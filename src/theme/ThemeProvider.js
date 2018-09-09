@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { Base, Provider as ReakitProvider, styled } from 'reakit';
 import * as theme from './index';
-// import '../global.styled.js';
 
 const Wrapper = styled(Base)`
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
