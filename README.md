@@ -1,16 +1,43 @@
-# medikit
+# Medikit (EXPERIMENTAL)
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+> Experimental Medipass Design System
 
-Describe medikit here.
+## Developing
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+Before you start developing, ensure that you have installed the package's dependencies:
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+```
+npm install
+```
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+After everything has installed, you can run the docs on a development server which will listen for changes made in the components:
+
+```
+npm run docs
+```
+
+## Testing
+
+To run the tests for the components:
+
+```
+npm run test
+```
+
+## Building
+
+### Documentation
+
+To build the documentation, simply run:
+
+```
+npm run build-docs
+```
+
+### Components
+
+To build the components for a production environment, run:
+
+```
+npm run build
+```
