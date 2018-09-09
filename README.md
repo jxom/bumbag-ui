@@ -1,6 +1,6 @@
-# Medikit (EXPERIMENTAL)
+# Medikit
 
-> Experimental Medipass Design System
+> (PROOF OF CONCEPT) Medipass Design System
 
 ## Developing
 
