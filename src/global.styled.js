@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import { colors } from './theme/colors';
 
 export default injectGlobal`
   html, body {
@@ -7,6 +8,11 @@ export default injectGlobal`
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+  }
+
+  *:focus {
+    outline: 2px solid ${colors.primary};
+    outline-offset: 2px;
   }
 
   @font-face {

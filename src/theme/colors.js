@@ -18,4 +18,4 @@ export const colorsInverted = {
   success: colors.white,
   danger: colors.white,
   warning: colors.text
-}
+};
