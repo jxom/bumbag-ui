@@ -1,15 +1,17 @@
 ---
 name: Button
+route: /components/button
+menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
 import { Button, Buttons } from '../index';
 
-# Import
+## Import
 
 `import { Button, Buttons } from 'medikit'`
 
-# Basic Usage
+## Basic Usage
 
 <Playground>
   <Buttons>
@@ -21,6 +23,19 @@ import { Button, Buttons } from '../index';
   </Buttons>
 </Playground>
 
-# Props
+## Sizes
+
+Buttons are available in four different sizes. `small`, `default`, `medium`, and `large`.
+
+<Playground>
+  <Buttons>
+    <Button size="small">Small button</Button>
+    <Button>Default button</Button>
+    <Button size="medium">Medium button</Button>
+    <Button size="large">Large button</Button>
+  </Buttons>
+</Playground>
+
+## Props
 
 <PropsTable of={Button} />

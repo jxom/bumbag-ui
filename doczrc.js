@@ -1,5 +1,8 @@
 export default {
   themeConfig: {
+    colors: {
+      primary: '#1a9cfc'
+    },
     styles: {
       body: {
         fontFamily: 'unset'

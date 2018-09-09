@@ -1,0 +1,23 @@
+---
+name: Colors
+route: /colors
+---
+
+import {Base, Flex} from 'reakit';
+import Color from './components/color';
+
+# Colors
+
+<Base>
+  <h2>General</h2>
+  <Flex marginBottom="2rem">
+    <Color color="secondary" title="Medipass blue"/>
+  </Flex>
+  <h2>UI</h2>
+  <Flex>
+    <Color color="primary" title="Primary blue"/>
+    <Color color="success" title="Success green"/>
+    <Color color="danger" title="Danger red"/>
+    <Color color="warning" title="Warning orange"/>
+  </Flex>
+</Base>
