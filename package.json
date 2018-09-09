@@ -1,7 +1,7 @@
 {
   "name": "medikit",
-  "version": "1.0.0",
-  "description": "medikit React component",
+  "version": "0.0.0",
+  "description": "Medipass Design System",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -12,25 +12,38 @@
   ],
   "scripts": {
     "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "clean": "nwb clean-module",
+    "develop": "nodemon -w src -x 'nwb build-react-component'",
+    "prepublish": "npm run build",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "npm run lint",
+    "docs": "docz dev",
+    "build-docs": "docz build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "polished": "2.0.3",
+    "reakit": "0.14.5",
+    "styled-components": "3.4.5"
+  },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
-    "nwb": "0.21.x",
+    "@medipass/eslint-config-react-medipass": "8.3.6",
+    "babel-eslint": "9.0.0",
+    "docz": "0.11.1",
+    "eslint": "5.5.0",
+    "nodemon": "1.18.4",
+    "nwb": "0.23.0",
+    "prop-types": "15.6.2",
     "react": "16.5.0",
     "react-dom": "16.5.0"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Jake Moxey",
+  "homepage": "https://medipass.com.au",
   "license": "MIT",
-  "repository": "",
+  "repository": "medipass/medikit",
   "keywords": [
     "react-component"
   ]
