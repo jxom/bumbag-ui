@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from 'styled-tools';
 
 const sizes = {
   small: {
@@ -23,6 +24,6 @@ export const Loader = styled.svg`
   ${props => sizes[props.size]} /* Extend size styles */
 
   & path {
-    fill: ${props => props.color || props.theme.colors[props.state]};
+    fill: ${props => props.color || palette()(props)};
   }
 `;

@@ -7,8 +7,8 @@ const Loader = ({ className, color, size, state }) => (
   <StyledLoader
     className={className}
     color={color}
+    palette={state}
     size={size}
-    state={state}
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     x="0px"

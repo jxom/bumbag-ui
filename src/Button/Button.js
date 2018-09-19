@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from 'reakit/Box';
+import _get from 'lodash/get';
 
-import theme from '../theme/index';
+import { palette } from '../theme';
 import Loader from '../Loader';
 import { DefaultButton, LinkButton, OutlinedButton, LoaderWrapper } from './styled';
 
@@ -21,13 +22,13 @@ const Button = ({ children, className, disabled, isLoading, size, state, type, .
       isLink={type === 'link'}
       isLoading={isLoading}
       isOutlined={type === 'outlined'}
+      palette={state}
       size={size}
-      state={state}
       {...props}
     >
       {isLoading ? (
         <LoaderWrapper>
-          <Loader color={type === 'default' ? theme.colorsInverted[state] : theme.colors[state]} />
+          <Loader color={type === 'default' ? _get(palette, `${state}Inverted`) : palette[state]} />
         </LoaderWrapper>
       ) : null}
       <Box>{children}</Box>

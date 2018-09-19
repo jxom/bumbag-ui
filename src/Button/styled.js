@@ -2,6 +2,7 @@ import { css } from 'styled-components';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import Button from 'reakit/Button';
+import { palette } from 'styled-tools';
 import { darken } from 'polished';
 
 const sizes = {
@@ -26,7 +27,6 @@ const sizes = {
 };
 
 const disabledAttributes = css`
-  border: 0;
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
@@ -34,14 +34,10 @@ const disabledAttributes = css`
 `;
 const interactiveAttributes = css`
   &:hover {
-    background-color: ${props => darken(0.05, props.theme.colors[props.state])};
-    box-shadow: 1px 5px 7px -5px rgb(117, 117, 117) !important;
-    transform: translateY(-1px);
+    background-color: ${props => darken(0.05, palette()(props))};
   }
   &:hover:active {
-    background-color: ${props => darken(0.1, props.theme.colors[props.state])};
-    box-shadow: 1px 2px 7px -5px rgb(117, 117, 117) !important;
-    transform: translateY(1px);
+    background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
 const loadingAttributes = css`
@@ -55,11 +51,11 @@ const loadingAttributes = css`
 export const BaseButton = css`
   align-items: center;
   border-radius: 4px;
-  box-shadow: 1px 4px 7px -5px rgb(117, 117, 117);
   cursor: pointer;
   display: inline-flex;
-  font-weight: 600;
+  font-weight: 500;
   justify-content: center;
+  text-decoration: none;
 
   &[disabled] {
     ${disabledAttributes}
@@ -73,18 +69,18 @@ export const BaseButton = css`
 `;
 
 export const DefaultButton = styled(Button)`
-  background-color: ${props => props.theme.colors[props.state]};
-  border: 1px solid ${props => darken(0.2, props.theme.colors[props.state])};
-  color: ${props => props.theme.colorsInverted[props.state]};
+  background-color: ${palette()};
+  border: 1px solid ${props => darken(0.2, palette()(props))};
+  color: ${props => palette(`${props.palette}Inverted`)(props)};
 `;
 
 export const OutlinedButton = styled(Button)`
   background-color: unset;
-  border: 1px solid ${props => props.theme.colors[props.state]};
-  color: ${props => props.theme.colors[props.state]};
+  border: 1px solid ${palette()};
+  color: ${palette()};
 
   &:hover {
-    color: ${props => props.theme.colorsInverted[props.state]};
+    color: ${props => palette(`${props.palette}Inverted`)(props)};
   }
 `;
 
@@ -92,12 +88,12 @@ export const LinkButton = styled(Button)`
   border: 0;
   background: unset;
   box-shadow: unset !important;
-  color: ${props => (props.state === 'default' ? props.theme.colors.text : props.theme.colors[props.state])};
+  color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
   text-decoration: underline;
 
   &:hover {
     color: ${props =>
-      props.state === 'default' ? darken(0.5, props.theme.colors.text) : darken(0.5, props.theme.colors[props.state])};
+      props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
   }
 `;
 
