@@ -10,19 +10,19 @@ export const palette = {
   default: darken(0.01, 'white'),
   defaultInverted: p('text'),
 
-  primary: '#1173bc',
+  primary: '#112ebb',
   primaryInverted: p('white'),
 
-  secondary: '#1a9cfc',
+  secondary: '#1d67fc',
   secondaryInverted: p('white'),
 
-  success: '#417505',
+  success: '#007d04',
   successInverted: p('white'),
 
-  danger: '#af0120',
+  danger: '#d60027',
   dangerInverted: p('white'),
 
-  warning: '#f39c12',
+  warning: '#ffb300',
   warningInverted: p('text')
 };
 

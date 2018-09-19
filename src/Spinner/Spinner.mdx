@@ -1,0 +1,40 @@
+---
+name: Spinner
+route: /elements/spinner
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Button, Spinner } from '../index';
+
+## Import
+
+`import { Spinner } from 'bumbag'`
+
+## Basic Usage
+
+<Playground>
+  <Spinner />
+</Playground>
+
+## Sizes
+
+<Playground>
+  <Spinner size="small" />
+  <Spinner />
+  <Spinner size="medium" />
+  <Spinner size="large" />
+</Playground>
+
+## Colors
+
+<Playground>
+  <Spinner state="success" />
+  <Spinner state="danger" />
+  <Spinner state="warning" />
+</Playground>
+
+
+## Props
+
+<PropsTable of={Spinner} />

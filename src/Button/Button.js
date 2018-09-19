@@ -4,8 +4,8 @@ import Box from 'reakit/Box';
 import _get from 'lodash/get';
 
 import { palette } from '../theme';
-import Loader from '../Loader';
-import { DefaultButton, LinkButton, OutlinedButton, LoaderWrapper } from './styled';
+import Spinner from '../Spinner';
+import { DefaultButton, LinkButton, OutlinedButton, SpinnerWrapper } from './styled';
 
 const Button = ({ children, className, disabled, isLoading, size, state, type, ...props }) => {
   let StyledButton = DefaultButton;
@@ -27,9 +27,9 @@ const Button = ({ children, className, disabled, isLoading, size, state, type, .
       {...props}
     >
       {isLoading ? (
-        <LoaderWrapper>
-          <Loader color={type === 'default' ? _get(palette, `${state}Inverted`) : palette[state]} />
-        </LoaderWrapper>
+        <SpinnerWrapper>
+          <Spinner color={type === 'default' ? _get(palette, `${state}Inverted`) : palette[state]} />
+        </SpinnerWrapper>
       ) : null}
       <Box>{children}</Box>
     </StyledButton>
@@ -40,15 +40,12 @@ Button.propTypes = {
   as: PropTypes.any,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  /** Is the button disabled? */
+  /** Makes the button disabled. The user is unable to interact with the button. */
   disabled: PropTypes.bool,
   /** Adds a loading indicator to the button. */
   isLoading: PropTypes.bool,
-  /** Size of the button. */
   size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
-  /** State of the button. */
   state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
-  /** Type of button. */
   type: PropTypes.oneOf(['default', 'outlined', 'link'])
 };
 

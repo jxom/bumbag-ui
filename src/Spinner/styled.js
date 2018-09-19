@@ -20,7 +20,7 @@ const sizes = {
   }
 };
 
-export const Loader = styled.svg`
+export const Spinner = styled.svg`
   ${props => sizes[props.size]} /* Extend size styles */
 
   & path {

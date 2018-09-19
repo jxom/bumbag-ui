@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Loader as StyledLoader } from './styled';
+import { Spinner as StyledSpinner } from './styled';
 
-const Loader = ({ className, color, size, state }) => (
-  <StyledLoader
+const Spinner = ({ className, color, size, state }) => (
+  <StyledSpinner
     className={className}
     color={color}
     palette={state}
@@ -27,10 +27,10 @@ const Loader = ({ className, color, size, state }) => (
         repeatCount="indefinite"
       />
     </path>
-  </StyledLoader>
+  </StyledSpinner>
 );
 
-Loader.propTypes = {
+Spinner.propTypes = {
   className: PropTypes.string,
   /** Color of the loading spinner. */
   color: PropTypes.string,
@@ -40,11 +40,11 @@ Loader.propTypes = {
   state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning'])
 };
 
-Loader.defaultProps = {
+Spinner.defaultProps = {
   className: null,
   color: null,
   state: 'primary',
   size: 'default'
 };
 
-export default Loader;
+export default Spinner;

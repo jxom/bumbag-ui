@@ -33,7 +33,7 @@ export const LinkButton = styled(Button)`
   }
 `;
 
-export const LoaderWrapper = styled(Box)`
+export const SpinnerWrapper = styled(Box)`
   position: absolute;
   width: 100%;
   height: 100%;
