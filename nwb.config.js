@@ -3,7 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'tracksuit',
+      global: 'bumbag',
       externals: {
         react: 'React'
       }
