@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'reakit/styled';
 import { palette } from 'styled-tools';
 
 const sizes = {
