@@ -23,6 +23,6 @@ export const Loader = styled.svg`
   ${props => sizes[props.size]} /* Extend size styles */
 
   & path {
-    fill: ${props => props.theme.colors[props.color]};
+    fill: ${props => props.color || props.theme.colors[props.state]};
   }
 `;

@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
-import { Base, Provider as ReakitProvider, styled } from 'reakit';
-import * as theme from './index';
+import { Box, Provider as ThemeProvider, styled } from 'reakit';
+import theme from './index';
 
-const Wrapper = styled(Base)`
+const Wrapper = styled(Box)`
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
@@ -132,7 +131,7 @@ const Wrapper = styled(Base)`
 const Provider = ({ children }) => (
   <ThemeProvider theme={theme}>
     <Wrapper>
-      <ReakitProvider theme={theme.reakit}>{children}</ReakitProvider>
+      {children}
     </Wrapper>
   </ThemeProvider>
 );

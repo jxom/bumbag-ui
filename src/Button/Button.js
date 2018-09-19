@@ -1,33 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Base from 'reakit/Base';
+import Box from 'reakit/Box';
 
-import { colors, colorsInverted } from '../theme/colors';
-import * as sharedPropTypes from '../prop-types';
+import theme from '../theme/index';
 import Loader from '../Loader';
-import {
-  BaseButton as StyledBaseButton,
-  LinkButton as StyledLinkButton,
-  OutlinedButton as StyledOutlinedButton,
-  LoaderWrapper
-} from './styled';
+import { DefaultButton, LinkButton, OutlinedButton, LoaderWrapper } from './styled';
 
-const Button = ({ children, className, color, isLink, isLoading, isOutlined, size, ...props }) => {
-  let Component = StyledBaseButton;
-  if (isLink) {
-    Component = StyledLinkButton;
-  } else if (isOutlined) {
-    Component = StyledOutlinedButton;
+const Button = ({ children, className, disabled, isLoading, size, state, type, ...props }) => {
+  let StyledButton = DefaultButton;
+  if (type === 'outlined') {
+    StyledButton = OutlinedButton;
+  }
+  if (type === 'link') {
+    StyledButton = LinkButton;
   }
   return (
-    <Component className={className} color={color} isLoading={isLoading} isOutlined={isOutlined} size={size} {...props}>
+    <StyledButton
+      className={className}
+      disabled={disabled}
+      isLink={type === 'link'}
+      isLoading={isLoading}
+      isOutlined={type === 'outlined'}
+      size={size}
+      state={state}
+      {...props}
+    >
       {isLoading ? (
         <LoaderWrapper>
-          <Loader color={isLink || isOutlined ? colors[color] : colorsInverted[color]} />
+          <Loader color={type === 'default' ? theme.colorsInverted[state] : theme.colors[state]} />
         </LoaderWrapper>
       ) : null}
-      <Base>{children}</Base>
-    </Component>
+      <Box>{children}</Box>
+    </StyledButton>
   );
 };
 
@@ -35,26 +39,26 @@ Button.propTypes = {
   as: PropTypes.any,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  /** Color of the button. Available values: "default", "primary", "secondary", "success", "warning", "danger" */
-  color: sharedPropTypes.color,
+  /** Is the button disabled? */
+  disabled: PropTypes.bool,
   /** Adds a loading indicator to the button. */
   isLoading: PropTypes.bool,
-  /** Button appears as a link, and has no 'button'-like styling. */
-  isLink: PropTypes.bool,
-  /** An outline is placed on the button. */
-  isOutlined: PropTypes.bool,
-  /** Size of the button. Available values: "small", "default", "medium", "large" */
-  size: sharedPropTypes.size
+  /** Size of the button. */
+  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
+  /** State of the button. */
+  state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
+  /** Type of button. */
+  type: PropTypes.oneOf(['default', 'outlined', 'link'])
 };
 
 Button.defaultProps = {
   as: null,
   className: null,
-  color: 'default',
+  disabled: false,
   isLoading: false,
-  isLink: false,
-  isOutlined: false,
-  size: 'default'
+  size: 'default',
+  state: 'default',
+  type: 'default'
 };
 
 export default Button;

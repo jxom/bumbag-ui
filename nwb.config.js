@@ -3,7 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'medikit',
+      global: 'boxkit',
       externals: {
         react: 'React'
       }

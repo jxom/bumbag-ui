@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Loader as StyledLoader } from './styled';
-import * as sharedPropTypes from '../prop-types';
 
-const Loader = ({ className, color, size }) => (
+const Loader = ({ className, color, size, state }) => (
   <StyledLoader
     className={className}
     color={color}
     size={size}
+    state={state}
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
@@ -33,14 +33,17 @@ const Loader = ({ className, color, size }) => (
 Loader.propTypes = {
   className: PropTypes.string,
   /** Color of the loading spinner. */
-  color: sharedPropTypes.color,
+  color: PropTypes.string,
   /** Size of the loading spinner. */
-  size: sharedPropTypes.size
+  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
+  /** State of the loading spinner. */
+  state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning'])
 };
 
 Loader.defaultProps = {
   className: null,
-  color: 'primary',
+  color: null,
+  state: 'primary',
   size: 'default'
 };
 

@@ -1,7 +1,7 @@
 ---
 name: Button
-route: /components/button
-menu: Components
+route: /elements/button
+menu: Elements
 ---
 
 import { Playground, PropsTable } from 'docz';
@@ -9,7 +9,7 @@ import { Button, Buttons } from '../index';
 
 ## Import
 
-`import { Button, Buttons } from 'medikit'`
+`import { Button, Buttons } from 'boxkit'`
 
 ## Basic Usage
 
@@ -24,8 +24,8 @@ However, you are able to change it to a custom element using the `as` prop.
 
 <Playground>
   <Buttons>
-    <Button>Default button</Button>
-    <Button as="a">Anchor button</Button>
+    <Button>Default</Button>
+    <Button as="a">Anchor</Button>
   </Buttons>
 </Playground>
 
@@ -35,11 +35,11 @@ Colors can be added to a button with the `color` prop.
 
 <Playground>
   <Buttons>
-    <Button>Default button</Button>
-    <Button color="primary">Primary button</Button>
-    <Button color="success">Success button</Button>
-    <Button color="danger">Danger button</Button>
-    <Button color="warning">Warning button</Button>
+    <Button>Default</Button>
+    <Button state="primary">Primary</Button>
+    <Button state="success">Success</Button>
+    <Button state="danger">Danger</Button>
+    <Button state="warning">Warning</Button>
   </Buttons>
 </Playground>
 
@@ -49,22 +49,22 @@ To indicate a button is loading, use the `isLoading` prop.
 
 <Playground>
   <Buttons>
-    <Button isLoading>Default button</Button>
-    <Button color="primary" isLoading>Primary button</Button>
-    <Button color="primary" isLink isLoading>Primary button</Button>
-    <Button color="success" isOutlined isLoading>Success button</Button>
+    <Button isLoading>Default</Button>
+    <Button state="primary" isLoading>Primary</Button>
+    <Button state="primary" isLoading type="link">Primary</Button>
+    <Button state="success" isLoading type="outlined">Success</Button>
   </Buttons>
 </Playground>
 
 ## Outlines
 
-An outline can be placed on a button using the `isOutlined` prop.
+An outline can be placed on a button by assigning `"outlined"` to the `type` prop.
 
 <Playground>
   <Buttons>
-    <Button color="primary" isOutlined>Primary button</Button>
-    <Button color="success" isOutlined>Success button</Button>
-    <Button color="danger" isOutlined>Danger button</Button>
+    <Button state="primary" type="outlined">Primary</Button>
+    <Button state="success" type="outlined">Success</Button>
+    <Button state="danger" type="outlined">Danger</Button>
   </Buttons>
 </Playground>
 
@@ -74,10 +74,10 @@ Buttons are available in four different sizes and can be added with a `size` pro
 
 <Playground>
   <Buttons>
-    <Button size="small">Small button</Button>
-    <Button>Default button</Button>
-    <Button size="medium">Medium button</Button>
-    <Button size="large">Large button</Button>
+    <Button size="small">Small</Button>
+    <Button>Default</Button>
+    <Button size="medium">Medium</Button>
+    <Button size="large">Large</Button>
   </Buttons>
 </Playground>
 
@@ -86,10 +86,46 @@ Buttons are available in four different sizes and can be added with a `size` pro
 A button can appear as a link with no styling by adding the `isLink` prop.
 
 <Playground>
-  <Button isLink color="primary">Default button</Button>
+  <Button state="primary" type="link">Default</Button>
 </Playground>
 
 
-## Props
+## Disabled
+
+To indicate a button as disabled, use the `disabled` prop.
+
+<Playground>
+  <Buttons>
+    <Button disabled>Default</Button>
+    <Button state="primary" disabled>Primary</Button>
+    <Button state="success" disabled>Success</Button>
+    <Button state="danger" disabled>Danger</Button>
+    <Button state="warning" disabled>Warning</Button>
+  </Buttons>
+</Playground>
+
+## Lists
+
+To group a set of buttons, use the `<Buttons>` component.
+
+<Playground>
+  <Buttons>
+    <Button>Previous</Button>
+    <Button>Next</Button>
+  </Buttons>
+  <Buttons isGrouped marginTop="1rem">
+    <Button>Previous</Button>
+    <Button>Now</Button>
+    <Button>Next</Button>
+  </Buttons>
+</Playground>
+
+### Submit/Cancel buttons
+
+## `<Button>` Props
 
 <PropsTable of={Button} />
+
+## `<Buttons>` Props
+
+<PropsTable of={Buttons} />

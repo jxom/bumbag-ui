@@ -1,8 +1,22 @@
+import { css } from 'styled-components';
 import styled from 'reakit/styled';
-import Flex from 'reakit/Flex';
+import Box from 'reakit/Box';
 
-export const Buttons = styled(Flex)`
+const groupedAttributes = css`
   & > *:not(:first-child) {
-    margin-left: 0.5rem;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left-width: 0px;
   }
+  & > *:not(:last-child) {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+`;
+
+export const Buttons = styled(Box)`
+  & > *:not(:first-child) {
+    margin-left: ${props => (props.isGrouped ? '' : '0.5rem')};
+  }
+  ${props => props.isGrouped && groupedAttributes};
 `;
