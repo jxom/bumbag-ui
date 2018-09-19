@@ -1,6 +1,6 @@
 import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
-import { BaseButton } from '../Button/styled';
+import Button from '../Button/theme';
 
 export const palette = {
   text: lighten(0.2, 'black'),
@@ -25,8 +25,6 @@ export const palette = {
   warning: '#f39c12',
   warningInverted: p('text')
 };
-
-const Button = BaseButton;
 
 export default {
   palette,
