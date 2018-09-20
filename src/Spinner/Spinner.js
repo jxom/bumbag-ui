@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import { Spinner as StyledSpinner } from './styled';
 
-const Spinner = ({ className, color, size, state }) => (
+const Spinner = ({ className, color, palette, size }) => (
   <StyledSpinner
     className={className}
     color={color}
-    palette={state}
+    palette={palette}
     size={size}
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -32,18 +32,15 @@ const Spinner = ({ className, color, size, state }) => (
 
 Spinner.propTypes = {
   className: PropTypes.string,
-  /** Color of the loading spinner. */
   color: PropTypes.string,
-  /** Size of the loading spinner. */
-  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
-  /** State of the loading spinner. */
-  state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning'])
+  palette: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
+  size: PropTypes.oneOf(['small', 'default', 'medium', 'large'])
 };
 
 Spinner.defaultProps = {
   className: null,
   color: null,
-  state: 'primary',
+  palette: 'primary',
   size: 'default'
 };
 

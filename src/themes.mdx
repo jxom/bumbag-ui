@@ -1,0 +1,57 @@
+---
+name: Themes
+order: 1
+route: /themes
+---
+
+```
+import { css, palette } from 'bumbag';
+
+const theme = {
+  palette: {
+    primary: 'blue',
+    text: 'black'
+  },
+  button: {
+    /* Modify the base button */
+    base: css`
+      fontSize: 10px
+    `,
+
+    /* Modify different button types */
+    default: css`
+      background-color: ${palette()};
+    `,
+    outlined: css`
+      border-color: ${palette()};
+    `,
+    link: css`
+      color: ${palette('text')}
+    `,
+
+    /* Modify different button size styles */
+    sizes: {
+      small: css`
+        fontSize: 0.5rem
+      `,
+      medium: css`
+        fontSize: 1.5rem
+      `,
+      large: css`
+        fontSize: 2rem
+      `
+    },
+
+    /* Modify button disabled state attributes */
+    disabled: css`
+      opacity: 0.5
+    `,
+
+    /* Modify button loading state attributes */
+    loading: css`
+      opacity: 0.5
+    `
+  }
+}
+```
+

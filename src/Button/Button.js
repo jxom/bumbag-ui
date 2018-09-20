@@ -1,38 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'reakit/styled';
 import Box from 'reakit/Box';
+import _Button from 'reakit/Button';
 import _get from 'lodash/get';
 
-import { palette } from '../theme';
+import { palette as p } from '../theme';
 import Spinner from '../Spinner';
-import { DefaultButton, LinkButton, OutlinedButton, SpinnerWrapper } from './styled';
 
-const Button = ({ children, className, disabled, isLoading, size, state, type, ...props }) => {
-  let StyledButton = DefaultButton;
-  if (type === 'outlined') {
-    StyledButton = OutlinedButton;
+export const SpinnerWrapper = styled(Box)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & + div {
+    opacity: 0;
   }
-  if (type === 'link') {
-    StyledButton = LinkButton;
-  }
+`;
+
+const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }) => {
   return (
-    <StyledButton
+    <_Button
       className={className}
       disabled={disabled}
-      isLink={type === 'link'}
       isLoading={isLoading}
-      isOutlined={type === 'outlined'}
-      palette={state}
+      palette={palette}
       size={size}
+      type={type}
       {...props}
     >
       {isLoading ? (
         <SpinnerWrapper>
-          <Spinner color={type === 'default' ? _get(palette, `${state}Inverted`) : palette[state]} />
+          <Spinner color={type === 'default' ? _get(p, `${palette}Inverted`) : p[palette]} />
         </SpinnerWrapper>
       ) : null}
       <Box>{children}</Box>
-    </StyledButton>
+    </_Button>
   );
 };
 
@@ -44,8 +50,8 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   /** Adds a loading indicator to the button. */
   isLoading: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
-  state: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
+  palette: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
+  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
   type: PropTypes.oneOf(['default', 'outlined', 'link'])
 };
 
@@ -54,8 +60,8 @@ Button.defaultProps = {
   className: null,
   disabled: false,
   isLoading: false,
+  palette: 'default',
   size: 'default',
-  state: 'default',
   type: 'default'
 };
 

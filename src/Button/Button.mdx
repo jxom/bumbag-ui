@@ -36,11 +36,11 @@ Colors can be added to a button with the `color` prop.
 <Playground>
   <Buttons>
     <Button>Default</Button>
-    <Button state="primary">Primary</Button>
-    <Button state="secondary">Secondary</Button>
-    <Button state="success">Success</Button>
-    <Button state="danger">Danger</Button>
-    <Button state="warning">Warning</Button>
+    <Button palette="primary">Primary</Button>
+    <Button palette="secondary">Secondary</Button>
+    <Button palette="success">Success</Button>
+    <Button palette="danger">Danger</Button>
+    <Button palette="warning">Warning</Button>
   </Buttons>
 </Playground>
 
@@ -51,9 +51,9 @@ To indicate a button is loading, use the `isLoading` prop.
 <Playground>
   <Buttons>
     <Button isLoading>Default</Button>
-    <Button state="primary" isLoading>Primary</Button>
-    <Button state="primary" isLoading type="link">Primary</Button>
-    <Button state="success" isLoading type="outlined">Success</Button>
+    <Button palette="primary" isLoading>Primary</Button>
+    <Button palette="primary" isLoading type="link">Primary</Button>
+    <Button palette="success" isLoading type="outlined">Success</Button>
   </Buttons>
 </Playground>
 
@@ -63,9 +63,9 @@ An outline can be placed on a button by assigning `"outlined"` to the `type` pro
 
 <Playground>
   <Buttons>
-    <Button state="primary" type="outlined">Primary</Button>
-    <Button state="success" type="outlined">Success</Button>
-    <Button state="danger" type="outlined">Danger</Button>
+    <Button palette="primary" type="outlined">Primary</Button>
+    <Button palette="success" type="outlined">Success</Button>
+    <Button palette="danger" type="outlined">Danger</Button>
   </Buttons>
 </Playground>
 
@@ -87,7 +87,7 @@ Buttons are available in four different sizes and can be added with a `size` pro
 A button can appear as a link with no styling by adding the `isLink` prop.
 
 <Playground>
-  <Button state="primary" type="link">Default</Button>
+  <Button palette="primary" type="link">Default</Button>
 </Playground>
 
 
@@ -98,10 +98,10 @@ To indicate a button as disabled, use the `disabled` prop.
 <Playground>
   <Buttons>
     <Button disabled>Default</Button>
-    <Button state="primary" disabled>Primary</Button>
-    <Button state="success" disabled>Success</Button>
-    <Button state="danger" disabled>Danger</Button>
-    <Button state="warning" disabled>Warning</Button>
+    <Button palette="primary" disabled>Primary</Button>
+    <Button palette="success" disabled>Success</Button>
+    <Button palette="danger" disabled>Danger</Button>
+    <Button palette="warning" disabled>Warning</Button>
   </Buttons>
 </Playground>
 
