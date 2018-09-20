@@ -1,25 +1,39 @@
-## Prerequisites
+## Developing
 
-[Node.js](http://nodejs.org/) >= v4 must be installed.
+Before you start developing, ensure that you have installed the package's dependencies:
 
-## Installation
+```
+yarn
+```
 
-- Running `npm install` in the component's root directory will install everything you need for development.
+After everything has installed, you can run the docs on a development server which will listen for changes made in the components:
 
-## Demo Development Server
+```
+yarn docs
+```
 
-- `npm start` will run a development server with the component's demo app at [http://localhost:3000](http://localhost:3000) with hot module reloading.
+## Testing
 
-## Running Tests
+To run the tests for the components:
 
-- `npm test` will run the tests once.
-
-- `npm run test:coverage` will run the tests and produce a coverage report in `coverage/`.
-
-- `npm run test:watch` will run the tests on every change.
+```
+yarn test
+```
 
 ## Building
 
-- `npm run build` will build the component for publishing to npm and also bundle the demo app.
+### Documentation
 
-- `npm run clean` will delete built resources.
+To build the documentation, simply run:
+
+```
+yarn build-docs
+```
+
+### Components
+
+To build the components for a production environment, run:
+
+```
+yarn build
+```
