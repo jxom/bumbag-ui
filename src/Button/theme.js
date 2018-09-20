@@ -24,31 +24,7 @@ const sizeAttributes = {
     }
   `
 };
-const disabledAttributes = css`
-  & {
-    cursor: not-allowed;
-    opacity: 0.7;
-    outline: unset;
-    pointer-events: unset;
-  }
-`;
-const interactiveAttributes = css`
-  &:hover {
-    background-color: ${props => darken(0.05, palette()(props))};
-  }
-  &:hover:active {
-    background-color: ${props => darken(0.1, palette()(props))};
-  }
-`;
-const loadingAttributes = css`
-  & {
-    cursor: not-allowed;
 
-    &:focus {
-      outline: unset !important;
-    }
-  }
-`;
 const linkAttributes = css`
   & {
     border: 0;
@@ -71,6 +47,33 @@ const outlinedAttributes = css`
 
     &:hover {
       color: ${props => palette(`${props.palette}Inverted`)(props)};
+    }
+  }
+`;
+
+const disabledAttributes = css`
+  & {
+    cursor: not-allowed;
+    opacity: 0.7;
+    outline: unset;
+    pointer-events: unset;
+  }
+`;
+
+const interactiveAttributes = css`
+  &:hover {
+    background-color: ${props => darken(0.05, palette()(props))};
+  }
+  &:hover:active {
+    background-color: ${props => darken(0.1, palette()(props))};
+  }
+`;
+const loadingAttributes = css`
+  & {
+    cursor: not-allowed;
+
+    &:focus {
+      outline: unset !important;
     }
   }
 `;
