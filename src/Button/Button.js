@@ -21,7 +21,7 @@ export const SpinnerWrapper = styled(Box)`
   }
 `;
 
-const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }) => {
+export const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }) => {
   return (
     <_Button
       className={className}
@@ -71,4 +71,4 @@ Button.defaultProps = {
   type: 'default'
 };
 
-export default withTheme(Button);
+export const ThemedButton = withTheme(Button);
