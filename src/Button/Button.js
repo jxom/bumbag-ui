@@ -4,7 +4,6 @@ import { withTheme } from 'styled-components';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import _Button from 'reakit/Button';
-import _get from 'lodash/get';
 
 import Spinner from '../Spinner';
 
@@ -16,12 +15,13 @@ export const SpinnerWrapper = styled(Box)`
   align-items: center;
   justify-content: center;
 
-  & + div {
+  & + span {
     opacity: 0;
   }
 `;
 
 export const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }) => {
+  const themePalette = props.theme.palette; // eslint-disable-line
   return (
     <_Button
       className={className}
@@ -35,15 +35,11 @@ export const Button = ({ children, className, disabled, isLoading, palette, size
       {isLoading ? (
         <SpinnerWrapper>
           <Spinner
-            color={
-              type === 'default'
-                ? _get(props, `theme.palette.${palette}Inverted`)(props)
-                : _get(props, `theme.palette.${palette}`)
-            }
+            color={type === 'default' ? themePalette[`${palette}Inverted`](props) : themePalette[`${palette}`]}
           />
         </SpinnerWrapper>
       ) : null}
-      <Box>{children}</Box>
+      <span>{children}</span>
     </_Button>
   );
 };

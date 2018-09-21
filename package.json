@@ -17,13 +17,14 @@
     "prepublish": "npm run build",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
-    "test": "npm run lint",
+    "test": "npm run lint && jest",
     "docs": "docz dev",
     "build-docs": "docz build"
   },
   "dependencies": {
     "classnames": "2.2.6",
     "docz-theme-default": "0.11.2",
+    "lodash.get": "4.4.2",
     "polished": "2.0.3",
     "reakit": "0.15.1",
     "styled-tools": "1.5.1"
@@ -34,13 +35,19 @@
   "devDependencies": {
     "@medipass/eslint-config-react-medipass": "8.3.6",
     "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
     "docz": "0.11.1",
     "eslint": "5.5.0",
+    "jest": "23.6.0",
+    "jest-styled-components": "6.2.0",
     "nodemon": "1.18.4",
     "nwb": "0.23.0",
     "prop-types": "15.6.2",
     "react": "16.5.0",
-    "react-dom": "16.5.0"
+    "react-dom": "16.5.0",
+    "react-testing-library": "5.1.0"
   },
   "author": "Jake Moxey & Dave Olsen",
   "homepage": "https://github.com/JakeNDavesCompanyPtyLtdEnterprises",
@@ -48,5 +55,10 @@
   "repository": "JakeNDavesCompanyPtyLtdEnterprises/bumbag",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/jest.transform.js"
+    }
+  }
 }
