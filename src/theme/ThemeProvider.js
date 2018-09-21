@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Provider as ThemeProvider, styled } from 'reakit';
 import { palette } from 'styled-tools';
-import theme from './index';
+import getTheme from './index';
 
 const Wrapper = styled(Box)`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
@@ -19,14 +19,19 @@ const Wrapper = styled(Box)`
   }
 `;
 
-const Provider = ({ children }) => (
-  <ThemeProvider theme={theme}>
+const Provider = ({ children, theme }) => (
+  <ThemeProvider theme={getTheme(theme)}>
     <Wrapper>{children}</Wrapper>
   </ThemeProvider>
 );
 
 Provider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  theme: PropTypes.object
+};
+
+Provider.defaultProps = {
+  theme: {}
 };
 
 export default Provider;

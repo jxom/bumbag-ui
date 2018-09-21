@@ -1,8 +1,8 @@
 import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
-import Button from '../Button/theme';
+import getButtonTheme from '../Button/theme';
 
-export const palette = {
+export const getPalette = palette => ({
   text: lighten(0.2, 'black'),
 
   white: 'white',
@@ -23,10 +23,12 @@ export const palette = {
   dangerInverted: p('white'),
 
   warning: '#ffb300',
-  warningInverted: p('text')
-};
+  warningInverted: p('text'),
 
-export default {
-  palette,
-  Button
-};
+  ...palette
+});
+
+export default theme => ({
+  palette: getPalette(theme.palette),
+  Button: getButtonTheme(theme.button)
+});

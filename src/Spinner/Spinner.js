@@ -39,7 +39,7 @@ Spinner.propTypes = {
 
 Spinner.defaultProps = {
   className: null,
-  color: null,
+  color: '',
   palette: 'primary',
   size: 'default'
 };

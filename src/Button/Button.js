@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import _Button from 'reakit/Button';
 import _get from 'lodash/get';
 
-import { palette as p } from '../theme';
 import Spinner from '../Spinner';
 
 export const SpinnerWrapper = styled(Box)`
@@ -34,7 +34,13 @@ const Button = ({ children, className, disabled, isLoading, palette, size, type,
     >
       {isLoading ? (
         <SpinnerWrapper>
-          <Spinner color={type === 'default' ? _get(p, `${palette}Inverted`) : p[palette]} />
+          <Spinner
+            color={
+              type === 'default'
+                ? _get(props, `theme.palette.${palette}Inverted`)(props)
+                : _get(props, `theme.palette.${palette}`)
+            }
+          />
         </SpinnerWrapper>
       ) : null}
       <Box>{children}</Box>
@@ -65,4 +71,4 @@ Button.defaultProps = {
   type: 'default'
 };
 
-export default Button;
+export default withTheme(Button);

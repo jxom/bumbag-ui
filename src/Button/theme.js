@@ -2,18 +2,24 @@ import { css } from 'reakit';
 import { palette } from 'styled-tools';
 import { darken } from 'polished';
 
-const sizeAttributes = {
+const getSizeAttributes = (sizesOverides = {}) => ({
   small: css`
     & {
       font-size: 0.8em;
       height: 2em;
       padding: 0 0.5rem;
     }
+    & {
+      ${sizesOverides.small};
+    }
   `,
   medium: css`
     & {
       height: 3em;
       padding: 0 1.25rem;
+    }
+    & {
+      ${sizesOverides.medium};
     }
   `,
   large: css`
@@ -22,10 +28,13 @@ const sizeAttributes = {
       height: 3em;
       padding: 0 1.5rem;
     }
+    & {
+      ${sizesOverides.large};
+    }
   `
-};
+});
 
-const linkAttributes = css`
+const getLinkAttributes = linkOverrides => css`
   & {
     border: 0;
     background: unset;
@@ -39,7 +48,7 @@ const linkAttributes = css`
     }
   }
 `;
-const outlinedAttributes = css`
+const getOutlinedAttributes = outlinedOverrides => css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -49,14 +58,20 @@ const outlinedAttributes = css`
       color: ${props => palette(`${props.palette}Inverted`)(props)};
     }
   }
+  & {
+    ${outlinedOverrides};
+  }
 `;
 
-const disabledAttributes = css`
+const getDisabledAttributes = disabledOverrides => css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
     outline: unset;
     pointer-events: unset;
+  }
+  & {
+    ${disabledOverrides};
   }
 `;
 
@@ -68,7 +83,7 @@ const interactiveAttributes = css`
     background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
-const loadingAttributes = css`
+const getLoadingAttributes = loadingOverrides => css`
   & {
     cursor: not-allowed;
 
@@ -76,9 +91,19 @@ const loadingAttributes = css`
       outline: unset !important;
     }
   }
+  & {
+    ${loadingOverrides};
+  }
 `;
 
-export default css`
+export default ({
+  base: baseOverrides,
+  disabled: disabledOverrides,
+  link: linkOverrides,
+  loading: loadingOverrides,
+  outlined: outlinedOverrides,
+  sizes: sizesOverides
+} = {}) => css`
   align-items: center;
   background-color: ${palette()};
   border: 1px solid ${props => darken(0.2, palette()(props))};
@@ -92,18 +117,22 @@ export default css`
   padding: 0 0.8rem;
   text-decoration: none;
 
+  & {
+    ${baseOverrides}
+  }
+
   &[disabled] {
-    ${disabledAttributes}
+    ${getDisabledAttributes(disabledOverrides)}
   }
 
   {/* Add size styles */}
-  ${props => sizeAttributes[props.size]}
+  ${props => getSizeAttributes(sizesOverides)[props.size]}
 
   {/* Add type styles */}
-  ${props => props.type === 'outlined' && outlinedAttributes}
-  ${props => props.type === 'link' && linkAttributes}
+  ${props => props.type === 'outlined' && getOutlinedAttributes(outlinedOverrides)}
+  ${props => props.type === 'link' && getLinkAttributes(linkOverrides)}
 
-  ${props => props.isLoading && loadingAttributes} {/* Add loading styles */}
+  ${props => props.isLoading && getLoadingAttributes(loadingOverrides)} {/* Add loading styles */}
   ${props =>
     !props.isLoading && !props.disabled && props.type !== 'link'
       ? interactiveAttributes
