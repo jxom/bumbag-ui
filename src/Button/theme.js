@@ -1,4 +1,4 @@
-import { css } from 'reakit';
+import { css } from 'styled-components';
 import { palette } from 'styled-tools';
 import { darken } from 'polished';
 
@@ -46,6 +46,9 @@ const getLinkAttributes = linkOverrides => css`
       color: ${props =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
     }
+  }
+  & {
+    ${linkOverrides};
   }
 `;
 const getOutlinedAttributes = outlinedOverrides => css`

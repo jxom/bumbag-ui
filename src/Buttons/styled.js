@@ -1,6 +1,7 @@
-import { css } from 'reakit';
+import { css } from 'styled-components';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
+import { theme } from 'styled-tools';
 
 const groupedAttributes = css`
   & > *:not(:first-child) {
@@ -12,11 +13,17 @@ const groupedAttributes = css`
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
   }
+  & {
+    ${theme('buttons.grouped')};
+  }
 `;
 
 export const Buttons = styled(Box)`
   & > *:not(:first-child) {
     margin-left: ${props => (props.isGrouped ? '' : '0.5rem')};
+  }
+  & {
+    ${theme('buttons.base')};
   }
   ${props => props.isGrouped && groupedAttributes};
 `;

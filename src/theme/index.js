@@ -30,5 +30,6 @@ export const getPalette = palette => ({
 
 export default theme => ({
   palette: getPalette(theme.palette),
-  Button: getButtonTheme(theme.button)
+  Button: getButtonTheme(theme.button),
+  ...theme
 });
