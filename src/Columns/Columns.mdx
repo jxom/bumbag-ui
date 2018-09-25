@@ -75,7 +75,7 @@ A width for the column can also be specified using the `spread` prop. `spread` c
 
 ## Offsets
 
-To avoid using empty columns to offset, an `offsetSpread` prop can be used to offset the column.
+To avoid using empty columns to offset, an `spreadOffset` prop can be used to offset the column.
 
 If a value of `left`, `right` or `both` is given, then the offset will apply to that area of the column.
 
@@ -86,7 +86,7 @@ If a value of `left`, `right` or `both` is given, then the offset will apply to 
         6
       </Box>
     </Column>
-    <Column spread={2} offsetSpread="left">
+    <Column spread={2} spreadOffset="left">
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         2
       </Box>
@@ -94,7 +94,7 @@ If a value of `left`, `right` or `both` is given, then the offset will apply to 
   </Columns>
 
   <Columns>
-    <Column spread={2} offsetSpread="right">
+    <Column spread={2} spreadOffset="right">
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         2
       </Box>
@@ -112,7 +112,7 @@ If a value of `left`, `right` or `both` is given, then the offset will apply to 
         6
       </Box>
     </Column>
-    <Column spread={2} offsetSpread="both">
+    <Column spread={2} spreadOffset="both">
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         2
       </Box>
@@ -129,7 +129,7 @@ However, a more specific value (between `1` and `11`) can be provided and is off
         6
       </Box>
     </Column>
-    <Column spread={3} offsetSpread={3}>
+    <Column spread={3} spreadOffset={3}>
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         3
       </Box>
@@ -142,7 +142,7 @@ However, a more specific value (between `1` and `11`) can be provided and is off
         2
       </Box>
     </Column>
-    <Column spread={6} offsetSpread={4}>
+    <Column spread={6} spreadOffset={4}>
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         6
       </Box>
@@ -155,7 +155,7 @@ However, a more specific value (between `1` and `11`) can be provided and is off
         6
       </Box>
     </Column>
-    <Column spread={3} offsetSpread={2}>
+    <Column spread={3} spreadOffset={2}>
       <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
         3
       </Box>

@@ -16,13 +16,13 @@ const marginAutoOffsets = {
   `
 };
 
-const getOffsetSpreadAttributes = offsetSpread => {
-  if (typeof offsetSpread === 'number') {
+const getSpreadOffsetAttributes = spreadOffset => {
+  if (typeof spreadOffset === 'number') {
     return css`
-      margin-left: ${getWidth(offsetSpread)};
+      margin-left: ${getWidth(spreadOffset)};
     `;
   }
-  return marginAutoOffsets[offsetSpread];
+  return marginAutoOffsets[spreadOffset];
 };
 
 const getWidth = spread => `${spread / 12 * 100}%`;
@@ -42,7 +42,7 @@ const Column = styled(Box)`
     `};
 
   & {
-    ${props => props.offsetSpread && getOffsetSpreadAttributes(props.offsetSpread)};
+    ${props => props.spreadOffset && getSpreadOffsetAttributes(props.spreadOffset)};
   }
 `;
 

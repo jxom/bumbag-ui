@@ -8,14 +8,14 @@ const Column = ({ children, ...props }) => <_Column {...props}>{children}</_Colu
 Column.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  offsetSpread: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 'left', 'both', 'right']),
-  spread: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  spread: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+  spreadOffset: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 'left', 'both', 'right'])
 };
 
 Column.defaultProps = {
   className: null,
-  offsetSpread: null,
-  spread: null
+  spread: null,
+  spreadOffset: null
 };
 
 export default Column;
