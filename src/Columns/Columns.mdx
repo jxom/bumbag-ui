@@ -13,6 +13,12 @@ import { Box, Columns, Column } from '../index';
 
 ## Basic Usage
 
+Bumbag uses a **12 column** flexbox based responsive column system.
+
+To create a basic columned layout, add a `<Columns>` component and then add your `<Column>`s.
+
+By default, each `<Column>` will have an **equal width** and you can have up to **12** columns.
+
 <Playground>
   <Columns>
     <Column>
@@ -38,7 +44,129 @@ import { Box, Columns, Column } from '../index';
   </Columns>
 </Playground>
 
+## Sizes
 
-## Props
+A width for the column can also be specified using the `spread` prop. `spread` can be any number between `1` and `12`.
+
+<Playground>
+  <Columns>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+    <Column spread={3}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        3
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Auto (2)
+      </Box>
+    </Column>
+    <Column spread={1}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        1
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+## Offsets
+
+To avoid using empty columns to offset, an `offsetSpread` prop can be used to offset the column.
+
+If a value of `left`, `right` or `both` is given, then the offset will apply to that area of the column.
+
+<Playground>
+  <Columns>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+    <Column spread={2} offsetSpread="left">
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        2
+      </Box>
+    </Column>
+  </Columns>
+
+  <Columns>
+    <Column spread={2} offsetSpread="right">
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        2
+      </Box>
+    </Column>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+  </Columns>
+
+  <Columns>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+    <Column spread={2} offsetSpread="both">
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        2
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+However, a more specific value (between `1` and `11`) can be provided and is offset to the left of the column.
+
+<Playground>
+  <Columns>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+    <Column spread={3} offsetSpread={3}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        3
+      </Box>
+    </Column>
+  </Columns>
+
+  <Columns>
+    <Column spread={2}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        2
+      </Box>
+    </Column>
+    <Column spread={6} offsetSpread={4}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+  </Columns>
+
+  <Columns>
+    <Column spread={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        6
+      </Box>
+    </Column>
+    <Column spread={3} offsetSpread={2}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        3
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+## `<Column>` Props
+
+<PropsTable of={Column} />
+
+## `<Columns>` Props
 
 <PropsTable of={Columns} />
