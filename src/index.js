@@ -10,4 +10,6 @@ export { default as ThemeProvider } from './theme/ThemeProvider';
 
 export { Button } from './Button';
 export { Buttons } from './Buttons';
+export { Column } from './Column';
+export { Columns } from './Columns';
 export { Spinner } from './Spinner';

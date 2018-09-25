@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Spinner as StyledSpinner } from './styled';
+import _Spinner from './styled';
 
 const Spinner = ({ className, color, palette, size }) => (
-  <StyledSpinner
+  <_Spinner
     className={className}
     color={color}
     palette={palette}
@@ -27,7 +27,7 @@ const Spinner = ({ className, color, palette, size }) => (
         repeatCount="indefinite"
       />
     </path>
-  </StyledSpinner>
+  </_Spinner>
 );
 
 Spinner.propTypes = {

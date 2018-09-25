@@ -1,0 +1,44 @@
+---
+name: Columns
+route: /layout/columns
+menu: Layout
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box, Columns, Column } from '../index';
+
+## Import
+
+`import { Column, Columns } from 'bumbag'`
+
+## Basic Usage
+
+<Playground>
+  <Columns>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        First column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Second column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Third column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Fourth column
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+
+## Props
+
+<PropsTable of={Columns} />

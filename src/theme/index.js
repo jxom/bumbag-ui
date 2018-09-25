@@ -31,5 +31,10 @@ export const getPalette = palette => ({
 export default theme => ({
   palette: getPalette(theme.palette),
   Button: getButtonTheme(theme.button),
+  layout: {
+    gapFactor: '0.5',
+    maxMobileBreakpoint: '768px',
+    ...theme.layout
+  },
   ...theme
 });

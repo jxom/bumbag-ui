@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Buttons as StyledButtons } from './styled';
+import _Buttons from './styled';
 
 const Buttons = ({ children, className, isGrouped, ...props }) => (
-  <StyledButtons className={className} isGrouped={isGrouped} {...props}>
+  <_Buttons className={className} isGrouped={isGrouped} {...props}>
     {children}
-  </StyledButtons>
+  </_Buttons>
 );
 
 Buttons.propTypes = {

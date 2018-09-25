@@ -32,7 +32,7 @@ const sizes = {
   `
 };
 
-export const Spinner = styled.svg`
+export default styled.svg`
   width: 1.5rem;
   height: 1.5rem;
 

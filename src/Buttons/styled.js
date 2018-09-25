@@ -18,7 +18,7 @@ const groupedAttributes = css`
   }
 `;
 
-export const Buttons = styled(Box)`
+export default styled(Box)`
   & > *:not(:first-child) {
     margin-left: ${props => (props.isGrouped ? '' : '0.5rem')};
   }
