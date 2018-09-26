@@ -1,4 +1,4 @@
-# Bumbag
+# Bumbag (WORK IN PROGRESS)
 
 <p align="center"><img src="./src/bumbag.png" width="400px"></img></p>
 
