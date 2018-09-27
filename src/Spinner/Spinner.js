@@ -1,13 +1,14 @@
 // @flow
 import React from 'react';
 
+import { type Palette, type Size } from '../types';
 import _Spinner from './styled';
 
 type Props = {
   className?: string,
   color?: string,
-  palette?: 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning',
-  size?: 'small' | 'default' | 'medium' | 'large'
+  palette?: Palette,
+  size?: Size
 };
 
 const Spinner = ({ className, color, palette, size }: Props) => (

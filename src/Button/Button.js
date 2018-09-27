@@ -6,6 +6,7 @@ import Box from 'reakit/Box';
 import _Button from 'reakit/Button';
 import _get from 'lodash/get';
 
+import { type Palette, type Size } from '../types';
 import Spinner from '../Spinner';
 
 export const SpinnerWrapper = styled(Box)`
@@ -29,8 +30,8 @@ type Props = {
   disabled?: boolean,
   /** Adds a loading indicator to the button. */
   isLoading?: boolean,
-  palette?: 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning',
-  size?: 'default' | 'small' | 'medium' | 'large',
+  palette?: Palette,
+  size?: Size,
   type?: 'default' | 'outlined' | 'link'
 };
 
