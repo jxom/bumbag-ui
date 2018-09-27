@@ -1,7 +1,10 @@
 // @flow
 import React from 'react';
-import { Box, Provider as ThemeProvider, styled } from 'reakit';
-import { palette } from 'styled-tools';
+import styled from 'reakit/styled';
+import Box from 'reakit/box';
+import ThemeProvider from 'reakit/Provider';
+import { palette, theme } from 'styled-tools';
+
 import { type ThemeConfig } from '../types';
 import getTheme from './index';
 
@@ -17,6 +20,10 @@ const Wrapper = styled(Box)`
   *:focus {
     outline: 2px solid ${palette('primary')};
     outline-offset: 2px;
+  }
+
+  & {
+    ${theme('global')};
   }
 `;
 

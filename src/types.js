@@ -8,6 +8,11 @@ export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'danger'
 export type Size = 'default' | 'small' | 'medium' | 'large';
 
 export type ThemeConfig = {
+  palette?: Object,
+
+  global?: string | Object,
+  layout?: {},
+
   button?: {
     base?: string | Object,
     disabled?: string | Object,
@@ -18,7 +23,5 @@ export type ThemeConfig = {
       medium?: string | Object,
       large?: string | Object
     }
-  },
-  palette?: Object,
-  layout?: {}
+  }
 };

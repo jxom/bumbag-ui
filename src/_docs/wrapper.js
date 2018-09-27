@@ -1,19 +1,8 @@
 import React from 'react';
-import { css } from 'reakit';
+// import { css } from 'reakit/styled';
 import ThemeProvider from '../theme/ThemeProvider';
 
-const theme = {
-  spinner: {
-    base: css`
-      font-size: 2rem;
-    `,
-    sizes: {
-      small: css`
-        font-size: 3rem;
-      `
-    }
-  }
-};
+const theme = {};
 
 const Wrapper = ({ children }: Object) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 

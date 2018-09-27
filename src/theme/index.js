@@ -30,13 +30,17 @@ export const getPalette = (palette?: Object) => ({
   ...palette
 });
 
-export default (theme: ThemeConfig) => ({
+export default (theme: ThemeConfig): ThemeConfig => ({
   palette: getPalette(theme.palette),
-  Button: getButtonTheme(theme.button),
+
+  global: theme.global,
   layout: {
     gapFactor: '0.5',
     maxMobileBreakpoint: '768px',
     ...theme.layout
   },
+
+  Button: getButtonTheme(theme.button),
+
   ...theme
 });
