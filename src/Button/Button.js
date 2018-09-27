@@ -1,6 +1,6 @@
 // @flow
 import React, { type Node } from 'react';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'reakit/styled';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import _Button from 'reakit/Button';

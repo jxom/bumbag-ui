@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'reakit/styled';
 import { palette } from 'styled-tools';
 import { darken } from 'polished';
 

@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'reakit/styled';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
