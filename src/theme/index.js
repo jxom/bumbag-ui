@@ -1,8 +1,10 @@
+// @flow
 import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
+import { type ThemeConfig } from '../types';
 import getButtonTheme from '../Button/theme';
 
-export const getPalette = palette => ({
+export const getPalette = (palette?: Object) => ({
   text: lighten(0.2, 'black'),
 
   white: 'white',
@@ -28,7 +30,7 @@ export const getPalette = palette => ({
   ...palette
 });
 
-export default theme => ({
+export default (theme: ThemeConfig) => ({
   palette: getPalette(theme.palette),
   Button: getButtonTheme(theme.button),
   layout: {

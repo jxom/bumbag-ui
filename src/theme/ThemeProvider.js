@@ -1,7 +1,8 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Box, Provider as ThemeProvider, styled } from 'reakit';
 import { palette } from 'styled-tools';
+import { type ThemeConfig } from '../types';
 import getTheme from './index';
 
 const Wrapper = styled(Box)`
@@ -19,16 +20,16 @@ const Wrapper = styled(Box)`
   }
 `;
 
-const Provider = ({ children, theme }) => (
+type Props = {
+  children: Node,
+  theme?: ThemeConfig
+};
+
+const Provider = ({ children, theme }: Props) => (
   <ThemeProvider theme={getTheme(theme)}>
     <Wrapper>{children}</Wrapper>
   </ThemeProvider>
 );
-
-Provider.propTypes = {
-  children: PropTypes.node.isRequired,
-  theme: PropTypes.object
-};
 
 Provider.defaultProps = {
   theme: {}

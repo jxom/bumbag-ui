@@ -8,5 +8,8 @@ module.exports = {
         react: 'React'
       }
     }
+  },
+  babel: {
+    presets: ['flow']
   }
 };

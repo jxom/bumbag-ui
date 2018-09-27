@@ -1,16 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import React, { type Node } from 'react';
 
 import _Column from './styled';
 
-const Column = ({ children, ...props }) => <_Column {...props}>{children}</_Column>;
-
-Column.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  spread: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
-  spreadOffset: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 'left', 'both', 'right'])
+type Props = {
+  children: Node,
+  className: string,
+  spread: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12,
+  spreadOffset: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right'
 };
+
+const Column = ({ children, className, spread, spreadOffset, ...props }: Props) => (
+  <_Column className={className} spread={spread} spreadOffset={spreadOffset} {...props}>
+    {children}
+  </_Column>
+);
 
 Column.defaultProps = {
   className: null,

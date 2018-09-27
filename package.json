@@ -14,32 +14,35 @@
     "build": "nwb build-react-component",
     "clean": "nwb clean-module",
     "develop": "nodemon -w src -x 'nwb build-react-component'",
-    "prepublish": "npm run build",
+    "prepublish": "yarn build",
+    "flow": "flow",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
-    "test": "npm run lint && jest",
+    "test": "yarn flow && yarn lint && jest",
     "docs": "docz dev",
     "build-docs": "docz build"
   },
   "dependencies": {
     "classnames": "2.2.6",
-    "docz-theme-default": "0.11.2",
-    "lodash.get": "4.4.2",
+    "lodash": "4.17.11",
     "polished": "2.0.3",
     "reakit": "0.15.1",
     "styled-tools": "1.5.1"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "devDependencies": {
     "@medipass/eslint-config-react-medipass": "8.3.6",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
     "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",
     "docz": "0.11.1",
     "eslint": "5.5.0",
+    "flow-bin": "0.81.0",
     "jest": "23.6.0",
     "jest-styled-components": "6.2.0",
     "nodemon": "1.18.4",

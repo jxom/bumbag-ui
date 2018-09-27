@@ -1,9 +1,16 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import _Spinner from './styled';
 
-const Spinner = ({ className, color, palette, size }) => (
+type Props = {
+  className?: string,
+  color?: string,
+  palette?: 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning',
+  size?: 'small' | 'default' | 'medium' | 'large'
+};
+
+const Spinner = ({ className, color, palette, size }: Props) => (
   <_Spinner
     className={className}
     color={color}
@@ -29,13 +36,6 @@ const Spinner = ({ className, color, palette, size }) => (
     </path>
   </_Spinner>
 );
-
-Spinner.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-  palette: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'warning']),
-  size: PropTypes.oneOf(['small', 'default', 'medium', 'large'])
-};
 
 Spinner.defaultProps = {
   className: null,

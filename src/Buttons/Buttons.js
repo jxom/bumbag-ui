@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import React, { type Node } from 'react';
 
 import _Buttons from './styled';
 
-const Buttons = ({ children, className, isGrouped, ...props }) => (
+type Props = {
+  children: Node,
+  className?: string,
+  isGrouped?: boolean
+};
+
+const Buttons = ({ children, className, isGrouped, ...props }: Props) => (
   <_Buttons className={className} isGrouped={isGrouped} {...props}>
     {children}
   </_Buttons>
 );
-
-Buttons.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  isGrouped: PropTypes.bool
-};
 
 Buttons.defaultProps = {
   className: null,
