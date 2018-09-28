@@ -5,7 +5,8 @@ module.exports = {
     umd: {
       global: 'bumbag',
       externals: {
-        react: 'React'
+        react: 'React',
+        'react-dom': 'ReactDOM'
       }
     }
   },
