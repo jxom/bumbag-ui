@@ -1,4 +1,5 @@
 export default {
+  dest: '/docs',
   themeConfig: {
     colors: {
       primary: '#1a9cfc'
