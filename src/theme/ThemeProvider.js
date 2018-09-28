@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import styled from 'reakit/styled';
-import Box from 'reakit/box';
+import Box from 'reakit/Box';
 import ThemeProvider from 'reakit/Provider';
 import { palette, theme } from 'styled-tools';
 

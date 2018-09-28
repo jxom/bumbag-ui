@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'reakit/styled';
+import { css } from 'reakit';
 import ThemeProvider from '../theme/ThemeProvider';
 
 const theme = {
