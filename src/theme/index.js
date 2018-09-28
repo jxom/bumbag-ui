@@ -46,5 +46,9 @@ export default (theme: ThemeConfig): ThemeConfig => ({
 
   Button: getButtonTheme(theme.button),
 
+  column: theme.column,
+  columns: theme.columns,
+  spinner: theme.spinner,
+
   ...theme
 });

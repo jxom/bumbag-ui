@@ -23,5 +23,19 @@ export type ThemeConfig = {
       medium?: string | Object,
       large?: string | Object
     }
+  },
+  column?: {
+    base?: string | Object
+  },
+  columns?: {
+    base?: string | Object
+  },
+  spinner?: {
+    base?: string | Object,
+    sizes?: {
+      small?: string | Object,
+      medium?: string | Object,
+      large?: string | Object
+    }
   }
 };

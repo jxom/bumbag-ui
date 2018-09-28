@@ -233,7 +233,97 @@ This example renders identically to the above example.
   </Columns>
 </Playground>
 
-## More to come...
+## Mobile columns
+
+By default, columns are only applied to screen widths of above **768px**. To enable columns for all viewports, set the `minBreakpoint` prop to `mobile` on `<Columns>`.
+
+<Playground>
+  <Columns minBreakpoint="mobile">
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        First column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Second column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Third column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Fourth column
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+## One line columns
+
+By default, columns are wrapped on multiple lines if necessary. To disable this, just add the `isOneLine` prop to `<Columns>` .
+
+<Playground>
+  <Columns isOneLine>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        First column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Second column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Third column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Fourth column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Fifth column
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+## Gapless
+
+To remove the gaps between columns, set the `isGapless` prop to `true` on `<Columns>`.
+
+<Playground>
+  <Columns isGapless>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        First column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Second column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Third column
+      </Box>
+    </Column>
+    <Column>
+      <Box backgroundColor="whitesmoke" padding="0.5rem">
+        Fourth column
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
 
 ## `<Column>` Props
 

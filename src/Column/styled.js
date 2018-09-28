@@ -19,8 +19,16 @@ const marginAutoOffsets = {
 const getWidth = spread => `${spread / 12 * 100}%`;
 
 const getSpreadAttributes = props => {
-  const { spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
-  if (!spread && !spreadMobile && !spreadTablet && !spreadDesktop && !spreadWidescreen && !spreadFullHD) {
+  const { minBreakpoint, spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
+  if (
+    !minBreakpoint &&
+    !spread &&
+    !spreadMobile &&
+    !spreadTablet &&
+    !spreadDesktop &&
+    !spreadWidescreen &&
+    !spreadFullHD
+  ) {
     return css`
       @media (max-width: ${theme('layout.tabletBreakpoint')}) {
         flex: none;
@@ -50,7 +58,9 @@ const getSpreadAttributes = props => {
     ${getAttributes({ spread: spreadFullHD, breakpoint: 'fullHDBreakpoint' })};
     ${getAttributes({ spread: spreadWidescreen, breakpoint: 'widescreenBreakpoint' })};
     ${getAttributes({ spread: spreadDesktop, breakpoint: 'desktopBreakpoint' })};
-    ${!spreadTablet &&
+    ${minBreakpoint !== 'tablet' &&
+      minBreakpoint !== 'mobile' &&
+      !spreadTablet &&
       !spreadMobile &&
       css`
         @media (max-width: ${theme('layout.tabletBreakpoint')}) {
@@ -58,7 +68,8 @@ const getSpreadAttributes = props => {
         }
       `};
     ${getAttributes({ spread: spreadTablet, breakpoint: 'tabletBreakpoint' })};
-    ${!spreadMobile &&
+    ${minBreakpoint !== 'mobile' &&
+      !spreadMobile &&
       css`
         @media (max-width: ${theme('layout.mobileBreakpoint')}) {
           width: 100%;
@@ -135,7 +146,12 @@ const getSpreadOffsetAttributes = props => {
 const Column = styled(Box)`
   flex: 1;
   max-width: 100%;
-  padding: ${theme('layout.gapFactor')}rem;
+  ${props =>
+    !props.isGapless
+      ? css`
+          padding: ${theme('layout.gapFactor')}rem;
+        `
+      : null};
 
   & {
     ${getSpreadAttributes};
@@ -143,6 +159,10 @@ const Column = styled(Box)`
 
   & {
     ${getSpreadOffsetAttributes};
+  }
+
+  & {
+    ${theme('column.base')};
   }
 `;
 

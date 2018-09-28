@@ -2,6 +2,7 @@
 import React, { type Node } from 'react';
 
 import type { ColumnSpread, ColumnSpreadOffset } from '../types';
+import ColumnsContext from '../Columns/ColumnsContext';
 import _Column from './styled';
 
 type Props = {
@@ -21,10 +22,47 @@ type Props = {
   spreadFullHDOffset?: ColumnSpreadOffset
 };
 
-const Column = ({ children, className, spread, spreadOffset, ...props }: Props) => (
-  <_Column className={className} spread={spread} spreadOffset={spreadOffset} {...props}>
-    {children}
-  </_Column>
+const Column = ({
+  children,
+  className,
+  spread,
+  spreadMobile,
+  spreadTablet,
+  spreadDesktop,
+  spreadWidescreen,
+  spreadFullHD,
+  spreadOffset,
+  spreadMobileOffset,
+  spreadTabletOffset,
+  spreadDesktopOffset,
+  spreadWidescreenOffset,
+  spreadFullHDOffset,
+  ...props
+}: Props) => (
+  <ColumnsContext.Consumer>
+    {({ isGapless, minBreakpoint }) => (
+      <_Column
+        className={className}
+        isGapless={isGapless}
+        minBreakpoint={minBreakpoint}
+        spread={spread}
+        spreadMobile={spreadMobile}
+        spreadTablet={spreadTablet}
+        spreadDesktop={spreadDesktop}
+        spreadWidescreen={spreadWidescreen}
+        spreadFullHD={spreadFullHD}
+        spreadOffset={spreadOffset}
+        spreadMobileOffset={spreadMobileOffset}
+        spreadTabletOffset={spreadTabletOffset}
+        spreadDesktopOffset={spreadDesktopOffset}
+        spreadWidescreenOffset={spreadWidescreenOffset}
+        spreadFullHDOffset={spreadFullHDOffset}
+        {...props}
+      >
+        {children}
+      </_Column>
+    )}
+  </ColumnsContext.Consumer>
 );
 
 Column.defaultProps = {
