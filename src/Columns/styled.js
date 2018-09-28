@@ -7,8 +7,4 @@ export default styled(Box)`
   display: flex;
   flex-wrap: wrap;
   margin: 0 -${theme('layout.gapFactor')}rem;
-
-  @media (max-width: ${theme('layout.maxMobileBreakpoint')}) {
-    display: block;
-  }
 `;

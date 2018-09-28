@@ -1,7 +1,7 @@
 // @flow
 import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
-import { type ThemeConfig } from '../types';
+import type { ThemeConfig } from '../types';
 import getButtonTheme from '../Button/theme';
 
 export const getPalette = (palette?: Object) => ({
@@ -36,7 +36,11 @@ export default (theme: ThemeConfig): ThemeConfig => ({
   global: theme.global,
   layout: {
     gapFactor: '0.5',
-    maxMobileBreakpoint: '768px',
+    mobileBreakpoint: '480px',
+    tabletBreakpoint: '768px',
+    desktopBreakpoint: '1024px',
+    widescreenBreakpoint: '1200px',
+    fullHDBreakpoint: '1440px',
     ...theme.layout
   },
 

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import { type Palette, type Size } from '../types';
+import type { Palette, Size } from '../types';
 import _Spinner from './styled';
 
 type Props = {

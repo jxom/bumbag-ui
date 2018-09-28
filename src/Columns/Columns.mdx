@@ -165,6 +165,74 @@ However, a more specific value (between `1` and `11`) can be provided and is off
   </Columns>
 </Playground>
 
+## Variable column sizes
+
+Column sizes may depend on the viewport. The `spreadMobile`, `spreadTablet`, `spreadDesktop`, `spreadWidescreen` and `spreadFullHD` props come in handy for these scenarios.
+
+- `spreadMobile` is effective for a window width smaller than **480px**.
+- `spreadTablet` is effective for a window width smaller than **768px**.
+- `spreadDesktop` is effective for a window width smaller than **1024px**.
+- `spreadWidescreen` is effective for a window width smaller than **1200px**.
+- `spreadFullHD` is effective for a window width smaller than **1440px**.
+- `spread` is effective for every viewport size, and viewports larger than **1440px**.
+
+<Playground>
+  <Columns>
+    <Column spread={10} spreadDesktop={8} spreadMobile={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        All: 10
+        <br/>
+        Desktop: 8
+        <br/>
+        Mobile: 6
+      </Box>
+    </Column>
+    <Column spread={2} spreadDesktop={4} spreadMobile={6}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+        All: 2
+        <br/>
+        Desktop: 4
+        <br/>
+        Mobile: 6
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+Variable spread offsets are also available with: `spreadMobileOffset`, `spreadTabletOffset`, `spreadDesktopOffset`, `spreadWidescreenOffset` and `spreadFullHDOffset`.
+
+<Playground>
+  <Columns>
+    <Column spread={10} spreadOffset={1} spreadDesktop={8} spreadDesktopOffset={2} spreadTablet={4} spreadTabletOffset={4}>
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem" >
+        All: 10
+        <br/>
+        Desktop: 8
+        <br/>
+        Tablet: 4
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
+If a value of `left`, `right`, or `both` is specified as a `spreadOffset`. Then this offset will apply for all variable column sizes.
+
+This example renders identically to the above example.
+
+<Playground>
+  <Columns>
+    <Column spread={10} spreadDesktop={8} spreadTablet={4} spreadOffset="both">
+      <Box backgroundColor="#112ebb" color="white" padding="0.5rem" >
+        All: 10
+        <br/>
+        Desktop: 8
+        <br/>
+        Tablet: 4
+      </Box>
+    </Column>
+  </Columns>
+</Playground>
+
 ## More to come...
 
 ## `<Column>` Props

@@ -5,7 +5,7 @@ import Box from 'reakit/box';
 import ThemeProvider from 'reakit/Provider';
 import { palette, theme } from 'styled-tools';
 
-import { type ThemeConfig } from '../types';
+import type { ThemeConfig } from '../types';
 import getTheme from './index';
 
 const Wrapper = styled(Box)`

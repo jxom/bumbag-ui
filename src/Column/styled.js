@@ -16,33 +16,133 @@ const marginAutoOffsets = {
   `
 };
 
-const getSpreadOffsetAttributes = spreadOffset => {
+const getWidth = spread => `${spread / 12 * 100}%`;
+
+const getSpreadAttributes = props => {
+  const { spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
+  if (!spread && !spreadMobile && !spreadTablet && !spreadDesktop && !spreadWidescreen && !spreadFullHD) {
+    return css`
+      @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+        flex: none;
+        width: 100%;
+      }
+    `;
+  }
+
+  const getAttributes = ({ breakpoint, spread }) => {
+    const attributes = css`
+      flex: none;
+      width: ${getWidth(spread)};
+    `;
+    if (!spread) return null;
+    if (breakpoint) {
+      return css`
+        @media (max-width: ${theme(`layout.${breakpoint}`)}) {
+          ${attributes};
+        }
+      `;
+    }
+    return attributes;
+  };
+
+  return css`
+    ${getAttributes({ spread })};
+    ${getAttributes({ spread: spreadFullHD, breakpoint: 'fullHDBreakpoint' })};
+    ${getAttributes({ spread: spreadWidescreen, breakpoint: 'widescreenBreakpoint' })};
+    ${getAttributes({ spread: spreadDesktop, breakpoint: 'desktopBreakpoint' })};
+    ${!spreadTablet &&
+      !spreadMobile &&
+      css`
+        @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+          width: 100%;
+        }
+      `};
+    ${getAttributes({ spread: spreadTablet, breakpoint: 'tabletBreakpoint' })};
+    ${!spreadMobile &&
+      css`
+        @media (max-width: ${theme('layout.mobileBreakpoint')}) {
+          width: 100%;
+        }
+      `};
+    ${getAttributes({ spread: spreadMobile, breakpoint: 'mobileBreakpoint' })};
+  `;
+};
+
+const getSpreadOffsetAttributes = props => {
+  const {
+    spreadOffset,
+    spreadMobileOffset,
+    spreadTabletOffset,
+    spreadDesktopOffset,
+    spreadWidescreenOffset,
+    spreadFullHDOffset
+  } = props;
+  if (
+    !spreadOffset &&
+    !spreadMobileOffset &&
+    !spreadTabletOffset &&
+    !spreadDesktopOffset &&
+    !spreadWidescreenOffset &&
+    !spreadFullHDOffset
+  ) {
+    return null;
+  }
+
+  const getAttributes = ({ breakpoint, spreadOffset }) => {
+    const attributes = css`
+      margin-left: ${getWidth(spreadOffset)};
+    `;
+    if (!spreadOffset) return null;
+    if (breakpoint) {
+      return css`
+        @media (max-width: ${theme(`layout.${breakpoint}`)}) {
+          ${attributes};
+        }
+      `;
+    }
+    return attributes;
+  };
+
   if (typeof spreadOffset === 'number') {
     return css`
-      margin-left: ${getWidth(spreadOffset)};
+      ${getAttributes({ spreadOffset })} /**/
+      ${getAttributes({
+        spreadOffset: spreadFullHDOffset,
+        breakpoint: 'fullHDBreakpoint'
+      })};
+      ${getAttributes({ spreadOffset: spreadWidescreenOffset, breakpoint: 'widescreenBreakpoint' })};
+      ${getAttributes({ spreadOffset: spreadDesktopOffset, breakpoint: 'desktopBreakpoint' })};
+      ${!spreadTabletOffset &&
+        !spreadMobileOffset &&
+        css`
+          @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+            margin-left: 0;
+          }
+        `};
+      ${getAttributes({ spreadOffset: spreadTabletOffset, breakpoint: 'tabletBreakpoint' })};
+      ${!spreadMobileOffset &&
+        css`
+          @media (max-width: ${theme('layout.mobileBreakpoint')}) {
+            margin-left: 0;
+          }
+        `};
+      ${getAttributes({ spreadOffset: spreadMobileOffset, breakpoint: 'mobileBreakpoint' })};
     `;
   }
   return marginAutoOffsets[spreadOffset];
 };
-
-const getWidth = spread => `${spread / 12 * 100}%`;
 
 const Column = styled(Box)`
   flex: 1;
   max-width: 100%;
   padding: ${theme('layout.gapFactor')}rem;
 
-  ${props =>
-    props.spread &&
-    css`
-      & {
-        flex: none;
-        width: ${getWidth(props.spread)};
-      }
-    `};
+  & {
+    ${getSpreadAttributes};
+  }
 
   & {
-    ${props => props.spreadOffset && getSpreadOffsetAttributes(props.spreadOffset)};
+    ${getSpreadOffsetAttributes};
   }
 `;
 

@@ -6,7 +6,7 @@ import Box from 'reakit/Box';
 import _Button from 'reakit/Button';
 import _get from 'lodash/get';
 
-import { type Palette, type Size } from '../types';
+import type { ButtonType, Palette, Size } from '../types';
 import Spinner from '../Spinner';
 
 export const SpinnerWrapper = styled(Box)`
@@ -32,7 +32,7 @@ type Props = {
   isLoading?: boolean,
   palette?: Palette,
   size?: Size,
-  type?: 'default' | 'outlined' | 'link'
+  type?: ButtonType
 };
 
 export const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }: Props) => {
