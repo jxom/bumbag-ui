@@ -1,6 +1,6 @@
 # Bumbag (WORK IN PROGRESS)
 
-<p align="center"><img src="./src/bumbag.png" width="400px"></img></p>
+<p align="center"><img src="./bumbag.png" width="400px"></img></p>
 
 ## Installing Bumbag
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import render from '../../utils/tests/render';
+import render from '../../_utils/tests/render';
 import Spinner from '../Spinner';
 import 'jest-styled-components';
 

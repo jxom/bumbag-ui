@@ -1,5 +1,5 @@
 import React from 'react';
-import render from '../../utils/tests/render';
+import render from '../../_utils/tests/render';
 import Buttons from '../Buttons';
 import Button from '../../Button';
 import 'jest-styled-components';
