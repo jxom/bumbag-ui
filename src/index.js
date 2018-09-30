@@ -12,4 +12,5 @@ export { Button } from './Button';
 export { Buttons } from './Buttons';
 export { Column } from './Column';
 export { Columns } from './Columns';
+export { Container } from './Container';
 export { Spinner } from './Spinner';

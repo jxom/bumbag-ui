@@ -8,14 +8,14 @@ const getWrapAttributes = props => {
   if (isOneLine) {
     if (minBreakpoint !== 'tablet' && minBreakpoint !== 'mobile') {
       return css`
-        @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+        @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
           flex-wrap: wrap;
         }
       `;
     }
     if (minBreakpoint !== 'mobile') {
       return css`
-        @media (max-width: ${theme('layout.mobileBreakpoint')}) {
+        @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
           flex-wrap: wrap;
         }
       `;

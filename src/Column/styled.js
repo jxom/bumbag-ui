@@ -30,7 +30,7 @@ const getSpreadAttributes = props => {
     !spreadFullHD
   ) {
     return css`
-      @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+      @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
         flex: none;
         width: 100%;
       }
@@ -45,7 +45,7 @@ const getSpreadAttributes = props => {
     if (!spread) return null;
     if (breakpoint) {
       return css`
-        @media (max-width: ${theme(`layout.${breakpoint}`)}) {
+        @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
           ${attributes};
         }
       `;
@@ -63,7 +63,7 @@ const getSpreadAttributes = props => {
       !spreadTablet &&
       !spreadMobile &&
       css`
-        @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+        @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
           width: 100%;
         }
       `};
@@ -71,7 +71,7 @@ const getSpreadAttributes = props => {
     ${minBreakpoint !== 'mobile' &&
       !spreadMobile &&
       css`
-        @media (max-width: ${theme('layout.mobileBreakpoint')}) {
+        @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
           width: 100%;
         }
       `};
@@ -106,7 +106,7 @@ const getSpreadOffsetAttributes = props => {
     if (!spreadOffset) return null;
     if (breakpoint) {
       return css`
-        @media (max-width: ${theme(`layout.${breakpoint}`)}) {
+        @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
           ${attributes};
         }
       `;
@@ -126,14 +126,14 @@ const getSpreadOffsetAttributes = props => {
       ${!spreadTabletOffset &&
         !spreadMobileOffset &&
         css`
-          @media (max-width: ${theme('layout.tabletBreakpoint')}) {
+          @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
             margin-left: 0;
           }
         `};
       ${getAttributes({ spreadOffset: spreadTabletOffset, breakpoint: 'tabletBreakpoint' })};
       ${!spreadMobileOffset &&
         css`
-          @media (max-width: ${theme('layout.mobileBreakpoint')}) {
+          @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
             margin-left: 0;
           }
         `};

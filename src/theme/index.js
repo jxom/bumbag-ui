@@ -37,12 +37,12 @@ export default (theme: ThemeConfig): ThemeConfig => ({
 
   global: theme.global,
   layout: {
-    gapFactor: '0.5',
-    mobileBreakpoint: '480px',
-    tabletBreakpoint: '768px',
-    desktopBreakpoint: '1024px',
-    widescreenBreakpoint: '1200px',
-    fullHDBreakpoint: '1440px',
+    gapFactor: 0.5,
+    mobileBreakpoint: 480,
+    tabletBreakpoint: 768,
+    desktopBreakpoint: 1024,
+    widescreenBreakpoint: 1200,
+    fullHDBreakpoint: 1440,
     ...theme.layout
   },
 
@@ -50,6 +50,10 @@ export default (theme: ThemeConfig): ThemeConfig => ({
 
   column: theme.column,
   columns: theme.columns,
+  container: {
+    fluidMargin: '0 2rem',
+    tabletMargin: '0 1rem'
+  },
   spinner: theme.spinner,
 
   ...theme

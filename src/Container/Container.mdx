@@ -1,0 +1,87 @@
+---
+name: Container
+route: /layout/container
+menu: Layout
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box, Container } from '../index';
+
+# Container
+
+## Import
+
+`import { Container } from 'bumbag'`
+
+## Basic Usage
+
+A container's max width is fixed, and varies per viewport breakpoint. To see container in action, maximise the component below and change the width of your screen.
+
+A container's max width is defined for viewport widths of **tablet (768px)** and above. For widths below **tablet (768px)**, a left and right margin is applied.
+
+<Playground>
+  <Container>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+</Playground>
+
+## Alignment
+
+By default, a container is aligned to the **center**, however its alignment can be **left** or **right** aligned with the `position` prop.
+
+To see this in action, maximise the component below and change the width of your screen.
+
+<Playground>
+  <Container align="left">
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+
+  <Container align="right" marginTop="1rem">
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+</Playground>
+
+## Fixed width
+
+A container's max width can be fixed after a certain breakpoint, meaning until that breakpoint has been reached, the width will be 100%.
+
+To see this in action, maximise the component below and change the width of your screen.
+
+<Playground>
+  <Container breakpoint="desktop">
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+
+  <Container breakpoint="mobile" position="left" marginTop="1rem">
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+</Playground>
+
+## Fluid containers
+
+A fluid container's width is always **100%**, but has a fixed left and right margin of `2rem` (2 * root font size 16px). For devices under the **tablet (768px)** viewport, the margin is `1rem`.
+
+To see this in action, maximise the component below and change the width of your screen.
+
+<Playground>
+  <Container isFluid>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Hello world!
+    </Box>
+  </Container>
+</Playground>
+
+
+## Props
+
+<PropsTable of={Container} />
