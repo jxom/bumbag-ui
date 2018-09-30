@@ -1,7 +1,5 @@
 # Bumbag
 
-<p align="center"><img src="./bumbag.png" width="400px"></img></p>
-
 ## Installing Bumbag
 
 Run the following command to install **Bumbag**:
