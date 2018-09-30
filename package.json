@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "yarn build:lib && yarn build:proxies && yarn build:docs",
+    "build": "yarn clean && yarn build:lib && yarn build:proxies && yarn build:docs",
     "build:lib": "nwb build-react-component",
     "build:docs": "docz build",
     "build:proxies": "node ./scripts/create-proxies",
