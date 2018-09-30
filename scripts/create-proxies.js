@@ -8,12 +8,12 @@ const createProxyPackage = (module, { isFile }) => {
   if (isFile) {
     modulePath = `${module}.js`;
   }
-  return `
+  return `{
   "name": "${name}/${module}",
   "private": true,
   "main": "../lib/${modulePath}",
-  "module": "../es/${modulePath}",
-`;
+  "module": "../es/${modulePath}"
+}`;
 };
 
 const createProxies = () => {
