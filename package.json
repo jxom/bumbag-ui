@@ -11,12 +11,15 @@
     "umd"
   ],
   "scripts": {
-    "build": "yarn build:lib && yarn build:docs",
+    "build": "yarn build:lib && yarn build:proxies && yarn build:docs",
     "build:lib": "nwb build-react-component",
     "build:docs": "docz build",
-    "clean": "nwb clean-module",
+    "build:proxies": "node ./scripts/create-proxies",
+    "clean": "nwb clean-module && yarn remove-proxies",
+    "remove-proxies": "node ./scripts/remove-proxies",
     "develop": "nodemon -w src -x 'nwb build-react-component'",
     "prepublish": "yarn build",
+    "postpublish": "yarn clean",
     "flow": "flow",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
@@ -52,7 +55,8 @@
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "react-testing-library": "5.1.0"
+    "react-testing-library": "5.1.0",
+    "rimraf": "2.6.2"
   },
   "author": "Jake Moxey & Dave Olsen",
   "homepage": "https://github.com/bigbellies",

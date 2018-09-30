@@ -4,6 +4,8 @@ import { palette as p } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 import getButtonTheme from '../Button/theme';
 
+export { default as ThemeProvider } from './ThemeProvider';
+
 export const getPalette = (palette?: Object) => ({
   text: lighten(0.2, 'black'),
 
