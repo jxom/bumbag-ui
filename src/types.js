@@ -8,40 +8,67 @@ export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'danger'
 
 export type Size = 'default' | 'small' | 'medium' | 'large';
 
+/* ====== START: THEMES ====== */
+export type Stylesheet = string | Object;
+export type ButtonThemeConfig = {
+  base?: Stylesheet,
+  disabled?: Stylesheet,
+  link?: Stylesheet,
+  loading?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
+export type ColumnThemeConfig = {
+  base?: Stylesheet
+};
+export type ColumnsThemeConfig = {
+  base?: Stylesheet
+};
+export type ContainerThemeConfig = {
+  base?: Stylesheet,
+  fluidMargin?: string,
+  tabletMargin?: string
+};
+export type HeadingThemeConfig = {
+  base?: Stylesheet,
+  h1?: Stylesheet,
+  h2?: Stylesheet,
+  h3?: Stylesheet,
+  h4?: Stylesheet,
+  h5?: Stylesheet,
+  h6?: Stylesheet,
+  subHeading?: Stylesheet
+};
+export type LayoutThemeConfig = {
+  mobileBreakpoint: number,
+  tabletBreakpoint: number,
+  desktopBreakpoint: number,
+  widescreenBreakpoint: number,
+  fullHDBreakpoint: number,
+  gapFactor: number
+};
+export type SpinnerThemeConfig = {
+  base?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type ThemeConfig = {
   palette?: Object,
 
-  global?: string | Object,
+  global?: Stylesheet,
   layout?: {},
 
-  button?: {
-    base?: string | Object,
-    disabled?: string | Object,
-    link?: string | Object,
-    loading?: string | Object,
-    sizes?: {
-      small?: string | Object,
-      medium?: string | Object,
-      large?: string | Object
-    }
-  },
-  column?: {
-    base?: string | Object
-  },
-  columns?: {
-    base?: string | Object
-  },
-  container: {
-    base?: string | Object,
-    fluidMargin?: string,
-    tabletMargin?: string
-  },
-  spinner?: {
-    base?: string | Object,
-    sizes?: {
-      small?: string | Object,
-      medium?: string | Object,
-      large?: string | Object
-    }
-  }
+  button?: ButtonThemeConfig,
+  column?: ColumnThemeConfig,
+  columns?: ColumnsThemeConfig,
+  container: ContainerThemeConfig,
+  heading: HeadingThemeConfig,
+  spinner?: SpinnerThemeConfig
 };
+/* ====== END: THEMES ====== */

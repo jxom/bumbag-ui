@@ -2,7 +2,9 @@
 import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
 import type { ThemeConfig } from '../types';
+
 import getButtonTheme from '../Button/theme';
+import getHeadingTheme from '../Heading/theme';
 
 export { default as ThemeProvider } from './ThemeProvider';
 
@@ -47,12 +49,14 @@ export default (theme: ThemeConfig): ThemeConfig => ({
   },
 
   Button: getButtonTheme(theme.button),
+  Heading: getHeadingTheme(theme.heading),
 
   column: theme.column,
   columns: theme.columns,
   container: {
     fluidMargin: '0 2rem',
-    tabletMargin: '0 1rem'
+    tabletMargin: '0 1rem',
+    ...theme.container
   },
   spinner: theme.spinner,
 

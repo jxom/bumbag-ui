@@ -12,6 +12,7 @@ const Wrapper = styled(Box)`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,62 @@
+---
+name: Heading
+route: /typography/heading
+menu: Typography
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box, Heading } from '../index';
+
+# Heading
+
+## Import
+
+`import { Heading } from 'bumbag'`
+
+## Basic Usage
+
+By default, `<Heading>` renders a `<h1>` with default margins applied.
+
+<Playground>
+  <Heading>Heading 1</Heading>
+  <p>Hello world!</p>
+</Playground>
+
+## Other headers
+
+Use the `as` prop to change from the default `h1` element to `h2`, `h3`, `h4`, `h5`, `h6`, `span`, or others.
+
+<Playground>
+  <Heading>Heading 1</Heading>
+  <Heading as="h2">Heading 2</Heading>
+  <Heading as="h3">Heading 3</Heading>
+  <Heading as="h4">Heading 4</Heading>
+  <Heading as="h5">Heading 5</Heading>
+  <Heading as="h6">Heading 6</Heading>
+</Playground>
+
+## Subheadings
+
+Subheading's are the same size as a normal heading, however have a slightly lower font weight.
+
+<Playground>
+  <Heading isSubHeading>Heading 1</Heading>
+  <Heading as="h2" isSubHeading>Heading 2</Heading>
+  <Heading as="h3" isSubHeading>Heading 3</Heading>
+  <Heading as="h4" isSubHeading>Heading 4</Heading>
+  <Heading as="h5" isSubHeading>Heading 5</Heading>
+  <Heading as="h6" isSubHeading>Heading 6</Heading>
+</Playground>
+
+A header can also be easily grouped with a subheading
+
+<Playground>
+  <Heading>Jake's Bumbag</Heading>
+  <Heading as="h3" isSubHeading>Simply the best</Heading>
+  <Heading as="h3">Jake's Bumbag</Heading>
+  <Heading as="h5" isSubHeading>Simply the best</Heading>
+</Playground>
+
+## Props
+
+<PropsTable of={Heading} />

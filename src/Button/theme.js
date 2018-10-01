@@ -1,8 +1,10 @@
+// @flow
 import { css } from 'reakit/styled';
 import { palette } from 'styled-tools';
 import { darken } from 'polished';
+import type { ButtonThemeConfig, Stylesheet } from '../types';
 
-const getSizeAttributes = (sizesOverides = {}) => ({
+const getSizeAttributes = (sizesOverides: Object = {}) => ({
   small: css`
     & {
       font-size: 0.8em;
@@ -34,7 +36,7 @@ const getSizeAttributes = (sizesOverides = {}) => ({
   `
 });
 
-const getLinkAttributes = linkOverrides => css`
+const getLinkAttributes = (linkOverrides: Stylesheet) => css`
   & {
     border: 0;
     background: unset;
@@ -51,7 +53,7 @@ const getLinkAttributes = linkOverrides => css`
     ${linkOverrides};
   }
 `;
-const getOutlinedAttributes = outlinedOverrides => css`
+const getOutlinedAttributes = (outlinedOverrides: Stylesheet) => css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -66,7 +68,7 @@ const getOutlinedAttributes = outlinedOverrides => css`
   }
 `;
 
-const getDisabledAttributes = disabledOverrides => css`
+const getDisabledAttributes = (disabledOverrides: Stylesheet) => css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
@@ -86,7 +88,7 @@ const interactiveAttributes = css`
     background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
-const getLoadingAttributes = loadingOverrides => css`
+const getLoadingAttributes = (loadingOverrides: Stylesheet) => css`
   & {
     cursor: not-allowed;
 
@@ -106,7 +108,7 @@ export default ({
   loading: loadingOverrides,
   outlined: outlinedOverrides,
   sizes: sizesOverides
-} = {}) => css`
+}: ButtonThemeConfig = {}): Stylesheet => css`
   align-items: center;
   background-color: ${palette()};
   border: 1px solid ${props => darken(0.2, palette()(props))};
