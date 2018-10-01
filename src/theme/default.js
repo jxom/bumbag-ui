@@ -57,6 +57,7 @@ export default ({ overrides }: { overrides: ThemeConfig }): ThemeConfig => ({
     ...overrides.container
   },
   spinner: overrides.spinner,
+  text: overrides.text,
 
   ...overrides
 });

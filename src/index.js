@@ -10,3 +10,4 @@ export * from './Columns';
 export * from './Container';
 export * from './Heading';
 export * from './Spinner';
+export * from './Text';

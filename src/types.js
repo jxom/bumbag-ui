@@ -61,6 +61,9 @@ export type SpinnerThemeConfig = {
     large?: Stylesheet
   }
 };
+export type TextThemeConfig = {
+  base?: Stylesheet
+};
 export type ThemeConfig = {
   palette?: Object,
 
@@ -70,8 +73,9 @@ export type ThemeConfig = {
   button?: ButtonThemeConfig,
   column?: ColumnThemeConfig,
   columns?: ColumnsThemeConfig,
-  container: ContainerThemeConfig,
-  heading: HeadingThemeConfig,
-  spinner?: SpinnerThemeConfig
+  container?: ContainerThemeConfig,
+  heading?: HeadingThemeConfig,
+  spinner?: SpinnerThemeConfig,
+  text?: TextThemeConfig
 };
 /* ====== END: THEMES ====== */

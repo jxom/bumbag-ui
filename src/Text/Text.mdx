@@ -1,0 +1,54 @@
+---
+name: Text
+route: /typography/text
+menu: Typography
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Text from './index';
+
+# Text
+
+## Import
+
+`import { Text } from 'bumbag'`
+
+## Basic Usage
+
+The `<Text>` component renders a `<span>` with basic reset styles by default.
+
+<Playground>
+  <Text>Hello world!</Text>
+</Playground>
+
+> Remember, you can also specify different colors with the `palette` prop.
+
+<Playground>
+  <Text palette="success">Hello world!</Text><br />
+  <Text palette="danger">Hello world!</Text>
+</Playground>
+
+## Other elements
+
+<Playground>
+  <Text as="strong">Bold</Text><br />
+  <Text as="i">Italic</Text><br />
+  <Text as="u">Underline</Text><br />
+  <Text as="abbr">I18N</Text><br />
+  <Text as="cite">Citation</Text><br />
+  <Text as="code">Hello world</Text><br />
+  <Text as="del">Deleted</Text><br />
+  <Text as="em">Emphasis</Text><br />
+  <Text as="ins">Inserted</Text><br />
+  <Text as="kbd">Ctrl + C</Text><br />
+  <Text as="mark">Highlighted</Text><br />
+  <Text as="s">Strikethrough</Text><br />
+  <Text as="samp">Sample</Text><br />
+  Text<Text as="sub">sub</Text><br />
+  Text<Text as="sup">sup</Text>
+</Playground>
+
+## Props
+
+<PropsTable of={Text} />
