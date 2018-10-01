@@ -1,5 +1,6 @@
 // @flow
 import { css } from 'reakit/styled';
+import { theme } from 'styled-tools';
 import type { HeadingThemeConfig, Stylesheet } from '../types';
 
 const getSubHeadingAttributes = ({ subHeadingOverrides }: { subHeadingOverrides: Stylesheet } = {}) => props => {
@@ -39,30 +40,45 @@ export default ({
 
   h1& {
     font-size: 3rem;
+    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+      font-size: 2rem;
+    }
     & {
       ${h1Overrides};
     }
   }
   h2& {
     font-size: 2.5rem;
+    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+      font-size: 1.8rem;
+    }
     & {
       ${h2Overrides};
     }
   }
   h3& {
     font-size: 2rem;
+    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+      font-size: 1.6rem;
+    }
     & {
       ${h3Overrides};
     }
   }
   h4& {
     font-size: 1.5rem;
+    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+      font-size: 1.4rem;
+    }
     & {
       ${h4Overrides};
     }
   }
   h5& {
     font-size: 1.25rem;
+    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+      font-size: 1.2rem;
+    }
     & {
       ${h5Overrides};
     }
