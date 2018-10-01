@@ -1,5 +1,7 @@
 # Bumbag
 
+> Note: Bumbag is extremely unstable at the moment and is still work in progress - meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
+
 ## Installing Bumbag
 
 Run the following command to install **Bumbag**:
