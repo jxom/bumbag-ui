@@ -5,6 +5,7 @@ import _Container from './styled';
 
 type Props = {
   align?: 'left' | 'right' | 'center',
+  as?: any,
   breakpoint?: Breakpoint,
   children: Node,
   className?: string,
@@ -19,6 +20,7 @@ const Container = ({ align, children, className, ...props }: Props) => (
 
 Container.defaultProps = {
   align: 'center',
+  as: null,
   breakpoint: null,
   className: null,
   isFluid: false

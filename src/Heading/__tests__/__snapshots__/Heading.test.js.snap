@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly for a basic heading 1`] = `
 .c1 {
   margin: unset;
   padding: unset;
@@ -39,45 +39,55 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.c2 path {
-  fill: #112ebb;
+.heading.c2 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+h1.c2 {
+  font-size: 3rem;
+}
+
+h2.c2 {
+  font-size: 2.5rem;
+}
+
+h3.c2 {
+  font-size: 2rem;
+}
+
+h4.c2 {
+  font-size: 1.5rem;
+}
+
+h5.c2 {
+  font-size: 1.25rem;
+}
+
+h6.c2 {
+  font-size: 1rem;
 }
 
 <div
   class="c0 c1"
 >
-  <svg
-    class="c2"
-    color=""
-    version="1.1"
-    viewBox="0 0 50 50"
-    x="0px"
-    xml:space="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    y="0px"
+  <h1
+    class="heading c2 c1"
   >
-    <path
-      d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
-    >
-      <animatetransform
-        attributeName="transform"
-        attributeType="xml"
-        dur="0.6s"
-        from="0 25 25"
-        repeatCount="indefinite"
-        to="360 25 25"
-        type="rotate"
-      />
-    </path>
-  </svg>
+    test
+  </h1>
 </div>
 `;
 
-exports[`renders correctly when a color prop is set 1`] = `
+exports[`renders correctly for a heading of a different element 1`] = `
 .c1 {
   margin: unset;
   padding: unset;
@@ -116,45 +126,55 @@ exports[`renders correctly when a color prop is set 1`] = `
 }
 
 .c2 {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.c2 path {
-  fill: red;
+.heading.c2 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+h1.c2 {
+  font-size: 3rem;
+}
+
+h2.c2 {
+  font-size: 2.5rem;
+}
+
+h3.c2 {
+  font-size: 2rem;
+}
+
+h4.c2 {
+  font-size: 1.5rem;
+}
+
+h5.c2 {
+  font-size: 1.25rem;
+}
+
+h6.c2 {
+  font-size: 1rem;
 }
 
 <div
   class="c0 c1"
 >
-  <svg
-    class="c2"
-    color="red"
-    version="1.1"
-    viewBox="0 0 50 50"
-    x="0px"
-    xml:space="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    y="0px"
+  <h3
+    class="heading c2 c1"
   >
-    <path
-      d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
-    >
-      <animatetransform
-        attributeName="transform"
-        attributeType="xml"
-        dur="0.6s"
-        from="0 25 25"
-        repeatCount="indefinite"
-        to="360 25 25"
-        type="rotate"
-      />
-    </path>
-  </svg>
+    test
+  </h3>
 </div>
 `;
 
-exports[`renders correctly when a palette prop is set 1`] = `
+exports[`renders correctly for a heading with a subheading 1`] = `
 .c1 {
   margin: unset;
   padding: unset;
@@ -193,45 +213,104 @@ exports[`renders correctly when a palette prop is set 1`] = `
 }
 
 .c2 {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.c2 path {
-  fill: #112ebb;
+.heading.c2 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+h1.c2 {
+  font-size: 3rem;
+}
+
+h2.c2 {
+  font-size: 2.5rem;
+}
+
+h3.c2 {
+  font-size: 2rem;
+}
+
+h4.c2 {
+  font-size: 1.5rem;
+}
+
+h5.c2 {
+  font-size: 1.25rem;
+}
+
+h6.c2 {
+  font-size: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c3 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+h1.c3 {
+  font-size: 3rem;
+}
+
+h2.c3 {
+  font-size: 2.5rem;
+}
+
+h3.c3 {
+  font-size: 2rem;
+}
+
+h4.c3 {
+  font-size: 1.5rem;
+}
+
+h5.c3 {
+  font-size: 1.25rem;
+}
+
+h6.c3 {
+  font-size: 1rem;
+}
+
+.c3 {
+  font-weight: 500;
 }
 
 <div
   class="c0 c1"
 >
-  <svg
-    class="c2"
-    color=""
-    version="1.1"
-    viewBox="0 0 50 50"
-    x="0px"
-    xml:space="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    y="0px"
-  >
-    <path
-      d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+  <div>
+    <h3
+      class="heading c2 c1"
     >
-      <animatetransform
-        attributeName="transform"
-        attributeType="xml"
-        dur="0.6s"
-        from="0 25 25"
-        repeatCount="indefinite"
-        to="360 25 25"
-        type="rotate"
-      />
-    </path>
-  </svg>
+      heading
+    </h3>
+    <h5
+      class="sub-heading c3 c1"
+    >
+      subheading
+    </h5>
+  </div>
 </div>
 `;
 
-exports[`renders correctly when a size prop is set 1`] = `
+exports[`renders correctly for a subheading 1`] = `
 .c1 {
   margin: unset;
   padding: unset;
@@ -270,45 +349,54 @@ exports[`renders correctly when a size prop is set 1`] = `
 }
 
 .c2 {
-  width: 1.5rem;
-  height: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c2 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+h1.c2 {
+  font-size: 3rem;
+}
+
+h2.c2 {
+  font-size: 2.5rem;
+}
+
+h3.c2 {
+  font-size: 2rem;
+}
+
+h4.c2 {
+  font-size: 1.5rem;
+}
+
+h5.c2 {
+  font-size: 1.25rem;
+}
+
+h6.c2 {
+  font-size: 1rem;
 }
 
 .c2 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c2 path {
-  fill: #112ebb;
+  font-weight: 500;
 }
 
 <div
   class="c0 c1"
 >
-  <svg
-    class="c2"
-    color=""
-    version="1.1"
-    viewBox="0 0 50 50"
-    x="0px"
-    xml:space="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    y="0px"
+  <h3
+    class="sub-heading c2 c1"
   >
-    <path
-      d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
-    >
-      <animatetransform
-        attributeName="transform"
-        attributeType="xml"
-        dur="0.6s"
-        from="0 25 25"
-        repeatCount="indefinite"
-        to="360 25 25"
-        type="rotate"
-      />
-    </path>
-  </svg>
+    test
+  </h3>
 </div>
 `;

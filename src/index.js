@@ -1,4 +1,4 @@
-export * from './primitives'
+export * from './primitives';
 
 export * from './theme';
 export * from './ThemeProvider';

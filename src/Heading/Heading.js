@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import _Heading from 'reakit/Heading';
 
 type Props = {
+  as?: any,
   children: Node,
   className?: string,
   isSubHeading?: boolean
@@ -24,6 +25,7 @@ const Heading = ({ children, className, isSubHeading, ...props }: Props) => (
 );
 
 Heading.defaultProps = {
+  as: null,
   className: null,
   isSubHeading: false
 };

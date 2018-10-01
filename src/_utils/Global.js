@@ -1,7 +1,7 @@
 // @flow
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
-import { palette, theme } from 'styled-tools'
+import { palette, theme } from 'styled-tools';
 
 export default styled(Box)`
   box-sizing: border-box;
