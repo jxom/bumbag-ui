@@ -5,13 +5,13 @@ export { default as Flex } from 'reakit/Flex';
 export { default as InlineFlex } from 'reakit/InlineFlex';
 export { default as Grid } from 'reakit/Grid';
 
-export { default as theme } from './theme';
-export { default as ThemeProvider } from './theme/ThemeProvider';
+export * from './theme';
+export * from './ThemeProvider';
 
-export { Button } from './Button';
-export { Buttons } from './Buttons';
-export { Column } from './Column';
-export { Columns } from './Columns';
-export { Container } from './Container';
-export { Heading } from './Heading';
-export { Spinner } from './Spinner';
+export * from './Button';
+export * from './Buttons';
+export * from './Column';
+export * from './Columns';
+export * from './Container';
+export * from './Heading';
+export * from './Spinner';

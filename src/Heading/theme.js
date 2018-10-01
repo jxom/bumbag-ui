@@ -26,10 +26,11 @@ export default ({
   subHeading: subHeadingOverrides
 }: HeadingThemeConfig = {}): Stylesheet => css`
   font-weight: bold;
+  line-height: 1.2;
   margin-bottom: 1rem;
 
   .heading& + .sub-heading {
-    margin-top: -1.5rem;
+    margin-top: -1rem;
   }
 
   &:last-child {

@@ -1,13 +1,15 @@
 import React from 'react';
 import { css } from 'reakit';
-import ThemeProvider from '../theme/ThemeProvider';
+import ThemeProvider from '../ThemeProvider';
 
 const theme = {
-  global: css`
-    li {
-      margin-bottom: 0.5rem;
-    }
-  `
+  global: {
+    base: css`
+      li {
+        margin-bottom: 0.5rem;
+      }
+    `
+  }
 };
 
 const Wrapper = ({ children }: Object) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;

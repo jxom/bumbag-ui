@@ -32,6 +32,9 @@ export type ContainerThemeConfig = {
   fluidMargin?: string,
   tabletMargin?: string
 };
+export type GlobalThemeConfig = {
+  base?: Stylesheet
+};
 export type HeadingThemeConfig = {
   base?: Stylesheet,
   h1?: Stylesheet,
@@ -61,7 +64,7 @@ export type SpinnerThemeConfig = {
 export type ThemeConfig = {
   palette?: Object,
 
-  global?: Stylesheet,
+  global?: GlobalThemeConfig,
   layout?: {},
 
   button?: ButtonThemeConfig,
