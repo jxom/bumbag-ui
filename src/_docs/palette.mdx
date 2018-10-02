@@ -1,0 +1,103 @@
+---
+name: Palette
+order: 1
+route: /palette
+---
+
+import Columns from '../Columns';
+import Column from '../Column'
+import PaletteColor from './PaletteColor';
+
+# Palette
+
+The palette is the main color set for Bumbag.
+
+<Columns marginTop="2rem">
+  <Column spread={3}>
+    <PaletteColor palette="text" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="white" border="1px solid grey" />
+  </Column>
+</Columns>
+<Columns marginTop="3rem">
+  <Column spread={3}>
+    <PaletteColor palette="default" border="1px solid grey" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="primary" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="secondary" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="success" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="danger" />
+  </Column>
+  <Column spread={3}>
+    <PaletteColor palette="warning" />
+  </Column>
+</Columns>
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  text: string,
+
+  white: string,
+
+  default: string,
+  defaultInverted: string,
+
+  primary: string,
+  primaryInverted: string,
+
+  secondary: string,
+  secondaryInverted: string,
+
+  success: string,
+  successInverted: string,
+
+  danger: string,
+  dangerInverted: string,
+
+  warning: string,
+  warningInverted: string,
+}
+```
+
+### Default
+
+```jsx
+import { lighten } from 'polished';
+import { p as palette } from 'styled-tools';
+
+{
+  text: lighten(0.2, 'black'),
+
+  white: 'white',
+
+  default: darken(0.01, 'white'),
+  defaultInverted: p('text'),
+
+  primary: '#112ebb',
+  primaryInverted: p('white'),
+
+  secondary: '#1d67fc',
+  secondaryInverted: p('white'),
+
+  success: '#007d04',
+  successInverted: p('white'),
+
+  danger: '#d60027',
+  dangerInverted: p('white'),
+
+  warning: '#ffb300',
+  warningInverted: p('text'),
+}
+```

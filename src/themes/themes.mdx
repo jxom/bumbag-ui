@@ -5,6 +5,134 @@ route: /theming
 
 # Theming
 
-### Docs for theming coming soon 😉
+Bumbag can be extensively themed to meet your requirements. You can either **override the default Bumbag theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
-or just read the source code... hehe
+## Overriding the default theme
+
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
+
+[Click here](https://github.com/bigbellies/bumbag/blob/master/src/themes/default.js) to see the default theme.
+
+### Example
+
+```jsx
+import { ThemeProvider, css } from 'bumbag';
+import { lighten } from 'polished';
+
+const theme = {
+  global: css`
+    font-family: 'Comic Sans MS'
+  `,
+  palette: {
+    primary: lighten(0.2, 'blue')
+  },
+  layout: {
+    mobileBreakpoint: 520,
+    tabletBreakpoint: 960
+  },
+  button: {
+    disabled: css`
+      opacity: 0.2
+    `
+  },
+  text: css`
+    font-weight: 300;
+  `
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+## Creating your own theme
+
+If you decide to not use the default Bumbag theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+
+### Example
+
+```jsx
+import { ThemeProvider, defaultTheme } from 'bumbag';
+
+const App = () => (
+  <ThemeProvider isStandalone theme={defaultTheme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+
+## Theme Config Schema
+
+```jsx
+{
+  // Core
+  global: GlobalThemeConfig,
+  palette: PaletteThemeConfig,
+  layout: LayoutThemeConfig,
+
+  // Components
+  blockquote: BlockquoteThemeConfig,
+  button: ButtonThemeConfig,
+  column: ColumnThemeConfig,
+  columns: ColumnsThemeConfig,
+  container: ContainerThemeConfig,
+  heading: HeadingThemeConfig,
+  paragraph: ParagraphThemeConfig,
+  spinner: SpinnerThemeConfig,
+  text: TextThemeConfig
+}
+```
+Core:
+
+- [GlobalThemeConfig](#globalthemeconfig)
+- [PaletteThemeConfig](/palette#theming)
+- [LayoutThemeConfig](#layoutthemeconfig)
+
+Components:
+
+- [BlockquoteThemeConfig]()
+- [ButtonThemeConfig]()
+- [ColumnThemeConfig]()
+- [ColumnsThemeConfig]()
+- [ContainerThemeConfig]()
+- [HeadingThemeConfig]()
+- [ParagraphThemeConfig]()
+- [SpinnerThemeConfig]()
+- [TextThemeConfig]()
+
+### GlobalThemeConfig
+
+```jsx
+{
+  base: string | Object
+}
+```
+
+### LayoutThemeConfig
+
+```jsx
+{
+  mobileBreakpoint: number,
+  tabletBreakpoint: number,
+  desktopBreakpoint: number,
+  widescreenBreakpoint: number,
+  fullHDBreakpoint: number,
+  gapFactor: number
+}
+```
+
+#### Default
+
+```jsx
+{
+  mobileBreakpoint: 480,
+  tabletBreakpoint: 768,
+  desktopBreakpoint: 1024,
+  widescreenBreakpoint: 1200,
+  fullHDBreakpoint: 1440,
+  gapFactor: 0.5
+}
+```
