@@ -10,7 +10,7 @@ type Props = {
   children: Node,
   className?: string,
   isSubHeading?: boolean,
-  palette: Palette
+  palette?: Palette
 };
 
 const Heading = ({ children, className, isSubHeading, ...props }: Props) => (

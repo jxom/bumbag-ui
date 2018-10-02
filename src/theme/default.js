@@ -3,8 +3,10 @@ import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
+import getBlockquoteTheme from '../Blockquote/theme';
 import getButtonTheme from '../Button/theme';
 import getHeadingTheme from '../Heading/theme';
+import getParagraphTheme from '../Paragraph/theme';
 
 export const getPalette = (palette?: Object) => ({
   text: lighten(0.2, 'black'),
@@ -46,8 +48,10 @@ export default ({ overrides }: { overrides: ThemeConfig }): ThemeConfig => ({
     ...overrides.layout
   },
 
+  Blockquote: getBlockquoteTheme(overrides.blockquote),
   Button: getButtonTheme(overrides.button),
   Heading: getHeadingTheme(overrides.heading),
+  Paragraph: getParagraphTheme(overrides.paragraph),
 
   column: overrides.column,
   columns: overrides.columns,

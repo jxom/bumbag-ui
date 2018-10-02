@@ -10,6 +10,9 @@ export type Size = 'default' | 'small' | 'medium' | 'large';
 
 /* ====== START: THEMES ====== */
 export type Stylesheet = string | Object;
+export type BlockquoteThemeConfig = {
+  base?: Stylesheet
+};
 export type ButtonThemeConfig = {
   base?: Stylesheet,
   disabled?: Stylesheet,
@@ -53,6 +56,9 @@ export type LayoutThemeConfig = {
   fullHDBreakpoint: number,
   gapFactor: number
 };
+export type ParagraphThemeConfig = {
+  base?: Stylesheet
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -70,11 +76,13 @@ export type ThemeConfig = {
   global?: GlobalThemeConfig,
   layout?: {},
 
+  blockquote?: BlockquoteThemeConfig,
   button?: ButtonThemeConfig,
   column?: ColumnThemeConfig,
   columns?: ColumnsThemeConfig,
   container?: ContainerThemeConfig,
   heading?: HeadingThemeConfig,
+  paragraph?: ParagraphThemeConfig,
   spinner?: SpinnerThemeConfig,
   text?: TextThemeConfig
 };

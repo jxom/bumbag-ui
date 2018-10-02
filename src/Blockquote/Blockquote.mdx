@@ -1,0 +1,56 @@
+---
+name: Blockquote
+route: /typography/blockquote
+menu: Typography
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Text from '../Text';
+import Paragraph from '../Paragraph';
+import Blockquote from './index';
+
+# Blockquote
+
+## Import
+
+`import { Blockquote } from 'bumbag'`
+
+## Basic Usage
+
+`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
+
+<Playground>
+  <Blockquote>
+    <Paragraph marginBottom="1rem">"Out here, survival is the name of the game. Only it's not a game; it's deadly serious."</Paragraph>
+    <Text as="cite">- Russell Coight</Text>
+  </Blockquote>
+  <Blockquote backgroundColor="whitesmoke" marginTop="1rem">
+    <Paragraph marginBottom="1rem">"Out here, survival is the name of the game. Only it's not a game; it's deadly serious."</Paragraph>
+    <Text as="cite">- Russell Coight</Text>
+  </Blockquote>
+</Playground>
+
+## Border styling
+
+The left border can be modified using the primitive style props:
+
+<Playground>
+  <Blockquote borderColor="blue">
+    <Paragraph marginBottom="1rem">"Out here, survival is the name of the game. Only it's not a game; it's deadly serious."</Paragraph>
+    <Text as="cite">- Russell Coight</Text>
+  </Blockquote>
+</Playground>
+
+Or you can hide the border:
+
+<Playground>
+  <Blockquote border="none">
+    <Paragraph marginBottom="1rem">"Out here, survival is the name of the game. Only it's not a game; it's deadly serious."</Paragraph>
+    <Text as="cite">- Russell Coight</Text>
+  </Blockquote>
+</Playground>
+
+## Props
+
+<PropsTable of={Blockquote} />
