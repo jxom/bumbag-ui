@@ -23,11 +23,6 @@ const getResponsiveAttributes = props => {
       & {
         max-width: ${theme(`layout.${breakpoint}Breakpoint`)}px;
       }
-
-      @media (max-width: ${theme(`layout.${breakpoint}Breakpoint`)}px) {
-        max-width: 100%;
-        width: 100%;
-      }
     `;
   }
   return css`
