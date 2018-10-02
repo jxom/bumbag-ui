@@ -1,0 +1,20 @@
+// @flow
+import React, { type Node } from 'react';
+import _Link from 'reakit/Link';
+
+type Props = {
+  children: Node,
+  className?: string
+};
+
+const Link = ({ children, className, ...props }: Props) => (
+  <_Link className={className} {...props}>
+    {children}
+  </_Link>
+);
+
+Link.defaultProps = {
+  className: null
+};
+
+export default Link;

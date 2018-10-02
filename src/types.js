@@ -56,6 +56,9 @@ export type LayoutThemeConfig = {
   fullHDBreakpoint: number,
   gapFactor: number
 };
+export type LinkThemeConfig = {
+  base?: Stylesheet
+};
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
@@ -82,6 +85,7 @@ export type ThemeConfig = {
   columns?: ColumnsThemeConfig,
   container?: ContainerThemeConfig,
   heading?: HeadingThemeConfig,
+  link?: LinkThemeConfig,
   paragraph?: ParagraphThemeConfig,
   spinner?: SpinnerThemeConfig,
   text?: TextThemeConfig

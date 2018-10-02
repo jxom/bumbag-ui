@@ -44,7 +44,6 @@ export default styled(Box)`
     vertical-align: baseline;
   }
 
-  a&,
   ins&,
   u& {
     text-decoration-skip: ink edges;

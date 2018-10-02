@@ -13,6 +13,7 @@ export default ({
   columns,
   container,
   heading,
+  link,
   paragraph,
   spinner,
   text,
@@ -65,6 +66,7 @@ export default ({
     ...container
   },
   heading,
+  link,
   paragraph,
   spinner,
   text,
