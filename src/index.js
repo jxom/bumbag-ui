@@ -1,6 +1,6 @@
 export * from './primitives';
 
-export * from './theme';
+export * from './themes';
 export * from './ThemeProvider';
 
 export * from './Blockquote';

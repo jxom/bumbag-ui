@@ -74,7 +74,7 @@ export type ThemeConfig = {
   palette?: Object,
 
   global?: GlobalThemeConfig,
-  layout?: {},
+  layout?: LayoutThemeConfig,
 
   blockquote?: BlockquoteThemeConfig,
   button?: ButtonThemeConfig,
