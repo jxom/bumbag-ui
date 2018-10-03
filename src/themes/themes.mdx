@@ -20,9 +20,11 @@ import { ThemeProvider, css } from 'bumbag';
 import { lighten } from 'polished';
 
 const theme = {
-  global: css`
-    font-family: 'Comic Sans MS'
-  `,
+  global: {
+    base: css`
+      font-family: 'Comic Sans MS'
+    `
+  },
   palette: {
     primary: lighten(0.2, 'blue')
   },
@@ -57,7 +59,7 @@ If you decide to not use the default Bumbag theme and roll out your own, just ad
 import { ThemeProvider, defaultTheme } from 'bumbag';
 
 const App = () => (
-  <ThemeProvider isStandalone theme={defaultTheme}>
+  <ThemeProvider isStandalone theme={defaultTheme()}>
     // ... your app
   </ThemeProvider>
 );
