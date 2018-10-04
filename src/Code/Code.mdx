@@ -40,22 +40,30 @@ A code block can be rendered by setting the `isBlock` prop. This will wrap the c
 The `<HighlighedCode>` component uses [Prism](https://prismjs.com/) under the hood. To highlight a language, specify the `lang` prop.
 
 <Playground>
-  <HighlightedCode isBlock lang="javascript">
-  {`function log(message) {
-    console.log(message);
-  }`}
+  <HighlightedCode lang="javascript">
+  {`console.log('Hello world')`}
   </HighlightedCode>
-  <HighlightedCode isBlock lang="html">
+  <HighlightedCode isBlock lang="html" marginTop="2rem">
   {`<body>
     <div class="content">Hello world</div>
   </body>`}
   </HighlightedCode>
 </Playground>
 
-You can also pass a `showLabel` prop to show a label of the language in the top right corner.
+You can also pass a `showLabel` prop to show a label of the language in the top right corner:
 
 <Playground>
   <HighlightedCode isBlock lang="javascript" showLabel>
+  {`function log(message) {
+    console.log(message);
+  }`}
+  </HighlightedCode>
+</Playground>
+
+and show line numbers with `showLineNumbers`:
+
+<Playground>
+  <HighlightedCode isBlock lang="javascript" showLineNumbers>
   {`function log(message) {
     console.log(message);
   }`}

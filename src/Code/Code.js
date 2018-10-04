@@ -6,8 +6,7 @@ type Props = {
   children: Node,
   className?: string,
   codeClassName?: string,
-  isBlock?: boolean,
-  lang: string
+  isBlock?: boolean
 };
 
 const Code = ({ children, className, codeClassName, isBlock, ...props }: Props) => (
@@ -19,8 +18,7 @@ const Code = ({ children, className, codeClassName, isBlock, ...props }: Props) 
 Code.defaultProps = {
   className: null,
   codeClassName: null,
-  isBlock: false,
-  lang: null
+  isBlock: false
 };
 
 export default Code;

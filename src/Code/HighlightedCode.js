@@ -34,7 +34,8 @@ type Props = {
   codeClassName?: string,
   isBlock?: boolean,
   lang: string,
-  showLabel?: boolean
+  showLabel?: boolean,
+  showLineNumbers?: boolean
 };
 
 export default class Code extends PureComponent<Props> {
@@ -43,7 +44,8 @@ export default class Code extends PureComponent<Props> {
     codeClassName: null,
     isBlock: false,
     lang: null,
-    showLabel: false
+    showLabel: false,
+    showLineNumbers: false
   };
 
   componentDidMount = () => {
@@ -52,17 +54,17 @@ export default class Code extends PureComponent<Props> {
   };
 
   render = () => {
-    const { children, className, codeClassName, isBlock, lang, showLabel, ...props } = this.props;
+    const { children, className, codeClassName, isBlock, lang, showLabel, showLineNumbers, ...props } = this.props;
     return (
-      <Wrapper lang={lang} showLabel={showLabel}>
+      <Wrapper lang={lang} showLabel={showLabel} {...props}>
         <SyntaxHighlighter
           className={className}
           codeClassName={codeClassName}
           block={isBlock}
           language={lang}
+          showLineNumbers={showLineNumbers}
           style={defaultTheme}
           PreTag={_Code}
-          {...props}
         >
           {children}
         </SyntaxHighlighter>
