@@ -24,6 +24,11 @@ export type ButtonThemeConfig = {
     large?: Stylesheet
   }
 };
+export type CodeThemeConfig = {
+  base?: Stylesheet,
+  block?: Stylesheet,
+  inline?: Stylesheet
+};
 export type ColumnThemeConfig = {
   base?: Stylesheet
 };
@@ -81,6 +86,7 @@ export type ThemeConfig = {
 
   blockquote?: BlockquoteThemeConfig,
   button?: ButtonThemeConfig,
+  code?: CodeThemeConfig,
   column?: ColumnThemeConfig,
   columns?: ColumnsThemeConfig,
   container?: ContainerThemeConfig,

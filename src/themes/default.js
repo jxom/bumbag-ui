@@ -9,6 +9,7 @@ export default ({
   layout,
   blockquote,
   button,
+  code,
   column,
   columns,
   container,
@@ -58,6 +59,7 @@ export default ({
 
   blockquote,
   button,
+  code,
   column,
   columns,
   container: {

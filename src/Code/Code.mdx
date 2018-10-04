@@ -1,0 +1,85 @@
+---
+name: Code
+route: /typography/code
+menu: Typography
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Code from './index';
+import HighlightedCode from './HighlightedCode';
+
+# Code
+
+## Import
+
+`import { Code, HighlightedCode } from 'bumbag'`
+
+## Basic Usage
+
+`<Code>` renders a `<code>` element by default with reset styles and theme styles.
+
+<Playground>
+  <Code>Hello world!</Code>
+</Playground>
+
+## Code blocks
+
+A code block can be rendered by setting the `isBlock` prop. This will wrap the code in a `<pre>`.
+
+<Playground>
+  <Code isBlock>
+  {`function log(message) {
+    console.log(message);
+  }`}
+  </Code>
+</Playground>
+
+## Highlighted code
+
+The `<HighlighedCode>` component uses [Prism](https://prismjs.com/) under the hood. To highlight a language, specify the `lang` prop.
+
+<Playground>
+  <HighlightedCode isBlock lang="javascript">
+  {`function log(message) {
+    console.log(message);
+  }`}
+  </HighlightedCode>
+  <HighlightedCode isBlock lang="html">
+  {`<body>
+    <div class="content">Hello world</div>
+  </body>`}
+  </HighlightedCode>
+</Playground>
+
+You can also pass a `showLabel` prop to show a label of the language in the top right corner.
+
+<Playground>
+  <HighlightedCode isBlock lang="javascript" showLabel>
+  {`function log(message) {
+    console.log(message);
+  }`}
+  </HighlightedCode>
+</Playground>
+
+
+
+## `<Code>` Props
+
+<PropsTable of={Code} />
+
+## `<HighlightedCode>` Props
+
+<PropsTable of={HighlightedCode} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  block: string | Object,
+  inline: string | Object
+}
+```

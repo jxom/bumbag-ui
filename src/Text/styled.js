@@ -10,13 +10,6 @@ export default styled(Box)`
     text-decoration: none;
   }
 
-  code& {
-    background: ${props => lighten(0.5, palette('primary')(props))};
-    border-radius: 0.1rem;
-    color: ${palette('primary')};
-    padding: 0.1rem 0.2rem;
-  }
-
   i& {
     font-style: italic;
   }
@@ -56,7 +49,6 @@ export default styled(Box)`
     font-style: italic;
   }
 
-  code&,
   kbd&,
   pre&,
   samp& {
