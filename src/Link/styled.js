@@ -1,8 +1,9 @@
-import { css } from 'reakit/styled';
-import { palette } from 'styled-tools';
+import Link from 'reakit/Link';
+import styled from 'reakit/styled';
+import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 
-export default ({ base: baseOverrides } = {}) => css`
+export default styled(Link)`
   color: ${palette('primary')}
   cursor: pointer;
   text-decoration: underline;
@@ -13,6 +14,6 @@ export default ({ base: baseOverrides } = {}) => css`
   }
 
   & {
-    ${baseOverrides};
+    ${theme('link.base')};
   }
 `;

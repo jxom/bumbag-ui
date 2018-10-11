@@ -1,8 +1,9 @@
-import { css } from 'reakit/styled';
-import { palette } from 'styled-tools';
+import Code from 'reakit/Code';
+import styled from 'reakit/styled';
+import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 
-export default ({ base: baseOverrides, inline: inlineOverrides, block: blockOverrides } = {}) => css`
+export default styled(Code)`
   background-color: ${darken(0.05, 'white')};
   border-radius: 0.1rem;
   color: ${palette('text')};
@@ -10,15 +11,15 @@ export default ({ base: baseOverrides, inline: inlineOverrides, block: blockOver
 
   code& {
     padding: 0.1rem 0.2rem;
-    ${inlineOverrides};
+    ${theme('code.inline')};
   }
 
   pre& {
     padding: 1rem;
-    ${blockOverrides};
+    ${theme('code.block')};
   }
 
   & {
-    ${baseOverrides};
+    ${theme('code.base')};
   }
 `;

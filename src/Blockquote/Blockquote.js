@@ -1,8 +1,8 @@
 // @flow
 import React, { type Node } from 'react';
-import _Blockquote from 'reakit/Blockquote';
 
 import type { Palette } from '../types';
+import _Blockquote from './styled';
 
 type Props = {
   children: Node,

@@ -4,7 +4,6 @@ import ThemeProvider from 'reakit/Provider';
 
 import type { ThemeConfig } from '../types';
 import Global from '../_utils/Global';
-import buildTheme from '../_utils/buildTheme';
 
 import { defaultTheme } from '../themes';
 
@@ -19,9 +18,8 @@ const Provider = ({ children, isStandalone, theme: _theme }: Props) => {
   if (isStandalone) {
     theme = _theme;
   }
-  const bumbagTheme = buildTheme(theme);
   return (
-    <ThemeProvider theme={bumbagTheme}>
+    <ThemeProvider theme={theme}>
       <Global>{children}</Global>
     </ThemeProvider>
   );

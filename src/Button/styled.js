@@ -1,10 +1,11 @@
 // @flow
 import { css } from 'reakit/styled';
-import { palette } from 'styled-tools';
+import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
-import type { ButtonThemeConfig, Stylesheet } from '../types';
+import Button from 'reakit/Button';
+import styled from 'reakit/styled';
 
-const getSizeAttributes = (sizesOverides: Object = {}) => ({
+const sizeAttributes = {
   small: css`
     & {
       font-size: 0.8em;
@@ -12,7 +13,7 @@ const getSizeAttributes = (sizesOverides: Object = {}) => ({
       padding: 0 0.5rem;
     }
     & {
-      ${sizesOverides.small};
+      ${theme('button.sizes.small')};
     }
   `,
   medium: css`
@@ -21,7 +22,7 @@ const getSizeAttributes = (sizesOverides: Object = {}) => ({
       padding: 0 1.25rem;
     }
     & {
-      ${sizesOverides.medium};
+      ${theme('button.sizes.medium')};
     }
   `,
   large: css`
@@ -31,12 +32,12 @@ const getSizeAttributes = (sizesOverides: Object = {}) => ({
       padding: 0 1.5rem;
     }
     & {
-      ${sizesOverides.large};
+      ${theme('button.sizes.large')};
     }
   `
-});
+};
 
-const getLinkAttributes = (linkOverrides: Stylesheet) => css`
+const linkAttributes = css`
   & {
     border: 0;
     background: unset;
@@ -50,10 +51,10 @@ const getLinkAttributes = (linkOverrides: Stylesheet) => css`
     }
   }
   & {
-    ${linkOverrides};
+    ${theme('button.link')};
   }
 `;
-const getOutlinedAttributes = (outlinedOverrides: Stylesheet) => css`
+const outlinedAttributes = css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -64,11 +65,11 @@ const getOutlinedAttributes = (outlinedOverrides: Stylesheet) => css`
     }
   }
   & {
-    ${outlinedOverrides};
+    ${theme('button.outlined')};
   }
 `;
 
-const getDisabledAttributes = (disabledOverrides: Stylesheet) => css`
+const disabledAttributes = css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
@@ -76,7 +77,7 @@ const getDisabledAttributes = (disabledOverrides: Stylesheet) => css`
     pointer-events: unset;
   }
   & {
-    ${disabledOverrides};
+    ${theme('button.disabled')};
   }
 `;
 
@@ -88,7 +89,7 @@ const interactiveAttributes = css`
     background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
-const getLoadingAttributes = (loadingOverrides: Stylesheet) => css`
+const loadingAttributes = css`
   & {
     cursor: not-allowed;
 
@@ -97,18 +98,11 @@ const getLoadingAttributes = (loadingOverrides: Stylesheet) => css`
     }
   }
   & {
-    ${loadingOverrides};
+    ${theme('button.loading')};
   }
 `;
 
-export default ({
-  base: baseOverrides,
-  disabled: disabledOverrides,
-  link: linkOverrides,
-  loading: loadingOverrides,
-  outlined: outlinedOverrides,
-  sizes: sizesOverides
-}: ButtonThemeConfig = {}): Stylesheet => css`
+export default styled(Button)`
   align-items: center;
   background-color: ${palette()};
   border: 1px solid ${props => darken(0.2, palette()(props))};
@@ -123,21 +117,21 @@ export default ({
   text-decoration: none;
 
   & {
-    ${baseOverrides}
+    ${theme('button.base')}
   }
 
   &[disabled] {
-    ${getDisabledAttributes(disabledOverrides)}
+    ${disabledAttributes}
   }
 
   {/* Add size styles */}
-  ${props => getSizeAttributes(sizesOverides)[props.size]}
+  ${props => sizeAttributes[props.size]}
 
   {/* Add type styles */}
-  ${props => props.type === 'outlined' && getOutlinedAttributes(outlinedOverrides)}
-  ${props => props.type === 'link' && getLinkAttributes(linkOverrides)}
+  ${props => props.type === 'outlined' && outlinedAttributes}
+  ${props => props.type === 'link' && linkAttributes}
 
-  ${props => props.isLoading && getLoadingAttributes(loadingOverrides)} {/* Add loading styles */}
+  ${props => props.isLoading && loadingAttributes} {/* Add loading styles */}
   ${props =>
     !props.isLoading && !props.disabled && props.type !== 'link'
       ? interactiveAttributes

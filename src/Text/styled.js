@@ -1,7 +1,6 @@
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
-import { palette, theme } from 'styled-tools';
-import { lighten } from 'polished';
+import { theme } from 'styled-tools';
 
 export default styled(Box)`
   abbr& {

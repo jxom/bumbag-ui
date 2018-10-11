@@ -1,8 +1,8 @@
 // @flow
 import React, { type Node } from 'react';
-import _Paragraph from 'reakit/Paragraph';
 
 import type { Palette } from '../types';
+import _Paragraph from './styled';
 
 type Props = {
   children: Node,

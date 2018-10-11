@@ -1,9 +1,9 @@
 // @flow
 import React, { type Node } from 'react';
 import classNames from 'classnames';
-import _Heading from 'reakit/Heading';
 
 import type { Palette } from '../types';
+import _Heading from './styled';
 
 type Props = {
   as?: any,

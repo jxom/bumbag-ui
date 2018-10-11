@@ -1,31 +1,17 @@
 // @flow
-import { css } from 'reakit/styled';
+import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
-import type { HeadingThemeConfig, Stylesheet } from '../types';
+import Heading from 'reakit/Heading';
 
-const getSubHeadingAttributes = ({ subHeadingOverrides }: { subHeadingOverrides: Stylesheet } = {}) => props => {
-  const { isSubHeading } = props;
-  if (isSubHeading) {
-    return css`
-      font-weight: 500;
+const subHeadingAttributes = css`
+  font-weight: 500;
 
-      & {
-        ${subHeadingOverrides};
-      }
-    `;
+  & {
+    ${theme('heading.subHeading')};
   }
-};
+`;
 
-export default ({
-  base: baseOverrides,
-  h1: h1Overrides,
-  h2: h2Overrides,
-  h3: h3Overrides,
-  h4: h4Overrides,
-  h5: h5Overrides,
-  h6: h6Overrides,
-  subHeading: subHeadingOverrides
-}: HeadingThemeConfig = {}): Stylesheet => css`
+export default styled(Heading)`
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -44,7 +30,7 @@ export default ({
       font-size: 2rem;
     }
     & {
-      ${h1Overrides};
+      ${theme('heading.h1')};
     }
   }
   h2& {
@@ -53,7 +39,7 @@ export default ({
       font-size: 1.8rem;
     }
     & {
-      ${h2Overrides};
+      ${theme('heading.h2')};
     }
   }
   h3& {
@@ -62,7 +48,7 @@ export default ({
       font-size: 1.6rem;
     }
     & {
-      ${h3Overrides};
+      ${theme('heading.h3')};
     }
   }
   h4& {
@@ -71,7 +57,7 @@ export default ({
       font-size: 1.4rem;
     }
     & {
-      ${h4Overrides};
+      ${theme('heading.h4')};
     }
   }
   h5& {
@@ -80,19 +66,19 @@ export default ({
       font-size: 1.2rem;
     }
     & {
-      ${h5Overrides};
+      ${theme('heading.h5')};
     }
   }
   h6& {
     font-size: 1rem;
     & {
-      ${h6Overrides};
+      ${theme('heading.h6')};
     }
   }
 
   & {
-    ${getSubHeadingAttributes({ subHeadingOverrides })};
+    ${props => props.isSubHeading && subHeadingAttributes};
   }
 
-  ${baseOverrides};
+  ${theme('heading.base')};
 `;

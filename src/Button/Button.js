@@ -3,11 +3,11 @@ import React, { type Node } from 'react';
 import { withTheme } from 'reakit/styled';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
-import _Button from 'reakit/Button';
 import _get from 'lodash/get';
 
 import type { ButtonType, Palette, Size } from '../types';
 import Spinner from '../Spinner';
+import _Button from './styled';
 
 export const SpinnerWrapper = styled(Box)`
   position: absolute;

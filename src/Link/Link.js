@@ -1,6 +1,6 @@
 // @flow
 import React, { type Node } from 'react';
-import _Link from 'reakit/Link';
+import _Link from './styled';
 
 type Props = {
   children: Node,
