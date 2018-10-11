@@ -64,6 +64,12 @@ export type LayoutThemeConfig = {
 export type LinkThemeConfig = {
   base?: Stylesheet
 };
+export type ListThemeConfig = {
+  base?: Stylesheet,
+  item?: {
+    base?: Stylesheet
+  }
+};
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
