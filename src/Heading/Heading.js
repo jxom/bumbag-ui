@@ -7,10 +7,10 @@ import _Heading from './styled';
 
 type Props = {
   as?: any,
+  color?: Palette,
   children: Node,
   className?: string,
-  isSubHeading?: boolean,
-  palette?: Palette
+  isSubHeading?: boolean
 };
 
 const Heading = ({ children, className, isSubHeading, ...props }: Props) => (
@@ -30,8 +30,8 @@ const Heading = ({ children, className, isSubHeading, ...props }: Props) => (
 Heading.defaultProps = {
   as: null,
   className: null,
-  isSubHeading: false,
-  palette: null
+  color: null,
+  isSubHeading: false
 };
 
 export default Heading;

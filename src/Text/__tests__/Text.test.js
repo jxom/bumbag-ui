@@ -9,13 +9,13 @@ it('renders correctly for a basic text', () => {
 });
 
 it('renders correctly for text with a color', () => {
-  const { container } = render(<Text palette="primary">test</Text>);
+  const { container } = render(<Text color="primary">test</Text>);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for text with a another element', () => {
   const { container } = render(
-    <Text as="strong" palette="primary">
+    <Text as="strong" color="primary">
       test
     </Text>
   );

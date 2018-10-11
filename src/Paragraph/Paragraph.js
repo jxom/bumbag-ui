@@ -7,7 +7,7 @@ import _Paragraph from './styled';
 type Props = {
   children: Node,
   className?: string,
-  palette?: Palette
+  color?: Palette
 };
 
 const Paragraph = ({ children, className, ...props }: Props) => (
@@ -18,7 +18,7 @@ const Paragraph = ({ children, className, ...props }: Props) => (
 
 Paragraph.defaultProps = {
   className: null,
-  palette: null
+  color: null
 };
 
 export default Paragraph;

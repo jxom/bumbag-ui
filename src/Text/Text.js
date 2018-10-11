@@ -7,7 +7,7 @@ type Props = {
   as?: any,
   className?: string,
   children: Node,
-  palette?: Palette
+  color?: Palette
 };
 
 const Text = ({ className, children, ...props }: Props) => (
@@ -19,7 +19,7 @@ const Text = ({ className, children, ...props }: Props) => (
 Text.defaultProps = {
   as: 'span',
   className: null,
-  palette: null
+  color: null
 };
 
 export default Text;
