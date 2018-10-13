@@ -48,6 +48,9 @@ export type DividerThemeConfig = {
 export type GlobalThemeConfig = {
   base?: Stylesheet
 };
+export type GroupThemeConfig = {
+  base?: Stylesheet
+};
 export type HeadingThemeConfig = {
   base?: Stylesheet,
   h1?: Stylesheet,
@@ -102,6 +105,7 @@ export type ThemeConfig = {
   columns?: ColumnsThemeConfig,
   container?: ContainerThemeConfig,
   divider?: DividerThemeConfig,
+  group?: GroupThemeConfig,
   heading?: HeadingThemeConfig,
   link?: LinkThemeConfig,
   list?: ListThemeConfig,

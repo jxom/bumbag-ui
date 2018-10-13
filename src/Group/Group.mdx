@@ -1,0 +1,71 @@
+---
+name: Group
+route: /elements/group
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import Group from './index';
+import { Group as GroupProps } from './Group';
+import { Box, Button, Block, Flex } from '../index';
+
+# Group
+
+## Import
+
+`import { Group } from 'bumbag'`
+
+## Basic Usage
+
+The `<Group>` component groups components together with their respective `border-radius`.
+
+<Playground>
+  <Group>
+    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+      Hello
+    </Box>
+    <Button>Send</Button>
+  </Group>
+</Playground>
+
+## Vertical
+
+A group can also be aligned vertically.
+
+<Playground>
+  <Group isVertical>
+    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem" textAlign="center">
+      Hello
+    </Box>
+    <Button>Send</Button>
+  </Group>
+</Playground>
+
+## Responsive
+
+A group can snap from horizontal to vertical after a given breakpoint with the `verticalAt` prop.
+
+The `verticalAt` prop accepts the following values: `"mobile"`, `"tablet"`, `"desktop"`, `"widescreen"` or `"fullHD"`.
+
+<Playground>
+  <Group verticalAt="tablet">
+    <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+      Hello
+    </Box>
+    <Button>Send</Button>
+  </Group>
+</Playground>
+
+## Props
+
+<PropsTable of={GroupProps} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```
