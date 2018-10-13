@@ -1,0 +1,68 @@
+---
+name: Divider
+route: /elements/divider
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import Divider from './index';
+import { Box, Block, Flex } from '../index';
+
+# Divider
+
+## Import
+
+`import { Divider } from 'bumbag'`
+
+## Basic Usage
+
+`<Divider>` renders a `<hr>` element with reset styles and basic divider styling.
+
+<Playground>
+  <Divider />
+</Playground>
+
+## Vertical
+
+Render a vertical divider by adding the `isVertical` prop to the component.
+
+<Playground>
+  <Flex>
+    Hello
+    <Divider isVertical />
+    World
+  </Flex>
+</Playground>
+
+## With content
+
+A divider can also have content. The `content` prop accepts a string.
+
+<Playground>
+  <Flex alignItems="center" height="50px">
+    Hello
+    <Divider content="or" isVertical />
+    World
+  </Flex>
+  <Box textAlign="center" marginTop="1rem">
+    Hello
+    <Divider content="or" />
+    World
+  </Box>
+</Playground>
+
+## Props
+
+<PropsTable of={Divider} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  content: string | Object,
+  vertical: string | Object
+}
+```

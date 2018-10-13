@@ -40,6 +40,11 @@ export type ContainerThemeConfig = {
   fluidMargin?: string,
   tabletMargin?: string
 };
+export type DividerThemeConfig = {
+  base?: Stylesheet,
+  content?: Stylesheet,
+  vertical?: Stylesheet
+};
 export type GlobalThemeConfig = {
   base?: Stylesheet
 };
@@ -96,8 +101,10 @@ export type ThemeConfig = {
   column?: ColumnThemeConfig,
   columns?: ColumnsThemeConfig,
   container?: ContainerThemeConfig,
+  divider?: DividerThemeConfig,
   heading?: HeadingThemeConfig,
   link?: LinkThemeConfig,
+  list?: ListThemeConfig,
   paragraph?: ParagraphThemeConfig,
   spinner?: SpinnerThemeConfig,
   text?: TextThemeConfig

@@ -11,6 +11,7 @@ export * from './Code';
 export * from './Column';
 export * from './Columns';
 export * from './Container';
+export * from './Divider';
 export * from './Heading';
 export * from './List';
 export * from './Paragraph';
