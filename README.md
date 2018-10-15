@@ -1,6 +1,6 @@
 # Bumbag
 
-<p align="center"><img src="./bumbag.svg" width="400px"></img></p>
+<p align="center"><img src="./bumbag.png" width="400px"></img></p>
 
 > Note: Bumbag is still work in progress, meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
 
