@@ -5,6 +5,9 @@ export default {
     colors: {
       primary: '#1a9cfc'
     },
+    logo: {
+      src: 'https://raw.githubusercontent.com/bigbellies/bumbag/master/logo.png'
+    },
     styles: {
       body: {
         fontFamily: 'unset'
