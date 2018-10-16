@@ -6,7 +6,8 @@ export default {
       primary: '#1a9cfc'
     },
     logo: {
-      src: 'https://raw.githubusercontent.com/bigbellies/bumbag/master/logo.png'
+      src: 'https://raw.githubusercontent.com/bigbellies/bumbag/master/logo.png',
+      width: '230px'
     },
     styles: {
       body: {
