@@ -1,0 +1,75 @@
+---
+name: Image
+route: /elements/image
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Image from './index';
+
+# Image
+
+## Import
+
+`import { Image } from 'bumbag'`
+
+## Basic Usage
+
+`<Image>` renders a `<img>` with `max-width: 100%`  and default reset styles applied.
+
+<Playground>
+  <Image src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" width={500} />
+</Playground>
+
+`<Image>` is also responsive by default, however, if you want to fix the width, add the `isFixed` prop.
+
+<Playground>
+  <Image isFixed src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" width={500} />
+</Playground>
+
+## Image fit
+
+Setting a `fit` prop to `"contain"` means that the whole image will fit in the bounds and it will not lose its scale.
+
+<Playground>
+  <Image fit="contain" height={300} width={300} src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" backgroundColor="whitesmoke" />
+</Playground>
+
+Setting a `fit` prop to `"cover"` means that the image will fill the bounds and it will not lose its scale.
+
+<Playground>
+  <Image fit="cover" height={300} width={300} src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" backgroundColor="whitesmoke" />
+</Playground>
+
+### Positioning
+
+You can change the position of a fitted image with the `fitPosition` prop. This prop mimics the `object-position` CSS attribute.
+
+<Playground>
+  <Image fit="contain" fitPosition="top" height={300} width={300} src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" backgroundColor="whitesmoke" />
+</Playground>
+
+<Playground>
+  <Image fit="cover" fitPosition="10px 5px" height={300} width={300} src="https://raw.githubusercontent.com/bigbellies/bumbag/master/src/_docs/bean.jpg" alt="Bean" backgroundColor="whitesmoke" />
+</Playground>
+
+## Props
+
+<PropsTable of={Image} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  fixed: string | Object,
+  fit: {
+    base: string | Object,
+    cover: string | Object,
+    contain: string | Object
+  }
+}
+```

@@ -61,6 +61,15 @@ export type HeadingThemeConfig = {
   h6?: Stylesheet,
   subHeading?: Stylesheet
 };
+export type ImageThemeConfig = {
+  base?: Stylesheet,
+  fixed?: Stylesheet,
+  fit?: {
+    base?: Stylesheet,
+    cover?: Stylesheet,
+    contain?: Stylesheet
+  }
+};
 export type LayoutThemeConfig = {
   mobileBreakpoint: number,
   tabletBreakpoint: number,
@@ -107,6 +116,7 @@ export type ThemeConfig = {
   divider?: DividerThemeConfig,
   group?: GroupThemeConfig,
   heading?: HeadingThemeConfig,
+  image?: ImageThemeConfig,
   link?: LinkThemeConfig,
   list?: ListThemeConfig,
   paragraph?: ParagraphThemeConfig,

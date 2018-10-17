@@ -13,6 +13,7 @@ export * from './Columns';
 export * from './Container';
 export * from './Divider';
 export * from './Heading';
+export * from './Image';
 export * from './List';
 export * from './Paragraph';
 export * from './Spinner';
