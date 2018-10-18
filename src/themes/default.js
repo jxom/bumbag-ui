@@ -3,27 +3,7 @@ import { darken, lighten } from 'polished';
 import { palette as p } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
-export default ({
-  palette,
-  global,
-  layout,
-  blockquote,
-  button,
-  code,
-  column,
-  columns,
-  container,
-  divider,
-  group,
-  heading,
-  image,
-  link,
-  list,
-  paragraph,
-  spinner,
-  text,
-  ...overrides
-}: ThemeConfig): ThemeConfig => ({
+export default (overrides: ThemeConfig = {}): ThemeConfig => ({
   palette: {
     text: lighten(0.2, 'black'),
 
@@ -47,10 +27,8 @@ export default ({
     warning: '#ffb300',
     warningInverted: p('text'),
 
-    ...palette
+    ...overrides.palette
   },
-
-  global,
   layout: {
     gapFactor: 0.5,
     mobileBreakpoint: 480,
@@ -58,28 +36,12 @@ export default ({
     desktopBreakpoint: 1024,
     widescreenBreakpoint: 1200,
     fullHDBreakpoint: 1440,
-    ...layout
+    ...overrides.layout
   },
-
-  blockquote,
-  button,
-  code,
-  column,
-  columns,
   container: {
     fluidMargin: '0 2rem',
     tabletMargin: '0 1rem',
-    ...container
+    ...overrides.container
   },
-  divider,
-  group,
-  heading,
-  image,
-  link,
-  list,
-  paragraph,
-  spinner,
-  text,
-
   ...overrides
 });
