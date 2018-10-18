@@ -74,6 +74,7 @@ const App = () => (
   global: GlobalThemeConfig,
   palette: PaletteThemeConfig,
   layout: LayoutThemeConfig,
+  fontSizes: FontSizeThemeConfig
 
   // Components
   blockquote: BlockquoteThemeConfig,
@@ -97,6 +98,7 @@ Core:
 - [GlobalThemeConfig](#globalthemeconfig)
 - [PaletteThemeConfig](/palette#theming)
 - [LayoutThemeConfig](#layoutthemeconfig)
+- [FontSizeThemeConfig](#fontsizethemeconfig)
 
 Components:
 
@@ -132,7 +134,16 @@ Components:
   desktopBreakpoint: number,
   widescreenBreakpoint: number,
   fullHDBreakpoint: number,
-  gapFactor: number
+  gapFactor: number,
+  spacing: {
+    xxsmall: number,
+    xsmall: number,
+    small: number,
+    medium: number,
+    large: number,
+    xlarge: number,
+    xxlarge: number
+  }
 }
 ```
 
@@ -145,6 +156,41 @@ Components:
   desktopBreakpoint: 1024,
   widescreenBreakpoint: 1200,
   fullHDBreakpoint: 1440,
-  gapFactor: 0.5
+  gapFactor: 0.5,
+  spacing: {
+    xxsmall: 0.5,
+    xsmall: 1,
+    small: 1.5,
+    medium: 2,
+    large: 2.5,
+    xlarge: 3,
+    xxlarge: 3.5
+  }
+}
+```
+
+### FontSizeThemeConfig
+
+```jsx
+{
+  small: number,
+  medium: number,
+  large: number,
+  xlarge: number,
+  xxlarge: number,
+  xxxlarge: number
+}
+```
+
+#### Default
+
+```jsx
+{
+  small: 0.8,
+  medium: 1.5,
+  large: 2,
+  xlarge: 2.25,
+  xxlarge: 2.5,
+  xxxlarge: 3
 }
 ```

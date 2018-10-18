@@ -16,6 +16,12 @@ const buildSpacingFromTheme = (property, props) => {
   return `${property}: ${spacing}rem !important;`;
 };
 
+const buildFontSizeFromTheme = (property, props) => {
+  let size = props.theme.fontSizes[props[_camelCase(property)]];
+  if (!size) return;
+  return `${property}: ${size}em !important;`;
+};
+
 export default {
   Box: css`
     /* If the color is one from the palette, use it. E.g. background-color="primary" */
@@ -47,5 +53,7 @@ export default {
     ${props => buildSpacingFromTheme('padding-right', props)};
     ${props => buildSpacingFromTheme('padding-top', props)};
     ${props => buildSpacingFromTheme('padding-bottom', props)};
+
+    ${props => buildFontSizeFromTheme('font-size', props)};
   `
 };

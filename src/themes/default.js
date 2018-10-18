@@ -47,6 +47,14 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     },
     ...overrides.layout
   },
+  fontSizes: {
+    small: 0.8,
+    medium: 1.5,
+    large: 2,
+    xlarge: 2.25,
+    xxlarge: 2.5,
+    xxxlarge: 3
+  },
   container: {
     fluidMargin: '0 2rem',
     tabletMargin: '0 1rem',

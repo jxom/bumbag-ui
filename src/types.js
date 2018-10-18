@@ -45,6 +45,14 @@ export type DividerThemeConfig = {
   content?: Stylesheet,
   vertical?: Stylesheet
 };
+export type FontSizeThemeConfig = {
+  small: number,
+  medium: number,
+  large: number,
+  xlarge: number,
+  xxlarge: number,
+  xxxlarge: number
+};
 export type GlobalThemeConfig = {
   base?: Stylesheet
 };
@@ -76,7 +84,16 @@ export type LayoutThemeConfig = {
   desktopBreakpoint: number,
   widescreenBreakpoint: number,
   fullHDBreakpoint: number,
-  gapFactor: number
+  gapFactor: number,
+  spacing: {
+    xxsmall: number,
+    xsmall: number,
+    small: number,
+    medium: number,
+    large: number,
+    xlarge: number,
+    xxlarge: number
+  }
 };
 export type LinkThemeConfig = {
   base?: Stylesheet
@@ -106,6 +123,7 @@ export type ThemeConfig = {
 
   global?: GlobalThemeConfig,
   layout?: LayoutThemeConfig,
+  fontSizes?: FontSizeThemeConfig,
 
   blockquote?: BlockquoteThemeConfig,
   button?: ButtonThemeConfig,
