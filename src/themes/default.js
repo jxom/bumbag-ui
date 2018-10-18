@@ -36,6 +36,15 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     desktopBreakpoint: 1024,
     widescreenBreakpoint: 1200,
     fullHDBreakpoint: 1440,
+    spacing: {
+      xxsmall: 0.5,
+      xsmall: 1,
+      small: 1.5,
+      medium: 2,
+      large: 2.5,
+      xlarge: 3,
+      xxlarge: 3.5
+    },
     ...overrides.layout
   },
   container: {
