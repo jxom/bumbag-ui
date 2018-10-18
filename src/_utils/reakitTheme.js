@@ -10,7 +10,7 @@ const buildColorFromPalette = (property, props) => {
   return `${property}: ${color} !important;`;
 };
 
-const buildMarginFromSpacings = (property, props) => {
+const buildSpacingFromTheme = (property, props) => {
   let spacing = props.theme.layout.spacing[props[_camelCase(property)]];
   if (!spacing) return;
   return `${property}: ${spacing}rem !important;`;
@@ -37,15 +37,15 @@ export default {
     ${props => buildColorFromPalette('text-decoration-color', props)};
     ${props => buildColorFromPalette('text-emphasis-color', props)};
 
-    ${props => buildMarginFromSpacings('margin', props)};
-    ${props => buildMarginFromSpacings('margin-left', props)};
-    ${props => buildMarginFromSpacings('margin-right', props)};
-    ${props => buildMarginFromSpacings('margin-top', props)};
-    ${props => buildMarginFromSpacings('margin-bottom', props)};
-    ${props => buildMarginFromSpacings('padding', props)};
-    ${props => buildMarginFromSpacings('padding-left', props)};
-    ${props => buildMarginFromSpacings('padding-right', props)};
-    ${props => buildMarginFromSpacings('padding-top', props)};
-    ${props => buildMarginFromSpacings('padding-bottom', props)};
+    ${props => buildSpacingFromTheme('margin', props)};
+    ${props => buildSpacingFromTheme('margin-left', props)};
+    ${props => buildSpacingFromTheme('margin-right', props)};
+    ${props => buildSpacingFromTheme('margin-top', props)};
+    ${props => buildSpacingFromTheme('margin-bottom', props)};
+    ${props => buildSpacingFromTheme('padding', props)};
+    ${props => buildSpacingFromTheme('padding-left', props)};
+    ${props => buildSpacingFromTheme('padding-right', props)};
+    ${props => buildSpacingFromTheme('padding-top', props)};
+    ${props => buildSpacingFromTheme('padding-bottom', props)};
   `
 };
