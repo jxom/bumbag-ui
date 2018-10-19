@@ -9,7 +9,8 @@ import _Rating from './styled';
 type Props = {
   className?: string,
   size: Size,
-  maxRating?: string
+  maxRating?: string,
+  onRate?: Function
 };
 
 type State = {
@@ -22,7 +23,8 @@ class Rating extends Component<Props, State> {
   static defaultProps = {
     className: null,
     size: 'regular',
-    maxRating: 5
+    maxRating: 5,
+    onRate: null
   };
 
   state = {
@@ -32,7 +34,11 @@ class Rating extends Component<Props, State> {
   };
 
   handleStarClick = (index: number) => {
-    this.setState({ rating: index + 1 });
+    const { onRate } = this.props;
+    const rating = index + 1;
+
+    this.setState({ rating });
+    onRate && onRate({ rating });
   };
 
   handleStarMouseOver = (index: number) => {
