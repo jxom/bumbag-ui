@@ -1,6 +1,6 @@
 export * from './primitives';
 
-export { styled } from './styled';
+export * from './styled';
 export * from './themes';
 export * from './ThemeProvider';
 
