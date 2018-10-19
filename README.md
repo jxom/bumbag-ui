@@ -1,25 +1,25 @@
-# Bumbag
+# Fannypack
 
-<p align="center"><img src="./bumbag.png" width="400px"></img></p>
+<p align="center"><img src="./fannypack.png" width="400px"></img></p>
 
-> Note: Bumbag is still work in progress, meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
+> Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
 
-## Installing Bumbag
+## Installing Fannypack
 
-Run the following command to install **Bumbag**:
+Run the following command to install **Fannypack**:
 
 ```curl
-yarn bumbag
+yarn fannypack
 ```
 
 ## Getting set up
 
 To start using the components, please follow these steps:
 
-1. Wrap your application in a `<ThemeProvider>` which is provided by **Bumbag**:
+1. Wrap your application in a `<ThemeProvider>` which is provided by **Fannypack**:
 
 ```jsx
-import { ThemeProvider } from 'bumbag';
+import { ThemeProvider } from 'fannypack';
 
 const App = () => (
   <ThemeProvider>
@@ -31,7 +31,7 @@ const App = () => (
 2. Now you can start using components like so!:
 
 ```jsx
-import { Button } from 'bumbag';
+import { Button } from 'fannypack';
 
 const MyApp = () => (
   <Button>
@@ -39,3 +39,7 @@ const MyApp = () => (
   </Button>
 );
 ```
+
+## Acknowledgements
+
+Thanks [Luke Edwards](https://twitter.com/lukeed05) for handing over the `fannypack` npm name!

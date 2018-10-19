@@ -6,22 +6,22 @@ route: /
 
 # Getting Started
 
-## Installing Bumbag
+## Installing Fannypack
 
-Run the following command to install **Bumbag**:
+Run the following command to install **Fannypack**:
 
 ```curl
-yarn bumbag
+yarn fannypack
 ```
 
 ## Getting set up
 
 To start using the components, follow these steps:
 
-1. Wrap your application in a `<ThemeProvider>` which is provided by **Bumbag**:
+1. Wrap your application in a `<ThemeProvider>` which is provided by **Fannypack**:
 
 ```jsx
-import { ThemeProvider } from 'bumbag';
+import { ThemeProvider } from 'fannypack';
 
 const App = () => (
   <ThemeProvider>
@@ -33,7 +33,7 @@ const App = () => (
 2. Now you can start using components like so:
 
 ```jsx
-import { Button } from 'bumbag';
+import { Button } from 'fannypack';
 
 const MyApp = () => (
   <Button>
@@ -46,12 +46,12 @@ No need to import any stylesheets. 😉
 
 ## Importing components
 
-There are two ways to import Bumbag components.
+There are two ways to import Fannypack components.
 
 Using:
 
-- Named imports - `import { Button } from 'bumbag';`
-- Default imports - `import Button from 'bumbag/Button';`
+- Named imports - `import { Button } from 'fannypack';`
+- Default imports - `import Button from 'fannypack/Button';`
 
 If you are using **Webpack@>=4**, **Rollup** or **Parcel**, then you can use named imports without it effecting your bundle size. However, if you are using older versions of Webpack or a bundler that does not support tree shaking, it is recommended to use default imports.
 

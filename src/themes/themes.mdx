@@ -5,18 +5,18 @@ route: /theming
 
 # Theming
 
-Bumbag can be extensively themed to meet your requirements. You can either **override the default Bumbag theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
+Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
 ## Overriding the default theme
 
-The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
 
-[Click here](https://github.com/bigbellies/bumbag/blob/master/src/themes/default.js) to see the default theme.
+[Click here](https://github.com/bigbellies/fannypack/blob/master/src/themes/default.js) to see the default theme.
 
 ### Example
 
 ```jsx
-import { ThemeProvider, css } from 'bumbag';
+import { ThemeProvider, css } from 'fannypack';
 import { lighten } from 'polished';
 
 const theme = {
@@ -51,12 +51,12 @@ const App = () => (
 
 ## Creating your own theme
 
-If you decide to not use the default Bumbag theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
 
 ### Example
 
 ```jsx
-import { ThemeProvider, defaultTheme } from 'bumbag';
+import { ThemeProvider, defaultTheme } from 'fannypack';
 
 const App = () => (
   <ThemeProvider isStandalone theme={defaultTheme()}>

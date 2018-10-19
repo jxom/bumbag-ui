@@ -3,7 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'bumbag',
+      global: 'fannypack',
       externals: {
         react: 'React',
         'react-dom': 'ReactDOM'
