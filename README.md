@@ -9,7 +9,7 @@
 Run the following command to install **Fannypack**:
 
 ```curl
-yarn fannypack
+yarn add fannypack
 ```
 
 ## Getting set up
