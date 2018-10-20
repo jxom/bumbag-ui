@@ -17,6 +17,7 @@ export { Heading } from './Heading';
 export { Image } from './Image';
 export { Link } from './Link';
 export { List, ListItem } from './List';
+export { Navigation } from './Navigation';
 export { Paragraph } from './Paragraph';
 export { Spinner } from './Spinner';
 export { Text } from './Text';

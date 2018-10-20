@@ -104,6 +104,9 @@ export type ListThemeConfig = {
     base?: Stylesheet
   }
 };
+export type NavigationThemeConfig = {
+  base?: Stylesheet
+};
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
@@ -137,6 +140,7 @@ export type ThemeConfig = {
   image?: ImageThemeConfig,
   link?: LinkThemeConfig,
   list?: ListThemeConfig,
+  navigation?: NavigationThemeConfig,
   paragraph?: ParagraphThemeConfig,
   spinner?: SpinnerThemeConfig,
   text?: TextThemeConfig

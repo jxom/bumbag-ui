@@ -13,7 +13,7 @@ type Props = {
 };
 
 const List = ({ children, className, isOrdered, ...props }: Props) => (
-  <_List as={isOrdered ? 'ol' : null} className={className} isOrdered {...props}>
+  <_List as={isOrdered ? 'ol' : null} className={className} isOrdered={isOrdered} {...props}>
     {children}
   </_List>
 );

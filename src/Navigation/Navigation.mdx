@@ -1,0 +1,57 @@
+---
+name: Navigation
+route: /elements/navigation
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Navigation from './index';
+import List from '../List';
+import Link from '../Link';
+
+# Navigation
+
+## Import
+
+`import { Navigation } from 'fannypack'`
+
+## Basic Usage
+
+By default, `<Navigation>` renders a `<nav>`.
+
+<Playground>
+  <Navigation>
+    <List>
+      <List.Item><Link href="https://google.com">Google</Link></List.Item>
+      <List.Item><Link href="https://github.com">GitHub</Link></List.Item>
+    </List>
+  </Navigation>
+</Playground>
+
+## Accessibility
+
+Using an accessibility title (`a11yTitle`), will enable screen readers to read the contents of the title.
+
+<Playground>
+  <Navigation a11yTitle="Awesome sites">
+    <List>
+      <List.Item><Link href="https://google.com">Google</Link></List.Item>
+      <List.Item><Link href="https://github.com">GitHub</Link></List.Item>
+    </List>
+  </Navigation>
+</Playground>
+
+## Props
+
+<PropsTable of={Navigation} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```
