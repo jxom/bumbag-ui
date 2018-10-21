@@ -59,7 +59,7 @@ class Rating extends Component<Props, State> {
           <RatingStar
             key={index}
             size={size}
-            active={isSelecting ? selectedIndex >= index : rating >= index + 1}
+            active={selectedIndex >= index || rating >= index + 1}
             onClick={() => this.handleStarClick(index)}
             onMouseEnter={() => this.handleStarMouseOver(index)}
           />
