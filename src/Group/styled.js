@@ -1,5 +1,5 @@
 import Group from 'reakit/Group';
-import styled, { css } from 'reakit/styled';
+import styled from 'reakit/styled';
 import { theme } from 'styled-tools';
 
 export default styled(Group)`

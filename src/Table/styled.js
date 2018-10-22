@@ -2,7 +2,6 @@
 import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
 import Box from 'reakit/Box';
-import Table from 'reakit/Table';
 
 export const Caption = styled(Box)`
   caption-side: ${props => props.position};

@@ -16,7 +16,7 @@ const marginAutoOffsets = {
   `
 };
 
-const getWidth = spread => `${spread / 12 * 100}%`;
+const getWidth = spread => `${(spread / 12) * 100}%`;
 
 const getSpreadAttributes = props => {
   const { minBreakpoint, spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
