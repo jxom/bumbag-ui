@@ -9,7 +9,7 @@ const sizes = {
       height: 1rem;
     }
     & {
-      ${theme('spinner.sizes.small')};
+      ${theme('Spinner.sizes.small')};
     }
   `,
   medium: css`
@@ -18,7 +18,7 @@ const sizes = {
       height: 2rem;
     }
     & {
-      ${theme('spinner.sizes.medium')};
+      ${theme('Spinner.sizes.medium')};
     }
   `,
   large: css`
@@ -27,7 +27,7 @@ const sizes = {
       height: 3rem;
     }
     & {
-      ${theme('spinner.sizes.large')};
+      ${theme('Spinner.sizes.large')};
     }
   `
 };
@@ -37,7 +37,7 @@ export default styled.svg`
   height: 1.5rem;
 
   & {
-    ${theme('spinner.base')};
+    ${theme('Spinner.base')};
   }
 
   ${props => sizes[props.size]} /* Extend size styles */;

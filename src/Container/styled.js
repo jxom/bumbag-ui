@@ -49,15 +49,15 @@ export default styled(Box)`
   ${props =>
     props.isFluid &&
     css`
-      margin: ${theme('container.fluidMargin')};
+      margin: ${theme('Container.fluidMargin')};
     `}
 
   @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
-    margin: ${theme('container.tabletMargin')};
+    margin: ${theme('Container.tabletMargin')};
   }
 
   ${getResponsiveAttributes} /**/
   ${props => !props.isFluid && alignAttributes[props.align]};
 
-  ${theme('container.base')}
+  ${theme('Container.base')}
 `;

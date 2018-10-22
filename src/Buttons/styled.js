@@ -14,7 +14,7 @@ const groupedAttributes = css`
     border-top-right-radius: 0px;
   }
   & {
-    ${theme('buttons.grouped')};
+    ${theme('Buttons.grouped')};
   }
 `;
 
@@ -23,7 +23,7 @@ export default styled(Box)`
     margin-left: ${props => (props.isGrouped ? '' : '0.5rem')};
   }
   & {
-    ${theme('buttons.base')};
+    ${theme('Buttons.base')};
   }
   ${props => props.isGrouped && groupedAttributes};
 `;

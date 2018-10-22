@@ -118,6 +118,37 @@ export type SpinnerThemeConfig = {
     large?: Stylesheet
   }
 };
+export type TableThemeConfig = {
+  base?: Stylesheet,
+  borderColor?: string,
+  hover: {
+    backgroundColor?: string
+  },
+  striped: {
+    backgroundColor?: string
+  },
+  Body?: {
+    base?: Stylesheet
+  },
+  Caption?: {
+    base?: Stylesheet
+  },
+  Cell?: {
+    base?: Stylesheet
+  },
+  Foot?: {
+    base?: Stylesheet
+  },
+  Head?: {
+    base?: Stylesheet
+  },
+  HeadCell?: {
+    base?: Stylesheet
+  },
+  Row?: {
+    base?: Stylesheet
+  }
+};
 export type TextThemeConfig = {
   base?: Stylesheet
 };
@@ -128,21 +159,22 @@ export type ThemeConfig = {
   layout?: LayoutThemeConfig,
   fontSizes?: FontSizeThemeConfig,
 
-  blockquote?: BlockquoteThemeConfig,
-  button?: ButtonThemeConfig,
-  code?: CodeThemeConfig,
-  column?: ColumnThemeConfig,
-  columns?: ColumnsThemeConfig,
-  container?: ContainerThemeConfig,
-  divider?: DividerThemeConfig,
-  group?: GroupThemeConfig,
-  heading?: HeadingThemeConfig,
-  image?: ImageThemeConfig,
-  link?: LinkThemeConfig,
-  list?: ListThemeConfig,
-  navigation?: NavigationThemeConfig,
-  paragraph?: ParagraphThemeConfig,
-  spinner?: SpinnerThemeConfig,
-  text?: TextThemeConfig
+  Blockquote?: BlockquoteThemeConfig,
+  Button?: ButtonThemeConfig,
+  Code?: CodeThemeConfig,
+  Column?: ColumnThemeConfig,
+  Columns?: ColumnsThemeConfig,
+  Container?: ContainerThemeConfig,
+  Divider?: DividerThemeConfig,
+  Group?: GroupThemeConfig,
+  Heading?: HeadingThemeConfig,
+  Image?: ImageThemeConfig,
+  Link?: LinkThemeConfig,
+  List?: ListThemeConfig,
+  Navigation?: NavigationThemeConfig,
+  Paragraph?: ParagraphThemeConfig,
+  Spinner?: SpinnerThemeConfig,
+  Table?: TableThemeConfig,
+  Text?: TextThemeConfig
 };
 /* ====== END: THEMES ====== */

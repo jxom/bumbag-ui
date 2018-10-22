@@ -15,7 +15,7 @@ const orderedAttributes = css`
   }
 
   & {
-    ${theme('list.ordered')};
+    ${theme('List.ordered')};
   }
 `;
 
@@ -23,7 +23,7 @@ export const ListItem = styled(Box)`
   margin-bottom: 0.2rem;
 
   & {
-    ${theme('list.item.base')};
+    ${theme('List.item.base')};
   }
 `;
 
@@ -40,6 +40,6 @@ export default styled(List)`
   }
 
   & {
-    ${theme('list.base')};
+    ${theme('List.base')};
   }
 `;

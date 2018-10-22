@@ -14,6 +14,6 @@ export default styled(Link)`
   }
 
   & {
-    ${theme('link.base')};
+    ${theme('Link.base')};
   }
 `;

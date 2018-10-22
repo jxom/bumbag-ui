@@ -17,7 +17,7 @@ const contentAttributes = css`
     padding: 0.2rem 0.5rem;
 
     & {
-      ${theme('divider.content')}
+      ${theme('Divider.content')}
     }
   }
 `;
@@ -25,7 +25,7 @@ const verticalAttributes = css`
   height: auto;
 
   & {
-    ${theme('divider.vertical')};
+    ${theme('Divider.vertical')};
   }
 `;
 
@@ -39,6 +39,6 @@ export default styled(Divider)`
   }
 
   & {
-    ${theme('divider.base')};
+    ${theme('Divider.base')};
   }
 `;

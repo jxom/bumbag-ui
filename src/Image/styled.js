@@ -15,8 +15,8 @@ const fitAttributes = props => {
             `
           : ''} /**/
 
-      ${theme('image.fit.base')};
-      ${theme('image.fit.contain')};
+      ${theme('Image.fit.base')};
+      ${theme('Image.fit.contain')};
     `;
   }
   if (props.fit === 'cover') {
@@ -29,8 +29,8 @@ const fitAttributes = props => {
             `
           : ''} /**/
 
-      ${theme('image.fit.base')};
-      ${theme('image.fit.cover')};
+      ${theme('Image.fit.base')};
+      ${theme('Image.fit.cover')};
     `;
   }
 };
@@ -39,7 +39,7 @@ const fixedAttributes = props => {
   return css`
     max-width: unset;
 
-    ${theme('image.fixed')};
+    ${theme('Image.fixed')};
   `;
 };
 
@@ -53,5 +53,5 @@ export default styled(Image)`
     ${fixedAttributes};
   }
 
-  ${theme('image.base')};
+  ${theme('Image.base')};
 `;

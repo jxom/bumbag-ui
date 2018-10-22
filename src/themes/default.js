@@ -1,30 +1,48 @@
 // @flow
-import { darken, lighten } from 'polished';
-import { palette as p } from 'styled-tools';
+import { darken, lighten, tint } from 'polished';
+import { palette as p, theme } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
 export default (overrides: ThemeConfig = {}): ThemeConfig => ({
   palette: {
-    text: lighten(0.2, 'black'),
+    text: '#435a6f',
+
+    black: 'black',
 
     white: 'white',
+    whiteDark: darken(0.03, 'white'),
+    whiteDarker: darken(0.05, 'white'),
+    whiteDarkest: darken(0.1, 'white'),
+
+    grayLightest: lighten(0.2, 'gray'),
+    grayLighter: lighten(0.1, 'gray'),
+    grayLight: lighten(0.05, 'gray'),
+    gray: 'gray',
+    grayDark: darken(0.05, 'gray'),
+    grayDarker: darken(0.1, 'gray'),
+    grayDarkest: darken(0.2, 'gray'),
 
     default: darken(0.01, 'white'),
     defaultInverted: p('text'),
 
     primary: '#112ebb',
+    primaryTint: tint(0.9, '#112ebb'),
     primaryInverted: p('white'),
 
     secondary: '#1d67fc',
+    secondaryTint: tint(0.9, '#1d67fc'),
     secondaryInverted: p('white'),
 
-    success: '#007d04',
+    success: '#007b2e',
+    successTint: tint(0.9, '#007b2e'),
     successInverted: p('white'),
 
     danger: '#d60027',
+    dangerTint: tint(0.9, '#d60027'),
     dangerInverted: p('white'),
 
     warning: '#ffb300',
+    warningTint: tint(0.9, '#ffb300'),
     warningInverted: p('text'),
 
     ...overrides.palette
@@ -37,13 +55,15 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     widescreenBreakpoint: 1200,
     fullHDBreakpoint: 1440,
     spacing: {
+      xxxsmall: 0.25,
       xxsmall: 0.5,
       xsmall: 1,
       small: 1.5,
       medium: 2,
       large: 2.5,
       xlarge: 3,
-      xxlarge: 3.5
+      xxlarge: 3.5,
+      xxxlarge: 4
     },
     ...overrides.layout
   },
@@ -55,10 +75,21 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     xxlarge: 2.5,
     xxxlarge: 3
   },
-  container: {
+  Container: {
     fluidMargin: '0 2rem',
     tabletMargin: '0 1rem',
-    ...overrides.container
+    ...overrides.Container
+  },
+  Table: {
+    borderColor: p('grayLightest'),
+    hover: {
+      backgroundColor: p('whiteDarker')
+    },
+    striped: {
+      backgroundColor: p('whiteDark')
+    },
+    spacing: theme('layout.spacing.xxsmall'),
+    ...overrides.Table
   },
   ...overrides
 });

@@ -116,12 +116,12 @@ const theme = {
     mobileBreakpoint: 520,
     tabletBreakpoint: 960
   },
-  button: {
+  Button: {
     disabled: css`
       opacity: 0.2
     `
   },
-  text: css`
+  Text: css`
     font-weight: 300;
   `
 }
@@ -161,20 +161,22 @@ const App = () => (
   fontSizes: FontSizeThemeConfig
 
   // Components
-  blockquote: BlockquoteThemeConfig,
-  button: ButtonThemeConfig,
-  code: CodeThemeConfig,
-  column: ColumnThemeConfig,
-  columns: ColumnsThemeConfig,
-  container: ContainerThemeConfig,
-  divider: DividerThemeConfig,
-  heading: HeadingThemeConfig,
-  image: ImageThemeConfig,
-  link: LinkThemeConfig,
-  list: ListThemeConfig,
-  paragraph: ParagraphThemeConfig,
-  spinner: SpinnerThemeConfig,
-  text: TextThemeConfig
+  Blockquote: BlockquoteThemeConfig,
+  Button: ButtonThemeConfig,
+  Code: CodeThemeConfig,
+  Column: ColumnThemeConfig,
+  Columns: ColumnsThemeConfig,
+  Container: ContainerThemeConfig,
+  Divider: DividerThemeConfig,
+  Group: GroupThemeConfig,
+  Heading: HeadingThemeConfig,
+  Image: ImageThemeConfig,
+  Link: LinkThemeConfig,
+  List: ListThemeConfig,
+  Paragraph: ParagraphThemeConfig,
+  Spinner: SpinnerThemeConfig,
+  Table: TableThemeConfig,
+  Text: TextThemeConfig
 }
 ```
 Core:
@@ -193,12 +195,14 @@ Components:
 - [ColumnsThemeConfig](/layout/column#theming)
 - [ContainerThemeConfig](/layout/container#theming)
 - [DividerThemeConfig](/layout/divider#theming)
+- [GroupThemeConfig](/components/group#theming)
 - [HeadingThemeConfig](/typography/heading#theming)
 - [ImageThemeConfig](/elements/image#theming)
 - [LinkThemeConfig](/typography/link#theming)
 - [ListThemeConfig](/typography/list#theming)
 - [ParagraphThemeConfig](/typography/paragraph#theming)
 - [SpinnerThemeConfig](/elements/spinner#theming)
+- [TableThemeConfig](/elements/table#theming)
 - [TextThemeConfig](/typography/text#theming)
 
 #### GlobalThemeConfig
@@ -242,6 +246,7 @@ Components:
   fullHDBreakpoint: 1440,
   gapFactor: 0.5,
   spacing: {
+    xxxsmall: 0.25,
     xxsmall: 0.5,
     xsmall: 1,
     small: 1.5,
@@ -249,6 +254,7 @@ Components:
     large: 2.5,
     xlarge: 3,
     xxlarge: 3.5
+    xxxlarge: 4
   }
 }
 ```

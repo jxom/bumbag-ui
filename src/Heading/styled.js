@@ -7,7 +7,7 @@ const subHeadingAttributes = css`
   font-weight: 500;
 
   & {
-    ${theme('heading.subHeading')};
+    ${theme('Heading.subHeading')};
   }
 `;
 
@@ -30,7 +30,7 @@ export default styled(Heading)`
       font-size: 2rem;
     }
     & {
-      ${theme('heading.h1')};
+      ${theme('Heading.h1')};
     }
   }
   h2& {
@@ -39,7 +39,7 @@ export default styled(Heading)`
       font-size: 1.8rem;
     }
     & {
-      ${theme('heading.h2')};
+      ${theme('Heading.h2')};
     }
   }
   h3& {
@@ -48,7 +48,7 @@ export default styled(Heading)`
       font-size: 1.6rem;
     }
     & {
-      ${theme('heading.h3')};
+      ${theme('Heading.h3')};
     }
   }
   h4& {
@@ -57,7 +57,7 @@ export default styled(Heading)`
       font-size: 1.4rem;
     }
     & {
-      ${theme('heading.h4')};
+      ${theme('Heading.h4')};
     }
   }
   h5& {
@@ -66,13 +66,13 @@ export default styled(Heading)`
       font-size: 1.2rem;
     }
     & {
-      ${theme('heading.h5')};
+      ${theme('Heading.h5')};
     }
   }
   h6& {
     font-size: 1rem;
     & {
-      ${theme('heading.h6')};
+      ${theme('Heading.h6')};
     }
   }
 
@@ -80,5 +80,5 @@ export default styled(Heading)`
     ${props => props.isSubHeading && subHeadingAttributes};
   }
 
-  ${theme('heading.base')};
+  ${theme('Heading.base')};
 `;

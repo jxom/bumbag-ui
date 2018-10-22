@@ -8,6 +8,6 @@ export default styled(Paragraph)`
   }
 
   & {
-    ${theme('paragraph.base')};
+    ${theme('Paragraph.base')};
   }
 `;

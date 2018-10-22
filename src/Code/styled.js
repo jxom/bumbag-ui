@@ -11,15 +11,15 @@ export default styled(Code)`
 
   code& {
     padding: 0.1rem 0.2rem;
-    ${theme('code.inline')};
+    ${theme('Code.inline')};
   }
 
   pre& {
     padding: 1rem;
-    ${theme('code.block')};
+    ${theme('Code.block')};
   }
 
   & {
-    ${theme('code.base')};
+    ${theme('Code.base')};
   }
 `;

@@ -15,6 +15,7 @@ export default styled(Box)`
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: ${palette('text')};
 
   *,
   *::before,

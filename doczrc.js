@@ -3,7 +3,8 @@ export default {
   menu: ['Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Elements', 'Components'],
   themeConfig: {
     colors: {
-      primary: '#1a9cfc'
+      primary: '#1a9cfc',
+      text: '#435a6f'
     },
     logo: {
       src: 'https://raw.githubusercontent.com/bigbellies/fannypack/master/logo.png',
@@ -11,7 +12,8 @@ export default {
     },
     styles: {
       body: {
-        fontFamily: 'unset'
+        fontFamily: 'unset',
+        color: 'unset'
       },
       h1: {
         fontWeight: 'bold'

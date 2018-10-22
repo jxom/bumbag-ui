@@ -39,6 +39,6 @@ export default styled(Box)`
   ${getWrapAttributes};
 
   & {
-    ${theme('columns.base')};
+    ${theme('Columns.base')};
   }
 `;

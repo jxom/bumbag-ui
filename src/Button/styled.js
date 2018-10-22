@@ -13,7 +13,7 @@ const sizeAttributes = {
       padding: 0 0.5rem;
     }
     & {
-      ${theme('button.sizes.small')};
+      ${theme('Button.sizes.small')};
     }
   `,
   medium: css`
@@ -22,7 +22,7 @@ const sizeAttributes = {
       padding: 0 1.25rem;
     }
     & {
-      ${theme('button.sizes.medium')};
+      ${theme('Button.sizes.medium')};
     }
   `,
   large: css`
@@ -32,7 +32,7 @@ const sizeAttributes = {
       padding: 0 1.5rem;
     }
     & {
-      ${theme('button.sizes.large')};
+      ${theme('Button.sizes.large')};
     }
   `
 };
@@ -51,7 +51,7 @@ const linkAttributes = css`
     }
   }
   & {
-    ${theme('button.link')};
+    ${theme('Button.link')};
   }
 `;
 const outlinedAttributes = css`
@@ -65,7 +65,7 @@ const outlinedAttributes = css`
     }
   }
   & {
-    ${theme('button.outlined')};
+    ${theme('Button.outlined')};
   }
 `;
 
@@ -77,7 +77,7 @@ const disabledAttributes = css`
     pointer-events: unset;
   }
   & {
-    ${theme('button.disabled')};
+    ${theme('Button.disabled')};
   }
 `;
 
@@ -98,7 +98,7 @@ const loadingAttributes = css`
     }
   }
   & {
-    ${theme('button.loading')};
+    ${theme('Button.loading')};
   }
 `;
 
@@ -117,7 +117,7 @@ export default styled(Button)`
   text-decoration: none;
 
   & {
-    ${theme('button.base')}
+    ${theme('Button.base')}
   }
 
   &[disabled] {

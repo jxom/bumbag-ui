@@ -4,42 +4,66 @@ order: 1
 route: /palette
 ---
 
-import Columns from '../Columns';
-import Column from '../Column'
+import { Box, Flex } from '../primitives';
 import PaletteColor from './PaletteColor';
 
 # Palette
 
 The palette is the main color set for Fannypack.
 
-<Columns marginTop="large">
-  <Column spread={3}>
-    <PaletteColor palette="text" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="white" border="1px solid grey" />
-  </Column>
-</Columns>
-<Columns marginTop="xlarge">
-  <Column spread={3}>
-    <PaletteColor palette="default" border="1px solid grey" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="primary" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="secondary" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="success" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="danger" />
-  </Column>
-  <Column spread={3}>
-    <PaletteColor palette="warning" />
-  </Column>
-</Columns>
+## Defaults
+
+<Box marginBottom="xxxlarge">
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="default" border="1px solid grey" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primaryTint" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryTint" /></Box>
+  </Flex>
+</Box>
+
+## Grayscales
+
+<Box marginBottom="xxxlarge">
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black" /></Box>
+  </Flex>
+  <Flex marginTop="xsmall">
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white" border="1px solid grey" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="whiteDark" border="1px solid grey" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="whiteDarker" border="1px solid grey" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="whiteDarkest" border="1px solid grey" /></Box>
+  </Flex>
+  <Flex marginTop="xsmall">
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="grayDark" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="grayDarker" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="grayDarkest" /></Box>
+  </Flex>
+</Box>
+
+## Statuses
+
+<Box marginBottom="xxxlarge">
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="successTint" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="dangerTint" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warningTint" /></Box>
+  </Flex>
+</Box>
 
 ## Theming
 
@@ -47,57 +71,93 @@ The palette is the main color set for Fannypack.
 
 ```jsx
 {
-  text: string,
+  text: '#435a6f',
 
-  white: string,
+  black: 'black',
 
-  default: string,
-  defaultInverted: string,
+  white: 'white',
+  whiteDark: darken(0.03, 'white'),
+  whiteDarker: darken(0.05, 'white'),
+  whiteDarkest: darken(0.1, 'white'),
 
-  primary: string,
-  primaryInverted: string,
+  grayLightest: lighten(0.2, 'gray'),
+  grayLighter: lighten(0.1, 'gray'),
+  grayLight: lighten(0.05, 'gray'),
+  gray: 'gray',
+  grayDark: darken(0.05, 'gray'),
+  grayDarker: darken(0.1, 'gray'),
+  grayDarkest: darken(0.2, 'gray'),
 
-  secondary: string,
-  secondaryInverted: string,
+  default: darken(0.01, 'white'),
+  defaultInverted: p('text'),
 
-  success: string,
-  successInverted: string,
+  primary: '#112ebb',
+  primaryTint: tint(0.9, '#112ebb'),
+  primaryInverted: p('white'),
 
-  danger: string,
-  dangerInverted: string,
+  secondary: '#1d67fc',
+  secondaryTint: tint(0.9, '#1d67fc'),
+  secondaryInverted: p('white'),
 
-  warning: string,
-  warningInverted: string,
+  success: '#007b2e',
+  successTint: tint(0.9, '#007b2e'),
+  successInverted: p('white'),
+
+  danger: '#d60027',
+  dangerTint: tint(0.9, '#d60027'),
+  dangerInverted: p('white'),
+
+  warning: '#ffb300',
+  warningTint: tint(0.9, '#ffb300'),
+  warningInverted: p('text'),
 }
 ```
 
 ### Default
 
 ```jsx
-import { lighten } from 'polished';
-import { p as palette } from 'styled-tools';
+import { lighten, darken, tint } from 'polished';
+import { palette as p } from 'styled-tools';
 
 {
-  text: lighten(0.2, 'black'),
+  text: '#435a6f',
+
+  black: 'black',
 
   white: 'white',
+  whiteDark: darken(0.03, 'white'),
+  whiteDarker: darken(0.05, 'white'),
+  whiteDarkest: darken(0.1, 'white'),
+
+  grayLightest: lighten(0.2, 'gray'),
+  grayLighter: lighten(0.1, 'gray'),
+  grayLight: lighten(0.05, 'gray'),
+  gray: 'gray',
+  grayDark: darken(0.05, 'gray'),
+  grayDarker: darken(0.1, 'gray'),
+  grayDarkest: darken(0.2, 'gray'),
 
   default: darken(0.01, 'white'),
   defaultInverted: p('text'),
 
   primary: '#112ebb',
+  primaryTint: tint(0.9, '#112ebb'),
   primaryInverted: p('white'),
 
   secondary: '#1d67fc',
+  secondaryTint: tint(0.9, '#1d67fc'),
   secondaryInverted: p('white'),
 
-  success: '#007d04',
+  success: '#007b2e',
+  successTint: tint(0.9, '#007b2e'),
   successInverted: p('white'),
 
   danger: '#d60027',
+  dangerTint: tint(0.9, '#d60027'),
   dangerInverted: p('white'),
 
   warning: '#ffb300',
+  warningTint: tint(0.9, '#ffb300'),
   warningInverted: p('text'),
 }
 ```

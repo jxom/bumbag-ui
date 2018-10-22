@@ -162,7 +162,7 @@ const Column = styled(Box)`
   }
 
   & {
-    ${theme('column.base')};
+    ${theme('Column.base')};
   }
 `;
 

@@ -1,8 +1,8 @@
 import { css } from 'reakit/styled';
 import _camelCase from 'lodash/camelCase';
 
-const buildColorFromPalette = (property, props) => {
-  let color = props.theme.palette[props[_camelCase(property)]];
+const buildColorFromPalette = (property, { theme, ...props }) => {
+  let color = theme.palette[props[_camelCase(property)]];
   if (typeof color === 'function') {
     color = color(props);
   }
@@ -10,14 +10,14 @@ const buildColorFromPalette = (property, props) => {
   return `${property}: ${color} !important;`;
 };
 
-const buildSpacingFromTheme = (property, props) => {
-  let spacing = props.theme.layout.spacing[props[_camelCase(property)]];
+const buildSpacingFromTheme = (property, { theme, ...props }) => {
+  let spacing = theme.layout.spacing[props[_camelCase(property)]];
   if (!spacing) return;
   return `${property}: ${spacing}rem !important;`;
 };
 
-const buildFontSizeFromTheme = (property, props) => {
-  let size = props.theme.fontSizes[props[_camelCase(property)]];
+const buildFontSizeFromTheme = (property, { theme, ...props }) => {
+  let size = theme.fontSizes[props[_camelCase(property)]];
   if (!size) return;
   return `${property}: ${size}em !important;`;
 };

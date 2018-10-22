@@ -2,7 +2,7 @@
 import React from 'react';
 import { withTheme } from 'reakit/styled';
 import { Box, Flex } from '../primitives';
-import Text from '../Text';
+import Code from '../Code';
 
 type Props = {
   palette: string,
@@ -13,9 +13,9 @@ const PaletteColor = ({ palette, theme, ...props }: Props) => {
   return (
     <Flex column alignItems="center">
       <Box marginBottom="1rem">
-        <Text as="code">{palette}</Text>
+        <Code>{palette}</Code>
       </Box>
-      <Box height="150px" borderRadius="4px" backgroundColor={theme.palette[palette]} width="150px" {...props} />
+      <Box height="40px" borderRadius="4px" backgroundColor={theme.palette[palette]} width="180px" {...props} />
     </Flex>
   );
 };

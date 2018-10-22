@@ -1,0 +1,512 @@
+---
+name: Table
+route: /elements/table
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz';
+import Table from './index';
+
+# Table
+
+## Import
+
+`import { Table } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Table>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Full width
+
+To make a table full width, add the `isFullWidth` prop to `<Table>`.
+
+<Playground>
+  <Table isFullWidth>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Borders
+
+To add an outer border to the table, add the `hasBorder` prop to `<Table>`.
+
+<Playground>
+  <Table hasBorder>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+To add a row borders to the table, add the `hasBorders` prop to `<Table.Body>`.
+
+<Playground>
+  <Table>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body hasBorders>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Striped tables
+
+Add the `isStriped` prop to `<Table>` to add striped rows.
+
+<Playground>
+  <Table isStriped>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Jansport</Table.Cell>
+        <Table.Cell textAlign="right">1</Table.Cell>
+        <Table.Cell textAlign="right">$5.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$41.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Hoverable table
+
+Add the `isHoverable` prop to `<Table>` to add hoverable rows.
+
+<Playground>
+  <Table isHoverable>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Jansport</Table.Cell>
+        <Table.Cell textAlign="right">1</Table.Cell>
+        <Table.Cell textAlign="right">$5.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$41.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Colored rows
+
+<Playground>
+  <Table>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row backgroundColor="primaryTint">
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row backgroundColor="successTint">
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row backgroundColor="warningTint">
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+      <Table.Row backgroundColor="dangerTint">
+        <Table.Cell>Jansport</Table.Cell>
+        <Table.Cell textAlign="right">1</Table.Cell>
+        <Table.Cell textAlign="right">$5.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$41.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Captions
+
+Use the `<Table.Caption>` component to add a caption to the table.
+
+<Playground>
+  <Table>
+    <Table.Caption>Fannypacks</Table.Caption>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+A caption can also be positioned to the bottom of the table.
+
+<Playground>
+  <Table>
+    <Table.Caption position="bottom">Fannypacks</Table.Caption>
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Accessibility
+
+Using an accessibility title (`a11yTitle`) will provide an accessible name for the table to be read easily by a screen reader.
+
+<Playground>
+  <Table a11yTitle="Fannypack prices">
+    <Table.Head>
+      <Table.Row>
+        <Table.HeadCell>Name</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+        <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Nike</Table.Cell>
+        <Table.Cell textAlign="right">3</Table.Cell>
+        <Table.Cell textAlign="right">$9.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Adidas</Table.Cell>
+        <Table.Cell textAlign="right">4</Table.Cell>
+        <Table.Cell textAlign="right">$12.00</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>North Face</Table.Cell>
+        <Table.Cell textAlign="right">5</Table.Cell>
+        <Table.Cell textAlign="right">$15.00</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Foot>
+      <Table.Row>
+        <Table.Cell>Total</Table.Cell>
+        <Table.Cell />
+        <Table.Cell textAlign="right">$36.00</Table.Cell>
+      </Table.Row>
+    </Table.Foot>
+  </Table>
+</Playground>
+
+## Props
+
+### `<Table>`
+
+<PropsTable of={Table} />
+
+### `<Table.Row>`
+
+<PropsTable of={Table.Row} />
+
+### `<Table.Head>`
+
+<PropsTable of={Table.Head} />
+
+### `<Table.HeadCell>`
+
+<PropsTable of={Table.HeadCell} />
+
+### `<Table.Body>`
+
+<PropsTable of={Table.Body} />
+
+### `<Table.Cell>`
+
+<PropsTable of={Table.Cell} />
+
+### `<Table.Foot>`
+
+<PropsTable of={Table.Foot} />
+
+### `<Table.Caption>`
+
+<PropsTable of={Table.Caption} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  borderColor: string,
+  hover: {
+    backgroundColor: string
+  },
+  striped: {
+    backgroundColor: string
+  },
+  Body: {
+    base: string | Object
+  },
+  Caption: {
+    base: string | Object
+  },
+  Cell: {
+    base: string | Object
+  },
+  Foot: {
+    base: string | Object
+  },
+  Head: {
+    base: string | Object
+  },
+  HeadCell: {
+    base: string | Object
+  },
+  Row: {
+    base: string | Object
+  }
+}
+```
+
+### Default
+
+```jsx
+import { palette, theme } from 'styled-tools';
+
+{
+  borderColor: palette('grayLightest'),
+  hover: {
+    backgroundColor: palette('whiteDarker')
+  },
+  striped: {
+    backgroundColor: palette('whiteDark')
+  },
+  spacing: theme('layout.spacing.xxsmall'),
+}
+```

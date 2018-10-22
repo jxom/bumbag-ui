@@ -8,6 +8,6 @@ export default styled(Group)`
   }
 
   & {
-    ${theme('group.base')};
+    ${theme('Group.base')};
   }
 `;
