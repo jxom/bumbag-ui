@@ -1,7 +1,7 @@
 // @flow
 import { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { darken } from 'polished';
+import { darken, tint } from 'polished';
 import Button from 'reakit/Button';
 import styled from 'reakit/styled';
 
@@ -116,8 +116,14 @@ export default styled(Button)`
   padding: 0 0.8rem;
   text-decoration: none;
 
-  & {
-    ${theme('Button.base')}
+  &:focus {
+    outline: unset;
+    z-index: 2;
+    box-shadow: ${props =>
+      tint(
+        0.3,
+        palette(props.palette === 'default' ? 'primary' : props.palette)(props)
+      )} 0px 0px 0px 3px, rgba(67, 90, 111, 0.14) 0px 0px 0px 1px inset, rgba(67, 90, 111, 0.3) 0px -1px 1px 0px inset !important;
   }
 
   &[disabled] {
@@ -136,4 +142,8 @@ export default styled(Button)`
     !props.isLoading && !props.disabled && props.type !== 'link'
       ? interactiveAttributes
       : ''} /* Add interactive styles */
+
+  & {
+    ${theme('Button.base')}
+  }
 `;

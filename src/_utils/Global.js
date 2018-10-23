@@ -1,6 +1,7 @@
 // @flow
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
+import { tint } from 'polished';
 import { palette, theme } from 'styled-tools';
 
 export default styled(Box)`
@@ -24,7 +25,7 @@ export default styled(Box)`
   }
 
   *:focus {
-    outline: 2px solid ${palette('primary')};
+    outline: 2px solid ${props => tint(0.3, palette('primary')(props))};
     outline-offset: 2px;
   }
 
