@@ -43,7 +43,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
 
     warning: '#ffb300',
     warningTint: tint(0.9, '#ffb300'),
-    warningInverted: p('text'),
+    warningInverted: lighten(0.2, 'black'),
 
     ...overrides.palette
   },
