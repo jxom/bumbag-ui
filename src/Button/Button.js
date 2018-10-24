@@ -1,9 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
-import { withTheme } from 'reakit/styled';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
-import _get from 'lodash/get';
 
 import type { ButtonType, Palette, Size } from '../types';
 import Spinner from '../Spinner';
@@ -36,7 +34,6 @@ type Props = {
 };
 
 export const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }: Props) => {
-  const themePalette = _get(props, 'theme.palette');
   return (
     <_Button
       className={className}
@@ -49,11 +46,7 @@ export const Button = ({ children, className, disabled, isLoading, palette, size
     >
       {isLoading ? (
         <SpinnerWrapper>
-          <Spinner
-            color={
-              type === 'default' ? themePalette[`${palette || ''}Inverted`](props) : themePalette[`${palette || ''}`]
-            }
-          />
+          <Spinner color={type === 'default' ? `${palette || ''}Inverted` : palette} />
         </SpinnerWrapper>
       ) : null}
       <span>{children}</span>
@@ -71,4 +64,4 @@ Button.defaultProps = {
   type: 'default'
 };
 
-export const ThemedButton = withTheme(Button);
+export default Button;

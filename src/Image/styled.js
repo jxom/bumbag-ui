@@ -3,7 +3,7 @@ import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
 import Image from 'reakit/Image';
 
-const fitAttributes = props => {
+const fitProperties = props => {
   if (!props.fit) return;
   if (props.fit === 'contain') {
     return css`
@@ -34,7 +34,7 @@ const fitAttributes = props => {
     `;
   }
 };
-const fixedAttributes = props => {
+const fixedProperties = props => {
   if (!props.isFixed) return;
   return css`
     max-width: unset;
@@ -47,10 +47,10 @@ export default styled(Image)`
   max-width: 100%;
 
   & {
-    ${fitAttributes};
+    ${fitProperties};
   }
   & {
-    ${fixedAttributes};
+    ${fixedProperties};
   }
 
   ${theme('Image.base')};

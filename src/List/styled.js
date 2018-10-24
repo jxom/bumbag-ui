@@ -3,7 +3,7 @@ import Box from 'reakit/Box';
 import List from 'reakit/List';
 import { theme } from 'styled-tools';
 
-const orderedAttributes = css`
+const orderedProperties = css`
   list-style-type: decimal;
 
   & & {
@@ -36,7 +36,7 @@ export default styled(List)`
   }
 
   & {
-    ${props => props.isOrdered && orderedAttributes};
+    ${props => props.isOrdered && orderedProperties};
   }
 
   & {

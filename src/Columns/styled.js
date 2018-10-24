@@ -3,7 +3,7 @@ import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
 
-const getWrapAttributes = props => {
+const getWrapProperties = props => {
   const { isOneLine, minBreakpoint } = props;
   if (isOneLine) {
     if (minBreakpoint !== 'tablet' && minBreakpoint !== 'mobile') {
@@ -36,7 +36,7 @@ export default styled(Box)`
       margin: 0 -${theme('layout.gapFactor')}rem;
     `} /**/
 
-  ${getWrapAttributes};
+  ${getWrapProperties};
 
   & {
     ${theme('Columns.base')};

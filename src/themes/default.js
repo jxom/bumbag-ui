@@ -23,23 +23,23 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     grayDarkest: darken(0.2, 'gray'),
 
     default: darken(0.01, 'white'),
-    defaultInverted: p('text'),
+    defaultInverted: '#435a6f',
 
     primary: '#112ebb',
     primaryTint: tint(0.9, '#112ebb'),
-    primaryInverted: p('white'),
+    primaryInverted: 'white',
 
     secondary: '#1d67fc',
     secondaryTint: tint(0.9, '#1d67fc'),
-    secondaryInverted: p('white'),
+    secondaryInverted: 'white',
 
     success: '#007b2e',
     successTint: tint(0.9, '#007b2e'),
-    successInverted: p('white'),
+    successInverted: 'white',
 
     danger: '#d60027',
     dangerTint: tint(0.9, '#d60027'),
-    dangerInverted: p('white'),
+    dangerInverted: 'white',
 
     warning: '#ffb300',
     warningTint: tint(0.9, '#ffb300'),

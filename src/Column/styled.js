@@ -18,7 +18,7 @@ const marginAutoOffsets = {
 
 const getWidth = spread => `${(spread / 12) * 100}%`;
 
-const getSpreadAttributes = props => {
+const getSpreadProperties = props => {
   const { minBreakpoint, spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
   if (
     !minBreakpoint &&
@@ -37,8 +37,8 @@ const getSpreadAttributes = props => {
     `;
   }
 
-  const getAttributes = ({ breakpoint, spread }) => {
-    const attributes = css`
+  const getProperties = ({ breakpoint, spread }) => {
+    const properties = css`
       flex: none;
       width: ${getWidth(spread)};
     `;
@@ -46,18 +46,18 @@ const getSpreadAttributes = props => {
     if (breakpoint) {
       return css`
         @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
-          ${attributes};
+          ${properties};
         }
       `;
     }
-    return attributes;
+    return properties;
   };
 
   return css`
-    ${getAttributes({ spread })};
-    ${getAttributes({ spread: spreadFullHD, breakpoint: 'fullHDBreakpoint' })};
-    ${getAttributes({ spread: spreadWidescreen, breakpoint: 'widescreenBreakpoint' })};
-    ${getAttributes({ spread: spreadDesktop, breakpoint: 'desktopBreakpoint' })};
+    ${getProperties({ spread })};
+    ${getProperties({ spread: spreadFullHD, breakpoint: 'fullHDBreakpoint' })};
+    ${getProperties({ spread: spreadWidescreen, breakpoint: 'widescreenBreakpoint' })};
+    ${getProperties({ spread: spreadDesktop, breakpoint: 'desktopBreakpoint' })};
     ${minBreakpoint !== 'tablet' &&
       minBreakpoint !== 'mobile' &&
       !spreadTablet &&
@@ -67,7 +67,7 @@ const getSpreadAttributes = props => {
           width: 100%;
         }
       `};
-    ${getAttributes({ spread: spreadTablet, breakpoint: 'tabletBreakpoint' })};
+    ${getProperties({ spread: spreadTablet, breakpoint: 'tabletBreakpoint' })};
     ${minBreakpoint !== 'mobile' &&
       !spreadMobile &&
       css`
@@ -75,11 +75,11 @@ const getSpreadAttributes = props => {
           width: 100%;
         }
       `};
-    ${getAttributes({ spread: spreadMobile, breakpoint: 'mobileBreakpoint' })};
+    ${getProperties({ spread: spreadMobile, breakpoint: 'mobileBreakpoint' })};
   `;
 };
 
-const getSpreadOffsetAttributes = props => {
+const getSpreadOffsetProperties = props => {
   const {
     spreadOffset,
     spreadMobileOffset,
@@ -99,30 +99,30 @@ const getSpreadOffsetAttributes = props => {
     return null;
   }
 
-  const getAttributes = ({ breakpoint, spreadOffset }) => {
-    const attributes = css`
+  const getProperties = ({ breakpoint, spreadOffset }) => {
+    const properties = css`
       margin-left: ${getWidth(spreadOffset)};
     `;
     if (!spreadOffset) return null;
     if (breakpoint) {
       return css`
         @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
-          ${attributes};
+          ${properties};
         }
       `;
     }
-    return attributes;
+    return properties;
   };
 
   if (typeof spreadOffset === 'number') {
     return css`
-      ${getAttributes({ spreadOffset })} /**/
-      ${getAttributes({
+      ${getProperties({ spreadOffset })} /**/
+      ${getProperties({
         spreadOffset: spreadFullHDOffset,
         breakpoint: 'fullHDBreakpoint'
       })};
-      ${getAttributes({ spreadOffset: spreadWidescreenOffset, breakpoint: 'widescreenBreakpoint' })};
-      ${getAttributes({ spreadOffset: spreadDesktopOffset, breakpoint: 'desktopBreakpoint' })};
+      ${getProperties({ spreadOffset: spreadWidescreenOffset, breakpoint: 'widescreenBreakpoint' })};
+      ${getProperties({ spreadOffset: spreadDesktopOffset, breakpoint: 'desktopBreakpoint' })};
       ${!spreadTabletOffset &&
         !spreadMobileOffset &&
         css`
@@ -130,14 +130,14 @@ const getSpreadOffsetAttributes = props => {
             margin-left: 0;
           }
         `};
-      ${getAttributes({ spreadOffset: spreadTabletOffset, breakpoint: 'tabletBreakpoint' })};
+      ${getProperties({ spreadOffset: spreadTabletOffset, breakpoint: 'tabletBreakpoint' })};
       ${!spreadMobileOffset &&
         css`
           @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
             margin-left: 0;
           }
         `};
-      ${getAttributes({ spreadOffset: spreadMobileOffset, breakpoint: 'mobileBreakpoint' })};
+      ${getProperties({ spreadOffset: spreadMobileOffset, breakpoint: 'mobileBreakpoint' })};
     `;
   }
   return marginAutoOffsets[spreadOffset];
@@ -154,11 +154,11 @@ const Column = styled(Box)`
       : null};
 
   & {
-    ${getSpreadAttributes};
+    ${getSpreadProperties};
   }
 
   & {
-    ${getSpreadOffsetAttributes};
+    ${getSpreadOffsetProperties};
   }
 
   & {

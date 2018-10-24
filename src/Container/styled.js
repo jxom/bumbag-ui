@@ -2,7 +2,7 @@ import styled, { css } from 'reakit/styled';
 import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
 
-const alignAttributes = {
+const alignProperties = {
   left: css`
     margin-right: auto;
   `,
@@ -15,7 +15,7 @@ const alignAttributes = {
   `
 };
 
-const getResponsiveAttributes = props => {
+const getResponsiveProperties = props => {
   const { breakpoint, isFluid } = props;
   if (isFluid) return;
   if (breakpoint) {
@@ -56,8 +56,8 @@ export default styled(Box)`
     margin: ${theme('Container.tabletMargin')};
   }
 
-  ${getResponsiveAttributes} /**/
-  ${props => !props.isFluid && alignAttributes[props.align]};
+  ${getResponsiveProperties} /**/
+  ${props => !props.isFluid && alignProperties[props.align]};
 
   ${theme('Container.base')}
 `;

@@ -1,12 +1,12 @@
-import { css } from 'reakit/styled';
-import styled from 'reakit/styled';
+import styled, { css, keyframes } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
+import { Box } from '../primitives';
 
 const sizes = {
   small: css`
     & {
-      width: 1rem;
-      height: 1rem;
+      font-size: 14px;
+      border-width: 2px;
     }
     & {
       ${theme('Spinner.sizes.small')};
@@ -14,8 +14,7 @@ const sizes = {
   `,
   medium: css`
     & {
-      width: 2rem;
-      height: 2rem;
+      font-size: 28px;
     }
     & {
       ${theme('Spinner.sizes.medium')};
@@ -23,8 +22,7 @@ const sizes = {
   `,
   large: css`
     & {
-      width: 3rem;
-      height: 3rem;
+      font-size: 36px;
     }
     & {
       ${theme('Spinner.sizes.large')};
@@ -32,17 +30,34 @@ const sizes = {
   `
 };
 
-export default styled.svg`
-  width: 1.5rem;
-  height: 1.5rem;
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+export const spinnerProperties = css`
+  animation: ${rotate} 0.6s infinite linear;
+  border: 0.1em solid ${props => palette(props.color)(props)};
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  position: relative;
+`;
+
+export default styled(Box)`
+  font-size: 20px;
+  ${spinnerProperties} /**/
 
   & {
     ${theme('Spinner.base')};
   }
 
   ${props => sizes[props.size]} /* Extend size styles */;
-
-  & path {
-    fill: ${props => props.color || palette()(props)};
-  }
 `;

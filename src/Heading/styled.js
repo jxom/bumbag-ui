@@ -3,7 +3,7 @@ import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
 import Heading from 'reakit/Heading';
 
-const subHeadingAttributes = css`
+const subHeadingProperties = css`
   font-weight: 500;
 
   & {
@@ -77,7 +77,7 @@ export default styled(Heading)`
   }
 
   & {
-    ${props => props.isSubHeading && subHeadingAttributes};
+    ${props => props.isSubHeading && subHeadingProperties};
   }
 
   ${theme('Heading.base')};

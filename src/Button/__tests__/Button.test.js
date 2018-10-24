@@ -1,6 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
-import { ThemedButton as Button } from '../Button';
+import Button from '../Button';
 import 'jest-styled-components';
 
 it('renders correctly for a default button', () => {

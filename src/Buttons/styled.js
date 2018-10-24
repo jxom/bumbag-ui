@@ -3,7 +3,7 @@ import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
 
-const groupedAttributes = css`
+const groupedProperties = css`
   & > *:not(:first-child) {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
@@ -25,5 +25,5 @@ export default styled(Box)`
   & {
     ${theme('Buttons.base')};
   }
-  ${props => props.isGrouped && groupedAttributes};
+  ${props => props.isGrouped && groupedProperties};
 `;

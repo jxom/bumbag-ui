@@ -5,7 +5,7 @@ import { darken, tint } from 'polished';
 import Button from 'reakit/Button';
 import styled from 'reakit/styled';
 
-const sizeAttributes = {
+const sizeProperties = {
   small: css`
     & {
       font-size: 0.8em;
@@ -37,7 +37,7 @@ const sizeAttributes = {
   `
 };
 
-const linkAttributes = css`
+const linkProperties = css`
   & {
     border: 0;
     background: unset;
@@ -54,7 +54,7 @@ const linkAttributes = css`
     ${theme('Button.link')};
   }
 `;
-const outlinedAttributes = css`
+const outlinedProperties = css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -69,7 +69,7 @@ const outlinedAttributes = css`
   }
 `;
 
-const disabledAttributes = css`
+const disabledProperties = css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
@@ -81,7 +81,7 @@ const disabledAttributes = css`
   }
 `;
 
-const interactiveAttributes = css`
+const interactiveProperties = css`
   &:hover {
     background-color: ${props => darken(0.05, palette()(props))};
   }
@@ -89,7 +89,7 @@ const interactiveAttributes = css`
     background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
-const loadingAttributes = css`
+const loadingProperties = css`
   & {
     cursor: not-allowed;
 
@@ -127,20 +127,20 @@ export default styled(Button)`
   }
 
   &[disabled] {
-    ${disabledAttributes}
+    ${disabledProperties}
   }
 
   {/* Add size styles */}
-  ${props => sizeAttributes[props.size]}
+  ${props => sizeProperties[props.size]}
 
   {/* Add type styles */}
-  ${props => props.type === 'outlined' && outlinedAttributes}
-  ${props => props.type === 'link' && linkAttributes}
+  ${props => props.type === 'outlined' && outlinedProperties}
+  ${props => props.type === 'link' && linkProperties}
 
-  ${props => props.isLoading && loadingAttributes} {/* Add loading styles */}
+  ${props => props.isLoading && loadingProperties} {/* Add loading styles */}
   ${props =>
     !props.isLoading && !props.disabled && props.type !== 'link'
-      ? interactiveAttributes
+      ? interactiveProperties
       : ''} /* Add interactive styles */
 
   & {

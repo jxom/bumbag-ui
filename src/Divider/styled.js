@@ -2,7 +2,7 @@ import Divider from 'reakit/Divider';
 import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
 
-const contentAttributes = css`
+const contentProperties = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@ const contentAttributes = css`
     }
   }
 `;
-const verticalAttributes = css`
+const verticalProperties = css`
   height: auto;
 
   & {
@@ -34,8 +34,8 @@ export default styled(Divider)`
   border-color: #e7e9ed;
 
   & {
-    ${props => props.content && contentAttributes} /**/
-    ${props => props.vertical && verticalAttributes};
+    ${props => props.content && contentProperties} /**/
+    ${props => props.vertical && verticalProperties};
   }
 
   & {

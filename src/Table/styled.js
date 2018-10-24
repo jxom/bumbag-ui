@@ -80,15 +80,15 @@ export const TableBody = styled(Box)`
   }
 `;
 
-const fullWidthAttributes = css`
+const fullWidthProperties = css`
   width: 100%;
 `;
-const hoverableAttributes = css`
+const hoverableProperties = css`
   & ${TableBody} ${TableRow}:hover {
     background-color: ${theme('Table.hover.backgroundColor')} !important;
   }
 `;
-const stripedAttributes = css`
+const stripedProperties = css`
   & ${TableBody} ${TableRow}:nth-child(even) {
     background-color: ${theme('Table.striped.backgroundColor')};
   }
@@ -100,13 +100,13 @@ export default styled(Box)`
   text-align: left;
 
   & {
-    ${props => props.isFullWidth && fullWidthAttributes};
+    ${props => props.isFullWidth && fullWidthProperties};
   }
   & {
-    ${props => props.isHoverable && hoverableAttributes};
+    ${props => props.isHoverable && hoverableProperties};
   }
   & {
-    ${props => props.isStriped && stripedAttributes};
+    ${props => props.isStriped && stripedProperties};
   }
 
   & {

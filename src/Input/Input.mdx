@@ -1,0 +1,107 @@
+---
+name: Input
+route: /form/input
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Input from './index';
+
+# Input
+
+## Import
+
+`import { Input } from 'fannypack'`
+
+## Basic Usage
+
+By default, `<Input>` renders an `<input>`.
+
+<Playground>
+  <Input />
+  <Input placeholder="Jake Moxey" marginLeft="xxsmall" />
+</Playground>
+
+## Disabled
+
+Make the input disabled with the `disabled` prop.
+
+<Playground>
+  <Input disabled defaultValue="Disabled field" />
+</Playground>
+
+## Full width
+
+To make the input span full width, add the `isFullWidth` prop.
+
+<Playground>
+  <Input isFullWidth />
+</Playground>
+
+## Types
+
+Just like normal `<input>` elements, you can specify a `type`.
+
+<Playground>
+  <Input type="number" /><br/>
+  <Input type="tel" marginTop="xxsmall"  /><br/>
+  <Input type="date" marginTop="xxsmall"  /><br/>
+  <Input type="email" marginTop="xxsmall"  /><br/>
+  <Input type="password" marginTop="xxsmall"  /><br/>
+  <Input type="search" marginTop="xxsmall"  /><br/>
+  <Input type="time" marginTop="xxsmall"  /><br/>
+  <Input type="url" marginTop="xxsmall"  />
+</Playground>
+
+## Sizes
+
+An input can come in different sizes - `small`, `medium`, `large`, or the default.
+
+<Playground>
+  <Input size="small" /><br/>
+  <Input marginTop="xxsmall" /><br/>
+  <Input size="medium" marginTop="xxsmall" /><br/>
+  <Input size="large" marginTop="xxsmall" />
+</Playground>
+
+## States
+
+An input can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+<Playground>
+  <Input state="danger" /><br/>
+  <Input state="success" marginTop="xxsmall" /><br/>
+  <Input state="warning" marginTop="xxsmall" /><br/>
+  <Input state="primary" marginTop="xxsmall" />
+</Playground>
+
+## Accessibility
+
+Using an accessibility label (`a11yLabel`), will enable screen readers to read the contents of the label.
+
+<Playground>
+  <Input a11yLabel="name" placeholder="Jake Moxey" />
+</Playground>
+
+## Props
+
+<PropsTable of={Input} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  disabled: string | Object,
+  focus: string | Object,
+  placeholder: string | Object,
+  sizes: {
+    small: string | Object,
+    medium: string | Object,
+    large: string | Object
+  }
+}
+```
