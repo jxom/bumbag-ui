@@ -78,6 +78,17 @@ export type ImageThemeConfig = {
     contain?: Stylesheet
   }
 };
+export type InputThemeConfig = {
+  base?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  placeholder?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type LayoutThemeConfig = {
   mobileBreakpoint: number,
   tabletBreakpoint: number,
@@ -169,6 +180,7 @@ export type ThemeConfig = {
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
   Image?: ImageThemeConfig,
+  Input?: InputThemeConfig,
   Link?: LinkThemeConfig,
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
