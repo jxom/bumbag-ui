@@ -1,0 +1,55 @@
+---
+name: Label
+route: /form/label
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Input from '../Input';
+import Label from './index';
+
+# Label
+
+## Import
+
+`import { Label } from 'fannypack'`
+
+## Basic Usage
+
+`<Label>` renders a `<label>` by default with basic reset styling.
+
+<Playground>
+  <Label>Hello world</Label>
+  This is me
+</Playground>
+
+They can also be linked with any type of field, like `<Input>`.
+
+<Playground>
+  <Label htmlFor="name">Your name</Label>
+  <Input id="name" />
+</Playground>
+
+## Accessibility
+
+If using in conjunction with other fields, it is highly recommend to add a `htmlFor` prop to `<Label>` which links to the field `id`.
+
+<Playground>
+  <Label htmlFor="name">Your name</Label>
+  <Input id="name" />
+</Playground>
+
+## Props
+
+<PropsTable of={Label} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```

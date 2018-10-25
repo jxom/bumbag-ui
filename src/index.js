@@ -16,6 +16,7 @@ export { Group } from './Group';
 export { Heading } from './Heading';
 export { Image } from './Image';
 export { Input } from './Input';
+export { Label } from './Label';
 export { Link } from './Link';
 export { List, ListItem } from './List';
 export { Navigation } from './Navigation';

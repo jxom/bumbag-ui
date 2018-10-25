@@ -89,6 +89,9 @@ export type InputThemeConfig = {
     large?: Stylesheet
   }
 };
+export type LabelThemeConfig = {
+  base?: Stylesheet
+};
 export type LayoutThemeConfig = {
   mobileBreakpoint: number,
   tabletBreakpoint: number,
@@ -181,6 +184,7 @@ export type ThemeConfig = {
   Heading?: HeadingThemeConfig,
   Image?: ImageThemeConfig,
   Input?: InputThemeConfig,
+  Label?: LabelThemeConfig,
   Link?: LinkThemeConfig,
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
