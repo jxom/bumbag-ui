@@ -12,6 +12,8 @@ type Props = {
   autoFocus?: boolean,
   children: Node,
   className?: string,
+  /** Default value of the input */
+  defaultValue?: string,
   /** Disables the input */
   disabled?: boolean,
   /** ID for the input */
@@ -22,6 +24,8 @@ type Props = {
   isLoading?: boolean,
   /** Makes the input required and sets aria-invalid to true */
   isRequired?: boolean,
+  /** Name of the input field */
+  name?: string,
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size,
   /** Regex pattern to apply to the input */
@@ -32,7 +36,7 @@ type Props = {
   state?: string,
   /** Specify the type of input. */
   type?: string,
-  /** Initial value of the input */
+  /** Value of the input */
   value?: string,
   /** Function to invoke when focus is lost */
   onBlur?: Function,
@@ -60,11 +64,13 @@ Input.defaultProps = {
   as: null,
   autoFocus: false,
   className: null,
+  defaultValue: undefined,
   disabled: false,
   id: null,
   isFullWidth: false,
   isLoading: false,
   isRequired: false,
+  name: null,
   onBlur: null,
   onChange: null,
   onFocus: null,

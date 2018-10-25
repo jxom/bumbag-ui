@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Label = ({ children, className, ...props }: Props) => (
-  <_Label marginBottom="xxxsmall" {...props}>
+  <_Label fontWeight="600" marginBottom="xxxsmall" {...props}>
     {children}
   </_Label>
 );

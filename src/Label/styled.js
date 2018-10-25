@@ -5,7 +5,6 @@ import Label from 'reakit/Label';
 
 export default styled(Label)`
   display: block;
-  font-weight: 600;
 
   ${theme('Label.base')};
 `;
