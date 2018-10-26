@@ -42,6 +42,9 @@ export const HiddenRadio = HiddenInput({
     transform: translate(-50%, -50%);
     width: 8px;
   `,
+  disabledTickCss: css`
+    background: ${palette('grayLighter')};
+  `,
   themePrefix: 'Radio'
 });
 

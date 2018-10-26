@@ -46,6 +46,9 @@ export const HiddenCheckbox = HiddenInput({
     transform: rotate(45deg);
     width: 6px;
   `,
+  disabledTickCss: css`
+    border-color: ${palette('grayLighter')};
+  `,
   themePrefix: 'Checkbox'
 });
 

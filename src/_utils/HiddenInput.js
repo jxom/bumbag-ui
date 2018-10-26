@@ -3,7 +3,7 @@ import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 import Input from 'reakit/Input';
 
-export default ({ Icon, tickCss, themePrefix }) => styled(Input)`
+export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input)`
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
@@ -27,9 +27,10 @@ export default ({ Icon, tickCss, themePrefix }) => styled(Input)`
       ${theme(`${themePrefix}.icon.focus`)};
     }
   }
-  &:checked + ${Icon} {
+  &:not([disabled]):checked + ${Icon} {
     border-color: ${props => tint(0.3, palette('primary')(props))};
-
+  }
+  &:checked + ${Icon} {
     & {
       ${props =>
         props.state &&
@@ -46,5 +47,8 @@ export default ({ Icon, tickCss, themePrefix }) => styled(Input)`
     & {
       ${theme(`${themePrefix}.icon.checked`)};
     }
+  }
+  &[disabled]:checked + ${Icon}::before {
+    ${disabledTickCss};
   }
 `;
