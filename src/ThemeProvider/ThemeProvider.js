@@ -22,7 +22,7 @@ const Provider = ({ children, isStandalone, theme: _theme }: Props) => {
   theme = {
     ...theme,
     ...reakitTheme,
-    ...theme.reakit
+    ...(theme && theme.reakit ? theme.reakit : {})
   };
   return (
     <ThemeProvider theme={theme}>
