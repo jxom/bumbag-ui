@@ -15,7 +15,7 @@ type Props = {
 };
 
 const Provider = ({ children, isStandalone, theme: _theme }: Props) => {
-  let theme = defaultTheme({ overrides: _theme });
+  let theme = defaultTheme(_theme);
   if (isStandalone) {
     theme = _theme;
   }
