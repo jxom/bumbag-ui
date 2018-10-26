@@ -24,6 +24,16 @@ export type ButtonThemeConfig = {
     large?: Stylesheet
   }
 };
+export type CheckboxThemeConfig = {
+  base: Stylesheet,
+  icon: {
+    base: Stylesheet,
+    checked: Stylesheet,
+    disabled: Stylesheet,
+    focus: Stylesheet,
+    tick: Stylesheet
+  }
+};
 export type CodeThemeConfig = {
   base?: Stylesheet,
   block?: Stylesheet,
@@ -124,6 +134,16 @@ export type NavigationThemeConfig = {
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
+export type RadioThemeConfig = {
+  base: Stylesheet,
+  icon: {
+    base: Stylesheet,
+    checked: Stylesheet,
+    disabled: Stylesheet,
+    focus: Stylesheet,
+    tick: Stylesheet
+  }
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -175,6 +195,7 @@ export type ThemeConfig = {
 
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
+  Checkbox?: CheckboxThemeConfig,
   Code?: CodeThemeConfig,
   Column?: ColumnThemeConfig,
   Columns?: ColumnsThemeConfig,
@@ -189,6 +210,7 @@ export type ThemeConfig = {
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
   Paragraph?: ParagraphThemeConfig,
+  Radio?: RadioThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig

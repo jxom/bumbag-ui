@@ -21,6 +21,7 @@ export { Link } from './Link';
 export { List, ListItem } from './List';
 export { Navigation } from './Navigation';
 export { Paragraph } from './Paragraph';
+export { Radio } from './Radio';
 export { Spinner } from './Spinner';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
 export { Text } from './Text';

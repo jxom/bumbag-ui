@@ -2,39 +2,39 @@
 import React from 'react';
 
 import Text from '../Text';
-import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
+import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
 type Props = {
-  /** An accessible label for the checkbox */
+  /** An accessible label for the radio */
   a11yLabel?: string,
-  /** Automatically focus on the checkbox */
+  /** Automatically focus on the radio */
   autoFocus?: boolean,
   checked?: boolean | string,
   className?: string,
-  /** Default value of the checkbox */
+  /** Default value of the radio */
   defaultValue?: string,
-  /** Disables the checkbox */
+  /** Disables the radio */
   disabled?: boolean,
-  /** ID for the checkbox */
+  /** ID for the radio */
   id?: string,
-  /** Makes the checkbox required and sets aria-invalid to true */
+  /** Makes the radio required and sets aria-invalid to true */
   isRequired?: boolean,
-  /** Checkbox label */
+  /** radio label */
   label: string,
   name?: string,
-  /** State of the checkbox. Can be any color in the palette. */
+  /** State of the radio. Can be any color in the palette. */
   state?: string,
-  /** Initial value of the checkbox */
+  /** Initial value of the radio */
   value?: string,
   /** Function to invoke when focus is lost */
   onBlur?: Function,
-  /** Function to invoke when checkbox has changed */
+  /** Function to invoke when radio has changed */
   onChange?: Function,
-  /** Function to invoke when checkbox is focused */
+  /** Function to invoke when radio is focused */
   onFocus?: Function
 };
 
-const Checkbox = ({
+const Radio = ({
   a11yLabel,
   autoFocus,
   checked,
@@ -52,14 +52,14 @@ const Checkbox = ({
   value,
   ...props
 }: Props) => (
-  <_Checkbox
+  <_Radio
     aria-describedby="label"
     aria-invalid={state === 'danger'}
     aria-label={a11yLabel}
     aria-required={isRequired}
     {...props}
   >
-    <HiddenCheckbox
+    <HiddenRadio
       autoFocus={autoFocus}
       checked={checked}
       defaultValue={defaultValue}
@@ -70,17 +70,17 @@ const Checkbox = ({
       onFocus={onFocus}
       name={name}
       state={state}
-      type="checkbox"
+      type="radio"
       value={value}
     />
-    <CheckboxIcon state={state} />
+    <RadioIcon state={state} />
     <Text id="label" marginLeft="xxsmall">
       {label}
     </Text>
-  </_Checkbox>
+  </_Radio>
 );
 
-Checkbox.defaultProps = {
+Radio.defaultProps = {
   a11yLabel: null,
   autoFocus: false,
   checked: undefined,
@@ -97,4 +97,4 @@ Checkbox.defaultProps = {
   value: undefined
 };
 
-export default Checkbox;
+export default Radio;

@@ -7,10 +7,10 @@ import Label from 'reakit/Label';
 import { Box } from '../primitives';
 import HiddenInput from '../_utils/HiddenInput';
 
-export const CheckboxIcon = styled(Box)`
+export const RadioIcon = styled(Box)`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
-  border-radius: 0.2em;
+  border-radius: 100%;
   height: 1em;
   position: relative;
   width: 1em;
@@ -25,33 +25,29 @@ export const CheckboxIcon = styled(Box)`
   }
 
   & {
-    ${theme('Checkbox.icon.base')};
+    ${theme('Radio.icon.base')};
   }
 `;
 
-export const HiddenCheckbox = HiddenInput({
-  Icon: CheckboxIcon,
+export const HiddenRadio = HiddenInput({
+  Icon: RadioIcon,
   tickCss: css`
-    background-clip: padding-box;
-    border: 0.1rem solid ${props => tint(0.3, palette('primary')(props))};
-    border-left-width: 0;
-    border-top-width: 0;
+    background: #586ccf;
+    border-radius: 50%;
     content: '';
-    height: 10px;
+    height: 8px;
     left: 50%;
-    margin-left: -3px;
-    margin-top: -6px;
     position: absolute;
     top: 50%;
-    transform: rotate(45deg);
-    width: 6px;
+    transform: translate(-50%, -50%);
+    width: 8px;
   `,
-  themePrefix: 'Checkbox'
+  themePrefix: 'Radio'
 });
 
 export default styled(Label)`
   display: flex;
   align-items: center;
 
-  ${theme('Checkbox.base')};
+  ${theme('Radio.base')};
 `;

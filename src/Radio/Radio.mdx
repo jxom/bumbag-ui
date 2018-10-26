@@ -1,0 +1,62 @@
+---
+name: Radio
+route: /form/radio
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Radio from './index';
+
+# Radio
+
+## Import
+
+`import { Radio } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Radio name="weather" label="Sunny" />
+  <Radio name="weather" label="Windy" />
+</Playground>
+
+## Disabled
+
+Make the Radio disabled with the `disabled` prop.
+
+<Playground>
+  <Radio disabled name="weather" label="Sunny" />
+</Playground>
+
+## States
+
+A Radio can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+<Playground>
+  <Radio state="danger" name="weather" label="Sunny" />
+  <Radio state="success" name="weather" label="Rainy" />
+  <Radio state="warning" name="weather" label="Windy" />
+  <Radio state="primary" name="weather" label="Overcast" />
+</Playground>
+
+## Props
+
+<PropsTable of={Radio} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  icon: {
+    base: string | Object,
+    checked: string | Object
+    disabled: string | Object,
+    focus: string | Object
+    tick: string | Object
+  }
+}
+```
