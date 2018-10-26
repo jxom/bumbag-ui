@@ -4,7 +4,7 @@
 
 > Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable 1.0.0 release.
 
-[Read the docs: https://fannypack.style](https://fannypack.style)
+[Read the docs here](https://fannypack.style)
 
 ## Installing Fannypack
 
