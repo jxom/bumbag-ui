@@ -4,6 +4,7 @@ export { styled, css } from './styled';
 export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';
 
+export { Alert } from './Alert';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';
 export { Buttons } from './Buttons';
