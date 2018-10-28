@@ -7,6 +7,7 @@ menu: Form
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Input from './index';
+import Component from '@reactions/component';
 
 # Input
 
@@ -21,6 +22,14 @@ By default, `<Input>` renders an `<input>`.
 <Playground>
   <Input />
   <Input placeholder="Jake Moxey" marginLeft="xxsmall" />
+</Playground>
+
+## Default values
+
+For uncontrolled inputs, set a default value using the `defaultValue` prop.
+
+<Playground>
+  <Input defaultValue="Fannypacks rock!" />
 </Playground>
 
 ## Disabled
@@ -74,6 +83,20 @@ An input can use different states (as per palette) such as `danger`, `success` a
   <Input state="success" marginTop="xxsmall" /><br/>
   <Input state="warning" marginTop="xxsmall" /><br/>
   <Input state="primary" marginTop="xxsmall" />
+</Playground>
+
+## Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `initialValue` with controlled inputs!
+
+<Playground>
+  <Component initialState={{ value: 'Fannypacks rock!' }}>
+    {({ state, setState }) => (
+      <Input onChange={e => setState({ value: e.target.value })} value={state.value} />
+    )}
+  </Component>
 </Playground>
 
 ## Accessibility

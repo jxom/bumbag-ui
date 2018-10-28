@@ -7,7 +7,7 @@ import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 type Props = {
   /** Automatically focus on the checkbox */
   autoFocus?: boolean,
-  checked?: boolean | string,
+  checked?: boolean,
   className?: string,
   /** Is the checkbox checked by default? */
   defaultChecked?: boolean,
