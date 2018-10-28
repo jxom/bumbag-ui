@@ -1,0 +1,89 @@
+---
+name: RadioGroup
+route: /form/radiogroup
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import { RadioGroup } from './index';
+import Component from '@reactions/component';
+
+# RadioGroup
+
+`import { RadioGroup } from 'fannypack'`
+
+
+## Basic Usage
+
+The `RadioGroup` component renders a group of [`<Radio>` fields](/form/radio).
+
+<Playground>
+  <RadioGroup name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## Horizontal group
+
+<Playground>
+  <RadioGroup isHorizontal name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## Disabled
+
+You can disable a radio group with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
+
+<Playground>
+  <RadioGroup name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy', disabled: true }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## States
+
+A RadioGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+<Playground>
+  <RadioGroup state="danger" name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## Default value
+
+Specify a default checked value with the `defaultValue` prop.
+
+<Playground>
+  <RadioGroup defaultValue="overcast" name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+<Playground>
+  <Component initialState={{ value: 'overcast' }}>
+    {({ state, setState }) => (
+      <RadioGroup name="weather2" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} value={state.value} onChange={value => setState({ value })} />
+    )}
+  </Component>
+</Playground>
+
+## Accessibility
+
+Using an accessibility label (`a11yLabel`) will provide an accessible label for the radio group to be read easily by a screen reader.
+
+<Playground>
+  <RadioGroup a11yLabel="Weather" name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+
+## Props
+
+<PropsTable of={RadioGroup} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  horizontal: string | Object
+}
+```

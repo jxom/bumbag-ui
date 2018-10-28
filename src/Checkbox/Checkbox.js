@@ -5,14 +5,12 @@ import Text from '../Text';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 
 type Props = {
-  /** An accessible label for the checkbox */
-  a11yLabel?: string,
   /** Automatically focus on the checkbox */
   autoFocus?: boolean,
   checked?: boolean | string,
   className?: string,
-  /** Default value of the checkbox */
-  defaultValue?: string,
+  /** Is the checkbox checked by default? */
+  defaultChecked?: boolean,
   /** Disables the checkbox */
   disabled?: boolean,
   /** ID for the checkbox */
@@ -35,11 +33,10 @@ type Props = {
 };
 
 const Checkbox = ({
-  a11yLabel,
   autoFocus,
   checked,
   className,
-  defaultValue,
+  defaultChecked,
   disabled,
   id,
   isRequired,
@@ -55,14 +52,14 @@ const Checkbox = ({
   <_Checkbox
     aria-describedby="label"
     aria-invalid={state === 'danger'}
-    aria-label={a11yLabel}
+    aria-label={label}
     aria-required={isRequired}
     {...props}
   >
     <HiddenCheckbox
       autoFocus={autoFocus}
       checked={checked}
-      defaultValue={defaultValue}
+      defaultChecked={defaultChecked}
       disabled={disabled}
       id={id}
       onBlur={onBlur}
@@ -81,11 +78,10 @@ const Checkbox = ({
 );
 
 Checkbox.defaultProps = {
-  a11yLabel: null,
   autoFocus: false,
   checked: undefined,
   className: null,
-  defaultValue: undefined,
+  defaultChecked: undefined,
   disabled: false,
   id: null,
   isRequired: false,

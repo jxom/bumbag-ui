@@ -5,14 +5,12 @@ import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
 type Props = {
-  /** An accessible label for the radio */
-  a11yLabel?: string,
   /** Automatically focus on the radio */
   autoFocus?: boolean,
   checked?: boolean | string,
   className?: string,
-  /** Default value of the radio */
-  defaultValue?: string,
+  /** Is the radio checked by default */
+  defaultChecked?: boolean,
   /** Disables the radio */
   disabled?: boolean,
   /** ID for the radio */
@@ -24,8 +22,8 @@ type Props = {
   name?: string,
   /** State of the radio. Can be any color in the palette. */
   state?: string,
-  /** Initial value of the radio */
-  value?: string,
+  /** Controlled value of the radio */
+  value?: string | boolean | Object,
   /** Function to invoke when focus is lost */
   onBlur?: Function,
   /** Function to invoke when radio has changed */
@@ -35,11 +33,10 @@ type Props = {
 };
 
 const Radio = ({
-  a11yLabel,
   autoFocus,
   checked,
   className,
-  defaultValue,
+  defaultChecked,
   disabled,
   id,
   isRequired,
@@ -55,23 +52,23 @@ const Radio = ({
   <_Radio
     aria-describedby="label"
     aria-invalid={state === 'danger'}
-    aria-label={a11yLabel}
+    aria-label={label}
     aria-required={isRequired}
     {...props}
   >
     <HiddenRadio
       autoFocus={autoFocus}
       checked={checked}
-      defaultValue={defaultValue}
+      defaultChecked={defaultChecked}
       disabled={disabled}
       id={id}
       onBlur={onBlur}
-      onChange={onChange}
+      onChange={onChange ? e => onChange({ target: { value: JSON.parse(e.target.value) } }) : undefined}
       onFocus={onFocus}
       name={name}
       state={state}
       type="radio"
-      value={value}
+      value={JSON.stringify(value)}
     />
     <RadioIcon state={state} />
     <Text id="label" marginLeft="xxsmall">
@@ -81,19 +78,18 @@ const Radio = ({
 );
 
 Radio.defaultProps = {
-  a11yLabel: null,
   autoFocus: false,
   checked: undefined,
-  className: null,
-  defaultValue: undefined,
+  className: undefined,
+  defaultChecked: false,
   disabled: false,
-  id: null,
+  id: undefined,
   isRequired: false,
-  onBlur: null,
-  onChange: null,
-  onFocus: null,
-  name: null,
-  state: null,
+  onBlur: undefined,
+  onChange: undefined,
+  onFocus: undefined,
+  name: undefined,
+  state: undefined,
   value: undefined
 };
 

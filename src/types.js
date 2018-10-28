@@ -147,6 +147,10 @@ export type RadioThemeConfig = {
     tick: Stylesheet
   }
 };
+export type RadioGroupThemeConfig = {
+  base: Stylesheet,
+  horizontal: Stylesheet
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -215,6 +219,7 @@ export type ThemeConfig = {
   Navigation?: NavigationThemeConfig,
   Paragraph?: ParagraphThemeConfig,
   Radio?: RadioThemeConfig,
+  RadioGroup?: RadioGroupThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig

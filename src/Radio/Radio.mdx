@@ -6,7 +6,8 @@ menu: Form
 
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
-import Radio from './index';
+import Radio, { RadioGroup } from './index';
+import Component from '@reactions/component';
 
 # Radio
 
@@ -17,8 +18,8 @@ import Radio from './index';
 ## Basic Usage
 
 <Playground>
-  <Radio name="weather" label="Sunny" />
-  <Radio name="weather" label="Windy" />
+  <Radio name="weather" label="Sunny" value="sunny" />
+  <Radio name="weather" label="Windy" value="windy" />
 </Playground>
 
 ## Disabled
@@ -26,8 +27,8 @@ import Radio from './index';
 Make the Radio disabled with the `disabled` prop.
 
 <Playground>
-  <Radio disabled name="hasFannypack" label="Yes" />
-  <Radio checked disabled name="hasFannypack" label="No" />
+  <Radio disabled name="hasFannypack" label="Yes" value={true} />
+  <Radio checked disabled name="hasFannypack" label="No" value={false} />
 </Playground>
 
 ## States
@@ -35,10 +36,21 @@ Make the Radio disabled with the `disabled` prop.
 A Radio can use different states (as per palette) such as `danger`, `success` and `warning`.
 
 <Playground>
-  <Radio state="danger" name="weather" label="Sunny" />
-  <Radio state="success" name="weather" label="Rainy" />
-  <Radio state="warning" name="weather" label="Windy" />
-  <Radio state="primary" name="weather" label="Overcast" />
+  <Radio state="danger" name="weather" label="Sunny" value="sunny" />
+  <Radio state="success" name="weather" label="Rainy" value="rainy" />
+  <Radio state="warning" name="weather" label="Windy" value="windy" />
+  <Radio state="primary" name="weather" label="Overcast" value="overcast" />
+</Playground>
+
+## Default checked
+
+To check an option by default, use the `defaultChecked` prop.
+
+<Playground>
+  <Radio name="weather" label="Sunny" value="sunny" />
+  <Radio defaultChecked name="weather" label="Rainy" value="rainy" />
+  <Radio name="weather" label="Windy" value="windy" />
+  <Radio name="weather" label="Overcast" value="overcast" />
 </Playground>
 
 ## Props

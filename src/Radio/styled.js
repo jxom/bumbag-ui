@@ -48,9 +48,36 @@ export const HiddenRadio = HiddenInput({
   themePrefix: 'Radio'
 });
 
-export default styled(Label)`
+export const Radio = styled(Label)`
   display: flex;
   align-items: center;
 
   ${theme('Radio.base')};
 `;
+
+const horizontalProperties = css`
+  display: flex;
+
+  & ${Radio}:not(:last-child) {
+    margin-right: 1rem;
+    margin-bottom: unset;
+  }
+
+  & {
+    ${theme('RadioGroup.horizontal')};
+  }
+`;
+
+export const RadioGroup = styled(Box)`
+  & ${Radio}:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  & {
+    ${props => props.isHorizontal && horizontalProperties};
+  }
+
+  ${theme('RadioGroup.base')};
+`;
+
+export default Radio;
