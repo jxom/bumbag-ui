@@ -3,7 +3,7 @@ import React from 'react';
 
 import { css } from 'reakit/styled';
 import styled from 'reakit/styled';
-import { theme } from 'styled-tools';
+import { theme, palette } from 'styled-tools';
 
 import type { Size } from '../types';
 
@@ -48,7 +48,7 @@ const Star = styled.svg`
   ${props => sizes[props.size]} /* Extend size styles */;
 
   & path {
-    fill: ${props => (props.active ? props.color || theme('rating.star.color') : 'lightgray')};
+    fill: ${props => (props.active ? theme('rating.star.color') || palette('black') : palette('whiteDarkest'))};
   }
 `;
 

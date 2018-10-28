@@ -11,7 +11,8 @@ type Props = {
   size: Size,
   rating?: number,
   maxRating?: string,
-  onRate?: Function
+  onRate?: Function,
+  disabled?: boolean
 };
 
 type State = {
@@ -27,7 +28,8 @@ class Rating extends Component<Props, State> {
     size: 'regular',
     rating: 0,
     maxRating: 5,
-    onRate: null
+    onRate: null,
+    disabled: false
   };
 
   state = {
@@ -39,22 +41,24 @@ class Rating extends Component<Props, State> {
 
   static getDerivedStateFromProps = (nextProps: Props, prevState: State) => {
     if (prevState.isStateDirty && nextProps.rating !== prevState.rating) {
-      console.log('setting rating ', prevState.rating, ' to ', nextProps.rating);
       return { ...prevState, rating: nextProps.rating, isStateDirty: false };
     }
     return null;
   };
 
   handleStarClick = (index: number) => {
-    const { onRate } = this.props;
+    const { onRate, disabled } = this.props;
     const rating = index + 1;
 
-    this.setState({ rating });
-    onRate && onRate({ rating, isStateDirty: true });
+    if (!disabled) {
+      this.setState({ rating });
+      onRate && onRate({ rating, isStateDirty: true });
+    }
   };
 
   handleStarMouseOver = (index: number) => {
-    this.setState({ isSelecting: true, selectedIndex: index });
+    const { disabled } = this.props;
+    !disabled && this.setState({ isSelecting: true, selectedIndex: index });
   };
 
   handleMouseLeave = () => {
