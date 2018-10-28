@@ -196,6 +196,7 @@ export type ThemeConfig = {
   layout?: LayoutThemeConfig,
   fontSizes?: FontSizeThemeConfig,
 
+  Alert?: AlertThemeConfig,
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
   Checkbox?: CheckboxThemeConfig,
