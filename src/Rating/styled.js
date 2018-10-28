@@ -45,6 +45,6 @@ export const RatingStar = styled.svg`
   ${props => starSizes[props.size]} /* Extend size styles */;
 
   & path {
-    fill: ${props => (props.active ? theme('rating.star.color') || palette('black') : palette('whiteDarkest'))};
+    fill: ${props => (props.active ? theme('rating.Star.color') || palette('black') : palette('whiteDarkest'))};
   }
 `;
