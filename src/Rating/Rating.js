@@ -4,7 +4,7 @@ import times from 'lodash/times';
 
 import type { Size } from '../types';
 import RatingStar from './RatingStar';
-import _Rating from './styled';
+import { Rating as _Rating } from './styled';
 
 type Props = {
   className?: string,

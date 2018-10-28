@@ -6,6 +6,7 @@ menu: Extras
 
 import { Playground, PropsTable } from 'docz';
 import Rating from '../Rating';
+import { RatingStar } from '../Rating';
 
 # Rating
 
@@ -15,8 +16,16 @@ import Rating from '../Rating';
 
 ## Basic Usage
 
+The rating callback returns `{ rating, maxRating }`.
+
 <Playground>
-  <Rating />
+  <Rating  onRate={({ rating }) => console.log(rating)}/>
+</Playground>
+
+## Controlled
+
+<Playground>
+  <Rating rating={3} />
 </Playground>
 
 ## Sizes
@@ -28,6 +37,27 @@ import Rating from '../Rating';
   <Rating rating={4} size="large" />
 </Playground>
 
+## Disabled
+
+<Playground>
+  <Rating rating={3} disabled />
+</Playground>
+
+
+# RatingStar
+
+`import { Rating } from 'fannypack'`
+
+<Playground>
+  <RatingStar />
+  <RatingStar size="medium"/>
+  <RatingStar size="large" active />
+</Playground>
+
 ## Props
 
+### `<Rating>`
 <PropsTable of={Rating} />
+
+### `<RatingStar>`
+<PropsTable of={RatingStar} />
