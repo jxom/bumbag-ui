@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Alert = ({ className, children, palette, ...props }: Props) => (
-  <_Alert className={className} palette={palette} {...props}>
+  <_Alert role="alert" className={className} palette={palette} {...props}>
     {children}
   </_Alert>
 );
