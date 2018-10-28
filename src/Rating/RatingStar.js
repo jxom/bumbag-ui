@@ -48,7 +48,7 @@ const Star = styled.svg`
   ${props => sizes[props.size]} /* Extend size styles */;
 
   & path {
-    fill: ${props => (props.active ? 'gold' : 'lightgray')};
+    fill: ${props => (props.active ? props.color || theme('rating.star.color') : 'lightgray')};
   }
 `;
 
