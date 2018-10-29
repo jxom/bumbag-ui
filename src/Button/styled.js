@@ -42,12 +42,12 @@ const linkProperties = css`
     border: 0;
     background: unset;
     box-shadow: unset !important;
-    color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props) || '')};
+    color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
     text-decoration: underline;
 
     &:hover {
       color: ${props =>
-        props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props) || '')};
+        props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
     }
   }
   & {
@@ -83,10 +83,10 @@ const disabledProperties = css`
 
 const interactiveProperties = css`
   &:hover {
-    background-color: ${props => darken(0.05, palette()(props) || '')};
+    background-color: ${props => darken(0.05, palette()(props))};
   }
   &:hover:active {
-    background-color: ${props => darken(0.1, palette()(props) || '')};
+    background-color: ${props => darken(0.1, palette()(props))};
   }
 `;
 const loadingProperties = css`
@@ -105,7 +105,7 @@ const loadingProperties = css`
 export default styled(Button)`
   align-items: center;
   background-color: ${palette()};
-  border: 1px solid ${props => darken(0.2, palette()(props) || '')};
+  border: 1px solid ${props => darken(0.2, palette()(props))};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;

@@ -4,6 +4,7 @@ import { palette as p, theme } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
 export default (overrides: ThemeConfig = {}): ThemeConfig => ({
+  ...overrides,
   palette: {
     text: '#435a6f',
 
@@ -90,6 +91,5 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     },
     spacing: theme('layout.spacing.xxsmall'),
     ...overrides.Table
-  },
-  ...overrides
+  }
 });
