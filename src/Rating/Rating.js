@@ -24,11 +24,11 @@ type State = {
 
 class Rating extends Component<Props, State> {
   static defaultProps = {
-    className: null,
+    className: undefined,
     size: 'regular',
     rating: 0,
     maxRating: 5,
-    onRate: null,
+    onRate: undefined,
     disabled: false
   };
 
