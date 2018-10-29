@@ -11,6 +11,7 @@ module.exports = {
     }
   },
   babel: {
-    presets: ['flow']
+    presets: ['flow'],
+    plugins: ['transform-class-properties']
   }
 };

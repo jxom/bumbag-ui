@@ -163,6 +163,16 @@ export type RatingThemeConfig = {
     }
   }
 };
+export type SelectThemeConfig = {
+  base?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -233,6 +243,7 @@ export type ThemeConfig = {
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,
   Rating?: RatingThemeConfig,
+  Select?: SelectThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig

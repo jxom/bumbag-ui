@@ -1,3 +1,4 @@
 module.exports = require('babel-jest').createTransformer({
-  presets: ['env', 'react']
+  presets: ['env', 'react'],
+  plugins: ['transform-class-properties']
 });
