@@ -2,7 +2,11 @@ import styled from 'reakit/styled';
 import { css } from 'reakit/styled';
 import { theme, palette } from 'styled-tools';
 
-export const Rating = styled.div``;
+export const Rating = styled.div`
+  & {
+    ${theme('Rating.base')};
+  }
+`;
 
 const starSizes = {
   small: css`
@@ -11,7 +15,7 @@ const starSizes = {
       height: 1rem;
     }
     & {
-      ${theme('rating.sizes.small')};
+      ${theme('Rating.Star.sizes.small')};
     }
   `,
   medium: css`
@@ -20,7 +24,7 @@ const starSizes = {
       height: 2rem;
     }
     & {
-      ${theme('rating.sizes.medium')};
+      ${theme('Rating.Star.sizes.medium')};
     }
   `,
   large: css`
@@ -29,7 +33,7 @@ const starSizes = {
       height: 3rem;
     }
     & {
-      ${theme('rating.sizes.large')};
+      ${theme('Rating.Star.sizes.large')};
     }
   `
 };
@@ -39,12 +43,12 @@ export const RatingStar = styled.svg`
   height: 1.5rem;
 
   & {
-    ${theme('rating.Star.base')};
+    ${theme('Rating.Star.base')};
   }
 
   ${props => starSizes[props.size]} /* Extend size styles */;
 
   & path {
-    fill: ${props => (props.active ? theme('rating.Star.color') || palette('black') : palette('whiteDarkest'))};
+    fill: ${props => (props.active ? theme('Rating.Star.color') || 'gold' : palette('whiteDarkest'))};
   }
 `;

@@ -16,33 +16,43 @@ import { RatingStar } from '../Rating';
 
 ## Basic Usage
 
-The rating callback returns `{ rating, maxRating }`.
+The rating callback is called with `{ rating, maxRating }`.
 
 <Playground>
-  <Rating  onRate={({ rating }) => console.log(rating)}/>
+  <Rating  onRate={result => console.log(result)}/>
 </Playground>
 
-## Controlled
+## Default Rating
 
 <Playground>
-  <Rating rating={3} />
-</Playground>
-
-## Sizes
-
-<Playground>
-  <Rating rating={1} size="small" />
-  <Rating rating={2} />
-  <Rating rating={3} size="medium" />
-  <Rating rating={4} size="large" />
+  <Rating defaultRating={3} />
 </Playground>
 
 ## Disabled
 
 <Playground>
-  <Rating rating={3} disabled />
+  <Rating defaultRating={3} disabled />
 </Playground>
 
+## Sizes
+
+<Playground>
+  <Rating defaultRating={1} size="small" />
+  <Rating defaultRating={2} />
+  <Rating defaultRating={3} size="medium" />
+  <Rating defaultRating={4} size="large" />
+</Playground>
+
+## Max Rating
+
+<Playground>
+  <Rating maxRating={1} />
+  <Rating maxRating={2} />
+  <Rating maxRating={3} />
+  <Rating maxRating={4} />
+  <Rating />
+  <Rating maxRating={10} />
+</Playground>
 
 # RatingStar
 
@@ -61,3 +71,22 @@ The rating callback returns `{ rating, maxRating }`.
 
 ### `<RatingStar>`
 <PropsTable of={RatingStar} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Star: {
+    base: string | Object,
+    color: string,
+    sizes: {
+      small: string | Object,
+      medium: string | Object,
+      large: string | Object,
+    }
+  }
+}
+```

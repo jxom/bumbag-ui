@@ -138,8 +138,8 @@ export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
 export type RadioThemeConfig = {
-  base: Stylesheet,
-  icon: {
+  base?: Stylesheet,
+  icon?: {
     base: Stylesheet,
     checked: Stylesheet,
     disabled: Stylesheet,
@@ -148,8 +148,20 @@ export type RadioThemeConfig = {
   }
 };
 export type RadioGroupThemeConfig = {
-  base: Stylesheet,
-  horizontal: Stylesheet
+  base?: Stylesheet,
+  horizontal?: Stylesheet
+};
+export type RatingThemeConfig = {
+  base?: Stylesheet,
+  Star?: {
+    base?: Stylesheet,
+    color?: string,
+    sizes?: {
+      small?: Stylesheet,
+      medium?: Stylesheet,
+      large?: Stylesheet
+    }
+  }
 };
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
@@ -220,6 +232,7 @@ export type ThemeConfig = {
   Paragraph?: ParagraphThemeConfig,
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,
+  Rating?: RatingThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig
