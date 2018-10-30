@@ -30,7 +30,7 @@ describe('sizes', () => {
   });
 });
 
-describe.only('behavior', () => {
+describe('behavior', () => {
   it('should call onRate with correct values when a rating is selected', () => {
     const handleRate = jest.fn();
     const { getByLabelText } = render(<Rating onRate={handleRate} />);
