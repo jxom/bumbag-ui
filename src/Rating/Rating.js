@@ -65,6 +65,7 @@ class Rating extends Component<Props, State> {
         {times(maxRating, index => (
           <RatingStar
             key={index}
+            aria-label={index + 1}
             size={size}
             active={isSelecting ? selectedIndex >= index : rating >= index + 1}
             onClick={() => this.handleStarClick(index)}
