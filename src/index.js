@@ -13,6 +13,7 @@ export { Column } from './Column';
 export { Columns } from './Columns';
 export { Container } from './Container';
 export { Divider } from './Divider';
+export { Field } from './Field';
 export { Group } from './Group';
 export { Heading } from './Heading';
 export { Image } from './Image';
