@@ -8,9 +8,11 @@ import _Select, { LoadingSpinner } from './styled';
 import Icon from './Icon';
 
 type Props = {
+  /** ID for the select field */
+  a11yId?: string,
   /** An accessible label for the select field */
   a11yLabel?: string,
-  autoComplete?: boolean,
+  autoComplete?: string,
   /** Automatically focus the select field */
   autoFocus?: boolean,
   children: Node,
@@ -19,8 +21,6 @@ type Props = {
   defaultValue?: string,
   /** Disables the select field */
   disabled?: boolean,
-  /** ID for the select field */
-  id?: string,
   /** Makes the select field span full width */
   isFullWidth?: boolean,
   /** Adds a cute loading indicator to the select field */
@@ -52,13 +52,13 @@ type State = {
 
 class Select extends PureComponent<Props, State> {
   static defaultProps = {
+    a11yId: undefined,
     a11yLabel: undefined,
-    autoComplete: false,
+    autoComplete: undefined,
     autoFocus: false,
     className: undefined,
     defaultValue: undefined,
     disabled: false,
-    id: undefined,
     isFullWidth: false,
     isLoading: false,
     isRequired: false,
@@ -84,13 +84,13 @@ class Select extends PureComponent<Props, State> {
 
   render = () => {
     const {
+      a11yId,
       a11yLabel,
       autoComplete,
       className,
       autoFocus,
       defaultValue,
       disabled,
-      id,
       isFullWidth,
       isLoading,
       isRequired,
@@ -116,7 +116,7 @@ class Select extends PureComponent<Props, State> {
           autoFocus={autoFocus}
           defaultValue={defaultValue || placeholder}
           disabled={disabled}
-          id={id}
+          id={a11yId}
           isFullWidth={isFullWidth}
           isPlaceholderSelected={isPlaceholderSelected}
           name={name}

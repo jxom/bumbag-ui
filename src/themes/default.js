@@ -7,6 +7,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
   ...overrides,
   palette: {
     text: '#435a6f',
+    textLight: lighten(0.05, '#435a6f'),
+    textLighter: lighten(0.1, '#435a6f'),
+    textLightest: lighten(0.2, '#435a6f'),
 
     black: 'black',
 

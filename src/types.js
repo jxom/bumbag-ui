@@ -58,6 +58,14 @@ export type DividerThemeConfig = {
   content?: Stylesheet,
   vertical?: Stylesheet
 };
+export type FieldThemeConfig = {
+  base?: Stylesheet,
+  label?: Stylesheet,
+  description?: Stylesheet,
+  hint?: Stylesheet,
+  optional?: Stylesheet,
+  validation?: Stylesheet
+};
 export type FontSizeThemeConfig = {
   small: number,
   medium: number,
@@ -231,6 +239,7 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig,
   Container?: ContainerThemeConfig,
   Divider?: DividerThemeConfig,
+  Field?: FieldThemeConfig,
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
   Image?: ImageThemeConfig,

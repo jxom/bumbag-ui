@@ -10,7 +10,7 @@ type Props = {
   htmlFor?: string
 };
 
-const Label = ({ children, className, ...props }: Props) => (
+const Label = ({ children, ...props }: Props) => (
   <_Label fontWeight="600" marginBottom="xxxsmall" {...props}>
     {children}
   </_Label>

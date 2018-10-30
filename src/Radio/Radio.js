@@ -5,6 +5,8 @@ import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
 type Props = {
+  /** An accessible id for the radio */
+  a11yId?: string,
   /** Automatically focus on the radio */
   autoFocus?: boolean,
   checked?: boolean | string,
@@ -13,8 +15,6 @@ type Props = {
   defaultChecked?: boolean,
   /** Disables the radio */
   disabled?: boolean,
-  /** ID for the radio */
-  id?: string,
   /** Makes the radio required and sets aria-invalid to true */
   isRequired?: boolean,
   /** radio label */
@@ -33,12 +33,12 @@ type Props = {
 };
 
 const Radio = ({
+  a11yId,
   autoFocus,
   checked,
   className,
   defaultChecked,
   disabled,
-  id,
   isRequired,
   label,
   onBlur,
@@ -61,7 +61,7 @@ const Radio = ({
       checked={checked}
       defaultChecked={defaultChecked}
       disabled={disabled}
-      id={id}
+      id={a11yId}
       onBlur={onBlur}
       onChange={onChange ? e => onChange({ target: { value: JSON.parse(e.target.value) } }) : undefined}
       onFocus={onFocus}
@@ -71,19 +71,19 @@ const Radio = ({
       value={JSON.stringify(value)}
     />
     <RadioIcon state={state} />
-    <Text id="label" marginLeft="xxsmall">
+    <Text id="label" htmlFor={a11yId} marginLeft="xxsmall">
       {label}
     </Text>
   </_Radio>
 );
 
 Radio.defaultProps = {
+  a11yId: undefined,
   autoFocus: false,
   checked: undefined,
   className: undefined,
-  defaultChecked: false,
+  defaultChecked: undefined,
   disabled: false,
-  id: undefined,
   isRequired: false,
   onBlur: undefined,
   onChange: undefined,

@@ -6,10 +6,12 @@ import { InlineBlock } from '../primitives';
 import _Input, { LoadingSpinner } from './styled';
 
 type Props = {
+  /** An accessible identifier for the input */
+  a11yId?: string,
   /** An accessible label for the input */
   a11yLabel?: string,
   as?: any,
-  autoComplete?: boolean,
+  autoComplete?: string,
   /** Automatically focus on the input */
   autoFocus?: boolean,
   children: Node,
@@ -18,8 +20,6 @@ type Props = {
   defaultValue?: string,
   /** Disables the input */
   disabled?: boolean,
-  /** ID for the input */
-  id?: string,
   /** Makes the input span full width */
   isFullWidth?: boolean,
   /** Adds a cute loading indicator to the input field */
@@ -65,13 +65,13 @@ type Props = {
 };
 
 const Input = ({
+  a11yId,
   a11yLabel,
   autoComplete,
   autoFocus,
   className,
   defaultValue,
   disabled,
-  id,
   isFullWidth,
   isLoading,
   isRequired,
@@ -95,7 +95,7 @@ const Input = ({
   value,
   ...props
 }: Props) => (
-  <InlineBlock relative {...props}>
+  <InlineBlock relative width={isFullWidth ? '100%' : undefined} {...props}>
     <_Input
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
@@ -104,7 +104,7 @@ const Input = ({
       autoFocus={autoFocus}
       defaultValue={defaultValue}
       disabled={disabled}
-      id={id}
+      id={a11yId}
       isFullWidth={isFullWidth}
       max={max}
       maxLength={maxLength}
@@ -130,14 +130,14 @@ const Input = ({
 );
 
 Input.defaultProps = {
+  a11yId: undefined,
   a11yLabel: undefined,
   as: undefined,
-  autoComplete: false,
+  autoComplete: undefined,
   autoFocus: false,
   className: undefined,
   defaultValue: undefined,
   disabled: false,
-  id: undefined,
   isFullWidth: false,
   isLoading: false,
   isRequired: false,
@@ -152,8 +152,8 @@ Input.defaultProps = {
   onFocus: undefined,
   pattern: undefined,
   placeholder: undefined,
-  readOnly: false,
-  spellCheck: false,
+  readOnly: undefined,
+  spellCheck: undefined,
   size: 'default',
   state: undefined,
   step: undefined,

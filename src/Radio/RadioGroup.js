@@ -5,6 +5,8 @@ import { RadioGroup as _RadioGroup } from './styled';
 import Radio from './Radio';
 
 type Props = {
+  /** An accessible ID for the radio group */
+  a11yId?: string,
   /** An accessible label for the radio group */
   a11yLabel?: string,
   className?: string,
@@ -12,8 +14,6 @@ type Props = {
   defaultValue?: string | boolean | Object,
   /** Disables the radio group */
   disabled?: boolean,
-  /** ID for the radio group */
-  id?: string,
   name: string,
   /** Radio group options */
   options: Array<{ disabled: boolean, label: string, value: string | boolean | Object }>,
@@ -26,11 +26,11 @@ type Props = {
 };
 
 const RadioGroup = ({
+  a11yId,
   a11yLabel,
   className,
   defaultValue,
   disabled,
-  id,
   onChange,
   options,
   name,
@@ -48,6 +48,7 @@ const RadioGroup = ({
     {options.map((option, i) => (
       <Radio
         key={i} // eslint-disable-line
+        a11yId={a11yId}
         checked={typeof value === 'undefined' ? undefined : JSON.stringify(option.value) === JSON.stringify(value)}
         defaultChecked={
           typeof defaultValue === 'undefined'
@@ -66,11 +67,11 @@ const RadioGroup = ({
 );
 
 RadioGroup.defaultProps = {
+  a11yId: undefined,
   a11yLabel: undefined,
   className: undefined,
   defaultValue: undefined,
   disabled: false,
-  id: undefined,
   onChange: undefined,
   state: undefined,
   value: undefined

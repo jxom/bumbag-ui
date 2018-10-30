@@ -71,7 +71,7 @@ const Checkbox = ({
       value={value}
     />
     <CheckboxIcon state={state} />
-    <Text id="label" marginLeft="xxsmall">
+    <Text id="label" htmlFor={id} marginLeft="xxsmall">
       {label}
     </Text>
   </_Checkbox>
