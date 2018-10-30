@@ -3,6 +3,8 @@ import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 
+import Spinner from '../Spinner';
+
 export const Icon = styled.svg`
   position: absolute;
   width: 20px;
@@ -13,6 +15,15 @@ export const Icon = styled.svg`
   transform: translateY(50%);
 `;
 
+export const LoadingSpinner = styled(Spinner)`
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  right: 7px;
+  z-index: 1;
+`;
+
 const sizeProperties = {
   small: css`
     font-size: 0.8rem;
@@ -20,6 +31,11 @@ const sizeProperties = {
     & + ${Icon} {
       width: 15px;
       height: 15px;
+    }
+    & + ${LoadingSpinner} {
+      width: 10px;
+      height: 10px;
+      top: 10px;
     }
 
     & {
@@ -33,6 +49,12 @@ const sizeProperties = {
       width: 25px;
       height: 25px;
     }
+    & + ${LoadingSpinner} {
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      right: 10px;
+    }
 
     & {
       ${theme('Select.sizes.medium')};
@@ -44,6 +66,12 @@ const sizeProperties = {
     & + ${Icon} {
       width: 30px;
       height: 30px;
+    }
+    & + ${LoadingSpinner} {
+      width: 25px;
+      height: 25px;
+      top: 16px;
+      right: 12px;
     }
 
     & {

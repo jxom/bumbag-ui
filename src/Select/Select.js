@@ -1,14 +1,16 @@
 // @flow
 import React, { PureComponent, type Node } from 'react';
 
-import { InlineBlock } from '../primitives';
 import type { Size } from '../types';
-import _Select from './styled';
+import { InlineBlock } from '../primitives';
+
+import _Select, { LoadingSpinner } from './styled';
 import Icon from './Icon';
 
 type Props = {
   /** An accessible label for the select field */
   a11yLabel?: string,
+  autoComplete?: boolean,
   /** Automatically focus the select field */
   autoFocus?: boolean,
   children: Node,
@@ -51,6 +53,7 @@ type State = {
 class Select extends PureComponent<Props, State> {
   static defaultProps = {
     a11yLabel: undefined,
+    autoComplete: false,
     autoFocus: false,
     className: undefined,
     defaultValue: undefined,
@@ -82,12 +85,14 @@ class Select extends PureComponent<Props, State> {
   render = () => {
     const {
       a11yLabel,
+      autoComplete,
       className,
       autoFocus,
       defaultValue,
       disabled,
       id,
       isFullWidth,
+      isLoading,
       isRequired,
       name,
       onBlur,
@@ -107,6 +112,7 @@ class Select extends PureComponent<Props, State> {
           aria-invalid={state === 'danger'}
           aria-label={a11yLabel}
           aria-required={isRequired}
+          autoComplete={autoComplete}
           autoFocus={autoFocus}
           defaultValue={defaultValue || placeholder}
           disabled={disabled}
@@ -132,7 +138,7 @@ class Select extends PureComponent<Props, State> {
             </option>
           ))}
         </_Select>
-        <Icon />
+        {isLoading ? <LoadingSpinner color="text" /> : <Icon />}
       </InlineBlock>
     );
   };

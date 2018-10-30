@@ -4,9 +4,26 @@ import { tint } from 'polished';
 import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
 
+import Spinner from '../Spinner';
+
+export const LoadingSpinner = styled(Spinner)`
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  right: 10px;
+  z-index: 1;
+`;
+
 const sizeProperties = {
   small: css`
     font-size: 0.8rem;
+
+    & + ${LoadingSpinner} {
+      width: 10px;
+      height: 10px;
+      top: 10px;
+    }
 
     & {
       ${theme('Input.sizes.small')};
@@ -15,12 +32,26 @@ const sizeProperties = {
   medium: css`
     font-size: 1.25rem;
 
+    & + ${LoadingSpinner} {
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      right: 10px;
+    }
+
     & {
       ${theme('Input.sizes.medium')};
     }
   `,
   large: css`
     font-size: 1.5rem;
+
+    & + ${LoadingSpinner} {
+      width: 25px;
+      height: 25px;
+      top: 16px;
+      right: 12px;
+    }
 
     & {
       ${theme('Input.sizes.large')};
