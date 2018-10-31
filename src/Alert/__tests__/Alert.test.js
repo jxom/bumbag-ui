@@ -21,3 +21,8 @@ it('renders correctly when a palette prop is set', () => {
   const { container } = render(<Alert palette="primary">Alert</Alert>);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly when a title prop is set', () => {
+  const { container } = render(<Alert title="Title">Alert</Alert>);
+  expect(container.firstChild).toMatchSnapshot();
+});

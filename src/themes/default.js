@@ -10,6 +10,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     textLight: lighten(0.05, '#435a6f'),
     textLighter: lighten(0.1, '#435a6f'),
     textLightest: lighten(0.2, '#435a6f'),
+    textTint: tint(0.9, '#435a6f'),
 
     black: 'black',
 

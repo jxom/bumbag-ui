@@ -6,7 +6,6 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Alert from '../Alert';
-import Spinner from './index';
 
 # Alerts
 
@@ -17,18 +16,18 @@ import Spinner from './index';
 ## Basic Usage
 
 <Playground>
-  <Alert>Alert message</Alert>
+  <Alert title="Alert Title">Alert message</Alert>
 </Playground>
 
 ## Colors
 
 <Playground>
-  <Alert>Default</Alert>
-  <Alert palette="primary" marginTop="xsmall">Primary</Alert>
-  <Alert palette="secondary" marginTop="xsmall">Secondary</Alert>
-  <Alert palette="success" marginTop="xsmall">Success</Alert>
-  <Alert palette="warning" marginTop="xsmall">Warning</Alert>
-  <Alert palette="danger" marginTop="xsmall">Danger</Alert>
+  <Alert title="Alert Title">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" palette="primary" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" palette="secondary" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" palette="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" palette="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" palette="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
 </Playground>
 
 ## Props
@@ -41,6 +40,9 @@ import Spinner from './index';
 
 ```jsx
 {
-  base: string | Object
+  base: string | Object,
+  title: {
+    base: string | Object
+  }
 }
 ```
