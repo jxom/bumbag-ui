@@ -10,7 +10,7 @@ export const Label = styled(_Label)`
   margin-bottom: 0 !important;
 
   & {
-    ${theme('Field.label')};
+    ${theme('FieldWrapper.label')};
   }
 `;
 
@@ -19,7 +19,7 @@ export const DescriptionText = styled(_Text)`
   font-size: 0.8rem;
 
   & {
-    ${theme('Field.description')};
+    ${theme('FieldWrapper.description')};
   }
 `;
 
@@ -29,7 +29,7 @@ export const HintText = styled(_Text)`
   margin-top: 0.25rem;
 
   & {
-    ${theme('Field.hint')};
+    ${theme('FieldWrapper.hint')};
   }
 `;
 
@@ -38,7 +38,7 @@ export const OptionalText = styled(_Text)`
   color: ${palette('textLightest')};
 
   & {
-    ${theme('Field.optional')};
+    ${theme('FieldWrapper.optional')};
   }
 `;
 
@@ -48,7 +48,7 @@ export const ValidationText = styled(_Text)`
   margin-top: 0.25rem;
 
   & {
-    ${theme('Field.validation')};
+    ${theme('FieldWrapper.validation')};
   }
 `;
 
@@ -61,5 +61,5 @@ export default styled(Field)`
       `};
   }
 
-  ${theme('Field.base')};
+  ${theme('FieldWrapper.base')};
 `;

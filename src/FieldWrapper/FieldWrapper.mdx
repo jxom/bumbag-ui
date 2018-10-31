@@ -1,31 +1,31 @@
 ---
-name: Field
-route: /form/field
+name: FieldWrapper
+route: /form/fieldwrapper
 menu: Form
 ---
 
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
-import Field from './index';
+import FieldWrapper from './index';
 import Checkbox from '../Checkbox';
 import RadioGroup from '../Radio/RadioGroup';
 import Input from '../Input';
 import Text from '../Text';
 
-# Field
+# FieldWrapper
 
 ## Import
 
-`import { Field } from 'fannypack'`
+`import { FieldWrapper } from 'fannypack'`
 
 ## Basic Usage
 
-The `<Field>` component is a utility belt that wraps around form elements.
+The `<FieldWrapper>` component is a utility belt that wraps around form elements.
 
 <Playground>
-  <Field a11yId="username" label="Username">
+  <FieldWrapper a11yId="username" label="Username">
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Descriptions
@@ -33,9 +33,9 @@ The `<Field>` component is a utility belt that wraps around form elements.
 The description text is placed underneath the label.
 
 <Playground>
-  <Field a11yId="username" label="Username" description="Required for your fannypack">
+  <FieldWrapper a11yId="username" label="Username" description="Required for your fannypack">
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Hints
@@ -43,9 +43,9 @@ The description text is placed underneath the label.
 The hint text is placed underneath the field child.
 
 <Playground>
-  <Field a11yId="username" label="Username" hint="Must be awesome">
+  <FieldWrapper a11yId="username" label="Username" hint="Must be awesome">
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Optional fields
@@ -53,9 +53,9 @@ The hint text is placed underneath the field child.
 To indicate a field as optional, add the `isOptional` prop.
 
 <Playground>
-  <Field a11yId="username" label="Username" isOptional>
+  <FieldWrapper a11yId="username" label="Username" isOptional>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Required fields
@@ -63,62 +63,62 @@ To indicate a field as optional, add the `isOptional` prop.
 Required fields don't show any visual feedback. Displaying 'optional' labels (as above) instead of a red astrix is more descriptive, less fearful, and accessible. However, adding the `isRequired` prop to the field will enable screen readers to identify required fields.
 
 <Playground>
-  <Field a11yId="username" label="Username" isRequired>
+  <FieldWrapper a11yId="username" label="Username" isRequired>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Full width
 
 <Playground>
-  <Field a11yId="username" label="Username" isFullWidth>
+  <FieldWrapper a11yId="username" label="Username" isFullWidth>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## States
 
 <Playground>
-  <Field a11yId="username" label="Username" validationText="This is an invalid name" state="danger">
+  <FieldWrapper a11yId="username" label="Username" validationText="This is an invalid name" state="danger">
     <Input defaultValue="Jake" />
-  </Field>
+  </FieldWrapper>
   <br/>
-  <Field a11yId="fannypacks" validationText="Please check the box!" state="primary" marginTop="small">
+  <FieldWrapper a11yId="fannypacks" validationText="Please check the box!" state="primary" marginTop="small">
     <Checkbox label="Fannypacks are great" />
-  </Field>
+  </FieldWrapper>
   <br/>
-  <Field a11yId="accept" label="Do you accept?" validationText="Nice one!" state="success" marginTop="small">
+  <FieldWrapper a11yId="accept" label="Do you accept?" validationText="Nice one!" state="success" marginTop="small">
     <RadioGroup defaultValue={true} name="accept" options={[{ label: 'Yes', value: true }, { label: 'No', value: false }]} />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Custom labels
 
 <Playground>
-  <Field a11yId="username" label={<Text color="primary">Username</Text>}>
+  <FieldWrapper a11yId="username" label={<Text color="primary">Username</Text>}>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Custom descriptions
 
 <Playground>
-  <Field a11yId="username" label="Username" description={<Text color="primary">Required for your fannypack</Text>}>
+  <FieldWrapper a11yId="username" label="Username" description={<Text color="primary">Required for your fannypack</Text>}>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Custom hints
 
 <Playground>
-  <Field a11yId="username" label="Username" hint={<Text color="primary">Must be awesome</Text>}>
+  <FieldWrapper a11yId="username" label="Username" hint={<Text color="primary">Must be awesome</Text>}>
     <Input />
-  </Field>
+  </FieldWrapper>
 </Playground>
 
 ## Props
 
-<PropsTable of={Field} />
+<PropsTable of={FieldWrapper} />
 
 ## Theming
 

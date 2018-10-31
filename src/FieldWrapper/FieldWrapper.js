@@ -1,7 +1,7 @@
 // @flow
 import React, { type Element } from 'react';
 
-import _Field, { Label, DescriptionText, HintText, OptionalText, ValidationText } from './styled';
+import _FieldWrapper, { Label, DescriptionText, HintText, OptionalText, ValidationText } from './styled';
 import { Flex } from '../primitives';
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   validationText?: string
 };
 
-const Field = ({
+const FieldWrapper = ({
   a11yId,
   children,
   description,
@@ -33,7 +33,7 @@ const Field = ({
 }: Props) => {
   const elementProps = { isFullWidth, isRequired, a11yId, state, marginTop: 'xxsmall' };
   return (
-    <_Field display="inline-block" isFullWidth={isFullWidth} {...props}>
+    <_FieldWrapper display="inline-block" isFullWidth={isFullWidth} {...props}>
       {label && (
         <Flex alignItems="center" justifyContent="space-between">
           {typeof label === 'string' ? <Label htmlFor={a11yId}>{label}</Label> : label}
@@ -48,11 +48,11 @@ const Field = ({
       {typeof hint === 'string' ? <HintText>{hint}</HintText> : <div>{hint}</div>}
 
       {validationText && <ValidationText color={state}>{validationText}</ValidationText>}
-    </_Field>
+    </_FieldWrapper>
   );
 };
 
-Field.defaultProps = {
+FieldWrapper.defaultProps = {
   a11yId: undefined,
   className: undefined,
   description: undefined,
@@ -66,4 +66,4 @@ Field.defaultProps = {
   validationText: undefined
 };
 
-export default Field;
+export default FieldWrapper;

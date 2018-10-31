@@ -58,7 +58,7 @@ export type DividerThemeConfig = {
   content?: Stylesheet,
   vertical?: Stylesheet
 };
-export type FieldThemeConfig = {
+export type FieldWrapperThemeConfig = {
   base?: Stylesheet,
   label?: Stylesheet,
   description?: Stylesheet,
@@ -239,7 +239,7 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig,
   Container?: ContainerThemeConfig,
   Divider?: DividerThemeConfig,
-  Field?: FieldThemeConfig,
+  FieldWrapper?: FieldWrapperThemeConfig,
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
   Image?: ImageThemeConfig,
