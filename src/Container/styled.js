@@ -21,21 +21,21 @@ const getResponsiveProperties = props => {
   if (breakpoint) {
     return css`
       & {
-        max-width: ${theme(`layout.${breakpoint}Breakpoint`)}px;
+        max-width: ${theme(`fannypack.layout.${breakpoint}Breakpoint`)}px;
       }
     `;
   }
   return css`
-    @media (max-width: ${props => theme('layout.fullHDBreakpoint')(props) + 128}px) {
-      max-width: ${theme('layout.widescreenBreakpoint')}px;
+    @media (max-width: ${props => theme('fannypack.layout.fullHDBreakpoint')(props) + 128}px) {
+      max-width: ${theme('fannypack.layout.widescreenBreakpoint')}px;
     }
 
-    @media (max-width: ${props => theme('layout.widescreenBreakpoint')(props) + 128}px) {
-      max-width: ${theme('layout.desktopBreakpoint')}px;
+    @media (max-width: ${props => theme('fannypack.layout.widescreenBreakpoint')(props) + 128}px) {
+      max-width: ${theme('fannypack.layout.desktopBreakpoint')}px;
     }
 
-    @media (max-width: ${props => theme('layout.desktopBreakpoint')(props) + 128}px) {
-      max-width: ${theme('layout.tabletBreakpoint')}px;
+    @media (max-width: ${props => theme('fannypack.layout.desktopBreakpoint')(props) + 128}px) {
+      max-width: ${theme('fannypack.layout.tabletBreakpoint')}px;
     }
   `;
 };
@@ -44,20 +44,20 @@ export default styled(Box)`
   ${props =>
     !props.isFluid &&
     css`
-      max-width: ${theme('layout.fullHDBreakpoint')}px;
+      max-width: ${theme('fannypack.layout.fullHDBreakpoint')}px;
     `}
   ${props =>
     props.isFluid &&
     css`
-      margin: ${theme('Container.fluidMargin')};
+      margin: ${theme('fannypack.Container.fluidMargin')};
     `}
 
-  @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
-    margin: ${theme('Container.tabletMargin')};
+  @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
+    margin: ${theme('fannypack.Container.tabletMargin')};
   }
 
   ${getResponsiveProperties} /**/
   ${props => !props.isFluid && alignProperties[props.align]};
 
-  ${theme('Container.base')}
+  ${theme('fannypack.Container.base')}
 `;

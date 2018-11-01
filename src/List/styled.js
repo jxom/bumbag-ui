@@ -15,7 +15,7 @@ const orderedProperties = css`
   }
 
   & {
-    ${theme('List.ordered')};
+    ${theme('fannypack.List.ordered')};
   }
 `;
 
@@ -23,7 +23,7 @@ export const ListItem = styled(Box)`
   margin-bottom: 0.2rem;
 
   & {
-    ${theme('List.item.base')};
+    ${theme('fannypack.List.item.base')};
   }
 `;
 
@@ -40,6 +40,6 @@ export default styled(List)`
   }
 
   & {
-    ${theme('List.base')};
+    ${theme('fannypack.List.base')};
   }
 `;

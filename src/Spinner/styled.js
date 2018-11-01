@@ -9,7 +9,7 @@ const sizes = {
       border-width: 2px;
     }
     & {
-      ${theme('Spinner.sizes.small')};
+      ${theme('fannypack.Spinner.sizes.small')};
     }
   `,
   medium: css`
@@ -17,7 +17,7 @@ const sizes = {
       font-size: 28px;
     }
     & {
-      ${theme('Spinner.sizes.medium')};
+      ${theme('fannypack.Spinner.sizes.medium')};
     }
   `,
   large: css`
@@ -25,7 +25,7 @@ const sizes = {
       font-size: 36px;
     }
     & {
-      ${theme('Spinner.sizes.large')};
+      ${theme('fannypack.Spinner.sizes.large')};
     }
   `
 };
@@ -56,7 +56,7 @@ export default styled(Box)`
   ${spinnerProperties} /**/
 
   & {
-    ${theme('Spinner.base')};
+    ${theme('fannypack.Spinner.base')};
   }
 
   ${props => sizes[props.size]} /* Extend size styles */;

@@ -4,5 +4,5 @@ import { theme } from 'styled-tools';
 import Navigation from 'reakit/Navigation';
 
 export default styled(Navigation)`
-  ${theme('Navigation.base')};
+  ${theme('fannypack.Navigation.base')};
 `;

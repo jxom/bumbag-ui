@@ -6,5 +6,5 @@ import Label from 'reakit/Label';
 export default styled(Label)`
   display: block;
 
-  ${theme('Label.base')};
+  ${theme('fannypack.Label.base')};
 `;

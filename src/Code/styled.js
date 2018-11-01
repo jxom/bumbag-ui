@@ -11,15 +11,15 @@ export default styled(Code)`
 
   code& {
     padding: 0.1rem 0.2rem;
-    ${theme('Code.inline')};
+    ${theme('fannypack.Code.inline')};
   }
 
   pre& {
     padding: 1rem;
-    ${theme('Code.block')};
+    ${theme('fannypack.Code.block')};
   }
 
   & {
-    ${theme('Code.base')};
+    ${theme('fannypack.Code.base')};
   }
 `;

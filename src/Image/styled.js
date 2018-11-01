@@ -15,8 +15,8 @@ const fitProperties = props => {
             `
           : ''} /**/
 
-      ${theme('Image.fit.base')};
-      ${theme('Image.fit.contain')};
+      ${theme('fannypack.Image.fit.base')};
+      ${theme('fannypack.Image.fit.contain')};
     `;
   }
   if (props.fit === 'cover') {
@@ -29,8 +29,8 @@ const fitProperties = props => {
             `
           : ''} /**/
 
-      ${theme('Image.fit.base')};
-      ${theme('Image.fit.cover')};
+      ${theme('fannypack.Image.fit.base')};
+      ${theme('fannypack.Image.fit.cover')};
     `;
   }
 };
@@ -39,7 +39,7 @@ const fixedProperties = props => {
   return css`
     max-width: unset;
 
-    ${theme('Image.fixed')};
+    ${theme('fannypack.Image.fixed')};
   `;
 };
 
@@ -53,5 +53,5 @@ export default styled(Image)`
     ${fixedProperties};
   }
 
-  ${theme('Image.base')};
+  ${theme('fannypack.Image.base')};
 `;

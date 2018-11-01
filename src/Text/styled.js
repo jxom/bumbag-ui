@@ -54,5 +54,5 @@ export default styled(Box)`
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
   }
 
-  ${theme('Text.base')};
+  ${theme('fannypack.Text.base')};
 `;

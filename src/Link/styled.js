@@ -14,6 +14,6 @@ export default styled(Link)`
   }
 
   & {
-    ${theme('Link.base')};
+    ${theme('fannypack.Link.base')};
   }
 `;

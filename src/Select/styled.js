@@ -39,7 +39,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Select.sizes.small')};
+      ${theme('fannypack.Select.sizes.small')};
     }
   `,
   medium: css`
@@ -57,7 +57,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Select.sizes.medium')};
+      ${theme('fannypack.Select.sizes.medium')};
     }
   `,
   large: css`
@@ -75,7 +75,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Select.sizes.large')};
+      ${theme('fannypack.Select.sizes.large')};
     }
   `
 };
@@ -101,7 +101,7 @@ export default styled.select`
     color: ${palette('grayLight')}
 
     & {
-      ${theme('Select.disabled')}
+      ${theme('fannypack.Select.disabled')}
     }
   }
   &[disabled] + ${Icon} {
@@ -115,7 +115,7 @@ export default styled.select`
     box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('Select.focus')}
+      ${theme('fannypack.Select.focus')}
     }
   }
 
@@ -126,5 +126,5 @@ export default styled.select`
     ${props => props.state && stateProperties}
   }
 
-  ${theme('Select.base')};
+  ${theme('fannypack.Select.base')};
 `;

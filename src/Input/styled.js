@@ -26,7 +26,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.small')};
+      ${theme('fannypack.Input.sizes.small')};
     }
   `,
   medium: css`
@@ -40,7 +40,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.medium')};
+      ${theme('fannypack.Input.sizes.medium')};
     }
   `,
   large: css`
@@ -54,7 +54,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('Input.sizes.large')};
+      ${theme('fannypack.Input.sizes.large')};
     }
   `
 };
@@ -76,7 +76,7 @@ export default styled(Input)`
     color: ${palette('grayLight')}
 
     & {
-      ${theme('Input.disabled')}
+      ${theme('fannypack.Input.disabled')}
     }
   }
 
@@ -87,7 +87,7 @@ export default styled(Input)`
     box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('Input.focus')}
+      ${theme('fannypack.Input.focus')}
     }
   }
 
@@ -95,7 +95,7 @@ export default styled(Input)`
     opacity: 0.6;
 
     & {
-      ${theme('Input.placeholder')}
+      ${theme('fannypack.Input.placeholder')}
     }
   }
 
@@ -113,5 +113,5 @@ export default styled(Input)`
     ${props => props.state && stateProperties}
   }
 
-  ${theme('Input.base')};
+  ${theme('fannypack.Input.base')};
 `;

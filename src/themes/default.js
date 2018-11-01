@@ -93,7 +93,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     striped: {
       backgroundColor: p('whiteDark')
     },
-    spacing: theme('layout.spacing.xxsmall'),
+    spacing: theme('fannypack.layout.spacing.xxsmall'),
     ...overrides.Table
   }
 });

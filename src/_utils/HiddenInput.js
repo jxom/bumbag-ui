@@ -16,7 +16,7 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
     box-shadow: unset;
 
     & {
-      ${theme(`${themePrefix}.icon.disabled`)};
+      ${theme(`fannypack.${themePrefix}.icon.disabled`)};
     }
   }
   &:focus + ${Icon} {
@@ -24,7 +24,7 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
     box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
 
     & {
-      ${theme(`${themePrefix}.icon.focus`)};
+      ${theme(`fannypack.${themePrefix}.icon.focus`)};
     }
   }
   &:not([disabled]):checked + ${Icon} {
@@ -41,11 +41,11 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
 
     &::before {
       ${tickCss};
-      ${theme(`${themePrefix}.icon.tick`)};
+      ${theme(`fannypack.${themePrefix}.icon.tick`)};
     }
 
     & {
-      ${theme(`${themePrefix}.icon.checked`)};
+      ${theme(`fannypack.${themePrefix}.icon.checked`)};
     }
   }
   &[disabled]:checked + ${Icon}::before {

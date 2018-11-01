@@ -15,7 +15,7 @@ import TableRow from './TableRow';
 import _Table from './styled';
 
 const OuterBorder = styled(InlineBlock)`
-  border: 1px solid ${theme('Table.borderColor')};
+  border: 1px solid ${theme('fannypack.Table.borderColor')};
   border-radius: 5px;
   padding: 0.25rem 0.5rem;
 `;

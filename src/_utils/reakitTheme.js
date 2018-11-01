@@ -11,13 +11,13 @@ const buildColorFromPalette = (property, { theme, ...props }) => {
 };
 
 const buildSpacingFromTheme = (property, { theme, ...props }) => {
-  let spacing = theme.layout.spacing[props[_camelCase(property)]];
+  let spacing = theme.fannypack.layout.spacing[props[_camelCase(property)]];
   if (!spacing) return;
   return `${property}: ${spacing}rem !important;`;
 };
 
 const buildFontSizeFromTheme = (property, { theme, ...props }) => {
-  let size = theme.fontSizes[props[_camelCase(property)]];
+  let size = theme.fannypack.fontSizes[props[_camelCase(property)]];
   if (!size) return;
   return `${property}: ${size}em !important;`;
 };

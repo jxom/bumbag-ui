@@ -25,7 +25,7 @@ export const CheckboxIcon = styled(Box)`
   }
 
   & {
-    ${theme('Checkbox.icon.base')};
+    ${theme('fannypack.Checkbox.icon.base')};
   }
 `;
 
@@ -56,5 +56,5 @@ export default styled(Label)`
   display: flex;
   align-items: center;
 
-  ${theme('Checkbox.base')};
+  ${theme('fannypack.Checkbox.base')};
 `;

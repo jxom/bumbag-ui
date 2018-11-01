@@ -8,6 +8,6 @@ export default styled(Group)`
   }
 
   & {
-    ${theme('Group.base')};
+    ${theme('fannypack.Group.base')};
   }
 `;

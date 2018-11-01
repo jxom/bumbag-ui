@@ -30,7 +30,7 @@ const getSpreadProperties = props => {
     !spreadFullHD
   ) {
     return css`
-      @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
+      @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
         flex: none;
         width: 100%;
       }
@@ -45,7 +45,7 @@ const getSpreadProperties = props => {
     if (!spread) return null;
     if (breakpoint) {
       return css`
-        @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
+        @media (max-width: ${theme(`fannypack.layout.${breakpoint}`)}px) {
           ${properties};
         }
       `;
@@ -63,7 +63,7 @@ const getSpreadProperties = props => {
       !spreadTablet &&
       !spreadMobile &&
       css`
-        @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
+        @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
           width: 100%;
         }
       `};
@@ -71,7 +71,7 @@ const getSpreadProperties = props => {
     ${minBreakpoint !== 'mobile' &&
       !spreadMobile &&
       css`
-        @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+        @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
           width: 100%;
         }
       `};
@@ -106,7 +106,7 @@ const getSpreadOffsetProperties = props => {
     if (!spreadOffset) return null;
     if (breakpoint) {
       return css`
-        @media (max-width: ${theme(`layout.${breakpoint}`)}px) {
+        @media (max-width: ${theme(`fannypack.layout.${breakpoint}`)}px) {
           ${properties};
         }
       `;
@@ -126,14 +126,14 @@ const getSpreadOffsetProperties = props => {
       ${!spreadTabletOffset &&
         !spreadMobileOffset &&
         css`
-          @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
+          @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
             margin-left: 0;
           }
         `};
       ${getProperties({ spreadOffset: spreadTabletOffset, breakpoint: 'tabletBreakpoint' })};
       ${!spreadMobileOffset &&
         css`
-          @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+          @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
             margin-left: 0;
           }
         `};
@@ -149,7 +149,7 @@ const Column = styled(Box)`
   ${props =>
     !props.isGapless
       ? css`
-          padding: ${theme('layout.gapFactor')}rem;
+          padding: ${theme('fannypack.layout.gapFactor')}rem;
         `
       : null};
 
@@ -162,7 +162,7 @@ const Column = styled(Box)`
   }
 
   & {
-    ${theme('Column.base')};
+    ${theme('fannypack.Column.base')};
   }
 `;
 

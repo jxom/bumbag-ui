@@ -13,7 +13,7 @@ const sizeProperties = {
       padding: 0 0.5rem;
     }
     & {
-      ${theme('Button.sizes.small')};
+      ${theme('fannypack.Button.sizes.small')};
     }
   `,
   medium: css`
@@ -22,7 +22,7 @@ const sizeProperties = {
       padding: 0 1.25rem;
     }
     & {
-      ${theme('Button.sizes.medium')};
+      ${theme('fannypack.Button.sizes.medium')};
     }
   `,
   large: css`
@@ -32,7 +32,7 @@ const sizeProperties = {
       padding: 0 1.5rem;
     }
     & {
-      ${theme('Button.sizes.large')};
+      ${theme('fannypack.Button.sizes.large')};
     }
   `
 };
@@ -51,7 +51,7 @@ const linkProperties = css`
     }
   }
   & {
-    ${theme('Button.link')};
+    ${theme('fannypack.Button.link')};
   }
 `;
 const outlinedProperties = css`
@@ -65,7 +65,7 @@ const outlinedProperties = css`
     }
   }
   & {
-    ${theme('Button.outlined')};
+    ${theme('fannypack.Button.outlined')};
   }
 `;
 
@@ -77,7 +77,7 @@ const disabledProperties = css`
     pointer-events: unset;
   }
   & {
-    ${theme('Button.disabled')};
+    ${theme('fannypack.Button.disabled')};
   }
 `;
 
@@ -98,7 +98,7 @@ const loadingProperties = css`
     }
   }
   & {
-    ${theme('Button.loading')};
+    ${theme('fannypack.Button.loading')};
   }
 `;
 
@@ -144,6 +144,6 @@ export default styled(Button)`
       : ''} /* Add interactive styles */
 
   & {
-    ${theme('Button.base')}
+    ${theme('fannypack.Button.base')}
   }
 `;

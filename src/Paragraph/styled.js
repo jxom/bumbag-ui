@@ -8,6 +8,6 @@ export default styled(Paragraph)`
   }
 
   & {
-    ${theme('Paragraph.base')};
+    ${theme('fannypack.Paragraph.base')};
   }
 `;

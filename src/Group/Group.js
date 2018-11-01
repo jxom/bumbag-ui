@@ -14,7 +14,7 @@ type Props = {
 };
 
 const getVerticalBreakpoint = ({ breakpoint, theme }: { breakpoint: Breakpoint | number, theme?: Object }) => {
-  return typeof breakpoint === 'number' ? breakpoint : _get(theme, `layout[${breakpoint}Breakpoint]`);
+  return typeof breakpoint === 'number' ? breakpoint : _get(theme, `fannypack.layout[${breakpoint}Breakpoint]`);
 };
 
 export const Group = ({ children, className, isVertical, theme, verticalAt: _verticalAt, ...props }: Props) => {

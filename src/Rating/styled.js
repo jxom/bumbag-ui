@@ -4,7 +4,7 @@ import { theme, palette } from 'styled-tools';
 
 export const Rating = styled.div`
   & {
-    ${theme('Rating.base')};
+    ${theme('fannypack.Rating.base')};
   }
 `;
 
@@ -15,7 +15,7 @@ const starSizes = {
       height: 1rem;
     }
     & {
-      ${theme('Rating.Star.sizes.small')};
+      ${theme('fannypack.Rating.Star.sizes.small')};
     }
   `,
   medium: css`
@@ -24,7 +24,7 @@ const starSizes = {
       height: 2rem;
     }
     & {
-      ${theme('Rating.Star.sizes.medium')};
+      ${theme('fannypack.Rating.Star.sizes.medium')};
     }
   `,
   large: css`
@@ -33,7 +33,7 @@ const starSizes = {
       height: 3rem;
     }
     & {
-      ${theme('Rating.Star.sizes.large')};
+      ${theme('fannypack.Rating.Star.sizes.large')};
     }
   `
 };
@@ -43,12 +43,12 @@ export const RatingStar = styled.svg`
   height: 1.5rem;
 
   & {
-    ${theme('Rating.Star.base')};
+    ${theme('fannypack.Rating.Star.base')};
   }
 
   ${props => starSizes[props.size]} /* Extend size styles */;
 
   & path {
-    fill: ${props => (props.active ? theme('Rating.Star.color')(props) || 'gold' : palette('whiteDarkest'))};
+    fill: ${props => (props.active ? theme('fannypack.Rating.Star.color')(props) || 'gold' : palette('whiteDarkest'))};
   }
 `;

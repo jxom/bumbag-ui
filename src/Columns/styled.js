@@ -8,14 +8,14 @@ const getWrapProperties = props => {
   if (isOneLine) {
     if (minBreakpoint !== 'tablet' && minBreakpoint !== 'mobile') {
       return css`
-        @media (max-width: ${theme('layout.tabletBreakpoint')}px) {
+        @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
           flex-wrap: wrap;
         }
       `;
     }
     if (minBreakpoint !== 'mobile') {
       return css`
-        @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+        @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
           flex-wrap: wrap;
         }
       `;
@@ -33,12 +33,12 @@ export default styled(Box)`
   ${props =>
     !props.isGapless &&
     css`
-      margin: 0 -${theme('layout.gapFactor')}rem;
+      margin: 0 -${theme('fannypack.layout.gapFactor')}rem;
     `} /**/
 
   ${getWrapProperties};
 
   & {
-    ${theme('Columns.base')};
+    ${theme('fannypack.Columns.base')};
   }
 `;

@@ -20,9 +20,10 @@ const Provider = ({ children, isStandalone, theme: _theme }: Props) => {
     theme = _theme;
   }
   theme = {
-    ...theme,
+    fannypack: theme, // Split into own 'fannypack' context to avoid conflicts
     ...reakitTheme,
-    ...(theme && theme.reakit ? theme.reakit : {})
+    ...(theme && theme.reakit ? theme.reakit : {}),
+    palette: theme && theme.palette ? theme.palette : {}
   };
   return (
     <ThemeProvider theme={theme}>

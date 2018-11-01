@@ -14,7 +14,7 @@ const groupedProperties = css`
     border-top-right-radius: 0px;
   }
   & {
-    ${theme('Buttons.grouped')};
+    ${theme('fannypack.Buttons.grouped')};
   }
 `;
 
@@ -23,7 +23,7 @@ export default styled(Box)`
     margin-left: ${props => (props.isGrouped ? '' : '0.5rem')};
   }
   & {
-    ${theme('Buttons.base')};
+    ${theme('fannypack.Buttons.base')};
   }
   ${props => props.isGrouped && groupedProperties};
 `;

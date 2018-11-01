@@ -6,7 +6,7 @@ import Label from '../Label';
 
 export const AlertTitle = styled(Label)`
   & {
-    ${theme('Alert.title.base')};
+    ${theme('fannypack.Alert.title.base')};
   }
 `;
 
@@ -21,6 +21,6 @@ export default styled(Box)`
   padding: 1rem;
 
   & {
-    ${theme('Alert.base')};
+    ${theme('fannypack.Alert.base')};
   }
 `;

@@ -30,6 +30,6 @@ export default styled(Box)`
   }
 
   & {
-    ${theme('global.base')};
+    ${theme('fannypack.global.base')};
   }
 `;

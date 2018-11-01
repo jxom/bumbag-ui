@@ -8,6 +8,6 @@ export default styled(Blockquote)`
   padding: 1rem;
 
   & {
-    ${theme('Blockquote.base')};
+    ${theme('fannypack.Blockquote.base')};
   }
 `;

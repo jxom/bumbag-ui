@@ -7,7 +7,7 @@ const subHeadingProperties = css`
   font-weight: 500;
 
   & {
-    ${theme('Heading.subHeading')};
+    ${theme('fannypack.Heading.subHeading')};
   }
 `;
 
@@ -26,53 +26,53 @@ export default styled(Heading)`
 
   h1& {
     font-size: 3rem;
-    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
       font-size: 2rem;
     }
     & {
-      ${theme('Heading.h1')};
+      ${theme('fannypack.Heading.h1')};
     }
   }
   h2& {
     font-size: 2.5rem;
-    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
       font-size: 1.8rem;
     }
     & {
-      ${theme('Heading.h2')};
+      ${theme('fannypack.Heading.h2')};
     }
   }
   h3& {
     font-size: 2rem;
-    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
       font-size: 1.6rem;
     }
     & {
-      ${theme('Heading.h3')};
+      ${theme('fannypack.Heading.h3')};
     }
   }
   h4& {
     font-size: 1.5rem;
-    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
       font-size: 1.4rem;
     }
     & {
-      ${theme('Heading.h4')};
+      ${theme('fannypack.Heading.h4')};
     }
   }
   h5& {
     font-size: 1.25rem;
-    @media (max-width: ${theme('layout.mobileBreakpoint')}px) {
+    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
       font-size: 1.2rem;
     }
     & {
-      ${theme('Heading.h5')};
+      ${theme('fannypack.Heading.h5')};
     }
   }
   h6& {
     font-size: 1rem;
     & {
-      ${theme('Heading.h6')};
+      ${theme('fannypack.Heading.h6')};
     }
   }
 
@@ -80,5 +80,5 @@ export default styled(Heading)`
     ${props => props.isSubHeading && subHeadingProperties};
   }
 
-  ${theme('Heading.base')};
+  ${theme('fannypack.Heading.base')};
 `;

@@ -25,7 +25,7 @@ export const RadioIcon = styled(Box)`
   }
 
   & {
-    ${theme('Radio.icon.base')};
+    ${theme('fannypack.Radio.icon.base')};
   }
 `;
 
@@ -52,7 +52,7 @@ export const Radio = styled(Label)`
   display: flex;
   align-items: center;
 
-  ${theme('Radio.base')};
+  ${theme('fannypack.Radio.base')};
 `;
 
 const horizontalProperties = css`
@@ -64,7 +64,7 @@ const horizontalProperties = css`
   }
 
   & {
-    ${theme('RadioGroup.horizontal')};
+    ${theme('fannypack.RadioGroup.horizontal')};
   }
 `;
 
@@ -77,7 +77,7 @@ export const RadioGroup = styled(Box)`
     ${props => props.isHorizontal && horizontalProperties};
   }
 
-  ${theme('RadioGroup.base')};
+  ${theme('fannypack.RadioGroup.base')};
 `;
 
 export default Radio;

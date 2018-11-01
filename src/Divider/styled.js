@@ -17,7 +17,7 @@ const contentProperties = css`
     padding: 0.2rem 0.5rem;
 
     & {
-      ${theme('Divider.content')}
+      ${theme('fannypack.Divider.content')}
     }
   }
 `;
@@ -25,7 +25,7 @@ const verticalProperties = css`
   height: auto;
 
   & {
-    ${theme('Divider.vertical')};
+    ${theme('fannypack.Divider.vertical')};
   }
 `;
 
@@ -39,6 +39,6 @@ export default styled(Divider)`
   }
 
   & {
-    ${theme('Divider.base')};
+    ${theme('fannypack.Divider.base')};
   }
 `;
