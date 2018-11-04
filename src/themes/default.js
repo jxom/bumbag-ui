@@ -1,5 +1,5 @@
 // @flow
-import { darken, lighten, tint } from 'polished';
+import { darken, lighten, shade, tint } from 'polished';
 import { palette as p, theme } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
@@ -30,23 +30,53 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     default: darken(0.01, 'white'),
     defaultInverted: '#435a6f',
 
-    primary: '#112ebb',
-    primaryTint: tint(0.9, '#112ebb'),
+    primary: '#3926a5',
+    primaryLight: tint(0.1, '#3926a5'),
+    primaryLighter: tint(0.3, '#3926a5'),
+    primaryLightest: tint(0.5, '#3926a5'),
+    primaryDark: shade(0.1, '#3926a5'),
+    primaryDarker: shade(0.3, '#3926a5'),
+    primaryDarkest: shade(0.5, '#3926a5'),
+    primaryTint: tint(0.9, '#3926a5'),
     primaryInverted: 'white',
 
-    secondary: '#1d67fc',
-    secondaryTint: tint(0.9, '#1d67fc'),
+    secondary: '#112ebb',
+    secondaryLight: tint(0.1, '#112ebb'),
+    secondaryLighter: tint(0.3, '#112ebb'),
+    secondaryLightest: tint(0.5, '#112ebb'),
+    secondaryDark: shade(0.1, '#112ebb'),
+    secondaryDarker: shade(0.3, '#112ebb'),
+    secondaryDarkest: shade(0.5, '#112ebb'),
+    secondaryTint: tint(0.9, '#112ebb'),
     secondaryInverted: 'white',
 
     success: '#007b2e',
+    successLight: tint(0.1, '#007b2e'),
+    successLighter: tint(0.3, '#007b2e'),
+    successLightest: tint(0.5, '#007b2e'),
+    successDark: shade(0.1, '#007b2e'),
+    successDarker: shade(0.3, '#007b2e'),
+    successDarkest: shade(0.5, '#007b2e'),
     successTint: tint(0.9, '#007b2e'),
     successInverted: 'white',
 
     danger: '#d60027',
+    dangerLight: tint(0.1, '#d60027'),
+    dangerLighter: tint(0.3, '#d60027'),
+    dangerLightest: tint(0.5, '#d60027'),
+    dangerDark: shade(0.1, '#d60027'),
+    dangerDarker: shade(0.3, '#d60027'),
+    dangerDarkest: shade(0.5, '#d60027'),
     dangerTint: tint(0.9, '#d60027'),
     dangerInverted: 'white',
 
     warning: '#ffb300',
+    warningLight: tint(0.1, '#ffb300'),
+    warningLighter: tint(0.3, '#ffb300'),
+    warningLightest: tint(0.5, '#ffb300'),
+    warningDark: shade(0.1, '#ffb300'),
+    warningDarker: shade(0.3, '#ffb300'),
+    warningDarkest: shade(0.5, '#ffb300'),
     warningTint: tint(0.9, '#ffb300'),
     warningInverted: lighten(0.2, 'black'),
 

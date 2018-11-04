@@ -81,8 +81,8 @@ const sizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => tint(0.3, palette(props.state)(props))}
-  box-shadow: ${props => tint(0.3, palette(props.state)(props))} 0px 0px 0px 1px !important;
+  border-color: ${props => palette(`${props.state}Lighter`)(props)}
+  box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
 export default styled.select`
@@ -111,8 +111,8 @@ export default styled.select`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${props => tint(0.3, palette('primary')(props))}
-    box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
+    border-color: ${palette('primaryLighter')}
+    box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Select.focus')}

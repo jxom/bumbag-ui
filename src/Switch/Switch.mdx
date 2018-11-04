@@ -1,0 +1,36 @@
+---
+name: Switch
+route: /form/switch
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Switch from './index';
+import Button from '../Button';
+
+# Switch
+
+## Import
+
+`import { Switch } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Switch label="Check me" />
+</Playground>
+
+## Props
+
+<PropsTable of={Switch} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```

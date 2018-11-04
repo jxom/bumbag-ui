@@ -26,5 +26,6 @@ export { Paragraph } from './Paragraph';
 export { Radio, RadioGroup } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Spinner } from './Spinner';
+export { Switch } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
 export { Text } from './Text';

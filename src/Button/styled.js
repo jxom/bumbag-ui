@@ -120,9 +120,8 @@ export default styled(Button)`
     outline: unset;
     z-index: 2;
     box-shadow: ${props =>
-      tint(
-        0.3,
-        palette(props.palette === 'default' ? 'primary' : props.palette)(props)
+      palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(
+        props
       )} 0px 0px 0px 3px, rgba(67, 90, 111, 0.14) 0px 0px 0px 1px inset, rgba(67, 90, 111, 0.3) 0px -1px 1px 0px inset !important;
   }
 

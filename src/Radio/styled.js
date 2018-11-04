@@ -19,8 +19,8 @@ export const RadioIcon = styled(Box)`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => tint(0.3, palette(props.state)(props))};
-        box-shadow: ${props => tint(0.3, palette(props.state)(props))} 0px 0px 0px 1px !important;
+        border-color: ${props => palette(`${props.state}Lighter`)(props)};
+        box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
       `};
   }
 
@@ -31,8 +31,8 @@ export const RadioIcon = styled(Box)`
 
 export const HiddenRadio = HiddenInput({
   Icon: RadioIcon,
-  tickCss: css`
-    background: #586ccf;
+  checkedIconCss: css`
+    background: ${palette('primaryLighter')};
     border-radius: 50%;
     content: '';
     height: 8px;
@@ -42,7 +42,7 @@ export const HiddenRadio = HiddenInput({
     transform: translate(-50%, -50%);
     width: 8px;
   `,
-  disabledTickCss: css`
+  disabledCss: css`
     background: ${palette('grayLighter')};
   `,
   themePrefix: 'Radio'

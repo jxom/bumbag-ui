@@ -25,7 +25,7 @@ export default styled(Box)`
   }
 
   *:focus {
-    outline: 2px solid ${props => tint(0.3, palette('primary')(props))};
+    outline: 2px solid ${palette('primaryLighter')};
     outline-offset: 2px;
   }
 

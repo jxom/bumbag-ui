@@ -1,9 +1,8 @@
 import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { tint } from 'polished';
 import Input from 'reakit/Input';
 
-export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input)`
+export default ({ Icon, checkedCss, disabledCss, checkedIconCss, uncheckedIconCss, themePrefix }) => styled(Input)`
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
@@ -11,6 +10,12 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
   position: absolute;
   width: 1px;
 
+  & + ${Icon} {
+    &::before {
+      ${uncheckedIconCss};
+      ${theme(`fannypack.${themePrefix}.icon.untick`)};
+    }
+  }
   &[disabled] + ${Icon} {
     background-color: ${palette('whiteDarker')};
     box-shadow: unset;
@@ -19,28 +24,33 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
       ${theme(`fannypack.${themePrefix}.icon.disabled`)};
     }
   }
+  &:checked:focus + ${Icon} {
+    border-color: ${props => palette(`${props.palette || 'primary'}Lighter`)};
+    box-shadow: ${props => palette(`${props.palette || 'primary'}Lighter`)} 0px 0px 0px 1px !important;
+  }
   &:focus + ${Icon} {
-    border-color: ${props => tint(0.3, palette('primary')(props))};
-    box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
+    border-color: ${palette('primaryLighter')};
+    box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
 
     & {
       ${theme(`fannypack.${themePrefix}.icon.focus`)};
     }
   }
   &:not([disabled]):checked + ${Icon} {
-    border-color: ${props => tint(0.3, palette('primary')(props))};
+    border-color: ${props => palette(`${props.palette || 'primary'}Lighter`)};
+    ${checkedCss};
   }
   &:checked + ${Icon} {
     & {
       ${props =>
         props.state &&
         css`
-          box-shadow: ${props => tint(0.3, palette('primary')(props))} 0px 0px 0px 1px !important;
+          box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
         `};
     }
 
     &::before {
-      ${tickCss};
+      ${checkedIconCss};
       ${theme(`fannypack.${themePrefix}.icon.tick`)};
     }
 
@@ -49,6 +59,6 @@ export default ({ Icon, disabledTickCss, tickCss, themePrefix }) => styled(Input
     }
   }
   &[disabled]:checked + ${Icon}::before {
-    ${disabledTickCss};
+    ${disabledCss};
   }
 `;
