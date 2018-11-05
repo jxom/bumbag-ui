@@ -36,6 +36,7 @@ export const HintText = styled(_Text)`
 export const OptionalText = styled(_Text)`
   font-size: 0.8rem;
   color: ${palette('textLightest')};
+  margin-left: 0.5rem;
 
   & {
     ${theme('fannypack.FieldWrapper.optional')};

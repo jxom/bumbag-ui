@@ -35,7 +35,7 @@ const FieldWrapper = ({
   return (
     <_FieldWrapper display="inline-block" isFullWidth={isFullWidth} {...props}>
       {label && (
-        <Flex alignItems="center" justifyContent="space-between">
+        <Flex alignItems="center">
           {typeof label === 'string' ? <Label htmlFor={a11yId}>{label}</Label> : label}
           {isOptional && <OptionalText>OPTIONAL</OptionalText>}
         </Flex>

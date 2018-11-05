@@ -8,6 +8,7 @@ import { Playground, PropsTable } from 'docz';
 import Component from '@reactions/component';
 import { Box } from '../primitives/index';
 import Checkbox from './index';
+import CheckboxField from './CheckboxField';
 
 # Checkbox
 
@@ -59,9 +60,29 @@ Note: Do not use `defaultChecked` with controlled inputs!
   </Component>
 </Playground>
 
-## Props
+## `<Checkbox>` Props
 
 <PropsTable of={Checkbox} />
+
+# CheckboxField
+
+## Import
+
+`import { CheckboxField } from 'fannypack'`
+
+## Basic Usage
+
+The `<CheckboxField>` component contains of the [`<Checkbox>` component](#checkbox) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Checkbox>` props](/form/checkbox#props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <CheckboxField a11yId="isSubscribed" checkboxLabel="Check me" label="Check below to subscribe" />
+</Playground>
+
+## `<CheckboxField>` Props
+
+<PropsTable of={CheckboxField} />
 
 ## Theming
 

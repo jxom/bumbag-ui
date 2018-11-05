@@ -1,7 +1,7 @@
 // @flow
 import { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { darken, tint } from 'polished';
+import { darken } from 'polished';
 import Button from 'reakit/Button';
 import styled from 'reakit/styled';
 

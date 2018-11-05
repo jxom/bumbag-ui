@@ -1,7 +1,6 @@
 // @flow
 import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { tint } from 'polished';
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';

@@ -1,27 +1,34 @@
 // @flow
-import React from 'react';
+import React, { type Element } from 'react';
 
-import Text from '../Text';
-import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
+import Checkbox from './Checkbox';
+import FieldWrapper from '../FieldWrapper';
 
 type Props = {
+  a11yId?: string,
   /** Automatically focus on the checkbox */
   autoFocus?: boolean,
+  checkboxLabel: string,
   checked?: boolean,
   className?: string,
   /** Is the checkbox checked by default? */
   defaultChecked?: boolean,
+  description?: string | Element<any>,
   /** Disables the checkbox */
   disabled?: boolean,
+  hint?: string | Element<any>,
   /** ID for the checkbox */
   id?: string,
+  isFullWidth?: boolean,
+  isOptional?: boolean,
   /** Makes the checkbox required and sets aria-invalid to true */
   isRequired?: boolean,
   /** Checkbox label */
-  label: string,
+  label?: string | Element<any>,
   name?: string,
   /** State of the checkbox. Can be any color in the palette. */
   state?: string,
+  validationText?: string,
   /** Initial value of the checkbox */
   value?: string,
   /** Function to invoke when focus is lost */
@@ -32,65 +39,55 @@ type Props = {
   onFocus?: Function
 };
 
-const Checkbox = ({
-  autoFocus,
-  checked,
-  className,
-  defaultChecked,
-  disabled,
-  id,
-  isRequired,
+const CheckboxField = ({
+  a11yId,
+  checkboxLabel,
+  description,
+  hint,
   label,
-  onBlur,
-  onChange,
-  onFocus,
-  name,
+  isFullWidth,
+  isOptional,
+  isRequired,
   state,
-  value,
+  validationText,
   ...props
 }: Props) => (
-  <_Checkbox
-    aria-describedby="label"
-    aria-invalid={state === 'danger'}
-    aria-label={label}
-    aria-required={isRequired}
-    {...props}
+  <FieldWrapper
+    a11yId={a11yId}
+    description={description}
+    hint={hint}
+    isFullWidth={isFullWidth}
+    isOptional={isOptional}
+    isRequired={isRequired}
+    label={label}
+    state={state}
+    validationText={validationText}
   >
-    <HiddenCheckbox
-      autoFocus={autoFocus}
-      checked={checked}
-      defaultChecked={defaultChecked}
-      disabled={disabled}
-      id={id}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      name={name}
-      state={state}
-      type="checkbox"
-      value={value}
-    />
-    <CheckboxIcon state={state} />
-    <Text id="label" htmlFor={id} marginLeft="xxsmall">
-      {label}
-    </Text>
-  </_Checkbox>
+    <Checkbox label={checkboxLabel} {...props} />
+  </FieldWrapper>
 );
 
-Checkbox.defaultProps = {
+CheckboxField.defaultProps = {
+  a11yId: undefined,
   autoFocus: false,
   checked: undefined,
   className: undefined,
   defaultChecked: undefined,
+  description: undefined,
   disabled: false,
+  hint: undefined,
   id: undefined,
+  isFullWidth: false,
+  isOptional: false,
   isRequired: false,
+  label: undefined,
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
   name: undefined,
   state: undefined,
+  validationText: undefined,
   value: undefined
 };
 
-export default Checkbox;
+export default CheckboxField;

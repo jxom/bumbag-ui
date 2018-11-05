@@ -1,7 +1,6 @@
 // @flow
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
-import { tint } from 'polished';
 import { palette, theme } from 'styled-tools';
 
 export default styled(Box)`

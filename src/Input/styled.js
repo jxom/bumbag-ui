@@ -1,6 +1,5 @@
 // @flow
 import styled, { css } from 'reakit/styled';
-import { tint } from 'polished';
 import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
 
