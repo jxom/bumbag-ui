@@ -19,6 +19,18 @@ const orderedProperties = css`
   }
 `;
 
+const horizontalProperties = css`
+  & li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: unset;
+  }
+
+  & {
+    ${theme('fannypack.List.horizontal')};
+  }
+`;
+
 export const ListItem = styled(Box)`
   margin-bottom: 0.2rem;
 
@@ -37,6 +49,10 @@ export default styled(List)`
 
   & {
     ${props => props.isOrdered && orderedProperties};
+  }
+
+  & {
+    ${props => props.isHorizontal && horizontalProperties};
   }
 
   & {

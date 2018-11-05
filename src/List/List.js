@@ -9,7 +9,8 @@ type Props = {
   children: Node,
   className?: string,
   color?: Palette,
-  isOrdered?: boolean
+  isOrdered?: boolean,
+  isHorizontal?: boolean
 };
 
 const List = ({ children, className, isOrdered, ...props }: Props) => (
@@ -23,7 +24,8 @@ List.Item = ListItem;
 List.defaultProps = {
   className: null,
   color: null,
-  isOrdered: false
+  isOrdered: false,
+  isHorizontal: false
 };
 
 export default List;
