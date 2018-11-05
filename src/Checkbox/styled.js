@@ -1,7 +1,6 @@
 // @flow
 import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { tint } from 'polished';
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
@@ -25,7 +24,7 @@ export const CheckboxIcon = styled(Box)`
   }
 
   & {
-    ${theme('fannypack.Checkbox.icon.base')};
+    ${theme('fannypack.Checkbox.base')};
   }
 `;
 
@@ -46,7 +45,7 @@ export const HiddenCheckbox = HiddenInput({
     transform: rotate(45deg);
     width: 6px;
   `,
-  disabledCss: css`
+  disabledCheckedIconCss: css`
     border-color: ${palette('grayLighter')};
   `,
   themePrefix: 'Checkbox'
@@ -56,5 +55,7 @@ export default styled(Label)`
   display: flex;
   align-items: center;
 
-  ${theme('fannypack.Checkbox.base')};
+  & {
+    ${theme('fannypack.Checkbox.label')};
+  }
 `;

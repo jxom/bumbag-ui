@@ -5,6 +5,7 @@ menu: Form
 ---
 
 import { Playground, PropsTable } from 'docz';
+import Component from '@reactions/component';
 import { Box } from '../primitives/index';
 import Checkbox from './index';
 
@@ -40,6 +41,24 @@ A checkbox can use different states (as per palette) such as `danger`, `success`
   <Checkbox state="primary" label="Click me" />
 </Playground>
 
+## Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `checked`.
+
+Note: Do not use `defaultChecked` with controlled inputs!
+
+<Playground>
+  <Component initialState={{ value: true }}>
+    {({ state, setState }) => (
+      <Checkbox
+        label="Click me"
+        checked={state.value}
+        onChange={e => setState({ value: e.target.checked })}
+      />
+    )}
+  </Component>
+</Playground>
+
 ## Props
 
 <PropsTable of={Checkbox} />
@@ -50,13 +69,15 @@ A checkbox can use different states (as per palette) such as `danger`, `success`
 
 ```jsx
 {
-  base: string | Object,
+  base: String | Object,
+  checked: String | Object,
+  disabled: String | Object,
+  focus: String | Object,
   icon: {
-    base: string | Object,
-    checked: string | Object
-    disabled: string | Object,
-    focus: string | Object
-    tick: string | Object
+    checked: String | Object,
+    unchecked: String | Object,
+    uncheckedDisabled: String | Object,
+    checkedDisabled: String | Object
   }
 }
 ```

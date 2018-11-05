@@ -28,13 +28,16 @@ export type ButtonThemeConfig = {
   }
 };
 export type CheckboxThemeConfig = {
-  base: Stylesheet,
-  icon: {
-    base: Stylesheet,
-    checked: Stylesheet,
-    disabled: Stylesheet,
-    focus: Stylesheet,
-    tick: Stylesheet
+  base?: Stylesheet,
+  label?: Stylesheet,
+  checked?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  icon?: {
+    checked?: Stylesheet,
+    unchecked?: Stylesheet,
+    uncheckedDisabled?: Stylesheet,
+    checkedDisabled?: Stylesheet
   }
 };
 export type CodeThemeConfig = {
@@ -147,12 +150,15 @@ export type ParagraphThemeConfig = {
 };
 export type RadioThemeConfig = {
   base?: Stylesheet,
+  label?: Stylesheet,
+  checked?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
   icon?: {
-    base: Stylesheet,
-    checked: Stylesheet,
-    disabled: Stylesheet,
-    focus: Stylesheet,
-    tick: Stylesheet
+    checked?: Stylesheet,
+    unchecked?: Stylesheet,
+    uncheckedDisabled?: Stylesheet,
+    checkedDisabled?: Stylesheet
   }
 };
 export type RadioGroupThemeConfig = {
@@ -187,6 +193,19 @@ export type SpinnerThemeConfig = {
     small?: Stylesheet,
     medium?: Stylesheet,
     large?: Stylesheet
+  }
+};
+export type SwitchThemeConfig = {
+  base?: Stylesheet,
+  label?: Stylesheet,
+  checked?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  icon?: {
+    checked?: Stylesheet,
+    unchecked?: Stylesheet,
+    uncheckedDisabled?: Stylesheet,
+    checkedDisabled?: Stylesheet
   }
 };
 export type TableThemeConfig = {
@@ -254,6 +273,7 @@ export type ThemeConfig = {
   Rating?: RatingThemeConfig,
   Select?: SelectThemeConfig,
   Spinner?: SpinnerThemeConfig,
+  Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
   Text?: TextThemeConfig
 };

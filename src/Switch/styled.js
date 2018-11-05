@@ -25,7 +25,7 @@ export const SwitchIcon = styled(Box)`
   }
 
   & {
-    ${theme('fannypack.Switch.icon.base')};
+    ${theme('fannypack.Switch.base')};
   }
 `;
 
@@ -35,12 +35,19 @@ export const HiddenSwitch = HiddenInput({
     background-color: ${props => palette(props.palette || 'primary')};
     transition: all ease 0.2s;
   `,
-  disabledCss: css`
-    border-color: ${palette('grayLighter')};
+  disabledCheckedCss: css`
+    background-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
+    border-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
+  `,
+  disabledUncheckedIconCss: css`
+    background: ${palette('whiteDarker')};
   `,
   checkedIconCss: css`
     border-color: ${props => palette(props.palette || 'primary')};
     left: 1.7em;
+  `,
+  disabledCheckedIconCss: css`
+    border-color: ${props => tint(0.5, palette(props.palette || 'primary')(props))};
   `,
   uncheckedIconCss: css`
     background: white;
@@ -59,8 +66,10 @@ export const HiddenSwitch = HiddenInput({
 
 export default styled(Label)`
   align-items: center;
-  cursor: pointer;
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   display: flex;
 
-  ${theme('fannypack.Switch.base')};
+  & {
+    ${theme('fannypack.Switch.label')};
+  }
 `;

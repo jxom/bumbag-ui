@@ -4,6 +4,7 @@ route: /form/radio
 menu: Form
 ---
 
+import { Fragment } from 'react';
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Radio, { RadioGroup } from './index';
@@ -53,6 +54,23 @@ To check an option by default, use the `defaultChecked` prop.
   <Radio name="weather" label="Overcast" value="overcast" />
 </Playground>
 
+## Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `checked`.
+
+Note: Do not use `defaultChecked` with controlled inputs!
+
+<Playground>
+  <Component initialState={{ value: 'rainy' }}>
+    {({ state, setState }) => (
+      <Fragment>
+        <Radio checked={state.value === 'sunny'} onChange={() => setState({ value: 'sunny' })} name="weather" label="Sunny" value="sunny"  />
+        <Radio checked={state.value === 'rainy'} onChange={() => setState({ value: 'rainy' })} name="weather" label="Rainy" value="rainy" />
+      </Fragment>
+    )}
+  </Component>
+</Playground>
+
 ## Props
 
 <PropsTable of={Radio} />
@@ -63,13 +81,15 @@ To check an option by default, use the `defaultChecked` prop.
 
 ```jsx
 {
-  base: string | Object,
+  base: String | Object,
+  checked: String | Object,
+  disabled: String | Object,
+  focus: String | Object,
   icon: {
-    base: string | Object,
-    checked: string | Object
-    disabled: string | Object,
-    focus: string | Object
-    tick: string | Object
+    checked: String | Object,
+    unchecked: String | Object,
+    uncheckedDisabled: String | Object,
+    checkedDisabled: String | Object
   }
 }
 ```

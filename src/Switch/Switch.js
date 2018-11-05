@@ -1,34 +1,36 @@
 // @flow
 import React from 'react';
 
+import { type Palette } from '../types';
 import Text from '../Text';
 import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
 
 type Props = {
-  /** Automatically focus on the checkbox */
+  /** Automatically focus on the switch */
   autoFocus?: boolean,
   checked?: boolean,
   className?: string,
-  /** Is the checkbox checked by default? */
+  /** Is the switch checked by default? */
   defaultChecked?: boolean,
-  /** Disables the checkbox */
+  /** Disables the switch */
   disabled?: boolean,
-  /** ID for the checkbox */
+  /** ID for the switch */
   id?: string,
-  /** Makes the checkbox required and sets aria-invalid to true */
+  /** Makes the switch required and sets aria-invalid to true */
   isRequired?: boolean,
   /** Switch label */
   label: string,
   name?: string,
-  /** State of the checkbox. Can be any color in the palette. */
+  palette?: Palette,
+  /** State of the switch. Can be any color in the palette. */
   state?: string,
-  /** Initial value of the checkbox */
+  /** Initial value of the switch */
   value?: string,
   /** Function to invoke when focus is lost */
   onBlur?: Function,
-  /** Function to invoke when checkbox has changed */
+  /** Function to invoke when switch has changed */
   onChange?: Function,
-  /** Function to invoke when checkbox is focused */
+  /** Function to invoke when switch is focused */
   onFocus?: Function
 };
 
@@ -55,6 +57,7 @@ const Switch = ({
     aria-invalid={state === 'danger'}
     aria-label={label}
     aria-required={isRequired}
+    disabled={disabled}
     {...props}
   >
     <HiddenSwitch
@@ -82,16 +85,17 @@ const Switch = ({
 Switch.defaultProps = {
   autoFocus: false,
   checked: undefined,
-  className: null,
+  className: undefined,
   defaultChecked: undefined,
   disabled: false,
-  id: null,
+  id: undefined,
   isRequired: false,
-  onBlur: null,
-  onChange: null,
-  onFocus: null,
-  name: null,
-  state: null,
+  onBlur: undefined,
+  onChange: undefined,
+  onFocus: undefined,
+  palette: undefined,
+  name: undefined,
+  state: undefined,
   value: undefined
 };
 

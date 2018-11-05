@@ -25,7 +25,7 @@ export const RadioIcon = styled(Box)`
   }
 
   & {
-    ${theme('fannypack.Radio.icon.base')};
+    ${theme('fannypack.Radio.base')};
   }
 `;
 
@@ -42,7 +42,7 @@ export const HiddenRadio = HiddenInput({
     transform: translate(-50%, -50%);
     width: 8px;
   `,
-  disabledCss: css`
+  disabledCheckedIconCss: css`
     background: ${palette('grayLighter')};
   `,
   themePrefix: 'Radio'
@@ -52,7 +52,9 @@ export const Radio = styled(Label)`
   display: flex;
   align-items: center;
 
-  ${theme('fannypack.Radio.base')};
+  & {
+    ${theme('fannypack.Radio.label')};
+  }
 `;
 
 const horizontalProperties = css`
@@ -76,8 +78,6 @@ export const RadioGroup = styled(Box)`
   & {
     ${props => props.isHorizontal && horizontalProperties};
   }
-
-  ${theme('fannypack.RadioGroup.base')};
 `;
 
 export default Radio;
