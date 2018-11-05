@@ -7,6 +7,7 @@ menu: Form
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Input from './index';
+import InputField from './InputField';
 import Component from '@reactions/component';
 
 # Input
@@ -107,9 +108,29 @@ Using an accessibility label (`a11yLabel`), will enable screen readers to read t
   <Input a11yLabel="name" placeholder="Jake Moxey" />
 </Playground>
 
-## Props
+## `<Input>` Props
 
 <PropsTable of={Input} />
+
+# InputField
+
+## Import
+
+`import { InputField } from 'fannypack'`
+
+## Basic Usage
+
+The `<InputField>` component contains of the [`<Input>` component](#input) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Input>` props](/form/input#input-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <InputField a11yId="name" label="Username" />
+</Playground>
+
+## `<InputField>` Props
+
+<PropsTable of={InputField} />
 
 ## Theming
 

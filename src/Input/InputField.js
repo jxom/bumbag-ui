@@ -1,11 +1,11 @@
 // @flow
-import React, { type Node } from 'react';
+import React, { type Node, type Element } from 'react';
 
 import type { Size } from '../types';
-import { InlineBlock } from '../primitives';
-import _Input, { LoadingSpinner } from './styled';
+import Input from './Input';
+import FieldWrapper from '../FieldWrapper';
 
-export type Props = {
+type Props = {
   /** An accessible identifier for the input */
   a11yId?: string,
   /** An accessible label for the input */
@@ -18,14 +18,18 @@ export type Props = {
   className?: string,
   /** Default value of the input */
   defaultValue?: string,
+  description?: string | Element<any>,
   /** Disables the input */
   disabled?: boolean,
+  hint?: string | Element<any>,
   /** Makes the input span full width */
   isFullWidth?: boolean,
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean,
+  isOptional?: boolean,
   /** Makes the input required and sets aria-invalid to true */
   isRequired?: boolean,
+  label?: string | Element<any>,
   /** Name of the input field */
   name?: string,
   /** Alters the size of the input. Can be "small", "medium" or "large" */
@@ -54,6 +58,7 @@ export type Props = {
   state?: string,
   /** Specify the type of input. */
   type?: string,
+  validationText?: string,
   /** Value of the input */
   value?: string,
   /** Function to invoke when focus is lost */
@@ -64,72 +69,34 @@ export type Props = {
   onFocus?: Function
 };
 
-const Input = ({
+const InputField = ({
   a11yId,
-  a11yLabel,
-  autoComplete,
-  autoFocus,
-  className,
-  defaultValue,
-  disabled,
+  description,
+  hint,
   isFullWidth,
-  isLoading,
+  isOptional,
   isRequired,
-  max,
-  maxLength,
-  min,
-  minLength,
-  multiple,
-  onBlur,
-  onChange,
-  onFocus,
-  name,
-  pattern,
-  placeholder,
-  readOnly,
-  size,
-  spellCheck,
+  label,
   state,
-  step,
-  type,
-  value,
+  validationText,
   ...props
 }: Props) => (
-  <InlineBlock relative width={isFullWidth ? '100%' : undefined} {...props}>
-    <_Input
-      aria-invalid={state === 'danger'}
-      aria-label={a11yLabel}
-      aria-required={isRequired}
-      autoComplete={autoComplete}
-      autoFocus={autoFocus}
-      defaultValue={defaultValue}
-      disabled={disabled}
-      id={a11yId}
-      isFullWidth={isFullWidth}
-      max={max}
-      maxLength={maxLength}
-      min={min}
-      minLength={minLength}
-      multiple={multiple}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      name={name}
-      readOnly={readOnly}
-      pattern={pattern}
-      placeholder={placeholder}
-      size={size}
-      spellCheck={spellCheck}
-      state={state}
-      step={step}
-      type={type}
-      value={value}
-    />
-    {isLoading && <LoadingSpinner color="text" />}
-  </InlineBlock>
+  <FieldWrapper
+    a11yId={a11yId}
+    description={description}
+    hint={hint}
+    isFullWidth={isFullWidth}
+    isOptional={isOptional}
+    isRequired={isRequired}
+    label={label}
+    state={state}
+    validationText={validationText}
+  >
+    <Input {...props} />
+  </FieldWrapper>
 );
 
-Input.defaultProps = {
+InputField.defaultProps = {
   a11yId: undefined,
   a11yLabel: undefined,
   as: undefined,
@@ -137,10 +104,14 @@ Input.defaultProps = {
   autoFocus: false,
   className: undefined,
   defaultValue: undefined,
+  description: undefined,
   disabled: false,
+  hint: undefined,
   isFullWidth: false,
   isLoading: false,
+  isOptional: false,
   isRequired: false,
+  label: undefined,
   max: undefined,
   maxLength: undefined,
   min: undefined,
@@ -158,7 +129,8 @@ Input.defaultProps = {
   state: undefined,
   step: undefined,
   type: 'text',
+  validationText: undefined,
   value: undefined
 };
 
-export default Input;
+export default InputField;
