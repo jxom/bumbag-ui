@@ -26,17 +26,30 @@ type Props = {
   disabled?: boolean,
   /** Adds a loading indicator to the button. */
   isLoading?: boolean,
+  /** Makes the button not interactable. */
+  isStatic?: boolean,
   palette?: Palette,
   size?: Size,
   type?: ButtonType
 };
 
-export const Button = ({ children, className, disabled, isLoading, palette, size, type, ...props }: Props) => {
+export const Button = ({
+  children,
+  className,
+  disabled,
+  isLoading,
+  isStatic,
+  palette,
+  size,
+  type,
+  ...props
+}: Props) => {
   return (
     <_Button
       className={className}
       disabled={disabled}
       isLoading={isLoading}
+      isStatic={isStatic}
       palette={palette}
       size={size}
       type={type}
@@ -57,6 +70,7 @@ Button.defaultProps = {
   className: null,
   disabled: false,
   isLoading: false,
+  isStatic: false,
   palette: 'default',
   size: 'default',
   type: 'default'

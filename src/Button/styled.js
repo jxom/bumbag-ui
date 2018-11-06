@@ -81,6 +81,21 @@ const disabledProperties = css`
   }
 `;
 
+const staticProperties = css`
+  & {
+    cursor: default;
+    outline: unset;
+
+    &:focus {
+      box-shadow: unset !important;
+      outline: unset !important;
+    }
+  }
+  & {
+    ${theme('fannypack.Button.static')};
+  }
+`;
+
 const interactiveProperties = css`
   &:hover {
     background-color: ${props => darken(0.05, palette()(props))};
@@ -137,8 +152,9 @@ export default styled(Button)`
   ${props => props.type === 'link' && linkProperties}
 
   ${props => props.isLoading && loadingProperties} {/* Add loading styles */}
+  ${props => props.isStatic && staticProperties} {/* Add static styles */}
   ${props =>
-    !props.isLoading && !props.disabled && props.type !== 'link'
+    !props.isStatic && !props.isLoading && !props.disabled && props.type !== 'link'
       ? interactiveProperties
       : ''} /* Add interactive styles */
 

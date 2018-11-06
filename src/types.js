@@ -21,6 +21,7 @@ export type ButtonThemeConfig = {
   disabled?: Stylesheet,
   link?: Stylesheet,
   loading?: Stylesheet,
+  static?: Stylesheet,
   sizes?: {
     small?: Stylesheet,
     medium?: Stylesheet,
