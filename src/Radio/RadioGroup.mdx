@@ -6,7 +6,7 @@ menu: Form
 
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
-import { RadioGroup } from './index';
+import { RadioGroup, RadioGroupField } from './index';
 import Component from '@reactions/component';
 
 # RadioGroup
@@ -72,10 +72,29 @@ Using an accessibility label (`a11yLabel`) will provide an accessible label for 
   <RadioGroup a11yLabel="Weather" name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
 </Playground>
 
-
-## Props
+## `<RadioGroup>` Props
 
 <PropsTable of={RadioGroup} />
+
+# RadioGroupField
+
+## Import
+
+`import { RadioGroupField } from 'fannypack'`
+
+## Basic Usage
+
+The `<RadioGroupField>` component contains of the [`<RadioGroup>` component](#radiogroup) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<RadioGroup>` props](/form/radiogroup#input-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <RadioGroupField a11yId="weather" label="Weather" name="weather" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+</Playground>
+
+## `<RadioGroupField>` Props
+
+<PropsTable of={RadioGroupField} />
 
 ## Theming
 

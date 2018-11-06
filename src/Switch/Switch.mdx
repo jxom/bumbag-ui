@@ -8,6 +8,7 @@ import { Playground, PropsTable } from 'docz';
 import Component from '@reactions/component';
 import { Box } from '../primitives/index';
 import Switch from './index';
+import SwitchField from './SwitchField';
 import Button from '../Button';
 
 # Switch
@@ -71,9 +72,29 @@ Note: Do not use `defaultChecked` with controlled inputs!
   </Component>
 </Playground>
 
-## Props
+## `<Switch>` Props
 
 <PropsTable of={Switch} />
+
+# SwitchField
+
+## Import
+
+`import { SwitchField } from 'fannypack'`
+
+## Basic Usage
+
+The `<SwitchField>` component contains of the [`<Switch>` component](#switch) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Switch>` props](/form/switch#switch-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <SwitchField a11yId="name" label="Check it" switchLabel="Check me" />
+</Playground>
+
+## `<SwitchField>` Props
+
+<PropsTable of={SwitchField} />
 
 ## Theming
 

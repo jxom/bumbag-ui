@@ -1,31 +1,38 @@
 // @flow
-import React from 'react';
+import React, { type Element } from 'react';
 
 import { type Palette } from '../types';
-import Text from '../Text';
-import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
+import Switch from './Switch';
+import FieldWrapper from '../FieldWrapper';
 
 type Props = {
+  a11yId?: string,
   /** Automatically focus on the switch */
   autoFocus?: boolean,
   checked?: boolean,
   className?: string,
   /** Is the switch checked by default? */
   defaultChecked?: boolean,
+  description?: string | Element<any>,
   /** Disables the switch */
   disabled?: boolean,
+  hint?: string | Element<any>,
   /** ID for the switch */
   id?: string,
+  isFullWidth?: boolean,
+  isOptional?: boolean,
   /** Makes the switch required and sets aria-invalid to true */
   isRequired?: boolean,
-  /** Switch label */
-  label?: string,
+  label?: string | Element<any>,
   name?: string,
   palette?: Palette,
   /** State of the switch. Can be any color in the palette. */
   state?: string,
+  /** Switch label */
+  switchLabel?: string,
   /** Initial value of the switch */
   value?: string,
+  validationText?: string,
   /** Function to invoke when focus is lost */
   onBlur?: Function,
   /** Function to invoke when switch has changed */
@@ -34,63 +41,46 @@ type Props = {
   onFocus?: Function
 };
 
-const Switch = ({
-  autoFocus,
-  checked,
-  className,
-  defaultChecked,
-  disabled,
-  id,
+const SwitchField = ({
+  a11yId,
+  description,
+  hint,
+  isFullWidth,
+  isOptional,
   isRequired,
   label,
-  onBlur,
-  onChange,
-  onFocus,
-  name,
-  palette,
+  switchLabel,
   state,
-  value,
+  validationText,
   ...props
 }: Props) => (
-  <_Switch
-    aria-describedby="label"
-    aria-invalid={state === 'danger'}
-    aria-label={label}
-    aria-required={isRequired}
-    disabled={disabled}
-    {...props}
+  <FieldWrapper
+    a11yId={a11yId}
+    description={description}
+    hint={hint}
+    isFullWidth={isFullWidth}
+    isOptional={isOptional}
+    isRequired={isRequired}
+    label={label}
+    state={state}
+    validationText={validationText}
   >
-    <HiddenSwitch
-      autoFocus={autoFocus}
-      checked={checked}
-      defaultChecked={defaultChecked}
-      disabled={disabled}
-      id={id}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      name={name}
-      palette={palette}
-      state={state}
-      type="checkbox"
-      value={value}
-    />
-    <SwitchIcon state={state} />
-    {label && (
-      <Text id="label" htmlFor={id} marginLeft="xxsmall">
-        {label}
-      </Text>
-    )}
-  </_Switch>
+    <Switch label={switchLabel} {...props} />
+  </FieldWrapper>
 );
 
-Switch.defaultProps = {
+SwitchField.defaultProps = {
+  a11yId: undefined,
   autoFocus: false,
   checked: undefined,
   className: undefined,
   defaultChecked: undefined,
+  description: undefined,
   disabled: false,
+  hint: undefined,
   id: undefined,
+  isFullWidth: false,
+  isOptional: undefined,
   isRequired: false,
   label: undefined,
   onBlur: undefined,
@@ -99,7 +89,9 @@ Switch.defaultProps = {
   palette: undefined,
   name: undefined,
   state: undefined,
+  switchLabel: undefined,
+  validationText: undefined,
   value: undefined
 };
 
-export default Switch;
+export default SwitchField;
