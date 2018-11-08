@@ -6,12 +6,11 @@ import { Caption as _Caption } from './styled';
 type Props = {
   as?: any,
   children: Node,
-  className?: string,
   /** Positioning of the caption */
   position?: 'top' | 'bottom'
 };
 
-const Caption = ({ as, children, className, position, ...props }: Props) => (
+const Caption = ({ as, children, position, ...props }: Props) => (
   <_Caption as={as} position={position} {...props}>
     {children}
   </_Caption>
@@ -19,7 +18,6 @@ const Caption = ({ as, children, className, position, ...props }: Props) => (
 
 Caption.defaultProps = {
   as: 'caption',
-  className: null,
   position: 'top'
 };
 

@@ -1,6 +1,7 @@
 // @flow
 import React, { type Node } from 'react';
 import { theme } from 'styled-tools';
+import { css } from 'reakit/styled';
 import ConditionalWrap from 'conditional-wrap';
 
 import styled from '../styled';
@@ -18,6 +19,11 @@ const OuterBorder = styled(InlineBlock)`
   border: 1px solid ${theme('fannypack.Table.borderColor')};
   border-radius: 5px;
   padding: 0.25rem 0.5rem;
+  ${props =>
+    props.isFullWidth &&
+    css`
+      width: 100%;
+    `};
 `;
 
 type Props = {
@@ -25,14 +31,17 @@ type Props = {
   a11yTitle?: string,
   as?: any,
   children: Node,
-  className?: string,
   /** Renders an outer border for the table */
-  hasBorder?: boolean
+  hasBorder?: boolean,
+  isFullWidth?: boolean
 };
 
-const Table = ({ a11yTitle, as, children, className, hasBorder, ...props }: Props) => (
-  <ConditionalWrap condition={hasBorder} wrap={children => <OuterBorder>{children}</OuterBorder>}>
-    <_Table as={as} aria-label={a11yTitle} {...props}>
+const Table = ({ a11yTitle, as, children, hasBorder, isFullWidth, ...props }: Props) => (
+  <ConditionalWrap
+    condition={hasBorder}
+    wrap={children => <OuterBorder isFullWidth={isFullWidth}>{children}</OuterBorder>}
+  >
+    <_Table as={as} aria-label={a11yTitle} isFullWidth={isFullWidth} {...props}>
       {children}
     </_Table>
   </ConditionalWrap>
@@ -49,8 +58,8 @@ Table.Row = TableRow;
 Table.defaultProps = {
   a11yTitle: null,
   as: 'table',
-  className: null,
-  hasBorder: false
+  hasBorder: false,
+  isFullWidth: false
 };
 
 export default Table;

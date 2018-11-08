@@ -6,12 +6,11 @@ import { TableFoot as _TableFoot } from './styled';
 type Props = {
   as?: any,
   children: Node,
-  className?: string,
   /** Renders a top border on the footer row */
   hasBorder?: boolean
 };
 
-const TableFoot = ({ as, children, className, hasBorder, ...props }: Props) => (
+const TableFoot = ({ as, children, hasBorder, ...props }: Props) => (
   <_TableFoot as={as} hasBorder={hasBorder} {...props}>
     {children}
   </_TableFoot>
@@ -19,7 +18,6 @@ const TableFoot = ({ as, children, className, hasBorder, ...props }: Props) => (
 
 TableFoot.defaultProps = {
   as: 'tfoot',
-  className: null,
   hasBorder: true
 };
 

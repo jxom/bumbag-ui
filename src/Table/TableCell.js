@@ -5,19 +5,17 @@ import { TableCell as _TableCell } from './styled';
 
 type Props = {
   as?: any,
-  children: Node,
-  className?: string
+  children: Node
 };
 
-const TableCell = ({ as, children, className, ...props }: Props) => (
+const TableCell = ({ as, children, ...props }: Props) => (
   <_TableCell as={as} {...props}>
     {children}
   </_TableCell>
 );
 
 TableCell.defaultProps = {
-  as: 'td',
-  className: null
+  as: 'td'
 };
 
 export default TableCell;

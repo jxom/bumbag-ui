@@ -5,19 +5,17 @@ import { TableRow as _TableRow } from './styled';
 
 type Props = {
   as?: any,
-  children: Node,
-  className?: string
+  children: Node
 };
 
-const TableRow = ({ as, children, className, ...props }: Props) => (
+const TableRow = ({ as, children, ...props }: Props) => (
   <_TableRow as={as} {...props}>
     {children}
   </_TableRow>
 );
 
 TableRow.defaultProps = {
-  as: 'tr',
-  className: null
+  as: 'tr'
 };
 
 export default TableRow;

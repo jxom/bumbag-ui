@@ -6,12 +6,11 @@ import { TableHead as _TableHead } from './styled';
 type Props = {
   as?: any,
   children: Node,
-  className?: string,
   /** Renders a bottom border on the header row */
   hasBorder?: boolean
 };
 
-const TableHead = ({ as, children, className, hasBorder, ...props }: Props) => (
+const TableHead = ({ as, children, hasBorder, ...props }: Props) => (
   <_TableHead as={as} hasBorder={hasBorder} {...props}>
     {children}
   </_TableHead>
@@ -19,7 +18,6 @@ const TableHead = ({ as, children, className, hasBorder, ...props }: Props) => (
 
 TableHead.defaultProps = {
   as: 'thead',
-  className: null,
   hasBorder: true
 };
 

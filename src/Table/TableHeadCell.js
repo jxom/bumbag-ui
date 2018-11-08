@@ -5,19 +5,17 @@ import { TableHeadCell as _TableHeadCell } from './styled';
 
 type Props = {
   as?: any,
-  children: Node,
-  className?: string
+  children: Node
 };
 
-const TableHeadCell = ({ as, children, className, ...props }: Props) => (
+const TableHeadCell = ({ as, children, ...props }: Props) => (
   <_TableHeadCell as={as} {...props}>
     {children}
   </_TableHeadCell>
 );
 
 TableHeadCell.defaultProps = {
-  as: 'th',
-  className: null
+  as: 'th'
 };
 
 export default TableHeadCell;
