@@ -13,7 +13,7 @@ export default {
   ],
   themeConfig: {
     colors: {
-      primary: '#1a9cfc',
+      primary: '#3926a5',
       text: '#435a6f'
     },
     logo: {
