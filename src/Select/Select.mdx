@@ -6,6 +6,8 @@ menu: Form
 
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
+import Button from '../Button';
+import Group from '../Group';
 import { Select, SelectField } from './index';
 import Component from '@reactions/component';
 
@@ -73,6 +75,17 @@ An input can use different states (as per palette) such as `danger`, `success` a
   <Select state="warning" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} marginTop="xxsmall" /><br/>
   <Select state="success" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} marginTop="xxsmall" /><br/>
   <Select state="primary" options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} marginTop="xxsmall" />
+</Playground>
+
+## Addons
+
+You can use the [Group component](/components/group) to add on stuff to your `<Select>`.
+
+<Playground>
+  <Group>
+    <Select options={[{ label: 'Yes', value: 'yes' }, { label: 'No', value: 'no' }]} />
+    <Button palette="primary">Submit</Button>
+  </Group>
 </Playground>
 
 ## Controlled Usage

@@ -120,7 +120,8 @@ const loadingProperties = css`
 export default styled(Button)`
   align-items: center;
   background-color: ${palette()};
-  border: 1px solid ${props => darken(0.2, palette()(props))};
+  border: 1px solid ${props =>
+    darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette)(props))};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;
@@ -135,9 +136,7 @@ export default styled(Button)`
     outline: unset;
     z-index: 2;
     box-shadow: ${props =>
-      palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(
-        props
-      )} 0px 0px 0px 3px, rgba(67, 90, 111, 0.14) 0px 0px 0px 1px inset, rgba(67, 90, 111, 0.3) 0px -1px 1px 0px inset !important;
+      palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)} 0px 0px 0px 2px;
   }
 
   &[disabled] {

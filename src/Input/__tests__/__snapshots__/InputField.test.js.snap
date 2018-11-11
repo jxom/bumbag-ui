@@ -25,7 +25,6 @@ exports[`renders correctly for a basic input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -78,6 +77,8 @@ exports[`renders correctly for a basic input field 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -161,7 +162,6 @@ exports[`renders correctly for a disabled input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -214,6 +214,8 @@ exports[`renders correctly for a disabled input field 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -298,7 +300,6 @@ exports[`renders correctly for a full width input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c4.c4.c4 {
@@ -351,6 +352,8 @@ exports[`renders correctly for a full width input field 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -383,10 +386,6 @@ exports[`renders correctly for a full width input field 1`] = `
   opacity: 0.6;
 }
 
-.c5 {
-  width: 100%;
-}
-
 .c2 {
   width: 100%;
 }
@@ -402,8 +401,6 @@ exports[`renders correctly for a full width input field 1`] = `
     <div />
     <div
       class="c3 c4"
-      style="width: 100%;"
-      width="100%"
     >
       <input
         aria-invalid="false"
@@ -444,7 +441,6 @@ exports[`renders correctly for a required field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -518,6 +514,8 @@ exports[`renders correctly for a required field 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -589,13 +587,765 @@ exports[`renders correctly for a required field 1`] = `
     >
       <input
         aria-invalid="false"
-        aria-required="true"
+        aria-required="false"
         class="c9 c10"
-        id="username"
         style="size: default;"
         type="text"
         value=""
       />
+    </div>
+    <div />
+  </div>
+</div>
+`;
+
+exports[`renders correctly for addon component (after) 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10.c10.c10 {
+  position: relative;
+}
+
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.25rem !important;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c8 > *:not(:first-child):not(:last-child),
+.c8 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+.c8 > *:first-child,
+.c8 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c8 > *:last-child,
+.c8 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-left-width: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c7 > * {
+  border-radius: 4px;
+}
+
+.c7 input:focus,
+.c7 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c7 > *:first-child {
+  border-right-width: 0;
+}
+
+.c7 > *:first-child input,
+.c7 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c7 > *:last-child input,
+.c7 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c7 > *:not(:first-child):not(:last-child) > input,
+.c7 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.c9 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c11[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c11:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #7467c0;
+  box-shadow: #7467c0 0px 0px 0px 1px !important;
+}
+
+.c11::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c11:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::placeholder {
+  opacity: 0.6;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c4 {
+  display: block;
+}
+
+.c3 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c1"
+    display="inline-block"
+    style="display: inline-block;"
+  >
+    <div
+      class="c2 c1"
+      style="align-items: center;"
+    >
+      <label
+        class="c3 c4 c5 c6"
+        font-weight="600"
+        for="username"
+        style="font-weight: 600;"
+      >
+        Username
+      </label>
+    </div>
+    <div />
+    <div
+      class="c7 c8 c1"
+      role="group"
+    >
+      <div
+        class="c9 c10"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="c11 c12"
+          style="size: default;"
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        test
+      </div>
+    </div>
+    <div />
+  </div>
+</div>
+`;
+
+exports[`renders correctly for addon component (before) 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10.c10.c10 {
+  position: relative;
+}
+
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.25rem !important;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c8 > *:not(:first-child):not(:last-child),
+.c8 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+.c8 > *:first-child,
+.c8 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c8 > *:last-child,
+.c8 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-left-width: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c7 > * {
+  border-radius: 4px;
+}
+
+.c7 input:focus,
+.c7 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c7 > *:first-child {
+  border-right-width: 0;
+}
+
+.c7 > *:first-child input,
+.c7 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c7 > *:last-child input,
+.c7 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c7 > *:not(:first-child):not(:last-child) > input,
+.c7 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.c9 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c11[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c11:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #7467c0;
+  box-shadow: #7467c0 0px 0px 0px 1px !important;
+}
+
+.c11::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c11:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::placeholder {
+  opacity: 0.6;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c4 {
+  display: block;
+}
+
+.c3 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c1"
+    display="inline-block"
+    style="display: inline-block;"
+  >
+    <div
+      class="c2 c1"
+      style="align-items: center;"
+    >
+      <label
+        class="c3 c4 c5 c6"
+        font-weight="600"
+        for="username"
+        style="font-weight: 600;"
+      >
+        Username
+      </label>
+    </div>
+    <div />
+    <div
+      class="c7 c8 c1"
+      role="group"
+    >
+      <div>
+        test
+      </div>
+      <div
+        class="c9 c10"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="c11 c12"
+          style="size: default;"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div />
+  </div>
+</div>
+`;
+
+exports[`renders correctly for addon component (vertical) 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c10.c10.c10 {
+  position: relative;
+}
+
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.25rem !important;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 > *:not(:first-child):not(:last-child),
+.c8 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-top-width: 0;
+}
+
+.c8 > *:first-child,
+.c8 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c8 > *:last-child,
+.c8 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-top-width: 0;
+  border-top-right-radius: 0;
+}
+
+.c7 > * {
+  border-radius: 4px;
+}
+
+.c7 input:focus,
+.c7 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c7 > *:first-child {
+  border-bottom-width: 0;
+}
+
+.c7 > *:first-child input,
+.c7 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c7 > *:last-child input,
+.c7 > *:last-child select {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c7 > *:not(:first-child):not(:last-child) > input,
+.c7 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.c9 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c11[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c11:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #7467c0;
+  box-shadow: #7467c0 0px 0px 0px 1px !important;
+}
+
+.c11::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c11:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c11::placeholder {
+  opacity: 0.6;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c4 {
+  display: block;
+}
+
+.c3 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c1"
+    display="inline-block"
+    style="display: inline-block;"
+  >
+    <div
+      class="c2 c1"
+      style="align-items: center;"
+    >
+      <label
+        class="c3 c4 c5 c6"
+        font-weight="600"
+        for="username"
+        style="font-weight: 600;"
+      >
+        Username
+      </label>
+    </div>
+    <div />
+    <div
+      class="c7 c8 c1"
+      role="group"
+    >
+      <div
+        class="c9 c10"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="c11 c12"
+          style="size: default;"
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        test
+      </div>
     </div>
     <div />
   </div>
@@ -627,7 +1377,6 @@ exports[`renders correctly for an input field with a default value 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -680,6 +1429,8 @@ exports[`renders correctly for an input field with a default value 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -763,7 +1514,6 @@ exports[`renders correctly for an input field with a description 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -837,6 +1587,8 @@ exports[`renders correctly for an input field with a description 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -972,7 +1724,6 @@ samp.c8 {
         aria-invalid="false"
         aria-required="false"
         class="c11 c12"
-        id="username"
         style="size: default;"
         type="text"
         value=""
@@ -1008,7 +1759,6 @@ exports[`renders correctly for an input field with a hint 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -1082,6 +1832,8 @@ exports[`renders correctly for an input field with a hint 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -1214,7 +1966,6 @@ samp.c12 {
         aria-invalid="false"
         aria-required="false"
         class="c9 c10"
-        id="username"
         style="size: default;"
         type="text"
         value=""
@@ -1254,7 +2005,6 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -1307,6 +2057,8 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -1391,7 +2143,6 @@ exports[`renders correctly for an optional input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -1465,6 +2216,8 @@ exports[`renders correctly for an optional input field 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -1602,7 +2355,6 @@ samp.c8 {
         aria-invalid="false"
         aria-required="false"
         class="c11 c12"
-        id="username"
         style="size: default;"
         type="text"
         value=""
@@ -1638,7 +2390,6 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -1691,6 +2442,8 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -1785,7 +2538,6 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -1838,6 +2590,8 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -1932,7 +2686,6 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -1985,6 +2738,8 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2078,7 +2833,6 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2131,6 +2885,8 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2163,11 +2919,6 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   opacity: 0.6;
 }
 
-.c4 {
-  border-color: #e24c67;
-  box-shadow: #e24c67 0px 0px 0px 1px !important;
-}
-
 <div
   class="c0 c1"
 >
@@ -2181,7 +2932,7 @@ exports[`states renders correctly for an input field with state danger 1`] = `
       class="c2 c3"
     >
       <input
-        aria-invalid="true"
+        aria-invalid="false"
         aria-required="false"
         class="c4 c5"
         style="size: default;"
@@ -2219,7 +2970,6 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2272,6 +3022,8 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2302,11 +3054,6 @@ exports[`states renders correctly for an input field with state primary 1`] = `
 
 .c4::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  border-color: #7467c0;
-  box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
 <div
@@ -2360,7 +3107,6 @@ exports[`states renders correctly for an input field with state success 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2413,6 +3159,8 @@ exports[`states renders correctly for an input field with state success 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2443,11 +3191,6 @@ exports[`states renders correctly for an input field with state success 1`] = `
 
 .c4::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  border-color: #4ca26c;
-  box-shadow: #4ca26c 0px 0px 0px 1px !important;
 }
 
 <div
@@ -2501,7 +3244,6 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2554,6 +3296,8 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2584,11 +3328,6 @@ exports[`states renders correctly for an input field with state warning 1`] = `
 
 .c4::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  border-color: #ffc94c;
-  box-shadow: #ffc94c 0px 0px 0px 1px !important;
 }
 
 <div
@@ -2642,7 +3381,6 @@ exports[`types renders correctly for an input field with type date 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2695,6 +3433,8 @@ exports[`types renders correctly for an input field with type date 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2778,7 +3518,6 @@ exports[`types renders correctly for an input field with type email 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2831,6 +3570,8 @@ exports[`types renders correctly for an input field with type email 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -2914,7 +3655,6 @@ exports[`types renders correctly for an input field with type number 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -2967,6 +3707,8 @@ exports[`types renders correctly for an input field with type number 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -3050,7 +3792,6 @@ exports[`types renders correctly for an input field with type password 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -3103,6 +3844,8 @@ exports[`types renders correctly for an input field with type password 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -3186,7 +3929,6 @@ exports[`types renders correctly for an input field with type search 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -3239,6 +3981,8 @@ exports[`types renders correctly for an input field with type search 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -3322,7 +4066,6 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -3375,6 +4118,8 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -3458,7 +4203,6 @@ exports[`types renders correctly for an input field with type time 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -3511,6 +4255,8 @@ exports[`types renders correctly for an input field with type time 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 
@@ -3594,7 +4340,6 @@ exports[`types renders correctly for an input field with type url 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c3.c3.c3 {
@@ -3647,6 +4392,8 @@ exports[`types renders correctly for an input field with type url 1`] = `
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 }
 

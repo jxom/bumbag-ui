@@ -67,6 +67,8 @@ export default styled(Input)`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
   padding: 0.4em 0.6em;
 
   &[disabled] {

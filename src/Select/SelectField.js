@@ -1,11 +1,17 @@
 // @flow
 import React, { type Node, type Element } from 'react';
+import ConditionalWrap from 'conditional-wrap';
 
 import type { Size } from '../types';
+import Group from '../Group';
 import Select from './Select';
 import FieldWrapper from '../FieldWrapper';
 
 type Props = {
+  /** Addon component to the input (before). Similar to the addon components in Input. */
+  addonBefore?: Element<any>,
+  /** Addon component to the input (after). Similar to the addon components in Input. */
+  addonAfter?: Element<any>,
   /** ID for the select field */
   a11yId?: string,
   /** An accessible label for the select field */
@@ -28,6 +34,8 @@ type Props = {
   isOptional?: boolean,
   /** Makes the select field required and sets aria-invalid to true */
   isRequired?: boolean,
+  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+  isVertical?: boolean,
   label?: string | Element<any>,
   /** Name of the select field */
   name?: string,
@@ -51,12 +59,15 @@ type Props = {
 };
 
 const SelectField = ({
+  addonBefore,
+  addonAfter,
   a11yId,
   description,
   hint,
   isFullWidth,
   isOptional,
   isRequired,
+  isVertical,
   label,
   state,
   validationText,
@@ -73,11 +84,20 @@ const SelectField = ({
     state={state}
     validationText={validationText}
   >
-    <Select {...props} />
+    <ConditionalWrap
+      condition={addonBefore || addonAfter}
+      wrap={children => <Group isVertical={isVertical}>{children}</Group>}
+    >
+      {addonBefore}
+      <Select {...props} />
+      {addonAfter}
+    </ConditionalWrap>
   </FieldWrapper>
 );
 
 SelectField.defaultProps = {
+  addonBefore: undefined,
+  addonAfter: undefined,
   a11yId: undefined,
   a11yLabel: undefined,
   autoComplete: undefined,
@@ -91,6 +111,7 @@ SelectField.defaultProps = {
   isLoading: false,
   isOptional: undefined,
   isRequired: false,
+  isVertical: false,
   label: undefined,
   name: undefined,
   onBlur: undefined,

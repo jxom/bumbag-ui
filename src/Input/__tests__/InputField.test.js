@@ -76,3 +76,20 @@ it('renders correctly for a required field', () => {
   const { container } = render(<InputField a11yId="username" label="Username" isRequired />);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly for addon component (before)', () => {
+  const { container } = render(<InputField a11yId="username" label="Username" addonBefore={<div>test</div>} />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for addon component (after)', () => {
+  const { container } = render(<InputField a11yId="username" label="Username" addonAfter={<div>test</div>} />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for addon component (vertical)', () => {
+  const { container } = render(
+    <InputField a11yId="username" label="Username" addonAfter={<div>test</div>} isVertical />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});

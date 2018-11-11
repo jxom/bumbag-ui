@@ -1,7 +1,9 @@
 // @flow
 import React, { type Node, type Element } from 'react';
+import ConditionalWrap from 'conditional-wrap';
 
 import type { Size } from '../types';
+import Group from '../Group';
 import Input from './Input';
 import FieldWrapper from '../FieldWrapper';
 
@@ -14,6 +16,10 @@ type Props = {
   autoComplete?: string,
   /** Automatically focus on the input */
   autoFocus?: boolean,
+  /** Addon component to the input (before). Similar to the addon components in Input. */
+  addonBefore?: Element<any>,
+  /** Addon component to the input (after). Similar to the addon components in Input. */
+  addonAfter?: Element<any>,
   children: Node,
   className?: string,
   /** Default value of the input */
@@ -29,6 +35,8 @@ type Props = {
   isOptional?: boolean,
   /** Makes the input required and sets aria-invalid to true */
   isRequired?: boolean,
+  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+  isVertical?: boolean,
   label?: string | Element<any>,
   /** Name of the input field */
   name?: string,
@@ -70,12 +78,15 @@ type Props = {
 };
 
 const InputField = ({
+  addonBefore,
+  addonAfter,
   a11yId,
   description,
   hint,
   isFullWidth,
   isOptional,
   isRequired,
+  isVertical,
   label,
   state,
   validationText,
@@ -92,11 +103,20 @@ const InputField = ({
     state={state}
     validationText={validationText}
   >
-    <Input {...props} />
+    <ConditionalWrap
+      condition={addonBefore || addonAfter}
+      wrap={children => <Group isVertical={isVertical}>{children}</Group>}
+    >
+      {addonBefore}
+      <Input {...props} />
+      {addonAfter}
+    </ConditionalWrap>
   </FieldWrapper>
 );
 
 InputField.defaultProps = {
+  addonBefore: undefined,
+  addonAfter: undefined,
   a11yId: undefined,
   a11yLabel: undefined,
   as: undefined,
@@ -111,6 +131,7 @@ InputField.defaultProps = {
   isLoading: false,
   isOptional: false,
   isRequired: false,
+  isVertical: false,
   label: undefined,
   max: undefined,
   maxLength: undefined,

@@ -185,3 +185,52 @@ it('renders correctly for a required field', () => {
   );
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly for addon component (before)', () => {
+  const { container } = render(
+    <SelectField
+      a11yId="weather"
+      label="Weather"
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+      addonBefore={<div>test</div>}
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for addon component (after)', () => {
+  const { container } = render(
+    <SelectField
+      a11yId="weather"
+      label="Weather"
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+      addonAfter={<div>test</div>}
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for addon component (vertical)', () => {
+  const { container } = render(
+    <SelectField
+      a11yId="weather"
+      label="Weather"
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+      addonBefore={<div>test</div>}
+      isVertical
+    />
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});

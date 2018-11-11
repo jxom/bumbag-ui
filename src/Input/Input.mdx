@@ -7,6 +7,9 @@ menu: Form
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Input from './index';
+import Button from '../Button';
+import Group from '../Group';
+import Select from '../Select';
 import InputField from './InputField';
 import Component from '@reactions/component';
 
@@ -84,6 +87,18 @@ An input can use different states (as per palette) such as `danger`, `success` a
   <Input state="success" marginTop="xxsmall" /><br/>
   <Input state="warning" marginTop="xxsmall" /><br/>
   <Input state="primary" marginTop="xxsmall" />
+</Playground>
+
+## Addons
+
+You can use the [Group component](/components/group) to add on stuff to your `<Input>`.
+
+<Playground>
+  <Group>
+    <Select options={[{ label: '$', value: 'dollars' }, { label: '€', value: 'euro' }]} />
+    <Input />
+    <Button>Send</Button>
+  </Group>
 </Playground>
 
 ## Controlled Usage

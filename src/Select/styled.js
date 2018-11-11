@@ -91,6 +91,7 @@ export default styled.select`
   border: 1px solid #bdbdbd;
   border-radius: 0.2em;
   color: ${props => (props.isPlaceholderSelected ? tint(0.4, palette('text')(props)) : palette('text')(props))};
+  height: 2.5em;
   padding: 0.4em 1.4em 0.4em 0.6em;
   line-height: 1.5;
   width: 100%;

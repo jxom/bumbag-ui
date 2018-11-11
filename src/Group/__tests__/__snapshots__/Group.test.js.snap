@@ -73,7 +73,7 @@ exports[`renders correctly for a basic group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   cursor: pointer;
@@ -95,7 +95,7 @@ exports[`renders correctly for a basic group 1`] = `
 .c5:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 3px,rgba(67,90,111,0.14) 0px 0px 0px 1px inset,rgba(67,90,111,0.3) 0px -1px 1px 0px inset !important;
+  box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
 .c5[disabled] {
@@ -144,6 +144,33 @@ exports[`renders correctly for a basic group 1`] = `
 
 .c2 > * {
   border-radius: 4px;
+}
+
+.c2 input:focus,
+.c2 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c2 > *:first-child {
+  border-right-width: 0;
+}
+
+.c2 > *:first-child input,
+.c2 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c2 > *:last-child input,
+.c2 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:not(:first-child):not(:last-child) > input,
+.c2 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
 }
 
 <div
@@ -246,7 +273,7 @@ exports[`renders correctly for a responsive group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   cursor: pointer;
@@ -268,7 +295,7 @@ exports[`renders correctly for a responsive group 1`] = `
 .c5:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 3px,rgba(67,90,111,0.14) 0px 0px 0px 1px inset,rgba(67,90,111,0.3) 0px -1px 1px 0px inset !important;
+  box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
 .c5[disabled] {
@@ -313,6 +340,33 @@ exports[`renders correctly for a responsive group 1`] = `
 
 .c2 > * {
   border-radius: 4px;
+}
+
+.c2 input:focus,
+.c2 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c2 > *:first-child {
+  border-right-width: 0;
+}
+
+.c2 > *:first-child input,
+.c2 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c2 > *:last-child input,
+.c2 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:not(:first-child):not(:last-child) > input,
+.c2 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
 }
 
 @media (max-width:768px) {
@@ -467,7 +521,7 @@ exports[`renders correctly for a vertical group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #fcfcfc;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
   cursor: pointer;
@@ -489,7 +543,7 @@ exports[`renders correctly for a vertical group 1`] = `
 .c5:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 3px,rgba(67,90,111,0.14) 0px 0px 0px 1px inset,rgba(67,90,111,0.3) 0px -1px 1px 0px inset !important;
+  box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
 .c5[disabled] {
@@ -538,6 +592,33 @@ exports[`renders correctly for a vertical group 1`] = `
 
 .c2 > * {
   border-radius: 4px;
+}
+
+.c2 input:focus,
+.c2 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c2 > *:first-child {
+  border-bottom-width: 0;
+}
+
+.c2 > *:first-child input,
+.c2 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:last-child input,
+.c2 > *:last-child select {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c2 > *:not(:first-child):not(:last-child) > input,
+.c2 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
 }
 
 <div
