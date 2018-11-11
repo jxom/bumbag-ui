@@ -1,5 +1,5 @@
 // @flow
-import { darken, lighten, shade, tint } from 'polished';
+import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme } from 'styled-tools';
 import type { ThemeConfig } from '../types';
 
@@ -38,7 +38,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     primaryDarker: shade(0.3, '#3926a5'),
     primaryDarkest: shade(0.5, '#3926a5'),
     primaryTint: tint(0.9, '#3926a5'),
-    primaryInverted: 'white',
+    primaryInverted: readableColor('#3926a5'),
 
     secondary: '#112ebb',
     secondaryLight: tint(0.1, '#112ebb'),
@@ -48,7 +48,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     secondaryDarker: shade(0.3, '#112ebb'),
     secondaryDarkest: shade(0.5, '#112ebb'),
     secondaryTint: tint(0.9, '#112ebb'),
-    secondaryInverted: 'white',
+    secondaryInverted: readableColor('#112ebb'),
 
     success: '#007b2e',
     successLight: tint(0.1, '#007b2e'),
@@ -58,7 +58,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     successDarker: shade(0.3, '#007b2e'),
     successDarkest: shade(0.5, '#007b2e'),
     successTint: tint(0.9, '#007b2e'),
-    successInverted: 'white',
+    successInverted: readableColor('#007b2e'),
 
     danger: '#d60027',
     dangerLight: tint(0.1, '#d60027'),
@@ -68,7 +68,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     dangerDarker: shade(0.3, '#d60027'),
     dangerDarkest: shade(0.5, '#d60027'),
     dangerTint: tint(0.9, '#d60027'),
-    dangerInverted: 'white',
+    dangerInverted: readableColor('#d60027'),
 
     warning: '#ffb300',
     warningLight: tint(0.1, '#ffb300'),
@@ -78,7 +78,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     warningDarker: shade(0.3, '#ffb300'),
     warningDarkest: shade(0.5, '#ffb300'),
     warningTint: tint(0.9, '#ffb300'),
-    warningInverted: lighten(0.2, 'black'),
+    warningInverted: readableColor('#ffb300'),
 
     ...overrides.palette
   },
