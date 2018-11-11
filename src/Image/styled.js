@@ -13,7 +13,7 @@ const fitProperties = props => {
           ? css`
               object-position: ${props.fitPosition};
             `
-          : ''} /**/
+          : ''};
 
       ${theme('fannypack.Image.fit.base')};
       ${theme('fannypack.Image.fit.contain')};
@@ -27,7 +27,7 @@ const fitProperties = props => {
           ? css`
               object-position: ${props.fitPosition};
             `
-          : ''} /**/
+          : ''};
 
       ${theme('fannypack.Image.fit.base')};
       ${theme('fannypack.Image.fit.cover')};

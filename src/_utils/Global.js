@@ -8,7 +8,7 @@ export default styled(Box)`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: ${theme('fannypack.fontWeights.normal')};
   line-height: 1.5;
   margin: 0;
   padding: 0;

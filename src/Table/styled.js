@@ -73,7 +73,7 @@ export const TableBody = styled(Box)`
       & ${TableRow} {
         border-bottom: 1px solid ${theme('fannypack.Table.borderColor')};
       }
-    `} /**/
+    `};
 
   & {
     ${theme('fannypack.Table.Body.base')};

@@ -240,6 +240,13 @@ export type TableThemeConfig = {
     base?: Stylesheet
   }
 };
+export type TagThemeConfig = {
+  base?: Stylesheet,
+  sizes?: {
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type TextThemeConfig = {
   base?: Stylesheet
 };
@@ -276,6 +283,7 @@ export type ThemeConfig = {
   Spinner?: SpinnerThemeConfig,
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
+  Tag?: TagThemeConfig,
   Text?: TextThemeConfig
 };
 /* ====== END: THEMES ====== */

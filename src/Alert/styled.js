@@ -17,7 +17,7 @@ export default styled(Box)`
     ${props => (props.palette === 'default' ? palette('text')(props) : palette(props.palette)(props))};
   border-radius: 4px;
   color: ${props =>
-    props.palette === 'default' ? darken(0.25, palette('text')(props)) : darken(0.25, palette(props.palette)(props))};
+    props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
   padding: 1rem;
 
   & {

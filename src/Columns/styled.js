@@ -34,7 +34,7 @@ export default styled(Box)`
     !props.isGapless &&
     css`
       margin: 0 -${theme('fannypack.layout.gapFactor')}rem;
-    `} /**/
+    `};
 
   ${getWrapProperties};
 

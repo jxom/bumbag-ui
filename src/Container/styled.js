@@ -56,7 +56,7 @@ export default styled(Box)`
     margin: ${theme('fannypack.Container.tabletMargin')};
   }
 
-  ${getResponsiveProperties} /**/
+  ${getResponsiveProperties};
   ${props => !props.isFluid && alignProperties[props.align]};
 
   ${theme('fannypack.Container.base')}

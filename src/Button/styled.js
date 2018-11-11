@@ -126,7 +126,7 @@ export default styled(Button)`
   color: ${props => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;
   display: inline-flex;
-  font-weight: 500;
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
   height: 2.5em;
   justify-content: center;
   padding: 0 0.8rem;

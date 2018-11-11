@@ -10,7 +10,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     textLight: lighten(0.05, '#435a6f'),
     textLighter: lighten(0.1, '#435a6f'),
     textLightest: lighten(0.2, '#435a6f'),
-    textTint: tint(0.9, '#435a6f'),
+    textTint: tint(0.8, '#435a6f'),
+    textInverted: readableColor('#435a6f'),
+    textTintInverted: '#435a6f',
 
     black: 'black',
 
@@ -37,8 +39,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     primaryDark: shade(0.1, '#3926a5'),
     primaryDarker: shade(0.3, '#3926a5'),
     primaryDarkest: shade(0.5, '#3926a5'),
-    primaryTint: tint(0.9, '#3926a5'),
+    primaryTint: tint(0.8, '#3926a5'),
     primaryInverted: readableColor('#3926a5'),
+    primaryTintInverted: '#3926a5',
 
     secondary: '#112ebb',
     secondaryLight: tint(0.1, '#112ebb'),
@@ -47,8 +50,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     secondaryDark: shade(0.1, '#112ebb'),
     secondaryDarker: shade(0.3, '#112ebb'),
     secondaryDarkest: shade(0.5, '#112ebb'),
-    secondaryTint: tint(0.9, '#112ebb'),
+    secondaryTint: tint(0.8, '#112ebb'),
     secondaryInverted: readableColor('#112ebb'),
+    secondaryTintInverted: '#112ebb',
 
     success: '#007b2e',
     successLight: tint(0.1, '#007b2e'),
@@ -57,8 +61,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     successDark: shade(0.1, '#007b2e'),
     successDarker: shade(0.3, '#007b2e'),
     successDarkest: shade(0.5, '#007b2e'),
-    successTint: tint(0.9, '#007b2e'),
+    successTint: tint(0.8, '#007b2e'),
     successInverted: readableColor('#007b2e'),
+    successTintInverted: shade(0.3, '#007b2e'),
 
     danger: '#d60027',
     dangerLight: tint(0.1, '#d60027'),
@@ -67,8 +72,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     dangerDark: shade(0.1, '#d60027'),
     dangerDarker: shade(0.3, '#d60027'),
     dangerDarkest: shade(0.5, '#d60027'),
-    dangerTint: tint(0.9, '#d60027'),
+    dangerTint: tint(0.8, '#d60027'),
     dangerInverted: readableColor('#d60027'),
+    dangerTintInverted: shade(0.3, '#d60027'),
 
     warning: '#ffb300',
     warningLight: tint(0.1, '#ffb300'),
@@ -77,8 +83,9 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     warningDark: shade(0.1, '#ffb300'),
     warningDarker: shade(0.3, '#ffb300'),
     warningDarkest: shade(0.5, '#ffb300'),
-    warningTint: tint(0.9, '#ffb300'),
+    warningTint: tint(0.8, '#ffb300'),
     warningInverted: readableColor('#ffb300'),
+    warningTintInverted: shade(0.5, '#ffb300'),
 
     ...overrides.palette
   },
@@ -109,6 +116,11 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     xlarge: 2.25,
     xxlarge: 2.5,
     xxxlarge: 3
+  },
+  fontWeights: {
+    normal: 400,
+    semibold: 500,
+    bold: 700
   },
   Container: {
     fluidMargin: '0 2rem',

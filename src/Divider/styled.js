@@ -13,7 +13,7 @@ const contentProperties = css`
     content: '${props => props.content}';
     text-transform: uppercase;
     font-size: 0.7em;
-    font-weight: bold;
+    font-weight: ${theme('fannypack.fontWeights.bold')};
     padding: 0.2rem 0.5rem;
 
     & {
@@ -34,7 +34,7 @@ export default styled(Divider)`
   border-color: #e7e9ed;
 
   & {
-    ${props => props.content && contentProperties} /**/
+    ${props => props.content && contentProperties};
     ${props => props.vertical && verticalProperties};
   }
 

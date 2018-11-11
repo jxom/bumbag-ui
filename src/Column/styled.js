@@ -116,7 +116,7 @@ const getSpreadOffsetProperties = props => {
 
   if (typeof spreadOffset === 'number') {
     return css`
-      ${getProperties({ spreadOffset })} /**/
+      ${getProperties({ spreadOffset })};
       ${getProperties({
         spreadOffset: spreadFullHDOffset,
         breakpoint: 'fullHDBreakpoint'

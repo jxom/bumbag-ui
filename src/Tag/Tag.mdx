@@ -1,0 +1,68 @@
+---
+name: Tag
+route: /components/tag
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Tag from '../Tag';
+
+# Tag
+
+## Import
+
+`import { Tag } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Tag>Default</Tag>
+  <Tag textTransform="uppercase" marginLeft="xxxsmall">Uppercase</Tag>
+</Playground>
+
+## Colors
+
+<Playground>
+  <Tag palette="primary">Primary</Tag>
+  <Tag palette="secondary" marginLeft="xxxsmall">Secondary</Tag>
+  <Tag palette="success" marginLeft="xxxsmall">Success</Tag>
+  <Tag palette="warning" marginLeft="xxxsmall">Warning</Tag>
+  <Tag palette="danger" marginLeft="xxxsmall">Danger</Tag>
+</Playground>
+
+### Tints
+
+<Playground>
+  <Tag palette="textTint">Default</Tag>
+  <Tag palette="primaryTint" marginLeft="xxxsmall">Primary</Tag>
+  <Tag palette="secondaryTint" marginLeft="xxxsmall">Secondary</Tag>
+  <Tag palette="successTint" marginLeft="xxxsmall">Success</Tag>
+  <Tag palette="warningTint" marginLeft="xxxsmall">Warning</Tag>
+  <Tag palette="dangerTint" marginLeft="xxxsmall">Danger</Tag>
+</Playground>
+
+## Sizes
+
+<Playground>
+  <Tag>Default</Tag>
+  <Tag size="medium" marginLeft="xxxsmall">Medium</Tag>
+  <Tag size="large" marginLeft="xxxsmall">Large</Tag>
+</Playground>
+
+## Props
+
+<PropsTable of={Tag} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  sizes: {
+    medium: string | Object,
+    large: string | Object
+  }
+}
+```

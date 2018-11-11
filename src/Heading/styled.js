@@ -4,7 +4,7 @@ import { theme } from 'styled-tools';
 import Heading from 'reakit/Heading';
 
 const subHeadingProperties = css`
-  font-weight: 500;
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
 
   & {
     ${theme('fannypack.Heading.subHeading')};
@@ -12,7 +12,7 @@ const subHeadingProperties = css`
 `;
 
 export default styled(Heading)`
-  font-weight: bold;
+  font-weight: ${theme('fannypack.fontWeights.bold')};
   line-height: 1.2;
   margin-bottom: 1rem;
 

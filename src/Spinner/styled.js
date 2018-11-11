@@ -53,7 +53,7 @@ export const spinnerProperties = css`
 
 export default styled(Box)`
   font-size: 20px;
-  ${spinnerProperties} /**/
+  ${spinnerProperties};
 
   & {
     ${theme('fannypack.Spinner.base')};
