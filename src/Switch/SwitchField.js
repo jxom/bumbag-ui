@@ -65,7 +65,7 @@ const SwitchField = ({
     state={state}
     validationText={validationText}
   >
-    <Switch label={switchLabel} {...props} />
+    {({ elementProps }) => <Switch label={switchLabel} {...props} {...elementProps} />}
   </FieldWrapper>
 );
 

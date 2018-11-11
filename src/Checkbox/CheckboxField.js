@@ -63,7 +63,7 @@ const CheckboxField = ({
     state={state}
     validationText={validationText}
   >
-    <Checkbox label={checkboxLabel} {...props} />
+    {({ elementProps }) => <Checkbox label={checkboxLabel} {...props} {...elementProps} />}
   </FieldWrapper>
 );
 

@@ -55,7 +55,7 @@ const InputField = ({
     state={state}
     validationText={validationText}
   >
-    <RadioGroup {...props} />
+    {({ elementProps }) => <RadioGroup {...props} {...elementProps} />}
   </FieldWrapper>
 );
 

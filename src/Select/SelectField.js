@@ -84,14 +84,16 @@ const SelectField = ({
     state={state}
     validationText={validationText}
   >
-    <ConditionalWrap
-      condition={addonBefore || addonAfter}
-      wrap={children => <Group isVertical={isVertical}>{children}</Group>}
-    >
-      {addonBefore}
-      <Select {...props} />
-      {addonAfter}
-    </ConditionalWrap>
+    {({ elementProps }) => (
+      <ConditionalWrap
+        condition={addonBefore || addonAfter}
+        wrap={children => <Group isVertical={isVertical}>{children}</Group>}
+      >
+        {addonBefore}
+        <Select {...props} {...elementProps} />
+        {addonAfter}
+      </ConditionalWrap>
+    )}
   </FieldWrapper>
 );
 

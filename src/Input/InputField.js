@@ -103,14 +103,16 @@ const InputField = ({
     state={state}
     validationText={validationText}
   >
-    <ConditionalWrap
-      condition={addonBefore || addonAfter}
-      wrap={children => <Group isVertical={isVertical}>{children}</Group>}
-    >
-      {addonBefore}
-      <Input {...props} />
-      {addonAfter}
-    </ConditionalWrap>
+    {({ elementProps }) => (
+      <ConditionalWrap
+        condition={addonBefore || addonAfter}
+        wrap={children => <Group isVertical={isVertical}>{children}</Group>}
+      >
+        {addonBefore}
+        <Input {...elementProps} {...props} />
+        {addonAfter}
+      </ConditionalWrap>
+    )}
   </FieldWrapper>
 );
 

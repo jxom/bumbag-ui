@@ -39,6 +39,7 @@ exports[`renders correctly for a basic select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -165,6 +166,7 @@ exports[`renders correctly for a basic select 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -238,6 +240,7 @@ exports[`renders correctly for a disabled select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -369,6 +372,7 @@ exports[`renders correctly for a disabled select 1`] = `
         aria-required="false"
         class="c9"
         disabled=""
+        id="weather"
       >
         <option
           disabled=""
@@ -445,6 +449,7 @@ exports[`renders correctly for a full width select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c9.c9.c9 {
@@ -574,11 +579,14 @@ exports[`renders correctly for a full width select 1`] = `
     <div />
     <div
       class="c8 c9"
+      style="width: 100%;"
+      width="100%"
     >
       <select
         aria-invalid="false"
         aria-required="false"
         class="c10"
+        id="weather"
       >
         <option
           value="sunny"
@@ -652,6 +660,7 @@ exports[`renders correctly for a required field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -768,6 +777,22 @@ exports[`renders correctly for a required field 1`] = `
   height: 30px;
 }
 
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c17[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c18[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -807,8 +832,9 @@ exports[`renders correctly for a required field 1`] = `
     >
       <select
         aria-invalid="false"
-        aria-required="false"
+        aria-required="true"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -882,6 +908,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -1012,6 +1039,7 @@ exports[`renders correctly for a select with a default value 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -1086,6 +1114,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -1216,6 +1245,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           disabled=""
@@ -1295,6 +1325,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -1471,6 +1502,22 @@ exports[`renders correctly for addon component (after) 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -1516,6 +1563,7 @@ exports[`renders correctly for addon component (after) 1`] = `
           aria-invalid="false"
           aria-required="false"
           class="c11"
+          id="weather"
         >
           <option
             value="sunny"
@@ -1593,6 +1641,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -1769,6 +1818,22 @@ exports[`renders correctly for addon component (before) 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -1817,6 +1882,7 @@ exports[`renders correctly for addon component (before) 1`] = `
           aria-invalid="false"
           aria-required="false"
           class="c11"
+          id="weather"
         >
           <option
             value="sunny"
@@ -1891,6 +1957,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -2067,6 +2134,22 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -2115,6 +2198,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
           aria-invalid="false"
           aria-required="false"
           class="c11"
+          id="weather"
         >
           <option
             value="sunny"
@@ -2189,6 +2273,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -2305,6 +2390,22 @@ exports[`renders correctly for an input field with a description 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -2408,6 +2509,7 @@ samp.c8 {
         aria-invalid="false"
         aria-required="false"
         class="c11"
+        id="weather"
       >
         <option
           value="sunny"
@@ -2481,6 +2583,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -2597,6 +2700,22 @@ exports[`renders correctly for an input field with a hint 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -2697,6 +2816,7 @@ samp.c13 {
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -2774,6 +2894,7 @@ exports[`renders correctly for an optional input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c10.c10.c10 {
@@ -2890,6 +3011,22 @@ exports[`renders correctly for an optional input field 1`] = `
   height: 30px;
 }
 
+.c18[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c20[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
+.c21[disabled] + .c12 {
+  fill: #8d8d8d;
+}
+
 .c5 {
   display: inline-block;
 }
@@ -2995,6 +3132,7 @@ samp.c8 {
         aria-invalid="false"
         aria-required="false"
         class="c11"
+        id="weather"
       >
         <option
           value="sunny"
@@ -3068,6 +3206,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -3236,6 +3375,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -3309,6 +3449,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -3468,6 +3609,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -3541,6 +3683,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -3690,6 +3833,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -3763,6 +3907,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -3817,6 +3962,41 @@ exports[`states renders correctly for a select with state danger 1`] = `
   transform: translateY(50%);
 }
 
+.c12[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c10 {
+  width: 15px;
+  height: 15px;
+}
+
+.c15[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c15 + .c10 {
+  width: 25px;
+  height: 25px;
+}
+
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c16 + .c10 {
+  width: 30px;
+  height: 30px;
+}
+
 .c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3848,35 +4028,9 @@ exports[`states renders correctly for a select with state danger 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13 + .c10 {
-  width: 15px;
-  height: 15px;
-}
-
-.c14[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c14 + .c10 {
-  width: 25px;
-  height: 25px;
-}
-
-.c15[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c10 {
-  width: 30px;
-  height: 30px;
+.c9 {
+  border-color: #e24c67;
+  box-shadow: #e24c67 0px 0px 0px 1px !important;
 }
 
 .c5 {
@@ -3917,9 +4071,10 @@ exports[`states renders correctly for a select with state danger 1`] = `
       class="c7 c8"
     >
       <select
-        aria-invalid="false"
+        aria-invalid="true"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -3993,6 +4148,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -4047,6 +4203,53 @@ exports[`states renders correctly for a select with state primary 1`] = `
   transform: translateY(50%);
 }
 
+.c12[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c10 {
+  width: 15px;
+  height: 15px;
+}
+
+.c15[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c15 + .c10 {
+  width: 25px;
+  height: 25px;
+}
+
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c16 + .c10 {
+  width: 30px;
+  height: 30px;
+}
+
+.c17[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c18[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
 .c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4078,35 +4281,9 @@ exports[`states renders correctly for a select with state primary 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13 + .c10 {
-  width: 15px;
-  height: 15px;
-}
-
-.c14[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c14 + .c10 {
-  width: 25px;
-  height: 25px;
-}
-
-.c15[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c10 {
-  width: 30px;
-  height: 30px;
+.c9 {
+  border-color: #7467c0;
+  box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
 .c5 {
@@ -4150,6 +4327,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -4223,6 +4401,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -4277,6 +4456,45 @@ exports[`states renders correctly for a select with state success 1`] = `
   transform: translateY(50%);
 }
 
+.c12[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c10 {
+  width: 15px;
+  height: 15px;
+}
+
+.c15[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c15 + .c10 {
+  width: 25px;
+  height: 25px;
+}
+
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c16 + .c10 {
+  width: 30px;
+  height: 30px;
+}
+
+.c17[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
 .c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4308,35 +4526,9 @@ exports[`states renders correctly for a select with state success 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13 + .c10 {
-  width: 15px;
-  height: 15px;
-}
-
-.c14[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c14 + .c10 {
-  width: 25px;
-  height: 25px;
-}
-
-.c15[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c10 {
-  width: 30px;
-  height: 30px;
+.c9 {
+  border-color: #4ca26c;
+  box-shadow: #4ca26c 0px 0px 0px 1px !important;
 }
 
 .c5 {
@@ -4380,6 +4572,7 @@ exports[`states renders correctly for a select with state success 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"
@@ -4453,6 +4646,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  margin-top: 0.5rem !important;
 }
 
 .c8.c8.c8 {
@@ -4507,6 +4701,49 @@ exports[`states renders correctly for a select with state warning 1`] = `
   transform: translateY(50%);
 }
 
+.c12[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c10 {
+  width: 15px;
+  height: 15px;
+}
+
+.c15[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c15 + .c10 {
+  width: 25px;
+  height: 25px;
+}
+
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c16 + .c10 {
+  width: 30px;
+  height: 30px;
+}
+
+.c17[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c18[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
 .c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4538,35 +4775,9 @@ exports[`states renders correctly for a select with state warning 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c13 + .c10 {
-  width: 15px;
-  height: 15px;
-}
-
-.c14[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c14 + .c10 {
-  width: 25px;
-  height: 25px;
-}
-
-.c15[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c10 {
-  width: 30px;
-  height: 30px;
+.c9 {
+  border-color: #ffc94c;
+  box-shadow: #ffc94c 0px 0px 0px 1px !important;
 }
 
 .c5 {
@@ -4610,6 +4821,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
         aria-invalid="false"
         aria-required="false"
         class="c9"
+        id="weather"
       >
         <option
           value="sunny"

@@ -6,7 +6,7 @@ import { Flex } from '../primitives';
 
 type Props = {
   a11yId?: string,
-  children: Element<any>,
+  children: Function | Element<any>,
   className?: string,
   description?: string | Element<any>,
   hint?: string | Element<any>,
@@ -43,7 +43,7 @@ const FieldWrapper = ({
 
       {typeof description === 'string' ? <DescriptionText>{description}</DescriptionText> : <div>{description}</div>}
 
-      {React.cloneElement(children, elementProps)}
+      {typeof children === 'function' ? children({ elementProps }) : React.cloneElement(children, elementProps)}
 
       {typeof hint === 'string' ? <HintText>{hint}</HintText> : <div>{hint}</div>}
 
