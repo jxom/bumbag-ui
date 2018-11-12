@@ -1,5 +1,6 @@
 import styled, { css } from 'reakit/styled';
 import InlineBlock from 'reakit/InlineBlock';
+import Flex from 'reakit/Flex';
 import { palette, theme } from 'styled-tools';
 
 const sizeAttributes = {
@@ -19,7 +20,7 @@ const sizeAttributes = {
   `
 };
 
-export default styled(InlineBlock)`
+const Tag = styled(InlineBlock)`
   background-color: ${palette()};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)};
@@ -35,3 +36,22 @@ export default styled(InlineBlock)`
     ${theme('fannypack.Tag.base')};
   }
 `;
+
+export const Tags = styled(Flex)`
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > ${Tag}:not(:last-child) {
+    margin-right: ${theme('fannypack.layout.spacing.xxxsmall')}rem;
+  }
+  & > ${Tag} {
+    margin-bottom: ${theme('fannypack.layout.spacing.xxxsmall')}rem;
+  }
+
+  & {
+    ${theme('fannypack.Tags.base')};
+  }
+`;
+
+export default Tag;

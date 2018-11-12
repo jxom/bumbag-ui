@@ -30,5 +30,5 @@ export { Select, SelectField } from './Select';
 export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
-export { Tag } from './Tag';
+export { Tag, Tags } from './Tag';
 export { Text } from './Text';

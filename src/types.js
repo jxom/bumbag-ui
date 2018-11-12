@@ -247,6 +247,9 @@ export type TagThemeConfig = {
     large?: Stylesheet
   }
 };
+export type TagsThemeConfig = {
+  base?: Stylesheet
+};
 export type TextThemeConfig = {
   base?: Stylesheet
 };
@@ -284,6 +287,7 @@ export type ThemeConfig = {
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
   Tag?: TagThemeConfig,
+  Tags?: TagsThemeConfig,
   Text?: TextThemeConfig
 };
 /* ====== END: THEMES ====== */

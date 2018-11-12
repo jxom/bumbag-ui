@@ -6,56 +6,92 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Tag from '../Tag';
+import Tags from './Tags';
+import Group from '../Group';
 
 # Tag
 
 ## Import
 
-`import { Tag } from 'fannypack'`
+`import { Tag, Tags } from 'fannypack'`
 
 ## Basic Usage
 
 <Playground>
   <Tag>Default</Tag>
-  <Tag textTransform="uppercase" marginLeft="xxxsmall">Uppercase</Tag>
 </Playground>
 
 ## Colors
 
 <Playground>
-  <Tag palette="primary">Primary</Tag>
-  <Tag palette="secondary" marginLeft="xxxsmall">Secondary</Tag>
-  <Tag palette="success" marginLeft="xxxsmall">Success</Tag>
-  <Tag palette="warning" marginLeft="xxxsmall">Warning</Tag>
-  <Tag palette="danger" marginLeft="xxxsmall">Danger</Tag>
+  <Tags>
+    <Tag palette="primary">Primary</Tag>
+    <Tag palette="secondary">Secondary</Tag>
+    <Tag palette="success">Success</Tag>
+    <Tag palette="warning">Warning</Tag>
+    <Tag palette="danger">Danger</Tag>
+  </Tags>
 </Playground>
 
 ### Tints
 
 <Playground>
-  <Tag palette="textTint">Default</Tag>
-  <Tag palette="primaryTint" marginLeft="xxxsmall">Primary</Tag>
-  <Tag palette="secondaryTint" marginLeft="xxxsmall">Secondary</Tag>
-  <Tag palette="successTint" marginLeft="xxxsmall">Success</Tag>
-  <Tag palette="warningTint" marginLeft="xxxsmall">Warning</Tag>
-  <Tag palette="dangerTint" marginLeft="xxxsmall">Danger</Tag>
+  <Tags>
+    <Tag palette="textTint">Default</Tag>
+    <Tag palette="primaryTint">Primary</Tag>
+    <Tag palette="secondaryTint">Secondary</Tag>
+    <Tag palette="successTint">Success</Tag>
+    <Tag palette="warningTint">Warning</Tag>
+    <Tag palette="dangerTint">Danger</Tag>
+  </Tags>
 </Playground>
 
 ## Sizes
 
 <Playground>
-  <Tag>Default</Tag>
-  <Tag size="medium" marginLeft="xxxsmall">Medium</Tag>
-  <Tag size="large" marginLeft="xxxsmall">Large</Tag>
+  <Tags>
+    <Tag>Default</Tag>
+    <Tag size="medium">Medium</Tag>
+    <Tag size="large">Large</Tag>
+  </Tags>
 </Playground>
 
-## Props
+## Lists
+
+To group a set of buttons, use the `<Tags>` component.
+
+<Playground>
+  <Tags>
+    <Tag>Hello</Tag>
+    <Tag>World</Tag>
+    <Tag>This</Tag>
+    <Tag>Is</Tag>
+    <Tag>Me</Tag>
+  </Tags>
+</Playground>
+
+## Grouping
+
+You can group tags to make one tag with the `<Group>` component.
+
+<Playground>
+  <Group>
+    <Tag>Default</Tag>
+    <Tag palette="textTint">Hello</Tag>
+  </Group>
+</Playground>
+
+## `<Tag>` Props
 
 <PropsTable of={Tag} />
 
+## `<Tags>` Props
+
+<PropsTable of={Tags} />
+
 ## Theming
 
-### Schema
+### `<Tag>` Schema
 
 ```jsx
 {
@@ -64,5 +100,13 @@ import Tag from '../Tag';
     medium: string | Object,
     large: string | Object
   }
+}
+```
+
+### `<Tags>` Schema
+
+```jsx
+{
+  base: string | Object
 }
 ```

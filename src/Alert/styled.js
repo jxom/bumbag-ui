@@ -1,6 +1,5 @@
 import styled from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
-import { darken } from 'polished';
 import { Box } from '../primitives';
 import Label from '../Label';
 
