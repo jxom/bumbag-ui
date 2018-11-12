@@ -1,5 +1,5 @@
 # Fannypack
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <p align="center"><img src="./fannypack.png" width="400px"></img></p>
 
@@ -47,8 +47,8 @@ const MyApp = () => (
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/7336481?v=4" width="100px;"/><br /><sub><b>Jake Moxey</b></sub>](https://jxom.io/)<br />[💻](https://github.com/jxom/fannypack/commits?author=jxom "Code") [📖](https://github.com/jxom/fannypack/commits?author=jxom "Documentation") [🤔](#ideas-jxom "Ideas, Planning, & Feedback") [👀](#review-jxom "Reviewed Pull Requests") |
-| :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/7336481?v=4" width="100px;"/><br /><sub><b>Jake Moxey</b></sub>](https://jxom.io/)<br />[💻](https://github.com/jxom/fannypack/commits?author=jxom "Code") [📖](https://github.com/jxom/fannypack/commits?author=jxom "Documentation") [🤔](#ideas-jxom "Ideas, Planning, & Feedback") [👀](#review-jxom "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/19571028?v=4" width="100px;"/><br /><sub><b>Samantha Wong</b></sub>](https://shooting-unicorns.com)<br />[🤔](#ideas-samantha-wong "Ideas, Planning, & Feedback") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people
 
