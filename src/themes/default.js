@@ -12,7 +12,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     textLightest: lighten(0.2, '#435a6f'),
     textTint: tint(0.8, '#435a6f'),
     textInverted: readableColor('#435a6f'),
-    textTintInverted: '#435a6f',
+    textTintInverted: shade(0.3, '#435a6f'),
 
     black: 'black',
 
@@ -41,7 +41,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     primaryDarkest: shade(0.5, '#3926a5'),
     primaryTint: tint(0.8, '#3926a5'),
     primaryInverted: readableColor('#3926a5'),
-    primaryTintInverted: '#3926a5',
+    primaryTintInverted: shade(0.5, '#3926a5'),
 
     secondary: '#112ebb',
     secondaryLight: tint(0.1, '#112ebb'),
@@ -52,7 +52,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     secondaryDarkest: shade(0.5, '#112ebb'),
     secondaryTint: tint(0.8, '#112ebb'),
     secondaryInverted: readableColor('#112ebb'),
-    secondaryTintInverted: '#112ebb',
+    secondaryTintInverted: shade(0.5, '#112ebb'),
 
     success: '#007b2e',
     successLight: tint(0.1, '#007b2e'),
@@ -63,7 +63,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     successDarkest: shade(0.5, '#007b2e'),
     successTint: tint(0.8, '#007b2e'),
     successInverted: readableColor('#007b2e'),
-    successTintInverted: shade(0.3, '#007b2e'),
+    successTintInverted: shade(0.5, '#007b2e'),
 
     danger: '#d60027',
     dangerLight: tint(0.1, '#d60027'),
@@ -74,7 +74,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     dangerDarkest: shade(0.5, '#d60027'),
     dangerTint: tint(0.8, '#d60027'),
     dangerInverted: readableColor('#d60027'),
-    dangerTintInverted: shade(0.3, '#d60027'),
+    dangerTintInverted: shade(0.5, '#d60027'),
 
     warning: '#ffb300',
     warningLight: tint(0.1, '#ffb300'),
@@ -85,7 +85,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     warningDarkest: shade(0.5, '#ffb300'),
     warningTint: tint(0.8, '#ffb300'),
     warningInverted: readableColor('#ffb300'),
-    warningTintInverted: shade(0.5, '#ffb300'),
+    warningTintInverted: shade(0.7, '#ffb300'),
 
     ...overrides.palette
   },
