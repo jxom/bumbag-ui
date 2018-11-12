@@ -47,7 +47,7 @@ const MyApp = () => (
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/7336481?v=4" width="100px;"/><br /><sub><b>Jake Moxey</b></sub>](https://jxom.io/)<br />[💻](https://github.com/jxom/fannypack/commits?author=jxom "Code") |
+| [<img src="https://avatars3.githubusercontent.com/u/7336481?v=4" width="100px;"/><br /><sub><b>Jake Moxey</b></sub>](https://jxom.io/)<br />[💻](https://github.com/jxom/fannypack/commits?author=jxom "Code") [📖](https://github.com/jxom/fannypack/commits?author=jxom "Documentation") [🤔](#ideas-jxom "Ideas, Planning, & Feedback") [👀](#review-jxom "Reviewed Pull Requests") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people
