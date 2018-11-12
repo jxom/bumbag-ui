@@ -6,6 +6,10 @@ type Props = {
   children: Node
 };
 
-const AlertTitle = ({ children, ...props }: Props) => <_AlertTitle {...props}>{children}</_AlertTitle>;
+const AlertTitle = ({ children, ...props }: Props) => (
+  <_AlertTitle as="h6" isSemiBold {...props}>
+    {children}
+  </_AlertTitle>
+);
 
 export default AlertTitle;

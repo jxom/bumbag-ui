@@ -16,10 +16,21 @@ import Alert from '../Alert';
 ## Basic Usage
 
 <Playground>
-  <Alert title="Alert Title">Alert message</Alert>
+  <Alert>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+</Playground>
+
+## Titles
+
+You can set a title with the `title` prop.
+
+<Playground>
+  <Alert title="Alert Title">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" marginTop="xsmall" />
 </Playground>
 
 ## Colors
+
+An alert can take a color from the palette.
 
 <Playground>
   <Alert title="Alert Title">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
@@ -28,6 +39,25 @@ import Alert from '../Alert';
   <Alert title="Alert Title" palette="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
   <Alert title="Alert Title" palette="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
   <Alert title="Alert Title" palette="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+</Playground>
+
+## Inline alerts
+
+To inline an alert, set the `display` prop to `inline-block`.
+
+<Playground>
+  <Alert display="inline-block">This is an inline alert.</Alert>
+</Playground>
+
+## Tints
+
+<Playground>
+  <Alert title="Alert Title" hasTint>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" hasTint palette="primary" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" hasTint palette="secondary" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" hasTint palette="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" hasTint palette="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
+  <Alert title="Alert Title" hasTint palette="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</Alert>
 </Playground>
 
 ## Props

@@ -53,11 +53,65 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  background-color: #d9dee2;
+  background-color: white;
+  border: 1px solid #e6e6e6;
   border-left: 4px solid #435a6f;
   border-radius: 4px;
-  color: #2e3e4d;
+  color: #435a6f;
   padding: 1rem;
+}
+
+abbr.c4 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c4 {
+  font-style: italic;
+}
+
+kbd.c4 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c4 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c4 {
+  font-weight: bold;
+}
+
+sub.c4,
+sup.c4 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c4,
+u.c4 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c4,
+cite.c4,
+var.c4,
+em.c4 {
+  font-style: italic;
+}
+
+kbd.c4,
+pre.c4,
+samp.c4 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
 <div
@@ -67,7 +121,11 @@ exports[`renders correctly 1`] = `
     class="c2 c3"
     role="alert"
   >
-    Alert
+    <span
+      class="c4 c1"
+    >
+      Alert
+    </span>
   </div>
 </div>
 `;
@@ -125,11 +183,65 @@ exports[`renders correctly when a palette prop is set 1`] = `
 }
 
 .c2 {
-  background-color: #d7d3ed;
+  background-color: white;
+  border: 1px solid #e6e6e6;
   border-left: 4px solid #3926a5;
   border-radius: 4px;
-  color: #1c1352;
+  color: #3926a5;
   padding: 1rem;
+}
+
+abbr.c4 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c4 {
+  font-style: italic;
+}
+
+kbd.c4 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c4 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c4 {
+  font-weight: bold;
+}
+
+sub.c4,
+sup.c4 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c4,
+u.c4 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c4,
+cite.c4,
+var.c4,
+em.c4 {
+  font-style: italic;
+}
+
+kbd.c4,
+pre.c4,
+samp.c4 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
 <div
@@ -139,7 +251,11 @@ exports[`renders correctly when a palette prop is set 1`] = `
     class="c2 c3"
     role="alert"
   >
-    Alert
+    <span
+      class="c4 c1"
+    >
+      Alert
+    </span>
   </div>
 </div>
 `;
@@ -171,20 +287,6 @@ exports[`renders correctly when a title prop is set 1`] = `
   color: #fcfcfc;
 }
 
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -211,19 +313,138 @@ exports[`renders correctly when a title prop is set 1`] = `
 }
 
 .c5 {
-  display: inline-block;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c5 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c5:last-child {
+  margin-bottom: 0;
+}
+
+h1.c5 {
+  font-size: 3rem;
+}
+
+h2.c5 {
+  font-size: 2.5rem;
+}
+
+h3.c5 {
+  font-size: 2rem;
+}
+
+h4.c5 {
+  font-size: 1.5rem;
+}
+
+h5.c5 {
+  font-size: 1.25rem;
+}
+
+h6.c5 {
+  font-size: 1rem;
 }
 
 .c4 {
-  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .c2 {
-  background-color: #d9dee2;
+  background-color: white;
+  border: 1px solid #e6e6e6;
   border-left: 4px solid #435a6f;
   border-radius: 4px;
-  color: #2e3e4d;
+  color: #435a6f;
   padding: 1rem;
+}
+
+abbr.c6 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c6 {
+  font-style: italic;
+}
+
+kbd.c6 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c6 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c6 {
+  font-weight: bold;
+}
+
+sub.c6,
+sup.c6 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c6,
+u.c6 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
+  font-style: italic;
+}
+
+kbd.c6,
+pre.c6,
+samp.c6 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+@media (max-width:480px) {
+  h1.c5 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c5 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c5 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c5 {
+    font-size: 1.2rem;
+  }
 }
 
 <div
@@ -233,14 +454,16 @@ exports[`renders correctly when a title prop is set 1`] = `
     class="c2 c3"
     role="alert"
   >
-    <label
-      class="c4 c5 c6"
-      font-weight="600"
-      style="font-weight: 600;"
+    <h6
+      class="c4 heading c5 c1"
     >
       Title
-    </label>
-    Alert
+    </h6>
+    <span
+      class="c6 c1"
+    >
+      Alert
+    </span>
   </div>
 </div>
 `;
@@ -298,10 +521,11 @@ exports[`renders correctly with a custom element 1`] = `
 }
 
 .c2 {
-  background-color: #d9dee2;
+  background-color: white;
+  border: 1px solid #e6e6e6;
   border-left: 4px solid #435a6f;
   border-radius: 4px;
-  color: #2e3e4d;
+  color: #435a6f;
   padding: 1rem;
 }
 

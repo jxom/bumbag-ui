@@ -11,7 +11,10 @@ export type Size = 'default' | 'small' | 'medium' | 'large';
 /* ====== START: THEMES ====== */
 export type Stylesheet = string | Object;
 export type AlertThemeConfig = {
-  base?: Stylesheet
+  base?: Stylesheet,
+  Title?: {
+    base?: Stylesheet
+  }
 };
 export type BlockquoteThemeConfig = {
   base?: Stylesheet
