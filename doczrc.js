@@ -1,16 +1,6 @@
 export default {
   dest: '/docs',
-  menu: [
-    'Getting Started',
-    'Primitives',
-    'Palette',
-    'Typography',
-    'Layout',
-    'Elements',
-    'Components',
-    'Form',
-    'Extras'
-  ],
+  menu: ['Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Extras'],
   themeConfig: {
     colors: {
       primary: '#3926a5',
