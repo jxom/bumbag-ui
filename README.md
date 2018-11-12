@@ -50,11 +50,6 @@ const MyApp = () => (
 | [<img src="https://avatars3.githubusercontent.com/u/7336481?v=4" width="100px;"/><br /><sub><b>Jake Moxey</b></sub>](https://jxom.io/)<br />[💻](https://github.com/jxom/fannypack/commits?author=jxom "Code") [📖](https://github.com/jxom/fannypack/commits?author=jxom "Documentation") [🤔](#ideas-jxom "Ideas, Planning, & Feedback") [👀](#review-jxom "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/19571028?v=4" width="100px;"/><br /><sub><b>Samantha Wong</b></sub>](https://shooting-unicorns.com)<br />[🤔](#ideas-samantha-wong "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/10344370?v=4" width="100px;"/><br /><sub><b>Dave Olsen</b></sub>](http://daveolsen.com.au)<br />[💻](https://github.com/jxom/fannypack/commits?author=daveols "Code") [🤔](#ideas-daveols "Ideas, Planning, & Feedback") [👀](#review-daveols "Reviewed Pull Requests") | [<img src="https://avatars1.githubusercontent.com/u/8334897?v=4" width="100px;"/><br /><sub><b>Yiming Tan(Michael)</b></sub>](https://github.com/Michaeltym)<br />[💻](https://github.com/jxom/fannypack/commits?author=Michaeltym "Code") | [<img src="https://avatars1.githubusercontent.com/u/1747517?v=4" width="100px;"/><br /><sub><b>Terence Huynh</b></sub>](http://terencehuynh.com)<br />[💻](https://github.com/jxom/fannypack/commits?author=terencehuynh "Code") | [<img src="https://avatars2.githubusercontent.com/u/41710405?v=4" width="100px;"/><br /><sub><b>Daniela Gattoni</b></sub>](https://github.com/danielagattoni)<br />[💻](https://github.com/jxom/fannypack/commits?author=danielagattoni "Code") | [<img src="https://avatars3.githubusercontent.com/u/3068563?v=4" width="100px;"/><br /><sub><b>Haz</b></sub>](https://twitter.com/diegohaz)<br />[📖](https://github.com/jxom/fannypack/commits?author=diegohaz "Documentation") |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-Thanks goes to these wonderful people
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Acknowledgements
 

@@ -18,7 +18,9 @@
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "test": "yarn flow && yarn lint && jest",
-    "docs": "docz dev"
+    "docs": "docz dev",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -36,6 +38,7 @@
   "devDependencies": {
     "@medipass/eslint-config-react-medipass": "8.3.7",
     "@reactions/component": "2.0.2",
+    "all-contributors-cli": "5.4.1",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-transform-class-properties": "6.24.1",
