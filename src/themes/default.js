@@ -1,6 +1,7 @@
 // @flow
 import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme } from 'styled-tools';
+import _get from 'lodash/get';
 import type { ThemeConfig } from '../types';
 
 export default (overrides: ThemeConfig = {}): ThemeConfig => ({
@@ -87,7 +88,7 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     warningInverted: readableColor('#ffb300'),
     warningTintInverted: shade(0.7, '#ffb300'),
 
-    ...overrides.palette
+    ..._get(overrides, 'palette', {})
   },
   layout: {
     gapFactor: 0.5,
@@ -107,35 +108,39 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
       xxlarge: 3.5,
       xxxlarge: 4
     },
-    ...overrides.layout
+    ..._get(overrides, 'layout', {})
   },
   fontSizes: {
     small: 0.8,
     medium: 1.5,
     large: 2,
-    xlarge: 2.25,
-    xxlarge: 2.5,
-    xxxlarge: 3
+    xlarge: 2.5,
+    xxlarge: 3,
+    xxxlarge: 4,
+    ..._get(overrides, 'fontSizes', {})
   },
   fontWeights: {
     normal: 400,
     semibold: 600,
-    bold: 700
+    bold: 700,
+    ..._get(overrides, 'fontWeights', {})
   },
   Container: {
     fluidMargin: '0 2rem',
     tabletMargin: '0 1rem',
-    ...overrides.Container
+    ..._get(overrides, 'Container', {})
   },
   Table: {
     borderColor: p('grayLightest'),
+    spacing: theme('fannypack.layout.spacing.xxsmall'),
     hover: {
-      backgroundColor: p('whiteDarker')
+      backgroundColor: p('whiteDarker'),
+      ..._get(overrides, 'Table.hover', {})
     },
     striped: {
-      backgroundColor: p('whiteDark')
+      backgroundColor: p('whiteDark'),
+      ..._get(overrides, 'Table.striped', {})
     },
-    spacing: theme('fannypack.layout.spacing.xxsmall'),
-    ...overrides.Table
+    ..._get(overrides, 'Table', {})
   }
 });

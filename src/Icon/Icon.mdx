@@ -1,0 +1,76 @@
+---
+name: Icon
+route: /components/icon
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Icon from './index';
+import { Icon as IconProps } from './Icon';
+import Text from '../Text';
+import Heading from '../Heading';
+
+# Icon
+
+Fannypack uses [Blueprint Icons](https://blueprintjs.com/docs/#icons) for its icons as they provide an extensive and useful set of icons.
+
+## Import
+
+`import { Icon } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Icon a11yLabel="Settings" icon="cog" />
+</Playground>
+
+> You can find a list of icon names from the [Blueprint Icons Directory](https://blueprintjs.com/docs/#icons).
+
+## Sizes
+
+Change the size of an icon with the `size` prop.
+
+<Playground>
+  <Icon a11yLabel="Settings" icon="cog" size="small" />
+  <Icon a11yLabel="Settings" icon="cog" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Settings" icon="cog" size="medium" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Settings" icon="cog" size="large" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Settings" icon="cog" size="xlarge" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Settings" icon="cog" size="xxlarge" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Settings" icon="cog" size="xxxlarge" marginLeft="xxxsmall" />
+</Playground>
+
+## Colors
+
+Change the color of an icon with the `color` prop. It can be any color from the [palette](/palette), or any other color like `#ff0000` or `red`.
+
+<Playground>
+  <Icon a11yLabel="Success" icon="tick-circle" color="success" />
+  <Icon a11yLabel="Error" icon="error" color="danger" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Warning" icon="warning-sign" color="warning" marginLeft="xxxsmall" />
+  <Icon a11yLabel="Copy" icon="clipboard" color="primary" marginLeft="xxxsmall" />
+</Playground>
+
+## Usage in text
+
+Icons will be the same size as its text by default.
+
+<Playground>
+  <Text>This is text with an icon! <Icon a11yLabel="Thumbs up" icon="thumbs-up" /></Text>
+  <Heading as="h3" marginTop="xsmall">This is a heading with an icon! <Icon a11yLabel="Thumbs up" icon="thumbs-up" /></Heading>
+</Playground>
+
+## Props
+
+<PropsTable of={IconProps} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```

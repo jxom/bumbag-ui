@@ -17,6 +17,7 @@ export { Divider } from './Divider';
 export { FieldWrapper } from './FieldWrapper';
 export { Group } from './Group';
 export { Heading } from './Heading';
+export { Icon } from './Icon';
 export { Image } from './Image';
 export { Input, InputField } from './Input';
 export { Label } from './Label';

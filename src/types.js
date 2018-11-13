@@ -97,6 +97,9 @@ export type HeadingThemeConfig = {
   h6?: Stylesheet,
   subHeading?: Stylesheet
 };
+export type IconThemeConfig = {
+  base?: Stylesheet
+};
 export type ImageThemeConfig = {
   base?: Stylesheet,
   fixed?: Stylesheet,
@@ -275,6 +278,7 @@ export type ThemeConfig = {
   FieldWrapper?: FieldWrapperThemeConfig,
   Group?: GroupThemeConfig,
   Heading?: HeadingThemeConfig,
+  Icon?: IconThemeConfig,
   Image?: ImageThemeConfig,
   Input?: InputThemeConfig,
   Label?: LabelThemeConfig,
