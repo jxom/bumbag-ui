@@ -22,6 +22,12 @@ const buildFontSizeFromTheme = (property, { theme, ...props }) => {
   return `${property}: ${size}em !important;`;
 };
 
+const buildFontWeightFromTheme = (property, { theme, ...props }) => {
+  let weight = theme.fannypack.fontWeights[props[_camelCase(property)]];
+  if (!weight) return;
+  return `${property}: ${weight} !important;`;
+};
+
 export default {
   Box: css`
     /* If the color is one from the palette, use it. E.g. background-color="primary" */
@@ -55,5 +61,7 @@ export default {
     ${props => buildSpacingFromTheme('padding-bottom', props)};
 
     ${props => buildFontSizeFromTheme('font-size', props)};
+
+    ${props => buildFontWeightFromTheme('font-weight', props)};
   `
 };
