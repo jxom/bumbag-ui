@@ -32,18 +32,30 @@ export const HiddenCheckbox = HiddenInput({
   Icon: CheckboxIcon,
   checkedIconCss: css`
     background-clip: padding-box;
-    border: 0.1rem solid ${palette('primaryLighter')};
-    border-left-width: 0;
-    border-top-width: 0;
     content: '';
-    height: 10px;
-    left: 50%;
-    margin-left: -3px;
-    margin-top: -6px;
+    left: calc(50% - 3px);
+    top: calc(50% - 6px);
     position: absolute;
-    top: 50%;
-    transform: rotate(45deg);
-    width: 6px;
+
+    & {
+      ${props =>
+        props.indeterminate
+          ? css`
+              background-color: #7467c0;
+              height: 2px;
+              width: 10px;
+              top: calc(50% - 1px);
+              left: calc(50% - 5px);
+            `
+          : css`
+              border: 0.1rem solid ${palette('primaryLighter')};
+              border-left-width: 0;
+              border-top-width: 0;
+              height: 10px;
+              transform: rotate(45deg);
+              width: 6px;
+            `};
+    }
   `,
   disabledCheckedIconCss: css`
     border-color: ${palette('grayLighter')};

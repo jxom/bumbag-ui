@@ -19,6 +19,7 @@ type Props = {
   hint?: string | Element<any>,
   /** ID for the checkbox */
   id?: string,
+  indeterminate?: boolean,
   isFullWidth?: boolean,
   isOptional?: boolean,
   /** Makes the checkbox required and sets aria-invalid to true */
@@ -45,6 +46,7 @@ const CheckboxField = ({
   description,
   hint,
   label,
+  indeterminate,
   isFullWidth,
   isOptional,
   isRequired,
@@ -77,6 +79,7 @@ CheckboxField.defaultProps = {
   disabled: false,
   hint: undefined,
   id: undefined,
+  indeterminate: false,
   isFullWidth: false,
   isOptional: false,
   isRequired: false,

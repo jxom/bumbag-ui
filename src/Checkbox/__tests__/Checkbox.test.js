@@ -13,6 +13,11 @@ it('renders correctly for a disabled checkbox', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
+it('renders correctly for an indeterminate checkbox', () => {
+  const { container } = render(<Checkbox defaultChecked indeterminate />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
 describe('states', () => {
   ['danger', 'success', 'warning', 'primary'].forEach(state => {
     it(`renders correctly for an checkbox with state ${state}`, () => {

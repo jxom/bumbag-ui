@@ -15,6 +15,7 @@ type Props = {
   disabled?: boolean,
   /** ID for the checkbox */
   id?: string,
+  indeterminate?: boolean,
   /** Makes the checkbox required and sets aria-invalid to true */
   isRequired?: boolean,
   /** Checkbox label */
@@ -39,6 +40,7 @@ const Checkbox = ({
   defaultChecked,
   disabled,
   id,
+  indeterminate,
   isRequired,
   label,
   onBlur,
@@ -62,6 +64,7 @@ const Checkbox = ({
       defaultChecked={defaultChecked}
       disabled={disabled}
       id={id}
+      indeterminate={indeterminate}
       onBlur={onBlur}
       onChange={onChange}
       onFocus={onFocus}
@@ -84,6 +87,7 @@ Checkbox.defaultProps = {
   defaultChecked: undefined,
   disabled: false,
   id: undefined,
+  indeterminate: false,
   isRequired: false,
   onBlur: undefined,
   onChange: undefined,
