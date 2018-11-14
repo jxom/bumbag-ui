@@ -1,6 +1,8 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Button from '../Button';
+import Buttons from '../Buttons';
+import Group from '../../Group';
 import 'jest-styled-components';
 
 it('renders correctly for a default button', () => {
@@ -66,5 +68,27 @@ it('renders correctly for an outlined button that is loading', () => {
 
 it('renders correctly for a disabled button', () => {
   const { container } = render(<Button disabled>Test</Button>);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for a list of buttons', () => {
+  const { container } = render(
+    <Buttons>
+      <Button>Test</Button>
+      <Button>Test 2</Button>
+      <Button>Test 3</Button>
+    </Buttons>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for grouped buttons', () => {
+  const { container } = render(
+    <Group>
+      <Button>Test</Button>
+      <Button>Test 2</Button>
+      <Button>Test 3</Button>
+    </Group>
+  );
   expect(container.firstChild).toMatchSnapshot();
 });

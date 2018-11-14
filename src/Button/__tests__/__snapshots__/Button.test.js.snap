@@ -1087,6 +1087,170 @@ exports[`renders correctly for a link button that is loading 1`] = `
 </div>
 `;
 
+exports[`renders correctly for a list of buttons 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c5:hover {
+  background-color: #efefef;
+}
+
+.c5:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 > .c4:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c2 > .c4 {
+  margin-bottom: 0.5rem;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3 c1"
+  >
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test
+      </span>
+    </button>
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test 2
+      </span>
+    </button>
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test 3
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`renders correctly for an outlined button 1`] = `
 .c1 {
   margin: unset;
@@ -1387,5 +1551,205 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
       Test
     </span>
   </button>
+</div>
+`;
+
+exports[`renders correctly for grouped buttons 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c5:hover {
+  background-color: #efefef;
+}
+
+.c5:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c7 > .c4:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c7 > .c4 {
+  margin-bottom: 0.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3 > *:not(:first-child):not(:last-child),
+.c3 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+.c3 > *:first-child,
+.c3 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c3 > *:last-child,
+.c3 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-left-width: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > * {
+  border-radius: 4px;
+}
+
+.c2 input:focus,
+.c2 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c2 > *:first-child input,
+.c2 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c2 > *:last-child input,
+.c2 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:not(:first-child):not(:last-child) > input,
+.c2 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3 c1"
+    role="group"
+  >
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test
+      </span>
+    </button>
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test 2
+      </span>
+    </button>
+    <button
+      class="c4 c5 c6"
+      style="size: default;"
+      type="default"
+    >
+      <span>
+        Test 3
+      </span>
+    </button>
+  </div>
 </div>
 `;

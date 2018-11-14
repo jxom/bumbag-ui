@@ -14,15 +14,6 @@ export default styled(Group)`
   }
 
   & > *:first-child {
-    ${props =>
-      props.vertical
-        ? css`
-            border-bottom-width: 0;
-          `
-        : css`
-            border-right-width: 0;
-          `};
-
     & input,
     & select {
       ${props =>

@@ -6,8 +6,9 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Button from './index';
-import Buttons from '../Buttons';
+import Buttons from './Buttons';
 import { Button as ButtonProps } from './Button';
+import Group from '../Group';
 
 # Buttons
 
@@ -119,18 +120,30 @@ To indicate a button as disabled, use the `disabled` prop.
 
 ## Lists
 
-To group a set of buttons, use the `<Buttons>` component.
+To display a list of buttons, use the `<Buttons>` component.
 
 <Playground>
   <Buttons>
     <Button>Previous</Button>
     <Button>Next</Button>
   </Buttons>
-  <Buttons isGrouped marginTop="xsmall">
+</Playground>
+
+## Group
+
+To group a set of buttons together, use the `<Group>` component.
+
+<Playground>
+  <Group>
     <Button>Previous</Button>
     <Button>Now</Button>
     <Button>Next</Button>
-  </Buttons>
+  </Group>
+  <Group isVertical marginTop="xsmall">
+    <Button>Previous</Button>
+    <Button>Now</Button>
+    <Button>Next</Button>
+  </Group>
 </Playground>
 
 ## `<Button>` Props
