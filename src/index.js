@@ -23,6 +23,7 @@ export { Label } from './Label';
 export { Link } from './Link';
 export { List, ListItem } from './List';
 export { Navigation } from './Navigation';
+export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';

@@ -152,6 +152,13 @@ export type ListThemeConfig = {
 export type NavigationThemeConfig = {
   base?: Stylesheet
 };
+export type PaneThemeConfig = {
+  base?: Stylesheet,
+  border?: {
+    default?: Stylesheet,
+    shadow?: Stylesheet
+  }
+};
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
@@ -285,6 +292,7 @@ export type ThemeConfig = {
   Link?: LinkThemeConfig,
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
+  Pane?: PaneThemeConfig,
   Paragraph?: ParagraphThemeConfig,
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,

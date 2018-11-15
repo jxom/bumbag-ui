@@ -1,0 +1,58 @@
+---
+name: Pane
+route: /layout/pane
+menu: Layout
+---
+
+import { Playground, PropsTable } from 'docz';
+import Pane from '../Pane';
+
+# Pane
+
+## Import
+
+`import { Pane } from 'fannypack'`
+
+## Basic Usage
+
+A `<Pane>` is the same as a `<Box>`, except it has a default border radius, and has the ability to add different types of borders to it. Using `<Pane>` and `<Box>` together are most likely the two building blocks for the layout of your app.
+
+<Playground>
+  <Pane backgroundColor="whiteDarker" padding="large">Hello world</Pane>
+</Playground>
+
+## Shadowed
+
+<Playground>
+  <Pane border="shadow" padding="large">Hello world</Pane>
+</Playground>
+
+## Bordered
+
+<Playground>
+  <Pane border padding="large">Hello world</Pane>
+</Playground>
+
+## Full width
+
+<Playground>
+  <Pane border isFullWidth padding="large">Hello world</Pane>
+</Playground>
+
+## Props
+
+<PropsTable of={Pane} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  border: {
+    default: string | Object,
+    shadow: string | Object
+  }
+}
+```
