@@ -428,13 +428,6 @@ exports[`renders correctly for a list of tags 1`] = `
   display: inline-block;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c4 {
   background-color: #435a6f;
   border-radius: 4px;
@@ -444,10 +437,21 @@ exports[`renders correctly for a list of tags 1`] = `
   padding: 0.2em 0.4em;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c2 {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;

@@ -14,6 +14,7 @@ export default styled(Flex)`
           margin-top: -${props => theme(`fannypack.layout.spacing.${props.spacing}`)(props)}rem;
         `
       : css`
+          align-items: center;
           justify-content: flex-start;
           margin-left: -${props => theme(`fannypack.layout.spacing.${props.spacing}`)(props)}rem;
           margin-top: -${props => theme(`fannypack.layout.spacing.${props.spacing}`)(props)}rem;
