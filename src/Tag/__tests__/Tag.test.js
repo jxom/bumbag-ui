@@ -1,7 +1,7 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Tag from '../Tag';
-import Tags from '../Tags';
+import Set from '../../Set';
 import 'jest-styled-components';
 
 it('renders correctly', () => {
@@ -29,11 +29,11 @@ describe('sizes', () => {
 
 it('renders correctly for a list of tags', () => {
   const { container } = render(
-    <Tags>
+    <Set>
       <Tag>Tag 1</Tag>
       <Tag>Tag 2</Tag>
       <Tag>Tag 3</Tag>
-    </Tags>
+    </Set>
   );
   expect(container.firstChild).toMatchSnapshot();
 });

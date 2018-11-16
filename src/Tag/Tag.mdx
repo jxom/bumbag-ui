@@ -6,14 +6,14 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Tag from '../Tag';
-import Tags from './Tags';
 import Group from '../Group';
+import Set from '../Set';
 
 # Tag
 
 ## Import
 
-`import { Tag, Tags } from 'fannypack'`
+`import { Tag } from 'fannypack'`
 
 ## Basic Usage
 
@@ -24,50 +24,50 @@ import Group from '../Group';
 ## Colors
 
 <Playground>
-  <Tags>
+  <Set spacing="xxxsmall">
     <Tag palette="primary">Primary</Tag>
     <Tag palette="secondary">Secondary</Tag>
     <Tag palette="success">Success</Tag>
     <Tag palette="warning">Warning</Tag>
     <Tag palette="danger">Danger</Tag>
-  </Tags>
+  </Set>
 </Playground>
 
 ### Tints
 
 <Playground>
-  <Tags>
+  <Set spacing="xxxsmall">
     <Tag palette="textTint">Default</Tag>
     <Tag palette="primaryTint">Primary</Tag>
     <Tag palette="secondaryTint">Secondary</Tag>
     <Tag palette="successTint">Success</Tag>
     <Tag palette="warningTint">Warning</Tag>
     <Tag palette="dangerTint">Danger</Tag>
-  </Tags>
+  </Set>
 </Playground>
 
 ## Sizes
 
 <Playground>
-  <Tags>
+  <Set spacing="xxxsmall">
     <Tag>Default</Tag>
     <Tag size="medium">Medium</Tag>
     <Tag size="large">Large</Tag>
-  </Tags>
+  </Set>
 </Playground>
 
-## Lists
+## Sets
 
-To group a set of buttons, use the `<Tags>` component.
+To group a set of tags, use the [`<Set>` component](/components/set).
 
 <Playground>
-  <Tags>
+  <Set spacing="xxxsmall">
     <Tag>Hello</Tag>
     <Tag>World</Tag>
     <Tag>This</Tag>
     <Tag>Is</Tag>
     <Tag>Me</Tag>
-  </Tags>
+  </Set>
 </Playground>
 
 ## Grouping
@@ -85,10 +85,6 @@ You can group tags to make one tag with the `<Group>` component.
 
 <PropsTable of={Tag} />
 
-## `<Tags>` Props
-
-<PropsTable of={Tags} />
-
 ## Theming
 
 ### `<Tag>` Schema
@@ -100,13 +96,5 @@ You can group tags to make one tag with the `<Group>` component.
     medium: string | Object,
     large: string | Object
   }
-}
-```
-
-### `<Tags>` Schema
-
-```jsx
-{
-  base: string | Object
 }
 ```

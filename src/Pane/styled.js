@@ -29,7 +29,6 @@ const Pane = styled(Box)`
     props.isFullWidth &&
     css`
       width: 100%;
-      margin-right: 0px !important;
     `};
 
   & {

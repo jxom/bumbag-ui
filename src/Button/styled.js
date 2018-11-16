@@ -4,7 +4,6 @@ import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _Button from 'reakit/Button';
 import styled from 'reakit/styled';
-import { Flex } from '../primitives';
 
 const sizeProperties = {
   small: css`
@@ -160,23 +159,6 @@ const Button = styled(_Button)`
 
   & {
     ${theme('fannypack.Button.base')}
-  }
-`;
-
-export const Buttons = styled(Flex)`
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  & > ${Button}:not(:last-child) {
-    margin-right: ${theme('fannypack.layout.spacing.xxsmall')}rem;
-  }
-  & > ${Button} {
-    margin-bottom: ${theme('fannypack.layout.spacing.xxsmall')}rem;
-  }
-
-  & {
-    ${theme('fannypack.Buttons.base')};
   }
 `;
 

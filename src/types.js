@@ -201,6 +201,10 @@ export type SelectThemeConfig = {
     large?: Stylesheet
   }
 };
+export type SetThemeConfig = {
+  base?: Stylesheet,
+  child?: Stylesheet
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -260,9 +264,6 @@ export type TagThemeConfig = {
     large?: Stylesheet
   }
 };
-export type TagsThemeConfig = {
-  base?: Stylesheet
-};
 export type TextThemeConfig = {
   base?: Stylesheet
 };
@@ -298,11 +299,11 @@ export type ThemeConfig = {
   RadioGroup?: RadioGroupThemeConfig,
   Rating?: RatingThemeConfig,
   Select?: SelectThemeConfig,
+  Set?: SetThemeConfig,
   Spinner?: SpinnerThemeConfig,
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
   Tag?: TagThemeConfig,
-  Tags?: TagsThemeConfig,
   Text?: TextThemeConfig
 };
 /* ====== END: THEMES ====== */

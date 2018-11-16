@@ -1,6 +1,5 @@
 import styled, { css } from 'reakit/styled';
 import InlineBlock from 'reakit/InlineBlock';
-import Flex from 'reakit/Flex';
 import { palette, theme } from 'styled-tools';
 
 const sizeAttributes = {
@@ -34,23 +33,6 @@ const Tag = styled(InlineBlock)`
 
   & {
     ${theme('fannypack.Tag.base')};
-  }
-`;
-
-export const Tags = styled(Flex)`
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  & > ${Tag}:not(:last-child) {
-    margin-right: ${theme('fannypack.layout.spacing.xxxsmall')}rem;
-  }
-  & > ${Tag} {
-    margin-bottom: ${theme('fannypack.layout.spacing.xxxsmall')}rem;
-  }
-
-  & {
-    ${theme('fannypack.Tags.base')};
   }
 `;
 

@@ -1101,7 +1101,7 @@ exports[`renders correctly for a list of buttons 1`] = `
   color: inherit;
 }
 
-.c6 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1146,7 +1146,7 @@ exports[`renders correctly for a list of buttons 1`] = `
   display: flex;
 }
 
-.c5 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1171,32 +1171,28 @@ exports[`renders correctly for a list of buttons 1`] = `
   text-decoration: none;
 }
 
-.c5:focus {
+.c4:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c5:hover {
+.c4:hover {
   background-color: #efefef;
 }
 
-.c5:hover:active {
+.c4:hover:active {
   background-color: #e3e3e3;
 }
 
 .c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1204,14 +1200,13 @@ exports[`renders correctly for a list of buttons 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
 }
 
-.c2 > .c4:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.c2 > .c4 {
-  margin-bottom: 0.5rem;
+.c2 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 <div
@@ -1219,9 +1214,10 @@ exports[`renders correctly for a list of buttons 1`] = `
 >
   <div
     class="c2 c3 c1"
+    spacing="xxsmall"
   >
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >
@@ -1230,7 +1226,7 @@ exports[`renders correctly for a list of buttons 1`] = `
       </span>
     </button>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >
@@ -1239,7 +1235,7 @@ exports[`renders correctly for a list of buttons 1`] = `
       </span>
     </button>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >
@@ -1568,7 +1564,7 @@ exports[`renders correctly for grouped buttons 1`] = `
   color: inherit;
 }
 
-.c6 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1606,7 +1602,7 @@ exports[`renders correctly for grouped buttons 1`] = `
   outline-offset: 2px;
 }
 
-.c5 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1631,33 +1627,25 @@ exports[`renders correctly for grouped buttons 1`] = `
   text-decoration: none;
 }
 
-.c5:focus {
+.c4:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c5:hover {
+.c4:hover {
   background-color: #efefef;
 }
 
-.c5:hover:active {
+.c4:hover:active {
   background-color: #e3e3e3;
-}
-
-.c7 > .c4:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.c7 > .c4 {
-  margin-bottom: 0.5rem;
 }
 
 .c3 {
@@ -1724,7 +1712,7 @@ exports[`renders correctly for grouped buttons 1`] = `
     role="group"
   >
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >
@@ -1733,7 +1721,7 @@ exports[`renders correctly for grouped buttons 1`] = `
       </span>
     </button>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >
@@ -1742,7 +1730,7 @@ exports[`renders correctly for grouped buttons 1`] = `
       </span>
     </button>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       style="size: default;"
       type="default"
     >

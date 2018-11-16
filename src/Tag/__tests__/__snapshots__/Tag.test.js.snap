@@ -386,7 +386,7 @@ exports[`renders correctly for a list of tags 1`] = `
   color: inherit;
 }
 
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -424,7 +424,7 @@ exports[`renders correctly for a list of tags 1`] = `
   outline-offset: 2px;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -435,7 +435,7 @@ exports[`renders correctly for a list of tags 1`] = `
   display: flex;
 }
 
-.c5 {
+.c4 {
   background-color: #435a6f;
   border-radius: 4px;
   color: #fff;
@@ -445,10 +445,6 @@ exports[`renders correctly for a list of tags 1`] = `
 }
 
 .c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -456,14 +452,13 @@ exports[`renders correctly for a list of tags 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
 }
 
-.c2 > .c4:not(:last-child) {
-  margin-right: 0.25rem;
-}
-
-.c2 > .c4 {
-  margin-bottom: 0.25rem;
+.c2 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 <div
@@ -471,19 +466,20 @@ exports[`renders correctly for a list of tags 1`] = `
 >
   <div
     class="c2 c3 c1"
+    spacing="xxsmall"
   >
     <div
-      class="c4 c5 c6 c7"
+      class="c4 c5 c6"
     >
       Tag 1
     </div>
     <div
-      class="c4 c5 c6 c7"
+      class="c4 c5 c6"
     >
       Tag 2
     </div>
     <div
-      class="c4 c5 c6 c7"
+      class="c4 c5 c6"
     >
       Tag 3
     </div>
