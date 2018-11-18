@@ -25,12 +25,12 @@ it('renders correctly for a button with a palette prop set', () => {
 });
 
 it('renders correctly for an outlined button', () => {
-  const { container } = render(<Button type="outlined">Test</Button>);
+  const { container } = render(<Button kind="outlined">Test</Button>);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for a link button', () => {
-  const { container } = render(<Button type="link">Test</Button>);
+  const { container } = render(<Button kind="link">Test</Button>);
   expect(container.firstChild).toMatchSnapshot();
 });
 
@@ -50,7 +50,7 @@ it('renders correctly for a colored button that is loading', () => {
 
 it('renders correctly for a link button that is loading', () => {
   const { container } = render(
-    <Button isLoading type="link">
+    <Button isLoading kind="link">
       Test
     </Button>
   );
@@ -59,7 +59,7 @@ it('renders correctly for a link button that is loading', () => {
 
 it('renders correctly for an outlined button that is loading', () => {
   const { container } = render(
-    <Button isLoading type="outlined">
+    <Button isLoading kind="outlined">
       Test
     </Button>
   );

@@ -7,6 +7,7 @@ menu: Components
 import { Playground, PropsTable } from 'docz';
 import Button from './index';
 import { Button as ButtonProps } from './Button';
+import ActionButtons from './ActionButtons';
 import Group from '../Group';
 import Set from '../Set';
 
@@ -30,7 +31,9 @@ However, you are able to change it to a custom element using the `as` prop. See 
 <Playground>
   <Set>
     <Button>Default</Button>
-    <Button as="a" href="#">Anchor</Button>
+    <Button as="a" href="#">
+      Anchor
+    </Button>
   </Set>
 </Playground>
 
@@ -56,9 +59,15 @@ To indicate a button is loading, use the `isLoading` prop.
 <Playground>
   <Set>
     <Button isLoading>Default</Button>
-    <Button palette="primary" isLoading>Primary</Button>
-    <Button palette="primary" isLoading type="link">Primary</Button>
-    <Button palette="success" isLoading type="outlined">Success</Button>
+    <Button palette="primary" isLoading>
+      Primary
+    </Button>
+    <Button palette="primary" isLoading kind="link">
+      Primary
+    </Button>
+    <Button palette="success" isLoading kind="outlined">
+      Success
+    </Button>
   </Set>
 </Playground>
 
@@ -68,9 +77,15 @@ An outline can be placed on a button by assigning `"outlined"` to the `type` pro
 
 <Playground>
   <Set>
-    <Button palette="primary" type="outlined">Primary</Button>
-    <Button palette="success" type="outlined">Success</Button>
-    <Button palette="danger" type="outlined">Danger</Button>
+    <Button palette="primary" kind="outlined">
+      Primary
+    </Button>
+    <Button palette="success" kind="outlined">
+      Success
+    </Button>
+    <Button palette="danger" kind="outlined">
+      Danger
+    </Button>
   </Set>
 </Playground>
 
@@ -92,7 +107,9 @@ Buttons are available in four different sizes and can be added with a `size` pro
 A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
 
 <Playground>
-  <Button palette="primary" type="link">Default</Button>
+  <Button palette="primary" kind="link">
+    Default
+  </Button>
 </Playground>
 
 ## Static
@@ -103,7 +120,6 @@ To make a button non-interactable, add the `isStatic` prop.
   <Button isStatic>Static</Button>
 </Playground>
 
-
 ## Disabled
 
 To indicate a button as disabled, use the `disabled` prop.
@@ -111,10 +127,18 @@ To indicate a button as disabled, use the `disabled` prop.
 <Playground>
   <Set>
     <Button disabled>Default</Button>
-    <Button palette="primary" disabled>Primary</Button>
-    <Button palette="success" disabled>Success</Button>
-    <Button palette="danger" disabled>Danger</Button>
-    <Button palette="warning" disabled>Warning</Button>
+    <Button palette="primary" disabled>
+      Primary
+    </Button>
+    <Button palette="success" disabled>
+      Success
+    </Button>
+    <Button palette="danger" disabled>
+      Danger
+    </Button>
+    <Button palette="warning" disabled>
+      Warning
+    </Button>
   </Set>
 </Playground>
 
@@ -178,3 +202,78 @@ To group a set of buttons together, use the `<Group>` component.
   }
 }
 ```
+
+# ActionButtons
+
+## Import
+
+`import { ActionButtons } from 'fannypack'`
+
+## Basic Usage
+
+The `<ActionButtons>` component renders a primary action button (e.g 'Submit'), as well as a secondary action button (e.g 'Cancel').
+They can be helpful for forms, dialogs and other things that require an action.
+
+<Playground>
+  <ActionButtons onClickSubmit={() => console.log('submitted')} onClickCancel={() => console.log('cancelled')} />
+</Playground>
+
+## Colors
+
+Action buttons can also take a color from the palette using the `palette` prop.
+
+<Playground>
+  <Set isVertical>
+    <ActionButtons
+      palette="text"
+      onClickSubmit={() => console.log('submitted')}
+      onClickCancel={() => console.log('cancelled')}
+    />
+    <ActionButtons
+      palette="secondary"
+      onClickSubmit={() => console.log('submitted')}
+      onClickCancel={() => console.log('cancelled')}
+    />
+    <ActionButtons
+      palette="danger"
+      onClickSubmit={() => console.log('submitted')}
+      onClickCancel={() => console.log('cancelled')}
+    />
+  </Set>
+</Playground>
+
+## Custom text
+
+To modify the text of the buttons, use the `submitText` and/or `cancelText` props.
+
+<Playground>
+  <ActionButtons cancelText="Close" submitText="Save" onClickSubmit={() => console.log('submitted')} onClickCancel={() => console.log('cancelled')} />
+</Playground>
+
+## Loading
+
+To indicate the primary button as loading, use the `isLoading` prop.
+
+<Playground>
+  <ActionButtons isLoading onClickSubmit={() => console.log('submitted')} onClickCancel={() => console.log('cancelled')} />
+</Playground>
+
+## Type
+
+To change the type of the submit button (e.g `submit` or `reset`). Use the `type` prop.
+
+<Playground>
+  <ActionButtons type="submit" />
+</Playground>
+
+## Custom props
+
+You can pass custom button props to action buttons using `submitProps` or `cancelProps`.
+
+<Playground>
+  <ActionButtons cancelText="Reject" submitProps={{ disabled: true }} cancelProps={{ palette: 'danger' }} />
+</Playground>
+
+## `<ActionButtons>` Props
+
+<PropsTable of={ActionButtons} />

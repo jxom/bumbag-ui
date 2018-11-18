@@ -1,0 +1,64 @@
+---
+name: Dialog
+route: /components/Dialog
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import { ActionButtons } from '../Button';
+import Heading from '../Heading';
+import Paragraph from '../Paragraph';
+import Set from '../Set';
+import Dialog from './index';
+
+# Dialog
+
+## Import
+
+`import { Dialog } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Dialog title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog>
+</Playground>
+
+## Footer
+
+You can render a footer for the dialog using the `footer` prop.
+
+<Playground>
+  <Dialog title="This is a title" footer={<ActionButtons/>}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog>
+</Playground>
+
+## Props
+
+<PropsTable of={Dialog} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Header: {
+    base: string | Object
+  },
+  Content: {
+    base: string | Object
+  },
+  Footer: {
+    base: string | Object
+  }
+}
+```

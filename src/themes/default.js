@@ -101,12 +101,12 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
       xxxsmall: 0.25,
       xxsmall: 0.5,
       xsmall: 1,
-      small: 1.5,
-      medium: 2,
-      large: 2.5,
-      xlarge: 3,
-      xxlarge: 3.5,
-      xxxlarge: 4
+      small: 1.25,
+      medium: 1.5,
+      large: 2,
+      xlarge: 2.5,
+      xxlarge: 3,
+      xxxlarge: 3.5
     },
     ..._get(overrides, 'layout', {})
   },

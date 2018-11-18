@@ -41,7 +41,6 @@ const linkProperties = css`
   & {
     border: 0;
     background: unset;
-    box-shadow: unset !important;
     color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
     text-decoration: underline;
 
@@ -109,6 +108,7 @@ const loadingProperties = css`
     cursor: not-allowed;
 
     &:focus {
+      box-shadow: unset !important;
       outline: unset !important;
     }
   }
@@ -146,14 +146,14 @@ const Button = styled(_Button)`
   {/* Add size styles */}
   ${props => sizeProperties[props.size]}
 
-  {/* Add type styles */}
-  ${props => props.type === 'outlined' && outlinedProperties}
-  ${props => props.type === 'link' && linkProperties}
+  {/* Add kind styles */}
+  ${props => props.kind === 'outlined' && outlinedProperties}
+  ${props => props.kind === 'link' && linkProperties}
 
   ${props => props.isLoading && loadingProperties} {/* Add loading styles */}
   ${props => props.isStatic && staticProperties} {/* Add static styles */}
   ${props =>
-    !props.isStatic && !props.isLoading && !props.disabled && props.type !== 'link'
+    !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link'
       ? interactiveProperties
       : ''} /* Add interactive styles */
 

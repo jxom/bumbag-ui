@@ -12,6 +12,7 @@ export { Code, HighlightedCode } from './Code';
 export { Column } from './Column';
 export { Columns } from './Columns';
 export { Container } from './Container';
+export { Dialog } from './Dialog';
 export { Divider } from './Divider';
 export { FieldWrapper } from './FieldWrapper';
 export { Group } from './Group';

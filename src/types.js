@@ -60,6 +60,18 @@ export type ContainerThemeConfig = {
   fluidMargin?: string,
   tabletMargin?: string
 };
+export type DialogThemeConfig = {
+  base?: Stylesheet,
+  Header?: {
+    base?: Stylesheet
+  },
+  Content?: {
+    base?: Stylesheet
+  },
+  Footer?: {
+    base?: Stylesheet
+  }
+};
 export type DividerThemeConfig = {
   base?: Stylesheet,
   content?: Stylesheet,
@@ -282,6 +294,7 @@ export type ThemeConfig = {
   Column?: ColumnThemeConfig,
   Columns?: ColumnsThemeConfig,
   Container?: ContainerThemeConfig,
+  Dialog?: DialogThemeConfig,
   Divider?: DividerThemeConfig,
   FieldWrapper?: FieldWrapperThemeConfig,
   Group?: GroupThemeConfig,

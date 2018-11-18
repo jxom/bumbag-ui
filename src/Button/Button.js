@@ -28,9 +28,9 @@ type Props = {
   isLoading?: boolean,
   /** Makes the button not interactable. */
   isStatic?: boolean,
+  kind?: ButtonType,
   palette?: Palette,
-  size?: Size,
-  type?: ButtonType
+  size?: Size
 };
 
 export const Button = ({
@@ -39,9 +39,9 @@ export const Button = ({
   disabled,
   isLoading,
   isStatic,
+  kind,
   palette,
   size,
-  type,
   ...props
 }: Props) => {
   return (
@@ -50,14 +50,14 @@ export const Button = ({
       disabled={disabled}
       isLoading={isLoading}
       isStatic={isStatic}
+      kind={kind}
       palette={palette}
       size={size}
-      type={type}
       {...props}
     >
       {isLoading ? (
         <SpinnerWrapper>
-          <Spinner color={type === 'default' ? `${palette || ''}Inverted` : palette} />
+          <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
         </SpinnerWrapper>
       ) : null}
       <span>{children}</span>
@@ -66,14 +66,14 @@ export const Button = ({
 };
 
 Button.defaultProps = {
-  as: null,
-  className: null,
+  as: undefined,
+  className: undefined,
   disabled: false,
   isLoading: false,
   isStatic: false,
+  kind: 'default',
   palette: 'default',
-  size: 'default',
-  type: 'default'
+  size: 'default'
 };
 
 export default Button;
