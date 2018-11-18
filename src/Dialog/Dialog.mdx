@@ -21,10 +21,15 @@ import Dialog from './index';
 ## Basic Usage
 
 <Playground>
-  <Dialog title="This is a title">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
+  <Dialog>
+    <Dialog.Header>
+      <Dialog.Title>This is a title</Dialog.Title>
+    </Dialog.Header>
+    <Dialog.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+      ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+      lectus augue sit amet justo.
+    </Dialog.Content>
   </Dialog>
 </Playground>
 
@@ -33,7 +38,31 @@ import Dialog from './index';
 You can render a footer for the dialog using the `footer` prop.
 
 <Playground>
-  <Dialog title="This is a title" footer={<ActionButtons/>}>
+  <Dialog title="This is a title" footer={<ActionButtons />}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog>
+</Playground>
+
+## Close button
+
+To render a close icon on a dialog, use the `showCloseButton` prop.
+
+<Playground>
+  <Dialog onClickClose={() => console.log('close')} showCloseButton title="This is a title" footer={<ActionButtons />}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog>
+</Playground>
+
+## Accessibility
+
+It is recommended to add an `a11yTitleId` and `a11yDescriptionId` so that screen readers can read the dialog effectively.
+
+<Playground>
+  <Dialog a11yTitleId="title" a11yDescriptionId="description" title="This is a title" footer={<ActionButtons />}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -59,6 +88,13 @@ You can render a footer for the dialog using the `footer` prop.
   },
   Footer: {
     base: string | Object
+  },
+  Title: {
+    base: string | Object
+  },
+  Close: {
+    base: string | Object,
+    hover: string | Object
   }
 }
 ```

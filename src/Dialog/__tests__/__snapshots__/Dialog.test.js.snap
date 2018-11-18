@@ -39,45 +39,45 @@ exports[`renders correctly for a default dialog 1`] = `
   outline-offset: 2px;
 }
 
-.c5 {
+.c7 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.heading.c5 + .sub-heading {
+.heading.c7 + .sub-heading {
   margin-top: -1rem;
 }
 
-.c5:last-child {
+.c7:last-child {
   margin-bottom: 0;
 }
 
-h1.c5 {
+h1.c7 {
   font-size: 3rem;
 }
 
-h2.c5 {
+h2.c7 {
   font-size: 2.5rem;
 }
 
-h3.c5 {
+h3.c7 {
   font-size: 2rem;
 }
 
-h4.c5 {
+h4.c7 {
   font-size: 1.5rem;
 }
 
-h5.c5 {
+h5.c7 {
   font-size: 1.25rem;
 }
 
-h6.c5 {
+h6.c7 {
   font-size: 1rem;
 }
 
-.c5 {
+.c7 {
   font-weight: 600;
 }
 
@@ -93,16 +93,32 @@ h6.c5 {
   border: 1px solid #e6e6e6;
 }
 
-.c6 {
+.c4 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
 }
 
-.c4 {
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid #e6e6e6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 1.25rem;
   width: 100%;
+}
+
+.c6 {
+  margin-bottom: 0px;
 }
 
 .c2 {
@@ -110,31 +126,31 @@ h6.c5 {
 }
 
 @media (max-width:480px) {
-  h1.c5 {
+  h1.c7 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:480px) {
-  h2.c5 {
+  h2.c7 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:480px) {
-  h3.c5 {
+  h3.c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:480px) {
-  h4.c5 {
+  h4.c7 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:480px) {
-  h5.c5 {
+  h5.c7 {
     font-size: 1.2rem;
   }
 }
@@ -144,18 +160,303 @@ h6.c5 {
 >
   <div
     class="c2 c3 c1"
+    role="dialog"
+  >
+    <div
+      class="c4 c1"
+    >
+      <div
+        class="c5 c1"
+      >
+        <h5
+          class="c6 sub-heading c7 c1"
+        >
+          This is a title
+        </h5>
+      </div>
+      <div
+        class="c4 c1"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for a dialog with a close button 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c9 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c0 {
+  box-sizing: border-box;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #435a6f;
+}
+
+.c0 *,
+.c0 *::before,
+.c0 *::after {
+  box-sizing: inherit;
+}
+
+.c0 *:focus {
+  outline: 2px solid #7467c0;
+  outline-offset: 2px;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  color: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c8 {
+  border: 0;
+  background: unset;
+  color: #435a6f;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8:hover {
+  color: #000;
+}
+
+.c6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c6 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c6:last-child {
+  margin-bottom: 0;
+}
+
+h1.c6 {
+  font-size: 3rem;
+}
+
+h2.c6 {
+  font-size: 2.5rem;
+}
+
+h3.c6 {
+  font-size: 2rem;
+}
+
+h4.c6 {
+  font-size: 1.5rem;
+}
+
+h5.c6 {
+  font-size: 1.25rem;
+}
+
+h6.c6 {
+  font-size: 1rem;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 3px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: 1px solid #e6e6e6;
+}
+
+.c11 {
+  padding: 1.25rem;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.c5 {
+  margin-bottom: 0px;
+}
+
+.c7 {
+  height: 2em;
+  width: 2em;
+  padding: 0px;
+}
+
+.c7:hover {
+  background-color: #f2f2f2;
+}
+
+.c2 {
+  border-radius: 5px;
+}
+
+.c10 {
+  fill: #435a6f;
+  position: relative;
+  top: 0.1em;
+}
+
+@media (max-width:480px) {
+  h1.c6 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c6 {
+    font-size: 1.2rem;
+  }
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3 c1"
+    role="dialog"
   >
     <div
       class="c4 c1"
     >
       <h5
-        class="sub-heading c5 c1"
+        class="c5 sub-heading c6 c1"
       >
         This is a title
       </h5>
+      <button
+        class="c7 c8 c9"
+        kind="link"
+        style="size: default;"
+      >
+        <span>
+          <svg
+            class="c10 c1"
+            height="1em"
+            role="img"
+            style="height: 1em; width: 1em;"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M9.41 8l3.29-3.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-3.29-3.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 3.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l3.29 3.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z"
+              fill-rule="even-odd"
+            />
+          </svg>
+        </span>
+      </button>
     </div>
     <div
-      class="c6 c1"
+      class="c11 c1"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
     </div>
@@ -202,45 +503,45 @@ exports[`renders correctly for a dialog with a footer 1`] = `
   outline-offset: 2px;
 }
 
-.c5 {
+.c7 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.heading.c5 + .sub-heading {
+.heading.c7 + .sub-heading {
   margin-top: -1rem;
 }
 
-.c5:last-child {
+.c7:last-child {
   margin-bottom: 0;
 }
 
-h1.c5 {
+h1.c7 {
   font-size: 3rem;
 }
 
-h2.c5 {
+h2.c7 {
   font-size: 2.5rem;
 }
 
-h3.c5 {
+h3.c7 {
   font-size: 2rem;
 }
 
-h4.c5 {
+h4.c7 {
   font-size: 1.5rem;
 }
 
-h5.c5 {
+h5.c7 {
   font-size: 1.25rem;
 }
 
-h6.c5 {
+h6.c7 {
   font-size: 1rem;
 }
 
-.c5 {
+.c7 {
   font-weight: 600;
 }
 
@@ -256,22 +557,38 @@ h6.c5 {
   border: 1px solid #e6e6e6;
 }
 
-.c6 {
+.c4 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
 }
 
-.c4 {
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid #e6e6e6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 1.25rem;
   width: 100%;
 }
 
-.c7 {
+.c8 {
   border-top: 1px solid #e6e6e6;
   padding: 1rem 1rem;
   width: 100%;
+}
+
+.c6 {
+  margin-bottom: 0px;
 }
 
 .c2 {
@@ -279,31 +596,31 @@ h6.c5 {
 }
 
 @media (max-width:480px) {
-  h1.c5 {
+  h1.c7 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:480px) {
-  h2.c5 {
+  h2.c7 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:480px) {
-  h3.c5 {
+  h3.c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:480px) {
-  h4.c5 {
+  h4.c7 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:480px) {
-  h5.c5 {
+  h5.c7 {
     font-size: 1.2rem;
   }
 }
@@ -313,25 +630,28 @@ h6.c5 {
 >
   <div
     class="c2 c3 c1"
+    role="dialog"
   >
     <div
       class="c4 c1"
     >
-      <h5
-        class="sub-heading c5 c1"
+      <div
+        class="c5 c1"
       >
-        This is a title
-      </h5>
-    </div>
-    <div
-      class="c6 c1"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-    </div>
-    <div
-      class="c7 c1"
-    >
-      <div>
+        <h5
+          class="c6 sub-heading c7 c1"
+        >
+          This is a title
+        </h5>
+      </div>
+      <div
+        class="c4 c1"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+      </div>
+      <div
+        class="c8 c1"
+      >
         test
       </div>
     </div>
