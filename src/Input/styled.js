@@ -3,6 +3,8 @@ import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
 
+import { InlineFlex } from '../primitives';
+import _Icon from '../Icon';
 import Spinner from '../Spinner';
 
 export const LoadingSpinner = styled(Spinner)`
@@ -16,8 +18,6 @@ export const LoadingSpinner = styled(Spinner)`
 
 const sizeProperties = {
   small: css`
-    font-size: 0.8rem;
-
     & + ${LoadingSpinner} {
       width: 10px;
       height: 10px;
@@ -29,8 +29,6 @@ const sizeProperties = {
     }
   `,
   medium: css`
-    font-size: 1.25rem;
-
     & + ${LoadingSpinner} {
       width: 20px;
       height: 20px;
@@ -43,8 +41,6 @@ const sizeProperties = {
     }
   `,
   large: css`
-    font-size: 1.5rem;
-
     & + ${LoadingSpinner} {
       width: 25px;
       height: 25px;
@@ -58,9 +54,54 @@ const sizeProperties = {
   `
 };
 
+const wrapperSizeProperties = {
+  small: css`
+    font-size: 0.8rem;
+
+    & {
+      ${theme('fannypack.Input.Wrapper.sizes.small')};
+    }
+  `,
+  medium: css`
+    font-size: 1.25rem;
+
+    & {
+      ${theme('fannypack.Input.Wrapper.sizes.medium')};
+    }
+  `,
+  large: css`
+    font-size: 1.5rem;
+
+    & {
+      ${theme('fannypack.Input.Wrapper.sizes.large')};
+    }
+  `
+};
+
 const stateProperties = css`
   border-color: ${props => palette(`${props.state}Lighter`)(props)}
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+`;
+
+export const Icon = styled(_Icon)`
+  fill: ${palette('textLightest')};
+  height: 2.5em;
+  margin: 0 0.75em;
+  top: 0;
+
+  ${theme('fannypack.Input.Icon.base')};
+`;
+
+export const InputWrapper = styled(InlineFlex)`
+  align-items: center;
+  position: relative;
+  width: ${props => (props.isFullWidth ? '100%' : undefined)};
+
+  & {
+    ${props => props.size && wrapperSizeProperties[props.size]};
+  }
+
+  ${theme('fannypack.Input.Wrapper.base')};
 `;
 
 export default styled(Input)`
@@ -100,6 +141,20 @@ export default styled(Input)`
     }
   }
 
+  & {
+    ${props =>
+      props.after &&
+      css`
+        padding-right: 2.3em;
+      `}
+  }
+  & {
+    ${props =>
+      props.before &&
+      css`
+        padding-left: 2.3em;
+      `}
+  }
   & {
     ${props =>
       props.isFullWidth &&

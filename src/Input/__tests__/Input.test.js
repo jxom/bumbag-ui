@@ -54,3 +54,13 @@ describe('states', () => {
     });
   });
 });
+
+it('renders correctly for an input with a before component', () => {
+  const { container } = render(<Input before={<Input.Icon icon="search" />} />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for an input with a after component', () => {
+  const { container } = render(<Input after={<Input.Icon icon="search" />} />);
+  expect(container.firstChild).toMatchSnapshot();
+});

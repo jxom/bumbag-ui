@@ -57,14 +57,21 @@ To make the input span full width, add the `isFullWidth` prop.
 Just like normal `<input>` elements, you can specify a `type`.
 
 <Playground>
-  <Input type="number" /><br/>
-  <Input type="tel" marginTop="xxsmall"  /><br/>
-  <Input type="date" marginTop="xxsmall"  /><br/>
-  <Input type="email" marginTop="xxsmall"  /><br/>
-  <Input type="password" marginTop="xxsmall"  /><br/>
-  <Input type="search" marginTop="xxsmall"  /><br/>
-  <Input type="time" marginTop="xxsmall"  /><br/>
-  <Input type="url" marginTop="xxsmall"  />
+  <Input type="number" />
+  <br />
+  <Input type="tel" marginTop="xxsmall" />
+  <br />
+  <Input type="date" marginTop="xxsmall" />
+  <br />
+  <Input type="email" marginTop="xxsmall" />
+  <br />
+  <Input type="password" marginTop="xxsmall" />
+  <br />
+  <Input type="search" marginTop="xxsmall" />
+  <br />
+  <Input type="time" marginTop="xxsmall" />
+  <br />
+  <Input type="url" marginTop="xxsmall" />
 </Playground>
 
 ## Sizes
@@ -72,9 +79,12 @@ Just like normal `<input>` elements, you can specify a `type`.
 An input can come in different sizes - `small`, `medium`, `large`, or the default.
 
 <Playground>
-  <Input size="small" /><br/>
-  <Input marginTop="xxsmall" /><br/>
-  <Input size="medium" marginTop="xxsmall" /><br/>
+  <Input size="small" />
+  <br />
+  <Input marginTop="xxsmall" />
+  <br />
+  <Input size="medium" marginTop="xxsmall" />
+  <br />
   <Input size="large" marginTop="xxsmall" />
 </Playground>
 
@@ -83,9 +93,12 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
 An input can use different states (as per palette) such as `danger`, `success` and `warning`.
 
 <Playground>
-  <Input state="danger" /><br/>
-  <Input state="success" marginTop="xxsmall" /><br/>
-  <Input state="warning" marginTop="xxsmall" /><br/>
+  <Input state="danger" />
+  <br />
+  <Input state="success" marginTop="xxsmall" />
+  <br />
+  <Input state="warning" marginTop="xxsmall" />
+  <br />
   <Input state="primary" marginTop="xxsmall" />
 </Playground>
 
@@ -101,6 +114,13 @@ You can use the [Group component](/components/group) to add on stuff to your `<I
   </Group>
 </Playground>
 
+## Icons
+
+<Playground>
+  <Input before={<Input.Icon icon="search" />} placeholder="Jake Moxey" />
+  <Input after={<Input.Icon icon="search" />} placeholder="Jake Moxey" marginLeft="xxsmall" />
+</Playground>
+
 ## Controlled Usage
 
 The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
@@ -109,9 +129,7 @@ Note: Do not use `defaultValue` with controlled inputs!
 
 <Playground>
   <Component initialState={{ value: 'Fannypacks rock!' }}>
-    {({ state, setState }) => (
-      <Input onChange={e => setState({ value: e.target.value })} value={state.value} />
-    )}
+    {({ state, setState }) => <Input onChange={e => setState({ value: e.target.value })} value={state.value} />}
   </Component>
 </Playground>
 

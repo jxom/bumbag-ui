@@ -12,6 +12,7 @@ type Props = {
   a11yId?: string,
   /** An accessible label for the input */
   a11yLabel?: string,
+  after?: Element<any>,
   as?: any,
   autoComplete?: string,
   /** Automatically focus on the input */
@@ -20,6 +21,7 @@ type Props = {
   addonBefore?: Element<any>,
   /** Addon component to the input (after). Similar to the addon components in Input. */
   addonAfter?: Element<any>,
+  before?: Element<any>,
   children: Node,
   className?: string,
   /** Default value of the input */
@@ -121,9 +123,11 @@ InputField.defaultProps = {
   addonAfter: undefined,
   a11yId: undefined,
   a11yLabel: undefined,
+  after: undefined,
   as: undefined,
   autoComplete: undefined,
   autoFocus: false,
+  before: undefined,
   className: undefined,
   defaultValue: undefined,
   description: undefined,

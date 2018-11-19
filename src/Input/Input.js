@@ -1,11 +1,12 @@
 // @flow
-import React, { type Node } from 'react';
+import React, { type Element, type Node } from 'react';
 
+import { InlineFlex } from '../primitives';
 import type { Size } from '../types';
-import { InlineBlock } from '../primitives';
-import _Input, { LoadingSpinner } from './styled';
+import _Input, { Icon, InputWrapper, LoadingSpinner } from './styled';
 
 export type Props = {
+  after?: Element<any>,
   /** An accessible identifier for the input */
   a11yId?: string,
   /** An accessible label for the input */
@@ -14,6 +15,7 @@ export type Props = {
   autoComplete?: string,
   /** Automatically focus on the input */
   autoFocus?: boolean,
+  before?: Element<any>,
   children: Node,
   className?: string,
   /** Default value of the input */
@@ -72,6 +74,8 @@ const Input = ({
   className,
   defaultValue,
   disabled,
+  after,
+  before,
   isFullWidth,
   isLoading,
   isRequired,
@@ -95,12 +99,24 @@ const Input = ({
   value,
   ...props
 }: Props) => (
-  <InlineBlock relative width={isFullWidth ? '100%' : undefined} {...props}>
+  <InputWrapper isFullWidth={isFullWidth} size={size}>
+    {before && (
+      <InlineFlex absolute zIndex="3">
+        {before}
+      </InlineFlex>
+    )}
+    {after && (
+      <InlineFlex absolute right="0" zIndex="3">
+        {after}
+      </InlineFlex>
+    )}
     <_Input
+      after={after}
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}
       autoComplete={autoComplete}
+      before={before}
       autoFocus={autoFocus}
       defaultValue={defaultValue}
       disabled={disabled}
@@ -124,10 +140,13 @@ const Input = ({
       step={step}
       type={type}
       value={value}
+      {...props}
     />
     {isLoading && <LoadingSpinner color="text" />}
-  </InlineBlock>
+  </InputWrapper>
 );
+
+Input.Icon = Icon;
 
 Input.defaultProps = {
   a11yId: undefined,
@@ -138,6 +157,8 @@ Input.defaultProps = {
   className: undefined,
   defaultValue: undefined,
   disabled: false,
+  after: undefined,
+  before: undefined,
   isFullWidth: false,
   isLoading: false,
   isRequired: false,

@@ -1,5 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
+import Input from '../Input';
 import InputField from '../InputField';
 import 'jest-styled-components';
 
@@ -91,5 +92,15 @@ it('renders correctly for addon component (vertical)', () => {
   const { container } = render(
     <InputField a11yId="username" label="Username" addonAfter={<div>test</div>} isVertical />
   );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for an input with a before component', () => {
+  const { container } = render(<InputField before={<Input.Icon icon="search" />} />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for an input with a after component', () => {
+  const { container } = render(<InputField after={<Input.Icon icon="search" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });
