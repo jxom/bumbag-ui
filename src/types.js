@@ -279,6 +279,17 @@ export type TagThemeConfig = {
 export type TextThemeConfig = {
   base?: Stylesheet
 };
+export type TextareaThemeConfig = {
+  base?: Stylesheet,
+  disabled?: Stylesheet,
+  focus?: Stylesheet,
+  placeholder?: Stylesheet,
+  sizes?: {
+    small?: Stylesheet,
+    medium?: Stylesheet,
+    large?: Stylesheet
+  }
+};
 export type ThemeConfig = {
   palette?: Object,
 
@@ -317,6 +328,7 @@ export type ThemeConfig = {
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
   Tag?: TagThemeConfig,
-  Text?: TextThemeConfig
+  Text?: TextThemeConfig,
+  Textarea?: TextareaThemeConfig
 };
 /* ====== END: THEMES ====== */

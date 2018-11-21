@@ -39,6 +39,8 @@ export type Props = {
   placeholder?: string,
   /** This prop prevents the user from modifying the value of the textarea. It is ignored if the value of the type attribute is hidden, range, color, checkbox, radio, file, or a button type (such as button or submit). */
   readOnly?: boolean,
+  /** The minimum number of rows in the text area. */
+  rows?: number,
   /** Setting the value of this attribute to true indicates that the element needs to have its spelling and grammar checked. The value default indicates that the element is to act according to a default behavior, possibly based on the parent element's own spellcheck value. The value false indicates that the element should not be checked. */
   spellCheck?: boolean,
   /** State of the input. Can be any color in the palette. */
@@ -53,56 +55,17 @@ export type Props = {
   onFocus?: Function
 };
 
-const Textarea = ({
-  a11yId,
-  a11yLabel,
-  autoComplete,
-  autoFocus,
-  className,
-  defaultValue,
-  disabled,
-  isFullWidth,
-  isLoading,
-  isRequired,
-  maxLength,
-  minLength,
-  onBlur,
-  onChange,
-  onFocus,
-  name,
-  pattern,
-  placeholder,
-  readOnly,
-  size,
-  spellCheck,
-  state,
-  value,
-  ...props
-}: Props) => (
-  <InlineBlock relative width={isFullWidth ? '100%' : undefined} {...props}>
+const Textarea = ({ a11yId, a11yLabel, isFullWidth, isLoading, isRequired, size, state, ...props }: Props) => (
+  <InlineBlock relative width={isFullWidth ? '100%' : undefined}>
     <_Textarea
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}
-      autoComplete={autoComplete}
-      autoFocus={autoFocus}
-      defaultValue={defaultValue}
-      disabled={disabled}
       id={a11yId}
       isFullWidth={isFullWidth}
-      maxLength={maxLength}
-      minLength={minLength}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      name={name}
-      readOnly={readOnly}
-      pattern={pattern}
-      placeholder={placeholder}
       size={size}
-      spellCheck={spellCheck}
       state={state}
-      value={value}
+      {...props}
     />
     {isLoading && <LoadingSpinner color="text" />}
   </InlineBlock>
@@ -129,6 +92,7 @@ Textarea.defaultProps = {
   pattern: undefined,
   placeholder: undefined,
   readOnly: undefined,
+  rows: '3',
   spellCheck: undefined,
   size: 'default',
   state: undefined,

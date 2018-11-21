@@ -25,7 +25,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('fannypack.Input.sizes.small')};
+      ${theme('fannypack.Textarea.sizes.small')};
     }
   `,
   medium: css`
@@ -39,7 +39,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('fannypack.Input.sizes.medium')};
+      ${theme('fannypack.Textarea.sizes.medium')};
     }
   `,
   large: css`
@@ -53,7 +53,7 @@ const sizeProperties = {
     }
 
     & {
-      ${theme('fannypack.Input.sizes.large')};
+      ${theme('fannypack.Textarea.sizes.large')};
     }
   `
 };
@@ -67,7 +67,6 @@ export default styled(Input.as('textarea'))`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
-  height: 2.5em;
   width: 100%;
   padding: 0.4em 0.6em;
 
@@ -77,7 +76,7 @@ export default styled(Input.as('textarea'))`
     color: ${palette('grayLight')}
 
     & {
-      ${theme('fannypack.Input.disabled')}
+      ${theme('fannypack.Textarea.disabled')}
     }
   }
 
@@ -88,7 +87,7 @@ export default styled(Input.as('textarea'))`
     box-shadow: ${props => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('fannypack.Input.focus')}
+      ${theme('fannypack.Textarea.focus')}
     }
   }
 
@@ -96,7 +95,7 @@ export default styled(Input.as('textarea'))`
     opacity: 0.6;
 
     & {
-      ${theme('fannypack.Input.placeholder')}
+      ${theme('fannypack.Textarea.placeholder')}
     }
   }
 
@@ -114,5 +113,5 @@ export default styled(Input.as('textarea'))`
     ${props => props.state && stateProperties}
   }
 
-  ${theme('fannypack.Input.base')};
+  ${theme('fannypack.Textarea.base')};
 `;
