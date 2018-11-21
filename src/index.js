@@ -35,3 +35,4 @@ export { Switch, SwitchField } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
 export { Tag } from './Tag';
 export { Text } from './Text';
+export { Textarea } from './Textarea';

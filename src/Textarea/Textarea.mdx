@@ -1,0 +1,104 @@
+---
+name: Textarea
+route: /form/textarea
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Textarea from './index';
+import Component from '@reactions/component';
+
+# Textarea
+
+## Import
+
+`import { Textarea } from 'fannypack'`
+
+## Basic usage
+<Playground>
+  <Textarea />
+</Playground>
+
+## Default values
+
+For uncontrolled textareas, set a default value using the `defaultValue` prop.
+
+<Playground>
+  <Textarea defaultValue="Fannypacks rock!" />
+</Playground>
+
+## Disabled
+
+Make the textarea disabled with the `disabled` prop.
+
+<Playground>
+  <Textarea disabled defaultValue="Disabled field" />
+</Playground>
+
+## Full width
+
+To make the textarea span full width, add the `isFullWidth` prop.
+
+<Playground>
+  <Textarea isFullWidth />
+</Playground>
+
+## Sizes
+
+A textarea can come in different sizes - `small`, `medium`, `large`, or the default.
+
+<Playground>
+  <Textarea size="small" /><br/>
+  <Textarea marginTop="xxsmall" /><br/>
+  <Textarea size="medium" marginTop="xxsmall" /><br/>
+  <Textarea size="large" marginTop="xxsmall" />
+</Playground>
+
+## States
+
+A textarea can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+<Playground>
+  <Textarea state="danger" /><br/>
+  <Textarea state="success" marginTop="xxsmall" /><br/>
+  <Textarea state="warning" marginTop="xxsmall" /><br/>
+  <Textarea state="primary" marginTop="xxsmall" />
+</Playground>
+
+
+## Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled textareas!
+
+<Playground>
+  <Component initialState={{ value: 'Fannypacks rock!' }}>
+    {({ state, setState }) => (
+      <Textarea onChange={e => setState({ value: e.target.value })} value={state.value} />
+    )}
+  </Component>
+</Playground>
+
+## Accessibility
+
+Using an accessibility label (`a11yLabel`), will enable screen readers to read the contents of the label.
+
+<Playground>
+  <Textarea a11yLabel="name" placeholder="Jake Moxey" />
+</Playground>
+
+## `<Textarea>` Props
+
+<PropsTable of={Textarea} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object
+}
+```
