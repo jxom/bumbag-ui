@@ -112,6 +112,7 @@ class Select extends PureComponent<Props, State> {
           aria-invalid={state === 'danger'}
           aria-label={a11yLabel}
           aria-required={isRequired}
+          as="select"
           autoComplete={autoComplete}
           autoFocus={autoFocus}
           defaultValue={defaultValue || placeholder}

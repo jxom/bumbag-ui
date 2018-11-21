@@ -46,6 +46,19 @@ exports[`renders correctly for a basic select 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -82,7 +95,7 @@ exports[`renders correctly for a basic select 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -114,7 +127,7 @@ exports[`renders correctly for a basic select 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -165,8 +178,10 @@ exports[`renders correctly for a basic select 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -186,7 +201,7 @@ exports[`renders correctly for a basic select 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -247,6 +262,19 @@ exports[`renders correctly for a disabled select 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -283,7 +311,7 @@ exports[`renders correctly for a disabled select 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -315,7 +343,7 @@ exports[`renders correctly for a disabled select 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -326,7 +354,7 @@ exports[`renders correctly for a disabled select 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -370,9 +398,11 @@ exports[`renders correctly for a disabled select 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         disabled=""
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           disabled=""
@@ -395,7 +425,7 @@ exports[`renders correctly for a disabled select 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -456,6 +486,19 @@ exports[`renders correctly for a full width select 1`] = `
   position: relative;
 }
 
+.c11 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -492,7 +535,7 @@ exports[`renders correctly for a full width select 1`] = `
   display: flex;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -524,7 +567,7 @@ exports[`renders correctly for a full width select 1`] = `
   color: #8d8d8d;
 }
 
-.c10[disabled] + .c11 {
+.c10[disabled] + .c12 {
   fill: #8d8d8d;
 }
 
@@ -535,7 +578,7 @@ exports[`renders correctly for a full width select 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c13[disabled] + .c11 {
+.c14[disabled] + .c12 {
   fill: #8d8d8d;
 }
 
@@ -585,8 +628,10 @@ exports[`renders correctly for a full width select 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c10"
+        class="c10 c11"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -606,7 +651,7 @@ exports[`renders correctly for a full width select 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c11 c12"
+        class="c12 c13"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -667,6 +712,19 @@ exports[`renders correctly for a required field 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -703,7 +761,7 @@ exports[`renders correctly for a required field 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -735,7 +793,7 @@ exports[`renders correctly for a required field 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -746,50 +804,50 @@ exports[`renders correctly for a required field 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13 + .c10 {
+.c14 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c17[disabled] + .c10 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c10 {
+.c19[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c10 {
+.c20[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -833,8 +891,10 @@ exports[`renders correctly for a required field 1`] = `
       <select
         aria-invalid="false"
         aria-required="true"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -854,7 +914,7 @@ exports[`renders correctly for a required field 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -915,6 +975,19 @@ exports[`renders correctly for a select with a default value 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -951,7 +1024,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -983,7 +1056,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -994,7 +1067,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -1038,8 +1111,10 @@ exports[`renders correctly for a select with a default value 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -1060,7 +1135,7 @@ exports[`renders correctly for a select with a default value 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -1121,6 +1196,19 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -1157,7 +1245,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1169,7 +1257,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -1193,7 +1281,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -1244,8 +1332,10 @@ exports[`renders correctly for a select with a placeholder 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           disabled=""
@@ -1271,7 +1361,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -1330,6 +1420,19 @@ exports[`renders correctly for addon component (after) 1`] = `
 
 .c10.c10.c10 {
   position: relative;
+}
+
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
 }
 
 .c0 {
@@ -1424,7 +1527,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   display: flex;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1456,7 +1559,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   color: #8d8d8d;
 }
 
-.c11[disabled] + .c12 {
+.c11[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -1467,50 +1570,50 @@ exports[`renders correctly for addon component (after) 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c15[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c16[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c16 + .c13 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c17[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c17 + .c13 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c18[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c18 + .c13 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c19[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c20[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c21[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c22[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -1558,8 +1661,10 @@ exports[`renders correctly for addon component (after) 1`] = `
         <select
           aria-invalid="false"
           aria-required="false"
-          class="c11"
+          class="c11 c12"
           id="weather"
+          style="size: default;"
+          type="text"
         >
           <option
             value="sunny"
@@ -1579,7 +1684,7 @@ exports[`renders correctly for addon component (after) 1`] = `
         </select>
         <svg
           aria-hidden="true"
-          class="c12 c13"
+          class="c13 c14"
           focusable="false"
           viewBox="0 0 20 20"
         >
@@ -1644,6 +1749,19 @@ exports[`renders correctly for addon component (before) 1`] = `
   position: relative;
 }
 
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -1736,7 +1854,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   display: flex;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1768,7 +1886,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   color: #8d8d8d;
 }
 
-.c11[disabled] + .c12 {
+.c11[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -1779,50 +1897,50 @@ exports[`renders correctly for addon component (before) 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c15[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c16[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c16 + .c13 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c17[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c17 + .c13 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c18[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c18 + .c13 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c19[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c20[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c21[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c22[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -1873,8 +1991,10 @@ exports[`renders correctly for addon component (before) 1`] = `
         <select
           aria-invalid="false"
           aria-required="false"
-          class="c11"
+          class="c11 c12"
           id="weather"
+          style="size: default;"
+          type="text"
         >
           <option
             value="sunny"
@@ -1894,7 +2014,7 @@ exports[`renders correctly for addon component (before) 1`] = `
         </select>
         <svg
           aria-hidden="true"
-          class="c12 c13"
+          class="c13 c14"
           focusable="false"
           viewBox="0 0 20 20"
         >
@@ -1954,6 +2074,19 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 
 .c10.c10.c10 {
   position: relative;
+}
+
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
 }
 
 .c0 {
@@ -2048,7 +2181,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   display: flex;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2080,7 +2213,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   color: #8d8d8d;
 }
 
-.c11[disabled] + .c12 {
+.c11[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -2091,50 +2224,50 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c15[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c16[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c16 + .c13 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c17[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c17 + .c13 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c18[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c18 + .c13 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c19[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c20[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c21[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c22[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -2185,8 +2318,10 @@ exports[`renders correctly for addon component (vertical) 1`] = `
         <select
           aria-invalid="false"
           aria-required="false"
-          class="c11"
+          class="c11 c12"
           id="weather"
+          style="size: default;"
+          type="text"
         >
           <option
             value="sunny"
@@ -2206,7 +2341,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
         </select>
         <svg
           aria-hidden="true"
-          class="c12 c13"
+          class="c13 c14"
           focusable="false"
           viewBox="0 0 20 20"
         >
@@ -2268,6 +2403,19 @@ exports[`renders correctly for an input field with a description 1`] = `
   position: relative;
 }
 
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -2304,7 +2452,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: flex;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2336,7 +2484,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   color: #8d8d8d;
 }
 
-.c11[disabled] + .c12 {
+.c11[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -2347,50 +2495,50 @@ exports[`renders correctly for an input field with a description 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c15[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c16[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c16 + .c13 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c17[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c17 + .c13 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c18[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c18 + .c13 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c19[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c20[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c21[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c22[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -2496,8 +2644,10 @@ samp.c8 {
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c11"
+        class="c11 c12"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -2517,7 +2667,7 @@ samp.c8 {
       </select>
       <svg
         aria-hidden="true"
-        class="c12 c13"
+        class="c13 c14"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -2578,6 +2728,19 @@ exports[`renders correctly for an input field with a hint 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -2614,7 +2777,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2646,7 +2809,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -2657,50 +2820,50 @@ exports[`renders correctly for an input field with a hint 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c17 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c10 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c17 + .c10 {
+.c18 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c10 {
+.c19[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c10 {
+.c20[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c10 {
+.c21[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c10 {
+.c22[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -2712,56 +2875,56 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: block;
 }
 
-abbr.c13 {
+abbr.c14 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c13 {
+i.c14 {
   font-style: italic;
 }
 
-kbd.c13 {
+kbd.c14 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
   padding: 0.1rem 0.2rem;
 }
 
-mark.c13 {
+mark.c14 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c13 {
+strong.c14 {
   font-weight: bold;
 }
 
-sub.c13,
-sup.c13 {
+sub.c14,
+sup.c14 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c13,
-u.c13 {
+ins.c14,
+u.c14 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c13,
-cite.c13,
-var.c13,
-em.c13 {
+i.c14,
+cite.c14,
+var.c14,
+em.c14 {
   font-style: italic;
 }
 
-kbd.c13,
-pre.c13,
-samp.c13 {
+kbd.c14,
+pre.c14,
+samp.c14 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
@@ -2769,7 +2932,7 @@ samp.c13 {
   margin-bottom: 0 !important;
 }
 
-.c12 {
+.c13 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
@@ -2803,8 +2966,10 @@ samp.c13 {
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -2824,7 +2989,7 @@ samp.c13 {
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -2835,7 +3000,7 @@ samp.c13 {
       </svg>
     </div>
     <span
-      class="c12 c13 c1"
+      class="c13 c14 c1"
     >
       Must be awesome
     </span>
@@ -2889,6 +3054,19 @@ exports[`renders correctly for an optional input field 1`] = `
   position: relative;
 }
 
+.c12 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -2925,7 +3103,7 @@ exports[`renders correctly for an optional input field 1`] = `
   display: flex;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2957,7 +3135,7 @@ exports[`renders correctly for an optional input field 1`] = `
   color: #8d8d8d;
 }
 
-.c11[disabled] + .c12 {
+.c11[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -2968,50 +3146,50 @@ exports[`renders correctly for an optional input field 1`] = `
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c15[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c16[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c16 + .c13 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c17[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c17 + .c13 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c18[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c18 + .c13 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c19[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c20[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c21[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c22[disabled] + .c13 {
   fill: #8d8d8d;
 }
 
@@ -3119,8 +3297,10 @@ samp.c8 {
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c11"
+        class="c11 c12"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -3140,7 +3320,7 @@ samp.c8 {
       </select>
       <svg
         aria-hidden="true"
-        class="c12 c13"
+        class="c13 c14"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -3201,6 +3381,19 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -3237,7 +3430,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3249,28 +3442,28 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 25px;
   height: 25px;
 }
@@ -3295,7 +3488,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -3310,12 +3503,12 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   font-size: 1.5rem;
 }
 
-.c9 + .c10 {
+.c9 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c9 + .c16 {
+.c9 + .c17 {
   width: 25px;
   height: 25px;
   top: 16px;
@@ -3362,8 +3555,10 @@ exports[`sizes renders correctly for a select with size large 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: large;"
+        type="text"
       >
         <option
           value="sunny"
@@ -3383,7 +3578,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -3444,6 +3639,19 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -3480,7 +3688,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3492,19 +3700,19 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
@@ -3529,7 +3737,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -3544,12 +3752,12 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   font-size: 1.25rem;
 }
 
-.c9 + .c10 {
+.c9 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c9 + .c15 {
+.c9 + .c16 {
   width: 20px;
   height: 20px;
   top: 15px;
@@ -3596,8 +3804,10 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: medium;"
+        type="text"
       >
         <option
           value="sunny"
@@ -3617,7 +3827,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -3678,6 +3888,19 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -3714,7 +3937,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3726,11 +3949,11 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -3754,7 +3977,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -3769,12 +3992,12 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   font-size: 0.8rem;
 }
 
-.c9 + .c10 {
+.c9 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c9 + .c14 {
+.c9 + .c15 {
   width: 10px;
   height: 10px;
   top: 10px;
@@ -3820,8 +4043,10 @@ exports[`sizes renders correctly for a select with size small 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: small;"
+        type="text"
       >
         <option
           value="sunny"
@@ -3841,7 +4066,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -3902,6 +4127,19 @@ exports[`states renders correctly for a select with state danger 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -3938,7 +4176,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3950,37 +4188,37 @@ exports[`states renders correctly for a select with state danger 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c17 + .c11 {
   width: 30px;
   height: 30px;
 }
@@ -4005,7 +4243,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4061,8 +4299,10 @@ exports[`states renders correctly for a select with state danger 1`] = `
       <select
         aria-invalid="true"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -4082,7 +4322,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -4143,6 +4383,19 @@ exports[`states renders correctly for a select with state primary 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -4179,7 +4432,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4191,50 +4444,50 @@ exports[`states renders correctly for a select with state primary 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c17 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c10 {
+.c19[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c10 {
+.c20[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4258,7 +4511,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4314,8 +4567,10 @@ exports[`states renders correctly for a select with state primary 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -4335,7 +4590,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -4396,6 +4651,19 @@ exports[`states renders correctly for a select with state success 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -4432,7 +4700,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4444,42 +4712,42 @@ exports[`states renders correctly for a select with state success 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c17 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4503,7 +4771,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4559,8 +4827,10 @@ exports[`states renders correctly for a select with state success 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -4580,7 +4850,7 @@ exports[`states renders correctly for a select with state success 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -4641,6 +4911,19 @@ exports[`states renders correctly for a select with state warning 1`] = `
   position: relative;
 }
 
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
 .c0 {
   box-sizing: border-box;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
@@ -4677,7 +4960,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   display: flex;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4689,46 +4972,46 @@ exports[`states renders correctly for a select with state warning 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c15 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c16 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c17 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c10 {
+.c19[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4752,7 +5035,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c10 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -4808,8 +5091,10 @@ exports[`states renders correctly for a select with state warning 1`] = `
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9"
+        class="c9 c10"
         id="weather"
+        style="size: default;"
+        type="text"
       >
         <option
           value="sunny"
@@ -4829,7 +5114,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c10 c11"
+        class="c11 c12"
         focusable="false"
         viewBox="0 0 20 20"
       >

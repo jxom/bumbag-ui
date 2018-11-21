@@ -2,6 +2,7 @@
 import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
+import Input from 'reakit/Input';
 
 import Spinner from '../Spinner';
 
@@ -85,7 +86,7 @@ const stateProperties = css`
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled.select`
+export default styled(Input)`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;

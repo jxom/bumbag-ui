@@ -67,36 +67,15 @@ export type Props = {
 };
 
 const Input = ({
-  a11yId,
   a11yLabel,
-  autoComplete,
-  autoFocus,
-  className,
-  defaultValue,
-  disabled,
+  a11yId,
   after,
   before,
   isFullWidth,
   isLoading,
   isRequired,
-  max,
-  maxLength,
-  min,
-  minLength,
-  multiple,
-  onBlur,
-  onChange,
-  onFocus,
-  name,
-  pattern,
-  placeholder,
-  readOnly,
   size,
-  spellCheck,
   state,
-  step,
-  type,
-  value,
   ...props
 }: Props) => (
   <InputWrapper isFullWidth={isFullWidth} size={size}>
@@ -115,31 +94,11 @@ const Input = ({
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}
-      autoComplete={autoComplete}
       before={before}
-      autoFocus={autoFocus}
-      defaultValue={defaultValue}
-      disabled={disabled}
       id={a11yId}
       isFullWidth={isFullWidth}
-      max={max}
-      maxLength={maxLength}
-      min={min}
-      minLength={minLength}
-      multiple={multiple}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      name={name}
-      readOnly={readOnly}
-      pattern={pattern}
-      placeholder={placeholder}
       size={size}
-      spellCheck={spellCheck}
       state={state}
-      step={step}
-      type={type}
-      value={value}
       {...props}
     />
     {isLoading && <LoadingSpinner color="text" />}
