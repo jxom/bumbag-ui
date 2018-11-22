@@ -2,6 +2,7 @@
 import styled, { css } from 'reakit/styled';
 import { theme } from 'styled-tools';
 import Heading from 'reakit/Heading';
+import Icon from '../Icon/styled';
 
 const subHeadingProperties = css`
   font-weight: ${theme('fannypack.fontWeights.semibold')};
@@ -74,6 +75,10 @@ export default styled(Heading)`
     & {
       ${theme('fannypack.Heading.h6')};
     }
+  }
+
+  & ${Icon} {
+    top: 0.1em;
   }
 
   & {

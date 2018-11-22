@@ -42,10 +42,13 @@ const linkProperties = css`
     border: 0;
     background: unset;
     color: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    fill: ${props => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
     text-decoration: underline;
 
     &:hover {
       color: ${props =>
+        props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
+      fill: ${props =>
         props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
     }
   }
@@ -58,9 +61,11 @@ const outlinedProperties = css`
     background-color: unset;
     border: 1px solid ${palette()};
     color: ${palette()};
+    fill: ${palette()};
 
     &:hover {
       color: ${props => palette(`${props.palette}Inverted`)(props)};
+      fill: ${props => palette(`${props.palette}Inverted`)(props)};
     }
   }
   & {
@@ -124,6 +129,7 @@ const Button = styled(_Button)`
     darken(0.2, palette(props.palette === 'default' ? 'whiteDarker' : props.palette)(props))};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)(props)};
+  fill: ${props => palette(`${props.palette}Inverted`)(props)};
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fannypack.fontWeights.semibold')};

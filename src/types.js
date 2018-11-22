@@ -269,6 +269,26 @@ export type TableThemeConfig = {
     base?: Stylesheet
   }
 };
+export type TabsThemeConfig = {
+  base?: Stylesheet,
+  Tab?: {
+    base?: Stylesheet,
+    active?: Stylesheet,
+    focus?: Stylesheet,
+    hover?: Stylesheet,
+    boxed?: {
+      base?: Stylesheet,
+      active?: Stylesheet
+    },
+    default?: {
+      base?: Stylesheet,
+      active?: Stylesheet
+    }
+  },
+  Panel?: {
+    base?: Stylesheet
+  }
+};
 export type TagThemeConfig = {
   base?: Stylesheet,
   sizes?: {
@@ -327,6 +347,7 @@ export type ThemeConfig = {
   Spinner?: SpinnerThemeConfig,
   Switch?: SwitchThemeConfig,
   Table?: TableThemeConfig,
+  Tabs?: TabsThemeConfig,
   Tag?: TagThemeConfig,
   Text?: TextThemeConfig,
   Textarea?: TextareaThemeConfig

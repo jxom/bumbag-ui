@@ -31,6 +31,8 @@ const tintAttributes = css`
   border-bottom-width: 0;
   color: ${props =>
     props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
+  fill: ${props =>
+    props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
 `;
 
 export default styled(Box)`

@@ -40,6 +40,7 @@ exports[`renders correctly for a basic input field 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -180,6 +181,7 @@ exports[`renders correctly for a disabled input field 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -321,6 +323,7 @@ exports[`renders correctly for a full width input field 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -484,6 +487,7 @@ exports[`renders correctly for a required field 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -664,6 +668,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -908,6 +913,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -1152,6 +1158,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -1382,6 +1389,7 @@ exports[`renders correctly for an input field with a default value 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -1536,6 +1544,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -1632,6 +1641,7 @@ kbd.c8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
+  fill: #fff;
   padding: 0.1rem 0.2rem;
 }
 
@@ -1668,6 +1678,10 @@ kbd.c8,
 pre.c8,
 samp.c8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c8 .c13 {
+  top: 0.1em;
 }
 
 .c3 {
@@ -1778,6 +1792,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -1874,6 +1889,7 @@ kbd.c12 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
+  fill: #fff;
   padding: 0.1rem 0.2rem;
 }
 
@@ -1910,6 +1926,10 @@ kbd.c12,
 pre.c12,
 samp.c12 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c12 .c13 {
+  top: 0.1em;
 }
 
 .c3 {
@@ -2007,6 +2027,7 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -2122,7 +2143,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2165,6 +2186,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -2192,10 +2214,9 @@ exports[`renders correctly for an input with a after component 1`] = `
   display: inline-flex;
 }
 
-.c7 {
-  fill: #435a6f;
+.c8 {
+  fill: inherit;
   position: relative;
-  top: 0.1em;
   height: 1em;
   width: 1em;
 }
@@ -2215,7 +2236,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   position: relative;
 }
 
-.c8 {
+.c9 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2224,37 +2245,41 @@ exports[`renders correctly for an input with a after component 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8:focus {
+.c9:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::placeholder {
+.c9::placeholder {
   opacity: 0.6;
 }
 
-.c8 {
+.c9 {
   padding-right: 2.3em;
+}
+
+.c11 .c7 {
+  top: 0.1em;
 }
 
 <div
@@ -2275,7 +2300,7 @@ exports[`renders correctly for an input with a after component 1`] = `
         style="right: 0px; z-index: 3;"
       >
         <svg
-          class="c6 c7 c1"
+          class="c6 c7 c8 c1"
           role="img"
           size="1"
           style="size: 1px;"
@@ -2290,7 +2315,7 @@ exports[`renders correctly for an input with a after component 1`] = `
       <input
         aria-invalid="false"
         aria-required="false"
-        class="c8 c9"
+        class="c9 c10"
         style="size: default;"
         type="text"
         value=""
@@ -2315,7 +2340,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2358,6 +2383,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -2385,10 +2411,9 @@ exports[`renders correctly for an input with a before component 1`] = `
   display: inline-flex;
 }
 
-.c7 {
-  fill: #435a6f;
+.c8 {
+  fill: inherit;
   position: relative;
-  top: 0.1em;
   height: 1em;
   width: 1em;
 }
@@ -2408,7 +2433,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   position: relative;
 }
 
-.c8 {
+.c9 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2417,37 +2442,41 @@ exports[`renders correctly for an input with a before component 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8:focus {
+.c9:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::placeholder {
+.c9::placeholder {
   opacity: 0.6;
 }
 
-.c8 {
+.c9 {
   padding-left: 2.3em;
+}
+
+.c11 .c7 {
+  top: 0.1em;
 }
 
 <div
@@ -2468,7 +2497,7 @@ exports[`renders correctly for an input with a before component 1`] = `
         style="z-index: 3;"
       >
         <svg
-          class="c6 c7 c1"
+          class="c6 c7 c8 c1"
           role="img"
           size="1"
           style="size: 1px;"
@@ -2483,7 +2512,7 @@ exports[`renders correctly for an input with a before component 1`] = `
       <input
         aria-invalid="false"
         aria-required="false"
-        class="c8 c9"
+        class="c9 c10"
         style="size: default;"
         type="text"
         value=""
@@ -2548,6 +2577,7 @@ exports[`renders correctly for an optional input field 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -2644,6 +2674,7 @@ kbd.c8 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
+  fill: #fff;
   padding: 0.1rem 0.2rem;
 }
 
@@ -2680,6 +2711,10 @@ kbd.c8,
 pre.c8,
 samp.c8 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c8 .c13 {
+  top: 0.1em;
 }
 
 .c3 {
@@ -2778,6 +2813,7 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -2929,6 +2965,7 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3080,6 +3117,7 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3230,6 +3268,7 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3375,6 +3414,7 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3520,6 +3560,7 @@ exports[`states renders correctly for an input field with state success 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3665,6 +3706,7 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3810,6 +3852,7 @@ exports[`types renders correctly for an input field with type date 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -3950,6 +3993,7 @@ exports[`types renders correctly for an input field with type email 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4090,6 +4134,7 @@ exports[`types renders correctly for an input field with type number 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4230,6 +4275,7 @@ exports[`types renders correctly for an input field with type password 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4370,6 +4416,7 @@ exports[`types renders correctly for an input field with type search 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4510,6 +4557,7 @@ exports[`types renders correctly for an input field with type tel 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4650,6 +4698,7 @@ exports[`types renders correctly for an input field with type time 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -4790,6 +4839,7 @@ exports[`types renders correctly for an input field with type url 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,

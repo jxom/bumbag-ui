@@ -1,0 +1,238 @@
+---
+name: Tabs
+route: /components/tabs
+menu: Components
+---
+
+import { Fragment } from 'react';
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Tabs from './index';
+import Icon from '../Icon';
+import Text from '../Text';
+
+# Tabs
+
+## Import
+
+`import { Tabs } from 'fannypack'`
+
+## Basic Usage
+
+By default, `<Tabs>` renders a `<ul>` that consists of `<Tabs.Tab>` which render `<li>` elements.
+
+Fannypack also has a `<Tabs.Container>` component which you can use to control your tab state.
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs>
+        <Tabs.Tab tab="dogs" {...tabs}>
+          Dogs
+        </Tabs.Tab>
+        <Tabs.Tab tab="cats" {...tabs}>
+          Cats
+        </Tabs.Tab>
+        <Tabs.Tab tab="parrots" {...tabs}>
+          Parrots
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Tab content
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Fragment>
+        <Tabs>
+          <Tabs.Tab tab="dogs" {...tabs}>
+            Dogs
+          </Tabs.Tab>
+          <Tabs.Tab tab="cats" {...tabs}>
+            Cats
+          </Tabs.Tab>
+        </Tabs>
+        <Tabs.Panel tab="dogs" padding="small" {...tabs}>
+          Dogs are awesome
+        </Tabs.Panel>
+        <Tabs.Panel tab="cats" padding="small" {...tabs}>
+          Cats are meh
+        </Tabs.Panel>
+      </Fragment>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Fitted tabs
+
+To make the tabs span the width of the element. Use the `isFitted` prop.
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs isFitted>
+        <Tabs.Tab tab="dogs" {...tabs}>
+          Dogs
+        </Tabs.Tab>
+        <Tabs.Tab tab="cats" {...tabs}>
+          Cats
+        </Tabs.Tab>
+        <Tabs.Tab tab="parrots" {...tabs}>
+          Parrots
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Alignment
+
+Tabs can also be center or right aligned.
+
+### Center aligned
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs align="center">
+        <Tabs.Tab tab="dogs" {...tabs}>
+          Dogs
+        </Tabs.Tab>
+        <Tabs.Tab tab="cats" {...tabs}>
+          Cats
+        </Tabs.Tab>
+        <Tabs.Tab tab="parrots" {...tabs}>
+          Parrots
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+### Right aligned
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs align="right">
+        <Tabs.Tab tab="dogs" {...tabs}>
+          Dogs
+        </Tabs.Tab>
+        <Tabs.Tab tab="cats" {...tabs}>
+          Cats
+        </Tabs.Tab>
+        <Tabs.Tab tab="parrots" {...tabs}>
+          Parrots
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Icons
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs>
+        <Tabs.Tab tab="documents" {...tabs}>
+          <Icon icon="document" marginRight="xxsmall" /> Documents
+        </Tabs.Tab>
+        <Tabs.Tab tab="messages" {...tabs}>
+          <Icon icon="chat" marginRight="xxsmall" /> Messages
+        </Tabs.Tab>
+        <Tabs.Tab tab="profile" {...tabs}>
+          <Icon icon="user" marginRight="xxsmall" /> Profile
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Boxed tabs
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs type="boxed">
+        <Tabs.Tab tab="documents" {...tabs}>
+          <Icon icon="document" marginRight="xxsmall" /> Documents
+        </Tabs.Tab>
+        <Tabs.Tab tab="messages" {...tabs}>
+          <Icon icon="chat" marginRight="xxsmall" /> Messages
+        </Tabs.Tab>
+        <Tabs.Tab tab="profile" {...tabs}>
+          <Icon icon="user" marginRight="xxsmall" /> Profile
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## Accessibility
+
+You can use the keyboard arrow buttons to navigate between the tabs.
+
+<Playground>
+  <Tabs.Container>
+    {tabs => (
+      <Tabs>
+        <Tabs.Tab tab="dogs" {...tabs}>
+          Dogs
+        </Tabs.Tab>
+        <Tabs.Tab tab="cats" {...tabs}>
+          Cats
+        </Tabs.Tab>
+        <Tabs.Tab tab="parrots" {...tabs}>
+          Parrots
+        </Tabs.Tab>
+      </Tabs>
+    )}
+  </Tabs.Container>
+</Playground>
+
+## `<Tabs>` Props
+
+<PropsTable of={Tabs} />
+
+## `<Tabs.Tab>` Props
+
+<PropsTable of={Tabs.Tab} />
+
+## `<Tabs.Panel>` Props
+
+<PropsTable of={Tabs.Panel} />
+
+## `<Tabs.Container>` Props
+
+Click [here](https://reakit.io/components/tabs/tabscontainer)
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Tab: {
+    base: string | Object,
+    active: string | Object,
+    focus: string | Object,
+    hover: string | Object,
+    boxed: {
+      base: string | Object,
+      active: string | Object
+    },
+    default: {
+      base: string | Object,
+      active: string | Object
+    }
+  }
+  Panel: {
+    base: string | Object
+  }
+}
+```

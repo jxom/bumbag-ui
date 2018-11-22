@@ -16,6 +16,7 @@ export default styled(Box)`
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: ${palette('text')};
+  fill: ${palette('text')};
 
   *,
   *::before,

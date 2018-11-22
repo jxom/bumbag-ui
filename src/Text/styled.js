@@ -1,6 +1,7 @@
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 import { theme } from 'styled-tools';
+import Icon from '../Icon/styled';
 
 export default styled(Box)`
   abbr& {
@@ -17,6 +18,7 @@ export default styled(Box)`
     background: #454d5d;
     border-radius: 0.1rem;
     color: #fff;
+    fill: #fff;
     padding: 0.1rem 0.2rem;
   }
 
@@ -52,6 +54,10 @@ export default styled(Box)`
   pre&,
   samp& {
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
+  }
+
+  & ${Icon} {
+    top: 0.1em;
   }
 
   ${theme('fannypack.Text.base')};

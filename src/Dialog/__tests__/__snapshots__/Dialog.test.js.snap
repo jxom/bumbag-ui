@@ -26,6 +26,7 @@ exports[`renders correctly for a default dialog 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -77,16 +78,21 @@ h6.c7 {
   font-size: 1rem;
 }
 
+.c7 .c8 {
+  top: 0.1em;
+}
+
 .c7 {
   font-weight: 600;
 }
 
 .c3 {
+  background-color: white;
+  border-radius: 3px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 3px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -223,6 +229,7 @@ exports[`renders correctly for a dialog with a close button 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -245,6 +252,7 @@ exports[`renders correctly for a dialog with a close button 1`] = `
   border: 1px solid #bfbfbf;
   border-radius: 4px;
   color: #435a6f;
+  fill: #435a6f;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -278,12 +286,21 @@ exports[`renders correctly for a dialog with a close button 1`] = `
   border: 0;
   background: unset;
   color: #435a6f;
+  fill: #435a6f;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c8:hover {
   color: #000;
+  fill: #000;
+}
+
+.c11 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
 }
 
 .c6 {
@@ -324,23 +341,28 @@ h6.c6 {
   font-size: 1rem;
 }
 
+.c6 .c10 {
+  top: 0.1em;
+}
+
 .c6 {
   font-weight: 600;
 }
 
 .c3 {
+  background-color: white;
+  border-radius: 3px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 3px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   border: 1px solid #e6e6e6;
 }
 
-.c11 {
+.c12 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
@@ -380,14 +402,6 @@ h6.c6 {
 
 .c2 {
   border-radius: 5px;
-}
-
-.c10 {
-  fill: #435a6f;
-  position: relative;
-  top: 0.1em;
-  height: 1em;
-  width: 1em;
 }
 
 @media (max-width:480px) {
@@ -442,7 +456,7 @@ h6.c6 {
       >
         <span>
           <svg
-            class="c10 c1"
+            class="c10 c11 c1"
             role="img"
             size="1"
             style="size: 1px;"
@@ -457,7 +471,7 @@ h6.c6 {
       </button>
     </div>
     <div
-      class="c11 c1"
+      class="c12 c1"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
     </div>
@@ -491,6 +505,7 @@ exports[`renders correctly for a dialog with a footer 1`] = `
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #435a6f;
+  fill: #435a6f;
 }
 
 .c0 *,
@@ -542,16 +557,21 @@ h6.c7 {
   font-size: 1rem;
 }
 
+.c7 .c9 {
+  top: 0.1em;
+}
+
 .c7 {
   font-weight: 600;
 }
 
 .c3 {
+  background-color: white;
+  border-radius: 3px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 3px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;

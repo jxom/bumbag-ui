@@ -3,8 +3,9 @@ import styled, { css } from '../styled';
 import { Box } from '../primitives';
 
 const Pane = styled(Box)`
-  display: inline-flex;
+  background-color: white;
   border-radius: 3px;
+  display: inline-flex;
   flex-wrap: wrap;
 
   ${props =>

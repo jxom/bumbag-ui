@@ -33,6 +33,7 @@ export { Set } from './Set';
 export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';
+export { Tabs } from './Tabs';
 export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
