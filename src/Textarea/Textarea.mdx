@@ -7,6 +7,7 @@ menu: Form
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Textarea from './index';
+import TextareaField from './TextareaField';
 import Component from '@reactions/component';
 
 # Textarea
@@ -93,12 +94,40 @@ Using an accessibility label (`a11yLabel`), will enable screen readers to read t
 
 <PropsTable of={Textarea} />
 
+# TextareaField
+
+## Import
+
+`import { TextareaField } from 'fannypack'`
+
+## Basic Usage
+
+The `<TextareaField>` component contains of the [`<Textarea>` component](#input) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Textarea>` props](/form/textarea#textarea-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <TextareaField a11yId="description" label="Description" />
+</Playground>
+
+## `<TextareaField>` Props
+
+<PropsTable of={TextareaField} />
+
 ## Theming
 
 ### Schema
 
 ```jsx
 {
-  base: string | Object
+  base: string | Object,
+  disabled: string | Object,
+  focus: string | Object,
+  placeholder: string | Object,
+  sizes: {
+    small: string | Object,
+    medium: string | Object,
+    large: string | Object
+  }
 }
 ```
