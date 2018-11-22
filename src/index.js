@@ -7,6 +7,7 @@ export { ThemeProvider } from './ThemeProvider';
 export { Alert } from './Alert';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';
+export { Card } from './Card';
 export { Checkbox, CheckboxField } from './Checkbox';
 export { Code, HighlightedCode } from './Code';
 export { Column } from './Column';

@@ -1,0 +1,90 @@
+---
+name: Card
+route: /components/card
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Card from '../Card';
+import Button, { ActionButtons } from '../Button';
+import Set from '../Set';
+
+# Card
+
+## Import
+
+`import { Card } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Card>Hello world</Card>
+</Playground>
+
+## Header
+
+You can render a header for the card using the `title` prop.
+
+<Playground>
+  <Card title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Card>
+</Playground>
+
+## Header with actions
+
+You can render a header with actions for the card using the `headerActions` prop.
+
+<Playground>
+  <Card title="This is a title" headerActions={<Set><Button palette="primary" kind="link">Action 1</Button><Button palette="primary" kind="link">Action 2</Button></Set>}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Card>
+</Playground>
+
+## Footer
+
+You can render a footer for the card using the `footer` prop.
+
+<Playground>
+  <Card title="This is a title" footer={<ActionButtons />}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Card>
+</Playground>
+
+## Full width
+
+<Playground>
+  <Card isFullWidth>Hello world</Card>
+</Playground>
+
+## Props
+
+<PropsTable of={Card} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Header: {
+    base: string | Object
+  },
+  Content: {
+    base: string | Object
+  },
+  Footer: {
+    base: string | Object
+  },
+  Title: {
+    base: string | Object
+  }
+}
+```
