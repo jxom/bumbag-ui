@@ -17,6 +17,10 @@ export const SpinnerWrapper = styled(Box)`
     opacity: 0;
   }
 `;
+const Text = styled.span`
+  align-items: center;
+  display: inline-flex;
+`;
 
 type Props = {
   as?: any,
@@ -60,7 +64,7 @@ export const Button = ({
           <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
         </SpinnerWrapper>
       ) : null}
-      <span>{children}</span>
+      <Text>{children}</Text>
     </_Button>
   );
 };
