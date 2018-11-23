@@ -37,3 +37,8 @@ it('renders correctly for a list of tags', () => {
   );
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly for an outlined tag', () => {
+  const { container } = render(<Tag kind="outlined">Outlined tag</Tag>);
+  expect(container.firstChild).toMatchSnapshot();
+});
