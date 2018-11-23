@@ -1,6 +1,6 @@
 export * from './primitives';
 
-export { styled, css } from './styled';
+export { styled, css, injectGlobal } from './styled';
 export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';
 
