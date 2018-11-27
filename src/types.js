@@ -16,6 +16,9 @@ export type AlertThemeConfig = {
     base?: Stylesheet
   }
 };
+export type BackdropThemeConfig = {
+  base?: Stylesheet
+};
 export type BlockquoteThemeConfig = {
   base?: Stylesheet
 };
@@ -179,6 +182,18 @@ export type ListThemeConfig = {
 export type NavigationThemeConfig = {
   base?: Stylesheet
 };
+export type OverlayThemeConfig = {
+  base?: Stylesheet,
+  Hide?: {
+    base?: Stylesheet
+  },
+  Show?: {
+    base?: Stylesheet
+  },
+  Toggle?: {
+    base?: Stylesheet
+  }
+};
 export type PaneThemeConfig = {
   base?: Stylesheet,
   border?: {
@@ -333,6 +348,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig,
 
   Alert?: AlertThemeConfig,
+  Backdrop?: BackdropThemeConfig,
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
   Checkbox?: CheckboxThemeConfig,
@@ -353,6 +369,7 @@ export type ThemeConfig = {
   Link?: LinkThemeConfig,
   List?: ListThemeConfig,
   Navigation?: NavigationThemeConfig,
+  Overlay?: OverlayThemeConfig,
   Pane?: PaneThemeConfig,
   Paragraph?: ParagraphThemeConfig,
   Radio?: RadioThemeConfig,

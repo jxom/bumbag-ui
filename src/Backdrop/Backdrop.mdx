@@ -1,0 +1,110 @@
+---
+name: Backdrop
+route: /utils/backdrop
+menu: Utilities
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Backdrop from './index';
+import Button from '../Button';
+import Pane from '../Pane';
+import Overlay from '../Overlay';
+
+# Backdrop
+
+## Import
+
+`import { Backdrop } from 'fannypack'`
+
+## Basic Usage
+
+`<Backdrop>` uses the [`<Hidden>` component](/utils/hidden) internally, and adds click functionality (as it is a button).
+
+In the example below, we are leveraging the [`<Overlay>` component](/utils/overlay) to help us to show/hide the backdrop.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide, toggle }) => (
+      <Box>
+        <Button onClick={show}>Show backdrop</Button>
+        <Backdrop visible={visible} />
+        <Overlay visible={visible}>
+          <Button onClick={hide}>Hide backdrop</Button>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## Animations
+
+You can also add animations to backdrop if you like.
+
+### Expand
+
+Have an expand-like animation by using the `expand` prop. The `expand` prop can take a boolean, or a position of `center`, `left`, `right`, `top` or `bottom`.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide, toggle }) => (
+      <Box>
+        <Button onClick={show}>Show backdrop</Button>
+        <Backdrop expand visible={visible} />
+        <Overlay visible={visible}>
+          <Button onClick={hide}>Hide backdrop</Button>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+### Fade
+
+Have a fade animation by using the `fade` prop.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide, toggle }) => (
+      <Box>
+        <Button onClick={show}>Show backdrop</Button>
+        <Backdrop fade visible={visible} />
+        <Overlay visible={visible}>
+          <Button onClick={hide}>Hide backdrop</Button>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+### Slide
+
+You can have a slide animation with the `slide` prop. The `slide` prop can take a boolean, or a position of `left`, `right`, `top` or `bottom`.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide, toggle }) => (
+      <Box>
+        <Button onClick={show}>Show backdrop</Button>
+        <Backdrop slide="bottom" visible={visible} />
+        <Overlay visible={visible}>
+          <Button onClick={hide}>Hide backdrop</Button>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## Props
+
+<PropsTable of={Backdrop} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object;
+}
+```

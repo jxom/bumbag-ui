@@ -1,0 +1,72 @@
+---
+name: Overlay
+route: /utils/overlay
+menu: Utilities
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Overlay from './index';
+import Button from '../Button';
+import Backdrop from '../Backdrop';
+import Pane from '../Pane';
+
+# Overlay
+
+## Import
+
+`import { Overlay } from 'fannypack'`
+
+## Basic Usage
+
+The `<Overlay>` component provides a intuitive way to handle overlay state.
+
+It is recommended to use the overlay helper components (`<Overlay.Show>`, `<Overlay.Hide>`) when building overlays to leverage accessibility features they provide like so:
+
+<Playground>
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button as={Overlay.Show} {...overlay}>
+          Click me
+        </Button>
+        <Backdrop fade as={Overlay.Hide} {...overlay} />
+        <Overlay fade slide {...overlay}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+An extended version of the `overlay` render prop is seen below:
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide }) => (
+      <Box>
+        <Button onClick={show}>
+          Click me
+        </Button>
+        <Backdrop fade visible={visible} onClick={hide} />
+        <Overlay fade slide visible={visible}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## Props
+
+<PropsTable of={Overlay} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object;
+}
+```
