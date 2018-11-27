@@ -296,7 +296,18 @@ exports[`renders correctly for a dialog with a close button 1`] = `
   fill: #000;
 }
 
-.c11 {
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c12 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -341,7 +352,7 @@ h6.c6 {
   font-size: 1rem;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   top: 0.1em;
 }
 
@@ -362,7 +373,7 @@ h6.c6 {
   border: 1px solid #e6e6e6;
 }
 
-.c12 {
+.c13 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
@@ -454,9 +465,11 @@ h6.c6 {
         kind="link"
         style="size: default;"
       >
-        <span>
+        <span
+          class="c10"
+        >
           <svg
-            class="c10 c11 c1"
+            class="c11 c12 c1"
             role="img"
             size="1"
             style="size: 1px;"
@@ -471,7 +484,7 @@ h6.c6 {
       </button>
     </div>
     <div
-      class="c12 c1"
+      class="c13 c1"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
     </div>
