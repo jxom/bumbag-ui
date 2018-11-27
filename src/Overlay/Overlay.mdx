@@ -7,6 +7,10 @@ menu: Utilities
 import { Playground, PropsTable } from 'docz';
 import { Box } from '../primitives/index';
 import Overlay from './index';
+import OverlayContainer from './OverlayContainer';
+import OverlayHide from './OverlayHide';
+import OverlayShow from './OverlayShow';
+import OverlayToggle from './OverlayToggle';
 import Button from '../Button';
 import Backdrop from '../Backdrop';
 import Pane from '../Pane';
@@ -19,7 +23,7 @@ import Pane from '../Pane';
 
 ## Basic Usage
 
-The `<Overlay>` component provides a intuitive way to handle overlay state.
+The `<Overlay>` component provides a intuitive way to handle overlay state. It is an export of [Reakit's `<Overlay>` component](https://reakit.io/components/overlay).
 
 It is recommended to use the overlay helper components (`<Overlay.Show>`, `<Overlay.Hide>`) when building overlays to leverage accessibility features they provide like so:
 
@@ -39,15 +43,87 @@ It is recommended to use the overlay helper components (`<Overlay.Show>`, `<Over
   </Overlay.Container>
 </Playground>
 
-An extended version of the `overlay` render prop is seen below:
+## Animations
+
+You can also add animations to backdrop if you like.
+
+### Expand
+
+Have an expand-like animation by using the `expand` prop. The `expand` prop can take a boolean, or a position of `center`, `left`, `right`, `top` or `bottom`.
+
+<Playground>
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button as={Overlay.Show} {...overlay}>
+          Click me
+        </Button>
+        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Overlay expand {...overlay}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+### Fade
+
+Have a fade animation by using the `fade` prop.
+
+<Playground>
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button as={Overlay.Show} {...overlay}>
+          Click me
+        </Button>
+        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Overlay fade {...overlay}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+### Slide
+
+You can have a slide animation with the `slide` prop. The `slide` prop can take a boolean, or a position of `left`, `right`, `top` or `bottom`.
+
+<Playground>
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button as={Overlay.Show} {...overlay}>
+          Click me
+        </Button>
+        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Overlay fade slide="bottom" {...overlay}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## `<Overlay>` Props
+
+<PropsTable of={Overlay} />
+
+# Overlay.Container
+
+## Basic Usage
+
+The `<Overlay.Container>` component is a direct export from [Reakit](https://reakit.io). It manages overlay state via a render prop pattern.
+
+An extended version of the `overlay` render prop shown in the above examples is shown below:
 
 <Playground>
   <Overlay.Container>
     {({ visible, show, hide }) => (
       <Box>
-        <Button onClick={show}>
-          Click me
-        </Button>
+        <Button onClick={show}>Click me</Button>
         <Backdrop fade visible={visible} onClick={hide} />
         <Overlay fade slide visible={visible}>
           <Pane padding="1rem">Hello!</Pane>
@@ -57,9 +133,69 @@ An extended version of the `overlay` render prop is seen below:
   </Overlay.Container>
 </Playground>
 
-## Props
+## `<Overlay.Container>` Props
 
-<PropsTable of={Overlay} />
+<PropsTable of={OverlayContainer} />
+
+# Overlay.Hide & Overlay.Show
+
+## Basic Usage
+
+The `<Overlay.Show>` & `<Overlay.Hide>` components are also a direct export from [Reakit](https://reakit.io/components/overlay/overlayshow).
+
+The `<Overlay.Show>` component provides an intuitive way to be able to show an overlay. It is a button by default, and passing it the `show` prop will enable it to handle the 'toggle on' logic of the overlay.
+
+The `<Overlay.Hide>` does the same thing, but the opposite.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, show, hide }) => (
+      <Box>
+        <Overlay.Show show={show}>Click to show</Overlay.Show>
+        <Overlay visible={visible}>
+          <Pane border="2px solid black" padding="1rem">
+            <Overlay.Hide hide={hide}>Click to hide</Overlay.Hide>
+          </Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## `<Overlay.Show>` Props
+
+<PropsTable of={OverlayShow} />
+
+## `<Overlay.Hide>` Props
+
+<PropsTable of={OverlayHide} />
+
+# Overlay.Toggle
+
+## Basic Usage
+
+The `<Overlay.Toggle>` component is also a direct export from [Reakit](https://reakit.io/components/overlay/overlayshow).
+
+The `<Overlay.Toggle>` component provides an intuitive way to be able to toggle an overlay. It is a button by default, and passing it the `toggle` prop will enable it to handle the 'toggle' logic of the overlay.
+
+<Playground>
+  <Overlay.Container>
+    {({ visible, toggle }) => (
+      <Box>
+        <Overlay.Toggle toggle={toggle}>Click to toggle</Overlay.Toggle>
+        <Overlay visible={visible}>
+          <Pane border="2px solid black" padding="1rem">
+            Hello!
+          </Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
+## `<Overlay.Toggle>` Props
+
+<PropsTable of={OverlayToggle} />
 
 ## Theming
 
@@ -67,6 +203,15 @@ An extended version of the `overlay` render prop is seen below:
 
 ```jsx
 {
-  base: string | Object;
+  base: string | Object,
+  Hide: {
+    base: string | Object
+  },
+  Show: {
+    base: string | Object
+  },
+  Toggle: {
+    base: string | Object
+  }
 }
 ```
