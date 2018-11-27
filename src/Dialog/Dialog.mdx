@@ -33,7 +33,7 @@ import Dialog from './index';
 You can render a footer for the dialog using the `footer` prop.
 
 <Playground>
-  <Dialog title="This is a title" footer={<ActionButtons />}>
+  <Dialog title="This is a title" footer={<ActionButtons justifyContent="flex-end" />}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -45,7 +45,7 @@ You can render a footer for the dialog using the `footer` prop.
 To render a close icon on a dialog, use the `showCloseButton` prop.
 
 <Playground>
-  <Dialog onClickClose={() => console.log('close')} showCloseButton title="This is a title" footer={<ActionButtons />}>
+  <Dialog onClickClose={() => console.log('close')} showCloseButton title="This is a title" footer={<ActionButtons justifyContent="flex-end" />}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.

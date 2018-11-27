@@ -40,13 +40,13 @@ const ActionButtons = ({
   ...props
 }: Props) => (
   <Set {...props}>
-    <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} type={type} {...submitProps}>
-      {/* $FlowFixMe */}
-      {submitText}
-    </Button>
     <Button onClick={onClickCancel} {...cancelProps}>
       {/* $FlowFixMe */}
       {cancelText}
+    </Button>
+    <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} type={type} {...submitProps}>
+      {/* $FlowFixMe */}
+      {submitText}
     </Button>
   </Set>
 );
