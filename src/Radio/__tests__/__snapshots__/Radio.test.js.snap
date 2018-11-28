@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly for a basic radio 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -14,7 +14,7 @@ exports[`renders correctly for a basic radio 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -27,7 +27,7 @@ exports[`renders correctly for a basic radio 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -41,44 +41,18 @@ exports[`renders correctly for a basic radio 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -86,50 +60,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c10 {
+.c7 .c9 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -138,7 +112,7 @@ samp.c8 {
   width: 1em;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -148,26 +122,26 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -181,11 +155,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,33 +170,29 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="false"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;
 
 exports[`renders correctly for a disabled radio 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -235,7 +205,7 @@ exports[`renders correctly for a disabled radio 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -248,7 +218,7 @@ exports[`renders correctly for a disabled radio 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -262,44 +232,18 @@ exports[`renders correctly for a disabled radio 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -307,50 +251,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c10 {
+.c7 .c9 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -359,7 +303,7 @@ samp.c8 {
   width: 1em;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -369,26 +313,26 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -402,11 +346,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -417,34 +361,30 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="false"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      disabled=""
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    disabled=""
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;
 
 exports[`states renders correctly for an radio with state danger 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -457,7 +397,7 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -470,7 +410,7 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -484,44 +424,18 @@ exports[`states renders correctly for an radio with state danger 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -529,50 +443,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -581,31 +495,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #e24c67;
   box-shadow: #e24c67 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -619,11 +533,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -633,30 +547,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -670,11 +584,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -685,33 +599,29 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="true"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="true"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;
 
 exports[`states renders correctly for an radio with state primary 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -724,7 +634,7 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -737,7 +647,7 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -751,44 +661,18 @@ exports[`states renders correctly for an radio with state primary 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -796,50 +680,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -848,31 +732,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -886,11 +770,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -900,30 +784,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -937,11 +821,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -952,33 +836,29 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="false"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;
 
 exports[`states renders correctly for an radio with state success 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -991,7 +871,7 @@ exports[`states renders correctly for an radio with state success 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1004,7 +884,7 @@ exports[`states renders correctly for an radio with state success 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1018,44 +898,18 @@ exports[`states renders correctly for an radio with state success 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1063,50 +917,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -1115,31 +969,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #4ca26c;
   box-shadow: #4ca26c 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -1153,11 +1007,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1167,30 +1021,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -1204,11 +1058,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1219,33 +1073,29 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="false"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;
 
 exports[`states renders correctly for an radio with state warning 1`] = `
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1258,7 +1108,7 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1271,7 +1121,7 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1285,44 +1135,18 @@ exports[`states renders correctly for an radio with state warning 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1330,50 +1154,50 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.1em;
 }
 
-.c3 {
+.c1 {
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -1382,31 +1206,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #ffc94c;
   box-shadow: #ffc94c 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -1420,11 +1244,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1434,30 +1258,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #7467c0;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background: #7467c0;
   border-radius: 50%;
   content: '';
@@ -1471,11 +1295,11 @@ samp.c8 {
   width: 8px;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   background: #9a9a9a;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1486,27 +1310,23 @@ samp.c8 {
   align-items: center;
 }
 
-<div
-  class="c0 c1"
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  aria-required="false"
+  class="c0 c1 c2"
 >
-  <label
-    aria-describedby="label"
-    aria-invalid="false"
-    aria-required="false"
-    class="c2 c3 c1"
-  >
-    <input
-      class="c4 c5"
-      type="radio"
-      value=""
-    />
-    <div
-      class="c6 c7 c1"
-    />
-    <span
-      class="c8 c9"
-      id="label"
-    />
-  </label>
-</div>
+  <input
+    class="c3 c4"
+    type="radio"
+    value=""
+  />
+  <div
+    class="c5 c6 c2"
+  />
+  <span
+    class="c7 c8"
+    id="label"
+  />
+</label>
 `;

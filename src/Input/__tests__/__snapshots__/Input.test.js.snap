@@ -14,7 +14,7 @@ exports[`renders correctly for a basic input 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -28,32 +28,6 @@ exports[`renders correctly for a basic input 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,7 +43,7 @@ exports[`renders correctly for a basic input 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -78,51 +52,47 @@ exports[`renders correctly for a basic input 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -140,7 +110,7 @@ exports[`renders correctly for a disabled input 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -154,32 +124,6 @@ exports[`renders correctly for a disabled input 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,7 +139,7 @@ exports[`renders correctly for a disabled input 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -204,52 +148,48 @@ exports[`renders correctly for a disabled input 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
+    disabled=""
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      disabled=""
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -267,7 +207,7 @@ exports[`renders correctly for a full width input 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -281,32 +221,6 @@ exports[`renders correctly for a full width input 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,7 +237,7 @@ exports[`renders correctly for a full width input 1`] = `
   width: 100%;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -332,55 +246,51 @@ exports[`renders correctly for a full width input 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   width: 100%;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -398,7 +308,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -411,7 +321,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -424,37 +334,11 @@ exports[`renders correctly for an input with a after component 1`] = `
   color: inherit;
 }
 
-.c4.c4.c4 {
+.c3.c3.c3 {
   position: absolute;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,21 +349,21 @@ exports[`renders correctly for an input with a after component 1`] = `
   display: inline-flex;
 }
 
-.c6 {
+.c5 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.c5 {
+.c4 {
   fill: #708da8;
   height: 2.5em;
   margin: 0 0.75em;
   top: 0;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -495,7 +379,7 @@ exports[`renders correctly for an input with a after component 1`] = `
   position: relative;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -504,72 +388,68 @@ exports[`renders correctly for an input with a after component 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c7:focus {
+.c6:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   opacity: 0.6;
 }
 
-.c7 {
+.c6 {
   padding-right: 2.3em;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
   <div
-    class="c2 c1"
-    style="size: default;"
+    class="c2 c3"
+    style="right: 0px; z-index: 3;"
   >
-    <div
-      class="c3 c4"
-      style="right: 0px; z-index: 3;"
+    <svg
+      class="c4 c5 c1"
+      role="img"
+      size="1"
+      style="size: 1px;"
+      viewBox="0 0 16 16"
     >
-      <svg
-        class="c5 c6 c1"
-        role="img"
-        size="1"
-        style="size: 1px;"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
-          fill-rule="even-odd"
-        />
-      </svg>
-    </div>
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c7 c8"
-      style="size: default;"
-      type="text"
-      value=""
-    />
+      <path
+        d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+        fill-rule="even-odd"
+      />
+    </svg>
   </div>
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c6 c7"
+    style="size: default;"
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -587,7 +467,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -600,7 +480,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -613,37 +493,11 @@ exports[`renders correctly for an input with a before component 1`] = `
   color: inherit;
 }
 
-.c4.c4.c4 {
+.c3.c3.c3 {
   position: absolute;
 }
 
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -654,21 +508,21 @@ exports[`renders correctly for an input with a before component 1`] = `
   display: inline-flex;
 }
 
-.c6 {
+.c5 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.c5 {
+.c4 {
   fill: #708da8;
   height: 2.5em;
   margin: 0 0.75em;
   top: 0;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,7 +538,7 @@ exports[`renders correctly for an input with a before component 1`] = `
   position: relative;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -693,72 +547,68 @@ exports[`renders correctly for an input with a before component 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c7:focus {
+.c6:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   opacity: 0.6;
 }
 
-.c7 {
+.c6 {
   padding-left: 2.3em;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
   <div
-    class="c2 c1"
-    style="size: default;"
+    class="c2 c3"
+    style="z-index: 3;"
   >
-    <div
-      class="c3 c4"
-      style="z-index: 3;"
+    <svg
+      class="c4 c5 c1"
+      role="img"
+      size="1"
+      style="size: 1px;"
+      viewBox="0 0 16 16"
     >
-      <svg
-        class="c5 c6 c1"
-        role="img"
-        size="1"
-        style="size: 1px;"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
-          fill-rule="even-odd"
-        />
-      </svg>
-    </div>
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c7 c8"
-      style="size: default;"
-      type="text"
-      value=""
-    />
+      <path
+        d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+        fill-rule="even-odd"
+      />
+    </svg>
   </div>
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c6 c7"
+    style="size: default;"
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -776,7 +626,7 @@ exports[`renders correctly for an input with a default value 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -790,32 +640,6 @@ exports[`renders correctly for an input with a default value 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,7 +655,7 @@ exports[`renders correctly for an input with a default value 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -840,51 +664,47 @@ exports[`renders correctly for an input with a default value 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value="Awesome value"
-    />
-  </div>
+    type="text"
+    value="Awesome value"
+  />
 </div>
 `;
 
@@ -902,7 +722,7 @@ exports[`renders correctly for an input with a placeholder 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -916,32 +736,6 @@ exports[`renders correctly for an input with a placeholder 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -957,7 +751,7 @@ exports[`renders correctly for an input with a placeholder 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -966,52 +760,48 @@ exports[`renders correctly for an input with a placeholder 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
+    placeholder="Awesome placeholder"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      placeholder="Awesome placeholder"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1029,7 +819,7 @@ exports[`sizes renders correctly for an input with size large 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1043,32 +833,6 @@ exports[`sizes renders correctly for an input with size large 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1084,11 +848,11 @@ exports[`sizes renders correctly for an input with size large 1`] = `
   position: relative;
 }
 
-.c2 {
+.c0 {
   font-size: 1.5rem;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1097,36 +861,36 @@ exports[`sizes renders correctly for an input with size large 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 + .c5 {
+.c2 + .c4 {
   width: 25px;
   height: 25px;
   top: 16px;
@@ -1135,20 +899,16 @@ exports[`sizes renders correctly for an input with size large 1`] = `
 
 <div
   class="c0 c1"
+  style="size: large;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: large;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: large;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1166,7 +926,7 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1180,32 +940,6 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,11 +955,11 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
   position: relative;
 }
 
-.c2 {
+.c0 {
   font-size: 1.25rem;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1234,36 +968,36 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 + .c5 {
+.c2 + .c4 {
   width: 20px;
   height: 20px;
   top: 15px;
@@ -1272,20 +1006,16 @@ exports[`sizes renders correctly for an input with size medium 1`] = `
 
 <div
   class="c0 c1"
+  style="size: medium;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: medium;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: medium;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1303,7 +1033,7 @@ exports[`sizes renders correctly for an input with size small 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1317,32 +1047,6 @@ exports[`sizes renders correctly for an input with size small 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1358,11 +1062,11 @@ exports[`sizes renders correctly for an input with size small 1`] = `
   position: relative;
 }
 
-.c2 {
+.c0 {
   font-size: 0.8rem;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1371,36 +1075,36 @@ exports[`sizes renders correctly for an input with size small 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 + .c5 {
+.c2 + .c4 {
   width: 10px;
   height: 10px;
   top: 10px;
@@ -1408,20 +1112,16 @@ exports[`sizes renders correctly for an input with size small 1`] = `
 
 <div
   class="c0 c1"
+  style="size: small;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: small;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: small;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1439,7 +1139,7 @@ exports[`states renders correctly for an input with state danger 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1453,32 +1153,6 @@ exports[`states renders correctly for an input with state danger 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1494,7 +1168,7 @@ exports[`states renders correctly for an input with state danger 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1503,56 +1177,52 @@ exports[`states renders correctly for an input with state danger 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #e24c67;
   box-shadow: #e24c67 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="true"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="true"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1570,7 +1240,7 @@ exports[`states renders correctly for an input with state primary 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1584,32 +1254,6 @@ exports[`states renders correctly for an input with state primary 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1625,7 +1269,7 @@ exports[`states renders correctly for an input with state primary 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1634,56 +1278,52 @@ exports[`states renders correctly for an input with state primary 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1701,7 +1341,7 @@ exports[`states renders correctly for an input with state success 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1715,32 +1355,6 @@ exports[`states renders correctly for an input with state success 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1756,7 +1370,7 @@ exports[`states renders correctly for an input with state success 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1765,56 +1379,52 @@ exports[`states renders correctly for an input with state success 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #4ca26c;
   box-shadow: #4ca26c 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1832,7 +1442,7 @@ exports[`states renders correctly for an input with state warning 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1846,32 +1456,6 @@ exports[`states renders correctly for an input with state warning 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1887,7 +1471,7 @@ exports[`states renders correctly for an input with state warning 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1896,56 +1480,52 @@ exports[`states renders correctly for an input with state warning 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #ffc94c;
   box-shadow: #ffc94c 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="text"
-      value=""
-    />
-  </div>
+    type="text"
+    value=""
+  />
 </div>
 `;
 
@@ -1963,7 +1543,7 @@ exports[`types renders correctly for an input with type date 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1977,32 +1557,6 @@ exports[`types renders correctly for an input with type date 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2018,7 +1572,7 @@ exports[`types renders correctly for an input with type date 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2027,51 +1581,47 @@ exports[`types renders correctly for an input with type date 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="date"
-      value=""
-    />
-  </div>
+    type="date"
+    value=""
+  />
 </div>
 `;
 
@@ -2089,7 +1639,7 @@ exports[`types renders correctly for an input with type email 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2103,32 +1653,6 @@ exports[`types renders correctly for an input with type email 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2144,7 +1668,7 @@ exports[`types renders correctly for an input with type email 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2153,51 +1677,47 @@ exports[`types renders correctly for an input with type email 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="email"
-      value=""
-    />
-  </div>
+    type="email"
+    value=""
+  />
 </div>
 `;
 
@@ -2215,7 +1735,7 @@ exports[`types renders correctly for an input with type number 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2229,32 +1749,6 @@ exports[`types renders correctly for an input with type number 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2270,7 +1764,7 @@ exports[`types renders correctly for an input with type number 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2279,51 +1773,47 @@ exports[`types renders correctly for an input with type number 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="number"
-      value=""
-    />
-  </div>
+    type="number"
+    value=""
+  />
 </div>
 `;
 
@@ -2341,7 +1831,7 @@ exports[`types renders correctly for an input with type password 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2355,32 +1845,6 @@ exports[`types renders correctly for an input with type password 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2396,7 +1860,7 @@ exports[`types renders correctly for an input with type password 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2405,51 +1869,47 @@ exports[`types renders correctly for an input with type password 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="password"
-      value=""
-    />
-  </div>
+    type="password"
+    value=""
+  />
 </div>
 `;
 
@@ -2467,7 +1927,7 @@ exports[`types renders correctly for an input with type search 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2481,32 +1941,6 @@ exports[`types renders correctly for an input with type search 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2522,7 +1956,7 @@ exports[`types renders correctly for an input with type search 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2531,51 +1965,47 @@ exports[`types renders correctly for an input with type search 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="search"
-      value=""
-    />
-  </div>
+    type="search"
+    value=""
+  />
 </div>
 `;
 
@@ -2593,7 +2023,7 @@ exports[`types renders correctly for an input with type tel 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2607,32 +2037,6 @@ exports[`types renders correctly for an input with type tel 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2648,7 +2052,7 @@ exports[`types renders correctly for an input with type tel 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2657,51 +2061,47 @@ exports[`types renders correctly for an input with type tel 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="tel"
-      value=""
-    />
-  </div>
+    type="tel"
+    value=""
+  />
 </div>
 `;
 
@@ -2719,7 +2119,7 @@ exports[`types renders correctly for an input with type time 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2733,32 +2133,6 @@ exports[`types renders correctly for an input with type time 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2774,7 +2148,7 @@ exports[`types renders correctly for an input with type time 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2783,51 +2157,47 @@ exports[`types renders correctly for an input with type time 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="time"
-      value=""
-    />
-  </div>
+    type="time"
+    value=""
+  />
 </div>
 `;
 
@@ -2845,7 +2215,7 @@ exports[`types renders correctly for an input with type url 1`] = `
   color: inherit;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2859,32 +2229,6 @@ exports[`types renders correctly for an input with type url 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2900,7 +2244,7 @@ exports[`types renders correctly for an input with type url 1`] = `
   position: relative;
 }
 
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2909,50 +2253,46 @@ exports[`types renders correctly for an input with type url 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #7467c0;
   box-shadow: #7467c0 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0 c1"
+  style="size: default;"
 >
-  <div
-    class="c2 c1"
+  <input
+    aria-invalid="false"
+    aria-required="false"
+    class="c2 c3"
     style="size: default;"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      style="size: default;"
-      type="url"
-      value=""
-    />
-  </div>
+    type="url"
+    value=""
+  />
 </div>
 `;

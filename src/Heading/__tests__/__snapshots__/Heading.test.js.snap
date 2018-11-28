@@ -15,112 +15,82 @@ exports[`renders correctly for a basic heading 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.heading.c2 + .sub-heading {
+.heading.c0 + .sub-heading {
   margin-top: -1rem;
 }
 
-.c2:last-child {
+.c0:last-child {
   margin-bottom: 0;
 }
 
-h1.c2 {
+h1.c0 {
   font-size: 3rem;
 }
 
-h2.c2 {
+h2.c0 {
   font-size: 2.5rem;
 }
 
-h3.c2 {
+h3.c0 {
   font-size: 2rem;
 }
 
-h4.c2 {
+h4.c0 {
   font-size: 1.5rem;
 }
 
-h5.c2 {
+h5.c0 {
   font-size: 1.25rem;
 }
 
-h6.c2 {
+h6.c0 {
   font-size: 1rem;
 }
 
-.c2 .c3 {
+.c0 .c2 {
   top: 0.1em;
 }
 
 @media (max-width:480px) {
-  h1.c2 {
+  h1.c0 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:480px) {
-  h2.c2 {
+  h2.c0 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:480px) {
-  h3.c2 {
+  h3.c0 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:480px) {
-  h4.c2 {
+  h4.c0 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:480px) {
-  h5.c2 {
+  h5.c0 {
     font-size: 1.2rem;
   }
 }
 
-<div
-  class="c0 c1"
+<h1
+  class="heading c0 c1"
 >
-  <h1
-    class="heading c2 c1"
-  >
-    test
-  </h1>
-</div>
+  test
+</h1>
 `;
 
 exports[`renders correctly for a heading of a different element 1`] = `
@@ -138,29 +108,138 @@ exports[`renders correctly for a heading of a different element 1`] = `
 }
 
 .c0 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c0 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+h1.c0 {
+  font-size: 3rem;
+}
+
+h2.c0 {
+  font-size: 2.5rem;
+}
+
+h3.c0 {
+  font-size: 2rem;
+}
+
+h4.c0 {
+  font-size: 1.5rem;
+}
+
+h5.c0 {
+  font-size: 1.25rem;
+}
+
+h6.c0 {
+  font-size: 1rem;
+}
+
+.c0 .c2 {
+  top: 0.1em;
+}
+
+@media (max-width:480px) {
+  h1.c0 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c0 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c0 {
+    font-size: 1.2rem;
+  }
+}
+
+<h3
+  class="heading c0 c1"
+>
+  test
+</h3>
+`;
+
+exports[`renders correctly for a heading with a subheading 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
   box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
+  background-color: unset;
+  color: inherit;
 }
 
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
+.c0 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
+.heading.c0 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+h1.c0 {
+  font-size: 3rem;
+}
+
+h2.c0 {
+  font-size: 2.5rem;
+}
+
+h3.c0 {
+  font-size: 2rem;
+}
+
+h4.c0 {
+  font-size: 1.5rem;
+}
+
+h5.c0 {
+  font-size: 1.25rem;
+}
+
+h6.c0 {
+  font-size: 1rem;
+}
+
+.c0 .c3 {
+  top: 0.1em;
 }
 
 .c2 {
@@ -205,176 +284,41 @@ h6.c2 {
   top: 0.1em;
 }
 
-@media (max-width:480px) {
-  h1.c2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width:480px) {
-  h2.c2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:480px) {
-  h3.c2 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:480px) {
-  h4.c2 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:480px) {
-  h5.c2 {
-    font-size: 1.2rem;
-  }
-}
-
-<div
-  class="c0 c1"
->
-  <h3
-    class="heading c2 c1"
-  >
-    test
-  </h3>
-</div>
-`;
-
-exports[`renders correctly for a heading with a subheading 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
 .c2 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.heading.c2 + .sub-heading {
-  margin-top: -1rem;
-}
-
-.c2:last-child {
-  margin-bottom: 0;
-}
-
-h1.c2 {
-  font-size: 3rem;
-}
-
-h2.c2 {
-  font-size: 2.5rem;
-}
-
-h3.c2 {
-  font-size: 2rem;
-}
-
-h4.c2 {
-  font-size: 1.5rem;
-}
-
-h5.c2 {
-  font-size: 1.25rem;
-}
-
-h6.c2 {
-  font-size: 1rem;
-}
-
-.c2 .c4 {
-  top: 0.1em;
-}
-
-.c3 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.heading.c3 + .sub-heading {
-  margin-top: -1rem;
-}
-
-.c3:last-child {
-  margin-bottom: 0;
-}
-
-h1.c3 {
-  font-size: 3rem;
-}
-
-h2.c3 {
-  font-size: 2.5rem;
-}
-
-h3.c3 {
-  font-size: 2rem;
-}
-
-h4.c3 {
-  font-size: 1.5rem;
-}
-
-h5.c3 {
-  font-size: 1.25rem;
-}
-
-h6.c3 {
-  font-size: 1rem;
-}
-
-.c3 .c4 {
-  top: 0.1em;
-}
-
-.c3 {
   font-weight: 600;
 }
 
 @media (max-width:480px) {
+  h1.c0 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c0 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c0 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:480px) {
   h1.c2 {
     font-size: 2rem;
   }
@@ -404,51 +348,17 @@ h6.c3 {
   }
 }
 
-@media (max-width:480px) {
-  h1.c3 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width:480px) {
-  h2.c3 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:480px) {
-  h3.c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:480px) {
-  h4.c3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:480px) {
-  h5.c3 {
-    font-size: 1.2rem;
-  }
-}
-
-<div
-  class="c0 c1"
->
-  <div>
-    <h3
-      class="heading c2 c1"
-    >
-      heading
-    </h3>
-    <h5
-      class="sub-heading c3 c1"
-    >
-      subheading
-    </h5>
-  </div>
+<div>
+  <h3
+    class="heading c0 c1"
+  >
+    heading
+  </h3>
+  <h5
+    class="sub-heading c2 c1"
+  >
+    subheading
+  </h5>
 </div>
 `;
 
@@ -467,114 +377,84 @@ exports[`renders correctly for a subheading 1`] = `
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.heading.c2 + .sub-heading {
+.heading.c0 + .sub-heading {
   margin-top: -1rem;
 }
 
-.c2:last-child {
+.c0:last-child {
   margin-bottom: 0;
 }
 
-h1.c2 {
+h1.c0 {
   font-size: 3rem;
 }
 
-h2.c2 {
+h2.c0 {
   font-size: 2.5rem;
 }
 
-h3.c2 {
+h3.c0 {
   font-size: 2rem;
 }
 
-h4.c2 {
+h4.c0 {
   font-size: 1.5rem;
 }
 
-h5.c2 {
+h5.c0 {
   font-size: 1.25rem;
 }
 
-h6.c2 {
+h6.c0 {
   font-size: 1rem;
 }
 
-.c2 .c3 {
+.c0 .c2 {
   top: 0.1em;
 }
 
-.c2 {
+.c0 {
   font-weight: 600;
 }
 
 @media (max-width:480px) {
-  h1.c2 {
+  h1.c0 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:480px) {
-  h2.c2 {
+  h2.c0 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width:480px) {
-  h3.c2 {
+  h3.c0 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:480px) {
-  h4.c2 {
+  h4.c0 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:480px) {
-  h5.c2 {
+  h5.c0 {
     font-size: 1.2rem;
   }
 }
 
-<div
-  class="c0 c1"
+<h3
+  class="sub-heading c0 c1"
 >
-  <h3
-    class="sub-heading c2 c1"
-  >
-    test
-  </h3>
-</div>
+  test
+</h3>
 `;

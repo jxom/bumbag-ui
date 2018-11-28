@@ -12,6 +12,7 @@ exports[`renders correctly for a card with a actions 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
+  padding: 1.5rem !important;
 }
 
 .c3 {
@@ -25,36 +26,181 @@ exports[`renders correctly for a card with a actions 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  padding: 1.5rem !important;
 }
 
 .c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
 }
 
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
+.c5 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
+.heading.c5 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c5:last-child {
+  margin-bottom: 0;
+}
+
+h1.c5 {
+  font-size: 3rem;
+}
+
+h2.c5 {
+  font-size: 2.5rem;
+}
+
+h3.c5 {
+  font-size: 2rem;
+}
+
+h4.c5 {
+  font-size: 1.5rem;
+}
+
+h5.c5 {
+  font-size: 1.25rem;
+}
+
+h6.c5 {
+  font-size: 1rem;
+}
+
+.c5 .c7 {
+  top: 0.1em;
+}
+
+.c5 {
+  font-weight: 600;
+}
+
+.c6 {
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
 .c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  position: relative;
+  width: 100%;
+}
+
+.c4 {
+  margin-bottom: 0px;
+}
+
+@media (max-width:480px) {
+  h1.c5 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c5 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c5 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c5 {
+    font-size: 1.2rem;
+  }
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3"
+  >
+    <h5
+      class="c4 sub-heading c5 c3"
+    >
+      This is a title
+    </h5>
+    <div>
+      <div>
+        test
+      </div>
+    </div>
+  </div>
+  <div
+    class="c6 c3"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+  </div>
+</div>
+`;
+
+exports[`renders correctly for a card with a footer 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  padding: 1.5rem !important;
+}
+
+.c3 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
   background-color: white;
   border-radius: 3px;
   display: -webkit-inline-box;
@@ -113,7 +259,188 @@ h6.c6 {
   font-weight: 600;
 }
 
+.c2 {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  position: relative;
+  width: 100%;
+}
+
 .c7 {
+  padding-top: 1.25rem;
+  width: 100%;
+}
+
+.c5 {
+  margin-bottom: 0px;
+}
+
+@media (max-width:480px) {
+  h1.c6 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c6 {
+    font-size: 1.2rem;
+  }
+}
+
+<div
+  class="c0 c1"
+>
+  <div
+    class="c2 c3"
+  >
+    <div
+      class="c4 c3"
+    >
+      <h5
+        class="c5 sub-heading c6 c3"
+      >
+        This is a title
+      </h5>
+    </div>
+    <div
+      class="c2 c3"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+    </div>
+    <div
+      class="c7 c3"
+    >
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for a default card 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  padding: 1.5rem !important;
+}
+
+.c3 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
+}
+
+.c6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c6 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c6:last-child {
+  margin-bottom: 0;
+}
+
+h1.c6 {
+  font-size: 3rem;
+}
+
+h2.c6 {
+  font-size: 2.5rem;
+}
+
+h3.c6 {
+  font-size: 2rem;
+}
+
+h4.c6 {
+  font-size: 1.5rem;
+}
+
+h5.c6 {
+  font-size: 1.25rem;
+}
+
+h6.c6 {
+  font-size: 1rem;
+}
+
+.c6 .c7 {
+  top: 0.1em;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c2 {
   max-height: 50vh;
   overflow-y: scroll;
 }
@@ -180,435 +507,18 @@ h6.c6 {
     class="c2 c3"
   >
     <div
-      class="c4 c1"
+      class="c4 c3"
     >
       <h5
-        class="c5 sub-heading c6 c1"
+        class="c5 sub-heading c6 c3"
       >
         This is a title
       </h5>
-      <div>
-        <div>
-          test
-        </div>
-      </div>
     </div>
     <div
-      class="c7 c1"
+      class="c2 c3"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly for a card with a footer 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  padding: 1.5rem !important;
-}
-
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
-  background-color: white;
-  border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-}
-
-.c7 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.heading.c7 + .sub-heading {
-  margin-top: -1rem;
-}
-
-.c7:last-child {
-  margin-bottom: 0;
-}
-
-h1.c7 {
-  font-size: 3rem;
-}
-
-h2.c7 {
-  font-size: 2.5rem;
-}
-
-h3.c7 {
-  font-size: 2rem;
-}
-
-h4.c7 {
-  font-size: 1.5rem;
-}
-
-h5.c7 {
-  font-size: 1.25rem;
-}
-
-h6.c7 {
-  font-size: 1rem;
-}
-
-.c7 .c9 {
-  top: 0.1em;
-}
-
-.c7 {
-  font-weight: 600;
-}
-
-.c4 {
-  max-height: 50vh;
-  overflow-y: scroll;
-}
-
-.c5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-bottom: 1.25rem;
-  position: relative;
-  width: 100%;
-}
-
-.c8 {
-  padding-top: 1.25rem;
-  width: 100%;
-}
-
-.c6 {
-  margin-bottom: 0px;
-}
-
-@media (max-width:480px) {
-  h1.c7 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width:480px) {
-  h2.c7 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:480px) {
-  h3.c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:480px) {
-  h4.c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:480px) {
-  h5.c7 {
-    font-size: 1.2rem;
-  }
-}
-
-<div
-  class="c0 c1"
->
-  <div
-    class="c2 c3"
-  >
-    <div
-      class="c4 c1"
-    >
-      <div
-        class="c5 c1"
-      >
-        <h5
-          class="c6 sub-heading c7 c1"
-        >
-          This is a title
-        </h5>
-      </div>
-      <div
-        class="c4 c1"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-      </div>
-      <div
-        class="c8 c1"
-      >
-        test
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly for a default card 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  padding: 1.5rem !important;
-}
-
-.c0 {
-  box-sizing: border-box;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans', 'Droid Sans','Helvetica Neue',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #435a6f;
-  fill: #435a6f;
-}
-
-.c0 *,
-.c0 *::before,
-.c0 *::after {
-  box-sizing: inherit;
-}
-
-.c0 *:focus {
-  outline: 2px solid #7467c0;
-  outline-offset: 2px;
-}
-
-.c2 {
-  background-color: white;
-  border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-}
-
-.c7 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.heading.c7 + .sub-heading {
-  margin-top: -1rem;
-}
-
-.c7:last-child {
-  margin-bottom: 0;
-}
-
-h1.c7 {
-  font-size: 3rem;
-}
-
-h2.c7 {
-  font-size: 2.5rem;
-}
-
-h3.c7 {
-  font-size: 2rem;
-}
-
-h4.c7 {
-  font-size: 1.5rem;
-}
-
-h5.c7 {
-  font-size: 1.25rem;
-}
-
-h6.c7 {
-  font-size: 1rem;
-}
-
-.c7 .c8 {
-  top: 0.1em;
-}
-
-.c7 {
-  font-weight: 600;
-}
-
-.c4 {
-  max-height: 50vh;
-  overflow-y: scroll;
-}
-
-.c5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-bottom: 1.25rem;
-  position: relative;
-  width: 100%;
-}
-
-.c6 {
-  margin-bottom: 0px;
-}
-
-@media (max-width:480px) {
-  h1.c7 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width:480px) {
-  h2.c7 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:480px) {
-  h3.c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:480px) {
-  h4.c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:480px) {
-  h5.c7 {
-    font-size: 1.2rem;
-  }
-}
-
-<div
-  class="c0 c1"
->
-  <div
-    class="c2 c3"
-  >
-    <div
-      class="c4 c1"
-    >
-      <div
-        class="c5 c1"
-      >
-        <h5
-          class="c6 sub-heading c7 c1"
-        >
-          This is a title
-        </h5>
-      </div>
-      <div
-        class="c4 c1"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-      </div>
     </div>
   </div>
 </div>
