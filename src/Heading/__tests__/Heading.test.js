@@ -9,13 +9,13 @@ it('renders correctly for a basic heading', () => {
 });
 
 it('renders correctly for a heading of a different element', () => {
-  const { container } = render(<Heading as="h3">test</Heading>);
+  const { container } = render(<Heading use="h3">test</Heading>);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for a subheading', () => {
   const { container } = render(
-    <Heading as="h3" isSubHeading>
+    <Heading use="h3" isSubHeading>
       test
     </Heading>
   );
@@ -25,8 +25,8 @@ it('renders correctly for a subheading', () => {
 it('renders correctly for a heading with a subheading', () => {
   const { container } = render(
     <div>
-      <Heading as="h3">heading</Heading>
-      <Heading as="h5" isSubHeading>
+      <Heading use="h3">heading</Heading>
+      <Heading use="h5" isSubHeading>
         subheading
       </Heading>
     </div>

@@ -14,7 +14,7 @@ type Props = {
 };
 
 const List = ({ children, className, isOrdered, ...props }: Props) => (
-  <_List as={isOrdered ? 'ol' : null} className={className} isOrdered={isOrdered} {...props}>
+  <_List use={isOrdered ? 'ol' : undefined} className={className} isOrdered={isOrdered} {...props}>
     {children}
   </_List>
 );
@@ -22,8 +22,8 @@ const List = ({ children, className, isOrdered, ...props }: Props) => (
 List.Item = ListItem;
 
 List.defaultProps = {
-  className: null,
-  color: null,
+  className: undefined,
+  color: undefined,
   isOrdered: false,
   isHorizontal: false
 };

@@ -5,7 +5,6 @@ import { OverlayHide as _OverlayHide } from './styled';
 
 type Props = {
   children: Function,
-  hide: Function,
   onClick?: Function
 };
 

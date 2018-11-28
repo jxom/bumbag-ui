@@ -27,10 +27,10 @@ const Columns = ({ children, className, isGapless, isOneLine, minBreakpoint, ...
 );
 
 Columns.defaultProps = {
-  className: null,
+  className: undefined,
   isGapless: false,
   isOneLine: false,
-  minBreakpoint: null
+  minBreakpoint: undefined
 };
 
 export default Columns;

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { Fragment } from 'react';
 import ThemeProvider from 'reakit/Provider';
 
 import type { ThemeConfig } from '../types';
@@ -27,7 +27,10 @@ const Provider = ({ children, isStandalone, theme: _theme }: Props) => {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Global>{children}</Global>
+      <Fragment>
+        <Global />
+        {children}
+      </Fragment>
     </ThemeProvider>
   );
 };

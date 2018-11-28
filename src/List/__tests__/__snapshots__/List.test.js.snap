@@ -40,16 +40,16 @@ exports[`renders correctly for a basic list 1`] = `
   outline-offset: 2px;
 }
 
-.c3 {
+.c4 {
   margin-bottom: 0.2rem;
 }
 
-.c2 {
+.c3 {
   list-style: unset;
   list-style-type: none;
 }
 
-.c2 .c2 {
+.c3 .c2 {
   margin-left: 1rem;
 }
 
@@ -57,25 +57,25 @@ exports[`renders correctly for a basic list 1`] = `
   class="c0 c1"
 >
   <ul
-    class="c2 c1"
+    class="c2 c3 c1"
   >
     <li
-      class="c3 c1"
+      class="c4 c1"
     >
       Item 1
     </li>
     <li
-      class="c3 c1"
+      class="c4 c1"
     >
       Item 2
     </li>
     <li
-      class="c3 c1"
+      class="c4 c1"
     >
       Item 3
     </li>
     <li
-      class="c3 c1"
+      class="c4 c1"
     >
       Item 4
     </li>
@@ -123,16 +123,16 @@ exports[`renders correctly for a list with styles 1`] = `
   outline-offset: 2px;
 }
 
-.c3 {
+.c4 {
   margin-bottom: 0.2rem;
 }
 
-.c2 {
+.c3 {
   list-style: unset;
   list-style-type: none;
 }
 
-.c2 .c2 {
+.c3 .c2 {
   margin-left: 1rem;
 }
 
@@ -141,46 +141,46 @@ exports[`renders correctly for a list with styles 1`] = `
 >
   <div>
     <ul
-      class="c2 c1"
+      class="c2 c3 c1"
       style="list-style-type: disc; list-style-position: inside;"
     >
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 1
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 2
       </li>
     </ul>
     <ul
-      class="c2 c1"
+      class="c2 c3 c1"
       style="list-style-type: circle; list-style-position: inside;"
     >
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 1
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
         style="list-style-type: georgian;"
       >
         Item 2
       </li>
       <ul
-        class="c2 c1"
+        class="c2 c3 c1"
         style="list-style-type: circle;"
       >
         <li
-          class="c3 c1"
+          class="c4 c1"
         >
           Item 1
         </li>
         <li
-          class="c3 c1"
+          class="c4 c1"
         >
           Item 2
         </li>
@@ -230,20 +230,36 @@ exports[`renders correctly for horizontal lists 1`] = `
   outline-offset: 2px;
 }
 
-.c3 {
+.c4 {
   margin-bottom: 0.2rem;
 }
 
-.c2 {
+.c5 .c2 {
+  margin-left: 1rem;
+}
+
+.c6 .c2 {
+  margin-left: 1rem;
+}
+
+.c6 .c2 {
+  list-style-type: lower-alpha;
+}
+
+.c6 .c2 .c2 {
+  list-style-type: lower-roman;
+}
+
+.c3 {
   list-style: unset;
   list-style-type: none;
 }
 
-.c2 .c2 {
+.c3 .c2 {
   margin-left: 1rem;
 }
 
-.c2 li {
+.c3 li {
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: unset;
@@ -254,25 +270,25 @@ exports[`renders correctly for horizontal lists 1`] = `
 >
   <div>
     <ul
-      class="c2 c1"
+      class="c2 c3 c1"
     >
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 1
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 2
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 3
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 4
       </li>
@@ -321,28 +337,32 @@ exports[`renders correctly for ordered lists 1`] = `
   outline-offset: 2px;
 }
 
-.c3 {
+.c4 {
   margin-bottom: 0.2rem;
 }
 
-.c2 {
+.c5 .c2 {
+  margin-left: 1rem;
+}
+
+.c3 {
   list-style: unset;
   list-style-type: none;
 }
 
-.c2 .c2 {
+.c3 .c2 {
   margin-left: 1rem;
 }
 
-.c2 {
+.c3 {
   list-style-type: decimal;
 }
 
-.c2 .c2 {
+.c3 .c2 {
   list-style-type: lower-alpha;
 }
 
-.c2 .c2 .c2 {
+.c3 .c2 .c2 {
   list-style-type: lower-roman;
 }
 
@@ -351,32 +371,32 @@ exports[`renders correctly for ordered lists 1`] = `
 >
   <div>
     <ol
-      class="c2 c1"
+      class="c2 c3 c1"
       style="list-style-position: inside;"
     >
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 1
       </li>
       <li
-        class="c3 c1"
+        class="c4 c1"
       >
         Item 2
       </li>
       <ol
-        class="c2 c1"
+        class="c2 c3 c1"
       >
         <li
-          class="c3 c1"
+          class="c4 c1"
         >
           Item 3
         </li>
         <ol
-          class="c2 c1"
+          class="c2 c3 c1"
         >
           <li
-            class="c3 c1"
+            class="c4 c1"
           >
             Item 4
           </li>

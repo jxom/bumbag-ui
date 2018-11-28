@@ -1,4 +1,5 @@
 // @flow
+import use from 'reakit/use';
 import styled, { css } from 'reakit/styled';
 import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
@@ -63,7 +64,7 @@ const stateProperties = css`
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input.as('textarea'))`
+export default styled(use(Input, 'textarea'))`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;

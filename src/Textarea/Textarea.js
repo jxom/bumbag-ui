@@ -9,7 +9,7 @@ export type Props = {
   a11yId?: string,
   /** An accessible label for the textarea */
   a11yLabel?: string,
-  as?: any,
+  use?: any,
   autoComplete?: string,
   /** Automatically focus on the textarea */
   autoFocus?: boolean,
@@ -74,7 +74,7 @@ const Textarea = ({ a11yId, a11yLabel, isFullWidth, isLoading, isRequired, size,
 Textarea.defaultProps = {
   a11yId: undefined,
   a11yLabel: undefined,
-  as: undefined,
+  use: undefined,
   autoComplete: undefined,
   autoFocus: false,
   className: undefined,

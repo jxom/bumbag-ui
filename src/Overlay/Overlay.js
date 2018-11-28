@@ -6,7 +6,7 @@ import _Overlay, { OverlayHide, OverlayShow, OverlayToggle } from './styled';
 
 type Props = {
   animated?: boolean,
-  as?: any,
+  use?: any,
   children: Node,
   className?: string,
   /** Delay of the animation if one is specified. */
@@ -19,17 +19,21 @@ type Props = {
   hideOnEsc?: boolean,
   /** Should the overlay be hidden when outside is clicked?  */
   hideOnClickOutside?: boolean,
+  /** Whether or not to show the overlay component */
+  isVisible?: boolean,
   /** Will the overlay have a fade animation when it is toggled on/off? */
   fade?: boolean,
   /** Will the overlay have a slide animation when it is toggled on/off? */
   slide?: boolean | string,
   /** Timing of the animation */
-  timing?: string,
-  /** Whether or not to show the overlay component */
-  visible?: boolean
+  timing?: string
 };
 
-const Overlay = ({ children, ...props }: Props) => <_Overlay {...props}>{children}</_Overlay>;
+const Overlay = ({ children, isVisible, ...props }: Props) => (
+  <_Overlay visible={isVisible} {...props}>
+    {children}
+  </_Overlay>
+);
 
 Overlay.Container = OverlayContainer;
 Overlay.Hide = OverlayHide;
@@ -38,17 +42,17 @@ Overlay.Toggle = OverlayToggle;
 
 Overlay.defaultProps = {
   animated: false,
-  as: null,
-  className: null,
+  use: undefined,
+  className: undefined,
   delay: undefined,
   duration: '250ms',
   expand: undefined,
   fade: false,
   hideOnEsc: true,
   hideOnClickOutside: true,
+  isVisible: false,
   slide: false,
-  timing: 'ease-in-out',
-  visible: false
+  timing: 'ease-in-out'
 };
 
 export default Overlay;

@@ -9,7 +9,7 @@ type Props = {
 };
 
 const DialogTitle = ({ children, ...props }: Props) => (
-  <_DialogTitle as="h5" isSubHeading {...props}>
+  <_DialogTitle use="h5" isSubHeading {...props}>
     {children}
   </_DialogTitle>
 );

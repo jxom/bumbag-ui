@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Tabs = ({ children, ...props }: Props) => (
-  <_Tabs as={ReakitTabs} {...props}>
+  <_Tabs use={ReakitTabs} {...props}>
     {children}
   </_Tabs>
 );
@@ -24,7 +24,7 @@ Tabs.Panel = TabPanel;
 Tabs.Container = ReakitTabs.Container;
 
 Tabs.defaultProps = {
-  className: null,
+  className: undefined,
   type: 'default'
 };
 

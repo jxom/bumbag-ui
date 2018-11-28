@@ -13,7 +13,7 @@ type Props = {
 const TabPanel = ({ children, ...props }: Props) => <_TabPanel {...props}>{children}</_TabPanel>;
 
 TabPanel.defaultProps = {
-  className: null,
+  className: undefined,
   isActive: false
 };
 

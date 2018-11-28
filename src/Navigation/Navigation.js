@@ -5,21 +5,21 @@ import _Navigation from './styled';
 
 type Props = {
   a11yTitle?: string,
-  as?: any,
+  use?: any,
   children: Node,
   className?: string
 };
 
-const Navigation = ({ a11yTitle, as, children, className, ...props }: Props) => (
-  <_Navigation as={as} aria-label={a11yTitle} role={as ? 'navigation' : null} {...props}>
+const Navigation = ({ a11yTitle, children, className, ...props }: Props) => (
+  <_Navigation aria-label={a11yTitle} {...props} role={props.use ? 'navigation' : null}>
     {children}
   </_Navigation>
 );
 
 Navigation.defaultProps = {
-  a11yTitle: null,
-  as: null,
-  className: null
+  a11yTitle: undefined,
+  use: undefined,
+  className: undefined
 };
 
 export default Navigation;

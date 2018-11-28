@@ -9,7 +9,7 @@ type Props = {
 };
 
 const DialogTitle = ({ children, ...props }: Props) => (
-  <_CardTitle as="h5" isSubHeading {...props}>
+  <_CardTitle use="h5" isSubHeading {...props}>
     {children}
   </_CardTitle>
 );

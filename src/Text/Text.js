@@ -4,7 +4,7 @@ import type { Palette } from '../types';
 import _Text from './styled';
 
 type Props = {
-  as?: any,
+  use?: any,
   className?: string,
   children: Node,
   color?: Palette
@@ -17,9 +17,9 @@ const Text = ({ className, children, ...props }: Props) => (
 );
 
 Text.defaultProps = {
-  as: 'span',
-  className: null,
-  color: null
+  use: 'span',
+  className: undefined,
+  color: undefined
 };
 
 export default Text;

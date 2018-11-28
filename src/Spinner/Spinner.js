@@ -15,7 +15,7 @@ const Spinner = ({ className, color, size, ...props }: Props) => (
 );
 
 Spinner.defaultProps = {
-  className: null,
+  className: undefined,
   color: 'primary',
   size: 'default'
 };

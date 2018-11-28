@@ -20,7 +20,7 @@ const Tab = ({ children, className, isActive, ...props }: Props) => (
 );
 
 Tab.defaultProps = {
-  className: null,
+  className: undefined,
   isActive: false,
   type: 'default'
 };

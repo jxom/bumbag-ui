@@ -17,8 +17,8 @@ const Code = ({ children, className, codeClassName, isBlock, ...props }: Props) 
 );
 
 Code.defaultProps = {
-  className: null,
-  codeClassName: null,
+  className: undefined,
+  codeClassName: undefined,
   isBlock: false
 };
 

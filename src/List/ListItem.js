@@ -11,14 +11,14 @@ type Props = {
 };
 
 const ListItem = ({ children, className, ...props }: Props) => (
-  <_ListItem as="li" className={className} {...props}>
+  <_ListItem use="li" className={className} {...props}>
     {children}
   </_ListItem>
 );
 
 ListItem.defaultProps = {
-  className: null,
-  color: null
+  className: undefined,
+  color: undefined
 };
 
 export default ListItem;

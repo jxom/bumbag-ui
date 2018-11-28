@@ -23,7 +23,7 @@ const Text = styled.span`
 `;
 
 type Props = {
-  as?: any,
+  use?: any,
   children: Node,
   className?: string,
   /** Makes the button disabled. The user is unable to interact with the button. */
@@ -70,7 +70,7 @@ export const Button = ({
 };
 
 Button.defaultProps = {
-  as: undefined,
+  use: undefined,
   className: undefined,
   disabled: false,
   isLoading: false,

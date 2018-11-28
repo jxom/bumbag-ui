@@ -5,6 +5,7 @@ menu: Utilities
 ---
 
 import { Playground, PropsTable } from 'docz';
+import Portal from 'reakit/Portal';
 import { Box } from '../primitives/index';
 import Overlay from './index';
 import OverlayContainer from './OverlayContainer';
@@ -31,10 +32,10 @@ It is recommended to use the overlay helper components (`<Overlay.Show>`, `<Over
   <Overlay.Container>
     {overlay => (
       <Box>
-        <Button as={Overlay.Show} {...overlay}>
+        <Button use={Overlay.Show} {...overlay}>
           Click me
         </Button>
-        <Backdrop fade as={Overlay.Hide} {...overlay} />
+        <Backdrop fade use={Overlay.Hide} {...overlay} />
         <Overlay fade slide {...overlay}>
           <Pane padding="1rem">Hello!</Pane>
         </Overlay>
@@ -55,10 +56,10 @@ Have an expand-like animation by using the `expand` prop. The `expand` prop can 
   <Overlay.Container>
     {overlay => (
       <Box>
-        <Button as={Overlay.Show} {...overlay}>
+        <Button use={Overlay.Show} {...overlay}>
           Click me
         </Button>
-        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Backdrop use={Overlay.Hide} {...overlay} />
         <Overlay expand {...overlay}>
           <Pane padding="1rem">Hello!</Pane>
         </Overlay>
@@ -75,10 +76,10 @@ Have a fade animation by using the `fade` prop.
   <Overlay.Container>
     {overlay => (
       <Box>
-        <Button as={Overlay.Show} {...overlay}>
+        <Button use={Overlay.Show} {...overlay}>
           Click me
         </Button>
-        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Backdrop use={Overlay.Hide} {...overlay} />
         <Overlay fade {...overlay}>
           <Pane padding="1rem">Hello!</Pane>
         </Overlay>
@@ -95,10 +96,10 @@ You can have a slide animation with the `slide` prop. The `slide` prop can take 
   <Overlay.Container>
     {overlay => (
       <Box>
-        <Button as={Overlay.Show} {...overlay}>
+        <Button use={Overlay.Show} {...overlay}>
           Click me
         </Button>
-        <Backdrop as={Overlay.Hide} {...overlay} />
+        <Backdrop use={Overlay.Hide} {...overlay} />
         <Overlay fade slide="bottom" {...overlay}>
           <Pane padding="1rem">Hello!</Pane>
         </Overlay>
@@ -121,11 +122,11 @@ An extended version of the `overlay` render prop shown in the above examples is 
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide }) => (
+    {({ isVisible, show, hide }) => (
       <Box>
         <Button onClick={show}>Click me</Button>
-        <Backdrop fade visible={visible} onClick={hide} />
-        <Overlay fade slide visible={visible}>
+        <Backdrop fade isVisible={isVisible} onClick={hide} />
+        <Overlay fade slide isVisible={isVisible}>
           <Pane padding="1rem">Hello!</Pane>
         </Overlay>
       </Box>
@@ -149,10 +150,10 @@ The `<Overlay.Hide>` does the same thing, but the opposite.
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide }) => (
+    {({ isVisible, show, hide }) => (
       <Box>
         <Overlay.Show show={show}>Click to show</Overlay.Show>
-        <Overlay visible={visible}>
+        <Overlay isVisible={isVisible}>
           <Pane border="2px solid black" padding="1rem">
             <Overlay.Hide hide={hide}>Click to hide</Overlay.Hide>
           </Pane>
@@ -180,10 +181,10 @@ The `<Overlay.Toggle>` component provides an intuitive way to be able to toggle 
 
 <Playground>
   <Overlay.Container>
-    {({ visible, toggle }) => (
+    {({ isVisible, toggle }) => (
       <Box>
         <Overlay.Toggle toggle={toggle}>Click to toggle</Overlay.Toggle>
-        <Overlay visible={visible}>
+        <Overlay isVisible={isVisible}>
           <Pane border="2px solid black" padding="1rem">
             Hello!
           </Pane>

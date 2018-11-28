@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 import _Label from './styled';
 
 type Props = {
-  as?: any,
+  use?: any,
   children: Node,
   className?: string,
   htmlFor?: string
@@ -17,9 +17,9 @@ const Label = ({ children, className, ...props }: Props) => (
 );
 
 Label.defaultProps = {
-  as: null,
-  htmlFor: null,
-  className: null
+  use: undefined,
+  htmlFor: undefined,
+  className: undefined
 };
 
 export default Label;

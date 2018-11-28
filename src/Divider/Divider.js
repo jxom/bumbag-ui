@@ -16,8 +16,8 @@ const Divider = ({ children, className, content, isVertical, ...props }: Props) 
 );
 
 Divider.defaultProps = {
-  className: null,
-  content: null,
+  className: undefined,
+  content: undefined,
   isVertical: false
 };
 

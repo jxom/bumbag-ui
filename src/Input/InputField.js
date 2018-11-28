@@ -13,7 +13,7 @@ type Props = {
   /** An accessible label for the input */
   a11yLabel?: string,
   after?: Element<any>,
-  as?: any,
+  use?: any,
   autoComplete?: string,
   /** Automatically focus on the input */
   autoFocus?: boolean,
@@ -124,7 +124,7 @@ InputField.defaultProps = {
   a11yId: undefined,
   a11yLabel: undefined,
   after: undefined,
-  as: undefined,
+  use: undefined,
   autoComplete: undefined,
   autoFocus: false,
   before: undefined,

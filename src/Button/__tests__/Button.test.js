@@ -12,7 +12,7 @@ it('renders correctly for a default button', () => {
 
 it('renders correctly for a button with a custom element', () => {
   const { container } = render(
-    <Button as="a" href="#">
+    <Button use="a" href="#">
       Test
     </Button>
   );

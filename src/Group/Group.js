@@ -27,10 +27,10 @@ export const Group = ({ children, className, isVertical, theme, verticalAt: _ver
 };
 
 Group.defaultProps = {
-  className: null,
+  className: undefined,
   isVertical: false,
   theme: {},
-  verticalAt: null
+  verticalAt: undefined
 };
 
 export default withTheme(Group);

@@ -8,7 +8,9 @@ type Props = {
 };
 
 const Overlay = ({ children, ...props }: Props) => (
-  <ReakitOverlay.Container {...props}>{children}</ReakitOverlay.Container>
+  <ReakitOverlay.Container {...props}>
+    {({ visible, ...rest }) => children({ isVisible: visible, ...rest })}
+  </ReakitOverlay.Container>
 );
 
 Overlay.defaultProps = {

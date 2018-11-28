@@ -6,7 +6,7 @@ import type { Palette } from '../types';
 import _Heading from './styled';
 
 type Props = {
-  as?: any,
+  use?: any,
   color?: Palette,
   children: Node,
   className?: string,
@@ -28,9 +28,9 @@ const Heading = ({ children, className, isSubHeading, ...props }: Props) => (
 );
 
 Heading.defaultProps = {
-  as: null,
-  className: null,
-  color: null,
+  use: undefined,
+  className: undefined,
+  color: undefined,
   isSubHeading: false
 };
 

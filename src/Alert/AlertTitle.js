@@ -7,7 +7,7 @@ type Props = {
 };
 
 const AlertTitle = ({ children, ...props }: Props) => (
-  <_AlertTitle as="h6" isSemiBold {...props}>
+  <_AlertTitle use="h6" isSemiBold {...props}>
     {children}
   </_AlertTitle>
 );

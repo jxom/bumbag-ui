@@ -4,18 +4,14 @@ import React, { type Node } from 'react';
 import { TableCell as _TableCell } from './styled';
 
 type Props = {
-  as?: any,
+  use?: any,
   children: Node
 };
 
-const TableCell = ({ as, children, ...props }: Props) => (
-  <_TableCell as={as} {...props}>
-    {children}
-  </_TableCell>
-);
+const TableCell = ({ children, ...props }: Props) => <_TableCell {...props}>{children}</_TableCell>;
 
 TableCell.defaultProps = {
-  as: 'td'
+  use: 'td'
 };
 
 export default TableCell;

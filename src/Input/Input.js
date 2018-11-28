@@ -11,7 +11,7 @@ export type Props = {
   a11yId?: string,
   /** An accessible label for the input */
   a11yLabel?: string,
-  as?: any,
+  use?: any,
   autoComplete?: string,
   /** Automatically focus on the input */
   autoFocus?: boolean,
@@ -110,7 +110,7 @@ Input.Icon = Icon;
 Input.defaultProps = {
   a11yId: undefined,
   a11yLabel: undefined,
-  as: undefined,
+  use: undefined,
   autoComplete: undefined,
   autoFocus: false,
   className: undefined,

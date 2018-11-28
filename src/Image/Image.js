@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import _Image from './styled';
 
 type Props = {
-  as?: any,
+  use?: any,
   children: Node,
   className?: string,
   /** How the image fits its bounds */
@@ -29,10 +29,10 @@ const Image = ({ children, className, isFixed, ...props }: Props) => (
 );
 
 Image.defaultProps = {
-  as: null,
-  className: null,
-  fit: null,
-  fitPosition: null,
+  use: undefined,
+  className: undefined,
+  fit: undefined,
+  fitPosition: undefined,
   isFixed: false
 };
 

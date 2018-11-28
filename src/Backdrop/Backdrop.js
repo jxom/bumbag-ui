@@ -5,7 +5,7 @@ import _Backdrop from './styled';
 
 type Props = {
   animated?: boolean,
-  as?: any,
+  use?: any,
   children: Node,
   className?: string,
   /** Delay of the animation if one is specified. */
@@ -20,19 +20,23 @@ type Props = {
   hideOnEsc?: boolean,
   /** Should the backdrop be hidden when outside is clicked?  */
   hideOnClickOutside?: boolean,
+  /** Whether or not to show the backdrop component */
+  isVisible?: boolean,
   /** Will the backdrop have a slide animation when it is toggled on/off? */
   slide?: boolean | string,
   /** Timing of the animation */
-  timing?: string,
-  /** Whether or not to show the backdrop component */
-  visible?: boolean
+  timing?: string
 };
 
-const Backdrop = ({ children, ...props }: Props) => <_Backdrop {...props}>{children}</_Backdrop>;
+const Backdrop = ({ children, isVisible, ...props }: Props) => (
+  <_Backdrop visible={isVisible} {...props}>
+    {children}
+  </_Backdrop>
+);
 
 Backdrop.defaultProps = {
   animated: false,
-  as: undefined,
+  use: undefined,
   className: undefined,
   delay: undefined,
   duration: '250ms',
@@ -40,9 +44,9 @@ Backdrop.defaultProps = {
   fade: false,
   hideOnEsc: true,
   hideOnClickOutside: true,
+  isVisible: false,
   slide: false,
-  timing: 'ease-in-out',
-  visible: false
+  timing: 'ease-in-out'
 };
 
 export default Backdrop;

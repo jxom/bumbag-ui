@@ -14,7 +14,7 @@ const Link = ({ children, className, ...props }: Props) => (
 );
 
 Link.defaultProps = {
-  className: null
+  className: undefined
 };
 
 export default Link;

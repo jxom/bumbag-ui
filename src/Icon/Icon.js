@@ -30,7 +30,7 @@ export const Icon = ({ a11yLabel, children, icon, size: _size, theme, ...props }
   const viewBoxSize = size >= LARGE_VIEW_BOX_SIZE ? LARGE_VIEW_BOX_SIZE : DEFAULT_VIEW_BOX_SIZE;
   const paths = svgPaths[icon];
   return (
-    <_Icon as="svg" role="img" size={size} viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} {...props}>
+    <_Icon use="svg" role="img" size={size} viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} {...props}>
       {a11yLabel && <title>{a11yLabel}</title>}
       {paths.map(path => (
         <path key={path} d={path} fillRule="even-odd" />

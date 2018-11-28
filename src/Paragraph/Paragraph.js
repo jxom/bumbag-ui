@@ -17,8 +17,8 @@ const Paragraph = ({ children, className, ...props }: Props) => (
 );
 
 Paragraph.defaultProps = {
-  className: null,
-  color: null
+  className: undefined,
+  color: undefined
 };
 
 export default Paragraph;

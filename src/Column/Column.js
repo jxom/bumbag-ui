@@ -66,19 +66,19 @@ const Column = ({
 );
 
 Column.defaultProps = {
-  className: null,
-  spread: null,
-  spreadMobile: null,
-  spreadTablet: null,
-  spreadDesktop: null,
-  spreadWidescreen: null,
-  spreadFullHD: null,
-  spreadOffset: null,
-  spreadMobileOffset: null,
-  spreadTabletOffset: null,
-  spreadDesktopOffset: null,
-  spreadWidescreenOffset: null,
-  spreadFullHDOffset: null
+  className: undefined,
+  spread: undefined,
+  spreadMobile: undefined,
+  spreadTablet: undefined,
+  spreadDesktop: undefined,
+  spreadWidescreen: undefined,
+  spreadFullHD: undefined,
+  spreadOffset: undefined,
+  spreadMobileOffset: undefined,
+  spreadTabletOffset: undefined,
+  spreadDesktopOffset: undefined,
+  spreadWidescreenOffset: undefined,
+  spreadFullHDOffset: undefined
 };
 
 export default Column;

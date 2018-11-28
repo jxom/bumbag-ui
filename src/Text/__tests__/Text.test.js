@@ -15,7 +15,7 @@ it('renders correctly for text with a color', () => {
 
 it('renders correctly for text with a another element', () => {
   const { container } = render(
-    <Text as="strong" color="primary">
+    <Text use="strong" color="primary">
       test
     </Text>
   );

@@ -29,19 +29,19 @@ const OuterBorder = styled(InlineBlock)`
 type Props = {
   /** Title of the table to be read by screen readers. */
   a11yTitle?: string,
-  as?: any,
+  use?: any,
   children: Node,
   /** Renders an outer border for the table */
   hasBorder?: boolean,
   isFullWidth?: boolean
 };
 
-const Table = ({ a11yTitle, as, children, hasBorder, isFullWidth, ...props }: Props) => (
+const Table = ({ a11yTitle, children, hasBorder, isFullWidth, use, ...props }: Props) => (
   <ConditionalWrap
     condition={hasBorder}
     wrap={children => <OuterBorder isFullWidth={isFullWidth}>{children}</OuterBorder>}
   >
-    <_Table as={as} aria-label={a11yTitle} isFullWidth={isFullWidth} {...props}>
+    <_Table use={use} aria-label={a11yTitle} isFullWidth={isFullWidth} {...props}>
       {children}
     </_Table>
   </ConditionalWrap>
@@ -56,8 +56,8 @@ Table.HeadCell = TableHeadCell;
 Table.Row = TableRow;
 
 Table.defaultProps = {
-  a11yTitle: null,
-  as: 'table',
+  a11yTitle: undefined,
+  use: 'table',
   hasBorder: false,
   isFullWidth: false
 };

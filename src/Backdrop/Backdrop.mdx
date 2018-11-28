@@ -25,11 +25,11 @@ In the example below, we are leveraging the [`<Overlay>` component](/utils/overl
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide, toggle }) => (
+    {({ isVisible, show, hide, toggle }) => (
       <Box>
         <Button onClick={show}>Show backdrop</Button>
-        <Backdrop visible={visible} />
-        <Overlay visible={visible}>
+        <Backdrop isVisible={isVisible} />
+        <Overlay isVisible={isVisible}>
           <Button onClick={hide}>Hide backdrop</Button>
         </Overlay>
       </Box>
@@ -47,11 +47,11 @@ Have an expand-like animation by using the `expand` prop. The `expand` prop can 
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide, toggle }) => (
+    {({ isVisible, show, hide, toggle }) => (
       <Box>
         <Button onClick={show}>Show backdrop</Button>
-        <Backdrop expand visible={visible} />
-        <Overlay visible={visible}>
+        <Backdrop expand isVisible={isVisible} />
+        <Overlay isVisible={isVisible}>
           <Button onClick={hide}>Hide backdrop</Button>
         </Overlay>
       </Box>
@@ -65,11 +65,11 @@ Have a fade animation by using the `fade` prop.
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide, toggle }) => (
+    {({ isVisible, show, hide, toggle }) => (
       <Box>
         <Button onClick={show}>Show backdrop</Button>
-        <Backdrop fade visible={visible} />
-        <Overlay visible={visible}>
+        <Backdrop fade isVisible={isVisible} />
+        <Overlay isVisible={isVisible}>
           <Button onClick={hide}>Hide backdrop</Button>
         </Overlay>
       </Box>
@@ -83,11 +83,11 @@ You can have a slide animation with the `slide` prop. The `slide` prop can take 
 
 <Playground>
   <Overlay.Container>
-    {({ visible, show, hide, toggle }) => (
+    {({ isVisible, show, hide, toggle }) => (
       <Box>
         <Button onClick={show}>Show backdrop</Button>
-        <Backdrop slide="bottom" visible={visible} />
-        <Overlay visible={visible}>
+        <Backdrop slide="bottom" isVisible={isVisible} />
+        <Overlay isVisible={isVisible}>
           <Button onClick={hide}>Hide backdrop</Button>
         </Overlay>
       </Box>

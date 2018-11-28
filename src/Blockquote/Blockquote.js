@@ -17,8 +17,8 @@ const Blockquote = ({ children, className, ...props }: Props) => (
 );
 
 Blockquote.defaultProps = {
-  className: null,
-  palette: null
+  className: undefined,
+  palette: undefined
 };
 
 export default Blockquote;
