@@ -1,8 +1,8 @@
 import { theme } from 'styled-tools';
 import styled, { css } from '../styled';
-import { Flex } from '../primitives';
+import { InlineFlex } from '../primitives';
 
-export default styled(Flex)`
+export default styled(InlineFlex)`
   flex-wrap: wrap;
 
   ${props =>

@@ -42,8 +42,8 @@ Backdrop.defaultProps = {
   duration: '250ms',
   expand: undefined,
   fade: false,
-  hideOnEsc: true,
-  hideOnClickOutside: true,
+  hideOnEsc: undefined,
+  hideOnClickOutside: undefined,
   isVisible: false,
   slide: false,
   timing: 'ease-in-out'

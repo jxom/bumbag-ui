@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 it('renders correctly for a default dialog', () => {
   const { container } = render(
-    <Dialog>
+    <Dialog.Dialog>
       <Dialog.Header>
         <Dialog.Title>This is a title</Dialog.Title>
       </Dialog.Header>
@@ -14,14 +14,14 @@ it('renders correctly for a default dialog', () => {
         ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
         consectetur lectus augue sit amet justo.
       </Dialog.Content>
-    </Dialog>
+    </Dialog.Dialog>
   );
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for a dialog with a footer', () => {
   const { container } = render(
-    <Dialog>
+    <Dialog.Dialog>
       <Dialog.Header>
         <Dialog.Title>This is a title</Dialog.Title>
       </Dialog.Header>
@@ -31,12 +31,12 @@ it('renders correctly for a dialog with a footer', () => {
         consectetur lectus augue sit amet justo.
       </Dialog.Content>
       <Dialog.Footer>test</Dialog.Footer>
-    </Dialog>
+    </Dialog.Dialog>
   );
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a dialog with a close button', () => {
+it('renders correctly for a compound dialog with a close button', () => {
   const { container } = render(
     <Dialog showCloseButton title="This is a title">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,

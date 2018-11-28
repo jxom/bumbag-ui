@@ -49,7 +49,7 @@ Overlay.defaultProps = {
   expand: undefined,
   fade: false,
   hideOnEsc: true,
-  hideOnClickOutside: true,
+  hideOnClickOutside: undefined,
   isVisible: false,
   slide: false,
   timing: 'ease-in-out'

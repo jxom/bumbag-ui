@@ -1,0 +1,68 @@
+---
+name: Modal
+route: /utils/modal
+menu: Utilities
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Hidden from 'reakit/Hidden';
+import Modal from './index';
+import Button, { ActionButtons } from '../Button';
+import Pane from '../Pane';
+
+# Modal
+
+## Import
+
+`import { Modal } from 'fannypack'`
+
+## Basic Usage
+
+The `<Modal>` component uses `<Overlay>` internally, but it is rendered inside a portal with it's focus trapped (keyboard navigation) for accessibility and also includes a backdrop.
+
+It is recommended to try use the [`<DialogModal>` component](/components/dialogmodal) before you use `<Modal>`. `<Modal>` provides a way to create a more flexible modal if you need. If `<DialogModal>` doesn't suit your needs, then feel free to use this.
+
+It is recommended to use the modal helper components (`<Modal.Show>`, `<Modal.Hide>`) when building modals to leverage accessibility features they provide like so:
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <Modal {...modal}>
+          {({ fallbackFocusRef, initialFocusRef }) => (
+            <Pane elementRef={fallbackFocusRef} padding="small" isFullWidth>
+              Hello world!
+              <Button use={Modal.Hide} elementRef={initialFocusRef} {...modal}>
+                Close
+              </Button>
+            </Pane>
+          )}
+        </Modal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## `<Modal>` Props
+
+<PropsTable of={Modal} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Hide: {
+    base: string | Object
+  },
+  Show: {
+    base: string | Object
+  }
+}
+```

@@ -5,7 +5,7 @@ import type { Palette } from '../types';
 import Button from './Button';
 import Set from '../Set';
 
-type Props = {
+export type Props = {
   /** Custom button props for the cancel button */
   cancelProps?: Object,
   /** Custom text for the cancel button */

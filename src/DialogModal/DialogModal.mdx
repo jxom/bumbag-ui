@@ -1,0 +1,158 @@
+---
+name: DialogModal
+route: /components/dialogmodal
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../primitives/index';
+import Hidden from 'reakit/Hidden';
+import DialogModal from './index';
+import Modal from '../Modal';
+import Button, { ActionButtons } from '../Button';
+import Backdrop from '../Backdrop';
+import Dialog from '../Dialog';
+import Text from '../Text';
+
+# DialogModal
+
+## Import
+
+`import { DialogModal, Modal } from 'fannypack'`
+
+## Basic Usage
+
+The `<DialogModal>` component uses the `<Dialog>` & `<Modal>` component internally, and provides you with nice accessibility features out of the box (such as focus trapping & accessibility ids).
+
+It is recommended to use the modal helper components (`<Modal.Show>`, `<Modal.Hide>`) when building modals to leverage accessibility features they provide like so:
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal showCloseButton title="This is a title" {...modal}>
+          This is the content
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Initial focus
+
+You can leverage the initially focused element in the modal using the `initialFocusRef` render prop.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal showCloseButton title="This is a title" {...modal}>
+          {({ initialFocusRef }) => (
+            <Button use={Modal.Hide} elementRef={initialFocusRef} {...modal}>
+              Close
+            </Button>
+          )}
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Action buttons
+
+The `<DialogModal>` component uses `<Dialog>` internally, which means you can also add in action buttons.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal
+          actionButtonsProps={{ onClickSubmit: () => alert('hello!') }}
+          showActionButtons
+          title="This is a title"
+          {...modal}
+        >
+          This is the content
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Footer
+
+You can also render a footer with the `footer` prop.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal
+          actionButtonsProps={{ onClickSubmit: () => alert('hello!') }}
+          footer={<Text>This is a footer</Text>}
+          showActionButtons
+          title="This is a title"
+          {...modal}
+        >
+          This is the content
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Restricting closure
+
+By default, `DialogModal`'s can be closed by clicking 'esc' or outside the modal area. To control this behaviour, you can pass the `hideOnEsc` and/or `hideOnClickOutside` props.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal hideOnEsc={false} hideOnClickOutside={false} title="This is a title" showActionButtons {...modal}>
+          This is the content
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Alerts
+
+A `DialogModal` of type 'alert' can be used to display urgent information that demands the user's immediate attention. By default, you are not allowed to close the modal via the 'esc' or clicking outside.
+
+Note: this will apply `role="alertdialog"` to the dialog.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal type="alert" title="This is a title" showActionButtons {...modal}>
+          This is the content
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## `<DialogModal>` Props
+
+<PropsTable of={DialogModal} />

@@ -9,8 +9,15 @@ import { Box } from '../primitives/index';
 import { ActionButtons } from '../Button';
 import Heading from '../Heading';
 import Paragraph from '../Paragraph';
+import Text from '../Text';
 import Set from '../Set';
 import Dialog from './index';
+import DialogDialog from './DialogDialog';
+import DialogHeader from './DialogHeader';
+import DialogContent from './DialogContent';
+import DialogFooter from './DialogFooter';
+import DialogTitle from './DialogTitle';
+import DialogClose from './DialogClose';
 
 # Dialog
 
@@ -33,7 +40,19 @@ import Dialog from './index';
 You can render a footer for the dialog using the `footer` prop.
 
 <Playground>
-  <Dialog title="This is a title" footer={<ActionButtons justifyContent="flex-end" />}>
+  <Dialog title="This is a title" footer={<Text>This is a footer</Text>}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog>
+</Playground>
+
+## Action buttons
+
+It is common to have action buttons in a dialog's footer. Use the `showActionButtons` prop to enable them. Dialog also accepts the `actionButtonsProps` that accepts the props of the [`<ActionButtons>` component](/components/button#actionbuttons-props).
+
+<Playground>
+  <Dialog actionButtonsProps={{ onClickSubmit: () => alert('Submitted') }} title="This is a title" showActionButtons>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -45,28 +64,67 @@ You can render a footer for the dialog using the `footer` prop.
 To render a close icon on a dialog, use the `showCloseButton` prop.
 
 <Playground>
-  <Dialog onClickClose={() => console.log('close')} showCloseButton title="This is a title" footer={<ActionButtons justifyContent="flex-end" />}>
+  <Dialog onClickClose={() => console.log('close')} showCloseButton title="This is a title">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Dialog>
 </Playground>
 
-## Accessibility
-
-It is recommended to add an `a11yTitleId` and `a11yDescriptionId` so that screen readers can read the dialog effectively.
-
-<Playground>
-  <Dialog a11yTitleId="title" a11yDescriptionId="description" title="This is a title" footer={<ActionButtons />}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-</Playground>
-
-## Props
+## `<Dialog>` Props
 
 <PropsTable of={Dialog} />
+
+# Dialog.Dialog
+
+## Import
+
+`import { Dialog } from 'fannypack'`
+
+## Basic Usage
+
+The `<Dialog>` component is made up of a compound of components (such as: `<Dialog.Dialog>`, `<Dialog.Header>`, `<Dialog.Content>`, etc). However, you can use `<Dialog.Dialog>` to make a more flexible dialog.
+
+<Playground>
+  <Dialog.Dialog a11yDescriptionId="description" a11yTitleId="title">
+    <Dialog.Header>
+      <Dialog.Title id="title">This is a title</Dialog.Title>
+      <Dialog.Close onClick={() => alert('Closed')} />
+    </Dialog.Header>
+    <Dialog.Content id="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+      ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+      lectus augue sit amet justo.
+    </Dialog.Content>
+    <Dialog.Footer justifyContent="flex-end">
+      <ActionButtons />
+    </Dialog.Footer>
+  </Dialog.Dialog>
+</Playground>
+
+## `<Dialog.Dialog>` Props
+
+<PropsTable of={DialogDialog} />
+
+## `<Dialog.Header>` Props
+
+<PropsTable of={DialogHeader} />
+
+## `<Dialog.Content>` Props
+
+<PropsTable of={DialogContent} />
+
+## `<Dialog.Footer>` Props
+
+<PropsTable of={DialogFooter} />
+
+## `<Dialog.Title>` Props
+
+<PropsTable of={DialogTitle} />
+
+## `<Dialog.Close>` Props
+
+<PropsTable of={DialogClose} />
 
 ## Theming
 

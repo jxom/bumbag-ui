@@ -1,6 +1,8 @@
 // @flow
 import React, { type Element, type Node } from 'react';
-import _Card from './styled';
+
+import { getUniqueId } from '../uniqueId';
+import CardCard from './CardCard';
 import CardContent from './CardContent';
 import CardHeader from './CardHeader';
 import CardFooter from './CardFooter';
@@ -18,7 +20,7 @@ type Props = {
 };
 
 const Card = ({ a11yDescriptionId, a11yTitleId, children, footer, headerActions, title, ...props }: Props) => (
-  <_Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} border="shadow" padding="medium" {...props}>
+  <CardCard a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} {...props}>
     {title && (
       <CardHeader>
         {typeof title === 'string' ? <CardTitle id={a11yTitleId}>{title}</CardTitle> : title}
@@ -27,17 +29,18 @@ const Card = ({ a11yDescriptionId, a11yTitleId, children, footer, headerActions,
     )}
     <CardContent id={a11yDescriptionId}>{children}</CardContent>
     {footer && <CardFooter>{footer}</CardFooter>}
-  </_Card>
+  </CardCard>
 );
 
+Card.Card = CardCard;
 Card.Header = CardHeader;
 Card.Content = CardContent;
 Card.Footer = CardFooter;
 Card.Title = CardTitle;
 
 Card.defaultProps = {
-  a11yDescriptionId: undefined,
-  a11yTitleId: undefined,
+  a11yDescriptionId: getUniqueId('Card'),
+  a11yTitleId: getUniqueId('Card'),
   children: undefined,
   className: undefined,
   footer: undefined,

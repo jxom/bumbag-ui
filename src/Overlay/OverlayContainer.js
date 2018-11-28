@@ -4,16 +4,18 @@ import ReakitOverlay from 'reakit/Overlay';
 
 type Props = {
   children: Function,
+  defaultVisible?: boolean,
   initialState?: Object
 };
 
-const Overlay = ({ children, ...props }: Props) => (
-  <ReakitOverlay.Container {...props}>
+const Overlay = ({ children, defaultVisible, initialState, ...props }: Props) => (
+  <ReakitOverlay.Container initialState={{ visible: defaultVisible, ...initialState }} {...props}>
     {({ visible, ...rest }) => children({ isVisible: visible, ...rest })}
   </ReakitOverlay.Container>
 );
 
 Overlay.defaultProps = {
+  defaultVisible: false,
   initialState: {}
 };
 

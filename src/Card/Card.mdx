@@ -50,7 +50,7 @@ You can render a header with actions for the card using the `headerActions` prop
 You can render a footer for the card using the `footer` prop.
 
 <Playground>
-  <Card title="This is a title" footer={<ActionButtons justifyContent="flex-end" />}>
+  <Card title="This is a title" footer={<ActionButtons justifyContent="flex-end" width="100%" />}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
@@ -66,6 +66,32 @@ You can render a footer for the card using the `footer` prop.
 ## Props
 
 <PropsTable of={Card} />
+
+# Card.Card
+
+## Import
+
+`import { Card } from 'fannypack'`
+
+## Basic Usage
+
+The `<Card>` component is made up of a compound of components (such as: `<Card.Card>`, `<Card.Header>`, `<Card.Content>`, etc). However, you can use `<Card.Card>` to make a more flexible card.
+
+<Playground>
+  <Card.Card a11yDescriptionId="description" a11yTitleId="title">
+    <Card.Header>
+      <Card.Title id="title">This is a title</Card.Title>
+    </Card.Header>
+    <Card.Content id="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+      ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+      lectus augue sit amet justo.
+    </Card.Content>
+    <Card.Footer justifyContent="flex-end">
+      <ActionButtons />
+    </Card.Footer>
+  </Card.Card>
+</Playground>
 
 ## Theming
 

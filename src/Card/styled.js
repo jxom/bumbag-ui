@@ -11,6 +11,7 @@ export default styled(Pane)`
       width: 100%;
     `};
   }
+
   & {
     ${theme('fannypack.Card.base')};
   }
@@ -18,6 +19,7 @@ export default styled(Pane)`
 export const CardContent = styled(Box)`
   max-height: 50vh;
   overflow-y: scroll;
+
   & {
     ${theme('fannypack.Card.Content.base')};
   }
@@ -30,13 +32,16 @@ export const CardHeader = styled(Box)`
   padding-bottom: ${theme('fannypack.layout.spacing.small')}rem;
   position: relative;
   width: 100%;
+
   & {
     ${theme('fannypack.Card.Header.base')};
   }
 `;
 export const CardFooter = styled(Box)`
+  display: flex;
   padding-top: ${theme('fannypack.layout.spacing.small')}rem;
   width: 100%;
+
   & {
     ${theme('fannypack.Card.Footer.base')};
   }

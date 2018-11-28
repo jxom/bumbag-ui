@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 it('renders correctly for a default card', () => {
   const { container } = render(
-    <Card>
+    <Card.Card>
       <Card.Header>
         <Card.Title>This is a title</Card.Title>
       </Card.Header>
@@ -14,14 +14,14 @@ it('renders correctly for a default card', () => {
         ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
         consectetur lectus augue sit amet justo.
       </Card.Content>
-    </Card>
+    </Card.Card>
   );
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for a card with a footer', () => {
   const { container } = render(
-    <Card>
+    <Card.Card>
       <Card.Header>
         <Card.Title>This is a title</Card.Title>
       </Card.Header>
@@ -31,12 +31,12 @@ it('renders correctly for a card with a footer', () => {
         consectetur lectus augue sit amet justo.
       </Card.Content>
       <Card.Footer>test</Card.Footer>
-    </Card>
+    </Card.Card>
   );
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a card with a actions', () => {
+it('renders correctly for a compounded card with a actions', () => {
   const { container } = render(
     <Card title="This is a title" headerActions={<div>test</div>}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
