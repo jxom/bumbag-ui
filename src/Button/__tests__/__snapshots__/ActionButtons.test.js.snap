@@ -23,11 +23,11 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #fcfcfc;
   color: inherit;
 }
 
-.c11 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -36,11 +36,11 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #fcfcfc;
+  background-color: #3926a5;
   color: inherit;
 }
 
-.c8 {
+.c11 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -87,7 +87,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   display: flex;
 }
 
-.c7 {
+.c10 {
   font-size: 20px;
   -webkit-animation: iVXCSc 0.6s infinite linear;
   animation: iVXCSc 0.6s infinite linear;
@@ -101,7 +101,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   position: relative;
 }
 
-.c10 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -111,53 +111,6 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   border-radius: 4px;
   color: #435a6f;
   fill: #435a6f;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  height: 2.5em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 0.8rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
-}
-
-.c10[disabled] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.c10:hover {
-  background-color: #efefef;
-}
-
-.c10:hover:active {
-  background-color: #e3e3e3;
-}
-
-.c4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
-  border-radius: 4px;
-  color: #fff;
-  fill: #fff;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -187,16 +140,63 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   pointer-events: unset;
 }
 
-.c4 {
+.c4:hover {
+  background-color: #efefef;
+}
+
+.c4:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3926a5;
+  border: 1px solid #1c1352;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7467c0 0px 0px 0px 2px;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c7 {
   cursor: not-allowed;
 }
 
-.c4:focus {
+.c7:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.c6 {
+.c9 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,11 +212,11 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   justify-content: center;
 }
 
-.c6 + span {
+.c9 + span {
   opacity: 0;
 }
 
-.c9 {
+.c6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -260,30 +260,30 @@ exports[`renders correctly for action buttons that is loading 1`] = `
       kind="default"
       style="size: default;"
     >
+      <span
+        class="c6"
+      >
+        Cancel
+      </span>
+    </button>
+    <button
+      class="c7 c8"
+      kind="default"
+      style="size: default;"
+    >
       <div
-        class="c6 c1"
+        class="c9 c1"
       >
         <div
-          class="c7 c8"
+          class="c10 c11"
           color="primaryInverted"
           style="size: default;"
         />
       </div>
       <span
-        class="c9"
+        class="c6"
       >
         Submit
-      </span>
-    </button>
-    <button
-      class="c10 c11"
-      kind="default"
-      style="size: default;"
-    >
-      <span
-        class="c9"
-      >
-        Cancel
       </span>
     </button>
   </div>
@@ -313,7 +313,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #fcfcfc;
   color: inherit;
 }
 
@@ -326,7 +326,7 @@ exports[`renders correctly for action buttons with a type 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #fcfcfc;
+  background-color: #3926a5;
   color: inherit;
 }
 
@@ -368,11 +368,11 @@ exports[`renders correctly for action buttons with a type 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
-  color: #fff;
-  fill: #fff;
+  color: #435a6f;
+  fill: #435a6f;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -403,11 +403,11 @@ exports[`renders correctly for action buttons with a type 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #efefef;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #e3e3e3;
 }
 
 .c7 {
@@ -415,11 +415,11 @@ exports[`renders correctly for action buttons with a type 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
+  background-color: #3926a5;
+  border: 1px solid #1c1352;
   border-radius: 4px;
-  color: #435a6f;
-  fill: #435a6f;
+  color: #fff;
+  fill: #fff;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -450,11 +450,11 @@ exports[`renders correctly for action buttons with a type 1`] = `
 }
 
 .c7:hover {
-  background-color: #efefef;
+  background-color: #322190;
 }
 
 .c7:hover:active {
-  background-color: #e3e3e3;
+  background-color: #2b1c7c;
 }
 
 .c6 {
@@ -500,23 +500,23 @@ exports[`renders correctly for action buttons with a type 1`] = `
       class="c4 c5"
       kind="default"
       style="size: default;"
-      type="submit"
     >
       <span
         class="c6"
       >
-        Submit
+        Cancel
       </span>
     </button>
     <button
       class="c7 c8"
       kind="default"
       style="size: default;"
+      type="submit"
     >
       <span
         class="c6"
       >
-        Cancel
+        Submit
       </span>
     </button>
   </div>
@@ -537,7 +537,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -550,7 +550,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -601,8 +601,8 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #d60027;
+  border: 1px solid #700014;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -625,7 +625,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
 .c4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #7467c0 0px 0px 0px 2px;
+  box-shadow: #e24c67 0px 0px 0px 2px;
 }
 
 .c4[disabled] {
@@ -635,13 +635,21 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   pointer-events: unset;
 }
 
+.c4:hover {
+  background-color: #bd0022;
+}
+
+.c4:hover:active {
+  background-color: #a3001e;
+}
+
 .c7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #d60027;
-  border: 1px solid #700014;
+  background-color: #3926a5;
+  border: 1px solid #1c1352;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
@@ -664,7 +672,7 @@ exports[`renders correctly for action buttons with custom props 1`] = `
 .c7:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #e24c67 0px 0px 0px 2px;
+  box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
 .c7[disabled] {
@@ -672,14 +680,6 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
-}
-
-.c7:hover {
-  background-color: #bd0022;
-}
-
-.c7:hover:active {
-  background-color: #a3001e;
 }
 
 .c6 {
@@ -723,6 +723,17 @@ exports[`renders correctly for action buttons with custom props 1`] = `
   >
     <button
       class="c4 c5"
+      kind="default"
+      style="size: default;"
+    >
+      <span
+        class="c6"
+      >
+        Reject
+      </span>
+    </button>
+    <button
+      class="c7 c8"
       disabled=""
       kind="default"
       style="size: default;"
@@ -731,17 +742,6 @@ exports[`renders correctly for action buttons with custom props 1`] = `
         class="c6"
       >
         Submit
-      </span>
-    </button>
-    <button
-      class="c7 c8"
-      kind="default"
-      style="size: default;"
-    >
-      <span
-        class="c6"
-      >
-        Reject
       </span>
     </button>
   </div>
@@ -771,7 +771,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #fcfcfc;
   color: inherit;
 }
 
@@ -784,7 +784,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #fcfcfc;
+  background-color: #3926a5;
   color: inherit;
 }
 
@@ -826,11 +826,11 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
-  color: #fff;
-  fill: #fff;
+  color: #435a6f;
+  fill: #435a6f;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -861,11 +861,11 @@ exports[`renders correctly for action buttons with custom text 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #efefef;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #e3e3e3;
 }
 
 .c7 {
@@ -873,11 +873,11 @@ exports[`renders correctly for action buttons with custom text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
+  background-color: #3926a5;
+  border: 1px solid #1c1352;
   border-radius: 4px;
-  color: #435a6f;
-  fill: #435a6f;
+  color: #fff;
+  fill: #fff;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -908,11 +908,11 @@ exports[`renders correctly for action buttons with custom text 1`] = `
 }
 
 .c7:hover {
-  background-color: #efefef;
+  background-color: #322190;
 }
 
 .c7:hover:active {
-  background-color: #e3e3e3;
+  background-color: #2b1c7c;
 }
 
 .c6 {
@@ -962,7 +962,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
       <span
         class="c6"
       >
-        Save
+        Close
       </span>
     </button>
     <button
@@ -973,7 +973,7 @@ exports[`renders correctly for action buttons with custom text 1`] = `
       <span
         class="c6"
       >
-        Close
+        Save
       </span>
     </button>
   </div>
@@ -1003,7 +1003,7 @@ exports[`renders correctly for default action buttons 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #3926a5;
+  background-color: #fcfcfc;
   color: inherit;
 }
 
@@ -1016,7 +1016,7 @@ exports[`renders correctly for default action buttons 1`] = `
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #fcfcfc;
+  background-color: #3926a5;
   color: inherit;
 }
 
@@ -1058,11 +1058,11 @@ exports[`renders correctly for default action buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #3926a5;
-  border: 1px solid #1c1352;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
   border-radius: 4px;
-  color: #fff;
-  fill: #fff;
+  color: #435a6f;
+  fill: #435a6f;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1093,11 +1093,11 @@ exports[`renders correctly for default action buttons 1`] = `
 }
 
 .c4:hover {
-  background-color: #322190;
+  background-color: #efefef;
 }
 
 .c4:hover:active {
-  background-color: #2b1c7c;
+  background-color: #e3e3e3;
 }
 
 .c7 {
@@ -1105,11 +1105,11 @@ exports[`renders correctly for default action buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfc;
-  border: 1px solid #bfbfbf;
+  background-color: #3926a5;
+  border: 1px solid #1c1352;
   border-radius: 4px;
-  color: #435a6f;
-  fill: #435a6f;
+  color: #fff;
+  fill: #fff;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1140,11 +1140,11 @@ exports[`renders correctly for default action buttons 1`] = `
 }
 
 .c7:hover {
-  background-color: #efefef;
+  background-color: #322190;
 }
 
 .c7:hover:active {
-  background-color: #e3e3e3;
+  background-color: #2b1c7c;
 }
 
 .c6 {
@@ -1194,7 +1194,7 @@ exports[`renders correctly for default action buttons 1`] = `
       <span
         class="c6"
       >
-        Submit
+        Cancel
       </span>
     </button>
     <button
@@ -1205,7 +1205,7 @@ exports[`renders correctly for default action buttons 1`] = `
       <span
         class="c6"
       >
-        Cancel
+        Submit
       </span>
     </button>
   </div>
@@ -1226,7 +1226,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1239,7 +1239,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1285,7 +1285,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
   display: flex;
 }
 
-.c7 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1311,28 +1311,28 @@ exports[`renders correctly when a palette prop is set 1`] = `
   text-decoration: none;
 }
 
-.c7:focus {
+.c4:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
-.c7[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c7:hover {
+.c4:hover {
   background-color: #efefef;
 }
 
-.c7:hover:active {
+.c4:hover:active {
   background-color: #e3e3e3;
 }
 
-.c4 {
+.c7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1358,24 +1358,24 @@ exports[`renders correctly when a palette prop is set 1`] = `
   text-decoration: none;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #56748f 0px 0px 0px 2px;
 }
 
-.c4[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c4:hover {
+.c7:hover {
   background-color: #394d5f;
 }
 
-.c4:hover:active {
+.c7:hover:active {
   background-color: #30404f;
 }
 
@@ -1426,7 +1426,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
       <span
         class="c6"
       >
-        Submit
+        Cancel
       </span>
     </button>
     <button
@@ -1437,7 +1437,7 @@ exports[`renders correctly when a palette prop is set 1`] = `
       <span
         class="c6"
       >
-        Cancel
+        Submit
       </span>
     </button>
   </div>
