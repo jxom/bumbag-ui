@@ -7,7 +7,7 @@ export default {
       text: '#435a6f'
     },
     logo: {
-      src: 'https://raw.githubusercontent.com/bigbellies/fannypack/master/logo.png',
+      src: 'https://raw.githubusercontent.com/jxom/fannypack/master/logo.png',
       width: '230px'
     },
     styles: {
