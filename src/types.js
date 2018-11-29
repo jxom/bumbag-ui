@@ -10,6 +10,9 @@ export type Size = 'default' | 'small' | 'medium' | 'large';
 
 /* ====== START: THEMES ====== */
 export type Stylesheet = string | Object;
+export type AvatarThemeConfig = {
+  base?: Stylesheet
+};
 export type AlertThemeConfig = {
   base?: Stylesheet,
   Title?: {
@@ -348,6 +351,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig,
 
   Alert?: AlertThemeConfig,
+  Avatar?: AvatarThemeConfig,
   Backdrop?: BackdropThemeConfig,
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,

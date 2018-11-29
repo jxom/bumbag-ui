@@ -5,6 +5,7 @@ export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';
 
 export { Alert } from './Alert';
+export { Avatar } from './Avatar';
 export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';

@@ -1,0 +1,81 @@
+---
+name: Avatar
+route: /components/avatar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Avatar from './index';
+import Set from '../Set';
+
+# Image
+
+## Import
+
+`import { Avatar } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" fit="cover" height={100} width={100} />
+</Playground>
+
+## Avatar shapes
+
+Avatars are available in two different shapes and can be changed using the `kind` prop.
+
+<Playground>
+  <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" kind="circle" alt="Bean" fit="cover" height={100} width={100} />
+</Playground>
+
+## Avatar sizes
+
+Avatars are available in five different sizes or you can set your own using the `size` prop.
+
+<Playground>
+  <Set>
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="xsmall" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="small" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="medium" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size="large" />
+    <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Bean" kind="circle" fit="cover" size={200} />
+  </Set>
+</Playground>
+
+## Avatar using initials
+
+Avatars can also be initials using the `initials` prop.
+
+<Playground>
+  <Set>
+    <Avatar palette="primary" initials="MB" alt="Bean" kind="circle" size="xsmall" />
+    <Avatar palette="success" initials="Mr Bean" alt="Bean" kind="circle" size="small" />
+    <Avatar palette="primary" initials="MB" alt="Bean" />
+    <Avatar palette="danger" initials="MB" alt="Bean" kind="circle" size="medium" />
+    <Avatar palette="warning" initials="MB" alt="Bean" kind="circle" size="large" />
+  </Set>
+</Playground>
+
+## Props
+
+<PropsTable of={Avatar} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  fit: {
+    cover: string | Object,
+    contain: string | Object
+  },
+  sizes: {
+    xsmall: string | Object,
+    small: string | Object,
+    medium: string | Object,
+    large: string | Object
+  }
+}
+```
