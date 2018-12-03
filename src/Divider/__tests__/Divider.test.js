@@ -3,8 +3,6 @@ import render from '../../_utils/tests/render';
 import Divider from '../Divider';
 import Box from 'reakit/Box';
 import Flex from 'reakit/Flex';
-import 'jest-styled-components';
-
 it('renders correctly for a basic divider', () => {
   const { container } = render(<Divider />);
   expect(container.firstChild).toMatchSnapshot();

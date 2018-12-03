@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Spinner from '../Spinner';
-import 'jest-styled-components';
-
 it('renders correctly', () => {
   const { container } = render(<Spinner />);
   expect(container.firstChild).toMatchSnapshot();

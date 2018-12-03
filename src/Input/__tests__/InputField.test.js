@@ -2,8 +2,6 @@ import React from 'react';
 import render from '../../_utils/tests/render';
 import Input from '../Input';
 import InputField from '../InputField';
-import 'jest-styled-components';
-
 it('renders correctly for a basic input field', () => {
   const { container } = render(<InputField />);
   expect(container.firstChild).toMatchSnapshot();

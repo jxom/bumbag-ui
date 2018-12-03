@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import RadioGroup from '../RadioGroup';
-import 'jest-styled-components';
-
 it('renders correctly for a basic RadioGroup', () => {
   const { container } = render(
     <RadioGroup

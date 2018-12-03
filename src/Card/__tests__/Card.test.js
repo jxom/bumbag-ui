@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Card from '../Card';
-import 'jest-styled-components';
-
 it('renders correctly for a default card', () => {
   const { container } = render(
     <Card.Card>

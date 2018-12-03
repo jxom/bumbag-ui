@@ -41,6 +41,7 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",
@@ -73,6 +74,7 @@
   "jest": {
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.transform.js"
-    }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js"
   }
 }

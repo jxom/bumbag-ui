@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Avatar from '../Avatar';
-import 'jest-styled-components';
-
 it('renders correctly for a default avatar', () => {
   const { container } = render(
     <Avatar src="https://raw.githubusercontent.com/bigbellies/fannypack/master/src/_docs/bean.jpg" alt="Mr bean" />

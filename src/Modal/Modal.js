@@ -49,7 +49,7 @@ const Modal = ({
   ...props
 }: Props) => (
   <Portal>
-    <TrapFocus isActive={isVisible}>
+    <TrapFocus isActive={isVisible} usesPortal>
       {({ fallbackFocusRef, initialFocusRef }) => (
         <Fragment>
           <Backdrop

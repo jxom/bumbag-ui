@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import CheckboxField from '../CheckboxField';
-import 'jest-styled-components';
-
 it('renders correctly for a basic checkbox field', () => {
   const { container } = render(<CheckboxField checkboxLabel="Check me" />);
   expect(container.firstChild).toMatchSnapshot();

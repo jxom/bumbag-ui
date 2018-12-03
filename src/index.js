@@ -32,6 +32,7 @@ export { Navigation } from './Navigation';
 export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } from './Overlay';
 export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
+export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, PopoverClose } from './Popover';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';

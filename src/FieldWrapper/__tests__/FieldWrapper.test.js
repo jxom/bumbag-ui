@@ -2,8 +2,6 @@ import React from 'react';
 import render from '../../_utils/tests/render';
 import FieldWrapper from '../FieldWrapper';
 import Input from '../../Input';
-import 'jest-styled-components';
-
 it('renders correctly for a basic field', () => {
   const { container } = render(
     <FieldWrapper a11yId="username" label="Username">

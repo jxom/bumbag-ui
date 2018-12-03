@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Input from '../Input';
-import 'jest-styled-components';
-
 it('renders correctly for a basic input', () => {
   const { container } = render(<Input />);
   expect(container.firstChild).toMatchSnapshot();

@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import ActionButtons from '../ActionButtons';
-import 'jest-styled-components';
-
 it('renders correctly for default action buttons', () => {
   const { container } = render(<ActionButtons />);
   expect(container.firstChild).toMatchSnapshot();

@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import TextareaField from '../TextareaField';
-import 'jest-styled-components';
-
 it('renders correctly for a basic input field', () => {
   const { container } = render(<TextareaField />);
   expect(container.firstChild).toMatchSnapshot();

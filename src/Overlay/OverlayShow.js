@@ -5,7 +5,8 @@ import { OverlayShow as _OverlayShow } from './styled';
 
 type Props = {
   children: Function,
-  onClick?: Function
+  onClick?: Function,
+  show: Function
 };
 
 const OverlayShow = ({ children, ...props }: Props) => <_OverlayShow {...props}>{children}</_OverlayShow>;

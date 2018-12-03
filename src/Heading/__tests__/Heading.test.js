@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Heading from '../Heading';
-import 'jest-styled-components';
-
 it('renders correctly for a basic heading', () => {
   const { container } = render(<Heading>test</Heading>);
   expect(container.firstChild).toMatchSnapshot();

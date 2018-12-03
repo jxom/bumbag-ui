@@ -3,8 +3,6 @@ import render from '../../_utils/tests/render';
 import Button from '../Button';
 import Set from '../../Set';
 import Group from '../../Group';
-import 'jest-styled-components';
-
 it('renders correctly for a default button', () => {
   const { container } = render(<Button>Test</Button>);
   expect(container.firstChild).toMatchSnapshot();

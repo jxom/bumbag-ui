@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Pane from '../Pane';
-import 'jest-styled-components';
-
 it('renders correctly for a basic pane', () => {
   const { container } = render(<Pane>test</Pane>);
   expect(container.firstChild).toMatchSnapshot();

@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Alert from '../Alert';
-import 'jest-styled-components';
-
 it('renders correctly', () => {
   const { container } = render(<Alert>Alert</Alert>);
   expect(container.firstChild).toMatchSnapshot();

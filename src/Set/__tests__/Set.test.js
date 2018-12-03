@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Set from '../Set';
-import 'jest-styled-components';
-
 it('renders correctly for a basic set', () => {
   const { container } = render(
     <Set>

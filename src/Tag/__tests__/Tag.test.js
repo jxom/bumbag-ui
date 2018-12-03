@@ -2,8 +2,6 @@ import React from 'react';
 import render from '../../_utils/tests/render';
 import Tag from '../Tag';
 import Set from '../../Set';
-import 'jest-styled-components';
-
 it('renders correctly', () => {
   const { container } = render(<Tag>Tag</Tag>);
   expect(container.firstChild).toMatchSnapshot();

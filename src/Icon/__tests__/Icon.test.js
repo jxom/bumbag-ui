@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Icon from '../Icon';
-import 'jest-styled-components';
-
 it('renders correctly for a basic icon', () => {
   const { container } = render(<Icon a11yLabel="Settings" icon="cog" />);
   expect(container.firstChild).toMatchSnapshot();

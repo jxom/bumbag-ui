@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Radio from '../Radio';
-import 'jest-styled-components';
-
 it('renders correctly for a basic radio', () => {
   const { container } = render(<Radio />);
   expect(container.firstChild).toMatchSnapshot();

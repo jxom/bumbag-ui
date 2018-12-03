@@ -207,6 +207,21 @@ export type PaneThemeConfig = {
 export type ParagraphThemeConfig = {
   base?: Stylesheet
 };
+export type PopoverThemeConfig = {
+  base?: Stylesheet,
+  Hide?: {
+    base?: Stylesheet
+  },
+  Show?: {
+    base?: Stylesheet
+  },
+  Toggle?: {
+    base?: Stylesheet
+  },
+  Close?: {
+    base?: Stylesheet
+  }
+};
 export type RadioThemeConfig = {
   base?: Stylesheet,
   label?: Stylesheet,
@@ -376,6 +391,7 @@ export type ThemeConfig = {
   Overlay?: OverlayThemeConfig,
   Pane?: PaneThemeConfig,
   Paragraph?: ParagraphThemeConfig,
+  Popover?: PopoverThemeConfig,
   Radio?: RadioThemeConfig,
   RadioGroup?: RadioGroupThemeConfig,
   Rating?: RatingThemeConfig,

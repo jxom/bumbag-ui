@@ -1,7 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import RatingStar from '../RatingStar';
-import 'jest-styled-components';
 
 it('renders correctly in basic form', () => {
   const { container } = render(<RatingStar />);

@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Dialog from '../Dialog';
-import 'jest-styled-components';
-
 it('renders correctly for a default dialog', () => {
   const { container } = render(
     <Dialog.Dialog>

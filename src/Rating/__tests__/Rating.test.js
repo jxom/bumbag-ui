@@ -1,10 +1,7 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
-import { fireEvent, cleanup } from 'react-testing-library';
+import { fireEvent } from 'react-testing-library';
 import Rating from '../Rating';
-import 'jest-styled-components';
-
-afterEach(cleanup);
 
 it('renders correctly for a basic rating', () => {
   const { container } = render(<Rating />);

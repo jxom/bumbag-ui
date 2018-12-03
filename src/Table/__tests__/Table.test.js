@@ -1,8 +1,6 @@
 import React from 'react';
 import render from '../../_utils/tests/render';
 import Table from '../Table';
-import 'jest-styled-components';
-
 it('renders correctly for a basic table', () => {
   const { container } = render(
     <Table>
