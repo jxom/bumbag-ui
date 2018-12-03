@@ -1,10 +1,10 @@
 // @flow
 import React from 'react';
-import Hidden from 'reakit/Hidden';
 
 import { PopoverClose as _PopoverClose } from './styled';
 import PopoverHide from './PopoverHide';
 import Icon from '../Icon';
+import VisuallyHidden from '../VisuallyHidden';
 
 type Props = {
   hide: Function
@@ -12,7 +12,7 @@ type Props = {
 
 const PopoverClose = (props: Props) => (
   <_PopoverClose use={PopoverHide} size="small" kind="link" {...props}>
-    <Hidden>Close</Hidden>
+    <VisuallyHidden>Close</VisuallyHidden>
     <Icon aria-hidden="true" icon="cross" />
   </_PopoverClose>
 );

@@ -2,6 +2,7 @@
 import React from 'react';
 
 import Icon from '../Icon';
+import VisuallyHidden from '../VisuallyHidden';
 import { DialogClose as _DialogClose } from './styled';
 
 type Props = {
@@ -10,7 +11,8 @@ type Props = {
 
 const DialogClose = ({ children, ...props }: Props) => (
   <_DialogClose kind="link" {...props}>
-    <Icon icon="cross" />
+    <VisuallyHidden>Close</VisuallyHidden>
+    <Icon aria-hidden="true" icon="cross" />
   </_DialogClose>
 );
 

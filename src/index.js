@@ -3,6 +3,7 @@ export * from './primitives';
 export { styled, css, createGlobalStyle } from './styled';
 export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';
+export { getUniqueId } from './uniqueId';
 
 export { Alert } from './Alert';
 export { Avatar } from './Avatar';
@@ -44,3 +45,4 @@ export { Tabs } from './Tabs';
 export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
+export { VisuallyHidden } from './VisuallyHidden';
