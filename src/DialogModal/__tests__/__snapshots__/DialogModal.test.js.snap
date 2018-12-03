@@ -252,7 +252,7 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   display: inline-flex;
 }
 
-.c14 {
+.c15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -297,7 +297,7 @@ h6.c8 {
   font-size: 1rem;
 }
 
-.c8 .c13 {
+.c8 .c14 {
   top: 0.1em;
 }
 
@@ -318,7 +318,7 @@ h6.c8 {
   border: 1px solid #e6e6e6;
 }
 
-.c15 {
+.c16 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
@@ -363,6 +363,18 @@ h6.c8 {
 
 .c4:focus {
   outline: unset;
+}
+
+.c13 {
+  border: 0px;
+  -webkit-clip: rect(0px,0px,0px,0px);
+  clip: rect(0px,0px,0px,0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
 }
 
 @media (max-width:480px) {
@@ -435,8 +447,14 @@ h6.c8 {
             <span
               class="c12"
             >
+              <div
+                class="c13 c1"
+              >
+                Close
+              </div>
               <svg
-                class="c13 c14 c1"
+                aria-hidden="true"
+                class="c14 c15 c1"
                 role="img"
                 size="1"
                 style="size: 1px;"
@@ -451,7 +469,7 @@ h6.c8 {
           </button>
         </div>
         <div
-          class="c15 c1"
+          class="c16 c1"
           id="Modal-3"
         >
           This is the content

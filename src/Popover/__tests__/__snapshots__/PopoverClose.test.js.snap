@@ -27,17 +27,6 @@ exports[`renders correctly 1`] = `
   color: inherit;
 }
 
-.c4 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-}
-
-.c4[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
 .c1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -124,6 +113,18 @@ exports[`renders correctly 1`] = `
   width: 1em;
 }
 
+.c4 {
+  border: 0px;
+  -webkit-clip: rect(0px,0px,0px,0px);
+  clip: rect(0px,0px,0px,0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
 <button
   aria-haspopup="true"
   class="c0 c1 c2 "
@@ -134,9 +135,7 @@ exports[`renders correctly 1`] = `
     class="c3"
   >
     <div
-      aria-hidden="true"
       class="c4 c5"
-      hidden=""
     >
       Close
     </div>
