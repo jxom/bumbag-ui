@@ -103,6 +103,17 @@ exports[`renders correctly for a button that is loading 1`] = `
   outline: unset !important;
 }
 
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 {
   position: absolute;
   display: -webkit-box;
@@ -119,19 +130,8 @@ exports[`renders correctly for a button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + span {
+.c2 + .c6 {
   opacity: 0;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 <button
@@ -149,7 +149,7 @@ exports[`renders correctly for a button that is loading 1`] = `
     />
   </div>
   <span
-    class="c6"
+    class="c6 c7"
   >
     Test
   </span>
@@ -217,28 +217,13 @@ exports[`renders correctly for a button with a custom element 1`] = `
   background-color: #e3e3e3;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <a
   class="c0 c1"
   href="#"
   kind="default"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </a>
 `;
 
@@ -303,27 +288,12 @@ exports[`renders correctly for a button with a palette prop set 1`] = `
   background-color: #2b1c7c;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <button
   class="c0 c1"
   kind="default"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </button>
 `;
 
@@ -430,6 +400,17 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   outline: unset !important;
 }
 
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 {
   position: absolute;
   display: -webkit-box;
@@ -446,19 +427,8 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + span {
+.c2 + .c6 {
   opacity: 0;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 <button
@@ -476,7 +446,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
     />
   </div>
   <span
-    class="c6"
+    class="c6 c7"
   >
     Test
   </span>
@@ -544,27 +514,12 @@ exports[`renders correctly for a default button 1`] = `
   background-color: #e3e3e3;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <button
   class="c0 c1"
   kind="default"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </button>
 `;
 
@@ -621,28 +576,13 @@ exports[`renders correctly for a disabled button 1`] = `
   pointer-events: unset;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <button
   class="c0 c1"
   disabled=""
   kind="default"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </button>
 `;
 
@@ -713,27 +653,12 @@ exports[`renders correctly for a link button 1`] = `
   fill: #000;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <button
   class="c0 c1"
   kind="link"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </button>
 `;
 
@@ -854,6 +779,17 @@ exports[`renders correctly for a link button that is loading 1`] = `
   outline: unset !important;
 }
 
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 {
   position: absolute;
   display: -webkit-box;
@@ -870,19 +806,8 @@ exports[`renders correctly for a link button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + span {
+.c2 + .c6 {
   opacity: 0;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 <button
@@ -900,7 +825,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
     />
   </div>
   <span
-    class="c6"
+    class="c6 c7"
   >
     Test
   </span>
@@ -981,17 +906,6 @@ exports[`renders correctly for a list of buttons 1`] = `
   background-color: #e3e3e3;
 }
 
-.c4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1030,33 +944,21 @@ exports[`renders correctly for a list of buttons 1`] = `
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test
-    </span>
+    Test
   </button>
   <button
     class="c2 c3"
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test 2
-    </span>
+    Test 2
   </button>
   <button
     class="c2 c3"
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test 3
-    </span>
+    Test 3
   </button>
 </div>
 `;
@@ -1134,27 +1036,12 @@ exports[`renders correctly for an outlined button 1`] = `
   background-color: #e3e3e3;
 }
 
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 <button
   class="c0 c1"
   kind="outlined"
   style="size: default;"
 >
-  <span
-    class="c2"
-  >
-    Test
-  </span>
+  Test
 </button>
 `;
 
@@ -1273,6 +1160,17 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   outline: unset !important;
 }
 
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .c2 {
   position: absolute;
   display: -webkit-box;
@@ -1289,19 +1187,8 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + span {
+.c2 + .c6 {
   opacity: 0;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 <button
@@ -1319,7 +1206,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
     />
   </div>
   <span
-    class="c6"
+    class="c6 c7"
   >
     Test
   </span>
@@ -1400,17 +1287,6 @@ exports[`renders correctly for grouped buttons 1`] = `
   background-color: #e3e3e3;
 }
 
-.c4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1476,33 +1352,21 @@ exports[`renders correctly for grouped buttons 1`] = `
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test
-    </span>
+    Test
   </button>
   <button
     class="c2 c3"
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test 2
-    </span>
+    Test 2
   </button>
   <button
     class="c2 c3"
     kind="default"
     style="size: default;"
   >
-    <span
-      class="c4"
-    >
-      Test 3
-    </span>
+    Test 3
   </button>
 </div>
 `;

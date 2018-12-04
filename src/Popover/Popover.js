@@ -1,6 +1,7 @@
 // @flow
 import React, { Fragment, type Element } from 'react';
 
+import type { Placement } from '../types';
 import { InlineBlock } from '../primitives';
 import { getUniqueId } from '../uniqueId';
 import Pane from '../Pane';
@@ -33,20 +34,7 @@ type Props = {
   flip?: boolean,
   gutter?: number | string,
   /** Placement of the popover content */
-  placement?:
-    | 'auto'
-    | 'top'
-    | 'right'
-    | 'bottom'
-    | 'left'
-    | 'top-start'
-    | 'right-start'
-    | 'bottom-start'
-    | 'left-start'
-    | 'top-end'
-    | 'right-end'
-    | 'bottom-end'
-    | 'left-end',
+  placement?: Placement,
   shift?: boolean,
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean,

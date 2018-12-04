@@ -241,18 +241,7 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   fill: #000;
 }
 
-.c12 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c15 {
+.c14 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -297,7 +286,7 @@ h6.c8 {
   font-size: 1rem;
 }
 
-.c8 .c14 {
+.c8 .c13 {
   top: 0.1em;
 }
 
@@ -318,7 +307,7 @@ h6.c8 {
   border: 1px solid #e6e6e6;
 }
 
-.c16 {
+.c15 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
@@ -365,7 +354,7 @@ h6.c8 {
   outline: unset;
 }
 
-.c13 {
+.c12 {
   border: 0px;
   -webkit-clip: rect(0px,0px,0px,0px);
   clip: rect(0px,0px,0px,0px);
@@ -444,32 +433,28 @@ h6.c8 {
             kind="link"
             style="size: default;"
           >
-            <span
-              class="c12"
+            <div
+              class="c12 c1"
             >
-              <div
-                class="c13 c1"
-              >
-                Close
-              </div>
-              <svg
-                aria-hidden="true"
-                class="c14 c15 c1"
-                role="img"
-                size="1"
-                style="size: 1px;"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.41 8l3.29-3.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-3.29-3.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 3.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l3.29 3.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z"
-                  fill-rule="even-odd"
-                />
-              </svg>
-            </span>
+              Close
+            </div>
+            <svg
+              aria-hidden="true"
+              class="c13 c14 c1"
+              role="img"
+              size="1"
+              style="size: 1px;"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.41 8l3.29-3.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-3.29-3.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 3.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l3.29 3.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z"
+                fill-rule="even-odd"
+              />
+            </svg>
           </button>
         </div>
         <div
-          class="c16 c1"
+          class="c15 c1"
           id="Modal-3"
         >
           This is the content
@@ -985,7 +970,7 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
-.c16 {
+.c15 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1087,7 +1072,7 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   background-color: #e3e3e3;
 }
 
-.c15 {
+.c14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1113,36 +1098,25 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   text-decoration: none;
 }
 
-.c15:focus {
+.c14:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #7467c0 0px 0px 0px 2px;
 }
 
-.c15[disabled] {
+.c14[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c15:hover {
+.c14:hover {
   background-color: #322190;
 }
 
-.c15:hover:active {
+.c14:hover:active {
   background-color: #2b1c7c;
-}
-
-.c14 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .c11 {
@@ -1212,7 +1186,7 @@ h6.c8 {
   font-size: 1rem;
 }
 
-.c8 .c17 {
+.c8 .c16 {
   top: 0.1em;
 }
 
@@ -1369,22 +1343,14 @@ h6.c8 {
                 kind="default"
                 style="size: default;"
               >
-                <span
-                  class="c14"
-                >
-                  Cancel
-                </span>
+                Cancel
               </button>
               <button
-                class="c15 c16"
+                class="c14 c15"
                 kind="default"
                 style="size: default;"
               >
-                <span
-                  class="c14"
-                >
-                  Submit
-                </span>
+                Submit
               </button>
             </div>
           </div>

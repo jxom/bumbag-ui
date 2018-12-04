@@ -21,6 +21,7 @@ export const PopoverClose = styled(Button)`
   height: 24px;
   right: 0;
   top: 0;
+  padding: 0px;
   text-align: right;
 
   ${theme('fannypack.Popover.Close.base')};

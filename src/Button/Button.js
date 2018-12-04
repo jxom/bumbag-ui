@@ -1,5 +1,5 @@
 // @flow
-import React, { type Node } from 'react';
+import React, { Fragment, type Node } from 'react';
 import styled from 'reakit/styled';
 import Box from 'reakit/Box';
 
@@ -7,19 +7,19 @@ import type { ButtonType, Palette, Size } from '../types';
 import Spinner from '../Spinner';
 import _Button from './styled';
 
+const Text = styled.span`
+  align-items: center;
+  display: inline-flex;
+`;
 export const SpinnerWrapper = styled(Box)`
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  & + span {
+  & + ${Text} {
     opacity: 0;
   }
-`;
-const Text = styled.span`
-  align-items: center;
-  display: inline-flex;
 `;
 
 type Props = {
@@ -60,11 +60,15 @@ export const Button = ({
       {...props}
     >
       {isLoading ? (
-        <SpinnerWrapper>
-          <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
-        </SpinnerWrapper>
-      ) : null}
-      <Text>{children}</Text>
+        <Fragment>
+          <SpinnerWrapper>
+            <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
+          </SpinnerWrapper>
+          <Text>{children}</Text>
+        </Fragment>
+      ) : (
+        children
+      )}
     </_Button>
   );
 };
