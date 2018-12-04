@@ -17,9 +17,6 @@ export default styled(Pane)`
   }
 `;
 export const CardContent = styled(Box)`
-  max-height: 50vh;
-  overflow-y: scroll;
-
   & {
     ${theme('fannypack.Card.Content.base')};
   }
