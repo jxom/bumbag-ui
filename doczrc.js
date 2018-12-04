@@ -20,5 +20,6 @@ export default {
       }
     }
   },
-  wrapper: 'src/_docs/wrapper'
+  wrapper: 'src/_docs/wrapper',
+  codeSandbox: false
 };
