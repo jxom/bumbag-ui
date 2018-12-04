@@ -79,7 +79,7 @@ const wrapperSizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)}
+  border-color: ${props => palette(`${props.state}Lighter`)(props)};
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
@@ -115,21 +115,21 @@ export default styled(Input)`
   &[disabled] {
     background-color: ${palette('whiteDarker')};
     box-shadow: unset;
-    color: ${palette('grayLight')}
+    color: ${palette('grayLight')};
 
     & {
-      ${theme('fannypack.Input.disabled')}
+      ${theme('fannypack.Input.disabled')};
     }
   }
 
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${props => palette('primaryLighter')(props)}
+    border-color: ${props => palette('primaryLighter')(props)};
     box-shadow: ${props => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('fannypack.Input.focus')}
+      ${theme('fannypack.Input.focus')};
     }
   }
 
@@ -137,7 +137,7 @@ export default styled(Input)`
     opacity: 0.6;
 
     & {
-      ${theme('fannypack.Input.placeholder')}
+      ${theme('fannypack.Input.placeholder')};
     }
   }
 
@@ -146,27 +146,27 @@ export default styled(Input)`
       props.after &&
       css`
         padding-right: 2.3em;
-      `}
+      `};
   }
   & {
     ${props =>
       props.before &&
       css`
         padding-left: 2.3em;
-      `}
+      `};
   }
   & {
     ${props =>
       props.isFullWidth &&
       css`
         width: 100%;
-      `}
+      `};
   }
   & {
-    ${props => props.size && sizeProperties[props.size]}
+    ${props => props.size && sizeProperties[props.size]};
   }
   & {
-    ${props => props.state && stateProperties}
+    ${props => props.state && stateProperties};
   }
 
   ${theme('fannypack.Input.base')};

@@ -45,12 +45,13 @@ export default styled(Box)`
     !props.isFluid &&
     css`
       max-width: ${theme('fannypack.layout.fullHDBreakpoint')}px;
-    `}
+    `};
+
   ${props =>
     props.isFluid &&
     css`
       margin: ${theme('fannypack.Container.fluidMargin')};
-    `}
+    `};
 
   @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
     margin: ${theme('fannypack.Container.tabletMargin')};
@@ -59,5 +60,5 @@ export default styled(Box)`
   ${getResponsiveProperties};
   ${props => !props.isFluid && alignProperties[props.align]};
 
-  ${theme('fannypack.Container.base')}
+  ${theme('fannypack.Container.base')};
 `;

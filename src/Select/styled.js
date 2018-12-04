@@ -82,7 +82,7 @@ const sizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)}
+  border-color: ${props => palette(`${props.state}Lighter`)(props)};
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
@@ -100,32 +100,33 @@ export default styled(Input)`
   &[disabled] {
     background: ${palette('whiteDarker')};
     box-shadow: unset;
-    color: ${palette('grayLight')}
+    color: ${palette('grayLight')};
 
     & {
-      ${theme('fannypack.Select.disabled')}
+      ${theme('fannypack.Select.disabled')};
     }
   }
+
   &[disabled] + ${Icon} {
-    fill: ${palette('grayLight')}
+    fill: ${palette('grayLight')};
   }
 
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${palette('primaryLighter')}
+    border-color: ${palette('primaryLighter')};
     box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('fannypack.Select.focus')}
+      ${theme('fannypack.Select.focus')};
     }
   }
 
   & {
-    ${props => props.size && sizeProperties[props.size]}
+    ${props => props.size && sizeProperties[props.size]};
   }
   & {
-    ${props => props.state && stateProperties}
+    ${props => props.state && stateProperties};
   }
 
   ${theme('fannypack.Select.base')};

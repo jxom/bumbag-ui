@@ -1,3 +1,5 @@
+import { css } from './src/styled';
+
 export default {
   dest: '/docs',
   menu: ['Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
@@ -10,13 +12,36 @@ export default {
       src: 'https://raw.githubusercontent.com/fannypackui/fannypack/master/logo.png',
       width: '230px'
     },
+    showPlaygroundEditor: true,
     styles: {
-      body: {
-        fontFamily: 'unset',
-        color: 'unset'
-      },
+      body: css`
+        font-family: unset;
+        font-size: 16px;
+        color: unset;
+
+        /* Quick hack until we create our own docz theme. */
+        & nav a {
+          font-size: 16px !important;
+        }
+
+        & > div > div > div {
+          font-size: 16px !important;
+        }
+      `,
       h1: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: '48px',
+        fontFamily: 'unset'
+      },
+      h2: {
+        fontWeight: '600',
+        fontFamily: 'unset'
+      },
+      paragraph: {
+        fontSize: '16px'
+      },
+      li: {
+        fontSize: '16px'
       }
     }
   },

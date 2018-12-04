@@ -61,7 +61,7 @@ export default styled(Tabs)`
   align-items: center;
   border-bottom: 1px solid ${palette('textTint')};
   display: flex;
-  font-weight: ${theme('fannypack.fontWeights.semibold')}
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
   list-style: none;
 
   ${props =>
@@ -79,7 +79,8 @@ export default styled(Tabs)`
         & {
           ${theme('fannypack.Tabs.Tab.default.base')};
         }
-      `}
+      `};
+
     ${props =>
       props.type === 'boxed' &&
       css`
@@ -87,7 +88,7 @@ export default styled(Tabs)`
         & {
           ${theme('fannypack.Tabs.Tab.boxed.base')};
         }
-      `}
+      `};
   }
   & ${Tab}.active {
     ${props =>

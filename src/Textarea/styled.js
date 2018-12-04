@@ -60,7 +60,7 @@ const sizeProperties = {
 };
 
 const stateProperties = css`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)}
+  border-color: ${props => palette(`${props.state}Lighter`)(props)};
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
@@ -74,21 +74,21 @@ export default styled(use(Input, 'textarea'))`
   &[disabled] {
     background-color: ${palette('whiteDarker')};
     box-shadow: unset;
-    color: ${palette('grayLight')}
+    color: ${palette('grayLight')};
 
     & {
-      ${theme('fannypack.Textarea.disabled')}
+      ${theme('fannypack.Textarea.disabled')};
     }
   }
 
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${props => palette('primaryLighter')(props)}
+    border-color: ${props => palette('primaryLighter')(props)};
     box-shadow: ${props => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
 
     & {
-      ${theme('fannypack.Textarea.focus')}
+      ${theme('fannypack.Textarea.focus')};
     }
   }
 
@@ -96,7 +96,7 @@ export default styled(use(Input, 'textarea'))`
     opacity: 0.6;
 
     & {
-      ${theme('fannypack.Textarea.placeholder')}
+      ${theme('fannypack.Textarea.placeholder')};
     }
   }
 
@@ -105,13 +105,13 @@ export default styled(use(Input, 'textarea'))`
       props.isFullWidth &&
       css`
         width: 100%;
-      `}
+      `};
   }
   & {
-    ${props => props.size && sizeProperties[props.size]}
+    ${props => props.size && sizeProperties[props.size]};
   }
   & {
-    ${props => props.state && stateProperties}
+    ${props => props.state && stateProperties};
   }
 
   ${theme('fannypack.Textarea.base')};
