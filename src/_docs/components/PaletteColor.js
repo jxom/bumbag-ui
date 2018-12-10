@@ -1,8 +1,8 @@
 // @flow
 import React from 'react';
 import { withTheme } from 'reakit/styled';
-import { Box, Flex } from '../primitives';
-import Code from '../Code';
+import { Box, Flex } from '../../primitives';
+import Code from '../../Code';
 
 type Props = {
   palette: string,

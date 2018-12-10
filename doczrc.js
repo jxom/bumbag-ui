@@ -2,7 +2,7 @@ import { css } from './src/styled';
 
 export default {
   dest: '/docs',
-  menu: ['Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
+  menu: ['Home', 'Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
   themeConfig: {
     colors: {
       primary: '#3926a5',
@@ -19,9 +19,17 @@ export default {
         font-size: 16px;
         color: unset;
 
-        /* Quick hack until we create our own docz theme. */
+        // Quick dirty hacks until we create our own docz theme
         & nav a {
           font-size: 16px !important;
+        }
+
+        & #get-started a {
+          color: #3926a5;
+        }
+
+        & nav > div:first-child {
+          display: none;
         }
 
         & > div > div > div {
