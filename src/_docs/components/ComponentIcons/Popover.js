@@ -4,7 +4,7 @@ const SvgComponent = props => (
   <svg width={62} height={51} fill="none" {...props}>
     <path
       d="M47.292 1H14.204c-.61 0-1.103.684-1.103 1.528v9.55c0 .843.494 1.527 1.103 1.527h33.088c.61 0 1.103-.684 1.103-1.528v-9.55C48.395 1.685 47.9 1 47.292 1z"
-      fill="#3926A5"
+      fill="#444bc9"
       stroke="#08175D"
     />
     <path d="M39.824 6.546h-22.69v2.017h22.69V6.546zM42.849 8.563l-1.747-1.89h3.493l-1.746 1.89z" fill="#fff" />
@@ -15,7 +15,7 @@ const SvgComponent = props => (
     />
     <path
       d="M55.958 30.244H5.538v2.73h50.42v-2.73zM30.748 35.979H5.538v2.731h25.21V35.98z"
-      fill="#3926A5"
+      fill="#444bc9"
       fillOpacity={0.12}
     />
   </svg>

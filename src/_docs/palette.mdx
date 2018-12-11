@@ -40,20 +40,6 @@ The palette is the main color set for Fannypack.
     <Box padding="0.5rem 0.25rem"><PaletteColor palette="primaryDarker" /></Box>
     <Box padding="0.5rem 0.25rem"><PaletteColor palette="primaryDarkest" /></Box>
   </Flex>
-  <Flex marginTop="large">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryTint" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryLight" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryLighter" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryLightest" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryDark" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryDarker" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryDarkest" /></Box>
-  </Flex>
 </Box>
 
 ## Grayscales
@@ -80,6 +66,20 @@ The palette is the main color set for Fannypack.
 
 <Box marginBottom="xxxlarge">
   <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoTint" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoLight" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoLighter" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoLightest" /></Box>
+  </Flex>
+  <Flex>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoDark" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoDarker" /></Box>
+    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoDarkest" /></Box>
+  </Flex>
+  <Flex marginTop="large">
     <Box padding="0.5rem 0.25rem"><PaletteColor palette="success" /></Box>
     <Box padding="0.5rem 0.25rem"><PaletteColor palette="successTint" /></Box>
   </Flex>
@@ -158,59 +158,59 @@ import { palette as p } from 'styled-tools';
   default: darken(0.01, 'white'),
   defaultInverted: '#435a6f',
 
-  primary: '#3926a5',
-  primaryLight: tint(0.1, '#3926a5'),
-  primaryLighter: tint(0.3, '#3926a5'),
-  primaryLightest: tint(0.5, '#3926a5'),
-  primaryDark: shade(0.1, '#3926a5'),
-  primaryDarker: shade(0.3, '#3926a5'),
-  primaryDarkest: shade(0.5, '#3926a5'),
-  primaryTint: tint(0.8, '#3926a5'),
-  primaryInverted: readableColor('#3926a5'),
-  primaryTintInverted: '#3926a5',
+  primary: '#444bc9',
+  primaryLight: tint(0.1, '#444bc9'),
+  primaryLighter: tint(0.3, '#444bc9'),
+  primaryLightest: tint(0.5, '#444bc9'),
+  primaryDark: shade(0.1, '#444bc9'),
+  primaryDarker: shade(0.3, '#444bc9'),
+  primaryDarkest: shade(0.5, '#444bc9'),
+  primaryTint: tint(0.8, '#444bc9'),
+  primaryInverted: readableColor('#444bc9'),
+  primaryTintInverted: '#444bc9',
 
-  secondary: '#112ebb',
-  secondaryLight: tint(0.1, '#112ebb'),
-  secondaryLighter: tint(0.3, '#112ebb'),
-  secondaryLightest: tint(0.5, '#112ebb'),
-  secondaryDark: shade(0.1, '#112ebb'),
-  secondaryDarker: shade(0.3, '#112ebb'),
-  secondaryDarkest: shade(0.5, '#112ebb'),
-  secondaryTint: tint(0.8, '#112ebb'),
-  secondaryInverted: readableColor('#112ebb'),
-  secondaryTintInverted: '#112ebb',
+  info: '#112ebb',
+  infoLight: tint(0.1, '#112ebb'),
+  infoLighter: tint(0.3, '#112ebb'),
+  infoLightest: tint(0.5, '#112ebb'),
+  infoDark: shade(0.1, '#112ebb'),
+  infoDarker: shade(0.3, '#112ebb'),
+  infoDarkest: shade(0.5, '#112ebb'),
+  infoTint: tint(0.8, '#112ebb'),
+  infoInverted: readableColor('#112ebb'),
+  infoTintInverted: '#112ebb',
 
-  success: '#007b2e',
-  successLight: tint(0.1, '#007b2e'),
-  successLighter: tint(0.3, '#007b2e'),
-  successLightest: tint(0.5, '#007b2e'),
-  successDark: shade(0.1, '#007b2e'),
-  successDarker: shade(0.3, '#007b2e'),
-  successDarkest: shade(0.5, '#007b2e'),
-  successTint: tint(0.8, '#007b2e'),
-  successInverted: readableColor('#007b2e'),
-  successTintInverted: shade(0.3, '#007b2e'),
+  success: '#2c8453',
+  successLight: tint(0.1, '#2c8453'),
+  successLighter: tint(0.3, '#2c8453'),
+  successLightest: tint(0.5, '#2c8453'),
+  successDark: shade(0.1, '#2c8453'),
+  successDarker: shade(0.3, '#2c8453'),
+  successDarkest: shade(0.5, '#2c8453'),
+  successTint: tint(0.8, '#2c8453'),
+  successInverted: readableColor('#2c8453'),
+  successTintInverted: shade(0.3, '#2c8453'),
 
-  danger: '#d60027',
-  dangerLight: tint(0.1, '#d60027'),
-  dangerLighter: tint(0.3, '#d60027'),
-  dangerLightest: tint(0.5, '#d60027'),
-  dangerDark: shade(0.1, '#d60027'),
-  dangerDarker: shade(0.3, '#d60027'),
-  dangerDarkest: shade(0.5, '#d60027'),
-  dangerTint: tint(0.8, '#d60027'),
-  dangerInverted: readableColor('#d60027'),
-  dangerTintInverted: shade(0.3, '#d60027'),
+  danger: '#c9444d',
+  dangerLight: tint(0.1, '#c9444d'),
+  dangerLighter: tint(0.3, '#c9444d'),
+  dangerLightest: tint(0.5, '#c9444d'),
+  dangerDark: shade(0.1, '#c9444d'),
+  dangerDarker: shade(0.3, '#c9444d'),
+  dangerDarkest: shade(0.5, '#c9444d'),
+  dangerTint: tint(0.8, '#c9444d'),
+  dangerInverted: readableColor('#c9444d'),
+  dangerTintInverted: shade(0.3, '#c9444d'),
 
-  warning: '#ffb300',
-  warningLight: tint(0.1, '#ffb300'),
-  warningLighter: tint(0.3, '#ffb300'),
-  warningLightest: tint(0.5, '#ffb300'),
-  warningDark: shade(0.1, '#ffb300'),
-  warningDarker: shade(0.3, '#ffb300'),
-  warningDarkest: shade(0.5, '#ffb300'),
-  warningTint: tint(0.8, '#ffb300'),
-  warningInverted: readableColor('#ffb300'),
-  warningTintInverted: shade(0.5, '#ffb300'),
+  warning: '#f2a100',
+  warningLight: tint(0.1, '#f2a100'),
+  warningLighter: tint(0.3, '#f2a100'),
+  warningLightest: tint(0.5, '#f2a100'),
+  warningDark: shade(0.1, '#f2a100'),
+  warningDarker: shade(0.3, '#f2a100'),
+  warningDarkest: shade(0.5, '#f2a100'),
+  warningTint: tint(0.8, '#f2a100'),
+  warningInverted: readableColor('#f2a100'),
+  warningTintInverted: shade(0.5, '#f2a100'),
 }
 ```

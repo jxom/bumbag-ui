@@ -45,7 +45,6 @@ Colors can be added to a button with the `palette` prop.
   <Set>
     <Button>Default</Button>
     <Button palette="primary">Primary</Button>
-    <Button palette="secondary">Secondary</Button>
     <Button palette="success">Success</Button>
     <Button palette="danger">Danger</Button>
     <Button palette="warning">Warning</Button>
@@ -226,11 +225,6 @@ Action buttons can also take a color from the palette using the `palette` prop.
   <Set isVertical>
     <ActionButtons
       palette="text"
-      onClickSubmit={() => console.log('submitted')}
-      onClickCancel={() => console.log('cancelled')}
-    />
-    <ActionButtons
-      palette="secondary"
       onClickSubmit={() => console.log('submitted')}
       onClickCancel={() => console.log('cancelled')}
     />
