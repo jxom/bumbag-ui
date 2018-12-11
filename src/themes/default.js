@@ -135,8 +135,10 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
       info: 'info-sign',
       warning: 'warning-sign',
       success: 'tick-circle',
-      danger: 'error'
-    }
+      danger: 'error',
+      ..._get(overrides, 'Icon.iconNames', {})
+    },
+    ..._get(overrides, 'Icon', {})
   },
   Table: {
     borderColor: p('grayLightest'),
