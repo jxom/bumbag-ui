@@ -24,25 +24,20 @@ const getTextColor = props => {
 };
 
 const tintAttributes = css`
-  background-color: ${props =>
-    props.palette === 'default' ? palette('textTint')(props) : palette(`${props.palette}Tint`)(props)};
+  background-color: ${props => props.type && palette(`${props.type}Tint`)(props)};
   border-top-width: 0;
   border-right-width: 0;
   border-bottom-width: 0;
-  color: ${props =>
-    props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
-  fill: ${props =>
-    props.palette === 'default' ? palette('textTintInverted')(props) : palette(`${props.palette}TintInverted`)(props)};
+  color: ${props => props.type && palette(`${props.type}TintInverted`)(props)};
+  fill: ${props => props.type && palette(`${props.type}TintInverted`)(props)};
 `;
 
 export default styled(Box)`
   background-color: white;
   border: 1px solid ${palette('whiteDarkest')};
-  border-left: 4px solid
-    ${props => (props.palette === 'default' ? palette('text')(props) : palette(props.palette)(props))};
+  border-left: 4px solid ${props => props.type && palette(props.type)(props)};
   border-radius: 4px;
   color: ${getTextColor};
-  padding: 1rem;
 
   & {
     ${props => props.hasTint && tintAttributes};

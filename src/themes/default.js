@@ -130,6 +130,14 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
     tabletMargin: '0 1rem',
     ..._get(overrides, 'Container', {})
   },
+  Icon: {
+    iconNames: {
+      info: 'info-sign',
+      warning: 'warning-sign',
+      success: 'tick-circle',
+      danger: 'error'
+    }
+  },
   Table: {
     borderColor: p('grayLightest'),
     spacing: theme('fannypack.layout.spacing.xxsmall'),

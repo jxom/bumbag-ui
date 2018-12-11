@@ -28,7 +28,8 @@ export const Icon = ({ a11yLabel, children, icon, size: _size, theme, ...props }
   const size = _get(theme, `fannypack.fontSizes[${_size || ''}]`, 1);
   const svgPaths = size >= LARGE_VIEW_BOX_SIZE ? IconSvgPaths20 : IconSvgPaths16;
   const viewBoxSize = size >= LARGE_VIEW_BOX_SIZE ? LARGE_VIEW_BOX_SIZE : DEFAULT_VIEW_BOX_SIZE;
-  const paths = svgPaths[icon];
+  const newIcon = _get(theme, `fannypack.Icon.iconNames[${icon}]`) || icon;
+  const paths = svgPaths[newIcon];
   return (
     <_Icon use="svg" role="img" size={size} viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} {...props}>
       {a11yLabel && <title>{a11yLabel}</title>}
