@@ -9,6 +9,7 @@ import Button from './index';
 import { Button as ButtonProps } from './Button';
 import ActionButtons from './ActionButtons';
 import Group from '../Group';
+import Icon from '../Icon';
 import Set from '../Set';
 
 # Button
@@ -48,6 +49,24 @@ Colors can be added to a button with the `palette` prop.
     <Button palette="success">Success</Button>
     <Button palette="danger">Danger</Button>
     <Button palette="warning">Warning</Button>
+  </Set>
+</Playground>
+
+## Icons
+
+You can add icons to your buttons with the `iconBefore` or `iconAfter` prop. Fannypack uses [Blueprint Icons](https://blueprintjs.com/docs/#icons) by default.
+
+<Playground>
+  <Set>
+    <Button iconBefore="clipboard">
+      Copy
+    </Button>
+    <Button iconBefore="edit" palette="primary">
+      Edit
+    </Button>
+    <Button iconAfter="arrow-right">
+      Continue
+    </Button>
   </Set>
 </Playground>
 
@@ -241,7 +260,12 @@ Action buttons can also take a color from the palette using the `palette` prop.
 To modify the text of the buttons, use the `submitText` and/or `cancelText` props.
 
 <Playground>
-  <ActionButtons cancelText="Close" submitText="Save" onClickSubmit={() => console.log('submitted')} onClickCancel={() => console.log('cancelled')} />
+  <ActionButtons
+    cancelText="Close"
+    submitText="Save"
+    onClickSubmit={() => console.log('submitted')}
+    onClickCancel={() => console.log('cancelled')}
+  />
 </Playground>
 
 ## Loading
@@ -249,7 +273,11 @@ To modify the text of the buttons, use the `submitText` and/or `cancelText` prop
 To indicate the primary button as loading, use the `isLoading` prop.
 
 <Playground>
-  <ActionButtons isLoading onClickSubmit={() => console.log('submitted')} onClickCancel={() => console.log('cancelled')} />
+  <ActionButtons
+    isLoading
+    onClickSubmit={() => console.log('submitted')}
+    onClickCancel={() => console.log('cancelled')}
+  />
 </Playground>
 
 ## Type

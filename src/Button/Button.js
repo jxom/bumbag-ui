@@ -5,7 +5,7 @@ import Box from 'reakit/Box';
 
 import type { ButtonType, Palette, Size } from '../types';
 import Spinner from '../Spinner';
-import _Button from './styled';
+import _Button, { ButtonIcon } from './styled';
 
 const Text = styled.span`
   align-items: center;
@@ -28,6 +28,10 @@ type Props = {
   className?: string,
   /** Makes the button disabled. The user is unable to interact with the button. */
   disabled?: boolean,
+  /** Icon that appears on the right side of the button. */
+  iconAfter?: boolean,
+  /** Icon that appears on the left side of the button. */
+  iconBefore?: boolean,
   /** Adds a loading indicator to the button. */
   isLoading?: boolean,
   /** Makes the button not interactable. */
@@ -41,6 +45,8 @@ export const Button = ({
   children,
   className,
   disabled,
+  iconAfter,
+  iconBefore,
   isLoading,
   isStatic,
   kind,
@@ -48,6 +54,13 @@ export const Button = ({
   size,
   ...props
 }: Props) => {
+  const child = (
+    <Fragment>
+      {iconBefore && <ButtonIcon icon={iconBefore} isBefore />}
+      {children}
+      {iconAfter && <ButtonIcon icon={iconAfter} isAfter />}
+    </Fragment>
+  );
   return (
     <_Button
       className={className}
@@ -64,10 +77,10 @@ export const Button = ({
           <SpinnerWrapper>
             <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
           </SpinnerWrapper>
-          <Text>{children}</Text>
+          <Text>{child}</Text>
         </Fragment>
       ) : (
-        children
+        <Fragment>{child}</Fragment>
       )}
     </_Button>
   );
@@ -77,6 +90,8 @@ Button.defaultProps = {
   use: undefined,
   className: undefined,
   disabled: false,
+  iconAfter: undefined,
+  iconBefore: undefined,
   isLoading: false,
   isStatic: false,
   kind: 'default',

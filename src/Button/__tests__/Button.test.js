@@ -90,3 +90,13 @@ it('renders correctly for grouped buttons', () => {
   );
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly for a button with a left icon', () => {
+  const { container } = render(<Button iconBefore="clipboard">Copy</Button>);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for a button with a right icon', () => {
+  const { container } = render(<Button iconAfter="arrow-right">Continue</Button>);
+  expect(container.firstChild).toMatchSnapshot();
+});

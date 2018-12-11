@@ -227,6 +227,113 @@ exports[`renders correctly for a button with a custom element 1`] = `
 </a>
 `;
 
+exports[`renders correctly for a button with a left icon 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c4 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c3 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.c2 {
+  margin-left: -0.2em;
+  margin-right: 0.4em;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+}
+
+.c0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c0:hover {
+  background-color: #efefef;
+}
+
+.c0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  class="c0 c1"
+  kind="default"
+  style="size: default;"
+>
+  <svg
+    class="c2 c3 c4"
+    role="img"
+    size="1"
+    style="size: 1px;"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M11 2c0-.55-.45-1-1-1h.22C9.88.4 9.24 0 8.5 0S7.12.4 6.78 1H7c-.55 0-1 .45-1 1v1h5V2zm2 0h-1v2H5V2H4c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h9c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1z"
+      fill-rule="even-odd"
+    />
+  </svg>
+  Copy
+</button>
+`;
+
 exports[`renders correctly for a button with a palette prop set 1`] = `
 .c1 {
   margin: unset;
@@ -293,6 +400,113 @@ exports[`renders correctly for a button with a palette prop set 1`] = `
   style="size: default;"
 >
   Test
+</button>
+`;
+
+exports[`renders correctly for a button with a right icon 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c4 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c3 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.c2 {
+  margin-left: 0.4em;
+  margin-right: -0.2em;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+}
+
+.c0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c0:hover {
+  background-color: #efefef;
+}
+
+.c0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  class="c0 c1"
+  kind="default"
+  style="size: default;"
+>
+  Continue
+  <svg
+    class="c2 c3 c4"
+    role="img"
+    size="1"
+    style="size: 1px;"
+    viewBox="0 0 16 16"
+  >
+    <path
+      d="M14.7 7.29l-5-5a.965.965 0 0 0-.71-.3 1.003 1.003 0 0 0-.71 1.71l3.29 3.29H1.99c-.55 0-1 .45-1 1s.45 1 1 1h9.59l-3.29 3.29a1.003 1.003 0 0 0 1.42 1.42l5-5c.18-.18.29-.43.29-.71s-.12-.52-.3-.7z"
+      fill-rule="even-odd"
+    />
+  </svg>
 </button>
 `;
 
