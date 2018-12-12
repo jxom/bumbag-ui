@@ -26,52 +26,52 @@ export default styled(Heading)`
   }
 
   h1& {
-    font-size: 3rem;
+    font-size: 3em;
     @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 2rem;
+      font-size: 2em;
     }
     & {
       ${theme('fannypack.Heading.h1')};
     }
   }
   h2& {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.8rem;
+      font-size: 1.8em;
     }
     & {
       ${theme('fannypack.Heading.h2')};
     }
   }
   h3& {
-    font-size: 2rem;
+    font-size: 2em;
     @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.6rem;
+      font-size: 1.6em;
     }
     & {
       ${theme('fannypack.Heading.h3')};
     }
   }
   h4& {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.4rem;
+      font-size: 1.4em;
     }
     & {
       ${theme('fannypack.Heading.h4')};
     }
   }
   h5& {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.2rem;
+      font-size: 1.2em;
     }
     & {
       ${theme('fannypack.Heading.h5')};
     }
   }
   h6& {
-    font-size: 1rem;
+    font-size: 1em;
     & {
       ${theme('fannypack.Heading.h6')};
     }
