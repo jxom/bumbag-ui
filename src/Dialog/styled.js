@@ -18,7 +18,7 @@ export const DialogContent = styled(Box)`
 `;
 export const DialogHeader = styled(Box)`
   align-items: center;
-  border-bottom: 1px solid ${palette('whiteDarkest')};
+  background-color: ${palette('whiteDarker')};
   display: flex;
   justify-content: space-between;
   padding: ${theme('fannypack.layout.spacing.small')}rem;
@@ -31,7 +31,7 @@ export const DialogHeader = styled(Box)`
 export const DialogFooter = styled(Box)`
   display: flex;
   align-items: center;
-  border-top: 1px solid ${palette('whiteDarkest')};
+  background-color: ${palette('whiteDarker')};
   padding: ${theme('fannypack.layout.spacing.xsmall')}rem ${theme('fannypack.layout.spacing.xsmall')}rem;
   width: 100%;
 
