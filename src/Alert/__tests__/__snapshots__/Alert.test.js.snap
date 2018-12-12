@@ -84,6 +84,7 @@ samp.c4 {
   border: 1px solid #e6e6e6;
   border-left: 4px solid #35709e;
   border-radius: 4px;
+  position: relative;
 }
 
 .c3 {
@@ -97,7 +98,7 @@ samp.c4 {
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"
@@ -108,6 +109,324 @@ samp.c4 {
         Alert
       </span>
     </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly when a close button is present 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c9 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+abbr.c6 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c6 {
+  font-style: italic;
+}
+
+kbd.c6 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c6 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c6 {
+  font-weight: bold;
+}
+
+sub.c6,
+sup.c6 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c6,
+u.c6 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
+  font-style: italic;
+}
+
+kbd.c6,
+pre.c6,
+samp.c6 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c6 .c11 {
+  top: 0.1em;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+}
+
+.c8:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c8 {
+  border: 0;
+  background: unset;
+  color: #435a6f;
+  fill: #435a6f;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8:hover {
+  color: #000;
+  fill: #000;
+}
+
+.c5 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c5 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c5:last-child {
+  margin-bottom: 0;
+}
+
+h1.c5 {
+  font-size: 3rem;
+}
+
+h2.c5 {
+  font-size: 2.5rem;
+}
+
+h3.c5 {
+  font-size: 2rem;
+}
+
+h4.c5 {
+  font-size: 1.5rem;
+}
+
+h5.c5 {
+  font-size: 1.25rem;
+}
+
+h6.c5 {
+  font-size: 1rem;
+}
+
+.c5 .c11 {
+  top: 0.1em;
+}
+
+.c4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.c7 {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.c7:hover {
+  background-color: #f2f2f2;
+}
+
+.c0 {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  border-left: 4px solid #35709e;
+  border-radius: 4px;
+  position: relative;
+}
+
+.c10 {
+  border: 0px;
+  -webkit-clip: rect(0px,0px,0px,0px);
+  clip: rect(0px,0px,0px,0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c3 {
+  padding: 1rem;
+}
+
+@media (max-width:480px) {
+  h1.c5 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:480px) {
+  h2.c5 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:480px) {
+  h3.c5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:480px) {
+  h4.c5 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  h5.c5 {
+    font-size: 1.2rem;
+  }
+}
+
+<div
+  class="c0 c1"
+  role="alert"
+  type="info"
+>
+  <div
+    class="c2 c1"
+    style="align-items: center; justify-content: space-between;"
+  >
+    <div
+      class="c3 c1"
+    >
+      <h6
+        class="c4 heading c5 c1"
+      >
+        Title
+      </h6>
+      <span
+        class="c6 c1"
+      >
+        Alert
+      </span>
+    </div>
+    <button
+      class="c7 c8 c9"
+      kind="link"
+      style="size: default;"
+    >
+      <div
+        class="c10 c1"
+      >
+        Close
+      </div>
+      <svg
+        aria-hidden="true"
+        class="c11 c12 c1"
+        role="img"
+        size="1"
+        style="size: 1px;"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M9.41 8l3.29-3.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-3.29-3.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 3.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l3.29 3.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z"
+          fill-rule="even-odd"
+        />
+      </svg>
+    </button>
   </div>
 </div>
 `;
@@ -243,6 +562,7 @@ h6.c5 {
   border: 1px solid #e6e6e6;
   border-left: 4px solid #35709e;
   border-radius: 4px;
+  position: relative;
 }
 
 .c3 {
@@ -286,7 +606,7 @@ h6.c5 {
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"
@@ -390,6 +710,7 @@ samp.c4 {
   border: 1px solid #e6e6e6;
   border-left: 4px solid #c9444d;
   border-radius: 4px;
+  position: relative;
 }
 
 .c3 {
@@ -403,7 +724,7 @@ samp.c4 {
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"
@@ -570,6 +891,7 @@ h6.c9 {
   border: 1px solid #e6e6e6;
   border-left: 4px solid #c9444d;
   border-radius: 4px;
+  position: relative;
 }
 
 .c7 {
@@ -622,7 +944,7 @@ h6.c9 {
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"
@@ -757,6 +1079,7 @@ h6.c9 {
   border: 1px solid #e6e6e6;
   border-left: 4px solid #c9444d;
   border-radius: 4px;
+  position: relative;
 }
 
 .c7 {
@@ -809,7 +1132,7 @@ h6.c9 {
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"
@@ -867,6 +1190,7 @@ exports[`renders correctly with a custom element 1`] = `
   border: 1px solid #e6e6e6;
   border-left: 4px solid #35709e;
   border-radius: 4px;
+  position: relative;
 }
 
 .c3 {
@@ -880,7 +1204,7 @@ exports[`renders correctly with a custom element 1`] = `
 >
   <div
     class="c2 c1"
-    style="align-items: center;"
+    style="align-items: center; justify-content: space-between;"
   >
     <div
       class="c3 c1"

@@ -29,8 +29,13 @@ export type AvatarThemeConfig = {
 };
 export type AlertThemeConfig = {
   base?: Stylesheet,
+  tint?: Stylesheet,
   Title?: {
     base?: Stylesheet
+  },
+  Close?: {
+    base?: Stylesheet,
+    hover?: Stylesheet
   }
 };
 export type BackdropThemeConfig = {
@@ -49,6 +54,32 @@ export type ButtonThemeConfig = {
     small?: Stylesheet,
     medium?: Stylesheet,
     large?: Stylesheet
+  }
+};
+export type CalloutThemeConfig = {
+  base?: Stylesheet,
+  tint?: Stylesheet,
+  Content?: {
+    base: Stylesheet
+  },
+  Header?: {
+    base: Stylesheet
+  },
+  Footer?: {
+    base: Stylesheet
+  },
+  Title?: {
+    base: Stylesheet
+  },
+  Tint?: {
+    base: Stylesheet
+  },
+  Icon?: {
+    base: Stylesheet
+  },
+  Close?: {
+    base?: Stylesheet,
+    hover?: Stylesheet
   }
 };
 export type CardThemeConfig = {
@@ -385,6 +416,7 @@ export type ThemeConfig = {
   Blockquote?: BlockquoteThemeConfig,
   Button?: ButtonThemeConfig,
   Checkbox?: CheckboxThemeConfig,
+  Callout?: CalloutThemeConfig,
   Card?: CardThemeConfig,
   Code?: CodeThemeConfig,
   Column?: ColumnThemeConfig,

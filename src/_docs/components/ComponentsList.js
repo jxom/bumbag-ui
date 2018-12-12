@@ -47,7 +47,6 @@ import TagIcon from './ComponentIcons/Tag';
 import TextIcon from './ComponentIcons/Text';
 import TextareaIcon from './ComponentIcons/Textarea';
 import TooltipIcon from './ComponentIcons/Tooltip';
-import TypographyIcon from './ComponentIcons/Typography';
 
 export default () => (
   <Box>

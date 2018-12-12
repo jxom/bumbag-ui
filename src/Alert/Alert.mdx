@@ -15,8 +15,15 @@ import Alert from '../Alert';
 
 ## Basic Usage
 
+The `<Alert>` component displays a **brief** & **important** message in a way that attracts a user's attention without interrupting a user's task.
+
+If you are needing to display more descriptive, but important message to a user, consider using the [`<Callout>` component](/components/callout).
+
 <Playground>
-  <Alert>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
+  <Alert>
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
 </Playground>
 
 ## Titles
@@ -24,7 +31,10 @@ import Alert from '../Alert';
 You can set a title with the `title` prop.
 
 <Playground>
-  <Alert title="Alert Title">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
+  <Alert title="Alert Title">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
   <Alert title="Alert Title" marginTop="xsmall" />
 </Playground>
 
@@ -33,10 +43,22 @@ You can set a title with the `title` prop.
 An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Playground>
-  <Alert title="Alert Title" type="info" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" type="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" type="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" type="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
+  <Alert title="Alert Title" type="info" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" type="success" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" type="warning" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" type="danger" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
 </Playground>
 
 ## Icons
@@ -44,10 +66,42 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 You can add a icon to your alert by using the `hasIcon` prop. The icon will default to the status' icon. If you want to change this icon, then configure the `iconNames` attribute in the [Icon theme](/components/icon#theming).
 
 <Playground>
-  <Alert title="Alert Title" hasIcon type="info" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasIcon type="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasIcon type="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasIcon type="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
+  <Alert title="Alert Title" hasIcon type="info" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasIcon type="success" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasIcon type="warning" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasIcon type="danger" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+</Playground>
+
+## Close button
+
+To add a close button, add the `showCloseButton` & `onClickClose` props.
+
+**Note:** You can also add props to the close button with `closeButtonProps`. It takes [`<Button>`'s props](/components/button)
+
+<Playground>
+  <Alert
+    title="Alert Title"
+    onClickClose={() => alert('Closed!')}
+    showCloseButton
+    hasIcon
+    type="info"
+    marginTop="xsmall"
+  >
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
 </Playground>
 
 ## Inline alerts
@@ -61,10 +115,22 @@ To inline an alert, set the `display` prop to `inline-block`.
 ## Tints
 
 <Playground>
-  <Alert title="Alert Title" hasTint type="info" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasTint type="success" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasTint type="warning" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
-  <Alert title="Alert Title" hasTint type="danger" marginTop="xsmall">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica.</Alert>
+  <Alert title="Alert Title" hasTint type="info" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasTint type="success" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasTint type="warning" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
+  <Alert title="Alert Title" hasTint type="danger" marginTop="xsmall">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Alert>
 </Playground>
 
 ## Props
@@ -78,7 +144,12 @@ To inline an alert, set the `display` prop to `inline-block`.
 ```jsx
 {
   base: string | Object,
-  title: {
+  tint: string | Object,
+  Close: {
+    base: string | object,
+    hover: string | object
+  }
+  Title: {
     base: string | Object
   }
 }

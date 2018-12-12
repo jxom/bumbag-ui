@@ -39,3 +39,12 @@ it('renders correctly when a title prop is set', () => {
   const { container } = render(<Alert title="Title">Alert</Alert>);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly when a close button is present', () => {
+  const { container } = render(
+    <Alert title="Title" onClickClose={() => {}} showCloseButton>
+      Alert
+    </Alert>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});

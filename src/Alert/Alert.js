@@ -6,6 +6,7 @@ import styled, { css } from '../styled';
 import Icon from '../Icon';
 import Text from '../Text';
 import _Alert from './styled';
+import AlertClose from './AlertClose';
 import AlertTitle from './AlertTitle';
 
 const ContentWrapper = styled(Box)`
@@ -23,16 +24,29 @@ const IconWrapper = styled(Flex)`
 
 type Props = {
   className?: string,
+  closeButtonProps?: Object,
   children?: Node,
   hasIcon?: boolean,
   hasTint?: boolean,
+  onClickClose?: Function,
+  showCloseButton?: boolean,
   title?: string,
   type?: 'info' | 'success' | 'danger' | 'warning'
 };
 
-const Alert = ({ className, children, hasIcon, title, type, ...props }: Props) => (
+const Alert = ({
+  className,
+  closeButtonProps,
+  children,
+  hasIcon,
+  onClickClose,
+  showCloseButton,
+  title,
+  type,
+  ...props
+}: Props) => (
   <_Alert role="alert" className={className} type={type} {...props}>
-    <Flex alignItems="center">
+    <Flex alignItems="center" justifyContent="space-between">
       {hasIcon && (
         <IconWrapper>
           <Icon color={type} icon={type} size={children ? 'medium' : undefined} />
@@ -42,15 +56,21 @@ const Alert = ({ className, children, hasIcon, title, type, ...props }: Props) =
         {title && <AlertTitle>{title}</AlertTitle>}
         {typeof children === 'string' ? <Text>{children}</Text> : children}
       </ContentWrapper>
+      {showCloseButton && (
+        <AlertClose isAbsolute={Boolean(children)} onClickClose={onClickClose} {...closeButtonProps} />
+      )}
     </Flex>
   </_Alert>
 );
 
 Alert.defaultProps = {
   className: undefined,
+  closeButtonProps: {},
   children: undefined,
   hasIcon: false,
   hasTint: false,
+  onClickClose: undefined,
+  showCloseButton: false,
   title: undefined,
   type: 'info'
 };
