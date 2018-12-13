@@ -132,10 +132,10 @@ export default (overrides: ThemeConfig = {}): ThemeConfig => ({
   },
   Icon: {
     iconNames: {
-      info: 'info-sign',
-      warning: 'warning-sign',
-      success: 'tick-circle',
-      danger: 'error',
+      info: 'info-circle',
+      warning: 'exclamation-triangle',
+      success: 'check-circle',
+      danger: 'exclamation-circle',
       ..._get(overrides, 'Icon.iconNames', {})
     },
     ..._get(overrides, 'Icon', {})

@@ -12,7 +12,7 @@ type Props = {
 const AlertClose = ({ onClickClose, ...props }: Props) => (
   <_AlertClose kind="link" onClick={onClickClose} {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon aria-hidden="true" icon="cross" />
+    <Icon aria-hidden="true" icon="times" />
   </_AlertClose>
 );
 

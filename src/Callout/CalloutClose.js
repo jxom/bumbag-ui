@@ -11,7 +11,7 @@ type Props = {
 const CalloutClose = ({ onClickClose, ...props }: Props) => (
   <_CalloutClose kind="link" onClick={onClickClose} {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon aria-hidden="true" icon="cross" />
+    <Icon aria-hidden="true" icon="times" />
   </_CalloutClose>
 );
 

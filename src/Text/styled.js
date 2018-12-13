@@ -57,7 +57,7 @@ export default styled(Box)`
   }
 
   & ${Icon} {
-    top: 0.1em;
+    top: 0.15em;
   }
 
   ${theme('fannypack.Text.base')};

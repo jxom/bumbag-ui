@@ -78,7 +78,7 @@ export default styled(Heading)`
   }
 
   & ${Icon} {
-    top: 0.1em;
+    top: 0.15em;
   }
 
   & {

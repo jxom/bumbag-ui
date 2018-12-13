@@ -13,7 +13,7 @@ type Props = {
 const PopoverClose = (props: Props) => (
   <_PopoverClose use={PopoverHide} size="small" kind="link" {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon aria-hidden="true" icon="cross" />
+    <Icon aria-hidden="true" icon="times" />
   </_PopoverClose>
 );
 

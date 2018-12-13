@@ -12,7 +12,7 @@ type Props = {
 const DialogClose = ({ children, ...props }: Props) => (
   <_DialogClose kind="link" {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon aria-hidden="true" icon="cross" />
+    <Icon aria-hidden="true" icon="times" />
   </_DialogClose>
 );
 

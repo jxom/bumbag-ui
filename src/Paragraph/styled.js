@@ -9,7 +9,7 @@ export default styled(Paragraph)`
   }
 
   & ${Icon} {
-    top: 0.1em;
+    top: 0.15em;
   }
 
   & {
