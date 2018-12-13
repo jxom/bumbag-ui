@@ -25,13 +25,13 @@ type Props = {
   hideOnClickOutside?: boolean,
   /** Whether or not to show the modal component */
   isVisible?: boolean,
+  kind?: ?'alert',
   showActionButtons?: boolean,
   showCloseButton?: boolean,
   /** Will the modal have a slide animation when it is toggled on/off? */
   slide?: boolean | string,
   /** Timing of the animation */
-  timing?: string,
-  type?: ?'alert'
+  timing?: string
 };
 
 const Modal = ({
@@ -43,9 +43,9 @@ const Modal = ({
   hideOnEsc,
   hideOnClickOutside,
   isVisible,
+  kind,
   showActionButtons,
   showCloseButton,
-  type,
   ...props
 }: Props) => (
   <Portal>
@@ -56,20 +56,20 @@ const Modal = ({
             delay={delay}
             duration={duration}
             expand={undefined}
-            hide={hideOnClickOutside && type !== 'alert' ? hide : undefined}
+            hide={hideOnClickOutside && kind !== 'alert' ? hide : undefined}
             fade={fade}
-            hideOnEsc={type === 'alert' ? false : hideOnEsc}
+            hideOnEsc={kind === 'alert' ? false : hideOnEsc}
             isVisible={isVisible}
             slide={undefined}
-            use={hideOnClickOutside && type !== 'alert' ? ModalHide : undefined}
+            use={hideOnClickOutside && kind !== 'alert' ? ModalHide : undefined}
           />
           <_Modal
             aria-modal="true"
             delay={delay}
             duration={duration}
             fade={fade}
-            hideOnEsc={type === 'alert' ? false : hideOnEsc}
-            hideOnClickOutside={type === 'alert' ? false : hideOnClickOutside}
+            hideOnEsc={kind === 'alert' ? false : hideOnEsc}
+            hideOnClickOutside={kind === 'alert' ? false : hideOnClickOutside}
             isVisible={isVisible}
             {...props}
           >
@@ -90,11 +90,11 @@ Modal.defaultProps = {
   hideOnEsc: true,
   hideOnClickOutside: true,
   isVisible: false,
+  kind: undefined,
   showActionButtons: false,
   showCloseButton: false,
   slide: false,
-  timing: 'ease-in-out',
-  type: undefined
+  timing: 'ease-in-out'
 };
 
 Modal.Container = ModalContainer;

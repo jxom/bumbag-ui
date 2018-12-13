@@ -4,6 +4,7 @@ import { Box } from '../primitives';
 
 import Button from '../Button';
 import Heading from '../Heading';
+import Icon from '../Icon';
 import Pane from '../Pane';
 
 export const DialogContent = styled(Box)`
@@ -60,6 +61,14 @@ export const DialogClose = styled(Button)`
 
   & {
     ${theme('fannypack.Dialog.Close.base')};
+  }
+`;
+
+export const DialogIcon = styled(Icon)`
+  margin-right: ${theme('fannypack.layout.spacing.xxsmall')}rem;
+
+  & {
+    ${theme('fannypack.Dialog.Icon.base')};
   }
 `;
 

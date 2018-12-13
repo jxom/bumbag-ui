@@ -10,6 +10,7 @@ import DialogHeader from './DialogHeader';
 import DialogFooter from './DialogFooter';
 import DialogTitle from './DialogTitle';
 import DialogClose from './DialogClose';
+import DialogIcon from './DialogIcon';
 
 type Props = {
   actionButtonsProps?: ActionButtonsProps,
@@ -20,11 +21,12 @@ type Props = {
   className?: string,
   closeButtonProps?: Object,
   footer?: string | Element<any>,
+  kind?: ?'alert',
   onClickClose?: Function,
   showActionButtons?: boolean,
   showCloseButton?: boolean,
-  role?: ?('alertdialog' | 'dialog'),
-  title?: string | Element<any>
+  title?: string | Element<any>,
+  type?: string
 };
 
 const Dialog = ({
@@ -35,17 +37,25 @@ const Dialog = ({
   children,
   closeButtonProps,
   footer,
+  kind,
   onClickClose,
   showActionButtons,
   showCloseButton,
-  role,
   title,
+  type,
   ...props
 }: Props) => (
-  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} role={role} border={border} {...props}>
+  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} kind={kind} border={border} {...props}>
     {title && (
       <DialogHeader>
-        {typeof title === 'string' ? <DialogTitle id={a11yTitleId}>{title}</DialogTitle> : title}
+        {typeof title === 'string' ? (
+          <DialogTitle id={a11yTitleId}>
+            {type && <DialogIcon color={type} icon={type} />}
+            {title}
+          </DialogTitle>
+        ) : (
+          title
+        )}
         {showCloseButton && <DialogClose onClick={onClickClose} {...closeButtonProps} />}
       </DialogHeader>
     )}
@@ -69,6 +79,7 @@ Dialog.Content = DialogContent;
 Dialog.Footer = DialogFooter;
 Dialog.Title = DialogTitle;
 Dialog.Close = DialogClose;
+Dialog.Icon = DialogIcon;
 
 Dialog.defaultProps = {
   actionButtonsProps: {},
@@ -78,11 +89,12 @@ Dialog.defaultProps = {
   className: undefined,
   closeButtonProps: {},
   footer: undefined,
+  kind: undefined,
   onClickClose: undefined,
   showActionButtons: false,
   showCloseButton: false,
-  role: 'dialog',
-  title: undefined
+  title: undefined,
+  type: undefined
 };
 
 export default Dialog;

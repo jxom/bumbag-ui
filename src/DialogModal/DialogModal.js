@@ -28,6 +28,7 @@ type Props = {
   hideOnClickOutside?: boolean,
   /** Whether or not to show the modal component */
   isVisible?: boolean,
+  kind?: ?'alert',
   showActionButtons?: boolean,
   showCloseButton?: boolean,
   /** Will the modal have a slide animation when it is toggled on/off? */
@@ -35,7 +36,7 @@ type Props = {
   /** Timing of the animation */
   timing?: string,
   title?: string | Element<any>,
-  type?: ?'alert'
+  type?: string
 };
 
 const DialogModal = ({
@@ -45,13 +46,14 @@ const DialogModal = ({
   children,
   footer,
   hide,
+  kind,
   showActionButtons,
   showCloseButton,
   title,
   type,
   ...props
 }: Props) => (
-  <Modal a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} hide={hide} type={type} {...props}>
+  <Modal a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} hide={hide} kind={kind} {...props}>
     {({ fallbackFocusRef, initialFocusRef }) => (
       <Dialog
         a11yDescriptionId={a11yDescriptionId}
@@ -63,17 +65,19 @@ const DialogModal = ({
             hide,
             ...(actionButtonsProps || {}).cancelProps
           },
+          palette: type,
           ...actionButtonsProps
         }}
         closeButtonProps={{ elementRef: initialFocusRef }}
         elementRef={fallbackFocusRef}
         footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
         onClickClose={hide}
-        role={type === 'alert' ? 'alertdialog' : 'dialog'}
-        showActionButtons={showActionButtons}
-        showCloseButton={showCloseButton}
+        role={kind === 'alert' ? 'alertdialog' : 'dialog'}
+        showActionButtons={showActionButtons || kind === 'alert'}
+        showCloseButton={showCloseButton && kind !== 'alert'}
         tabIndex="-1"
         title={title}
+        type={type}
         width="100%"
       >
         {typeof children === 'function' ? children({ initialFocusRef }) : children}
@@ -95,6 +99,7 @@ DialogModal.defaultProps = {
   hideOnEsc: true,
   hideOnClickOutside: true,
   isVisible: false,
+  kind: undefined,
   showActionButtons: false,
   showCloseButton: false,
   slide: false,

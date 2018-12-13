@@ -65,11 +65,24 @@ it('renders correctly for a dialog modal with a footer', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a dialog modal with type alert', () => {
+it('renders correctly for a dialog modal with kind alert', () => {
   const { container } = render(
     <Modal.Container defaultVisible>
       {modal => (
-        <DialogModal type="alert" {...modal}>
+        <DialogModal kind="alert" {...modal}>
+          This is the content
+        </DialogModal>
+      )}
+    </Modal.Container>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+it('renders correctly for a dialog modal with type', () => {
+  const { container } = render(
+    <Modal.Container defaultVisible>
+      {modal => (
+        <DialogModal type="danger" {...modal}>
           This is the content
         </DialogModal>
       )}

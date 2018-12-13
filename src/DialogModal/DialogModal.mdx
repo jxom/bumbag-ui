@@ -34,7 +34,9 @@ It is recommended to use the modal helper components (`<Modal.Show>`, `<Modal.Hi
           Click me
         </Button>
         <DialogModal showCloseButton title="This is a title" {...modal}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
         </DialogModal>
       </Box>
     )}
@@ -83,7 +85,9 @@ The `<DialogModal>` component uses `<Dialog>` internally, which means you can al
           title="This is a title"
           {...modal}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
         </DialogModal>
       </Box>
     )}
@@ -108,7 +112,9 @@ You can also render a footer with the `footer` prop.
           title="This is a title"
           {...modal}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
         </DialogModal>
       </Box>
     )}
@@ -127,18 +133,20 @@ By default, `DialogModal`'s can be closed by clicking 'esc' or outside the modal
           Click me
         </Button>
         <DialogModal hideOnEsc={false} hideOnClickOutside={false} title="This is a title" showActionButtons {...modal}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
         </DialogModal>
       </Box>
     )}
   </Modal.Container>
 </Playground>
 
-## Alerts
+## Types
 
-A `DialogModal` of type 'alert' can be used to display urgent information that demands the user's immediate attention. By default, you are not allowed to close the modal via the 'esc' or clicking outside.
+If you pass a type of `"info"`, `"success"`, `"warning"` or `"danger"` - it will add a respective icon and style the action buttons.
 
-Note: this will apply `role="alertdialog"` to the dialog.
+Using types with [alert dialogs](#alerts) can be handy!
 
 <Playground>
   <Modal.Container>
@@ -147,8 +155,43 @@ Note: this will apply `role="alertdialog"` to the dialog.
         <Button use={Modal.Show} {...modal}>
           Click me
         </Button>
-        <DialogModal type="alert" title="This is a title" showActionButtons {...modal}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+        <DialogModal
+          type="info"
+          title="This is a title"
+          showCloseButton
+          {...modal}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
+        </DialogModal>
+      </Box>
+    )}
+  </Modal.Container>
+</Playground>
+
+## Alerts
+
+A `DialogModal` of kind 'alert' can be used to display urgent information that demands the user's immediate attention.
+
+By default, you are not allowed to close the modal via the 'esc' or clicking outside - it requires a user response.
+
+<Playground>
+  <Modal.Container>
+    {modal => (
+      <Box>
+        <Button use={Modal.Show} {...modal}>
+          Click me
+        </Button>
+        <DialogModal
+          kind="alert"
+          type="danger"
+          title="This is a title"
+          {...modal}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+          ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+          consectetur lectus augue sit amet justo.
         </DialogModal>
       </Box>
     )}

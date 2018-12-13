@@ -6,3 +6,4 @@ export { default as DialogDialog } from './DialogDialog';
 export { default as DialogFooter } from './DialogFooter';
 export { default as DialogHeader } from './DialogHeader';
 export { default as DialogTitle } from './DialogTitle';
+export { default as DialogIcon } from './DialogIcon';
