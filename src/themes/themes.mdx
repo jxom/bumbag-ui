@@ -4,7 +4,11 @@ route: /styling
 ---
 
 import { Playground, PropsTable } from 'docz';
-import { Box, Button, Text, styled } from '../index';
+import { styled } from '../styled';
+import { Box } from '../primitives';
+import Button from '../Button';
+import Text from '../Text';
+
 const RedButton = styled(Button)`
   background-color: red;
   color: white;

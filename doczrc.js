@@ -1,7 +1,8 @@
-import { css } from './src/styled';
+import { css } from 'reakit/styled';
 
 export default {
   dest: '/docs',
+  files: '**/src/**/*.mdx',
   menu: ['Home', 'Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
   themeConfig: {
     colors: {
@@ -54,5 +55,14 @@ export default {
     }
   },
   wrapper: 'src/_docs/wrapper',
-  codeSandbox: false
+  codeSandbox: false,
+  typescript: true,
+  modifyBundlerConfig: (config, dev) => {
+    if (!dev) {
+      delete config.devtool;
+      config.module.rules.shift();
+      config.optimization.minimizer[0].options.sourceMap = false;
+    }
+    return config;
+  }
 };

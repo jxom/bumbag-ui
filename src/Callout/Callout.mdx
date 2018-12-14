@@ -6,9 +6,10 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
-import Callout from '../Callout';
 import Button, { ActionButtons } from '../Button';
 import Set from '../Set';
+import Callout from './Callout';
+import CalloutClose from './CalloutClose';
 
 # Callout
 
@@ -105,12 +106,22 @@ You can add a tint using the `hasTint` prop.
 You can also specify your own [`<Icon>` component](/components/icon) using the `icon` prop.
 
 <Playground>
-  <Callout icon="flame" title="This is a title">
+  <Callout icon="igloo" title="This is a title">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Callout>
 </Playground>
+
+## `<Callout>` Props
+
+<PropsTable of={Callout} />
+
+## `<Callout.Close>` Props
+
+This component is used internally in `<Callout>`, but you may find it helpful for specifying the props in the `closeButtonProps` prop.
+
+<PropsTable of={CalloutClose} />
 
 ## Theming
 

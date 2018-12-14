@@ -4,5 +4,16 @@
     "react/jsx-pascal-case": 0,
     "react/default-props-match-prop-types": 0,
     "jsx-a11y/href-no-hash": 0
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "typescript-eslint-parser",
+      "plugins": ["typescript"],
+      "rules": {
+        "no-undef": "off",
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }

@@ -102,5 +102,5 @@ export default [
       }
     ]
   }),
-  createConfig({ pkg, input: 'src/index.js', umd: true })
+  createConfig({ pkg, input: 'src/index.ts', umd: true })
 ];

@@ -5,7 +5,14 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz';
-import Table from './index';
+import Table from './Table';
+import TableBody from './TableBody';
+import TableCaption from './TableCaption';
+import TableCell from './TableCell';
+import TableFoot from './TableFoot';
+import TableHead from './TableHead';
+import TableHeadCell from './TableHeadCell';
+import TableRow from './TableRow';
 
 # Table
 
@@ -430,31 +437,31 @@ Using an accessibility title (`a11yTitle`) will provide an accessible name for t
 
 ### `<Table.Row>`
 
-<PropsTable of={Table.Row} />
+<PropsTable of={TableRow} />
 
 ### `<Table.Head>`
 
-<PropsTable of={Table.Head} />
+<PropsTable of={TableHead} />
 
 ### `<Table.HeadCell>`
 
-<PropsTable of={Table.HeadCell} />
+<PropsTable of={TableHeadCell} />
 
 ### `<Table.Body>`
 
-<PropsTable of={Table.Body} />
+<PropsTable of={TableBody} />
 
 ### `<Table.Cell>`
 
-<PropsTable of={Table.Cell} />
+<PropsTable of={TableCell} />
 
 ### `<Table.Foot>`
 
-<PropsTable of={Table.Foot} />
+<PropsTable of={TableFoot} />
 
 ### `<Table.Caption>`
 
-<PropsTable of={Table.Caption} />
+<PropsTable of={TableCaption} />
 
 ## Theming
 

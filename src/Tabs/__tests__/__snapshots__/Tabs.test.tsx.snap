@@ -1,0 +1,995 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly for an active tab 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+<ul
+  class="c0 c1"
+  role="tablist"
+  type="default"
+>
+  <li
+    aria-controls="dogsPanel"
+    aria-hidden="false"
+    aria-selected="true"
+    class="active c2 c3 c4 c1"
+    id="dogsTab"
+    loop=""
+    role="tab"
+    step="dogs"
+    tabindex="0"
+  >
+    Dogs
+  </li>
+  <li
+    aria-controls="catsPanel"
+    aria-hidden="false"
+    aria-selected="false"
+    class="c2 c3 c4 c1"
+    id="catsTab"
+    loop=""
+    role="tab"
+    step="cats"
+    tabindex="-1"
+  >
+    Cats
+  </li>
+  <li
+    aria-controls="parrotsPanel"
+    aria-hidden="false"
+    aria-selected="false"
+    class="c2 c3 c4 c1"
+    id="parrotsTab"
+    loop=""
+    role="tab"
+    step="parrots"
+    tabindex="-1"
+  >
+    Parrots
+  </li>
+</ul>
+`;
+
+exports[`renders correctly for basic tabs 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+<ul
+  class="c0 c1"
+  role="tablist"
+  type="default"
+>
+  <li
+    aria-controls="dogsPanel"
+    aria-hidden="false"
+    aria-selected="true"
+    class="c2 c3 active c4 c1"
+    id="dogsTab"
+    loop=""
+    role="tab"
+    step="dogs"
+    tabindex="0"
+  >
+    Dogs
+  </li>
+  <li
+    aria-controls="catsPanel"
+    aria-hidden="false"
+    aria-selected="false"
+    class="c2 c3 c4 c1"
+    id="catsTab"
+    loop=""
+    role="tab"
+    step="cats"
+    tabindex="-1"
+  >
+    Cats
+  </li>
+  <li
+    aria-controls="parrotsPanel"
+    aria-hidden="false"
+    aria-selected="false"
+    class="c2 c3 c4 c1"
+    id="parrotsTab"
+    loop=""
+    role="tab"
+    step="parrots"
+    tabindex="-1"
+  >
+    Parrots
+  </li>
+</ul>
+`;
+
+exports[`renders correctly for boxed tabs 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c5 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c6 .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c7 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c8 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2 {
+  border: 1px solid transparent;
+}
+
+.c0 .c2.active {
+  border: 1px solid #d9dee2;
+  border-bottom-color: transparent;
+}
+
+<div>
+  <ul
+    class="c0 c1"
+    role="tablist"
+    type="boxed"
+  >
+    <li
+      aria-controls="dogsPanel"
+      aria-hidden="false"
+      aria-selected="true"
+      class="c2 c3 active c4 c1"
+      id="dogsTab"
+      loop=""
+      role="tab"
+      step="dogs"
+      tabindex="0"
+    >
+      Dogs
+    </li>
+    <li
+      aria-controls="catsPanel"
+      aria-hidden="false"
+      aria-selected="false"
+      class="c2 c3 c4 c1"
+      id="catsTab"
+      loop=""
+      role="tab"
+      step="cats"
+      tabindex="-1"
+    >
+      Cats
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly for center aligned tabs 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c5 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c6 .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div>
+  <ul
+    class="c0 c1"
+    role="tablist"
+    type="default"
+  >
+    <li
+      aria-controls="dogsPanel"
+      aria-hidden="false"
+      aria-selected="true"
+      class="c2 c3 active c4 c1"
+      id="dogsTab"
+      loop=""
+      role="tab"
+      step="dogs"
+      tabindex="0"
+    >
+      Dogs
+    </li>
+    <li
+      aria-controls="catsPanel"
+      aria-hidden="false"
+      aria-selected="false"
+      class="c2 c3 c4 c1"
+      id="catsTab"
+      loop=""
+      role="tab"
+      step="cats"
+      tabindex="-1"
+    >
+      Cats
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly for fitted tabs 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c5 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+<div>
+  <ul
+    class="c0 c1"
+    role="tablist"
+    type="default"
+  >
+    <li
+      aria-controls="dogsPanel"
+      aria-hidden="false"
+      aria-selected="true"
+      class="c2 c3 active c4 c1"
+      id="dogsTab"
+      loop=""
+      role="tab"
+      step="dogs"
+      tabindex="0"
+    >
+      Dogs
+    </li>
+    <li
+      aria-controls="catsPanel"
+      aria-hidden="false"
+      aria-selected="false"
+      class="c2 c3 c4 c1"
+      id="catsTab"
+      loop=""
+      role="tab"
+      step="cats"
+      tabindex="-1"
+    >
+      Cats
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly for right aligned tabs 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c5 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c6 .c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c7 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+.c0 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+<div>
+  <ul
+    class="c0 c1"
+    role="tablist"
+    type="default"
+  >
+    <li
+      aria-controls="dogsPanel"
+      aria-hidden="false"
+      aria-selected="true"
+      class="c2 c3 active c4 c1"
+      id="dogsTab"
+      loop=""
+      role="tab"
+      step="dogs"
+      tabindex="0"
+    >
+      Dogs
+    </li>
+    <li
+      aria-controls="catsPanel"
+      aria-hidden="false"
+      aria-selected="false"
+      class="c2 c3 c4 c1"
+      id="catsTab"
+      loop=""
+      role="tab"
+      step="cats"
+      tabindex="-1"
+    >
+      Cats
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders correctly for tabs with content 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  padding: 1.25rem !important;
+}
+
+.c5:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c4[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5rem;
+}
+
+.c3.active {
+  background-color: white;
+  color: #444bc9;
+  fill: #444bc9;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:not(.active):hover {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d9dee2;
+}
+
+.c3:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #d9dee2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  list-style: none;
+}
+
+.c0 .c2.active {
+  box-shadow: inset 0 -2px 0 0 #444bc9;
+}
+
+<div>
+  <ul
+    class="c0 c1"
+    role="tablist"
+    type="default"
+  >
+    <li
+      aria-controls="dogsPanel"
+      aria-hidden="false"
+      aria-selected="true"
+      class="c2 c3 active c4 c1"
+      id="dogsTab"
+      loop=""
+      role="tab"
+      step="dogs"
+      tabindex="0"
+    >
+      Dogs
+    </li>
+    <li
+      aria-controls="catsPanel"
+      aria-hidden="false"
+      aria-selected="false"
+      class="c2 c3 c4 c1"
+      id="catsTab"
+      loop=""
+      role="tab"
+      step="cats"
+      tabindex="-1"
+    >
+      Cats
+    </li>
+  </ul>
+  <div
+    aria-hidden="false"
+    aria-labelledby="dogsTab"
+    class="c4 c5"
+    id="dogsPanel"
+    loop=""
+    role="tabpanel"
+  >
+    Dogs are awesome
+  </div>
+</div>
+`;

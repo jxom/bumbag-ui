@@ -3,7 +3,7 @@ const { join } = require('path');
 
 const isDirectory = source => lstatSync(join(__dirname, '../src', source)).isDirectory();
 const isFile = source => lstatSync(join(__dirname, '../src', source)).isFile();
-const isModule = source => isDirectory(source) || (isFile(source) && /.js$/.test(source));
+const isModule = source => isDirectory(source) || (isFile(source) && /.(js|ts|tsx)$/.test(source));
 const isNotPrivate = source => !/^_/.test(source);
 const isNotIndex = source => !/^index\.js/.test(source);
 

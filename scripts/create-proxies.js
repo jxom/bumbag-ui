@@ -4,12 +4,12 @@ const getModules = require('./get-modules');
 const { name } = require('../package.json');
 
 const createProxyPackage = (module, { isFile }) => {
-  const modulePath = `${module}.js`;
   return `{
   "name": "${name}/${module}",
   "private": true,
-  "main": "../lib/${modulePath}",
-  "module": "../es/${modulePath}"
+  "main": "../lib/${module}.js",
+  "module": "../es/${module}.js",
+  "types": "../ts/${module}/index.d.ts"
 }`;
 };
 
