@@ -6,7 +6,7 @@ import { TooltipProps as ReakitTooltipProps } from 'reakit/ts/Tooltip/Tooltip';
 import { Placement, placementPropType } from '../types';
 import _Tooltip from './styled';
 
-export interface LocalTooltipProps {
+export type LocalTooltipProps = {
   className?: string;
   children: React.ReactNode;
   delay?: string;
@@ -19,7 +19,7 @@ export interface LocalTooltipProps {
   placement?: Placement;
   slide?: boolean;
   timing?: string;
-}
+};
 export type TooltipProps = ReakitTooltipProps & LocalTooltipProps;
 
 export const Tooltip: React.FunctionComponent<LocalTooltipProps> = ({ children, ...props }) => (

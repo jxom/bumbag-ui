@@ -8,8 +8,7 @@ import FieldWrapper, {
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
 
-export interface Props {}
-export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalTextareaProps & Props;
+export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalTextareaProps;
 export type InputFieldProps = LocalTextareaFieldProps & TextareaProps;
 
 export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = ({

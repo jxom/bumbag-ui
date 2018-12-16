@@ -6,7 +6,7 @@ import _Avatar, { AvatarCircle } from './styled';
 import { AvatarProps as ReakitAvatarProps } from 'reakit/ts';
 import { Omit } from '../types';
 
-export interface LocalAvatarProps {
+export type LocalAvatarProps = {
   a11yLabel?: string;
   alt?: string;
   color?: string;
@@ -18,7 +18,7 @@ export interface LocalAvatarProps {
   palette?: string;
   size?: number | 'default' | 'xsmall' | 'small' | 'medium' | 'large';
   src?: string;
-}
+};
 export type AvatarProps = LocalAvatarProps & Omit<ReakitAvatarProps, 'size'>;
 
 const defaultProps: Partial<LocalAvatarProps> = {

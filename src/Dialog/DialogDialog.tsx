@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import { PaneProps } from '../Pane/Pane';
 import Dialog from './styled';
 
-export interface LocalDialogDialogProps {
+export type LocalDialogDialogProps = {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   border?: true | 'shadow';
   children: React.ReactNode;
   className?: string;
   kind?: 'alert' | undefined;
-}
+};
 export type DialogDialogProps = LocalDialogDialogProps & PaneProps;
 
 export const DialogDialog: React.FunctionComponent<LocalDialogDialogProps> = ({

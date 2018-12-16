@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
-
-import Button, { ButtonProps } from './Button';
-import Set from '../Set';
+import * as PropTypes from 'prop-types';
+// @ts-ignore
+import _omit from 'lodash/omit';
+import Button, { ButtonProps, buttonPropTypes } from './Button';
+import Set, { SetProps } from '../Set/Set';
 import { Omit } from '../types';
 
-export interface LocalActionButtonsProps {
+export type LocalActionButtonsProps = {
   /** Custom button props for the cancel button */
   cancelProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the cancel button */
@@ -23,21 +24,8 @@ export interface LocalActionButtonsProps {
   submitText?: string;
   /** Button type of the submit button */
   type?: string;
-}
-export type ActionButtonsProps = LocalActionButtonsProps & ReakitBoxProps;
-
-const defaultProps: Partial<LocalActionButtonsProps> = {
-  cancelProps: {},
-  cancelText: 'Cancel',
-  className: undefined,
-  isLoading: false,
-  onClickSubmit: undefined,
-  onClickCancel: undefined,
-  palette: 'primary',
-  submitProps: {},
-  submitText: 'Submit',
-  type: undefined
 };
+export type ActionButtonsProps = LocalActionButtonsProps & Omit<SetProps, 'children'>;
 
 export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = ({
   cancelProps,
@@ -61,6 +49,30 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
   </Set>
 );
 
-ActionButtons.defaultProps = defaultProps;
+ActionButtons.propTypes = {
+  cancelProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
+  cancelText: PropTypes.string,
+  className: PropTypes.string,
+  isLoading: PropTypes.bool,
+  onClickSubmit: PropTypes.func,
+  onClickCancel: PropTypes.func,
+  palette: PropTypes.string,
+  submitProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
+  submitText: PropTypes.string,
+  type: PropTypes.string
+};
+ActionButtons.defaultProps = {
+  cancelProps: {},
+  cancelText: 'Cancel',
+  className: undefined,
+  isLoading: false,
+  onClickSubmit: undefined,
+  onClickCancel: undefined,
+  palette: 'primary',
+  submitProps: {},
+  submitText: 'Submit',
+  type: undefined
+};
 
-export default ActionButtons;
+const C: React.FunctionComponent<ActionButtonsProps> = ActionButtons;
+export default C;

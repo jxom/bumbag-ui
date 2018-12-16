@@ -5,11 +5,11 @@ import { OverlayHideProps as ReakitOverlayHideProps } from 'reakit/ts';
 
 import { OverlayHide as _OverlayHide } from './styled';
 
-export interface LocalOverlayHideProps {
+export type LocalOverlayHideProps = {
   children?: React.ReactNode | void;
   hide(): void;
   onClick?(): void;
-}
+};
 export type OverlayHideProps = LocalOverlayHideProps & ReakitOverlayHideProps;
 
 export const OverlayHide: React.FunctionComponent<LocalOverlayHideProps> = ({ children, ...props }) => (

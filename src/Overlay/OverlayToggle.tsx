@@ -5,11 +5,11 @@ import { OverlayToggleProps as ReakitOverlayToggleProps } from 'reakit/ts';
 
 import { OverlayToggle as _OverlayToggle } from './styled';
 
-export interface LocalOverlayToggleProps {
+export type LocalOverlayToggleProps = {
   children?: React.ReactNode;
   toggle(): void;
   onClick?(): void;
-}
+};
 export type OverlayToggleProps = LocalOverlayToggleProps & ReakitOverlayToggleProps;
 
 export const OverlayToggle: React.FunctionComponent<LocalOverlayToggleProps> = ({ children, ...props }) => (

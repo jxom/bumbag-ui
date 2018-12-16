@@ -18,7 +18,7 @@ import {
 } from '../types';
 import _Popover from './styled';
 
-export interface Props {
+export type LocalPopoverPopoverProps = {
   children: React.ReactNode | (({ initialFocusRef }: { initialFocusRef?: React.RefObject<any> }) => React.ReactNode);
   className?: string;
   /** Whether or not to show the popover component */
@@ -29,8 +29,8 @@ export interface Props {
   shift?: boolean;
   /** Traps focus within the popover */
   trapFocus?: boolean;
-}
-export type LocalPopoverPopoverProps = Props & AnimateProps & RestrictHideProps;
+} & AnimateProps &
+  RestrictHideProps;
 export type PopoverPopoverProps = LocalPopoverPopoverProps & ReakitPopoverProps;
 
 export const PopoverPopover: React.FunctionComponent<LocalPopoverPopoverProps> = ({

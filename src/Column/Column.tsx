@@ -7,7 +7,7 @@ import { ColumnSpread, ColumnSpreadOffset, columnSpreadPropType, columnSpreadOff
 import ColumnsContext, { ColumnsContextProps } from '../Columns/ColumnsContext';
 import _Column from './styled';
 
-export interface LocalColumnProps {
+export type LocalColumnProps = {
   children: React.ReactNode;
   className?: string;
   spread?: ColumnSpread;
@@ -22,7 +22,7 @@ export interface LocalColumnProps {
   spreadDesktopOffset?: ColumnSpreadOffset;
   spreadWidescreenOffset?: ColumnSpreadOffset;
   spreadFullHDOffset?: ColumnSpreadOffset;
-}
+};
 export type ColumnProps = LocalColumnProps & ColumnsContextProps & ReakitBoxProps;
 
 export const Column: React.FunctionComponent<LocalColumnProps> = ({

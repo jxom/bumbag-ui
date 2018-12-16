@@ -5,11 +5,11 @@ import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
 import _Label from './styled';
 
-export interface LocalLabelProps {
+export type LocalLabelProps = {
   children: React.ReactNode;
   className?: string;
   htmlFor?: string;
-}
+};
 export type LabelProps = LocalLabelProps & ReakitLabelProps;
 
 export const Label: React.FunctionComponent<LocalLabelProps> = ({ children, className, ...props }) => (

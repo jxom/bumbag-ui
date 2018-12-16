@@ -8,7 +8,7 @@ import { Omit, Size, sizePropType } from '../types';
 import { IconProps } from '../Icon/Icon';
 import _Input, { Icon, InputWrapper, LoadingSpinner } from './styled';
 
-export interface LocalInputProps {
+export type LocalInputProps = {
   after?: React.ReactElement<any>;
   /** An accessible identifier for the input */
   a11yId?: string;
@@ -66,11 +66,11 @@ export interface LocalInputProps {
   onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when input is focused */
   onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
-}
+};
 export type InputProps = Omit<ReakitInputProps, 'size'> & LocalInputProps;
-export interface InputComponents {
+export type InputComponents = {
   Icon: React.FunctionComponent<IconProps>;
-}
+};
 
 export const Input: React.FunctionComponent<LocalInputProps> & InputComponents = ({
   a11yLabel,

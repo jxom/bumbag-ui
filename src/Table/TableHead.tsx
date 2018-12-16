@@ -5,11 +5,11 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import { TableHead as _TableHead } from './styled';
 
-export interface LocalTableHeadProps {
+export type LocalTableHeadProps = {
   children: React.ReactNode;
   /** Renders a bottom border on the header row */
   hasBorder?: boolean;
-}
+};
 export type TableHeadProps = ReakitBoxProps & LocalTableHeadProps;
 
 export const TableHead: React.FunctionComponent<LocalTableHeadProps> = ({ children, hasBorder, ...props }) => (

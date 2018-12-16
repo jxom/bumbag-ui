@@ -1,12 +1,10 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { Box } from '../primitives';
 import styled from '../styled';
 import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
 import { Omit, ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
-// @ts-ignore
 import Spinner from '../Spinner';
 import _Button, { ButtonIcon } from './styled';
 
@@ -25,8 +23,7 @@ export const SpinnerWrapper = styled(Box)`
   }
 `;
 
-export interface LocalButtonProps {
-  use?: any;
+export type LocalButtonProps = {
   /** Specifies that the button should have focus when the page loads. */
   autoFocus?: boolean;
   children: React.ReactNode;
@@ -46,26 +43,10 @@ export interface LocalButtonProps {
   palette?: string;
   size?: Size;
   type?: string;
-}
+};
 export type ButtonProps = LocalButtonProps & Omit<ReakitButtonProps, 'size'>;
 
-const defaultProps: Partial<LocalButtonProps> = {
-  use: undefined,
-  autoFocus: false,
-  className: undefined,
-  disabled: false,
-  id: undefined,
-  iconAfter: undefined,
-  iconBefore: undefined,
-  isLoading: false,
-  isStatic: false,
-  kind: 'default',
-  palette: 'default',
-  size: 'default',
-  type: 'button'
-};
-
-export const Button = ({
+export const Button: React.FunctionComponent<LocalButtonProps> = ({
   children,
   className,
   disabled,
@@ -77,7 +58,7 @@ export const Button = ({
   palette,
   size,
   ...props
-}: LocalButtonProps) => {
+}) => {
   const child = (
     <React.Fragment>
       {/*
@@ -114,8 +95,7 @@ export const Button = ({
   );
 };
 
-Button.propTypes = {
-  use: PropTypes.any,
+export const buttonPropTypes = {
   autoFocus: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -130,7 +110,22 @@ Button.propTypes = {
   size: sizePropType,
   type: PropTypes.string
 };
-Button.defaultProps = defaultProps;
+Button.propTypes = buttonPropTypes;
+
+Button.defaultProps = {
+  autoFocus: false,
+  className: undefined,
+  disabled: false,
+  id: undefined,
+  iconAfter: undefined,
+  iconBefore: undefined,
+  isLoading: false,
+  isStatic: false,
+  kind: 'default',
+  palette: 'default',
+  size: 'default',
+  type: 'button'
+};
 
 // @ts-ignore
 const C: React.FunctionComponent<ButtonProps> = Button;

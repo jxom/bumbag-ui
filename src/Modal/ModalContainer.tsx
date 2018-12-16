@@ -5,7 +5,7 @@ import OverlayContainer, {
   overlayContainerPropTypes
 } from '../Overlay/OverlayContainer';
 
-export interface ModalContainerProps extends OverlayContainerProps {}
+export type ModalContainerProps = OverlayContainerProps & {};
 
 const ModalContainer: React.FunctionComponent<ModalContainerProps> = ({ children, defaultVisible, ...props }) => (
   <OverlayContainer defaultVisible={defaultVisible} {...props}>

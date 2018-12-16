@@ -5,12 +5,12 @@ import { DividerProps as ReakitDividerProps } from 'reakit/ts';
 
 import _Divider from './styled';
 
-export interface LocalDividerProps {
+export type LocalDividerProps = {
   children?: React.ReactNode;
   className?: string;
   content?: string;
   isVertical?: boolean;
-}
+};
 export type DividerProps = LocalDividerProps & ReakitDividerProps;
 
 export const Divider: React.FunctionComponent<LocalDividerProps> = ({

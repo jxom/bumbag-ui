@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { CardContent as _CardContent } from './styled';
 
-export interface LocalCardContentProps {
+export type LocalCardContentProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type CardContentProps = LocalCardContentProps & ReakitBoxProps;
 
 const CardContent: React.FunctionComponent<LocalCardContentProps> = ({ children, ...props }) => (

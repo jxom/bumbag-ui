@@ -5,11 +5,11 @@ import { OverlayShowProps as ReakitOverlayShowProps } from 'reakit/ts';
 
 import { OverlayShow as _OverlayShow } from './styled';
 
-export interface LocalOverlayShowProps {
+export type LocalOverlayShowProps = {
   children?: React.ReactNode | void;
   onClick?(): void;
   show(): void;
-}
+};
 export type OverlayShowProps = LocalOverlayShowProps & ReakitOverlayShowProps;
 
 export const OverlayShow: React.FunctionComponent<LocalOverlayShowProps> = ({ children, ...props }) => (

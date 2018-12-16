@@ -5,11 +5,11 @@ import { PopoverToggleProps as ReakitPopoverToggleProps } from 'reakit/ts';
 
 import { PopoverToggle as _PopoverToggle } from './styled';
 
-export interface LocalPopoverToggleProps {
+export type LocalPopoverToggleProps = {
   children: React.ReactNode;
   onClick?(): void;
   toggle(): void;
-}
+};
 export type PopoverToggleProps = ReakitPopoverToggleProps & LocalPopoverToggleProps;
 
 export const PopoverToggle: React.FunctionComponent<LocalPopoverToggleProps> = ({ children, ...props }) => (

@@ -5,9 +5,9 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import { TableHeadCell as _TableHeadCell } from './styled';
 
-export interface LocalTableHeadCellProps {
+export type LocalTableHeadCellProps = {
   children?: React.ReactNode;
-}
+};
 export type TableHeadCellProps = ReakitBoxProps & LocalTableHeadCellProps;
 
 export const TableHeadCell: React.FunctionComponent<LocalTableHeadCellProps> = ({ children, ...props }) => (

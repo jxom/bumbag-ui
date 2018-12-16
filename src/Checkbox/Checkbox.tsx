@@ -6,7 +6,7 @@ import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 import Text from '../Text';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 
-export interface LocalCheckboxProps {
+export type LocalCheckboxProps = {
   /** Automatically focus on the checkbox */
   autoFocus?: boolean;
   checked?: boolean;
@@ -33,7 +33,7 @@ export interface LocalCheckboxProps {
   onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when checkbox is focused */
   onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
-}
+};
 export type CheckboxProps = LocalCheckboxProps & ReakitLabelProps;
 
 export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({

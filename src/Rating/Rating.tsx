@@ -7,21 +7,21 @@ import { Omit, Size } from '../types';
 import RatingStar from './RatingStar';
 import { Rating as _Rating } from './styled';
 
-export interface LocalRatingProps {
+export type LocalRatingProps = {
   className?: string;
   size?: Size;
   defaultRating?: number;
   maxRating?: number;
   onRate?: ({ rating, maxRating }: { rating: number; maxRating?: number }) => void;
   disabled?: boolean;
-}
+};
 export type RatingProps = LocalRatingProps & Omit<ReakitBoxProps, 'size'>;
 
-export interface RatingState {
+export type RatingState = {
   rating: number | undefined;
   isSelecting: boolean;
   selectedIndex: number | undefined;
-}
+};
 
 export class Rating extends React.Component<LocalRatingProps, RatingState> {
   static defaultProps = {

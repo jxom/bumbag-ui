@@ -26,7 +26,7 @@ const IconWrapper = styled(Flex)`
   padding: 0 1rem;
 `;
 
-export interface LocalAlertProps {
+export type LocalAlertProps = {
   className?: string;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
   children?: React.ReactNode;
@@ -36,7 +36,7 @@ export interface LocalAlertProps {
   showCloseButton?: boolean;
   title?: string;
   type?: string;
-}
+};
 export type AlertProps = LocalAlertProps & ReakitBoxProps;
 
 const defaultProps: Partial<LocalAlertProps> = {

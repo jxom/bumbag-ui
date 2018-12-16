@@ -4,16 +4,16 @@ import { ListProps as ReakitListProps } from 'reakit/ts';
 import _List from './styled';
 import ListItem, { ListItemProps } from './ListItem';
 
-export interface LocalListProps {
+export type LocalListProps = {
   children: React.ReactNode;
   className?: string;
   isOrdered?: boolean;
   isHorizontal?: boolean;
-}
+};
 export type ListProps = LocalListProps & ReakitListProps;
-export interface ListComponents {
+export type ListComponents = {
   Item: React.FunctionComponent<ListItemProps>;
-}
+};
 
 export const List: React.FunctionComponent<LocalListProps> & ListComponents = ({
   children,

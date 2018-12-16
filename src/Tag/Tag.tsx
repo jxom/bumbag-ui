@@ -5,13 +5,13 @@ import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBloc
 
 import _Tag from './styled';
 
-export interface LocalTagProps {
+export type LocalTagProps = {
   className?: string;
   children: React.ReactNode;
   kind?: 'outlined';
   palette?: string;
   size?: string;
-}
+};
 export type TagProps = ReakitInlineBlockProps & LocalTagProps;
 
 export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, ...props }) => (

@@ -5,11 +5,11 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import { Caption as _Caption } from './styled';
 
-export interface LocalTableCaptionProps {
+export type LocalTableCaptionProps = {
   children: React.ReactNode;
   /** Positioning of the caption */
   position?: 'top' | 'bottom';
-}
+};
 export type TableCaptionProps = ReakitBoxProps & LocalTableCaptionProps;
 
 export const TableCaption: React.FunctionComponent<LocalTableCaptionProps> = ({ children, position, ...props }) => (

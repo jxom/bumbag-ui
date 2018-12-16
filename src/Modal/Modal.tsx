@@ -21,7 +21,7 @@ import {
   restrictHidePropTypes
 } from '../types';
 
-export interface Props {
+export type LocalModalProps = {
   children:
     | React.ReactNode
     | ((
@@ -37,14 +37,14 @@ export interface Props {
   kind?: 'alert' | void;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
-}
-export type LocalModalProps = Props & RestrictHideProps & AnimateProps;
+} & RestrictHideProps &
+  AnimateProps;
 export type ModalProps = OverlayProps & LocalModalProps;
-export interface ModalComponents {
+export type ModalComponents = {
   Container: React.FunctionComponent<ModalContainerProps>;
   Hide: React.FunctionComponent<ModalHideProps>;
   Show: React.FunctionComponent<ModalShowProps>;
-}
+};
 
 export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents = ({
   children,

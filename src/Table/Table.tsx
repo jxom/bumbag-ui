@@ -28,7 +28,7 @@ const OuterBorder = styled(InlineBlock)<{ isFullWidth?: boolean }>`
     `};
 `;
 
-export interface LocalTableProps {
+export type LocalTableProps = {
   /** Title of the table to be read by screen readers. */
   a11yTitle?: string;
   children: React.ReactNode;
@@ -37,9 +37,9 @@ export interface LocalTableProps {
   isFullWidth?: boolean;
   isHoverable?: boolean;
   isStriped?: boolean;
-}
+};
 export type TableProps = ReakitBoxProps & LocalTableProps;
-export interface TableComponents {
+export type TableComponents = {
   Body: React.FunctionComponent<TableBodyProps>;
   Caption: React.FunctionComponent<TableCaptionProps>;
   Cell: React.FunctionComponent<TableCellProps>;
@@ -47,7 +47,7 @@ export interface TableComponents {
   Head: React.FunctionComponent<TableHeadProps>;
   HeadCell: React.FunctionComponent<TableHeadCellProps>;
   Row: React.FunctionComponent<TableRowProps>;
-}
+};
 
 export const Table: React.FunctionComponent<LocalTableProps> & TableComponents = ({
   a11yTitle,

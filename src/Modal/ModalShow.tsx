@@ -8,7 +8,7 @@ import {
 
 import { ModalShow as _ModalShow } from './styled';
 
-export interface LocalModalShowProps extends LocalOverlayShowProps {}
+export type LocalModalShowProps = LocalOverlayShowProps & {};
 export type ModalShowProps = OverlayShowProps;
 
 const ModalShow: React.FunctionComponent<LocalModalShowProps> = ({ children, ...props }) => (

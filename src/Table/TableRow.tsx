@@ -5,9 +5,9 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import { TableRow as _TableRow } from './styled';
 
-export interface LocalTableRowProps {
+export type LocalTableRowProps = {
   children: React.ReactNode;
-}
+};
 export type TableRowProps = ReakitBoxProps & LocalTableRowProps;
 
 export const TableRow: React.FunctionComponent<LocalTableRowProps> = ({ children, ...props }) => (

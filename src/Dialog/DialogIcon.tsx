@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import { IconProps } from '../Icon/Icon';
 import { DialogIcon as _DialogIcon } from './styled';
 
-export interface LocalDialogIconProps {
+export type LocalDialogIconProps = {
   className?: string;
   icon: string;
-}
+};
 export type DialogIconProps = IconProps & LocalDialogIconProps;
 
 // @ts-ignore

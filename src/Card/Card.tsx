@@ -10,7 +10,7 @@ import CardHeader, { CardHeaderProps } from './CardHeader';
 import CardFooter, { CardFooterProps } from './CardFooter';
 import CardTitle, { CardTitleProps } from './CardTitle';
 
-export interface LocalCardProps {
+export type LocalCardProps = {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
@@ -19,14 +19,14 @@ export interface LocalCardProps {
   headerActions?: React.ReactElement<any>;
   isFullWidth?: boolean;
   title?: string | React.ReactElement<any>;
-}
-export interface CardComponents {
+};
+export type CardComponents = {
   Card: React.FunctionComponent<CardCardProps>;
   Header: React.FunctionComponent<CardHeaderProps>;
   Content: React.FunctionComponent<CardContentProps>;
   Footer: React.FunctionComponent<CardFooterProps>;
   Title: React.FunctionComponent<CardTitleProps>;
-}
+};
 
 export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
   a11yDescriptionId,

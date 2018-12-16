@@ -6,10 +6,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 import { Omit, Size } from '../types';
 import { RatingStar as _RatingStar } from './styled';
 
-export interface LocalRatingStarProps {
+export type LocalRatingStarProps = {
   active?: boolean;
   size?: Size;
-}
+};
 export type RatingStarProps = LocalRatingStarProps & Omit<ReakitBoxProps, 'size'>;
 
 export const RatingStar: React.FunctionComponent<LocalRatingStarProps> = ({ size, active, ...props }) => (

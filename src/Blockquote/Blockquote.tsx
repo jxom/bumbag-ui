@@ -7,11 +7,11 @@ import { BlockquoteProps as ReakitBlockquoteProps } from 'reakit/ts/Blockquote/B
 import { Palette } from '../types';
 import _Blockquote from './styled';
 
-export interface LocalBlockquoteProps {
+export type LocalBlockquoteProps = {
   children: React.ReactNode;
   className?: string;
   palette?: Palette;
-}
+};
 export type BlockquoteProps = LocalBlockquoteProps & ReakitBlockquoteProps;
 
 const defaultProps: Partial<LocalBlockquoteProps> = {

@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { CardHeader as _CardHeader } from './styled';
 
-export interface LocalCardHeaderProps {
+export type LocalCardHeaderProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type CardHeaderProps = LocalCardHeaderProps & ReakitBoxProps;
 
 const CardHeader: React.FunctionComponent<LocalCardHeaderProps> = ({ children, ...props }) => (

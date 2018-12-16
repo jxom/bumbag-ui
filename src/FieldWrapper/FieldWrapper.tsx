@@ -7,7 +7,7 @@ import { Flex } from '../primitives';
 import { Omit } from '../types';
 import _FieldWrapper, { Label, DescriptionText, HintText, OptionalText, ValidationText } from './styled';
 
-export interface LocalFieldWrapperProps {
+export type LocalFieldWrapperProps = {
   a11yId?: string;
   children: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;
   className?: string;
@@ -19,15 +19,15 @@ export interface LocalFieldWrapperProps {
   label?: string | React.ReactElement<any>;
   state?: string;
   validationText?: string;
-}
+};
 export type FieldWrapperProps = Omit<ReakitFieldProps, 'label'> & LocalFieldWrapperProps;
-export interface FieldElementProps {
+export type FieldElementProps = {
   a11yId?: LocalFieldWrapperProps['a11yId'];
   isFullWidth?: LocalFieldWrapperProps['isFullWidth'];
   isRequired?: LocalFieldWrapperProps['isRequired'];
   state?: LocalFieldWrapperProps['state'];
   marginTop?: string;
-}
+};
 
 export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
   a11yId,

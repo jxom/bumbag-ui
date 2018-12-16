@@ -18,7 +18,7 @@ import PopoverShow, { PopoverShowProps } from './PopoverShow';
 import PopoverHide, { PopoverHideProps } from './PopoverHide';
 import PopoverToggle, { PopoverToggleProps } from './PopoverToggle';
 
-export interface Props {
+export type LocalPopoverProps = LocalPopoverPopoverProps & {
   children: React.ReactElement<any>;
   className?: string;
   content:
@@ -27,17 +27,16 @@ export interface Props {
     | (({ initialFocusRef, ...args }: { initialFocusRef?: React.RefObject<any> }) => React.ReactNode);
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean;
-}
-export type LocalPopoverProps = LocalPopoverPopoverProps & Props;
+};
 export type PopoverProps = LocalPopoverProps;
-export interface PopoverComponents {
+export type PopoverComponents = {
   Popover: React.FunctionComponent<PopoverPopoverProps>;
   Container: React.FunctionComponent<PopoverContainerProps>;
   Close: React.FunctionComponent<PopoverCloseProps>;
   Hide: React.FunctionComponent<PopoverHideProps>;
   Show: React.FunctionComponent<PopoverShowProps>;
   Toggle: React.FunctionComponent<PopoverToggleProps>;
-}
+};
 
 export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverComponents = ({
   children,

@@ -8,9 +8,9 @@ import { Omit } from '../types';
 import VisuallyHidden from '../VisuallyHidden';
 import { DialogClose as _DialogClose } from './styled';
 
-export interface LocalDialogCloseProps {
+export type LocalDialogCloseProps = {
   className?: string;
-}
+};
 export type DialogCloseProps = LocalDialogCloseProps & Omit<ButtonProps, 'children'>;
 
 export const DialogClose: React.FunctionComponent<LocalDialogCloseProps> = ({ children, ...props }) => (

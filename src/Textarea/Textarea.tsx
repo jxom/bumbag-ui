@@ -6,7 +6,7 @@ import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 import _Textarea, { LoadingSpinner } from './styled';
 import { InlineBlock } from '../primitives';
 
-export interface LocalTextareaProps {
+export type LocalTextareaProps = {
   /** An accessible identifier for the textarea */
   a11yId?: string;
   /** An accessible label for the textarea */
@@ -54,7 +54,7 @@ export interface LocalTextareaProps {
   onChange?(e: React.FormEvent<HTMLTextAreaElement>): void;
   /** Function to invoke when input is focused */
   onFocus?(e: React.FocusEvent<HTMLTextAreaElement>): void;
-}
+};
 export type TextareaProps = ReakitInputProps & LocalTextareaProps;
 
 export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({

@@ -17,20 +17,20 @@ import OverlayShow, { OverlayShowProps } from './OverlayShow';
 import OverlayToggle, { OverlayToggleProps } from './OverlayToggle';
 import _Overlay from './styled';
 
-export interface LocalOverlayProps {
+export type LocalOverlayProps = {
   use?: any;
   children: React.ReactNode;
   className?: string;
   /** Whether or not to show the overlay component */
   isVisible?: boolean;
-}
+};
 export type OverlayProps = LocalOverlayProps & AnimateProps & RestrictHideProps & ReakitOverlayProps;
-export interface OverlayComponents {
+export type OverlayComponents = {
   Container: React.FunctionComponent<OverlayContainerProps>;
   Hide: React.FunctionComponent<OverlayHideProps>;
   Show: any;
   Toggle: any;
-}
+};
 
 export const Overlay: React.FunctionComponent<LocalOverlayProps & AnimateProps & RestrictHideProps> &
   OverlayComponents = ({ children, isVisible, ...props }) => (

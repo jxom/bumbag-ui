@@ -6,12 +6,12 @@ import { Omit } from '../types';
 
 import _Pane from './styled';
 
-export interface LocalPaneProps {
+export type LocalPaneProps = {
   border?: boolean | 'shadow';
   className?: string;
   children?: React.ReactNode;
   isFullWidth?: boolean;
-}
+};
 export type PaneProps = LocalPaneProps & Omit<ReakitBoxProps, 'border'>;
 
 export const Pane: React.FunctionComponent<LocalPaneProps> = ({ border, children, ...props }) => (

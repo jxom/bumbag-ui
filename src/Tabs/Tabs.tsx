@@ -10,21 +10,21 @@ import _Tabs from './styled';
 import Tab, { TabProps } from './Tab';
 import TabPanel, { TabPanelProps } from './TabPanel';
 
-export interface LocalTabsProps {
+export type LocalTabsProps = {
   align?: 'left' | 'center' | 'right';
   children: React.ReactNode;
   className?: string;
   isFitted?: boolean;
   /** Visual type of the tab */
   type?: 'default' | 'boxed';
-}
+};
 export type TabsProps = ReakitTabsProps & LocalTabsProps;
 
-export interface TabsComponents {
+export type TabsComponents = {
   Tab: React.FunctionComponent<TabProps>;
   Panel: React.FunctionComponent<TabPanelProps>;
   Container: React.FunctionComponent<{ children: (...args: any) => React.ReactNode }>;
-}
+};
 
 export const Tabs: React.FunctionComponent<LocalTabsProps> & TabsComponents = ({ children, ...props }) => (
   <_Tabs use={ReakitTabs} {...props}>

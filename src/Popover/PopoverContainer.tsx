@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // @ts-ignore
 import ReakitPopover from 'reakit/Popover';
 
-export interface LocalPopoverContainerProps {
+export type LocalPopoverContainerProps = {
   children: ((
     {
       isVisible,
@@ -21,7 +21,7 @@ export interface LocalPopoverContainerProps {
   ) => React.ReactNode);
   defaultVisible?: boolean;
   initialState?: {};
-}
+};
 export type PopoverContainerProps = LocalPopoverContainerProps;
 
 export const PopoverContainer: React.FunctionComponent<LocalPopoverContainerProps> = ({

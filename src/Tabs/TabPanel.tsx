@@ -5,12 +5,12 @@ import { TabsPanelProps as ReakitTabPanelProps } from 'reakit/ts/Tabs/TabsPanel'
 
 import { TabPanel as _TabPanel } from './styled';
 
-export interface LocalTabPanelProps {
+export type LocalTabPanelProps = {
   children: React.ReactNode;
   className?: string;
   /** A unique identifier for the tab */
   tab: string;
-}
+};
 export type TabPanelProps = ReakitTabPanelProps & LocalTabPanelProps;
 
 export const TabPanel: React.FunctionComponent<LocalTabPanelProps> = ({ children, ...props }) => (

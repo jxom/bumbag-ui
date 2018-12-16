@@ -13,15 +13,15 @@ import FieldWrapper, {
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
 
-export interface Props {
-  /** Addon component to the input (before). Similar to the addon components in Input. */
-  addonBefore?: React.ReactElement<any>;
-  /** Addon component to the input (after). Similar to the addon components in Input. */
-  addonAfter?: React.ReactElement<any>;
-  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
-  isVertical?: boolean;
-}
-export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalInputProps & Props;
+export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalInputProps & {
+    /** Addon component to the input (before). Similar to the addon components in Input. */
+    addonBefore?: React.ReactElement<any>;
+    /** Addon component to the input (after). Similar to the addon components in Input. */
+    addonAfter?: React.ReactElement<any>;
+    /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+    isVertical?: boolean;
+  };
 export type InputFieldProps = LocalInputFieldProps & InputProps;
 
 export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({

@@ -5,11 +5,11 @@ import { PopoverHideProps as ReakitPopoverHideProps } from 'reakit/ts';
 
 import { PopoverHide as _PopoverHide } from './styled';
 
-export interface LocalPopoverHideProps {
+export type LocalPopoverHideProps = {
   children: React.ReactNode;
   hide(): void;
   onClick?(): void;
-}
+};
 export type PopoverHideProps = ReakitPopoverHideProps & LocalPopoverHideProps;
 
 export const PopoverHide: React.FunctionComponent<LocalPopoverHideProps> = ({ children, ...props }) => (

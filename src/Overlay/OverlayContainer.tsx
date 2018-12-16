@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 // @ts-ignore
 import ReakitOverlay from 'reakit/Overlay';
 
-export interface OverlayContainerProps {
+export type OverlayContainerProps = {
   children: ({ isVisible }: { isVisible: boolean }) => React.ReactNode;
   defaultVisible?: boolean;
   initialState?: Object;
-}
+};
 
 export const OverlayContainer: React.FunctionComponent<OverlayContainerProps> = ({
   children,

@@ -6,10 +6,10 @@ import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 import { AlertClose as _AlertClose } from './styled';
 
-export interface LocalAlertCloseProps {
+export type LocalAlertCloseProps = {
   isAbsolute?: boolean;
   onClickClose?: ButtonProps['onClick'];
-}
+};
 export type AlertCloseProps = Omit<ButtonProps, 'children'> & LocalAlertCloseProps;
 
 export const AlertClose: React.FunctionComponent<LocalAlertCloseProps> = ({ onClickClose, ...props }) => (

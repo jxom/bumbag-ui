@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { CardFooter as _CardFooter } from './styled';
 
-export interface LocalCardFooterProps {
+export type LocalCardFooterProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type CardFooterProps = LocalCardFooterProps & ReakitBoxProps;
 
 const CardFooter: React.FunctionComponent<LocalCardFooterProps> = ({ children, ...props }) => (

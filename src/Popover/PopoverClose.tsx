@@ -9,9 +9,9 @@ import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 
-export interface LocalPopoverCloseProps {
+export type LocalPopoverCloseProps = {
   hide(): void;
-}
+};
 export type PopoverCloseProps = Omit<ButtonProps, 'children'> & LocalPopoverCloseProps;
 
 export const PopoverClose: React.FunctionComponent<LocalPopoverCloseProps> = props => (

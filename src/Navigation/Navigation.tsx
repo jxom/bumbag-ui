@@ -5,12 +5,12 @@ import { NavigationProps as ReakitNavigationProps } from 'reakit/ts';
 
 import _Navigation from './styled';
 
-export interface LocalNavigationProps {
+export type LocalNavigationProps = {
   a11yTitle?: string;
   children: React.ReactNode;
   className?: string;
   use?: any;
-}
+};
 export type NavigationProps = ReakitNavigationProps & LocalNavigationProps;
 
 export const Navigation: React.FunctionComponent<LocalNavigationProps> = ({

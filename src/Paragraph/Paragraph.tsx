@@ -5,10 +5,10 @@ import { ParagraphProps as ReakitParagraphProps } from 'reakit/ts';
 
 import _Paragraph from './styled';
 
-export interface LocalParagraphProps {
+export type LocalParagraphProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type ParagraphProps = ReakitParagraphProps & LocalParagraphProps;
 
 export const Paragraph: React.FunctionComponent<LocalParagraphProps> = ({ children, className, ...props }) => (

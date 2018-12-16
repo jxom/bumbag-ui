@@ -17,28 +17,29 @@ import {
   restrictHidePropTypes
 } from '../types';
 
-export interface Props {
-  a11yDescriptionId?: string;
-  a11yTitleId?: string;
-  actionButtonsProps?: ActionButtonsProps;
-  children:
-    | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
-    | React.ReactNode;
-  className?: string;
-  footer?:
-    | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
-    | string
-    | React.ReactElement<any>;
-  hide?(): void;
-  /** Whether or not to show the modal component */
-  isVisible?: boolean;
-  kind?: 'alert';
-  showActionButtons?: boolean;
-  showCloseButton?: boolean;
-  title?: string | React.ReactElement<any>;
-  type?: string;
-}
-export type LocalDialogModalProps = AnimateProps & RestrictHideProps & Omit<LocalModalProps, 'children'> & Props;
+export type LocalDialogModalProps = AnimateProps &
+  RestrictHideProps &
+  Omit<LocalModalProps, 'children'> & {
+    a11yDescriptionId?: string;
+    a11yTitleId?: string;
+    actionButtonsProps?: ActionButtonsProps;
+    children:
+      | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
+      | React.ReactNode;
+    className?: string;
+    footer?:
+      | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
+      | string
+      | React.ReactElement<any>;
+    hide?(): void;
+    /** Whether or not to show the modal component */
+    isVisible?: boolean;
+    kind?: 'alert';
+    showActionButtons?: boolean;
+    showCloseButton?: boolean;
+    title?: string | React.ReactElement<any>;
+    type?: string;
+  };
 
 export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   a11yDescriptionId,

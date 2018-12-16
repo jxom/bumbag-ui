@@ -14,7 +14,7 @@ import DialogTitle, { DialogTitleProps } from './DialogTitle';
 import DialogClose, { DialogCloseProps } from './DialogClose';
 import DialogIcon, { DialogIconProps } from './DialogIcon';
 
-export interface LocalDialogProps {
+export type LocalDialogProps = {
   actionButtonsProps?: ActionButtonsProps;
   a11yDescriptionId?: string;
   a11yTitleId?: string;
@@ -29,9 +29,9 @@ export interface LocalDialogProps {
   showCloseButton?: boolean;
   title?: string | React.ReactElement<any>;
   type?: string;
-}
+};
 export type DialogProps = LocalDialogProps & DialogDialogProps;
-export interface DialogComponents {
+export type DialogComponents = {
   Dialog: React.FunctionComponent<DialogDialogProps>;
   Content: React.FunctionComponent<DialogContentProps>;
   Header: React.FunctionComponent<DialogHeaderProps>;
@@ -39,7 +39,7 @@ export interface DialogComponents {
   Title: React.FunctionComponent<DialogTitleProps>;
   Close: React.FunctionComponent<DialogCloseProps>;
   Icon: React.FunctionComponent<DialogIconProps>;
-}
+};
 
 export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponents = ({
   actionButtonsProps,

@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { DialogTitle as _DialogTitle } from './styled';
 
-export interface LocalDialogTitleProps {
+export type LocalDialogTitleProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type DialogTitleProps = LocalDialogTitleProps & ReakitBoxProps;
 
 export const DialogTitle: React.FunctionComponent<LocalDialogTitleProps> = ({ children, ...props }) => (

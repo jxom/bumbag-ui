@@ -42,7 +42,7 @@ export const placementPropType = PropTypes.oneOf([
 export type Size = 'default' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
 export const sizePropType = PropTypes.oneOf(['default', 'small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge']);
 
-export interface AnimateProps {
+export type AnimateProps = {
   /** Delay of the animation if one is specified. */
   delay?: string;
   /** Duration of the animation if one is specified. */
@@ -55,7 +55,7 @@ export interface AnimateProps {
   slide?: boolean | 'bottom' | 'left' | 'right' | 'top';
   /** Timing of the animation */
   timing?: string;
-}
+};
 export const animatePropTypes = {
   delay: PropTypes.string,
   duration: PropTypes.string,
@@ -73,12 +73,12 @@ export const animateDefaultProps = {
   timing: undefined
 };
 
-export interface RestrictHideProps {
+export type RestrictHideProps = {
   /** Should the component be hidden when 'esc' is pressed?  */
   hideOnEsc?: boolean;
   /** Should the component be hidden when outside is clicked?  */
   hideOnClickOutside?: boolean;
-}
+};
 export const restrictHidePropTypes = {
   hideOnEsc: PropTypes.bool,
   hideOnClickOutside: PropTypes.bool
@@ -88,7 +88,7 @@ export const restrictDefaultProps = {
   hideOnClickOutside: undefined
 };
 
-export interface StyledProps {
+export type StyledProps = {
   theme: {};
   tone?: number;
-}
+};

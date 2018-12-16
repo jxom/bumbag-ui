@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { DialogFooter as _DialogFooter } from './styled';
 
-export interface LocalDialogFooterProps {
+export type LocalDialogFooterProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type DialogFooterProps = LocalDialogFooterProps & ReakitBoxProps;
 
 export const DialogFooter: React.FunctionComponent<LocalDialogFooterProps> = ({ children, ...props }) => (

@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { ListItem as _ListItem } from './styled';
 
-export interface LocalListItemProps {
+export type LocalListItemProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type ListItemProps = ReakitBoxProps & LocalListItemProps;
 
 export const ListItem: React.FunctionComponent<LocalListItemProps> = ({ children, className, ...props }) => (

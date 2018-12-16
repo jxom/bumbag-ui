@@ -5,12 +5,12 @@ import { InlineFlexProps as ReakitInlineFlexProps } from 'reakit/ts/InlineFlex/I
 
 import _Set from './styled';
 
-export interface LocalSetProps {
+export type LocalSetProps = {
   className?: string;
   children: React.ReactNode;
   isVertical?: boolean;
   spacing?: string;
-}
+};
 export type SetProps = ReakitInlineFlexProps & LocalSetProps;
 
 export const Set: React.FunctionComponent<LocalSetProps> = ({ children, ...props }) => (

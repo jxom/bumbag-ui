@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import { PaneProps } from '../Pane/Pane';
 import Card from './styled';
 
-export interface LocalCardCardProps {
+export type LocalCardCardProps = {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
   className?: string;
   isFullWidth?: boolean;
-}
+};
 export type CardCardProps = LocalCardCardProps & PaneProps;
 
 const CardCard: React.FunctionComponent<LocalCardCardProps> = ({

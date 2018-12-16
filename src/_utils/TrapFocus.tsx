@@ -4,7 +4,7 @@ import _get from 'lodash/get';
 // @ts-ignore
 import createFocusTrap from 'focus-trap';
 
-export interface TrapFocusProps {
+export type TrapFocusProps = {
   children: (
     {
       fallbackFocusRef,
@@ -13,10 +13,10 @@ export interface TrapFocusProps {
   ) => React.ReactNode;
   isActive?: boolean;
   usesPortal?: boolean;
-}
-export interface TrapFocusState {
+};
+export type TrapFocusState = {
   originalAriaHiddenValues: Array<string | void>;
-}
+};
 
 const noop = () => {};
 

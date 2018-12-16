@@ -9,7 +9,7 @@ import { Omit } from '../types';
 import _Select, { LoadingSpinner } from './styled';
 import Icon from './Icon';
 
-export interface LocalSelectProps {
+export type LocalSelectProps = {
   /** ID for the select field */
   a11yId?: string;
   /** An accessible label for the select field */
@@ -46,12 +46,12 @@ export interface LocalSelectProps {
   onChange?(value: string): void;
   /** Function to invoke when the select field is focused */
   onFocus?(e: React.FocusEvent<HTMLSelectElement>): void;
-}
+};
 export type SelectProps = Omit<ReakitInlineBlockProps, 'children'> & LocalSelectProps;
 
-export interface SelectState {
+export type SelectState = {
   isPlaceholderSelected: boolean;
-}
+};
 
 export const selectDefaultProps = {
   a11yId: undefined,

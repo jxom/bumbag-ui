@@ -6,7 +6,7 @@ import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
-export interface LocalRadioProps {
+export type LocalRadioProps = {
   /** An accessible id for the radio */
   a11yId?: string;
   /** Automatically focus on the radio */
@@ -32,7 +32,7 @@ export interface LocalRadioProps {
   onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when input is focused */
   onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
-}
+};
 export type RadioProps = ReakitLabelProps & LocalRadioProps;
 
 export const Radio: React.FunctionComponent<LocalRadioProps> = ({

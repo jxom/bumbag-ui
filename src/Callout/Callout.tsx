@@ -7,7 +7,7 @@ import { getUniqueId } from '../uniqueId';
 import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
 import CalloutClose, { CalloutCloseProps } from './CalloutClose';
 
-export interface LocalCalloutProps {
+export type LocalCalloutProps = {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
@@ -20,7 +20,7 @@ export interface LocalCalloutProps {
   showCloseButton?: boolean;
   title?: string | React.ReactElement<any>;
   type?: string;
-}
+};
 export type CalloutProps = CardCardProps & LocalCalloutProps;
 
 export const Callout: React.FunctionComponent<LocalCalloutProps> = ({

@@ -5,12 +5,12 @@ import { CodeProps as ReakitCodeProps } from 'reakit/ts';
 
 import _Code from './styled';
 
-export interface LocalCodeProps {
+export type LocalCodeProps = {
   children: React.ReactNode;
   className?: string;
   codeClassName?: string;
   isBlock?: boolean;
-}
+};
 export type CodeProps = LocalCodeProps & ReakitCodeProps;
 
 export const Code: React.FunctionComponent<LocalCodeProps> = ({

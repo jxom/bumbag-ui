@@ -34,7 +34,7 @@ const Wrapper = styled(Box)<HighlightedCodeProps>`
   `};
 `;
 
-export interface LocalHighlightedCodeProps {
+export type LocalHighlightedCodeProps = {
   children: React.ReactNode;
   className?: string;
   codeClassName?: string;
@@ -42,7 +42,7 @@ export interface LocalHighlightedCodeProps {
   lang: string;
   showLabel?: boolean;
   showLineNumbers?: boolean;
-}
+};
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 
 export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {

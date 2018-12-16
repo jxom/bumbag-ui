@@ -8,9 +8,9 @@ import VisuallyHidden from '../VisuallyHidden';
 import { Omit } from '../types';
 import { CalloutClose as _CalloutClose } from './styled';
 
-export interface LocalCalloutCloseProps {
+export type LocalCalloutCloseProps = {
   onClickClose?: () => void;
-}
+};
 export type CalloutCloseProps = Omit<ReakitButtonProps, 'children'> & LocalCalloutCloseProps;
 
 export const CalloutClose: React.FunctionComponent<LocalCalloutCloseProps> = ({ onClickClose, ...props }) => (

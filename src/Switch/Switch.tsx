@@ -7,7 +7,7 @@ import Text from '../Text';
 import { Omit } from '../types';
 import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
 
-export interface LocalSwitchProps {
+export type LocalSwitchProps = {
   /** Automatically focus on the switch */
   autoFocus?: boolean;
   checked?: boolean;
@@ -34,7 +34,7 @@ export interface LocalSwitchProps {
   onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when switch is focused */
   onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
-}
+};
 export type SwitchProps = LocalSwitchProps & Omit<ReakitLabelProps, 'children'>;
 
 export const Switch: React.FunctionComponent<LocalSwitchProps> = ({

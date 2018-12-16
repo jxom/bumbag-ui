@@ -5,10 +5,10 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { DialogContent as _DialogContent } from './styled';
 
-export interface LocalDialogContentProps {
+export type LocalDialogContentProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type DialogContentProps = LocalDialogContentProps & ReakitBoxProps;
 
 export const DialogContent: React.FunctionComponent<LocalDialogContentProps> = ({ children, ...props }) => (

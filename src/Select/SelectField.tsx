@@ -15,15 +15,15 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
 
-export interface Props {
-  /** Addon component to the input (before). Similar to the addon components in Input. */
-  addonBefore?: React.ReactElement<any>;
-  /** Addon component to the input (after). Similar to the addon components in Input. */
-  addonAfter?: React.ReactElement<any>;
-  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
-  isVertical?: boolean;
-}
-export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalSelectProps & Props;
+export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalSelectProps & {
+    /** Addon component to the input (before). Similar to the addon components in Input. */
+    addonBefore?: React.ReactElement<any>;
+    /** Addon component to the input (after). Similar to the addon components in Input. */
+    addonAfter?: React.ReactElement<any>;
+    /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+    isVertical?: boolean;
+  };
 export type SelectFieldProps = LocalSelectFieldProps & SelectProps;
 
 export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({

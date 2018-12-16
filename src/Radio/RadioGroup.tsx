@@ -6,7 +6,7 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 import { RadioGroup as _RadioGroup } from './styled';
 import Radio from './Radio';
 
-export interface LocalRadioGroupProps {
+export type LocalRadioGroupProps = {
   /** An accessible ID for the radio group */
   a11yId?: string;
   /** An accessible label for the radio group */
@@ -26,7 +26,7 @@ export interface LocalRadioGroupProps {
   value?: string;
   /** Function to invoke when radio group has changed */
   onChange?(value: string): void;
-}
+};
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
 
 export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> = ({

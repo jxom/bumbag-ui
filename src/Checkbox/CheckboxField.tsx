@@ -12,10 +12,10 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
 
-export interface Props {
-  checkboxLabel?: string;
-}
-export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalCheckboxProps & Props;
+export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalCheckboxProps & {
+    checkboxLabel?: string;
+  };
 export type CheckboxFieldProps = LocalCheckboxFieldProps & CheckboxProps;
 
 export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = ({

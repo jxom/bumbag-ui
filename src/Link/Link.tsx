@@ -5,10 +5,10 @@ import { LinkProps as ReakitLinkProps } from 'reakit/ts';
 
 import _Link from './styled';
 
-export interface LocalLinkProps {
+export type LocalLinkProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 export type LinkProps = LocalLinkProps & ReakitLinkProps;
 
 export const Link: React.FunctionComponent<LocalLinkProps> = ({ children, className, ...props }) => (

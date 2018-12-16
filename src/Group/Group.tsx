@@ -8,13 +8,13 @@ import { withTheme } from '../styled';
 import { Omit, Breakpoint, breakpointPropType } from '../types';
 import _Group from './styled';
 
-export interface LocalGroupProps {
+export type LocalGroupProps = {
   children: React.ReactNode;
   className?: string;
   isVertical?: boolean;
   theme?: Object;
   verticalAt?: Breakpoint | number;
-}
+};
 export type GroupProps = LocalGroupProps & Omit<ReakitGroupProps, 'verticalAt'>;
 
 const getVerticalBreakpoint = ({ breakpoint, theme }: { breakpoint?: Breakpoint | number; theme?: Object }) => {

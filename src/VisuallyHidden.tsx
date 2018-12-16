@@ -15,9 +15,9 @@ const _VisuallyHidden = styled(Box)`
   position: absolute;
 `;
 
-export interface VisuallyHiddenProps {
+export type VisuallyHiddenProps = {
   children: React.ReactNode;
-}
+};
 
 export const VisuallyHidden: React.FunctionComponent<VisuallyHiddenProps> = ({ children }) => (
   <_VisuallyHidden>{children}</_VisuallyHidden>

@@ -7,13 +7,13 @@ import { breakpointPropType } from '../types';
 import ColumnsContext from './ColumnsContext';
 import _Columns from './styled';
 
-export interface LocalColumnsProps {
+export type LocalColumnsProps = {
   children: React.ReactNode;
   className?: string;
   isGapless?: boolean;
   isOneLine?: boolean;
   minBreakpoint?: 'tablet' | 'mobile';
-}
+};
 export type ColumnsProps = LocalColumnsProps & ReakitBoxProps;
 
 export const Columns: React.FunctionComponent<LocalColumnsProps> = ({

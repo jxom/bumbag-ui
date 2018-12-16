@@ -4,7 +4,7 @@ import { ImageProps as ReakitImageProps } from 'reakit/ts';
 
 import _Image from './styled';
 
-export interface LocalImageProps {
+export type LocalImageProps = {
   use?: any;
   children?: React.ReactNode;
   className?: string;
@@ -14,7 +14,7 @@ export interface LocalImageProps {
   fitPosition?: string;
   /** Fix the width of the image. It will not be responsive. */
   isFixed?: boolean;
-}
+};
 export type ImageProps = LocalImageProps & ReakitImageProps;
 
 export const Image: React.FunctionComponent<LocalImageProps> = ({ children, className, isFixed, ...props }) => (

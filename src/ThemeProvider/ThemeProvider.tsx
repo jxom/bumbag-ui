@@ -10,11 +10,11 @@ import reakitTheme from '../_utils/reakitTheme';
 
 import defaultTheme from '../themes/default';
 
-export interface LocalThemeProviderProps {
+export type LocalThemeProviderProps = {
   children: React.ReactNode;
   isStandalone?: boolean;
   theme?: ThemeConfig;
-}
+};
 
 const Provider: React.FunctionComponent<LocalThemeProviderProps> = ({ children, isStandalone, theme: _theme }) => {
   let theme = defaultTheme(_theme);

@@ -12,12 +12,12 @@ import FieldWrapper, {
 import { Omit } from '../types';
 import Switch, { LocalSwitchProps, SwitchProps, switchPropTypes, switchDefaultProps } from './Switch';
 
-export interface Props {
-  a11yId?: string;
-  /** Switch label */
-  switchLabel?: string;
-}
-export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalSwitchProps & Props;
+export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalSwitchProps & {
+    a11yId?: string;
+    /** Switch label */
+    switchLabel?: string;
+  };
 export type SwitchFieldProps = LocalSwitchFieldProps & SwitchProps;
 
 export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({

@@ -14,7 +14,7 @@ import { withTheme } from '../styled';
 import { Omit, Size, sizePropType } from '../types';
 import _Icon from './styled';
 
-export interface Props {
+export type Props = {
   children?: React.ReactNode;
   /** Color of the icon. Can be a color from the palette, or any other color. */
   color?: string;
@@ -24,15 +24,15 @@ export interface Props {
   /** Size of the icon. Available values: "small", "medium", "large" */
   size?: Size;
   theme?: Object;
-}
-export interface PropsWithA11yHidden extends Props {
+};
+export type PropsWithA11yHidden = Props & {
   /** Indicates that this element should be skipped by assistive technologies. */
   a11yHidden: boolean;
-}
-export interface PropsWithA11yLabel extends Props {
+};
+export type PropsWithA11yLabel = Props & {
   /** A label for the icon which can be read by screen readers. This is required if a11yHidden is false. */
   a11yLabel: string;
-}
+};
 export type LocalIconProps = PropsWithA11yHidden | PropsWithA11yLabel;
 export type IconProps = Omit<ReakitBoxProps, 'size'> & LocalIconProps;
 

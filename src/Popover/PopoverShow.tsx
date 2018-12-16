@@ -5,11 +5,11 @@ import { PopoverShowProps as ReakitPopoverShowProps } from 'reakit/ts';
 
 import { PopoverShow as _PopoverShow } from './styled';
 
-export interface LocalPopoverShowProps {
+export type LocalPopoverShowProps = {
   children: React.ReactNode;
   onClick?(): void;
   show(): void;
-}
+};
 export type PopoverShowProps = ReakitPopoverShowProps & LocalPopoverShowProps;
 
 export const PopoverShow: React.FunctionComponent<LocalPopoverShowProps> = ({ children, ...props }) => (

@@ -5,11 +5,11 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import _Text from './styled';
 
-export interface LocalTextProps {
+export type LocalTextProps = {
   className?: string;
   children: React.ReactNode;
   color?: string;
-}
+};
 export type TextProps = ReakitBoxProps & LocalTextProps;
 
 export const Text: React.FunctionComponent<LocalTextProps> = ({ children, ...props }) => (
