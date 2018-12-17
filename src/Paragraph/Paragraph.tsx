@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { ParagraphProps as ReakitParagraphProps } from '@jmoxey/reakit/ts';
+import { ParagraphProps as ReakitParagraphProps } from 'reakit/ts';
 
 import _Paragraph from './styled';
 

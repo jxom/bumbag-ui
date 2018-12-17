@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { InputProps as ReakitInputProps } from '@jmoxey/reakit/ts/Input/Input';
+import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 
 import _Textarea, { LoadingSpinner } from './styled';
 import { InlineBlock } from '../primitives';

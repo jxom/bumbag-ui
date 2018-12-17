@@ -1,4 +1,4 @@
-import Link from '@jmoxey/reakit/Link';
+import Link from 'reakit/Link';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 

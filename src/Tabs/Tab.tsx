@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { TabsTabProps as ReakitTabProps } from '@jmoxey/reakit/ts/Tabs/TabsTab';
-import { StepContainerActions, StepContainerSelectors } from '@jmoxey/reakit/ts/Step/StepContainer';
+import { TabsTabProps as ReakitTabProps } from 'reakit/ts/Tabs/TabsTab';
+import { StepContainerActions, StepContainerSelectors } from 'reakit/ts/Step/StepContainer';
 
 import { Tab as _Tab } from './styled';
 

@@ -1,4 +1,4 @@
-import Paragraph from '@jmoxey/reakit/Paragraph';
+import Paragraph from 'reakit/Paragraph';
 import { theme } from 'styled-tools';
 
 import styled from '../styled';

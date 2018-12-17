@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { HeadingProps as ReakitHeadingProps } from '@jmoxey/reakit/ts/Heading/Heading';
+import { HeadingProps as ReakitHeadingProps } from 'reakit/ts/Heading/Heading';
 
 import _Heading from './styled';
 

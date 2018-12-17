@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { OverlayShowProps as ReakitOverlayShowProps } from '@jmoxey/reakit/ts';
+import { OverlayShowProps as ReakitOverlayShowProps } from 'reakit/ts';
 
 import { OverlayShow as _OverlayShow } from './styled';
 

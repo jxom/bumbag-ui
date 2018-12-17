@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import ThemeProvider from '@jmoxey/reakit/Provider';
+import ThemeProvider from 'reakit/Provider';
 
 import { ThemeConfig } from '../types';
 import Global from '../_utils/Global';

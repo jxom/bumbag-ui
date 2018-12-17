@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { InputProps as ReakitInputProps } from '@jmoxey/reakit/ts';
+import { InputProps as ReakitInputProps } from 'reakit/ts';
 
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';

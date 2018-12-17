@@ -1,4 +1,4 @@
-import Group from '@jmoxey/reakit/Group';
+import Group from 'reakit/Group';
 import { theme } from 'styled-tools';
 
 import styled, { css } from '../styled';

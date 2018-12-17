@@ -1,4 +1,4 @@
-import Divider from '@jmoxey/reakit/Divider';
+import Divider from 'reakit/Divider';
 import { theme } from 'styled-tools';
 
 import { styled, css } from '../styled';

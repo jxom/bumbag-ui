@@ -1,4 +1,4 @@
-import InlineFlex from '@jmoxey/reakit/InlineFlex';
+import InlineFlex from 'reakit/InlineFlex';
 import { palette, theme } from 'styled-tools';
 
 import styled, { css } from '../styled';

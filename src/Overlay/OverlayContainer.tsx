@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import ReakitOverlay from '@jmoxey/reakit/Overlay';
+import ReakitOverlay from 'reakit/Overlay';
 
 export type OverlayContainerProps = {
   children: ({ isVisible }: { isVisible: boolean }) => React.ReactNode;

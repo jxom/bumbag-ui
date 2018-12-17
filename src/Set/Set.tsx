@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { InlineFlexProps as ReakitInlineFlexProps } from '@jmoxey/reakit/ts/InlineFlex/InlineFlex';
+import { InlineFlexProps as ReakitInlineFlexProps } from 'reakit/ts/InlineFlex/InlineFlex';
 
 import _Set from './styled';
 

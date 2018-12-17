@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import Overlay from '@jmoxey/reakit/Overlay';
+import Overlay from 'reakit/Overlay';
 
 import styled from '../styled';
 import { OverlayProps } from './Overlay';

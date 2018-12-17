@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { BlockquoteProps as ReakitBlockquoteProps } from '@jmoxey/reakit/ts/Blockquote/Blockquote';
+import { BlockquoteProps as ReakitBlockquoteProps } from 'reakit/ts/Blockquote/Blockquote';
 
 import { Palette } from '../types';
 import _Blockquote from './styled';

@@ -1,5 +1,5 @@
 import { palette, theme } from 'styled-tools';
-import Input from '@jmoxey/reakit/Input';
+import Input from 'reakit/Input';
 
 import styled, { css } from '../styled';
 

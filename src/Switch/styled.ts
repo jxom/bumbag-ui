@@ -1,6 +1,6 @@
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
-import Label from '@jmoxey/reakit/Label';
+import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
 import styled, { css } from '../styled';

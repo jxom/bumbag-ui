@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { GroupProps as ReakitGroupProps } from '@jmoxey/reakit/ts';
+import { GroupProps as ReakitGroupProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 import { withTheme } from '../styled';

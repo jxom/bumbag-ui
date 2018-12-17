@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ListProps as ReakitListProps } from '@jmoxey/reakit/ts';
+import { ListProps as ReakitListProps } from 'reakit/ts';
 
 import _List from './styled';
 import ListItem, { ListItemProps } from './ListItem';

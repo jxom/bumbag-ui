@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { TooltipProps as ReakitTooltipProps } from '@jmoxey/reakit/ts/Tooltip/Tooltip';
+import { TooltipProps as ReakitTooltipProps } from 'reakit/ts/Tooltip/Tooltip';
 
 import { Placement, placementPropType } from '../types';
 import _Tooltip from './styled';

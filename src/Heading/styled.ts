@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import Heading from '@jmoxey/reakit/Heading';
+import Heading from 'reakit/Heading';
 
 import styled, { css } from '../styled';
 // @ts-ignore

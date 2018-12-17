@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { DialogContent as _DialogContent } from './styled';
 

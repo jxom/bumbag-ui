@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { NavigationProps as ReakitNavigationProps } from '@jmoxey/reakit/ts';
+import { NavigationProps as ReakitNavigationProps } from 'reakit/ts';
 
 import _Navigation from './styled';
 

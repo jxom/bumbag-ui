@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import ReakitPopover from '@jmoxey/reakit/Popover';
+import ReakitPopover from 'reakit/Popover';
 
 export type LocalPopoverContainerProps = {
   children: ((

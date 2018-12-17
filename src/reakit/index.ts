@@ -1,1 +1,1 @@
-export * from '@jmoxey/reakit';
+export * from 'reakit';

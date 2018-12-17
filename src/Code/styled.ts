@@ -1,4 +1,4 @@
-import Code from '@jmoxey/reakit/Code';
+import Code from 'reakit/Code';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 

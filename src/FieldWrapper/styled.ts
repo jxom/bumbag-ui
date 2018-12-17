@@ -1,5 +1,5 @@
 import { palette, theme } from 'styled-tools';
-import Field from '@jmoxey/reakit/Field';
+import Field from 'reakit/Field';
 
 import { css, styled } from '../styled';
 import { Omit } from '../types';

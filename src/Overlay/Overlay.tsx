@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { OverlayProps as ReakitOverlayProps } from '@jmoxey/reakit/ts';
+import { OverlayProps as ReakitOverlayProps } from 'reakit/ts';
 
 import {
   AnimateProps,

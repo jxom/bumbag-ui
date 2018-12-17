@@ -1,4 +1,4 @@
-import List from '@jmoxey/reakit/List';
+import List from 'reakit/List';
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';

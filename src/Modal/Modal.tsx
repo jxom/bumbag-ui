@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import Portal from '@jmoxey/reakit/Portal';
+import Portal from 'reakit/Portal';
 
 import { isFunction } from '../_utils/assert';
 import TrapFocus from '../_utils/TrapFocus';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { CodeProps as ReakitCodeProps } from '@jmoxey/reakit/ts';
+import { CodeProps as ReakitCodeProps } from 'reakit/ts';
 
 import _Code from './styled';
 

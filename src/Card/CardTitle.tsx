@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { HeadingProps as ReakitHeadingProps } from '@jmoxey/reakit/ts/Heading/Heading';
+import { HeadingProps as ReakitHeadingProps } from 'reakit/ts/Heading/Heading';
 
 import { CardTitle as _CardTitle } from './styled';
 

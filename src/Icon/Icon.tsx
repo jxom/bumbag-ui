@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 // @ts-ignore
 import propTypeUtils from 'airbnb-prop-types';
-import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
+import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 import * as icons from '@fortawesome/free-solid-svg-icons';
 // @ts-ignore
 import _get from 'lodash/get';

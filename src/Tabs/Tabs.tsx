@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import ReakitTabs from '@jmoxey/reakit/Tabs';
-import { TabsProps as ReakitTabsProps } from '@jmoxey/reakit/ts/Tabs/Tabs';
+import ReakitTabs from 'reakit/Tabs';
+import { TabsProps as ReakitTabsProps } from 'reakit/ts/Tabs/Tabs';
 
 import _Tabs from './styled';
 import Tab, { TabProps } from './Tab';

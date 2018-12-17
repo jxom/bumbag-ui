@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { PopoverHideProps as ReakitPopoverHideProps } from '@jmoxey/reakit/ts';
+import { PopoverHideProps as ReakitPopoverHideProps } from 'reakit/ts';
 
 import { PopoverHide as _PopoverHide } from './styled';
 

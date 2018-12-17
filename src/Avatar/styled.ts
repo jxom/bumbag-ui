@@ -1,4 +1,4 @@
-import _Avatar from '@jmoxey/reakit/Avatar';
+import _Avatar from 'reakit/Avatar';
 import { palette, theme } from 'styled-tools';
 
 import { styled, css } from '../styled';

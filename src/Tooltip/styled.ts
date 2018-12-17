@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import _Tooltip from '@jmoxey/reakit/Tooltip';
+import _Tooltip from 'reakit/Tooltip';
 
 import styled from '../styled';
 import { LocalTooltipProps } from './Tooltip';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { ButtonProps as ReakitButtonProps } from '@jmoxey/reakit/ts/Button/Button';
+import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';

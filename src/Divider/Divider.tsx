@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { DividerProps as ReakitDividerProps } from '@jmoxey/reakit/ts';
+import { DividerProps as ReakitDividerProps } from 'reakit/ts';
 
 import _Divider from './styled';
 

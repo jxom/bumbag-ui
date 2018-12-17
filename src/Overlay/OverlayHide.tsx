@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { OverlayHideProps as ReakitOverlayHideProps } from '@jmoxey/reakit/ts';
+import { OverlayHideProps as ReakitOverlayHideProps } from 'reakit/ts';
 
 import { OverlayHide as _OverlayHide } from './styled';
 

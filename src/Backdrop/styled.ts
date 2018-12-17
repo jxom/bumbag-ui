@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import Backdrop from '@jmoxey/reakit/Backdrop';
+import Backdrop from 'reakit/Backdrop';
 import styled from '../styled';
 import { LocalBackdropProps } from './Backdrop';
 

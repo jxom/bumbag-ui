@@ -8,7 +8,7 @@ import styled, {
   withTheme,
   ServerStyleSheet,
   StyleSheetManager
-} from '@jmoxey/reakit/styled';
+} from 'reakit/styled';
 
 export {
   styled,

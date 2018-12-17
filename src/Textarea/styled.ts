@@ -1,6 +1,6 @@
 import { palette, theme } from 'styled-tools';
-import use from '@jmoxey/reakit/use';
-import Input from '@jmoxey/reakit/Input';
+import use from 'reakit/use';
+import Input from 'reakit/Input';
 
 import styled, { css } from '../styled';
 import Spinner from '../Spinner';

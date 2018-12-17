@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { TabsPanelProps as ReakitTabPanelProps } from '@jmoxey/reakit/ts/Tabs/TabsPanel';
-import { StepContainerSelectors } from '@jmoxey/reakit/ts/Step/StepContainer';
+import { TabsPanelProps as ReakitTabPanelProps } from 'reakit/ts/Tabs/TabsPanel';
+import { StepContainerSelectors } from 'reakit/ts/Step/StepContainer';
 
 import { TabPanel as _TabPanel } from './styled';
 
