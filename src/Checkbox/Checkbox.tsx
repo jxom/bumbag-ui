@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { LabelProps as ReakitLabelProps } from 'reakit/ts';
+import { LabelProps as ReakitLabelProps } from '@jmoxey/reakit/ts';
 
 import Text from '../Text';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';

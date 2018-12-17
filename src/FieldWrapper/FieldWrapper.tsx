@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { FieldProps as ReakitFieldProps } from 'reakit/ts/Field/Field';
+import { FieldProps as ReakitFieldProps } from '@jmoxey/reakit/ts/Field/Field';
 
 import { Flex } from '../primitives';
 import { Omit } from '../types';

@@ -3,7 +3,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _Avatar, { AvatarCircle } from './styled';
-import { AvatarProps as ReakitAvatarProps } from 'reakit/ts';
+import { AvatarProps as ReakitAvatarProps } from '@jmoxey/reakit/ts';
 import { Omit } from '../types';
 
 export type LocalAvatarProps = {

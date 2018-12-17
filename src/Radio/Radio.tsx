@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { LabelProps as ReakitLabelProps } from 'reakit/ts';
+import { LabelProps as ReakitLabelProps } from '@jmoxey/reakit/ts';
 
 import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
@@ -11,7 +11,7 @@ export type LocalRadioProps = {
   a11yId?: string;
   /** Automatically focus on the radio */
   autoFocus?: boolean;
-  checked?: boolean | string;
+  checked?: boolean;
   className?: string;
   /** Is the radio checked by default */
   defaultChecked?: boolean;

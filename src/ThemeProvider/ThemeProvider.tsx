@@ -2,7 +2,7 @@ import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
 // @ts-ignore
-import ThemeProvider from 'reakit/Provider';
+import ThemeProvider from '@jmoxey/reakit/Provider';
 
 import { ThemeConfig } from '../types';
 import Global from '../_utils/Global';

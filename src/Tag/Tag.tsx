@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBlock/InlineBlock';
+import { InlineBlockProps as ReakitInlineBlockProps } from '@jmoxey/reakit/ts/InlineBlock/InlineBlock';
 
 import _Tag from './styled';
 
@@ -14,8 +14,10 @@ export type LocalTagProps = {
 };
 export type TagProps = ReakitInlineBlockProps & LocalTagProps;
 
-export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, ...props }) => (
-  <_Tag {...props}>{children}</_Tag>
+export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, size, ...props }) => (
+  <_Tag styledSize={size} {...props}>
+    {children}
+  </_Tag>
 );
 
 Tag.propTypes = {

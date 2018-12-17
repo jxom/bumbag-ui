@@ -1,7 +1,7 @@
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 // @ts-ignore
-import Label from 'reakit/Label';
+import Label from '@jmoxey/reakit/Label';
 
 import { Box } from '../primitives';
 import styled, { css } from '../styled';
@@ -30,7 +30,7 @@ export const SwitchIcon = styled(Box)<{ state?: string }>`
   }
 `;
 
-export const HiddenSwitch = HiddenInput({
+export const HiddenSwitch = HiddenInput<LocalSwitchProps>({
   Icon: SwitchIcon,
   checkedCss: css`
     background-color: ${(props: any) => palette(props.palette || 'primary')};

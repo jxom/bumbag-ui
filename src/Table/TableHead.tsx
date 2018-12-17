@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
+import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts/Box/Box';
 
 import { TableHead as _TableHead } from './styled';
 

@@ -9,7 +9,7 @@ import {
   withTheme,
   ServerStyleSheet,
   StyleSheetManager
-} from 'reakit';
+} from '@jmoxey/reakit';
 
 export {
   styled,

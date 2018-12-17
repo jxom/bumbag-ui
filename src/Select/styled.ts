@@ -1,11 +1,11 @@
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 // @ts-ignore
-import Input from 'reakit/Input';
+import Input from '@jmoxey/reakit/Input';
 
 import styled, { css } from '../styled';
 // @ts-ignore
-import Spinner from '../Spinner';
+import Spinner, { LocalSpinnerProps } from '../Spinner';
 import { SelectProps } from './Select';
 
 export const Icon = styled.svg`
@@ -88,11 +88,11 @@ const stateProperties = css<{ state: SelectProps['state'] }>`
   box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)<{ // eslint-disable-line
-  isPlaceholderSelected: boolean;
-  size: SelectProps['size'];
-  state: SelectProps['state'];
-}>`
+export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
+    isPlaceholderSelected: boolean;
+    styledSize: SelectProps['size'];
+  }
+>`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;
@@ -129,7 +129,7 @@ export default styled(Input)<{ // eslint-disable-line
   }
 
   & {
-    ${props => props.size && sizeProperties[props.size || '']};
+    ${props => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {
     ${props => props.state && stateProperties};

@@ -1,5 +1,5 @@
 // @ts-ignore
-import InlineBlock from 'reakit/InlineBlock';
+import InlineBlock from '@jmoxey/reakit/InlineBlock';
 import { palette, theme } from 'styled-tools';
 
 import styled, { css } from '../styled';
@@ -34,7 +34,7 @@ const outlinedProperties = css`
   }
 `;
 
-const Tag = styled(InlineBlock)<LocalTagProps>`
+const Tag = styled(InlineBlock)<LocalTagProps & { styledSize: LocalTagProps['size'] }>`
   background-color: ${palette()};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)};
@@ -44,7 +44,7 @@ const Tag = styled(InlineBlock)<LocalTagProps>`
   padding: 0.2em 0.4em;
 
   & {
-    ${props => props.size && sizeAttributes[props.size]};
+    ${props => props.styledSize && sizeAttributes[props.styledSize]};
     ${props => props.kind === 'outlined' && outlinedProperties};
   }
 

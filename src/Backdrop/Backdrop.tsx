@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { BackdropProps as ReakitBackdropProps } from 'reakit/ts/Backdrop/Backdrop';
+import { BackdropProps as ReakitBackdropProps } from '@jmoxey/reakit/ts/Backdrop/Backdrop';
 
 import _Backdrop from './styled';
 import {

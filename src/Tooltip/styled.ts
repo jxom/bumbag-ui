@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 // @ts-ignore
-import _Tooltip from 'reakit/Tooltip';
+import _Tooltip from '@jmoxey/reakit/Tooltip';
 
 import styled from '../styled';
 import { LocalTooltipProps } from './Tooltip';

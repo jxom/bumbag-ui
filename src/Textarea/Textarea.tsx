@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
+import { InputProps as ReakitInputProps } from '@jmoxey/reakit/ts/Input/Input';
 
 import _Textarea, { LoadingSpinner } from './styled';
 import { InlineBlock } from '../primitives';
@@ -74,7 +74,7 @@ export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({
       aria-required={isRequired}
       id={a11yId}
       isFullWidth={isFullWidth}
-      size={size}
+      styledSize={size}
       state={state}
       {...props}
     />

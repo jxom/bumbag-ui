@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { CardContent as _CardContent } from './styled';
 

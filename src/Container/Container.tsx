@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { Breakpoint } from '../types';
 import _Container from './styled';

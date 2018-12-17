@@ -1,4 +1,6 @@
-export type Stylesheet = string | Object;
+import { InterpolationValue } from 'styled-components';
+
+export type Stylesheet = InterpolationValue[];
 export type AvatarThemeConfig = {
   base?: Stylesheet;
 };

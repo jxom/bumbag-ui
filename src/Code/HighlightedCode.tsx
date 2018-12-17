@@ -8,8 +8,8 @@ import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 // @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 // @ts-ignore
-import _Code from 'reakit/Code';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+import _Code from '@jmoxey/reakit/Code';
+import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { Box } from '../primitives';
 import { styled, css } from '../styled';

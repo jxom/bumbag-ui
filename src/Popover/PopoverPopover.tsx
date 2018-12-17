@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { PopoverProps as ReakitPopoverProps } from 'reakit/ts';
+import { PopoverProps as ReakitPopoverProps } from '@jmoxey/reakit/ts';
 
 import { isFunction } from '../_utils/assert';
 import TrapFocus from '../_utils/TrapFocus';

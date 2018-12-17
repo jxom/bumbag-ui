@@ -1,14 +1,13 @@
 // @flow
 import { palette, theme } from 'styled-tools';
 // @ts-ignore
-import Label from 'reakit/Label';
+import Label from '@jmoxey/reakit/Label';
 
 import { Box } from '../primitives';
 import styled, { css } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
 import { Omit } from '../types';
-import { RadioProps } from './Radio';
-import { RadioGroupProps } from './RadioGroup';
+import { RadioProps, LocalRadioProps } from './Radio';
 
 export const RadioIcon = styled(Box)<{ state?: string }>`
   border: 1px solid #bdbdbd;
@@ -32,7 +31,7 @@ export const RadioIcon = styled(Box)<{ state?: string }>`
   }
 `;
 
-export const HiddenRadio = HiddenInput({
+export const HiddenRadio = HiddenInput<Omit<LocalRadioProps, 'label'>>({
   Icon: RadioIcon,
   checkedIconCss: css`
     background: ${palette('primaryLighter')};

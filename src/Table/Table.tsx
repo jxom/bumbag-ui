@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { theme } from 'styled-tools';
 // @ts-ignore
 import ConditionalWrap from 'conditional-wrap';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
+import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts/Box/Box';
 
 import styled, { css } from '../styled';
 import { InlineBlock } from '../primitives';

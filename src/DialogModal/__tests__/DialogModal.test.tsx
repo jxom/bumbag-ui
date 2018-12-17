@@ -3,7 +3,7 @@ import render from '../../_utils/tests/render';
 import Modal from '../../Modal';
 import DialogModal from '../DialogModal';
 
-jest.mock('reakit/Portal', () => 'portal');
+jest.mock('@jmoxey/reakit/Portal', () => 'portal');
 
 it('renders correctly for a default dialog modal', () => {
   const { container } = render(

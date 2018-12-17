@@ -1,5 +1,5 @@
 // @ts-ignore
-import Label from 'reakit/Label';
+import Label from '@jmoxey/reakit/Label';
 import { theme } from 'styled-tools';
 
 import styled from '../styled';

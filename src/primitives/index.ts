@@ -1,14 +1,14 @@
 // @ts-ignore
-export { default as Box } from 'reakit/Box';
+export { default as Box } from '@jmoxey/reakit/Box';
 // @ts-ignore
-export { default as Block } from 'reakit/Block';
+export { default as Block } from '@jmoxey/reakit/Block';
 // @ts-ignore
-export { default as Inline } from 'reakit/Inline';
+export { default as Inline } from '@jmoxey/reakit/Inline';
 // @ts-ignore
-export { default as InlineBlock } from 'reakit/InlineBlock';
+export { default as InlineBlock } from '@jmoxey/reakit/InlineBlock';
 // @ts-ignore
-export { default as Flex } from 'reakit/Flex';
+export { default as Flex } from '@jmoxey/reakit/Flex';
 // @ts-ignore
-export { default as InlineFlex } from 'reakit/InlineFlex';
+export { default as InlineFlex } from '@jmoxey/reakit/InlineFlex';
 // @ts-ignore
-export { default as Grid } from 'reakit/Grid';
+export { default as Grid } from '@jmoxey/reakit/Grid';

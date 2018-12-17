@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { Box } from '../primitives';
 import styled from '../styled';
-import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
+import { ButtonProps as ReakitButtonProps } from '@jmoxey/reakit/ts/Button/Button';
 
 import { Omit, ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
 import Spinner from '../Spinner';

@@ -2,9 +2,12 @@ import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { TabsTabProps as ReakitTabProps } from 'reakit/ts/Tabs/TabsTab';
+import { TabsTabProps as ReakitTabProps } from '@jmoxey/reakit/ts/Tabs/TabsTab';
+import { StepContainerActions, StepContainerSelectors } from '@jmoxey/reakit/ts/Step/StepContainer';
 
 import { Tab as _Tab } from './styled';
+
+const noop = () => {};
 
 export type LocalTabProps = {
   children: React.ReactNode;
@@ -13,6 +16,14 @@ export type LocalTabProps = {
   isActive?: boolean;
   /** A unique identifier for the tab */
   tab: string;
+  current: number;
+  register: StepContainerActions['register'];
+  update: StepContainerActions['update'];
+  unregister: StepContainerActions['unregister'];
+  show: StepContainerActions['show'];
+  next: StepContainerActions['next'];
+  previous: StepContainerActions['previous'];
+  isCurrent: StepContainerSelectors['isCurrent'];
 };
 export type TabProps = ReakitTabProps & LocalTabProps;
 
@@ -26,11 +37,26 @@ Tab.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isActive: PropTypes.bool,
-  tab: PropTypes.string.isRequired
+  tab: PropTypes.string.isRequired,
+  current: PropTypes.number.isRequired,
+  register: PropTypes.func.isRequired,
+  update: PropTypes.func.isRequired,
+  unregister: PropTypes.func.isRequired,
+  isCurrent: PropTypes.func.isRequired,
+  show: PropTypes.func.isRequired,
+  next: PropTypes.func.isRequired,
+  previous: PropTypes.func.isRequired
 };
 Tab.defaultProps = {
   className: undefined,
-  isActive: false
+  isActive: false,
+  register: noop,
+  update: noop,
+  unregister: noop,
+  isCurrent: () => false,
+  show: noop,
+  next: noop,
+  previous: noop
 };
 
 // @ts-ignore

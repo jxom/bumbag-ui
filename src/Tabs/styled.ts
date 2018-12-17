@@ -1,5 +1,5 @@
 // @ts-ignore
-import Tabs from 'reakit/Tabs';
+import Tabs from '@jmoxey/reakit/Tabs';
 import { palette, theme } from 'styled-tools';
 
 import styled, { css } from '../styled';

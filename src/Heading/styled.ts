@@ -1,7 +1,7 @@
 // @flow
 import { theme } from 'styled-tools';
 // @ts-ignore
-import Heading from 'reakit/Heading';
+import Heading from '@jmoxey/reakit/Heading';
 
 import styled, { css } from '../styled';
 // @ts-ignore

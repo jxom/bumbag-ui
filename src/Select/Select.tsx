@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBlock/InlineBlock';
+import { InlineBlockProps as ReakitInlineBlockProps } from '@jmoxey/reakit/ts/InlineBlock/InlineBlock';
 
 import { InlineBlock } from '../primitives';
 import { Omit } from '../types';
@@ -151,7 +151,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
           onBlur={onBlur}
           onChange={this.handleChange}
           onFocus={onFocus}
-          size={size}
+          styledSize={size}
           state={state}
           value={value}
         >

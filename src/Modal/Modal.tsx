@@ -2,7 +2,7 @@ import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
 // @ts-ignore
-import Portal from 'reakit/Portal';
+import Portal from '@jmoxey/reakit/Portal';
 
 import { isFunction } from '../_utils/assert';
 import TrapFocus from '../_utils/TrapFocus';

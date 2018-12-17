@@ -1,11 +1,12 @@
 // @flow
 import { palette, theme } from 'styled-tools';
 // @ts-ignore
-import Label from 'reakit/Label';
+import Label from '@jmoxey/reakit/Label';
 
 import { Box } from '../primitives';
 import { styled, css } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
+import { LocalCheckboxProps } from './Checkbox';
 
 export const CheckboxIcon = styled(Box)<{ state?: string }>`
   border: 1px solid #bdbdbd;
@@ -29,7 +30,7 @@ export const CheckboxIcon = styled(Box)<{ state?: string }>`
   }
 `;
 
-export const HiddenCheckbox = HiddenInput({
+export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
   Icon: CheckboxIcon,
   checkedIconCss: css<{ indeterminate?: boolean }>`
     background-clip: padding-box;

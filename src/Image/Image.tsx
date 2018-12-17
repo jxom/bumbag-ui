@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { ImageProps as ReakitImageProps } from 'reakit/ts';
+import { ImageProps as ReakitImageProps } from '@jmoxey/reakit/ts';
 
 import _Image from './styled';
 

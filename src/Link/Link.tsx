@@ -1,7 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
 import PropTypes from 'prop-types';
-import { LinkProps as ReakitLinkProps } from 'reakit/ts';
+import { LinkProps as ReakitLinkProps } from '@jmoxey/reakit/ts';
 
 import _Link from './styled';
 

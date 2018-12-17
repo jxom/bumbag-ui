@@ -1,7 +1,7 @@
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 // @ts-ignore
-import _Button from 'reakit/Button';
+import _Button from '@jmoxey/reakit/Button';
 
 import { styled, css } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';

@@ -1,5 +1,5 @@
 // @ts-ignore
-import Popover from 'reakit/Popover';
+import Popover from '@jmoxey/reakit/Popover';
 import { theme } from 'styled-tools';
 
 import styled from '../styled';

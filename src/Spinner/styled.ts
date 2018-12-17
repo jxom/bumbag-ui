@@ -54,7 +54,7 @@ export const spinnerProperties = css`
   position: relative;
 `;
 
-export default styled(Box)<LocalSpinnerProps>`
+export default styled(Box)<LocalSpinnerProps & { styledSize: LocalSpinnerProps['size'] }>`
   font-size: 20px;
   ${spinnerProperties};
 
@@ -62,5 +62,5 @@ export default styled(Box)<LocalSpinnerProps>`
     ${theme('fannypack.Spinner.base')};
   }
 
-  ${(props: LocalSpinnerProps) => props.size && sizes[props.size || '']};
+  ${props => props.styledSize && sizes[props.styledSize]};
 `;

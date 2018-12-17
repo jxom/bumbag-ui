@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 // @ts-ignore
-import Backdrop from 'reakit/Backdrop';
+import Backdrop from '@jmoxey/reakit/Backdrop';
 import styled from '../styled';
 import { BackdropProps } from './Backdrop';
 

@@ -1,8 +1,8 @@
 import { palette, theme } from 'styled-tools';
 // @ts-ignore
-import use from 'reakit/use';
+import use from '@jmoxey/reakit/use';
 // @ts-ignore
-import Input from 'reakit/Input';
+import Input from '@jmoxey/reakit/Input';
 
 import styled, { css } from '../styled';
 import Spinner from '../Spinner';
@@ -66,7 +66,7 @@ const stateProperties = css`
   box-shadow: ${(props: any) => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(use(Input, 'textarea'))<LocalTextareaProps>`
+export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize: LocalTextareaProps['size'] }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -103,17 +103,17 @@ export default styled(use(Input, 'textarea'))<LocalTextareaProps>`
   }
 
   & {
-    ${(props: LocalTextareaProps) =>
+    ${props =>
       props.isFullWidth &&
       css`
         width: 100%;
       `};
   }
   & {
-    ${(props: LocalTextareaProps) => props.size && sizeProperties[props.size]};
+    ${props => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {
-    ${(props: LocalTextareaProps) => props.state && stateProperties};
+    ${props => props.state && stateProperties};
   }
 
   ${theme('fannypack.Textarea.base')};
