@@ -29,10 +29,6 @@ export default {
           color: #444bc9;
         }
 
-        & nav > div:first-child {
-          display: none;
-        }
-
         & > div > div > div {
           font-size: 16px !important;
         }
