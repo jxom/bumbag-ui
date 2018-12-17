@@ -1,5 +1,4 @@
 import { theme } from 'styled-tools';
-// @ts-ignore
 import Navigation from '@jmoxey/reakit/Navigation';
 
 import styled from '../styled';

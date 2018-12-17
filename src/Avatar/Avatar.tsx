@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _Avatar, { AvatarCircle } from './styled';
 import { AvatarProps as ReakitAvatarProps } from '@jmoxey/reakit/ts';
@@ -72,14 +71,17 @@ export const Avatar: React.FunctionComponent<LocalAvatarProps> = ({
 Avatar.propTypes = {
   a11yLabel: PropTypes.string,
   alt: PropTypes.string,
-  kind: PropTypes.oneOf(['circle', 'square']),
+  kind: PropTypes.oneOf(['circle', 'square']) as PropTypes.Validator<LocalAvatarProps['kind']>,
   color: PropTypes.string,
   className: PropTypes.string,
-  fit: PropTypes.oneOf(['cover', 'contain']),
+  fit: PropTypes.oneOf(['cover', 'contain']) as PropTypes.Validator<LocalAvatarProps['fit']>,
   fitPosition: PropTypes.string,
   initials: PropTypes.string,
   palette: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf(['default', 'xsmall', 'small', 'medium', 'large'])]),
+  size: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.oneOf(['default', 'xsmall', 'small', 'medium', 'large'])
+  ]) as PropTypes.Validator<LocalAvatarProps['size']>,
   src: PropTypes.string
 };
 Avatar.defaultProps = defaultProps;

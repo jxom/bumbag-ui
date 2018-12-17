@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from '@jmoxey/reakit/ts';
 
 import Text from '../Text';

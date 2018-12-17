@@ -1,7 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
-// @ts-ignore
+import * as PropTypes from 'prop-types';
 import ReakitOverlay from '@jmoxey/reakit/Overlay';
 
 export type OverlayContainerProps = {

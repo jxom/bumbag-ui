@@ -1,6 +1,5 @@
 import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
-// @ts-ignore
 import Input from '@jmoxey/reakit/Input';
 
 import styled, { css } from '../styled';

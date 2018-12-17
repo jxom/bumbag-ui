@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { PopoverToggleProps as ReakitPopoverToggleProps } from '@jmoxey/reakit/ts';
 
 import { PopoverToggle as _PopoverToggle } from './styled';

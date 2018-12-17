@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BlockquoteProps as ReakitBlockquoteProps } from '@jmoxey/reakit/ts/Blockquote/Blockquote';
 
 import { Palette } from '../types';
@@ -10,7 +9,7 @@ import _Blockquote from './styled';
 export type LocalBlockquoteProps = {
   children: React.ReactNode;
   className?: string;
-  palette?: Palette;
+  palette?: string;
 };
 export type BlockquoteProps = LocalBlockquoteProps & ReakitBlockquoteProps;
 

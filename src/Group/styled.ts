@@ -1,4 +1,3 @@
-// @ts-ignore
 import Group from '@jmoxey/reakit/Group';
 import { theme } from 'styled-tools';
 

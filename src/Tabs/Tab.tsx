@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TabsTabProps as ReakitTabProps } from '@jmoxey/reakit/ts/Tabs/TabsTab';
 import { StepContainerActions, StepContainerSelectors } from '@jmoxey/reakit/ts/Step/StepContainer';

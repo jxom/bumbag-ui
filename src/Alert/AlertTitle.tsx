@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { AlertTitle as _AlertTitle } from './styled';
 
 export type AlertTitleProps = {

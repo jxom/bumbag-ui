@@ -1,6 +1,5 @@
 // @flow
 import { palette, theme } from 'styled-tools';
-// @ts-ignore
 import Label from '@jmoxey/reakit/Label';
 
 import { Box } from '../primitives';

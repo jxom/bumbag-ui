@@ -1,4 +1,3 @@
-// @ts-ignore
 import Divider from '@jmoxey/reakit/Divider';
 import { theme } from 'styled-tools';
 

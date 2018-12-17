@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { RadioGroup as _RadioGroup } from './styled';
@@ -74,7 +73,7 @@ export const radioGroupPropTypes = {
   disabled: PropTypes.bool,
   isHorizontal: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
   state: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func

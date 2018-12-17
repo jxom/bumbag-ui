@@ -1,8 +1,6 @@
 // @flow
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
-// @ts-ignore
+import * as PropTypes from 'prop-types';
 import ReakitTabs from '@jmoxey/reakit/Tabs';
 import { TabsProps as ReakitTabsProps } from '@jmoxey/reakit/ts/Tabs/Tabs';
 
@@ -37,11 +35,11 @@ Tabs.Panel = TabPanel;
 Tabs.Container = ReakitTabs.Container;
 
 Tabs.propTypes = {
-  align: PropTypes.oneOf(['left', 'center', 'right']),
+  align: PropTypes.oneOf(['left', 'center', 'right']) as PropTypes.Validator<LocalTabsProps['align']>,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isFitted: PropTypes.bool,
-  type: PropTypes.oneOf(['default', 'boxed'])
+  type: PropTypes.oneOf(['default', 'boxed']) as PropTypes.Validator<LocalTabsProps['type']>
 };
 Tabs.defaultProps = {
   align: undefined,

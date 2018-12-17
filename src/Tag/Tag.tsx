@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { InlineBlockProps as ReakitInlineBlockProps } from '@jmoxey/reakit/ts/InlineBlock/InlineBlock';
 
 import _Tag from './styled';
@@ -23,7 +22,7 @@ export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, size, ..
 Tag.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  kind: PropTypes.oneOf(['outlined']),
+  kind: PropTypes.oneOf(['outlined']) as PropTypes.Validator<LocalTagProps['kind']>,
   palette: PropTypes.string,
   size: PropTypes.string
 };

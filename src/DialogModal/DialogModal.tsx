@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import { ActionButtonsProps } from '../Button/ActionButtons';
 // @ts-ignore
@@ -102,7 +101,7 @@ DialogModal.propTypes = {
   footer: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
   hide: PropTypes.func,
   isVisible: PropTypes.bool,
-  kind: PropTypes.oneOf(['alert']),
+  kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogModalProps['kind']>,
   showActionButtons: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),

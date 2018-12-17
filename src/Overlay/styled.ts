@@ -1,5 +1,4 @@
 import { theme } from 'styled-tools';
-// @ts-ignore
 import Overlay from '@jmoxey/reakit/Overlay';
 
 import styled from '../styled';

@@ -1,4 +1,3 @@
-// @ts-ignore
 import _Avatar from '@jmoxey/reakit/Avatar';
 import { palette, theme } from 'styled-tools';
 

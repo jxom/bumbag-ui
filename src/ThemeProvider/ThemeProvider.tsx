@@ -1,7 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
-// @ts-ignore
+import * as PropTypes from 'prop-types';
 import ThemeProvider from '@jmoxey/reakit/Provider';
 
 import { ThemeConfig } from '../types';

@@ -1,14 +1,36 @@
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 export type ButtonType = 'default' | 'outlined' | 'link';
-export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link']);
+export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link']) as PropTypes.Validator<ButtonType>;
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
-export const breakpointPropType = PropTypes.oneOf(['fullHD', 'widescreen', 'desktop', 'tablet', 'mobile']);
+export const breakpointPropType = PropTypes.oneOf([
+  'fullHD',
+  'widescreen',
+  'desktop',
+  'tablet',
+  'mobile'
+]) as PropTypes.Validator<Breakpoint>;
 export type ColumnSpread = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-export const columnSpreadPropType = PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+export const columnSpreadPropType = PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) as PropTypes.Validator<
+  ColumnSpread
+>;
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
-export const columnSpreadOffsetPropType = PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 'left', 'both', 'right']);
+export const columnSpreadOffsetPropType = PropTypes.oneOf([
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  'left',
+  'both',
+  'right'
+]) as PropTypes.Validator<ColumnSpreadOffset>;
 export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning';
 export type Placement =
   | 'auto'
@@ -38,9 +60,17 @@ export const placementPropType = PropTypes.oneOf([
   'right-end',
   'bottom-end',
   'left-end'
-]);
+]) as PropTypes.Validator<Placement>;
 export type Size = 'default' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
-export const sizePropType = PropTypes.oneOf(['default', 'small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge']);
+export const sizePropType = PropTypes.oneOf([
+  'default',
+  'small',
+  'medium',
+  'large',
+  'xlarge',
+  'xxlarge',
+  'xxxlarge'
+]) as PropTypes.Validator<Size>;
 
 export type AnimateProps = {
   /** Delay of the animation if one is specified. */
@@ -59,9 +89,15 @@ export type AnimateProps = {
 export const animatePropTypes = {
   delay: PropTypes.string,
   duration: PropTypes.string,
-  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  expand: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['bottom', 'left', 'right', 'top', 'center'])
+  ]) as PropTypes.Validator<AnimateProps['expand']>,
   fade: PropTypes.bool,
-  slide: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  slide: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['bottom', 'left', 'right', 'top'])
+  ]) as PropTypes.Validator<AnimateProps['slide']>,
   timing: PropTypes.string
 };
 export const animateDefaultProps = {

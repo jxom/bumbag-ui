@@ -1,7 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
-// @ts-ignore
+import * as PropTypes from 'prop-types';
 import Portal from '@jmoxey/reakit/Portal';
 
 import { isFunction } from '../_utils/assert';
@@ -98,7 +96,7 @@ Modal.propTypes = {
   className: PropTypes.string,
   isVisible: PropTypes.bool,
   hide: PropTypes.func,
-  kind: PropTypes.oneOf(['alert']),
+  kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalModalProps['kind']>,
   showActionButtons: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   ...animatePropTypes,

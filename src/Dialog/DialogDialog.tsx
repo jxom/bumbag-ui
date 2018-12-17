@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import { PaneProps } from '../Pane/Pane';
 import Dialog from './styled';
@@ -35,10 +34,10 @@ export const DialogDialog: React.FunctionComponent<LocalDialogDialogProps> = ({
 DialogDialog.propTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
-  border: PropTypes.oneOf([true, 'shadow']),
+  border: PropTypes.oneOf([true, 'shadow']) as PropTypes.Validator<LocalDialogDialogProps['border']>,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  kind: PropTypes.oneOf(['alert'])
+  kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogDialogProps['kind']>
 };
 DialogDialog.defaultProps = {
   a11yDescriptionId: undefined,

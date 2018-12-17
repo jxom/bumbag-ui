@@ -1,9 +1,7 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import { InlineBlock } from '../primitives';
-// @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import Pane from '../Pane';
 import PopoverContainer, { PopoverContainerProps } from './PopoverContainer';
@@ -71,7 +69,9 @@ Popover.Toggle = PopoverToggle;
 Popover.propTypes = {
   ...popoverPopoverPropTypes,
   className: PropTypes.string,
-  content: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]),
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]) as PropTypes.Validator<
+    LocalPopoverProps['content']
+  >,
   showCloseButton: PropTypes.bool,
   children: PropTypes.element.isRequired
 };

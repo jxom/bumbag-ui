@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import { IconProps } from '../Icon/Icon';
 import { DialogIcon as _DialogIcon } from './styled';

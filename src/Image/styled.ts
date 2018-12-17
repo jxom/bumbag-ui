@@ -1,5 +1,4 @@
 import { theme } from 'styled-tools';
-// @ts-ignore
 import Image from '@jmoxey/reakit/Image';
 
 import styled, { css } from '../styled';

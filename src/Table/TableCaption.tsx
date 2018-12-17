@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts/Box/Box';
 
 import { Caption as _Caption } from './styled';
@@ -20,7 +19,7 @@ export const TableCaption: React.FunctionComponent<LocalTableCaptionProps> = ({ 
 
 TableCaption.propTypes = {
   children: PropTypes.node.isRequired,
-  position: PropTypes.oneOf(['top', 'bottom'])
+  position: PropTypes.oneOf(['top', 'bottom']) as PropTypes.Validator<LocalTableCaptionProps['position']>
 };
 TableCaption.defaultProps = {
   position: 'top'

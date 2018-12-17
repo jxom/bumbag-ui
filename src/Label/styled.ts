@@ -1,4 +1,3 @@
-// @ts-ignore
 import Label from '@jmoxey/reakit/Label';
 import { theme } from 'styled-tools';
 

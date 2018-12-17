@@ -1,4 +1,3 @@
-// @ts-ignore
 import InlineBlock from '@jmoxey/reakit/InlineBlock';
 import { palette, theme } from 'styled-tools';
 

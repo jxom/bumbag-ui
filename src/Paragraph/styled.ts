@@ -1,4 +1,3 @@
-// @ts-ignore
 import Paragraph from '@jmoxey/reakit/Paragraph';
 import { theme } from 'styled-tools';
 

@@ -1,10 +1,9 @@
 import { theme } from 'styled-tools';
-// @ts-ignore
 import Backdrop from '@jmoxey/reakit/Backdrop';
 import styled from '../styled';
-import { BackdropProps } from './Backdrop';
+import { LocalBackdropProps } from './Backdrop';
 
-export default styled(Backdrop)<BackdropProps>`
+export default styled(Backdrop)<LocalBackdropProps>`
   background-color: black;
   opacity: 0.4;
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 import { Omit } from '../types';
 
@@ -21,7 +20,9 @@ export const Pane: React.FunctionComponent<LocalPaneProps> = ({ border, children
 );
 
 Pane.propTypes = {
-  border: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.oneOf(['shadow'])]),
+  border: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['shadow'])]) as PropTypes.Validator<
+    LocalPaneProps['border']
+  >,
   className: PropTypes.string,
   children: PropTypes.node,
   isFullWidth: PropTypes.bool

@@ -1,4 +1,3 @@
-// @ts-ignore
 import List from '@jmoxey/reakit/List';
 import { theme } from 'styled-tools';
 

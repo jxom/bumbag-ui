@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from '@jmoxey/reakit/ts';
 
 import Text from '../Text';
@@ -83,7 +82,7 @@ export const Radio: React.FunctionComponent<LocalRadioProps> = ({
 Radio.propTypes = {
   a11yId: PropTypes.string,
   autoFocus: PropTypes.bool,
-  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]) as PropTypes.Validator<LocalRadioProps['checked']>,
   className: PropTypes.string,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,

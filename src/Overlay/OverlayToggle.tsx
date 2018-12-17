@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { OverlayToggleProps as ReakitOverlayToggleProps } from '@jmoxey/reakit/ts';
 
 import { OverlayToggle as _OverlayToggle } from './styled';

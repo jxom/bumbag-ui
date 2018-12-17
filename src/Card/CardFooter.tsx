@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { CardFooter as _CardFooter } from './styled';

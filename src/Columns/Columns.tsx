@@ -1,6 +1,5 @@
 import * as React from 'react';
-// @ts-ignore
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 
 import { breakpointPropType } from '../types';
@@ -42,7 +41,7 @@ Columns.propTypes = {
   className: PropTypes.string,
   isGapless: PropTypes.bool,
   isOneLine: PropTypes.bool,
-  minBreakpoint: breakpointPropType
+  minBreakpoint: PropTypes.oneOf(['tablet', 'mobile']) as PropTypes.Validator<LocalColumnsProps['minBreakpoint']>
 };
 Columns.defaultProps = {
   className: undefined,

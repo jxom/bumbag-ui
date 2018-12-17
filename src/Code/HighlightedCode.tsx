@@ -7,7 +7,6 @@ import defaultTheme from 'react-syntax-highlighter/styles/prism/atom-dark';
 import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 // @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-// @ts-ignore
 import _Code from '@jmoxey/reakit/Code';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 

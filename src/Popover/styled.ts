@@ -1,4 +1,3 @@
-// @ts-ignore
 import Popover from '@jmoxey/reakit/Popover';
 import { theme } from 'styled-tools';
 
