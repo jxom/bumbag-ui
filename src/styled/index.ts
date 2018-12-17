@@ -1,5 +1,4 @@
-import {
-  styled,
+import styled, {
   css,
   keyframes,
   createGlobalStyle,
@@ -9,7 +8,7 @@ import {
   withTheme,
   ServerStyleSheet,
   StyleSheetManager
-} from '@jmoxey/reakit';
+} from '@jmoxey/reakit/styled';
 
 export {
   styled,

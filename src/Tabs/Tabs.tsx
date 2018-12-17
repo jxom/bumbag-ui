@@ -1,4 +1,3 @@
-// @flow
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import ReakitTabs from '@jmoxey/reakit/Tabs';

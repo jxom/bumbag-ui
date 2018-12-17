@@ -1,4 +1,3 @@
-// @flow
 import { theme } from 'styled-tools';
 import Heading from '@jmoxey/reakit/Heading';
 

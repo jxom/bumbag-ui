@@ -1,4 +1,3 @@
-// @flow
 import { palette, theme } from 'styled-tools';
 import Label from '@jmoxey/reakit/Label';
 
