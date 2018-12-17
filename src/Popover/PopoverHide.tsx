@@ -11,8 +11,13 @@ export type LocalPopoverHideProps = {
 };
 export type PopoverHideProps = ReakitPopoverHideProps & LocalPopoverHideProps;
 
-export const PopoverHide: React.FunctionComponent<LocalPopoverHideProps> = ({ children, ...props }) => (
-  <_PopoverHide {...props}>{children}</_PopoverHide>
+export const PopoverHide: React.FunctionComponent<LocalPopoverHideProps> = React.forwardRef(
+  ({ children, ...props }, ref) => (
+    // @ts-ignore
+    <_PopoverHide {...props} ref={ref}>
+      {children}
+    </_PopoverHide>
+  )
 );
 
 PopoverHide.propTypes = {

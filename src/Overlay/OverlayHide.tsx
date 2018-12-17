@@ -11,8 +11,13 @@ export type LocalOverlayHideProps = {
 };
 export type OverlayHideProps = LocalOverlayHideProps & ReakitOverlayHideProps;
 
-export const OverlayHide: React.FunctionComponent<LocalOverlayHideProps> = ({ children, ...props }) => (
-  <_OverlayHide {...props}>{children}</_OverlayHide>
+export const OverlayHide: React.FunctionComponent<LocalOverlayHideProps> = React.forwardRef(
+  ({ children, ...props }, ref) => (
+    // @ts-ignore
+    <_OverlayHide {...props} ref={ref}>
+      {children}
+    </_OverlayHide>
+  )
 );
 
 export const overlayHidePropTypes = {

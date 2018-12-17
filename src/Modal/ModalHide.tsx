@@ -8,12 +8,15 @@ import {
 
 import { ModalHide as _ModalHide } from './styled';
 
-export type LocalModalHideProps = LocalOverlayHideProps & {};
+export type LocalModalHideProps = LocalOverlayHideProps;
 export type ModalHideProps = OverlayHideProps;
 
-const ModalHide: React.FunctionComponent<LocalModalHideProps> = ({ children, ...props }) => (
-  <_ModalHide {...props}>{children}</_ModalHide>
-);
+const ModalHide: React.FunctionComponent<LocalModalHideProps> = React.forwardRef(({ children, ...props }, ref) => (
+  // @ts-ignore
+  <_ModalHide {...props} ref={ref}>
+    {children}
+  </_ModalHide>
+));
 
 ModalHide.propTypes = {
   ...overlayHidePropTypes
