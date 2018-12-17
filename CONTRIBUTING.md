@@ -12,6 +12,16 @@ After everything has installed, you can run the docs on a development server whi
 yarn docs
 ```
 
+## Commands
+
+- `yarn build` - Compile the components, type definitions, and proxy packages.
+- `yarn type-check` - Check that all the types are valid
+- `yarn lint` - Runs the linter
+- `yarn lint:fix` - Fixes lint issues
+- `yarn clean` - Clean up the compiled files.
+- `yarn docs` - Runs component documentation on a local development server.
+- `yarn develop` - Compile components & listen for changes (only use this for testing Fannypack consumer apps)
+
 ## Guide to developing a new component
 
 The list below is a guide (or checklist) to creating a new Fannypack component. You can reference this list as well as referencing existing components.
@@ -140,11 +150,3 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
 
 - Component's theme config is added to [`src/types/theme.ts`](https://github.com/fannypackui/fannypack/blob/master/src/types/theme.ts)
   
-
-## Testing
-
-To run the tests for the components:
-
-```
-yarn test
-```
