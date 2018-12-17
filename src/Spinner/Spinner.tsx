@@ -10,7 +10,7 @@ export type LocalSpinnerProps = {
   color?: string;
   size?: string;
 };
-export type SpinnerProps = Omit<ReakitBoxProps, 'children'> & LocalSpinnerProps;
+export type SpinnerProps = Omit<Omit<ReakitBoxProps, 'children'>, 'size'> & LocalSpinnerProps;
 
 export const Spinner: React.FunctionComponent<LocalSpinnerProps> = ({ className, color, size, ...props }) => (
   <_Spinner className={className} color={color} styledSize={size} {...props} />
@@ -27,4 +27,6 @@ Spinner.defaultProps = {
   size: 'default'
 };
 
-export default Spinner;
+// @ts-ignore
+const C: React.FunctionComponent<SpinnerProps> = Spinner;
+export default C;

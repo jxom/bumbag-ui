@@ -15,7 +15,7 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
 
-export type LocalRadioGroupFieldProps = LocalRadioGroupProps & Omit<LocalFieldWrapperProps, 'children'>;
+export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalRadioGroupProps;
 export type RadioGroupFieldProps = RadioGroupProps & LocalRadioGroupFieldProps;
 
 export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> = ({

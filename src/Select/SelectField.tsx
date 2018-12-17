@@ -80,4 +80,6 @@ SelectField.defaultProps = {
   ...selectDefaultProps
 };
 
-export default SelectField;
+// @ts-ignore
+const C: React.FunctionComponent<SelectFieldProps> = SelectField;
+export default C;

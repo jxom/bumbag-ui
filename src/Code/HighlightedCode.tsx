@@ -78,4 +78,6 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
   };
 }
 
-export default HighlightedCode as React.ComponentClass<HighlightedCodeProps>;
+// @ts-ignore
+const C: React.FunctionComponent<HighlightedCodeProps> = HighlightedCode;
+export default C;

@@ -98,7 +98,7 @@ Note: Do not use `defaultValue` with controlled inputs!
 <Playground>
   <Component initialState={{ value: 'windy' }}>
     {({ state, setState }) => (
-      <Select onChange={value => setState({ value })} value={state.value} options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
+      <Select onChange={e => setState({ value: e.target.value })} value={state.value} options={[{ label: 'Sunny', value: 'sunny' }, { label: 'Windy', value: 'windy' }, { label: 'Overcast', value: 'overcast' }]} />
     )}
   </Component>
 </Playground>

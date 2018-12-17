@@ -25,4 +25,4 @@ Paragraph.defaultProps = {
 };
 
 const C: React.FunctionComponent<ParagraphProps> = Paragraph;
-export default Paragraph;
+export default C;

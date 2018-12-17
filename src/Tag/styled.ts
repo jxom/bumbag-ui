@@ -1,4 +1,4 @@
-import InlineBlock from '@jmoxey/reakit/InlineBlock';
+import InlineFlex from '@jmoxey/reakit/InlineFlex';
 import { palette, theme } from 'styled-tools';
 
 import styled, { css } from '../styled';
@@ -33,13 +33,15 @@ const outlinedProperties = css`
   }
 `;
 
-const Tag = styled(InlineBlock)<LocalTagProps & { styledSize: LocalTagProps['size'] }>`
+const Tag = styled(InlineFlex)<LocalTagProps & { styledSize: LocalTagProps['size'] }>`
+  align-items: center;
   background-color: ${palette()};
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)};
   fill: ${props => palette(`${props.palette}Inverted`)};
   font-size: ${theme('fannypack.fontSizes.small')}rem;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
+  justify-content: center;
   padding: 0.2em 0.4em;
 
   & {

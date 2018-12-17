@@ -2,10 +2,9 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { ActionButtonsProps } from '../Button/ActionButtons';
-// @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import Dialog from '../Dialog';
-import Modal, { LocalModalProps } from '../Modal/Modal';
+import Modal, { ModalProps, LocalModalProps } from '../Modal/Modal';
 import {
   Omit,
   AnimateProps,
@@ -39,6 +38,7 @@ export type LocalDialogModalProps = AnimateProps &
     title?: string | React.ReactElement<any>;
     type?: string;
   };
+export type DialogModalProps = Omit<ModalProps, 'children'> & LocalDialogModalProps;
 
 export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   a11yDescriptionId,
@@ -127,4 +127,6 @@ DialogModal.defaultProps = {
   hideOnClickOutside: true
 };
 
-export default DialogModal;
+// @ts-ignore
+const C: React.FunctionComponent<DialogModalProps> = DialogModal;
+export default C;

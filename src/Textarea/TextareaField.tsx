@@ -9,7 +9,7 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 
 export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalTextareaProps;
-export type InputFieldProps = LocalTextareaFieldProps & TextareaProps;
+export type TextareaFieldProps = LocalTextareaFieldProps & TextareaProps;
 
 export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = ({
   a11yId,
@@ -51,4 +51,6 @@ TextareaField.defaultProps = {
   ...textareaDefaultProps
 };
 
-export default TextareaField;
+// @ts-ignore
+const C: React.FunctionComponent<TextareaFieldProps> = TextareaField;
+export default C;

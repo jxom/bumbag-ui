@@ -24,7 +24,7 @@ export type LocalRadioGroupProps = {
   /** Controlled value of the radio group */
   value?: string;
   /** Function to invoke when radio group has changed */
-  onChange?(value: string): void;
+  onChange?(e: React.FormEvent<HTMLInputElement>): void;
 };
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
 
@@ -57,7 +57,7 @@ export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> = ({
         disabled={disabled || option.disabled}
         name={name}
         label={option.label}
-        onChange={onChange ? (e: any) => onChange(e.target.value) : undefined}
+        onChange={onChange}
         state={state}
         value={option.value}
       />
@@ -95,4 +95,4 @@ RadioGroup.defaultProps = radioGroupDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<RadioGroupProps> = RadioGroup;
-export default RadioGroup;
+export default C;

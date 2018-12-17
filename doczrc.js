@@ -3,7 +3,18 @@ import { css } from '@jmoxey/reakit/styled';
 export default {
   dest: '/docs',
   files: '**/src/**/*.mdx',
-  menu: ['Home', 'Getting Started', 'Primitives', 'Palette', 'Typography', 'Layout', 'Components', 'Form', 'Utilities'],
+  menu: [
+    'Home',
+    'Getting Started',
+    'Primitives',
+    'Palette',
+    'Typography',
+    'Layout',
+    'Components',
+    'Form',
+    'Utilities',
+    'Styling & Theming'
+  ],
   themeConfig: {
     colors: {
       primary: '#444bc9',

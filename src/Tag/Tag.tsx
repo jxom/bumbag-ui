@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { InlineBlockProps as ReakitInlineBlockProps } from '@jmoxey/reakit/ts/InlineBlock/InlineBlock';
 
+import { Omit } from '../types';
 import _Tag from './styled';
 
 export type LocalTagProps = {
@@ -11,7 +12,7 @@ export type LocalTagProps = {
   palette?: string;
   size?: string;
 };
-export type TagProps = ReakitInlineBlockProps & LocalTagProps;
+export type TagProps = Omit<ReakitInlineBlockProps, 'size'> & LocalTagProps;
 
 export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, size, ...props }) => (
   <_Tag styledSize={size} {...props}>
@@ -35,4 +36,4 @@ Tag.defaultProps = {
 
 // @ts-ignore
 const C: React.FunctionComponent<TagProps> = Tag;
-export default Tag;
+export default C;

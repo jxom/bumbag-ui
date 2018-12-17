@@ -19,6 +19,7 @@ export type LocalCardProps = {
   isFullWidth?: boolean;
   title?: string | React.ReactElement<any>;
 };
+export type CardProps = CardCardProps & LocalCardProps;
 export type CardComponents = {
   Card: React.FunctionComponent<CardCardProps>;
   Header: React.FunctionComponent<CardHeaderProps>;
@@ -75,4 +76,6 @@ Card.defaultProps = {
   title: undefined
 };
 
-export default Card;
+// @ts-ignore
+const C: React.FunctionComponent<CardProps> & CardComponents = Card;
+export default C;

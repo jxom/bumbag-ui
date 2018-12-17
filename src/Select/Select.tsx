@@ -42,11 +42,11 @@ export type LocalSelectProps = {
   /** Function to invoke when focus is lost */
   onBlur?(e: React.FocusEvent<HTMLSelectElement>): void;
   /** Function to invoke when the select field has changed */
-  onChange?(value: string): void;
+  onChange?(e: React.FormEvent<HTMLInputElement>): void;
   /** Function to invoke when the select field is focused */
   onFocus?(e: React.FocusEvent<HTMLSelectElement>): void;
 };
-export type SelectProps = Omit<ReakitInlineBlockProps, 'children'> & LocalSelectProps;
+export type SelectProps = Omit<Omit<ReakitInlineBlockProps, 'children'>, 'size'> & LocalSelectProps;
 
 export type SelectState = {
   isPlaceholderSelected: boolean;
@@ -105,7 +105,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
   handleChange = (e: any) => {
     const { onChange } = this.props;
     this.setState({ isPlaceholderSelected: false });
-    onChange && onChange(e.target.value);
+    onChange && onChange(e);
   };
 
   render = () => {
@@ -172,5 +172,5 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
 }
 
 // @ts-ignore
-const C: React.PureComponent<SelectProps, SelectState> = Select;
-export default Select;
+const C: React.FunctionComponent<SelectProps> = Select;
+export default C;

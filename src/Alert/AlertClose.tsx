@@ -25,4 +25,4 @@ AlertClose.defaultProps = {
 };
 
 const C: React.FunctionComponent<AlertCloseProps> = AlertClose;
-export default AlertClose;
+export default C;

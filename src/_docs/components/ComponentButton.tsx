@@ -18,27 +18,44 @@ const Wrapper = styled(Pane)`
   }
 `;
 
-const Icon = styled(Pane)`
+const IconWrapper = styled(Pane)`
   border: 1px solid ${palette('primaryLighter')};
   align-items: center;
   justify-content: center;
 `;
 
 type Props = {
-  children: React.ReactNode;
   href: string;
-  title: string;
+  name: string;
 };
 
-const ComponentButton = ({ children, title, ...props }: Props) => (
-  <Wrapper use="a" {...props}>
-    <Icon backgroundColor="primaryTint" height={100} width={180}>
-      {children}
-    </Icon>
-    <Heading use="h6" marginTop="xxsmall" isSubHeading>
-      {title}
-    </Heading>
-  </Wrapper>
-);
+class ComponentButton extends React.PureComponent<Props> {
+  state = { Icon: null };
+
+  componentDidMount = () => {
+    const { name } = this.props;
+    import(`./ComponentIcons/${name}`)
+      .then(component => this.setState({ Icon: component.default }))
+      .catch(() => {});
+  };
+
+  render = () => {
+    const { name, ...props } = this.props;
+    const { Icon } = this.state;
+    return (
+      <Wrapper use="a" {...props}>
+        <IconWrapper backgroundColor="primaryTint" height={100} width={180}>
+          {Icon && (
+            // @ts-ignore
+            <Icon />
+          )}
+        </IconWrapper>
+        <Heading use="h6" marginTop="xxsmall" isSubHeading>
+          {name}
+        </Heading>
+      </Wrapper>
+    );
+  };
+}
 
 export default ComponentButton;

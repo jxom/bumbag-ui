@@ -61,4 +61,6 @@ SwitchField.defaultProps = {
   ...switchDefaultProps
 };
 
-export default SwitchField;
+// @ts-ignore
+const C: React.FunctionComponent<SwitchFieldProps> = SwitchField;
+export default C;
