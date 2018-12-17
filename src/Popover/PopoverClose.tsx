@@ -16,7 +16,7 @@ export type PopoverCloseProps = Omit<ButtonProps, 'children'> & LocalPopoverClos
 export const PopoverClose: React.FunctionComponent<LocalPopoverCloseProps> = props => (
   <_PopoverClose use={PopoverHide} size="small" kind="link" {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon a11yLabel="Close" aria-hidden="true" icon="times" />
+    <Icon a11yHidden icon="times" />
   </_PopoverClose>
 );
 

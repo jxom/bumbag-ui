@@ -15,7 +15,7 @@ export type DialogCloseProps = LocalDialogCloseProps & Omit<ButtonProps, 'childr
 export const DialogClose: React.FunctionComponent<LocalDialogCloseProps> = ({ children, ...props }) => (
   <_DialogClose kind="link" {...props}>
     <VisuallyHidden>Close</VisuallyHidden>
-    <Icon a11yLabel="Close" aria-hidden="true" icon="times" />
+    <Icon a11yHidden icon="times" />
   </_DialogClose>
 );
 

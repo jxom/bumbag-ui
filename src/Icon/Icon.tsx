@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 // @ts-ignore
-import { mutuallyExclusiveProps } from 'airbnb-prop-types';
+import propTypeUtils from 'airbnb-prop-types';
 import { BoxProps as ReakitBoxProps } from '@jmoxey/reakit/ts';
 import * as icons from '@fortawesome/free-solid-svg-icons';
 // @ts-ignore
@@ -70,8 +70,8 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
 };
 
 Icon.propTypes = {
-  a11yHidden: mutuallyExclusiveProps(PropTypes.bool, 'a11yHidden', 'a11yLabel'),
-  a11yLabel: mutuallyExclusiveProps(PropTypes.string, 'a11yHidden', 'a11yLabel'),
+  a11yHidden: propTypeUtils.mutuallyExclusiveProps(PropTypes.bool, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
+  a11yLabel: propTypeUtils.mutuallyExclusiveProps(PropTypes.string, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
   children: PropTypes.node,
   color: PropTypes.string,
   className: PropTypes.string,
@@ -80,8 +80,6 @@ Icon.propTypes = {
   theme: PropTypes.object // eslint-disable-line
 };
 Icon.defaultProps = {
-  a11yHidden: false,
-  a11yLabel: undefined,
   children: null,
   className: undefined,
   color: undefined,
