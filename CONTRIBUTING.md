@@ -22,9 +22,33 @@ yarn docs
 - `yarn docs` - Runs component documentation on a local development server.
 - `yarn develop` - Compile components & listen for changes (only use this for testing Fannypack consumer apps)
 
+## Getting Fannypack set up on your machine
+
+To get Fannypack up and running on your machine, follow these steps:
+
+1. Fork this repository
+
+> Click on 'Fork' in the top right hand corner.
+
+2. Clone your newly created forked Fannypack repository onto your machine
+
+> Run `git clone git@github.com:<your-username>/fannypack.git` (SSH) or `git clone https://github.com/<your-username>/fannypack.git` (HTTPS) in your terminal
+
+3. Go to the `fannypack` folder and install the dependencies
+
+> Run `yarn`
+
+4. Now you can start developing!
+
+> Run `yarn docs` to get the component documentation up and running.
+
 ## Guide to developing a new component
 
 The list below is a guide (or checklist) to creating a new Fannypack component. You can reference this list as well as referencing existing components.
+
+- Create a new branch for your component
+
+  > `git checkout -b add-my-compoenent`
 
 - A **component folder** (e.g. `MyComponent/`) which consists of:
   - The component's `.tsx` file (e.g. `MyComponent.tsx`).
@@ -149,4 +173,17 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
 - Component is exported in [`src/index.js`](https://github.com/fannypackui/fannypack/blob/master/src/index.ts)
 
 - Component's theme config is added to [`src/types/theme.ts`](https://github.com/fannypackui/fannypack/blob/master/src/types/theme.ts)
+
+## Pushing your changes and creating a pull request
+
+Once you are happy with your new component, create a pull request by doing the following:
+
+1. Push all your changes to your branch
+
+  > `git push origin add-my-component`
+  
+2. Head to the Fannypack repository, and open a pull request
+
+  > Or enter this in your address bar: `https://github.com/fannypackui/fannypack/compare/master...<your-username>:<branch>`
+
   

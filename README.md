@@ -7,7 +7,7 @@
 
 > Note: Fannypack is still work in progress, meaning that it's APIs will most likely change in the future until a stable release.
 
-[Read the docs here](https://fannypack.style)
+## [Go to the Fannypack Docs](https://fannypack.style)
 
 ## Installing Fannypack
 
@@ -44,6 +44,10 @@ const MyApp = () => (
   </Button>
 );
 ```
+
+## Contributing
+
+Feel like contributing? That's awesome! We have a [Contributing guide](/CONTRIBUTING.md) to help you out.
 
 ## Contributors
 
