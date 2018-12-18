@@ -1,11 +1,99 @@
+import { InterpolationValue } from 'styled-components';
 import { theme } from 'styled-tools';
 import Overlay from 'reakit/Overlay';
 
-import styled from '../styled';
+import styled, { css } from '../styled';
 import { OverlayProps } from './Overlay';
 import { OverlayHideProps } from './OverlayHide';
 import { OverlayShowProps } from './OverlayShow';
 import { OverlayToggleProps } from './OverlayToggle';
+
+const getPlacementAttributes = (props: OverlayProps) => {
+  if (!props.placement) return null;
+
+  const getHiddenAttributes = ({ transformX, transformY }: { transformX: string; transformY: string }) => (
+    props: any
+  ) =>
+    css`
+      &[aria-hidden='true'] {
+        transform: ${`translate3d(${props.slide ? transformX : '0'}, ${props.slide ? transformY : '0'}, 0px) ${
+          props.expand ? 'scale(0.01)' : ''
+        }`};
+      }
+    `;
+
+  const placementAttributes: { [key: string]: InterpolationValue[] } = {
+    // @ts-ignore
+    top: css`
+      top: ${theme('fannypack.layout.spacing.small')}em;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '-50%', transformY: 'calc(50% - 100%)' })};
+    `,
+    // @ts-ignore
+    bottom: css`
+      bottom: ${theme('fannypack.layout.spacing.small')}em;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '-50%', transformY: 'calc(50% + 100%)' })};
+    `,
+    // @ts-ignore
+    left: css`
+      top: 50%;
+      left: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0px, -50%, 0px);
+
+      ${getHiddenAttributes({ transformX: 'calc(50% - 100%)', transformY: '-50%' })};
+    `,
+    // @ts-ignore
+    right: css`
+      top: 50%;
+      right: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0px, -50%, 0px);
+
+      ${getHiddenAttributes({ transformX: 'calc(50% + 100%)', transformY: '-50%' })};
+    `,
+    // @ts-ignore
+    'top-start': css`
+      top: ${theme('fannypack.layout.spacing.small')}em;
+      left: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% - 100%)' })};
+    `,
+    // @ts-ignore
+    'top-end': css`
+      top: ${theme('fannypack.layout.spacing.small')}em;
+      right: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% - 100%)' })};
+    `,
+    // @ts-ignore
+    'bottom-end': css`
+      bottom: ${theme('fannypack.layout.spacing.small')}em;
+      right: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% + 100%)' })};
+    `,
+    // @ts-ignore
+    'bottom-start': css`
+      bottom: ${theme('fannypack.layout.spacing.small')}em;
+      left: ${theme('fannypack.layout.spacing.small')}em;
+      transform: translate3d(0, 0, 0px);
+
+      ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% + 100%)' })};
+    `
+  };
+  return css`
+    top: unset;
+    left: unset;
+    ${placementAttributes[props.placement]};
+  `;
+};
 
 export const OverlayHide = styled(Overlay.Hide)<OverlayHideProps>`
   ${theme('fannypack.Overlay.Hide.base')};
@@ -20,5 +108,9 @@ export const OverlayToggle = styled(Overlay.Toggle)<OverlayToggleProps>`
 `;
 
 export default styled(Overlay)<OverlayProps>`
+  & {
+    ${getPlacementAttributes};
+  }
+
   ${theme('fannypack.Overlay.base')};
 `;

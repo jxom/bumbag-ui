@@ -1,11 +1,12 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
 import { CardCardProps } from '../Card/CardCard';
 import { Box, Flex } from '../primitives';
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
-import CalloutClose, { CalloutCloseProps } from './CalloutClose';
+import CalloutClose, { CalloutCloseProps, calloutClosePropTypes } from './CalloutClose';
 
 export type LocalCalloutProps = {
   a11yDescriptionId?: string;
@@ -62,7 +63,23 @@ export const Callout: React.FunctionComponent<LocalCalloutProps> = ({
   );
 };
 
-Callout.defaultProps = {
+export const calloutPropTypes = {
+  a11yDescriptionId: PropTypes.string,
+  a11yTitleId: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  closeButtonProps: PropTypes.shape(calloutClosePropTypes),
+  footer: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  hasTint: PropTypes.bool,
+  icon: PropTypes.string,
+  onClickClose: PropTypes.func,
+  showCloseButton: PropTypes.bool,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  type: PropTypes.string
+};
+Callout.propTypes = calloutPropTypes;
+
+export const calloutDefaultProps = {
   a11yDescriptionId: getUniqueId('Callout'),
   a11yTitleId: getUniqueId('Callout'),
   children: undefined,
@@ -76,6 +93,7 @@ Callout.defaultProps = {
   title: undefined,
   type: undefined
 };
+Callout.defaultProps = calloutDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<CalloutProps> = Callout;

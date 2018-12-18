@@ -45,6 +45,26 @@ It is recommended to use the overlay helper components (`<Overlay.Show>`, `<Over
   </Overlay.Container>
 </Playground>
 
+## Placement
+
+By default, an overlay is placed in the center of the screen. However, you can change this with the `placement` prop.
+
+<Playground>
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button use={Overlay.Show} {...overlay}>
+          Click me
+        </Button>
+        <Backdrop fade use={Overlay.Hide} {...overlay} />
+        <Overlay placement="bottom-end" fade slide {...overlay}>
+          <Pane padding="1rem">Hello!</Pane>
+        </Overlay>
+      </Box>
+    )}
+  </Overlay.Container>
+</Playground>
+
 ## Animations
 
 You can also add animations to backdrop if you like.

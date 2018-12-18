@@ -11,6 +11,7 @@ export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { Button } from './Button';
 export { Callout } from './Callout';
+export { CalloutOverlay } from './CalloutOverlay';
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
 export { Checkbox, CheckboxField } from './Checkbox';
 export { Code, HighlightedCode } from './Code';

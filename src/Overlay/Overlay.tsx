@@ -4,9 +4,11 @@ import { OverlayProps as ReakitOverlayProps } from 'reakit/ts';
 
 import {
   AnimateProps,
+  Placement,
   RestrictHideProps,
   animateDefaultProps,
   animatePropTypes,
+  placementPropType,
   restrictDefaultProps,
   restrictHidePropTypes
 } from '../types';
@@ -17,11 +19,11 @@ import OverlayToggle, { OverlayToggleProps } from './OverlayToggle';
 import _Overlay from './styled';
 
 export type LocalOverlayProps = {
-  use?: any;
   children: React.ReactNode;
   className?: string;
   /** Whether or not to show the overlay component */
   isVisible?: boolean;
+  placement?: Placement;
 };
 export type OverlayProps = LocalOverlayProps & AnimateProps & RestrictHideProps & ReakitOverlayProps;
 export type OverlayComponents = {
@@ -43,22 +45,25 @@ Overlay.Hide = OverlayHide;
 Overlay.Show = OverlayShow;
 Overlay.Toggle = OverlayToggle;
 
-Overlay.propTypes = {
-  use: PropTypes.any,
+export const overlayPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isVisible: PropTypes.bool,
+  placement: placementPropType,
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
-Overlay.defaultProps = {
-  use: undefined,
+Overlay.propTypes = overlayPropTypes;
+
+export const overlayDefaultProps = {
   className: undefined,
   isVisible: false,
+  placement: undefined,
   ...animateDefaultProps,
   ...restrictDefaultProps,
   hideOnEsc: true
 };
+Overlay.defaultProps = overlayDefaultProps;
 
 const C: React.FunctionComponent<OverlayProps> & OverlayComponents = Overlay;
 export default C;

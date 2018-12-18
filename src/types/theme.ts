@@ -59,6 +59,13 @@ export type CalloutThemeConfig = {
     hover?: Stylesheet;
   };
 };
+export type CalloutOverlayThemeConfig = {
+  base?: Stylesheet;
+  Callout?: {
+    base?: Stylesheet;
+    mobile?: Stylesheet;
+  };
+};
 export type CardThemeConfig = {
   base?: Stylesheet;
   Content?: {
@@ -489,6 +496,7 @@ export type ThemeConfig = {
   Button?: ButtonThemeConfig;
   Checkbox?: CheckboxThemeConfig;
   Callout?: CalloutThemeConfig;
+  CalloutOverlay?: CalloutOverlayThemeConfig;
   Card?: CardThemeConfig;
   Code?: CodeThemeConfig;
   Column?: ColumnThemeConfig;

@@ -1,14 +1,20 @@
-
 ---
-name: Callout
-route: /components/callout
+name: CalloutOverlay
+route: /components/calloutoverlay
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import Portal from 'reakit/Portal';
+import { Box } from '../primitives/index';
+import Overlay from '../Overlay';
+import Button from '../Button';
+import Backdrop from '../Backdrop';
+import Pane from '../Pane';
 import CalloutOverlay from './CalloutOverlay';
 
-# Callout
+# CalloutOverlay
 
 ## Import
 
@@ -16,11 +22,28 @@ import CalloutOverlay from './CalloutOverlay';
 
 ## Basic Usage
 
+`CalloutOverlay` is identical to `Callout` and uses `Overlay` internally to create a callout overlay. Callout overlays are useful for showing announcements to the user.
+
 <Playground>
-  <CalloutOverlay />
+  <Overlay.Container>
+    {overlay => (
+      <Box>
+        <Button use={Overlay.Toggle} {...overlay}>
+          Click me
+        </Button>
+        <CalloutOverlay fade slide showCloseButton title="This is a title" type="info" {...overlay}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+          eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+          augue sit amet justo.
+        </CalloutOverlay>
+      </Box>
+    )}
+  </Overlay.Container>
 </Playground>
 
 ## Props
+
+<PropsTable component={CalloutOverlay} />
 
 ## Theming
 
@@ -28,6 +51,10 @@ import CalloutOverlay from './CalloutOverlay';
 
 ```jsx
 {
-  base: string | Object
+  base: string | Object,
+  Callout: {
+    base: string | Object,
+    mobile: string | Object
+  }
 }
 ```
