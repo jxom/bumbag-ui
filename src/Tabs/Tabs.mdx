@@ -5,7 +5,8 @@ menu: Components
 ---
 
 import { Fragment } from 'react';
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import Tabs from './Tabs';
 import TabPanel from './TabPanel';
@@ -198,15 +199,15 @@ You can use the keyboard arrow buttons to navigate between the tabs.
 
 ## `<Tabs>` Props
 
-<PropsTable of={Tabs} />
+<PropsTable component={Tabs} />
 
 ## `<Tabs.Tab>` Props
 
-<PropsTable of={Tab} />
+<PropsTable component={Tab} />
 
 ## `<Tabs.Panel>` Props
 
-<PropsTable of={TabPanel} />
+<PropsTable component={TabPanel} />
 
 ## `<Tabs.Container>` Props
 

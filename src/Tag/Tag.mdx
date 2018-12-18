@@ -4,7 +4,8 @@ route: /components/tag
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import {Tag} from './Tag';
 import Group from '../Group';
 import Set from '../Set';
@@ -98,7 +99,7 @@ You can group tags to make one tag with the `<Group>` component.
 
 ## `<Tag>` Props
 
-<PropsTable of={Tag} />
+<PropsTable component={Tag} />
 
 ## Theming
 

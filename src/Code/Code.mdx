@@ -4,7 +4,8 @@ route: /typography/code
 menu: Typography
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import { Code } from './Code';
 import { HighlightedCode } from './HighlightedCode';
@@ -74,11 +75,11 @@ and show line numbers with `showLineNumbers`:
 
 ## `<Code>` Props
 
-<PropsTable of={Code} />
+<PropsTable component={Code} />
 
 ## `<HighlightedCode>` Props
 
-<PropsTable of={HighlightedCode} />
+<PropsTable component={HighlightedCode} />
 
 ## Theming
 

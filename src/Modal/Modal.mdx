@@ -4,7 +4,8 @@ route: /utils/modal
 menu: Utilities
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import Hidden from 'reakit/Hidden';
 import { Modal } from './Modal';
@@ -49,7 +50,7 @@ It is recommended to use the modal helper components (`<Modal.Show>`, `<Modal.Hi
 
 ## `<Modal>` Props
 
-<PropsTable of={Modal} />
+<PropsTable component={Modal} />
 
 ## Theming
 

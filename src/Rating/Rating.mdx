@@ -4,7 +4,8 @@ route: /components/rating
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Rating } from './Rating';
 import { RatingStar } from './RatingStar';
 
@@ -67,10 +68,10 @@ The rating callback is called with `{ rating, maxRating }`.
 ## Props
 
 ### `<Rating>`
-<PropsTable of={Rating} />
+<PropsTable component={Rating} />
 
 ### `<RatingStar>`
-<PropsTable of={RatingStar} />
+<PropsTable component={RatingStar} />
 
 ## Theming
 

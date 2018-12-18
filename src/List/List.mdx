@@ -4,7 +4,8 @@ route: /typography/list
 menu: Typography
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import {List} from './List';
 import {ListItem} from './ListItem';
@@ -84,11 +85,11 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 ## `<List>` Props
 
-<PropsTable of={List} />
+<PropsTable component={List} />
 
 ## `<List.Item>` Props
 
-<PropsTable of={ListItem} />
+<PropsTable component={ListItem} />
 
 ## Theming
 

@@ -4,7 +4,8 @@ route: /form/checkbox
 menu: Form
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import Component from '@reactions/component';
 import { Box } from '../primitives/index';
 import {Checkbox} from './Checkbox';
@@ -68,7 +69,7 @@ Note: Do not use `defaultChecked` with controlled inputs!
 
 ## `<Checkbox>` Props
 
-<PropsTable of={Checkbox} />
+<PropsTable component={Checkbox} />
 
 # CheckboxField
 
@@ -88,7 +89,7 @@ It accepts a combination of [`<Checkbox>` props](/form/checkbox#props) and [`<Fi
 
 ## `<CheckboxField>` Props
 
-<PropsTable of={CheckboxField} />
+<PropsTable component={CheckboxField} />
 
 ## Theming
 

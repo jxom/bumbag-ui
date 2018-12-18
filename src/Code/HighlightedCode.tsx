@@ -1,13 +1,16 @@
 import * as React from 'react';
+import { palette } from 'styled-tools';
 // @ts-ignore
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
 // @ts-ignore
-import defaultTheme from 'react-syntax-highlighter/styles/prism/atom-dark';
+import defaultTheme from 'react-syntax-highlighter/styles/prism/coy';
 // @ts-ignore
 import javascript from 'react-syntax-highlighter/languages/prism/javascript';
 // @ts-ignore
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import _Code from 'reakit/Code';
+// @ts-ignore
+import json from 'react-syntax-highlighter/languages/prism/json';
+import _Code from './Code';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { Box } from '../primitives';
@@ -20,13 +23,13 @@ const Wrapper = styled(Box)<HighlightedCodeProps>`
   position: relative;
 
   &:before {
-    color: #e4e4e4;
-    content: '${props => props.lang}';
+    color: ${palette('text')};
+    content: '${(props: any) => props.lang}';
     font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
     font-size: 0.8rem;
     font-weight: bold;
     position: absolute;
-    right: 0.6rem;
+    right: 0.5rem;
     top: 0.2rem;
     text-transform: uppercase;
   }
@@ -56,10 +59,12 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
   componentDidMount = () => {
     registerLanguage('javascript', javascript);
     registerLanguage('jsx', jsx);
+    registerLanguage('json', json);
   };
 
   render = () => {
     const { children, className, codeClassName, isBlock, lang, showLineNumbers, ...props } = this.props;
+    console.log(defaultTheme);
     return (
       <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter

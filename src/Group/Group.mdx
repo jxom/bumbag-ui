@@ -4,7 +4,8 @@ route: /utils/group
 menu: Utilities
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import Group from './Group';
 import { Group as GroupProps } from './Group';
 import { Box, Block, Flex } from '../primitives';
@@ -59,7 +60,7 @@ The `verticalAt` prop accepts the following values: `"mobile"`, `"tablet"`, `"de
 
 ## Props
 
-<PropsTable of={GroupProps} />
+<PropsTable component={GroupProps} />
 
 ## Theming
 

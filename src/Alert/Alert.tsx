@@ -1,11 +1,13 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
+// @ts-ignore
+import _omit from 'lodash/omit';
 
 import { Box, Flex } from '../primitives';
 import styled, { css } from '../styled';
 import { Omit } from '../types';
-import { ButtonProps } from '../Button/Button';
+import { ButtonProps, buttonPropTypes } from '../Button/Button';
 import Icon from '../Icon';
 import Text from '../Text';
 import _Alert from './styled';
@@ -82,7 +84,7 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
 
 Alert.propTypes = {
   className: PropTypes.string,
-  closeButtonProps: PropTypes.object,
+  closeButtonProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
   children: PropTypes.node,
   hasIcon: PropTypes.bool,
   hasTint: PropTypes.bool,

@@ -4,7 +4,8 @@ route: /components/navigation
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import {Navigation} from './Navigation';
 import List from '../List';
@@ -56,7 +57,7 @@ Using an accessibility title (`a11yTitle`), will enable screen readers to read t
 
 ## Props
 
-<PropsTable of={Navigation} />
+<PropsTable component={Navigation} />
 
 ## Theming
 

@@ -4,7 +4,8 @@ route: /components/Dialog
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import { ActionButtons } from '../Button';
 import Heading from '../Heading';
@@ -73,7 +74,7 @@ To render a close icon on a dialog, use the `showCloseButton` prop.
 
 ## `<Dialog>` Props
 
-<PropsTable of={Dialog} />
+<PropsTable component={Dialog} />
 
 # Dialog.Dialog
 
@@ -104,27 +105,27 @@ The `<Dialog>` component is made up of a compound of components (such as: `<Dial
 
 ## `<Dialog.Dialog>` Props
 
-<PropsTable of={DialogDialog} />
+<PropsTable component={DialogDialog} />
 
 ## `<Dialog.Header>` Props
 
-<PropsTable of={DialogHeader} />
+<PropsTable component={DialogHeader} />
 
 ## `<Dialog.Content>` Props
 
-<PropsTable of={DialogContent} />
+<PropsTable component={DialogContent} />
 
 ## `<Dialog.Footer>` Props
 
-<PropsTable of={DialogFooter} />
+<PropsTable component={DialogFooter} />
 
 ## `<Dialog.Title>` Props
 
-<PropsTable of={DialogTitle} />
+<PropsTable component={DialogTitle} />
 
 ## `<Dialog.Close>` Props
 
-<PropsTable of={DialogClose} />
+<PropsTable component={DialogClose} />
 
 ## Theming
 

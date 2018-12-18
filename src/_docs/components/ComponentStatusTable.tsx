@@ -1,10 +1,8 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { ComponentDetails, componentDetailsPropTypes } from '../utils/components';
+import { ComponentDetails } from '../utils/components';
 import Table from '../../../src/Table';
-import Tag from '../../../src/Tag';
-import Icon from '../../../src/Icon';
 import Link from '../../../src/Link';
 import ComponentStatusTag from './ComponentStatusTag';
 

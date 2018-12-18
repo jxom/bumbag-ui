@@ -64,12 +64,5 @@ export default {
   wrapper: 'src/_docs/wrapper',
   codeSandbox: false,
   typescript: true,
-  modifyBundlerConfig: (config, dev) => {
-    if (!dev) {
-      delete config.devtool;
-      config.module.rules.shift();
-      config.optimization.minimizer[0].options.sourceMap = false;
-    }
-    return config;
-  }
+  propsParser: false
 };

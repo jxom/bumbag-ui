@@ -4,7 +4,8 @@ route: /form/fieldwrapper
 menu: Form
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import {FieldWrapper} from './FieldWrapper';
 import Checkbox from '../Checkbox';
@@ -118,7 +119,7 @@ Required fields don't show any visual feedback. Displaying 'optional' labels (as
 
 ## Props
 
-<PropsTable of={FieldWrapper} />
+<PropsTable component={FieldWrapper} />
 
 ## Theming
 

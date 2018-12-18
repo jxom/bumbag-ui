@@ -4,7 +4,8 @@ route: /utils/overlay
 menu: Utilities
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import Portal from 'reakit/Portal';
 import { Box } from '../primitives/index';
 import {Overlay} from './Overlay';
@@ -110,7 +111,7 @@ You can have a slide animation with the `slide` prop. The `slide` prop can take 
 
 ## `<Overlay>` Props
 
-<PropsTable of={Overlay} />
+<PropsTable component={Overlay} />
 
 # Overlay.Container
 
@@ -136,7 +137,7 @@ An extended version of the `overlay` render prop shown in the above examples is 
 
 ## `<Overlay.Container>` Props
 
-<PropsTable of={OverlayContainer} />
+<PropsTable component={OverlayContainer} />
 
 # Overlay.Hide & Overlay.Show
 
@@ -165,11 +166,11 @@ The `<Overlay.Hide>` does the same thing, but the opposite.
 
 ## `<Overlay.Show>` Props
 
-<PropsTable of={OverlayShow} />
+<PropsTable component={OverlayShow} />
 
 ## `<Overlay.Hide>` Props
 
-<PropsTable of={OverlayHide} />
+<PropsTable component={OverlayHide} />
 
 # Overlay.Toggle
 
@@ -196,7 +197,7 @@ The `<Overlay.Toggle>` component provides an intuitive way to be able to toggle 
 
 ## `<Overlay.Toggle>` Props
 
-<PropsTable of={OverlayToggle} />
+<PropsTable component={OverlayToggle} />
 
 ## Theming
 

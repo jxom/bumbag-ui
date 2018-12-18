@@ -4,7 +4,8 @@ route: /form/input
 menu: Form
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import {Input} from './Input';
 import Button from '../Button';
@@ -143,7 +144,7 @@ Using an accessibility label (`a11yLabel`), will enable screen readers to read t
 
 ## `<Input>` Props
 
-<PropsTable of={Input} />
+<PropsTable component={Input} />
 
 # InputField
 
@@ -163,7 +164,7 @@ It accepts a combination of [`<Input>` props](/form/input#input-props) and [`<Fi
 
 ## `<InputField>` Props
 
-<PropsTable of={InputField} />
+<PropsTable component={InputField} />
 
 ## Theming
 

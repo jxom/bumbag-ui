@@ -4,7 +4,8 @@ route: /components/button
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import Button from './index';
 import { Button as ButtonPropsTable } from './Button';
 import {ActionButtons} from './ActionButtons';
@@ -190,7 +191,7 @@ To group a set of buttons together, use the `<Group>` component.
 
 ## `<Button>` Props
 
-<PropsTable of={ButtonPropsTable} />
+<PropsTable component={ButtonPropsTable} />
 
 ## Theming
 
@@ -298,4 +299,4 @@ You can pass custom button props to action buttons using `submitProps` or `cance
 
 ## `<ActionButtons>` Props
 
-<PropsTable of={ActionButtons} />
+<PropsTable component={ActionButtons} />

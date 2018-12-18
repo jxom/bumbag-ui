@@ -4,7 +4,8 @@ route: /form/radiogroup
 menu: Form
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import { RadioGroupField } from './RadioGroupField';
 import { RadioGroup } from './RadioGroup';
@@ -75,7 +76,7 @@ Using an accessibility label (`a11yLabel`) will provide an accessible label for 
 
 ## `<RadioGroup>` Props
 
-<PropsTable of={RadioGroup} />
+<PropsTable component={RadioGroup} />
 
 # RadioGroupField
 
@@ -95,7 +96,7 @@ It accepts a combination of [`<RadioGroup>` props](/form/radiogroup#input-props)
 
 ## `<RadioGroupField>` Props
 
-<PropsTable of={RadioGroupField} />
+<PropsTable component={RadioGroupField} />
 
 ## Theming
 

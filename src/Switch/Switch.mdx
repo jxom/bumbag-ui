@@ -4,7 +4,8 @@ route: /form/switch
 menu: Form
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import Component from '@reactions/component';
 import { Box } from '../primitives/index';
 import {Switch} from './Switch';
@@ -73,7 +74,7 @@ Note: Do not use `defaultChecked` with controlled inputs!
 
 ## `<Switch>` Props
 
-<PropsTable of={Switch} />
+<PropsTable component={Switch} />
 
 # SwitchField
 
@@ -93,7 +94,7 @@ It accepts a combination of [`<Switch>` props](/form/switch#switch-props) and [`
 
 ## `<SwitchField>` Props
 
-<PropsTable of={SwitchField} />
+<PropsTable component={SwitchField} />
 
 ## Theming
 

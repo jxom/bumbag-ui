@@ -4,7 +4,8 @@ route: /layout/columns
 menu: Layout
 ---
 
-import { Playground, PropsTable } from 'docz';
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
 import { Column } from '../Column';
 import { Columns } from './Columns';
@@ -329,11 +330,11 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 
 ## `<Column>` Props
 
-<PropsTable of={Column} />
+<PropsTable component={Column} />
 
 ## `<Columns>` Props
 
-<PropsTable of={Columns} />
+<PropsTable component={Columns} />
 
 ## Theming
 
