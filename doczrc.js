@@ -64,6 +64,7 @@ export default {
   wrapper: 'src/_docs/wrapper',
   codeSandbox: false,
   typescript: true,
+  propsParser: false,
   modifyBundlerConfig: (config, dev) => {
     if (!dev) {
       delete config.devtool;
