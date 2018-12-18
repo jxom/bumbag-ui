@@ -64,5 +64,10 @@ export default {
   wrapper: 'src/_docs/wrapper',
   codeSandbox: false,
   typescript: true,
-  propsParser: false
+  propsParser: false,
+  modifyBabelRc: (babelrc, args) => {
+    babelrc.presets.pop();
+    babelrc.presets.push(['docz-fannypack', { parseProps: false, typescript: true, flow: false }]);
+    return babelrc;
+  }
 };
