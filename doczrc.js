@@ -73,6 +73,46 @@ export default {
     return babelrc;
   },
   htmlContext: {
-    favicon: 'https://github.com/fannypackui/fannypack/blob/master/src/_docs/icon.png?raw=true'
+    favicon: 'https://github.com/fannypackui/fannypack/blob/master/src/_docs/icon.png?raw=true',
+    head: {
+      meta: [
+        {
+          name: 'twitter:title',
+          content: 'Fannypack'
+        },
+        {
+          name: 'twitter:creator',
+          content: '@jxom_'
+        },
+        {
+          name: 'twitter:description',
+          content: 'A friendly, themeable, accessible React UI Kit'
+        },
+        {
+          name: 'twitter:url',
+          content: 'https://fannypack.style'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://github.com/fannypackui/fannypack/raw/master/fannypack.png'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'og:type',
+          content: 'website'
+        },
+        {
+          name: 'og:title',
+          content: 'Fannypack'
+        },
+        {
+          name: 'og:description',
+          content: 'A friendly, themeable, accessible React UI Kit'
+        }
+      ]
+    }
   }
 };
