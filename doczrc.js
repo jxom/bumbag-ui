@@ -1,6 +1,8 @@
 import { css } from 'reakit/styled';
 
 export default {
+  title: 'Fannypack',
+  description: 'A friendly, themeable, accessible React UI Kit',
   dest: '/docs',
   files: '**/src/**/*.mdx',
   menu: [
@@ -69,5 +71,8 @@ export default {
     babelrc.presets.pop();
     babelrc.presets.push(['docz-fannypack', { parseProps: false, typescript: true, flow: false }]);
     return babelrc;
+  },
+  htmlContext: {
+    favicon: 'https://github.com/fannypackui/fannypack/blob/master/src/_docs/icon.png?raw=true'
   }
 };
