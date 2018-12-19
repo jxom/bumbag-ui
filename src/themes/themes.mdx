@@ -89,7 +89,7 @@ Possible values are: `small`, `medium`, `large`, `xlarge`, `xxlarge`. You can al
 
 Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
-### Overriding the default theme
+### Overriding the default theme (recommended)
 
 The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
 
@@ -99,7 +99,6 @@ The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify
 
 ```jsx
 import { ThemeProvider, css } from 'fannypack';
-import { lighten } from 'polished';
 
 const theme = {
   global: {
@@ -108,7 +107,7 @@ const theme = {
     `
   },
   palette: {
-    primary: lighten(0.2, 'blue')
+    primary: 'blue'
   },
   layout: {
     mobileBreakpoint: 520,
@@ -131,7 +130,7 @@ const App = () => (
 );
 ```
 
-### Creating your own theme
+### Creating your own theme (advanced)
 
 If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
 
@@ -156,7 +155,8 @@ const App = () => (
   global: GlobalThemeConfig,
   palette: PaletteThemeConfig,
   layout: LayoutThemeConfig,
-  fontSizes: FontSizeThemeConfig
+  fontSizes: FontSizeThemeConfig,
+  fontWeights: FontWeightsThemeConfig
 
   // Components
   Alert: AlertThemeConfig,
@@ -206,6 +206,7 @@ Core:
 - [PaletteThemeConfig](/palette#theming)
 - [LayoutThemeConfig](#layoutthemeconfig)
 - [FontSizeThemeConfig](#fontsizethemeconfig)
+- [FontWeightsThemeConfig](#fontweightsthemeconfig)
 
 Components:
 
@@ -250,13 +251,17 @@ Components:
 
 #### GlobalThemeConfig
 
+The global theme config is injected into the global stylesheet of your app. It uses styled-component's [`createGlobalStyle`](https://www.styled-components.com/docs/api#createglobalstyle).
+
 ```jsx
 {
-  base: string | Object
+  base: css | Object
 }
 ```
 
 #### LayoutThemeConfig
+
+The layout theme config is used to manage breakpoints & spacing (like paddings & margins).
 
 ```jsx
 {
@@ -326,3 +331,25 @@ Components:
   xxlarge: 3
 }
 ```
+
+#### FontWeightsThemeConfig
+
+```jsx
+{
+  normal: number,
+  semibold: number,
+  bold: number
+}
+```
+
+##### Default
+
+```jsx
+{
+  normal: 400,
+  semibold: 600,
+  bold: 700
+}
+```
+
+

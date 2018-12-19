@@ -87,8 +87,16 @@ and show line numbers with `showLineNumbers`:
 
 ```jsx
 {
-  base: string | Object,
-  block: string | Object,
-  inline: string | Object
+  Code: {
+    base: css | Object,
+
+    // Styles to apply for blocked code
+    block: css | Object,
+
+    // Styles to apply for inline code
+    inline: css | Object
+  }
 }
 ```
+
+[Learn more about theming](/styling#theming)

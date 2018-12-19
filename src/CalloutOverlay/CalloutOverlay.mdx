@@ -51,10 +51,15 @@ import CalloutOverlay from './CalloutOverlay';
 
 ```jsx
 {
-  base: string | Object,
-  Callout: {
-    base: string | Object,
-    mobile: string | Object
+  CalloutOverlay: {
+    base: css | Object,
+
+    // Styles to apply to the callout inside the overlay
+    Callout: {
+      base: css | Object,
+      // Style to apply when mobile viewport
+      mobile: css | Object
+    }
   }
 }
 ```

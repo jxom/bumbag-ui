@@ -79,14 +79,16 @@ The rating callback is called with `{ rating, maxRating }`.
 
 ```jsx
 {
-  base: string | Object,
-  Star: {
-    base: string | Object,
-    color: string,
-    sizes: {
-      small: string | Object,
-      medium: string | Object,
-      large: string | Object,
+  Rating: {
+    base: css | Object,
+    Star: {
+      base: css | Object,
+      color: string,
+      sizes: {
+        small: css | Object,
+        medium: css | Object,
+        large: css | Object,
+      }
     }
   }
 }

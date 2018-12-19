@@ -71,7 +71,7 @@ To see this in action, maximise the component below and change the width of your
 
 ## Fluid containers
 
-A fluid container's width is always **100%**, but has a fixed left and right margin of `2rem` (2 * root font size 16px). For devices under the **tablet (768px)** viewport, the margin is `1rem`.
+A fluid container's width is always **100%**, but has a fixed left and right margin of `2rem` (2 \* root font size 16px). For devices under the **tablet (768px)** viewport, the margin is `1rem`.
 
 To see this in action, maximise the component below and change the width of your screen.
 
@@ -83,7 +83,6 @@ To see this in action, maximise the component below and change the width of your
   </Container>
 </Playground>
 
-
 ## Props
 
 <PropsTable component={Container} />
@@ -94,11 +93,19 @@ To see this in action, maximise the component below and change the width of your
 
 ```jsx
 {
-  base: string | Object,
-  fluidMargin: string, // margin for fluid columns
-  tabletMargin: string // margin for columns below tablet viewport
+  Container: {
+    base: css | Object,
+
+    // margin for fluid columns
+    fluidMargin: string,
+
+    // margin for columns below tablet viewport
+    tabletMargin: string
+  }
 }
 ```
+
+[Learn more about theming](/styling#theming)
 
 ### Default
 

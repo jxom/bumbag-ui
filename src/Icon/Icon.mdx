@@ -74,12 +74,17 @@ Icons will be the same size as its text by default.
 
 ```jsx
 {
-  base: string | Object,
-  iconNames: {
-    info: string,
-    warning: string,
-    success: string,
-    danger: string
+  Icon: {
+    base: css | Object,
+
+    // Icon name aliases which map to the proper icon names (so you can use <Icon icon="info">).
+    // Note: you are able to add more, but these ones are required.
+    iconNames: {
+      info: string,
+      warning: string,
+      success: string,
+      danger: string
+    }
   }
 }
 ```

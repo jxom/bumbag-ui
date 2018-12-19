@@ -199,25 +199,27 @@ To group a set of buttons together, use the `<Group>` component.
 
 ```jsx
 {
-  base: string | Object,
+  Button {
+    base: css | Object,
 
-  // disabled button type styles
-  disabled: string | Object,
+    // disabled button type styles
+    disabled: css | Object,
 
-  // link button type styles
-  link: string | Object,
+    // link button type styles
+    link: css | Object,
 
-  // loading button styles
-  loading: string | Object,
+    // loading button styles
+    loading: css | Object,
 
-  // static button styles
-  static: stirng | Object,
+    // static button styles
+    static: stirng | Object,
 
-  // size styles
-  sizes: {
-    small: string | Object,
-    medium: string | Object,
-    large: string | Object
+    // size styles
+    sizes: {
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
   }
 }
 ```

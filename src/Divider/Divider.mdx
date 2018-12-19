@@ -62,8 +62,14 @@ A divider can also have content. The `content` prop accepts a string.
 
 ```jsx
 {
-  base: string | Object,
-  content: string | Object,
-  vertical: string | Object
+  Divider: {
+    base: css | Object,
+
+    // Style for the divider content
+    content: css | Object,
+
+    // Style for vertical dividers
+    vertical: css | Object
+  }
 }
 ```

@@ -219,23 +219,25 @@ Click [here](https://reakit.io/components/tabs/tabscontainer)
 
 ```jsx
 {
-  base: string | Object,
-  Tab: {
-    base: string | Object,
-    active: string | Object,
-    focus: string | Object,
-    hover: string | Object,
-    boxed: {
-      base: string | Object,
-      active: string | Object
-    },
-    default: {
-      base: string | Object,
-      active: string | Object
+  Tabs: {
+    base: css | Object,
+    Tab: {
+      base: css | Object,
+      active: css | Object,
+      focus: css | Object,
+      hover: css | Object,
+      boxed: {
+        base: css | Object,
+        active: css | Object
+      },
+      default: {
+        base: css | Object,
+        active: css | Object
+      }
     }
-  }
-  Panel: {
-    base: string | Object
+    Panel: {
+      base: css | Object
+    }
   }
 }
 ```

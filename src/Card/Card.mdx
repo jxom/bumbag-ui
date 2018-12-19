@@ -100,18 +100,28 @@ The `<Card>` component is made up of a compound of components (such as: `<Card.C
 
 ```jsx
 {
-  base: string | Object,
-  Header: {
-    base: string | Object
-  },
-  Content: {
-    base: string | Object
-  },
-  Footer: {
-    base: string | Object
-  },
-  Title: {
-    base: string | Object
+  Card: {
+    base: css | Object,
+
+    // Style to apply to card header
+    Header: {
+      base: css | Object
+    },
+
+    // Style to apply to card content
+    Content: {
+      base: css | Object
+    },
+
+    // Style to apply to card footer
+    Footer: {
+      base: css | Object
+    },
+
+    // Style to apply to card title
+    Title: {
+      base: css | Object
+    }
   }
 }
 ```

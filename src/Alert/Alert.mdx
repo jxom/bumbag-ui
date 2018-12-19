@@ -144,14 +144,24 @@ To inline an alert, set the `display` prop to `inline-block`.
 
 ```jsx
 {
-  base: string | Object,
-  tint: string | Object,
-  Close: {
-    base: string | object,
-    hover: string | object
-  }
-  Title: {
-    base: string | Object
+  Alert: {
+    base: css | Object,
+
+    // Style to apply for tinted alerts
+    tint: css | Object,
+
+    // Style to apply for the close button
+    Close: {
+      base: css | object,
+      hover: css | object
+    }
+
+    // Style to apply for the alert title
+    Title: {
+      base: css | Object
+    }
   }
 }
 ```
+
+[Learn more about theming](/styling#theming)

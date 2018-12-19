@@ -50,10 +50,16 @@ A `<Pane>` is the same as a `<Box>`, except it has a default border radius, and 
 
 ```jsx
 {
-  base: string | Object,
-  border: {
-    default: string | Object,
-    shadow: string | Object
+  Pane: {
+    base: css | Object,
+
+    // Styles to apply for bordered panes
+    border: {
+      default: css | Object,
+      shadow: css | Object
+    }
   }
 }
 ```
+
+[Learn more about theming](/styling#theming)

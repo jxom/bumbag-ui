@@ -130,29 +130,42 @@ This component is used internally in `<Callout>`, but you may find it helpful fo
 
 ```jsx
 {
-  base: string | Object,
-  tint: string | Object,
-  Content: {
-    base: string | Object
-  },
-  Header: {
-    base: string | Object
-  },
-  Footer: {
-    base: string | Object
-  },
-  Title: {
-    base: string | Object
-  },
-  Tint: {
-    base: string | Object
-  },
-  Icon: {
-    base: string | Object
-  },
-  Close: {
-    base: string | Object,
-    hover: string | Object
+  Callout: {
+    base: css | Object,
+
+    // Style to apply for tinted callouts
+    tint: css | Object,
+
+    // Style to apply for callout content
+    Content: {
+      base: css | Object
+    },
+
+    // Style to apply for callout header
+    Header: {
+      base: css | Object
+    },
+
+    // Style to apply for callout footer
+    Footer: {
+      base: css | Object
+    },
+
+    // Style to apply for callout title
+    Title: {
+      base: css | Object
+    },
+
+    // Style to apply for callout icon
+    Icon: {
+      base: css | Object
+    },
+
+    // Style to apply for callout close button
+    Close: {
+      base: css | Object,
+      hover: css | Object
+    }
   }
 }
 ```

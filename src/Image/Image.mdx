@@ -65,12 +65,18 @@ You can change the position of a fitted image with the `fitPosition` prop. This 
 
 ```jsx
 {
-  base: string | Object,
-  fixed: string | Object,
-  fit: {
-    base: string | Object,
-    cover: string | Object,
-    contain: string | Object
+  Image: {
+    base: css | Object,
+
+    // Style to apply to fixed images
+    fixed: css | Object,
+
+    // Styles to apply when `fit` prop is present
+    fit: {
+      base: css | Object,
+      cover: css | Object,
+      contain: css | Object
+    }
   }
 }
 ```

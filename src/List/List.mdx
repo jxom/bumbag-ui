@@ -97,10 +97,18 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 ```jsx
 {
-  base: string | Object,
-  item: {
-    base: string | Object
-  },
-  ordered: string | Object
+  List: {
+    base: css | Object,
+
+    // Styles to apply for list items (<List.Item>)
+    item: {
+      base: css | Object
+    },
+
+    // Styles to apply for ordered lists (<List isOrdered>)
+    ordered: css | Object
+  }
 }
 ```
+
+[Learn more about theming](/styling#theming)

@@ -68,15 +68,19 @@ Avatars can also be initials using the `initials` prop.
 
 ```jsx
 {
-  fit: {
-    cover: string | Object,
-    contain: string | Object
-  },
-  sizes: {
-    xsmall: string | Object,
-    small: string | Object,
-    medium: string | Object,
-    large: string | Object
+  Avatar: {
+    // Styles to apply when the `fit` prop is present
+    fit: {
+      cover: css | Object,
+      contain: css | Object
+    },
+    // Styles to apply for particular sizes
+    sizes: {
+      xsmall: css | Object,
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
   }
 }
 ```
