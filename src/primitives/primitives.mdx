@@ -3,6 +3,10 @@ name: Primitives
 route: /primitives
 ---
 
+import { Playground } from 'docz';
+import { Box, Block, Inline, InlineBlock, InlineFlex, Grid, Flex } from '../primitives';
+import PropsTable from '../_docs/components/PropsTable';
+
 # Primitives
 
 Fannypack exports Reakit's primitives:
@@ -15,12 +19,174 @@ Fannypack exports Reakit's primitives:
 - `<InlineFlex>`
 - `<Grid>`
 
-These primitive components provide an abstraction on top of the `<div>` element to include reset styles and respective `display` value.
-
-You can import them like so:
-
-```
-import { Box, Block, Inline, InlineBlock, Flex, InlineFlex, Grid } from 'fannypack';
-```
+These primitive components provide an abstraction on top of the `<div>` element to include reset styles and allows you to specify CSS attributes as props (see the below for more details).
 
 See more about primitive components [here](https://reakit.io/components/box).
+
+## Box
+
+`import { Box } from 'fannypack'`
+
+All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use `Box`'s props. [Read more here](https://reakit.io/components/box).
+
+By default it renders a `<div>` element with basic reset styles.
+
+<Playground>
+  <Box>This is a box</Box>
+</Playground>
+
+You're able to apply any CSS attribute as a prop to box:
+
+<Playground>
+  <Box backgroundColor="primary" color="white" padding="small">
+    This is a box
+  </Box>
+</Playground>
+
+### Color attributes
+
+Any CSS color attribute (e.g. `color`, `border-color`, etc) can take a [color from the Fannypack palette](/palette#theming).
+
+<Playground>
+  <Box backgroundColor="primaryTint" color="primary">
+    This is a box
+  </Box>
+</Playground>
+
+### Margin & padding attributes
+
+Any CSS margin/padding attribute (e.g. `margin`, `padding-left`, etc) can take a [spacing from the Fannypack theme](/styling#layoutthemeconfig).
+
+<Playground>
+  <Box backgroundColor="primaryTint" padding="small">
+    This is a box
+  </Box>
+</Playground>
+
+### Font attributes
+
+The `fontWeight` CSS prop can contain of a [font weight in the Fannypack theme](/styling#fontweightsthemeconfig).
+
+<Playground>
+  <Box fontWeight="semibold">This is a box</Box>
+</Playground>
+
+The `fontSize` CSS prop can contain of a [font size in the Fannypack theme](/styling#fontsizethemeconfig).
+
+<Playground>
+  <Box fontSize="large">This is a box</Box>
+</Playground>
+
+## Block
+
+`import { Block } from 'fannypack'`
+
+A `<Block>` is a `<Box>` with `display: block`. [Read more here](https://reakit.io/components/block).
+
+<Playground>
+  <Block backgroundColor="primaryTint" padding="small">
+    Block 1
+  </Block>
+  <Block backgroundColor="successTint" padding="small">
+    Block 2
+  </Block>
+  <Block backgroundColor="dangerTint" padding="small">
+    Block 3
+  </Block>
+</Playground>
+
+## Inline
+
+`import { Inline } from 'fannypack'`
+
+An `<Inline>` is a `<Box>` with `display: inline`. [Read more here](https://reakit.io/components/inline).
+
+<Playground>
+  <Inline>
+    Inline 1
+  </Inline>
+  <Inline>
+    Inline 2
+  </Inline>
+  <Inline>
+    Inline 3
+  </Inline>
+</Playground>
+
+## InlineBlock
+
+`import { InlineBlock } from 'fannypack'`
+
+An `<InlineBlock>` is a `<Box>` with `display: inline-block`. [Read more here](https://reakit.io/components/inlineblock).
+
+<Playground>
+  <InlineBlock backgroundColor="primaryTint" padding="small">
+    InlineBlock 1
+  </InlineBlock>
+  <InlineBlock backgroundColor="successTint" padding="small">
+    InlineBlock 2
+  </InlineBlock>
+  <InlineBlock backgroundColor="dangerTint" padding="small">
+    InlineBlock 3
+  </InlineBlock>
+</Playground>
+
+## Flex
+
+`import { Flex } from 'fannypack'`
+
+A `<Flex>` is a `<Box>` with `display: flex`. [Read more here](https://reakit.io/components/flex).
+
+<Playground>
+  <Flex>
+    <Box backgroundColor="primaryTint" padding="small">
+      Box 1
+    </Box>
+    <Box backgroundColor="successTint" padding="small">
+      Box 2
+    </Box>
+    <Box backgroundColor="dangerTint" padding="small">
+      Box 3
+    </Box>
+  </Flex>
+</Playground>
+
+## InlineFlex
+
+`import { InlineFlex } from 'fannypack'`
+
+An `<InlineFlex>` is a `<Box>` with `display: inline-flex`. [Read more here](https://reakit.io/components/inlineflex).
+
+<Playground>
+  <InlineFlex justifyContent="space-evenly" width="100%">
+    <Box backgroundColor="primaryTint" padding="small">
+      Box 1
+    </Box>
+    <Box backgroundColor="successTint" padding="small">
+      Box 2
+    </Box>
+    <Box backgroundColor="dangerTint" padding="small">
+      Box 3
+    </Box>
+  </InlineFlex>
+</Playground>
+
+## Grid
+
+`import { Grid } from 'fannypack'`
+
+A `<Grid>` is a `<Box>` with `display: grid`. It also consists of a `<Grid.Item>` component to pair with the `<Grid>`. [Read more here](https://reakit.io/components/grid).
+
+<Playground>
+  <Grid templateColumns="repeat(2, 1fr)" autoRows="auto" gap="3vw">
+    <Grid.Item backgroundColor="primaryTint" padding="small">
+      Grid Item 1
+    </Grid.Item>
+    <Grid.Item backgroundColor="successTint" padding="small">
+      Grid Item 2
+    </Grid.Item>
+    <Grid.Item backgroundColor="dangerTint" padding="small">
+      Grid Item 3
+    </Grid.Item>
+  </Grid>
+</Playground>
