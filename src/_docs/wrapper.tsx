@@ -10,7 +10,8 @@ import {
   faLongArrowAltRight,
   faFile,
   faComments,
-  faUser
+  faUser,
+  faHandPaper
 } from '@fortawesome/free-solid-svg-icons';
 
 const theme = {
@@ -26,7 +27,18 @@ const theme = {
     },
     iconSets: [
       {
-        icons: [faIgloo, faSearch, faClipboard, faThumbsUp, faPen, faLongArrowAltRight, faFile, faComments, faUser],
+        icons: [
+          faIgloo,
+          faSearch,
+          faClipboard,
+          faThumbsUp,
+          faPen,
+          faLongArrowAltRight,
+          faFile,
+          faComments,
+          faUser,
+          faHandPaper
+        ],
         prefix: 'solid-',
         type: 'font-awesome' as 'font-awesome'
       }

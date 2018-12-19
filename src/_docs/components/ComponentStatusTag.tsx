@@ -11,7 +11,7 @@ const statusColors = {
 };
 const statusIcons = {
   complete: 'success',
-  pending: 'hand-paper'
+  pending: 'solid-hand-paper'
 };
 const statusTexts = {
   complete: 'Complete',
