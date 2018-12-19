@@ -175,7 +175,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
       border: 1px solid ${palette('grayLightest')};
     `};
 
-  ${props => props.size && sizeProperties[props.size || '']};
+  ${props => props.styledSize && sizeProperties[props.styledSize || '']};
 
   ${props => props.isLoading && loadingProperties};
   ${props => props.isStatic && staticProperties};
