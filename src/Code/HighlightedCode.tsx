@@ -15,7 +15,7 @@ import _Code from './Code';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
 import { Box } from '../primitives';
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 
 const Wrapper = styled(Box)<HighlightedCodeProps>`
   ${props =>

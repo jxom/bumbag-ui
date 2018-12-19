@@ -1,7 +1,7 @@
 import Divider from 'reakit/Divider';
 import { theme } from 'styled-tools';
 
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 import { DividerProps } from './Divider';
 
 const contentProperties = css`

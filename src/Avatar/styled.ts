@@ -1,7 +1,7 @@
 import _Avatar from 'reakit/Avatar';
 import { palette, theme } from 'styled-tools';
 
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 import { Box } from '../primitives';
 import { AvatarProps } from './Avatar';
 

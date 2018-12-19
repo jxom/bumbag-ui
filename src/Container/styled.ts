@@ -1,7 +1,7 @@
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 import { ContainerProps } from './Container';
 
 const alignProperties = {

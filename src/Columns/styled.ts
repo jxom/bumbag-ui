@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import { css, styled } from '../styled';
+import styled, { css } from '../styled';
 import { Box } from '../primitives';
 import { ColumnsProps } from './Columns';
 

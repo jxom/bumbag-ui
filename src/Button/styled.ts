@@ -2,7 +2,7 @@ import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _Button from 'reakit/Button';
 
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
 

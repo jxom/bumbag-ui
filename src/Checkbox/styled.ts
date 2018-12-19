@@ -2,7 +2,7 @@ import { palette, theme } from 'styled-tools';
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
-import { styled, css } from '../styled';
+import styled, { css } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
 import { LocalCheckboxProps } from './Checkbox';
 

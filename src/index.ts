@@ -1,5 +1,15 @@
 export * from './primitives';
-export * from './styled';
+export {
+  default as styled,
+  css,
+  keyframes,
+  createGlobalStyle,
+  isStyledComponent,
+  ThemeConsumer,
+  withTheme,
+  ServerStyleSheet,
+  StyleSheetManager
+} from './styled';
 
 export { defaultTheme } from './themes';
 export { ThemeProvider } from './ThemeProvider';

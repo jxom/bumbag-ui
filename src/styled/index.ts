@@ -11,7 +11,6 @@ import styled, {
 } from 'reakit/styled';
 
 export {
-  styled,
   css,
   keyframes,
   createGlobalStyle,

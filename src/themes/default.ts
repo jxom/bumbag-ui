@@ -13,39 +13,39 @@ const defaultPalette: { [key: string]: string } = {
   warning: '#f2a100'
 };
 
-const generateTextVariants = (textColor: string) => ({
-  text: textColor,
-  textLight: lighten(0.05, textColor),
-  textLighter: lighten(0.1, textColor),
-  textLightest: lighten(0.2, textColor),
-  textTint: tint(0.8, textColor),
-  textInverted: readableColor(textColor),
-  textTintInverted: shade(0.3, textColor)
-});
-const generateColorVariants = ({
-  paletteKey,
-  overrides
-}: {
-  paletteKey: string;
-  overrides?: ({ color }: { color: string }) => {};
-}) => {
-  const color = _get(overrides, `palette.${paletteKey}`) || defaultPalette[paletteKey];
-  return {
-    [paletteKey]: color,
-    [`${paletteKey}Light`]: tint(0.1, color),
-    [`${paletteKey}Lighter`]: tint(0.3, color),
-    [`${paletteKey}Lightest`]: tint(0.5, color),
-    [`${paletteKey}Dark`]: shade(0.1, color),
-    [`${paletteKey}Darker`]: shade(0.3, color),
-    [`${paletteKey}Darkest`]: shade(0.5, color),
-    [`${paletteKey}Tint`]: tint(0.8, color),
-    [`${paletteKey}Inverted`]: readableColor(color),
-    [`${paletteKey}TintInverted`]: shade(0.5, color),
-    ...(overrides ? overrides({ color }) : {})
-  };
-};
-
 function theme(overrides: ThemeConfig = {}): ThemeConfig {
+  const generateTextVariants = (textColor: string) => ({
+    text: textColor,
+    textLight: lighten(0.05, textColor),
+    textLighter: lighten(0.1, textColor),
+    textLightest: lighten(0.2, textColor),
+    textTint: tint(0.8, textColor),
+    textInverted: readableColor(textColor),
+    textTintInverted: shade(0.3, textColor)
+  });
+  const generateColorVariants = ({
+    paletteKey,
+    paletteOverrides
+  }: {
+    paletteKey: string;
+    paletteOverrides?: ({ color }: { color: string }) => {};
+  }) => {
+    const color = _get(overrides, `palette.${paletteKey}`) || defaultPalette[paletteKey];
+    return {
+      [paletteKey]: color,
+      [`${paletteKey}Light`]: tint(0.1, color),
+      [`${paletteKey}Lighter`]: tint(0.3, color),
+      [`${paletteKey}Lightest`]: tint(0.5, color),
+      [`${paletteKey}Dark`]: shade(0.1, color),
+      [`${paletteKey}Darker`]: shade(0.3, color),
+      [`${paletteKey}Darkest`]: shade(0.5, color),
+      [`${paletteKey}Tint`]: tint(0.8, color),
+      [`${paletteKey}Inverted`]: readableColor(color),
+      [`${paletteKey}TintInverted`]: shade(0.5, color),
+      ...(paletteOverrides ? paletteOverrides({ color }) : {})
+    };
+  };
+
   return {
     ...overrides,
     palette: {
@@ -83,7 +83,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       }),
       ...generateColorVariants({
         paletteKey: 'warning',
-        overrides: ({ color }) => ({
+        paletteOverrides: ({ color }) => ({
           warningTintInverted: shade(0.7, color)
         })
       }),
