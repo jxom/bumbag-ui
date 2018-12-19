@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { ActionButtonsProps } from '../Button/ActionButtons';
+import { ActionButtonsProps, actionButtonsPropTypes } from '../Button/ActionButtons';
 import { getUniqueId } from '../uniqueId';
 import Dialog from '../Dialog';
 import Modal, { ModalProps, LocalModalProps } from '../Modal/Modal';
@@ -95,7 +95,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
 DialogModal.propTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
-  actionButtonsProps: PropTypes.object,
+  actionButtonsProps: PropTypes.shape(actionButtonsPropTypes),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   className: PropTypes.string,
   footer: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),

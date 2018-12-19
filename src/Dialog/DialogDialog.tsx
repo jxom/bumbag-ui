@@ -1,13 +1,12 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { PaneProps } from '../Pane/Pane';
+import { LocalPaneProps, PaneProps, panePropTypes, paneDefaultProps } from '../Pane/Pane';
 import Dialog from './styled';
 
-export type LocalDialogDialogProps = {
+export type LocalDialogDialogProps = LocalPaneProps & {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
-  border?: true | 'shadow';
   children: React.ReactNode;
   className?: string;
   kind?: 'alert' | undefined;
@@ -31,21 +30,25 @@ export const DialogDialog: React.FunctionComponent<LocalDialogDialogProps> = ({
   </Dialog>
 );
 
-DialogDialog.propTypes = {
+export const dialogDialogPropTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
-  border: PropTypes.oneOf([true, 'shadow']) as PropTypes.Validator<LocalDialogDialogProps['border']>,
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogDialogProps['kind']>
+  kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogDialogProps['kind']>,
+  ...panePropTypes,
+  children: PropTypes.node.isRequired
 };
-DialogDialog.defaultProps = {
+DialogDialog.propTypes = dialogDialogPropTypes;
+
+export const dialogDialogDefaultProps = {
+  ...paneDefaultProps,
   a11yDescriptionId: undefined,
   a11yTitleId: undefined,
   border: true,
   className: undefined,
   kind: undefined
 };
+DialogDialog.defaultProps = dialogDialogDefaultProps;
 
 const C: React.FunctionComponent<DialogDialogProps> = DialogDialog;
 export default C;

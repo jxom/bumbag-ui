@@ -28,7 +28,6 @@ const getTintAttributes = (props: any) => {
 };
 
 export default styled(CardCard)<CalloutProps>`
-  border: none;
   position: relative;
 
   ${getTintAttributes};

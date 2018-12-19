@@ -49,7 +49,7 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
   </Set>
 );
 
-ActionButtons.propTypes = {
+export const actionButtonsPropTypes = {
   cancelProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
   cancelText: PropTypes.string,
   className: PropTypes.string,
@@ -61,7 +61,9 @@ ActionButtons.propTypes = {
   submitText: PropTypes.string,
   type: PropTypes.string
 };
-ActionButtons.defaultProps = {
+ActionButtons.propTypes = actionButtonsPropTypes;
+
+export const actionButtonsDefaultProps = {
   cancelProps: {},
   cancelText: 'Cancel',
   className: undefined,
@@ -73,6 +75,7 @@ ActionButtons.defaultProps = {
   submitText: 'Submit',
   type: undefined
 };
+ActionButtons.defaultProps = actionButtonsDefaultProps;
 
 const C: React.FunctionComponent<ActionButtonsProps> = ActionButtons;
 export default C;

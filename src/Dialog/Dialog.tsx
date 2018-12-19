@@ -1,12 +1,20 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
+// @ts-ignore
+import _omit from 'lodash/omit';
 
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import { Box } from '../primitives';
 import { Omit } from '../types';
-import ActionButtons, { ActionButtonsProps } from '../Button/ActionButtons';
-import { ButtonProps } from '../Button/Button';
-import DialogDialog, { DialogDialogProps } from './DialogDialog';
+import ActionButtons, { ActionButtonsProps, actionButtonsPropTypes } from '../Button/ActionButtons';
+import { ButtonProps, buttonPropTypes } from '../Button/Button';
+import DialogDialog, {
+  DialogDialogProps,
+  LocalDialogDialogProps,
+  dialogDialogPropTypes,
+  dialogDialogDefaultProps
+} from './DialogDialog';
 import DialogContent, { DialogContentProps } from './DialogContent';
 import DialogHeader, { DialogHeaderProps } from './DialogHeader';
 import DialogFooter, { DialogFooterProps } from './DialogFooter';
@@ -14,16 +22,14 @@ import DialogTitle, { DialogTitleProps } from './DialogTitle';
 import DialogClose, { DialogCloseProps } from './DialogClose';
 import DialogIcon, { DialogIconProps } from './DialogIcon';
 
-export type LocalDialogProps = {
+export type LocalDialogProps = LocalDialogDialogProps & {
   actionButtonsProps?: ActionButtonsProps;
   a11yDescriptionId?: string;
   a11yTitleId?: string;
-  border?: true | 'shadow';
   children: React.ReactNode;
   className?: string;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
   footer?: string | React.ReactElement<any>;
-  kind?: 'alert' | undefined;
   onClickClose?: () => void;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
@@ -45,11 +51,9 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
   actionButtonsProps,
   a11yDescriptionId,
   a11yTitleId,
-  border,
   children,
   closeButtonProps,
   footer,
-  kind,
   onClickClose,
   showActionButtons,
   showCloseButton,
@@ -57,7 +61,7 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
   type,
   ...props
 }) => (
-  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} kind={kind} border={border} {...props}>
+  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} {...props}>
     {title && (
       <DialogHeader>
         {typeof title === 'string' ? (
@@ -93,15 +97,30 @@ Dialog.Title = DialogTitle;
 Dialog.Close = DialogClose;
 Dialog.Icon = DialogIcon;
 
+Dialog.propTypes = {
+  actionButtonsProps: PropTypes.shape(actionButtonsPropTypes),
+  a11yDescriptionId: PropTypes.string,
+  a11yTitleId: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  closeButtonProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
+  footer: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  onClickClose: PropTypes.func,
+  showActionButtons: PropTypes.bool,
+  showCloseButton: PropTypes.bool,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  type: PropTypes.string,
+  ...dialogDialogPropTypes
+};
+
 Dialog.defaultProps = {
+  ...dialogDialogDefaultProps,
   actionButtonsProps: {},
   a11yDescriptionId: getUniqueId('Dialog'),
   a11yTitleId: getUniqueId('Dialog'),
-  border: true,
   className: undefined,
   closeButtonProps: {},
   footer: undefined,
-  kind: undefined,
   onClickClose: undefined,
   showActionButtons: false,
   showCloseButton: false,

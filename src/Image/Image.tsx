@@ -1,11 +1,11 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { ImageProps as ReakitImageProps } from 'reakit/ts';
 
 import _Image from './styled';
 
 export type LocalImageProps = {
-  use?: any;
   children?: React.ReactNode;
   className?: string;
   /** How the image fits its bounds */
@@ -29,8 +29,14 @@ export const Image: React.FunctionComponent<LocalImageProps> = ({ children, clas
   </_Image>
 );
 
+Image.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  fit: PropTypes.oneOf(['cover', 'contain']) as PropTypes.Validator<LocalImageProps['fit']>,
+  fitPosition: PropTypes.string,
+  isFixed: PropTypes.bool
+};
 Image.defaultProps = {
-  use: undefined,
   className: undefined,
   fit: undefined,
   fitPosition: undefined,

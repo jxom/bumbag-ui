@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
-import CardCard, { CardCardProps } from './CardCard';
+import CardCard, { CardCardProps, cardCardPropTypes, cardCardDefaultProps } from './CardCard';
 import CardContent, { CardContentProps } from './CardContent';
 import CardHeader, { CardHeaderProps } from './CardHeader';
 import CardFooter, { CardFooterProps } from './CardFooter';
@@ -63,9 +63,11 @@ Card.propTypes = {
   footer: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   headerActions: PropTypes.element,
   isFullWidth: PropTypes.bool,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  ...cardCardPropTypes
 };
 Card.defaultProps = {
+  ...cardCardDefaultProps,
   a11yDescriptionId: getUniqueId('Card'),
   a11yTitleId: getUniqueId('Card'),
   children: undefined,

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { palette } from 'styled-tools';
 // @ts-ignore
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light';
@@ -48,6 +49,16 @@ export type LocalHighlightedCodeProps = {
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 
 export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    codeClassName: PropTypes.string,
+    isBlock: PropTypes.bool,
+    lang: PropTypes.string.isRequired,
+    showLabel: PropTypes.bool,
+    showLineNumbers: PropTypes.bool
+  };
+
   static defaultProps = {
     className: undefined,
     codeClassName: undefined,

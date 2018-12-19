@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 
 import { LocalCalloutProps, calloutPropTypes, calloutDefaultProps } from '../Callout/Callout';
 import { LocalOverlayProps, OverlayProps, overlayPropTypes, overlayDefaultProps } from '../Overlay/Overlay';
-import OverlayHide from '../Overlay/OverlayHide';
+import { Omit } from '../types';
 import _CalloutOverlay, { Callout } from './styled';
 
 export type LocalCalloutOverlayProps = LocalOverlayProps &
@@ -15,6 +15,7 @@ export type CalloutOverlayProps = OverlayProps & LocalCalloutOverlayProps;
 export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> = ({
   a11yDescriptionId,
   a11yTitleId,
+  border,
   children,
   className,
   closeButtonProps,
@@ -31,6 +32,7 @@ export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> =
     <Callout
       a11yDescriptionId={a11yDescriptionId}
       a11yTitleId={a11yTitleId}
+      border={border}
       className={className}
       closeButtonProps={closeButtonProps}
       footer={footer}

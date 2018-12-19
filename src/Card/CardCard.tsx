@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { PaneProps } from '../Pane/Pane';
+import { LocalPaneProps, PaneProps, panePropTypes, paneDefaultProps } from '../Pane/Pane';
 import Card from './styled';
 
-export type LocalCardCardProps = {
+export type LocalCardCardProps = LocalPaneProps & {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
@@ -19,25 +19,31 @@ const CardCard: React.FunctionComponent<LocalCardCardProps> = ({
   children,
   ...props
 }) => (
-  <Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} border="shadow" padding="medium" {...props}>
+  <Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} padding="medium" {...props}>
     {children}
   </Card>
 );
 
-CardCard.propTypes = {
+export const cardCardPropTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  isFullWidth: PropTypes.bool
+  isFullWidth: PropTypes.bool,
+  ...panePropTypes
 };
-CardCard.defaultProps = {
+CardCard.propTypes = cardCardPropTypes;
+
+export const cardCardDefaultProps = {
+  ...paneDefaultProps,
   a11yDescriptionId: undefined,
   a11yTitleId: undefined,
+  border: 'shadow' as 'shadow',
   children: undefined,
   className: undefined,
   isFullWidth: false
 };
+CardCard.defaultProps = cardCardDefaultProps;
 
 const C: React.FunctionComponent<CardCardProps> = CardCard;
 export default C;

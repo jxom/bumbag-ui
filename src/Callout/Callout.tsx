@@ -1,14 +1,14 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { CardCardProps } from '../Card/CardCard';
+import { LocalCardCardProps, CardCardProps, cardCardPropTypes, cardCardDefaultProps } from '../Card/CardCard';
 import { Box, Flex } from '../primitives';
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
 import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
 import CalloutClose, { CalloutCloseProps, calloutClosePropTypes } from './CalloutClose';
 
-export type LocalCalloutProps = {
+export type LocalCalloutProps = LocalCardCardProps & {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
@@ -75,11 +75,13 @@ export const calloutPropTypes = {
   onClickClose: PropTypes.func,
   showCloseButton: PropTypes.bool,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  type: PropTypes.string
+  type: PropTypes.string,
+  ...cardCardPropTypes
 };
 Callout.propTypes = calloutPropTypes;
 
 export const calloutDefaultProps = {
+  ...cardCardDefaultProps,
   a11yDescriptionId: getUniqueId('Callout'),
   a11yTitleId: getUniqueId('Callout'),
   children: undefined,

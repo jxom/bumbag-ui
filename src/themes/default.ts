@@ -4,17 +4,52 @@ import { palette as p, theme as t } from 'styled-tools';
 import _get from 'lodash/get';
 import { ThemeConfig } from '../types';
 
+const defaultPalette: { [key: string]: string } = {
+  text: '#435a6f',
+  primary: '#444bc9',
+  info: '#35709e',
+  success: '#2c8453',
+  danger: '#c9444d',
+  warning: '#f2a100'
+};
+
+const generateTextVariants = (textColor: string) => ({
+  text: textColor,
+  textLight: lighten(0.05, textColor),
+  textLighter: lighten(0.1, textColor),
+  textLightest: lighten(0.2, textColor),
+  textTint: tint(0.8, textColor),
+  textInverted: readableColor(textColor),
+  textTintInverted: shade(0.3, textColor)
+});
+const generateColorVariants = ({
+  paletteKey,
+  overrides
+}: {
+  paletteKey: string;
+  overrides?: ({ color }: { color: string }) => {};
+}) => {
+  const color = _get(overrides, `palette.${paletteKey}`) || defaultPalette[paletteKey];
+  return {
+    [paletteKey]: color,
+    [`${paletteKey}Light`]: tint(0.1, color),
+    [`${paletteKey}Lighter`]: tint(0.3, color),
+    [`${paletteKey}Lightest`]: tint(0.5, color),
+    [`${paletteKey}Dark`]: shade(0.1, color),
+    [`${paletteKey}Darker`]: shade(0.3, color),
+    [`${paletteKey}Darkest`]: shade(0.5, color),
+    [`${paletteKey}Tint`]: tint(0.8, color),
+    [`${paletteKey}Inverted`]: readableColor(color),
+    [`${paletteKey}TintInverted`]: shade(0.5, color),
+    ...(overrides ? overrides({ color }) : {})
+  };
+};
+
 function theme(overrides: ThemeConfig = {}): ThemeConfig {
   return {
     ...overrides,
     palette: {
-      text: '#435a6f',
-      textLight: lighten(0.05, '#435a6f'),
-      textLighter: lighten(0.1, '#435a6f'),
-      textLightest: lighten(0.2, '#435a6f'),
-      textTint: tint(0.8, '#435a6f'),
-      textInverted: readableColor('#435a6f'),
-      textTintInverted: shade(0.3, '#435a6f'),
+      ...generateTextVariants(_get(overrides, 'palette.text') || defaultPalette.text),
 
       black: 'black',
 
@@ -34,60 +69,24 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       default: darken(0.01, 'white'),
       defaultInverted: '#435a6f',
 
-      primary: '#444bc9',
-      primaryLight: tint(0.1, '#444bc9'),
-      primaryLighter: tint(0.3, '#444bc9'),
-      primaryLightest: tint(0.5, '#444bc9'),
-      primaryDark: shade(0.1, '#444bc9'),
-      primaryDarker: shade(0.3, '#444bc9'),
-      primaryDarkest: shade(0.5, '#444bc9'),
-      primaryTint: tint(0.8, '#444bc9'),
-      primaryInverted: readableColor('#444bc9'),
-      primaryTintInverted: shade(0.5, '#444bc9'),
-
-      info: '#35709e',
-      infoLight: tint(0.1, '#35709e'),
-      infoLighter: tint(0.3, '#35709e'),
-      infoLightest: tint(0.5, '#35709e'),
-      infoDark: shade(0.1, '#35709e'),
-      infoDarker: shade(0.3, '#35709e'),
-      infoDarkest: shade(0.5, '#35709e'),
-      infoTint: tint(0.8, '#35709e'),
-      infoInverted: readableColor('#35709e'),
-      infoTintInverted: shade(0.5, '#35709e'),
-
-      success: '#2c8453',
-      successLight: tint(0.1, '#2c8453'),
-      successLighter: tint(0.3, '#2c8453'),
-      successLightest: tint(0.5, '#2c8453'),
-      successDark: shade(0.1, '#2c8453'),
-      successDarker: shade(0.3, '#2c8453'),
-      successDarkest: shade(0.5, '#2c8453'),
-      successTint: tint(0.8, '#2c8453'),
-      successInverted: readableColor('#2c8453'),
-      successTintInverted: shade(0.5, '#2c8453'),
-
-      danger: '#c9444d',
-      dangerLight: tint(0.1, '#c9444d'),
-      dangerLighter: tint(0.3, '#c9444d'),
-      dangerLightest: tint(0.5, '#c9444d'),
-      dangerDark: shade(0.1, '#c9444d'),
-      dangerDarker: shade(0.3, '#c9444d'),
-      dangerDarkest: shade(0.5, '#c9444d'),
-      dangerTint: tint(0.8, '#c9444d'),
-      dangerInverted: readableColor('#c9444d'),
-      dangerTintInverted: shade(0.5, '#c9444d'),
-
-      warning: '#f2a100',
-      warningLight: tint(0.1, '#f2a100'),
-      warningLighter: tint(0.3, '#f2a100'),
-      warningLightest: tint(0.5, '#f2a100'),
-      warningDark: shade(0.1, '#f2a100'),
-      warningDarker: shade(0.3, '#f2a100'),
-      warningDarkest: shade(0.5, '#f2a100'),
-      warningTint: tint(0.8, '#f2a100'),
-      warningInverted: readableColor('#f2a100'),
-      warningTintInverted: shade(0.7, '#f2a100'),
+      ...generateColorVariants({
+        paletteKey: 'primary'
+      }),
+      ...generateColorVariants({
+        paletteKey: 'info'
+      }),
+      ...generateColorVariants({
+        paletteKey: 'success'
+      }),
+      ...generateColorVariants({
+        paletteKey: 'danger'
+      }),
+      ...generateColorVariants({
+        paletteKey: 'warning',
+        overrides: ({ color }) => ({
+          warningTintInverted: shade(0.7, color)
+        })
+      }),
 
       ..._get(overrides, 'palette', {})
     },

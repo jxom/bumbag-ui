@@ -19,7 +19,7 @@ export const Pane: React.FunctionComponent<LocalPaneProps> = ({ border, children
   </_Pane>
 );
 
-Pane.propTypes = {
+export const panePropTypes = {
   border: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['shadow'])]) as PropTypes.Validator<
     LocalPaneProps['border']
   >,
@@ -27,12 +27,15 @@ Pane.propTypes = {
   children: PropTypes.node,
   isFullWidth: PropTypes.bool
 };
-Pane.defaultProps = {
+Pane.propTypes = panePropTypes;
+
+export const paneDefaultProps = {
   border: false,
   className: undefined,
   children: undefined,
   isFullWidth: false
 };
+Pane.defaultProps = paneDefaultProps;
 
 const C: React.FunctionComponent<PaneProps> = Pane;
 export default C;

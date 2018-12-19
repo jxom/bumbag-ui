@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { ListProps as ReakitListProps } from 'reakit/ts';
 
 import _List from './styled';
@@ -28,6 +29,12 @@ export const List: React.FunctionComponent<LocalListProps> & ListComponents = ({
 
 List.Item = ListItem;
 
+List.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  isOrdered: PropTypes.bool,
+  isHorizontal: PropTypes.bool
+};
 List.defaultProps = {
   className: undefined,
   isOrdered: false,
