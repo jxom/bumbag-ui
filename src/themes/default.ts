@@ -2,7 +2,14 @@ import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme as t } from 'styled-tools';
 // @ts-ignore
 import _get from 'lodash/get';
+import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
+import * as faExclamationTriangle from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import * as faCheckCircle from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import * as faExclamationCircle from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import * as faTimes from '@fortawesome/free-solid-svg-icons/faTimes';
+
 import { ThemeConfig } from '../types';
+import parseIcons, { Opts as ParseIconsOpts, Icons } from '../parseIcons';
 
 const defaultPalette: { [key: string]: string } = {
   text: '#435a6f',
@@ -23,6 +30,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
     textInverted: readableColor(textColor),
     textTintInverted: shade(0.3, textColor)
   });
+
   const generateColorVariants = ({
     paletteKey,
     paletteOverrides
@@ -45,6 +53,20 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       ...(paletteOverrides ? paletteOverrides({ color }) : {})
     };
   };
+
+  const parseOverrideIcons = (
+    icons: Array<{ icons: Icons; type: ParseIconsOpts['type']; prefix: ParseIconsOpts['prefix'] }>
+  ) =>
+    icons.reduce(
+      (
+        currentIcons: {},
+        iconSet: { icons: Icons; type: ParseIconsOpts['type']; prefix: ParseIconsOpts['prefix'] }
+      ) => ({
+        ...currentIcons,
+        ...parseIcons(iconSet.icons, { type: iconSet.type, prefix: iconSet.prefix })
+      }),
+      {}
+    );
 
   return {
     ...overrides,
@@ -132,14 +154,21 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       ..._get(overrides, 'Container', {})
     },
     Icon: {
+      ..._get(overrides, 'Icon', {}),
+      icons: {
+        ...parseIcons([faInfoCircle, faExclamationTriangle, faCheckCircle, faExclamationCircle, faTimes], {
+          type: 'font-awesome-standalone'
+        }),
+        ...parseOverrideIcons(_get(overrides, 'Icon.iconSets', [])),
+        ..._get(overrides, 'Icon.icons', {})
+      },
       iconNames: {
         info: 'info-circle',
         warning: 'exclamation-triangle',
         success: 'check-circle',
         danger: 'exclamation-circle',
         ..._get(overrides, 'Icon.iconNames', {})
-      },
-      ..._get(overrides, 'Icon', {})
+      }
     },
     Table: {
       borderColor: p('grayLightest'),

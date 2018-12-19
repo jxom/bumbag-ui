@@ -56,11 +56,11 @@ describe('states', () => {
 });
 
 it('renders correctly for an input with a before component', () => {
-  const { container } = render(<Input before={<Input.Icon a11yLabel="Search" icon="search" />} />);
+  const { container } = render(<Input before={<Input.Icon a11yLabel="Search" icon="info-circle" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for an input with a after component', () => {
-  const { container } = render(<Input after={<Input.Icon a11yLabel="Search" icon="search" />} />);
+  const { container } = render(<Input after={<Input.Icon a11yLabel="Search" icon="info-circle" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });

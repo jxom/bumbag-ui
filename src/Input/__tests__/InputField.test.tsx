@@ -96,11 +96,11 @@ it('renders correctly for addon component (vertical)', () => {
 });
 
 it('renders correctly for an input with a before component', () => {
-  const { container } = render(<InputField before={<Input.Icon a11yLabel="Search" icon="search" />} />);
+  const { container } = render(<InputField before={<Input.Icon a11yLabel="Search" icon="info-circle" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 it('renders correctly for an input with a after component', () => {
-  const { container } = render(<InputField after={<Input.Icon a11yLabel="Search" icon="search" />} />);
+  const { container } = render(<InputField after={<Input.Icon a11yLabel="Search" icon="info-circle" />} />);
   expect(container.firstChild).toMatchSnapshot();
 });

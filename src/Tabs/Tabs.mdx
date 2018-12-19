@@ -137,18 +137,20 @@ Tabs can also be center or right aligned.
 
 ## Icons
 
+**Note:** To use tab icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
+
 <Playground>
   <Tabs.Container>
     {tabs => (
       <Tabs>
         <Tabs.Tab tab="documents" {...tabs}>
-          <Icon icon="file" marginRight="xxsmall" /> Documents
+          <Icon icon="solid-file" marginRight="xxsmall" /> Documents
         </Tabs.Tab>
         <Tabs.Tab tab="messages" {...tabs}>
-          <Icon icon="comments" marginRight="xxsmall" /> Messages
+          <Icon icon="solid-comments" marginRight="xxsmall" /> Messages
         </Tabs.Tab>
         <Tabs.Tab tab="profile" {...tabs}>
-          <Icon icon="user" marginRight="xxsmall" /> Profile
+          <Icon icon="solid-user" marginRight="xxsmall" /> Profile
         </Tabs.Tab>
       </Tabs>
     )}
@@ -162,13 +164,13 @@ Tabs can also be center or right aligned.
     {tabs => (
       <Tabs type="boxed">
         <Tabs.Tab tab="documents" {...tabs}>
-          <Icon icon="file" marginRight="xxsmall" /> Documents
+          <Icon icon="solid-file" marginRight="xxsmall" /> Documents
         </Tabs.Tab>
         <Tabs.Tab tab="messages" {...tabs}>
-          <Icon icon="comments" marginRight="xxsmall" /> Messages
+          <Icon icon="solid-comments" marginRight="xxsmall" /> Messages
         </Tabs.Tab>
         <Tabs.Tab tab="profile" {...tabs}>
-          <Icon icon="user" marginRight="xxsmall" /> Profile
+          <Icon icon="solid-user" marginRight="xxsmall" /> Profile
         </Tabs.Tab>
       </Tabs>
     )}

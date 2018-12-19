@@ -55,17 +55,19 @@ Colors can be added to a button with the `palette` prop.
 
 ## Icons
 
-You can add icons to your buttons with the `iconBefore` or `iconAfter` prop. Fannypack uses the [free Font Awesome Icon Set](https://fontawesome.com/icons?d=gallery&m=free) by default.
+You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
+
+**Note:** To use button icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
 
 <Playground>
   <Set>
-    <Button iconBefore="clipboard">
+    <Button iconBefore="solid-clipboard">
       Copy
     </Button>
-    <Button iconBefore="pen" palette="primary">
+    <Button iconBefore="solid-pen" palette="primary">
       Edit
     </Button>
-    <Button iconAfter="long-arrow-alt-right">
+    <Button iconAfter="solid-long-arrow-alt-right">
       Continue
     </Button>
   </Set>

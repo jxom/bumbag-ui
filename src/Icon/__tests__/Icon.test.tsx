@@ -4,14 +4,14 @@ import Icon from '../Icon';
 import { Size } from '../../types';
 
 it('renders correctly for a basic icon', () => {
-  const { container } = render(<Icon a11yLabel="Settings" icon="cog" />);
+  const { container } = render(<Icon a11yLabel="Settings" icon="info-circle" />);
   expect(container.firstChild).toMatchSnapshot();
 });
 
 describe('colors', () => {
   ['danger', 'success', 'warning', 'primary'].forEach(color => {
     it(`renders correctly for an icon with color ${color}`, () => {
-      const { container } = render(<Icon a11yLabel="Settings" color={color} icon="cog" />);
+      const { container } = render(<Icon a11yLabel="Settings" color={color} icon="info-circle" />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -20,7 +20,7 @@ describe('colors', () => {
 describe('sizes', () => {
   ['small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge'].forEach(size => {
     it(`renders correctly for an icon with size ${size}`, () => {
-      const { container } = render(<Icon a11yLabel="Settings" size={size as Size} icon="cog" />);
+      const { container } = render(<Icon a11yLabel="Settings" size={size as Size} icon="info-circle" />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });

@@ -1,4 +1,6 @@
 import { InterpolationValue } from 'styled-components';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { ParsedIcons, Opts as ParseIconsOpts } from '../parseIcons';
 
 export type Stylesheet = InterpolationValue[];
 export type AvatarThemeConfig = {
@@ -166,6 +168,12 @@ export type HeadingThemeConfig = {
 };
 export type IconThemeConfig = {
   base?: Stylesheet;
+  iconSets?: Array<{
+    icons: IconDefinition[];
+    prefix?: ParseIconsOpts['prefix'];
+    type: ParseIconsOpts['type'];
+  }>;
+  icons?: ParsedIcons;
   iconNames?: {
     info?: string;
     warning?: string;

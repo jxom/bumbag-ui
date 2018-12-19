@@ -75,7 +75,6 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
 
   render = () => {
     const { children, className, codeClassName, isBlock, lang, showLineNumbers, ...props } = this.props;
-    console.log(defaultTheme);
     return (
       <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter

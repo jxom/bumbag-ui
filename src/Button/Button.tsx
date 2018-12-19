@@ -5,6 +5,7 @@ import styled from '../styled';
 import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
 import { Omit, ButtonType, buttonTypePropType, Size, sizePropType } from '../types';
+import { LocalIconProps, iconPropTypes } from '../Icon/Icon';
 import Spinner from '../Spinner';
 import _Button, { ButtonIcon } from './styled';
 
@@ -32,9 +33,9 @@ export type LocalButtonProps = {
   disabled?: boolean;
   id?: string;
   /** Icon that appears on the right side of the button. */
-  iconAfter?: string;
+  iconAfter?: LocalIconProps['icon'];
   /** Icon that appears on the left side of the button. */
-  iconBefore?: string;
+  iconBefore?: LocalIconProps['icon'];
   /** Adds a loading indicator to the button. */
   isLoading?: boolean;
   /** Makes the button not interactable. */
@@ -101,8 +102,8 @@ export const buttonPropTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
-  iconAfter: PropTypes.string,
-  iconBefore: PropTypes.string,
+  iconAfter: iconPropTypes['icon'],
+  iconBefore: iconPropTypes['icon'],
   isLoading: PropTypes.bool,
   isStatic: PropTypes.bool,
   kind: buttonTypePropType,
