@@ -1,7 +1,7 @@
 // @ts-ignore
 import _camelCase from 'lodash/camelCase';
 
-import { css } from '../styled';
+import { css, space } from '../styled';
 import { ThemeConfig } from '../types';
 
 const buildColorFromPalette = (property: string, { theme, ...props }: { theme: ThemeConfig }) => {
@@ -14,9 +14,9 @@ const buildColorFromPalette = (property: string, { theme, ...props }: { theme: T
   return `${property}: ${color} !important;`;
 };
 
-const buildSpacingFromTheme = (property: string, { theme, ...props }: { theme: { fannypack: ThemeConfig } }) => {
+const buildSpacingFromTheme = (property: string, props: { theme: { fannypack: ThemeConfig } }) => {
   // @ts-ignore
-  let spacing = theme.fannypack.layout.spacing[props[_camelCase(property)]];
+  let spacing = space(props[_camelCase(property)])(props);
   if (!spacing) return;
   return `${property}: ${spacing}rem !important;`;
 };

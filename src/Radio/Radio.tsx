@@ -73,7 +73,7 @@ export const Radio: React.FunctionComponent<LocalRadioProps> = ({
       value={value}
     />
     <RadioIcon state={state} />
-    <Text id="label" htmlFor={a11yId} marginLeft="xxsmall">
+    <Text id="label" htmlFor={a11yId} marginLeft="2u">
       {label}
     </Text>
   </_Radio>

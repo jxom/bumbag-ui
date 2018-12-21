@@ -214,18 +214,7 @@ export type LayoutThemeConfig = {
   widescreenBreakpoint?: number;
   fullHDBreakpoint?: number;
   gapFactor?: number;
-  spacing?: {
-    xxxsmall?: number;
-    xxsmall?: number;
-    xsmall?: number;
-    small?: number;
-    medium?: number;
-    large?: number;
-    xlarge?: number;
-    xxlarge?: number;
-    xxxlarge?: number;
-    xxxxlarge?: number;
-  };
+  spacingUnit?: number;
 };
 export type LinkThemeConfig = {
   base?: Stylesheet;

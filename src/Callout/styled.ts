@@ -1,6 +1,4 @@
-import { palette, theme } from 'styled-tools';
-
-import styled, { css } from '../styled';
+import styled, { css, space, palette, theme } from '../styled';
 import CardCard from '../Card/CardCard';
 import CardHeader from '../Card/CardHeader';
 import CardContent from '../Card/CardContent';
@@ -84,7 +82,7 @@ export const CalloutFooter = styled(CardFooter)`
 `;
 
 export const CalloutIcon = styled(Icon)<IconProps>`
-  margin-right: ${theme('fannypack.layout.spacing.xsmall')}rem;
+  margin-right: ${space(4)}rem;
 
   & {
     ${theme('fannypack.Callout.Icon.base')};

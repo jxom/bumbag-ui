@@ -79,7 +79,7 @@ export const Switch: React.FunctionComponent<LocalSwitchProps> = ({
     />
     <SwitchIcon state={state} />
     {label && (
-      <Text id="label" htmlFor={id} marginLeft="xxsmall">
+      <Text id="label" htmlFor={id} marginLeft="2u">
         {label}
       </Text>
     )}

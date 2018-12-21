@@ -25,7 +25,7 @@ Set.propTypes = {
 Set.defaultProps = {
   className: undefined,
   isVertical: false,
-  spacing: 'xxsmall'
+  spacing: '2u'
 };
 
 // @ts-ignore

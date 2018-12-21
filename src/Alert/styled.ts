@@ -1,6 +1,6 @@
 import { palette, theme } from 'styled-tools';
 import { Box } from '../primitives';
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import Button from '../Button';
 import Heading from '../Heading';
 import { AlertProps } from './Alert';
@@ -8,7 +8,7 @@ import { AlertCloseProps } from './AlertClose';
 
 export const AlertTitle = styled(Heading)`
   font-weight: ${theme('fannypack.fontWeights.semibold')};
-  margin-bottom: ${theme('fannypack.layout.spacing.xxsmall')}rem;
+  margin-bottom: ${space(2)}rem;
 
   & {
     ${theme('fannypack.Alert.Title.base')};
