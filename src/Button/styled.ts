@@ -161,7 +161,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${props => palette(props.palette === 'default' ? 'primaryLighter' : `${props.palette}Lighter`)(props)}
+    box-shadow: ${props => palette(props.palette === 'default' ? 'primary300' : `${props.palette}300`)(props)}
       0px 0px 0px 2px;
   }
 
@@ -172,7 +172,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   ${props =>
     props.palette === 'default' &&
     css`
-      border: 1px solid ${palette('grayLightest')};
+      border: 1px solid ${palette('gray100')};
     `};
 
   ${props => props.styledSize && sizeProperties[props.styledSize || '']};

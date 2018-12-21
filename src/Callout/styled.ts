@@ -47,7 +47,7 @@ export const CalloutClose = styled(Button)<CalloutCloseProps>`
   text-align: right;
 
   &:hover {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     & {
       ${theme('fannypack.Callout.Close.hover')};
     }

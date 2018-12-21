@@ -27,7 +27,7 @@ export const DialogContent = styled(Box)<DialogContentProps>`
 `;
 export const DialogHeader = styled(Box)<DialogHeaderProps>`
   align-items: center;
-  background-color: ${palette('whiteDarker')};
+  background-color: ${palette('white700')};
   display: flex;
   justify-content: space-between;
   padding: ${theme('fannypack.layout.spacing.small')}rem;
@@ -40,7 +40,7 @@ export const DialogHeader = styled(Box)<DialogHeaderProps>`
 export const DialogFooter = styled(Box)<DialogFooterProps>`
   display: flex;
   align-items: center;
-  background-color: ${palette('whiteDarker')};
+  background-color: ${palette('white700')};
   padding: ${theme('fannypack.layout.spacing.xsmall')}rem ${theme('fannypack.layout.spacing.xsmall')}rem;
   width: 100%;
 
@@ -61,7 +61,7 @@ export const DialogClose = styled(Button)<DialogCloseProps>`
   padding: 0px;
 
   &:hover {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     & {
       ${theme('fannypack.Dialog.Close.hover')};
     }

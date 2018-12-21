@@ -60,8 +60,8 @@ const sizeProperties: any = {
 };
 
 const stateProperties = css`
-  border-color: ${(props: any) => palette(`${props.state}Lighter`)(props)};
-  box-shadow: ${(props: any) => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${(props: any) => palette(`${props.state}300`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
 `;
 
 export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize: LocalTextareaProps['size'] }>`
@@ -72,9 +72,9 @@ export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize:
   padding: 0.4em 0.6em;
 
   &[disabled] {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('grayLight')};
+    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Textarea.disabled')};
@@ -84,8 +84,8 @@ export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize:
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${palette('primaryLighter')};
-    box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
+    border-color: ${palette('primary300')};
+    box-shadow: ${palette('primary300')} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Textarea.focus')};

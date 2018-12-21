@@ -52,6 +52,6 @@ export const RatingStar = styled(Box)<RatingStarProps>`
   ${props => (props.size ? starSizes[props.size || ''] : null)};
 
   & path {
-    fill: ${props => (props.active ? theme('fannypack.Rating.Star.color')(props) || 'gold' : palette('whiteDarkest'))};
+    fill: ${props => (props.active ? theme('fannypack.Rating.Star.color')(props) || 'gold' : palette('white800'))};
   }
 `;

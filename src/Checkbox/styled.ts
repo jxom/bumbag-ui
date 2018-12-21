@@ -18,8 +18,8 @@ export const CheckboxIcon = styled(Box)<{ state?: string }>`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => palette(`${props.state}Lighter`)(props)};
-        box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+        border-color: ${props => palette(`${props.state}300`)(props)};
+        box-shadow: ${props => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
       `};
   }
 
@@ -48,7 +48,7 @@ export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
               left: calc(50% - 5px);
             `
           : css`
-              border: 0.1rem solid ${palette('primaryLighter')};
+              border: 0.1rem solid ${palette('primary300')};
               border-left-width: 0;
               border-top-width: 0;
               height: 10px;
@@ -58,7 +58,7 @@ export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
     }
   `,
   disabledCheckedIconCss: css`
-    border-color: ${palette('grayLighter')};
+    border-color: ${palette('gray300')};
   `,
   themePrefix: 'Checkbox'
 });

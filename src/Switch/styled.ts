@@ -8,7 +8,7 @@ import HiddenInput from '../_utils/HiddenInput';
 import { LocalSwitchProps } from './Switch';
 
 export const SwitchIcon = styled(Box)<{ state?: string }>`
-  background-color: ${palette('whiteDarker')};
+  background-color: ${palette('white700')};
   border: 1px solid #bdbdbd;
   border-radius: 1em;
   height: 1.5em;
@@ -19,8 +19,8 @@ export const SwitchIcon = styled(Box)<{ state?: string }>`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => palette(`${props.state}Lighter`)};
-        box-shadow: ${props => palette(`${props.state}Lighter`)} 0px 0px 0px 1px !important;
+        border-color: ${props => palette(`${props.state}300`)};
+        box-shadow: ${props => palette(`${props.state}300`)} 0px 0px 0px 1px !important;
       `};
   }
 
@@ -40,7 +40,7 @@ export const HiddenSwitch = HiddenInput<LocalSwitchProps>({
     border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
   `,
   disabledUncheckedIconCss: css`
-    background: ${palette('whiteDarker')};
+    background: ${palette('white700')};
   `,
   checkedIconCss: css`
     border-color: ${(props: any) => palette(props.palette || 'primary')};

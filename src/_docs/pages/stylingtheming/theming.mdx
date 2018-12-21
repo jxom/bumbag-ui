@@ -1,101 +1,27 @@
 ---
-name: Styling & Theming
-route: /styling
+name: Theming
+route: /styling/theming
+menu: Styling & Theming
 ---
 
 import { Playground } from 'docz';
-import PropsTable from '../_docs/components/PropsTable';
-import styled from '../styled';
-import { Box } from '../primitives';
-import Button from '../Button';
-import Text from '../Text';
+import PropsTable from '../../components/PropsTable';
+import styled from 'src/styled';
+import { Box } from 'src/primitives';
+import Button from 'src/Button';
+import Text from 'src/Text';
 
-# Styling & theming components
-
-## Styling
-
-There are **three** methods to style your Fannypack components (similar to [Reakit](https://reakit.io/guide/styling)):
-
-- [Using styled-components](#using-styled-components)
-- [Using inline styles](#inline-styles)
-- [Using themes](#theming)
-
-<hr style={{ marginTop: '2rem' }}/>
-
-### Using styled-components
-
-Fannypack uses [styled-components](https://www.styled-components.com/docs/basics#getting-started) internally to style components with a `styled` method.
-
-Here is a basic example using `styled` with **Fannypack**:
-
-```jsx
-import { Button, styled } from 'fannypack';
-
-const RedButton = styled(Button)`
-  background-color: red;
-  color: white;
-`;
-
-<RedButton>I am a red button!</RedButton>
-```
-
-<hr style={{ marginTop: '2rem' }}/>
-
-
-### Inline styles
-
-Alternatively, you can also use inline styles in Fannypack. These inline styles can be passed through as camel-cased props. Inline styling can be very useful for margins and paddings.
-
-Here is an example of using inline styling with **Fannypack**:
-
-<Playground>
-  <Box backgroundColor="primary" width="50px" height="50px" />
-  <Box backgroundColor="primary" marginTop="medium" width="50px" height="50px" />
-</Playground>
-
-#### Colors
-
-When using inline styling, you can specify a color from the palette with any color CSS property.
-
-Example:
-
-<Playground>
-  <Box backgroundColor="success" width="50px" height="50px" />
-</Playground>
-
-#### Margins & paddings
-
-You can also specify a humanized value for margins & paddings.
-
-<Playground>
-  <Box padding="large" marginLeft="xxlarge" marginRight="xxlarge" backgroundColor="primary" color="white">Hello world</Box>
-</Playground>
-
-Possible values are: `xxsmall`, `xsmall`, `small`, `medium`, `large`, `xlarge`, `xxlarge`. You can also pass the normal values like `5px`, `1rem`, `auto` as well if you prefer.
-
-#### Font sizes
-
-You can also specify a humanized value for font sizes.
-
-<Playground>
-  <Text fontSize="large">Hello world</Text>
-</Playground>
-
-Possible values are: `small`, `medium`, `large`, `xlarge`, `xxlarge`. You can also pass the normal values like `16px` and `1.5rem` as well if you prefer.
-
-<hr style={{ marginTop: '2rem' }}/>
-
-## Theming
+# Theming
 
 Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
-### Overriding the default theme (recommended)
+## Overriding the default theme (recommended)
 
 The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
 
 [Click here](https://github.com/fannypackui/fannypack/blob/master/src/themes/default.js) to see the default theme.
 
-#### Example
+### Example
 
 ```jsx
 import { ThemeProvider, css } from 'fannypack';
@@ -130,11 +56,11 @@ const App = () => (
 );
 ```
 
-### Creating your own theme (advanced)
+## Creating your own theme (advanced)
 
 If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
 
-#### Example
+### Example
 
 ```jsx
 import { ThemeProvider, defaultTheme } from 'fannypack';
@@ -147,7 +73,7 @@ const App = () => (
 ```
 
 
-### Theme Config Schema
+## Theme Reference
 
 ```jsx
 {
@@ -200,15 +126,16 @@ const App = () => (
   Textarea: TextareaThemeConfig
 }
 ```
-Core:
 
-- [GlobalThemeConfig](#globalthemeconfig)
+### Core
+
+- [GlobalThemeConfig](/styling/global-styles#theming)
 - [PaletteThemeConfig](/palette#theming)
 - [LayoutThemeConfig](#layoutthemeconfig)
 - [FontSizeThemeConfig](#fontsizethemeconfig)
 - [FontWeightsThemeConfig](#fontweightsthemeconfig)
 
-Components:
+### Components
 
 - [AlertThemeConfig] (/components/alert#theming)
 - [AvatarThemeConfig] (/components/avatar#theming)
@@ -249,16 +176,6 @@ Components:
 - [TextThemeConfig](/typography/text#theming)
 - [TextareaThemeConfig](/form/textarea#theming)
 
-#### GlobalThemeConfig
-
-The global theme config is injected into the global stylesheet of your app. It uses styled-component's [`createGlobalStyle`](https://www.styled-components.com/docs/api#createglobalstyle).
-
-```jsx
-{
-  base: css | Object
-}
-```
-
 #### LayoutThemeConfig
 
 The layout theme config is used to manage breakpoints & spacing (like paddings & margins).
@@ -272,13 +189,15 @@ The layout theme config is used to manage breakpoints & spacing (like paddings &
   fullHDBreakpoint: number,
   gapFactor: number,
   spacing: {
+    xxxsmall: number,
     xxsmall: number,
     xsmall: number,
     small: number,
     medium: number,
     large: number,
     xlarge: number,
-    xxlarge: number
+    xxlarge: number,
+    xxxlarge: number,
   }
 }
 ```
@@ -297,12 +216,12 @@ The layout theme config is used to manage breakpoints & spacing (like paddings &
     xxxsmall: 0.25,
     xxsmall: 0.5,
     xsmall: 1,
-    small: 1.5,
-    medium: 2,
-    large: 2.5,
-    xlarge: 3,
-    xxlarge: 3.5
-    xxxlarge: 4
+    small: 1.25,
+    medium: 1.5,
+    large: 2,
+    xlarge: 2.5,
+    xxlarge: 3,
+    xxxlarge: 3.5
   }
 }
 ```

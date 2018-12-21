@@ -31,7 +31,7 @@ function HiddenInput<T>({
       }
     }
     &[disabled] + ${Icon} {
-      background-color: ${palette('whiteDarker')};
+      background-color: ${palette('white700')};
       box-shadow: unset;
 
       &::before {
@@ -46,23 +46,23 @@ function HiddenInput<T>({
       }
     }
     &:checked:focus + ${Icon} {
-      border-color: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)};
-      box-shadow: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)} 0px 0px 0px 1px !important;
+      border-color: ${(props: any) => palette(`${props.palette || 'primary'}300`)};
+      box-shadow: ${(props: any) => palette(`${props.palette || 'primary'}300`)} 0px 0px 0px 1px !important;
 
       & {
         ${theme(`fannypack.${themePrefix}.focusChecked`)};
       }
     }
     &:focus + ${Icon} {
-      border-color: ${palette('primaryLighter')};
-      box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
+      border-color: ${palette('primary300')};
+      box-shadow: ${palette('primary300')} 0px 0px 0px 1px !important;
 
       & {
         ${theme(`fannypack.${themePrefix}.focus`)};
       }
     }
     &:not([disabled]):checked + ${Icon} {
-      border-color: ${(props: any) => palette(`${props.palette || 'primary'}Lighter`)};
+      border-color: ${(props: any) => palette(`${props.palette || 'primary'}300`)};
       ${checkedCss};
     }
     &:checked + ${Icon} {
@@ -72,7 +72,7 @@ function HiddenInput<T>({
         ${(props: any) =>
           props.state &&
           css`
-            box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
+            box-shadow: ${palette('primary300')} 0px 0px 0px 1px !important;
           `};
       }
 

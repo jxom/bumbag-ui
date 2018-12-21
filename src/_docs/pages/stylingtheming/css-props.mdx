@@ -1,0 +1,71 @@
+---
+name: CSS Props
+route: /styling/css-props
+menu: Styling & Theming
+order: 2
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../../components/PropsTable';
+import styled from 'src/styled';
+import { Box } from 'src/primitives';
+import Button from 'src/Button';
+import Text from 'src/Text';
+
+# CSS Props
+
+You can also use CSS-as-props in Fannypack. These CSS attributes can be passed through as camel-cased props. CSS props can be very useful for margins and paddings.
+
+Here is an example of using CSS props with Fannypack:
+
+<Playground>
+  <Box backgroundColor="blue" width="50px" height="50px" />
+  <Box backgroundColor="blue" marginTop="1rem" width="50px" height="50px" />
+</Playground>
+
+## Colors
+
+When using CSS props, you can specify a [**color from the palette**](/palette) with any color CSS property (`color`, `backgroundColor`, `borderColor`, etc).
+
+Or, you can specify a **CSS color** or **hex** value.
+
+Example:
+
+<Playground>
+  <Box backgroundColor="successTint" color="success" padding="1rem">
+    Hello world
+  </Box>
+  <Box backgroundColor="#ff0000" color="black" padding="1rem" marginTop="1rem">
+    Hello world
+  </Box>
+</Playground>
+
+## Spacing
+
+You can specify a [**spacing from the theme**]() for margins & paddings.
+
+Or, you can specify a **`px`**, **`em`** or **`rem`** unit.
+
+<Playground>
+  <Box padding="large" marginLeft="xxlarge" marginRight="xxlarge" backgroundColor="primary" color="white">Hello world</Box>
+</Playground>
+
+## Font sizes
+
+You can specify a [**font size from the theme**]() for font sizes.
+
+Or, you can specify a **`px`**, **`em`** or **`rem`** unit.
+
+<Playground>
+  <Text fontSize="large">Hello world</Text>
+</Playground>
+
+## Font weights
+
+You can specify a [**font weight from the theme**]() for font weights.
+
+Or, you can specify a CSS font weight value (e.g. `500` or `"bolder"`).
+
+<Playground>
+  <Text fontWeight="semibold">Hello world</Text>
+</Playground>

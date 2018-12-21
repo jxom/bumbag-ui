@@ -38,7 +38,7 @@ export const HintText = styled(_Text)`
 
 export const OptionalText = styled(_Text)`
   font-size: 0.8rem;
-  color: ${palette('textLightest')};
+  color: ${palette('text100')};
   margin-left: 0.5rem;
 
   & {

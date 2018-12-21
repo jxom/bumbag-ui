@@ -5,9 +5,9 @@ import { createGlobalStyle } from '../styled';
 export default createGlobalStyle`
   html, body {
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-      'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-family: ${props =>
+      theme('fannypack.global.fallbackFontFamily')(props) || theme('fannypack.global.fontFamily')(props)};
+    font-size: ${theme('fannypack.global.fontSize')}px;
     font-weight: ${theme('fannypack.fontWeights.normal')};
     line-height: 1.5;
     margin: 0;
@@ -20,6 +20,10 @@ export default createGlobalStyle`
     ${theme('fannypack.global.base')};
   }
 
+  html.wf-active, body {
+    font-family: ${theme('fannypack.global.fontFamily')};
+  }
+
   *,
   *::before,
   *::after {
@@ -27,7 +31,7 @@ export default createGlobalStyle`
   }
 
   *:focus {
-    outline: 2px solid ${palette('primaryLighter')};
+    outline: 2px solid ${palette('primary300')};
     outline-offset: 2px;
   }
 `;
