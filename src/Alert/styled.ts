@@ -33,7 +33,7 @@ export const AlertClose = styled(Button)<AlertCloseProps>`
         `};
 
   &:hover {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     & {
       ${theme('fannypack.Alert.Close.hover')};
     }
@@ -54,7 +54,7 @@ const tintAttributes = css<AlertProps>`
 
 export default styled(Box)<AlertProps>`
   background-color: white;
-  border: 1px solid ${palette('whiteDarkest')};
+  border: 1px solid ${palette('white800')};
   border-left: 4px solid ${props => props.type && palette(props.type)(props)};
   border-radius: 4px;
   position: relative;

@@ -1,0 +1,30 @@
+---
+name: Styled Components
+route: /styling/styled-components
+menu: Styling & Theming
+order: 1
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../../components/PropsTable';
+import styled from 'src/styled';
+import { Box } from 'src/primitives';
+import Button from 'src/Button';
+import Text from 'src/Text';
+
+# Styled Components
+
+Fannypack uses [styled-components](https://www.styled-components.com/docs/basics#getting-started) internally to style components with a `styled` function.
+
+Here is a basic example using `styled` with **Fannypack**:
+
+```jsx
+import { Button, styled } from 'fannypack';
+
+const RedButton = styled(Button)`
+  background-color: red;
+  color: white;
+`;
+
+<RedButton>I am a red button!</RedButton>
+```

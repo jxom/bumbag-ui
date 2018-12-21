@@ -22,10 +22,11 @@ const defaultPalette: { [key: string]: string } = {
 
 function theme(overrides: ThemeConfig = {}): ThemeConfig {
   const generateTextVariants = (textColor: string) => ({
+    text100: lighten(0.2, textColor),
+    text200: lighten(0.15, textColor),
+    text300: lighten(0.1, textColor),
+    text400: lighten(0.05, textColor),
     text: textColor,
-    textLight: lighten(0.05, textColor),
-    textLighter: lighten(0.1, textColor),
-    textLightest: lighten(0.2, textColor),
     textTint: tint(0.8, textColor),
     textInverted: readableColor(textColor),
     textTintInverted: shade(0.3, textColor)
@@ -40,14 +41,16 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
   }) => {
     const color = _get(overrides, `palette.${paletteKey}`) || defaultPalette[paletteKey];
     return {
+      [`${paletteKey}100`]: tint(0.7, color),
+      [`${paletteKey}200`]: tint(0.5, color),
+      [`${paletteKey}300`]: tint(0.3, color),
+      [`${paletteKey}400`]: tint(0.1, color),
       [paletteKey]: color,
-      [`${paletteKey}Light`]: tint(0.1, color),
-      [`${paletteKey}Lighter`]: tint(0.3, color),
-      [`${paletteKey}Lightest`]: tint(0.5, color),
-      [`${paletteKey}Dark`]: shade(0.1, color),
-      [`${paletteKey}Darker`]: shade(0.3, color),
-      [`${paletteKey}Darkest`]: shade(0.5, color),
-      [`${paletteKey}Tint`]: tint(0.8, color),
+      [`${paletteKey}600`]: shade(0.1, color),
+      [`${paletteKey}700`]: shade(0.3, color),
+      [`${paletteKey}800`]: shade(0.5, color),
+      [`${paletteKey}900`]: shade(0.7, color),
+      [`${paletteKey}Tint`]: tint(0.7, color),
       [`${paletteKey}Inverted`]: readableColor(color),
       [`${paletteKey}TintInverted`]: shade(0.5, color),
       ...(paletteOverrides ? paletteOverrides({ color }) : {})
@@ -70,23 +73,32 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
 
   return {
     ...overrides,
+    global: {
+      fontFamily:
+        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+      fontSize: 16,
+      ..._get(overrides, 'global', {})
+    },
     palette: {
       ...generateTextVariants(_get(overrides, 'palette.text') || defaultPalette.text),
 
       black: 'black',
 
       white: 'white',
-      whiteDark: darken(0.03, 'white'),
-      whiteDarker: darken(0.05, 'white'),
-      whiteDarkest: darken(0.1, 'white'),
+      white600: darken(0.03, 'white'),
+      white700: darken(0.05, 'white'),
+      white800: darken(0.1, 'white'),
+      white900: darken(0.15, 'white'),
 
-      grayLightest: lighten(0.2, 'gray'),
-      grayLighter: lighten(0.1, 'gray'),
-      grayLight: lighten(0.05, 'gray'),
+      gray100: lighten(0.2, 'gray'),
+      gray200: lighten(0.15, 'gray'),
+      gray300: lighten(0.1, 'gray'),
+      gray400: lighten(0.05, 'gray'),
       gray: 'gray',
-      grayDark: darken(0.05, 'gray'),
-      grayDarker: darken(0.1, 'gray'),
-      grayDarkest: darken(0.2, 'gray'),
+      gray600: darken(0.05, 'gray'),
+      gray700: darken(0.1, 'gray'),
+      gray800: darken(0.15, 'gray'),
+      gray900: darken(0.2, 'gray'),
 
       default: darken(0.01, 'white'),
       defaultInverted: '#435a6f',
@@ -119,6 +131,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       desktopBreakpoint: 1024,
       widescreenBreakpoint: 1200,
       fullHDBreakpoint: 1440,
+      ..._get(overrides, 'layout', {}),
       spacing: {
         xxxsmall: 0.25,
         xxsmall: 0.5,
@@ -130,16 +143,15 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
         xxlarge: 3,
         xxxlarge: 3.5,
         ..._get(overrides, 'layout.spacing', {})
-      },
-      ..._get(overrides, 'layout', {})
+      }
     },
     fontSizes: {
       small: 0.8,
-      medium: 1.5,
-      large: 2,
-      xlarge: 2.5,
-      xxlarge: 3,
-      xxxlarge: 4,
+      medium: 1.25,
+      large: 1.5,
+      xlarge: 2,
+      xxlarge: 2.5,
+      xxxlarge: 3,
       ..._get(overrides, 'fontSizes', {})
     },
     fontWeights: {
@@ -171,17 +183,17 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       }
     },
     Table: {
-      borderColor: p('grayLightest'),
+      borderColor: p('gray100'),
       spacing: t('fannypack.layout.spacing.xxsmall'),
+      ..._get(overrides, 'Table', {}),
       hover: {
-        backgroundColor: p('whiteDarker'),
+        backgroundColor: p('white700'),
         ..._get(overrides, 'Table.hover', {})
       },
       striped: {
-        backgroundColor: p('whiteDark'),
+        backgroundColor: p('white600'),
         ..._get(overrides, 'Table.striped', {})
-      },
-      ..._get(overrides, 'Table', {})
+      }
     }
   };
 }

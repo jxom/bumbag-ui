@@ -152,6 +152,9 @@ export type FontWeightsThemeConfig = {
 };
 export type GlobalThemeConfig = {
   base?: Stylesheet;
+  fontFamily?: string;
+  fallbackFontFamily?: string;
+  fontSize?: number;
 };
 export type GroupThemeConfig = {
   base?: Stylesheet;
@@ -212,6 +215,7 @@ export type LayoutThemeConfig = {
   fullHDBreakpoint?: number;
   gapFactor?: number;
   spacing?: {
+    xxxsmall?: number;
     xxsmall?: number;
     xsmall?: number;
     small?: number;
@@ -219,6 +223,8 @@ export type LayoutThemeConfig = {
     large?: number;
     xlarge?: number;
     xxlarge?: number;
+    xxxlarge?: number;
+    xxxxlarge?: number;
   };
 };
 export type LinkThemeConfig = {
@@ -247,9 +253,9 @@ export type OverlayThemeConfig = {
 };
 export type PaletteThemeConfig = {
   text?: string;
-  textLight?: string;
-  textLighter?: string;
-  textLightest?: string;
+  text400?: string;
+  text300?: string;
+  text100?: string;
   textTint?: string;
   textInverted?: string;
   textTintInverted?: string;
@@ -257,72 +263,74 @@ export type PaletteThemeConfig = {
   black?: string;
 
   white?: string;
-  whiteDark?: string;
-  whiteDarker?: string;
-  whiteDarkest?: string;
+  white600?: string;
+  white700?: string;
+  white800?: string;
 
-  grayLightest?: string;
-  grayLighter?: string;
-  grayLight?: string;
+  gray100?: string;
+  gray200?: string;
+  gray300?: string;
+  gray400?: string;
   gray?: string;
-  grayDark?: string;
-  grayDarker?: string;
-  grayDarkest?: string;
+  gray600?: string;
+  gray700?: string;
+  gray800?: string;
+  gray900?: string;
 
   default?: string;
   defaultInverted?: string;
 
+  primary200?: string;
+  primary300?: string;
+  primary400?: string;
   primary?: string;
-  primaryLight?: string;
-  primaryLighter?: string;
-  primaryLightest?: string;
-  primaryDark?: string;
-  primaryDarker?: string;
-  primaryDarkest?: string;
+  primary600?: string;
+  primary700?: string;
+  primary800?: string;
   primaryTint?: string;
   primaryInverted?: string;
   primaryTintInverted?: string;
 
+  info200?: string;
+  info300?: string;
+  info400?: string;
   info?: string;
-  infoLight?: string;
-  infoLighter?: string;
-  infoLightest?: string;
-  infoDark?: string;
-  infoDarker?: string;
-  infoDarkest?: string;
+  info600?: string;
+  info700?: string;
+  info800?: string;
   infoTint?: string;
   infoInverted?: string;
   infoTintInverted?: string;
 
+  success200?: string;
+  success300?: string;
+  success400?: string;
   success?: string;
-  successLight?: string;
-  successLighter?: string;
-  successLightest?: string;
-  successDark?: string;
-  successDarker?: string;
-  successDarkest?: string;
+  success600?: string;
+  success700?: string;
+  success800?: string;
   successTint?: string;
   successInverted?: string;
   successTintInverted?: string;
 
+  danger200?: string;
+  danger300?: string;
+  danger400?: string;
   danger?: string;
-  dangerLight?: string;
-  dangerLighter?: string;
-  dangerLightest?: string;
-  dangerDark?: string;
-  dangerDarker?: string;
-  dangerDarkest?: string;
+  danger600?: string;
+  danger700?: string;
+  danger800?: string;
   dangerTint?: string;
   dangerInverted?: string;
   dangerTintInverted?: string;
 
+  warning200?: string;
+  warning300?: string;
+  warning400?: string;
   warning?: string;
-  warningLight?: string;
-  warningLighter?: string;
-  warningLightest?: string;
-  warningDark?: string;
-  warningDarker?: string;
-  warningDarkest?: string;
+  warning600?: string;
+  warning700?: string;
+  warning800?: string;
   warningTint?: string;
   warningInverted?: string;
   warningTintInverted?: string;
@@ -489,6 +497,10 @@ export type TextareaThemeConfig = {
     large?: Stylesheet;
   };
 };
+export type WebFontLoader = {
+  [key: string]: Object;
+};
+
 export type ThemeConfig = {
   palette?: PaletteThemeConfig;
 
@@ -496,6 +508,7 @@ export type ThemeConfig = {
   layout?: LayoutThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
+  webFontLoader?: WebFontLoader;
 
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;

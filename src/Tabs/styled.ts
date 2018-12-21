@@ -34,7 +34,7 @@ export const Tab = styled(Tabs.Tab)<LocalTabProps>`
     ${theme('fannypack.Tabs.Tab.focus')};
   }
   &:not(.active):hover {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     border-bottom: 1px solid ${palette('textTint')};
     ${theme('fannypack.Tabs.Tab.hover')};
   }

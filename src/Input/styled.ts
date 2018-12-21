@@ -81,13 +81,13 @@ const wrapperSizeProperties: { [key: string]: any } = {
 };
 
 const stateProperties = css`
-  border-color: ${(props: any) => palette(`${props.state}Lighter`)(props)};
-  box-shadow: ${(props: any) => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${(props: any) => palette(`${props.state}300`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
 `;
 
 // @ts-ignore
 export const Icon: React.FunctionComponent<IconProps> = styled(_Icon)<IconProps>`
-  fill: ${palette('textLightest')};
+  fill: ${palette('text100')};
   height: 2.5em;
   margin: 0 0.75em;
   top: 0;
@@ -116,9 +116,9 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
   padding: 0.4em 0.6em;
 
   &[disabled] {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('grayLight')};
+    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Input.disabled')};
@@ -128,8 +128,8 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${(props: any) => palette('primaryLighter')(props)};
-    box-shadow: ${(props: any) => palette('primaryLighter')(props)} 0px 0px 0px 1px !important;
+    border-color: ${(props: any) => palette('primary300')(props)};
+    box-shadow: ${(props: any) => palette('primary300')(props)} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Input.focus')};

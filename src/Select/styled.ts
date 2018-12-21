@@ -83,8 +83,8 @@ const sizeProperties: any = {
 };
 
 const stateProperties = css<{ state: SelectProps['state'] }>`
-  border-color: ${props => palette(`${props.state}Lighter`)(props)};
-  box-shadow: ${props => palette(`${props.state}Lighter`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${props => palette(`${props.state}300`)(props)};
+  box-shadow: ${props => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
 `;
 
 export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
@@ -103,9 +103,9 @@ export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
   width: 100%;
 
   &[disabled] {
-    background: ${palette('whiteDarker')};
+    background: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('grayLight')};
+    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Select.disabled')};
@@ -113,14 +113,14 @@ export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
   }
 
   &[disabled] + ${Icon} {
-    fill: ${palette('grayLight')};
+    fill: ${palette('gray400')};
   }
 
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${palette('primaryLighter')};
-    box-shadow: ${palette('primaryLighter')} 0px 0px 0px 1px !important;
+    border-color: ${palette('primary300')};
+    box-shadow: ${palette('primary300')} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Select.focus')};

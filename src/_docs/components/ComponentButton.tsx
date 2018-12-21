@@ -14,12 +14,12 @@ const Wrapper = styled(Pane)`
   text-decoration: none;
 
   &:hover {
-    background-color: ${palette('whiteDarker')};
+    background-color: ${palette('white700')};
   }
 `;
 
 const IconWrapper = styled(Pane)`
-  border: 1px solid ${palette('primaryLighter')};
+  border: 1px solid ${palette('primary300')};
   align-items: center;
   justify-content: center;
 `;

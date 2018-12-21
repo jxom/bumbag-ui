@@ -1,0 +1,130 @@
+---
+name: Fonts
+route: /styling/fonts
+menu: Styling & Theming
+order: 3
+---
+
+import { Playground } from 'docz';
+import Text from 'src/Text';
+
+# Fonts
+
+By default, Fannypack uses the following fonts as it's default font set:
+
+```css
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+```
+
+You can change the font family through the [Fannypack theme](/styling/theming) via `global.fontFamily`:
+
+```jsx
+import { css, ThemeProvider } from 'fannypack';
+
+const theme = {
+  global: {
+    fontFamily: 'Comic Sans MS'
+  }
+}
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    {/* your app... */}
+  </ThemeProvider>
+)
+```
+
+## Loading Custom Fonts via Web Font Loader
+
+Fannypack uses [Typekit's Web Font Loader](https://github.com/typekit/webfontloader) which allows you to load in fonts regardless of the source - without `<link>`, `@font-face` or `@import`. You can asynchronously load in fonts from Google Fonts, Typekit, Fonts.com, and Fontdeck, as well as self-hosted web fonts. [Click here to read more about it.](https://github.com/typekit/webfontloader)
+
+To load in a custom font via **Web Font Loader**, add the [config](https://github.com/typekit/webfontloader#google) in the [Fannypack Theme](/styling/theming). Below is an example of loading in a **Google font**.
+
+```jsx
+const theme = {
+  webFontLoader: {
+    google: {
+      families: ['Lato:400,700']
+    }
+  },
+  global: {
+    fontFamily: "'Lato', sans-serif",
+    fallbackFontFamily: 'sans-serif'
+  },
+  fontWeights: {
+    normal: 400,
+    bold: 700
+  }
+}
+```
+
+**Note:** It is recommended that you set a fallback font family when loading in a custom font so the browser can use the fallback font and switch over when the custom font has loaded.
+
+## Font Weights
+
+Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
+
+<Playground>
+  <Text fontWeight="normal">Normal text</Text><br/>
+  <Text fontWeight="semibold">Semibold text</Text><br/>
+  <Text fontWeight="bold">Bold text</Text>
+</Playground>
+
+You can also access the font weights in Styled Components through the Fannypack Theme:
+
+```jsx
+const BoldText = styled(Text)`
+  font-weight: ${props => props.theme.fannypack.fontWeights.bold};
+`;
+```
+
+## Font Sizes
+
+Fannypack currently has six font sizes: `small`, `medium`, `large`, `xlarge`, `xxlarge` and `xxxlarge`. You can also add your own custom font sizes in the theme config if you wish.
+
+<Playground>
+  <Text fontSize="small">Small text</Text><br/>
+  <Text>Normal text</Text><br/>
+  <Text fontSize="medium">Medium text</Text><br/>
+  <Text fontSize="large">Large text</Text><br/>
+  <Text fontSize="xlarge">XLarge text</Text><br/>
+  <Text fontSize="xxlarge">XXLarge text</Text><br/>
+  <Text fontSize="xxxlarge">XXXLarge text</Text><br/>
+</Playground>
+
+You can also access the font weights in Styled Components through the Fannypack Theme:
+
+```jsx
+const BoldText = styled(Text)`
+  font-size: ${props => props.theme.fannypack.fontSizes.large};
+`;
+```
+
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  global: {
+    base: css | string
+  },
+  fontWeights: {
+    // These are the default required font weights, but you can also add your own.
+    normal: number,
+    semibold: number,
+    bold: number
+  },
+  fontSizes: {
+    // These are the default required font sizes, but you can also add your own.
+    small: number,
+    medium: number,
+    large: number,
+    xlarge: number,
+    xxlarge: number,
+    xxxlarge: number
+  }
+}
+```
+

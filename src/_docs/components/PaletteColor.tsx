@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { withTheme } from '../../styled';
 import { Box, Flex } from '../../primitives';
-import Code from '../../Code';
+import Pane from '../../Pane';
+import Text from '../../Text';
 
 export type PaletteColorProps = {
   palette: string;
@@ -10,12 +11,20 @@ export type PaletteColorProps = {
 
 const PaletteColor: React.FunctionComponent<PaletteColorProps> = ({ palette, theme, ...props }) => {
   return (
-    <Flex column alignItems="center">
-      <Box marginBottom="1rem">
-        <Code>{palette}</Code>
-      </Box>
-      <Box height="40px" borderRadius="4px" backgroundColor={theme.palette[palette]} width="180px" {...props} />
-    </Flex>
+    <Pane border="shadow">
+      <Flex flexDirection="column">
+        <Box borderRadius="2px" height="60px" backgroundColor={theme.palette[palette]} width="180px" {...props} />
+        <Box padding="xxsmall" lineHeight="1">
+          <Text fontSize="small" marginBottom="xxxsmall">
+            {palette}
+          </Text>
+          <br />
+          <Text color="text100" fontSize="small">
+            {theme.palette[palette]}
+          </Text>
+        </Box>
+      </Flex>
+    </Pane>
   );
 };
 
