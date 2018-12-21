@@ -13,7 +13,7 @@ export default () => {
     <Box>
       {Object.keys(sectionTitles).map((section: string) => (
         <React.Fragment key={section}>
-          <Heading use="h4" marginTop="8u">
+          <Heading use="h4" marginTop="8x">
             {sectionTitles[section]}
           </Heading>
           <Columns>

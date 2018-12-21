@@ -6,8 +6,8 @@ export default (_scale: number | string | void) => (props: { theme: { fannypack:
   let scale = _scale;
   if (!scale) return 0;
   if (typeof scale === 'string') {
-    if (!scale.includes('u')) return 0;
-    scale = parseFloat(scale.replace('u', ''));
+    if (!scale.includes('x')) return 0;
+    scale = parseFloat(scale.replace('x', ''));
   }
   if (isNaN(scale)) return 0;
   const unit: number = _get(props, 'theme.fannypack.layout.spacingUnit');

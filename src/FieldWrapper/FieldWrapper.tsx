@@ -41,7 +41,7 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
   validationText,
   ...props
 }) => {
-  const elementProps: FieldElementProps = { isFullWidth, isRequired, a11yId, state, marginTop: '2u' };
+  const elementProps: FieldElementProps = { isFullWidth, isRequired, a11yId, state, marginTop: '2x' };
   return (
     <_FieldWrapper display="inline-block" isFullWidth={isFullWidth} {...props}>
       {label && (

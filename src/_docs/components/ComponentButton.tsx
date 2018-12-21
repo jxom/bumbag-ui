@@ -50,7 +50,7 @@ class ComponentButton extends React.PureComponent<Props> {
             <Icon />
           )}
         </IconWrapper>
-        <Heading use="h6" marginTop="2u" isSubHeading>
+        <Heading use="h6" marginTop="2x" isSubHeading>
           {name}
         </Heading>
       </Wrapper>

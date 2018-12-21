@@ -12,7 +12,7 @@ export type LocalLabelProps = {
 export type LabelProps = LocalLabelProps & ReakitLabelProps;
 
 export const Label: React.FunctionComponent<LocalLabelProps> = ({ children, className, ...props }) => (
-  <_Label className={className} fontWeight="600" marginBottom="1u" {...props}>
+  <_Label className={className} fontWeight="600" marginBottom="1x" {...props}>
     {children}
   </_Label>
 );
