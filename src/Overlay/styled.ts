@@ -2,7 +2,7 @@ import { InterpolationValue } from 'styled-components';
 import { theme } from 'styled-tools';
 import Overlay from 'reakit/Overlay';
 
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { OverlayProps } from './Overlay';
 import { OverlayHideProps } from './OverlayHide';
 import { OverlayShowProps } from './OverlayShow';
@@ -25,7 +25,7 @@ const getPlacementAttributes = (props: OverlayProps) => {
   const placementAttributes: { [key: string]: InterpolationValue[] } = {
     // @ts-ignore
     top: css`
-      top: ${theme('fannypack.layout.spacing.small')}em;
+      top: ${space(5)}em;
       left: 50%;
       transform: translate3d(-50%, 0, 0px);
 
@@ -33,7 +33,7 @@ const getPlacementAttributes = (props: OverlayProps) => {
     `,
     // @ts-ignore
     bottom: css`
-      bottom: ${theme('fannypack.layout.spacing.small')}em;
+      bottom: ${space(5)}em;
       left: 50%;
       transform: translate3d(-50%, 0, 0px);
 
@@ -42,7 +42,7 @@ const getPlacementAttributes = (props: OverlayProps) => {
     // @ts-ignore
     left: css`
       top: 50%;
-      left: ${theme('fannypack.layout.spacing.small')}em;
+      left: ${space(5)}em;
       transform: translate3d(0px, -50%, 0px);
 
       ${getHiddenAttributes({ transformX: 'calc(50% - 100%)', transformY: '-50%' })};
@@ -50,39 +50,39 @@ const getPlacementAttributes = (props: OverlayProps) => {
     // @ts-ignore
     right: css`
       top: 50%;
-      right: ${theme('fannypack.layout.spacing.small')}em;
+      right: ${space(5)}em;
       transform: translate3d(0px, -50%, 0px);
 
       ${getHiddenAttributes({ transformX: 'calc(50% + 100%)', transformY: '-50%' })};
     `,
     // @ts-ignore
     'top-start': css`
-      top: ${theme('fannypack.layout.spacing.small')}em;
-      left: ${theme('fannypack.layout.spacing.small')}em;
+      top: ${space(5)}em;
+      left: ${space(5)}em;
       transform: translate3d(0, 0, 0px);
 
       ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% - 100%)' })};
     `,
     // @ts-ignore
     'top-end': css`
-      top: ${theme('fannypack.layout.spacing.small')}em;
-      right: ${theme('fannypack.layout.spacing.small')}em;
+      top: ${space(5)}em;
+      right: ${space(5)}em;
       transform: translate3d(0, 0, 0px);
 
       ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% - 100%)' })};
     `,
     // @ts-ignore
     'bottom-end': css`
-      bottom: ${theme('fannypack.layout.spacing.small')}em;
-      right: ${theme('fannypack.layout.spacing.small')}em;
+      bottom: ${space(5)}em;
+      right: ${space(5)}em;
       transform: translate3d(0, 0, 0px);
 
       ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% + 100%)' })};
     `,
     // @ts-ignore
     'bottom-start': css`
-      bottom: ${theme('fannypack.layout.spacing.small')}em;
-      left: ${theme('fannypack.layout.spacing.small')}em;
+      bottom: ${space(5)}em;
+      left: ${space(5)}em;
       transform: translate3d(0, 0, 0px);
 
       ${getHiddenAttributes({ transformX: '0', transformY: 'calc(50% + 100%)' })};

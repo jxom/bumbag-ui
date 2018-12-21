@@ -14,7 +14,7 @@ it('renders correctly for a basic set', () => {
 
 it('renders correctly for a set with custom spacing', () => {
   const { container } = render(
-    <Set spacing="large">
+    <Set spacing="minor-8">
       <div>test</div>
       <div>test</div>
     </Set>

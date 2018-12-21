@@ -1,7 +1,7 @@
 import { theme } from 'styled-tools';
 import _Tooltip from 'reakit/Tooltip';
 
-import styled from '../styled';
+import styled, { space } from '../styled';
 import { LocalTooltipProps } from './Tooltip';
 
 const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
@@ -11,7 +11,7 @@ const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
   opacity: 0.8;
   font-size: ${theme('fannypack.fontSizes.small')}rem;
   font-weight: ${theme('fannypack.fontWeights.normal')};
-  padding: ${theme('fannypack.layout.spacing.xxxsmall')}rem ${theme('fannypack.layout.spacing.xxsmall')}rem;
+  padding: ${space(1)}rem ${space(2)}rem;
 
   & {
     ${theme('fannypack.Tooltip.base')};

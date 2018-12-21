@@ -1,6 +1,6 @@
 import { palette, theme } from 'styled-tools';
 
-import styled from '../styled';
+import styled, { space } from '../styled';
 import { Box } from '../primitives';
 import Button from '../Button';
 // @ts-ignore
@@ -16,7 +16,7 @@ import { DialogHeaderProps } from './DialogHeader';
 import { DialogIconProps } from './DialogIcon';
 
 export const DialogContent = styled(Box)<DialogContentProps>`
-  padding: ${theme('fannypack.layout.spacing.small')}rem;
+  padding: ${space(5)}rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
@@ -30,7 +30,7 @@ export const DialogHeader = styled(Box)<DialogHeaderProps>`
   background-color: ${palette('white700')};
   display: flex;
   justify-content: space-between;
-  padding: ${theme('fannypack.layout.spacing.small')}rem;
+  padding: ${space(5)}rem;
   width: 100%;
 
   & {
@@ -41,7 +41,7 @@ export const DialogFooter = styled(Box)<DialogFooterProps>`
   display: flex;
   align-items: center;
   background-color: ${palette('white700')};
-  padding: ${theme('fannypack.layout.spacing.xsmall')}rem ${theme('fannypack.layout.spacing.xsmall')}rem;
+  padding: ${space(4)}rem ${space(4)}rem;
   width: 100%;
 
   & {
@@ -73,7 +73,7 @@ export const DialogClose = styled(Button)<DialogCloseProps>`
 `;
 
 export const DialogIcon = styled(Icon)<DialogIconProps>`
-  margin-right: ${theme('fannypack.layout.spacing.xxsmall')}rem;
+  margin-right: ${space(2)}rem;
 
   & {
     ${theme('fannypack.Dialog.Icon.base')};

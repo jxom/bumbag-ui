@@ -1,5 +1,6 @@
 import { darken, lighten, shade, tint, readableColor } from 'polished';
 import { palette as p, theme as t } from 'styled-tools';
+import { space } from '../styled';
 // @ts-ignore
 import _get from 'lodash/get';
 import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
@@ -46,6 +47,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       [`${paletteKey}300`]: tint(0.3, color),
       [`${paletteKey}400`]: tint(0.1, color),
       [paletteKey]: color,
+      [`${paletteKey}500`]: color,
       [`${paletteKey}600`]: shade(0.1, color),
       [`${paletteKey}700`]: shade(0.3, color),
       [`${paletteKey}800`]: shade(0.5, color),
@@ -83,8 +85,10 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       ...generateTextVariants(_get(overrides, 'palette.text') || defaultPalette.text),
 
       black: 'black',
+      black500: 'black',
 
       white: 'white',
+      white500: 'white',
       white600: darken(0.03, 'white'),
       white700: darken(0.05, 'white'),
       white800: darken(0.1, 'white'),
@@ -95,6 +99,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       gray300: lighten(0.1, 'gray'),
       gray400: lighten(0.05, 'gray'),
       gray: 'gray',
+      gray500: 'gray',
       gray600: darken(0.05, 'gray'),
       gray700: darken(0.1, 'gray'),
       gray800: darken(0.15, 'gray'),
@@ -125,25 +130,15 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       ..._get(overrides, 'palette', {})
     },
     layout: {
-      gapFactor: 0.5,
+      gapFactor: space(2),
       mobileBreakpoint: 480,
       tabletBreakpoint: 768,
       desktopBreakpoint: 1024,
       widescreenBreakpoint: 1200,
       fullHDBreakpoint: 1440,
-      ..._get(overrides, 'layout', {}),
-      spacing: {
-        xxxsmall: 0.25,
-        xxsmall: 0.5,
-        xsmall: 1,
-        small: 1.25,
-        medium: 1.5,
-        large: 2,
-        xlarge: 2.5,
-        xxlarge: 3,
-        xxxlarge: 3.5,
-        ..._get(overrides, 'layout.spacing', {})
-      }
+      minorUnit: 4,
+      majorUnit: 8,
+      ..._get(overrides, 'layout', {})
     },
     fontSizes: {
       small: 0.8,
@@ -184,7 +179,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
     },
     Table: {
       borderColor: p('gray100'),
-      spacing: t('fannypack.layout.spacing.xxsmall'),
+      spacing: space(2),
       ..._get(overrides, 'Table', {}),
       hover: {
         backgroundColor: p('white700'),

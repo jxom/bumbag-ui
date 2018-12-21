@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { Box } from '../primitives';
 import { CardCardProps } from './CardCard';
 import { CardContentProps } from './CardContent';
@@ -33,7 +33,7 @@ export const CardHeader = styled(Box)<CardHeaderProps>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: ${theme('fannypack.layout.spacing.xsmall')}em;
+  padding-bottom: ${space(4)}em;
   position: relative;
   width: 100%;
 
@@ -43,7 +43,7 @@ export const CardHeader = styled(Box)<CardHeaderProps>`
 `;
 export const CardFooter = styled(Box)<CardFooterProps>`
   display: flex;
-  padding-top: ${theme('fannypack.layout.spacing.xsmall')}rem;
+  padding-top: ${space(4)}rem;
   width: 100%;
 
   & {

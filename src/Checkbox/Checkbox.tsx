@@ -77,7 +77,7 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
     />
     <CheckboxIcon state={state} />
     {label && (
-      <Text id="label" htmlFor={id} marginLeft="xxsmall">
+      <Text id="label" htmlFor={id} marginLeft="minor-2">
         {label}
       </Text>
     )}

@@ -1,5 +1,4 @@
-import { theme } from 'styled-tools';
-import styled from '../styled';
+import styled, { space, theme } from '../styled';
 import _Callout from '../Callout';
 import Overlay from '../Overlay';
 import { LocalCalloutOverlayProps } from './CalloutOverlay';
@@ -7,7 +6,7 @@ import { LocalCalloutOverlayProps } from './CalloutOverlay';
 export const Callout = styled(_Callout)`
   max-width: 500px;
 
-  @media screen and (max-width: calc(500px + ${theme('fannypack.layout.spacing.small')}em)) {
+  @media screen and (max-width: calc(500px + ${space(5)}em)) {
     width: 100%;
 
     & {
