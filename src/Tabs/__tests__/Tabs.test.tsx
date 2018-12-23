@@ -57,10 +57,10 @@ it('renders correctly for tabs with content', () => {
               Cats
             </Tabs.Tab>
           </Tabs>
-          <Tabs.Panel tab="dogs" padding="5x" {...tabs}>
+          <Tabs.Panel tab="dogs" padding="major-3" {...tabs}>
             Dogs are awesome
           </Tabs.Panel>
-          <Tabs.Panel tab="cats" padding="5x" {...tabs}>
+          <Tabs.Panel tab="cats" padding="major-3" {...tabs}>
             Cats are meh
           </Tabs.Panel>
         </div>

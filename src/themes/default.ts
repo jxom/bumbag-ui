@@ -136,7 +136,8 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       desktopBreakpoint: 1024,
       widescreenBreakpoint: 1200,
       fullHDBreakpoint: 1440,
-      spacingUnit: 4,
+      minorUnit: 4,
+      majorUnit: 8,
       ..._get(overrides, 'layout', {})
     },
     fontSizes: {
