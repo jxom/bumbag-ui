@@ -9,7 +9,6 @@ import styled, {
   ServerStyleSheet,
   StyleSheetManager
 } from 'reakit/styled';
-import { prop, theme, ifProp, ifNotProp, switchProp, withProp } from 'styled-tools';
 
 export {
   css,

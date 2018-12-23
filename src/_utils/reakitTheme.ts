@@ -25,7 +25,7 @@ const buildFontSizeFromTheme = (property: string, { theme, ...props }: { theme: 
   // @ts-ignore
   let size = theme.fannypack.fontSizes[props[_camelCase(property)]];
   if (!size) return;
-  return `${property}: ${size}em !important;`;
+  return `${property}: ${size}rem !important;`;
 };
 
 const buildFontWeightFromTheme = (property: string, { theme, ...props }: { theme: { fannypack: ThemeConfig } }) => {

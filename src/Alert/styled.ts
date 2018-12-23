@@ -25,11 +25,11 @@ export const AlertClose = styled(Button)<AlertCloseProps>`
     props.isAbsolute
       ? css`
           position: absolute;
-          right: 0.5rem;
-          top: 0.5rem;
+          right: ${space(2)}rem;
+          top: ${space(2)}rem;
         `
       : css`
-          margin: 0 0.5rem;
+          margin: 0 ${space(2)}rem;
         `};
 
   &:hover {

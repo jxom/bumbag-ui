@@ -141,12 +141,16 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
       ..._get(overrides, 'layout', {})
     },
     fontSizes: {
-      small: 0.8,
-      medium: 1.25,
-      large: 1.5,
-      xlarge: 2,
-      xxlarge: 2.5,
-      xxxlarge: 3,
+      100: 0.75,
+      150: 0.875,
+      200: 1,
+      300: 1.25,
+      400: 1.5,
+      500: 2,
+      600: 2.5,
+      700: 3,
+      800: 3.75,
+      900: 4.5,
       ..._get(overrides, 'fontSizes', {})
     },
     fontWeights: {

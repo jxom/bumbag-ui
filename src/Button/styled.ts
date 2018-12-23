@@ -2,16 +2,16 @@ import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _Button from 'reakit/Button';
 
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
 
 const sizeProperties: any = {
   small: css`
     & {
-      font-size: 0.8em;
-      height: 2em;
-      padding: 0 0.5rem;
+      font-size: ${theme('fannypack.fontSizes.100')}em;
+      height: ${space(8)}em;
+      padding: 0 ${space(2)}rem;
     }
     & {
       ${theme('fannypack.Button.sizes.small')};
@@ -19,8 +19,8 @@ const sizeProperties: any = {
   `,
   medium: css`
     & {
-      height: 3em;
-      padding: 0 1.25rem;
+      height: ${space(12)}em;
+      padding: 0 ${space(5)}rem;
     }
     & {
       ${theme('fannypack.Button.sizes.medium')};
@@ -28,9 +28,9 @@ const sizeProperties: any = {
   `,
   large: css`
     & {
-      font-size: 1.25rem;
-      height: 3em;
-      padding: 0 1.5rem;
+      font-size: ${theme('fannypack.fontSizes.300')}em;
+      height: ${space(12)}em;
+      padding: 0 ${space(6)}rem;
     }
     & {
       ${theme('fannypack.Button.sizes.large')};
@@ -161,8 +161,8 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${props => palette(props.palette === 'default' ? 'primary300' : `${props.palette}300`)(props)}
-      0px 0px 0px 2px;
+    box-shadow: ${props => palette(props.palette === 'default' ? 'primary300' : `${props.palette}300`)(props)} 0px 0px
+      0px 2px;
   }
 
   &[disabled] {

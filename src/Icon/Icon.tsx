@@ -18,8 +18,8 @@ export type Props = {
   className?: string;
   /** The name of your icon from the free Font Awesome Icon Set (https://fontawesome.com/icons?d=gallery&m=free). */
   icon: string | ParsedIcon;
-  /** Size of the icon. Available values: "small", "medium", "large" */
-  size?: Size;
+  /** Size of the icon. */
+  size?: string;
   theme?: Object;
   type?: ParseIconOpts['type'];
 };
@@ -91,8 +91,8 @@ export const iconPropTypes = {
       paths: PropTypes.arrayOf(PropTypes.string)
     })
   ]) as PropTypes.Validator<LocalIconProps['icon']>,
-  size: sizePropType,
-    theme: PropTypes.object, // eslint-disable-line
+  size: PropTypes.string,
+  theme: PropTypes.object, // eslint-disable-line
   type: PropTypes.oneOf(['font-awesome', 'font-awesome-standalone']) as PropTypes.Validator<LocalIconProps['type']>
 };
 

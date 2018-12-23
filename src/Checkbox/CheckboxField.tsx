@@ -19,16 +19,27 @@ export type CheckboxFieldProps = LocalCheckboxFieldProps & CheckboxProps;
 
 export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = ({
   a11yId,
+  autoFocus,
   checkboxLabel,
+  checked,
+  className,
+  defaultChecked,
   description,
+  disabled,
   hint,
   label,
   indeterminate,
+  id,
   isFullWidth,
   isOptional,
   isRequired,
+  onBlur,
+  onChange,
+  onFocus,
+  name,
   state,
   validationText,
+  value,
   ...props
 }) => (
   <FieldWrapper
@@ -41,8 +52,28 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
-    {({ elementProps }) => <Checkbox label={checkboxLabel} {...props} {...elementProps} />}
+    {({ elementProps }) => (
+      <Checkbox
+        autoFocus={autoFocus}
+        checked={checked}
+        className={className}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        id={id}
+        indeterminate={indeterminate}
+        isRequired={isRequired}
+        label={checkboxLabel}
+        name={name}
+        state={state}
+        value={value}
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        {...elementProps}
+      />
+    )}
   </FieldWrapper>
 );
 

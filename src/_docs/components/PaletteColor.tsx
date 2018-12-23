@@ -15,11 +15,11 @@ const PaletteColor: React.FunctionComponent<PaletteColorProps> = ({ palette, the
       <Flex flexDirection="column">
         <Box borderRadius="2px" height="60px" backgroundColor={theme.palette[palette]} width="180px" {...props} />
         <Box padding="minor-2" lineHeight="1">
-          <Text fontSize="small" marginBottom="minor-1">
+          <Text fontSize="150" marginBottom="minor-1">
             {palette}
           </Text>
           <br />
-          <Text color="text100" fontSize="small">
+          <Text color="text100" fontSize="100">
             {theme.palette[palette]}
           </Text>
         </Box>

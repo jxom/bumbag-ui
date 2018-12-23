@@ -5,9 +5,162 @@ menu: Styling & Theming
 order: 3
 ---
 
+import {Playground} from 'docz';
+import { Block } from 'src/primitives';
+import Button from 'src/Button'
+import Code from 'src/Code'
+import InputField from 'src/Input/InputField'
+import Table from 'src/Table'
+
 # Spacing
 
+Fannypack uses two types of scales for its spacing system: the **8px major scale** and the **4px minor scale**.
 
+## The 8px major scale (recommended)
+
+The **8px major scale** is most commonly used for positional spacing. Like **heights & widths** of components, as well as **margins & paddings** between components on a layout.
+
+**Note:** It is recommended to try stick to the 8px scale unless you need more precision. In that case, use the **4px minor scale**.
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Utility</Table.HeadCell>
+      <Table.HeadCell>Token</Table.HeadCell>
+      <Table.HeadCell>px</Table.HeadCell>
+      <Table.HeadCell>rem</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell><Code>space(1, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-1</Code></Table.Cell>
+      <Table.Cell>8px</Table.Cell>
+      <Table.Cell>0.5rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(2, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-2</Code></Table.Cell>
+      <Table.Cell>16px</Table.Cell>
+      <Table.Cell>1rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(3, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-3</Code></Table.Cell>
+      <Table.Cell>24px</Table.Cell>
+      <Table.Cell>1.5rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(4, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-4</Code></Table.Cell>
+      <Table.Cell>32px</Table.Cell>
+      <Table.Cell>2rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(5, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-5</Code></Table.Cell>
+      <Table.Cell>40px</Table.Cell>
+      <Table.Cell>2.5rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(n, 'major')</Code></Table.Cell>
+      <Table.Cell><Code>major-n</Code></Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell>...</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
+### Usage via CSS props
+
+<Playground>
+  <Block>
+    <InputField label="First name" />
+    <InputField label="Last name" marginLeft="major-1" />
+  </Block>
+  <Button marginTop="major-2">Save</Button>
+</Playground>
+
+### Usage via styled components
+
+```jsx
+import { space } from 'fannypack';
+
+const SaveButton = styled(Button)`
+  margin-top: ${space(2, 'major')}rem;
+`;
+```
+
+## The 4px minor scale
+
+The **4px minor scale** is most commonly used for precise spacing (**margins & paddings**) of atomic components (e.g. the inner padding of a checkbox).
+
+Fannypack also exports a utility function called `space` to help you with calculating the scale values.
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Utility</Table.HeadCell>
+      <Table.HeadCell>Token</Table.HeadCell>
+      <Table.HeadCell>px</Table.HeadCell>
+      <Table.HeadCell>rem</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell><Code>space(1, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-1</Code></Table.Cell>
+      <Table.Cell>4px</Table.Cell>
+      <Table.Cell>0.25rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(2, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-2</Code></Table.Cell>
+      <Table.Cell>8px</Table.Cell>
+      <Table.Cell>0.5rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(3, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-3</Code></Table.Cell>
+      <Table.Cell>12px</Table.Cell>
+      <Table.Cell>0.75rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(4, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-4</Code></Table.Cell>
+      <Table.Cell>16px</Table.Cell>
+      <Table.Cell>1rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(5, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-5</Code></Table.Cell>
+      <Table.Cell>20px</Table.Cell>
+      <Table.Cell>1.25rem</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell><Code>space(n, 'minor')</Code></Table.Cell>
+      <Table.Cell><Code>minor-n</Code></Table.Cell>
+      <Table.Cell>...</Table.Cell>
+      <Table.Cell>...</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
+### Usage via CSS props
+
+<Playground>
+  <Button padding="minor-1">Save</Button>
+</Playground>
+
+### Usage via styled components
+
+```jsx
+import { space } from 'fannypack';
+
+const SaveButton = styled(Button)`
+  padding: ${space(1, 'minor')}rem;
+`;
+```
 
 ## Theming
 
@@ -15,8 +168,9 @@ order: 3
 
 ```jsx
 {
-  global: {
-    base: css | string
+  layout: {
+    minorUnit: number // default = 4,
+    majorUnit: number // default = 8
   }
 }
 ```

@@ -29,13 +29,40 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   a11yId,
   description,
   hint,
-  isFullWidth,
   isOptional,
-  isRequired,
   isVertical,
   label,
-  state,
   validationText,
+  after,
+  a11yLabel,
+  autoComplete,
+  autoFocus,
+  before,
+  children,
+  className,
+  defaultValue,
+  disabled,
+  isFullWidth,
+  isLoading,
+  isRequired,
+  name,
+  size,
+  max,
+  maxLength,
+  min,
+  minLength,
+  multiple,
+  pattern,
+  placeholder,
+  readOnly,
+  spellCheck,
+  step,
+  state,
+  type,
+  value,
+  onBlur,
+  onChange,
+  onFocus,
   ...props
 }) => (
   <FieldWrapper
@@ -48,6 +75,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
     {({ elementProps }) => (
       <ConditionalWrap
@@ -55,7 +83,41 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
         wrap={(children: React.ReactNode) => <Group isVertical={isVertical}>{children}</Group>}
       >
         {addonBefore}
-        <Input {...elementProps} {...props} />
+        <Input
+          after={after}
+          a11yId={a11yId}
+          a11yLabel={a11yLabel}
+          autoComplete={autoComplete}
+          autoFocus={autoFocus}
+          before={before}
+          className={className}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          isFullWidth={isFullWidth}
+          isLoading={isLoading}
+          isRequired={isRequired}
+          name={name}
+          size={size}
+          max={max}
+          maxLength={maxLength}
+          min={min}
+          minLength={minLength}
+          multiple={multiple}
+          pattern={pattern}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          spellCheck={spellCheck}
+          step={step}
+          state={state}
+          type={type}
+          value={value}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          {...elementProps}
+        >
+          {children}
+        </Input>
         {addonAfter}
       </ConditionalWrap>
     )}
