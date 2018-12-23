@@ -6,6 +6,8 @@ import styled, { css, space } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
 
+const isInteractive = (props: any) => !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link';
+
 const sizeProperties: any = {
   small: css`
     & {
@@ -64,11 +66,15 @@ const outlinedProperties = css`
     color: ${palette()};
     fill: ${palette()};
 
-    &:hover {
-      background-color: ${palette()};
-      color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
-      fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
-    }
+    ${props =>
+      isInteractive(props) &&
+      css`
+        &:hover {
+          background-color: ${palette()};
+          color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+          fill: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
+        }
+      `};
   }
   & {
     ${theme('fannypack.Button.outlined')};
@@ -108,6 +114,9 @@ const interactiveProperties = css`
   }
   &:hover:active {
     background-color: ${(props: any) => darken(0.1, palette()(props))};
+  }
+  & {
+    ${theme('fannypack.Button.interactive')};
   }
 `;
 const loadingProperties = css`
@@ -165,6 +174,10 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
       0px 2px;
   }
 
+  & {
+    ${theme('fannypack.Button.base')};
+  }
+
   &[disabled] {
     ${disabledProperties};
   }
@@ -179,15 +192,10 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
 
   ${props => props.isLoading && loadingProperties};
   ${props => props.isStatic && staticProperties};
-  ${props =>
-    !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link' ? interactiveProperties : ''};
+  ${props => (isInteractive(props) ? interactiveProperties : '')};
 
   ${props => props.kind === 'outlined' && outlinedProperties};
   ${props => props.kind === 'link' && linkProperties};
-
-  & {
-    ${theme('fannypack.Button.base')};
-  }
 `;
 
 export default Button;
