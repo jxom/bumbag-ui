@@ -26,18 +26,33 @@ export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
 export type SelectFieldProps = LocalSelectFieldProps & SelectProps;
 
 export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
+  a11yLabel,
+  a11yId,
   addonBefore,
   addonAfter,
-  a11yId,
+  autoComplete,
+  autoFocus,
+  className,
   description,
+  defaultValue,
+  disabled,
   hint,
+  isLoading,
   isFullWidth,
   isOptional,
   isRequired,
   isVertical,
   label,
+  name,
+  onBlur,
+  onChange,
+  onFocus,
+  options,
+  placeholder,
+  size,
   state,
   validationText,
+  value,
   ...props
 }) => (
   <FieldWrapper
@@ -50,6 +65,7 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
     {({ elementProps }) => (
       <ConditionalWrap
@@ -57,7 +73,28 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
         wrap={(children: React.ReactNode) => <Group isVertical={isVertical}>{children}</Group>}
       >
         {addonBefore}
-        <Select {...props} {...elementProps} />
+        <Select
+          a11yId={a11yId}
+          a11yLabel={a11yLabel}
+          autoComplete={autoComplete}
+          autoFocus={autoFocus}
+          className={className}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          isFullWidth={isFullWidth}
+          isLoading={isLoading}
+          isRequired={isRequired}
+          name={name}
+          options={options}
+          placeholder={placeholder}
+          size={size}
+          state={state}
+          value={value}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          {...elementProps}
+        />
         {addonAfter}
       </ConditionalWrap>
     )}

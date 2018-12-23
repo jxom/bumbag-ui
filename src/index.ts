@@ -2,6 +2,7 @@ export * from './primitives';
 export {
   default as styled,
   css,
+  space,
   keyframes,
   createGlobalStyle,
   isStyledComponent,

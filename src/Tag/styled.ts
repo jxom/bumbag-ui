@@ -1,7 +1,7 @@
 import InlineFlex from 'reakit/InlineFlex';
 import { palette, theme } from 'styled-tools';
 
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { LocalTagProps } from './Tag';
 
 const sizeAttributes: any = {
@@ -39,10 +39,10 @@ const Tag = styled(InlineFlex)<LocalTagProps & { styledSize: LocalTagProps['size
   border-radius: 4px;
   color: ${props => palette(`${props.palette}Inverted`)};
   fill: ${props => palette(`${props.palette}Inverted`)};
-  font-size: ${theme('fannypack.fontSizes.small')}rem;
+  font-size: ${theme('fannypack.fontSizes.100')}rem;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
   justify-content: center;
-  padding: 0.2em 0.4em;
+  padding: ${space(1)}em ${space(2)}em;
 
   & {
     ${props => props.styledSize && sizeAttributes[props.styledSize]};

@@ -20,14 +20,23 @@ export type RadioGroupFieldProps = RadioGroupProps & LocalRadioGroupFieldProps;
 
 export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> = ({
   a11yId,
+  a11yLabel,
+  className,
+  defaultValue,
   description,
+  disabled,
   hint,
   isFullWidth,
+  isHorizontal,
   isOptional,
   isRequired,
   label,
+  name,
+  onChange,
+  options,
   state,
   validationText,
+  value,
   ...props
 }) => (
   <FieldWrapper
@@ -40,8 +49,24 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
-    {({ elementProps }) => <RadioGroup {...props} {...elementProps} />}
+    {({ elementProps }) => (
+      <RadioGroup
+        a11yId={a11yId}
+        a11yLabel={a11yLabel}
+        className={className}
+        defaultValue={defaultValue}
+        disabled={disabled}
+        isHorizontal={isHorizontal}
+        name={name}
+        options={options}
+        state={state}
+        value={value}
+        onChange={onChange}
+        {...elementProps}
+      />
+    )}
   </FieldWrapper>
 );
 

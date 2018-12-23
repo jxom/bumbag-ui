@@ -30,6 +30,18 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
   switchLabel,
   state,
   validationText,
+  autoFocus,
+  checked,
+  className,
+  defaultChecked,
+  disabled,
+  id,
+  name,
+  palette,
+  value,
+  onBlur,
+  onChange,
+  onFocus,
   ...props
 }) => (
   <FieldWrapper
@@ -42,8 +54,28 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
-    {({ elementProps }) => <Switch label={switchLabel} {...props} {...elementProps} />}
+    {({ elementProps }) => (
+      <Switch
+        label={switchLabel}
+        autoFocus={autoFocus}
+        checked={checked}
+        className={className}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        id={id}
+        isRequired={isRequired}
+        name={name}
+        palette={palette}
+        state={state}
+        value={value}
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        {...elementProps}
+      />
+    )}
   </FieldWrapper>
 );
 

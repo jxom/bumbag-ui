@@ -132,8 +132,8 @@ const App = () => (
 - [GlobalThemeConfig](/styling/global-styles#theming)
 - [PaletteThemeConfig](/palette#theming)
 - [LayoutThemeConfig](#layoutthemeconfig)
-- [FontSizeThemeConfig](#fontsizethemeconfig)
-- [FontWeightsThemeConfig](#fontweightsthemeconfig)
+- [FontSizeThemeConfig](/styling/fonts#theming)
+- [FontWeightsThemeConfig](/styling/fonts#theming)
 
 ### Components
 
@@ -188,17 +188,8 @@ The layout theme config is used to manage breakpoints & spacing (like paddings &
   widescreenBreakpoint: number,
   fullHDBreakpoint: number,
   gapFactor: number,
-  spacing: {
-    xxxsmall: number,
-    xxsmall: number,
-    xsmall: number,
-    small: number,
-    medium: number,
-    large: number,
-    xlarge: number,
-    xxlarge: number,
-    xxxlarge: number,
-  }
+  minorUnit: number,
+  majorUnit: number
 }
 ```
 
@@ -212,63 +203,10 @@ The layout theme config is used to manage breakpoints & spacing (like paddings &
   widescreenBreakpoint: 1200,
   fullHDBreakpoint: 1440,
   gapFactor: 0.5,
-  spacing: {
-    xxxsmall: 0.25,
-    xxsmall: 0.5,
-    xsmall: 1,
-    small: 1.25,
-    medium: 1.5,
-    large: 2,
-    xlarge: 2.5,
-    xxlarge: 3,
-    xxxlarge: 3.5
-  }
+  minorUnit: 4,
+  majorUnit: 8
 }
 ```
 
-#### FontSizeThemeConfig
-
-```jsx
-{
-  small: number,
-  medium: number,
-  large: number,
-  xlarge: number,
-  xxlarge: number,
-  xxxlarge: number
-}
-```
-
-##### Default
-
-```jsx
-{
-  small: 0.8,
-  medium: 1.5,
-  large: 2,
-  xlarge: 2.5,
-  xxlarge: 3
-}
-```
-
-#### FontWeightsThemeConfig
-
-```jsx
-{
-  normal: number,
-  semibold: number,
-  bold: number
-}
-```
-
-##### Default
-
-```jsx
-{
-  normal: 400,
-  semibold: 600,
-  bold: 700
-}
-```
 
 

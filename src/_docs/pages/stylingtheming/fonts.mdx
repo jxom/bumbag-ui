@@ -80,23 +80,28 @@ const BoldText = styled(Text)`
 
 ## Font Sizes
 
-Fannypack currently has six font sizes: `small`, `medium`, `large`, `xlarge`, `xxlarge` and `xxxlarge`. You can also add your own custom font sizes in the theme config if you wish.
+Fannypack uses a scale from 100-900 for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
+
+`200` (16px) is the base font size.
 
 <Playground>
-  <Text fontSize="small">Small text</Text><br/>
-  <Text>Normal text</Text><br/>
-  <Text fontSize="medium">Medium text</Text><br/>
-  <Text fontSize="large">Large text</Text><br/>
-  <Text fontSize="xlarge">XLarge text</Text><br/>
-  <Text fontSize="xxlarge">XXLarge text</Text><br/>
-  <Text fontSize="xxxlarge">XXXLarge text</Text><br/>
+  <Text fontSize="100">Text 100 - 12px</Text><br/>
+  <Text fontSize="150">Text 150 - 14px</Text><br/>
+  <Text>Text 200 - 16px (normal)</Text><br/>
+  <Text fontSize="300">Text 300 - 20px</Text><br/>
+  <Text fontSize="400">Text 400 - 24px</Text><br/>
+  <Text fontSize="500">Text 500 - 32px</Text><br/>
+  <Text fontSize="600">Text 600 - 40px</Text><br/>
+  <Text fontSize="700">Text 700 - 48px</Text><br/>
+  <Text fontSize="800">Text 800 - 60px</Text><br/>
+  <Text fontSize="900">Text 900 - 72px</Text><br/>
 </Playground>
 
 You can also access the font weights in Styled Components through the Fannypack Theme:
 
 ```jsx
 const BoldText = styled(Text)`
-  font-size: ${props => props.theme.fannypack.fontSizes.large};
+  font-size: ${props => props.theme.fannypack.fontSizes.500};
 `;
 ```
 
@@ -112,18 +117,22 @@ const BoldText = styled(Text)`
   },
   fontWeights: {
     // These are the default required font weights, but you can also add your own.
-    normal: number,
-    semibold: number,
-    bold: number
+    normal: number,   // default = 400
+    semibold: number, // default = 600
+    bold: number      // default = 700
   },
   fontSizes: {
     // These are the default required font sizes, but you can also add your own.
-    small: number,
-    medium: number,
-    large: number,
-    xlarge: number,
-    xxlarge: number,
-    xxxlarge: number
+    100: number, // default = 0.75  (12px)
+    150: number, // default = 0.875 (14px)
+    200: number, // default = 1     (16px)
+    300: number, // default = 1.25  (20px)
+    400: number, // default = 1.5   (24px)
+    500: number, // default = 2     (32px)
+    600: number, // default = 2.5   (40px)
+    700: number, // default = 3     (48px)
+    800: number, // default = 3.75  (60px)
+    900: number, // default = 4.5   (72px)
   }
 }
 ```

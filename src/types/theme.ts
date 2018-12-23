@@ -138,12 +138,16 @@ export type FieldWrapperThemeConfig = {
   validation?: Stylesheet;
 };
 export type FontSizeThemeConfig = {
-  small?: number;
-  medium?: number;
-  large?: number;
-  xlarge?: number;
-  xxlarge?: number;
-  xxxlarge?: number;
+  100?: number;
+  150?: number;
+  200?: number;
+  300?: number;
+  400?: number;
+  500?: number;
+  600?: number;
+  700?: number;
+  800?: number;
+  900?: number;
 };
 export type FontWeightsThemeConfig = {
   normal?: number;
@@ -214,7 +218,8 @@ export type LayoutThemeConfig = {
   widescreenBreakpoint?: number;
   fullHDBreakpoint?: number;
   gapFactor?: number;
-  spacingUnit?: number;
+  minorUnit?: number;
+  majorUnit?: number;
 };
 export type LinkThemeConfig = {
   base?: Stylesheet;

@@ -18,7 +18,7 @@ describe('colors', () => {
 });
 
 describe('sizes', () => {
-  ['small', 'medium', 'large', 'xlarge', 'xxlarge', 'xxxlarge'].forEach(size => {
+  ['100', '200', '300', '400', '500', '600', '700', '800', '900'].forEach(size => {
     it(`renders correctly for an icon with size ${size}`, () => {
       const { container } = render(<Icon a11yLabel="Settings" size={size as Size} icon="info-circle" />);
       expect(container.firstChild).toMatchSnapshot();

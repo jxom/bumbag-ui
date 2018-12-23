@@ -5,7 +5,7 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 import _omit from 'lodash/omit';
 
 import { Box, Flex } from '../primitives';
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { Omit } from '../types';
 import { ButtonProps, buttonPropTypes } from '../Button/Button';
 import Icon from '../Icon';
@@ -15,7 +15,7 @@ import AlertClose, { AlertCloseProps } from './AlertClose';
 import AlertTitle from './AlertTitle';
 
 const ContentWrapper = styled(Box)<{ hasIcon?: boolean }>`
-  padding: 1rem;
+  padding: ${space(4)}rem;
 
   ${props =>
     props.hasIcon &&
@@ -23,8 +23,8 @@ const ContentWrapper = styled(Box)<{ hasIcon?: boolean }>`
       padding-left: 0;
     `};
 `;
-const IconWrapper = styled(Flex)`
-  padding: 0 1rem;
+const IconWrapper = styled(Flex)<any>`
+  padding: 0 ${space(4)}rem;
 `;
 
 export type LocalAlertProps = {
@@ -68,7 +68,7 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
       {hasIcon &&
         type && (
           <IconWrapper>
-            <Icon a11yLabel={type} color={type} icon={type} size={children ? 'large' : undefined} />
+            <Icon a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
           </IconWrapper>
         )}
       <ContentWrapper hasIcon={hasIcon}>
