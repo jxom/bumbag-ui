@@ -31,7 +31,7 @@ export default createGlobalStyle`
   }
 
   *:focus {
-    outline: 2px solid ${palette('primary300')};
+    outline: 2px solid ${palette('primary')};
     outline-offset: 2px;
   }
 `;
