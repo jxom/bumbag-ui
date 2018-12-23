@@ -28,52 +28,37 @@ export default styled(Heading)<HeadingProps>`
   }
 
   h1& {
-    font-size: 3em;
-    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 2em;
-    }
+    font-size: ${theme('fannypack.fontSizes.700')}rem;
     & {
       ${theme('fannypack.Heading.h1')};
     }
   }
   h2& {
-    font-size: 2.5em;
-    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.8em;
-    }
+    font-size: ${theme('fannypack.fontSizes.600')}rem;
     & {
       ${theme('fannypack.Heading.h2')};
     }
   }
   h3& {
-    font-size: 2em;
-    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.6em;
-    }
+    font-size: ${theme('fannypack.fontSizes.500')}rem;
     & {
       ${theme('fannypack.Heading.h3')};
     }
   }
   h4& {
-    font-size: 1.5em;
-    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.4em;
-    }
+    font-size: ${theme('fannypack.fontSizes.400')}rem;
     & {
       ${theme('fannypack.Heading.h4')};
     }
   }
   h5& {
-    font-size: 1.25em;
-    @media (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
-      font-size: 1.2em;
-    }
+    font-size: ${theme('fannypack.fontSizes.300')}rem;
     & {
       ${theme('fannypack.Heading.h5')};
     }
   }
   h6& {
-    font-size: 1em;
+    font-size: ${theme('fannypack.fontSizes.200')}rem;
     & {
       ${theme('fannypack.Heading.h6')};
     }
