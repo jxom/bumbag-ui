@@ -119,8 +119,8 @@ export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${palette('primary300')};
-    box-shadow: ${palette('primary300')} 0px 0px 0px 1px !important;
+    border-color: ${palette('primary')};
+    box-shadow: ${palette('primary')} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Select.focus')};

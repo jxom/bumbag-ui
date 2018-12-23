@@ -1,6 +1,5 @@
 import * as React from 'react';
 import 'parse-prop-types';
-import ThemeProvider from '../ThemeProvider';
 import {
   faIgloo,
   faSearch,
@@ -13,6 +12,8 @@ import {
   faUser,
   faHandPaper
 } from '@fortawesome/free-solid-svg-icons';
+
+import ThemeProvider from '../ThemeProvider';
 
 const theme = {
   Icon: {

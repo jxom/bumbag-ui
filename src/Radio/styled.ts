@@ -19,8 +19,8 @@ export const RadioIcon = styled(Box)<{ state?: string }>`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => palette(`${props.state}300`)(props)};
-        box-shadow: ${props => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
+        border-color: ${props => palette(`${props.state}`)(props)};
+        box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
       `};
   }
 
@@ -32,7 +32,7 @@ export const RadioIcon = styled(Box)<{ state?: string }>`
 export const HiddenRadio = HiddenInput<Omit<LocalRadioProps, 'label'>>({
   Icon: RadioIcon,
   checkedIconCss: css`
-    background: ${palette('primary300')};
+    background: ${palette('primary')};
     border-radius: 50%;
     content: '';
     height: 8px;

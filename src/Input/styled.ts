@@ -81,8 +81,8 @@ const wrapperSizeProperties: { [key: string]: any } = {
 };
 
 const stateProperties = css`
-  border-color: ${(props: any) => palette(`${props.state}300`)(props)};
-  box-shadow: ${(props: any) => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${(props: any) => palette(`${props.state}`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
 
 // @ts-ignore
@@ -128,8 +128,8 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    border-color: ${(props: any) => palette('primary300')(props)};
-    box-shadow: ${(props: any) => palette('primary300')(props)} 0px 0px 0px 1px !important;
+    border-color: ${(props: any) => palette('primary')(props)};
+    box-shadow: ${(props: any) => palette('primary')(props)} 0px 0px 0px 1px !important;
 
     & {
       ${theme('fannypack.Input.focus')};
