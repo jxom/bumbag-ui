@@ -2,12 +2,6 @@ import { palette, css, space } from '../styled';
 
 export default {
   global: {
-    base: css`
-      *:focus {
-        outline: 2px solid ${palette('primary')};
-        outline-offset: 2px;
-      }
-    `,
     fontFamily:
       "'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     fallbackFontFamily:
@@ -15,11 +9,12 @@ export default {
   },
   webFontLoader: {
     google: {
-      families: ['Lato:400,700']
+      families: ['Lato:400,500,700']
     }
   },
   fontWeights: {
     normal: 400,
+    semibold: 500,
     bold: 700
   },
   palette: {
