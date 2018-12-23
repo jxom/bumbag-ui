@@ -15,6 +15,7 @@ import parseIcons, { Opts as ParseIconsOpts, Icons } from '../parseIcons';
 const defaultPalette: { [key: string]: string } = {
   text: '#435a6f',
   primary: '#444bc9',
+  secondary: '#793fb2',
   info: '#35709e',
   success: '#2c8453',
   danger: '#c9444d',
@@ -110,6 +111,9 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
 
       ...generateColorVariants({
         paletteKey: 'primary'
+      }),
+      ...generateColorVariants({
+        paletteKey: 'secondary'
       }),
       ...generateColorVariants({
         paletteKey: 'info'
