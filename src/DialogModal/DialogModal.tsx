@@ -65,9 +65,9 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
             use: Modal.Hide,
             // @ts-ignore
             hide,
-            palette: type,
             ...(actionButtonsProps || {}).cancelProps
           },
+          palette: type,
           ...actionButtonsProps
         }}
         closeButtonProps={{ elementRef: initialFocusRef }}
