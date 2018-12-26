@@ -73,8 +73,10 @@ Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You
 You can also access the font weights in Styled Components through the Fannypack Theme:
 
 ```jsx
+import { Text, theme, styled } from 'fannypack;
+
 const BoldText = styled(Text)`
-  font-weight: ${props => props.theme.fannypack.fontWeights.bold};
+  font-weight: ${theme('fannypack.fontWeights.bold')};
 `;
 ```
 
@@ -97,11 +99,13 @@ Fannypack uses a scale from 100-900 for font sizes. We use a numeric scale, inst
   <Text fontSize="900">Text 900 - 72px</Text><br/>
 </Playground>
 
-You can also access the font weights in Styled Components through the Fannypack Theme:
+You can also access the font sizes in Styled Components through the Fannypack Theme:
 
 ```jsx
-const BoldText = styled(Text)`
-  font-size: ${props => props.theme.fannypack.fontSizes.500};
+import { Text, theme, styled } from 'fannypack';
+
+const LargeText = styled(Text)`
+  font-size: ${theme('fannypack.fontSizes.700')};
 `;
 ```
 
