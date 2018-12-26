@@ -2,14 +2,21 @@ export * from './primitives';
 export {
   default as styled,
   css,
-  space,
   keyframes,
   createGlobalStyle,
   isStyledComponent,
   ThemeConsumer,
   withTheme,
   ServerStyleSheet,
-  StyleSheetManager
+  StyleSheetManager,
+  space,
+  prop,
+  theme,
+  palette,
+  ifProp,
+  ifNotProp,
+  switchProp,
+  withProp
 } from './styled';
 
 export { defaultTheme } from './themes';
