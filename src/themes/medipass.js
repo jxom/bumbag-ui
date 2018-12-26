@@ -9,13 +9,13 @@ export default {
   },
   webFontLoader: {
     google: {
-      families: ['Lato:400,500,700']
+      families: ['Lato:400,700,900']
     }
   },
   fontWeights: {
     normal: 400,
-    semibold: 500,
-    bold: 700
+    semibold: 700,
+    bold: 900
   },
   palette: {
     primary200: '#d2f1fa',
@@ -105,5 +105,21 @@ export default {
         padding: 0 ${space(4)}rem;
       `
     }
+  },
+  Label: {
+    base: css`
+      font-size: 14px;
+    `
+  },
+  Input: {
+    base: css`
+      border-radius: 0px;
+      box-shadow: none;
+      height: ${space(9)}rem;
+      font-size: 14px;
+    `,
+    focus: css`
+      box-shadow: none !important;
+    `
   }
 };

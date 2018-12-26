@@ -137,15 +137,15 @@ export const ButtonIcon = styled(Icon)<IconProps & { isAfter: boolean; isBefore:
   ${props =>
     props.isBefore &&
     css`
-      margin-left: -0.2em;
-      margin-right: 0.4em;
+      margin-left: -${space(1)}em;
+      margin-right: ${space(2)}em;
     `};
 
   ${props =>
     props.isAfter &&
     css`
-      margin-left: 0.4em;
-      margin-right: -0.2em;
+      margin-left: ${space(2)}em;
+      margin-right: -${space(1)}em;
     `};
 
   & {
