@@ -7,6 +7,8 @@
 
 ## [Go to the Fannypack Docs](https://fannypack.style)
 
+## [Changelog](https://github.com/fannypackui/fannypack/releases)
+
 ## Installing Fannypack
 
 Run the following command to install **Fannypack**:
