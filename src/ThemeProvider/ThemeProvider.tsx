@@ -48,7 +48,7 @@ const loadTheme = ({
   return derivedTheme;
 };
 
-class Provider extends React.PureComponent<LocalThemeProviderProps, State> {
+class Provider extends React.Component<LocalThemeProviderProps, State> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     isStandalone: PropTypes.bool,
