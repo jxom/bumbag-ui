@@ -7,6 +7,7 @@ menu: Layout
 import { Playground } from 'docz';
 import PropsTable from '../_docs/components/PropsTable';
 import { Pane } from '../Pane';
+import { Set } from '../Set';
 
 # Pane
 
@@ -34,6 +35,17 @@ A `<Pane>` is the same as a `<Box>`, except it has a default border radius, and 
   <Pane border padding="major-4">Hello world</Pane>
 </Playground>
 
+## Elevations
+
+<Playground>
+  <Set spacing="major-4">
+    <Pane elevation="100" padding="major-4">Hello world</Pane>
+    <Pane elevation="200" padding="major-4">Hello world</Pane>
+    <Pane elevation="300" padding="major-4">Hello world</Pane>
+    <Pane elevation="400" padding="major-4">Hello world</Pane>
+  </Set>
+</Playground>
+
 ## Full width
 
 <Playground>
@@ -57,6 +69,14 @@ A `<Pane>` is the same as a `<Box>`, except it has a default border radius, and 
     border: {
       default: css | Object,
       shadow: css | Object
+    },
+
+    // Scales for pane elevations, maps to a number (pixels). These keys below are required, but you can also add more.
+    elevations: {
+      100: number, // default = 4
+      200: number, // default = 8
+      300: number, // default = 12
+      400: number, // default = 24
     }
   }
 }

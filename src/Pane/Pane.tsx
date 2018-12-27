@@ -9,6 +9,7 @@ export type LocalPaneProps = {
   border?: boolean | 'shadow';
   className?: string;
   children?: React.ReactNode;
+  elevation?: string;
   isFullWidth?: boolean;
 };
 export type PaneProps = LocalPaneProps & Omit<ReakitBoxProps, 'border'>;
@@ -25,7 +26,8 @@ export const panePropTypes = {
   >,
   className: PropTypes.string,
   children: PropTypes.node,
-  isFullWidth: PropTypes.bool
+  isFullWidth: PropTypes.bool,
+  elevation: PropTypes.string
 };
 Pane.propTypes = panePropTypes;
 

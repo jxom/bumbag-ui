@@ -19,6 +19,7 @@ export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> =
   children,
   className,
   closeButtonProps,
+  elevation,
   footer,
   hasTint,
   icon,
@@ -35,6 +36,7 @@ export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> =
       border={border}
       className={className}
       closeButtonProps={closeButtonProps}
+      elevation={elevation}
       footer={footer}
       hasTint={hasTint}
       icon={icon}
@@ -58,6 +60,7 @@ CalloutOverlay.propTypes = {
 CalloutOverlay.defaultProps = {
   ...overlayDefaultProps,
   ...calloutDefaultProps,
+  elevation: '300',
   placement: 'bottom-end'
 };
 

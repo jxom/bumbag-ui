@@ -46,7 +46,7 @@ export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverCompon
     {popover => (
       <InlineBlock relative>
         {React.cloneElement(children, { use: PopoverToggle, ...popover })}
-        <PopoverPopover border="shadow" padding="minor-5" {...props} {...popover} use={Pane}>
+        <PopoverPopover elevation="200" padding="minor-5" {...props} {...popover} use={Pane}>
           {({ initialFocusRef }) => (
             <React.Fragment>
               {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}{/* eslint-disable-line */}
