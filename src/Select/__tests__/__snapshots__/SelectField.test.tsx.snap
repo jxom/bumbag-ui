@@ -18,25 +18,7 @@ exports[`renders correctly for a basic select 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -50,15 +32,15 @@ exports[`renders correctly for a basic select 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -71,11 +53,11 @@ exports[`renders correctly for a basic select 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -86,7 +68,7 @@ exports[`renders correctly for a basic select 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -98,7 +80,7 @@ exports[`renders correctly for a basic select 1`] = `
   transform: translateY(50%);
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -112,17 +94,17 @@ exports[`renders correctly for a basic select 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
@@ -135,6 +117,8 @@ exports[`renders correctly for a basic select 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -151,22 +135,20 @@ exports[`renders correctly for a basic select 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -188,7 +170,7 @@ exports[`renders correctly for a basic select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -220,7 +202,7 @@ exports[`renders correctly for a disabled select 1`] = `
   outline: none;
 }
 
-.c5 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -231,10 +213,184 @@ exports[`renders correctly for a disabled select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-bottom: 0.25rem !important;
+  margin-top: 0.5rem !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6.c6.c6 {
+  position: relative;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: #435a6f;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.c7 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  color: #435a6f;
+  height: 2.5em;
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.c7[disabled] {
+  background: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c7[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c11[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0"
+  display="inline-block"
+  style="display: inline-block;"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="weather"
+    >
+      Weather
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c6"
+  >
+    <select
+      aria-invalid="false"
+      aria-required="false"
+      class="c7 c8"
+      disabled=""
+      id="weather"
+      type="text"
+    >
+      <option
+        disabled=""
+        value="sunny"
+      >
+        Sunny
+      </option>
+      <option
+        disabled=""
+        value="windy"
+      >
+        Windy
+      </option>
+      <option
+        disabled=""
+        value="overcast"
+      >
+        Overcast
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="c9 c10"
+      focusable="false"
+      viewBox="0 0 20 20"
+    >
+      <path
+        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for a full width select 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -281,7 +437,7 @@ exports[`renders correctly for a disabled select 1`] = `
   display: inline-block;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,222 +491,14 @@ exports[`renders correctly for a disabled select 1`] = `
   fill: #8d8d8d;
 }
 
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
-      for="weather"
-      style="font-weight: 600;"
-    >
-      Weather
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c7"
-  >
-    <select
-      aria-invalid="false"
-      aria-required="false"
-      class="c8 c9"
-      disabled=""
-      id="weather"
-      type="text"
-    >
-      <option
-        disabled=""
-        value="sunny"
-      >
-        Sunny
-      </option>
-      <option
-        disabled=""
-        value="windy"
-      >
-        Windy
-      </option>
-      <option
-        disabled=""
-        value="overcast"
-      >
-        Overcast
-      </option>
-    </select>
-    <svg
-      aria-hidden="true"
-      class="c10 c11"
-      focusable="false"
-      viewBox="0 0 20 20"
-    >
-      <path
-        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for a full width select 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c6:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c8:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8.c8.c8 {
-  position: relative;
-}
-
-.c10 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-}
-
-.c10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c12 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 2px;
-  z-index: 1;
-  fill: #435a6f;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.c9 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
-  border: 1px solid #bdbdbd;
-  border-radius: 0.2em;
-  color: #435a6f;
-  height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.c9[disabled] {
-  background: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c9[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c9:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c13[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
 .c5 {
   display: inline-block;
 }
 
 .c4 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c3 {
@@ -571,24 +519,22 @@ exports[`renders correctly for a full width select 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c3 c4 c5 c6"
-      font-weight="600"
+      class="c3 c4 c5 c1"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c7 c8"
+    class="c6 c7"
     style="width: 100%;"
     width="100%"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c9 c10"
+      class="c8 c9"
       id="weather"
       type="text"
     >
@@ -610,7 +556,7 @@ exports[`renders correctly for a full width select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c11 c12"
+      class="c10 c11"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -642,7 +588,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c5 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -653,10 +599,606 @@ exports[`renders correctly for a required field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-bottom: 0.25rem !important;
+  margin-top: 0.5rem !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6.c6.c6 {
+  position: relative;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: #435a6f;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.c7 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  color: #435a6f;
+  height: 2.5em;
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.c7[disabled] {
+  background: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c7[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c11[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c12[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c12 + .c9 {
+  width: 15px;
+  height: 15px;
+}
+
+.c13[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c13 + .c9 {
+  width: 25px;
+  height: 25px;
+}
+
+.c14[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c9 {
+  width: 30px;
+  height: 30px;
+}
+
+.c15[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c16[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c17[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c18[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0"
+  display="inline-block"
+  style="display: inline-block;"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="weather"
+    >
+      Weather
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c6"
+  >
+    <select
+      aria-invalid="false"
+      aria-required="true"
+      class="c7 c8"
+      id="weather"
+      type="text"
+    >
+      <option
+        value="sunny"
+      >
+        Sunny
+      </option>
+      <option
+        value="windy"
+      >
+        Windy
+      </option>
+      <option
+        value="overcast"
+      >
+        Overcast
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="c9 c10"
+      focusable="false"
+      viewBox="0 0 20 20"
+    >
+      <path
+        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for a select with a default value 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.5rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6.c6.c6 {
+  position: relative;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: #435a6f;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.c7 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  color: #435a6f;
+  height: 2.5em;
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.c7[disabled] {
+  background: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c7[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c11[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0"
+  display="inline-block"
+  style="display: inline-block;"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="weather"
+    >
+      Weather
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c6"
+  >
+    <select
+      aria-invalid="false"
+      aria-required="false"
+      class="c7 c8"
+      id="weather"
+      type="text"
+    >
+      <option
+        value="sunny"
+      >
+        Sunny
+      </option>
+      <option
+        selected=""
+        value="windy"
+      >
+        Windy
+      </option>
+      <option
+        value="overcast"
+      >
+        Overcast
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="c9 c10"
+      focusable="false"
+      viewBox="0 0 20 20"
+    >
+      <path
+        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for a select with a placeholder 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.5rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6.c6.c6 {
+  position: relative;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: #435a6f;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.c11[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c7 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  color: #8e9ca8;
+  height: 2.5em;
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.c7[disabled] {
+  background: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c7[disabled] + .c9 {
+  fill: #8d8d8d;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0"
+  display="inline-block"
+  style="display: inline-block;"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="weather"
+    >
+      Weather
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c6"
+  >
+    <select
+      aria-invalid="false"
+      aria-required="false"
+      class="c7 c8"
+      id="weather"
+      type="text"
+    >
+      <option
+        disabled=""
+        selected=""
+      >
+        Select weather...
+      </option>
+      <option
+        value="sunny"
+      >
+        Sunny
+      </option>
+      <option
+        value="windy"
+      >
+        Windy
+      </option>
+      <option
+        value="overcast"
+      >
+        Overcast
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="c9 c10"
+      focusable="false"
+      viewBox="0 0 20 20"
+    >
+      <path
+        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for addon component (after) 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -697,6 +1239,62 @@ exports[`renders correctly for a required field 1`] = `
 
 .c9:focus:not(:focus-visible) {
   outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 > *:not(:first-child):not(:last-child),
+.c5 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+.c5 > *:first-child,
+.c5 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c5 > *:last-child,
+.c5 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-left-width: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c5 > * {
+  border-radius: 4px;
+}
+
+.c5 input:focus,
+.c5 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c5 > *:first-child input,
+.c5 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c5 > *:last-child input,
+.c5 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c5 > *:not(:first-child):not(:last-child) > input,
+.c5 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
 }
 
 .c6 {
@@ -806,6 +1404,8 @@ exports[`renders correctly for a required field 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -822,750 +1422,24 @@ exports[`renders correctly for a required field 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
-  >
-    <select
-      aria-invalid="false"
-      aria-required="true"
-      class="c8 c9"
-      id="weather"
-      type="text"
-    >
-      <option
-        value="sunny"
-      >
-        Sunny
-      </option>
-      <option
-        value="windy"
-      >
-        Windy
-      </option>
-      <option
-        value="overcast"
-      >
-        Overcast
-      </option>
-    </select>
-    <svg
-      aria-hidden="true"
-      class="c10 c11"
-      focusable="false"
-      viewBox="0 0 20 20"
-    >
-      <path
-        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for a select with a default value 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c7:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7.c7.c7 {
-  position: relative;
-}
-
-.c9 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-}
-
-.c9:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  display: inline-block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c11 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 2px;
-  z-index: 1;
-  fill: #435a6f;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.c8 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
-  border: 1px solid #bdbdbd;
-  border-radius: 0.2em;
-  color: #435a6f;
-  height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.c8[disabled] {
-  background: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c8[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c8:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
-      for="weather"
-      style="font-weight: 600;"
-    >
-      Weather
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c7"
-  >
-    <select
-      aria-invalid="false"
-      aria-required="false"
-      class="c8 c9"
-      id="weather"
-      type="text"
-    >
-      <option
-        value="sunny"
-      >
-        Sunny
-      </option>
-      <option
-        selected=""
-        value="windy"
-      >
-        Windy
-      </option>
-      <option
-        value="overcast"
-      >
-        Overcast
-      </option>
-    </select>
-    <svg
-      aria-hidden="true"
-      class="c10 c11"
-      focusable="false"
-      viewBox="0 0 20 20"
-    >
-      <path
-        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for a select with a placeholder 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c7:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7.c7.c7 {
-  position: relative;
-}
-
-.c9 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-}
-
-.c9:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  display: inline-block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c11 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 2px;
-  z-index: 1;
-  fill: #435a6f;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.c12[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c8 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
-  border: 1px solid #bdbdbd;
-  border-radius: 0.2em;
-  color: #8e9ca8;
-  height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.c8[disabled] {
-  background: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c8[disabled] + .c10 {
-  fill: #8d8d8d;
-}
-
-.c8:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
-      for="weather"
-      style="font-weight: 600;"
-    >
-      Weather
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c7"
-  >
-    <select
-      aria-invalid="false"
-      aria-required="false"
-      class="c8 c9"
-      id="weather"
-      type="text"
-    >
-      <option
-        disabled=""
-        selected=""
-      >
-        Select weather...
-      </option>
-      <option
-        value="sunny"
-      >
-        Sunny
-      </option>
-      <option
-        value="windy"
-      >
-        Windy
-      </option>
-      <option
-        value="overcast"
-      >
-        Overcast
-      </option>
-    </select>
-    <svg
-      aria-hidden="true"
-      class="c10 c11"
-      focusable="false"
-      viewBox="0 0 20 20"
-    >
-      <path
-        d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for addon component (after) 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c8:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8.c8.c8 {
-  position: relative;
-}
-
-.c10 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-}
-
-.c10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c6 > *:not(:first-child):not(:last-child),
-.c6 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
-  border-radius: 0;
-  border-left-width: 0;
-}
-
-.c6 > *:first-child,
-.c6 > *:first-child .GroupItem-sc-2orogz-0 {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.c6 > *:last-child,
-.c6 > *:last-child .GroupItem-sc-2orogz-0 {
-  border-top-left-radius: 0;
-  border-left-width: 0;
-  border-bottom-left-radius: 0;
-}
-
-.c6 > * {
-  border-radius: 4px;
-}
-
-.c6 input:focus,
-.c6 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.c6 > *:first-child input,
-.c6 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.c6 > *:last-child input,
-.c6 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.c6 > *:not(:first-child):not(:last-child) > input,
-.c6 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.c7 {
-  display: inline-block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c12 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 2px;
-  z-index: 1;
-  fill: #435a6f;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.c9 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
-  border: 1px solid #bdbdbd;
-  border-radius: 0.2em;
-  color: #435a6f;
-  height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.c9[disabled] {
-  background: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c9[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c9:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c13[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c14[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c14 + .c11 {
-  width: 15px;
-  height: 15px;
-}
-
-.c15[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c11 {
-  width: 25px;
-  height: 25px;
-}
-
-.c16[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c16 + .c11 {
-  width: 30px;
-  height: 30px;
-}
-
-.c17[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c18[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c19[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c20[disabled] + .c11 {
-  fill: #8d8d8d;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
-      for="weather"
-      style="font-weight: 600;"
-    >
-      Weather
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c0"
+    class="c5 c0"
     role="group"
   >
     <div
-      class="c7 c8"
+      class="c6 c7"
     >
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9 c10"
+        class="c8 c9"
         id="weather"
         type="text"
       >
@@ -1587,7 +1461,7 @@ exports[`renders correctly for addon component (after) 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c11 c12"
+        class="c10 c11"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -1623,25 +1497,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1655,15 +1511,15 @@ exports[`renders correctly for addon component (before) 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c8:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8.c8.c8 {
+.c7.c7.c7 {
   position: relative;
 }
 
-.c10 {
+.c9 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1676,11 +1532,11 @@ exports[`renders correctly for addon component (before) 1`] = `
   color: inherit;
 }
 
-.c10:focus:not(:focus-visible) {
+.c9:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1690,53 +1546,53 @@ exports[`renders correctly for addon component (before) 1`] = `
   flex-direction: row;
 }
 
-.c6 > *:not(:first-child):not(:last-child),
-.c6 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+.c5 > *:not(:first-child):not(:last-child),
+.c5 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
   border-radius: 0;
   border-left-width: 0;
 }
 
-.c6 > *:first-child,
-.c6 > *:first-child .GroupItem-sc-2orogz-0 {
+.c5 > *:first-child,
+.c5 > *:first-child .GroupItem-sc-2orogz-0 {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.c6 > *:last-child,
-.c6 > *:last-child .GroupItem-sc-2orogz-0 {
+.c5 > *:last-child,
+.c5 > *:last-child .GroupItem-sc-2orogz-0 {
   border-top-left-radius: 0;
   border-left-width: 0;
   border-bottom-left-radius: 0;
 }
 
-.c6 > * {
+.c5 > * {
   border-radius: 4px;
 }
 
-.c6 input:focus,
-.c6 select:focus {
+.c5 input:focus,
+.c5 select:focus {
   z-index: 1;
   position: relative;
 }
 
-.c6 > *:first-child input,
-.c6 > *:first-child select {
+.c5 > *:first-child input,
+.c5 > *:first-child select {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.c6 > *:last-child input,
-.c6 > *:last-child select {
+.c5 > *:last-child input,
+.c5 > *:last-child select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c6 > *:not(:first-child):not(:last-child) > input,
-.c6 > *:not(:first-child):not(:last-child) > select {
+.c5 > *:not(:first-child):not(:last-child) > input,
+.c5 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
 }
 
@@ -1747,7 +1603,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   display: flex;
 }
 
-.c12 {
+.c11 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1759,7 +1615,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   transform: translateY(50%);
 }
 
-.c9 {
+.c8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1773,67 +1629,67 @@ exports[`renders correctly for addon component (before) 1`] = `
   width: 100%;
 }
 
-.c9[disabled] {
+.c8[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c9[disabled] + .c11 {
+.c8[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c9:focus {
+.c8:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c13[disabled] + .c11 {
+.c12[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c11 {
+.c13[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c14 + .c11 {
+.c13 + .c10 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c11 {
+.c14[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c15 + .c11 {
+.c14 + .c10 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c11 {
+.c15[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c16 + .c11 {
+.c15 + .c10 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c11 {
+.c16[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c11 {
+.c17[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c11 {
+.c18[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c11 {
+.c19[disabled] + .c10 {
   fill: #8d8d8d;
 }
 
@@ -1843,6 +1699,8 @@ exports[`renders correctly for addon component (before) 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -1859,29 +1717,27 @@ exports[`renders correctly for addon component (before) 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c0"
+    class="c5 c0"
     role="group"
   >
     <div>
       test
     </div>
     <div
-      class="c7 c8"
+      class="c6 c7"
     >
       <select
         aria-invalid="false"
         aria-required="false"
-        class="c9 c10"
+        class="c8 c9"
         id="weather"
         type="text"
       >
@@ -1903,7 +1759,7 @@ exports[`renders correctly for addon component (before) 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="c11 c12"
+        class="c10 c11"
         focusable="false"
         viewBox="0 0 20 20"
       >
@@ -1936,7 +1792,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   outline: none;
 }
 
-.c5 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1947,10 +1803,287 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-bottom: 0.25rem !important;
+  margin-top: 0.5rem !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c7.c7.c7 {
+  position: relative;
+}
+
+.c9 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c9:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 > *:not(:first-child):not(:last-child),
+.c5 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+  border-radius: 0;
+  border-top-width: 0;
+}
+
+.c5 > *:first-child,
+.c5 > *:first-child .GroupItem-sc-2orogz-0 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c5 > *:last-child,
+.c5 > *:last-child .GroupItem-sc-2orogz-0 {
+  border-top-left-radius: 0;
+  border-top-width: 0;
+  border-top-right-radius: 0;
+}
+
+.c5 > * {
+  border-radius: 4px;
+}
+
+.c5 input:focus,
+.c5 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c5 > *:first-child input,
+.c5 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c5 > *:last-child input,
+.c5 > *:last-child select {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c5 > *:not(:first-child):not(:last-child) > input,
+.c5 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.c6 {
+  display: inline-block;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 2px;
+  z-index: 1;
+  fill: #435a6f;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.c8 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  color: #435a6f;
+  height: 2.5em;
+  padding: 0.4em 1.4em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.c8[disabled] {
+  background: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c8[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c8:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c12[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c13 + .c10 {
+  width: 15px;
+  height: 15px;
+}
+
+.c14[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c14 + .c10 {
+  width: 25px;
+  height: 25px;
+}
+
+.c15[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c15 + .c10 {
+  width: 30px;
+  height: 30px;
+}
+
+.c16[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c17[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c18[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c19[disabled] + .c10 {
+  fill: #8d8d8d;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+<div
+  class="c0"
+  display="inline-block"
+  style="display: inline-block;"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="weather"
+    >
+      Weather
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c0"
+    role="group"
+  >
+    <div>
+      test
+    </div>
+    <div
+      class="c6 c7"
+    >
+      <select
+        aria-invalid="false"
+        aria-required="false"
+        class="c8 c9"
+        id="weather"
+        type="text"
+      >
+        <option
+          value="sunny"
+        >
+          Sunny
+        </option>
+        <option
+          value="windy"
+        >
+          Windy
+        </option>
+        <option
+          value="overcast"
+        >
+          Overcast
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="c10 c11"
+        focusable="false"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for an input field with a description 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1991,62 +2124,6 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 
 .c10:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c6 > *:not(:first-child):not(:last-child),
-.c6 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
-  border-radius: 0;
-  border-top-width: 0;
-}
-
-.c6 > *:first-child,
-.c6 > *:first-child .GroupItem-sc-2orogz-0 {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.c6 > *:last-child,
-.c6 > *:last-child .GroupItem-sc-2orogz-0 {
-  border-top-left-radius: 0;
-  border-top-width: 0;
-  border-top-right-radius: 0;
-}
-
-.c6 > * {
-  border-radius: 4px;
-}
-
-.c6 input:focus,
-.c6 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.c6 > *:first-child input,
-.c6 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.c6 > *:last-child input,
-.c6 > *:last-child select {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.c6 > *:not(:first-child):not(:last-child) > input,
-.c6 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
 }
 
 .c7 {
@@ -2156,277 +2233,22 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
-      for="weather"
-      style="font-weight: 600;"
-    >
-      Weather
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c0"
-    role="group"
-  >
-    <div>
-      test
-    </div>
-    <div
-      class="c7 c8"
-    >
-      <select
-        aria-invalid="false"
-        aria-required="false"
-        class="c9 c10"
-        id="weather"
-        type="text"
-      >
-        <option
-          value="sunny"
-        >
-          Sunny
-        </option>
-        <option
-          value="windy"
-        >
-          Windy
-        </option>
-        <option
-          value="overcast"
-        >
-          Overcast
-        </option>
-      </select>
-      <svg
-        aria-hidden="true"
-        class="c11 c12"
-        focusable="false"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M13 8l-3-3-3 3h6zm-.1 4L10 14.9 7.1 12h5.8z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for an input field with a description 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c9:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9.c9.c9 {
-  position: relative;
-}
-
-.c11 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-}
-
-.c11:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8 {
-  display: inline-block;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c13 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 2px;
-  z-index: 1;
-  fill: #435a6f;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.c10 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
-  border: 1px solid #bdbdbd;
-  border-radius: 0.2em;
-  color: #435a6f;
-  height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
-  line-height: 1.5;
-  width: 100%;
-}
-
-.c10[disabled] {
-  background: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c10[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c10:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c14[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c15[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c15 + .c12 {
-  width: 15px;
-  height: 15px;
-}
-
-.c16[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c16 + .c12 {
-  width: 25px;
-  height: 25px;
-}
-
-.c17[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c17 + .c12 {
-  width: 30px;
-  height: 30px;
-}
-
-.c18[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c19[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c20[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c21[disabled] + .c12 {
-  fill: #8d8d8d;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-}
-
-abbr.c7 {
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2434,42 +2256,42 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c22 {
+.c6 .c21 {
   top: 0.15em;
 }
 
@@ -2477,7 +2299,7 @@ samp.c7 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   display: block;
   font-size: 0.8rem;
 }
@@ -2492,26 +2314,24 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <span
-    class="c6 c7 c0"
+    class="c5 c6 c0"
   >
     Required for your fannypack
   </span>
   <div
-    class="c8 c9"
+    class="c7 c8"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c10 c11"
+      class="c9 c10"
       id="weather"
       type="text"
     >
@@ -2533,7 +2353,7 @@ samp.c7 {
     </select>
     <svg
       aria-hidden="true"
-      class="c12 c13"
+      class="c11 c12"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -2565,25 +2385,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2597,15 +2399,15 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2618,11 +2420,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -2633,7 +2435,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2645,7 +2447,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   transform: translateY(50%);
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2659,67 +2461,67 @@ exports[`renders correctly for an input field with a hint 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c10 {
+.c15[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c15 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c10 {
+.c16[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c17 + .c10 {
+.c16 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c10 {
+.c17[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c10 {
+.c18[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c10 {
+.c19[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c10 {
+.c20[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
@@ -2729,20 +2531,22 @@ exports[`renders correctly for an input field with a hint 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
-abbr.c13 {
+abbr.c12 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c13 {
+i.c12 {
   font-style: italic;
 }
 
-kbd.c13 {
+kbd.c12 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2750,42 +2554,42 @@ kbd.c13 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c13 {
+mark.c12 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c13 {
+strong.c12 {
   font-weight: bold;
 }
 
-sub.c13,
-sup.c13 {
+sub.c12,
+sup.c12 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c13,
-u.c13 {
+ins.c12,
+u.c12 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c13,
-cite.c13,
-var.c13,
-em.c13 {
+i.c12,
+cite.c12,
+var.c12,
+em.c12 {
   font-style: italic;
 }
 
-kbd.c13,
-pre.c13,
-samp.c13 {
+kbd.c12,
+pre.c12,
+samp.c12 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c13 .c22 {
+.c12 .c21 {
   top: 0.15em;
 }
 
@@ -2793,7 +2597,7 @@ samp.c13 {
   margin-bottom: 0 !important;
 }
 
-.c12 {
+.c11 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
@@ -2809,22 +2613,20 @@ samp.c13 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -2846,7 +2648,7 @@ samp.c13 {
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -2857,7 +2659,7 @@ samp.c13 {
     </svg>
   </div>
   <span
-    class="c12 c13 c0"
+    class="c11 c12 c0"
   >
     Must be awesome
   </span>
@@ -2882,25 +2684,7 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2914,15 +2698,15 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9.c9.c9 {
+.c8.c8.c8 {
   position: relative;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2935,11 +2719,11 @@ exports[`renders correctly for an optional input field 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8 {
+.c7 {
   display: inline-block;
 }
 
@@ -2950,7 +2734,7 @@ exports[`renders correctly for an optional input field 1`] = `
   display: flex;
 }
 
-.c13 {
+.c12 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -2962,7 +2746,7 @@ exports[`renders correctly for an optional input field 1`] = `
   transform: translateY(50%);
 }
 
-.c10 {
+.c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2976,67 +2760,67 @@ exports[`renders correctly for an optional input field 1`] = `
   width: 100%;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c10:focus {
+.c9:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c14[disabled] + .c12 {
+.c13[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15[disabled] + .c12 {
+.c14[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c15 + .c12 {
+.c14 + .c11 {
   width: 15px;
   height: 15px;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c16 + .c12 {
+.c15 + .c11 {
   width: 25px;
   height: 25px;
 }
 
-.c17[disabled] + .c12 {
+.c16[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c17 + .c12 {
+.c16 + .c11 {
   width: 30px;
   height: 30px;
 }
 
-.c18[disabled] + .c12 {
+.c17[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c12 {
+.c18[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c20[disabled] + .c12 {
+.c19[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
-.c21[disabled] + .c12 {
+.c20[disabled] + .c11 {
   fill: #8d8d8d;
 }
 
@@ -3046,20 +2830,22 @@ exports[`renders correctly for an optional input field 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
-abbr.c7 {
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3067,42 +2853,42 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c22 {
+.c6 .c21 {
   top: 0.15em;
 }
 
@@ -3110,7 +2896,7 @@ samp.c7 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
@@ -3126,27 +2912,25 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
     <span
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     >
       OPTIONAL
     </span>
   </div>
   <div />
   <div
-    class="c8 c9"
+    class="c7 c8"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c10 c11"
+      class="c9 c10"
       id="weather"
       type="text"
     >
@@ -3168,7 +2952,7 @@ samp.c7 {
     </select>
     <svg
       aria-hidden="true"
-      class="c12 c13"
+      class="c11 c12"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -3200,25 +2984,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3232,15 +2998,15 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3253,11 +3019,11 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -3268,7 +3034,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3280,33 +3046,33 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3320,33 +3086,33 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   font-size: 1.5rem;
 }
 
-.c8 + .c10 {
+.c7 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c8 + .c16 {
+.c7 + .c15 {
   width: 25px;
   height: 25px;
   top: 16px;
@@ -3359,6 +3125,8 @@ exports[`sizes renders correctly for a select with size large 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -3375,22 +3143,20 @@ exports[`sizes renders correctly for a select with size large 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -3412,7 +3178,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -3444,25 +3210,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3476,15 +3224,15 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3497,11 +3245,11 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -3512,7 +3260,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3524,24 +3272,24 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3555,33 +3303,33 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   font-size: 1.25rem;
 }
 
-.c8 + .c10 {
+.c7 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c8 + .c15 {
+.c7 + .c14 {
   width: 20px;
   height: 20px;
   top: 15px;
@@ -3594,6 +3342,8 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -3610,22 +3360,20 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -3647,7 +3395,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -3679,25 +3427,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3711,15 +3441,15 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3732,11 +3462,11 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -3747,7 +3477,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3759,15 +3489,15 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3781,33 +3511,33 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   font-size: 0.8rem;
 }
 
-.c8 + .c10 {
+.c7 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c8 + .c14 {
+.c7 + .c13 {
   width: 10px;
   height: 10px;
   top: 10px;
@@ -3819,6 +3549,8 @@ exports[`sizes renders correctly for a select with size small 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -3835,22 +3567,20 @@ exports[`sizes renders correctly for a select with size small 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -3872,7 +3602,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -3904,25 +3634,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3936,15 +3648,15 @@ exports[`states renders correctly for a select with state danger 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3957,11 +3669,11 @@ exports[`states renders correctly for a select with state danger 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -3972,7 +3684,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -3984,42 +3696,42 @@ exports[`states renders correctly for a select with state danger 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c15[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c15 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4033,24 +3745,24 @@ exports[`states renders correctly for a select with state danger 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   border-color: #c9444d;
   box-shadow: #c9444d 0px 0px 0px 1px !important;
 }
@@ -4061,6 +3773,8 @@ exports[`states renders correctly for a select with state danger 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -4077,22 +3791,20 @@ exports[`states renders correctly for a select with state danger 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="true"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -4114,7 +3826,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -4146,25 +3858,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4178,15 +3872,15 @@ exports[`states renders correctly for a select with state primary 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4199,11 +3893,11 @@ exports[`states renders correctly for a select with state primary 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -4214,7 +3908,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4226,54 +3920,54 @@ exports[`states renders correctly for a select with state primary 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c15[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c15 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c16[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c10 {
+.c17[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c19[disabled] + .c10 {
+.c18[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4287,24 +3981,24 @@ exports[`states renders correctly for a select with state primary 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
@@ -4315,6 +4009,8 @@ exports[`states renders correctly for a select with state primary 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -4331,22 +4027,20 @@ exports[`states renders correctly for a select with state primary 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -4368,7 +4062,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -4400,25 +4094,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4432,15 +4108,15 @@ exports[`states renders correctly for a select with state success 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4453,11 +4129,11 @@ exports[`states renders correctly for a select with state success 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -4468,7 +4144,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4480,46 +4156,46 @@ exports[`states renders correctly for a select with state success 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c15[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c15 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c16[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4533,24 +4209,24 @@ exports[`states renders correctly for a select with state success 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   border-color: #2c8453;
   box-shadow: #2c8453 0px 0px 0px 1px !important;
 }
@@ -4561,6 +4237,8 @@ exports[`states renders correctly for a select with state success 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -4577,22 +4255,20 @@ exports[`states renders correctly for a select with state success 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -4614,7 +4290,7 @@ exports[`states renders correctly for a select with state success 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -4646,25 +4322,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4678,15 +4336,15 @@ exports[`states renders correctly for a select with state warning 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -4699,11 +4357,11 @@ exports[`states renders correctly for a select with state warning 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
 }
 
@@ -4714,7 +4372,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   display: flex;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -4726,50 +4384,50 @@ exports[`states renders correctly for a select with state warning 1`] = `
   transform: translateY(50%);
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c13[disabled] + .c10 {
+.c12[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c14 + .c10 {
+.c13 + .c9 {
   width: 15px;
   height: 15px;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c15 + .c10 {
+.c14 + .c9 {
   width: 25px;
   height: 25px;
 }
 
-.c16[disabled] + .c10 {
+.c15[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c16 + .c10 {
+.c15 + .c9 {
   width: 30px;
   height: 30px;
 }
 
-.c17[disabled] + .c10 {
+.c16[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c18[disabled] + .c10 {
+.c17[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4783,24 +4441,24 @@ exports[`states renders correctly for a select with state warning 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8 {
+.c7 {
   border-color: #f2a100;
   box-shadow: #f2a100 0px 0px 0px 1px !important;
 }
@@ -4811,6 +4469,8 @@ exports[`states renders correctly for a select with state warning 1`] = `
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -4827,22 +4487,20 @@ exports[`states renders correctly for a select with state warning 1`] = `
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
   </div>
   <div />
   <div
-    class="c6 c7"
+    class="c5 c6"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -4864,7 +4522,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >

@@ -19,7 +19,7 @@ const CardCard: React.FunctionComponent<LocalCardCardProps> = ({
   children,
   ...props
 }) => (
-  <Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} padding="minor-6" {...props}>
+  <Card aria-describedby={a11yDescriptionId} aria-labelledby={a11yTitleId} {...props}>
     {children}
   </Card>
 );

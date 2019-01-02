@@ -12,6 +12,8 @@ import Pane from '../Pane';
 import Heading from '../Heading';
 
 export default styled(Pane)<CardCardProps>`
+  padding: ${space(6, 'minor')}rem;
+
   ${props =>
     props.isFullWidth &&
     css`
