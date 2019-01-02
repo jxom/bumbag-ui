@@ -1,8 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import ThemeProvider from 'reakit/Provider';
-// @ts-ignore
-import webFontLoader from 'webfontloader';
 
 import { ThemeConfig } from '../types';
 import Global from '../_utils/Global';
@@ -38,7 +36,8 @@ const loadTheme = ({
   if (typeof window !== 'undefined') {
     const webFontLoaderConfig = theme.webFontLoader;
     if (webFontLoaderConfig) {
-      webFontLoader.load(webFontLoaderConfig);
+      // @ts-ignore
+      import('webfontloader').then(webFontLoader => webFontLoader.load(webFontLoaderConfig));
     }
   }
   const derivedTheme: DerivedTheme = {
