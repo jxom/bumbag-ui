@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { Container, ActionMap } from 'constate';
-import { EffectMap } from 'constate/dist/ts/src';
+import { Container } from 'reakit';
+import { ActionMap, EffectMap } from 'constate/dist/ts/src';
 // @ts-ignore
 import _uniqueId from 'lodash/uniqueId';
 
@@ -27,7 +27,7 @@ type State = {
   props: {};
 };
 export type ToastContainerProps = {
-  children: (props: Actions & { toasts: Array<Toast> }) => React.ReactNode;
+  children: (props: Actions & Effects & { toasts: Array<Toast> }) => React.ReactNode;
   placement?: Placement;
 };
 
