@@ -6,6 +6,8 @@ menu: Components
 
 import { Playground } from 'docz';
 import PropsTable from '../_docs/components/PropsTable';
+import { Button } from '../Button';
+import { Set } from '../Set';
 import { Toast } from './Toast';
 
 # Toast
@@ -14,10 +16,301 @@ import { Toast } from './Toast';
 
 `import { Toast } from 'fannypack'`
 
+## Basic usage
+
+The `<Toast>` component is a bit different to the other fannypack components as you don't use the component directly. Instead, you use `Toast`'s container (`Toast.Container`) or the `withToast` higher-order component to render your toasts.
+
+### Using render props (`Toast.Container`)
+
+<Playground>
+  <Toast.Container>
+    {toast => (
+      <Button onClick={() => toast.success({ title: 'Message sent', message: 'Your message was sent successfully!' })}>Add toast</Button>
+    )}
+  </Toast.Container>
+</Playground>
+
+### Using higher-order component (`withToasts`)
+
+```jsx
+class MyComponent extends React.Component {
+  onSubmit = () => {
+    const { toast } = this.props;
+    toast.success({ title: 'Message sent', message: 'Your message was sent successfully!' });
+  };
+
+  render() {
+    return <form onSubmit={this.onSubmit}>...</form>;
+  }
+}
+
+export default withToasts(MyComponent);
+```
+
+## Success
+
+To add a success toast, use the `toast.success` method:
+
+<Playground>
+  <Toast.Container>
+    {toast => (
+      <Button onClick={() => toast.success({ title: 'Message sent', message: 'Your message was sent successfully!' })}>Add success toast</Button>
+    )}
+  </Toast.Container>
+</Playground>
+
+## Info
+
+To add an info toast, use the `toast.info` method:
+
+<Playground>
+  <Toast.Container>
+    {toast => (
+      <Button onClick={() => toast.info({ title: 'Fannypack updated', message: 'Fannypack has been automatically updated.' })}>Add info toast</Button>
+    )}
+  </Toast.Container>
+</Playground>
+
+## Danger
+
+To add a danger toast, use the `toast.danger` method:
+
+<Playground>
+  <Toast.Container>
+    {toast => (
+      <Button onClick={() => toast.danger({ autoDismissTimeout: 0, title: 'An error occurred', message: 'We cannot update your details at this time.' })}>Add danger toast</Button>
+    )}
+  </Toast.Container>
+</Playground>
+
+## Warning
+
+To add an warning toast, use the `toast.warning` method:
+
+<Playground>
+  <Toast.Container>
+    {toast => (
+      <Button onClick={() => toast.warning({ title: 'Watch out!', message: 'If you do this, you are not going to have a fun time.' })}>Add warning toast</Button>
+    )}
+  </Toast.Container>
+</Playground>
+
+## Placement
+
+You can customise the placement of the toasts by using the `Toast.placement` theme variable. `Toast.placement` is set to `"top-end"` by default.
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  Toast: {
+    placement: 'bottom-end'
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+## Stacked toasts
+
+By default, toasts in Fannypack are stacked, meaning that you can display multiple toasts at the one time. However, you have the ability to disable this using the `Toast.isStacked` theme variable.
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  Toast: {
+    isStacked: false
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+## Custom Toast props
+
+You can override the `Toast` component props using the `Toast.defaultProps` theme variable. This variable accepts an object of the [`<Toast>` props](#props).
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  Toast: {
+    defaultProps: {
+      hideCloseButton: true,
+      hasHorizontalBar: true,
+      hasTint: true
+    }
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+## Dismiss timeout
+
+By default, the toast timeout is 5 seconds (5000ms). You can change this via the `Toast.defaultProps` theme variable.
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  Toast: {
+    defaultProps: {
+      autoDismissTimeout: 2000
+    }
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+## Custom Toast component
+
+By default, Fannypack uses a [default Toast component](#defaulttoastcomponent). You can change the default toast with the `Toast.component` theme variable. [Click here to see an example implementation of the `<Toast>` component](https://github.com/fannypackui/fannypack/tree/master/src/Toast/Toast.tsx).
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+import MyCustomToast from './MyCustomToast';
+
+const theme = {
+  Toast: {
+    component: MyCustomToast
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+# Default Toast component
+
 ## Basic Usage
 
 <Playground>
-  <Toast>Hello world</Toast>
+  <Toast>
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+## Types
+
+A toast can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
+
+<Playground>
+  <Toast type="info">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast type="success">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast type="warning">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast type="danger">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+## Titles
+
+You can provide a title using the `title` prop.
+
+<Playground>
+  <Toast title="An error occurred!" type="danger">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast title="Welcome to Fannypack!" type="info" />
+</Playground>
+
+## Close button
+
+Use the `onClickClose` prop to handle when the close button is triggered.
+
+<Playground>
+  <Toast onClickClose={() => alert('Closed!')} title="An error occurred!" type="danger">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+By default, a toast has a close button. To hide it, you can use the `hideCloseButton` prop.
+
+<Playground>
+  <Toast hideCloseButton title="An error occurred!" type="danger">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+## Dismiss timeout
+
+To animate the left bar to be a countdown, use the `autoDismissTimeout` prop to set a countdown (in milliseconds).
+
+To see it in action, change the value of the `autoDismissTimeout` prop below.
+
+<Playground>
+  <Toast autoDismissTimeout={5000}>
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+## Horizontal bar
+
+<Playground>
+  <Toast hasHorizontalBar>
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+</Playground>
+
+## Tints
+
+Use the `hasTint` prop to render tinted toasts:
+
+<Playground>
+  <Toast hasTint type="info">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast hasTint type="danger">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast hasTint type="success">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
+  <Toast hasTint type="warning">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+    helvetica.
+  </Toast>
 </Playground>
 
 ## Props
@@ -31,6 +324,29 @@ import { Toast } from './Toast';
 ```jsx
 {
   Toast: {
+    base: css | Object,
+    tint: css | Object,
+    Close: {
+      base: css | Object,
+      hover: css | Object,
+    },
+    Content: {
+      base: css | Object,
+    },
+    CountdownBar: {
+      base: css | Object,
+      autoDismissTimeout: css | Object,
+      background: css | Object
+    },
+    Title: {
+      base: css | Object
+    },
+    Icon: {
+      base: css | Object,
+      wrapper: css | Object
+    }
+  },
+  Toasts: {
     base: css | Object
   }
 }

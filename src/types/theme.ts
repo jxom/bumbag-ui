@@ -491,6 +491,32 @@ export type TextareaThemeConfig = {
     large?: Stylesheet;
   };
 };
+export type ToastThemeConfig = {
+  base?: Stylesheet;
+  tint?: Stylesheet;
+  Close?: {
+    base?: Stylesheet;
+    hover?: Stylesheet;
+  };
+  Content?: {
+    base?: Stylesheet;
+  };
+  CountdownBar?: {
+    base?: Stylesheet;
+    autoDismissTimeout?: Stylesheet;
+    background?: Stylesheet;
+  };
+  Title?: {
+    base?: Stylesheet;
+  };
+  Icon?: {
+    base?: Stylesheet;
+    wrapper?: Stylesheet;
+  };
+};
+export type ToastsThemeConfig = {
+  base?: Stylesheet;
+};
 export type WebFontLoader = {
   [key: string]: Object;
 };
@@ -545,6 +571,8 @@ export type ThemeConfig = {
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
   Textarea?: TextareaThemeConfig;
+  Toast?: ToastThemeConfig;
+  Toasts?: ToastsThemeConfig;
 
   reakit?: any;
 };

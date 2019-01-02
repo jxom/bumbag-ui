@@ -35,8 +35,8 @@ exports[`renders correctly 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {
@@ -161,101 +161,12 @@ exports[`renders correctly when a close button is present 1`] = `
   display: flex;
 }
 
-.c5 {
-  background-color: white;
-  border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-}
-
 .c16 {
   fill: inherit;
   position: relative;
   font-size: 1em;
   height: 1em;
   width: 1em;
-}
-
-.c10 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.heading.c10 + .sub-heading {
-  margin-top: -1rem;
-}
-
-.c10:last-child {
-  margin-bottom: 0;
-}
-
-h1.c10 {
-  font-size: 3rem;
-}
-
-h2.c10 {
-  font-size: 2.5rem;
-}
-
-h3.c10 {
-  font-size: 2rem;
-}
-
-h4.c10 {
-  font-size: 1.5rem;
-}
-
-h5.c10 {
-  font-size: 1.25rem;
-}
-
-h6.c10 {
-  font-size: 1rem;
-}
-
-.c10 .c15 {
-  top: 0.15em;
-}
-
-.c10 {
-  font-weight: 600;
-}
-
-.c4 {
-  padding: 1.5rem;
-}
-
-.c8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-bottom: 1em;
-  position: relative;
-  width: 100%;
-}
-
-.c9 {
-  margin-bottom: 0px;
 }
 
 .c12 {
@@ -311,6 +222,107 @@ h6.c10 {
   fill: #000;
 }
 
+.c10 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading.c10 + .sub-heading {
+  margin-top: -1rem;
+}
+
+.c10:last-child {
+  margin-bottom: 0;
+}
+
+h1.c10 {
+  font-size: 3rem;
+}
+
+h2.c10 {
+  font-size: 2.5rem;
+}
+
+h3.c10 {
+  font-size: 2rem;
+}
+
+h4.c10 {
+  font-size: 1.5rem;
+}
+
+h5.c10 {
+  font-size: 1.25rem;
+}
+
+h6.c10 {
+  font-size: 1rem;
+}
+
+.c10 .c15 {
+  top: 0.15em;
+}
+
+.c10 {
+  font-weight: 600;
+}
+
+.c5 {
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+}
+
+.c14 {
+  border: 0px;
+  -webkit-clip: rect(0px,0px,0px,0px);
+  clip: rect(0px,0px,0px,0px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.c4 {
+  padding: 1.5rem;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  position: relative;
+  width: 100%;
+}
+
+.c9 {
+  margin-bottom: 0px;
+}
+
 .c3 {
   position: relative;
 }
@@ -338,18 +350,6 @@ h6.c10 {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c14 {
-  border: 0px;
-  -webkit-clip: rect(0px,0px,0px,0px);
-  clip: rect(0px,0px,0px,0px);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0px;
-  overflow: hidden;
-  position: absolute;
 }
 
 .c0 {
@@ -493,8 +493,8 @@ exports[`renders correctly when a footer prop is set 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {
@@ -628,8 +628,8 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {
@@ -737,20 +737,6 @@ exports[`renders correctly when a title prop is set 1`] = `
   display: flex;
 }
 
-.c5 {
-  background-color: white;
-  border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-}
-
 .c10 {
   font-weight: 700;
   line-height: 1.2;
@@ -795,6 +781,20 @@ h6.c10 {
 
 .c10 {
   font-weight: 600;
+}
+
+.c5 {
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {
@@ -966,20 +966,6 @@ exports[`renders correctly when a type prop is set 1`] = `
   display: flex;
 }
 
-.c5 {
-  background-color: white;
-  border-radius: 3px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-}
-
 .c11 {
   fill: #35709e;
   position: relative;
@@ -1032,6 +1018,20 @@ h6.c8 {
 
 .c8 {
   font-weight: 600;
+}
+
+.c5 {
+  background-color: white;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {
@@ -1176,8 +1176,8 @@ exports[`renders correctly with a custom element 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  box-shadow: 0px 2px 4px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
-  box-shadow: 0px 6px 12px 0px #e6e6e6,0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 2px 4px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
 .c4 {

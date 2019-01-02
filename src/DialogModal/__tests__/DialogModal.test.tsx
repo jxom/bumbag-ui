@@ -9,7 +9,8 @@ it('renders correctly for a default dialog modal', () => {
   const { container } = render(
     <Modal.Container defaultVisible>
       {modal => <DialogModal {...modal}>This is the content</DialogModal>}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -22,7 +23,8 @@ it('renders correctly for a dialog modal with a close button', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -35,7 +37,8 @@ it('renders correctly for a dialog modal with a title', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -48,7 +51,8 @@ it('renders correctly for a dialog modal with action buttons', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -61,7 +65,8 @@ it('renders correctly for a dialog modal with a footer', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -74,7 +79,8 @@ it('renders correctly for a dialog modal with kind alert', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });
@@ -87,7 +93,8 @@ it('renders correctly for a dialog modal with type', () => {
           This is the content
         </DialogModal>
       )}
-    </Modal.Container>
+    </Modal.Container>,
+    { theme: { Toast: { disabled: true } } }
   );
   expect(container.firstChild).toMatchSnapshot();
 });

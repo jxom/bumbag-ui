@@ -1,10 +1,13 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import ThemeProvider from 'reakit/Provider';
+// @ts-ignore
+import _get from 'lodash/get';
 
 import { ThemeConfig } from '../types';
 import Global from '../_utils/Global';
 import reakitTheme from '../_utils/reakitTheme';
+import ToastManager from '../Toast/ToastManager';
 
 import defaultTheme from '../themes/default';
 
@@ -73,6 +76,7 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
           {/*
             // @ts-ignore */}
           <Global />
+          {!_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
           {children}
         </React.Fragment>
       </ThemeProvider>
