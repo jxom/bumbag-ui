@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { InlineBlock } from '../primitives';
-import { getUniqueId } from '../uniqueId';
 import Pane from '../Pane';
 import PopoverContainer, { PopoverContainerProps } from './PopoverContainer';
 import PopoverClose, { PopoverCloseProps } from './PopoverClose';

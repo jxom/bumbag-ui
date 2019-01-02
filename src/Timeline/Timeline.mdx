@@ -1,0 +1,74 @@
+---
+name: Timeline
+route: /components/timeline
+menu: Components
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import Timeline from './index';
+
+
+# Timeline
+
+## Import
+
+`import { Timeline } from 'fannypack'`
+
+## Basic Usage
+
+The `<Timeline>` component is made up of a compound of components such as: `<Timeline.Step>`,  `<Timeline.StepHeading>` and `<Timeline.StepDetail>`
+
+<Playground>
+  <Timeline activeStep="StepHeading2" progressColor="success">
+    <Timeline.Step a11yTitleId="StepHeading1" a11yDescriptionId="StepDetail1">
+      <Timeline.StepHeading id="StepHeading1">Step one Heading</Timeline.StepHeading>
+      <Timeline.StepDetail id="StepDetail1">Step one details goes here</Timeline.StepDetail>
+    </Timeline.Step>
+    <Timeline.Step a11yTitleId="StepHeading2" a11yDescriptionId="StepDetail2">
+      <Timeline.StepHeading id="StepHeading2">Step two Heading</Timeline.StepHeading>
+      <Timeline.StepDetail id="StepDetail2">Step two details goes here</Timeline.StepDetail>
+    </Timeline.Step>
+    <Timeline.Step a11yTitleId="StepHeading3" a11yDescriptionId="StepDetail3">
+      <Timeline.StepHeading id="StepHeading3">Step three Heading</Timeline.StepHeading>
+      <Timeline.StepDetail id="StepDetail3">Step three details goes here</Timeline.StepDetail>
+    </Timeline.Step>
+  </Timeline>
+</Playground>
+
+## Props
+
+### `<Timeline>`
+<PropsTable component={Timeline} />
+
+### `<Timeline.Step>`
+<PropsTable component={Timeline.Step} />
+
+### `<Timeline.StepHeading>`
+<PropsTable component={Timeline.StepHeading} />
+
+### `<Timeline.StepDetail>`
+<PropsTable component={Timeline.StepDetail} />
+
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Bullet: {
+    base: string | Object
+  },
+  Step: {
+    base: Stylesheet;
+  },
+  StepHeading: {
+    base: string | Object
+  },
+  StepDetail: {
+    base: string | Object
+  }
+}
+```
