@@ -178,6 +178,10 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
     ${disabledProperties};
   }
 
+  & {
+    ${theme('fannypack.Button.base')};
+  }
+
   ${props =>
     props.palette === 'default' &&
     css`
