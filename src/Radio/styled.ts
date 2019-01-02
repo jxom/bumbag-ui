@@ -35,12 +35,12 @@ export const HiddenRadio = HiddenInput<Omit<LocalRadioProps, 'label'>>({
     background: ${palette('primary')};
     border-radius: 50%;
     content: '';
-    height: 8px;
+    height: 0.5em;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 8px;
+    width: 0.5em;
   `,
   disabledCheckedIconCss: css`
     background: ${palette('gray300')};

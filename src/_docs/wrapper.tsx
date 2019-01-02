@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import ThemeProvider from '../ThemeProvider';
+// @ts-ignore
 import medipass from '../themes/medipass';
 
 const theme = {

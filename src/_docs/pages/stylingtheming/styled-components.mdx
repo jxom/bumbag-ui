@@ -28,3 +28,29 @@ const RedButton = styled(Button)`
 
 <RedButton>I am a red button!</RedButton>
 ```
+
+## Accessing the theme
+
+Fannypack exports a `theme` utility function which you can use to access theme variables:
+
+```jsx
+import { Text, styled, theme } from 'fannypack';
+
+const LargeText = styled(Button)`
+  font-size: ${theme('fannypack.fontSizes.700')}rem;
+`;
+```
+
+## Accessing the palette
+
+Fannypack exports a `palette` utility function which you can use to access palette colors:
+
+```jsx
+import { Text, palette, styled } from 'fannypack';
+
+const PrimaryText = styled(Button)`
+  color: ${palette('primary')};
+`;
+```
+
+

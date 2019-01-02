@@ -35,9 +35,12 @@ const loadTheme = ({
   if (isStandalone && _theme) {
     theme = _theme;
   }
-  const webFontLoaderConfig = theme.webFontLoader;
-  if (webFontLoaderConfig) {
-    webFontLoader.load(webFontLoaderConfig);
+  if (typeof window !== 'undefined') {
+    const webFontLoaderConfig = theme.webFontLoader;
+    if (webFontLoaderConfig) {
+      // @ts-ignore
+      import('webfontloader').then(webFontLoader => webFontLoader.load(webFontLoaderConfig));
+    }
   }
   const derivedTheme: DerivedTheme = {
     fannypack: theme, // Split into own 'fannypack' context to avoid conflicts
@@ -48,7 +51,7 @@ const loadTheme = ({
   return derivedTheme;
 };
 
-class Provider extends React.PureComponent<LocalThemeProviderProps, State> {
+class Provider extends React.Component<LocalThemeProviderProps, State> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     isStandalone: PropTypes.bool,

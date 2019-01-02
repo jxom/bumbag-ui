@@ -24,6 +24,16 @@ const Pane = styled(Box)<PaneProps & { styledBorder?: boolean | 'shadow' | strin
       }
     `};
   ${(props: any) =>
+    props.elevation &&
+    css`
+      box-shadow: 0px
+          ${(props: any) =>
+            // @ts-ignore
+            theme(`fannypack.Pane.elevations.${props.elevation}`)(props) / 2}px
+          ${theme(`fannypack.Pane.elevations.${props.elevation}`)}px 0px ${palette('white800')},
+        0px 0px 0px 1px ${palette('white800')};
+    `};
+  ${(props: any) =>
     props.styledBorder === true &&
     css`
       border: 1px solid ${palette('white800')};

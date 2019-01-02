@@ -1,0 +1,39 @@
+---
+name: Toast
+route: /components/toast
+menu: Components
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import { Toast } from './Toast';
+
+# Toast
+
+## Import
+
+`import { Toast } from 'fannypack'`
+
+## Basic Usage
+
+<Playground>
+  <Toast>Hello world</Toast>
+</Playground>
+
+## Props
+
+<PropsTable component={Toast} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  Toast: {
+    base: css | Object
+  }
+}
+```
+
+[Learn more about theming](/styling#theming)

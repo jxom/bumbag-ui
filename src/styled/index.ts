@@ -10,6 +10,10 @@ import styled, {
   StyleSheetManager
 } from 'reakit/styled';
 import { prop, theme, palette, ifProp, ifNotProp, switchProp, withProp } from 'styled-tools';
+<<<<<<< HEAD
+=======
+import space from './space';
+>>>>>>> master
 
 export {
   css,
@@ -20,7 +24,15 @@ export {
   ThemeProvider,
   withTheme,
   ServerStyleSheet,
-  StyleSheetManager
+  StyleSheetManager,
+  prop,
+  theme,
+  palette,
+  ifProp,
+  ifNotProp,
+  switchProp,
+  withProp,
+  space
 };
 export { prop, theme, palette, ifProp, ifNotProp, switchProp, withProp } from 'styled-tools';
 export { default as space } from './space';

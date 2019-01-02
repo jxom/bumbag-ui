@@ -170,12 +170,8 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${props => palette(props.palette === 'default' ? 'primary300' : `${props.palette}300`)(props)} 0px 0px
-      0px 2px;
-  }
-
-  & {
-    ${theme('fannypack.Button.base')};
+    box-shadow: ${props => palette(props.palette === 'default' ? 'primary' : `${props.palette}300`)(props)} 0px 0px 0px
+      2px;
   }
 
   &[disabled] {

@@ -185,6 +185,15 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
         ..._get(overrides, 'Icon.iconNames', {})
       }
     },
+    Pane: {
+      ..._get(overrides, 'Pane', {}),
+      elevations: {
+        100: 4,
+        200: 8,
+        300: 12,
+        400: 24
+      }
+    },
     Table: {
       borderColor: p('gray100'),
       spacing: space(2),

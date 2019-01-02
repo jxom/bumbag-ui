@@ -9,7 +9,15 @@ export {
   ThemeConsumer,
   withTheme,
   ServerStyleSheet,
-  StyleSheetManager
+  StyleSheetManager,
+  space,
+  prop,
+  theme,
+  palette,
+  ifProp,
+  ifNotProp,
+  switchProp,
+  withProp
 } from './styled';
 
 export { defaultTheme } from './themes';
@@ -58,5 +66,6 @@ export { Tabs } from './Tabs';
 export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
+export { Timeline } from './Timeline';
 export { Tooltip } from './Tooltip';
 export { VisuallyHidden } from './VisuallyHidden';

@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { InlineBlock } from '../primitives';
-import { getUniqueId } from '../uniqueId';
 import Pane from '../Pane';
 import PopoverContainer, { PopoverContainerProps } from './PopoverContainer';
 import PopoverClose, { PopoverCloseProps } from './PopoverClose';
@@ -46,7 +45,7 @@ export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverCompon
     {popover => (
       <InlineBlock relative>
         {React.cloneElement(children, { use: PopoverToggle, ...popover })}
-        <PopoverPopover border="shadow" padding="minor-5" {...props} {...popover} use={Pane}>
+        <PopoverPopover elevation="200" padding="minor-5" {...props} {...popover} use={Pane}>
           {({ initialFocusRef }) => (
             <React.Fragment>
               {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}{/* eslint-disable-line */}

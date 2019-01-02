@@ -83,8 +83,8 @@ const sizeProperties: any = {
 };
 
 const stateProperties = css<{ state: SelectProps['state'] }>`
-  border-color: ${props => palette(`${props.state}300`)(props)};
-  box-shadow: ${props => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
+  border-color: ${props => palette(`${props.state}`)(props)};
+  box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
 
 export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line

@@ -33,27 +33,27 @@ export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
   checkedIconCss: css<{ indeterminate?: boolean }>`
     background-clip: padding-box;
     content: '';
-    left: calc(50% - 3px);
-    top: calc(50% - 6px);
+    left: calc(50% - 0.1875em);
+    top: calc(50% - 0.375em);
     position: absolute;
 
     & {
       ${props =>
         props.indeterminate
           ? css`
-              background-color: #7467c0;
-              height: 2px;
-              width: 10px;
-              top: calc(50% - 1px);
-              left: calc(50% - 5px);
+              background-color: ${palette('primary')};
+              height: 0.125em;
+              width: 0.625em;
+              top: calc(50% - 0.0625em);
+              left: calc(50% - 0.3125em);
             `
           : css`
-              border: 0.1rem solid ${palette('primary')};
+              border: 0.1em solid ${palette('primary')};
               border-left-width: 0;
               border-top-width: 0;
-              height: 10px;
+              height: 0.625em;
               transform: rotate(45deg);
-              width: 6px;
+              width: 0.375em;
             `};
     }
   `,

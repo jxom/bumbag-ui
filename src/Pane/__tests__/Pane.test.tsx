@@ -21,3 +21,10 @@ it('renders correctly for a full width pane', () => {
   const { container } = render(<Pane isFullWidth>test</Pane>);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+['100', '200', '300', '400'].forEach(elevation => {
+  it(`renders correctly for a pane with elevation ${elevation}`, () => {
+    const { container } = render(<Pane elevation={elevation}>test</Pane>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
