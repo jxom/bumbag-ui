@@ -71,6 +71,10 @@ exports[`renders correctly for a basic checkbox field 1`] = `
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -127,10 +131,6 @@ samp.c8 {
 
 .c8 .c10 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {
@@ -308,6 +308,10 @@ exports[`renders correctly for a disabled checkbox field 1`] = `
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -364,10 +368,6 @@ samp.c8 {
 
 .c8 .c10 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {
@@ -493,7 +493,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -507,11 +507,11 @@ exports[`renders correctly for a required field 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -524,11 +524,11 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c12 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -542,25 +542,7 @@ exports[`renders correctly for a required field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c13:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
+.c12:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -571,18 +553,22 @@ exports[`renders correctly for a required field 1`] = `
   display: flex;
 }
 
-abbr.c12 {
+.c4 {
+  display: inline-block;
+}
+
+abbr.c11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c12 {
+i.c11 {
   font-style: italic;
 }
 
-kbd.c12 {
+kbd.c11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -590,50 +576,46 @@ kbd.c12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c12 {
+mark.c11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c12 {
+strong.c11 {
   font-weight: bold;
 }
 
-sub.c12,
-sup.c12 {
+sub.c11,
+sup.c11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c12,
-u.c12 {
+ins.c11,
+u.c11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c12,
-cite.c12,
-var.c12,
-em.c12 {
+i.c11,
+cite.c11,
+var.c11,
+em.c11 {
   font-style: italic;
 }
 
-kbd.c12,
-pre.c12,
-samp.c12 {
+kbd.c11,
+pre.c11,
+samp.c11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c12 .c15 {
+.c11 .c14 {
   top: 0.15em;
 }
 
-.c4 {
-  display: inline-block;
-}
-
-.c11 {
+.c10 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -642,7 +624,7 @@ samp.c12 {
   width: 1em;
 }
 
-.c8 {
+.c7 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -652,26 +634,26 @@ samp.c12 {
   width: 1px;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c8:checked:focus + .c10 {
+.c7:checked:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8:focus + .c10 {
+.c7:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8:not([disabled]):checked + .c10 {
+.c7:not([disabled]):checked + .c9 {
   border-color: #444bc9;
 }
 
-.c8:checked + .c10::before {
+.c7:checked + .c9::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -679,7 +661,7 @@ samp.c12 {
   position: absolute;
 }
 
-.c8:checked + .c10::before {
+.c7:checked + .c9::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -690,34 +672,34 @@ samp.c12 {
   width: 0.375em;
 }
 
-.c8[disabled]:checked + .c10::before {
+.c7[disabled]:checked + .c9::before {
   border-color: #9a9a9a;
 }
 
-.c14[disabled] + .c10 {
+.c13[disabled] + .c9 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c14:checked:focus + .c10 {
+.c13:checked:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c14:focus + .c10 {
+.c13:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c14:not([disabled]):checked + .c10 {
+.c13:not([disabled]):checked + .c9 {
   border-color: #444bc9;
 }
 
-.c14:checked + .c10 {
+.c13:checked + .c9 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c14:checked + .c10::before {
+.c13:checked + .c9::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -725,7 +707,7 @@ samp.c12 {
   position: absolute;
 }
 
-.c14:checked + .c10::before {
+.c13:checked + .c9::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -736,11 +718,11 @@ samp.c12 {
   width: 0.375em;
 }
 
-.c14[disabled]:checked + .c10::before {
+.c13[disabled]:checked + .c9::before {
   border-color: #9a9a9a;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -753,6 +735,8 @@ samp.c12 {
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -769,10 +753,8 @@ samp.c12 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
@@ -783,18 +765,18 @@ samp.c12 {
     aria-invalid="false"
     aria-label="Check me"
     aria-required="true"
-    class="c6 c4 c7"
+    class="c5 c4 c6"
   >
     <input
-      class="c8 c9"
+      class="c7 c8"
       type="checkbox"
       value=""
     />
     <div
-      class="c10 c11 c0"
+      class="c9 c10 c0"
     />
     <span
-      class="c12 c13"
+      class="c11 c12"
       id="label"
     >
       Check me
@@ -822,7 +804,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -836,11 +818,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -853,11 +835,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c14 {
+.c13 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -871,25 +853,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c14:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
+.c13:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -900,18 +864,22 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: flex;
 }
 
-abbr.c7 {
+.c4 {
+  display: inline-block;
+}
+
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -919,50 +887,46 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c16 {
+.c6 .c15 {
   top: 0.15em;
 }
 
-.c4 {
-  display: inline-block;
-}
-
-.c13 {
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -971,7 +935,7 @@ samp.c7 {
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -981,26 +945,26 @@ samp.c7 {
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1008,7 +972,7 @@ samp.c7 {
   position: absolute;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1019,34 +983,34 @@ samp.c7 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c15[disabled] + .c12 {
+.c14[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c15:checked:focus + .c12 {
+.c14:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:focus + .c12 {
+.c14:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:not([disabled]):checked + .c12 {
+.c14:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c15:checked + .c12 {
+.c14:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:checked + .c12::before {
+.c14:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1054,7 +1018,7 @@ samp.c7 {
   position: absolute;
 }
 
-.c15:checked + .c12::before {
+.c14:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1065,11 +1029,11 @@ samp.c7 {
   width: 0.375em;
 }
 
-.c15[disabled]:checked + .c12::before {
+.c14[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1082,13 +1046,15 @@ samp.c7 {
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   display: block;
   font-size: 0.8rem;
 }
@@ -1103,16 +1069,14 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
   </div>
   <span
-    class="c6 c7 c0"
+    class="c5 c6 c0"
   >
     Required for your fannypack
   </span>
@@ -1121,18 +1085,18 @@ samp.c7 {
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c8 c4 c9"
+    class="c7 c4 c8"
   >
     <input
-      class="c10 c11"
+      class="c9 c10"
       type="checkbox"
       value=""
     />
     <div
-      class="c12 c13 c0"
+      class="c11 c12 c0"
     />
     <span
-      class="c7 c14"
+      class="c6 c13"
       id="label"
     >
       Check me
@@ -1160,7 +1124,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1174,11 +1138,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1191,11 +1155,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c12 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1209,25 +1173,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c13:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
+.c12:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1238,18 +1184,22 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: flex;
 }
 
-abbr.c12 {
+.c4 {
+  display: inline-block;
+}
+
+abbr.c11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c12 {
+i.c11 {
   font-style: italic;
 }
 
-kbd.c12 {
+kbd.c11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1257,50 +1207,46 @@ kbd.c12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c12 {
+mark.c11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c12 {
+strong.c11 {
   font-weight: bold;
 }
 
-sub.c12,
-sup.c12 {
+sub.c11,
+sup.c11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c12,
-u.c12 {
+ins.c11,
+u.c11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c12,
-cite.c12,
-var.c12,
-em.c12 {
+i.c11,
+cite.c11,
+var.c11,
+em.c11 {
   font-style: italic;
 }
 
-kbd.c12,
-pre.c12,
-samp.c12 {
+kbd.c11,
+pre.c11,
+samp.c11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c12 .c16 {
+.c11 .c15 {
   top: 0.15em;
 }
 
-.c4 {
-  display: inline-block;
-}
-
-.c11 {
+.c10 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1309,7 +1255,7 @@ samp.c12 {
   width: 1em;
 }
 
-.c8 {
+.c7 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1319,26 +1265,26 @@ samp.c12 {
   width: 1px;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c8:checked:focus + .c10 {
+.c7:checked:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8:focus + .c10 {
+.c7:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8:not([disabled]):checked + .c10 {
+.c7:not([disabled]):checked + .c9 {
   border-color: #444bc9;
 }
 
-.c8:checked + .c10::before {
+.c7:checked + .c9::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1346,7 +1292,7 @@ samp.c12 {
   position: absolute;
 }
 
-.c8:checked + .c10::before {
+.c7:checked + .c9::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1357,34 +1303,34 @@ samp.c12 {
   width: 0.375em;
 }
 
-.c8[disabled]:checked + .c10::before {
+.c7[disabled]:checked + .c9::before {
   border-color: #9a9a9a;
 }
 
-.c15[disabled] + .c10 {
+.c14[disabled] + .c9 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c15:checked:focus + .c10 {
+.c14:checked:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:focus + .c10 {
+.c14:focus + .c9 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:not([disabled]):checked + .c10 {
+.c14:not([disabled]):checked + .c9 {
   border-color: #444bc9;
 }
 
-.c15:checked + .c10 {
+.c14:checked + .c9 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:checked + .c10::before {
+.c14:checked + .c9::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1392,7 +1338,7 @@ samp.c12 {
   position: absolute;
 }
 
-.c15:checked + .c10::before {
+.c14:checked + .c9::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1403,11 +1349,11 @@ samp.c12 {
   width: 0.375em;
 }
 
-.c15[disabled]:checked + .c10::before {
+.c14[disabled]:checked + .c9::before {
   border-color: #9a9a9a;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1420,13 +1366,15 @@ samp.c12 {
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c14 {
+.c13 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
@@ -1442,10 +1390,8 @@ samp.c12 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
@@ -1456,25 +1402,25 @@ samp.c12 {
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c6 c4 c7"
+    class="c5 c4 c6"
   >
     <input
-      class="c8 c9"
+      class="c7 c8"
       type="checkbox"
       value=""
     />
     <div
-      class="c10 c11 c0"
+      class="c9 c10 c0"
     />
     <span
-      class="c12 c13"
+      class="c11 c12"
       id="label"
     >
       Check me
     </span>
   </label>
   <span
-    class="c14 c12 c0"
+    class="c13 c11 c0"
   >
     Must be awesome
   </span>
@@ -1499,7 +1445,7 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1513,11 +1459,11 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1530,11 +1476,11 @@ exports[`renders correctly for an optional input field 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c14 {
+.c13 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1548,25 +1494,7 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c14:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
+.c13:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1577,18 +1505,22 @@ exports[`renders correctly for an optional input field 1`] = `
   display: flex;
 }
 
-abbr.c7 {
+.c4 {
+  display: inline-block;
+}
+
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1596,50 +1528,46 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c16 {
+.c6 .c15 {
   top: 0.15em;
 }
 
-.c4 {
-  display: inline-block;
-}
-
-.c13 {
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1648,7 +1576,7 @@ samp.c7 {
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1658,26 +1586,26 @@ samp.c7 {
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1685,7 +1613,7 @@ samp.c7 {
   position: absolute;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1696,34 +1624,34 @@ samp.c7 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c15[disabled] + .c12 {
+.c14[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c15:checked:focus + .c12 {
+.c14:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:focus + .c12 {
+.c14:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:not([disabled]):checked + .c12 {
+.c14:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c15:checked + .c12 {
+.c14:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:checked + .c12::before {
+.c14:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1731,7 +1659,7 @@ samp.c7 {
   position: absolute;
 }
 
-.c15:checked + .c12::before {
+.c14:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1742,11 +1670,11 @@ samp.c7 {
   width: 0.375em;
 }
 
-.c15[disabled]:checked + .c12::before {
+.c14[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1759,13 +1687,15 @@ samp.c7 {
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
@@ -1781,15 +1711,13 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
     <span
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     >
       OPTIONAL
     </span>
@@ -1800,18 +1728,18 @@ samp.c7 {
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c8 c4 c9"
+    class="c7 c4 c8"
   >
     <input
-      class="c10 c11"
+      class="c9 c10"
       type="checkbox"
       value=""
     />
     <div
-      class="c12 c13 c0"
+      class="c11 c12 c0"
     />
     <span
-      class="c7 c14"
+      class="c6 c13"
       id="label"
     >
       Check me
@@ -1892,6 +1820,10 @@ exports[`states renders correctly for a checkbox field with state danger 1`] = `
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -1948,10 +1880,6 @@ samp.c8 {
 
 .c8 .c11 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {
@@ -2180,6 +2108,10 @@ exports[`states renders correctly for a checkbox field with state primary 1`] = 
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -2236,10 +2168,6 @@ samp.c8 {
 
 .c8 .c11 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {
@@ -2468,6 +2396,10 @@ exports[`states renders correctly for a checkbox field with state success 1`] = 
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -2524,10 +2456,6 @@ samp.c8 {
 
 .c8 .c11 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {
@@ -2756,6 +2684,10 @@ exports[`states renders correctly for a checkbox field with state warning 1`] = 
   outline: none;
 }
 
+.c2 {
+  display: inline-block;
+}
+
 abbr.c8 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -2812,10 +2744,6 @@ samp.c8 {
 
 .c8 .c11 {
   top: 0.15em;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c7 {

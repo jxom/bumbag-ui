@@ -18,25 +18,7 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -50,11 +32,11 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -67,11 +49,11 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -85,12 +67,8 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -100,7 +78,11 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -109,7 +91,7 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -119,26 +101,26 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -152,11 +134,11 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,22 +149,22 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -190,47 +172,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c16 {
+.c13 .c15 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -247,10 +231,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -259,7 +241,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -267,20 +249,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -292,20 +274,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -317,20 +299,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -360,25 +342,7 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -392,11 +356,11 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -409,11 +373,11 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -427,12 +391,8 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -442,7 +402,11 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -451,7 +415,7 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -461,26 +425,26 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -494,11 +458,11 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -509,22 +473,22 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -532,47 +496,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c16 {
+.c13 .c15 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -589,10 +555,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -601,7 +565,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -609,10 +573,10 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         disabled=""
         id="weather"
         name="weather"
@@ -620,10 +584,10 @@ samp.c14 {
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -635,10 +599,10 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         disabled=""
         id="weather"
         name="weather"
@@ -646,10 +610,10 @@ samp.c14 {
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -661,10 +625,10 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         disabled=""
         id="weather"
         name="weather"
@@ -672,10 +636,10 @@ samp.c14 {
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -705,25 +669,7 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -737,11 +683,11 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -754,11 +700,11 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -772,12 +718,8 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -787,7 +729,11 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -796,7 +742,7 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -806,26 +752,26 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -839,11 +785,11 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -854,22 +800,22 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -877,47 +823,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c16 {
+.c13 .c15 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -934,10 +882,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -946,7 +892,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -954,10 +900,10 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         disabled=""
         id="weather"
         name="weather"
@@ -965,10 +911,10 @@ samp.c14 {
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -980,20 +926,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -1005,20 +951,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -1048,25 +994,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1080,11 +1008,11 @@ exports[`renders correctly for a required field 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1097,11 +1025,11 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1115,12 +1043,8 @@ exports[`renders correctly for a required field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -1130,7 +1054,11 @@ exports[`renders correctly for a required field 1`] = `
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -1139,7 +1067,7 @@ exports[`renders correctly for a required field 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1149,26 +1077,26 @@ exports[`renders correctly for a required field 1`] = `
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1182,34 +1110,34 @@ exports[`renders correctly for a required field 1`] = `
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c16:checked:focus + .c12 {
+.c15:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:focus + .c12 {
+.c15:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:not([disabled]):checked + .c12 {
+.c15:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c16:checked + .c12 {
+.c15:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:checked + .c12::before {
+.c15:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1223,11 +1151,11 @@ exports[`renders correctly for a required field 1`] = `
   width: 0.5em;
 }
 
-.c16[disabled]:checked + .c12::before {
+.c15[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1238,22 +1166,22 @@ exports[`renders correctly for a required field 1`] = `
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1261,47 +1189,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c17 {
+.c13 .c16 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -1318,10 +1248,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
@@ -1330,7 +1258,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -1338,20 +1266,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -1363,20 +1291,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -1388,20 +1316,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -1431,25 +1359,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1463,11 +1373,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c12 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1480,11 +1390,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   color: inherit;
 }
 
-.c13:focus:not(:focus-visible) {
+.c12:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c16 {
+.c15 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1498,12 +1408,8 @@ exports[`renders correctly for an input field with a description 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c16:focus:not(:focus-visible) {
+.c15:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -1513,7 +1419,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: flex;
 }
 
-.c15 {
+.c4 {
+  display: inline-block;
+}
+
+.c14 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -1522,7 +1432,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   width: 1em;
 }
 
-.c12 {
+.c11 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1532,26 +1442,26 @@ exports[`renders correctly for an input field with a description 1`] = `
   width: 1px;
 }
 
-.c12[disabled] + .c14 {
+.c11[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c12:checked:focus + .c14 {
+.c11:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c12:focus + .c14 {
+.c11:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c12:not([disabled]):checked + .c14 {
+.c11:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c12:checked + .c14::before {
+.c11:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1565,34 +1475,34 @@ exports[`renders correctly for an input field with a description 1`] = `
   width: 0.5em;
 }
 
-.c12[disabled]:checked + .c14::before {
+.c11[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c17[disabled] + .c14 {
+.c16[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c17:checked:focus + .c14 {
+.c16:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:focus + .c14 {
+.c16:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:not([disabled]):checked + .c14 {
+.c16:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c17:checked + .c14 {
+.c16:checked + .c13 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:checked + .c14::before {
+.c16:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1606,11 +1516,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   width: 0.5em;
 }
 
-.c17[disabled]:checked + .c14::before {
+.c16[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1621,22 +1531,22 @@ exports[`renders correctly for an input field with a description 1`] = `
   align-items: center;
 }
 
-.c8 .c10:not(:last-child) {
+.c7 .c9:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c7 {
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1644,54 +1554,56 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c18 {
+.c6 .c17 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   display: block;
   font-size: 0.8rem;
 }
@@ -1706,23 +1618,21 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
   </div>
   <span
-    class="c6 c7 c0"
+    class="c5 c6 c0"
   >
     Required for your fannypack
   </span>
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c8 c9"
+    class="c7 c8"
     role="group"
   >
     <label
@@ -1730,20 +1640,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -1755,20 +1665,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -1780,20 +1690,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -1823,25 +1733,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1855,11 +1747,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1872,11 +1764,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1890,12 +1782,8 @@ exports[`renders correctly for an input field with a hint 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -1905,7 +1793,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -1914,7 +1806,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1924,26 +1816,26 @@ exports[`renders correctly for an input field with a hint 1`] = `
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1957,34 +1849,34 @@ exports[`renders correctly for an input field with a hint 1`] = `
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c17[disabled] + .c12 {
+.c16[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c17:checked:focus + .c12 {
+.c16:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:focus + .c12 {
+.c16:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:not([disabled]):checked + .c12 {
+.c16:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c17:checked + .c12 {
+.c16:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:checked + .c12::before {
+.c16:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1998,11 +1890,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   width: 0.5em;
 }
 
-.c17[disabled]:checked + .c12::before {
+.c16[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2013,22 +1905,22 @@ exports[`renders correctly for an input field with a hint 1`] = `
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2036,54 +1928,56 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c18 {
+.c13 .c17 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c16 {
+.c15 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
@@ -2099,10 +1993,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
@@ -2111,7 +2003,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -2119,20 +2011,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -2144,20 +2036,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -2169,20 +2061,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="username"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="username"
         id="label"
       >
@@ -2191,7 +2083,7 @@ samp.c14 {
     </label>
   </div>
   <span
-    class="c16 c14 c0"
+    class="c15 c13 c0"
   >
     Must be awesome
   </span>
@@ -2216,25 +2108,7 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2248,11 +2122,11 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c12 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2265,11 +2139,11 @@ exports[`renders correctly for an optional input field 1`] = `
   color: inherit;
 }
 
-.c13:focus:not(:focus-visible) {
+.c12:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c16 {
+.c15 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2283,12 +2157,8 @@ exports[`renders correctly for an optional input field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c16:focus:not(:focus-visible) {
+.c15:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -2298,7 +2168,11 @@ exports[`renders correctly for an optional input field 1`] = `
   display: flex;
 }
 
-.c15 {
+.c4 {
+  display: inline-block;
+}
+
+.c14 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -2307,7 +2181,7 @@ exports[`renders correctly for an optional input field 1`] = `
   width: 1em;
 }
 
-.c12 {
+.c11 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -2317,26 +2191,26 @@ exports[`renders correctly for an optional input field 1`] = `
   width: 1px;
 }
 
-.c12[disabled] + .c14 {
+.c11[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c12:checked:focus + .c14 {
+.c11:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c12:focus + .c14 {
+.c11:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c12:not([disabled]):checked + .c14 {
+.c11:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c12:checked + .c14::before {
+.c11:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -2350,34 +2224,34 @@ exports[`renders correctly for an optional input field 1`] = `
   width: 0.5em;
 }
 
-.c12[disabled]:checked + .c14::before {
+.c11[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c17[disabled] + .c14 {
+.c16[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c17:checked:focus + .c14 {
+.c16:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:focus + .c14 {
+.c16:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:not([disabled]):checked + .c14 {
+.c16:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c17:checked + .c14 {
+.c16:checked + .c13 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c17:checked + .c14::before {
+.c16:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -2391,11 +2265,11 @@ exports[`renders correctly for an optional input field 1`] = `
   width: 0.5em;
 }
 
-.c17[disabled]:checked + .c14::before {
+.c16[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2406,22 +2280,22 @@ exports[`renders correctly for an optional input field 1`] = `
   align-items: center;
 }
 
-.c8 .c10:not(:last-child) {
+.c7 .c9:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c7 {
+abbr.c6 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c7 {
+i.c6 {
   font-style: italic;
 }
 
-kbd.c7 {
+kbd.c6 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2429,54 +2303,56 @@ kbd.c7 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c7 {
+mark.c6 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c7 {
+strong.c6 {
   font-weight: bold;
 }
 
-sub.c7,
-sup.c7 {
+sub.c6,
+sup.c6 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c7,
-u.c7 {
+ins.c6,
+u.c6 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c7,
-cite.c7,
-var.c7,
-em.c7 {
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
   font-style: italic;
 }
 
-kbd.c7,
-pre.c7,
-samp.c7 {
+kbd.c6,
+pre.c6,
+samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c7 .c18 {
+.c6 .c17 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
   margin-bottom: 0 !important;
 }
 
-.c6 {
+.c5 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
@@ -2492,15 +2368,13 @@ samp.c7 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="username"
-      style="font-weight: 600;"
     >
       Username
     </label>
     <span
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     >
       OPTIONAL
     </span>
@@ -2509,7 +2383,7 @@ samp.c7 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c8 c9"
+    class="c7 c8"
     role="group"
   >
     <label
@@ -2517,20 +2391,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -2542,20 +2416,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -2567,20 +2441,20 @@ samp.c7 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c10 c11 c4 c0"
+      class="c9 c10 c4 c0"
     >
       <input
-        class="c12 c13"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c14 c15 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c7 c16"
+        class="c6 c15"
         for="username"
         id="label"
       >
@@ -2610,25 +2484,7 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2642,11 +2498,11 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2659,11 +2515,11 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2677,12 +2533,8 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -2692,7 +2544,11 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -2701,31 +2557,31 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   width: 1em;
 }
 
-.c13 {
+.c12 {
   border-color: #c9444d;
   box-shadow: #c9444d 0px 0px 0px 1px !important;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c16:checked:focus + .c12 {
+.c15:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:focus + .c12 {
+.c15:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:not([disabled]):checked + .c12 {
+.c15:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c16:checked + .c12::before {
+.c15:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -2739,11 +2595,11 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   width: 0.5em;
 }
 
-.c16[disabled]:checked + .c12::before {
+.c15[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -2753,30 +2609,30 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12 {
+.c9:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -2790,11 +2646,11 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2805,22 +2661,22 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2828,47 +2684,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c17 {
+.c13 .c16 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -2885,10 +2743,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -2897,7 +2753,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="true"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -2905,20 +2761,20 @@ samp.c14 {
       aria-invalid="true"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -2930,20 +2786,20 @@ samp.c14 {
       aria-invalid="true"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -2955,20 +2811,20 @@ samp.c14 {
       aria-invalid="true"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -2998,25 +2854,7 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3030,11 +2868,11 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3047,11 +2885,11 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3065,12 +2903,8 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -3080,7 +2914,11 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -3089,31 +2927,31 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   width: 1em;
 }
 
-.c13 {
+.c12 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c16:checked:focus + .c12 {
+.c15:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:focus + .c12 {
+.c15:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:not([disabled]):checked + .c12 {
+.c15:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c16:checked + .c12::before {
+.c15:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3127,11 +2965,11 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   width: 0.5em;
 }
 
-.c16[disabled]:checked + .c12::before {
+.c15[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -3141,30 +2979,30 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12 {
+.c9:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3178,11 +3016,11 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3193,22 +3031,22 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3216,47 +3054,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c17 {
+.c13 .c16 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -3273,10 +3113,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -3285,7 +3123,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -3293,20 +3131,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3318,20 +3156,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3343,20 +3181,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3386,25 +3224,7 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3418,11 +3238,11 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3435,11 +3255,11 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3453,12 +3273,8 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -3468,7 +3284,11 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -3477,31 +3297,31 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   width: 1em;
 }
 
-.c13 {
+.c12 {
   border-color: #2c8453;
   box-shadow: #2c8453 0px 0px 0px 1px !important;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c16:checked:focus + .c12 {
+.c15:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:focus + .c12 {
+.c15:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:not([disabled]):checked + .c12 {
+.c15:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c16:checked + .c12::before {
+.c15:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3515,11 +3335,11 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   width: 0.5em;
 }
 
-.c16[disabled]:checked + .c12::before {
+.c15[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -3529,30 +3349,30 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12 {
+.c9:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3566,11 +3386,11 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3581,22 +3401,22 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3604,47 +3424,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c17 {
+.c13 .c16 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -3661,10 +3483,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -3673,7 +3493,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -3681,20 +3501,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3706,20 +3526,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3731,20 +3551,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -3774,25 +3594,7 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   outline: none;
 }
 
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-bottom: 0.25rem !important;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3806,11 +3608,11 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3823,11 +3625,11 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -3841,12 +3643,8 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   margin-left: 0.5rem !important;
 }
 
-.c15:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c4 {
-  display: inline-block;
 }
 
 .c1 {
@@ -3856,7 +3654,11 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   display: flex;
 }
 
-.c13 {
+.c4 {
+  display: inline-block;
+}
+
+.c12 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
@@ -3865,31 +3667,31 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   width: 1em;
 }
 
-.c13 {
+.c12 {
   border-color: #f2a100;
   box-shadow: #f2a100 0px 0px 0px 1px !important;
 }
 
-.c16[disabled] + .c12 {
+.c15[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c16:checked:focus + .c12 {
+.c15:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:focus + .c12 {
+.c15:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c16:not([disabled]):checked + .c12 {
+.c15:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c16:checked + .c12::before {
+.c15:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3903,11 +3705,11 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   width: 0.5em;
 }
 
-.c16[disabled]:checked + .c12::before {
+.c15[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c10 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -3917,30 +3719,30 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   width: 1px;
 }
 
-.c10[disabled] + .c12 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c12 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c12 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c12 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c12 {
+.c9:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:checked + .c12::before {
+.c9:checked + .c11::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -3954,11 +3756,11 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   width: 0.5em;
 }
 
-.c10[disabled]:checked + .c12::before {
+.c9[disabled]:checked + .c11::before {
   background: #9a9a9a;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3969,22 +3771,22 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
   align-items: center;
 }
 
-.c6 .c8:not(:last-child) {
+.c5 .c7:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c14 {
+abbr.c13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c14 {
+i.c13 {
   font-style: italic;
 }
 
-kbd.c14 {
+kbd.c13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -3992,47 +3794,49 @@ kbd.c14 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c14 {
+mark.c13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c14 {
+strong.c13 {
   font-weight: bold;
 }
 
-sub.c14,
-sup.c14 {
+sub.c13,
+sup.c13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c14,
-u.c14 {
+ins.c13,
+u.c13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c14,
-cite.c14,
-var.c14,
-em.c14 {
+i.c13,
+cite.c13,
+var.c13,
+em.c13 {
   font-style: italic;
 }
 
-kbd.c14,
-pre.c14,
-samp.c14 {
+kbd.c13,
+pre.c13,
+samp.c13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c14 .c17 {
+.c13 .c16 {
   top: 0.15em;
 }
 
 .c3 {
   display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .c2 {
@@ -4049,10 +3853,8 @@ samp.c14 {
     style="align-items: center;"
   >
     <label
-      class="c2 c3 c4 c5"
-      font-weight="600"
+      class="c2 c3 c4 c0"
       for="weather"
-      style="font-weight: 600;"
     >
       Weather
     </label>
@@ -4061,7 +3863,7 @@ samp.c14 {
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c7"
+    class="c5 c6"
     role="group"
   >
     <label
@@ -4069,20 +3871,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -4094,20 +3896,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
@@ -4119,20 +3921,20 @@ samp.c14 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c8 c9 c4 c0"
+      class="c7 c8 c4 c0"
     >
       <input
-        class="c10 c11"
+        class="c9 c10"
         id="weather"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c12 c13 c0"
+        class="c11 c12 c0"
       />
       <span
-        class="c14 c15"
+        class="c13 c14"
         for="weather"
         id="label"
       >
