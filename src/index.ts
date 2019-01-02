@@ -10,7 +10,6 @@ export {
   withTheme,
   ServerStyleSheet,
   StyleSheetManager,
-  space,
   prop,
   theme,
   palette,
