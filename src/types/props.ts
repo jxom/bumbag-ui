@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 
-export type ButtonType = 'default' | 'outlined' | 'link';
+export type ButtonType = 'default' | 'outlined' | 'link' | 'ghost';
 export const buttonTypePropType = PropTypes.oneOf(['default', 'outlined', 'link']) as PropTypes.Validator<ButtonType>;
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
 export const breakpointPropType = PropTypes.oneOf([

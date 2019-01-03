@@ -74,6 +74,24 @@ const outlinedProperties = css`
     ${theme('fannypack.Button.outlined')};
   }
 `;
+const ghostProperties = css<ButtonProps>`
+  & {
+    background-color: unset;
+    border: unset;
+    color: ${props => (props.palette === 'default' ? palette('defaultInverted') : palette())};
+    fill: ${props => (props.palette === 'default' ? palette('defaultInverted') : palette())};
+
+    &:hover {
+      background-color: ${(props: any) => darken(0.05, palette('default')(props))};
+    }
+    &:hover:active {
+      background-color: ${(props: any) => darken(0.1, palette('default')(props))};
+    }
+  }
+  & {
+    ${theme('fannypack.Button.ghost')};
+  }
+`;
 
 const disabledProperties = css`
   & {
@@ -175,6 +193,10 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
       border: 1px solid ${palette('gray100')};
     `};
 
+  & {
+    ${theme('fannypack.Button.base')};
+  }
+
   ${props => props.styledSize && sizeProperties[props.styledSize || '']};
 
   ${props => props.isLoading && loadingProperties};
@@ -184,10 +206,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
 
   ${props => props.kind === 'outlined' && outlinedProperties};
   ${props => props.kind === 'link' && linkProperties};
-
-  & {
-    ${theme('fannypack.Button.base')};
-  }
+  ${props => props.kind === 'ghost' && ghostProperties};
 `;
 
 export default Button;

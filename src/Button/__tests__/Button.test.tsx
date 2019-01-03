@@ -34,6 +34,11 @@ it('renders correctly for a link button', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
+it('renders correctly for a ghost button', () => {
+  const { container } = render(<Button kind="ghost">Test</Button>);
+  expect(container.firstChild).toMatchSnapshot();
+});
+
 it('renders correctly for a button that is loading', () => {
   const { container } = render(<Button isLoading>Test</Button>);
   expect(container.firstChild).toMatchSnapshot();
