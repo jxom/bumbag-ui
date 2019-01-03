@@ -173,6 +173,18 @@ export type HeadingThemeConfig = {
   h6?: Stylesheet;
   subHeading?: Stylesheet;
 };
+export type HiddenThemeConfig = {
+  base?: Stylesheet;
+  Hide?: {
+    base?: Stylesheet;
+  };
+  Show?: {
+    base?: Stylesheet;
+  };
+  Toggle?: {
+    base?: Stylesheet;
+  };
+};
 export type IconThemeConfig = {
   base?: Stylesheet;
   iconSets?: Array<{
@@ -548,6 +560,7 @@ export type ThemeConfig = {
   FieldWrapper?: FieldWrapperThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
+  Hidden?: HiddenThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
   Input?: InputThemeConfig;
