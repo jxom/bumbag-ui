@@ -38,7 +38,9 @@ export default {
           font-size: 16px !important;
         }
 
-        & #get-started a {
+        & #get-started a,
+        & #changelog a,
+        & #component-status a {
           color: #444bc9;
         }
 
