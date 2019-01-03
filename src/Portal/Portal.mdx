@@ -1,0 +1,39 @@
+---
+name: Portal
+route: /utils/portal
+menu: Utilities
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import Portal from './index';
+
+# Portal
+
+## Import
+
+`import { Portal } from 'fannypack'`
+
+## Basic Usage
+
+The `<Portal>` component is built with [React Portals](https://reactjs.org/docs/portals.html) and is useful for instances where the component needs to be detached from the main DOM tree, and placed adjacent to it in it's own `<div>`.
+
+<Playground>
+  <Portal textAlign="center">I am on the bottom of the page</Portal>
+</Playground>
+
+## Props
+
+<PropsTable component={Portal} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  Portal: {
+    base: css | Object
+  }
+}
+```

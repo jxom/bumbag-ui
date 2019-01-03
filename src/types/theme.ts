@@ -366,6 +366,9 @@ export type PopoverThemeConfig = {
     base?: Stylesheet;
   };
 };
+export type PortalThemeConfig = {
+  base?: Stylesheet;
+};
 export type RadioThemeConfig = {
   base?: Stylesheet;
   label?: Stylesheet;
@@ -572,6 +575,7 @@ export type ThemeConfig = {
   Pane?: PaneThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
+  Portal?: PortalThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
   Rating?: RatingThemeConfig;

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import Portal from 'reakit/Portal';
 // @ts-ignore
 import _get from 'lodash/get';
 
 import { withTheme } from '../styled';
 import { ThemeConfig } from '../types';
+import Portal from '../Portal';
 
 import { Toasts } from './styled';
 import ToastContainer from './ToastContainer';
