@@ -242,6 +242,26 @@ export type ListThemeConfig = {
     base?: Stylesheet;
   };
 };
+export type MenuThemeConfig = {
+  base: Stylesheet;
+  horizontal: Stylesheet;
+  vertical: Stylesheet;
+  Item: {
+    base: Stylesheet;
+    disabled: Stylesheet;
+    icon: Stylesheet;
+    focus: Stylesheet;
+    hover: Stylesheet;
+    active: Stylesheet;
+  };
+  Divider: {
+    base: Stylesheet;
+  };
+  Group: {
+    base: Stylesheet;
+    title: Stylesheet;
+  };
+};
 export type NavigationThemeConfig = {
   base?: Stylesheet;
 };
@@ -570,6 +590,7 @@ export type ThemeConfig = {
   Label?: LabelThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
+  Menu?: MenuThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
   Pane?: PaneThemeConfig;

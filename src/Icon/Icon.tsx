@@ -63,7 +63,7 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
     // @ts-ignore
     <_Icon
       use="svg"
-      ariaHidden={a11yHidden}
+      aria-hidden={a11yHidden}
       role="img"
       size={size}
       viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
@@ -78,8 +78,8 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
 };
 
 export const iconPropTypes = {
-    a11yHidden: propTypeUtils.mutuallyExclusiveProps(PropTypes.bool, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
-    a11yLabel: propTypeUtils.mutuallyExclusiveProps(PropTypes.string, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
+  a11yHidden: propTypeUtils.mutuallyExclusiveProps(PropTypes.bool, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
+  a11yLabel: propTypeUtils.mutuallyExclusiveProps(PropTypes.string, 'a11yHidden', 'a11yLabel'), // eslint-disable-line
   children: PropTypes.node,
   color: PropTypes.string,
   className: PropTypes.string,
