@@ -173,6 +173,18 @@ export type HeadingThemeConfig = {
   h6?: Stylesheet;
   subHeading?: Stylesheet;
 };
+export type HiddenThemeConfig = {
+  base?: Stylesheet;
+  Hide?: {
+    base?: Stylesheet;
+  };
+  Show?: {
+    base?: Stylesheet;
+  };
+  Toggle?: {
+    base?: Stylesheet;
+  };
+};
 export type IconThemeConfig = {
   base?: Stylesheet;
   iconSets?: Array<{
@@ -353,6 +365,9 @@ export type PopoverThemeConfig = {
   Close?: {
     base?: Stylesheet;
   };
+};
+export type PortalThemeConfig = {
+  base?: Stylesheet;
 };
 export type RadioThemeConfig = {
   base?: Stylesheet;
@@ -548,6 +563,7 @@ export type ThemeConfig = {
   FieldWrapper?: FieldWrapperThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
+  Hidden?: HiddenThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
   Input?: InputThemeConfig;
@@ -559,6 +575,7 @@ export type ThemeConfig = {
   Pane?: PaneThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
+  Portal?: PortalThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
   Rating?: RatingThemeConfig;

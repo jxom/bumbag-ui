@@ -42,6 +42,7 @@ export { Divider } from './Divider';
 export { FieldWrapper } from './FieldWrapper';
 export { Group } from './Group';
 export { Heading } from './Heading';
+export { Hidden, HiddenContainer, HiddenShow, HiddenHide, HiddenToggle } from './Hidden';
 export { Icon } from './Icon';
 export { Image } from './Image';
 export { Input, InputField } from './Input';
@@ -54,6 +55,7 @@ export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } fr
 export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
 export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, PopoverClose } from './Popover';
+export { Portal } from './Portal';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';

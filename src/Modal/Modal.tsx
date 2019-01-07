@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import Portal from 'reakit/Portal';
 
 import { isFunction } from '../_utils/assert';
 import TrapFocus from '../_utils/TrapFocus';
 import Backdrop from '../Backdrop';
 import { OverlayProps } from '../Overlay/Overlay';
+import Portal from '../Portal';
 import ModalContainer, { ModalContainerProps } from './ModalContainer';
 import ModalHide, { ModalHideProps } from './ModalHide';
 import ModalShow, { ModalShowProps } from './ModalShow';
