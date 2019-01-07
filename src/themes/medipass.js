@@ -70,6 +70,7 @@ export default {
         outline: 2px solid ${props => (props.palette === 'default' ? palette('gray800') : palette())};
         outline-offset: 0;
         box-shadow: none;
+        background-color: ${palette()};
       }
     `,
     outlined: css`
@@ -115,11 +116,14 @@ export default {
     base: css`
       border-radius: 0px;
       box-shadow: none;
-      height: ${space(9)}rem;
+      height: ${space(10)}rem;
       font-size: 14px;
-    `,
-    focus: css`
-      box-shadow: none !important;
+    `
+  },
+  Checkbox: {
+    base: css`
+      border-radius: 0px;
+      box-shadow: none;
     `
   }
 };
