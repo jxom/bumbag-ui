@@ -1,5 +1,7 @@
 import * as React from 'react';
 import 'parse-prop-types';
+// @ts-ignore
+import qs from 'query-string';
 import {
   faIgloo,
   faSearch,
@@ -18,11 +20,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import ThemeProvider from '../ThemeProvider';
-// @ts-ignore
-import medipass from '../themes/medipass';
 
-const theme = {
-  ...medipass,
+type Props = {
+  children: React.ReactNode;
+};
+type State = {
+  theme?: {};
+};
+
+const docsTheme = {
   Icon: {
     icons: {
       calendar: {
@@ -58,8 +64,31 @@ const theme = {
   }
 };
 
-const Wrapper = ({ children }: { children: React.ReactNode }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+class Wrapper extends React.Component<Props, State> {
+  state = {
+    theme: undefined
+  };
+
+  componentDidMount = async () => {
+    const query = qs.parse(window.location.search);
+    let newTheme = {};
+    if (query.theme) {
+      const module = await import(`../themes/${query.theme}`);
+      newTheme = module.default;
+    }
+    this.setState({
+      theme: {
+        ...docsTheme,
+        ...newTheme
+      }
+    });
+  };
+
+  render = () => {
+    const { children } = this.props;
+    const { theme } = this.state;
+    return theme ? <ThemeProvider theme={theme}>{children}</ThemeProvider> : null;
+  };
+}
 
 export default Wrapper;
