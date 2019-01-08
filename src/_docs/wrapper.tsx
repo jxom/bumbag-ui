@@ -71,7 +71,11 @@ class Wrapper extends React.Component<Props, State> {
 
   componentDidMount = async () => {
     const query = qs.parse(window.location.search);
-    const { default: newTheme } = await import(`../themes/${query.theme}`);
+    let newTheme = {};
+    if (query.theme) {
+      const module = await import(`../themes/${query.theme}`);
+      newTheme = module.default;
+    }
     this.setState({
       theme: {
         ...docsTheme,
