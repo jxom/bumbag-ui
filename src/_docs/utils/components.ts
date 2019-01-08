@@ -240,8 +240,8 @@ export const componentList: Array<ComponentDetails> = [
   {
     name: 'Menu',
     type: 'component',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    status: 'complete',
+    docsPath: '/components/menu'
   },
   {
     name: 'Modal',
