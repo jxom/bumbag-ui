@@ -28,6 +28,20 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('renders correctly for a menu with an active item', () => {
+    const { container } = render(
+      <Menu a11yTitle="Main menu">
+        <Menu.Group>
+          <Menu.Item icon="success" isActive>
+            Edit...
+          </Menu.Item>
+          <Menu.Item icon="danger">Share...</Menu.Item>
+        </Menu.Group>
+      </Menu>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('renders correctly for a menu with a disabled item', () => {
     const { container } = render(
       <Menu a11yTitle="Main menu">
@@ -92,9 +106,6 @@ describe('props', () => {
   it('renders correctly for a menu popover', () => {
     const { container } = render(
       <Menu.Popover
-        padding="0"
-        placement="bottom-start"
-        width="200px"
         content={
           <Menu a11yTitle="Main menu">
             <Menu.Group title="Actions">

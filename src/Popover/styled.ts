@@ -1,7 +1,6 @@
 import Popover from 'reakit/Popover';
-import { theme } from 'styled-tools';
 
-import styled from '../styled';
+import styled, { space, theme } from '../styled';
 import Button from '../Button';
 import { PopoverCloseProps } from './PopoverClose';
 import { PopoverToggleProps } from './PopoverToggle';
@@ -35,6 +34,7 @@ export const PopoverClose = styled(Button)<PopoverCloseProps>`
 
 export default styled(Popover)<PopoverPopoverProps>`
   display: block;
+  padding: ${space(5)}rem;
 
   ${theme('fannypack.Popover.base')};
 `;

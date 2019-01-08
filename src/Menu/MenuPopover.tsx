@@ -3,8 +3,9 @@ import * as PropTypes from 'prop-types';
 // @ts-ignore
 import Component from '@reactions/component';
 
-import Popover, { LocalPopoverProps, PopoverProps, popoverPropTypes, popoverDefaultProps } from '../Popover/Popover';
+import { LocalPopoverProps, PopoverProps, popoverPropTypes, popoverDefaultProps } from '../Popover/Popover';
 import MenuContext from './MenuContext';
+import { MenuPopover as _MenuPopover } from './styled';
 
 export type LocalMenuPopoverProps = LocalPopoverProps & {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ export class MenuPopover extends React.Component<LocalMenuPopoverProps> {
     const { children, ...props } = this.props;
     return (
       <MenuContext.Provider>
-        <Popover {...props} gutter={6}>
+        <_MenuPopover {...props} gutter={6} placement="bottom-start">
           {(popover: any) => (
             <MenuContext.Consumer>
               {({ setPopoverProps }) => (
@@ -48,7 +49,7 @@ export class MenuPopover extends React.Component<LocalMenuPopoverProps> {
               )}
             </MenuContext.Consumer>
           )}
-        </Popover>
+        </_MenuPopover>
       </MenuContext.Provider>
     );
   };

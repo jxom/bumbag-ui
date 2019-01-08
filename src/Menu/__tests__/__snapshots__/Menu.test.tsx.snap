@@ -226,6 +226,10 @@ a.c5:hover {
   top: 0.15em;
 }
 
+.c13 .c8 {
+  top: 0.15em;
+}
+
 .c10 {
   margin: 0;
   width: 100%;
@@ -339,7 +343,7 @@ a.c5:hover {
 `;
 
 exports[`props renders correctly for a menu popover 1`] = `
-.c9 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -352,11 +356,11 @@ exports[`props renders correctly for a menu popover 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c16 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -369,7 +373,7 @@ exports[`props renders correctly for a menu popover 1`] = `
   color: inherit;
 }
 
-.c15:focus:not(:focus-visible) {
+.c16:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -411,7 +415,7 @@ exports[`props renders correctly for a menu popover 1`] = `
   outline: none;
 }
 
-.c6 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -424,11 +428,11 @@ exports[`props renders correctly for a menu popover 1`] = `
   color: inherit;
 }
 
-.c6:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c16 {
+.c17 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -442,7 +446,7 @@ exports[`props renders correctly for a menu popover 1`] = `
   color: #c9444d !important;
 }
 
-.c16:focus:not(:focus-visible) {
+.c17:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -497,7 +501,7 @@ exports[`props renders correctly for a menu popover 1`] = `
   background-color: #e3e3e3;
 }
 
-.c7 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   display: -webkit-inline-box;
@@ -510,18 +514,18 @@ exports[`props renders correctly for a menu popover 1`] = `
   box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.1),0px 0px 0px 1px rgb(0,0,0,0.1);
 }
 
-.c5 {
+.c6 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
 }
 
-.c5[aria-hidden="true"] {
+.c6[aria-hidden="true"] {
   pointer-events: none;
   display: none !important;
 }
 
-.c19 {
+.c20 {
   border-color: currentColor;
   border-style: solid;
   opacity: 0.2;
@@ -530,7 +534,7 @@ exports[`props renders correctly for a menu popover 1`] = `
   border-width: 1px 0 0 0;
 }
 
-.c20 {
+.c21 {
   color: #444bc9;
   fill: #444bc9;
   cursor: pointer;
@@ -540,21 +544,35 @@ exports[`props renders correctly for a menu popover 1`] = `
   text-decoration-skip: ink edges;
 }
 
-.c20:hover {
+.c21:hover {
   color: #03040b;
   fill: #03040b;
 }
 
-.c20 .c22 {
+.c21 .c23 {
   top: 0.15em;
 }
 
-.c18 {
+.c19 {
   opacity: 1;
   border-color: #e7e9ed;
 }
 
-.c14 {
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  cursor: auto;
+  z-index: 999;
+  display: block;
+  padding: 1.25rem;
+}
+
+.c15 {
   background-color: unset;
   cursor: pointer;
   display: block;
@@ -564,52 +582,52 @@ exports[`props renders correctly for a menu popover 1`] = `
   width: 100%;
 }
 
-a.c14 {
+a.c15 {
   color: unset;
   fill: unset;
   -webkit-text-decoration: unset;
   text-decoration: unset;
 }
 
-a.c14:hover {
+a.c15:hover {
   color: unset;
   fill: unset;
 }
 
-.c14[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c14:not(:disabled):focus {
+.c15:not(:disabled):focus {
   outline: unset;
   background-color: #f7f7f7;
 }
 
-.c14:not(:disabled):hover {
+.c15:not(:disabled):hover {
   background-color: #f7f7f7;
 }
 
-.c14:not(:disabled):focus:active,
-.c14:not(:disabled):hover:active {
+.c15:not(:disabled):focus:active,
+.c15:not(:disabled):hover:active {
   background-color: #f2f2f2;
 }
 
-.c14 .c22 {
+.c15 .c23 {
   top: 0.15em;
 }
 
-.c17 {
+.c18 {
   margin: 0;
   width: 100%;
 }
 
-.c11 {
+.c12 {
   margin: 0.5rem 0;
   width: 100%;
 }
 
-.c12 {
+.c13 {
   color: #60819f;
   font-size: 0.75rem;
   font-weight: 600;
@@ -622,7 +640,12 @@ a.c14:hover {
   text-transform: uppercase;
 }
 
-.c8 {
+.c4 {
+  padding: 0px;
+  width: 200px;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -636,7 +659,7 @@ a.c14:hover {
   flex-direction: column;
 }
 
-.c21 .c10 {
+.c22 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -649,21 +672,8 @@ a.c14:hover {
   flex-wrap: wrap;
 }
 
-.c21 .c13 {
+.c22 .c14 {
   width: unset;
-}
-
-.c4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-user-select: auto;
-  -moz-user-select: auto;
-  -ms-user-select: auto;
-  user-select: auto;
-  cursor: auto;
-  z-index: 999;
-  display: block;
 }
 
 <div
@@ -679,49 +689,48 @@ a.c14:hover {
   </button>
   <div
     aria-hidden="true"
-    class="c4 c5 c6 c7"
+    class="c4 c5 c6 c7 c8"
     data-placement="bottom-start"
     elevation="200"
     hidden=""
     id="popover0"
     role="group"
-    style="elevation: 200; padding: 0px; width: 200px;"
-    width="200px"
+    style="elevation: 200;"
   >
     <nav
       aria-label="Main menu"
       aria-orientation="vertical"
-      class="c8 c9"
+      class="c9 c10"
       role="menu"
     >
       <div
-        class="c10 c11 c9"
+        class="c11 c12 c10"
       >
         <div
-          class="c12 c9"
+          class="c13 c10"
         >
           Actions
         </div>
         <button
-          class="c13 c14 c15"
+          class="c14 c15 c16"
           role="menuitem"
         >
           Edit...
         </button>
         <button
-          class="c13 c14 c15"
+          class="c14 c15 c16"
           role="menuitem"
         >
           Share...
         </button>
         <button
-          class="c13 c14 c15"
+          class="c14 c15 c16"
           role="menuitem"
         >
           Rename...
         </button>
         <button
-          class="c13 c14 c16"
+          class="c14 c15 c17"
           color="danger"
           role="menuitem"
         >
@@ -729,19 +738,19 @@ a.c14:hover {
         </button>
       </div>
       <hr
-        class="c17 c18 c19 c9"
+        class="c18 c19 c20 c10"
         role="separator"
       />
       <div
-        class="c10 c11 c9"
+        class="c11 c12 c10"
       >
         <div
-          class="c12 c9"
+          class="c13 c10"
         >
           Links
         </div>
         <a
-          class="c13 c14 c15 c20 "
+          class="c14 c15 c16 c21 "
           href="https://google.com"
           role="menuitem"
         >
@@ -838,6 +847,10 @@ a.c3:hover {
 }
 
 .c3 .c6 {
+  top: 0.15em;
+}
+
+.c8 .c6 {
   top: 0.15em;
 }
 
@@ -1020,6 +1033,10 @@ a.c3:hover {
   top: 0.15em;
 }
 
+.c11 .c6 {
+  top: 0.15em;
+}
+
 .c8 {
   margin: 0;
   width: 100%;
@@ -1110,6 +1127,221 @@ a.c3:hover {
       role="menuitem"
     >
       Go to google
+    </button>
+  </div>
+</nav>
+`;
+
+exports[`props renders correctly for a menu with an active item 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c4 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #444bc9;
+  color: inherit;
+}
+
+.c4:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c7 {
+  fill: inherit;
+  position: relative;
+  font-size: 1em;
+  height: 1em;
+  width: 1em;
+}
+
+.c8 {
+  background-color: unset;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 0.375rem 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+a.c8 {
+  color: unset;
+  fill: unset;
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+}
+
+a.c8:hover {
+  color: unset;
+  fill: unset;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c8:not(:disabled):focus {
+  outline: unset;
+  background-color: #f7f7f7;
+}
+
+.c8:not(:disabled):hover {
+  background-color: #f7f7f7;
+}
+
+.c8:not(:disabled):focus:active,
+.c8:not(:disabled):hover:active {
+  background-color: #f2f2f2;
+}
+
+.c8 .c6 {
+  top: 0.15em;
+}
+
+.c3 {
+  background-color: unset;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 0.375rem 1rem;
+  text-align: left;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+a.c3 {
+  color: unset;
+  fill: unset;
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+}
+
+a.c3:hover {
+  color: unset;
+  fill: unset;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c3:not(:disabled):focus {
+  outline: unset;
+  background-color: #f7f7f7;
+}
+
+.c3:not(:disabled):hover {
+  background-color: #f7f7f7;
+}
+
+.c3:not(:disabled):focus:active,
+.c3:not(:disabled):hover:active {
+  background-color: #f2f2f2;
+}
+
+.c3.c3:hover,
+.c3.c3:focus {
+  background-color: #e6e6e6;
+}
+
+.c3 .c6 {
+  top: 0.15em;
+}
+
+.c5 {
+  margin-right: 0.5rem;
+}
+
+.c2 {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<nav
+  aria-label="Main menu"
+  aria-orientation="vertical"
+  class="c0 c1"
+  role="menu"
+>
+  <div
+    class="c2 c1"
+  >
+    <button
+      class="c3 c4"
+      role="menuitem"
+    >
+      <svg
+        aria-hidden="true"
+        class="c5 c6 c7 c1"
+        role="img"
+        size="1"
+        style="size: 1px;"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Edit...
+    </button>
+    <button
+      class="c8 c4"
+      role="menuitem"
+    >
+      <svg
+        aria-hidden="true"
+        class="c5 c6 c7 c1"
+        role="img"
+        size="1"
+        style="size: 1px;"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Share...
     </button>
   </div>
 </nav>
@@ -1364,6 +1596,10 @@ a.c3:hover {
 }
 
 .c3 .c6 {
+  top: 0.15em;
+}
+
+.c8 .c6 {
   top: 0.15em;
 }
 

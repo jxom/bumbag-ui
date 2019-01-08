@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { buttonPropTypes, buttonDefaultProps, LocalButtonProps, ButtonProps } from '../Button/Button';
-import { PopoverContainerRenderProps } from '../Popover/PopoverContainer';
 import { Omit } from '../types';
 import { MenuButton as _MenuButton } from './styled';
 import { withMenuContext, MenuContextState } from './MenuContext';

@@ -50,7 +50,6 @@ exports[`renders correctly for a default popover 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  padding: 1.25rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -218,6 +217,7 @@ samp.c8 {
   cursor: auto;
   z-index: 999;
   display: block;
+  padding: 1.25rem;
 }
 
 <div
@@ -301,7 +301,6 @@ exports[`renders correctly when a placement prop is set 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  padding: 1.25rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -469,6 +468,7 @@ samp.c8 {
   cursor: auto;
   z-index: 999;
   display: block;
+  padding: 1.25rem;
 }
 
 <div
@@ -552,7 +552,6 @@ exports[`renders correctly when showCloseButton is truthy 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  padding: 1.25rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -809,13 +808,14 @@ samp.c14 {
   cursor: auto;
   z-index: 999;
   display: block;
+  padding: 1.25rem;
 }
 
 <div
   class="c0 c1"
 >
   <button
-    aria-controls="popover0"
+    aria-controls="popover2"
     aria-haspopup="true"
     class="c2 c3 "
     kind="default"
@@ -829,12 +829,12 @@ samp.c14 {
     data-placement="bottom"
     elevation="200"
     hidden=""
-    id="popover0"
+    id="popover2"
     role="group"
     style="elevation: 200;"
   >
     <button
-      aria-controls="popover0"
+      aria-controls="popover2"
       aria-haspopup="true"
       class="c8 c9 c3 "
       kind="link"

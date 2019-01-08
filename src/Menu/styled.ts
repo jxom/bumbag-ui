@@ -5,11 +5,13 @@ import styled, { css, palette, space, theme } from '../styled';
 import Button from '../Button';
 import Navigation from '../Navigation';
 import Divider from '../Divider';
+import Popover from '../Popover';
 import Icon from '../Icon/Icon';
 import StyledIcon from '../Icon/styled';
 import { LocalMenuProps } from './Menu';
+import { LocalMenuItemProps } from './MenuItem';
 
-export const MenuItem = styled(ReakitButton)`
+export const MenuItem = styled(ReakitButton)<LocalMenuItemProps>`
   background-color: unset;
   cursor: pointer;
   display: block;
@@ -56,11 +58,22 @@ export const MenuItem = styled(ReakitButton)`
   &:not(:disabled):focus:active,
   &:not(:disabled):hover:active {
     background-color: ${palette('white700')};
-
-    & {
-      ${theme('fannypack.Menu.Item.active')};
-    }
   }
+
+  ${props =>
+    props.isActive &&
+    css`
+      background-color: ${palette('white700')};
+
+      &&:hover,
+      &&:focus {
+        background-color: ${palette('white800')};
+      }
+
+      & {
+        ${theme('fannypack.Menu.Item.active')};
+      }
+    `}
 
   & ${StyledIcon} {
     top: 0.15em;
@@ -114,6 +127,15 @@ export const MenuGroupTitle = styled(Box)`
 
   & {
     ${theme('fannypack.Menu.Group.title')};
+  }
+`;
+
+export const MenuPopover = styled(Popover)`
+  padding: 0px;
+  width: 200px;
+
+  & {
+    ${theme('fannypack.Menu.Popover.base')};
   }
 `;
 

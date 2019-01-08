@@ -12,6 +12,7 @@ export type LocalMenuItemProps = {
   children: React.ReactNode;
   context?: MenuContextState;
   icon?: IconProps['icon'];
+  isActive?: boolean;
   isDisabled?: boolean;
   onClick?(): void;
 };
@@ -21,11 +22,13 @@ export class MenuItem extends React.Component<LocalMenuItemProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     icon: iconPropTypes['icon'],
+    isActive: PropTypes.bool,
     isDisabled: PropTypes.bool,
     onClick: PropTypes.func
   };
   static defaultProps = {
     icon: undefined,
+    isActive: false,
     isDisabled: false,
     onClick: undefined
   };
