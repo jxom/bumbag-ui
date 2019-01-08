@@ -12,28 +12,27 @@ export type LocalNavigationProps = {
 };
 export type NavigationProps = ReakitNavigationProps & LocalNavigationProps;
 
-export const Navigation: React.FunctionComponent<LocalNavigationProps> = ({
-  a11yTitle,
-  children,
-  className,
-  ...props
-}) => (
-  <_Navigation aria-label={a11yTitle} {...props} role={props.use ? 'navigation' : undefined}>
+export const Navigation: React.FunctionComponent<LocalNavigationProps> = ({ a11yTitle, children, ...props }) => (
+  // @ts-ignore
+  <_Navigation aria-label={a11yTitle} {...props} role={props.use ? 'navigation' : props.role}>
     {children}
   </_Navigation>
 );
 
-Navigation.propTypes = {
+export const navigationPropTypes = {
   a11yTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   use: PropTypes.any
 };
-Navigation.defaultProps = {
+Navigation.propTypes = navigationPropTypes;
+
+export const navigationDefaultProps = {
   a11yTitle: undefined,
   className: undefined,
   use: undefined
 };
+Navigation.defaultProps = navigationDefaultProps;
 
 const C: React.FunctionComponent<NavigationProps> = Navigation;
 export default C;

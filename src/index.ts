@@ -49,6 +49,7 @@ export { Input, InputField } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
 export { List, ListItem } from './List';
+export { Menu, MenuGroup, MenuDivider, MenuItem, MenuPopover, MenuButton } from './Menu';
 export { Modal, ModalContainer, ModalShow, ModalHide } from './Modal';
 export { Navigation } from './Navigation';
 export { Overlay, OverlayContainer, OverlayShow, OverlayHide, OverlayToggle } from './Overlay';

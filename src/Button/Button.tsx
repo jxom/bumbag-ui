@@ -113,7 +113,7 @@ export const buttonPropTypes = {
 };
 Button.propTypes = buttonPropTypes;
 
-Button.defaultProps = {
+export const buttonDefaultProps: Partial<LocalButtonProps> = {
   autoFocus: false,
   className: undefined,
   disabled: false,
@@ -127,6 +127,7 @@ Button.defaultProps = {
   size: 'default',
   type: 'button'
 };
+Button.defaultProps = buttonDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<ButtonProps> = Button;

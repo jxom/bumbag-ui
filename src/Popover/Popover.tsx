@@ -1,9 +1,13 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { PopoverProps as ReakitPopoverProps } from 'reakit/ts/Popover/Popover';
 
 import { InlineBlock } from '../primitives';
 import Pane from '../Pane';
-import PopoverContainer, { PopoverContainerProps } from './PopoverContainer';
+import { isFunction } from '../_utils/assert';
+import { Omit } from '../types';
+
+import PopoverContainer, { PopoverContainerProps, PopoverContainerRenderProps } from './PopoverContainer';
 import PopoverClose, { PopoverCloseProps } from './PopoverClose';
 import PopoverPopover, {
   LocalPopoverPopoverProps,
@@ -16,7 +20,9 @@ import PopoverHide, { PopoverHideProps } from './PopoverHide';
 import PopoverToggle, { PopoverToggleProps } from './PopoverToggle';
 
 export type LocalPopoverProps = LocalPopoverPopoverProps & {
-  children: React.ReactElement<any>;
+  children:
+    | React.ReactNode
+    | (({ use, ...args }: PopoverContainerRenderProps & { use: React.ReactElement<any> }) => React.ReactNode);
   className?: string;
   content:
     | string
@@ -25,7 +31,7 @@ export type LocalPopoverProps = LocalPopoverPopoverProps & {
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean;
 };
-export type PopoverProps = LocalPopoverProps;
+export type PopoverProps = Omit<ReakitPopoverProps, 'content'> & LocalPopoverProps;
 export type PopoverComponents = {
   Popover: React.FunctionComponent<PopoverPopoverProps>;
   Container: React.FunctionComponent<PopoverContainerProps>;
@@ -44,11 +50,18 @@ export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverCompon
   <PopoverContainer>
     {popover => (
       <InlineBlock relative>
-        {React.cloneElement(children, { use: PopoverToggle, ...popover })}
-        <PopoverPopover elevation="200" padding="minor-5" {...props} {...popover} use={Pane}>
+        {isFunction(children)
+          ? /*
+            // @ts-ignore */
+            children({ use: PopoverToggle, ...popover })
+          : children
+            ? React.cloneElement(children as React.ReactElement<any>, { use: PopoverToggle, ...popover })
+            : null}
+        <PopoverPopover elevation="200" {...props} {...popover} use={Pane}>
           {({ initialFocusRef }) => (
             <React.Fragment>
-              {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}{/* eslint-disable-line */}
+              {showCloseButton && <PopoverClose elementRef={initialFocusRef} {...popover} />}
+              {/* eslint-disable-line */}
               {typeof content === 'function' ? content({ initialFocusRef, ...popover }) : content}
             </React.Fragment>
           )}
@@ -65,21 +78,26 @@ Popover.Hide = PopoverHide;
 Popover.Show = PopoverShow;
 Popover.Toggle = PopoverToggle;
 
-Popover.propTypes = {
+export const popoverPropTypes = {
   ...popoverPopoverPropTypes,
   className: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]) as PropTypes.Validator<
     LocalPopoverProps['content']
   >,
   showCloseButton: PropTypes.bool,
-  children: PropTypes.element.isRequired
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired as PropTypes.Validator<
+    LocalPopoverProps['children']
+  >
 };
-Popover.defaultProps = {
+Popover.propTypes = popoverPropTypes;
+
+export const popoverDefaultProps = {
   ...popoverPopoverDefaultProps,
   className: undefined,
   showCloseButton: false,
   children: undefined
 };
+Popover.defaultProps = popoverDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<PopoverProps> & PopoverComponents = Popover;

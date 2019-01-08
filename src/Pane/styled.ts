@@ -17,7 +17,7 @@ const Pane = styled(Box)<PaneProps & { styledBorder?: boolean | 'shadow' | strin
   ${(props: any) =>
     props.styledBorder === 'shadow' &&
     css`
-      box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.1), 0px 0px 0px 1px rgb(0, 0, 0, 0.1);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
 
       & {
         ${theme('fannypack.Pane.border.shadow')};
@@ -30,8 +30,8 @@ const Pane = styled(Box)<PaneProps & { styledBorder?: boolean | 'shadow' | strin
           ${(props: any) =>
             // @ts-ignore
             theme(`fannypack.Pane.elevations.${props.elevation}`)(props) / 2}px
-          ${theme(`fannypack.Pane.elevations.${props.elevation}`)}px 0px rgb(0, 0, 0, 0.1),
-        0px 0px 0px 1px rgb(0, 0, 0, 0.1);
+          ${theme(`fannypack.Pane.elevations.${props.elevation}`)}px 0px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     `};
   ${(props: any) =>
     props.styledBorder === true &&

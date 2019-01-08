@@ -10,7 +10,11 @@ import {
   faFile,
   faComments,
   faUser,
-  faHandPaper
+  faHandPaper,
+  faFileSignature,
+  faShare,
+  faExternalLinkAlt,
+  faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 import ThemeProvider from '../ThemeProvider';
@@ -41,7 +45,11 @@ const theme = {
           faFile,
           faComments,
           faUser,
-          faHandPaper
+          faHandPaper,
+          faShare,
+          faFileSignature,
+          faExternalLinkAlt,
+          faTrashAlt
         ],
         prefix: 'solid-',
         type: 'font-awesome' as 'font-awesome'
