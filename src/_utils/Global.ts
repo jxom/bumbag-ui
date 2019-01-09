@@ -17,7 +17,6 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility;
     color: ${palette('text')};
     fill: ${palette('text')};
-    ${theme('fannypack.global.base')};
   }
 
   html.wf-active, body {
@@ -34,4 +33,6 @@ export default createGlobalStyle`
     outline: 2px solid ${palette('primary')};
     outline-offset: 2px;
   }
+
+  ${theme('fannypack.global.base')};
 `;
