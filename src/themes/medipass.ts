@@ -59,15 +59,16 @@ export default {
   Button: {
     base: css`
       border-radius: 0px;
-      border: 2px solid ${props => (props.palette === 'default' ? palette('gray700') : 'transparent')};
-      color: ${props => (props.palette === 'default' ? palette('gray700') : palette(`${props.palette}Inverted`))};
+      border: 2px solid ${(props: any) => (props.palette === 'default' ? palette('gray700') : 'transparent')};
+      color: ${(props: any) =>
+        props.palette === 'default' ? palette('gray700') : palette(`${props.palette}Inverted`)};
       height: ${space(11)}rem;
       padding: 0 ${space(4)}rem;
       font-size: 15px;
       text-transform: uppercase;
 
       &:focus {
-        outline: 2px solid ${props => (props.palette === 'default' ? palette('gray800') : palette())};
+        outline: 2px solid ${(props: any) => (props.palette === 'default' ? palette('gray800') : palette())};
         outline-offset: 0;
         box-shadow: none;
         background-color: ${palette()};
@@ -79,11 +80,11 @@ export default {
     interactive: css`
       &:focus {
         border: 2px solid white;
-        background-color: ${props =>
+        background-color: ${(props: any) =>
           props.palette === 'default' ? palette('gray800') : palette(`${props.palette}600`)};
-        color: ${props => (props.palette === 'default' ? 'white' : palette(`${props.palette}Inverted`))};
+        color: ${(props: any) => (props.palette === 'default' ? 'white' : palette(`${props.palette}Inverted`))};
       }
-      ${props =>
+      ${(props: any) =>
         props.palette === 'default' &&
         css`
           &:hover {
