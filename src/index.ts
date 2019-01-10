@@ -19,7 +19,7 @@ export {
   withProp
 } from './styled';
 
-export { defaultTheme } from './themes';
+export { default as defaultTheme } from './themes/default';
 export { ThemeProvider } from './ThemeProvider';
 export { getUniqueId } from './uniqueId';
 

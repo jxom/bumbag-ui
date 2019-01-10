@@ -1,2 +1,7 @@
-export { default as defaultTheme } from './default';
-export { default as medipass } from './medipass';
+import defaultTheme from './default';
+import medipass from './medipass';
+
+export default {
+  defaultTheme,
+  medipass
+};
