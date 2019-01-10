@@ -6,7 +6,8 @@ import styled, { css, space } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
 
-const isInteractive = (props: any) => !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link';
+export const isInteractive = (props: any) =>
+  !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link';
 
 const sizeProperties: any = {
   small: css`
