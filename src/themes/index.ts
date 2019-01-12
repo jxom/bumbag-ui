@@ -2,6 +2,6 @@ import defaultTheme from './default';
 import medipass from './medipass';
 
 export default {
-  defaultTheme,
+  default: defaultTheme,
   medipass
 };
