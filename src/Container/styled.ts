@@ -43,6 +43,8 @@ const getResponsiveProperties = (props: any) => {
 };
 
 export default styled(Box)<ContainerProps>`
+  width: 100%;
+
   ${props =>
     !props.isFluid &&
     css`
