@@ -35,7 +35,13 @@ export default styled(Box)<ColumnsProps>`
   ${props =>
     !props.isGapless &&
     css`
-      margin: 0 -${theme('fannypack.layout.gapFactor')}rem;
+      margin-left: -${theme('fannypack.layout.gapFactor')}rem;
+      margin-right: -${theme('fannypack.layout.gapFactor')}rem;
+      margin-top: -${theme('fannypack.layout.gapFactor')}rem;
+
+      &:last-child {
+        margin-bottom: -${theme('fannypack.layout.gapFactor')}rem;
+      }
     `};
 
   ${getWrapProperties};
