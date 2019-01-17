@@ -11,6 +11,30 @@ import PaletteColor from '../components/PaletteColor';
 
 The palette is the main color set for Fannypack.
 
+
+## Accessing the palette
+
+Fannypack exports a `palette` utility function which you can use to access palette colors:
+
+```jsx
+import { Button, palette, styled } from 'fannypack';
+
+const PrimaryButton = styled(Button)`
+  color: ${palette('primary')};
+`;
+
+<PrimaryButton> I am a primary button</PrimaryButton>
+```
+
+Any CSS color attribute (e.g. `color`, `border-color`, etc) can take a color from the palette:
+
+```jsx
+import { Text } from 'fannypack';
+
+<Text color="primary">I am a primary text</Text>
+```
+
+
 ## Defaults
 
 <Box marginBottom="major-7">
@@ -178,3 +202,5 @@ The palette is the main color set for Fannypack.
   }
 }
 ```
+
+[Learn more about Styled components](/styling/styled-components)
