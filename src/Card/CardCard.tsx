@@ -9,7 +9,6 @@ export type LocalCardCardProps = LocalPaneProps & {
   a11yTitleId?: string;
   children: React.ReactNode;
   className?: string;
-  isFullWidth?: boolean;
 };
 export type CardCardProps = LocalCardCardProps & PaneProps;
 
@@ -29,7 +28,6 @@ export const cardCardPropTypes = {
   a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  isFullWidth: PropTypes.bool,
   ...panePropTypes
 };
 CardCard.propTypes = cardCardPropTypes;
@@ -40,8 +38,7 @@ export const cardCardDefaultProps = {
   a11yTitleId: undefined,
   border: 'shadow' as 'shadow',
   children: undefined,
-  className: undefined,
-  isFullWidth: false
+  className: undefined
 };
 CardCard.defaultProps = cardCardDefaultProps;
 

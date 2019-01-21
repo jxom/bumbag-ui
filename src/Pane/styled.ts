@@ -7,8 +7,6 @@ import { PaneProps } from './Pane';
 const Pane = styled(Box)<PaneProps & { styledBorder?: boolean | 'shadow' | string }>`
   background-color: white;
   border-radius: 3px;
-  display: inline-flex;
-  flex-wrap: wrap;
 
   ${(props: any) =>
     props.styledBorder !== 'shadow' && typeof props.styledBorder !== 'boolean'

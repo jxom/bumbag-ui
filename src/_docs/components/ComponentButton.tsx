@@ -20,6 +20,7 @@ const Wrapper = styled(Pane)`
 
 const IconWrapper = styled(Pane)`
   border: 1px solid ${palette('primary300')};
+  display: flex;
   align-items: center;
   justify-content: center;
 `;
