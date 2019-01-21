@@ -27,7 +27,9 @@ export type LocalPopoverProps = LocalPopoverPopoverProps & {
   content:
     | string
     | React.ReactElement<any>
-    | (({ initialFocusRef, ...args }: { initialFocusRef?: React.RefObject<any> }) => React.ReactNode);
+    | ((
+        { initialFocusRef, ...args }: { initialFocusRef?: React.RefObject<any> } & PopoverContainerRenderProps
+      ) => React.ReactNode);
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean;
 };

@@ -11,6 +11,7 @@ import { MenuItem as _MenuItem, MenuIcon } from './styled';
 export type LocalMenuItemProps = {
   children: React.ReactNode;
   context?: MenuContextState;
+  hideOnClick?: boolean;
   icon?: IconProps['icon'];
   isActive?: boolean;
   isDisabled?: boolean;
@@ -18,25 +19,30 @@ export type LocalMenuItemProps = {
 };
 export type MenuItemProps = Omit<Omit<ReakitButtonProps, 'as'>, 'elementRef'> & LocalMenuItemProps;
 
+export const menuItemPropTypes = {
+  children: PropTypes.node.isRequired,
+  hideOnClick: PropTypes.bool,
+  icon: iconPropTypes['icon'],
+  isActive: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func
+};
+export const menuItemDefaultProps = {
+  hideOnClick: true,
+  icon: undefined,
+  isActive: false,
+  isDisabled: false,
+  onClick: undefined
+};
+
 export class MenuItem extends React.Component<LocalMenuItemProps> {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    icon: iconPropTypes['icon'],
-    isActive: PropTypes.bool,
-    isDisabled: PropTypes.bool,
-    onClick: PropTypes.func
-  };
-  static defaultProps = {
-    icon: undefined,
-    isActive: false,
-    isDisabled: false,
-    onClick: undefined
-  };
+  static propTypes = menuItemPropTypes;
+  static defaultProps = menuItemDefaultProps;
 
   handleClick = () => {
-    const { context, onClick } = this.props;
+    const { context, hideOnClick, onClick } = this.props;
     onClick && onClick();
-    context && context.hide();
+    hideOnClick && context && context.hide();
   };
 
   render = () => {

@@ -60,11 +60,11 @@ export type LocalInputProps = {
   /** Value of the input */
   value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when input has changed */
-  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
   /** Function to invoke when input is focused */
-  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type InputProps = Omit<ReakitInputProps, 'size'> & LocalInputProps;
 export type InputComponents = {

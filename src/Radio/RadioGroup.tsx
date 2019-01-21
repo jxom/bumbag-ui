@@ -24,7 +24,7 @@ export type LocalRadioGroupProps = {
   /** Controlled value of the radio group */
   value?: string;
   /** Function to invoke when radio group has changed */
-  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
 };
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
 

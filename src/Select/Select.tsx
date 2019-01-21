@@ -40,11 +40,11 @@ export type LocalSelectProps = {
   /** Value of the select field */
   value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?(e: React.FocusEvent<HTMLSelectElement>): void;
+  onBlur?: React.FocusEventHandler<HTMLSelectElement>;
   /** Function to invoke when the select field has changed */
-  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
   /** Function to invoke when the select field is focused */
-  onFocus?(e: React.FocusEvent<HTMLSelectElement>): void;
+  onFocus?: React.FocusEventHandler<HTMLSelectElement>;
 };
 export type SelectProps = Omit<Omit<ReakitInlineBlockProps, 'children'>, 'size'> & LocalSelectProps;
 

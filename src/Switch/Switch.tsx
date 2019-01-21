@@ -28,11 +28,11 @@ export type LocalSwitchProps = {
   /** Initial value of the switch */
   value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when switch has changed */
-  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
   /** Function to invoke when switch is focused */
-  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type SwitchProps = LocalSwitchProps & Omit<ReakitLabelProps, 'children'>;
 

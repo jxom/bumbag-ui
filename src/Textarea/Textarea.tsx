@@ -49,11 +49,11 @@ export type LocalTextareaProps = {
   /** Value of the input */
   value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?(e: React.FocusEvent<HTMLTextAreaElement>): void;
+  onBlur?: React.FocusEventHandler<HTMLTextAreaElement>;
   /** Function to invoke when input has changed */
-  onChange?(e: React.FormEvent<HTMLTextAreaElement>): void;
+  onChange?: React.FormEventHandler<HTMLTextAreaElement>;
   /** Function to invoke when input is focused */
-  onFocus?(e: React.FocusEvent<HTMLTextAreaElement>): void;
+  onFocus?: React.FocusEventHandler<HTMLTextAreaElement>;
 };
 export type TextareaProps = Omit<ReakitInputProps, 'size'> & LocalTextareaProps;
 

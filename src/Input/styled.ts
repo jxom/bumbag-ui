@@ -15,7 +15,7 @@ export const LoadingSpinner = styled(Spinner)`
   height: 15px;
   top: 12px;
   right: 10px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const sizeProperties: { [key: string]: any } = {

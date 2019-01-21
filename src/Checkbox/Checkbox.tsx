@@ -27,11 +27,11 @@ export type LocalCheckboxProps = {
   /** Initial value of the checkbox */
   value?: string;
   /** Function to invoke when focus is lost */
-  onBlur?(e: React.FocusEvent<HTMLInputElement>): void;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when checkbox has changed */
-  onChange?(e: React.FormEvent<HTMLInputElement>): void;
+  onChange?: React.FormEventHandler<HTMLInputElement>;
   /** Function to invoke when checkbox is focused */
-  onFocus?(e: React.FocusEvent<HTMLInputElement>): void;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
 export type CheckboxProps = LocalCheckboxProps & ReakitLabelProps;
 

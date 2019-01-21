@@ -20,6 +20,7 @@ export type LocalMenuProps = LocalNavigationProps & {
   children: React.ReactNode;
   context?: MenuContextState;
   isHorizontal?: boolean;
+  setInitialFocus?: boolean;
 };
 export type MenuProps = NavigationProps & LocalMenuProps;
 export type MenuComponents = {
@@ -52,7 +53,8 @@ export class Menu extends React.Component<LocalMenuProps, State> {
   };
   static defaultProps = {
     ...navigationDefaultProps,
-    isHorizontal: false
+    isHorizontal: false,
+    setInitialFocus: true
   };
 
   menu = React.createRef<HTMLElement>();
@@ -62,14 +64,15 @@ export class Menu extends React.Component<LocalMenuProps, State> {
   };
 
   componentDidUpdate = (prevProps: MenuProps) => {
-    const { context } = this.props;
+    const { context, setInitialFocus } = this.props;
     const { context: prevContext } = prevProps;
-    if (context && prevContext && context.isVisible !== prevContext.isVisible) {
+    if (setInitialFocus && context && prevContext && context.isVisible !== prevContext.isVisible) {
       const menuItems =
         (this.menu.current && this.menu.current.querySelectorAll('[role=menuitem]:not(:disabled)')) || [];
+      const startAtFirst = !context.startAt || context.startAt === 'first';
       requestAnimationFrame(() => {
         // @ts-ignore
-        menuItems[context.startAt === 'first' ? 0 : menuItems.length - 1].focus();
+        menuItems[startAtFirst ? 0 : menuItems.length - 1].focus();
       });
     }
   };
@@ -107,9 +110,10 @@ export class Menu extends React.Component<LocalMenuProps, State> {
   };
 
   handleFocus = () => {
+    const { setInitialFocus } = this.props;
     const menuItems = (this.menu.current && this.menu.current.querySelectorAll('[role=menuitem]')) || [];
 
-    let activeItemIndex = 0;
+    let activeItemIndex = setInitialFocus ? 0 : -1;
     // @ts-ignore
     menuItems.forEach((item, i) => {
       if (document.activeElement && document.activeElement.isEqualNode(item)) {

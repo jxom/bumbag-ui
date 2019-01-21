@@ -100,6 +100,21 @@ You can group tags to make one tag with the `<Group>` component.
   </Group>
 </Playground>
 
+## Removable tags
+
+You can add a removable tag by adding the `onRemove` prop:
+
+<Playground>
+  <Set spacing="minor-1">
+    <Tag onRemove={() => alert('removed')} palette="primary">Primary</Tag>
+    <Tag onRemove={() => alert('removed')} palette="secondary">Secondary</Tag>
+    <Tag onRemove={() => alert('removed')} palette="info">Info</Tag>
+    <Tag onRemove={() => alert('removed')} palette="success">Success</Tag>
+    <Tag onRemove={() => alert('removed')} palette="warning">Warning</Tag>
+    <Tag onRemove={() => alert('removed')} palette="danger">Danger</Tag>
+  </Set>
+</Playground>
+
 ## `<Tag>` Props
 
 <PropsTable component={Tag} />
