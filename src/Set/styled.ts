@@ -13,7 +13,6 @@ export default styled(InlineFlex)<LocalSetProps>`
           align-items: flex-start;
           display: inline-flex;
           flex-direction: column;
-          margin-top: -${props => space(props.spacing)(props)}rem;
         `
       : css`
           align-items: center;
@@ -26,7 +25,9 @@ export default styled(InlineFlex)<LocalSetProps>`
     ${props =>
       props.isVertical
         ? css`
-            margin-top: ${props => space(props.spacing)(props)}rem;
+            &:not(:last-child) {
+              margin-bottom: ${props => space(props.spacing)(props)}rem;
+            }
           `
         : css`
             margin-left: ${props => space(props.spacing)(props)}rem;
