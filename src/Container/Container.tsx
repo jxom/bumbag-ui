@@ -11,6 +11,7 @@ export type LocalContainerProps = {
   children: React.ReactNode;
   className?: string;
   isFluid?: boolean;
+  isLayout?: boolean;
 };
 export type ContainerProps = LocalContainerProps & ReakitBoxProps;
 
@@ -25,13 +26,15 @@ Container.propTypes = {
   breakpoint: breakpointPropType,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  isFluid: PropTypes.bool
+  isFluid: PropTypes.bool,
+  isLayout: PropTypes.bool
 };
 Container.defaultProps = {
   align: 'center',
   breakpoint: undefined,
   className: undefined,
-  isFluid: false
+  isFluid: false,
+  isLayout: false
 };
 
 const C: React.FunctionComponent<ContainerProps> = Container;

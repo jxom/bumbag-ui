@@ -7,9 +7,5 @@ export default {
       css`
         max-width: 100%;
       `};
-
-    @media (max-width: 768px) {
-      margin: 0px;
-    }
   `
 };

@@ -57,9 +57,13 @@ export default styled(Box)<ContainerProps>`
       margin: ${theme('fannypack.Container.fluidMargin')};
     `};
 
-  @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
-    margin: ${theme('fannypack.Container.tabletMargin')};
-  }
+  ${props =>
+    props.isLayout &&
+    css`
+      @media (max-width: ${theme('fannypack.layout.tabletBreakpoint')}px) {
+        margin: ${theme('fannypack.Container.tabletMargin')};
+      }
+    `};
 
   ${getResponsiveProperties};
   ${props => (props.align && !props.isFluid ? alignProperties[props.align] : null)};

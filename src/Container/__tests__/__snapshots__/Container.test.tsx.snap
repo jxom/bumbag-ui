@@ -25,12 +25,6 @@ exports[`alignment renders correctly for a center aligned container 1`] = `
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
-}
-
 @media (max-width:1568px) {
   .c0 {
     max-width: 1200px;
@@ -80,12 +74,6 @@ exports[`alignment renders correctly for a left aligned container 1`] = `
   margin-right: auto;
 }
 
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
-}
-
 @media (max-width:1568px) {
   .c0 {
     max-width: 1200px;
@@ -133,12 +121,6 @@ exports[`alignment renders correctly for a right aligned container 1`] = `
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
 }
 
 @media (max-width:1568px) {
@@ -195,12 +177,6 @@ exports[`fixed width renders correctly when breakpoint is desktop 1`] = `
   max-width: 1024px;
 }
 
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
-}
-
 <div
   class="c0 c1"
 >
@@ -235,12 +211,6 @@ exports[`fixed width renders correctly when breakpoint is fullHD 1`] = `
 
 .c0 {
   max-width: 1440px;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
 }
 
 <div
@@ -279,12 +249,6 @@ exports[`fixed width renders correctly when breakpoint is mobile 1`] = `
   max-width: 480px;
 }
 
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
-}
-
 <div
   class="c0 c1"
 >
@@ -319,12 +283,6 @@ exports[`fixed width renders correctly when breakpoint is tablet 1`] = `
 
 .c0 {
   max-width: 768px;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
 }
 
 <div
@@ -363,12 +321,6 @@ exports[`fixed width renders correctly when breakpoint is widescreen 1`] = `
   max-width: 1200px;
 }
 
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
-}
-
 <div
   class="c0 c1"
 >
@@ -399,9 +351,59 @@ exports[`fluid renders correctly for a fluid container 1`] = `
   margin: 0 2rem;
 }
 
+<div
+  class="c0 c1"
+>
+  test
+</div>
+`;
+
+exports[`layout renders correctly for a layout container 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width:768px) {
   .c0 {
     margin: 0 1rem;
+  }
+}
+
+@media (max-width:1568px) {
+  .c0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .c0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .c0 {
+    max-width: 768px;
   }
 }
 
@@ -435,12 +437,6 @@ exports[`renders correctly for a basic container 1`] = `
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    margin: 0 1rem;
-  }
 }
 
 @media (max-width:1568px) {

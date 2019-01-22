@@ -1,7 +1,6 @@
-import { css, space } from '../../styled';
-
 import global from './global';
 import webFontLoader from './webFontLoader';
+import layout from './layout';
 import fontWeights from './fontWeights';
 import _palette from './palette';
 
@@ -15,6 +14,7 @@ export default {
   // Foundation
   global,
   webFontLoader,
+  layout,
   fontWeights,
   palette: _palette,
 

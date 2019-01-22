@@ -57,3 +57,10 @@ describe('fluid', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('layout', () => {
+  it('renders correctly for a layout container', () => {
+    const { container } = render(<Container isLayout>test</Container>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
