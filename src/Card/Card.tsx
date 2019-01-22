@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+// @ts-ignore
+import ConditionalWrap from 'conditional-wrap';
 
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
@@ -37,14 +39,23 @@ export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
   title,
   ...props
 }) => (
-  <CardCard a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} {...props}>
+  <CardCard
+    a11yDescriptionId={title || footer ? a11yDescriptionId : undefined}
+    a11yTitleId={title ? a11yTitleId : undefined}
+    {...props}
+  >
     {title && (
       <CardHeader>
         {typeof title === 'string' ? <CardTitle id={a11yTitleId}>{title}</CardTitle> : title}
         {headerActions && <div>{headerActions}</div>}
       </CardHeader>
     )}
-    <CardContent id={a11yDescriptionId}>{children}</CardContent>
+    <ConditionalWrap
+      condition={title || footer}
+      wrap={(children: React.ReactNode) => <CardContent id={a11yDescriptionId}>{children}</CardContent>}
+    >
+      {children}
+    </ConditionalWrap>
     {footer && <CardFooter>{footer}</CardFooter>}
   </CardCard>
 );
