@@ -3,9 +3,9 @@ import { css } from '../../styled';
 export default {
   base: css`
     ${(props: any) =>
-      !props.breakpoint &&
+      props.isFluid &&
       css`
-        max-width: 100%;
+        margin: 0px;
       `};
   `
 };
