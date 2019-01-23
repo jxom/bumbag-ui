@@ -15,7 +15,7 @@ export class AsyncExample extends React.Component<{}> {
     searchText: string;
   }) => {
     const response = await fetch(
-      `http://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10${searchText ? `&q=${searchText}` : ''}${
+      `https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10${searchText ? `&q=${searchText}` : ''}${
         data.completed ? '&completed=true' : ''
       }`
     );
