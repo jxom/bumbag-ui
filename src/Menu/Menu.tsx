@@ -71,8 +71,11 @@ export class Menu extends React.Component<LocalMenuProps, State> {
         (this.menu.current && this.menu.current.querySelectorAll('[role=menuitem]:not(:disabled)')) || [];
       const startAtFirst = !context.startAt || context.startAt === 'first';
       requestAnimationFrame(() => {
-        // @ts-ignore
-        menuItems[startAtFirst ? 0 : menuItems.length - 1].focus();
+        const focusedItem = menuItems[startAtFirst ? 0 : menuItems.length - 1];
+        if (focusedItem) {
+          // @ts-ignore
+          focusedItem.focus();
+        }
       });
     }
   };
@@ -101,7 +104,7 @@ export class Menu extends React.Component<LocalMenuProps, State> {
         activeItemIndex = menuItems.length - 1;
       }
 
-      if (activeItemIndex > -1) {
+      if (activeItemIndex > -1 && menuItems[activeItemIndex]) {
         // @ts-ignore
         menuItems[activeItemIndex].focus();
         this.setState({ activeItemIndex });
