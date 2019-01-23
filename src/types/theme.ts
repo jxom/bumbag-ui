@@ -428,6 +428,59 @@ export type SelectThemeConfig = {
     large?: Stylesheet;
   };
 };
+export type SelectMenuThemeConfig = {
+  base: Stylesheet;
+  horizontal: Stylesheet;
+  vertical: Stylesheet;
+  Item: {
+    base: Stylesheet;
+    disabled: Stylesheet;
+    icon: Stylesheet;
+    focus: Stylesheet;
+    hover: Stylesheet;
+    active: Stylesheet;
+  };
+  Divider: {
+    base: Stylesheet;
+  };
+  Group: {
+    base: Stylesheet;
+    title: Stylesheet;
+  };
+  Button: {
+    base: Stylesheet;
+  };
+  Popover: {
+    base: Stylesheet;
+  };
+  SearchInput: {
+    base: Stylesheet;
+  };
+  Icon: {
+    base: Stylesheet;
+  };
+  LoadingSpinner: {
+    base: Stylesheet;
+  };
+  StaticItem: {
+    base: Stylesheet;
+  };
+  LoadingItemSpinner: {
+    base: Stylesheet;
+  };
+  BottomSection: {
+    base: Stylesheet;
+  };
+  TopSection: {
+    base: Stylesheet;
+  };
+  ActionButton: {
+    base: Stylesheet;
+  };
+  Tag: {
+    base: Stylesheet;
+  };
+};
 export type SetThemeConfig = {
   base?: Stylesheet;
   child?: Stylesheet;
@@ -601,6 +654,7 @@ export type ThemeConfig = {
   RadioGroup?: RadioGroupThemeConfig;
   Rating?: RatingThemeConfig;
   Select?: SelectThemeConfig;
+  SelectMenu?: SelectMenuThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Switch?: SwitchThemeConfig;

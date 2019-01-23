@@ -136,6 +136,8 @@ export const SelectMenuSearchInput = styled(Input)`
     border-bottom: none;
     box-shadow: ${(props: any) => palette('primary')(props)} inset 0px 0px 0px 2px !important;
   }
+
+  ${theme('fannypack.SelectMenu.SearchInput.base')};
 `;
 
 export const SelectMenuSection = styled(Box)`
