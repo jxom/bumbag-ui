@@ -1,6 +1,9 @@
 import { darken } from 'polished';
+import _defaultPalette from '../../themes/default/palette';
 import { palette, css, space } from '../../styled';
 import { isInteractive } from '../../Button/styled';
+
+const defaultPalette = _defaultPalette({});
 
 export default {
   base: css`
@@ -37,7 +40,9 @@ export default {
         }
         &:hover:active {
           background-color: ${(props: any) =>
-            props.palette === 'default' ? darken(0.1, palette('gray700')(props)) : darken(0.1, palette()(props))};
+            props.palette === 'default'
+              ? darken(0.1, palette('gray700', 0, defaultPalette.gray700)(props))
+              : darken(0.1, palette()(props))};
         }
       `};
   `,

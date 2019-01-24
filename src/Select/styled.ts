@@ -2,10 +2,13 @@ import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 import Input from 'reakit/Input';
 
+import _defaultPalette from '../themes/default/palette';
 import styled, { css } from '../styled';
 // @ts-ignore
 import Spinner, { LocalSpinnerProps } from '../Spinner';
 import { SelectProps } from './Select';
+
+const defaultPalette = _defaultPalette({});
 
 export const Icon = styled.svg`
   position: absolute;
@@ -87,7 +90,9 @@ const stateProperties = css<{ state: SelectProps['state'] }>`
   box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
+export default styled(Input)<
+  LocalSpinnerProps & {
+    // eslint-disable-line
     isPlaceholderSelected: boolean;
     styledSize: SelectProps['size'];
   }
@@ -96,7 +101,8 @@ export default styled(Input)<LocalSpinnerProps & { // eslint-disable-line
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;
   border-radius: 0.2em;
-  color: ${props => (props.isPlaceholderSelected ? tint(0.4, palette('text')(props)) : palette('text')(props))};
+  color: ${props =>
+    props.isPlaceholderSelected ? tint(0.4, palette('text', 0, defaultPalette.text)(props)) : palette('text')(props)};
   height: 2.5em;
   padding: 0.4em 1.4em 0.4em 0.6em;
   line-height: 1.5;

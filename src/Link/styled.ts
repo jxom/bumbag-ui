@@ -1,10 +1,13 @@
 import Link from 'reakit/Link';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
+import _defaultPalette from '../themes/default/palette';
 
 import styled from '../styled';
 import Icon from '../Icon/styled';
 import { LinkProps } from './Link';
+
+const defaultPalette = _defaultPalette({});
 
 export default styled(Link)<LinkProps>`
   color: ${palette('primary')};
@@ -14,8 +17,8 @@ export default styled(Link)<LinkProps>`
   text-decoration-skip: ink edges;
 
   &:hover {
-    color: ${props => darken(0.5, palette('primary')(props))};
-    fill: ${props => darken(0.5, palette('primary')(props))};
+    color: ${props => darken(0.5, palette('primary', 0, defaultPalette.primary)(props))};
+    fill: ${props => darken(0.5, palette('primary', 0, defaultPalette.primary)(props))};
   }
 
   & ${Icon} {

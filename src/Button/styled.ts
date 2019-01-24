@@ -1,10 +1,13 @@
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _Button from 'reakit/Button';
+import _defaultPalette from '../themes/default/palette';
 
 import styled, { css, space } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
 import { ButtonProps } from './Button';
+
+const defaultPalette = _defaultPalette({});
 
 export const isInteractive = (props: any) =>
   !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link';
@@ -45,15 +48,25 @@ const linkProperties = css`
   & {
     border: 0;
     background: unset;
-    color: ${(props: any) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
-    fill: ${(props: any) => (props.palette === 'default' ? palette('text')(props) : palette()(props))};
+    color: ${(props: any) =>
+      // @ts-ignore
+      props.palette === 'default' ? palette('text', 0, defaultPalette.text)(props) : palette()(props)};
+    fill: ${(props: any) =>
+      // @ts-ignore
+      props.palette === 'default' ? palette('text', 0, defaultPalette.text)(props) : palette()(props)};
     text-decoration: underline;
 
     &:hover {
       color: ${(props: any) =>
-        props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
+        props.palette === 'default'
+          ? // @ts-ignore
+            darken(0.5, palette('text', 0, defaultPalette.text)(props))
+          : darken(0.5, palette()(props))};
       fill: ${(props: any) =>
-        props.palette === 'default' ? darken(0.5, palette('text')(props)) : darken(0.5, palette()(props))};
+        props.palette === 'default'
+          ? // @ts-ignore
+            darken(0.5, palette('text', 0, defaultPalette.text)(props))
+          : darken(0.5, palette()(props))};
     }
   }
   & {

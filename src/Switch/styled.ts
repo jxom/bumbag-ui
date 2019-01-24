@@ -2,10 +2,13 @@ import { palette, theme } from 'styled-tools';
 import { tint } from 'polished';
 import Label from 'reakit/Label';
 
+import _defaultPalette from '../themes/default/palette';
 import { Box } from '../primitives';
 import styled, { css } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
 import { LocalSwitchProps } from './Switch';
+
+const defaultPalette = _defaultPalette({});
 
 export const SwitchIcon = styled(Box)<{ state?: string }>`
   background-color: ${palette('white700')};
@@ -36,18 +39,19 @@ export const HiddenSwitch = HiddenInput<LocalSwitchProps>({
     transition: all ease 0.2s;
   `,
   disabledCheckedCss: css`
-    background-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
-    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
+    background-color: ${(props: any) =>
+      tint(0.5, palette(props.palette || 'primary', 0, defaultPalette.primary)(props))};
+    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary', 0, defaultPalette.primary)(props))};
   `,
   disabledUncheckedIconCss: css`
     background: ${palette('white700')};
   `,
   checkedIconCss: css`
-    border-color: ${(props: any) => palette(props.palette || 'primary')};
+    border-color: ${(props: any) => palette(props.palette || 'primary', 0, defaultPalette.primary)};
     left: 1.7em;
   `,
   disabledCheckedIconCss: css`
-    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary')(props))};
+    border-color: ${(props: any) => tint(0.5, palette(props.palette || 'primary', 0, defaultPalette.primary)(props))};
   `,
   uncheckedIconCss: css`
     background: white;
