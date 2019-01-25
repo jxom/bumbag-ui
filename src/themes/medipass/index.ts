@@ -7,6 +7,7 @@ import _palette from './palette';
 import Button from './Button';
 import Checkbox from './Checkbox';
 import Container from './Container';
+import Heading from './Heading';
 import Input from './Input';
 import Label from './Label';
 
@@ -22,6 +23,7 @@ export default {
   Button,
   Checkbox,
   Container,
+  Heading,
   Input,
   Label
 };
