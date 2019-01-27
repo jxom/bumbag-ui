@@ -3,7 +3,7 @@ const resolve = require('rollup-plugin-node-resolve');
 const replace = require('rollup-plugin-replace');
 const commonjs = require('rollup-plugin-commonjs');
 const json = require('rollup-plugin-json');
-const { uglify } = require('rollup-plugin-uglify');
+const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
 
 const pkg = require('./package.json');
@@ -44,7 +44,7 @@ const getPlugins = umd =>
           }
         }),
         ignore(['stream']),
-        uglify(),
+        terser(),
         replace({
           'process.env.NODE_ENV': JSON.stringify('production')
         }),
