@@ -154,28 +154,10 @@ export const componentList: Array<ComponentDetails> = [
     docsPath: '/components/divider'
   },
   {
-    name: 'Empty',
-    type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
-  },
-  {
-    name: 'Error',
-    type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
-  },
-  {
     name: 'FieldWrapper',
     type: 'form',
     status: 'complete',
     docsPath: '/form/fieldwrapper'
-  },
-  {
-    name: 'Grid',
-    type: 'layout',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
   },
   {
     name: 'Group',
@@ -232,10 +214,10 @@ export const componentList: Array<ComponentDetails> = [
     docsPath: '/typography/list'
   },
   {
-    name: 'Loading',
-    type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    name: 'Markdown',
+    type: 'component',
+    status: 'complete',
+    docsPath: '/components/markdown'
   },
   {
     name: 'Menu',
@@ -294,8 +276,8 @@ export const componentList: Array<ComponentDetails> = [
   {
     name: 'Portal',
     type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    status: 'complete',
+    docsPath: '/utils/portal'
   },
   {
     name: 'Radio',
@@ -310,16 +292,16 @@ export const componentList: Array<ComponentDetails> = [
     docsPath: '/components/rating'
   },
   {
-    name: 'SearchableSelect',
-    type: 'form',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
-  },
-  {
     name: 'Select',
     type: 'form',
     status: 'complete',
     docsPath: '/form/select'
+  },
+  {
+    name: 'SelectMenu',
+    type: 'form',
+    status: 'complete',
+    docsPath: '/form/selectmenu'
   },
   {
     name: 'Set',

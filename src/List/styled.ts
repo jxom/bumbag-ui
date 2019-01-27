@@ -2,7 +2,7 @@ import List from 'reakit/List';
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { ListItemProps } from './ListItem';
 import { ListProps } from './List';
 
@@ -46,8 +46,12 @@ export default styled(List)<ListProps>`
   list-style: unset;
   list-style-type: none;
 
+  &:not(:last-child) {
+    margin-bottom: ${space(4)}rem;
+  }
+
   & & {
-    margin-left: 1rem;
+    margin-left: ${space(4)}rem;
   }
 
   & {

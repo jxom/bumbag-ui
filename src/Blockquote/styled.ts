@@ -8,6 +8,10 @@ export default styled(Blockquote)<BlockquoteProps>`
   border-left: 4px solid ${darken(0.2, 'white')};
   padding: ${space(4)}rem;
 
+  &:not(:last-child) {
+    margin-bottom: ${space(4)}rem;
+  }
+
   & {
     ${theme('fannypack.Blockquote.base')};
   }

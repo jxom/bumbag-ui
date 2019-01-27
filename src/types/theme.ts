@@ -242,6 +242,9 @@ export type ListThemeConfig = {
     base?: Stylesheet;
   };
 };
+export type MarkdownThemeConfig = {
+  base?: Stylesheet;
+};
 export type MenuThemeConfig = {
   base: Stylesheet;
   horizontal: Stylesheet;
@@ -643,6 +646,7 @@ export type ThemeConfig = {
   Label?: LabelThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
+  Markdown?: MarkdownThemeConfig;
   Menu?: MenuThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;

@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import styled, { css } from '../styled';
+import styled, { css, space } from '../styled';
 import { Box } from '../primitives';
 
 import { LocalTableProps } from './Table';
@@ -107,6 +107,10 @@ export default styled(Box)<LocalTableProps>`
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: ${space(4)}rem;
+  }
 
   & {
     ${props => props.isFullWidth && fullWidthProperties};

@@ -1,7 +1,6 @@
-import { theme } from 'styled-tools';
 import Heading from 'reakit/Heading';
 
-import styled, { css } from '../styled';
+import styled, { css, space, theme } from '../styled';
 // @ts-ignore
 import Icon from '../Icon/styled';
 import { HeadingProps } from './Heading';
@@ -17,14 +16,13 @@ const subHeadingProperties = css`
 export default styled(Heading)<HeadingProps>`
   font-weight: ${theme('fannypack.fontWeights.bold')};
   line-height: 1.2;
-  margin-bottom: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: ${space(4)}rem;
+  }
 
   .heading& + .sub-heading {
     margin-top: -1rem;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 
   h1& {
