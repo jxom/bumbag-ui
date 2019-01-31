@@ -73,7 +73,7 @@ export const actionButtonsDefaultProps = {
   palette: 'primary',
   submitProps: {},
   submitText: 'Submit',
-  type: undefined
+  type: 'submit'
 };
 ActionButtons.defaultProps = actionButtonsDefaultProps;
 
