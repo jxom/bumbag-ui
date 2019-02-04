@@ -15,12 +15,16 @@ export default {
     font-size: 15px;
     text-transform: uppercase;
 
-    &:focus {
-      outline: 2px solid ${(props: any) => (props.palette === 'default' ? palette('gray800') : palette())};
-      outline-offset: 0;
-      box-shadow: none;
-      background-color: ${palette()};
-    }
+    ${props =>
+      isInteractive(props) &&
+      css`
+        &:focus {
+          outline: 2px solid ${(props: any) => (props.palette === 'default' ? palette('gray800') : palette())};
+          outline-offset: 0;
+          box-shadow: none;
+          background-color: ${palette()};
+        }
+      `}
   `,
   outlined: css`
     border-width: 2px;

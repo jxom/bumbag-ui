@@ -4,11 +4,12 @@ route: /components/button
 menu: Components
 ---
 
+import { Fragment } from 'react';
 import { Playground } from 'docz';
 import PropsTable from '../_docs/components/PropsTable';
 import Button from './index';
 import { Button as ButtonPropsTable } from './Button';
-import {ActionButtons} from './ActionButtons';
+import { ActionButtons } from './ActionButtons';
 import Group from '../Group';
 import Icon from '../Icon';
 import Set from '../Set';
@@ -62,15 +63,11 @@ You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
 
 <Playground>
   <Set>
-    <Button iconBefore="solid-clipboard">
-      Copy
-    </Button>
+    <Button iconBefore="solid-clipboard">Copy</Button>
     <Button iconBefore="solid-pen" palette="primary">
       Edit
     </Button>
-    <Button iconAfter="solid-long-arrow-alt-right">
-      Continue
-    </Button>
+    <Button iconAfter="solid-long-arrow-alt-right">Continue</Button>
   </Set>
 </Playground>
 
@@ -120,9 +117,7 @@ To have a button of minimal appearence, use the assign `"ghost"` to the `kind` p
 
 <Playground>
   <Set>
-    <Button kind="ghost">
-      Default
-    </Button>
+    <Button kind="ghost">Default</Button>
     <Button palette="primary" kind="ghost">
       Primary
     </Button>
@@ -327,6 +322,23 @@ You can pass custom button props to action buttons using `submitProps` or `cance
 
 <Playground>
   <ActionButtons cancelText="Reject" submitProps={{ disabled: true }} cancelProps={{ palette: 'danger' }} />
+</Playground>
+
+## Addon buttons
+
+<Playground>
+  <ActionButtons
+    addonButtons={
+      <Fragment>
+        <Button palette="danger" kind="outlined">
+          Delete
+        </Button>
+        <Button palette="primary" kind="outlined">
+          Save draft
+        </Button>
+      </Fragment>
+    }
+  />
 </Playground>
 
 ## `<ActionButtons>` Props

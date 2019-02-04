@@ -7,6 +7,7 @@ import Set, { SetProps } from '../Set/Set';
 import { Omit } from '../types';
 
 export type LocalActionButtonsProps = {
+  addonButtons?: React.ReactElement<any>;
   /** Custom button props for the cancel button */
   cancelProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the cancel button */
@@ -28,6 +29,7 @@ export type LocalActionButtonsProps = {
 export type ActionButtonsProps = LocalActionButtonsProps & Omit<SetProps, 'children'>;
 
 export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = ({
+  addonButtons,
   cancelProps,
   cancelText,
   isLoading,
@@ -43,6 +45,7 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
     <Button onClick={onClickCancel} {...cancelProps}>
       {cancelText}
     </Button>
+    {addonButtons}
     <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} type={type} {...submitProps}>
       {submitText}
     </Button>
