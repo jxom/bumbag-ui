@@ -1,0 +1,67 @@
+---
+name: Breadcrumb
+route: /components/breadcrumb
+menu: Components
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import Breadcrumb from './index';
+
+
+# Breadcrumb
+
+## Import
+
+`import { Breadcrumb } from 'fannypack'`
+
+## Basic Usage
+
+The `<Breadcrumb>` component is used with `<Breadcrumb.Step` to create an accessible Breadcrumb.
+  
+<Playground>
+  <Breadcrumb>
+    <Breadcrumb.Step>Home</Breadcrumb.Step>
+    <Breadcrumb.Step>Breadcrumb</Breadcrumb.Step>
+    <Breadcrumb.Step isCurrent>Basic Usage</Breadcrumb.Step>
+  </Breadcrumb>
+</Playground>
+
+<Playground>
+  <Breadcrumb separationColor="secondary300">
+    <Breadcrumb.Step href="/">Home</Breadcrumb.Step>
+    <Breadcrumb.Step href="#import">Breadcrumb</Breadcrumb.Step>
+    <Breadcrumb.Step href="#basic-usage" isCurrent>Basic Usage</Breadcrumb.Step>
+  </Breadcrumb>
+</Playground>
+
+## Props
+
+### `<Breadcrumb>`
+<PropsTable component={Breadcrumb} />
+
+### `<Breadcrumb.Step>`
+<PropsTable component={Breadcrumb.Step} />
+
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  base: string | Object,
+  Step: {
+    base: string | Object
+  },
+  List: {
+    base: string | Object
+  },
+  Link: {
+    base: string | Object
+  },
+  Span: {
+    base: string | Object
+  }
+}
+```

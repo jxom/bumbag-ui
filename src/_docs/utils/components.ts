@@ -78,8 +78,8 @@ export const componentList: Array<ComponentDetails> = [
   {
     name: 'Breadcrumb',
     type: 'component',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    status: 'complete',
+    docsPath: 'components/breadcrumb'
   },
   {
     name: 'Button',

@@ -23,6 +23,21 @@ export type BackdropThemeConfig = {
 export type BlockquoteThemeConfig = {
   base?: Stylesheet;
 };
+export type BreadcrumbThemeConfig = {
+  base?: Stylesheet;
+  Step?: {
+    base?: Stylesheet;
+  };
+  List?: {
+    base?: Stylesheet;
+  };
+  Link?: {
+    base?: Stylesheet;
+  };
+  Span?: {
+    base?: Stylesheet;
+  };
+};
 export type ButtonThemeConfig = {
   base?: Stylesheet;
   disabled?: Stylesheet;
@@ -625,6 +640,7 @@ export type ThemeConfig = {
   Avatar?: AvatarThemeConfig;
   Backdrop?: BackdropThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
+  Breadcrumb?: BreadcrumbThemeConfig;
   Button?: ButtonThemeConfig;
   Checkbox?: CheckboxThemeConfig;
   Callout?: CalloutThemeConfig;

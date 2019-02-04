@@ -28,6 +28,7 @@ export { Avatar } from './Avatar';
 export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { ActionButtons, Button } from './Button';
+export { Breadcrumb } from './Breadcrumb';
 export { Callout } from './Callout';
 export { CalloutOverlay } from './CalloutOverlay';
 export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
