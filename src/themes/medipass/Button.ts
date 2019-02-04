@@ -24,7 +24,7 @@ export default {
           box-shadow: none;
           background-color: ${palette()};
         }
-      `}
+      `};
   `,
   outlined: css`
     border-width: 2px;

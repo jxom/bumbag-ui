@@ -16,7 +16,7 @@ const sizeProperties: any = {
   small: css`
     & {
       font-size: ${theme('fannypack.fontSizes.100')}em;
-      height: ${space(8)}em;
+      min-height: ${space(8)}em;
       padding: 0 ${space(2)}rem;
     }
     & {
@@ -25,7 +25,7 @@ const sizeProperties: any = {
   `,
   medium: css`
     & {
-      height: ${space(12)}em;
+      min-height: ${space(12)}em;
       padding: 0 ${space(5)}rem;
     }
     & {
@@ -35,7 +35,7 @@ const sizeProperties: any = {
   large: css`
     & {
       font-size: ${theme('fannypack.fontSizes.300')}em;
-      height: ${space(12)}em;
+      min-height: ${space(12)}em;
       padding: 0 ${space(6)}rem;
     }
     & {
@@ -194,7 +194,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
-  height: 2.5em;
+  min-height: 2.5em;
   justify-content: center;
   padding: 0 0.8rem;
   text-decoration: none;
