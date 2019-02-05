@@ -101,10 +101,12 @@ export const InputWrapper = styled(InlineFlex)<{ isFullWidth?: boolean; styledSi
   width: ${(props: { isFullWidth?: boolean }) => (props.isFullWidth ? '100%' : undefined)};
 
   & {
-    ${(props: { styledSize?: string }) => props.styledSize && wrapperSizeProperties[props.styledSize]};
+    ${theme('fannypack.Input.Wrapper.base')};
   }
 
-  ${theme('fannypack.Input.Wrapper.base')};
+  & {
+    ${(props: { styledSize?: string }) => props.styledSize && wrapperSizeProperties[props.styledSize]};
+  }
 `;
 
 export default styled(Input)<InputProps & { styledSize?: string }>`
@@ -165,12 +167,15 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
         width: 100%;
       `};
   }
+
+  & {
+    ${theme('fannypack.Input.base')};
+  }
+
   & {
     ${(props: any) => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {
     ${(props: any) => props.state && stateProperties};
   }
-
-  ${theme('fannypack.Input.base')};
 `;
