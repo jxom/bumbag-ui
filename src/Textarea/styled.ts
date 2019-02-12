@@ -101,13 +101,6 @@ export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize:
   }
 
   & {
-    ${props =>
-      props.isFullWidth &&
-      css`
-        width: 100%;
-      `};
-  }
-  & {
     ${props => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {

@@ -30,7 +30,6 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
   label,
   indeterminate,
   id,
-  isFullWidth,
   isOptional,
   isRequired,
   onBlur,
@@ -46,7 +45,6 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}

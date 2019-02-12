@@ -18,7 +18,7 @@ exports[`renders correctly for a basic input field 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -31,15 +31,15 @@ exports[`renders correctly for a basic input field 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -50,18 +50,14 @@ exports[`renders correctly for a basic input field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -69,48 +65,46 @@ exports[`renders correctly for a basic input field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -137,109 +131,6 @@ exports[`renders correctly for a disabled input field 1`] = `
   outline: none;
 }
 
-.c2 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c2:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c2.c2.c2 {
-  position: relative;
-}
-
-.c4 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c4:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
-  border: 1px solid #bdbdbd;
-  box-shadow: inset 0px 1px 2px #e5e5e5;
-  border-radius: 0.2em;
-  width: 100%;
-  padding: 0.4em 0.6em;
-}
-
-.c3[disabled] {
-  background-color: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c3:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c3::-webkit-input-placeholder {
-  opacity: 0.6;
-}
-
-.c3::-moz-placeholder {
-  opacity: 0.6;
-}
-
-.c3:-ms-input-placeholder {
-  opacity: 0.6;
-}
-
-.c3::placeholder {
-  opacity: 0.6;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div />
-  <div
-    class="c1 c2"
-  >
-    <textarea
-      aria-invalid="false"
-      aria-required="false"
-      class="c3 c4"
-      disabled=""
-      rows="3"
-      type="text"
-    />
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for a full width input field 1`] = `
 .c1 {
   margin: unset;
   padding: unset;
@@ -257,7 +148,87 @@ exports[`renders correctly for a full width input field 1`] = `
   outline: none;
 }
 
+.c1.c1.c1 {
+  position: relative;
+}
+
 .c3 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c2 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c2[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c2:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c2::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c2::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c2:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c2::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="c0"
+>
+  <div />
+  <div
+    class="c1"
+  >
+    <textarea
+      aria-invalid="false"
+      aria-required="false"
+      class="c2 c3"
+      disabled=""
+      rows="3"
+      type="text"
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for a full width input field 1`] = `
+.c0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -270,15 +241,32 @@ exports[`renders correctly for a full width input field 1`] = `
   color: inherit;
 }
 
-.c3:focus:not(:focus-visible) {
+.c0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c3.c3.c3 {
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c1.c1.c1 {
   position: relative;
 }
 
-.c5 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -289,18 +277,14 @@ exports[`renders correctly for a full width input field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
 .c2 {
-  display: inline-block;
-}
-
-.c4 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -308,58 +292,46 @@ exports[`renders correctly for a full width input field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c4[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c4:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c4::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c4:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c4::placeholder {
+.c2::placeholder {
   opacity: 0.6;
-}
-
-.c4 {
-  width: 100%;
-}
-
-.c0 {
-  width: 100%;
 }
 
 <div
-  class="c0 c1"
-  display="inline-block"
-  style="display: inline-block;"
+  class="c0"
 >
   <div />
   <div
-    class="c2 c3"
-    style="width: 100%;"
-    width="100%"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c4 c5"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -386,7 +358,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c6 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -399,15 +371,15 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c6:focus:not(:focus-visible) {
+.c5:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6.c6.c6 {
+.c5.c5.c5 {
   position: relative;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -418,15 +390,11 @@ exports[`renders correctly for a required field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c8:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c5 {
-  display: inline-block;
 }
 
 .c1 {
@@ -440,7 +408,7 @@ exports[`renders correctly for a required field 1`] = `
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -448,32 +416,32 @@ exports[`renders correctly for a required field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c7:focus {
+.c6:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   opacity: 0.6;
 }
 
@@ -481,6 +449,7 @@ exports[`renders correctly for a required field 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -489,8 +458,6 @@ exports[`renders correctly for a required field 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -505,12 +472,12 @@ exports[`renders correctly for a required field 1`] = `
   </div>
   <div />
   <div
-    class="c5 c6"
+    class="c5"
   >
     <textarea
       aria-invalid="false"
       aria-required="true"
-      class="c7 c8"
+      class="c6 c7"
       id="username"
       rows="3"
       type="text"
@@ -538,7 +505,7 @@ exports[`renders correctly for an input field with a default value 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -551,15 +518,15 @@ exports[`renders correctly for an input field with a default value 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -570,18 +537,14 @@ exports[`renders correctly for an input field with a default value 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -589,48 +552,46 @@ exports[`renders correctly for an input field with a default value 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     >
@@ -659,7 +620,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   outline: none;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -672,15 +633,15 @@ exports[`renders correctly for an input field with a description 1`] = `
   color: inherit;
 }
 
-.c8:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8.c8.c8 {
+.c7.c7.c7 {
   position: relative;
 }
 
-.c10 {
+.c9 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -691,15 +652,11 @@ exports[`renders correctly for an input field with a description 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c10:focus:not(:focus-visible) {
+.c9:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c7 {
-  display: inline-block;
 }
 
 .c1 {
@@ -713,7 +670,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: inline-block;
 }
 
-.c9 {
+.c8 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -721,32 +678,32 @@ exports[`renders correctly for an input field with a description 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c9[disabled] {
+.c8[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c9:focus {
+.c8:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c9::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c9::-moz-placeholder {
+.c8::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c9:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c9::placeholder {
+.c8::placeholder {
   opacity: 0.6;
 }
 
@@ -754,6 +711,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c6 {
@@ -810,7 +768,7 @@ samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c6 .c11 {
+.c6 .c10 {
   top: 0.15em;
 }
 
@@ -821,12 +779,11 @@ samp.c6 {
 .c5 {
   display: block;
   font-size: 0.8rem;
+  margin-top: 0.25rem;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -845,12 +802,12 @@ samp.c6 {
     Required for your fannypack
   </span>
   <div
-    class="c7 c8"
+    class="c7"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c9 c10"
+      class="c8 c9"
       id="username"
       rows="3"
       type="text"
@@ -878,7 +835,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   outline: none;
 }
 
-.c6 {
+.c5 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -891,15 +848,15 @@ exports[`renders correctly for an input field with a hint 1`] = `
   color: inherit;
 }
 
-.c6:focus:not(:focus-visible) {
+.c5:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6.c6.c6 {
+.c5.c5.c5 {
   position: relative;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -910,15 +867,11 @@ exports[`renders correctly for an input field with a hint 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c8:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c5 {
-  display: inline-block;
 }
 
 .c1 {
@@ -932,7 +885,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: inline-block;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -940,32 +893,32 @@ exports[`renders correctly for an input field with a hint 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c7:focus {
+.c6:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   opacity: 0.6;
 }
 
@@ -973,20 +926,21 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-abbr.c10 {
+abbr.c9 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c10 {
+i.c9 {
   font-style: italic;
 }
 
-kbd.c10 {
+kbd.c9 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -994,42 +948,42 @@ kbd.c10 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c10 {
+mark.c9 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c10 {
+strong.c9 {
   font-weight: bold;
 }
 
-sub.c10,
-sup.c10 {
+sub.c9,
+sup.c9 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c10,
-u.c10 {
+ins.c9,
+u.c9 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c10,
-cite.c10,
-var.c10,
-em.c10 {
+i.c9,
+cite.c9,
+var.c9,
+em.c9 {
   font-style: italic;
 }
 
-kbd.c10,
-pre.c10,
-samp.c10 {
+kbd.c9,
+pre.c9,
+samp.c9 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c10 .c11 {
+.c9 .c10 {
   top: 0.15em;
 }
 
@@ -1037,7 +991,7 @@ samp.c10 {
   margin-bottom: 0 !important;
 }
 
-.c9 {
+.c8 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
@@ -1045,8 +999,6 @@ samp.c10 {
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1061,19 +1013,19 @@ samp.c10 {
   </div>
   <div />
   <div
-    class="c5 c6"
+    class="c5"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c7 c8"
+      class="c6 c7"
       id="username"
       rows="3"
       type="text"
     />
   </div>
   <span
-    class="c9 c10 c0"
+    class="c8 c9 c0"
   >
     Must be awesome
   </span>
@@ -1098,7 +1050,7 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1111,15 +1063,15 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1130,18 +1082,14 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1149,48 +1097,46 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       placeholder="Awesome placeholder"
       rows="3"
       type="text"
@@ -1218,7 +1164,7 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1231,15 +1177,15 @@ exports[`renders correctly for an optional input field 1`] = `
   color: inherit;
 }
 
-.c8:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8.c8.c8 {
+.c7.c7.c7 {
   position: relative;
 }
 
-.c10 {
+.c9 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1250,15 +1196,11 @@ exports[`renders correctly for an optional input field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c10:focus:not(:focus-visible) {
+.c9:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c7 {
-  display: inline-block;
 }
 
 .c1 {
@@ -1272,7 +1214,7 @@ exports[`renders correctly for an optional input field 1`] = `
   display: inline-block;
 }
 
-.c9 {
+.c8 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1280,32 +1222,32 @@ exports[`renders correctly for an optional input field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c9[disabled] {
+.c8[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c9:focus {
+.c8:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c9::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c9::-moz-placeholder {
+.c8::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c9:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c9::placeholder {
+.c8::placeholder {
   opacity: 0.6;
 }
 
@@ -1313,6 +1255,7 @@ exports[`renders correctly for an optional input field 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c6 {
@@ -1369,7 +1312,7 @@ samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c6 .c11 {
+.c6 .c10 {
   top: 0.15em;
 }
 
@@ -1381,12 +1324,11 @@ samp.c6 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
+  line-height: 1;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1406,12 +1348,12 @@ samp.c6 {
   </div>
   <div />
   <div
-    class="c7 c8"
+    class="c7"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c9 c10"
+      class="c8 c9"
       id="username"
       rows="3"
       type="text"
@@ -1439,7 +1381,7 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1452,15 +1394,15 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1471,18 +1413,14 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1490,48 +1428,46 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -1558,7 +1494,7 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1571,15 +1507,15 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1590,18 +1526,14 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1609,48 +1541,46 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -1677,7 +1607,7 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1690,15 +1620,15 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1709,18 +1639,14 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1728,48 +1654,46 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -1796,7 +1720,7 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1809,15 +1733,15 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1828,18 +1752,14 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1847,53 +1767,51 @@ exports[`states renders correctly for an input field with state danger 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #d97c82;
   box-shadow: #d97c82 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="true"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -1920,7 +1838,7 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1933,15 +1851,15 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1952,18 +1870,14 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1971,53 +1885,51 @@ exports[`states renders correctly for an input field with state primary 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #7c81d9;
   box-shadow: #7c81d9 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -2044,7 +1956,7 @@ exports[`states renders correctly for an input field with state success 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2057,15 +1969,15 @@ exports[`states renders correctly for an input field with state success 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2076,18 +1988,14 @@ exports[`states renders correctly for an input field with state success 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2095,53 +2003,51 @@ exports[`states renders correctly for an input field with state success 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #6ba886;
   box-shadow: #6ba886 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />
@@ -2168,7 +2074,7 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   outline: none;
 }
 
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2181,15 +2087,15 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2.c2.c2 {
+.c1.c1.c1 {
   position: relative;
 }
 
-.c4 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2200,18 +2106,14 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c4:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c3 {
+.c2 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2219,53 +2121,51 @@ exports[`states renders correctly for an input field with state warning 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c3[disabled] {
+.c2[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c3:focus {
+.c2:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c3::placeholder {
+.c2::placeholder {
   opacity: 0.6;
 }
 
-.c3 {
+.c2 {
   border-color: #f5bd4c;
   box-shadow: #f5bd4c 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div />
   <div
-    class="c1 c2"
+    class="c1"
   >
     <textarea
       aria-invalid="false"
       aria-required="false"
-      class="c3 c4"
+      class="c2 c3"
       rows="3"
       type="text"
     />

@@ -26,7 +26,6 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
   description,
   disabled,
   hint,
-  isFullWidth,
   isHorizontal,
   isOptional,
   isRequired,
@@ -43,7 +42,6 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}

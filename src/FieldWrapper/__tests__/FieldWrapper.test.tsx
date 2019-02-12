@@ -49,15 +49,6 @@ it('renders correctly for a required field', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a full width field', () => {
-  const { container } = render(
-    <FieldWrapper a11yId="username" label="Username" isFullWidth>
-      <Input />
-    </FieldWrapper>
-  );
-  expect(container.firstChild).toMatchSnapshot();
-});
-
 describe('states', () => {
   ['danger', 'success', 'warning', 'primary'].forEach(state => {
     it(`renders correctly for an input with state ${state}`, () => {

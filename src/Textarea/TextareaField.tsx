@@ -16,7 +16,6 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
   a11yLabel,
   description,
   hint,
-  isFullWidth,
   isLoading,
   isOptional,
   isRequired,
@@ -30,7 +29,6 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}

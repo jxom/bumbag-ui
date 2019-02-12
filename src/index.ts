@@ -41,6 +41,7 @@ export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogH
 export { DialogModal } from './DialogModal';
 export { Divider } from './Divider';
 export { FieldWrapper } from './FieldWrapper';
+export { FieldSet } from './FieldSet';
 export { Group } from './Group';
 export { Heading } from './Heading';
 export { Hidden, HiddenContainer, HiddenShow, HiddenHide, HiddenToggle } from './Hidden';
@@ -48,6 +49,7 @@ export { Icon } from './Icon';
 export { Image } from './Image';
 export { Input, InputField } from './Input';
 export { Label } from './Label';
+export { LayoutSet } from './LayoutSet';
 export { Link } from './Link';
 export { List, ListItem } from './List';
 export { Markdown } from './Markdown';
@@ -75,3 +77,5 @@ export { Timeline } from './Timeline';
 export { Toast } from './Toast';
 export { Tooltip } from './Tooltip';
 export { VisuallyHidden } from './VisuallyHidden';
+
+export { formikField, reduxFormField } from './adaptors';

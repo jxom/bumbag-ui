@@ -23,8 +23,6 @@ export type LocalInputProps = {
   defaultValue?: string;
   /** Disables the input */
   disabled?: boolean;
-  /** Makes the input span full width */
-  isFullWidth?: boolean;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */
@@ -75,15 +73,34 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   a11yLabel,
   a11yId,
   after,
+  autoComplete,
+  autoFocus,
   before,
-  isFullWidth,
+  defaultValue,
+  disabled,
   isLoading,
   isRequired,
+  max,
+  maxLength,
+  min,
+  minLength,
+  multiple,
+  name,
+  onBlur,
+  onChange,
+  onFocus,
+  pattern,
+  placeholder,
+  readOnly,
+  spellCheck,
+  step,
+  type,
   size,
   state,
+  value,
   ...props
 }) => (
-  <InputWrapper isFullWidth={isFullWidth} styledSize={size}>
+  <InputWrapper styledSize={size} {...props}>
     {before && (
       <InlineFlex absolute zIndex="3">
         {before}
@@ -99,12 +116,30 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}
+      autoComplete={autoComplete}
+      autoFocus={autoFocus}
       before={before}
+      defaultValue={defaultValue}
+      disabled={disabled}
       id={a11yId}
-      isFullWidth={isFullWidth}
-      styledSize={size}
+      max={max}
+      maxLength={maxLength}
+      min={min}
+      minLength={minLength}
+      multiple={multiple}
+      name={name}
+      onBlur={onBlur}
+      onChange={onChange}
+      onFocus={onFocus}
+      pattern={pattern}
+      placeholder={placeholder}
+      readOnly={readOnly}
+      spellCheck={spellCheck}
       state={state}
-      {...props}
+      step={step}
+      styledSize={size}
+      type={type}
+      value={value}
     />
     {isLoading && <LoadingSpinner color="text" />}
   </InputWrapper>
@@ -123,7 +158,6 @@ export const inputPropTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
-  isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   isRequired: PropTypes.bool,
   name: PropTypes.string,
@@ -158,7 +192,6 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   disabled: false,
   after: undefined,
   before: undefined,
-  isFullWidth: false,
   isLoading: false,
   isRequired: false,
   max: undefined,

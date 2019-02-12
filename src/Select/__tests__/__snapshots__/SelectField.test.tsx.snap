@@ -29,7 +29,7 @@ exports[`renders correctly for a basic select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -119,6 +119,7 @@ exports[`renders correctly for a basic select 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -127,8 +128,6 @@ exports[`renders correctly for a basic select 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -144,6 +143,7 @@ exports[`renders correctly for a basic select 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -213,7 +213,7 @@ exports[`renders correctly for a disabled select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -307,6 +307,7 @@ exports[`renders correctly for a disabled select 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -315,8 +316,6 @@ exports[`renders correctly for a disabled select 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -332,6 +331,7 @@ exports[`renders correctly for a disabled select 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -377,7 +377,7 @@ exports[`renders correctly for a disabled select 1`] = `
 `;
 
 exports[`renders correctly for a full width select 1`] = `
-.c1 {
+.c0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -390,11 +390,11 @@ exports[`renders correctly for a full width select 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7 {
+.c6 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -405,18 +405,18 @@ exports[`renders correctly for a full width select 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c7.c7.c7 {
+.c6.c6.c6 {
   position: relative;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -429,26 +429,26 @@ exports[`renders correctly for a full width select 1`] = `
   color: inherit;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c6 {
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c5 {
   display: inline-block;
 }
 
-.c11 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c10 {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -460,7 +460,7 @@ exports[`renders correctly for a full width select 1`] = `
   transform: translateY(50%);
 }
 
-.c8 {
+.c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -474,52 +474,47 @@ exports[`renders correctly for a full width select 1`] = `
   width: 100%;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   background: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8[disabled] + .c10 {
+.c7[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c8:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c12[disabled] + .c10 {
+.c11[disabled] + .c9 {
   fill: #8d8d8d;
 }
 
-.c4 {
+.c3 {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-.c3 {
+.c2 {
   margin-bottom: 0 !important;
 }
 
-.c0 {
-  width: 100%;
-}
-
 <div
-  class="c0 c1"
-  display="inline-block"
-  style="display: inline-block;"
+  class="c0"
 >
   <div
-    class="c2 c1"
+    class="c1 c0"
     style="align-items: center;"
   >
     <label
-      class="c3 c4 c5 c1"
+      class="c2 c3 c4 c0"
       for="weather"
     >
       Weather
@@ -527,14 +522,14 @@ exports[`renders correctly for a full width select 1`] = `
   </div>
   <div />
   <div
-    class="c6 c7"
-    style="width: 100%;"
+    class="c5 c6"
+    style="min-width: 50px; width: 100%;"
     width="100%"
   >
     <select
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c7 c8"
       id="weather"
       type="text"
     >
@@ -556,7 +551,7 @@ exports[`renders correctly for a full width select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="c10 c11"
+      class="c9 c10"
       focusable="false"
       viewBox="0 0 20 20"
     >
@@ -599,7 +594,7 @@ exports[`renders correctly for a required field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -736,6 +731,7 @@ exports[`renders correctly for a required field 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -744,8 +740,6 @@ exports[`renders correctly for a required field 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -761,6 +755,7 @@ exports[`renders correctly for a required field 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -830,7 +825,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -924,6 +919,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -932,8 +928,6 @@ exports[`renders correctly for a select with a default value 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -949,6 +943,7 @@ exports[`renders correctly for a select with a default value 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -1019,7 +1014,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -1113,6 +1108,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -1121,8 +1117,6 @@ exports[`renders correctly for a select with a placeholder 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1138,6 +1132,7 @@ exports[`renders correctly for a select with a placeholder 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -1213,7 +1208,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c7:focus:not(:focus-visible) {
@@ -1406,6 +1401,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -1414,8 +1410,6 @@ exports[`renders correctly for addon component (after) 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1435,6 +1429,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   >
     <div
       class="c6 c7"
+      style="min-width: 50px;"
     >
       <select
         aria-invalid="false"
@@ -1508,7 +1503,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c7:focus:not(:focus-visible) {
@@ -1701,6 +1696,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -1709,8 +1705,6 @@ exports[`renders correctly for addon component (before) 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1733,6 +1727,7 @@ exports[`renders correctly for addon component (before) 1`] = `
     </div>
     <div
       class="c6 c7"
+      style="min-width: 50px;"
     >
       <select
         aria-invalid="false"
@@ -1803,7 +1798,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c7:focus:not(:focus-visible) {
@@ -1996,6 +1991,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -2004,8 +2000,6 @@ exports[`renders correctly for addon component (vertical) 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -2028,6 +2022,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
     </div>
     <div
       class="c6 c7"
+      style="min-width: 50px;"
     >
       <select
         aria-invalid="false"
@@ -2098,7 +2093,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c8:focus:not(:focus-visible) {
@@ -2235,6 +2230,7 @@ exports[`renders correctly for an input field with a description 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c6 {
@@ -2302,12 +2298,11 @@ samp.c6 {
 .c5 {
   display: block;
   font-size: 0.8rem;
+  margin-top: 0.25rem;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -2327,6 +2322,7 @@ samp.c6 {
   </span>
   <div
     class="c7 c8"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -2396,7 +2392,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -2533,6 +2529,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c12 {
@@ -2605,8 +2602,6 @@ samp.c12 {
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -2622,6 +2617,7 @@ samp.c12 {
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -2695,7 +2691,7 @@ exports[`renders correctly for an optional input field 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c8:focus:not(:focus-visible) {
@@ -2832,6 +2828,7 @@ exports[`renders correctly for an optional input field 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c6 {
@@ -2900,12 +2897,11 @@ samp.c6 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
+  line-height: 1;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -2926,6 +2922,7 @@ samp.c6 {
   <div />
   <div
     class="c7 c8"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -2995,7 +2992,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -3127,6 +3124,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -3135,8 +3133,6 @@ exports[`sizes renders correctly for a select with size large 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -3152,6 +3148,7 @@ exports[`sizes renders correctly for a select with size large 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -3221,7 +3218,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -3344,6 +3341,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -3352,8 +3350,6 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -3369,6 +3365,7 @@ exports[`sizes renders correctly for a select with size medium 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -3438,7 +3435,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -3551,6 +3548,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -3559,8 +3557,6 @@ exports[`sizes renders correctly for a select with size small 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -3576,6 +3572,7 @@ exports[`sizes renders correctly for a select with size small 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -3645,7 +3642,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -3775,6 +3772,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -3783,8 +3781,6 @@ exports[`states renders correctly for a select with state danger 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -3800,6 +3796,7 @@ exports[`states renders correctly for a select with state danger 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="true"
@@ -3869,7 +3866,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -4011,6 +4008,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -4019,8 +4017,6 @@ exports[`states renders correctly for a select with state primary 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -4036,6 +4032,7 @@ exports[`states renders correctly for a select with state primary 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -4105,7 +4102,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -4239,6 +4236,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -4247,8 +4245,6 @@ exports[`states renders correctly for a select with state success 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -4264,6 +4260,7 @@ exports[`states renders correctly for a select with state success 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"
@@ -4333,7 +4330,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   box-sizing: border-box;
   background-color: unset;
   color: inherit;
-  margin-top: 0.5rem !important;
+  margin-top: 0.75rem !important;
 }
 
 .c6:focus:not(:focus-visible) {
@@ -4471,6 +4468,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -4479,8 +4477,6 @@ exports[`states renders correctly for a select with state warning 1`] = `
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -4496,6 +4492,7 @@ exports[`states renders correctly for a select with state warning 1`] = `
   <div />
   <div
     class="c5 c6"
+    style="min-width: 50px;"
   >
     <select
       aria-invalid="false"

@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 
 import _Textarea, { LoadingSpinner } from './styled';
-import { InlineBlock } from '../primitives';
+import { Box } from '../primitives';
 import { Omit } from '../types';
 
 export type LocalTextareaProps = {
@@ -60,26 +60,24 @@ export type TextareaProps = Omit<ReakitInputProps, 'size'> & LocalTextareaProps;
 export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({
   a11yId,
   a11yLabel,
-  isFullWidth,
   isLoading,
   isRequired,
   size,
   state,
   ...props
 }) => (
-  <InlineBlock relative width={isFullWidth ? '100%' : undefined}>
+  <Box relative>
     <_Textarea
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}
       id={a11yId}
-      isFullWidth={isFullWidth}
       styledSize={size}
       state={state}
       {...props}
     />
     {isLoading && <LoadingSpinner color="text" />}
-  </InlineBlock>
+  </Box>
 );
 
 export const textareaPropTypes = {

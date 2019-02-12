@@ -24,11 +24,6 @@ it('renders correctly for an input field with a default value', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a full width input field', () => {
-  const { container } = render(<InputField isFullWidth />);
-  expect(container.firstChild).toMatchSnapshot();
-});
-
 describe('types', () => {
   ['number', 'tel', 'date', 'email', 'password', 'search', 'time', 'url'].forEach(type => {
     it(`renders correctly for an input field with type ${type}`, () => {

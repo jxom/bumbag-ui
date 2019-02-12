@@ -59,7 +59,6 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}

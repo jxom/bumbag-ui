@@ -1,17 +1,16 @@
 import { theme } from 'styled-tools';
 
 import styled, { css, space } from '../styled';
-import { InlineFlex } from '../primitives';
+import { Flex } from '../primitives';
 import { LocalSetProps } from './Set';
 
-export default styled(InlineFlex)<LocalSetProps>`
+export default styled(Flex)<LocalSetProps>`
   flex-wrap: wrap;
 
   ${props =>
     props.isVertical
       ? css`
           align-items: flex-start;
-          display: inline-flex;
           flex-direction: column;
         `
       : css`

@@ -8,6 +8,9 @@ export default styled(Label)<LabelProps>`
   display: block;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
   margin-bottom: ${space(1)}rem;
+  line-height: 1;
 
-  ${theme('fannypack.Label.base')};
+  & {
+    ${theme('fannypack.Label.base')};
+  }
 `;

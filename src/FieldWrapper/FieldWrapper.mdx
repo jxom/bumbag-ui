@@ -69,25 +69,15 @@ Required fields don't show any visual feedback. Displaying 'optional' labels (as
   </FieldWrapper>
 </Playground>
 
-## Full width
-
-<Playground>
-  <FieldWrapper a11yId="username" label="Username" isFullWidth>
-    <Input />
-  </FieldWrapper>
-</Playground>
-
 ## States
 
 <Playground>
   <FieldWrapper a11yId="username" label="Username" validationText="This is an invalid name" state="danger">
     <Input defaultValue="Jake" />
   </FieldWrapper>
-  <br/>
   <FieldWrapper a11yId="fannypacks" validationText="Please check the box!" state="primary" marginTop="major-3">
     <Checkbox label="Fannypacks are great" />
   </FieldWrapper>
-  <br/>
   <FieldWrapper a11yId="accept" label="Do you accept?" validationText="Nice one!" state="success" marginTop="major-3">
     <RadioGroup defaultValue={true} name="accept" options={[{ label: 'Yes', value: true }, { label: 'No', value: false }]} />
   </FieldWrapper>
