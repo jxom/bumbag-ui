@@ -5,13 +5,14 @@ menu: Form
 ---
 
 import { Playground } from 'docz';
+import { Formik, Form, Field } from 'formik';
 import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives/index';
-import {Input} from './Input';
+import { Input } from './Input';
 import Button from '../Button';
 import Group from '../Group';
 import Select from '../Select';
-import {InputField} from './InputField';
+import { InputField } from './InputField';
 import Component from '@reactions/component';
 
 # Input
@@ -26,7 +27,7 @@ By default, `<Input>` renders an `<input>`.
 
 <Playground>
   <Input />
-  <Input placeholder="Jake Moxey" marginLeft="major-1" />
+  <Input placeholder="Jake Moxey" marginTop="major-1" />
 </Playground>
 
 ## Default values
@@ -45,33 +46,18 @@ Make the input disabled with the `disabled` prop.
   <Input disabled defaultValue="Disabled field" />
 </Playground>
 
-## Full width
-
-To make the input span full width, add the `isFullWidth` prop.
-
-<Playground>
-  <Input isFullWidth />
-</Playground>
-
 ## Types
 
 Just like normal `<input>` elements, you can specify a `type`.
 
 <Playground>
   <Input type="number" />
-  <br />
   <Input type="tel" marginTop="major-1" />
-  <br />
   <Input type="date" marginTop="major-1" />
-  <br />
   <Input type="email" marginTop="major-1" />
-  <br />
   <Input type="password" marginTop="major-1" />
-  <br />
   <Input type="search" marginTop="major-1" />
-  <br />
   <Input type="time" marginTop="major-1" />
-  <br />
   <Input type="url" marginTop="major-1" />
 </Playground>
 
@@ -81,11 +67,8 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
 
 <Playground>
   <Input size="small" />
-  <br />
   <Input marginTop="major-1" />
-  <br />
   <Input size="medium" marginTop="major-1" />
-  <br />
   <Input size="large" marginTop="major-1" />
 </Playground>
 
@@ -95,11 +78,8 @@ An input can use different states (as per palette) such as `danger`, `success` a
 
 <Playground>
   <Input state="danger" />
-  <br />
   <Input state="success" marginTop="major-1" />
-  <br />
   <Input state="warning" marginTop="major-1" />
-  <br />
   <Input state="primary" marginTop="major-1" />
 </Playground>
 
@@ -121,7 +101,7 @@ You can use the [Group component](/components/group) to add on stuff to your `<I
 
 <Playground>
   <Input before={<Input.Icon icon="solid-search" />} placeholder="Jake Moxey" />
-  <Input after={<Input.Icon icon="solid-search" />} placeholder="Jake Moxey" marginLeft="major-1" />
+  <Input after={<Input.Icon icon="solid-search" />} placeholder="Jake Moxey" marginTop="major-1" />
 </Playground>
 
 ## Controlled Usage

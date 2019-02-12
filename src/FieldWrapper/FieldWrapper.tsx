@@ -12,7 +12,6 @@ export type LocalFieldWrapperProps = {
   className?: string;
   description?: string | React.ReactElement<any>;
   hint?: string | React.ReactElement<any>;
-  isFullWidth?: boolean;
   isOptional?: boolean;
   isRequired?: boolean;
   label?: string | React.ReactElement<any>;
@@ -22,7 +21,6 @@ export type LocalFieldWrapperProps = {
 export type FieldWrapperProps = Omit<ReakitFieldProps, 'label'> & LocalFieldWrapperProps;
 export type FieldElementProps = {
   a11yId?: LocalFieldWrapperProps['a11yId'];
-  isFullWidth?: LocalFieldWrapperProps['isFullWidth'];
   isRequired?: LocalFieldWrapperProps['isRequired'];
   state?: LocalFieldWrapperProps['state'];
   marginTop?: string;
@@ -33,7 +31,6 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
   children,
   description,
   hint,
-  isFullWidth,
   isOptional,
   isRequired,
   label,
@@ -41,9 +38,9 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
   validationText,
   ...props
 }) => {
-  const elementProps: FieldElementProps = { isFullWidth, isRequired, a11yId, state, marginTop: 'minor-2' };
+  const elementProps: FieldElementProps = { isRequired, a11yId, state, marginTop: 'minor-3' };
   return (
-    <_FieldWrapper display="inline-block" isFullWidth={isFullWidth} {...props}>
+    <_FieldWrapper {...props}>
       {label && (
         <Flex alignItems="center">
           {typeof label === 'string' ? <Label htmlFor={a11yId}>{label}</Label> : label}
@@ -70,7 +67,6 @@ export const fieldWrapperPropTypes = {
   className: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   hint: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  isFullWidth: PropTypes.bool,
   isOptional: PropTypes.bool,
   isRequired: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -84,7 +80,6 @@ export const fieldWrapperDefaultProps = {
   className: undefined,
   description: undefined,
   hint: undefined,
-  isFullWidth: false,
   isOptional: undefined,
   isRequired: undefined,
   label: undefined,

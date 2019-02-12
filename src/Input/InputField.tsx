@@ -42,7 +42,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   className,
   defaultValue,
   disabled,
-  isFullWidth,
   isLoading,
   isRequired,
   name,
@@ -69,7 +68,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}
@@ -93,7 +91,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           className={className}
           defaultValue={defaultValue}
           disabled={disabled}
-          isFullWidth={isFullWidth}
           isLoading={isLoading}
           isRequired={isRequired}
           name={name}
@@ -124,20 +121,23 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   </FieldWrapper>
 );
 
-InputField.propTypes = {
+export const inputFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
   ...fieldWrapperPropTypes,
   ...inputPropTypes
 };
-InputField.defaultProps = {
+InputField.propTypes = inputFieldPropTypes;
+
+export const inputFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
   isVertical: false,
   ...fieldWrapperDefaultProps,
   ...inputDefaultProps
 };
+InputField.defaultProps = inputFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<InputFieldProps> = InputField;

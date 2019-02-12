@@ -1,7 +1,7 @@
 import { palette, theme } from 'styled-tools';
 import Field from 'reakit/Field';
 
-import styled, { css } from '../styled';
+import styled, { space } from '../styled';
 import { Omit } from '../types';
 // @ts-ignore
 import _Label from '../Label';
@@ -20,6 +20,7 @@ export const Label = styled(_Label)`
 export const DescriptionText = styled(_Text)`
   display: block;
   font-size: 0.8rem;
+  margin-top: ${space(1)}rem;
 
   & {
     ${theme('fannypack.FieldWrapper.description')};
@@ -29,7 +30,7 @@ export const DescriptionText = styled(_Text)`
 export const HintText = styled(_Text)`
   display: block;
   font-size: 0.8rem;
-  margin-top: 0.25rem;
+  margin-top: ${space(1)}rem;
 
   & {
     ${theme('fannypack.FieldWrapper.hint')};
@@ -39,7 +40,8 @@ export const HintText = styled(_Text)`
 export const OptionalText = styled(_Text)`
   font-size: 0.8rem;
   color: ${palette('text100')};
-  margin-left: 0.5rem;
+  margin-left: ${space(2)}rem;
+  line-height: 1;
 
   & {
     ${theme('fannypack.FieldWrapper.optional')};
@@ -49,7 +51,7 @@ export const OptionalText = styled(_Text)`
 export const ValidationText = styled(_Text)`
   display: block;
   font-size: 0.8rem;
-  margin-top: 0.25rem;
+  margin-top: ${space(1)}rem;
 
   & {
     ${theme('fannypack.FieldWrapper.validation')};
@@ -58,12 +60,6 @@ export const ValidationText = styled(_Text)`
 
 export default styled(Field)<Omit<FieldWrapperProps, 'children'>>`
   & {
-    ${props =>
-      props.isFullWidth &&
-      css`
-        width: 100%;
-      `};
+    ${theme('fannypack.FieldWrapper.base')};
   }
-
-  ${theme('fannypack.FieldWrapper.base')};
 `;

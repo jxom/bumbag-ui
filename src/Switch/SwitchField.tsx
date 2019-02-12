@@ -23,7 +23,6 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
   a11yId,
   description,
   hint,
-  isFullWidth,
   isOptional,
   isRequired,
   label,
@@ -48,7 +47,6 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
     a11yId={a11yId}
     description={description}
     hint={hint}
-    isFullWidth={isFullWidth}
     isOptional={isOptional}
     isRequired={isRequired}
     label={label}
