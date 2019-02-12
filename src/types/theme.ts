@@ -152,6 +152,11 @@ export type FieldWrapperThemeConfig = {
   optional?: Stylesheet;
   validation?: Stylesheet;
 };
+export type FieldSetThemeConfig = {
+  base?: Stylesheet;
+  horizontal?: Stylesheet;
+  vertical?: Stylesheet;
+};
 export type FontSizeThemeConfig = {
   100?: number;
   150?: number;
@@ -247,6 +252,11 @@ export type LayoutThemeConfig = {
   gapFactor?: number;
   minorUnit?: number;
   majorUnit?: number;
+};
+export type LayoutSetThemeConfig = {
+  base?: Stylesheet;
+  horizontal?: Stylesheet;
+  vertical?: Stylesheet;
 };
 export type LinkThemeConfig = {
   base?: Stylesheet;
@@ -653,6 +663,7 @@ export type ThemeConfig = {
   Dialog?: DialogThemeConfig;
   Divider?: DividerThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
+  FieldSet?: FieldSetThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
   Hidden?: HiddenThemeConfig;
@@ -660,6 +671,7 @@ export type ThemeConfig = {
   Image?: ImageThemeConfig;
   Input?: InputThemeConfig;
   Label?: LabelThemeConfig;
+  LayoutSet?: LayoutSetThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Markdown?: MarkdownThemeConfig;

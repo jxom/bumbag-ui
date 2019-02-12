@@ -3,7 +3,7 @@ import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
 
 import styled, { css } from '../styled';
-import { InlineFlex } from '../primitives';
+import { Box } from '../primitives';
 import _Icon, { IconProps } from '../Icon/Icon';
 // @ts-ignore
 import Spinner from '../Spinner';
@@ -95,10 +95,10 @@ export const Icon: React.FunctionComponent<IconProps> = styled(_Icon)<IconProps>
   ${theme('fannypack.Input.Icon.base')};
 `;
 
-export const InputWrapper = styled(InlineFlex)<{ isFullWidth?: boolean; styledSize?: string }>`
+export const InputWrapper = styled(Box)<{ styledSize?: string }>`
   align-items: center;
   position: relative;
-  width: ${(props: { isFullWidth?: boolean }) => (props.isFullWidth ? '100%' : undefined)};
+  width: 100%;
 
   & {
     ${theme('fannypack.Input.Wrapper.base')};
@@ -158,13 +158,6 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
       props.before &&
       css`
         padding-left: 2.3em;
-      `};
-  }
-  & {
-    ${(props: any) =>
-      props.isFullWidth &&
-      css`
-        width: 100%;
       `};
   }
 

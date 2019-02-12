@@ -9,7 +9,9 @@ import layout from './layout';
 import fontSizes from './fontSizes';
 import fontWeights from './fontWeights';
 import Container from './Container';
+import FieldSet from './FieldSet';
 import Icon from './Icon';
+import LayoutSet from './LayoutSet';
 import Pane from './Pane';
 import Table from './Table';
 
@@ -24,7 +26,9 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
     fontWeights: fontWeights(overrides),
 
     Container: Container(overrides),
+    FieldSet: FieldSet(overrides),
     Icon: Icon(overrides),
+    LayoutSet: LayoutSet(overrides),
     Pane: Pane(overrides),
     Table: Table(overrides)
   };

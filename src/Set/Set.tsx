@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { InlineFlexProps as ReakitInlineFlexProps } from 'reakit/ts/InlineFlex/InlineFlex';
+import { FlexProps as ReakitFlexProps } from 'reakit/ts/Flex/Flex';
 
 import _Set from './styled';
 
@@ -10,7 +10,7 @@ export type LocalSetProps = {
   isVertical?: boolean;
   spacing?: string;
 };
-export type SetProps = ReakitInlineFlexProps & LocalSetProps;
+export type SetProps = ReakitFlexProps & LocalSetProps;
 
 export const Set: React.FunctionComponent<LocalSetProps> = ({ children, ...props }) => (
   <_Set {...props}>{children}</_Set>

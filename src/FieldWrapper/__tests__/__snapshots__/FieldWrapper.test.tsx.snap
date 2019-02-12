@@ -18,7 +18,25 @@ exports[`renders correctly for a basic field 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -29,10 +47,9 @@ exports[`renders correctly for a basic field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -51,6 +68,7 @@ exports[`renders correctly for a basic field 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 .c2 {
@@ -58,22 +76,15 @@ exports[`renders correctly for a basic field 1`] = `
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -82,39 +93,37 @@ exports[`renders correctly for a basic field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c6:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -129,12 +138,12 @@ exports[`renders correctly for a basic field 1`] = `
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value=""
@@ -162,7 +171,25 @@ exports[`renders correctly for a field with a description 1`] = `
   outline: none;
 }
 
-.c9 {
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -173,10 +200,9 @@ exports[`renders correctly for a field with a description 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -195,6 +221,7 @@ exports[`renders correctly for a field with a description 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
 abbr.c6 {
@@ -251,7 +278,7 @@ samp.c6 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   top: 0.15em;
 }
 
@@ -262,25 +289,19 @@ samp.c6 {
 .c5 {
   display: block;
   font-size: 0.8rem;
+  margin-top: 0.25rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c8 {
+.c9 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -289,39 +310,37 @@ samp.c6 {
   padding: 0.4em 0.6em;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c8:focus {
+.c9:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c8::placeholder {
+.c9::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -340,12 +359,12 @@ samp.c6 {
     Required for your fannypack
   </span>
   <div
-    class="c7 c0"
+    class="c7 c8"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c8 c9"
+      class="c9 c10"
       id="username"
       type="text"
       value=""
@@ -373,7 +392,25 @@ exports[`renders correctly for a field with a hint 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -384,10 +421,9 @@ exports[`renders correctly for a field with a hint 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -406,20 +442,21 @@ exports[`renders correctly for a field with a hint 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-abbr.c9 {
+abbr.c10 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c9 {
+i.c10 {
   font-style: italic;
 }
 
-kbd.c9 {
+kbd.c10 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -427,42 +464,42 @@ kbd.c9 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c9 {
+mark.c10 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c9 {
+strong.c10 {
   font-weight: bold;
 }
 
-sub.c9,
-sup.c9 {
+sub.c10,
+sup.c10 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c9,
-u.c9 {
+ins.c10,
+u.c10 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c9,
-cite.c9,
-var.c9,
-em.c9 {
+i.c10,
+cite.c10,
+var.c10,
+em.c10 {
   font-style: italic;
 }
 
-kbd.c9,
-pre.c9,
-samp.c9 {
+kbd.c10,
+pre.c10,
+samp.c10 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c9 .c10 {
+.c10 .c11 {
   top: 0.15em;
 }
 
@@ -470,29 +507,22 @@ samp.c9 {
   margin-bottom: 0 !important;
 }
 
-.c8 {
+.c9 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -501,39 +531,37 @@ samp.c9 {
   padding: 0.4em 0.6em;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c6:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   opacity: 0.6;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -548,27 +576,27 @@ samp.c9 {
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value=""
     />
   </div>
   <span
-    class="c8 c9 c0"
+    class="c9 c10 c0"
   >
     Must be awesome
   </span>
 </div>
 `;
 
-exports[`renders correctly for a full width field 1`] = `
-.c1 {
+exports[`renders correctly for a required field 1`] = `
+.c0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -581,7 +609,25 @@ exports[`renders correctly for a full width field 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -596,47 +642,493 @@ exports[`renders correctly for a full width field 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
 .c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c5 {
-  display: inline-block;
 }
 
 .c4 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  display: inline-block;
 }
 
 .c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.c2 {
   margin-bottom: 0 !important;
 }
 
-.c0 {
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
   width: 100%;
 }
 
-.c6 {
+.c7 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c7[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c7:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c7::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c7::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c7:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c7::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="username"
+    >
+      Username
+    </label>
+  </div>
+  <div />
+  <div
+    class="c5 c6"
+  >
+    <input
+      aria-invalid="false"
+      aria-required="true"
+      class="c7 c8"
+      id="username"
+      type="text"
+      value=""
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`renders correctly for an optional field 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c10 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c10:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+abbr.c6 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c6 {
+  font-style: italic;
+}
+
+kbd.c6 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c6 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c6 {
+  font-weight: bold;
+}
+
+sub.c6,
+sup.c6 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c6,
+u.c6 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c6,
+cite.c6,
+var.c6,
+em.c6 {
+  font-style: italic;
+}
+
+kbd.c6,
+pre.c6,
+samp.c6 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c6 .c11 {
+  top: 0.15em;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+.c5 {
+  font-size: 0.8rem;
+  color: #708da8;
+  margin-left: 0.5rem;
+  line-height: 1;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.c9 {
+  border: 1px solid #bdbdbd;
+  box-shadow: inset 0px 1px 2px #e5e5e5;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+}
+
+.c9[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  color: #8d8d8d;
+}
+
+.c9:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #444bc9;
+  box-shadow: #444bc9 0px 0px 0px 1px !important;
+}
+
+.c9::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.c9::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.c9:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.c9::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1 c0"
+    style="align-items: center;"
+  >
+    <label
+      class="c2 c3 c4 c0"
+      for="username"
+    >
+      Username
+    </label>
+    <span
+      class="c5 c6 c0"
+    >
+      OPTIONAL
+    </span>
+  </div>
+  <div />
+  <div
+    class="c7 c8"
+  >
+    <input
+      aria-invalid="false"
+      aria-required="false"
+      class="c9 c10"
+      id="username"
+      type="text"
+      value=""
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`states renders correctly for an input with state danger 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: inherit;
+}
+
+.c8:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c11 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  color: #c9444d !important;
+}
+
+.c11:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+abbr.c10 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c10 {
+  font-style: italic;
+}
+
+kbd.c10 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c10 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c10 {
+  font-weight: bold;
+}
+
+sub.c10,
+sup.c10 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c10,
+u.c10 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c10,
+cite.c10,
+var.c10,
+em.c10 {
+  font-style: italic;
+}
+
+kbd.c10,
+pre.c10,
+samp.c10 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c10 .c12 {
+  top: 0.15em;
+}
+
+.c2 {
+  margin-bottom: 0 !important;
+}
+
+.c9 {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.c5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -684,601 +1176,12 @@ exports[`renders correctly for a full width field 1`] = `
 }
 
 .c7 {
-  width: 100%;
-}
-
-<div
-  class="c0 c1"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c2 c1"
-    style="align-items: center;"
-  >
-    <label
-      class="c3 c4 c5 c1"
-      for="username"
-    >
-      Username
-    </label>
-  </div>
-  <div />
-  <div
-    class="c6 c1"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c7 c8"
-      id="username"
-      type="text"
-      value=""
-    />
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for a required field 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c7:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.c6 {
-  border: 1px solid #bdbdbd;
-  box-shadow: inset 0px 1px 2px #e5e5e5;
-  border-radius: 0.2em;
-  height: 2.5em;
-  width: 100%;
-  padding: 0.4em 0.6em;
-}
-
-.c6[disabled] {
-  background-color: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c6:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c6::-webkit-input-placeholder {
-  opacity: 0.6;
-}
-
-.c6::-moz-placeholder {
-  opacity: 0.6;
-}
-
-.c6:-ms-input-placeholder {
-  opacity: 0.6;
-}
-
-.c6::placeholder {
-  opacity: 0.6;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
-    >
-      Username
-    </label>
-  </div>
-  <div />
-  <div
-    class="c5 c0"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="true"
-      class="c6 c7"
-      id="username"
-      type="text"
-      value=""
-    />
-  </div>
-  <div />
-</div>
-`;
-
-exports[`renders correctly for an optional field 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c9:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-abbr.c6 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-i.c6 {
-  font-style: italic;
-}
-
-kbd.c6 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.c6 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.c6 {
-  font-weight: bold;
-}
-
-sub.c6,
-sup.c6 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.c6,
-u.c6 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.c6,
-cite.c6,
-var.c6,
-em.c6 {
-  font-style: italic;
-}
-
-kbd.c6,
-pre.c6,
-samp.c6 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.c6 .c10 {
-  top: 0.15em;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-.c5 {
-  font-size: 0.8rem;
-  color: #708da8;
-  margin-left: 0.5rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.c8 {
-  border: 1px solid #bdbdbd;
-  box-shadow: inset 0px 1px 2px #e5e5e5;
-  border-radius: 0.2em;
-  height: 2.5em;
-  width: 100%;
-  padding: 0.4em 0.6em;
-}
-
-.c8[disabled] {
-  background-color: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c8:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c8::-webkit-input-placeholder {
-  opacity: 0.6;
-}
-
-.c8::-moz-placeholder {
-  opacity: 0.6;
-}
-
-.c8:-ms-input-placeholder {
-  opacity: 0.6;
-}
-
-.c8::placeholder {
-  opacity: 0.6;
-}
-
-<div
-  class="c0"
-  display="inline-block"
-  style="display: inline-block;"
->
-  <div
-    class="c1 c0"
-    style="align-items: center;"
-  >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
-    >
-      Username
-    </label>
-    <span
-      class="c5 c6 c0"
-    >
-      OPTIONAL
-    </span>
-  </div>
-  <div />
-  <div
-    class="c7 c0"
-  >
-    <input
-      aria-invalid="false"
-      aria-required="false"
-      class="c8 c9"
-      id="username"
-      type="text"
-      value=""
-    />
-  </div>
-  <div />
-</div>
-`;
-
-exports[`states renders correctly for an input with state danger 1`] = `
-.c0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c7 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: white;
-  color: inherit;
-  margin-top: 0.5rem !important;
-}
-
-.c7:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c10 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  color: #c9444d !important;
-}
-
-.c10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c3 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-abbr.c9 {
-  border-bottom: 1px dotted;
-  cursor: help;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-i.c9 {
-  font-style: italic;
-}
-
-kbd.c9 {
-  background: #454d5d;
-  border-radius: 0.1rem;
-  color: #fff;
-  fill: #fff;
-  padding: 0.1rem 0.2rem;
-}
-
-mark.c9 {
-  background: #ffe9b3;
-  border-radius: 0.1rem;
-  padding: 0.1rem 0.2rem;
-}
-
-strong.c9 {
-  font-weight: bold;
-}
-
-sub.c9,
-sup.c9 {
-  font-size: 0.8em;
-  vertical-align: baseline;
-}
-
-ins.c9,
-u.c9 {
-  -webkit-text-decoration-skip: ink edges;
-  text-decoration-skip: ink edges;
-}
-
-i.c9,
-cite.c9,
-var.c9,
-em.c9 {
-  font-style: italic;
-}
-
-kbd.c9,
-pre.c9,
-samp.c9 {
-  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
-}
-
-.c9 .c11 {
-  top: 0.15em;
-}
-
-.c2 {
-  margin-bottom: 0 !important;
-}
-
-.c8 {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 0.25rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.c6 {
-  border: 1px solid #bdbdbd;
-  box-shadow: inset 0px 1px 2px #e5e5e5;
-  border-radius: 0.2em;
-  height: 2.5em;
-  width: 100%;
-  padding: 0.4em 0.6em;
-}
-
-.c6[disabled] {
-  background-color: #f2f2f2;
-  box-shadow: unset;
-  color: #8d8d8d;
-}
-
-.c6:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: #444bc9;
-  box-shadow: #444bc9 0px 0px 0px 1px !important;
-}
-
-.c6::-webkit-input-placeholder {
-  opacity: 0.6;
-}
-
-.c6::-moz-placeholder {
-  opacity: 0.6;
-}
-
-.c6:-ms-input-placeholder {
-  opacity: 0.6;
-}
-
-.c6::placeholder {
-  opacity: 0.6;
-}
-
-.c6 {
   border-color: #c9444d;
   box-shadow: #c9444d 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1293,12 +1196,12 @@ samp.c9 {
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="true"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value="Jake"
@@ -1306,7 +1209,7 @@ samp.c9 {
   </div>
   <div />
   <span
-    class="c8 c9 c10"
+    class="c9 c10 c11"
     color="danger"
   >
     This is an invalid name
@@ -1332,7 +1235,25 @@ exports[`states renders correctly for an input with state primary 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1343,14 +1264,13 @@ exports[`states renders correctly for an input with state primary 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c10 {
+.c11 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1364,7 +1284,7 @@ exports[`states renders correctly for an input with state primary 1`] = `
   color: #444bc9 !important;
 }
 
-.c10:focus:not(:focus-visible) {
+.c11:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1383,20 +1303,21 @@ exports[`states renders correctly for an input with state primary 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-abbr.c9 {
+abbr.c10 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c9 {
+i.c10 {
   font-style: italic;
 }
 
-kbd.c9 {
+kbd.c10 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1404,42 +1325,42 @@ kbd.c9 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c9 {
+mark.c10 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c9 {
+strong.c10 {
   font-weight: bold;
 }
 
-sub.c9,
-sup.c9 {
+sub.c10,
+sup.c10 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c9,
-u.c9 {
+ins.c10,
+u.c10 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c9,
-cite.c9,
-var.c9,
-em.c9 {
+i.c10,
+cite.c10,
+var.c10,
+em.c10 {
   font-style: italic;
 }
 
-kbd.c9,
-pre.c9,
-samp.c9 {
+kbd.c10,
+pre.c10,
+samp.c10 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c9 .c11 {
+.c10 .c12 {
   top: 0.15em;
 }
 
@@ -1447,29 +1368,22 @@ samp.c9 {
   margin-bottom: 0 !important;
 }
 
-.c8 {
+.c9 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1478,44 +1392,42 @@ samp.c9 {
   padding: 0.4em 0.6em;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c6:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   opacity: 0.6;
 }
 
-.c6 {
+.c7 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1530,12 +1442,12 @@ samp.c9 {
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value="Jake"
@@ -1543,7 +1455,7 @@ samp.c9 {
   </div>
   <div />
   <span
-    class="c8 c9 c10"
+    class="c9 c10 c11"
     color="primary"
   >
     This is an invalid name
@@ -1569,7 +1481,25 @@ exports[`states renders correctly for an input with state success 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1580,14 +1510,13 @@ exports[`states renders correctly for an input with state success 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c10 {
+.c11 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1601,7 +1530,7 @@ exports[`states renders correctly for an input with state success 1`] = `
   color: #2c8453 !important;
 }
 
-.c10:focus:not(:focus-visible) {
+.c11:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1620,20 +1549,21 @@ exports[`states renders correctly for an input with state success 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-abbr.c9 {
+abbr.c10 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c9 {
+i.c10 {
   font-style: italic;
 }
 
-kbd.c9 {
+kbd.c10 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1641,42 +1571,42 @@ kbd.c9 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c9 {
+mark.c10 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c9 {
+strong.c10 {
   font-weight: bold;
 }
 
-sub.c9,
-sup.c9 {
+sub.c10,
+sup.c10 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c9,
-u.c9 {
+ins.c10,
+u.c10 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c9,
-cite.c9,
-var.c9,
-em.c9 {
+i.c10,
+cite.c10,
+var.c10,
+em.c10 {
   font-style: italic;
 }
 
-kbd.c9,
-pre.c9,
-samp.c9 {
+kbd.c10,
+pre.c10,
+samp.c10 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c9 .c11 {
+.c10 .c12 {
   top: 0.15em;
 }
 
@@ -1684,29 +1614,22 @@ samp.c9 {
   margin-bottom: 0 !important;
 }
 
-.c8 {
+.c9 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1715,44 +1638,42 @@ samp.c9 {
   padding: 0.4em 0.6em;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c6:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   opacity: 0.6;
 }
 
-.c6 {
+.c7 {
   border-color: #2c8453;
   box-shadow: #2c8453 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -1767,12 +1688,12 @@ samp.c9 {
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value="Jake"
@@ -1780,7 +1701,7 @@ samp.c9 {
   </div>
   <div />
   <span
-    class="c8 c9 c10"
+    class="c9 c10 c11"
     color="success"
   >
     This is an invalid name
@@ -1806,7 +1727,25 @@ exports[`states renders correctly for an input with state warning 1`] = `
   outline: none;
 }
 
-.c7 {
+.c6 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-top: 0.75rem !important;
+}
+
+.c6:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1817,14 +1756,13 @@ exports[`states renders correctly for an input with state warning 1`] = `
   box-sizing: border-box;
   background-color: white;
   color: inherit;
-  margin-top: 0.5rem !important;
 }
 
-.c7:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c10 {
+.c11 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1838,7 +1776,7 @@ exports[`states renders correctly for an input with state warning 1`] = `
   color: #f2a100 !important;
 }
 
-.c10:focus:not(:focus-visible) {
+.c11:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1857,20 +1795,21 @@ exports[`states renders correctly for an input with state warning 1`] = `
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-abbr.c9 {
+abbr.c10 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c9 {
+i.c10 {
   font-style: italic;
 }
 
-kbd.c9 {
+kbd.c10 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1878,42 +1817,42 @@ kbd.c9 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c9 {
+mark.c10 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c9 {
+strong.c10 {
   font-weight: bold;
 }
 
-sub.c9,
-sup.c9 {
+sub.c10,
+sup.c10 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c9,
-u.c9 {
+ins.c10,
+u.c10 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c9,
-cite.c9,
-var.c9,
-em.c9 {
+i.c10,
+cite.c10,
+var.c10,
+em.c10 {
   font-style: italic;
 }
 
-kbd.c9,
-pre.c9,
-samp.c9 {
+kbd.c10,
+pre.c10,
+samp.c10 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c9 .c11 {
+.c10 .c12 {
   top: 0.15em;
 }
 
@@ -1921,29 +1860,22 @@ samp.c9 {
   margin-bottom: 0 !important;
 }
 
-.c8 {
+.c9 {
   display: block;
   font-size: 0.8rem;
   margin-top: 0.25rem;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.c6 {
+.c7 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1952,44 +1884,42 @@ samp.c9 {
   padding: 0.4em 0.6em;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c6:focus {
+.c7:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   opacity: 0.6;
 }
 
-.c6 {
+.c7 {
   border-color: #f2a100;
   box-shadow: #f2a100 0px 0px 0px 1px !important;
 }
 
 <div
   class="c0"
-  display="inline-block"
-  style="display: inline-block;"
 >
   <div
     class="c1 c0"
@@ -2004,12 +1934,12 @@ samp.c9 {
   </div>
   <div />
   <div
-    class="c5 c0"
+    class="c5 c6"
   >
     <input
       aria-invalid="false"
       aria-required="false"
-      class="c6 c7"
+      class="c7 c8"
       id="username"
       type="text"
       value="Jake"
@@ -2017,7 +1947,7 @@ samp.c9 {
   </div>
   <div />
   <span
-    class="c8 c9 c10"
+    class="c9 c10 c11"
     color="warning"
   >
     This is an invalid name

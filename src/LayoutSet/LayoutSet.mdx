@@ -1,0 +1,81 @@
+---
+name: LayoutSet
+route: /layout/LayoutSet
+menu: Layout
+---
+
+import { Playground } from 'docz';
+import PropsTable from '../_docs/components/PropsTable';
+import { Box } from '../primitives/index';
+import { Card } from '../index';
+import LayoutSet from './LayoutSet';
+
+# LayoutSet
+
+## Import
+
+`import { LayoutSet } from 'fannypack'`
+
+## Basic Usage
+
+The `<LayoutSet>` component is a utility belt that wraps around layout elements to space them out correctly. It uses the [`<Set>` utility](/utils/set) internally.
+
+<Playground>
+  <LayoutSet>
+    <Card title="Hello">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus at.
+      Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et posuere
+      leo. Cras placerat sapien in consectetur aliquet.
+    </Card>
+    <Card title="World">
+      <LayoutSet spacing="major-2">
+        <Card border>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+          at. Sed mollis eros sem, eu tincidunt lectus interdum sed.
+        </Card>
+        <Card border>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia lacinia dui id pellentesque. Orci
+          varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec laoreet magna non
+          ornare consectetur. Proin cursus consectetur ligula, et posuere leo. Cras placerat sapien in consectetur
+          aliquet.
+        </Card>
+      </LayoutSet>
+    </Card>
+    <LayoutSet isHorizontal>
+      <Card title="Title 1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+        at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+        posuere leo. Cras placerat sapien in consectetur aliquet.
+      </Card>
+      <Card title="Title 2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+        at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+        posuere leo. Cras placerat sapien in consectetur aliquet.
+      </Card>
+    </LayoutSet>
+  </LayoutSet>
+</Playground>
+
+## Props
+
+<PropsTable component={LayoutSet} />
+
+## Theming
+
+### Schema
+
+```jsx
+{
+  LayoutSet: {
+    base: css | Object,
+    vertical: css | Object,
+    horizontal: css | Object
+  }
+}
+```
