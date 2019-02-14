@@ -10,6 +10,8 @@ import Container from './Container';
 import Heading from './Heading';
 import Input from './Input';
 import Label from './Label';
+import Select from './Select';
+import SelectMenu from './SelectMenu';
 
 export default {
   // Foundation
@@ -25,5 +27,7 @@ export default {
   Container,
   Heading,
   Input,
-  Label
+  Label,
+  Select,
+  SelectMenu
 };

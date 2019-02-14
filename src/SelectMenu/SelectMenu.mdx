@@ -7,6 +7,7 @@ menu: Form
 import { Playground } from 'docz';
 import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives';
+import FieldSet from '../FieldSet';
 import Text from '../Text';
 import SelectMenu from './SelectMenu';
 import SelectMenuField from './SelectMenuField';
@@ -300,24 +301,26 @@ The `<SelectMenuField>` component contains of the [`<SelectMenu>` component](#se
 It accepts a combination of [`<SelectMenu>` props](/form/select#selectmenu-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
 
 <Playground>
-  <SelectMenuField
-    label="Weather"
-    options={[
-      { key: 1, label: 'Sunny', value: 'sunny' },
-      { key: 2, label: 'Windy', value: 'windy' },
-      { key: 3, label: 'Overcast', value: 'overcast' }
-    ]}
-  />
-  <SelectMenuField
-    isDropdown
-    isSearchable
-    label="Weather"
-    options={[
-      { key: 1, label: 'Sunny', value: 'sunny' },
-      { key: 2, label: 'Windy', value: 'windy' },
-      { key: 3, label: 'Overcast', value: 'overcast' }
-    ]}
-  />
+  <FieldSet>
+    <SelectMenuField
+      label="Weather"
+      options={[
+        { key: 1, label: 'Sunny', value: 'sunny' },
+        { key: 2, label: 'Windy', value: 'windy' },
+        { key: 3, label: 'Overcast', value: 'overcast' }
+      ]}
+    />
+    <SelectMenuField
+      isDropdown
+      isSearchable
+      label="Weather"
+      options={[
+        { key: 1, label: 'Sunny', value: 'sunny' },
+        { key: 2, label: 'Windy', value: 'windy' },
+        { key: 3, label: 'Overcast', value: 'overcast' }
+      ]}
+    />
+  </FieldSet>
 </Playground>
 
 ## `<SelectMenuField>` Props
