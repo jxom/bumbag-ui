@@ -7,6 +7,7 @@ import _Set from './styled';
 export type LocalSetProps = {
   className?: string;
   children: React.ReactNode;
+  isFilled?: boolean;
   isVertical?: boolean;
   spacing?: string;
 };
@@ -19,11 +20,13 @@ export const Set: React.FunctionComponent<LocalSetProps> = ({ children, ...props
 Set.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  isFilled: PropTypes.bool,
   isVertical: PropTypes.bool,
   spacing: PropTypes.string
 };
 Set.defaultProps = {
   className: undefined,
+  isFilled: false,
   isVertical: false,
   spacing: 'minor-2'
 };

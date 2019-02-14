@@ -48,7 +48,7 @@ export type SelectMenuItemObject = {
   label: string;
   value?: string | number | boolean | Object;
 };
-export type SelectMenuItem = string | SelectMenuItemObject;
+export type SelectMenuItem = string | SelectMenuItemObject | null;
 export type SelectMenuItems = Array<SelectMenuItem>;
 
 export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
@@ -72,7 +72,11 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
     page: number;
     searchText?: string;
   }): Promise<{ options: SelectMenuItems }>;
-  onChange?(value: string | SelectMenuItemObject['value'], item: SelectMenuItem): void;
+  onChange?(
+    value: string | SelectMenuItemObject['value'] | null,
+    item: SelectMenuItem,
+    values: SelectMenuItem | SelectMenuItems | null
+  ): void;
   options?: SelectMenuItems;
   placeholder?: string;
   renderBottomActions?(opts: {
@@ -91,6 +95,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
     items: { [key: string]: SelectMenuItem }
   ): React.ReactNode;
   searchInputProps?: LocalSelectMenuSearchInputProps;
+  value?: SelectMenuItem | SelectMenuItems;
   useTags?: boolean;
 };
 export type SelectMenuProps = Omit<Omit<MenuProps, 'as'>, 'children'> & LocalSelectMenuProps;
@@ -126,8 +131,27 @@ const selectMenuItemObjectPropType = PropTypes.shape({
 const selectMenuItemPropType = PropTypes.oneOfType([PropTypes.string, selectMenuItemObjectPropType]);
 const selectMenuItemsPropType = PropTypes.arrayOf(selectMenuItemPropType);
 
-const getDefaultOptions = (props: SelectMenuProps) => {
-  const { defaultKey, defaultKeys, defaultOption, defaultOptions, options } = props;
+const getSelectedOptionsFromValue = (value: SelectMenuItem | SelectMenuItems) => {
+  if (typeof value === 'string') {
+    return { [value]: value };
+  }
+  if (Array.isArray(value)) {
+    return value.reduce((currentSelectedOptions, defaultOption) => {
+      const key = _get(defaultOption, 'key', defaultOption);
+      return { ...currentSelectedOptions, [key]: defaultOption };
+    }, {});
+  }
+  if (typeof value === 'object') {
+    const key = _get(value, 'key', value);
+    return { [key]: value };
+  }
+  return {};
+};
+const getDefaultSelectedOptionsFromProps = (props: SelectMenuProps) => {
+  const { defaultKey, defaultKeys, defaultOption, defaultOptions, options, value } = props;
+  if (value) {
+    return getSelectedOptionsFromValue(value);
+  }
   if (defaultOption) {
     const key = _get(defaultOption, 'key', defaultOption);
     return { [key]: defaultOption };
@@ -241,7 +265,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     renderOption: PropTypes.func,
     renderValue: PropTypes.func,
     searchInputProps: PropTypes.shape(selectMenuSearchInputPropTypes),
-    useTags: PropTypes.bool
+    useTags: PropTypes.bool,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
   };
   static defaultProps = {
     defaultKey: undefined,
@@ -265,7 +290,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     renderOption: optionRenderer,
     renderValue: valueRenderer,
     searchInputProps: undefined,
-    useTags: false
+    useTags: false,
+    value: undefined
   };
 
   optionsGroup = React.createRef<HTMLDivElement>();
@@ -275,14 +301,17 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     contextKey: this.props.loadQuery ? Object.values(this.props.loadQuery).join('.') : undefined,
     options: this.props.options || [],
     page: 1,
-    selectedOptions: getDefaultOptions(this.props),
+    selectedOptions: getDefaultSelectedOptionsFromProps(this.props),
     searchText: ''
   };
 
   componentDidUpdate = (prevProps: SelectMenuProps) => {
-    const { loadQuery, options } = this.props;
-    const { loadQuery: prevLoadQuery, options: prevOptions } = prevProps;
+    const { loadQuery, options, value } = this.props;
+    const { loadQuery: prevLoadQuery, options: prevOptions, value: prevValue } = prevProps;
 
+    if (value && value !== prevValue) {
+      this.setState({ selectedOptions: getSelectedOptionsFromValue(value) });
+    }
     if (options && _get(options, 'length') !== _get(prevOptions, 'length')) {
       this.filterOptions();
     }
@@ -321,6 +350,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
   };
 
   handleClearSelected = () => {
+    const { onChange } = this.props;
+    onChange && onChange(null, null, null);
     this.setState({ selectedOptions: {} });
   };
 
@@ -342,8 +373,15 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       }
       this.setState({ selectedOptions: newSelectedOptions });
 
+      let newValues: SelectMenuItems | SelectMenuItem | null = Object.values(newSelectedOptions);
+      if (newValues.length === 0) {
+        newValues = null;
+      } else if (!isMultiSelect) {
+        newValues = newValues[0];
+      }
       const value = _get(option, 'value', option);
-      onChange && onChange(value, option);
+
+      onChange && onChange(value, option, newValues);
     };
   };
 
@@ -489,8 +527,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     const { emptyText, isDropdown, isMultiSelect, renderEmpty, renderError, renderOption, useTags } = this.props;
     const { options, selectedOptions } = this.state;
     return (
+      // @ts-ignore
       <SelectMenuGroup
-        // @ts-ignore
         elementRef={this.optionsGroup}
         isDropdown={isDropdown}
         isMultiSelect={isMultiSelect}

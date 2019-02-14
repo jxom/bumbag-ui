@@ -48,6 +48,7 @@ export class MenuButton extends React.Component<LocalMenuButtonProps> {
         onKeyDown={this.handleKeyDown}
         {...context}
         {...props}
+        type="button"
       />
     );
   };

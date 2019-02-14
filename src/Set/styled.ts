@@ -5,15 +5,19 @@ import { Flex } from '../primitives';
 import { LocalSetProps } from './Set';
 
 export default styled(Flex)<LocalSetProps>`
-  flex-wrap: wrap;
-
   ${props =>
     props.isVertical
       ? css`
-          align-items: flex-start;
           flex-direction: column;
+
+          ${props =>
+            !props.isFilled &&
+            css`
+              align-items: flex-start;
+            `};
         `
       : css`
+          flex-wrap: wrap;
           align-items: center;
           justify-content: flex-start;
           margin-left: -${props => space(props.spacing)(props)}rem;

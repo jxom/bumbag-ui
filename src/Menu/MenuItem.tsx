@@ -48,7 +48,7 @@ export class MenuItem extends React.Component<LocalMenuItemProps> {
   render = () => {
     const { children, icon, isDisabled, ...props } = this.props;
     return (
-      <_MenuItem role="menuitem" disabled={isDisabled} {...props} onClick={this.handleClick}>
+      <_MenuItem role="menuitem" disabled={isDisabled} {...props} onClick={this.handleClick} type="button">
         {icon && (
           // @ts-ignore
           <MenuIcon a11yHidden icon={icon} />

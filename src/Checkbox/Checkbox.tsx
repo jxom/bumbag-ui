@@ -25,7 +25,7 @@ export type LocalCheckboxProps = {
   /** State of the checkbox. Can be any color in the palette. */
   state?: string;
   /** Initial value of the checkbox */
-  value?: string;
+  value?: boolean | string;
   /** Function to invoke when focus is lost */
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when checkbox has changed */
@@ -73,6 +73,7 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
       name={name}
       state={state}
       type="checkbox"
+      // @ts-ignore
       value={value}
     />
     <CheckboxIcon state={state} />
@@ -96,7 +97,7 @@ export const checkboxPropTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   state: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func
@@ -122,5 +123,6 @@ export const checkboxDefaultProps = {
 };
 Checkbox.defaultProps = checkboxDefaultProps;
 
+// @ts-ignore
 const C: React.FunctionComponent<CheckboxProps> = Checkbox;
 export default C;

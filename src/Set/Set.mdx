@@ -64,6 +64,20 @@ You can also have a vertical set with the `isVertical` prop.
   </Set>
 </Playground>
 
+By default, `<Set>` will preserve the width of it's children. However, if you'd like your children to fill the width of `<Set>`, use the `isFilled` prop:
+
+<Playground>
+  <Set isVertical isFilled spacing="minor-1">
+    <Tag>Tag 1</Tag>
+    <Tag>Tag 2</Tag>
+    <Tag>Tag 3</Tag>
+    <Tag>Tag 4</Tag>
+    <Tag>Tag 5</Tag>
+    <Tag>Tag 6</Tag>
+    <Tag>Tag 7</Tag>
+  </Set>
+</Playground>
+
 ## Props
 
 <PropsTable component={Set} />
