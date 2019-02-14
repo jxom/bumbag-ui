@@ -40,7 +40,7 @@ export class SelectMenuSearchInput extends React.Component<LocalSelectMenuSearch
 
   render = () => {
     const { ...props } = this.props;
-    return <_SelectMenuSearchInput elementRef={this.search} {...props} />;
+    return <_SelectMenuSearchInput {...props} inputRef={this.search} />;
   };
 }
 

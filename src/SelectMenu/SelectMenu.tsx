@@ -230,6 +230,57 @@ const optionRenderer: LocalSelectMenuProps['renderOption'] = option => _get(opti
 const valueRenderer: LocalSelectMenuProps['renderValue'] = (value, values, selectedOptions) =>
   getButtonValue(selectedOptions);
 
+export const selectMenuPropTypes = {
+  defaultKey: PropTypes.string,
+  defaultKeys: PropTypes.arrayOf(PropTypes.string),
+  defaultOption: selectMenuItemPropType,
+  defaultOptions: selectMenuItemsPropType,
+  emptyText: PropTypes.string,
+  filterOptions: PropTypes.func,
+  isDropdown: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isMultiSelect: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  loadQuery: PropTypes.object,
+  loadOptions: PropTypes.func,
+  onChange: PropTypes.func,
+  options: selectMenuItemsPropType,
+  placeholder: PropTypes.string,
+  renderBottomActions: PropTypes.func,
+  renderEmpty: PropTypes.func,
+  renderError: PropTypes.func,
+  renderOption: PropTypes.func,
+  renderValue: PropTypes.func,
+  searchInputProps: PropTypes.shape(selectMenuSearchInputPropTypes),
+  useTags: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
+};
+export const selectMenuDefaultProps = {
+  defaultKey: undefined,
+  defaultKeys: undefined,
+  defaultOption: undefined,
+  defaultOptions: undefined,
+  emptyText: 'No results found',
+  filterOptions: optionsFilter,
+  isDropdown: false,
+  isLoading: false,
+  isMultiSelect: false,
+  isSearchable: false,
+  loadQuery: undefined,
+  loadOptions: undefined,
+  onChange: undefined,
+  options: [],
+  placeholder: 'Select...',
+  renderBottomActions: bottomActionsRenderer,
+  renderEmpty: emptyRenderer,
+  renderError: errorRenderer,
+  renderOption: optionRenderer,
+  renderValue: valueRenderer,
+  searchInputProps: {},
+  useTags: false,
+  value: undefined
+};
+
 export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState> {
   static ActionButton = SelectMenuActionButton;
   static BottomSection = SelectMenuBottomSection;
@@ -243,56 +294,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
   static Tag = SelectMenuTag;
   static TopSection = SelectMenuTopSection;
 
-  static propTypes = {
-    defaultKey: PropTypes.string,
-    defaultKeys: PropTypes.arrayOf(PropTypes.string),
-    defaultOption: selectMenuItemPropType,
-    defaultOptions: selectMenuItemsPropType,
-    emptyText: PropTypes.string,
-    filterOptions: PropTypes.func,
-    isDropdown: PropTypes.bool,
-    isLoading: PropTypes.bool,
-    isMultiSelect: PropTypes.bool,
-    isSearchable: PropTypes.bool,
-    loadQuery: PropTypes.object,
-    loadOptions: PropTypes.func,
-    onChange: PropTypes.func,
-    options: selectMenuItemsPropType,
-    placeholder: PropTypes.string,
-    renderBottomActions: PropTypes.func,
-    renderEmpty: PropTypes.func,
-    renderError: PropTypes.func,
-    renderOption: PropTypes.func,
-    renderValue: PropTypes.func,
-    searchInputProps: PropTypes.shape(selectMenuSearchInputPropTypes),
-    useTags: PropTypes.bool,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
-  };
-  static defaultProps = {
-    defaultKey: undefined,
-    defaultKeys: undefined,
-    defaultOption: undefined,
-    defaultOptions: undefined,
-    emptyText: 'No results found',
-    filterOptions: optionsFilter,
-    isDropdown: false,
-    isLoading: false,
-    isMultiSelect: false,
-    isSearchable: false,
-    loadQuery: undefined,
-    loadOptions: undefined,
-    onChange: undefined,
-    options: [],
-    placeholder: 'Select...',
-    renderBottomActions: bottomActionsRenderer,
-    renderEmpty: emptyRenderer,
-    renderError: errorRenderer,
-    renderOption: optionRenderer,
-    renderValue: valueRenderer,
-    searchInputProps: undefined,
-    useTags: false,
-    value: undefined
-  };
+  static propTypes = selectMenuPropTypes;
+  static defaultProps = selectMenuDefaultProps;
 
   optionsGroup = React.createRef<HTMLDivElement>();
 

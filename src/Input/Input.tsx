@@ -23,6 +23,7 @@ export type LocalInputProps = {
   defaultValue?: string;
   /** Disables the input */
   disabled?: boolean;
+  inputRef?: React.RefObject<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */
@@ -78,6 +79,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   before,
   defaultValue,
   disabled,
+  inputRef,
   isLoading,
   isRequired,
   max,
@@ -121,6 +123,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
       before={before}
       defaultValue={defaultValue}
       disabled={disabled}
+      elementRef={inputRef}
       id={a11yId}
       max={max}
       maxLength={maxLength}
@@ -158,6 +161,7 @@ export const inputPropTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
+  inputRef: PropTypes.object as PropTypes.Validator<LocalInputProps['inputRef']>,
   isLoading: PropTypes.bool,
   isRequired: PropTypes.bool,
   name: PropTypes.string,
@@ -192,6 +196,7 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   disabled: false,
   after: undefined,
   before: undefined,
+  inputRef: undefined,
   isLoading: false,
   isRequired: false,
   max: undefined,

@@ -64,7 +64,7 @@ export { Portal } from './Portal';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';
-export { SelectMenu } from './SelectMenu';
+export { SelectMenu, SelectMenuField } from './SelectMenu';
 export { Set } from './Set';
 export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';

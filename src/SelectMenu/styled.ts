@@ -125,16 +125,18 @@ export const SelectMenuPopover = styled(Menu.Popover)`
 `;
 
 export const SelectMenuSearchInput = styled(Input)`
-  border: none;
-  border-bottom: 1px solid ${palette('white900')};
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  box-shadow: none;
-  width: 100%;
+  & input {
+    border: none;
+    border-bottom: 1px solid ${palette('white900')};
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: none;
+    width: 100%;
 
-  &:focus {
-    border-bottom: none;
-    box-shadow: ${(props: any) => palette('primary')(props)} inset 0px 0px 0px 2px !important;
+    &:focus {
+      border-bottom: none;
+      box-shadow: ${(props: any) => palette('primary')(props)} inset 0px 0px 0px 2px !important;
+    }
   }
 
   ${theme('fannypack.SelectMenu.SearchInput.base')};

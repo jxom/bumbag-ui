@@ -9,6 +9,7 @@ import PropsTable from '../_docs/components/PropsTable';
 import { Box } from '../primitives';
 import Text from '../Text';
 import SelectMenu from './SelectMenu';
+import SelectMenuField from './SelectMenuField';
 import BasicAsyncExample from './examples/BasicAsyncExample';
 import AsyncWithSearchExample from './examples/AsyncWithSearchExample';
 import AsyncWithQueryExample from './examples/AsyncWithQueryExample';
@@ -285,6 +286,43 @@ To make a select menu searchable, add the `isSearchable` prop.
 ## `<SelectMenu>` Props
 
 <PropsTable component={SelectMenu} />
+
+# SelectMenuField
+
+## Import
+
+`import { SelectMenuField } from 'fannypack'`
+
+## Basic Usage
+
+The `<SelectMenuField>` component contains of the [`<Select>` component](#select) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Select>` props](/form/select#select-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+<Playground>
+  <SelectMenuField
+    label="Weather"
+    options={[
+      { key: 1, label: 'Sunny', value: 'sunny' },
+      { key: 2, label: 'Windy', value: 'windy' },
+      { key: 3, label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+  <SelectMenuField
+    isDropdown
+    isSearchable
+    label="Weather"
+    options={[
+      { key: 1, label: 'Sunny', value: 'sunny' },
+      { key: 2, label: 'Windy', value: 'windy' },
+      { key: 3, label: 'Overcast', value: 'overcast' }
+    ]}
+  />
+</Playground>
+
+## `<SelectMenuField>` Props
+
+<PropsTable component={SelectMenuField} />
 
 ## Theming
 
