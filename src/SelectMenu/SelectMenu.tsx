@@ -529,6 +529,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     return (
       // @ts-ignore
       <SelectMenuGroup
+        // @ts-ignore
         elementRef={this.optionsGroup}
         isDropdown={isDropdown}
         isMultiSelect={isMultiSelect}

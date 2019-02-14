@@ -65,6 +65,7 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
         label={checkboxLabel}
         name={name}
         state={state}
+        // @ts-ignore
         value={value}
         onBlur={onBlur}
         onChange={onChange}
