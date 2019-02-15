@@ -18,6 +18,7 @@ yarn docs
 - `yarn type-check` - Check that all the types are valid
 - `yarn lint` - Runs the linter
 - `yarn lint:fix` - Fixes lint issues
+- `yarn test` - Runs type-check, linter & tests
 - `yarn clean` - Clean up the compiled files.
 - `yarn docs` - Runs component documentation on a local development server.
 - `yarn develop` - Compile components & listen for changes (only use this for testing Fannypack consumer apps)
