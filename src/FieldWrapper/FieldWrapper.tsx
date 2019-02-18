@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { FieldProps as ReakitFieldProps } from 'reakit/ts/Field/Field';
 
-import { Flex } from '../primitives';
+import { Box, Flex } from '../primitives';
 import { Omit } from '../types';
 import _FieldWrapper, { Label, DescriptionText, HintText, OptionalText, ValidationText } from './styled';
 
@@ -38,17 +38,22 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
   validationText,
   ...props
 }) => {
-  const elementProps: FieldElementProps = { isRequired, a11yId, state, marginTop: 'minor-3' };
+  const elementProps: FieldElementProps = { isRequired, a11yId, state };
   return (
     <_FieldWrapper {...props}>
       {label && (
-        <Flex alignItems="center">
-          {typeof label === 'string' ? <Label htmlFor={a11yId}>{label}</Label> : label}
-          {isOptional && <OptionalText>OPTIONAL</OptionalText>}
-        </Flex>
+        <Box marginBottom="minor-2">
+          <Flex alignItems="center">
+            {typeof label === 'string' ? <Label htmlFor={a11yId}>{label}</Label> : label}
+            {isOptional && <OptionalText>OPTIONAL</OptionalText>}
+          </Flex>
+          {typeof description === 'string' ? (
+            <DescriptionText>{description}</DescriptionText>
+          ) : (
+            <div>{description}</div>
+          )}
+        </Box>
       )}
-
-      {typeof description === 'string' ? <DescriptionText>{description}</DescriptionText> : <div>{description}</div>}
 
       {typeof children === 'function'
         ? children({ elementProps })

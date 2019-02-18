@@ -20,7 +20,6 @@ export const Label = styled(_Label)`
 export const DescriptionText = styled(_Text)`
   display: block;
   font-size: 0.8rem;
-  margin-top: ${space(1)}rem;
 
   & {
     ${theme('fannypack.FieldWrapper.description')};

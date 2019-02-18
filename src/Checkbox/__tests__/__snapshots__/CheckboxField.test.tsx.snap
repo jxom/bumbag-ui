@@ -18,25 +18,7 @@ exports[`renders correctly for a basic checkbox field 1`] = `
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -49,11 +31,11 @@ exports[`renders correctly for a basic checkbox field 1`] = `
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -67,7 +49,7 @@ exports[`renders correctly for a basic checkbox field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -75,18 +57,18 @@ exports[`renders correctly for a basic checkbox field 1`] = `
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -94,46 +76,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c10 {
+.c7 .c9 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -142,7 +124,7 @@ samp.c8 {
   width: 1em;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -152,26 +134,26 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -179,7 +161,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -190,7 +172,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -208,24 +190,23 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
@@ -253,25 +234,7 @@ exports[`renders correctly for a disabled checkbox field 1`] = `
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -284,11 +247,11 @@ exports[`renders correctly for a disabled checkbox field 1`] = `
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -302,7 +265,7 @@ exports[`renders correctly for a disabled checkbox field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -310,18 +273,18 @@ exports[`renders correctly for a disabled checkbox field 1`] = `
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -329,46 +292,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c10 {
+.c7 .c9 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -377,7 +340,7 @@ samp.c8 {
   width: 1em;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -387,26 +350,26 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -414,7 +377,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -425,7 +388,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -443,25 +406,24 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       disabled=""
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
@@ -486,24 +448,6 @@ exports[`renders correctly for a required field 1`] = `
 }
 
 .c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -543,13 +487,31 @@ exports[`renders correctly for a required field 1`] = `
 }
 
 .c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.5rem !important;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
 }
 
@@ -718,7 +680,7 @@ samp.c11 {
   border-color: #9a9a9a;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -729,14 +691,14 @@ samp.c11 {
   align-items: center;
 }
 
-.c3 {
+.c4 {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
   line-height: 1;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 0 !important;
 }
 
@@ -744,23 +706,27 @@ samp.c11 {
   class="c0"
 >
   <div
-    class="c1 c0"
-    style="align-items: center;"
+    class="c1"
   >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
+    <div
+      class="c2 c0"
+      style="align-items: center;"
     >
-      Username
-    </label>
+      <label
+        class="c3 c4 c5 c0"
+        for="username"
+      >
+        Username
+      </label>
+    </div>
+    <div />
   </div>
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="true"
-    class="c5 c4 c6"
+    class="c6 c5 c0"
   >
     <input
       class="c7 c8"
@@ -796,24 +762,6 @@ exports[`renders correctly for an input field with a description 1`] = `
 }
 
 .c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c8 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -853,28 +801,46 @@ exports[`renders correctly for an input field with a description 1`] = `
 }
 
 .c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.5rem !important;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
 }
 
-abbr.c6 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c6 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c6 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -882,42 +848,42 @@ kbd.c6 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c6 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c6 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c6,
-sup.c6 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c6,
-u.c6 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c6,
-cite.c6,
-var.c6,
-em.c6 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c6,
-pre.c6,
-samp.c6 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c6 .c15 {
+.c7 .c15 {
   top: 0.15em;
 }
 
@@ -1028,7 +994,7 @@ samp.c6 {
   border-color: #9a9a9a;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1039,48 +1005,51 @@ samp.c6 {
   align-items: center;
 }
 
-.c3 {
+.c4 {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
   line-height: 1;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 0 !important;
 }
 
-.c5 {
+.c6 {
   display: block;
   font-size: 0.8rem;
-  margin-top: 0.25rem;
 }
 
 <div
   class="c0"
 >
   <div
-    class="c1 c0"
-    style="align-items: center;"
+    class="c1"
   >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
+    <div
+      class="c2 c0"
+      style="align-items: center;"
     >
-      Username
-    </label>
+      <label
+        class="c3 c4 c5 c0"
+        for="username"
+      >
+        Username
+      </label>
+    </div>
+    <span
+      class="c6 c7 c0"
+    >
+      Required for your fannypack
+    </span>
   </div>
-  <span
-    class="c5 c6 c0"
-  >
-    Required for your fannypack
-  </span>
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c7 c4 c8"
+    class="c8 c5 c0"
   >
     <input
       class="c9 c10"
@@ -1091,7 +1060,7 @@ samp.c6 {
       class="c11 c12 c0"
     />
     <span
-      class="c6 c13"
+      class="c7 c13"
       id="label"
     >
       Check me
@@ -1116,24 +1085,6 @@ exports[`renders correctly for an input field with a hint 1`] = `
 }
 
 .c0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c6:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1173,13 +1124,31 @@ exports[`renders correctly for an input field with a hint 1`] = `
 }
 
 .c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.5rem !important;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
 }
 
@@ -1348,7 +1317,7 @@ samp.c11 {
   border-color: #9a9a9a;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1359,14 +1328,14 @@ samp.c11 {
   align-items: center;
 }
 
-.c3 {
+.c4 {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
   line-height: 1;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 0 !important;
 }
 
@@ -1380,23 +1349,27 @@ samp.c11 {
   class="c0"
 >
   <div
-    class="c1 c0"
-    style="align-items: center;"
+    class="c1"
   >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
+    <div
+      class="c2 c0"
+      style="align-items: center;"
     >
-      Username
-    </label>
+      <label
+        class="c3 c4 c5 c0"
+        for="username"
+      >
+        Username
+      </label>
+    </div>
+    <div />
   </div>
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c5 c4 c6"
+    class="c6 c5 c0"
   >
     <input
       class="c7 c8"
@@ -1439,24 +1412,6 @@ exports[`renders correctly for an optional input field 1`] = `
   outline: none;
 }
 
-.c8 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c8:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .c10 {
   margin: unset;
   padding: unset;
@@ -1493,28 +1448,46 @@ exports[`renders correctly for an optional input field 1`] = `
 }
 
 .c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  margin-bottom: 0.5rem !important;
+}
+
+.c1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
 }
 
-abbr.c6 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c6 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c6 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1522,42 +1495,42 @@ kbd.c6 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c6 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c6 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c6,
-sup.c6 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c6,
-u.c6 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c6,
-cite.c6,
-var.c6,
-em.c6 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c6,
-pre.c6,
-samp.c6 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c6 .c15 {
+.c7 .c15 {
   top: 0.15em;
 }
 
@@ -1668,7 +1641,7 @@ samp.c6 {
   border-color: #9a9a9a;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1679,18 +1652,18 @@ samp.c6 {
   align-items: center;
 }
 
-.c3 {
+.c4 {
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
   line-height: 1;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 0 !important;
 }
 
-.c5 {
+.c6 {
   font-size: 0.8rem;
   color: #708da8;
   margin-left: 0.5rem;
@@ -1701,28 +1674,32 @@ samp.c6 {
   class="c0"
 >
   <div
-    class="c1 c0"
-    style="align-items: center;"
+    class="c1"
   >
-    <label
-      class="c2 c3 c4 c0"
-      for="username"
+    <div
+      class="c2 c0"
+      style="align-items: center;"
     >
-      Username
-    </label>
-    <span
-      class="c5 c6 c0"
-    >
-      OPTIONAL
-    </span>
+      <label
+        class="c3 c4 c5 c0"
+        for="username"
+      >
+        Username
+      </label>
+      <span
+        class="c6 c7 c0"
+      >
+        OPTIONAL
+      </span>
+    </div>
+    <div />
   </div>
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c7 c4 c8"
+    class="c8 c5 c0"
   >
     <input
       class="c9 c10"
@@ -1733,7 +1710,7 @@ samp.c6 {
       class="c11 c12 c0"
     />
     <span
-      class="c6 c13"
+      class="c7 c13"
       id="label"
     >
       Check me
@@ -1761,25 +1738,7 @@ exports[`states renders correctly for a checkbox field with state danger 1`] = `
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1792,11 +1751,11 @@ exports[`states renders correctly for a checkbox field with state danger 1`] = `
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1810,7 +1769,7 @@ exports[`states renders correctly for a checkbox field with state danger 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1818,18 +1777,18 @@ exports[`states renders correctly for a checkbox field with state danger 1`] = `
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1837,46 +1796,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1885,31 +1844,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #c9444d;
   box-shadow: #c9444d 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1917,7 +1876,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1928,11 +1887,11 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1942,30 +1901,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1973,7 +1932,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -1984,7 +1943,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -2002,24 +1961,23 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="true"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
@@ -2047,25 +2005,7 @@ exports[`states renders correctly for a checkbox field with state primary 1`] = 
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2078,11 +2018,11 @@ exports[`states renders correctly for a checkbox field with state primary 1`] = 
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2096,7 +2036,7 @@ exports[`states renders correctly for a checkbox field with state primary 1`] = 
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -2104,18 +2044,18 @@ exports[`states renders correctly for a checkbox field with state primary 1`] = 
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2123,46 +2063,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2171,31 +2111,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2203,7 +2143,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2214,11 +2154,11 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -2228,30 +2168,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2259,7 +2199,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2270,7 +2210,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -2288,24 +2228,23 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
@@ -2333,25 +2272,7 @@ exports[`states renders correctly for a checkbox field with state success 1`] = 
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2364,11 +2285,11 @@ exports[`states renders correctly for a checkbox field with state success 1`] = 
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2382,7 +2303,7 @@ exports[`states renders correctly for a checkbox field with state success 1`] = 
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -2390,18 +2311,18 @@ exports[`states renders correctly for a checkbox field with state success 1`] = 
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2409,46 +2330,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2457,31 +2378,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #2c8453;
   box-shadow: #2c8453 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2489,7 +2410,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2500,11 +2421,11 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -2514,30 +2435,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2545,7 +2466,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2556,7 +2477,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -2574,24 +2495,23 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
@@ -2619,25 +2539,7 @@ exports[`states renders correctly for a checkbox field with state warning 1`] = 
   outline: none;
 }
 
-.c3 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  margin-top: 0.75rem !important;
-}
-
-.c3:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2650,11 +2552,11 @@ exports[`states renders correctly for a checkbox field with state warning 1`] = 
   color: inherit;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2668,7 +2570,7 @@ exports[`states renders correctly for a checkbox field with state warning 1`] = 
   margin-left: 0.5rem !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -2676,18 +2578,18 @@ exports[`states renders correctly for a checkbox field with state warning 1`] = 
   display: inline-block;
 }
 
-abbr.c8 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c8 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c8 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2695,46 +2597,46 @@ kbd.c8 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c8 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c8 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c8,
-sup.c8 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c8,
-u.c8 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c8,
-cite.c8,
-var.c8,
-em.c8 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c8,
-pre.c8,
-samp.c8 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c8 .c11 {
+.c7 .c10 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2743,31 +2645,31 @@ samp.c8 {
   width: 1em;
 }
 
-.c7 {
+.c6 {
   border-color: #f2a100;
   box-shadow: #f2a100 0px 0px 0px 1px !important;
 }
 
-.c10[disabled] + .c6 {
+.c9[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c10:checked:focus + .c6 {
+.c9:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:focus + .c6 {
+.c9:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c10:not([disabled]):checked + .c6 {
+.c9:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2775,7 +2677,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c10:checked + .c6::before {
+.c9:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2786,11 +2688,11 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c10[disabled]:checked + .c6::before {
+.c9[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
-.c4 {
+.c3 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -2800,30 +2702,30 @@ samp.c8 {
   width: 1px;
 }
 
-.c4[disabled] + .c6 {
+.c3[disabled] + .c5 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c4:checked:focus + .c6 {
+.c3:checked:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:focus + .c6 {
+.c3:focus + .c5 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:not([disabled]):checked + .c6 {
+.c3:not([disabled]):checked + .c5 {
   border-color: #444bc9;
 }
 
-.c4:checked + .c6 {
+.c3:checked + .c5 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2831,7 +2733,7 @@ samp.c8 {
   position: absolute;
 }
 
-.c4:checked + .c6::before {
+.c3:checked + .c5::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -2842,7 +2744,7 @@ samp.c8 {
   width: 0.375em;
 }
 
-.c4[disabled]:checked + .c6::before {
+.c3[disabled]:checked + .c5::before {
   border-color: #9a9a9a;
 }
 
@@ -2860,24 +2762,23 @@ samp.c8 {
 <div
   class="c0"
 >
-  <div />
   <label
     aria-describedby="label"
     aria-invalid="false"
     aria-label="Check me"
     aria-required="false"
-    class="c1 c2 c3"
+    class="c1 c2 c0"
   >
     <input
-      class="c4 c5"
+      class="c3 c4"
       type="checkbox"
       value=""
     />
     <div
-      class="c6 c7 c0"
+      class="c5 c6 c0"
     />
     <span
-      class="c8 c9"
+      class="c7 c8"
       id="label"
     >
       Check me
