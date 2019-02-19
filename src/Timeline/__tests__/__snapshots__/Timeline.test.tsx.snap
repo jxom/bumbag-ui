@@ -36,29 +36,11 @@ exports[`Timeline renders correctly 1`] = `
   outline: none;
 }
 
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  font-weight: 600 !important;
-}
-
-.c6:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .c5:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.c5 .c8 {
+.c5 .c7 {
   top: 0.15em;
 }
 
@@ -93,6 +75,9 @@ exports[`Timeline renders correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 0.625rem;
   width: 0.625rem;
   margin-top: 1rem;
@@ -105,6 +90,7 @@ exports[`Timeline renders correctly 1`] = `
   margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
+  font-weight: 600;
 }
 
 .c4:not(:last-child) {
@@ -112,7 +98,7 @@ exports[`Timeline renders correctly 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c7 {
+.c6 {
   color: #435a6f;
 }
 
@@ -133,15 +119,13 @@ exports[`Timeline renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading1"
-        style="font-weight: semibold;"
       >
         Step one Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail1"
       >
         Step one details goes here
@@ -162,15 +146,13 @@ exports[`Timeline renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading2"
-        style="font-weight: semibold;"
       >
         Step two Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail2"
       >
         Step two details goes here
@@ -191,15 +173,13 @@ exports[`Timeline renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading3"
-        style="font-weight: semibold;"
       >
         Step three Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail3"
       >
         Step three details goes here
@@ -227,7 +207,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   outline: none;
 }
 
-.c8 {
+.c7 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -241,25 +221,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   background-color: #d9dee2 !important;
 }
 
-.c8:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c5 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  font-weight: 600 !important;
-}
-
-.c5:focus:not(:focus-visible) {
+.c7:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -267,11 +229,11 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c4 .c9 {
+.c4 .c8 {
   top: 0.15em;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,11 +241,11 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   position: relative;
 }
 
-.c7:last-child {
+.c6:last-child {
   margin-bottom: 0;
 }
 
-.c7::before {
+.c6::before {
   content: '';
   border: 1px solid #d9dee2;
   position: absolute;
@@ -292,7 +254,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   margin-top: 1.25rem;
 }
 
-.c7:last-child::before {
+.c6:last-child::before {
   border: 0;
 }
 
@@ -327,6 +289,9 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 0.625rem;
   width: 0.625rem;
   margin-top: 1rem;
@@ -339,6 +304,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
+  font-weight: 600;
 }
 
 .c3:not(:last-child) {
@@ -346,7 +312,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c6 {
+.c5 {
   color: #435a6f;
 }
 
@@ -368,15 +334,13 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c3 c4 c5"
-        font-weight="semibold"
+        class="c3 c4 c0"
         id="StepHeading1"
-        style="font-weight: semibold;"
       >
         Step one Heading
       </p>
       <div
-        class="c6 c0"
+        class="c5 c0"
         id="StepDetail1"
       >
         Step one details goes here
@@ -386,7 +350,7 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   <div
     aria-describedby="StepDetail2"
     aria-labelledby="StepHeading2"
-    class="c7 c0"
+    class="c6 c0"
   >
     <div
       class="c2 c0"
@@ -398,15 +362,13 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c3 c4 c5"
-        font-weight="semibold"
+        class="c3 c4 c0"
         id="StepHeading2"
-        style="font-weight: semibold;"
       >
         Step two Heading
       </p>
       <div
-        class="c6 c0"
+        class="c5 c0"
         id="StepDetail2"
       >
         Step two details goes here
@@ -416,10 +378,10 @@ exports[`Timeline with activeStep renders correctly 1`] = `
   <div
     aria-describedby="StepDetail3"
     aria-labelledby="StepHeading3"
-    class="c7 c0"
+    class="c6 c0"
   >
     <div
-      class="c2 c8"
+      class="c2 c7"
     />
     <div
       aria-describedby="StepDetail3"
@@ -427,15 +389,13 @@ exports[`Timeline with activeStep renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c3 c4 c5"
-        font-weight="semibold"
+        class="c3 c4 c0"
         id="StepHeading3"
-        style="font-weight: semibold;"
       >
         Step three Heading
       </p>
       <div
-        class="c6 c0"
+        class="c5 c0"
         id="StepDetail3"
       >
         Step three details goes here
@@ -481,29 +441,11 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   outline: none;
 }
 
-.c6 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  font-weight: 600 !important;
-}
-
-.c6:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .c5:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.c5 .c9 {
+.c5 .c8 {
   top: 0.15em;
 }
 
@@ -532,7 +474,7 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   border: 0;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,11 +482,11 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   position: relative;
 }
 
-.c8:last-child {
+.c7:last-child {
   margin-bottom: 0;
 }
 
-.c8::before {
+.c7::before {
   content: '';
   border: 1px solid green;
   position: absolute;
@@ -553,7 +495,7 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   margin-top: 1.25rem;
 }
 
-.c8:last-child::before {
+.c7:last-child::before {
   border: 0;
 }
 
@@ -563,6 +505,9 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 0.625rem;
   width: 0.625rem;
   margin-top: 1rem;
@@ -575,6 +520,7 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   margin-bottom: 0.25rem;
   line-height: 1.5rem;
   color: #435a6f;
+  font-weight: 600;
 }
 
 .c4:not(:last-child) {
@@ -582,7 +528,7 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c7 {
+.c6 {
   color: #435a6f;
 }
 
@@ -603,15 +549,13 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading1"
-        style="font-weight: semibold;"
       >
         Step one Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail1"
       >
         Step one details goes here
@@ -621,7 +565,7 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
   <div
     aria-describedby="StepDetail2"
     aria-labelledby="StepHeading2"
-    class="c8 c0"
+    class="c7 c0"
   >
     <div
       class="c2 c0"
@@ -633,15 +577,13 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading2"
-        style="font-weight: semibold;"
       >
         Step two Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail2"
       >
         Step two details goes here
@@ -662,15 +604,13 @@ exports[`Timeline with custom color in step renders correctly 1`] = `
       class="c0"
     >
       <p
-        class="c4 c5 c6"
-        font-weight="semibold"
+        class="c4 c5 c0"
         id="StepHeading3"
-        style="font-weight: semibold;"
       >
         Step three Heading
       </p>
       <div
-        class="c7 c0"
+        class="c6 c0"
         id="StepDetail3"
       >
         Step three details goes here

@@ -45,6 +45,7 @@ export const TimelineStep = styled(Box)<TimelineStepProps>`
 export const TimelineBullet = styled(Box)`
   border-radius: 50%;
   display: inline-flex;
+  flex-shrink: 0;
   height: 0.625rem;
   width: 0.625rem;
   margin-top: ${space(4)}rem;
@@ -61,6 +62,7 @@ export const TimelineStepHeading = styled(Paragraph)<TimelineStepHeadingProps>`
   margin-bottom: ${space(1)}rem;
   line-height: 1.5rem;
   color: ${props => props.color || palette('text')};
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
 
   &:not(:last-child) {
     margin-top: ${space(2)}rem;

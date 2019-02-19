@@ -12,7 +12,7 @@ export type LocalTimelineStepHeadingProps = {
 export type TimelineStepHeadingProps = ReakitParagraphProps & LocalTimelineStepHeadingProps;
 
 const TimelineStepHeading: React.FunctionComponent<LocalTimelineStepHeadingProps> = ({ children, color, ...props }) => (
-  <_TimelineStepHeading color={color} fontWeight="semibold" {...props}>
+  <_TimelineStepHeading color={color} {...props}>
     {children}
   </_TimelineStepHeading>
 );
