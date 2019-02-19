@@ -49,15 +49,17 @@ export const DialogFooter = styled(Box)<DialogFooterProps>`
   }
 `;
 export const DialogTitle = styled(Heading)`
-  margin-bottom: 0px;
+  && {
+    margin-bottom: 0px;
+  }
 
   & {
     ${theme('fannypack.Dialog.Title.base')};
   }
 `;
 export const DialogClose = styled(Button)<DialogCloseProps>`
-  height: 2em;
-  width: 2em;
+  min-height: 1.5em;
+  width: 1.5em;
   padding: 0px;
 
   &:hover {

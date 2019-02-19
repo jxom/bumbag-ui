@@ -11,7 +11,7 @@ import { ToastTitleProps } from './ToastTitle';
 
 export const ToastClose = styled(Button)<ToastCloseProps>`
   width: 24px;
-  height: 24px;
+  min-height: 24px;
   padding: 0;
   text-align: right;
 

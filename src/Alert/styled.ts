@@ -20,7 +20,7 @@ export const AlertTitle = styled(Heading)`
 
 export const AlertClose = styled(Button)<AlertCloseProps>`
   width: 24px;
-  height: 24px;
+  min-height: 24px;
   padding: 0;
   text-align: right;
 

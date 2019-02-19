@@ -37,10 +37,10 @@ export default styled(CardCard)<CalloutProps>`
 
 export const CalloutClose = styled(Button)<CalloutCloseProps>`
   position: absolute;
-  right: 0.8rem;
-  top: 0.8rem;
-  width: 30px;
-  height: 30px;
+  right: 1rem;
+  top: 1rem;
+  width: 1.5em;
+  min-height: 1.5em;
   padding: 0;
   text-align: right;
 

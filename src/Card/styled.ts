@@ -46,7 +46,10 @@ export const CardFooter = styled(Box)<CardFooterProps>`
   }
 `;
 export const CardTitle = styled(Heading)<CardTitleProps>`
-  margin-bottom: 0px;
+  && {
+    margin-bottom: 0px;
+  }
+
   & {
     ${theme('fannypack.Card.Title.base')};
   }

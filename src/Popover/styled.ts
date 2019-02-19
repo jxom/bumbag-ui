@@ -23,7 +23,7 @@ export const PopoverToggle = styled(Popover.Toggle)<PopoverToggleProps>`
 export const PopoverClose = styled(Button)<PopoverCloseProps>`
   position: absolute;
   width: 24px;
-  height: 24px;
+  min-height: 24px;
   right: 0;
   top: 0;
   padding: 0px;
