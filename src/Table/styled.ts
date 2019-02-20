@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import styled, { css, space } from '../styled';
+import styled, { css, space, s } from '../styled';
 import { Box } from '../primitives';
 
 import { LocalTableProps } from './Table';
@@ -79,7 +79,7 @@ export const TableBody = styled(Box)<LocalTableBodyProps>`
   ${props =>
     props.hasBorders &&
     css`
-      & ${TableRow} {
+      & ${s(TableRow)} {
         border-bottom: 1px solid ${theme('fannypack.Table.borderColor')};
       }
     `};
@@ -93,12 +93,12 @@ const fullWidthProperties = css`
   width: 100%;
 `;
 const hoverableProperties = css`
-  & ${TableBody} ${TableRow}:hover {
+  & ${s(TableBody)} ${TableRow}:hover {
     background-color: ${theme('fannypack.Table.hover.backgroundColor')} !important;
   }
 `;
 const stripedProperties = css`
-  & ${TableBody} ${TableRow}:nth-child(even) {
+  & ${s(TableBody)} ${TableRow}:nth-child(even) {
     background-color: ${theme('fannypack.Table.striped.backgroundColor')};
   }
 `;

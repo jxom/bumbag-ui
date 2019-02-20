@@ -1,7 +1,7 @@
 import Tabs from 'reakit/Tabs';
 import { palette, theme } from 'styled-tools';
 
-import styled, { css } from '../styled';
+import styled, { css, s } from '../styled';
 import { LocalTabsProps } from './Tabs';
 import { LocalTabProps } from './Tab';
 import { LocalTabPanelProps } from './TabPanel';
@@ -66,12 +66,12 @@ export default styled(Tabs)<LocalTabsProps>`
   ${props =>
     props.isFitted &&
     css`
-      & ${Tab} {
+      & ${s(Tab)} {
         flex: 1;
       }
     `};
 
-  & ${Tab} {
+  & ${s(Tab)} {
     ${props =>
       props.type === 'default' &&
       css`
@@ -89,7 +89,7 @@ export default styled(Tabs)<LocalTabsProps>`
         }
       `};
   }
-  & ${Tab}.active {
+  & ${s(Tab)}.active {
     ${props =>
       props.type === 'default' &&
       css`

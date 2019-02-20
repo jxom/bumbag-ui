@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -14,45 +14,48 @@ exports[`renders correctly 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c4 {
-  padding: 1.5rem;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c0 {
+.c2 {
   -webkit-transform: translate3d(-50%,-50%,0px);
   -ms-transform: translate3d(-50%,-50%,0px);
   transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c6 {
+  padding: 1.5rem;
+}
+
+.c5 {
+  position: relative;
 }
 
 .c0 {
@@ -71,12 +74,12 @@ exports[`renders correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -84,24 +87,24 @@ exports[`renders correctly 1`] = `
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           Callout
@@ -113,7 +116,7 @@ exports[`renders correctly 1`] = `
 `;
 
 exports[`renders correctly when a close button is present 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -126,11 +129,11 @@ exports[`renders correctly when a close button is present 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c15 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -143,18 +146,18 @@ exports[`renders correctly when a close button is present 1`] = `
   color: inherit;
 }
 
-.c13:focus:not(:focus-visible) {
+.c15:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c16 {
+.c18 {
   fill: inherit;
   position: relative;
   font-size: 1em;
@@ -162,7 +165,7 @@ exports[`renders correctly when a close button is present 1`] = `
   width: 1em;
 }
 
-.c12 {
+.c14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -188,20 +191,20 @@ exports[`renders correctly when a close button is present 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.c12:focus {
+.c14:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
-.c12[disabled] {
+.c14[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c12 {
+.c14 {
   border: 0;
   background: unset;
   color: #435a6f;
@@ -210,64 +213,82 @@ exports[`renders correctly when a close button is present 1`] = `
   text-decoration: underline;
 }
 
-.c12:hover {
+.c14:hover {
   color: #000;
   fill: #000;
 }
 
-.c10 {
+.c12 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-.c10:not(:last-child) {
+.c12:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.heading.c10 + .sub-heading {
+.heading.c12 + .sub-heading {
   margin-top: -1rem;
 }
 
-h1.c10 {
+h1.c12 {
   font-size: 3rem;
 }
 
-h2.c10 {
+h2.c12 {
   font-size: 2.5rem;
 }
 
-h3.c10 {
+h3.c12 {
   font-size: 2rem;
 }
 
-h4.c10 {
+h4.c12 {
   font-size: 1.5rem;
 }
 
-h5.c10 {
+h5.c12 {
   font-size: 1.25rem;
 }
 
-h6.c10 {
+h6.c12 {
   font-size: 1rem;
 }
 
-.c10 .c15 {
+.c12 .c17 {
   top: 0.15em;
 }
 
-.c10 {
+.c12 {
   font-weight: 600;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c14 {
+.c2 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c16 {
   border: 0px;
   -webkit-clip: rect(0px,0px,0px,0px);
   clip: rect(0px,0px,0px,0px);
@@ -279,11 +300,11 @@ h6.c10 {
   position: absolute;
 }
 
-.c4 {
+.c6 {
   padding: 1.5rem;
 }
 
-.c8 {
+.c10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -304,15 +325,15 @@ h6.c10 {
   width: 100%;
 }
 
-.c9.c9 {
+.c11.c11 {
   margin-bottom: 0px;
 }
 
-.c3 {
+.c5 {
   position: relative;
 }
 
-.c11 {
+.c13 {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -322,11 +343,11 @@ h6.c10 {
   text-align: right;
 }
 
-.c11:hover {
+.c13:hover {
   background-color: #f2f2f2;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,21 +356,6 @@ h6.c10 {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c0 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
 }
 
 .c0 {
@@ -368,12 +374,12 @@ h6.c10 {
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -381,34 +387,34 @@ h6.c10 {
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c7 c8 c1"
+          class="c9 c10 c3"
         >
           <h5
-            class="c9 sub-heading c10 c1"
+            class="c11 sub-heading c12 c3"
             id="Callout-2"
           >
             Title
           </h5>
         </div>
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           Callout
@@ -416,18 +422,18 @@ h6.c10 {
       </div>
     </div>
     <button
-      class="c11 c12 c13"
+      class="c13 c14 c15"
       kind="link"
       type="button"
     >
       <div
-        class="c14 c1"
+        class="c16 c3"
       >
         Close
       </div>
       <svg
         aria-hidden="true"
-        class="c15 c16 c1"
+        class="c17 c18 c3"
         role="img"
         size="1"
         style="size: 1px;"
@@ -445,7 +451,7 @@ h6.c10 {
 `;
 
 exports[`renders correctly when a footer prop is set 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -458,29 +464,47 @@ exports[`renders correctly when a footer prop is set 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c4 {
+.c2 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c6 {
   padding: 1.5rem;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -489,23 +513,8 @@ exports[`renders correctly when a footer prop is set 1`] = `
   width: 100%;
 }
 
-.c3 {
+.c5 {
   position: relative;
-}
-
-.c0 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
 }
 
 .c0 {
@@ -524,12 +533,12 @@ exports[`renders correctly when a footer prop is set 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -537,30 +546,30 @@ exports[`renders correctly when a footer prop is set 1`] = `
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           Callout
         </div>
         <div
-          class="c7 c1"
+          class="c9 c3"
         >
           <div>
             footer
@@ -573,7 +582,7 @@ exports[`renders correctly when a footer prop is set 1`] = `
 `;
 
 exports[`renders correctly when a hasTint prop is set 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -586,45 +595,48 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c4 {
-  padding: 1.5rem;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c0 {
+.c2 {
   -webkit-transform: translate3d(-50%,-50%,0px);
   -ms-transform: translate3d(-50%,-50%,0px);
   transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c6 {
+  padding: 1.5rem;
+}
+
+.c5 {
+  position: relative;
 }
 
 .c0 {
@@ -643,12 +655,12 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -656,24 +668,24 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           Callout
@@ -685,7 +697,7 @@ exports[`renders correctly when a hasTint prop is set 1`] = `
 `;
 
 exports[`renders correctly when a title prop is set 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -698,15 +710,247 @@ exports[`renders correctly when a title prop is set 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c12 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.c12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.c12 + .sub-heading {
+  margin-top: -1rem;
+}
+
+h1.c12 {
+  font-size: 3rem;
+}
+
+h2.c12 {
+  font-size: 2.5rem;
+}
+
+h3.c12 {
+  font-size: 2rem;
+}
+
+h4.c12 {
+  font-size: 1.5rem;
+}
+
+h5.c12 {
+  font-size: 1.25rem;
+}
+
+h6.c12 {
+  font-size: 1rem;
+}
+
+.c12 .c13 {
+  top: 0.15em;
+}
+
+.c12 {
+  font-weight: 600;
+}
+
+.c7 {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
+}
+
+.c2 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c6 {
+  padding: 1.5rem;
+}
+
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  position: relative;
+  width: 100%;
+}
+
+.c11.c11 {
+  margin-bottom: 0px;
+}
+
+.c5 {
+  position: relative;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c0 {
+  top: unset;
+  left: unset;
+  bottom: 1.25em;
+  right: 1.25em;
+  -webkit-transform: translate3d(0,0,0px);
+  -ms-transform: translate3d(0,0,0px);
+  transform: translate3d(0,0,0px);
+}
+
+.c0[aria-hidden='true'] {
+  -webkit-transform: translate3d(0,0,0px);
+  -ms-transform: translate3d(0,0,0px);
+  transform: translate3d(0,0,0px);
+}
+
+.c4 {
+  max-width: 500px;
+}
+
+@media screen and (max-width:calc(500px + 1.25em)) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+<div
+  aria-hidden="false"
+  aria-modal="true"
+  class="c0 c1 c2 c3"
+  role="dialog"
+>
+  <div
+    aria-describedby="Callout-1"
+    aria-labelledby="Callout-2"
+    class="c4 c5 c6 c7 c3"
+    elevation="300"
+    style="elevation: 300;"
+  >
+    <div
+      class="c8 c3"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c9 c10 c3"
+        >
+          <h5
+            class="c11 sub-heading c12 c3"
+            id="Callout-2"
+          >
+            Title
+          </h5>
+        </div>
+        <div
+          class="c3"
+          id="Callout-1"
+        >
+          Callout
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly when a type prop is set 1`] = `
+.c3 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c14 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+  color: #35709e !important;
+}
+
+.c14:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  fill: #35709e;
+  position: relative;
+  font-size: 1em;
+  height: 1em;
+  width: 1em;
 }
 
 .c10 {
@@ -746,7 +990,7 @@ h6.c10 {
   font-size: 1rem;
 }
 
-.c10 .c11 {
+.c10 .c12 {
   top: 0.15em;
 }
 
@@ -754,274 +998,48 @@ h6.c10 {
   font-weight: 600;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c4 {
-  padding: 1.5rem;
+.c2 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
 }
 
-.c8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-bottom: 1em;
-  position: relative;
-  width: 100%;
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c6 {
+  padding: 1.5rem;
 }
 
 .c9.c9 {
   margin-bottom: 0px;
 }
 
-.c3 {
+.c5 {
   position: relative;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.c0 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c0 {
-  top: unset;
-  left: unset;
-  bottom: 1.25em;
-  right: 1.25em;
-  -webkit-transform: translate3d(0,0,0px);
-  -ms-transform: translate3d(0,0,0px);
-  transform: translate3d(0,0,0px);
-}
-
-.c0[aria-hidden='true'] {
-  -webkit-transform: translate3d(0,0,0px);
-  -ms-transform: translate3d(0,0,0px);
-  transform: translate3d(0,0,0px);
-}
-
-.c2 {
-  max-width: 500px;
-}
-
-@media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-<div
-  aria-hidden="false"
-  aria-modal="true"
-  class="c0 c1"
-  role="dialog"
->
-  <div
-    aria-describedby="Callout-1"
-    aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
-    elevation="300"
-    style="elevation: 300;"
-  >
-    <div
-      class="c6 c1"
-    >
-      <div
-        class="c1"
-      >
-        <div
-          class="c7 c8 c1"
-        >
-          <h5
-            class="c9 sub-heading c10 c1"
-            id="Callout-2"
-          >
-            Title
-          </h5>
-        </div>
-        <div
-          class="c1"
-          id="Callout-1"
-        >
-          Callout
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly when a type prop is set 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c12 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-  color: #35709e !important;
-}
-
-.c12:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c11 {
-  fill: #35709e;
-  position: relative;
-  font-size: 1em;
-  height: 1em;
-  width: 1em;
-}
-
-.c8 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.c8:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.c8 + .sub-heading {
-  margin-top: -1rem;
-}
-
-h1.c8 {
-  font-size: 3rem;
-}
-
-h2.c8 {
-  font-size: 2.5rem;
-}
-
-h3.c8 {
-  font-size: 2rem;
-}
-
-h4.c8 {
-  font-size: 1.5rem;
-}
-
-h5.c8 {
-  font-size: 1.25rem;
-}
-
-h6.c8 {
-  font-size: 1rem;
-}
-
-.c8 .c10 {
-  top: 0.15em;
-}
-
-.c8 {
-  font-weight: 600;
-}
-
-.c5 {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
-  box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
-}
-
-.c4 {
-  padding: 1.5rem;
-}
-
-.c7.c7 {
-  margin-bottom: 0px;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c9 {
   margin-right: 1rem;
 }
 
 .c0 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c0 {
   top: unset;
   left: unset;
   bottom: 1.25em;
@@ -1037,12 +1055,12 @@ h6.c8 {
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -1050,25 +1068,25 @@ h6.c8 {
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
     type="info"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <h5
-        class="c7 sub-heading c8 c1"
+        class="c9 sub-heading c10 c3"
       >
         <svg
-          class="c9 c10 c11 c12"
+          class="c11 c12 c13 c14"
           color="info"
           role="img"
           size="1"
@@ -1083,10 +1101,10 @@ h6.c8 {
         </svg>
       </h5>
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           Callout
@@ -1098,7 +1116,7 @@ h6.c8 {
 `;
 
 exports[`renders correctly with a custom element 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1111,45 +1129,48 @@ exports[`renders correctly with a custom element 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c5 {
+.c7 {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1),0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
-.c4 {
-  padding: 1.5rem;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c0 {
+.c2 {
   -webkit-transform: translate3d(-50%,-50%,0px);
   -ms-transform: translate3d(-50%,-50%,0px);
   transform: translate3d(-50%,-50%,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c6 {
+  padding: 1.5rem;
+}
+
+.c5 {
+  position: relative;
 }
 
 .c0 {
@@ -1168,12 +1189,12 @@ exports[`renders correctly with a custom element 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.c2 {
+.c4 {
   max-width: 500px;
 }
 
 @media screen and (max-width:calc(500px + 1.25em)) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
@@ -1181,24 +1202,24 @@ exports[`renders correctly with a custom element 1`] = `
 <div
   aria-hidden="false"
   aria-modal="true"
-  class="c0 c1"
+  class="c0 c1 c2 c3"
   role="dialog"
 >
   <div
     aria-describedby="Callout-1"
     aria-labelledby="Callout-2"
-    class="c2 c3 c4 c5 c1"
+    class="c4 c5 c6 c7 c3"
     elevation="300"
     style="elevation: 300;"
   >
     <div
-      class="c6 c1"
+      class="c8 c3"
     >
       <div
-        class="c1"
+        class="c3"
       >
         <div
-          class="c1"
+          class="c3"
           id="Callout-1"
         >
           <label>

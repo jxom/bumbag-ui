@@ -1,6 +1,6 @@
 import Paragraph from 'reakit/Paragraph';
 
-import styled, { space, theme } from '../styled';
+import styled, { space, theme, s } from '../styled';
 import Icon from '../Icon/styled';
 import { ParagraphProps } from './Paragraph';
 
@@ -9,7 +9,7 @@ export default styled(Paragraph)<ParagraphProps>`
     margin-bottom: ${space(4)}rem;
   }
 
-  & ${Icon} {
+  & ${s(Icon)} {
     top: 0.15em;
   }
 

@@ -2,7 +2,7 @@ import { palette, theme } from 'styled-tools';
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
-import styled, { css } from '../styled';
+import styled, { css, s } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
 import { Omit } from '../types';
 import { RadioProps, LocalRadioProps } from './Radio';
@@ -60,7 +60,7 @@ export const Radio = styled(Label)<Omit<RadioProps, 'label'>>`
 const horizontalProperties = css`
   display: flex;
 
-  & ${Radio}:not(:last-child) {
+  & ${s(Radio)}:not(:last-child) {
     margin-right: 1rem;
     margin-bottom: unset;
   }
@@ -71,7 +71,7 @@ const horizontalProperties = css`
 `;
 
 export const RadioGroup = styled(Box)<{ isHorizontal?: boolean }>`
-  & ${Radio}:not(:last-child) {
+  & ${s(Radio)}:not(:last-child) {
     margin-bottom: 0.5rem;
   }
 

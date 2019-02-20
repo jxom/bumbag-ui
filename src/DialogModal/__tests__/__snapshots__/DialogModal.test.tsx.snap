@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly for a default dialog modal 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -14,20 +14,39 @@ exports[`renders correctly for a default dialog modal 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c5 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c0 {
+.c2 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -36,48 +55,38 @@ exports[`renders correctly for a default dialog modal 1`] = `
   z-index: 998;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
+.c5 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c0 {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.c4 {
+.c7 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -87,27 +96,27 @@ exports[`renders correctly for a default dialog modal 1`] = `
   <div>
     <button
       aria-hidden="false"
-      class="c0 c1 "
+      class="c0 c1 c2 c3 "
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="dialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
           id="Modal-3"
         >
           This is the content
@@ -119,7 +128,7 @@ exports[`renders correctly for a default dialog modal 1`] = `
 `;
 
 exports[`renders correctly for a dialog modal with a close button 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -132,11 +141,11 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c11 {
+.c14 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -149,11 +158,11 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   color: inherit;
 }
 
-.c11:focus:not(:focus-visible) {
+.c14:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c14 {
+.c17 {
   fill: inherit;
   position: relative;
   font-size: 1em;
@@ -161,7 +170,7 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   width: 1em;
 }
 
-.c10 {
+.c13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -187,20 +196,20 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.c10:focus {
+.c13:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
-.c10[disabled] {
+.c13[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c10 {
+.c13 {
   border: 0;
   background: unset;
   color: #435a6f;
@@ -209,63 +218,103 @@ exports[`renders correctly for a dialog modal with a close button 1`] = `
   text-decoration: underline;
 }
 
-.c10:hover {
+.c13:hover {
   color: #000;
   fill: #000;
 }
 
-.c8 {
+.c11 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-.c8:not(:last-child) {
+.c11:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.heading.c8 + .sub-heading {
+.heading.c11 + .sub-heading {
   margin-top: -1rem;
 }
 
-h1.c8 {
+h1.c11 {
   font-size: 3rem;
 }
 
-h2.c8 {
+h2.c11 {
   font-size: 2.5rem;
 }
 
-h3.c8 {
+h3.c11 {
   font-size: 2rem;
 }
 
-h4.c8 {
+h4.c11 {
   font-size: 1.5rem;
 }
 
-h5.c8 {
+h5.c11 {
   font-size: 1.25rem;
 }
 
-h6.c8 {
+h6.c11 {
   font-size: 1rem;
 }
 
-.c8 .c13 {
+.c11 .c16 {
   top: 0.15em;
 }
 
-.c8 {
+.c11 {
   font-weight: 600;
 }
 
-.c5 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c12 {
+.c2 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.c5 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c15 {
   border: 0px;
   -webkit-clip: rect(0px,0px,0px,0px);
   clip: rect(0px,0px,0px,0px);
@@ -278,55 +327,24 @@ h6.c8 {
 }
 
 .c0 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -moz-tap-highlight-color: rgba(0,0,0,0);
   background-color: black;
   opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 }
 
-.c15 {
+.c18 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -344,25 +362,25 @@ h6.c8 {
   width: 100%;
 }
 
-.c7.c7 {
+.c10.c10 {
   margin-bottom: 0px;
 }
 
-.c9 {
+.c12 {
   min-height: 1.5em;
   width: 1.5em;
   padding: 0px;
 }
 
-.c9:hover {
+.c12:hover {
   background-color: #f2f2f2;
 }
 
-.c4 {
+.c7 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -372,47 +390,47 @@ h6.c8 {
   <div>
     <button
       aria-hidden="false"
-      class="c0 c1 "
+      class="c0 c1 c2 c3 "
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="dialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
         >
           <h5
-            class="c7 sub-heading c8 c1"
+            class="c10 sub-heading c11 c3"
             id="Modal-4"
           >
             This is a title
           </h5>
           <button
-            class="c9 c10 c11"
+            class="c12 c13 c14"
             kind="link"
             type="button"
           >
             <div
-              class="c12 c1"
+              class="c15 c3"
             >
               Close
             </div>
             <svg
               aria-hidden="true"
-              class="c13 c14 c1"
+              class="c16 c17 c3"
               role="img"
               size="1"
               style="size: 1px;"
@@ -427,7 +445,7 @@ h6.c8 {
           </button>
         </div>
         <div
-          class="c15 c1"
+          class="c18 c3"
           id="Modal-3"
         >
           This is the content
@@ -439,7 +457,7 @@ h6.c8 {
 `;
 
 exports[`renders correctly for a dialog modal with a footer 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -452,65 +470,84 @@ exports[`renders correctly for a dialog modal with a footer 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8 {
+.c11 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-.c8:not(:last-child) {
+.c11:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.heading.c8 + .sub-heading {
+.heading.c11 + .sub-heading {
   margin-top: -1rem;
 }
 
-h1.c8 {
+h1.c11 {
   font-size: 3rem;
 }
 
-h2.c8 {
+h2.c11 {
   font-size: 2.5rem;
 }
 
-h3.c8 {
+h3.c11 {
   font-size: 2rem;
 }
 
-h4.c8 {
+h4.c11 {
   font-size: 1.5rem;
 }
 
-h5.c8 {
+h5.c11 {
   font-size: 1.25rem;
 }
 
-h6.c8 {
+h6.c11 {
   font-size: 1rem;
 }
 
-.c8 .c11 {
+.c11 .c14 {
   top: 0.15em;
 }
 
-.c8 {
+.c11 {
   font-weight: 600;
 }
 
-.c5 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c0 {
+.c2 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -519,44 +556,34 @@ h6.c8 {
   z-index: 998;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
+.c5 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c0 {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 }
 
-.c9 {
+.c12 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -574,7 +601,7 @@ h6.c8 {
   width: 100%;
 }
 
-.c10 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -588,15 +615,15 @@ h6.c8 {
   width: 100%;
 }
 
-.c7.c7 {
+.c10.c10 {
   margin-bottom: 0px;
 }
 
-.c4 {
+.c7 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -606,47 +633,47 @@ h6.c8 {
   <div>
     <button
       aria-hidden="false"
-      class="c0 c1 "
+      class="c0 c1 c2 c3 "
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="dialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
         >
           <h5
-            class="c7 sub-heading c8 c1"
+            class="c10 sub-heading c11 c3"
             id="Modal-4"
           >
             This is a title
           </h5>
         </div>
         <div
-          class="c9 c1"
+          class="c12 c3"
           id="Modal-3"
         >
           This is the content
         </div>
         <div
-          class="c10 c1"
+          class="c13 c3"
           style="justify-content: space-between;"
         >
           <div
-            class="c1"
+            class="c3"
           >
             This is a footer
           </div>
@@ -658,7 +685,7 @@ h6.c8 {
 `;
 
 exports[`renders correctly for a dialog modal with a title 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -671,65 +698,84 @@ exports[`renders correctly for a dialog modal with a title 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c8 {
+.c11 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-.c8:not(:last-child) {
+.c11:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.heading.c8 + .sub-heading {
+.heading.c11 + .sub-heading {
   margin-top: -1rem;
 }
 
-h1.c8 {
+h1.c11 {
   font-size: 3rem;
 }
 
-h2.c8 {
+h2.c11 {
   font-size: 2.5rem;
 }
 
-h3.c8 {
+h3.c11 {
   font-size: 2rem;
 }
 
-h4.c8 {
+h4.c11 {
   font-size: 1.5rem;
 }
 
-h5.c8 {
+h5.c11 {
   font-size: 1.25rem;
 }
 
-h6.c8 {
+h6.c11 {
   font-size: 1rem;
 }
 
-.c8 .c10 {
+.c11 .c13 {
   top: 0.15em;
 }
 
-.c8 {
+.c11 {
   font-weight: 600;
 }
 
-.c5 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c0 {
+.c2 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -738,44 +784,34 @@ h6.c8 {
   z-index: 998;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
+.c5 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c0 {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 }
 
-.c9 {
+.c12 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -793,15 +829,15 @@ h6.c8 {
   width: 100%;
 }
 
-.c7.c7 {
+.c10.c10 {
   margin-bottom: 0px;
 }
 
-.c4 {
+.c7 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -811,37 +847,37 @@ h6.c8 {
   <div>
     <button
       aria-hidden="false"
-      class="c0 c1 "
+      class="c0 c1 c2 c3 "
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="dialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
         >
           <h5
-            class="c7 sub-heading c8 c1"
+            class="c10 sub-heading c11 c3"
             id="Modal-4"
           >
             This is a title
           </h5>
         </div>
         <div
-          class="c9 c1"
+          class="c12 c3"
           id="Modal-3"
         >
           This is the content
@@ -853,7 +889,7 @@ h6.c8 {
 `;
 
 exports[`renders correctly for a dialog modal with action buttons 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -866,11 +902,11 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c13 {
+.c17 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -883,11 +919,11 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
-.c13:focus:not(:focus-visible) {
+.c17:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c15 {
+.c19 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -900,11 +936,18 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   color: inherit;
 }
 
-.c15:focus:not(:focus-visible) {
+.c19:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c12 {
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -930,28 +973,28 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.c12:focus {
+.c16:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
-.c12[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c12:hover {
+.c16:hover {
   background-color: #efefef;
 }
 
-.c12:hover:active {
+.c16:hover:active {
   background-color: #e3e3e3;
 }
 
-.c14 {
+.c18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -976,32 +1019,429 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
   text-decoration: none;
 }
 
-.c14:focus {
+.c18:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #7c81d9 0px 0px 0px 2px;
 }
 
-.c14[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c14:hover {
+.c18:hover {
   background-color: #373ebd;
 }
 
-.c14:hover:active {
+.c18:hover:active {
   background-color: #3137a9;
 }
 
+.c14 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.c14 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .c11 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.c11:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.c11 + .sub-heading {
+  margin-top: -1rem;
+}
+
+h1.c11 {
+  font-size: 3rem;
+}
+
+h2.c11 {
+  font-size: 2.5rem;
+}
+
+h3.c11 {
+  font-size: 2rem;
+}
+
+h4.c11 {
+  font-size: 1.5rem;
+}
+
+h5.c11 {
+  font-size: 1.25rem;
+}
+
+h6.c11 {
+  font-size: 1rem;
+}
+
+.c11 .c20 {
+  top: 0.15em;
+}
+
+.c11 {
+  font-weight: 600;
+}
+
+.c8 {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+}
+
+.c2 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.c5 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.c0 {
+  background-color: black;
+  opacity: 0.4;
+}
+
+.c4 {
+  padding: 0 1rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.c12 {
+  padding: 1.25rem;
+  max-height: 50vh;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f2f2f2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 1rem 1rem;
+  width: 100%;
+}
+
+.c10.c10 {
+  margin-bottom: 0px;
+}
+
+.c7 {
+  border-radius: 5px;
+}
+
+.c7:focus {
+  outline: unset;
+}
+
+<portal
+  class=""
+>
+  <div>
+    <button
+      aria-hidden="false"
+      class="c0 c1 c2 c3 "
+      role="button"
+      tabindex="-1"
+    />
+    <div
+      aria-hidden="false"
+      aria-modal="true"
+      class="c4 c5 c6 c3"
+      role="dialog"
+    >
+      <div
+        aria-describedby="Modal-3"
+        aria-labelledby="Modal-4"
+        class="c7 c8 c3"
+        role="dialog"
+        style="width: 100%;"
+        tabindex="-1"
+        width="100%"
+      >
+        <div
+          class="c9 c3"
+        >
+          <h5
+            class="c10 sub-heading c11 c3"
+            id="Modal-4"
+          >
+            This is a title
+          </h5>
+        </div>
+        <div
+          class="c12 c3"
+          id="Modal-3"
+        >
+          This is the content
+        </div>
+        <div
+          class="c13 c3"
+          style="justify-content: flex-end;"
+        >
+          <div
+            class="c3"
+          >
+            <div
+              class="c14 c15 c3"
+              spacing="minor-2"
+            >
+              <button
+                class="c16 c17 "
+                kind="default"
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                class="c18 c19"
+                kind="default"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</portal>
+`;
+
+exports[`renders correctly for a dialog modal with kind alert 1`] = `
+.c3 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c3:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c14 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  color: inherit;
+}
+
+.c14:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c16 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: #444bc9;
+  color: inherit;
+}
+
+.c16:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+}
+
+.c13:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c13:hover {
+  background-color: #efefef;
+}
+
+.c13:hover:active {
+  background-color: #e3e3e3;
+}
+
+.c15 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #444bc9;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
+}
+
+.c15[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.c15:hover {
+  background-color: #373ebd;
+}
+
+.c15:hover:active {
+  background-color: #3137a9;
+}
+
+.c11 {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1023,60 +1463,34 @@ exports[`renders correctly for a dialog modal with action buttons 1`] = `
 }
 
 .c8 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.c8:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.c8 + .sub-heading {
-  margin-top: -1rem;
-}
-
-h1.c8 {
-  font-size: 3rem;
-}
-
-h2.c8 {
-  font-size: 2.5rem;
-}
-
-h3.c8 {
-  font-size: 2rem;
-}
-
-h4.c8 {
-  font-size: 1.5rem;
-}
-
-h5.c8 {
-  font-size: 1.25rem;
-}
-
-h6.c8 {
-  font-size: 1rem;
-}
-
-.c8 .c16 {
-  top: 0.15em;
-}
-
-.c8 {
-  font-weight: 600;
-}
-
-.c5 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c0 {
+.c2 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -1085,31 +1499,21 @@ h6.c8 {
   z-index: 998;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
+.c5 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c0 {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
@@ -1119,24 +1523,6 @@ h6.c8 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
-  width: 100%;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1.25rem;
   width: 100%;
 }
 
@@ -1151,340 +1537,14 @@ h6.c8 {
   align-items: center;
   background-color: #f2f2f2;
   padding: 1rem 1rem;
-  width: 100%;
-}
-
-.c7.c7 {
-  margin-bottom: 0px;
-}
-
-.c4 {
-  border-radius: 5px;
-}
-
-.c4:focus {
-  outline: unset;
-}
-
-<portal
-  class=""
->
-  <div>
-    <button
-      aria-hidden="false"
-      class="c0 c1 "
-      role="button"
-      tabindex="-1"
-    />
-    <div
-      aria-hidden="false"
-      aria-modal="true"
-      class="c2 c3 c1"
-      role="dialog"
-    >
-      <div
-        aria-describedby="Modal-3"
-        aria-labelledby="Modal-4"
-        class="c4 c5 c1"
-        role="dialog"
-        style="width: 100%;"
-        tabindex="-1"
-        width="100%"
-      >
-        <div
-          class="c6 c1"
-        >
-          <h5
-            class="c7 sub-heading c8 c1"
-            id="Modal-4"
-          >
-            This is a title
-          </h5>
-        </div>
-        <div
-          class="c9 c1"
-          id="Modal-3"
-        >
-          This is the content
-        </div>
-        <div
-          class="c10 c1"
-          style="justify-content: flex-end;"
-        >
-          <div
-            class="c1"
-          >
-            <div
-              class="c11 c1"
-              spacing="minor-2"
-            >
-              <button
-                class="c12 c13 "
-                kind="default"
-                type="button"
-              >
-                Cancel
-              </button>
-              <button
-                class="c14 c15"
-                kind="default"
-                type="submit"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</portal>
-`;
-
-exports[`renders correctly for a dialog modal with kind alert 1`] = `
-.c1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: unset;
-  color: inherit;
-}
-
-.c1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c10 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: #fcfcfc;
-  color: inherit;
-}
-
-.c10:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c12 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: #444bc9;
-  color: inherit;
-}
-
-.c12:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.c9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  color: #435a6f;
-  fill: #435a6f;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.5em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 0.8rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border: 1px solid #b3b3b3;
-}
-
-.c9:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #444bc9 0px 0px 0px 2px;
-}
-
-.c9[disabled] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.c9:hover {
-  background-color: #efefef;
-}
-
-.c9:hover:active {
-  background-color: #e3e3e3;
-}
-
-.c11 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #444bc9;
-  border-radius: 4px;
-  color: #fff;
-  fill: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.5em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 0.8rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c11:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #7c81d9 0px 0px 0px 2px;
-}
-
-.c11[disabled] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.c11:hover {
-  background-color: #373ebd;
-}
-
-.c11:hover:active {
-  background-color: #3137a9;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.c8 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.c5 {
-  background-color: white;
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
-}
-
-.c0 {
-  -webkit-transform: translate3d(0px,0px,0px);
-  -ms-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
-}
-
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-}
-
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c2 {
-  padding: 0 1rem;
-  max-width: 600px;
-  width: 100%;
-}
-
-.c6 {
-  padding: 1.25rem;
-  max-height: 50vh;
-  overflow-y: scroll;
   width: 100%;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 1rem 1rem;
-  width: 100%;
-}
-
-.c4 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -1494,51 +1554,51 @@ exports[`renders correctly for a dialog modal with kind alert 1`] = `
   <div>
     <div
       aria-hidden="false"
-      class="c0 c1"
+      class="c0 c1 c2 c3"
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="alertdialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
           id="Modal-3"
         >
           This is the content
         </div>
         <div
-          class="c7 c1"
+          class="c10 c3"
           style="justify-content: flex-end;"
         >
           <div
-            class="c1"
+            class="c3"
           >
             <div
-              class="c8 c1"
+              class="c11 c12 c3"
               spacing="minor-2"
             >
               <button
-                class="c9 c10 "
+                class="c13 c14 "
                 kind="default"
                 type="button"
               >
                 Cancel
               </button>
               <button
-                class="c11 c12"
+                class="c15 c16"
                 kind="default"
                 type="submit"
               >
@@ -1554,7 +1614,7 @@ exports[`renders correctly for a dialog modal with kind alert 1`] = `
 `;
 
 exports[`renders correctly for a dialog modal with type 1`] = `
-.c1 {
+.c3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1567,20 +1627,39 @@ exports[`renders correctly for a dialog modal with type 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c5 {
+.c8 {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
 }
 
-.c0 {
+.c2 {
   -webkit-transform: translate3d(0px,0px,0px);
   -ms-transform: translate3d(0px,0px,0px);
   transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c6 {
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.c6[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -1589,48 +1668,38 @@ exports[`renders correctly for a dialog modal with type 1`] = `
   z-index: 998;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -moz-tap-highlight-color: rgba(0,0,0,0);
-  background-color: black;
-  opacity: 0.4;
 }
 
-.c0[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
-}
-
-.c3 {
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
+.c5 {
   position: fixed;
   z-index: 19900410;
   left: 50%;
   top: 50%;
 }
 
-.c3[aria-hidden="true"] {
-  pointer-events: none;
-  display: none !important;
+.c0 {
+  background-color: black;
+  opacity: 0.4;
 }
 
-.c2 {
+.c4 {
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   padding: 1.25rem;
   max-height: 50vh;
   overflow-y: scroll;
   width: 100%;
 }
 
-.c4 {
+.c7 {
   border-radius: 5px;
 }
 
-.c4:focus {
+.c7:focus {
   outline: unset;
 }
 
@@ -1640,27 +1709,27 @@ exports[`renders correctly for a dialog modal with type 1`] = `
   <div>
     <button
       aria-hidden="false"
-      class="c0 c1 "
+      class="c0 c1 c2 c3 "
       role="button"
       tabindex="-1"
     />
     <div
       aria-hidden="false"
       aria-modal="true"
-      class="c2 c3 c1"
+      class="c4 c5 c6 c3"
       role="dialog"
     >
       <div
         aria-describedby="Modal-3"
         aria-labelledby="Modal-4"
-        class="c4 c5 c1"
+        class="c7 c8 c3"
         role="dialog"
         style="width: 100%;"
         tabindex="-1"
         width="100%"
       >
         <div
-          class="c6 c1"
+          class="c9 c3"
           id="Modal-3"
         >
           This is the content

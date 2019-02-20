@@ -1,6 +1,6 @@
 import Heading from 'reakit/Heading';
 
-import styled, { css, space, theme } from '../styled';
+import styled, { css, space, theme, s } from '../styled';
 // @ts-ignore
 import Icon from '../Icon/styled';
 import { HeadingProps } from './Heading';
@@ -62,7 +62,7 @@ export default styled(Heading)<HeadingProps>`
     }
   }
 
-  & ${Icon} {
+  & ${s(Icon)} {
     top: 0.15em;
   }
 

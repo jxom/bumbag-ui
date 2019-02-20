@@ -1209,7 +1209,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
 `;
 
 exports[`renders correctly for a list of buttons 1`] = `
-.c3 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1222,11 +1222,11 @@ exports[`renders correctly for a list of buttons 1`] = `
   color: inherit;
 }
 
-.c3:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1239,11 +1239,18 @@ exports[`renders correctly for a list of buttons 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1269,32 +1276,28 @@ exports[`renders correctly for a list of buttons 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.c2:focus {
+.c3:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
-.c2[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c2:hover {
+.c3:hover {
   background-color: #efefef;
 }
 
-.c2:hover:active {
+.c3:hover:active {
   background-color: #e3e3e3;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1316,25 +1319,25 @@ exports[`renders correctly for a list of buttons 1`] = `
 }
 
 <div
-  class="c0 c1"
+  class="c0 c1 c2"
   spacing="minor-2"
 >
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >
     Test
   </button>
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >
     Test 2
   </button>
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >
@@ -1605,7 +1608,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
 `;
 
 exports[`renders correctly for grouped buttons 1`] = `
-.c3 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1618,11 +1621,11 @@ exports[`renders correctly for grouped buttons 1`] = `
   color: inherit;
 }
 
-.c3:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c1 {
+.c2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1635,11 +1638,11 @@ exports[`renders correctly for grouped buttons 1`] = `
   color: inherit;
 }
 
-.c1:focus:not(:focus-visible) {
+.c2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c2 {
+.c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1665,28 +1668,28 @@ exports[`renders correctly for grouped buttons 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.c2:focus {
+.c3:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
-.c2[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.c2:hover {
+.c3:hover {
   background-color: #efefef;
 }
 
-.c2:hover:active {
+.c3:hover:active {
   background-color: #e3e3e3;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1696,20 +1699,20 @@ exports[`renders correctly for grouped buttons 1`] = `
   flex-direction: row;
 }
 
-.c0 > *:not(:first-child):not(:last-child),
-.c0 > *:not(:first-child):not(:last-child) .GroupItem-sc-2orogz-0 {
+.c1 > *:not(:first-child):not(:last-child),
+.c1 > *:not(:first-child):not(:last-child) .sc-dxgOiQ {
   border-radius: 0;
   border-left-width: 0;
 }
 
-.c0 > *:first-child,
-.c0 > *:first-child .GroupItem-sc-2orogz-0 {
+.c1 > *:first-child,
+.c1 > *:first-child .sc-dxgOiQ {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.c0 > *:last-child,
-.c0 > *:last-child .GroupItem-sc-2orogz-0 {
+.c1 > *:last-child,
+.c1 > *:last-child .sc-dxgOiQ {
   border-top-left-radius: 0;
   border-left-width: 0;
   border-bottom-left-radius: 0;
@@ -1743,25 +1746,25 @@ exports[`renders correctly for grouped buttons 1`] = `
 }
 
 <div
-  class="c0 c1"
+  class="c0 c1 c2"
   role="group"
 >
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >
     Test
   </button>
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >
     Test 2
   </button>
   <button
-    class="c2 c3"
+    class="c3 c4"
     kind="default"
     type="button"
   >

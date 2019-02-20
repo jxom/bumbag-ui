@@ -10,6 +10,7 @@ import styled, {
   StyleSheetManager
 } from 'reakit/styled';
 import { prop, theme, palette, ifProp, ifNotProp, switchProp, withProp } from 'styled-tools';
+import s from 'styled-selector';
 import space from './space';
 
 export {
@@ -29,7 +30,8 @@ export {
   ifNotProp,
   switchProp,
   withProp,
-  space
+  space,
+  s
 };
 
 export default styled;
