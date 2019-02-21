@@ -10,7 +10,7 @@ export default styled(Flex)<LocalSetProps>`
       ? css`
           flex-direction: column;
 
-          ${props =>
+          ${(props: any) =>
             !props.isFilled &&
             css`
               align-items: flex-start;
@@ -20,8 +20,8 @@ export default styled(Flex)<LocalSetProps>`
           flex-wrap: wrap;
           align-items: center;
           justify-content: flex-start;
-          margin-left: -${props => space(props.spacing)(props)}rem;
-          margin-top: -${props => space(props.spacing)(props)}rem;
+          margin-left: -${(props: any) => space(props.spacing)(props)}rem;
+          margin-top: -${(props: any) => space(props.spacing)(props)}rem;
         `};
 
   & > * {
@@ -29,12 +29,12 @@ export default styled(Flex)<LocalSetProps>`
       props.isVertical
         ? css`
             &:not(:last-child) {
-              margin-bottom: ${props => space(props.spacing)(props)}rem;
+              margin-bottom: ${(props: any) => space(props.spacing)(props)}rem;
             }
           `
         : css`
-            margin-left: ${props => space(props.spacing)(props)}rem;
-            margin-top: ${props => space(props.spacing)(props)}rem;
+            margin-left: ${(props: any) => space(props.spacing)(props)}rem;
+            margin-top: ${(props: any) => space(props.spacing)(props)}rem;
           `};
 
     ${theme('fannypack.Set.child')};

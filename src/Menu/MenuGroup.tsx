@@ -8,7 +8,7 @@ import { MenuGroup as _MenuGroup, MenuGroupTitle } from './styled';
 export type LocalMenuGroupProps = {
   children: React.ReactNode;
 };
-export type MenuGroupProps = Omit<Omit<ReakitBoxProps, 'as'>, 'elementRef'> & LocalMenuGroupProps;
+export type MenuGroupProps = Omit<Omit<ReakitBoxProps, 'use'>, 'ref'> & LocalMenuGroupProps;
 
 export const MenuGroup: React.FunctionComponent<MenuGroupProps> = ({ children, title, ...props }) => (
   <_MenuGroup {...props}>

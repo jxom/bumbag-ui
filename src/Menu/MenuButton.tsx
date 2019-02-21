@@ -11,7 +11,7 @@ export type LocalMenuButtonProps = LocalButtonProps & {
   isVisible?: boolean;
   onClick?(e: React.MouseEvent<any>): void;
 };
-export type MenuButtonProps = Omit<ButtonProps, 'as'> & LocalMenuButtonProps;
+export type MenuButtonProps = Omit<ButtonProps, 'use'> & LocalMenuButtonProps;
 
 const KEYS = {
   UP: 38,

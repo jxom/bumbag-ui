@@ -7,6 +7,7 @@ import {
   navigationPropTypes,
   navigationDefaultProps
 } from '../Navigation/Navigation';
+import { Omit } from '../types';
 
 import _Menu from './styled';
 import MenuButton, { MenuButtonProps } from './MenuButton';
@@ -22,7 +23,7 @@ export type LocalMenuProps = LocalNavigationProps & {
   isHorizontal?: boolean;
   setInitialFocus?: boolean;
 };
-export type MenuProps = NavigationProps & LocalMenuProps;
+export type MenuProps = Omit<NavigationProps, 'ref'> & LocalMenuProps;
 export type MenuComponents = {
   Button: React.FunctionComponent<MenuButtonProps>;
   Divider: React.FunctionComponent<MenuDividerProps>;

@@ -17,7 +17,7 @@ export type LocalMenuItemProps = {
   isDisabled?: boolean;
   onClick?(): void;
 };
-export type MenuItemProps = Omit<Omit<ReakitButtonProps, 'as'>, 'elementRef'> & LocalMenuItemProps;
+export type MenuItemProps = Omit<ReakitButtonProps, 'elementRef'> & LocalMenuItemProps;
 
 export const menuItemPropTypes = {
   children: PropTypes.node.isRequired,

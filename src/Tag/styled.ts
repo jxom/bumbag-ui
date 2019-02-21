@@ -46,7 +46,7 @@ export const RemoveButton = styled(Button)`
   ${props =>
     props.kind !== 'ghost' &&
     css`
-      color: ${props => palette(`${props.palette}Inverted`)};
+      color: ${(props: any) => palette(`${props.palette}Inverted`)};
     `};
 
   &:focus {

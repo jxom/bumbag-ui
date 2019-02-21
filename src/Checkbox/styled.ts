@@ -18,8 +18,8 @@ export const CheckboxIcon = styled(Box)<{ state?: string }>`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => palette(`${props.state}`)(props)};
-        box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
+        border-color: ${(props: any) => palette(`${props.state}`)(props)};
+        box-shadow: ${(props: any) => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
       `};
   }
 

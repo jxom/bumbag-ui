@@ -5,7 +5,7 @@ import { PortalProps as ReakitPortalProps } from 'reakit/ts/Portal/Portal';
 import { Omit } from '../types';
 import _Portal from './styled';
 
-export type PortalProps = Omit<ReakitPortalProps, 'as'>;
+export type PortalProps = Omit<Omit<ReakitPortalProps, 'use'>, 'ref'>;
 
 export const Portal: React.FunctionComponent<PortalProps> = ({ children, ...props }) => (
   <_Portal {...props}>{children}</_Portal>

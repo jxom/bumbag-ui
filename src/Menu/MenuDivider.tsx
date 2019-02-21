@@ -6,7 +6,7 @@ import { Omit } from '../types';
 import { MenuDivider as _MenuDivider } from './styled';
 
 export type LocalMenuDividerProps = {};
-export type MenuDividerProps = Omit<DividerProps, 'as'> & LocalMenuDividerProps;
+export type MenuDividerProps = Omit<Omit<DividerProps, 'use'>, 'ref'> & LocalMenuDividerProps;
 
 export const MenuDivider: React.FunctionComponent<MenuDividerProps> = ({ ...props }) => (
   <_MenuDivider role="separator" {...props} />

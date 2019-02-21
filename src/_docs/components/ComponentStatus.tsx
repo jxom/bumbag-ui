@@ -24,7 +24,7 @@ class ComponentStatus extends React.PureComponent<Props, State> {
     const { components } = this.state;
     return Object.keys(components).map(section => (
       <Box key={section}>
-        <Heading as="h4">{sectionTitles[section]}</Heading>
+        <Heading use="h4">{sectionTitles[section]}</Heading>
         {/*
           // @ts-ignore */}
         <ComponentStatusTable components={components[section] || []} />

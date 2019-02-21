@@ -98,7 +98,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   value?: SelectMenuItem | SelectMenuItems;
   useTags?: boolean;
 };
-export type SelectMenuProps = Omit<Omit<MenuProps, 'as'>, 'children'> & LocalSelectMenuProps;
+export type SelectMenuProps = Omit<MenuProps, 'children'> & LocalSelectMenuProps;
 export type SelectMenuState = {
   blockLoad: boolean;
   contextKey: string | void;

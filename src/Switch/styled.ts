@@ -22,8 +22,8 @@ export const SwitchIcon = styled(Box)<{ state?: string }>`
     ${props =>
       props.state &&
       css`
-        border-color: ${props => palette(`${props.state}`)};
-        box-shadow: ${props => palette(`${props.state}`)} 0px 0px 0px 1px !important;
+        border-color: ${(props: any) => palette(`${props.state}`)};
+        box-shadow: ${(props: any) => palette(`${props.state}`)} 0px 0px 0px 1px !important;
       `};
   }
 

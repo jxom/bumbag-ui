@@ -13,6 +13,7 @@ function HiddenInput<T>({
   uncheckedIconCss,
   themePrefix
 }: any) {
+  // @ts-ignore
   return styled(Input)<T>`
     clip: rect(0, 0, 0, 0);
     height: 1px;
