@@ -74,7 +74,7 @@ export { Tag } from './Tag';
 export { Text } from './Text';
 export { Textarea, TextareaField } from './Textarea';
 export { Timeline } from './Timeline';
-export { Toast } from './Toast';
+export { Toast, ToastClose, ToastIcon, ToastTitle, ToastContainer, withToasts } from './Toast';
 export { Tooltip } from './Tooltip';
 export { VisuallyHidden } from './VisuallyHidden';
 
