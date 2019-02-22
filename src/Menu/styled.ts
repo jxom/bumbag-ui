@@ -1,7 +1,7 @@
 import ReakitButton from 'reakit/Button';
 
 import { Box } from '../primitives';
-import styled, { css, palette, space, theme, selector as s } from '../styled';
+import styled, { css, palette, space, theme, selector } from '../styled';
 import Button from '../Button';
 import Navigation from '../Navigation';
 import Divider from '../Divider';
@@ -75,7 +75,7 @@ export const MenuItem = styled(ReakitButton)<LocalMenuItemProps>`
       }
     `}
 
-  & ${s(StyledIcon)} {
+  & ${selector(StyledIcon)} {
     top: 0.15em;
   }
 
@@ -148,13 +148,13 @@ export default styled(Navigation)<LocalMenuProps>`
       ? css`
           flex-direction: row;
 
-          & ${s(MenuGroup)} {
+          & ${selector(MenuGroup)} {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
           }
 
-          & ${s(MenuItem)} {
+          & ${selector(MenuItem)} {
             width: unset;
           }
 

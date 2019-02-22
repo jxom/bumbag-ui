@@ -1,7 +1,7 @@
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';
-import styled, { selector as s } from '../styled';
+import styled, { selector } from '../styled';
 import Icon from '../Icon/styled';
 import { LocalTextProps } from './Text';
 
@@ -58,7 +58,7 @@ export default styled(Box)<LocalTextProps>`
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
   }
 
-  & ${s(Icon)} {
+  & ${selector(Icon)} {
     top: 0.15em;
   }
 

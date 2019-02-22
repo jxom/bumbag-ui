@@ -3,7 +3,7 @@ import Button from '../Button';
 import Heading from '../Heading';
 import Icon, { LocalIconProps } from '../Icon/Icon';
 import Pane from '../Pane';
-import styled, { css, keyframes, palette, space, theme, selector as s } from '../styled';
+import styled, { css, keyframes, palette, space, theme, selector } from '../styled';
 
 import { LocalToastProps } from './Toast';
 import { ToastCloseProps } from './ToastClose';
@@ -221,7 +221,7 @@ const placementAttributes: { [key: string]: any } = {
     top: 1rem;
     left: 1rem;
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromLeft} 300ms ease-in-out forwards;
     }
   `,
@@ -230,7 +230,7 @@ const placementAttributes: { [key: string]: any } = {
     left: 50%;
     transform: translateX(-50%);
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromTop} 300ms ease-in-out forwards;
     }
   `,
@@ -238,7 +238,7 @@ const placementAttributes: { [key: string]: any } = {
     top: 1rem;
     right: 1rem;
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromRight} 300ms ease-in-out forwards;
     }
   `,
@@ -247,7 +247,7 @@ const placementAttributes: { [key: string]: any } = {
     top: 50%;
     transform: translateY(-50%);
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromLeft} 300ms ease-in-out forwards;
     }
   `,
@@ -256,7 +256,7 @@ const placementAttributes: { [key: string]: any } = {
     top: 50%;
     transform: translateY(-50%);
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromRight} 300ms ease-in-out forwards;
     }
   `,
@@ -264,7 +264,7 @@ const placementAttributes: { [key: string]: any } = {
     bottom: 1rem;
     left: 1rem;
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromLeft} 300ms ease-in-out forwards;
     }
   `,
@@ -273,7 +273,7 @@ const placementAttributes: { [key: string]: any } = {
     left: 50%;
     transform: translateX(-50%);
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromBottom} 300ms ease-in-out forwards;
     }
   `,
@@ -281,7 +281,7 @@ const placementAttributes: { [key: string]: any } = {
     bottom: 1rem;
     right: 1rem;
 
-    & ${s(Toast)} {
+    & ${selector(Toast)} {
       animation: ${fromRight} 300ms ease-in-out forwards;
     }
   `

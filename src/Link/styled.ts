@@ -3,7 +3,7 @@ import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _defaultPalette from '../themes/default/palette';
 
-import styled, { selector as s } from '../styled';
+import styled, { selector } from '../styled';
 import Icon from '../Icon/styled';
 import { LinkProps } from './Link';
 
@@ -21,7 +21,7 @@ export default styled(Link)<LinkProps>`
     fill: ${props => darken(0.5, palette('primary', 0, defaultPalette.primary)(props))};
   }
 
-  & ${s(Icon)} {
+  & ${selector(Icon)} {
     top: 0.15em;
   }
 
