@@ -93,12 +93,12 @@ const fullWidthProperties = css`
   width: 100%;
 `;
 const hoverableProperties = css`
-  & ${s(TableBody)} ${TableRow}:hover {
+  & ${s(TableBody)} ${s(TableRow)}:hover {
     background-color: ${theme('fannypack.Table.hover.backgroundColor')} !important;
   }
 `;
 const stripedProperties = css`
-  & ${s(TableBody)} ${TableRow}:nth-child(even) {
+  & ${s(TableBody)} ${s(TableRow)}:nth-child(even) {
     background-color: ${theme('fannypack.Table.striped.backgroundColor')};
   }
 `;
