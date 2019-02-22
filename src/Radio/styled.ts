@@ -2,7 +2,7 @@ import { palette, theme } from 'styled-tools';
 import Label from 'reakit/Label';
 
 import { Box } from '../primitives';
-import styled, { css, s } from '../styled';
+import styled, { css, selector as s } from '../styled';
 import HiddenInput from '../_utils/HiddenInput';
 import { Omit } from '../types';
 import { RadioProps, LocalRadioProps } from './Radio';

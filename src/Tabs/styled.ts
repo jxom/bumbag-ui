@@ -1,7 +1,7 @@
 import Tabs from 'reakit/Tabs';
 import { palette, theme } from 'styled-tools';
 
-import styled, { css, s } from '../styled';
+import styled, { css, selector as s } from '../styled';
 import { LocalTabsProps } from './Tabs';
 import { LocalTabProps } from './Tab';
 import { LocalTabPanelProps } from './TabPanel';

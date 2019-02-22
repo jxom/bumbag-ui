@@ -3,7 +3,7 @@ import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _defaultPalette from '../themes/default/palette';
 
-import styled, { s } from '../styled';
+import styled, { selector as s } from '../styled';
 import Icon from '../Icon/styled';
 import { LinkProps } from './Link';
 

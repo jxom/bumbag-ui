@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import styled, { css, space, s } from '../styled';
+import styled, { css, space, selector as s } from '../styled';
 import { Box } from '../primitives';
 
 import { LocalTableProps } from './Table';

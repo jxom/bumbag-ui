@@ -1,6 +1,6 @@
 import Paragraph from 'reakit/Paragraph';
 
-import styled, { space, theme, s } from '../styled';
+import styled, { space, theme, selector as s } from '../styled';
 import Icon from '../Icon/styled';
 import { ParagraphProps } from './Paragraph';
 

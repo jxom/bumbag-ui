@@ -3,7 +3,7 @@ import Button from '../Button';
 import Heading from '../Heading';
 import Icon, { LocalIconProps } from '../Icon/Icon';
 import Pane from '../Pane';
-import styled, { css, keyframes, palette, space, theme, s } from '../styled';
+import styled, { css, keyframes, palette, space, theme, selector as s } from '../styled';
 
 import { LocalToastProps } from './Toast';
 import { ToastCloseProps } from './ToastClose';

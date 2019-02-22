@@ -15,6 +15,7 @@ export {
   palette,
   ifProp,
   ifNotProp,
+  selector,
   switchProp,
   withProp
 } from './styled';

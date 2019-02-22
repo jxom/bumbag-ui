@@ -1,7 +1,7 @@
 import ReakitButton from 'reakit/Button';
 
 import { Box } from '../primitives';
-import styled, { css, palette, space, theme, s } from '../styled';
+import styled, { css, palette, space, theme, selector as s } from '../styled';
 import Button from '../Button';
 import Navigation from '../Navigation';
 import Divider from '../Divider';
