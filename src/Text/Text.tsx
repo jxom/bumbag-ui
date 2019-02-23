@@ -6,7 +6,7 @@ import _Text from './styled';
 
 export type LocalTextProps = {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   color?: string;
 };
 export type TextProps = ReakitBoxProps & LocalTextProps;
@@ -19,11 +19,12 @@ export const Text: React.FunctionComponent<LocalTextProps> = ({ children, ...pro
 
 Text.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   color: PropTypes.string
 };
 Text.defaultProps = {
   className: undefined,
+  children: undefined,
   color: undefined
 };
 
