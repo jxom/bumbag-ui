@@ -70,8 +70,19 @@ export default {
   typescript: true,
   propsParser: false,
   modifyBabelRc: (babelrc, args) => {
-    babelrc.presets.pop();
+    function removeFromBabelConfig(key, nameToRemove) {
+      return babelrc[key].filter(entry => {
+        let name = entry;
+        if (Array.isArray(entry)) {
+          name = entry[0];
+        }
+        return !name.includes(nameToRemove);
+      });
+    }
+    babelrc.presets = removeFromBabelConfig('presets', 'babel-preset-docz');
     babelrc.presets.push(['docz-fannypack', { parseProps: false, typescript: true, flow: false }]);
+    // TODO: Disable react-hot-loader for now. Seems to be bugged. Add back in later.
+    babelrc.plugins = removeFromBabelConfig('plugins', 'react-hot-loader');
     return babelrc;
   },
   htmlContext: {
