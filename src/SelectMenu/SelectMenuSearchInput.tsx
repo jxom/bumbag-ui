@@ -18,7 +18,7 @@ export const selectMenuSearchInputDefaultProps = {
   ...inputDefaultProps,
   autoComplete: 'off',
   // @ts-ignore
-  before: <Input.Icon icon="solid-search" />,
+  before: <Input.Icon icon="search" />,
   isDropdownActive: false,
   isFullWidth: true,
   placeholder: 'Type to search...'
