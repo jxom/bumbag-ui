@@ -5,6 +5,7 @@ const commonjs = require('rollup-plugin-commonjs');
 const json = require('rollup-plugin-json');
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
+const proxyDirectories = require('rollup-plugin-proxy-directories');
 
 const pkg = require('./package.json');
 const getModuleEntries = require('./scripts/get-module-entries');
@@ -89,7 +90,7 @@ export default [
   createConfig({
     pkg,
     experimentalCodeSplitting: true,
-    input: getModuleEntries(),
+    input: [],
     output: [
       {
         format: 'es',
@@ -100,6 +101,9 @@ export default [
         dir: 'lib',
         exports: 'named'
       }
+    ],
+    plugins: [
+      proxyDirectories()
     ]
   }),
   createConfig({ pkg, input: 'src/index.ts', umd: true })
