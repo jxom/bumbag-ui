@@ -102,9 +102,7 @@ export default [
         exports: 'named'
       }
     ],
-    plugins: [
-      proxyDirectories()
-    ]
+    plugins: [proxyDirectories()]
   }),
   createConfig({ pkg, input: 'src/index.ts', umd: true })
 ];
