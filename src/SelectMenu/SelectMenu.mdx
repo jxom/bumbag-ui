@@ -115,11 +115,11 @@ Use the `icon` prop to use icons.
 
 ## Custom option renderer
 
-Use the `optionRenderer` prop if you want to change the content of the menu item.
+Use the `renderOption` prop if you want to change the content of the menu item.
 
 <Playground>
   <SelectMenu
-    optionRenderer={option => (
+    renderOption={option => (
       <Box>
         <Text fontWeight="600">{option.value._id}.</Text> {option.value.name}
       </Box>
