@@ -1,3 +1,5 @@
-export { default as Code } from './Code';
-export { default as HighlightedCode } from './HighlightedCode';
-export { default } from './Code';
+import Code from './Code';
+import HighlightedCode from './HighlightedCode';
+
+export { Code, HighlightedCode };
+export default Code;

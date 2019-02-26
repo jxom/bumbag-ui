@@ -1,3 +1,5 @@
-export { default } from './Select';
-export { default as Select } from './Select';
-export { default as SelectField } from './SelectField';
+import Select from './Select';
+import SelectField from './SelectField';
+
+export { Select, SelectField };
+export default Select;

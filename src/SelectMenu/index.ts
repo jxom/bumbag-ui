@@ -1,3 +1,5 @@
-export { default } from './SelectMenu';
-export { default as SelectMenu } from './SelectMenu';
-export { default as SelectMenuField } from './SelectMenuField';
+import SelectMenu from './SelectMenu';
+import SelectMenuField from './SelectMenuField';
+
+export { SelectMenu, SelectMenuField };
+export default SelectMenu;

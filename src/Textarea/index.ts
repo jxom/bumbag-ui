@@ -1,3 +1,5 @@
-export { default as Textarea } from './Textarea';
-export { default as TextareaField } from './TextareaField';
-export { default } from './Textarea';
+import Textarea from './Textarea';
+import TextareaField from './TextareaField';
+
+export { Textarea, TextareaField };
+export default Textarea;
