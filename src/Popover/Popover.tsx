@@ -30,6 +30,7 @@ export type LocalPopoverProps = LocalPopoverPopoverProps & {
     | ((
         { initialFocusRef, ...args }: { initialFocusRef?: React.RefObject<any> } & PopoverContainerRenderProps
       ) => React.ReactNode);
+  isFullWidth?: boolean;
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean;
 };
@@ -46,12 +47,13 @@ export type PopoverComponents = {
 export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverComponents = ({
   children,
   content,
+  isFullWidth,
   showCloseButton,
   ...props
 }) => (
   <PopoverContainer>
     {popover => (
-      <InlineBlock relative>
+      <InlineBlock relative width={isFullWidth ? '100%' : undefined}>
         {isFunction(children)
           ? /*
             // @ts-ignore */
@@ -83,21 +85,23 @@ Popover.Toggle = PopoverToggle;
 export const popoverPropTypes = {
   ...popoverPopoverPropTypes,
   className: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired as PropTypes.Validator<
+    LocalPopoverProps['children']
+  >,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.func]) as PropTypes.Validator<
     LocalPopoverProps['content']
   >,
-  showCloseButton: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired as PropTypes.Validator<
-    LocalPopoverProps['children']
-  >
+  isFullWidth: PropTypes.bool,
+  showCloseButton: PropTypes.bool
 };
 Popover.propTypes = popoverPropTypes;
 
 export const popoverDefaultProps = {
   ...popoverPopoverDefaultProps,
+  children: undefined,
   className: undefined,
-  showCloseButton: false,
-  children: undefined
+  isFullWidth: false,
+  showCloseButton: false
 };
 Popover.defaultProps = popoverDefaultProps;
 
