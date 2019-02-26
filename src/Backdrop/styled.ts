@@ -5,7 +5,7 @@ import { LocalBackdropProps } from './Backdrop';
 
 export default styled(Backdrop)<LocalBackdropProps>`
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.6;
 
   & {
     ${theme('fannypack.Backdrop.base')};
