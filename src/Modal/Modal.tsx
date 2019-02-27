@@ -92,7 +92,7 @@ export const Modal: React.FunctionComponent<LocalModalProps> & ModalComponents =
 );
 
 Modal.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   className: PropTypes.string,
   isVisible: PropTypes.bool,
   hide: PropTypes.func,
