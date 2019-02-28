@@ -7,6 +7,10 @@ export default {
     showCloseButton: true,
     hasHorizontalBar: true
   },
+  base: css`
+    width: unset;
+    max-width: 480px;
+  `,
   Title: {
     base: css`
       && {
