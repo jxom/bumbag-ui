@@ -69,7 +69,7 @@ const actions: ActionMap<State, Actions> = {
 };
 
 export const ToastContainer: React.FunctionComponent<ToastContainerProps> = ({ children, ...props }) => (
-  <Container context="toasts" initialState={{ ...initialState, props }} actions={actions} effects={effects} pure>
+  <Container context="toasts" initialState={{ ...initialState, props }} actions={actions} effects={effects}>
     {children}
   </Container>
 );
