@@ -35,7 +35,7 @@ export const generateColorVariants = ({
     [`${paletteKey}700`]: shade(0.3, color),
     [`${paletteKey}800`]: shade(0.5, color),
     [`${paletteKey}900`]: shade(0.7, color),
-    [`${paletteKey}Tint`]: tint(0.7, color),
+    [`${paletteKey}Tint`]: tint(0.9, color),
     [`${paletteKey}Inverted`]: readableColor(color),
     [`${paletteKey}TintInverted`]: shade(0.5, color),
     ...(paletteOverrides ? paletteOverrides({ color }) : {})
