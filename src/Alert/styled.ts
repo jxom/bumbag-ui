@@ -9,7 +9,7 @@ import { AlertCloseProps } from './AlertClose';
 export const AlertTitle = styled(Heading)`
   font-weight: ${theme('fannypack.fontWeights.semibold')};
 
-  && {
+  &&:not(:last-child) {
     margin-bottom: ${space(2)}em;
   }
 
