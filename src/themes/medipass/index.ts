@@ -13,6 +13,7 @@ import Input from './Input';
 import Label from './Label';
 import Select from './Select';
 import SelectMenu from './SelectMenu';
+import Toast from './Toast';
 
 export default {
   // Foundation
@@ -31,5 +32,6 @@ export default {
   Input,
   Label,
   Select,
-  SelectMenu
+  SelectMenu,
+  Toast
 };
