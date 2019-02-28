@@ -174,7 +174,7 @@ export const componentList: Array<ComponentDetails> = [
   {
     name: 'Hidden',
     type: 'util',
-    status: 'pending',
+    status: 'complete',
     docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
   },
   {
