@@ -9,6 +9,7 @@ const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
   border-radius: 2px;
   color: white;
   opacity: 0.8;
+  hyphens: auto;
   font-size: ${theme('fannypack.fontSizes.100')}rem;
   font-weight: ${theme('fannypack.fontWeights.normal')};
   padding: ${space(1)}rem ${space(2)}rem;

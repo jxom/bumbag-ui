@@ -198,6 +198,7 @@ const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   justify-content: center;
   padding: 0 0.8rem;
   text-decoration: none;
+  hyphens: auto;
 
   &:focus {
     outline: unset;
