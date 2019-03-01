@@ -70,10 +70,10 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
   };
 
   render = () => {
-    const { children } = this.props;
+    const { children, ...props } = this.props;
     const { theme } = this.state;
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider {...props} theme={theme}>
         <LoadsProvider>
           <React.Fragment>
             {/*
