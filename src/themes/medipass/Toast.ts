@@ -1,4 +1,4 @@
-import { css } from '../../styled';
+import { css, theme } from '../../styled';
 
 export default {
   placement: 'top',
@@ -8,8 +8,11 @@ export default {
     hasHorizontalBar: true
   },
   base: css`
-    width: unset;
-    max-width: 480px;
+    width: 480px;
+
+    @media screen and (max-width: ${theme('fannypack.layout.mobileBreakpoint')}px) {
+      width: 90vw;
+    }
   `,
   Title: {
     base: css`
