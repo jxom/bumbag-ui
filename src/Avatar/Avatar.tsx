@@ -20,20 +20,6 @@ export type LocalAvatarProps = {
 };
 export type AvatarProps = LocalAvatarProps & Omit<ReakitAvatarProps, 'size'>;
 
-const defaultProps: Partial<LocalAvatarProps> = {
-  a11yLabel: undefined,
-  alt: undefined,
-  kind: 'square',
-  className: undefined,
-  color: undefined,
-  fit: undefined,
-  fitPosition: undefined,
-  initials: undefined,
-  palette: undefined,
-  size: undefined,
-  src: undefined
-};
-
 export const Avatar: React.FunctionComponent<LocalAvatarProps> = ({
   a11yLabel,
   className,
@@ -68,7 +54,7 @@ export const Avatar: React.FunctionComponent<LocalAvatarProps> = ({
   </React.Fragment>
 );
 
-Avatar.propTypes = {
+export const avatarPropTypes = {
   a11yLabel: PropTypes.string,
   alt: PropTypes.string,
   kind: PropTypes.oneOf(['circle', 'square']) as PropTypes.Validator<LocalAvatarProps['kind']>,
@@ -84,7 +70,22 @@ Avatar.propTypes = {
   ]) as PropTypes.Validator<LocalAvatarProps['size']>,
   src: PropTypes.string
 };
-Avatar.defaultProps = defaultProps;
+Avatar.propTypes = avatarPropTypes;
+
+export const avatarDefaultProps: Partial<LocalAvatarProps> = {
+  a11yLabel: undefined,
+  alt: undefined,
+  kind: 'square',
+  className: undefined,
+  color: undefined,
+  fit: undefined,
+  fitPosition: undefined,
+  initials: undefined,
+  palette: undefined,
+  size: undefined,
+  src: undefined
+};
+Avatar.defaultProps = avatarDefaultProps;
 
 const C: React.FunctionComponent<AvatarProps> = Avatar;
 export default C;

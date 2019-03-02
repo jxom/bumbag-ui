@@ -1,11 +1,11 @@
-import Code from 'reakit/Code';
+import _Code from 'reakit/Code';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 
 import { CodeProps } from './Code';
 import styled from '../styled';
 
-export default styled(Code)<CodeProps>`
+export const Code = styled(_Code)<CodeProps>`
   background-color: ${darken(0.05, 'white')};
   border-radius: 0.1rem;
   color: ${palette('text')};
@@ -25,3 +25,5 @@ export default styled(Code)<CodeProps>`
     ${theme('fannypack.Code.base')};
   }
 `;
+
+export default Code;

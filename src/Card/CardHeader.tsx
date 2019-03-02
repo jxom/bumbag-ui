@@ -10,17 +10,20 @@ export type LocalCardHeaderProps = {
 };
 export type CardHeaderProps = LocalCardHeaderProps & ReakitBoxProps;
 
-const CardHeader: React.FunctionComponent<LocalCardHeaderProps> = ({ children, ...props }) => (
+export const CardHeader: React.FunctionComponent<LocalCardHeaderProps> = ({ children, ...props }) => (
   <_CardHeader {...props}>{children}</_CardHeader>
 );
 
-CardHeader.propTypes = {
+export const cardHeaderPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-CardHeader.defaultProps = {
+CardHeader.propTypes = cardHeaderPropTypes;
+
+export const cardHeaderDefaultProps = {
   className: undefined
 };
+CardHeader.defaultProps = cardHeaderDefaultProps;
 
 const C: React.FunctionComponent<CardHeaderProps> = CardHeader;
 export default C;

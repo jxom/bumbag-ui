@@ -1,10 +1,10 @@
-import Blockquote from 'reakit/Blockquote';
+import _Blockquote from 'reakit/Blockquote';
 import { darken } from 'polished';
 import { theme } from 'styled-tools';
 import styled, { space } from '../styled';
 import { BlockquoteProps } from './Blockquote';
 
-export default styled(Blockquote)<BlockquoteProps>`
+const Blockquote = styled(_Blockquote)<BlockquoteProps>`
   border-left: 4px solid ${darken(0.2, 'white')};
   padding: ${space(4)}rem;
 
@@ -16,3 +16,5 @@ export default styled(Blockquote)<BlockquoteProps>`
     ${theme('fannypack.Blockquote.base')};
   }
 `;
+
+export default Blockquote;

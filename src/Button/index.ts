@@ -1,3 +1,7 @@
-export { default } from './Button';
-export { default as Button } from './Button';
-export { default as ActionButtons } from './ActionButtons';
+import Button from './Button';
+import * as buttonStyled from './styled';
+
+export * from './ActionButtons';
+export * from './Button';
+export { buttonStyled };
+export default Button;

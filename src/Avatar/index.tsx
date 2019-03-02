@@ -1,2 +1,6 @@
-export { default as Avatar } from './Avatar';
-export { default } from './Avatar';
+import Avatar from './Avatar';
+import * as avatarStyled from './styled';
+
+export * from './Avatar';
+export { avatarStyled };
+export default Avatar;

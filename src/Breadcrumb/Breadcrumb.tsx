@@ -32,14 +32,16 @@ export const Breadcrumb: React.FunctionComponent<LocalBreadcrumbProps> & Breadcr
 
 Breadcrumb.Step = BreadcrumbStep;
 
-Breadcrumb.propTypes = {
+export const breadcrumbPropTypes = {
   children: PropTypes.node.isRequired,
   separationColor: PropTypes.string
 };
+Breadcrumb.propTypes = breadcrumbPropTypes;
 
-Breadcrumb.defaultProps = {
+export const breadcrumbDefaultProps = {
   separationColor: ''
 };
+Breadcrumb.defaultProps = breadcrumbDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<LocalBreadcrumbProps> & BreadcrumbComponents = Breadcrumb;

@@ -10,17 +10,20 @@ export type LocalCardFooterProps = {
 };
 export type CardFooterProps = LocalCardFooterProps & ReakitBoxProps;
 
-const CardFooter: React.FunctionComponent<LocalCardFooterProps> = ({ children, ...props }) => (
+export const CardFooter: React.FunctionComponent<LocalCardFooterProps> = ({ children, ...props }) => (
   <_CardFooter {...props}>{children}</_CardFooter>
 );
 
-CardFooter.propTypes = {
+export const cardFooterPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-CardFooter.defaultProps = {
+CardFooter.propTypes = cardFooterPropTypes;
+
+export const cardFooterDefaultProps = {
   className: undefined
 };
+CardFooter.defaultProps = cardFooterDefaultProps;
 
 const C: React.FunctionComponent<CardFooterProps> = CardFooter;
 export default C;

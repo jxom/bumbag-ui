@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { HeadingProps as ReakitHeadingProps } from 'reakit/ts/Heading/Heading';
 
 import { CardTitle as _CardTitle } from './styled';
@@ -9,15 +10,22 @@ export type LocalCardTitleProps = {
 };
 export type CardTitleProps = LocalCardTitleProps & ReakitHeadingProps;
 
-const CardTitle: React.FunctionComponent<LocalCardTitleProps> = ({ children, ...props }) => (
+export const CardTitle: React.FunctionComponent<LocalCardTitleProps> = ({ children, ...props }) => (
   <_CardTitle use="h5" isSubHeading {...props}>
     {children}
   </_CardTitle>
 );
 
-CardTitle.defaultProps = {
+export const cardTitlePropTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
+};
+CardTitle.propTypes = cardTitlePropTypes;
+
+export const cardTitleDefaultProps = {
   className: undefined
 };
+CardTitle.defaultProps = cardTitleDefaultProps;
 
 const C: React.FunctionComponent<CardTitleProps> = CardTitle;
 export default C;

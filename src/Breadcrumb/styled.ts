@@ -15,7 +15,7 @@ export const Breadcrumb = styled(Navigation)<BreadcrumbProps>`
     display: inline-block;
     height: 0.8rem;
     margin: 0 ${space(4)}rem;
-    msrgin-right: 0;
+    margin-right: 0;
     transform: rotate(15deg);
   }
 

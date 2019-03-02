@@ -6,14 +6,15 @@ export type AlertTitleProps = {
   children: React.ReactNode;
 };
 
-const AlertTitle = ({ children, ...props }: AlertTitleProps) => (
+export const AlertTitle = ({ children, ...props }: AlertTitleProps) => (
   <_AlertTitle use="h6" {...props}>
     {children}
   </_AlertTitle>
 );
 
-AlertTitle.propTypes = {
+export const alertTitlePropTypes = {
   children: PropTypes.node.isRequired
 };
+AlertTitle.propTypes = alertTitlePropTypes;
 
 export default AlertTitle;

@@ -1,2 +1,6 @@
-export { default as Blockquote } from './Blockquote';
-export { default } from './Blockquote';
+import Blockquote from './Blockquote';
+import * as blockquoteStyled from './styled';
+
+export * from './Blockquote';
+export { blockquoteStyled };
+export default Blockquote;

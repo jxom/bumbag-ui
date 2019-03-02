@@ -1,2 +1,6 @@
-export { default } from './CalloutOverlay';
-export { default as CalloutOverlay } from './CalloutOverlay';
+import CalloutOverlay from './CalloutOverlay';
+import * as calloutOverlayStyled from './styled';
+
+export * from './CalloutOverlay';
+export { calloutOverlayStyled };
+export default CalloutOverlay;

@@ -1,2 +1,6 @@
-export { default } from './Backdrop';
-export { default as Backdrop } from './Backdrop';
+import Backdrop from './Backdrop';
+import * as backdropStyled from './styled';
+
+export * from './Backdrop';
+export { backdropStyled };
+export default Backdrop;

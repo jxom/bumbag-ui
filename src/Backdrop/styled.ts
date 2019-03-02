@@ -1,9 +1,9 @@
 import { theme } from 'styled-tools';
-import Backdrop from 'reakit/Backdrop';
+import _Backdrop from 'reakit/Backdrop';
 import styled from '../styled';
 import { LocalBackdropProps } from './Backdrop';
 
-export default styled(Backdrop)<LocalBackdropProps>`
+export const Backdrop = styled(_Backdrop)<LocalBackdropProps>`
   background-color: black;
   opacity: 0.6;
 
@@ -11,3 +11,5 @@ export default styled(Backdrop)<LocalBackdropProps>`
     ${theme('fannypack.Backdrop.base')};
   }
 `;
+
+export default Backdrop;

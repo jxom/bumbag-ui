@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
 import { ButtonProps } from '../Button/Button';
 import Icon from '../Icon';
@@ -19,10 +20,17 @@ export const AlertClose: React.FunctionComponent<LocalAlertCloseProps> = ({ onCl
   </_AlertClose>
 );
 
-AlertClose.defaultProps = {
+export const alertClosePropTypes = {
+  isAbsolute: PropTypes.bool,
+  onClickClose: PropTypes.func
+};
+AlertClose.propTypes = alertClosePropTypes;
+
+export const alertCloseDefaultProps = {
   isAbsolute: false,
   onClickClose: undefined
 };
+AlertClose.defaultProps = alertCloseDefaultProps;
 
 const C: React.FunctionComponent<AlertCloseProps> = AlertClose;
 export default C;

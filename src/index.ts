@@ -24,17 +24,36 @@ export { default as defaultTheme } from './themes/default';
 export { ThemeProvider } from './ThemeProvider';
 export { getUniqueId } from './uniqueId';
 
-export { Alert } from './Alert';
-export { Avatar } from './Avatar';
-export { Backdrop } from './Backdrop';
-export { Blockquote } from './Blockquote';
-export { ActionButtons, Button } from './Button';
-export { Breadcrumb } from './Breadcrumb';
-export { Callout } from './Callout';
-export { CalloutOverlay } from './CalloutOverlay';
-export { Card, CardCard, CardContent, CardFooter, CardHeader, CardTitle } from './Card';
-export { Checkbox, CheckboxField } from './Checkbox';
-export { Code, HighlightedCode } from './Code';
+export { default as Alert } from './Alert';
+export * from './Alert';
+
+export { default as Backdrop } from './Backdrop';
+export * from './Backdrop';
+
+export { default as Blockquote } from './Blockquote';
+export * from './Blockquote';
+
+export { default as Button } from './Button';
+export * from './Button';
+
+export { default as Breadcrumb } from './Breadcrumb';
+export * from './Breadcrumb';
+
+export { default as Callout } from './Callout';
+export * from './Callout';
+
+export { default as CalloutOverlay } from './CalloutOverlay';
+export * from './CalloutOverlay';
+
+export { default as Card } from './Card';
+export * from './Card';
+
+export { default as Checkbox } from './Checkbox';
+export * from './Checkbox';
+
+export { default as Code } from './Code';
+export * from './Code';
+
 export { Column } from './Column';
 export { Columns } from './Columns';
 export { Container } from './Container';

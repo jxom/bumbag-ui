@@ -12,7 +12,7 @@ export type LocalCardCardProps = LocalPaneProps & {
 };
 export type CardCardProps = LocalCardCardProps & PaneProps;
 
-const CardCard: React.FunctionComponent<LocalCardCardProps> = ({
+export const CardCard: React.FunctionComponent<LocalCardCardProps> = ({
   a11yDescriptionId,
   a11yTitleId,
   children,

@@ -63,7 +63,7 @@ export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
   themePrefix: 'Checkbox'
 });
 
-export default styled(Label)`
+export const Checkbox = styled(Label)`
   display: flex;
   align-items: center;
 
@@ -71,3 +71,5 @@ export default styled(Label)`
     ${theme('fannypack.Checkbox.label')};
   }
 `;
+
+export default Checkbox;

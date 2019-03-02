@@ -65,20 +65,22 @@ export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> =
   );
 };
 
-CalloutOverlay.propTypes = {
+export const calloutOverlayPropTypes = {
   children: PropTypes.node.isRequired,
   hide: PropTypes.func,
   ...overlayPropTypes,
   ...calloutPropTypes
 };
+CalloutOverlay.propTypes = calloutOverlayPropTypes;
 
-CalloutOverlay.defaultProps = {
+export const calloutOverlayDefaultProps = {
   ...overlayDefaultProps,
   ...calloutDefaultProps,
   elevation: '300',
   hide: undefined,
   placement: 'bottom-end'
 };
+CalloutOverlay.defaultProps = calloutOverlayDefaultProps;
 
 const C: React.FunctionComponent<CalloutOverlayProps> = CalloutOverlay;
 export default C;

@@ -5,13 +5,13 @@ import styled, { css } from '../styled';
 import { Box } from '../primitives';
 import { AvatarProps } from './Avatar';
 
-const circleProperties = css`
+export const circleProperties = css`
   & {
     border-radius: 50%;
   }
 `;
 
-const fitProperties = (props: any) => {
+export const fitProperties = (props: any) => {
   if (!props.fit) return null;
   if (props.fit === 'contain') {
     return css`
@@ -44,7 +44,7 @@ const fitProperties = (props: any) => {
   return null;
 };
 
-const sizeProperties: any = {
+export const sizeProperties: any = {
   xsmall: css`
     & {
       font-size: 8px;

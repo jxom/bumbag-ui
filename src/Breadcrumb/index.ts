@@ -1,2 +1,7 @@
-export { default } from './Breadcrumb';
-export { default as Breadcrumb } from './Breadcrumb';
+import Breadcrumb from './Breadcrumb';
+import * as breadcrumbStyled from './styled';
+
+export * from './Breadcrumb';
+export * from './BreadcrumbStep';
+export { breadcrumbStyled };
+export default Breadcrumb;

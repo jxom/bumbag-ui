@@ -19,6 +19,8 @@ export const Callout = styled(_Callout)`
   }
 `;
 
-export default styled(Overlay)<LocalCalloutOverlayProps>`
+const CalloutOverlay = styled(Overlay)<LocalCalloutOverlayProps>`
   ${theme('fannypack.CalloutOverlay.base')};
 `;
+
+export default CalloutOverlay;

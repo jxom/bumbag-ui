@@ -15,7 +15,12 @@ export type LocalBreadcrumbStepProps = {
   isCurrent?: boolean;
 };
 
-const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({ children, color, href, isCurrent }) => (
+export const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({
+  children,
+  color,
+  href,
+  isCurrent
+}) => (
   <_BreadcrumbStep>
     {href ? (
       <_BreadcrumbLink aria-current={isCurrent ? 'page' : undefined} color={color} href={href}>
@@ -29,18 +34,20 @@ const BreadcrumbStep: React.FunctionComponent<LocalBreadcrumbStepProps> = ({ chi
   </_BreadcrumbStep>
 );
 
-BreadcrumbStep.propTypes = {
+export const breadcrumbStepPropTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   href: PropTypes.string,
   isCurrent: PropTypes.bool
 };
+BreadcrumbStep.propTypes = breadcrumbStepPropTypes;
 
-BreadcrumbStep.defaultProps = {
+export const breadcrumbStepDefaultProps = {
   color: undefined,
   href: undefined,
   isCurrent: undefined
 };
+BreadcrumbStep.defaultProps = breadcrumbStepDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<LocalBreadcrumbStepProps> = BreadcrumbStep;

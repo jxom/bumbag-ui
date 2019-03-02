@@ -12,7 +12,7 @@ const defaultPalette = _defaultPalette({});
 export const isInteractive = (props: any) =>
   !props.isStatic && !props.isLoading && !props.disabled && props.kind !== 'link';
 
-const sizeProperties: any = {
+export const sizeProperties: any = {
   small: css`
     & {
       font-size: ${theme('fannypack.fontSizes.100')}em;
@@ -44,7 +44,7 @@ const sizeProperties: any = {
   `
 };
 
-const linkProperties = css`
+export const linkProperties = css`
   & {
     border: 0;
     background: unset;
@@ -73,7 +73,7 @@ const linkProperties = css`
     ${theme('fannypack.Button.link')};
   }
 `;
-const outlinedProperties = css`
+export const outlinedProperties = css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -94,7 +94,7 @@ const outlinedProperties = css`
     ${theme('fannypack.Button.outlined')};
   }
 `;
-const ghostProperties = css<ButtonProps>`
+export const ghostProperties = css<ButtonProps>`
   & {
     background-color: unset;
     border: unset;
@@ -113,7 +113,7 @@ const ghostProperties = css<ButtonProps>`
   }
 `;
 
-const disabledProperties = css`
+export const disabledProperties = css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
@@ -125,7 +125,7 @@ const disabledProperties = css`
   }
 `;
 
-const staticProperties = css`
+export const staticProperties = css`
   & {
     cursor: default;
     outline: unset;
@@ -140,7 +140,7 @@ const staticProperties = css`
   }
 `;
 
-const interactiveProperties = css`
+export const interactiveProperties = css`
   &:hover {
     background-color: ${(props: any) => darken(0.05, palette()(props))};
   }
@@ -151,7 +151,7 @@ const interactiveProperties = css`
     ${theme('fannypack.Button.interactive')};
   }
 `;
-const loadingProperties = css`
+export const loadingProperties = css`
   & {
     cursor: not-allowed;
 
@@ -185,7 +185,7 @@ export const ButtonIcon = styled(Icon)<IconProps & { isAfter: boolean; isBefore:
   }
 `;
 
-const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
+export const Button = styled(_Button)<ButtonProps & { styledSize: any }>`
   align-items: center;
   background-color: ${palette()};
   border-radius: 4px;

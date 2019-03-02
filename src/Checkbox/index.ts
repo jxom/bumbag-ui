@@ -1,5 +1,7 @@
 import Checkbox from './Checkbox';
-import CheckboxField from './CheckboxField';
+import * as checkboxStyled from './styled';
 
-export { Checkbox, CheckboxField };
+export * from './Checkbox';
+export * from './CheckboxField';
+export { checkboxStyled };
 export default Checkbox;

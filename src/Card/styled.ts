@@ -11,7 +11,7 @@ import Pane from '../Pane';
 // @ts-ignore
 import Heading from '../Heading';
 
-export default styled(Pane)<CardCardProps>`
+export const Card = styled(Pane)<CardCardProps>`
   padding: ${space(6, 'minor')}rem;
 
   & {
@@ -54,3 +54,5 @@ export const CardTitle = styled(Heading)<CardTitleProps>`
     ${theme('fannypack.Card.Title.base')};
   }
 `;
+
+export default Card;

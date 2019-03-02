@@ -24,9 +24,10 @@ export const calloutClosePropTypes = {
 };
 CalloutClose.propTypes = calloutClosePropTypes;
 
-CalloutClose.defaultProps = {
+export const calloutCloseDefaultProps = {
   onClickClose: undefined
 };
+CalloutClose.defaultProps = calloutCloseDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<CalloutCloseProps> = CalloutClose;

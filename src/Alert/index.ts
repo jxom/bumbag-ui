@@ -1,2 +1,8 @@
-export { Alert } from './Alert';
-export { Alert as default } from './Alert';
+import Alert from './Alert';
+import * as alertStyled from './styled';
+
+export * from './Alert';
+export * from './AlertClose';
+export * from './AlertTitle';
+export { alertStyled };
+export default Alert;

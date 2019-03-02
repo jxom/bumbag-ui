@@ -30,7 +30,7 @@ export const Backdrop: React.FunctionComponent<LocalBackdropProps> = ({ children
   </_Backdrop>
 );
 
-Backdrop.propTypes = {
+export const backdropPropTypes = {
   use: PropTypes.any,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -39,7 +39,9 @@ Backdrop.propTypes = {
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
-Backdrop.defaultProps = {
+Backdrop.propTypes = backdropPropTypes;
+
+export const backdropDefaultProps = {
   use: undefined,
   children: undefined,
   className: undefined,
@@ -48,6 +50,7 @@ Backdrop.defaultProps = {
   ...animateDefaultProps,
   ...restrictDefaultProps
 };
+Backdrop.defaultProps = backdropDefaultProps;
 
 const C: React.FunctionComponent<BackdropProps> = Backdrop;
 export default C;

@@ -24,17 +24,20 @@ export const Code: React.FunctionComponent<LocalCodeProps> = ({
   </_Code>
 );
 
-Code.propTypes = {
+export const codePropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   codeClassName: PropTypes.string,
   isBlock: PropTypes.bool
 };
-Code.defaultProps = {
+Code.propTypes = codePropTypes;
+
+export const codeDefaultProps = {
   className: undefined,
   codeClassName: undefined,
   isBlock: false
 };
+Code.defaultProps = codeDefaultProps;
 
 const C: React.FunctionComponent<CodeProps> = Code;
 export default C;

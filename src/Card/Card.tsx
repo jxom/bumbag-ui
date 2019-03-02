@@ -66,7 +66,7 @@ Card.Content = CardContent;
 Card.Footer = CardFooter;
 Card.Title = CardTitle;
 
-Card.propTypes = {
+export const cardPropTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
@@ -77,7 +77,9 @@ Card.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   ...cardCardPropTypes
 };
-Card.defaultProps = {
+Card.propTypes = cardPropTypes;
+
+export const cardDefaultProps = {
   ...cardCardDefaultProps,
   a11yDescriptionId: getUniqueId('Card'),
   a11yTitleId: getUniqueId('Card'),

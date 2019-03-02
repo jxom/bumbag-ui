@@ -48,24 +48,26 @@ export type LocalHighlightedCodeProps = {
 };
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 
-export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    codeClassName: PropTypes.string,
-    isBlock: PropTypes.bool,
-    lang: PropTypes.string.isRequired,
-    showLabel: PropTypes.bool,
-    showLineNumbers: PropTypes.bool
-  };
+export const highlightedCodePropTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  codeClassName: PropTypes.string,
+  isBlock: PropTypes.bool,
+  lang: PropTypes.string.isRequired,
+  showLabel: PropTypes.bool,
+  showLineNumbers: PropTypes.bool
+};
+export const highlightedCodeDefaultProps = {
+  className: undefined,
+  codeClassName: undefined,
+  isBlock: false,
+  showLabel: false,
+  showLineNumbers: false
+};
 
-  static defaultProps = {
-    className: undefined,
-    codeClassName: undefined,
-    isBlock: false,
-    showLabel: false,
-    showLineNumbers: false
-  };
+export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {
+  static propTypes = highlightedCodePropTypes;
+  static defaultProps = highlightedCodeDefaultProps;
 
   componentDidMount = () => {
     registerLanguage('javascript', javascript);

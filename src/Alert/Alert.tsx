@@ -40,18 +40,6 @@ export type LocalAlertProps = {
 };
 export type AlertProps = LocalAlertProps & ReakitBoxProps;
 
-const defaultProps: Partial<LocalAlertProps> = {
-  className: undefined,
-  closeButtonProps: {},
-  children: undefined,
-  hasIcon: false,
-  hasTint: false,
-  onClickClose: undefined,
-  showCloseButton: false,
-  title: undefined,
-  type: 'info'
-};
-
 export const Alert: React.FunctionComponent<LocalAlertProps> = ({
   className,
   closeButtonProps,
@@ -82,7 +70,7 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
   </_Alert>
 );
 
-Alert.propTypes = {
+export const alertPropTypes = {
   className: PropTypes.string,
   closeButtonProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
   children: PropTypes.node,
@@ -93,7 +81,20 @@ Alert.propTypes = {
   title: PropTypes.string,
   type: PropTypes.string
 };
-Alert.defaultProps = defaultProps;
+Alert.propTypes = alertPropTypes;
+
+export const alertDefaultProps: Partial<LocalAlertProps> = {
+  className: undefined,
+  closeButtonProps: {},
+  children: undefined,
+  hasIcon: false,
+  hasTint: false,
+  onClickClose: undefined,
+  showCloseButton: false,
+  title: undefined,
+  type: 'info'
+};
+Alert.defaultProps = alertDefaultProps;
 
 const C: React.FunctionComponent<AlertProps> = Alert;
 export default C;
