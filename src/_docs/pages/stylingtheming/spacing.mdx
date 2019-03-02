@@ -11,6 +11,7 @@ import Button from 'src/Button'
 import Code from 'src/Code'
 import InputField from 'src/Input/InputField'
 import Table from 'src/Table'
+import FieldSet from 'src/FieldSet';
 
 # Spacing
 
@@ -74,10 +75,10 @@ The **8px major scale** is most commonly used for positional spacing. Like **hei
 ### Usage via CSS props
 
 <Playground>
-  <Block>
+  <FieldSet isHorizontal spacing="major-2">
     <InputField label="First name" />
-    <InputField label="Last name" marginLeft="major-1" />
-  </Block>
+    <InputField label="Last name" />
+  </FieldSet>
   <Button marginTop="major-2">Save</Button>
 </Playground>
 
