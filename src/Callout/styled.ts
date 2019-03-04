@@ -18,7 +18,6 @@ const getTintAttributes = (props: any) => {
 
   return css`
     background-color: ${type && palette(`${type}Tint`)(props)};
-    box-shadow: none;
     color: ${type && palette(`${type}TintInverted`)(props)};
     fill: ${type && palette(`${type}TintInverted`)(props)};
     ${theme('fannypack.Callout.tint')};
