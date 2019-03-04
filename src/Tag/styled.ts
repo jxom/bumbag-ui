@@ -42,6 +42,7 @@ export const RemoveButton = styled(Button)`
   background: none;
   padding: 0 ${space(1)}rem;
   height: 100%;
+  min-height: 100%;
 
   ${props =>
     props.kind !== 'ghost' &&
@@ -60,6 +61,8 @@ export const RemoveButton = styled(Button)`
 `;
 
 export const TagContent = styled(Box)<{ isRemovable: boolean }>`
+  align-items: center;
+  display: flex;
   padding: 0 ${space(2)}em;
 
   ${props =>
