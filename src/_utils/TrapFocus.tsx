@@ -11,11 +11,22 @@ export type TrapFocusProps = {
       initialFocusRef
     }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
   ) => React.ReactNode;
+  delayToActivate?: string;
   isActive?: boolean;
   usesPortal?: boolean;
 };
 export type TrapFocusState = {
   originalAriaHiddenValues: Array<string | void>;
+};
+
+const convertToMs = (time: string) => {
+  if (/([0-9]*[.])?[0-9]+ms/.test(time)) {
+    return parseFloat(time.replace('ms', ''));
+  }
+  if (/([0-9]*[.])?[0-9]+s/.test(time)) {
+    return parseFloat(time.replace('s', '')) * 1000;
+  }
+  return 0;
 };
 
 const noop = () => {};
@@ -39,7 +50,7 @@ export default class TrapFocus extends React.Component<TrapFocusProps, TrapFocus
   };
 
   componentDidMount = () => {
-    const { isActive, usesPortal } = this.props;
+    const { delayToActivate, isActive, usesPortal } = this.props;
 
     // @ts-ignore
     this.trap = createFocusTrap(this.wrapper.current, {
@@ -50,7 +61,11 @@ export default class TrapFocus extends React.Component<TrapFocusProps, TrapFocus
     });
 
     if (isActive) {
-      this.trap.activate();
+      if (delayToActivate) {
+        setTimeout(this.trap.activate, convertToMs(delayToActivate));
+      } else {
+        this.trap.activate();
+      }
     }
 
     if (usesPortal) {
@@ -64,11 +79,15 @@ export default class TrapFocus extends React.Component<TrapFocusProps, TrapFocus
   };
 
   componentDidUpdate = (prevProps: TrapFocusProps) => {
-    const { isActive, usesPortal } = this.props;
+    const { delayToActivate, isActive, usesPortal } = this.props;
     const { originalAriaHiddenValues } = this.state;
     if (isActive !== prevProps.isActive) {
       if (isActive) {
-        this.trap.activate();
+        if (delayToActivate) {
+          setTimeout(this.trap.activate, convertToMs(delayToActivate));
+        } else {
+          this.trap.activate();
+        }
       } else {
         this.trap.deactivate();
       }

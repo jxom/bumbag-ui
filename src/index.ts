@@ -67,6 +67,7 @@ export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';
 export { SelectMenu, SelectMenuField } from './SelectMenu';
 export { Set } from './Set';
+export { Sidebar } from './Sidebar';
 export { Spinner } from './Spinner';
 export { Switch, SwitchField } from './Switch';
 export { Table, TableBody, TableCaption, TableCell, TableFoot, TableHead, TableHeadCell, TableRow } from './Table';

@@ -312,8 +312,8 @@ export const componentList: Array<ComponentDetails> = [
   {
     name: 'Sidebar',
     type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    status: 'complete',
+    docsPath: '/utils/sidebar'
   },
   {
     name: 'Spinner',

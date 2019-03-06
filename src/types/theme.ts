@@ -513,6 +513,18 @@ export type SetThemeConfig = {
   base?: Stylesheet;
   child?: Stylesheet;
 };
+export type SidebarThemeConfig = {
+  base?: Stylesheet;
+  Show?: {
+    base?: Stylesheet;
+  };
+  Hide?: {
+    base?: Stylesheet;
+  };
+  Close?: {
+    base?: Stylesheet;
+  };
+};
 export type SpinnerThemeConfig = {
   base?: Stylesheet;
   sizes?: {
@@ -688,6 +700,7 @@ export type ThemeConfig = {
   Select?: SelectThemeConfig;
   SelectMenu?: SelectMenuThemeConfig;
   Set?: SetThemeConfig;
+  Sidebar?: SidebarThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Switch?: SwitchThemeConfig;
   Table?: TableThemeConfig;
