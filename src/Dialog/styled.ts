@@ -18,7 +18,7 @@ import { DialogIconProps } from './DialogIcon';
 export const DialogContent = styled(Box)<DialogContentProps>`
   padding: ${space(5)}rem;
   max-height: 50vh;
-  overflow-y: scroll;
+  overflow-y: ${props => (props.hasScroll ? 'scroll' : 'visible')};
   width: 100%;
 
   & {

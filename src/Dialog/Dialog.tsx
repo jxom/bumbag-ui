@@ -30,6 +30,7 @@ export type LocalDialogProps = LocalDialogDialogProps & {
   className?: string;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
   footer?: string | React.ReactElement<any>;
+  hasScroll?: boolean;
   onClickClose?: () => void;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
@@ -54,6 +55,7 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
   children,
   closeButtonProps,
   footer,
+  hasScroll,
   onClickClose,
   showActionButtons,
   showCloseButton,
@@ -75,7 +77,9 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
         {showCloseButton && <DialogClose onClick={onClickClose} {...closeButtonProps} />}
       </DialogHeader>
     )}
-    <DialogContent id={a11yDescriptionId}>{children}</DialogContent>
+    <DialogContent id={a11yDescriptionId} hasScroll={hasScroll}>
+      {children}
+    </DialogContent>
     {(footer || showActionButtons) && (
       <DialogFooter justifyContent={footer ? 'space-between' : 'flex-end'}>
         {footer && <Box>{footer}</Box>}
@@ -105,6 +109,7 @@ Dialog.propTypes = {
   className: PropTypes.string,
   closeButtonProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
   footer: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  hasScroll: PropTypes.bool,
   onClickClose: PropTypes.func,
   showActionButtons: PropTypes.bool,
   showCloseButton: PropTypes.bool,
@@ -121,6 +126,7 @@ Dialog.defaultProps = {
   className: undefined,
   closeButtonProps: {},
   footer: undefined,
+  hasScroll: false,
   onClickClose: undefined,
   showActionButtons: false,
   showCloseButton: false,

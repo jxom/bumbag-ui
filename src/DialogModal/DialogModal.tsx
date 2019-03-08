@@ -18,6 +18,7 @@ export type LocalDialogModalProps = Omit<LocalModalProps, 'children'> & {
     | (({ initialFocusRef }: { initialFocusRef: React.RefObject<HTMLElement> }) => React.ReactNode)
     | string
     | React.ReactElement<any>;
+  hasScroll?: boolean;
   kind?: 'alert';
   title?: string | React.ReactElement<any>;
   type?: string;
@@ -30,6 +31,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   actionButtonsProps,
   children,
   footer,
+  hasScroll,
   hide,
   kind,
   showActionButtons,
@@ -58,6 +60,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
         elementRef={fallbackFocusRef}
         // @ts-ignore
         footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
+        hasScroll={hasScroll}
         onClickClose={hide}
         role={kind === 'alert' ? 'alertdialog' : 'dialog'}
         showActionButtons={showActionButtons || kind === 'alert'}
@@ -83,6 +86,7 @@ DialogModal.propTypes = {
   actionButtonsProps: PropTypes.shape(actionButtonsPropTypes),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   footer: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element]),
+  hasScroll: PropTypes.bool,
   kind: PropTypes.oneOf(['alert']) as PropTypes.Validator<LocalDialogModalProps['kind']>,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   type: PropTypes.string
@@ -93,6 +97,7 @@ DialogModal.defaultProps = {
   a11yDescriptionId: getUniqueId('Modal'),
   a11yTitleId: getUniqueId('Modal'),
   footer: undefined,
+  hasScroll: false,
   kind: undefined,
   title: undefined,
   type: undefined,

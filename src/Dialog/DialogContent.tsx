@@ -7,6 +7,7 @@ import { DialogContent as _DialogContent } from './styled';
 export type LocalDialogContentProps = {
   children: React.ReactNode;
   className?: string;
+  hasScroll?: boolean;
 };
 export type DialogContentProps = LocalDialogContentProps & ReakitBoxProps;
 
@@ -16,10 +17,12 @@ export const DialogContent: React.FunctionComponent<LocalDialogContentProps> = (
 
 DialogContent.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  hasScroll: PropTypes.bool
 };
 DialogContent.defaultProps = {
-  className: undefined
+  className: undefined,
+  hasScroll: false
 };
 
 const C: React.FunctionComponent<DialogContentProps> = DialogContent;
