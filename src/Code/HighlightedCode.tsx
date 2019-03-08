@@ -85,6 +85,7 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
           showLineNumbers={showLineNumbers}
           style={defaultTheme}
           PreTag={_Code}
+          wrapLines
         >
           {children}
         </SyntaxHighlighter>
