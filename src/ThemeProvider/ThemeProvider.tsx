@@ -79,7 +79,7 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
             {/*
             // @ts-ignore */}
             {process.env.NODE_ENV !== 'test' && <Global />}
-            {!_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
+            {process.env.NODE_ENV !== 'test' && !_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
             {children}
           </React.Fragment>
         </LoadsProvider>
