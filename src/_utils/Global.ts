@@ -19,7 +19,8 @@ export default createGlobalStyle`
     fill: ${palette('text')};
   }
 
-  html.wf-active, body {
+  html.wf-active,
+  html.wf-active > body {
     font-family: ${theme('fannypack.global.fontFamily')};
   }
 
