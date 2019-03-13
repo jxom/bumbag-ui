@@ -8,7 +8,6 @@ const ignore = require('rollup-plugin-ignore');
 const proxyDirectories = require('rollup-plugin-proxy-directories');
 
 const pkg = require('./package.json');
-const getModuleEntries = require('./scripts/get-module-entries');
 
 const extensions = ['.ts', '.tsx', '.js', '.jsx', '.json'];
 
@@ -44,7 +43,7 @@ const getPlugins = umd =>
             './node_modules/react-is/index.js': ['isValidElementType', 'isElement', 'ForwardRef']
           }
         }),
-        ignore(['stream']),
+        ignore(['stream', 'react-test-renderer']),
         terser(),
         replace({
           'process.env.NODE_ENV': JSON.stringify('production')
@@ -102,7 +101,7 @@ export default [
         exports: 'named'
       }
     ],
-    plugins: [proxyDirectories()]
+    plugins: [proxyDirectories(), ignore(['react-test-renderer'])]
   }),
   createConfig({ pkg, input: 'src/index.ts', umd: true })
 ];
