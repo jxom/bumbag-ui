@@ -15,7 +15,8 @@ export default {
     'Components',
     'Form',
     'Utilities',
-    'Styling & Theming'
+    'Styling & Theming',
+    { name: 'Playroom', href: '/playroom' }
   ],
   themeConfig: {
     colors: {

@@ -10,7 +10,7 @@
     "build": "yarn clean && yarn build:lib && yarn build:types",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:docs": "docz build",
+    "build:docs": "yarn docz:build && yarn playroom:build",
     "build:fab": "yarn build:docs && yarn fab:compile",
     "fab:compile": "fab-static docs/",
     "clean": "rimraf es/ lib/ dist/ ts/",
@@ -22,7 +22,10 @@
     "lint:fix": "eslint src/ --fix",
     "test": "yarn type-check && yarn lint && yarn jest",
     "jest": "jest",
-    "docs": "docz dev"
+    "docz:start": "docz dev",
+    "docz:build": "docz build",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "5.7.2",
@@ -70,6 +73,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
+    "babel-loader": "8.0.5",
     "babel-plugin-styled-components": "1.9.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-docz-fannypack": "0.13.3",
@@ -83,6 +87,7 @@
     "jest": "23.6.0",
     "jest-styled-components": "6.3.1",
     "parse-prop-types": "0.3.0",
+    "playroom": "0.7.2",
     "query-string": "6.2.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
