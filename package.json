@@ -15,7 +15,7 @@
     "fab:compile": "fab-static docs/",
     "clean": "rimraf es/ lib/ dist/ ts/",
     "develop": "rollup -c -w",
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "postpublish": "yarn clean",
     "type-check": "tsc --noEmit",
     "lint": "eslint src/ --ext js,ts,tsx",
