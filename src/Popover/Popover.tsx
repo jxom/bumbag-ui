@@ -27,9 +27,10 @@ export type LocalPopoverProps = LocalPopoverPopoverProps & {
   content:
     | string
     | React.ReactElement<any>
-    | ((
-        { initialFocusRef, ...args }: { initialFocusRef?: React.RefObject<any> } & PopoverContainerRenderProps
-      ) => React.ReactNode);
+    | (({
+        initialFocusRef,
+        ...args
+      }: { initialFocusRef?: React.RefObject<any> } & PopoverContainerRenderProps) => React.ReactNode);
   isFullWidth?: boolean;
   /** Displays a cross button in the top right corner of the popover content. */
   showCloseButton?: boolean;
@@ -59,8 +60,8 @@ export const Popover: React.FunctionComponent<LocalPopoverProps> & PopoverCompon
             // @ts-ignore */
             children({ use: PopoverToggle, ...popover })
           : children
-            ? React.cloneElement(children as React.ReactElement<any>, { use: PopoverToggle, ...popover })
-            : null}
+          ? React.cloneElement(children as React.ReactElement<any>, { use: PopoverToggle, ...popover })
+          : null}
         <PopoverPopover elevation="200" {...props} {...popover} use={Pane}>
           {({ initialFocusRef }) => (
             <React.Fragment>

@@ -17,13 +17,12 @@ export default () => {
             {sectionTitles[section]}
           </Heading>
           <Columns>
-            {components[section].map(
-              (component: ComponentDetails) =>
-                component.status === 'complete' ? (
-                  <Column key={component.name} spread={3} spreadTablet={6}>
-                    <ComponentButton name={component.name} href={component.docsPath} />
-                  </Column>
-                ) : null
+            {components[section].map((component: ComponentDetails) =>
+              component.status === 'complete' ? (
+                <Column key={component.name} spread={3} spreadTablet={6}>
+                  <ComponentButton name={component.name} href={component.docsPath} />
+                </Column>
+              ) : null
             )}
           </Columns>
         </React.Fragment>

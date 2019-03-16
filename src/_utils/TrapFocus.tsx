@@ -5,12 +5,13 @@ import _get from 'lodash/get';
 import createFocusTrap from 'focus-trap';
 
 export type TrapFocusProps = {
-  children: (
-    {
-      fallbackFocusRef,
-      initialFocusRef
-    }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
-  ) => React.ReactNode;
+  children: ({
+    fallbackFocusRef,
+    initialFocusRef
+  }: {
+    fallbackFocusRef: React.RefObject<HTMLElement>;
+    initialFocusRef: React.RefObject<HTMLElement>;
+  }) => React.ReactNode;
   delayToActivate?: string;
   isActive?: boolean;
   usesPortal?: boolean;

@@ -22,12 +22,13 @@ import {
 export type LocalModalProps = {
   children:
     | React.ReactNode
-    | ((
-        {
-          fallbackFocusRef,
-          initialFocusRef
-        }: { fallbackFocusRef: React.RefObject<HTMLElement>; initialFocusRef: React.RefObject<HTMLElement> }
-      ) => React.ReactNode);
+    | (({
+        fallbackFocusRef,
+        initialFocusRef
+      }: {
+        fallbackFocusRef: React.RefObject<HTMLElement>;
+        initialFocusRef: React.RefObject<HTMLElement>;
+      }) => React.ReactNode);
   className?: string;
   /** Whether or not to show the modal component */
   isVisible?: boolean;

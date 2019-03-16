@@ -65,12 +65,11 @@ export const Alert: React.FunctionComponent<LocalAlertProps> = ({
 }) => (
   <_Alert role="alert" className={className} type={type} {...props}>
     <Flex alignItems="center">
-      {hasIcon &&
-        type && (
-          <IconWrapper>
-            <Icon a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
-          </IconWrapper>
-        )}
+      {hasIcon && type && (
+        <IconWrapper>
+          <Icon a11yLabel={type} color={type} icon={type} size={children ? '400' : undefined} />
+        </IconWrapper>
+      )}
       <ContentWrapper hasIcon={hasIcon}>
         {title && <AlertTitle>{title}</AlertTitle>}
         {typeof children === 'string' ? <Text>{children}</Text> : children}

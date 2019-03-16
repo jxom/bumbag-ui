@@ -9,7 +9,7 @@ export type PopoverContainerRenderProps = {
   toggle(): void;
 };
 export type LocalPopoverContainerProps = {
-  children: (({ isVisible, hide, show, toggle, ...args }: PopoverContainerRenderProps) => React.ReactNode);
+  children: ({ isVisible, hide, show, toggle, ...args }: PopoverContainerRenderProps) => React.ReactNode;
   defaultVisible?: boolean;
   initialState?: {};
 };
