@@ -20,6 +20,14 @@ export type AlertThemeConfig = {
 export type BackdropThemeConfig = {
   base?: Stylesheet;
 };
+export type BadgeThemeConfig = {
+  base?: Stylesheet;
+  absolute?: Stylesheet;
+  sizes?: {
+    medium?: Stylesheet;
+    lərge?: Stylesheet;
+  };
+};
 export type BlockquoteThemeConfig = {
   base?: Stylesheet;
 };
@@ -661,6 +669,7 @@ export type ThemeConfig = {
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;
   Backdrop?: BackdropThemeConfig;
+  Badge?: BadgeThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
   Breadcrumb?: BreadcrumbThemeConfig;
   Button?: ButtonThemeConfig;

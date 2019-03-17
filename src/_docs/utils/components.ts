@@ -65,9 +65,9 @@ export const componentList: Array<ComponentDetails> = [
   },
   {
     name: 'Badge',
-    type: 'util',
-    status: 'pending',
-    docsPath: 'https://github.com/fannypackui/fannypack/issues/1'
+    type: 'component',
+    status: 'complete',
+    docsPath: '/components/badge'
   },
   {
     name: 'Blockquote',

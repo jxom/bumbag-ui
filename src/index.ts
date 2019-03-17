@@ -26,6 +26,7 @@ export { getUniqueId } from './uniqueId';
 
 export { Alert } from './Alert';
 export { Avatar } from './Avatar';
+export { Badge } from './Badge';
 export { Backdrop } from './Backdrop';
 export { Blockquote } from './Blockquote';
 export { ActionButtons, Button } from './Button';
