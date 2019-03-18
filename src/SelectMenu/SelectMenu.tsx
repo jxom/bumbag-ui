@@ -365,7 +365,6 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       const key = _get(option, 'key', option);
       // @ts-ignore
       const isOptionSelected = Boolean(selectedOptions[key]);
-
       let newSelectedOptions = isMultiSelect ? selectedOptions : {};
       if (isOptionSelected) {
         // @ts-ignore
@@ -390,11 +389,20 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
 
   handleRemoveOption = (option: SelectMenuItem) => {
     return () => {
+      const { isMultiSelect, onChange } = this.props;
       const { selectedOptions } = this.state;
       let newSelectedOptions = { ...selectedOptions };
       // @ts-ignore
       delete newSelectedOptions[_get(option, 'key', option)];
       this.setState({ selectedOptions: newSelectedOptions });
+      let newValues: SelectMenuItems | SelectMenuItem | null = Object.values(newSelectedOptions);
+      if (newValues.length === 0) {
+        newValues = null;
+      } else if (!isMultiSelect) {
+        newValues = newValues[0];
+      }
+      const value = _get(option, 'value', option);
+      onChange && onChange(value, option, newValues);
     };
   };
 
