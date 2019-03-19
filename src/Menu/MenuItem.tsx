@@ -15,7 +15,7 @@ export type LocalMenuItemProps = {
   icon?: IconProps['icon'];
   isActive?: boolean;
   isDisabled?: boolean;
-  onClick?(): void;
+  onClick?(e: React.MouseEvent<any>): void;
 };
 export type MenuItemProps = Omit<ReakitButtonProps, 'elementRef'> & LocalMenuItemProps;
 
