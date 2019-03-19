@@ -39,7 +39,7 @@ export class MenuItem extends React.Component<LocalMenuItemProps> {
   static propTypes = menuItemPropTypes;
   static defaultProps = menuItemDefaultProps;
 
-  handleClick = e => {
+  handleClick = (e: React.MouseEvent<any>) => {
     const { context, hideOnClick, onClick } = this.props;
     onClick && onClick(e);
     hideOnClick && context && context.hide();
