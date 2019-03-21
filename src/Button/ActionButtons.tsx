@@ -2,9 +2,11 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 // @ts-ignore
 import _omit from 'lodash/omit';
-import Button, { ButtonProps, buttonPropTypes } from './Button';
-import Set, { SetProps } from '../Set/Set';
+
+import { SetProps } from '../Set/Set';
 import { Omit } from '../types';
+import Button, { ButtonProps, buttonPropTypes } from './Button';
+import { ActionButtons as _ActionButtons } from './styled';
 
 export type LocalActionButtonsProps = {
   addonButtons?: React.ReactElement<any>;
@@ -41,7 +43,7 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
   type,
   ...props
 }) => (
-  <Set {...props}>
+  <_ActionButtons {...props}>
     <Button onClick={onClickCancel} {...cancelProps}>
       {cancelText}
     </Button>
@@ -49,7 +51,7 @@ export const ActionButtons: React.FunctionComponent<LocalActionButtonsProps> = (
     <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} type={type} {...submitProps}>
       {submitText}
     </Button>
-  </Set>
+  </_ActionButtons>
 );
 
 export const actionButtonsPropTypes = {

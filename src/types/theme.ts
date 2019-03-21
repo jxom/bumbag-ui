@@ -3,6 +3,9 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../parseIcons';
 
 export type Stylesheet = InterpolationValue[];
+export type ActionButtonsThemeConfig = {
+  base?: Stylesheet;
+};
 export type AvatarThemeConfig = {
   base?: Stylesheet;
 };
@@ -666,6 +669,7 @@ export type ThemeConfig = {
   fontWeights?: FontWeightsThemeConfig;
   webFontLoader?: WebFontLoader;
 
+  ActionButtons?: ActionButtonsThemeConfig;
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;
   Backdrop?: BackdropThemeConfig;

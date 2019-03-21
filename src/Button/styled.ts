@@ -5,6 +5,8 @@ import _defaultPalette from '../themes/default/palette';
 
 import styled, { css, space } from '../styled';
 import Icon, { IconProps } from '../Icon/Icon';
+import Set from '../Set';
+import { ActionButtonsProps } from './ActionButtons';
 import { ButtonProps } from './Button';
 
 const defaultPalette = _defaultPalette({});
@@ -182,6 +184,12 @@ export const ButtonIcon = styled(Icon)<IconProps & { isAfter: boolean; isBefore:
 
   & {
     ${theme('fannypack.Button.Icon.base')};
+  }
+`;
+
+export const ActionButtons = styled(Set)<ActionButtonsProps>`
+  & {
+    ${theme('fannypack.ActionButtons.base')};
   }
 `;
 
