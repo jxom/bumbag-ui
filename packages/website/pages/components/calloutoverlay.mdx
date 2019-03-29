@@ -1,0 +1,61 @@
+import PropsTable from '../../components/PropsTable';
+import CalloutOverlay from 'fannypack/CalloutOverlay/CalloutOverlay';
+
+# CalloutOverlay
+
+### Import
+
+```jsx
+import { CalloutOverlay } from 'fannypack'
+```
+
+### Basic Usage
+
+`CalloutOverlay` is identical to `Callout` and uses `Overlay` internally to create a callout overlay. Callout overlays are useful for showing announcements to the user.
+
+```.jsx
+<Overlay.Container>
+  {overlay => (
+    <Box>
+      <Button use={Overlay.Toggle} {...overlay}>
+        Click me
+      </Button>
+      <CalloutOverlay
+        fade
+        slide
+        showCloseButton
+        title="This is a title"
+        type="info"
+        {...overlay}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+        augue sit amet justo.
+      </CalloutOverlay>
+    </Box>
+  )}
+</Overlay.Container>
+```
+
+### Props
+
+<PropsTable component={CalloutOverlay} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  CalloutOverlay: {
+    base: css | Object,
+
+    // Styles to apply to the callout inside the overlay
+    Callout: {
+      base: css | Object,
+      // Style to apply when mobile viewport
+      mobile: css | Object
+    }
+  }
+}
+```

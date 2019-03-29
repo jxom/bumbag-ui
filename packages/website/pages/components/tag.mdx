@@ -1,0 +1,129 @@
+import PropsTable from '../../components/PropsTable';
+import { Tag } from 'fannypack/Tag/Tag';
+
+# Tag
+
+### Import
+
+```jsx
+import { Tag } from 'fannypack'
+```
+
+### Basic Usage
+
+```.jsx
+<Tag>Default</Tag>
+```
+
+### Colors
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag palette="primary">Primary</Tag>
+  <Tag palette="secondary">Secondary</Tag>
+  <Tag palette="info">Info</Tag>
+  <Tag palette="success">Success</Tag>
+  <Tag palette="warning">Warning</Tag>
+  <Tag palette="danger">Danger</Tag>
+</Set>
+```
+
+#### Tints
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag palette="textTint">Default</Tag>
+  <Tag palette="primaryTint">Primary</Tag>
+  <Tag palette="secondaryTint">Secondary</Tag>
+  <Tag palette="infoTint">Info</Tag>
+  <Tag palette="successTint">Success</Tag>
+  <Tag palette="warningTint">Warning</Tag>
+  <Tag palette="dangerTint">Danger</Tag>
+</Set>
+```
+
+### Outlines
+
+An outline can be placed on a tag by assigning `"outlined"` to the `kind` prop.
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag kind="outlined">Default</Tag>
+  <Tag palette="primary" kind="outlined">Primary</Tag>
+  <Tag palette="secondary" kind="outlined">Secondary</Tag>
+  <Tag palette="info" kind="outlined">Info</Tag>
+  <Tag palette="success" kind="outlined">Success</Tag>
+  <Tag palette="warning" kind="outlined">Warning</Tag>
+  <Tag palette="danger" kind="outlined">Danger</Tag>
+</Set>
+```
+
+### Sizes
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag>Default</Tag>
+  <Tag size="medium">Medium</Tag>
+  <Tag size="large">Large</Tag>
+</Set>
+```
+
+### Sets
+
+To group a set of tags, use the [`<Set>` component](/components/set).
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag>Hello</Tag>
+  <Tag>World</Tag>
+  <Tag>This</Tag>
+  <Tag>Is</Tag>
+  <Tag>Me</Tag>
+</Set>
+```
+
+### Grouping
+
+You can group tags to make one tag with the `<Group>` component.
+
+```.jsx
+<Group>
+  <Tag>Default</Tag>
+  <Tag palette="textTint">Hello</Tag>
+</Group>
+```
+
+### Removable tags
+
+You can add a removable tag by adding the `onRemove` prop:
+
+```.jsx
+<Set spacing="minor-1">
+  <Tag onRemove={() => alert('removed')} palette="primary">Primary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="secondary">Secondary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="info">Info</Tag>
+  <Tag onRemove={() => alert('removed')} palette="success">Success</Tag>
+  <Tag onRemove={() => alert('removed')} palette="warning">Warning</Tag>
+  <Tag onRemove={() => alert('removed')} palette="danger">Danger</Tag>
+</Set>
+```
+
+### `<Tag>` Props
+
+<PropsTable component={Tag} />
+
+### Theming
+
+#### `<Tag>` Schema
+
+```jsx
+{
+  Tag: {
+    base: css | Object,
+    sizes: {
+      medium: css | Object,
+      large: css | Object
+    }
+  }
+}
+```

@@ -1,0 +1,59 @@
+import PropsTable from '../../components/PropsTable';
+
+# CSS Props
+
+You can also use CSS-as-props in Fannypack. These CSS attributes can be passed through as camel-cased props. CSS props can be very useful for margins and paddings.
+
+Here is an example of using CSS props with Fannypack:
+
+```.jsx
+<Box backgroundColor="blue" width="50px" height="50px" />
+<Box backgroundColor="blue" marginTop="1rem" width="50px" height="50px" />
+```
+
+## Colors
+
+When using CSS props, you can specify a [**color from the palette**](/palette) with any color CSS property (`color`, `backgroundColor`, `borderColor`, etc).
+
+Or, you can specify a **CSS color** or **hex** value.
+
+Example:
+
+```.jsx
+<Box backgroundColor="successTint" color="success" padding="1rem">
+  Hello world
+</Box>
+<Box backgroundColor="#ff0000" color="black" padding="1rem" marginTop="1rem">
+  Hello world
+</Box>
+```
+
+## Spacing
+
+You can specify a [**spacing from the theme**]() for margins & paddings.
+
+Or, you can specify a **`px`**, **`em`** or **`rem`** unit.
+
+```.jsx
+<Box padding="major-4" marginLeft="major-6" marginRight="major-6" backgroundColor="primary" color="white">Hello world</Box>
+```
+
+## Font sizes
+
+You can specify a [**font size from the theme**]() for font sizes.
+
+Or, you can specify a **`px`**, **`em`** or **`rem`** unit.
+
+```.jsx
+<Text fontSize="400">Hello world</Text>
+```
+
+## Font weights
+
+You can specify a [**font weight from the theme**]() for font weights.
+
+Or, you can specify a CSS font weight value (e.g. `500` or `"bolder"`).
+
+```.jsx
+<Text fontWeight="semibold">Hello world</Text>
+```

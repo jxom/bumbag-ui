@@ -1,0 +1,140 @@
+import PropsTable from '../../components/PropsTable';
+import { Sidebar } from 'fannypack/Sidebar/Sidebar';
+
+# Sidebar
+
+### Import
+
+```jsx
+import { Sidebar } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<Sidebar>` component uses a fixed `<Overlay>` internally, but it is rendered inside a portal with it's focus trapped (keyboard navigation) for accessibility and also includes a backdrop.
+
+It is recommended to use the sidebar helper components (`<Sidebar.Show>`, `<Sidebar.Hide>`) when building sidebars to leverage accessibility features they provide like so:
+
+```.jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Click me
+      </Button>
+      <Sidebar {...sidebar}>
+        Hello world!
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+### Align
+
+You can align the sidebar with the `align` prop which will align the sidebar to the one side of the screen. This can be either set to `"left"` or `"right"`.
+
+```.jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Click me
+      </Button>
+      <Sidebar align="right" {...sidebar}>
+        Hello world!
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+### With initial focus set
+
+```.jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Click me
+      </Button>
+      <Sidebar align="right" {...sidebar}>
+        {({ initialFocusRef }) => (
+          <React.Fragment>
+            Hello world!
+            <Button elementRef={initialFocusRef} use={Sidebar.Hide} {...sidebar}>
+              Close
+            </Button>
+          </React.Fragment>
+        )}
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+### With close button hidden
+
+You can hide the close button with the `hideCloseButton` prop.
+
+```.jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Click me
+      </Button>
+      <Sidebar align="right" hideCloseButton {...sidebar}>
+        Hello world!
+        <Button use={Sidebar.Hide} {...sidebar}>
+          Close
+        </Button>
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+### With no animation
+
+You can disable the default animations with the `slide` and `backdropFade` props.
+
+```.jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Click me
+      </Button>
+      <Sidebar slide={false} backdropFade={false} {...sidebar}>
+        Hello world!
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+### `<Sidebar>` Props
+
+<PropsTable component={Sidebar} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Sidebar: {
+    base: css | Object,
+    Hide: {
+      base: css | Object
+    },
+    Show: {
+      base: css | Object
+    },
+    Close: {
+      base: css | Object
+    }
+  }
+}
+```

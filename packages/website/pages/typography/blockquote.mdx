@@ -1,0 +1,76 @@
+import { Box, Text, Paragraph } from 'fannypack';
+import {Blockquote} from 'fannypack/Blockquote';
+import PropsTable from '../../components/PropsTable';
+
+# Blockquote
+
+### Import
+
+```jsx
+import { Blockquote } from 'fannypack'
+```
+
+### Basic Usage
+
+`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
+
+```.jsx
+<Blockquote>
+  <Paragraph marginBottom="major-2">
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </Paragraph>
+  <Text use="cite">- Russell Coight</Text>
+</Blockquote>
+<Blockquote backgroundColor="whitesmoke" marginTop="major-2">
+  <Paragraph marginBottom="major-2">
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </Paragraph>
+  <Text use="cite">- Russell Coight</Text>
+</Blockquote>
+```
+
+### Border styling
+
+The left border can be modified using the primitive style props:
+
+```.jsx
+<Blockquote borderColor="blue">
+  <Paragraph marginBottom="major-2">
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </Paragraph>
+  <Text use="cite">- Russell Coight</Text>
+</Blockquote>
+```
+
+Or you can hide the border:
+
+```.jsx
+<Blockquote border="none">
+  <Paragraph marginBottom="major-2">
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </Paragraph>
+  <Text use="cite">- Russell Coight</Text>
+</Blockquote>
+```
+
+### Props
+
+<PropsTable component={Blockquote} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Blockquote: {
+    base: css | Object
+  }
+}
+```
+
+[Learn more about theming](/styling#theming)

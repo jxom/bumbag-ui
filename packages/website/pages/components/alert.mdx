@@ -1,0 +1,162 @@
+import PropsTable from '../../components/PropsTable';
+import { Alert } from 'fannypack/Alert';
+
+# Alerts
+
+### Import
+
+```jsx
+import { Alert } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<Alert>` component displays a **brief** & **important** message in a way that attracts a user's attention without interrupting a user's task.
+
+If you are needing to display more descriptive, but important message to a user, consider using the [`<Callout>` component](/components/callout).
+
+```.jsx
+<Alert>
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+```
+
+### Titles
+
+You can set a title with the `title` prop.
+
+```.jsx
+<Alert title="Alert Title">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" marginTop="major-2" />
+```
+
+### Types
+
+An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
+
+```.jsx
+<Alert title="Alert Title" type="info" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" type="success" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" type="warning" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" type="danger" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+```
+
+### Icons
+
+You can add a icon to your alert by using the `hasIcon` prop. The icon will default to the status' icon. If you want to change this icon, then configure the `iconNames` attribute in the [Icon theme](/components/icon#theming).
+
+```.jsx
+<Alert title="Alert Title" hasIcon type="info" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasIcon type="success" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasIcon type="warning" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasIcon type="danger" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+```
+
+### Close button
+
+To add a close button, add the `showCloseButton` & `onClickClose` props.
+
+**Note:** You can also add props to the close button with `closeButtonProps`. It takes [`<Button>`'s props](/components/button)
+
+```.jsx
+<Alert
+  title="Alert Title"
+  onClickClose={() => alert('Closed!')}
+  showCloseButton
+  hasIcon
+  type="info"
+  marginTop="major-2"
+>
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+```
+
+### Inline alerts
+
+To inline an alert, set the `display` prop to `inline-block`.
+
+```.jsx
+<Alert display="inline-block">This is an inline alert.</Alert>
+```
+
+### Tints
+
+```.jsx
+<Alert title="Alert Title" hasTint type="info" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasTint type="success" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasTint type="warning" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+<Alert title="Alert Title" hasTint type="danger" marginTop="major-2">
+  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
+  helvetica.
+</Alert>
+```
+
+### Props
+
+<PropsTable component={Alert} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Alert: {
+    base: css | Object,
+
+    // Style to apply for tinted alerts
+    tint: css | Object,
+
+    // Style to apply for the close button
+    Close: {
+      base: css | object,
+      hover: css | object
+    }
+
+    // Style to apply for the alert title
+    Title: {
+      base: css | Object
+    }
+  }
+}
+```
+
+[Learn more about theming](/styling#theming)

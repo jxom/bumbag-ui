@@ -1,0 +1,133 @@
+# Fonts
+
+By default, Fannypack uses the following fonts as it's default font set:
+
+```css
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+```
+
+You can change the font family through the [Fannypack theme](/styling/theming) via `global.fontFamily`:
+
+```jsx
+import { css, ThemeProvider } from 'fannypack';
+
+const theme = {
+  global: {
+    fontFamily: 'Comic Sans MS'
+  }
+}
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    {/* your app... */}
+  </ThemeProvider>
+)
+```
+
+### Loading Custom Fonts via Web Font Loader
+
+Fannypack uses [Typekit's Web Font Loader](https://github.com/typekit/webfontloader) which allows you to load in fonts regardless of the source - without `<link>`, `@font-face` or `@import`. You can asynchronously load in fonts from Google Fonts, Typekit, Fonts.com, and Fontdeck, as well as self-hosted web fonts. [Click here to read more about it.](https://github.com/typekit/webfontloader)
+
+To load in a custom font via **Web Font Loader**, add the [config](https://github.com/typekit/webfontloader#google) in the [Fannypack Theme](/styling/theming). Below is an example of loading in a **Google font**.
+
+```jsx
+const theme = {
+  webFontLoader: {
+    google: {
+      families: ['Lato:400,700']
+    }
+  },
+  global: {
+    fontFamily: "'Lato', sans-serif",
+    fallbackFontFamily: 'sans-serif'
+  },
+  fontWeights: {
+    normal: 400,
+    bold: 700
+  }
+}
+```
+
+**Note:** It is recommended that you set a fallback font family when loading in a custom font so the browser can use the fallback font and switch over when the custom font has loaded.
+
+### Font Weights
+
+Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
+
+```.jsx
+<Text fontWeight="normal">Normal text</Text><br/>
+<Text fontWeight="semibold">Semibold text</Text><br/>
+<Text fontWeight="bold">Bold text</Text>
+```
+
+You can also access the font weights in Styled Components through the Fannypack Theme:
+
+```jsx
+import { Text, theme, styled } from 'fannypack;
+
+const BoldText = styled(Text)`
+  font-weight: ${theme('fannypack.fontWeights.bold')};
+`;
+```
+
+### Font Sizes
+
+Fannypack uses a scale from 100-900 for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
+
+`200` (16px) is the base font size.
+
+```.jsx
+<Text fontSize="100">Text 100 - 12px</Text><br/>
+<Text fontSize="150">Text 150 - 14px</Text><br/>
+<Text>Text 200 - 16px (normal)</Text><br/>
+<Text fontSize="300">Text 300 - 20px</Text><br/>
+<Text fontSize="400">Text 400 - 24px</Text><br/>
+<Text fontSize="500">Text 500 - 32px</Text><br/>
+<Text fontSize="600">Text 600 - 40px</Text><br/>
+<Text fontSize="700">Text 700 - 48px</Text><br/>
+<Text fontSize="800">Text 800 - 60px</Text><br/>
+<Text fontSize="900">Text 900 - 72px</Text><br/>
+```
+
+You can also access the font sizes in Styled Components through the Fannypack Theme:
+
+```jsx
+import { Text, theme, styled } from 'fannypack';
+
+const LargeText = styled(Text)`
+  font-size: ${theme('fannypack.fontSizes.700')}em;
+`;
+```
+
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  global: {
+    base: css | string
+  },
+  fontWeights: {
+    // These are the default required font weights, but you can also add your own.
+    normal: number,   // default = 400
+    semibold: number, // default = 600
+    bold: number      // default = 700
+  },
+  fontSizes: {
+    // These are the default required font sizes, but you can also add your own.
+    100: number, // default = 0.75  (12px)
+    150: number, // default = 0.875 (14px)
+    200: number, // default = 1     (16px)
+    300: number, // default = 1.25  (20px)
+    400: number, // default = 1.5   (24px)
+    500: number, // default = 2     (32px)
+    600: number, // default = 2.5   (40px)
+    700: number, // default = 3     (48px)
+    800: number, // default = 3.75  (60px)
+    900: number, // default = 4.5   (72px)
+  }
+}
+```
+

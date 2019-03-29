@@ -1,0 +1,199 @@
+import { Box, Block, Inline, InlineBlock, InlineFlex, Grid, Flex } from 'fannypack';
+
+# Primitives
+
+Fannypack exports Reakit's primitives:
+
+- `<Box>`
+- `<Block>`
+- `<Inline>`
+- `<InlineBlock>`
+- `<Flex>`
+- `<InlineFlex>`
+- `<Grid>`
+
+These primitive components provide an abstraction on top of the `<div>` element to include reset styles and allows you to specify CSS attributes as props (see the below for more details).
+
+See more about primitive components [here](https://reakit.io/components/box).
+
+## Box
+
+```jsx
+import { Box } from 'fannypack'
+```
+
+All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use `Box`'s props. [Read more here](https://reakit.io/components/box).
+
+By default it renders a `<div>` element with basic reset styles.
+
+```.jsx
+<Box>This is a box</Box>
+```
+
+You're able to apply any CSS attribute as a prop to box:
+
+```.jsx
+<Box backgroundColor="primary" color="white" padding="major-3">
+  This is a box
+</Box>
+```
+
+#### Color attributes
+
+Any CSS color attribute (e.g. `color`, `border-color`, etc) can take a [color from the Fannypack palette](/palette#theming).
+
+```.jsx
+<Box backgroundColor="primaryTint" color="primary">
+  This is a box
+</Box>
+```
+
+#### Margin & padding attributes
+
+Any CSS margin/padding attribute (e.g. `margin`, `padding-left`, etc) can take a [spacing from the Fannypack theme](/styling#layoutthemeconfig).
+
+```.jsx
+<Box backgroundColor="primaryTint" padding="major-3">
+  This is a box
+</Box>
+```
+
+#### Font attributes
+
+The `fontWeight` CSS prop can contain of a [font weight in the Fannypack theme](/styling#fontweightsthemeconfig).
+
+```.jsx
+<Box fontWeight="semibold">This is a box</Box>
+```
+
+The `fontSize` CSS prop can contain of a [font size in the Fannypack theme](/styling#fontsizethemeconfig).
+
+```.jsx
+<Box fontSize="400">This is a box</Box>
+```
+
+## Block
+
+```jsx
+import { Block } from 'fannypack'
+```
+
+A `<Block>` is a `<Box>` with `display: block`. [Read more here](https://reakit.io/components/block).
+
+```.jsx
+<Block backgroundColor="primaryTint" padding="major-3">
+  Block 1
+</Block>
+<Block backgroundColor="successTint" padding="major-3">
+  Block 2
+</Block>
+<Block backgroundColor="dangerTint" padding="major-3">
+  Block 3
+</Block>
+```
+
+## Inline
+
+```jsx
+import { Inline } from 'fannypack'
+```
+
+An `<Inline>` is a `<Box>` with `display: inline`. [Read more here](https://reakit.io/components/inline).
+
+```.jsx
+<Inline>
+  Inline 1
+</Inline>
+<Inline>
+  Inline 2
+</Inline>
+<Inline>
+  Inline 3
+</Inline>
+```
+
+## InlineBlock
+
+```jsx
+import { InlineBlock } from 'fannypack'
+```
+
+An `<InlineBlock>` is a `<Box>` with `display: inline-block`. [Read more here](https://reakit.io/components/inlineblock).
+
+```.jsx
+<InlineBlock backgroundColor="primaryTint" padding="major-3">
+  InlineBlock 1
+</InlineBlock>
+<InlineBlock backgroundColor="successTint" padding="major-3">
+  InlineBlock 2
+</InlineBlock>
+<InlineBlock backgroundColor="dangerTint" padding="major-3">
+  InlineBlock 3
+</InlineBlock>
+```
+
+## Flex
+
+```jsx
+import { Flex } from 'fannypack'
+```
+
+A `<Flex>` is a `<Box>` with `display: flex`. [Read more here](https://reakit.io/components/flex).
+
+```.jsx
+<Flex>
+  <Box backgroundColor="primaryTint" padding="major-3">
+    Box 1
+  </Box>
+  <Box backgroundColor="successTint" padding="major-3">
+    Box 2
+  </Box>
+  <Box backgroundColor="dangerTint" padding="major-3">
+    Box 3
+  </Box>
+</Flex>
+```
+
+## InlineFlex
+
+```jsx
+import { InlineFlex } from 'fannypack'
+```
+
+An `<InlineFlex>` is a `<Box>` with `display: inline-flex`. [Read more here](https://reakit.io/components/inlineflex).
+
+```.jsx
+<InlineFlex justifyContent="space-evenly" width="100%">
+  <Box backgroundColor="primaryTint" padding="major-3">
+    Box 1
+  </Box>
+  <Box backgroundColor="successTint" padding="major-3">
+    Box 2
+  </Box>
+  <Box backgroundColor="dangerTint" padding="major-3">
+    Box 3
+  </Box>
+</InlineFlex>
+```
+
+## Grid
+
+```jsx
+import { Grid } from 'fannypack'
+```
+
+A `<Grid>` is a `<Box>` with `display: grid`. It also consists of a `<Grid.Item>` component to pair with the `<Grid>`. [Read more here](https://reakit.io/components/grid).
+
+```.jsx
+<Grid templateColumns="repeat(2, 1fr)" autoRows="auto" gap="3vw">
+  <Grid.Item backgroundColor="primaryTint" padding="major-3">
+    Grid Item 1
+  </Grid.Item>
+  <Grid.Item backgroundColor="successTint" padding="major-3">
+    Grid Item 2
+  </Grid.Item>
+  <Grid.Item backgroundColor="dangerTint" padding="major-3">
+    Grid Item 3
+  </Grid.Item>
+</Grid>
+```
