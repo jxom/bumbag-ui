@@ -1,0 +1,223 @@
+import PropsTable from '../../components/PropsTable';
+import { Box, Button, Text, styled } from 'fannypack';
+
+# Theming
+
+Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
+
+### Overriding the default theme (recommended)
+
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](#theme-config-schema).
+
+[Click here](https://github.com/fannypackui/fannypack/blob/master/src/themes/default.js) to see the default theme.
+
+#### Example
+
+```jsx
+import { ThemeProvider, css } from 'fannypack';
+
+const theme = {
+  global: {
+    base: css`
+      font-family: 'Comic Sans MS'
+    `
+  },
+  palette: {
+    primary: 'blue'
+  },
+  layout: {
+    mobileBreakpoint: 520,
+    tabletBreakpoint: 960
+  },
+  Button: {
+    disabled: css`
+      opacity: 0.2
+    `
+  },
+  Text: css`
+    font-weight: 300;
+  `
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+### Creating your own theme (advanced)
+
+If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+
+#### Example
+
+```jsx
+import { ThemeProvider, defaultTheme } from 'fannypack';
+
+const App = () => (
+  <ThemeProvider isStandalone theme={defaultTheme()}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
+
+### Theme Reference
+
+```jsx
+{
+  // Core
+  global: GlobalThemeConfig,
+  palette: PaletteThemeConfig,
+  layout: LayoutThemeConfig,
+  fontSizes: FontSizeThemeConfig,
+  fontWeights: FontWeightsThemeConfig
+
+  // Components
+  ActionButtons: ActionButtonsThemeConfig,
+  Alert: AlertThemeConfig,
+  Avatar: AvatarThemeConfig,
+  Badge: BadgeThemeConfig,
+  Backdrop: BackdropThemeConfig,
+  Blockquote: BlockquoteThemeConfig,
+  Button: ButtonThemeConfig,
+  Callout: CalloutThemeConfig,
+  CalloutOverlay: CalloutOverlayThemeConfig,
+  Card: CardThemeConfig,
+  Code: CodeThemeConfig,
+  Column: ColumnThemeConfig,
+  Columns: ColumnsThemeConfig,
+  Container: ContainerThemeConfig,
+  Divider: DividerThemeConfig,
+  FieldWrapper: FieldWrapperThemeConfig,
+  FieldSet: FieldSetThemeConfig,
+  Group: GroupThemeConfig,
+  Heading: HeadingThemeConfig,
+  Hidden: HiddenThemeConfig,
+  Icon: IconThemeConfig,
+  Image: ImageThemeConfig,
+  Input: InputThemeConfig,
+  Label: LabelThemeConfig,
+  LayoutSet: LayoutSetThemeConfig,
+  Link: LinkThemeConfig,
+  List: ListThemeConfig,
+  Markdown: MarkdownThemeConfig,
+  Menu: MenuThemeConfig,
+  Modal: ModalThemeConfig,
+  Overlay: OverlayThemeConfig,
+  Pane: PaneThemeConfig,
+  Paragraph: ParagraphThemeConfig,
+  Popover: PopoverThemeConfig,
+  Radio: RadioThemeConfig,
+  RadioGroup: RadioGroupThemeConfig
+  Rating: RatingThemeConfig,
+  Select: SelectThemeConfig,
+  SelectMenu: SelectMenuThemeConfig,
+  Set: SetThemeConfig,
+  Sidebar: SidebarThemeConfig,
+  Spinner: SpinnerThemeConfig,
+  Switch: SwitchThemeConfig,
+  Table: TableThemeConfig,
+  Tabs: TabsThemeConfig,
+  Tag: TagThemeConfig,
+  Text: TextThemeConfig,
+  Textarea: TextareaThemeConfig,
+  Toast: ToastThemeConfig,
+  Toasts: ToastsThemeConfig
+}
+```
+
+#### Core
+
+- [GlobalThemeConfig](/styling/global-styles#theming)
+- [PaletteThemeConfig](/palette#theming)
+- [LayoutThemeConfig](#layoutthemeconfig)
+- [FontSizeThemeConfig](/styling/fonts#theming)
+- [FontWeightsThemeConfig](/styling/fonts#theming)
+
+#### Components
+
+- [ActionButtonsThemeConfig](/components/button#theming)
+- [AlertThemeConfig](/components/alert#theming)
+- [AvatarThemeConfig](/components/avatar#theming)
+- [BadgeThemeConfig](/components/badge#theming)
+- [BackdropThemeConfig](/utils/backdrop#theming)
+- [BlockquoteThemeConfig](/typography/blockquote#theming)
+- [BreadcrumbThemeConfig](/components/breadcrumb#theming)
+- [ButtonThemeConfig](/components/button#theming)
+- [CalloutThemeConfig](/components/callout#theming)
+- [CalloutOverlayThemeConfig](/components/calloutoverlay#theming)
+- [CardThemeConfig](/components/card#theming)
+- [CodeThemeConfig](/typography/code#theming)
+- [ColumnThemeConfig](/layout/column#theming)
+- [ColumnsThemeConfig](/layout/column#theming)
+- [ContainerThemeConfig](/layout/container#theming)
+- [DividerThemeConfig](/layout/divider#theming)
+- [FieldWrapper](/form/fieldwrapper#theming)
+- [FieldSet](/form/fieldset#theming)
+- [GroupThemeConfig](/utils/group#theming)
+- [HeadingThemeConfig](/typography/heading#theming)
+- [HiddenThemeConfig](/utils/hidden#theming)
+- [IconThemeConfig](/components/icon#theming)
+- [ImageThemeConfig](/components/image#theming)
+- [InputThemeConfig](/form/input#theming)
+- [LabelThemeConfig](/form/label#theming)
+- [LayoutSetThemeConfig](/layout/layoutset#theming)
+- [LinkThemeConfig](/typography/link#theming)
+- [ListThemeConfig](/typography/list#theming)
+- [MarkdownThemeConfig](/components/markdown#theming)
+- [MenuThemeConfig](/components/menu#theming)
+- [ModalThemeConfig](/utils/modal#theming)
+- [OverlayThemeConfig](/utils/overlay#theming)
+- [PaneThemeConfig](/layout/pane#theming)
+- [ParagraphThemeConfig](/typography/paragraph#theming)
+- [PopoverThemeConfig](/components/popover#theming)
+- [RadioThemeConfig](/form/radio#theming)
+- [RadioGroupThemeConfig](/form/radiogroup#theming)
+- [RatingThemeConfig](/extras/rating#theming)
+- [SelectThemeConfig](/form/select#theming)
+- [SelectMenuThemeConfig](/form/selectmenu#theming)
+- [SetThemeConfig](/utils/set#theming)
+- [SidebarThemeConfig](/utils/sidebar#theming)
+- [SpinnerThemeConfig](/components/spinner#theming)
+- [SwitchThemeConfig](/form/switch#theming)
+- [TableThemeConfig](/components/table#theming)
+- [TabsThemeConfig](/components/tabs#theming)
+- [TagThemeConfig](/components/tag#theming)
+- [TextThemeConfig](/typography/text#theming)
+- [TextareaThemeConfig](/form/textarea#theming)
+- [ToastThemeConfig](/typography/toast#theming)
+- [ToastsThemeConfig](/typography/toast#theming)
+
+###### LayoutThemeConfig
+
+The layout theme config is used to manage breakpoints & spacing (like paddings & margins).
+
+```jsx
+{
+  mobileBreakpoint: number,
+  tabletBreakpoint: number,
+  desktopBreakpoint: number,
+  widescreenBreakpoint: number,
+  fullHDBreakpoint: number,
+  gapFactor: number,
+  minorUnit: number,
+  majorUnit: number
+}
+```
+
+Default:
+
+```jsx
+{
+  mobileBreakpoint: 480,
+  tabletBreakpoint: 768,
+  desktopBreakpoint: 1024,
+  widescreenBreakpoint: 1200,
+  fullHDBreakpoint: 1440,
+  gapFactor: 0.5,
+  minorUnit: 4,
+  majorUnit: 8
+}
+```

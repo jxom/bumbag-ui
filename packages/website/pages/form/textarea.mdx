@@ -1,0 +1,123 @@
+import PropsTable from '../../components/PropsTable';
+import {Textarea} from 'fannypack/Textarea/Textarea';
+import {TextareaField} from 'fannypack/Textarea/TextareaField';
+
+# Textarea
+
+### Import
+
+```jsx
+import { Textarea } from 'fannypack'
+```
+
+### Basic usage
+```.jsx
+<Textarea />
+```
+
+### Default values
+
+For uncontrolled textareas, set a default value using the `defaultValue` prop.
+
+```.jsx
+<Textarea defaultValue="Fannypacks rock!" />
+```
+
+### Disabled
+
+Make the textarea disabled with the `disabled` prop.
+
+```.jsx
+<Textarea disabled defaultValue="Disabled field" />
+```
+
+### Sizes
+
+A textarea can come in different sizes - `small`, `medium`, `large`, or the default.
+
+```.jsx
+<Textarea size="small" /><br/>
+<Textarea marginTop="major-1" /><br/>
+<Textarea size="medium" marginTop="major-1" /><br/>
+<Textarea size="large" marginTop="major-1" />
+```
+
+### States
+
+A textarea can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```.jsx
+<Textarea state="danger" /><br/>
+<Textarea state="success" marginTop="major-1" /><br/>
+<Textarea state="warning" marginTop="major-1" /><br/>
+<Textarea state="primary" marginTop="major-1" />
+```
+
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled textareas!
+
+```.jsx
+<Component initialState={{ value: 'Fannypacks rock!' }}>
+  {({ state, setState }) => (
+    <Textarea onChange={e => setState({ value: e.target.value })} value={state.value} />
+  )}
+</Component>
+```
+
+### Accessibility
+
+Using an accessibility label (`a11yLabel`), will enable screen readers to read the contents of the label.
+
+```.jsx
+<Textarea a11yLabel="name" placeholder="Jake Moxey" />
+```
+
+### `<Textarea>` Props
+
+<PropsTable component={Textarea} />
+
+# TextareaField
+
+### Import
+
+```jsx
+import { TextareaField } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<TextareaField>` component contains of the [`<Textarea>` component](#input) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Textarea>` props](/form/textarea#textarea-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+```.jsx
+<TextareaField a11yId="description" label="Description" />
+```
+
+### `<TextareaField>` Props
+
+<PropsTable component={TextareaField} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Textarea: {
+    base: css | Object,
+    disabled: css | Object,
+    focus: css | Object,
+    placeholder: css | Object,
+    sizes: {
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
+  }
+}
+```

@@ -1,0 +1,127 @@
+import PropsTable from '../../components/PropsTable';
+import Hidden from 'fannypack/Hidden/Hidden';
+import { Divider } from 'fannypack';
+
+# Hidden
+
+### Import
+
+```jsx
+import { Hidden } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<Hidden>` component hides itself away and waits for a visible prop to show up. By default, it hides it's children.
+
+```.jsx
+<Hidden>test</Hidden>
+```
+
+You can show the children by default, with the `isVisible` prop flag.
+
+```.jsx
+<Hidden isVisible>test</Hidden>
+```
+
+### `<Hidden>` Props
+
+<PropsTable component={Hidden} />
+
+<Divider marginTop="major-4" marginBottom="major-4" />
+
+# Hidden.Container
+
+The `Hidden.Container` component allows you to control hidden state with ease (it's like toggle state). It's recommended to use `Hidden.Show` & `Hidden.Hide` (or `Hidden.Toggle`) with the container to get event handlers out of the box.
+
+### Basic Usage
+
+#### With a toggle
+
+```.jsx
+<Hidden.Container>
+  {hidden => (
+    <Box>
+      <Button use={Hidden.Toggle} {...hidden}>Click me</Button>
+      <Hidden {...hidden}>
+        Hello!
+      </Hidden>
+    </Box>
+  )}
+</Hidden.Container>
+```
+
+#### With show/hide
+
+```.jsx
+<Hidden.Container>
+  {hidden => (
+    <Box>
+      <Group>
+        <Button use={Hidden.Show} {...hidden}>Show</Button>
+        <Button use={Hidden.Hide} {...hidden}>Hide</Button>
+      </Group>
+      <Hidden {...hidden}>
+        Hello!
+      </Hidden>
+    </Box>
+  )}
+</Hidden.Container>
+```
+
+### Container render props
+
+A destructured version of the above example:
+
+```.jsx
+<Hidden.Container>
+  {hidden => (
+    <Box>
+      <Group>
+        <Button onClick={hidden.show}>Show</Button>
+        <Button onClick={hidden.hide}>Hide</Button>
+      </Group>
+      <Hidden isVisible={hidden.isVisible}>
+        Hello!
+      </Hidden>
+    </Box>
+  )}
+</Hidden.Container>
+```
+
+### `<Hidden.Container>` Props
+
+<PropsTable component={Hidden.Container} />
+
+### `<Hidden.Show>` Props
+
+<PropsTable component={Hidden.Show} />
+
+### `<Hidden.Hide>` Props
+
+<PropsTable component={Hidden.Hide} />
+
+### `<Hidden.Toggle>` Props
+
+<PropsTable component={Hidden.Toggle} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Hidden: {
+    base: css | Object,
+    Show: {
+      base: css | Object
+    },
+    Hide: {
+      base: css | Object
+    },
+    Toggle: {
+      base: css | Object
+    }
+  }
+}
+```

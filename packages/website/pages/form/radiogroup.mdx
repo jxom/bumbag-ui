@@ -1,0 +1,170 @@
+import PropsTable from '../../components/PropsTable';
+import { RadioGroupField } from 'fannypack/Radio/RadioGroupField';
+import { RadioGroup } from 'fannypack/Radio/RadioGroup';
+
+# RadioGroup
+
+```jsx
+import { RadioGroup } from 'fannypack'
+```
+
+### Basic Usage
+
+The `RadioGroup` component renders a group of [`<Radio>` fields](/form/radio).
+
+```.jsx
+<RadioGroup
+  name="weather"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Horizontal group
+
+```.jsx
+<RadioGroup
+  isHorizontal
+  name="weather2"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Disabled
+
+You can disable a radio group with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
+
+```.jsx
+<RadioGroup
+  name="weather3"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy', disabled: true },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### States
+
+A RadioGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```.jsx
+<RadioGroup
+  state="danger"
+  name="weather4"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Default value
+
+Specify a default checked value with the `defaultValue` prop.
+
+```.jsx
+<RadioGroup
+  defaultValue="overcast"
+  name="weather5"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+```.jsx
+<Component initialState={{ value: 'overcast' }}>
+  {({ state, setState }) => (
+    <RadioGroup
+      name="weather6"
+      options={[
+        { label: 'Sunny', value: 'sunny' },
+        { label: 'Windy', value: 'windy' },
+        { label: 'Overcast', value: 'overcast' }
+      ]}
+      value={state.value}
+      onChange={e => setState({ value: e.target.value })}
+    />
+  )}
+</Component>
+```
+
+### Accessibility
+
+Using an accessibility label (`a11yLabel`) will provide an accessible label for the radio group to be read easily by a screen reader.
+
+```.jsx
+<RadioGroup
+  a11yLabel="Weather"
+  name="weather7"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### `<RadioGroup>` Props
+
+<PropsTable component={RadioGroup} />
+
+# RadioGroupField
+
+### Import
+
+```jsx
+import { RadioGroupField } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<RadioGroupField>` component contains of the [`<RadioGroup>` component](#radiogroup) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<RadioGroup>` props](/form/radiogroup#input-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+```.jsx
+<RadioGroupField
+  a11yId="weather"
+  label="Weather"
+  name="weather8"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### `<RadioGroupField>` Props
+
+<PropsTable component={RadioGroupField} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  RadioGroup: {
+    base: css | Object,
+    horizontal: css | Object
+  }
+}
+```

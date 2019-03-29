@@ -1,0 +1,228 @@
+import { Code } from 'fannypack';
+import { Button } from 'fannypack/Button';
+import PropsTable from '../../components/PropsTable';
+
+# Button
+
+```jsx
+import { Button } from 'fannypack';
+```
+
+### Basic usage
+
+```.jsx
+<Button>Default</Button>
+```
+
+### Custom elements
+
+Button, by default, renders a `<button>` element.
+However, you are able to change it to a custom element using the `as` prop. See more [here](https://reakit.io/components/button).
+
+```.jsx
+<Set>
+  <Button>Default</Button>
+  <Button use="a" href="#">
+    Anchor
+  </Button>
+</Set>
+```
+
+### Colors
+
+Colors can be added to a button with the `palette` prop.
+
+```.jsx
+<Set>
+  <Button>Default</Button>
+  <Button palette="primary">Primary</Button>
+  <Button palette="secondary">Secondary</Button>
+  <Button palette="success">Success</Button>
+  <Button palette="danger">Danger</Button>
+  <Button palette="warning">Warning</Button>
+</Set>
+```
+
+### Icons
+
+You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
+
+**Note:** To use button icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
+
+```.jsx
+<Set>
+  <Button iconBefore="solid-clipboard">Copy</Button>
+  <Button iconBefore="solid-pen" palette="primary">
+    Edit
+  </Button>
+  <Button iconAfter="solid-long-arrow-alt-right">Continue</Button>
+</Set>
+```
+
+### Loading
+
+To indicate a button is loading, use the `isLoading` prop.
+
+```.jsx
+<Set>
+  <Button isLoading>Default</Button>
+  <Button palette="primary" isLoading>
+    Primary
+  </Button>
+  <Button palette="primary" isLoading kind="link">
+    Primary
+  </Button>
+  <Button palette="success" isLoading kind="outlined">
+    Success
+  </Button>
+</Set>
+```
+
+### Outlines
+
+An outline can be placed on a button by assigning `"outlined"` to the `kind` prop.
+
+```.jsx
+<Set>
+  <Button palette="primary" kind="outlined">
+    Primary
+  </Button>
+  <Button palette="secondary" kind="outlined">
+    Secondary
+  </Button>
+  <Button palette="success" kind="outlined">
+    Success
+  </Button>
+  <Button palette="danger" kind="outlined">
+    Danger
+  </Button>
+</Set>
+```
+
+### Ghost
+
+To have a button of minimal appearence, use the assign `"ghost"` to the `kind` prop.
+
+```.jsx
+<Set>
+  <Button kind="ghost">Default</Button>
+  <Button palette="primary" kind="ghost">
+    Primary
+  </Button>
+  <Button palette="success" kind="ghost">
+    Success
+  </Button>
+  <Button palette="danger" kind="ghost">
+    Danger
+  </Button>
+  <Button palette="warning" kind="ghost">
+    Warning
+  </Button>
+</Set>
+```
+
+### Sizes
+
+Buttons are available in four different sizes and can be added with a `size` prop.
+
+```.jsx
+<Set>
+  <Button size="small">Small</Button>
+  <Button>Default</Button>
+  <Button size="medium">Medium</Button>
+  <Button size="large">Large</Button>
+</Set>
+```
+
+### Links
+
+A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
+
+```.jsx
+<Button palette="primary" kind="link">
+  Default
+</Button>
+```
+
+### Static
+
+To make a button non-interactable, add the `isStatic` prop.
+
+```.jsx
+<Button isStatic>Static</Button>
+```
+
+### Disabled
+
+To indicate a button as disabled, use the `disabled` prop.
+
+```.jsx
+<Set>
+  <Button disabled>Default</Button>
+  <Button palette="primary" disabled>
+    Primary
+  </Button>
+  <Button palette="success" disabled>
+    Success
+  </Button>
+  <Button palette="danger" disabled>
+    Danger
+  </Button>
+  <Button palette="warning" disabled>
+    Warning
+  </Button>
+</Set>
+```
+
+### Sets
+
+To display a set of buttons, use the [`<Set>` component](/components/set).
+
+```.jsx
+<Set>
+  <Button>Previous</Button>
+  <Button>Next</Button>
+</Set>
+```
+
+### Group
+
+To group a set of buttons together, use the `<Group>` component.
+
+```.jsx
+<Group>
+  <Button>Previous</Button>
+  <Button>Now</Button>
+  <Button>Next</Button>
+</Group>
+<Group isVertical marginTop="major-2">
+  <Button>Previous</Button>
+  <Button>Now</Button>
+  <Button>Next</Button>
+</Group>
+```
+
+### `<Button>` props
+
+<PropsTable component={Button} />
+
+## Theming
+
+### Schema
+
+<Code isBlock lang="javascript">
+{`{
+  Button: {
+    base: css | Object,
+    disabled: css | Object
+    loading: css | Object,
+    static: css | Object,
+    sizes: {
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
+  }
+}
+`}
+</Code>
