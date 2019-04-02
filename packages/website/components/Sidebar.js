@@ -61,7 +61,7 @@ function Sidebar(props) {
 
   const MobileSidebar = React.useCallback(
     ({ children }) => (
-      <PopoutSidebar isVisible={layout.isMenuOpen} onClickClose={layout.closeMenu}>
+      <PopoutSidebar isVisible={layout.isMenuOpen} onClickClose={layout.closeMenu} hide={layout.closeMenu}>
         {children}
       </PopoutSidebar>
     ),
