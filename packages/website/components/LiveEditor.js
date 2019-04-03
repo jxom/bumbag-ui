@@ -7,8 +7,9 @@ import {
 } from 'react-live';
 import { withMDXComponents } from '@mdx-js/tag/dist/mdx-provider';
 import base64url from 'base64-url';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
-import { Box, Button, palette, styled } from 'fannypack';
+import { Box, Button, Toast, palette, styled } from 'fannypack';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
@@ -60,9 +61,15 @@ export const LiveCode = withMDXComponents(({ components, scope, ...props }) => {
         <LivePreview />
         <Box relative>
           <Box absolute top="0.25rem" right="0.25rem">
-            <Button kind="ghost" palette="primary" size="small">
-              Copy
-            </Button>
+            <Toast.Container>
+              {toast => (
+                <CopyToClipboard text={code} onCopy={() => toast.success({ title: 'Copied snippet to clipboard' })}>
+                  <Button kind="ghost" palette="primary" size="small">
+                    Copy
+                  </Button>
+                </CopyToClipboard>
+              )}
+            </Toast.Container>
             <Button kind="ghost" palette="primary" size="small" onClick={handleClickPlayroom}>
               Playroom
             </Button>
