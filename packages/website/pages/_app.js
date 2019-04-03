@@ -1,5 +1,5 @@
-import 'parse-prop-types';
 import 'babel-polyfill';
+import 'parse-prop-types';
 import React from 'react';
 import Head from 'next/head';
 import App, { Container } from 'next/app';
