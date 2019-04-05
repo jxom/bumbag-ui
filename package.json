@@ -4,12 +4,16 @@
   "author": "jxom <jakemoxey@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --stream",
     "build:fab": "lerna run build:fab",
     "clean": "lerna clean",
+    "develop": "lerna run develop --scope=fannypack --stream",
+    "docs": "lerna run start --scope=website --stream",
     "prepare": "lerna run prepare",
     "publish-packages": "lerna publish",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "test": "lerna run test --stream",
+    "type-check": "lerna run typecheck --stream"
   },
   "devDependencies": {
     "@babel/cli": "7.2.0",
