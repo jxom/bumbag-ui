@@ -79,7 +79,7 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   </Modal>
 );
 
-DialogModal.propTypes = {
+export const dialogModalPropTypes = {
   ...modalPropTypes,
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
@@ -91,7 +91,9 @@ DialogModal.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   type: PropTypes.string
 };
-DialogModal.defaultProps = {
+DialogModal.propTypes = dialogModalPropTypes;
+
+export const dialogModalDefaultProps = {
   ...modalDefaultProps,
   actionButtonsProps: {},
   a11yDescriptionId: getUniqueId('Modal'),
@@ -104,6 +106,7 @@ DialogModal.defaultProps = {
   hideOnEsc: true,
   hideOnClickOutside: true
 };
+DialogModal.defaultProps = dialogModalDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<DialogModalProps> = DialogModal;

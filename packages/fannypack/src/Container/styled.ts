@@ -4,7 +4,7 @@ import { Box } from '../primitives';
 import styled, { css } from '../styled';
 import { ContainerProps } from './Container';
 
-const alignProperties = {
+export const alignProperties = {
   left: css`
     margin-right: auto;
   `,
@@ -17,7 +17,7 @@ const alignProperties = {
   `
 };
 
-const getResponsiveProperties = (props: any) => {
+export const getResponsiveProperties = (props: any) => {
   const { breakpoint, isFluid } = props;
   if (isFluid) return;
   if (breakpoint) {
@@ -42,7 +42,7 @@ const getResponsiveProperties = (props: any) => {
   `;
 };
 
-export default styled(Box)<ContainerProps>`
+export const Container = styled(Box)<ContainerProps>`
   width: 100%;
 
   ${props =>
@@ -70,3 +70,5 @@ export default styled(Box)<ContainerProps>`
 
   ${theme('fannypack.Container.base')};
 `;
+
+export default Container;

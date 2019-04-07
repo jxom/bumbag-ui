@@ -14,13 +14,16 @@ export const DialogFooter: React.FunctionComponent<LocalDialogFooterProps> = ({ 
   <_DialogFooter {...props}>{children}</_DialogFooter>
 );
 
-DialogFooter.propTypes = {
+export const dialogFooterPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-DialogFooter.defaultProps = {
+DialogFooter.propTypes = dialogFooterPropTypes;
+
+export const dialogFooterDefaultProps = {
   className: undefined
 };
+DialogFooter.defaultProps = dialogFooterDefaultProps;
 
 const C: React.FunctionComponent<DialogFooterProps> = DialogFooter;
 export default C;

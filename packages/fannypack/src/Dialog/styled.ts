@@ -82,7 +82,7 @@ export const DialogIcon = styled(Icon)<DialogIconProps>`
   }
 `;
 
-export default styled(Pane)<DialogDialogProps>`
+export const Dialog = styled(Pane)<DialogDialogProps>`
   border-radius: 5px;
 
   &:focus {
@@ -93,3 +93,5 @@ export default styled(Pane)<DialogDialogProps>`
     ${theme('fannypack.Dialog.base')};
   }
 `;
+
+export default Dialog;

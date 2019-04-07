@@ -1,7 +1,11 @@
 import Button from './Button';
-import * as buttonStyled from './styled';
+import * as styledButton from './styled';
+
+export default Button;
 
 export * from './ActionButtons';
+export { default as ActionButtons } from './ActionButtons';
 export * from './Button';
-export { buttonStyled };
-export default Button;
+export { default as Button } from './Button';
+
+export { styledButton };

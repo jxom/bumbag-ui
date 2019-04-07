@@ -1,10 +1,10 @@
-import Divider from 'reakit/Divider';
+import _Divider from 'reakit/Divider';
 import { theme } from 'styled-tools';
 
 import styled, { css } from '../styled';
 import { DividerProps } from './Divider';
 
-const contentProperties = css`
+export const contentProperties = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ const contentProperties = css`
     }
   }
 `;
-const verticalProperties = css`
+export const verticalProperties = css`
   height: auto;
 
   & {
@@ -31,7 +31,7 @@ const verticalProperties = css`
   }
 `;
 
-export default styled(Divider)<DividerProps>`
+export const Divider = styled(_Divider)<DividerProps>`
   opacity: 1;
   border-color: #e7e9ed;
 
@@ -44,3 +44,5 @@ export default styled(Divider)<DividerProps>`
     ${theme('fannypack.Divider.base')};
   }
 `;
+
+export default Divider;

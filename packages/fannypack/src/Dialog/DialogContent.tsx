@@ -15,15 +15,18 @@ export const DialogContent: React.FunctionComponent<LocalDialogContentProps> = (
   <_DialogContent {...props}>{children}</_DialogContent>
 );
 
-DialogContent.propTypes = {
+export const dialogContentPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   hasScroll: PropTypes.bool
 };
-DialogContent.defaultProps = {
+DialogContent.propTypes = dialogContentPropTypes;
+
+export const dialogContentDefaultProps = {
   className: undefined,
   hasScroll: false
 };
+DialogContent.defaultProps = dialogContentDefaultProps;
 
 const C: React.FunctionComponent<DialogContentProps> = DialogContent;
 export default C;

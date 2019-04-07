@@ -45,19 +45,22 @@ Hidden.Show = HiddenShow;
 Hidden.Hide = HiddenHide;
 Hidden.Toggle = HiddenToggle;
 
-Hidden.propTypes = {
+export const hiddenPropTypes = {
   ...animatePropTypes,
   ...restrictHidePropTypes,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isVisible: PropTypes.bool
 };
-Hidden.defaultProps = {
+Hidden.propTypes = hiddenPropTypes;
+
+export const hiddenDefaultProps = {
   ...animateDefaultProps,
   ...restrictDefaultProps,
   className: undefined,
   isVisible: undefined
 };
+Hidden.defaultProps = hiddenDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<HiddenProps> & HiddenComponents = Hidden;

@@ -15,15 +15,18 @@ export const HiddenShow: React.FunctionComponent<LocalHiddenShowProps> = ({ chil
   <_HiddenShow {...props}>{children}</_HiddenShow>
 );
 
-HiddenShow.propTypes = {
+export const hiddenShowPropTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   show: PropTypes.func.isRequired
 };
-HiddenShow.defaultProps = {
+HiddenShow.propTypes = hiddenShowPropTypes;
+
+export const hiddenShowDefaultProps = {
   children: null,
   onClick: undefined
 };
+HiddenShow.defaultProps = hiddenShowDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<HiddenShowProps> = HiddenShow;

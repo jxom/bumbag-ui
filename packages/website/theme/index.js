@@ -19,9 +19,38 @@ import {
   faExternalLinkAlt,
   faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
-import { css } from 'fannypack';
+import { css, palette } from 'fannypack';
 
 export default {
+  global: {
+    base: css`
+      .token {
+        &.tag {
+          color: ${palette('primary')};
+        }
+
+        &.punctuation {
+          color: ${palette('text')};
+        }
+
+        &.string {
+          color: ${palette('text')};
+        }
+
+        &.operator {
+          color: ${palette('secondary')};
+        }
+
+        &.attr-name {
+          color: ${palette('secondary')};
+        }
+
+        &.attr-value {
+          color: ${palette('text')};
+        }
+      }
+    `
+  },
   Code: {
     base: css`
       & span {

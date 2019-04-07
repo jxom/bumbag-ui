@@ -25,16 +25,18 @@ export const FieldSet: React.FunctionComponent<LocalFieldSetProps> = ({ children
   );
 };
 
-FieldSet.propTypes = {
+export const fieldSetPropTypes = {
   children: PropTypes.node.isRequired,
   isHorizontal: PropTypes.bool,
   spacing: PropTypes.string
 };
+FieldSet.propTypes = fieldSetPropTypes;
 
-FieldSet.defaultProps = {
+export const fieldSetDefaultProps = {
   isHorizontal: false,
   spacing: undefined
 };
+FieldSet.defaultProps = fieldSetDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<FieldSetProps> = withTheme(FieldSet);

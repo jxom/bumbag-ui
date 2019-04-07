@@ -4,7 +4,7 @@ import styled, { css } from '../styled';
 import { Box } from '../primitives';
 import { ColumnsProps } from './Columns';
 
-const getWrapProperties = (props: any) => {
+export const getWrapProperties = (props: any) => {
   const { isOneLine, minBreakpoint } = props;
   if (isOneLine) {
     if (minBreakpoint !== 'tablet' && minBreakpoint !== 'mobile') {
@@ -29,7 +29,7 @@ const getWrapProperties = (props: any) => {
   }
 };
 
-export default styled(Box)<ColumnsProps>`
+export const Columns = styled(Box)<ColumnsProps>`
   display: flex;
 
   ${props =>
@@ -50,3 +50,5 @@ export default styled(Box)<ColumnsProps>`
     ${theme('fannypack.Columns.base')};
   }
 `;
+
+export default Columns;

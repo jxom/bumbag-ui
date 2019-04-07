@@ -1,6 +1,9 @@
 import Backdrop from './Backdrop';
-import * as backdropStyled from './styled';
+import * as styledBackdrop from './styled';
+
+export default Backdrop;
 
 export * from './Backdrop';
-export { backdropStyled };
-export default Backdrop;
+export { default as Backdrop } from './Backdrop';
+
+export { styledBackdrop };

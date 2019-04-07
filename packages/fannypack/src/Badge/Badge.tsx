@@ -13,18 +13,21 @@ export type LocalBadgeProps = {
 };
 export type BadgeProps = ReakitInlineFlexProps & LocalBadgeProps;
 
-export class Badge extends React.Component<LocalBadgeProps> {
-  static propTypes = {
-    children: PropTypes.node,
-    isAbsolute: PropTypes.bool,
-    palette: PropTypes.string
-  };
+export const badgePropTypes = {
+  children: PropTypes.node,
+  isAbsolute: PropTypes.bool,
+  palette: PropTypes.string
+};
 
-  static defaultProps = {
-    children: undefined,
-    isAbsolute: false,
-    palette: 'text'
-  };
+export const badgeDefaultProps = {
+  children: undefined,
+  isAbsolute: false,
+  palette: 'text'
+};
+
+export class Badge extends React.Component<LocalBadgeProps> {
+  static propTypes = badgePropTypes;
+  static defaultProps = badgeDefaultProps;
 
   badge = React.createRef();
 

@@ -21,7 +21,7 @@ export const Container: React.FunctionComponent<LocalContainerProps> = ({ align,
   </_Container>
 );
 
-Container.propTypes = {
+export const containerPropTypes = {
   align: PropTypes.oneOf(['left', 'right', 'center']) as PropTypes.Validator<LocalContainerProps['align']>,
   breakpoint: breakpointPropType,
   children: PropTypes.node.isRequired,
@@ -29,13 +29,16 @@ Container.propTypes = {
   isFluid: PropTypes.bool,
   isLayout: PropTypes.bool
 };
-Container.defaultProps = {
+Container.propTypes = containerPropTypes;
+
+export const containerDefaultProps = {
   align: 'center',
   breakpoint: undefined,
   className: undefined,
   isFluid: false,
   isLayout: false
 };
+Container.defaultProps = containerDefaultProps;
 
 const C: React.FunctionComponent<ContainerProps> = Container;
 export default C;

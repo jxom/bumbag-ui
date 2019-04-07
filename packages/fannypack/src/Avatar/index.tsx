@@ -1,6 +1,9 @@
 import Avatar from './Avatar';
-import * as avatarStyled from './styled';
+import * as styledAvatar from './styled';
+
+export default Avatar;
 
 export * from './Avatar';
-export { avatarStyled };
-export default Avatar;
+export { default as Avatar } from './Avatar';
+
+export { styledAvatar };

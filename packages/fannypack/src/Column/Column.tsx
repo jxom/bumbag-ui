@@ -67,7 +67,7 @@ export const Column: React.FunctionComponent<LocalColumnProps> = ({
   </ColumnsContext.Consumer>
 );
 
-Column.propTypes = {
+export const columnPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   spread: columnSpreadPropType,
@@ -83,7 +83,9 @@ Column.propTypes = {
   spreadWidescreenOffset: columnSpreadOffsetPropType,
   spreadFullHDOffset: columnSpreadOffsetPropType
 };
-Column.defaultProps = {
+Column.propTypes = columnPropTypes;
+
+export const columnDefaultProps = {
   className: undefined,
   spread: undefined,
   spreadMobile: undefined,
@@ -98,6 +100,7 @@ Column.defaultProps = {
   spreadWidescreenOffset: undefined,
   spreadFullHDOffset: undefined
 };
+Column.defaultProps = columnDefaultProps;
 
 const C: React.FunctionComponent<ColumnProps> = Column;
 export default C;

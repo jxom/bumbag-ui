@@ -57,8 +57,10 @@ export const ValidationText = styled(_Text)`
   }
 `;
 
-export default styled(Field)<Omit<FieldWrapperProps, 'children'>>`
+export const FieldWrapper = styled(Field)<Omit<FieldWrapperProps, 'children'>>`
   & {
     ${theme('fannypack.FieldWrapper.base')};
   }
 `;
+
+export default FieldWrapper;

@@ -1,10 +1,10 @@
-import Group from 'reakit/Group';
+import _Group from 'reakit/Group';
 import { theme } from 'styled-tools';
 
 import styled, { css } from '../styled';
 import { GroupProps } from './Group';
 
-export default styled(Group)<GroupProps>`
+export const Group = styled(_Group)<GroupProps>`
   & > * {
     border-radius: 4px;
   }
@@ -56,3 +56,5 @@ export default styled(Group)<GroupProps>`
     ${theme('fannypack.Group.base')};
   }
 `;
+
+export default Group;

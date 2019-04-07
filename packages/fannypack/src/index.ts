@@ -26,41 +26,38 @@ export { getUniqueId } from './uniqueId';
 
 export { default as Alert } from './Alert';
 export * from './Alert';
-
+export { default as Avatar } from './Avatar';
+export * from './Avatar';
 export { default as Backdrop } from './Backdrop';
 export * from './Backdrop';
-
+export { default as Badge } from './Badge';
+export * from './Badge';
 export { default as Blockquote } from './Blockquote';
 export * from './Blockquote';
-
 export { default as Button } from './Button';
 export * from './Button';
-
 export { default as Breadcrumb } from './Breadcrumb';
 export * from './Breadcrumb';
-
 export { default as Callout } from './Callout';
 export * from './Callout';
-
 export { default as CalloutOverlay } from './CalloutOverlay';
 export * from './CalloutOverlay';
-
 export { default as Card } from './Card';
 export * from './Card';
-
 export { default as Checkbox } from './Checkbox';
 export * from './Checkbox';
-
 export { default as Code } from './Code';
 export * from './Code';
-
-export { Avatar } from './Avatar';
-export { Badge } from './Badge';
-export { Column } from './Column';
-export { Columns } from './Columns';
-export { Container } from './Container';
-export { Dialog, DialogClose, DialogContent, DialogDialog, DialogFooter, DialogHeader, DialogTitle } from './Dialog';
-export { DialogModal } from './DialogModal';
+export { default as Column } from './Column';
+export * from './Column';
+export { default as Columns } from './Columns';
+export * from './Columns';
+export { default as Container } from './Container';
+export * from './Container';
+export { default as Dialog } from './Dialog';
+export * from './Dialog';
+export { default as DialogModal } from './DialogModal';
+export * from './DialogModal';
 export { Divider } from './Divider';
 export { FieldWrapper } from './FieldWrapper';
 export { FieldSet } from './FieldSet';

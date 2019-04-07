@@ -36,19 +36,22 @@ export const Group: React.FunctionComponent<LocalGroupProps> = ({
   );
 };
 
-Group.propTypes = {
+export const groupPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isVertical: PropTypes.bool,
   theme: PropTypes.object,
   verticalAt: PropTypes.oneOfType([breakpointPropType, PropTypes.number])
 };
-Group.defaultProps = {
+Group.propTypes = groupPropTypes;
+
+export const groupDefaultProps = {
   className: undefined,
   isVertical: false,
   theme: {},
   verticalAt: undefined
 };
+Group.defaultProps = groupDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<GroupProps> = withTheme(Group);

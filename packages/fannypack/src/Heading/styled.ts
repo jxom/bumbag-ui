@@ -1,11 +1,11 @@
-import Heading from 'reakit/Heading';
+import _Heading from 'reakit/Heading';
 
 import styled, { css, space, theme, selector } from '../styled';
 // @ts-ignore
 import Icon from '../Icon/styled';
 import { HeadingProps } from './Heading';
 
-const subHeadingProperties = css`
+export const subHeadingProperties = css`
   font-weight: ${theme('fannypack.fontWeights.semibold')};
 
   & {
@@ -13,7 +13,7 @@ const subHeadingProperties = css`
   }
 `;
 
-export default styled(Heading)<HeadingProps>`
+export const Heading = styled(_Heading)<HeadingProps>`
   font-weight: ${theme('fannypack.fontWeights.bold')};
   line-height: 1.2;
 
@@ -72,3 +72,5 @@ export default styled(Heading)<HeadingProps>`
 
   ${theme('fannypack.Heading.base')};
 `;
+
+export default Heading;

@@ -4,7 +4,7 @@ import styled, { css } from '../styled';
 import Set from '../Set';
 import { FieldSetProps } from './FieldSet';
 
-export default styled(Set)<FieldSetProps>`
+export const FieldSet = styled(Set)<FieldSetProps>`
   ${props =>
     props.isHorizontal
       ? css`
@@ -35,3 +35,5 @@ export default styled(Set)<FieldSetProps>`
     ${theme('fannypack.FieldSet.base')};
   }
 `;
+
+export default FieldSet;

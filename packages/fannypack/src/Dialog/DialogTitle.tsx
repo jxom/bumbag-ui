@@ -16,13 +16,16 @@ export const DialogTitle: React.FunctionComponent<LocalDialogTitleProps> = ({ ch
   </_DialogTitle>
 );
 
-DialogTitle.propTypes = {
+export const dialogTitlePropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-DialogTitle.defaultProps = {
+DialogTitle.propTypes = dialogTitlePropTypes;
+
+export const dialogTitleDefaultProps = {
   className: undefined
 };
+DialogTitle.defaultProps = dialogTitleDefaultProps;
 
 const C: React.FunctionComponent<DialogTitleProps> = DialogTitle;
 export default C;

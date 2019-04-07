@@ -24,18 +24,21 @@ export const Divider: React.FunctionComponent<LocalDividerProps> = ({
   </_Divider>
 );
 
-Divider.propTypes = {
+export const dividerPropTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   content: PropTypes.string,
   isVertical: PropTypes.bool
 };
-Divider.defaultProps = {
+Divider.propTypes = dividerPropTypes;
+
+export const dividerDefaultProps = {
   children: null,
   className: undefined,
   content: undefined,
   isVertical: false
 };
+Divider.defaultProps = dividerDefaultProps;
 
 const C: React.FunctionComponent<DividerProps> = Divider;
 export default C;

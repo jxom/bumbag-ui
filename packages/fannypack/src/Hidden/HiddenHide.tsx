@@ -20,15 +20,18 @@ export const HiddenHide: React.FunctionComponent<LocalHiddenHideProps> = React.f
   )
 );
 
-HiddenHide.propTypes = {
+export const hiddenHidePropTypes = {
   children: PropTypes.node,
   hide: PropTypes.func.isRequired,
   onClick: PropTypes.func
 };
-HiddenHide.defaultProps = {
+HiddenHide.propTypes = hiddenHidePropTypes;
+
+export const hiddenHideDefaultProps = {
   children: null,
   onClick: undefined
 };
+HiddenHide.defaultProps = hiddenHideDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<HiddenHideProps> = HiddenHide;

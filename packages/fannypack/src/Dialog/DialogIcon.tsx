@@ -13,13 +13,16 @@ export type DialogIconProps = IconProps & LocalDialogIconProps;
 // @ts-ignore
 export const DialogIcon: React.FunctionComponent<LocalDialogIconProps> = props => <_DialogIcon {...props} />;
 
-DialogIcon.propTypes = {
+export const dialogIconPropTypes = {
   className: PropTypes.string,
   icon: PropTypes.string.isRequired
 };
-DialogIcon.defaultProps = {
+DialogIcon.propTypes = dialogIconPropTypes;
+
+export const dialogIconDefaultProps = {
   className: undefined
 };
+DialogIcon.defaultProps = dialogIconDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<DialogIconProps> = DialogIcon;

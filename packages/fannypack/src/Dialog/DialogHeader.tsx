@@ -14,13 +14,16 @@ export const DialogHeader: React.FunctionComponent<LocalDialogHeaderProps> = ({ 
   <_DialogHeader {...props}>{children}</_DialogHeader>
 );
 
-DialogHeader.propTypes = {
+export const dialogHeaderPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-DialogHeader.defaultProps = {
+DialogHeader.propTypes = dialogHeaderPropTypes;
+
+export const dialogHeaderDefaultProps = {
   className: undefined
 };
+DialogHeader.defaultProps = dialogHeaderDefaultProps;
 
 const C: React.FunctionComponent<DialogHeaderProps> = DialogHeader;
 export default C;

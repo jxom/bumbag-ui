@@ -5,7 +5,7 @@ import styled, { css } from '../styled';
 import { ColumnSpread } from '../types';
 import { ColumnProps } from './Column';
 
-const marginAutoOffsets: { [key: string]: any } = {
+export const marginAutoOffsets: { [key: string]: any } = {
   left: css`
     margin-left: auto;
   `,
@@ -18,9 +18,9 @@ const marginAutoOffsets: { [key: string]: any } = {
   `
 };
 
-const getWidth = (spread: ColumnSpread) => `${(spread / 12) * 100}%`;
+export const getWidth = (spread: ColumnSpread) => `${(spread / 12) * 100}%`;
 
-const getSpreadProperties = (props: any) => {
+export const getSpreadProperties = (props: any) => {
   const { minBreakpoint, spread, spreadMobile, spreadTablet, spreadDesktop, spreadWidescreen, spreadFullHD } = props;
   if (
     !minBreakpoint &&
@@ -81,7 +81,7 @@ const getSpreadProperties = (props: any) => {
   `;
 };
 
-const getSpreadOffsetProperties = (props: any) => {
+export const getSpreadOffsetProperties = (props: any) => {
   const {
     spreadOffset,
     spreadMobileOffset,
@@ -145,7 +145,7 @@ const getSpreadOffsetProperties = (props: any) => {
   return marginAutoOffsets[spreadOffset];
 };
 
-const Column = styled(Box)<ColumnProps>`
+export const Column = styled(Box)<ColumnProps>`
   flex: 1;
   max-width: 100%;
   ${props =>

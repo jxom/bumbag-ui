@@ -15,15 +15,18 @@ export const HiddenToggle: React.FunctionComponent<LocalHiddenToggleProps> = ({ 
   <_HiddenToggle {...props}>{children}</_HiddenToggle>
 );
 
-HiddenToggle.propTypes = {
+export const hiddenTogglePropTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   toggle: PropTypes.func.isRequired
 };
-HiddenToggle.defaultProps = {
+HiddenToggle.propTypes = hiddenTogglePropTypes;
+
+export const hiddenToggleDefaultProps = {
   children: null,
   onClick: undefined
 };
+HiddenToggle.defaultProps = hiddenToggleDefaultProps;
 
 const C: React.FunctionComponent<HiddenToggleProps> = HiddenToggle;
 export default C;

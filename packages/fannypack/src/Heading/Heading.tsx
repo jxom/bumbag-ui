@@ -31,15 +31,18 @@ export const Heading: React.FunctionComponent<LocalHeadingProps> = ({
   </_Heading>
 );
 
-Heading.propTypes = {
+export const headingPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isSubHeading: PropTypes.bool
 };
-Heading.defaultProps = {
+Heading.propTypes = headingPropTypes;
+
+export const headingDefaultProps = {
   className: undefined,
   isSubHeading: false
 };
+Heading.defaultProps = headingDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<HeadingProps> = Heading;

@@ -19,12 +19,15 @@ export const DialogClose: React.FunctionComponent<LocalDialogCloseProps> = props
   </_DialogClose>
 );
 
-DialogClose.propTypes = {
+export const dialogClosePropTypes = {
   className: PropTypes.string
 };
-DialogClose.defaultProps = {
+DialogClose.propTypes = dialogClosePropTypes;
+
+export const dialogCloseDefaultProps = {
   className: undefined
 };
+DialogClose.defaultProps = dialogCloseDefaultProps;
 
 const C: React.FunctionComponent<DialogCloseProps> = DialogClose;
 export default C;

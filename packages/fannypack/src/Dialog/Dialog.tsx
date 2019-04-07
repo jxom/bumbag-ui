@@ -101,7 +101,7 @@ Dialog.Title = DialogTitle;
 Dialog.Close = DialogClose;
 Dialog.Icon = DialogIcon;
 
-Dialog.propTypes = {
+export const dialogPropTypes = {
   actionButtonsProps: PropTypes.shape(actionButtonsPropTypes),
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
@@ -117,8 +117,9 @@ Dialog.propTypes = {
   type: PropTypes.string,
   ...dialogDialogPropTypes
 };
+Dialog.propTypes = dialogPropTypes;
 
-Dialog.defaultProps = {
+export const dialogDefaultProps = {
   ...dialogDialogDefaultProps,
   actionButtonsProps: {},
   a11yDescriptionId: getUniqueId('Dialog'),
@@ -133,6 +134,7 @@ Dialog.defaultProps = {
   title: undefined,
   type: undefined
 };
+Dialog.defaultProps = dialogDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<DialogProps> & DialogComponents = Dialog;

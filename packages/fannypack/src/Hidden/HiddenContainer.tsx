@@ -19,14 +19,17 @@ export const HiddenContainer: React.FunctionComponent<HiddenContainerProps> = ({
   </ReakitHidden.Container>
 );
 
-HiddenContainer.propTypes = {
+export const hiddenContainerPropTypes = {
   children: PropTypes.func.isRequired,
   defaultVisible: PropTypes.bool,
   initialState: PropTypes.object
 };
-HiddenContainer.defaultProps = {
+HiddenContainer.propTypes = hiddenContainerPropTypes;
+
+export const hiddenContainerDefaultProps = {
   defaultVisible: false,
   initialState: {}
 };
+HiddenContainer.defaultProps = hiddenContainerDefaultProps;
 
 export default HiddenContainer;

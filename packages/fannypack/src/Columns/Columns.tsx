@@ -36,19 +36,22 @@ export const Columns: React.FunctionComponent<LocalColumnsProps> = ({
   </ColumnsContext.Provider>
 );
 
-Columns.propTypes = {
+export const columnsPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isGapless: PropTypes.bool,
   isOneLine: PropTypes.bool,
   minBreakpoint: PropTypes.oneOf(['tablet', 'mobile']) as PropTypes.Validator<LocalColumnsProps['minBreakpoint']>
 };
-Columns.defaultProps = {
+Columns.propTypes = columnsPropTypes;
+
+export const columnsDefaultProps = {
   className: undefined,
   isGapless: false,
   isOneLine: false,
   minBreakpoint: undefined
 };
+Columns.defaultProps = columnsDefaultProps;
 
 const C: React.FunctionComponent<ColumnsProps> = Columns;
 export default C;
