@@ -1,6 +1,9 @@
+// @ts-ignore
+import _get from 'lodash/get';
+
 export default ({ palette }: { palette: { [key: string]: string } }) => ({
   'code[class*="language-"]': {
-    color: palette.text,
+    color: _get(palette, 'text'),
     background: 'none',
     fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     textAlign: 'left',
@@ -18,7 +21,7 @@ export default ({ palette }: { palette: { [key: string]: string } }) => ({
     hyphens: 'none'
   },
   'pre[class*="language-"]': {
-    color: palette.text,
+    color: _get(palette, 'text'),
     background: 'none',
     fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     textAlign: 'left',
@@ -70,7 +73,7 @@ export default ({ palette }: { palette: { [key: string]: string } }) => ({
     position: 'relative',
     padding: '.2em',
     borderRadius: '0.3em',
-    color: palette.primary,
+    color: _get(palette, 'primary'),
     border: '1px solid rgba(0, 0, 0, 0.1)',
     display: 'inline',
     whiteSpace: 'normal'
@@ -138,49 +141,49 @@ export default ({ palette }: { palette: { [key: string]: string } }) => ({
     color: '#5F6364'
   },
   property: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   tag: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   boolean: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   number: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   'function-name': {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   constant: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   symbol: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   deleted: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   selector: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   'attr-name': {
-    color: palette.secondary
+    color: _get(palette, 'secondary')
   },
   string: {
-    color: palette.text
+    color: _get(palette, 'text')
   },
   char: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   function: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   builtin: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   inserted: {
-    color: palette.primary
+    color: _get(palette, 'primary')
   },
   operator: {
     color: '#a67f59'
@@ -196,16 +199,16 @@ export default ({ palette }: { palette: { [key: string]: string } }) => ({
     color: '#a67f59'
   },
   atrule: {
-    color: palette.secondary
+    color: _get(palette, 'secondary')
   },
   'attr-value': {
-    color: palette.text
+    color: _get(palette, 'text')
   },
   keyword: {
-    color: palette.secondary
+    color: _get(palette, 'secondary')
   },
   'class-name': {
-    color: palette.secondary
+    color: _get(palette, 'secondary')
   },
   regex: {
     color: '#e90'
