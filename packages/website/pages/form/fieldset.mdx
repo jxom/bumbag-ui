@@ -1,0 +1,44 @@
+import PropsTable from '../../components/PropsTable';
+import { FieldSet } from 'fannypack/FieldSet/FieldSet';
+
+# FieldSet
+
+### Import
+
+```jsx
+import { FieldSet } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<FieldSet>` component is a utility belt that wraps around field elements to space them out correctly. It uses the [`<Set>` utility](/utils/set) internally.
+
+```.jsx
+<FieldSet>
+  <FieldSet isHorizontal>
+    <InputField name="firstName" label="First name" />
+    <InputField name="lastName" label="Last name" />
+  </FieldSet>
+  <InputField name="username" label="Username" />
+  <InputField name="password" label="Password" type="password" />
+  <Button>Save</Button>
+</FieldSet>
+```
+
+### Props
+
+<PropsTable component={FieldSet} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  FieldSet: {
+    base: css | Object,
+    vertical: css | Object,
+    horizontal: css | Object
+  }
+}
+```

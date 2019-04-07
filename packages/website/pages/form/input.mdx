@@ -1,0 +1,173 @@
+import PropsTable from '../../components/PropsTable';
+import { Divider } from 'fannypack';
+import { Input } from 'fannypack/Input/Input';
+import { InputField } from 'fannypack/Input/InputField';
+
+# Input
+
+### Import
+
+```jsx
+import { Input } from 'fannypack'
+```
+
+### Basic Usage
+
+By default, `<Input>` renders an `<input>`.
+
+```.jsx
+<Input />
+<Input placeholder="Jake Moxey" marginTop="major-1" />
+```
+
+### Default values
+
+For uncontrolled inputs, set a default value using the `defaultValue` prop.
+
+```.jsx
+<Input defaultValue="Fannypacks rock!" />
+```
+
+### Disabled
+
+Make the input disabled with the `disabled` prop.
+
+```.jsx
+<Input disabled defaultValue="Disabled field" />
+```
+
+### Types
+
+Just like normal `<input>` elements, you can specify a `type`.
+
+```.jsx
+<Input type="number" />
+<Input type="tel" marginTop="major-1" />
+<Input type="date" marginTop="major-1" />
+<Input type="email" marginTop="major-1" />
+<Input type="password" marginTop="major-1" />
+<Input type="search" marginTop="major-1" />
+<Input type="time" marginTop="major-1" />
+<Input type="url" marginTop="major-1" />
+```
+
+### Sizes
+
+An input can come in different sizes - `small`, `medium`, `large`, or the default.
+
+```.jsx
+<Input size="small" />
+<Input marginTop="major-1" />
+<Input size="medium" marginTop="major-1" />
+<Input size="large" marginTop="major-1" />
+```
+
+### States
+
+An input can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```.jsx
+<Input state="danger" />
+<Input state="success" marginTop="major-1" />
+<Input state="warning" marginTop="major-1" />
+<Input state="primary" marginTop="major-1" />
+```
+
+### Addons
+
+You can use the [Group component](/components/group) to add on stuff to your `<Input>`.
+
+```.jsx
+<Group>
+  <Select options={[{ label: '$', value: 'dollars' }, { label: '€', value: 'euro' }]} />
+  <Input />
+  <Button>Send</Button>
+</Group>
+```
+
+### Icons
+
+**Note:** To use input icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
+
+```.jsx
+<Input
+  before={<Input.Icon icon="solid-search" />}
+  placeholder="Jake Moxey"
+/>
+<Input
+  after={<Input.Icon icon="solid-search" />}
+  placeholder="Jake Moxey"
+  marginTop="major-1"
+/>
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled inputs!
+
+```.jsx
+<Component initialState={{ value: 'Fannypacks rock!' }}>
+  {
+    ({ state, setState }) =>
+      <Input onChange={e => setState({ value: e.target.value })} value={state.value} />
+  }
+</Component>
+```
+
+### Accessibility
+
+Using an accessibility label (`a11yLabel`), will enable screen readers to read the contents of the label.
+
+```.jsx
+<Input a11yLabel="name" placeholder="Jake Moxey" />
+```
+
+### `<Input>` Props
+
+<PropsTable component={Input} />
+
+<Divider marginTop="major-4" marginBottom="major-4" />
+
+# InputField
+
+### Import
+
+```jsx
+import { InputField } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<InputField>` component contains of the [`<Input>` component](#input) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Input>` props](/form/input#input-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+```.jsx
+<InputField a11yId="name" label="Username" />
+```
+
+### `<InputField>` Props
+
+<PropsTable component={InputField} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Input: {
+    base: css | Object,
+    disabled: css | Object,
+    focus: css | Object,
+    placeholder: css | Object,
+    sizes: {
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
+  }
+}
+```

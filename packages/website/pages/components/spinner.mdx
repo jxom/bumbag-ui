@@ -1,0 +1,54 @@
+import PropsTable from '../../components/PropsTable';
+import {Spinner} from 'fannypack/Spinner/Spinner';
+
+# Spinners
+
+### Import
+
+```jsx
+import { Spinner } from 'fannypack'
+```
+
+### Basic Usage
+
+```.jsx
+<Spinner />
+```
+
+### Sizes
+
+```.jsx
+<Spinner size="small" />
+<Spinner marginLeft="major-1" />
+<Spinner size="medium" marginLeft="major-1" />
+<Spinner size="large" marginLeft="major-1" />
+```
+
+### Colors
+
+```.jsx
+<Spinner color="success" />
+<Spinner color="danger" marginLeft="major-1" />
+<Spinner color="warning" marginLeft="major-1" />
+```
+
+### Props
+
+<PropsTable component={Spinner} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Spinner: {
+    base: css | Object,
+    sizes: {
+      small: css | Object,
+      medium: css | Object,
+      large: css | Object
+    }
+  }
+}
+```

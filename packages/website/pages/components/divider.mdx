@@ -1,0 +1,70 @@
+import PropsTable from '../../components/PropsTable';
+import {Divider} from 'fannypack/Divider';
+import { Box, Block, Flex } from 'fannypack';
+
+# Divider
+
+### Import
+
+```jsx
+import { Divider } from 'fannypack'
+```
+
+### Basic Usage
+
+`<Divider>` renders a `<hr>` element with reset styles and basic divider styling.
+
+```.jsx
+<Divider />
+```
+
+### Vertical
+
+Render a vertical divider by adding the `isVertical` prop to the component.
+
+```.jsx
+<Flex>
+  Hello
+  <Divider isVertical />
+  World
+</Flex>
+```
+
+### With content
+
+A divider can also have content. The `content` prop accepts a string.
+
+```.jsx
+<Flex alignItems="center" height="50px">
+  Hello
+  <Divider content="or" isVertical />
+  World
+</Flex>
+<Box textAlign="center" marginTop="major-2">
+  Hello
+  <Divider content="or" />
+  World
+</Box>
+```
+
+### Props
+
+<PropsTable component={Divider} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Divider: {
+    base: css | Object,
+
+    // Style for the divider content
+    content: css | Object,
+
+    // Style for vertical dividers
+    vertical: css | Object
+  }
+}
+```

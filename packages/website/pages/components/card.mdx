@@ -1,0 +1,141 @@
+import PropsTable from '../../components/PropsTable';
+import { Card } from 'fannypack/Card/Card';
+import { Divider } from 'fannypack';
+
+# Card
+
+### Import
+
+```jsx
+import { Card } from 'fannypack';
+```
+
+### Basic Usage
+
+```.jsx
+<Card>Hello world</Card>
+```
+
+### Header
+
+You can render a header for the card using the `title` prop.
+
+```.jsx
+<Card title="This is a title">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Header with actions
+
+You can render a header with actions for the card using the `headerActions` prop.
+
+```.jsx
+<Card
+  title="This is a title"
+  headerActions={
+    <Set>
+      <Button palette="primary" kind="link">Action 1</Button>
+      <Button palette="primary" kind="link">Action 2</Button>
+    </Set>
+  }
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Footer
+
+You can render a footer for the card using the `footer` prop.
+
+```.jsx
+<Card
+  title="This is a title"
+  footer={
+    <ActionButtons
+      justifyContent="flex-end"
+      width="100%"
+    />
+  }
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Full width
+
+```.jsx
+<Card isFullWidth>Hello world</Card>
+```
+
+### Props
+
+<PropsTable component={Card} />
+
+<Divider marginTop="major-4" marginBottom="major-4" />
+
+# Card.Card
+
+### Import
+
+```jsx
+import { Card } from 'fannypack';
+```
+
+### Basic Usage
+
+The `<Card>` component is made up of a compound of components (such as: `<Card.Card>`, `<Card.Header>`, `<Card.Content>`, etc). However, you can use `<Card.Card>` to make a more flexible card.
+
+```.jsx
+<Card.Card a11yDescriptionId="description" a11yTitleId="title">
+  <Card.Header>
+    <Card.Title id="title">This is a title</Card.Title>
+  </Card.Header>
+  <Card.Content id="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+    ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
+    lectus augue sit amet justo.
+  </Card.Content>
+  <Card.Footer justifyContent="flex-end">
+    <ActionButtons />
+  </Card.Footer>
+</Card.Card>
+```
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Card: {
+    base: css | Object,
+
+    // Style to apply to card header
+    Header: {
+      base: css | Object
+    },
+
+    // Style to apply to card content
+    Content: {
+      base: css | Object
+    },
+
+    // Style to apply to card footer
+    Footer: {
+      base: css | Object
+    },
+
+    // Style to apply to card title
+    Title: {
+      base: css | Object
+    }
+  }
+}
+```

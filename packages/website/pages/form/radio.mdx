@@ -1,0 +1,102 @@
+import PropsTable from '../../components/PropsTable';
+import { Radio } from 'fannypack/Radio/Radio';
+
+# Radio
+
+### Import
+
+```jsx
+import { Radio } from 'fannypack'
+```
+
+### Basic Usage
+
+```.jsx
+<Radio name="weather" label="Sunny" value="sunny" />
+<Radio name="weather" label="Windy" value="windy" />
+```
+
+### Disabled
+
+Make the Radio disabled with the `disabled` prop.
+
+```.jsx
+<Radio disabled name="hasFannypack" label="Yes" value={true} />
+<Radio checked disabled name="hasFannypack" label="No" value={false} />
+```
+
+### States
+
+A Radio can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```.jsx
+<Radio state="danger" name="weather2" label="Sunny" value="sunny" />
+<Radio state="success" name="weather2" label="Rainy" value="rainy" />
+<Radio state="warning" name="weather2" label="Windy" value="windy" />
+<Radio state="primary" name="weather2" label="Overcast" value="overcast" />
+```
+
+### Default checked
+
+To check an option by default, use the `defaultChecked` prop.
+
+```.jsx
+<Radio name="weather3" label="Sunny" value="sunny" />
+<Radio defaultChecked name="weather3" label="Rainy" value="rainy" />
+<Radio name="weather3" label="Windy" value="windy" />
+<Radio name="weather3" label="Overcast" value="overcast" />
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `checked`.
+
+Note: Do not use `defaultChecked` with controlled inputs!
+
+```.jsx
+<Component initialState={{ value: 'rainy' }}>
+  {({ state, setState }) => (
+    <>
+      <Radio
+        checked={state.value === 'sunny'}
+        onChange={() => setState({ value: 'sunny' })}
+        name="weather4"
+        label="Sunny"
+        value="sunny"
+      />
+      <Radio
+        checked={state.value === 'rainy'}
+        onChange={() => setState({ value: 'rainy' })}
+        name="weather4"
+        label="Rainy"
+        value="rainy"
+      />
+    </>
+  )}
+</Component>
+```
+
+### Props
+
+<PropsTable component={Radio} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Radio: {
+    base: css | Object,
+    checked: css | Object,
+    disabled: css | Object,
+    focus: css | Object,
+    icon: {
+      checked: css | Object,
+      unchecked: css | Object,
+      uncheckedDisabled: css | Object,
+      checkedDisabled: css | Object
+    }
+  }
+}
+```

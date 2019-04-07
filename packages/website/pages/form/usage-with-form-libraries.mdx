@@ -1,0 +1,64 @@
+# Usage with form libraries
+
+Fannypack provides you with field adaptors for the React form libraries [Formik]() and [Redux Form]() to allow for 'built-in' state & validation rendering instead of you doing it yourself with their metadata.
+
+### Formik
+
+To use Fannypack fields with Formik, import the `formikField` adaptor and create a Formik field component with it. Then use your field component with Formik's `<Field>`.
+
+> Note: You must create the field outside of your component.
+
+```jsx
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import { InputField, formikField } from 'fannypack';
+
+const FormikInputField = formikField(InputField);
+
+function Form() {
+  return (
+    <Formik
+      initialValues={{ username: '' }}
+      handleSubmit={data => console.log(data)}
+    >
+      <Form>
+        <Field
+          component={FormikInputField}
+          name="username"
+          label="Username"
+        />
+      </Form>
+    </Formik>
+  );
+}
+
+export default Form;
+```
+
+### Redux Form
+
+To use Fannypack fields with Redux Form, import the `reduxFormField` adaptor and create a Redux Form field component with it. Then use your field component with Redux Form's `<Field>`.
+
+> Note: You must create the field outside of your component.
+
+```jsx
+import React from 'react';
+import { reduxForm, Field } from 'redux-form';
+import { InputField, reduxFormField } from 'fannypack';
+
+const ReduxFormInputField = reduxFormField(InputField);
+
+function Form() {
+  return (
+    <form>
+      <Field
+        component={ReduxFormInputField}
+        name="username"
+        label="Username"
+      />
+    </form>
+  );
+}
+
+export default reduxForm({ form: 'addUsername' })(Form);
+```

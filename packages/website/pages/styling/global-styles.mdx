@@ -1,0 +1,35 @@
+# Global Styles
+
+To add global styles to Fannypack, you will need to inject them in the Fannypack theme:
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  global: {
+    base: css`
+      font-family: 'Comic Sans MS';
+      font-size: 20px;
+    `
+  }
+}
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    {/* your app... */}
+  </ThemeProvider>
+)
+```
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  global: {
+    base: css | Object
+  }
+}
+```
+

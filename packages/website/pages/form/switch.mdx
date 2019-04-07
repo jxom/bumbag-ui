@@ -1,0 +1,110 @@
+import PropsTable from '../../components/PropsTable';
+import { Switch } from 'fannypack/Switch/Switch';
+import { SwitchField } from 'fannypack/Switch/SwitchField';
+
+# Switch
+
+### Import
+
+`import { Switch } from 'fannypack'`
+
+### Basic Usage
+
+```.jsx
+<Switch label="Check me" />
+```
+
+### Disabled
+
+Make the switch disabled with the `disabled` prop.
+
+```.jsx
+<Switch disabled label="Check me" />
+<Switch checked disabled label="Check me" marginTop="major-1" />
+```
+
+### Colors
+
+Add colors to your switch by using the `palette` prop.
+
+```.jsx
+<Switch defaultChecked palette="success" label="Check me" />
+<Switch defaultChecked palette="danger" label="Check me" marginTop="major-1" />
+<Switch defaultChecked palette="warning" label="Check me" marginTop="major-1" />
+```
+
+### States
+
+A switch can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```.jsx
+<Switch state="danger" label="Click me" />
+<Switch state="success" label="Click me" marginTop="major-1" />
+<Switch state="warning" label="Click me" marginTop="major-1" />
+<Switch state="primary" label="Click me" marginTop="major-1" />
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `checked`.
+
+Note: Do not use `defaultChecked` with controlled inputs!
+
+```.jsx
+<Component initialState={{ value: true }}>
+  {({ state, setState }) => (
+    <Switch
+      label="Click me"
+      checked={state.value}
+      onChange={e => setState({ value: e.target.checked })}
+    />
+  )}
+</Component>
+```
+
+### `<Switch>` Props
+
+<PropsTable component={Switch} />
+
+# SwitchField
+
+### Import
+
+```jsx
+import { SwitchField } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<SwitchField>` component contains of the [`<Switch>` component](#switch) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Switch>` props](/form/switch#switch-props) and [`<FieldWrapper>` props](/form/fieldwrapper#props).
+
+```.jsx
+<SwitchField a11yId="name" label="Check it" switchLabel="Check me" />
+```
+
+### `<SwitchField>` Props
+
+<PropsTable component={SwitchField} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Switch: {
+    base: css | Object,
+    checked: css | Object,
+    disabled: css | Object,
+    focus: css | Object,
+    icon: {
+      checked: css | Object,
+      unchecked: css | Object,
+      uncheckedDisabled: css | Object,
+      checkedDisabled: css | Object
+    }
+  }
+}
+```

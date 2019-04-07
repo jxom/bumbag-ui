@@ -1,0 +1,147 @@
+import PropsTable from '../../components/PropsTable';
+import { FieldWrapper } from 'fannypack/FieldWrapper/FieldWrapper';
+
+# FieldWrapper
+
+### Import
+
+```jsx
+import { FieldWrapper } from 'fannypack'
+```
+
+### Basic Usage
+
+The `<FieldWrapper>` component is a utility belt that wraps around form elements.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username">
+  <Input />
+</FieldWrapper>
+```
+
+### Descriptions
+
+The description text is placed underneath the label.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username" description="Required for your fannypack">
+  <Input />
+</FieldWrapper>
+```
+
+### Hints
+
+The hint text is placed underneath the field child.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username" hint="Must be awesome">
+  <Input />
+</FieldWrapper>
+```
+
+### Optional fields
+
+To indicate a field as optional, add the `isOptional` prop.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username" isOptional>
+  <Input />
+</FieldWrapper>
+```
+
+### Required fields
+
+Required fields don't show any visual feedback. Displaying 'optional' labels (as above) instead of a red astrix is more descriptive, less fearful, and accessible. However, adding the `isRequired` prop to the field will enable screen readers to identify required fields.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username" isRequired>
+  <Input />
+</FieldWrapper>
+```
+
+### States
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  validationText="This is an invalid name"
+  state="danger"
+>
+  <Input defaultValue="Jake" />
+</FieldWrapper>
+<FieldWrapper
+  a11yId="fannypacks"
+  validationText="Please check the box!"
+  state="primary"
+  marginTop="major-3"
+>
+  <Checkbox label="Fannypacks are great" />
+</FieldWrapper>
+<FieldWrapper
+  a11yId="accept"
+  label="Do you accept?"
+  validationText="Nice one!"
+  state="success"
+  marginTop="major-3"
+>
+  <RadioGroup
+    defaultValue={true}
+    name="accept"
+    options={[{ label: 'Yes', value: true }, { label: 'No', value: false }]}
+  />
+</FieldWrapper>
+```
+
+### Custom labels
+
+```.jsx
+<FieldWrapper a11yId="username" label={<Text color="primary">Username</Text>}>
+  <Input />
+</FieldWrapper>
+```
+
+### Custom descriptions
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  description={<Text color="primary">Required for your fannypack</Text>}
+>
+  <Input />
+</FieldWrapper>
+```
+
+### Custom hints
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  hint={<Text color="primary">Must be awesome</Text>}
+>
+  <Input />
+</FieldWrapper>
+```
+
+### Props
+
+<PropsTable component={FieldWrapper} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  FieldWrapper: {
+    base: css | Object,
+    label: css | Object,
+    description: css | Object,
+    hint: css | Object,
+    optional: css | Object,
+    validation: css | Object
+  }
+}
+```

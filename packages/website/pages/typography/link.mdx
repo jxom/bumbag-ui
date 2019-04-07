@@ -1,0 +1,37 @@
+import PropsTable from '../../components/PropsTable';
+import { Box } from 'fannypack';
+import { Link } from 'fannypack/Link';
+
+# Link
+
+### Import
+
+```jsx
+import { Link } from 'fannypack'
+```
+
+### Basic Usage
+
+`<Link>` renders a `<a>` element with reset styles and basic link styling.
+
+```.jsx
+<Link href="https://google.com">Click me</Link>
+```
+
+### Props
+
+<PropsTable component={Link} />
+
+### Theming
+
+#### Schema
+
+```jsx
+{
+  Link: {
+    base: css | Object;
+  }
+}
+```
+
+[Learn more about theming](/styling#theming)

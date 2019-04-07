@@ -1,3 +1,13 @@
+## Contents
+
+- [Developing](#developing)
+- [Commands](#commands)
+- [Getting Fannypack set up on your machine](#getting-fannypack-set-up-on-your-machine)
+- [Guide to developing a new component](#guide-to-developing-a-new-component)
+  - [Fannypack library (`packages/fannypack`)](#fannypack-library-packagesfannypack)
+  - [Website (`packages/website`)](#website-packageswebsite)
+- [Pushing your changes and creating a pull request](#pushing-your-changes-and-creating-a-pull-request)
+
 ## Developing
 
 Before you start developing, ensure that you have installed the package's dependencies:
@@ -19,7 +29,6 @@ yarn docs
 - `yarn lint` - Runs the linter
 - `yarn lint:fix` - Fixes lint issues
 - `yarn test` - Runs type-check, linter & tests
-- `yarn clean` - Clean up the compiled files.
 - `yarn docs` - Runs component documentation on a local development server.
 - `yarn develop` - Compile components & listen for changes (only use this for testing Fannypack consumer apps)
 
@@ -45,25 +54,22 @@ To get Fannypack up and running on your machine, follow these steps:
 
 ## Guide to developing a new component
 
-The list below is a guide (or checklist) to creating a new Fannypack component. You can reference this list as well as referencing existing components.
-
 - Create a new branch for your component
 
   > `git checkout -b add-my-compoenent`
 
-- A **component folder** (e.g. `MyComponent/`) which consists of:
+The Fannypack repository is set up as [a "monorepo"]() consisting of two main packages: the **Fannypack library** (`packages/fannypack`) and the **website** (`packages/website`). When creating or updating a component, you will have to make changes in both these packages.
+
+The list below is a guide (or checklist) to creating a new Fannypack component. You can reference this list as well as referencing existing components.
+
+### Fannypack library (`packages/fannypack`)
+
+- A **component folder** (e.g. `packages/fannypack/src/MyComponent/`) which consists of:
   - The component's `.tsx` file (e.g. `MyComponent.tsx`).
   - A `index.ts` file that exports the component and it's child components (if it has any).
   - A `styled.ts` file that manages the component's styling (CSS-in-JS via styled-components).
   - The components documentation (e.g. `MyComponent.mdx`).
   - A `__tests__` folder, consisting of the component's tests.
-
-- The **component's documentation** (`MyComponent.mdx`) contains:
-  - Import instructions
-  - Basic usage of the component
-  - Variants of the component
-  - Props table
-  - Theming docs
 
 - The **component itself** (`MyComponent.tsx`):
 
@@ -78,7 +84,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
     };
     ```
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/src/Alert/Alert.tsx#L28)
+  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/Alert/Alert.tsx#L30)
 
   Ensure **Typescript prop types** are exported:
 
@@ -88,7 +94,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
     export type ComponentProps = ButtonProps & LocalComponentProps;
   ```
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/src/Alert/Alert.tsx#L39)
+  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/Alert/Alert.tsx#L41)
 
   Ensure that the **local prop types** are attached to the component
 
@@ -96,7 +102,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
     export const MyComponent: React.FunctionComponent<LocalComponentProps> = ({
   ```
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/src/Alert/Alert.tsx#L53)
+  [A realistic example](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/Alert/Alert.tsx#L55)
 
   Ensure that your component has **prop types**:
 
@@ -171,9 +177,20 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
 
   Ensure that the component is tested via the [WAVE accessibility plugin](https://wave.webaim.org/extension/)
 
-- Component is exported in [`src/index.js`](https://github.com/fannypackui/fannypack/blob/master/src/index.ts)
+- Component is exported in [`src/index.js`](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/index.ts)
 
-- Component's theme config is added to [`src/types/theme.ts`](https://github.com/fannypackui/fannypack/blob/master/src/types/theme.ts)
+- Component's theme config is added to [`src/types/theme.ts`](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/types/theme.ts)
+
+### Website (`packages/website`)
+
+- The **component's documentation page** (e.g. `packages/website/pages/components/MyComponent.mdx`) contains:
+  - Import instructions
+  - Basic usage of the component
+  - Variants of the component
+  - Props table
+  - Theming docs
+- Add your component page to `utils/routes.js`
+- Add your component to `utils/components.js` (or make sure it's ticked off as "complete")
 
 ## Pushing your changes and creating a pull request
 

@@ -1,0 +1,108 @@
+import PropsTable from '../../components/PropsTable';
+import { Code } from 'fannypack';
+import { ActionButtons } from 'fannypack/Button';
+
+# ActionButtons
+
+### Import
+
+```jsx
+import { ActionButtons } from 'fannypack';
+```
+
+### Basic Usage
+
+The `<ActionButtons>` component renders a primary action button (e.g 'Submit'), as well as a secondary action button (e.g 'Cancel').
+They can be helpful for forms, dialogs and other things that require an action.
+
+```.jsx
+<ActionButtons
+  onClickSubmit={() => console.log('submitted')}
+  onClickCancel={() => console.log('cancelled')}
+/>
+```
+
+### Colors
+
+Action buttons can also take a color from the palette using the `palette` prop.
+
+```.jsx
+<Set isVertical>
+  <ActionButtons
+    palette="text"
+    onClickSubmit={() => console.log('submitted')}
+    onClickCancel={() => console.log('cancelled')}
+  />
+  <ActionButtons
+    palette="danger"
+    onClickSubmit={() => console.log('submitted')}
+    onClickCancel={() => console.log('cancelled')}
+  />
+</Set>
+```
+
+### Custom text
+
+To modify the text of the buttons, use the `submitText` and/or `cancelText` props.
+
+```.jsx
+<ActionButtons
+  cancelText="Close"
+  submitText="Save"
+  onClickSubmit={() => console.log('submitted')}
+  onClickCancel={() => console.log('cancelled')}
+/>
+```
+
+### Loading
+
+To indicate the primary button as loading, use the `isLoading` prop.
+
+```.jsx
+<ActionButtons
+  isLoading
+  onClickSubmit={() => console.log('submitted')}
+  onClickCancel={() => console.log('cancelled')}
+/>
+```
+
+### Type
+
+To change the type of the submit button (e.g `submit` or `reset`). Use the `type` prop.
+
+```.jsx
+<ActionButtons type="submit" />
+```
+
+### Custom props
+
+You can pass custom button props to action buttons using `submitProps` or `cancelProps`.
+
+```.jsx
+<ActionButtons
+  cancelText="Reject"
+  submitProps={{ disabled: true }}
+  cancelProps={{ palette: 'danger' }}
+/>
+```
+
+### Addon buttons
+
+```.jsx
+<ActionButtons
+  addonButtons={
+    <React.Fragment>
+      <Button palette="danger" kind="outlined">
+        Delete
+      </Button>
+      <Button palette="primary" kind="outlined">
+        Save draft
+      </Button>
+    </React.Fragment>
+  }
+/>
+```
+
+### `<ActionButtons>` Props
+
+<PropsTable component={ActionButtons} />

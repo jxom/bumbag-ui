@@ -1,0 +1,85 @@
+import PropsTable from '../../components/PropsTable';
+import { Tooltip } from 'fannypack/Tooltip/Tooltip';
+
+# Tooltip
+
+### Import
+
+```jsx
+import { Tooltip } from 'fannypack'
+```
+
+### Basic Usage
+
+```.jsx
+<Box height="50px">
+  <Button>
+    Hover on me
+    <Tooltip>Hello world!</Tooltip>
+  </Button>
+</Box>
+```
+
+### Placement
+
+You can place the tooltip to a particular side of the target with the `placement` prop.
+
+Available values are: `auto`, `top`, `right`, `bottom`, `left`, `top-start`, `right-start`, `bottom-start`, `left-start`, `top-end`, `right-end`, `bottom-end`, `left-end`.
+
+```.jsx
+<Button>
+  Hover on me
+  <Tooltip placement="right">Hello world!</Tooltip>
+</Button>
+```
+
+### Animations
+
+#### Fade
+
+```.jsx
+<Box height="50px">
+  <Button>
+    Hover on me
+    <Tooltip fade>Hello world!</Tooltip>
+  </Button>
+</Box>
+```
+
+#### Slide
+
+```.jsx
+<Box height="50px">
+  <Button>
+    Hover on me
+    <Tooltip slide fade>Hello world!</Tooltip>
+  </Button>
+</Box>
+```
+
+#### Expand
+
+```.jsx
+<Box height="50px">
+  <Button>
+    Hover on me
+    <Tooltip expand fade slide>Hello world!</Tooltip>
+  </Button>
+</Box>
+```
+
+### `<Tooltip>` Props
+
+<PropsTable component={Tooltip} />
+
+### Theming
+
+#### `<Tooltip>` Schema
+
+```jsx
+{
+  Tooltip: {
+    base: css | Object;
+  }
+}
+```
