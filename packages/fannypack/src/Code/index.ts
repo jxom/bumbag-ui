@@ -1,7 +1,9 @@
 import Code from './Code';
-import * as code from './styled';
+import * as codeStyled from './styled';
 
 export * from './Code';
 export * from './HighlightedCode';
-export { code };
+export { default as HighlightedCode } from './HighlightedCode';
+
+export { codeStyled };
 export default Code;

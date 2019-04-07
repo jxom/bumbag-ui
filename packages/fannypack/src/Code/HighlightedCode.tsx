@@ -81,8 +81,8 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
 
   render = () => {
     const { children, className, codeClassName, isBlock, lang, showLineNumbers, theme, ...props } = this.props;
-    console.log('test', _get(theme, 'fannypack.palette'));
     const style = defaultTheme({ palette: _get(theme, 'fannypack.palette') });
+    console.log(style);
     return (
       <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter
