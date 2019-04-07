@@ -1,7 +1,7 @@
 // @ts-ignore
 import _get from 'lodash/get';
 
-export default ({ palette }: { palette: { [key: string]: string } }) => console.log(palette) || ({
+export default ({ palette }: { palette: { [key: string]: string } }) => ({
   'code[class*="language-"]': {
     color: _get(palette, 'text'),
     background: 'none',

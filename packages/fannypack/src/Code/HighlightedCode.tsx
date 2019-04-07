@@ -51,27 +51,25 @@ export type LocalHighlightedCodeProps = {
 };
 export type HighlightedCodeProps = LocalHighlightedCodeProps & ReakitBoxProps;
 
-export const highlightedCodePropTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  codeClassName: PropTypes.string,
-  isBlock: PropTypes.bool,
-  lang: PropTypes.string.isRequired,
-  showLabel: PropTypes.bool,
-  showLineNumbers: PropTypes.bool
-};
-export const highlightedCodeDefaultProps = {
-  className: undefined,
-  codeClassName: undefined,
-  isBlock: false,
-  showLabel: false,
-  showLineNumbers: false,
-  theme: {}
-};
-
 export class HighlightedCode extends React.PureComponent<LocalHighlightedCodeProps> {
-  static propTypes = highlightedCodePropTypes;
-  static defaultProps = highlightedCodeDefaultProps;
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    codeClassName: PropTypes.string,
+    isBlock: PropTypes.bool,
+    lang: PropTypes.string.isRequired,
+    showLabel: PropTypes.bool,
+    showLineNumbers: PropTypes.bool
+  };
+
+  static defaultProps = {
+    className: undefined,
+    codeClassName: undefined,
+    isBlock: false,
+    showLabel: false,
+    showLineNumbers: false,
+    theme: {}
+  };
 
   componentDidMount = () => {
     registerLanguage('javascript', javascript);
@@ -82,7 +80,6 @@ export class HighlightedCode extends React.PureComponent<LocalHighlightedCodePro
   render = () => {
     const { children, className, codeClassName, isBlock, lang, showLineNumbers, theme, ...props } = this.props;
     const style = defaultTheme({ palette: _get(theme, 'fannypack.palette') });
-    console.log(style);
     return (
       <Wrapper lang={lang} {...props}>
         <SyntaxHighlighter
