@@ -3,13 +3,17 @@
 To add global styles to Fannypack, you will need to inject them in the Fannypack theme:
 
 ```jsx
-import { ThemeProvider } from 'fannypack';
+import { ThemeProvider, css } from 'fannypack';
 
 const theme = {
   global: {
+    fontFamily: 'Comic Sans MS',
+    fontSize: 20,
     base: css`
-      font-family: 'Comic Sans MS';
-      font-size: 20px;
+      html,
+      body {
+        background-color: pink;
+      }
     `
   }
 }

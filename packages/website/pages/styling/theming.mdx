@@ -18,8 +18,13 @@ import { ThemeProvider, css } from 'fannypack';
 
 const theme = {
   global: {
+    fontFamily: 'Comic Sans MS',
+    fontSize: 20,
     base: css`
-      font-family: 'Comic Sans MS'
+      html,
+      body {
+        background-color: pink;
+      }
     `
   },
   palette: {
