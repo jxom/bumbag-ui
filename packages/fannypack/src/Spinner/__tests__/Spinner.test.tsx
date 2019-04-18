@@ -21,3 +21,8 @@ it('renders correctly when a palette prop is set', () => {
   const { container } = render(<Spinner color="primary" />);
   expect(container.firstChild).toMatchSnapshot();
 });
+
+it('renders correctly when a value prop is set', () => {
+  const { container } = render(<Spinner value={75} />);
+  expect(container.firstChild).toMatchSnapshot();
+});

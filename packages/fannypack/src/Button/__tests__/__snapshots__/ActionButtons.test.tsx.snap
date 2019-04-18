@@ -52,7 +52,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   outline: none;
 }
 
-.c9 {
+.c8 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -66,7 +66,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   color: #fff !important;
 }
 
-.c9:focus:not(:focus-visible) {
+.c8:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -77,18 +77,23 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   display: flex;
 }
 
-.c8 {
+.c10 {
+  stroke-dasharray: 126;
+  stroke-dashoffset: 60px;
+  stroke: #fff;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.c9 {
   font-size: 20px;
-  -webkit-animation: iVXCSc 0.6s infinite linear;
-  animation: iVXCSc 0.6s infinite linear;
-  border: 0.1em solid #fff;
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
   height: 1em;
   width: 1em;
-  position: relative;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: iVXCSc 0.6s infinite linear;
+  animation: iVXCSc 0.6s infinite linear;
 }
 
 .c0 {
@@ -214,7 +219,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   outline: unset !important;
 }
 
-.c11 {
+.c12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -241,7 +246,7 @@ exports[`renders correctly for action buttons that is loading 1`] = `
   justify-content: center;
 }
 
-.c7 + .c10 {
+.c7 + .c11 {
   opacity: 0;
 }
 
@@ -265,12 +270,27 @@ exports[`renders correctly for action buttons that is loading 1`] = `
       class="c7 c2"
     >
       <div
-        class="c8 c9"
+        class="c8 c1"
         color="primaryInverted"
-      />
+      >
+        <svg
+          class="c9"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="c10"
+            color="primaryInverted"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
     </div>
     <span
-      class="c10 c11"
+      class="c11 c12"
     >
       Submit
     </span>

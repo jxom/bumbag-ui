@@ -19,17 +19,27 @@ import { Spinner } from 'fannypack'
 
 ```.jsx
 <Spinner size="small" />
-<Spinner marginLeft="major-1" />
-<Spinner size="medium" marginLeft="major-1" />
-<Spinner size="large" marginLeft="major-1" />
+<Spinner />
+<Spinner size="medium" />
+<Spinner size="large" />
 ```
 
 ### Colors
 
 ```.jsx
 <Spinner color="success" />
-<Spinner color="danger" marginLeft="major-1" />
-<Spinner color="warning" marginLeft="major-1" />
+<Spinner color="danger" />
+<Spinner color="warning" />
+```
+
+### Progress
+
+You can indicate progress on your spinner by adding a `value` prop.
+
+```.jsx
+<Spinner value={25} />
+<Spinner value={50} size="medium" />
+<Spinner value={75} size="large" />
 ```
 
 ### Props

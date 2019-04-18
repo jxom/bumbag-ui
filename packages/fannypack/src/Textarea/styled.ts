@@ -8,10 +8,8 @@ import { LocalTextareaProps } from './Textarea';
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
-  width: 15px;
-  height: 15px;
   top: 12px;
-  right: 10px;
+  right: 14px;
   z-index: 1;
 `;
 
@@ -20,8 +18,6 @@ const sizeProperties: any = {
     font-size: 0.8rem;
 
     & + ${LoadingSpinner} {
-      width: 10px;
-      height: 10px;
       top: 10px;
     }
 
@@ -33,8 +29,6 @@ const sizeProperties: any = {
     font-size: 1.25rem;
 
     & + ${LoadingSpinner} {
-      width: 20px;
-      height: 20px;
       top: 15px;
       right: 10px;
     }
@@ -47,8 +41,6 @@ const sizeProperties: any = {
     font-size: 1.5rem;
 
     & + ${LoadingSpinner} {
-      width: 25px;
-      height: 25px;
       top: 16px;
       right: 12px;
     }
