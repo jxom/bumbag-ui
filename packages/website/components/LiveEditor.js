@@ -87,7 +87,7 @@ LiveCode.defaultProps = {
   transformCode: src => `<React.Fragment>${src}</React.Fragment>`
 };
 
-const REG = /language\-\.jsx/;
+const REG = /language\-\.jsx/; // eslint-disable-line
 
 export const MDXLive = ({ pre: Pre, fallback: Fallback, match = REG, children, metaString, ...props }) => {
   const isLive = match.test(props.className);

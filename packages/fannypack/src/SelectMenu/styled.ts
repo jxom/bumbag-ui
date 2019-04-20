@@ -63,10 +63,6 @@ export const SelectMenuLoadingSpinner = styled(Spinner)`
   right: 7px;
   z-index: 1;
 
-  & > svg {
-    font-size: 1rem;
-  }
-
   ${theme('fannypack.SelectMenu.LoadingSpinner.base')};
 `;
 
@@ -78,10 +74,6 @@ export const SelectMenuStaticItem = styled(Flex)`
 `;
 
 export const SelectMenuLoadingItemSpinner = styled(Spinner)`
-  & > svg {
-    font-size: 1rem;
-  }
-
   ${theme('fannypack.SelectMenu.LoadingItemSpinner.base')};
 `;
 

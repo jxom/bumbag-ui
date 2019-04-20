@@ -63,6 +63,7 @@ export { Pane } from './Pane';
 export { Paragraph } from './Paragraph';
 export { Popover, PopoverContainer, PopoverShow, PopoverHide, PopoverToggle, PopoverClose } from './Popover';
 export { Portal } from './Portal';
+export { ProgressBar } from './ProgressBar';
 export { Radio, RadioGroup, RadioGroupField } from './Radio';
 export { Rating, RatingStar } from './Rating';
 export { Select, SelectField } from './Select';

@@ -25,10 +25,6 @@ export const LoadingSpinner = styled(Spinner)`
   top: 10px;
   right: 7px;
   z-index: 1;
-
-  & > svg {
-    font-size: 1rem;
-  }
 `;
 
 const sizeProperties: any = {

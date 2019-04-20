@@ -254,6 +254,12 @@ export const componentList = [
     docsPath: '/components/popover'
   },
   {
+    name: 'ProgressBar',
+    type: 'component',
+    status: 'complete',
+    docsPath: '/components/progressbar'
+  },
+  {
     name: 'Portal',
     type: 'util',
     status: 'complete',

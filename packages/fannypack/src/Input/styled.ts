@@ -19,9 +19,6 @@ export const LoadingSpinner = styled(Spinner)`
 const sizeProperties: { [key: string]: any } = {
   small: css`
     & + ${LoadingSpinner} {
-      & > svg {
-        font-size: 0.8rem;
-      }
       top: 8px;
     }
 
@@ -31,10 +28,7 @@ const sizeProperties: { [key: string]: any } = {
   `,
   medium: css`
     & + ${LoadingSpinner} {
-      & > svg {
-        font-size: 1.5rem;
-      }
-      top: 14 px;
+      top: 10px;
       right: 10px;
     }
 
@@ -44,11 +38,8 @@ const sizeProperties: { [key: string]: any } = {
   `,
   large: css`
     & + ${LoadingSpinner} {
-      & > svg {
-        font-size: 2rem;
-      }
-      top: 16px;
-      right: 12px;
+      top: 10px;
+      right: 10px;
     }
 
     & {

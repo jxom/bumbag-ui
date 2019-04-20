@@ -85,7 +85,7 @@ export const Button: React.FunctionComponent<LocalButtonProps> = ({
       {isLoading ? (
         <React.Fragment>
           <SpinnerWrapper>
-            <Spinner use={Flex} color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
+            <Spinner use={Flex} color={kind === 'default' ? `${palette || ''}Inverted` : palette} size="20px" />
           </SpinnerWrapper>
           <Text>{child}</Text>
         </React.Fragment>
