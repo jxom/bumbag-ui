@@ -4,6 +4,7 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 
+import { Omit } from '../types';
 import _ProgressBar, { ProgressBarIndicator } from './styled';
 
 export type LocalProgressBarProps = {
@@ -12,7 +13,7 @@ export type LocalProgressBarProps = {
   size?: string;
   value?: number;
 };
-export type ProgressBarProps = ReakitBoxProps & LocalProgressBarProps;
+export type ProgressBarProps = Omit<ReakitBoxProps, 'size'> & LocalProgressBarProps;
 
 function normalizeValue(value: number, maxValue: number) {
   let newValue = value;
