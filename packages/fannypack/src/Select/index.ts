@@ -1,5 +1,13 @@
 import Select from './Select';
-import SelectField from './SelectField';
+import * as styledSelect from './styled';
 
-export { Select, SelectField };
 export default Select;
+
+export * from './Select';
+export { default as Select } from './Select';
+export * from './SelectField';
+export { default as SelectField } from './SelectField';
+export * from './Icon';
+export { default as SelectIcon } from './Icon';
+
+export { styledSelect };

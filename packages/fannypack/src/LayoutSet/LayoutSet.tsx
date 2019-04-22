@@ -25,16 +25,18 @@ export const LayoutSet: React.FunctionComponent<LocalLayoutSetProps> = ({ childr
   );
 };
 
-LayoutSet.propTypes = {
+export const layoutSetPropTypes = {
   children: PropTypes.node.isRequired,
   isHorizontal: PropTypes.bool,
   spacing: PropTypes.string
 };
+LayoutSet.propTypes = layoutSetPropTypes;
 
-LayoutSet.defaultProps = {
+export const layoutSetDefaultProps = {
   isHorizontal: false,
   spacing: undefined
 };
+LayoutSet.defaultProps = layoutSetDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<LayoutSetProps> = withTheme(LayoutSet);

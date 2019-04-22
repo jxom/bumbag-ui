@@ -150,15 +150,17 @@ const tags = (props: LocalMarkdownProps): { [key: string]: { Component: BoxProps
   }
 });
 
-export class Markdown extends React.Component<LocalMarkdownProps> {
-  static propTypes = {
-    content: PropTypes.string.isRequired,
-    elementProps: PropTypes.object
-  };
+export const markdownPropTypes = {
+  content: PropTypes.string.isRequired,
+  elementProps: PropTypes.object
+};
+export const markdownDefaultProps = {
+  elementProps: {}
+};
 
-  static defaultProps = {
-    elementProps: {}
-  };
+export class Markdown extends React.Component<LocalMarkdownProps> {
+  static propTypes = markdownPropTypes;
+  static defaultProps = markdownDefaultProps;
 
   handleIterate = (Tag: string, props: Object, children: React.ReactElement<any>) => {
     const { Component, props: overrideProps = {} } = tags(this.props)[Tag] || { Component: Tag };

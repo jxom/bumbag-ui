@@ -15,14 +15,17 @@ export const PopoverShow: React.FunctionComponent<LocalPopoverShowProps> = ({ ch
   <_PopoverShow {...props}>{children}</_PopoverShow>
 );
 
-PopoverShow.propTypes = {
+export const popoverShowPropTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   show: PropTypes.func.isRequired
 };
-PopoverShow.defaultProps = {
+PopoverShow.propTypes = popoverShowPropTypes;
+
+export const popoverShowDefaultProps = {
   onClick: undefined
 };
+PopoverShow.defaultProps = popoverShowDefaultProps;
 
 const C: React.FunctionComponent<PopoverShowProps> = PopoverShow;
 export default C;

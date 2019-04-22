@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import Sidebar from 'reakit/Sidebar';
+import _Sidebar from 'reakit/Sidebar';
 import styled, { css, palette, space } from '../styled';
 import Button from '../Button';
 import { SidebarCloseProps } from './SidebarClose';
@@ -32,18 +32,20 @@ export const SidebarClose = styled(Button)<SidebarCloseProps>`
   }
 `;
 
-export const SidebarHide = styled(Sidebar.Hide)<SidebarHideProps>`
+export const SidebarHide = styled(_Sidebar.Hide)<SidebarHideProps>`
   ${theme('fannypack.Modal.Hide.base')};
 `;
 
-export const SidebarShow = styled(Sidebar.Show)<SidebarShowProps>`
+export const SidebarShow = styled(_Sidebar.Show)<SidebarShowProps>`
   ${theme('fannypack.Modal.Show.base')};
 `;
 
-export default styled(Sidebar)<SidebarProps>`
+export const Sidebar = styled(_Sidebar)<SidebarProps>`
   background-color: white;
   box-shadow: ${props => (props.align === 'left' ? '3px' : '-3px')} 0px 12px 0px rgba(0, 0, 0, 0.1);
   width: ${props => props.width};
 
   ${theme('fannypack.Modal.base')};
 `;
+
+export default Sidebar;

@@ -17,19 +17,22 @@ export const Set: React.FunctionComponent<LocalSetProps> = ({ children, ...props
   <_Set {...props}>{children}</_Set>
 );
 
-Set.propTypes = {
+export const setPropTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   isFilled: PropTypes.bool,
   isVertical: PropTypes.bool,
   spacing: PropTypes.string
 };
-Set.defaultProps = {
+Set.propTypes = setPropTypes;
+
+export const setDefaultProps = {
   className: undefined,
   isFilled: false,
   isVertical: false,
   spacing: 'minor-2'
 };
+Set.defaultProps = setDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<SetProps> = Set;

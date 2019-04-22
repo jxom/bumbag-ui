@@ -12,14 +12,17 @@ export type LocalMenuPopoverProps = LocalPopoverProps & {
 };
 export type MenuPopoverProps = PopoverProps & LocalMenuPopoverProps;
 
+export const menuPopoverPropTypes = {
+  ...popoverPropTypes,
+  children: PropTypes.node.isRequired
+};
+export const menuPopoverDefaultProps = {
+  ...popoverDefaultProps
+};
+
 export class MenuPopover extends React.Component<LocalMenuPopoverProps> {
-  static propTypes = {
-    ...popoverPropTypes,
-    children: PropTypes.node.isRequired
-  };
-  static defaultProps = {
-    ...popoverDefaultProps
-  };
+  static propTypes = menuPopoverPropTypes;
+  static defaultProps = menuPopoverDefaultProps;
 
   render = () => {
     const { children, ...props } = this.props;

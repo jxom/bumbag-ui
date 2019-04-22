@@ -17,13 +17,16 @@ export const TableFoot: React.FunctionComponent<LocalTableFootProps> = ({ childr
   </_TableFoot>
 );
 
-TableFoot.propTypes = {
+export const tableFootPropTypes = {
   children: PropTypes.node.isRequired,
   hasBorder: PropTypes.bool
 };
-TableFoot.defaultProps = {
+TableFoot.propTypes = tableFootPropTypes;
+
+export const tableFootDefaultProps = {
   hasBorder: true
 };
+TableFoot.defaultProps = tableFootDefaultProps;
 
 const C: React.FunctionComponent<TableFootProps> = TableFoot;
 export default C;

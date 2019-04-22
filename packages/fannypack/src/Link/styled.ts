@@ -1,4 +1,4 @@
-import Link from 'reakit/Link';
+import _Link from 'reakit/Link';
 import { palette, theme } from 'styled-tools';
 import { darken } from 'polished';
 import _defaultPalette from '../themes/default/palette';
@@ -9,7 +9,7 @@ import { LinkProps } from './Link';
 
 const defaultPalette = _defaultPalette({});
 
-export default styled(Link)<LinkProps>`
+export const Link = styled(_Link)<LinkProps>`
   color: ${palette('primary')};
   fill: ${palette('primary')};
   cursor: pointer;
@@ -29,3 +29,5 @@ export default styled(Link)<LinkProps>`
     ${theme('fannypack.Link.base')};
   }
 `;
+
+export default Link;

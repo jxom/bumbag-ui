@@ -1,5 +1,11 @@
 import Textarea from './Textarea';
-import TextareaField from './TextareaField';
+import * as styledTextarea from './styled';
 
-export { Textarea, TextareaField };
 export default Textarea;
+
+export * from './Textarea';
+export { default as Textarea } from './Textarea';
+export * from './TextareaField';
+export { default as TextareaField } from './TextareaField';
+
+export { styledTextarea };

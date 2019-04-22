@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { palette, theme } from 'styled-tools';
-import Input from 'reakit/Input';
+import _Input from 'reakit/Input';
 
 import styled, { css, selector } from '../styled';
 import { Box } from '../primitives';
@@ -16,7 +16,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 2;
 `;
 
-const sizeProperties: { [key: string]: any } = {
+export const sizeProperties: { [key: string]: any } = {
   small: css`
     & + ${LoadingSpinner} {
       top: 8px;
@@ -48,7 +48,7 @@ const sizeProperties: { [key: string]: any } = {
   `
 };
 
-const wrapperSizeProperties: { [key: string]: any } = {
+export const wrapperSizeProperties: { [key: string]: any } = {
   small: css`
     font-size: 0.8rem;
 
@@ -72,7 +72,7 @@ const wrapperSizeProperties: { [key: string]: any } = {
   `
 };
 
-const stateProperties = css`
+export const stateProperties = css`
   border-color: ${(props: any) => palette(`${props.state}`)(props)};
   box-shadow: ${(props: any) => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
@@ -101,7 +101,7 @@ export const InputWrapper = styled(Box)<{ styledSize?: string }>`
   }
 `;
 
-export default styled(Input)<InputProps & { styledSize?: string }>`
+export const Input = styled(_Input)<InputProps & { styledSize?: string }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -164,3 +164,5 @@ export default styled(Input)<InputProps & { styledSize?: string }>`
     ${(props: any) => props.state && stateProperties};
   }
 `;
+
+export default Input;

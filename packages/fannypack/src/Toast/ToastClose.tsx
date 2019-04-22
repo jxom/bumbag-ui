@@ -20,15 +20,17 @@ export const ToastClose: React.FunctionComponent<LocalToastCloseProps> = ({ onCl
   </_ToastClose>
 );
 
-ToastClose.propTypes = {
+export const toastClosePropTypes = {
   isAbsolute: PropTypes.bool,
   onClickClose: PropTypes.func
 };
+ToastClose.propTypes = toastClosePropTypes;
 
-ToastClose.defaultProps = {
+export const toastCloseDefaultProps = {
   isAbsolute: false,
   onClickClose: undefined
 };
+ToastClose.defaultProps = toastCloseDefaultProps;
 
 const C: React.FunctionComponent<ToastCloseProps> = ToastClose;
 export default C;

@@ -1,6 +1,13 @@
 import Radio from './Radio';
-import RadioGroup from './RadioGroup';
-import RadioGroupField from './RadioGroupField';
+import * as styledRadio from './styled';
 
-export { Radio, RadioGroup, RadioGroupField };
 export default Radio;
+
+export * from './Radio';
+export { default as Radio } from './Radio';
+export * from './RadioGroup';
+export { default as RadioGroup } from './RadioGroup';
+export * from './RadioGroupField';
+export { default as RadioGroupField } from './RadioGroupField';
+
+export { styledRadio };

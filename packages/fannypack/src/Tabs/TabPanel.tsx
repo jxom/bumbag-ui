@@ -18,15 +18,18 @@ export const TabPanel: React.FunctionComponent<LocalTabPanelProps> = ({ children
   <_TabPanel {...props}>{children}</_TabPanel>
 );
 
-TabPanel.propTypes = {
+export const tabPanelPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   tab: PropTypes.string.isRequired,
   isCurrent: PropTypes.func.isRequired
 };
-TabPanel.defaultProps = {
+TabPanel.propTypes = tabPanelPropTypes;
+
+export const tabPanelDefaultProps = {
   className: undefined
 };
+TabPanel.defaultProps = tabPanelDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TabPanelProps> = TabPanel;

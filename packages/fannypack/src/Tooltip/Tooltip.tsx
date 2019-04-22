@@ -25,7 +25,7 @@ export const Tooltip: React.FunctionComponent<LocalTooltipProps> = ({ children, 
   <_Tooltip {...props}>{children}</_Tooltip>
 );
 
-Tooltip.propTypes = {
+export const tooltipPropTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   delay: PropTypes.string,
@@ -37,7 +37,9 @@ Tooltip.propTypes = {
   slide: PropTypes.bool,
   timing: PropTypes.string
 };
-Tooltip.defaultProps = {
+Tooltip.propTypes = tooltipPropTypes;
+
+export const tooltipDefaultProps = {
   className: undefined,
   delay: undefined,
   duration: '100ms',
@@ -47,7 +49,8 @@ Tooltip.defaultProps = {
   placement: 'bottom',
   slide: false,
   timing: 'ease-in-out'
-};
+}
+Tooltip.defaultProps = tooltipDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TooltipProps> = Tooltip;

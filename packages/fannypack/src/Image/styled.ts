@@ -4,7 +4,7 @@ import Image from 'reakit/Image';
 import styled, { css } from '../styled';
 import { ImageProps } from './Image';
 
-const fitProperties = (props: ImageProps) => {
+export const fitProperties = (props: ImageProps) => {
   if (!props.fit) return;
   if (props.fit === 'contain') {
     return css`
@@ -36,7 +36,7 @@ const fitProperties = (props: ImageProps) => {
   }
   return null;
 };
-const fixedProperties = (props: ImageProps) => {
+export const fixedProperties = (props: ImageProps) => {
   if (!props.isFixed) return;
   return css`
     max-width: unset;
@@ -45,7 +45,7 @@ const fixedProperties = (props: ImageProps) => {
   `;
 };
 
-export default styled(Image)<ImageProps>`
+export const Image = styled(Image)<ImageProps>`
   max-width: 100%;
 
   & {
@@ -57,3 +57,5 @@ export default styled(Image)<ImageProps>`
 
   ${theme('fannypack.Image.base')};
 `;
+
+export default Image;

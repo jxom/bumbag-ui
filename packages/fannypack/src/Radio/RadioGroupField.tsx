@@ -68,14 +68,17 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
   </FieldWrapper>
 );
 
-RadioGroupField.propTypes = {
+export const radioGroupFieldPropTypes = {
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...radioGroupPropTypes
 };
-RadioGroupField.defaultProps = {
+RadioGroupField.propTypes = radioGroupFieldPropTypes;
+
+export const radioGroupFieldDefaultProps = {
   ...fieldWrapperDefaultProps,
   ...radioGroupDefaultProps
-};
+}
+RadioGroupField.defaultProps = radioGroupFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<RadioGroupFieldProps> = RadioGroupField;

@@ -15,9 +15,11 @@ export const TableRow: React.FunctionComponent<LocalTableRowProps> = ({ children
   </_TableRow>
 );
 
-TableRow.propTypes = {
+export const tableRowPropTypes = {
   children: PropTypes.node.isRequired
 };
+TableRow.propTypes = tableRowPropTypes;
+
 TableRow.defaultProps = {};
 
 const C: React.FunctionComponent<TableRowProps> = TableRow;

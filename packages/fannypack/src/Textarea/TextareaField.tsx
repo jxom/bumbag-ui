@@ -41,15 +41,17 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
   </FieldWrapper>
 );
 
-TextareaField.propTypes = {
+export const textareaFieldPropTypes = {
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...textareaPropTypes
 };
+TextareaField.propTypes = textareaFieldPropTypes;
 
-TextareaField.defaultProps = {
+export const textareaFieldDefaultProps = {
   ...fieldWrapperDefaultProps,
   ...textareaDefaultProps
-};
+}
+TextareaField.defaultProps = textareaFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TextareaFieldProps> = TextareaField;

@@ -33,19 +33,22 @@ Tabs.Tab = Tab;
 Tabs.Panel = TabPanel;
 Tabs.Container = ReakitTabs.Container;
 
-Tabs.propTypes = {
+export const tabsPropTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right']) as PropTypes.Validator<LocalTabsProps['align']>,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isFitted: PropTypes.bool,
   type: PropTypes.oneOf(['default', 'boxed']) as PropTypes.Validator<LocalTabsProps['type']>
 };
-Tabs.defaultProps = {
+Tabs.propTypes = tabsPropTypes;
+
+export const tabsDefaultProps = {
   align: undefined,
   className: undefined,
   isFitted: false,
   type: 'default'
-};
+}
+Tabs.defaultProps = tabsDefaultProps;
 
 const C: React.FunctionComponent<TabsProps> & TabsComponents = Tabs;
 export default C;

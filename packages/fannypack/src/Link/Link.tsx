@@ -16,13 +16,16 @@ export const Link: React.FunctionComponent<LocalLinkProps> = ({ children, classN
   </_Link>
 );
 
-Link.propTypes = {
+export const linkPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-Link.defaultProps = {
+Link.propTypes = linkPropTypes;
+
+export const linkDefaultProps = {
   className: undefined
 };
+Link.defaultProps = linkDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<LinkProps> = Link;

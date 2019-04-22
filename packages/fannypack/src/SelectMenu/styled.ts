@@ -167,6 +167,8 @@ export const SelectMenuTag = styled(Tag)`
   ${theme('fannypack.SelectMenu.Tag.base')};
 `;
 
-export default styled(Menu)`
+export const SelectMenu = styled(Menu)`
   ${theme('fannypack.SelectMenu.base')};
 `;
+
+export default SelectMenu;

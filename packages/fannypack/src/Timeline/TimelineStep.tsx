@@ -33,20 +33,22 @@ const TimelineStep: React.FunctionComponent<LocalTimelineStepProps> = ({
   </TimelineRow>
 );
 
-TimelineStep.propTypes = {
+export const timelineStepPropTypes = {
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
   lineColor: PropTypes.string,
   progressColor: PropTypes.string
 };
+TimelineStep.propTypes = timelineStepPropTypes;
 
-TimelineStep.defaultProps = {
+export const timelineStepDefaultProps = {
   a11yDescriptionId: undefined,
   a11yTitleId: undefined,
   lineColor: undefined,
   progressColor: 'textTint'
-};
+}
+TimelineStep.defaultProps = timelineStepDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TimelineStepProps> = TimelineStep;

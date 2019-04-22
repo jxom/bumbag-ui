@@ -4,7 +4,7 @@ import styled, { css, space } from '../styled';
 import { Flex } from '../primitives';
 import { LocalSetProps } from './Set';
 
-export default styled(Flex)<LocalSetProps>`
+export const Set = styled(Flex)<LocalSetProps>`
   ${props =>
     props.isVertical
       ? css`
@@ -44,3 +44,5 @@ export default styled(Flex)<LocalSetProps>`
     ${theme('fannypack.Set.base')};
   }
 `;
+
+export default Set;

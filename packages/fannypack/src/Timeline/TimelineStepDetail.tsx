@@ -17,14 +17,16 @@ const TimelineStepDetail: React.FunctionComponent<LocalTimelineStepDetailProps> 
   </_TimelineStepDetail>
 );
 
-TimelineStepDetail.propTypes = {
+export const timelineStepDetailPropTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string
 };
+TimelineStepDetail.propTypes = timelineStepDetailPropTypes;
 
-TimelineStepDetail.defaultProps = {
+export const timelineStepDetailDefaultProps = {
   color: undefined
 };
+TimelineStepDetail.defaultProps = timelineStepDetailDefaultProps;
 
 const C: React.FunctionComponent<TimelineStepDetailProps> = TimelineStepDetail;
 export default C;

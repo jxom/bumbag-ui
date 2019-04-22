@@ -73,7 +73,7 @@ Table.Head = TableHead;
 Table.HeadCell = TableHeadCell;
 Table.Row = TableRow;
 
-Table.propTypes = {
+export const tablePropTypes = {
   a11yTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   hasBorder: PropTypes.bool,
@@ -81,13 +81,16 @@ Table.propTypes = {
   isHoverable: PropTypes.bool,
   isStriped: PropTypes.bool
 };
-Table.defaultProps = {
+Table.propTypes = tablePropTypes;
+
+export const tableDefaultProps = {
   a11yTitle: undefined,
   hasBorder: false,
   isFullWidth: false,
   isHoverable: false,
   isStriped: false
-};
+}
+Table.defaultProps = tableDefaultProps;
 
 const C: React.FunctionComponent<TableProps> & TableComponents = Table;
 export default C;

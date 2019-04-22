@@ -17,14 +17,16 @@ const TimelineStepHeading: React.FunctionComponent<LocalTimelineStepHeadingProps
   </_TimelineStepHeading>
 );
 
-TimelineStepHeading.propTypes = {
+export const timelineStepHeadingPropTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string
 };
+TimelineStepHeading.propTypes = timelineStepHeadingPropTypes;
 
-TimelineStepHeading.defaultProps = {
+export const timelineStepHeadingDefaultProps = {
   color: undefined
-};
+}
+TimelineStepHeading.defaultProps = timelineStepHeadingDefaultPRops;
 
 const C: React.FunctionComponent<TimelineStepHeadingProps> = TimelineStepHeading;
 export default C;

@@ -46,18 +46,22 @@ const KEYS = {
   FNDOWN: 34
 };
 
+export const menuPropTypes = {
+  ...navigationPropTypes,
+  children: PropTypes.node.isRequired,
+  isHorizontal: PropTypes.bool
+};
+
+export const menuDefaultProps = {
+  ...navigationDefaultProps,
+  isHorizontal: false,
+  role: 'menu',
+  setInitialFocus: true
+};
+
 export class Menu extends React.Component<LocalMenuProps, State> {
-  static propTypes = {
-    ...navigationPropTypes,
-    children: PropTypes.node.isRequired,
-    isHorizontal: PropTypes.bool
-  };
-  static defaultProps = {
-    ...navigationDefaultProps,
-    isHorizontal: false,
-    role: 'menu',
-    setInitialFocus: true
-  };
+  static propTypes = menuPropTypes;
+  static defaultProps = menuDefaultProps;
 
   menu = React.createRef<HTMLElement>();
 

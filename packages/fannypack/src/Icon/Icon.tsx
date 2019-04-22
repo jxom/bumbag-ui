@@ -95,10 +95,9 @@ export const iconPropTypes = {
   theme: PropTypes.object, // eslint-disable-line
   type: PropTypes.oneOf(['font-awesome', 'font-awesome-standalone']) as PropTypes.Validator<LocalIconProps['type']>
 };
-
 Icon.propTypes = iconPropTypes;
 
-Icon.defaultProps = {
+export const iconDefaultProps = {
   children: null,
   className: undefined,
   color: undefined,
@@ -106,6 +105,7 @@ Icon.defaultProps = {
   size: 'default',
   type: undefined
 };
+Icon.defaultProps = iconDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<IconProps> = withTheme(Icon);

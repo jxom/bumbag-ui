@@ -17,16 +17,19 @@ export const Text: React.FunctionComponent<LocalTextProps> = ({ children, ...pro
   </_Text>
 );
 
-Text.propTypes = {
+export const textPropTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   color: PropTypes.string
 };
-Text.defaultProps = {
+Text.propTypes = textPropTypes;
+
+export const textDefaultProps = {
   className: undefined,
   children: undefined,
   color: undefined
 };
+Text.defaultProps = textDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TextProps> = Text;

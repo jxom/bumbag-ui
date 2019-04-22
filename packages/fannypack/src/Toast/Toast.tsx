@@ -61,7 +61,7 @@ export const Toast: React.FunctionComponent<LocalToastProps> & ToastComponents =
 
 Toast.Container = ToastContainer;
 
-Toast.propTypes = {
+export const toastPropTypes = {
   autoDismissTimeout: PropTypes.number,
   children: PropTypes.node,
   closeButtonProps: PropTypes.shape(_omit(buttonPropTypes, 'children')),
@@ -74,8 +74,9 @@ Toast.propTypes = {
   title: PropTypes.string,
   ...panePropTypes
 };
+Toast.propTypes = toastPropTypes;
 
-Toast.defaultProps = {
+export const toastDefaultProps = {
   ...paneDefaultProps,
   autoDismissTimeout: undefined,
   children: undefined,
@@ -88,7 +89,8 @@ Toast.defaultProps = {
   onClickClose: undefined,
   title: undefined,
   type: 'info'
-};
+}
+Toast.defaultProps = toastDefaultProps;
 
 const C: React.FunctionComponent<ToastProps> & ToastComponents = Toast;
 export default C;

@@ -68,7 +68,7 @@ export const HiddenSwitch = HiddenInput<LocalSwitchProps>({
   themePrefix: 'Switch'
 });
 
-export default styled(Label)<LocalSwitchProps>`
+export const Switch = styled(Label)<LocalSwitchProps>`
   align-items: center;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   display: flex;
@@ -77,3 +77,5 @@ export default styled(Label)<LocalSwitchProps>`
     ${theme('fannypack.Switch.label')};
   }
 `;
+
+export default Switch;

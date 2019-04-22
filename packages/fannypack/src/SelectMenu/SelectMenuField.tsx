@@ -124,15 +124,16 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   </FieldWrapper>
 );
 
-SelectMenuField.propTypes = {
+export const selectMenuFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...selectMenuPropTypes
 };
+SelectMenuField.propTypes = selectMenuFieldPropTypes;
 
-SelectMenuField.defaultProps = {
+export const selectMenuFieldDefaultProps = {
   ...fieldWrapperDefaultProps,
   ...selectMenuDefaultProps,
   addonBefore: undefined,
@@ -140,6 +141,7 @@ SelectMenuField.defaultProps = {
   a11yId: getUniqueId('SelectMenuField'),
   isVertical: false
 };
+SelectMenuField.defaultProps = selectMenuFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<SelectMenuFieldProps> = SelectMenuField;

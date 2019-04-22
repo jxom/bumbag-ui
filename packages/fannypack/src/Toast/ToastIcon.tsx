@@ -21,13 +21,16 @@ export const ToastIcon: React.FunctionComponent<LocalToastIconProps> = ({ size, 
   </ToastIconWrapper>
 );
 
-ToastIcon.propTypes = {
+export const toastIconPropTypes = {
   size: PropTypes.string,
   type: PropTypes.string.isRequired
 };
-ToastIcon.defaultProps = {
+ToastIcon.propTypes = toastIconPropTypes;
+
+export const toastIconDefaultProps = {
   size: undefined
 };
+ToastIcon.defaultProps = toastIconDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<ToastIconProps> = ToastIcon;

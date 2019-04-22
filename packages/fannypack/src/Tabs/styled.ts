@@ -1,4 +1,4 @@
-import Tabs from 'reakit/Tabs';
+import _Tabs from 'reakit/Tabs';
 import { palette, theme } from 'styled-tools';
 
 import styled, { css, selector } from '../styled';
@@ -6,13 +6,13 @@ import { LocalTabsProps } from './Tabs';
 import { LocalTabProps } from './Tab';
 import { LocalTabPanelProps } from './TabPanel';
 
-export const TabPanel = styled(Tabs.Panel)<LocalTabPanelProps>`
+export const TabPanel = styled(_Tabs.Panel)<LocalTabPanelProps>`
   & {
     ${theme('fannypack.Tabs.Panel.base')};
   }
 `;
 
-export const Tab = styled(Tabs.Tab)<LocalTabProps>`
+export const Tab = styled(_Tabs.Tab)<LocalTabProps>`
   align-items: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -56,7 +56,7 @@ const alignPropeties: any = {
   `
 };
 
-export default styled(Tabs)<LocalTabsProps>`
+export const Tabs = styled(_Tabs)<LocalTabsProps>`
   align-items: center;
   border-bottom: 1px solid ${palette('textTint')};
   display: flex;
@@ -117,3 +117,5 @@ export default styled(Tabs)<LocalTabsProps>`
     ${theme('fannypack.Tabs.base')};
   }
 `;
+
+export default Tabs;

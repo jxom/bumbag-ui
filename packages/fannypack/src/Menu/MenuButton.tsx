@@ -20,14 +20,18 @@ const KEYS = {
   SPACE: 32
 };
 
+export const menuButtonPropTypes = {
+  ...buttonPropTypes,
+  onClick: PropTypes.func
+};
+export const menuButtonDefaultProps = {
+  ...buttonDefaultProps
+};
+
 export class MenuButton extends React.Component<LocalMenuButtonProps> {
-  static propTypes = {
-    ...buttonPropTypes,
-    onClick: PropTypes.func
-  };
-  static defaultProps = {
-    ...buttonDefaultProps
-  };
+  static propTypes = menuButtonPropTypes;
+
+  static defaultProps = menuButtonDefaultProps;
 
   handleKeyDown = (e: React.KeyboardEvent<any>) => {
     const { context, isVisible } = this.props;

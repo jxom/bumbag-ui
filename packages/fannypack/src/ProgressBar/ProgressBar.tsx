@@ -35,19 +35,21 @@ export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ ma
   );
 };
 
-ProgressBar.propTypes = {
+export const progressBarPropTypes = {
   color: PropTypes.string,
   maxValue: PropTypes.number,
   size: PropTypes.string,
   value: PropTypes.number
 };
+ProgressBar.propTypes = progressBarPropTypes;
 
-ProgressBar.defaultProps = {
+export const progressBarDefaultProps = {
   color: 'primary',
   maxValue: 100,
   size: undefined,
   value: 0
 };
+ProgressBar.defaultProps = progressBarDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<ProgressBarProps> = ProgressBar;

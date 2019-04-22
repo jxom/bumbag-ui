@@ -11,7 +11,7 @@ export const Rating = styled(Box)`
   }
 `;
 
-const starSizes: any = {
+export const starSizes: any = {
   small: css`
     & {
       width: 1rem;

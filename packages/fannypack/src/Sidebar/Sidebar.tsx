@@ -114,7 +114,7 @@ export const Sidebar: React.FunctionComponent<LocalSidebarProps> & SidebarCompon
   </Portal>
 );
 
-Sidebar.propTypes = {
+export const sidebarPropTypes = {
   align: PropTypes.oneOf(['left', 'right']),
   backdropFade: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
@@ -127,7 +127,9 @@ Sidebar.propTypes = {
   ...animatePropTypes,
   ...restrictHidePropTypes
 };
-Sidebar.defaultProps = {
+Sidebar.propTypes = sidebarPropTypes;
+
+export const sidebarDefaultProps = {
   ...animateDefaultProps,
   ...restrictDefaultProps,
   align: 'left',
@@ -142,6 +144,7 @@ Sidebar.defaultProps = {
   slide: true,
   width: '250px'
 };
+Sidebar.defaultProps = sidebarDefaultProps;
 
 Sidebar.Container = SidebarContainer;
 Sidebar.Close = SidebarClose;

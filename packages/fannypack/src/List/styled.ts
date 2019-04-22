@@ -1,4 +1,4 @@
-import List from 'reakit/List';
+import _List from 'reakit/List';
 import { theme } from 'styled-tools';
 
 import { Box } from '../primitives';
@@ -6,7 +6,7 @@ import styled, { css, space } from '../styled';
 import { ListItemProps } from './ListItem';
 import { ListProps } from './List';
 
-const orderedProperties = css`
+export const orderedProperties = css`
   list-style-type: decimal;
 
   & & {
@@ -22,7 +22,7 @@ const orderedProperties = css`
   }
 `;
 
-const horizontalProperties = css`
+export const horizontalProperties = css`
   & li {
     display: inline-block;
     margin-right: 1rem;
@@ -42,7 +42,7 @@ export const ListItem = styled(Box)<ListItemProps>`
   }
 `;
 
-export default styled(List)<ListProps>`
+export const List = styled(_List)<ListProps>`
   list-style: unset;
   list-style-type: none;
 
@@ -66,3 +66,5 @@ export default styled(List)<ListProps>`
     ${theme('fannypack.List.base')};
   }
 `;
+
+export default List;

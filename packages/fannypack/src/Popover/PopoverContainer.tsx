@@ -26,14 +26,17 @@ export const PopoverContainer: React.FunctionComponent<LocalPopoverContainerProp
   </ReakitPopover.Container>
 );
 
-PopoverContainer.propTypes = {
+export const popoverContainerPropTypes = {
   children: PropTypes.func.isRequired,
   defaultVisible: PropTypes.bool,
   initialState: PropTypes.object
 };
-PopoverContainer.defaultProps = {
+PopoverContainer.propTypes = popoverContainerPropTypes;
+
+export const popoverContainerDefaultProps = {
   defaultVisible: false,
   initialState: {}
 };
+PopoverContainer.defaultProps = popoverContainerDefaultProps;
 
 export default PopoverContainer;

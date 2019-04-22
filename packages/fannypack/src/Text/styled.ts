@@ -5,7 +5,7 @@ import styled, { selector } from '../styled';
 import Icon from '../Icon/styled';
 import { LocalTextProps } from './Text';
 
-export default styled(Box)<LocalTextProps>`
+export const Text = styled(Box)<LocalTextProps>`
   abbr& {
     border-bottom: 1px dotted;
     cursor: help;
@@ -64,3 +64,5 @@ export default styled(Box)<LocalTextProps>`
 
   ${theme('fannypack.Text.base')};
 `;
+
+export default Text;

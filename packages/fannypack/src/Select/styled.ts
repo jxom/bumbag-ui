@@ -27,7 +27,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 1;
 `;
 
-const sizeProperties: any = {
+export const sizeProperties: any = {
   small: css`
     font-size: 0.8rem;
 
@@ -88,7 +88,7 @@ const stateProperties = css<{ state: SelectProps['state'] }>`
   box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(Input)<
+export const Select = styled(Input)<
   LocalSpinnerProps & {
     // eslint-disable-line
     isPlaceholderSelected: boolean;
@@ -140,3 +140,5 @@ export default styled(Input)<
 
   ${theme('fannypack.Select.base')};
 `;
+
+export default Select;

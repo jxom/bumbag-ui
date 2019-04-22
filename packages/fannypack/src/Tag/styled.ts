@@ -7,7 +7,7 @@ import { Box } from '../primitives';
 
 import { LocalTagProps } from './Tag';
 
-const sizeAttributes: any = {
+export const sizeAttributes: any = {
   medium: css`
     font-size: 1em;
     height: 2rem;
@@ -26,7 +26,7 @@ const sizeAttributes: any = {
   `
 };
 
-const outlinedProperties = css`
+export const outlinedProperties = css`
   & {
     background-color: unset;
     border: 1px solid ${palette()};
@@ -76,7 +76,7 @@ export const TagContent = styled(Box)<{ isRemovable: boolean }>`
   }
 `;
 
-const Tag = styled(InlineFlex)<LocalTagProps & { styledSize: LocalTagProps['size'] }>`
+export const Tag = styled(InlineFlex)<LocalTagProps & { styledSize: LocalTagProps['size'] }>`
   align-items: center;
   background-color: ${palette()};
   border-radius: 4px;

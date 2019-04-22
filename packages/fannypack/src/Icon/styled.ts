@@ -4,7 +4,7 @@ import { Box } from '../primitives';
 import styled from '../styled';
 import { IconProps } from './Icon';
 
-export default styled(Box)<IconProps>`
+export const Icon = styled(Box)<IconProps>`
   fill: ${props => (props.color ? palette(props.color)(props) : 'inherit')};
   position: relative;
   font-size: ${props => props.size}em;
@@ -12,3 +12,5 @@ export default styled(Box)<IconProps>`
   width: 1em;
   ${theme('fannypack.Icon.base')};
 `;
+
+export default Icon;

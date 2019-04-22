@@ -89,21 +89,21 @@ export const TableBody = styled(Box)<LocalTableBodyProps>`
   }
 `;
 
-const fullWidthProperties = css`
+export const fullWidthProperties = css`
   width: 100%;
 `;
-const hoverableProperties = css`
+export const hoverableProperties = css`
   & ${selector(TableBody)} ${selector(TableRow)}:hover {
     background-color: ${theme('fannypack.Table.hover.backgroundColor')} !important;
   }
 `;
-const stripedProperties = css`
+export const stripedProperties = css`
   & ${selector(TableBody)} ${selector(TableRow)}:nth-child(even) {
     background-color: ${theme('fannypack.Table.striped.backgroundColor')};
   }
 `;
 
-export default styled(Box)<LocalTableProps>`
+export const Table = styled(Box)<LocalTableProps>`
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
@@ -126,3 +126,5 @@ export default styled(Box)<LocalTableProps>`
     ${theme('fannypack.Table.base')};
   }
 `;
+
+export default Table;

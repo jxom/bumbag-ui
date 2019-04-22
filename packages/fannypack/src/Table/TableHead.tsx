@@ -17,13 +17,16 @@ export const TableHead: React.FunctionComponent<LocalTableHeadProps> = ({ childr
   </_TableHead>
 );
 
-TableHead.propTypes = {
+export const tableHeadPropTypes = {
   children: PropTypes.node.isRequired,
   hasBorder: PropTypes.bool
 };
-TableHead.defaultProps = {
+TableHead.propTypes = tableHeadPropTypes;
+
+export const tableHeadDefaultProps = {
   hasBorder: true
 };
+TableHead.defaultProps = tableHeadDefaultProps;
 
 const C: React.FunctionComponent<TableHeadProps> = TableHead;
 export default C;

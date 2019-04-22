@@ -12,8 +12,9 @@ export const Portal: React.FunctionComponent<PortalProps> = ({ children, ...prop
   <_Portal {...props}>{children}</_Portal>
 );
 
-Portal.propTypes = {
+export const portalPropTypes = {
   children: PropTypes.node.isRequired
 };
+Portal.propTypes = portalPropTypes;
 
 export default Portal;

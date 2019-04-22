@@ -52,15 +52,18 @@ Timeline.Step = TimelineStep;
 Timeline.StepHeading = TimelineStepHeading;
 Timeline.StepDetail = TimelineStepDetail;
 
-Timeline.propTypes = {
+export const timelinePropTypes = {
   activeStep: PropTypes.string,
   children: PropTypes.node.isRequired,
   progressColor: PropTypes.string
 };
-Timeline.defaultProps = {
+Timeline.propTypes = timelinePropTypes;
+
+export const timelineDefaultProps = {
   activeStep: undefined,
   progressColor: undefined
 };
+Timeline.defaultProps = timelineDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TimelineProps> & TimelineComponents = Timeline;

@@ -79,7 +79,7 @@ export const Radio: React.FunctionComponent<LocalRadioProps> = ({
   </_Radio>
 );
 
-Radio.propTypes = {
+export const radioPropTypes = {
   a11yId: PropTypes.string,
   autoFocus: PropTypes.bool,
   checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]) as PropTypes.Validator<LocalRadioProps['checked']>,
@@ -95,7 +95,9 @@ Radio.propTypes = {
   state: PropTypes.string,
   value: PropTypes.string
 };
-Radio.defaultProps = {
+Radio.propTypes = radioPropTypes;
+
+export const radioDefaultProps = {
   a11yId: undefined,
   autoFocus: false,
   checked: undefined,
@@ -110,6 +112,7 @@ Radio.defaultProps = {
   state: undefined,
   value: undefined
 };
+Radio.defaultProps = radioDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<RadioProps> = Radio;

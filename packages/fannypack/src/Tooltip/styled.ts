@@ -4,7 +4,7 @@ import _Tooltip from 'reakit/Tooltip';
 import styled, { space } from '../styled';
 import { LocalTooltipProps } from './Tooltip';
 
-const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
+export const Tooltip = styled(_Tooltip)<LocalTooltipProps>`
   background: black;
   border-radius: 2px;
   color: white;

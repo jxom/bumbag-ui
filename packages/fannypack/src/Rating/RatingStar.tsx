@@ -18,14 +18,17 @@ export const RatingStar: React.FunctionComponent<LocalRatingStarProps> = ({ size
   </_RatingStar>
 );
 
-RatingStar.propTypes = {
+export const ratingStarPropTypes = {
   active: PropTypes.bool,
   size: PropTypes.string
 };
-RatingStar.defaultProps = {
+RatingStar.propTypes = ratingStarPropTypes;
+
+export const ratingStarDefaultProps = {
   size: 'default',
   active: false
-};
+}
+RatingStar.defaultProps = ratingStarDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<RatingStarProps> = RatingStar;

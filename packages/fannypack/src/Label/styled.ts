@@ -1,10 +1,10 @@
-import Label from 'reakit/Label';
+import _Label from 'reakit/Label';
 import { theme } from 'styled-tools';
 
 import styled, { space } from '../styled';
 import { LabelProps } from './Label';
 
-export default styled(Label)<LabelProps>`
+export const Label = styled(_Label)<LabelProps>`
   display: block;
   font-weight: ${theme('fannypack.fontWeights.semibold')};
   margin-bottom: ${space(1)}rem;
@@ -14,3 +14,5 @@ export default styled(Label)<LabelProps>`
     ${theme('fannypack.Label.base')};
   }
 `;
+
+export default Label;

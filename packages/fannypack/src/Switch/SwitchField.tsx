@@ -77,19 +77,21 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
   </FieldWrapper>
 );
 
-SwitchField.propTypes = {
+export const switchFieldPropTypes = {
   a11yId: PropTypes.string,
   switchLabel: PropTypes.string,
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...switchPropTypes
 };
+SwitchField.propTypes = switchFieldPropTypes;
 
-SwitchField.defaultProps = {
+export const switchFieldDefaultProps = {
   a11yId: undefined,
   switchLabel: undefined,
   ...fieldWrapperDefaultProps,
   ...switchDefaultProps
 };
+SwitchField.defaultProps = switchFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<SwitchFieldProps> = SwitchField;

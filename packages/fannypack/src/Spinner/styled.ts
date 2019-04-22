@@ -58,7 +58,7 @@ export const Circle = styled.circle<{ color?: string; value?: number }>`
   transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
-const Spinner = styled.svg<LocalSpinnerProps & { styledSize?: string; value?: number }>`
+export const Spinner = styled.svg<LocalSpinnerProps & { styledSize?: string; value?: number }>`
   width: 1em;
   height: 1em;
   font-size: 20px;

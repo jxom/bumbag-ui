@@ -74,13 +74,16 @@ export const ToastContainer: React.FunctionComponent<ToastContainerProps> = ({ c
   </Container>
 );
 
-ToastContainer.propTypes = {
+export const toastContainerPropTypes = {
   children: PropTypes.func.isRequired,
   placement: placementPropType
 };
-ToastContainer.defaultProps = {
+ToastContainer.propTypes = toastContainerPropTypes;
+
+export const toastContainerDefaultProps = {
   placement: 'top-end'
 };
+ToastContainer.defaultProps = toastContainerDefaultProps;
 
 export default ToastContainer;
 

@@ -139,7 +139,7 @@ export const MenuPopover = styled(Popover)`
   }
 `;
 
-export default styled(Navigation)<LocalMenuProps>`
+export const Menu = styled(Navigation)<LocalMenuProps>`
   display: flex;
   align-items: flex-start;
 
@@ -174,3 +174,5 @@ export default styled(Navigation)<LocalMenuProps>`
     ${theme('fannypack.Menu.base')};
   }
 `;
+
+export default Menu;

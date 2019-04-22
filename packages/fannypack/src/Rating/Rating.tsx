@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 // @ts-ignore
 import times from 'lodash/times';
@@ -23,15 +24,27 @@ export type RatingState = {
   selectedIndex: number | undefined;
 };
 
+export const ratingPropTypes = {
+  className: PropTypes.string,
+  size: PropTypes.string,
+  defaultRating: PropTypes.number,
+  maxRating: PropTypes.number,
+  onRate: PropTypes.func,
+  disabled: PropTypes.bool
+};
+
+export const ratingDefaultProps = {
+  className: undefined,
+  size: 'default',
+  defaultRating: 0,
+  maxRating: 5,
+  onRate: undefined,
+  disabled: false
+};
+
 export class Rating extends React.Component<LocalRatingProps, RatingState> {
-  static defaultProps = {
-    className: undefined,
-    size: 'default',
-    defaultRating: 0,
-    maxRating: 5,
-    onRate: undefined,
-    disabled: false
-  };
+  static propTypes = ratingPropTypes;
+  static defaultProps = ratingDefaultProps;
 
   state = {
     rating: this.props.defaultRating || 0,

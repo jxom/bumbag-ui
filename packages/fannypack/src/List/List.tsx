@@ -29,17 +29,20 @@ export const List: React.FunctionComponent<LocalListProps> & ListComponents = ({
 
 List.Item = ListItem;
 
-List.propTypes = {
+export const listPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isOrdered: PropTypes.bool,
   isHorizontal: PropTypes.bool
 };
-List.defaultProps = {
+List.propTypes = listPropTypes;
+
+export const listDefaultProps = {
   className: undefined,
   isOrdered: false,
   isHorizontal: false
 };
+List.defaultProps = listDefaultProps;
 
 const C: React.FunctionComponent<ListProps> & ListComponents = List;
 export default C;

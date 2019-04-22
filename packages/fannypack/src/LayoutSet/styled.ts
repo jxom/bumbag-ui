@@ -4,7 +4,7 @@ import styled, { css } from '../styled';
 import Set from '../Set';
 import { LayoutSetProps } from './LayoutSet';
 
-export default styled(Set)<LayoutSetProps>`
+export const LayoutSet = styled(Set)<LayoutSetProps>`
   ${props =>
     props.isHorizontal
       ? css`
@@ -35,3 +35,5 @@ export default styled(Set)<LayoutSetProps>`
     ${theme('fannypack.LayoutSet.base')};
   }
 `;
+
+export default LayoutSet;

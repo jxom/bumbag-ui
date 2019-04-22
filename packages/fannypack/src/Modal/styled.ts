@@ -13,10 +13,12 @@ export const ModalShow = styled(Overlay.Show)<ModalShowProps>`
   ${theme('fannypack.Modal.Show.base')};
 `;
 
-export default styled(Overlay)<ModalProps>`
+export const Modal = styled(Overlay)<ModalProps>`
   padding: 0 1rem;
   max-width: 600px;
   width: 100%;
 
   ${theme('fannypack.Modal.base')};
 `;
+
+export default Modal;

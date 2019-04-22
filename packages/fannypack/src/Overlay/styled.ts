@@ -1,6 +1,6 @@
 import { InterpolationValue } from 'styled-components';
 import { theme } from 'styled-tools';
-import Overlay from 'reakit/Overlay';
+import _Overlay from 'reakit/Overlay';
 
 import styled, { css, space } from '../styled';
 import { OverlayProps } from './Overlay';
@@ -8,7 +8,7 @@ import { OverlayHideProps } from './OverlayHide';
 import { OverlayShowProps } from './OverlayShow';
 import { OverlayToggleProps } from './OverlayToggle';
 
-const getPlacementAttributes = (props: OverlayProps) => {
+export const getPlacementAttributes = (props: OverlayProps) => {
   if (!props.placement) return null;
 
   const getHiddenAttributes = ({ transformX, transformY }: { transformX: string; transformY: string }) => (
@@ -107,10 +107,12 @@ export const OverlayToggle = styled(Overlay.Toggle)<OverlayToggleProps>`
   ${theme('fannypack.Overlay.Toggle.base')};
 `;
 
-export default styled(Overlay)<OverlayProps>`
+export const Overlay = styled(_Overlay)<OverlayProps>`
   & {
     ${getPlacementAttributes};
   }
 
   ${theme('fannypack.Overlay.base')};
 `;
+
+export default Overlay;

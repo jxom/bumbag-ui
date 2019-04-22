@@ -20,9 +20,11 @@ export const PopoverClose: React.FunctionComponent<LocalPopoverCloseProps> = pro
   </_PopoverClose>
 );
 
-PopoverClose.propTypes = {
+export const popoverClosePropTypes = {
   hide: PropTypes.func.isRequired
 };
+PopoverClose.propTypes = popoverClosePropTypes;
+
 PopoverClose.defaultProps = {};
 
 // @ts-ignore

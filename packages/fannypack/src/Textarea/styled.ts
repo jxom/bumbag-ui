@@ -13,7 +13,7 @@ export const LoadingSpinner = styled(Spinner)`
   z-index: 1;
 `;
 
-const sizeProperties: any = {
+export const sizeProperties: any = {
   small: css`
     font-size: 0.8rem;
 
@@ -51,12 +51,12 @@ const sizeProperties: any = {
   `
 };
 
-const stateProperties = css`
+export const stateProperties = css`
   border-color: ${(props: any) => palette(`${props.state}300`)(props)};
   box-shadow: ${(props: any) => palette(`${props.state}300`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize: LocalTextareaProps['size'] }>`
+export const Textarea = styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize: LocalTextareaProps['size'] }>`
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -101,3 +101,6 @@ export default styled(use(Input, 'textarea'))<LocalTextareaProps & { styledSize:
 
   ${theme('fannypack.Textarea.base')};
 `;
+
+export default Textarea;
+

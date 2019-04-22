@@ -22,18 +22,21 @@ export const Spinner: React.FunctionComponent<LocalSpinnerProps> = ({ ...props }
   </Box>
 );
 
-Spinner.propTypes = {
+export const spinnerPropTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.string,
   value: PropTypes.number
 };
-Spinner.defaultProps = {
+Spinner.propTypes = spinnerPropTypes;
+
+export const spinnerDefaultProps = {
   className: undefined,
   color: 'primary',
   size: 'default',
   value: undefined
 };
+Spinner.defaultProps = spinnerDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<SpinnerProps> = Spinner;

@@ -27,7 +27,7 @@ export const Tag: React.FunctionComponent<LocalTagProps> = ({ children, onRemove
   </_Tag>
 );
 
-Tag.propTypes = {
+export const tagPropTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   kind: PropTypes.oneOf(['outlined']) as PropTypes.Validator<LocalTagProps['kind']>,
@@ -35,13 +35,16 @@ Tag.propTypes = {
   palette: PropTypes.string,
   size: PropTypes.string
 };
-Tag.defaultProps = {
+Tag.propTypes = tagPropTypes;
+
+export const tagDefaultProps = {
   className: undefined,
   kind: undefined,
   onRemove: undefined,
   palette: 'text',
   size: undefined
 };
+Tag.defaultProps = tagDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TagProps> = Tag;

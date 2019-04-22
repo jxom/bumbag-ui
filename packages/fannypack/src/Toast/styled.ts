@@ -70,7 +70,7 @@ export const Content = styled(Flex)`
   }
 `;
 
-const heightCountdown = keyframes`
+export const heightCountdown = keyframes`
   from {
     height: calc(100% + 2px);
   }
@@ -79,7 +79,7 @@ const heightCountdown = keyframes`
     height: 0%;
   }
 `;
-const widthCountdown = keyframes`
+export const widthCountdown = keyframes`
   from {
     width: calc(100% + 2px);
   }
@@ -216,7 +216,7 @@ const fromBottom = keyframes`
     transform: translateY(0);
   }
 `;
-const placementAttributes: { [key: string]: any } = {
+export const placementAttributes: { [key: string]: any } = {
   'top-start': css`
     top: 1rem;
     left: 1rem;

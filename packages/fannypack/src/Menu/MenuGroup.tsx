@@ -18,13 +18,16 @@ export const MenuGroup: React.FunctionComponent<MenuGroupProps> = ({ children, t
   </_MenuGroup>
 );
 
-MenuGroup.propTypes = {
+export const menuGroupPropTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string
 };
-MenuGroup.defaultProps = {
+MenuGroup.propTypes = menuGroupPropTypes;
+
+export const menuGroupDefaultProps = {
   title: undefined
 };
+MenuGroup.defaultProps = menuGroupDefaultProps;
 
 const C: React.FunctionComponent<MenuGroupProps> = MenuGroup;
 export default C;

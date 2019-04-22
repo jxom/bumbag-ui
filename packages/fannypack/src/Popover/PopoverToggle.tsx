@@ -15,14 +15,17 @@ export const PopoverToggle: React.FunctionComponent<LocalPopoverToggleProps> = (
   <_PopoverToggle {...props}>{children}</_PopoverToggle>
 );
 
-PopoverToggle.propTypes = {
+export const popoverTogglePropTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   toggle: PropTypes.func.isRequired
 };
-PopoverToggle.defaultProps = {
+PopoverToggle.propTypes = popoverTogglePropTypes;
+
+export const popoverToggleDefaultProps = {
   onClick: undefined
 };
+PopoverToggle.defaultProps = popoverToggleDefaultProps;
 
 const C: React.FunctionComponent<PopoverToggleProps> = PopoverToggle;
 export default C;

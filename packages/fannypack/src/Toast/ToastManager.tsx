@@ -44,13 +44,16 @@ export const ToastManager: React.FunctionComponent<ToastManagerProps> = ({ theme
   );
 };
 
-ToastManager.propTypes = {
+export const toastManagerPropTypes = {
   theme: PropTypes.object as PropTypes.Validator<ToastManagerProps['theme']>
 };
-ToastManager.defaultProps = {
+ToastManager.propTypes = toastManagerPropTypes;
+
+export const toastManagerDefaultProps = {
   theme: {
     fannypack: {}
   }
 };
+ToastManager.defaultProps = toastManagerDefaultProps;
 
 export default withTheme(ToastManager);

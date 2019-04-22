@@ -16,13 +16,16 @@ export const ListItem: React.FunctionComponent<LocalListItemProps> = ({ children
   </_ListItem>
 );
 
-ListItem.propTypes = {
+export const listItemPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-ListItem.defaultProps = {
+ListItem.propTypes = listItemPropTypes;
+
+export const listItemDefaultProps = {
   className: undefined
 };
+ListItem.defaultProps = listItemDefaultProps;
 
 const C: React.FunctionComponent<ListItemProps> = ListItem;
 export default C;

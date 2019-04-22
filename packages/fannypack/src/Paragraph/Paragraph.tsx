@@ -16,13 +16,16 @@ export const Paragraph: React.FunctionComponent<LocalParagraphProps> = ({ childr
   </_Paragraph>
 );
 
-Paragraph.propTypes = {
+export const paragraphPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
-Paragraph.defaultProps = {
+Paragraph.propTypes = paragraphPropTypes;
+
+export const paragraphDefaultProps = {
   className: undefined
 };
+Paragraph.defaultProps = paragraphDefaultProps;
 
 const C: React.FunctionComponent<ParagraphProps> = Paragraph;
 export default C;

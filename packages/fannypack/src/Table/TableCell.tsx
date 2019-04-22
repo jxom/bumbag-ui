@@ -15,12 +15,15 @@ export const TableCell: React.FunctionComponent<LocalTableCellProps> = ({ childr
   </_TableCell>
 );
 
-TableCell.propTypes = {
+export const tableCellPropTypes = {
   children: PropTypes.node
 };
-TableCell.defaultProps = {
+TableCell.propTypes = tableCellPropTypes;
+
+export const tableCellDefaultProps = {
   children: undefined
 };
+TableCell.defaultProps = tableCellDefaultProps;
 
 const C: React.FunctionComponent<TableCellProps> = TableCell;
 export default C;

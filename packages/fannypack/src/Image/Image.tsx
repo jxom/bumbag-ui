@@ -29,20 +29,23 @@ export const Image: React.FunctionComponent<LocalImageProps> = ({ children, clas
   </_Image>
 );
 
-Image.propTypes = {
+export const imagePropTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   fit: PropTypes.oneOf(['cover', 'contain']) as PropTypes.Validator<LocalImageProps['fit']>,
   fitPosition: PropTypes.string,
   isFixed: PropTypes.bool
 };
-Image.defaultProps = {
+Image.propTypes = imagePropTypes;
+
+export const imageDefaultProps = {
   children: undefined,
   className: undefined,
   fit: undefined,
   fitPosition: undefined,
   isFixed: false
 };
+Image.defaultProps = imageDefaultProps;
 
 const C: React.FunctionComponent<ImageProps> = Image;
 export default C;

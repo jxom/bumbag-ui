@@ -100,21 +100,23 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
   </FieldWrapper>
 );
 
-SelectField.propTypes = {
+export const selectFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...selectPropTypes
 };
+SelectField.propTypes = selectFieldPropTypes;
 
-SelectField.defaultProps = {
+export const selectFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
   isVertical: false,
   ...fieldWrapperDefaultProps,
   ...selectDefaultProps
 };
+SelectField.defaultProps = selectFieldDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<SelectFieldProps> = SelectField;

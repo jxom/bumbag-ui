@@ -15,15 +15,18 @@ export const Label: React.FunctionComponent<LocalLabelProps> = ({ children, ...p
   <_Label {...props}>{children}</_Label>
 );
 
-Label.propTypes = {
+export const labelPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   htmlFor: PropTypes.string
 };
-Label.defaultProps = {
+Label.propTypes = labelPropTypes;
+
+export const labelDefaultProps = {
   htmlFor: undefined,
   className: undefined
 };
+Label.defaultProps = labelDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<LabelProps> = Label;

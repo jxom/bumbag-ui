@@ -15,12 +15,15 @@ export const TableHeadCell: React.FunctionComponent<LocalTableHeadCellProps> = (
   </_TableHeadCell>
 );
 
-TableHeadCell.propTypes = {
+tableHeadCellPropTypes = {
   children: PropTypes.node
 };
-TableHeadCell.defaultProps = {
+TableHeadCell.propTypes = tableHeadCellPropTypes;
+
+tableHeadCellDefaultProps = {
   children: undefined
 };
+TableHeadCell.defaultProps = tableHeadCellDefaultProps;
 
 const C: React.FunctionComponent<TableHeadCellProps> = TableHeadCell;
 export default C;

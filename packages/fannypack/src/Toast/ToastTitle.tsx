@@ -15,9 +15,10 @@ export const ToastTitle: React.FunctionComponent<LocalToastTitleProps> = ({ chil
   </_ToastTitle>
 );
 
-ToastTitle.propTypes = {
+export const toastTitlePropTypes = {
   children: PropTypes.node.isRequired
 };
+ToastTitle.propTypes = toastTitlePropTypes;
 
 const C: React.FunctionComponent<ToastTitleProps> = ToastTitle;
 export default C;

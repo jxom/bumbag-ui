@@ -32,7 +32,7 @@ export const Tab: React.FunctionComponent<LocalTabProps> = ({ children, classNam
   </_Tab>
 );
 
-Tab.propTypes = {
+export const tabPropTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isActive: PropTypes.bool,
@@ -46,7 +46,9 @@ Tab.propTypes = {
   next: PropTypes.func.isRequired,
   previous: PropTypes.func.isRequired
 };
-Tab.defaultProps = {
+Tab.propTypes = tabPropTypes;
+
+export const tabDefaultProps = {
   className: undefined,
   isActive: false,
   register: noop,
@@ -57,6 +59,7 @@ Tab.defaultProps = {
   next: noop,
   previous: noop
 };
+Tab.defaultProps = tabDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<TabProps> = Tab;

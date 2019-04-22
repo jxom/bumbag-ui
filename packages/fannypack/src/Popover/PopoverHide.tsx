@@ -20,14 +20,17 @@ export const PopoverHide: React.FunctionComponent<LocalPopoverHideProps> = React
   )
 );
 
-PopoverHide.propTypes = {
+export const popoverHidePropTypes = {
   children: PropTypes.node.isRequired,
   hide: PropTypes.func.isRequired,
   onClick: PropTypes.func
 };
-PopoverHide.defaultProps = {
+PopoverHide.propTypes = popoverHidePropTypes;
+
+export const popoverHideDefaultProps = {
   onClick: undefined
-};
+}
+PopoverHide.defaultProps = popoverHideDefaultProps;
 
 const C: React.FunctionComponent<PopoverHideProps> = PopoverHide;
 export default C;
