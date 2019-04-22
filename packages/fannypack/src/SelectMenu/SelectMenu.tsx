@@ -469,7 +469,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
                 selectedOptions
               )
             : placeholder}
-          {isLoading ? <SelectMenuLoadingSpinner color="text" /> : <SelectIcon />}
+          {isLoading ? <SelectMenuLoadingSpinner color="text" size="1rem" /> : <SelectIcon />}
         </SelectMenuButton>
       </SelectMenuPopover>
     ) : (
@@ -565,7 +565,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
         })}
         <Loads.Loading>
           <SelectMenuStaticItem>
-            <SelectMenuLoadingItemSpinner color="text" />
+            <SelectMenuLoadingItemSpinner color="text" size="1rem" />
           </SelectMenuStaticItem>
         </Loads.Loading>
         <Loads.Success>{options.length === 0 && renderEmpty && renderEmpty({ emptyText })}</Loads.Success>

@@ -35,7 +35,7 @@ exports[`renders correctly for a button that is loading 1`] = `
   outline: none;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -49,22 +49,38 @@ exports[`renders correctly for a button that is loading 1`] = `
   color: #435a6f !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  stroke-dasharray: 126;
+  stroke-dashoffset: 60px;
+  stroke: #435a6f;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.c6 {
+  width: 1em;
+  height: 1em;
   font-size: 20px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-animation: iVXCSc 0.6s infinite linear;
   animation: iVXCSc 0.6s infinite linear;
-  border: 0.1em solid #435a6f;
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  position: relative;
+}
+
+.c6 {
+  font-size: 20px;
 }
 
 .c0 {
@@ -119,7 +135,7 @@ exports[`renders correctly for a button that is loading 1`] = `
   outline: unset !important;
 }
 
-.c7 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -146,7 +162,7 @@ exports[`renders correctly for a button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + .c6 {
+.c2 + .c8 {
   opacity: 0;
 }
 
@@ -161,10 +177,25 @@ exports[`renders correctly for a button that is loading 1`] = `
     <div
       class="c4 c5"
       color="defaultInverted"
-    />
+    >
+      <svg
+        class="c6"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="c7"
+          color="defaultInverted"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
   </div>
   <span
-    class="c6 c7"
+    class="c8 c9"
   >
     Test
   </span>
@@ -606,7 +637,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   outline: none;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -620,22 +651,38 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   color: #fff !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  stroke-dasharray: 126;
+  stroke-dashoffset: 60px;
+  stroke: #fff;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.c6 {
+  width: 1em;
+  height: 1em;
   font-size: 20px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-animation: iVXCSc 0.6s infinite linear;
   animation: iVXCSc 0.6s infinite linear;
-  border: 0.1em solid #fff;
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  position: relative;
+}
+
+.c6 {
+  font-size: 20px;
 }
 
 .c0 {
@@ -689,7 +736,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   outline: unset !important;
 }
 
-.c7 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -716,7 +763,7 @@ exports[`renders correctly for a colored button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + .c6 {
+.c2 + .c8 {
   opacity: 0;
 }
 
@@ -731,10 +778,25 @@ exports[`renders correctly for a colored button that is loading 1`] = `
     <div
       class="c4 c5"
       color="primaryInverted"
-    />
+    >
+      <svg
+        class="c6"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="c7"
+          color="primaryInverted"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
   </div>
   <span
-    class="c6 c7"
+    class="c8 c9"
   >
     Test
   </span>
@@ -1102,7 +1164,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
   outline: none;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1116,22 +1178,38 @@ exports[`renders correctly for a link button that is loading 1`] = `
   color: #fcfcfc !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  stroke-dasharray: 126;
+  stroke-dashoffset: 60px;
+  stroke: #fcfcfc;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.c6 {
+  width: 1em;
+  height: 1em;
   font-size: 20px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-animation: iVXCSc 0.6s infinite linear;
   animation: iVXCSc 0.6s infinite linear;
-  border: 0.1em solid #fcfcfc;
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  position: relative;
+}
+
+.c6 {
+  font-size: 20px;
 }
 
 .c0 {
@@ -1200,7 +1278,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
   fill: #000;
 }
 
-.c7 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1227,7 +1305,7 @@ exports[`renders correctly for a link button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + .c6 {
+.c2 + .c8 {
   opacity: 0;
 }
 
@@ -1242,10 +1320,25 @@ exports[`renders correctly for a link button that is loading 1`] = `
     <div
       class="c4 c5"
       color="default"
-    />
+    >
+      <svg
+        class="c6"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="c7"
+          color="default"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
   </div>
   <span
-    class="c6 c7"
+    class="c8 c9"
   >
     Test
   </span>
@@ -1520,7 +1613,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   outline: none;
 }
 
-.c5 {
+.c4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1534,22 +1627,38 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   color: #fcfcfc !important;
 }
 
-.c5:focus:not(:focus-visible) {
+.c4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  stroke-dasharray: 126;
+  stroke-dashoffset: 60px;
+  stroke: #fcfcfc;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.c6 {
+  width: 1em;
+  height: 1em;
   font-size: 20px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-animation: iVXCSc 0.6s infinite linear;
   animation: iVXCSc 0.6s infinite linear;
-  border: 0.1em solid #fcfcfc;
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  position: relative;
+}
+
+.c6 {
+  font-size: 20px;
 }
 
 .c0 {
@@ -1611,7 +1720,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   fill: #fcfcfc;
 }
 
-.c7 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1638,7 +1747,7 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
   justify-content: center;
 }
 
-.c2 + .c6 {
+.c2 + .c8 {
   opacity: 0;
 }
 
@@ -1653,10 +1762,25 @@ exports[`renders correctly for an outlined button that is loading 1`] = `
     <div
       class="c4 c5"
       color="default"
-    />
+    >
+      <svg
+        class="c6"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="c7"
+          color="default"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
   </div>
   <span
-    class="c6 c7"
+    class="c8 c9"
   >
     Test
   </span>

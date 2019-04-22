@@ -165,7 +165,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
             </option>
           ))}
         </_Select>
-        {isLoading ? <LoadingSpinner color="text" /> : <Icon />}
+        {isLoading ? <LoadingSpinner color="text" size="1rem" /> : <Icon />}
       </InlineBlock>
     );
   };

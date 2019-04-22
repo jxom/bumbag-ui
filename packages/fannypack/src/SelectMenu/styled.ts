@@ -59,9 +59,7 @@ export const SelectMenuIcon = styled.svg`
 
 export const SelectMenuLoadingSpinner = styled(Spinner)`
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 12px;
+  top: 10px;
   right: 7px;
   z-index: 1;
 
@@ -76,9 +74,6 @@ export const SelectMenuStaticItem = styled(Flex)`
 `;
 
 export const SelectMenuLoadingItemSpinner = styled(Spinner)`
-  width: 15px;
-  height: 15px;
-
   ${theme('fannypack.SelectMenu.LoadingItemSpinner.base')};
 `;
 

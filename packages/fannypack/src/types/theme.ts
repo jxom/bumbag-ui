@@ -431,6 +431,15 @@ export type PopoverThemeConfig = {
 export type PortalThemeConfig = {
   base?: Stylesheet;
 };
+export type ProgressBarThemeConfig = {
+  base?: Stylesheet;
+  indicator?: Stylesheet;
+  sizes?: {
+    small?: Stylesheet;
+    medium?: Stylesheet;
+    large?: Stylesheet;
+  };
+};
 export type RadioThemeConfig = {
   base?: Stylesheet;
   label?: Stylesheet;
@@ -711,6 +720,7 @@ export type ThemeConfig = {
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;
+  ProgressBar?: ProgressBarThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
   Rating?: RatingThemeConfig;

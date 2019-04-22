@@ -32,6 +32,7 @@ export default [
   { menu: 'Components', name: 'Menu', path: '/components/menu', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Navigation', path: '/components/navigation', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Popover', path: '/components/popover', breakpoint: 'tablet' },
+  { menu: 'Components', name: 'ProgressBar', path: '/components/progressbar', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Rating', path: '/components/rating', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Spinner', path: '/components/spinner', breakpoint: 'tablet' },
   { menu: 'Components', name: 'Table', path: '/components/table', breakpoint: 'tablet' },

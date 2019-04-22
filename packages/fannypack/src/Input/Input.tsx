@@ -144,7 +144,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
       type={type}
       value={value}
     />
-    {isLoading && <LoadingSpinner color="text" />}
+    {isLoading && <LoadingSpinner color="text" size="small" />}
   </InputWrapper>
 );
 

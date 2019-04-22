@@ -1,10 +1,12 @@
 import { palette, theme } from 'styled-tools';
 
-import { Box } from '../primitives';
 import styled, { css, keyframes } from '../styled';
 import { LocalSpinnerProps } from './Spinner';
 
-const sizes: any = {
+export const defaultDashArrayValue = 126;
+export const defaultDashOffset = '60px';
+
+export const sizes: any = {
   small: css`
     & {
       font-size: 14px;
@@ -32,7 +34,7 @@ const sizes: any = {
   `
 };
 
-const rotate = keyframes`
+export const rotate = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -41,26 +43,41 @@ const rotate = keyframes`
     transform: rotate(360deg);
   }
 `;
-export const spinnerProperties = css`
+
+export const spinnerAnimation = css`
   animation: ${rotate} 0.6s infinite linear;
-  border: 0.1em solid
-    ${(props: LocalSpinnerProps & { theme: any }) => (props.color ? palette(props.color)(props) : null)};
-  border-radius: 100%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  position: relative;
 `;
 
-export default styled(Box)<LocalSpinnerProps & { styledSize: LocalSpinnerProps['size'] }>`
+export const Circle = styled.circle<{ color?: string; value?: number }>`
+  stroke-dasharray: ${defaultDashArrayValue};
+  stroke-dashoffset: ${props =>
+    typeof props.value === 'number'
+      ? `${defaultDashArrayValue - (props.value / 100) * defaultDashArrayValue}px`
+      : defaultDashOffset};
+  stroke: ${(props: any) => palette(props.color)};
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+`;
+
+const Spinner = styled.svg<LocalSpinnerProps & { styledSize?: string; value?: number }>`
+  width: 1em;
+  height: 1em;
   font-size: 20px;
-  ${spinnerProperties};
+  transform: rotate(-90deg);
+
+  ${props => typeof props.value === 'undefined' && spinnerAnimation};
 
   & {
     ${theme('fannypack.Spinner.base')};
   }
 
-  ${props => props.styledSize && sizes[props.styledSize]};
+  ${props =>
+    props.styledSize &&
+    (sizes[props.styledSize] ||
+      css`
+        & {
+          font-size: ${(props: any) => props.styledSize};
+        }
+      `)};
 `;
+
+export default Spinner;

@@ -11,9 +11,7 @@ export type LocalCardTitleProps = {
 export type CardTitleProps = LocalCardTitleProps & ReakitHeadingProps;
 
 export const CardTitle: React.FunctionComponent<LocalCardTitleProps> = ({ children, ...props }) => (
-  <_CardTitle use="h5" isSubHeading {...props}>
-    {children}
-  </_CardTitle>
+  <_CardTitle {...props}>{children}</_CardTitle>
 );
 
 export const cardTitlePropTypes = {

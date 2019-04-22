@@ -189,8 +189,8 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
   - Variants of the component
   - Props table
   - Theming docs
-- Add your component page to `utils/routes.js`
-- Add your component to `utils/components.js` (or make sure it's ticked off as "complete")
+- Add your component page to [`utils/routes.js`](https://github.com/fannypackui/fannypack/blob/master/packages/website/utils/routes.js)
+- Add your component to [`utils/components.js`](https://github.com/fannypackui/fannypack/blob/master/packages/website/utils/components.js) (or make sure it's ticked off as "complete")
 
 ## Pushing your changes and creating a pull request
 

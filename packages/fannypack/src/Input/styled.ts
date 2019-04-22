@@ -2,7 +2,7 @@ import * as React from 'react';
 import { palette, theme } from 'styled-tools';
 import Input from 'reakit/Input';
 
-import styled, { css } from '../styled';
+import styled, { css, selector } from '../styled';
 import { Box } from '../primitives';
 import _Icon, { IconProps } from '../Icon/Icon';
 // @ts-ignore
@@ -11,9 +11,7 @@ import { InputProps } from './Input';
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 12px;
+  top: 10px;
   right: 10px;
   z-index: 2;
 `;
@@ -21,9 +19,7 @@ export const LoadingSpinner = styled(Spinner)`
 const sizeProperties: { [key: string]: any } = {
   small: css`
     & + ${LoadingSpinner} {
-      width: 10px;
-      height: 10px;
-      top: 10px;
+      top: 8px;
     }
 
     & {
@@ -32,9 +28,7 @@ const sizeProperties: { [key: string]: any } = {
   `,
   medium: css`
     & + ${LoadingSpinner} {
-      width: 20px;
-      height: 20px;
-      top: 15px;
+      top: 10px;
       right: 10px;
     }
 
@@ -44,10 +38,8 @@ const sizeProperties: { [key: string]: any } = {
   `,
   large: css`
     & + ${LoadingSpinner} {
-      width: 25px;
-      height: 25px;
-      top: 16px;
-      right: 12px;
+      top: 10px;
+      right: 10px;
     }
 
     & {

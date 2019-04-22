@@ -22,9 +22,7 @@ export const Icon = styled.svg`
 
 export const LoadingSpinner = styled(Spinner)`
   position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 12px;
+  top: 10px;
   right: 7px;
   z-index: 1;
 `;
@@ -104,7 +102,7 @@ export default styled(Input)<
   color: ${props =>
     props.isPlaceholderSelected ? tint(0.4, palette('text', 0, defaultPalette.text)(props)) : palette('text')(props)};
   height: 2.5em;
-  padding: 0.4em 1.4em 0.4em 0.6em;
+  padding: 0.4em 1.6em 0.4em 0.6em;
   line-height: 1.5;
   width: 100%;
 

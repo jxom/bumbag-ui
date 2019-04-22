@@ -18,8 +18,13 @@ import { ThemeProvider, css } from 'fannypack';
 
 const theme = {
   global: {
+    fontFamily: 'Comic Sans MS',
+    fontSize: 20,
     base: css`
-      font-family: 'Comic Sans MS'
+      html,
+      body {
+        background-color: pink;
+      }
     `
   },
   palette: {
@@ -109,6 +114,7 @@ const App = () => (
   Pane: PaneThemeConfig,
   Paragraph: ParagraphThemeConfig,
   Popover: PopoverThemeConfig,
+  ProgressBar: ProgressBarThemeConfig,
   Radio: RadioThemeConfig,
   RadioGroup: RadioGroupThemeConfig
   Rating: RatingThemeConfig,
@@ -173,6 +179,7 @@ const App = () => (
 - [PaneThemeConfig](/layout/pane#theming)
 - [ParagraphThemeConfig](/typography/paragraph#theming)
 - [PopoverThemeConfig](/components/popover#theming)
+- [ProgressBarThemeConfig](/components/progressbar#theming)
 - [RadioThemeConfig](/form/radio#theming)
 - [RadioGroupThemeConfig](/form/radiogroup#theming)
 - [RatingThemeConfig](/extras/rating#theming)

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { Box } from '../primitives';
+import { Box, Flex } from '../primitives';
 import styled from '../styled';
 import { ButtonProps as ReakitButtonProps } from 'reakit/ts/Button/Button';
 
@@ -85,7 +85,7 @@ export const Button: React.FunctionComponent<LocalButtonProps> = ({
       {isLoading ? (
         <React.Fragment>
           <SpinnerWrapper>
-            <Spinner color={kind === 'default' ? `${palette || ''}Inverted` : palette} />
+            <Spinner use={Flex} color={kind === 'default' ? `${palette || ''}Inverted` : palette} size="20px" />
           </SpinnerWrapper>
           <Text>{child}</Text>
         </React.Fragment>

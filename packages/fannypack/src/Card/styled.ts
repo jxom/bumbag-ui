@@ -1,6 +1,6 @@
 import { theme } from 'styled-tools';
 
-import styled, { css, space } from '../styled';
+import styled, { space } from '../styled';
 import { Box } from '../primitives';
 import { CardCardProps } from './CardCard';
 import { CardContentProps } from './CardContent';
@@ -9,7 +9,7 @@ import { CardHeaderProps } from './CardHeader';
 import { CardTitleProps } from './CardTitle';
 import Pane from '../Pane';
 // @ts-ignore
-import Heading from '../Heading';
+import Text from '../Text';
 
 export const Card = styled(Pane)<CardCardProps>`
   padding: ${space(6, 'minor')}rem;
@@ -45,10 +45,9 @@ export const CardFooter = styled(Box)<CardFooterProps>`
     ${theme('fannypack.Card.Footer.base')};
   }
 `;
-export const CardTitle = styled(Heading)<CardTitleProps>`
-  && {
-    margin-bottom: 0px;
-  }
+export const CardTitle = styled(Text)<CardTitleProps>`
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
+  font-size: ${theme('fannypack.fontSizes.300')}rem;
 
   & {
     ${theme('fannypack.Card.Title.base')};
