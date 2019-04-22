@@ -82,6 +82,8 @@ export { default as LayoutSet } from './LayoutSet';
 export * from './LayoutSet';
 export { default as Link } from './Link';
 export * from './Link';
+export { default as List } from './List';
+export * from './List';
 export { default as Markdown } from './Markdown';
 export * from './Markdown';
 export { default as Menu } from './Menu';

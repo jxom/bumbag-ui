@@ -25,8 +25,8 @@ TimelineStepHeading.propTypes = timelineStepHeadingPropTypes;
 
 export const timelineStepHeadingDefaultProps = {
   color: undefined
-}
-TimelineStepHeading.defaultProps = timelineStepHeadingDefaultPRops;
+};
+TimelineStepHeading.defaultProps = timelineStepHeadingDefaultProps;
 
 const C: React.FunctionComponent<TimelineStepHeadingProps> = TimelineStepHeading;
 export default C;

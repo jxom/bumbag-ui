@@ -8,15 +8,15 @@ import { PopoverShowProps } from './PopoverShow';
 import { PopoverHideProps } from './PopoverHide';
 import { PopoverPopoverProps } from './PopoverPopover';
 
-export const PopoverHide = styled(Popover.Hide)<PopoverHideProps>`
+export const PopoverHide = styled(_Popover.Hide)<PopoverHideProps>`
   ${theme('fannypack.Popover.Hide.base')};
 `;
 
-export const PopoverShow = styled(Popover.Show)<PopoverShowProps>`
+export const PopoverShow = styled(_Popover.Show)<PopoverShowProps>`
   ${theme('fannypack.Popover.Show.base')};
 `;
 
-export const PopoverToggle = styled(Popover.Toggle)<PopoverToggleProps>`
+export const PopoverToggle = styled(_Popover.Toggle)<PopoverToggleProps>`
   ${theme('fannypack.Popover.Toggle.base')};
 `;
 

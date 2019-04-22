@@ -1,5 +1,5 @@
 import { theme } from 'styled-tools';
-import Image from 'reakit/Image';
+import _Image from 'reakit/Image';
 
 import styled, { css } from '../styled';
 import { ImageProps } from './Image';
@@ -45,7 +45,7 @@ export const fixedProperties = (props: ImageProps) => {
   `;
 };
 
-export const Image = styled(Image)<ImageProps>`
+export const Image = styled(_Image)<ImageProps>`
   max-width: 100%;
 
   & {

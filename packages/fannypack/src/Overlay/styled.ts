@@ -95,15 +95,15 @@ export const getPlacementAttributes = (props: OverlayProps) => {
   `;
 };
 
-export const OverlayHide = styled(Overlay.Hide)<OverlayHideProps>`
+export const OverlayHide = styled(_Overlay.Hide)<OverlayHideProps>`
   ${theme('fannypack.Overlay.Hide.base')};
 `;
 
-export const OverlayShow = styled(Overlay.Show)<OverlayShowProps>`
+export const OverlayShow = styled(_Overlay.Show)<OverlayShowProps>`
   ${theme('fannypack.Overlay.Show.base')};
 `;
 
-export const OverlayToggle = styled(Overlay.Toggle)<OverlayToggleProps>`
+export const OverlayToggle = styled(_Overlay.Toggle)<OverlayToggleProps>`
   ${theme('fannypack.Overlay.Toggle.base')};
 `;
 
