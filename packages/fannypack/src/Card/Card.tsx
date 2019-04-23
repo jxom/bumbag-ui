@@ -90,6 +90,7 @@ export const cardDefaultProps = {
   isFullWidth: false,
   title: undefined
 };
+Card.defaultProps = cardPropTypes;
 
 // @ts-ignore
 const C: React.FunctionComponent<CardProps> & CardComponents = Card;

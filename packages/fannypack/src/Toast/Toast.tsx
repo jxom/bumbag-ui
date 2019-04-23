@@ -89,7 +89,7 @@ export const toastDefaultProps = {
   onClickClose: undefined,
   title: undefined,
   type: 'info'
-}
+};
 Toast.defaultProps = toastDefaultProps;
 
 const C: React.FunctionComponent<ToastProps> & ToastComponents = Toast;

@@ -31,7 +31,7 @@ export const containerPropTypes = {
 };
 Container.propTypes = containerPropTypes;
 
-export const containerDefaultProps = {
+export const containerDefaultProps: Partial<LocalContainerProps> = {
   align: 'center',
   breakpoint: undefined,
   className: undefined,

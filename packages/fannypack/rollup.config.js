@@ -90,7 +90,6 @@ const createConfig = ({ umd, pkg, plugins = [], ...config }) => ({
 export default [
   createConfig({
     pkg,
-    experimentalCodeSplitting: true,
     input: [],
     output: [
       {
@@ -104,6 +103,5 @@ export default [
       }
     ],
     plugins: [proxyDirectories(), ignore(['react-test-renderer'])]
-  }),
-  createConfig({ pkg, input: 'src/index.ts', umd: true })
+  })
 ];

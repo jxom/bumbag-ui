@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { LocalCalloutProps, calloutPropTypes, calloutDefaultProps } from '../Callout/Callout';
+import { LocalCalloutProps, CalloutProps, calloutPropTypes, calloutDefaultProps } from '../Callout/Callout';
 import { LocalOverlayProps, OverlayProps, overlayPropTypes, overlayDefaultProps } from '../Overlay/Overlay';
 import OverlayHide from '../Overlay/OverlayHide';
 import _CalloutOverlay, { Callout } from './styled';
@@ -11,7 +11,7 @@ export type LocalCalloutOverlayProps = LocalOverlayProps &
     children: React.ReactNode;
     hide?(): void;
   };
-export type CalloutOverlayProps = OverlayProps & LocalCalloutOverlayProps;
+export type CalloutOverlayProps = OverlayProps & CalloutProps & LocalCalloutOverlayProps;
 
 export const CalloutOverlay: React.FunctionComponent<LocalCalloutOverlayProps> = ({
   a11yDescriptionId,
@@ -73,7 +73,7 @@ export const calloutOverlayPropTypes = {
 };
 CalloutOverlay.propTypes = calloutOverlayPropTypes;
 
-export const calloutOverlayDefaultProps = {
+export const calloutOverlayDefaultProps: Partial<LocalCalloutOverlayProps> = {
   ...overlayDefaultProps,
   ...calloutDefaultProps,
   elevation: '300',

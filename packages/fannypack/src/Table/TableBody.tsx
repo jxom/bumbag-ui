@@ -25,7 +25,7 @@ TableBody.propTypes = tableBodyPropTypes;
 
 export const tableBodyDefaultProps = {
   hasBorders: false
-}
+};
 TableBody.defaultProps = tableBodyDefaultProps;
 
 const C: React.FunctionComponent<TableBodyProps> = TableBody;

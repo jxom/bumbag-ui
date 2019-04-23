@@ -134,6 +134,8 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
     const { isPlaceholderSelected } = this.state;
     return (
       <InlineBlock relative minWidth="50px" width={isFullWidth ? '100%' : undefined} {...props}>
+        {/*
+          // @ts-ignore */}
         <_Select
           aria-invalid={state === 'danger'}
           aria-label={a11yLabel}

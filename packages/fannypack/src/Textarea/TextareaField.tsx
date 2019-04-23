@@ -50,7 +50,7 @@ TextareaField.propTypes = textareaFieldPropTypes;
 export const textareaFieldDefaultProps = {
   ...fieldWrapperDefaultProps,
   ...textareaDefaultProps
-}
+};
 TextareaField.defaultProps = textareaFieldDefaultProps;
 
 // @ts-ignore

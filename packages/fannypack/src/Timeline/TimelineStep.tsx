@@ -47,7 +47,7 @@ export const timelineStepDefaultProps = {
   a11yTitleId: undefined,
   lineColor: undefined,
   progressColor: 'textTint'
-}
+};
 TimelineStep.defaultProps = timelineStepDefaultProps;
 
 // @ts-ignore

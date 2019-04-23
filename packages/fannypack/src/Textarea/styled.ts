@@ -103,4 +103,3 @@ export const Textarea = styled(use(Input, 'textarea'))<LocalTextareaProps & { st
 `;
 
 export default Textarea;
-

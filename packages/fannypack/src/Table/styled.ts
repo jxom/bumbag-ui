@@ -60,9 +60,16 @@ export const TableHead = styled(Box)<LocalTableHeadProps>`
   }
 `;
 
-export const TableHeadCell = styled(Box)<LocalTableHeadCellProps>`
+export const tableHeadCellText = css`
   font-weight: bold;
+
+  & {
+    ${theme('fannypack.Table.HeadCell.text')};
+  }
+`;
+export const TableHeadCell = styled(Box)<LocalTableHeadCellProps>`
   padding: ${theme('fannypack.Table.spacing')}rem;
+  ${tableHeadCellText}
 
   & {
     ${theme('fannypack.Table.HeadCell.base')};
@@ -102,6 +109,34 @@ export const stripedProperties = css`
     background-color: ${theme('fannypack.Table.striped.backgroundColor')};
   }
 `;
+export const responsiveAttributes = css`
+  @media screen and (max-width: ${(props: any) =>
+      theme(`fannypack.layout.${props.responsiveBreakpoint}Breakpoint`)}px) {
+    & ${selector(TableHead)} {
+      display: none;
+    }
+
+    & ${selector(TableBody)} ${selector(TableRow)}:not(:last-child) {
+      border-bottom: 1px solid ${theme('fannypack.Table.borderColor')};
+    }
+
+    & ${selector(TableBody)} ${selector(TableCell)} {
+      display: block;
+      text-align: left !important;
+
+      &::before {
+        display: block;
+        content: attr(data-content);
+        ${tableHeadCellText}
+      }
+    }
+
+    & ${selector(TableFoot)} ${selector(TableCell)} {
+      display: block;
+      text-align: left !important;
+    }
+  }
+`;
 
 export const Table = styled(Box)<LocalTableProps>`
   border-collapse: collapse;
@@ -112,6 +147,9 @@ export const Table = styled(Box)<LocalTableProps>`
     margin-bottom: ${space(4)}rem;
   }
 
+  & {
+    ${props => props.isResponsive && responsiveAttributes};
+  }
   & {
     ${props => props.isFullWidth && fullWidthProperties};
   }

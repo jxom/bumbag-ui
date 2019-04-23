@@ -83,23 +83,17 @@ export const sizeProperties: any = {
   `
 };
 
-const stateProperties = css<{ state: SelectProps['state'] }>`
-  border-color: ${props => palette(`${props.state}`)(props)};
-  box-shadow: ${props => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
+const stateProperties = css`
+  border-color: ${(props: any) => palette(`${props.state}`)(props)};
+  box-shadow: ${(props: any) => palette(`${props.state}`)(props)} 0px 0px 0px 1px !important;
 `;
 
-export const Select = styled(Input)<
-  LocalSpinnerProps & {
-    // eslint-disable-line
-    isPlaceholderSelected: boolean;
-    styledSize: SelectProps['size'];
-  }
->`
+export const Select = styled(Input)`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid #bdbdbd;
   border-radius: 0.2em;
-  color: ${props =>
+  color: ${(props: any) =>
     props.isPlaceholderSelected ? tint(0.4, palette('text', 0, defaultPalette.text)(props)) : palette('text')(props)};
   height: 2.5em;
   padding: 0.4em 1.6em 0.4em 0.6em;
@@ -132,10 +126,10 @@ export const Select = styled(Input)<
   }
 
   & {
-    ${props => props.styledSize && sizeProperties[props.styledSize]};
+    ${(props: any) => props.styledSize && sizeProperties[props.styledSize]};
   }
   & {
-    ${props => props.state && stateProperties};
+    ${(props: any) => props.state && stateProperties};
   }
 
   ${theme('fannypack.Select.base')};

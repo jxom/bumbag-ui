@@ -80,7 +80,7 @@ export const toastContainerPropTypes = {
 };
 ToastContainer.propTypes = toastContainerPropTypes;
 
-export const toastContainerDefaultProps = {
+export const toastContainerDefaultProps: Partial<ToastContainerProps> = {
   placement: 'top-end'
 };
 ToastContainer.defaultProps = toastContainerDefaultProps;

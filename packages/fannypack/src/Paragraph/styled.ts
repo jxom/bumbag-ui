@@ -19,4 +19,3 @@ export const Paragraph = styled(_Paragraph)<ParagraphProps>`
 `;
 
 export default Paragraph;
-

@@ -29,7 +29,7 @@ PopoverHide.propTypes = popoverHidePropTypes;
 
 export const popoverHideDefaultProps = {
   onClick: undefined
-}
+};
 PopoverHide.defaultProps = popoverHideDefaultProps;
 
 const C: React.FunctionComponent<PopoverHideProps> = PopoverHide;

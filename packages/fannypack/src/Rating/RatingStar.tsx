@@ -27,7 +27,7 @@ RatingStar.propTypes = ratingStarPropTypes;
 export const ratingStarDefaultProps = {
   size: 'default',
   active: false
-}
+};
 RatingStar.defaultProps = ratingStarDefaultProps;
 
 // @ts-ignore

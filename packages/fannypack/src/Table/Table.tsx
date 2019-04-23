@@ -16,10 +16,22 @@ import TableHeadCell, { TableHeadCellProps } from './TableHeadCell';
 import TableRow, { TableRowProps } from './TableRow';
 import _Table from './styled';
 
-const OuterBorder = styled(InlineBlock)<{ isFullWidth?: boolean }>`
+const OuterBorder = styled(InlineBlock)<{
+  isFullWidth?: boolean;
+  isResponsive?: boolean;
+  responsiveBreakpoint?: string;
+}>`
   border: 1px solid ${theme('fannypack.Table.borderColor')};
   border-radius: 5px;
   padding: 0.25rem 0.5rem;
+  ${props =>
+    props.isResponsive &&
+    css`
+      @media screen and (max-width: ${(props: any) =>
+          theme(`fannypack.layout.${props.responsiveBreakpoint}Breakpoint`)}px) {
+        padding: 0px;
+      }
+    `};
   ${props =>
     props.isFullWidth &&
     css`
@@ -35,7 +47,9 @@ export type LocalTableProps = {
   hasBorder?: boolean;
   isFullWidth?: boolean;
   isHoverable?: boolean;
+  isResponsive?: boolean;
   isStriped?: boolean;
+  responsiveBreakpoint?: string;
 };
 export type TableProps = ReakitBoxProps & LocalTableProps;
 export type TableComponents = {
@@ -53,13 +67,26 @@ export const Table: React.FunctionComponent<LocalTableProps> & TableComponents =
   children,
   hasBorder,
   isFullWidth,
+  isResponsive,
+  responsiveBreakpoint,
   ...props
 }) => (
   <ConditionalWrap
     condition={hasBorder}
-    wrap={(children: React.ReactNode) => <OuterBorder isFullWidth={isFullWidth}>{children}</OuterBorder>}
+    wrap={(children: React.ReactNode) => (
+      <OuterBorder isFullWidth={isFullWidth} isResponsive={isResponsive} responsiveBreakpoint={responsiveBreakpoint}>
+        {children}
+      </OuterBorder>
+    )}
   >
-    <_Table use="table" aria-label={a11yTitle} isFullWidth={isFullWidth} {...props}>
+    <_Table
+      use="table"
+      aria-label={a11yTitle}
+      isFullWidth={isFullWidth}
+      isResponsive={isResponsive}
+      responsiveBreakpoint={responsiveBreakpoint}
+      {...props}
+    >
       {children}
     </_Table>
   </ConditionalWrap>
@@ -79,7 +106,9 @@ export const tablePropTypes = {
   hasBorder: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isHoverable: PropTypes.bool,
-  isStriped: PropTypes.bool
+  isResponsive: PropTypes.bool,
+  isStriped: PropTypes.bool,
+  responsiveBreakpoint: PropTypes.string
 };
 Table.propTypes = tablePropTypes;
 
@@ -88,8 +117,10 @@ export const tableDefaultProps = {
   hasBorder: false,
   isFullWidth: false,
   isHoverable: false,
-  isStriped: false
-}
+  isResponsive: false,
+  isStriped: false,
+  responsiveBreakpoint: 'mobile'
+};
 Table.defaultProps = tableDefaultProps;
 
 const C: React.FunctionComponent<TableProps> & TableComponents = Table;

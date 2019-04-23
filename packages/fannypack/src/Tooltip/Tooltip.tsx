@@ -39,7 +39,7 @@ export const tooltipPropTypes = {
 };
 Tooltip.propTypes = tooltipPropTypes;
 
-export const tooltipDefaultProps = {
+export const tooltipDefaultProps: Partial<LocalTooltipProps> = {
   className: undefined,
   delay: undefined,
   duration: '100ms',
@@ -49,7 +49,7 @@ export const tooltipDefaultProps = {
   placement: 'bottom',
   slide: false,
   timing: 'ease-in-out'
-}
+};
 Tooltip.defaultProps = tooltipDefaultProps;
 
 // @ts-ignore

@@ -42,12 +42,12 @@ export const tabsPropTypes = {
 };
 Tabs.propTypes = tabsPropTypes;
 
-export const tabsDefaultProps = {
+export const tabsDefaultProps: Partial<LocalTabsProps> = {
   align: undefined,
   className: undefined,
   isFitted: false,
   type: 'default'
-}
+};
 Tabs.defaultProps = tabsDefaultProps;
 
 const C: React.FunctionComponent<TabsProps> & TabsComponents = Tabs;

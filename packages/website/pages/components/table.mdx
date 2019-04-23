@@ -170,6 +170,72 @@ To add a row borders to the table, add the `hasBorders` prop to `<Table.Body>`.
 </Table>
 ```
 
+### Responsive tables
+
+When an `isResponsive` prop is attached to a table. When the table reaches the `"mobile"` breakpoint, it will collapse itself to a condensed version.
+
+Try it out in **Playroom**!
+
+```.jsx
+<Table isResponsive isFullWidth>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+```
+
+You can change the responsive breakpoints using the `responsiveBreakpoint` prop:
+
+```.jsx
+<Table isResponsive isFullWidth responsiveBreakpoint="tablet">
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+```
+
 ### Striped tables
 
 Add the `isStriped` prop to `<Table>` to add striped rows.

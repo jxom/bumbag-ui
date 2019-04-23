@@ -77,7 +77,7 @@ RadioGroupField.propTypes = radioGroupFieldPropTypes;
 export const radioGroupFieldDefaultProps = {
   ...fieldWrapperDefaultProps,
   ...radioGroupDefaultProps
-}
+};
 RadioGroupField.defaultProps = radioGroupFieldDefaultProps;
 
 // @ts-ignore

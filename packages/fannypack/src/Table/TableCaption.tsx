@@ -23,9 +23,9 @@ export const tableCaptionPropTypes = {
 };
 TableCaption.propTypes = tableCaptionPropTypes;
 
-export const tableCaptionDefaultProps = {
+export const tableCaptionDefaultProps: Partial<LocalTableCaptionProps> = {
   position: 'top'
-}
+};
 TableCaption.defaultProps = tableCaptionDefaultProps;
 
 const C: React.FunctionComponent<TableCaptionProps> = TableCaption;

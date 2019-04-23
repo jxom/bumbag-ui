@@ -129,7 +129,7 @@ export const sidebarPropTypes = {
 };
 Sidebar.propTypes = sidebarPropTypes;
 
-export const sidebarDefaultProps = {
+export const sidebarDefaultProps: Partial<LocalSidebarProps> = {
   ...animateDefaultProps,
   ...restrictDefaultProps,
   align: 'left',
