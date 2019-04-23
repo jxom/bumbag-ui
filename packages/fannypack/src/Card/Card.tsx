@@ -5,13 +5,13 @@ import ConditionalWrap from 'conditional-wrap';
 
 // @ts-ignore
 import { getUniqueId } from '../uniqueId';
-import CardCard, { CardCardProps, cardCardPropTypes, cardCardDefaultProps } from './CardCard';
+import CardCard, { LocalCardCardProps, CardCardProps, cardCardPropTypes, cardCardDefaultProps } from './CardCard';
 import CardContent, { CardContentProps } from './CardContent';
 import CardHeader, { CardHeaderProps } from './CardHeader';
 import CardFooter, { CardFooterProps } from './CardFooter';
 import CardTitle, { CardTitleProps } from './CardTitle';
 
-export type LocalCardProps = {
+export type LocalCardProps = LocalCardCardProps & {
   a11yDescriptionId?: string;
   a11yTitleId?: string;
   children: React.ReactNode;
@@ -30,7 +30,6 @@ export type CardComponents = {
   Title: React.FunctionComponent<CardTitleProps>;
 };
 
-// @ts-ignore
 export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
   a11yDescriptionId,
   a11yTitleId,
@@ -68,6 +67,7 @@ Card.Footer = CardFooter;
 Card.Title = CardTitle;
 
 export const cardPropTypes = {
+  ...cardCardPropTypes,
   a11yDescriptionId: PropTypes.string,
   a11yTitleId: PropTypes.string,
   children: PropTypes.node.isRequired,
@@ -75,12 +75,11 @@ export const cardPropTypes = {
   footer: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   headerActions: PropTypes.element,
   isFullWidth: PropTypes.bool,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  ...cardCardPropTypes
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 Card.propTypes = cardPropTypes;
 
-export const cardDefaultProps: Partial<LocalCardProps> = {
+export const cardDefaultProps = {
   ...cardCardDefaultProps,
   a11yDescriptionId: getUniqueId('Card'),
   a11yTitleId: getUniqueId('Card'),
@@ -90,8 +89,7 @@ export const cardDefaultProps: Partial<LocalCardProps> = {
   isFullWidth: false,
   title: undefined
 };
-// @ts-ignore
-Card.defaultProps = cardPropTypes;
+Card.defaultProps = cardDefaultProps;
 
 // @ts-ignore
 const C: React.FunctionComponent<CardProps> & CardComponents = Card;
