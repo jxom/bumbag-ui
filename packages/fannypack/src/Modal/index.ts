@@ -1,5 +1,4 @@
 import Modal from './Modal';
-import * as styledModal from './styled';
 
 export default Modal;
 
@@ -11,5 +10,3 @@ export * from './ModalHide';
 export { default as ModalHide } from './ModalHide';
 export * from './ModalShow';
 export { default as ModalShow } from './ModalShow';
-
-export { styledModal };

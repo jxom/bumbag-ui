@@ -1,5 +1,4 @@
 import Sidebar from './Sidebar';
-import * as styledSidebar from './styled';
 
 export default Sidebar;
 
@@ -13,5 +12,3 @@ export * from './SidebarHide';
 export { default as SidebarHide } from './SidebarHide';
 export * from './SidebarShow';
 export { default as SidebarShow } from './SidebarShow';
-
-export { styledSidebar };

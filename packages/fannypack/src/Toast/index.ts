@@ -1,5 +1,4 @@
 import Toast from './Toast';
-import * as styledToast from './styled';
 
 export default Toast;
 
@@ -15,5 +14,3 @@ export * from './ToastManager';
 export { default as ToastManager } from './ToastManager';
 export * from './ToastTitle';
 export { default as ToastTitle } from './ToastTitle';
-
-export { styledToast };

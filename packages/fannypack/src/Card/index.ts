@@ -1,5 +1,4 @@
 import Card from './Card';
-import * as styledCard from './styled';
 
 export default Card;
 
@@ -15,5 +14,3 @@ export * from './CardHeader';
 export { default as CardHeader } from './CardHeader';
 export * from './CardTitle';
 export { default as CardTitle } from './CardTitle';
-
-export { styledCard };

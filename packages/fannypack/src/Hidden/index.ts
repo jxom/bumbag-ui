@@ -1,5 +1,4 @@
 import Hidden from './Hidden';
-import * as styledHidden from './styled';
 
 export default Hidden;
 
@@ -13,5 +12,3 @@ export * from './HiddenShow';
 export { default as HiddenShow } from './HiddenShow';
 export * from './HiddenToggle';
 export { default as HiddenToggle } from './HiddenToggle';
-
-export { styledHidden };

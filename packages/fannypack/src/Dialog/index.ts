@@ -1,5 +1,4 @@
 import Dialog from './Dialog';
-import * as styledDialog from './styled';
 
 export default Dialog;
 
@@ -19,5 +18,3 @@ export * from './DialogTitle';
 export { default as DialogTitle } from './DialogTitle';
 export * from './DialogIcon';
 export { default as DialogIcon } from './DialogIcon';
-
-export { styledDialog };

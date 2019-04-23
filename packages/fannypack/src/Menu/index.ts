@@ -1,5 +1,4 @@
 import Menu from './Menu';
-import * as styledMenu from './styled';
 
 export default Menu;
 
@@ -17,5 +16,3 @@ export * from './MenuItem';
 export { default as MenuItem } from './MenuItem';
 export * from './MenuPopover';
 export { default as MenuPopover } from './MenuPopover';
-
-export { styledMenu };

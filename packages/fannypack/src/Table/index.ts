@@ -1,5 +1,4 @@
 import Table from './Table';
-import * as styledTable from './styled';
 
 export default Table;
 
@@ -19,5 +18,3 @@ export * from './TableHeadCell';
 export { default as TableHeadCell } from './TableHeadCell';
 export * from './TableRow';
 export { default as TableRow } from './TableRow';
-
-export { styledTable };

@@ -1,5 +1,4 @@
 import Popover from './Popover';
-import * as styledPopover from './styled';
 
 export default Popover;
 
@@ -17,5 +16,3 @@ export * from './PopoverShow';
 export { default as PopoverShow } from './PopoverShow';
 export * from './PopoverToggle';
 export { default as PopoverToggle } from './PopoverToggle';
-
-export { styledPopover };

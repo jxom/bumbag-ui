@@ -30,6 +30,7 @@ export type CardComponents = {
   Title: React.FunctionComponent<CardTitleProps>;
 };
 
+// @ts-ignore
 export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
   a11yDescriptionId,
   a11yTitleId,
@@ -79,17 +80,17 @@ export const cardPropTypes = {
 };
 Card.propTypes = cardPropTypes;
 
-export const cardDefaultProps = {
+export const cardDefaultProps: Partial<LocalCardProps> = {
   ...cardCardDefaultProps,
   a11yDescriptionId: getUniqueId('Card'),
   a11yTitleId: getUniqueId('Card'),
-  children: undefined,
   className: undefined,
   footer: undefined,
   headerActions: undefined,
   isFullWidth: false,
   title: undefined
 };
+// @ts-ignore
 Card.defaultProps = cardPropTypes;
 
 // @ts-ignore
