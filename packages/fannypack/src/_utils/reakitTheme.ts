@@ -1,7 +1,9 @@
 // @ts-ignore
 import _camelCase from 'lodash/camelCase';
+// @ts-ignore
+import _get from 'lodash/get';
 
-import { css, space } from '../styled';
+import { css, space, theme } from '../styled';
 import { ThemeConfig } from '../types';
 
 const buildColorFromPalette = (property: string, { theme, ...props }: { theme: ThemeConfig }) => {
@@ -33,6 +35,68 @@ const buildFontWeightFromTheme = (property: string, { theme, ...props }: { theme
   let weight = theme.fannypack.fontWeights[props[_camelCase(property)]];
   if (!weight) return;
   return `${property}: ${weight} !important;`;
+};
+
+const buildVisibleAttributesFromProps = (props: { hiddenBreakpoint?: string; showBreakpoint?: string }) => {
+  let breakpoint = props.hiddenBreakpoint || props.showBreakpoint;
+  if (!breakpoint) return;
+
+  let key: string | undefined;
+  if (props.hiddenBreakpoint && breakpoint.includes('max')) {
+    key = 'max-width';
+  } else if (props.hiddenBreakpoint && breakpoint.includes('min')) {
+    key = 'min-width';
+  } else if (props.showBreakpoint && breakpoint.includes('max')) {
+    key = 'min-width';
+  } else if (props.showBreakpoint && breakpoint.includes('min')) {
+    key = 'max-width';
+  }
+
+  let strippedBreakpoint = breakpoint;
+  strippedBreakpoint = strippedBreakpoint.replace('max-', '');
+  strippedBreakpoint = strippedBreakpoint.replace('min-', '');
+
+  const minBreakpointValues: { [key: string]: number } = {
+    mobile: 0,
+    tablet: _get(props, 'theme.fannypack.layout.mobileBreakpoint'),
+    desktop: _get(props, 'theme.fannypack.layout.tabletBreakpoint'),
+    widescreen: _get(props, 'theme.fannypack.layout.desktopBreakpoint'),
+    fullHD: _get(props, 'theme.fannypack.layout.widescreenBreakpoint')
+  };
+  let breakpointValue = _get(props, `theme.fannypack.layout['${strippedBreakpoint}Breakpoint']`);
+  if (props.hiddenBreakpoint && breakpoint.includes('min')) {
+    breakpointValue = minBreakpointValues[strippedBreakpoint] + 1;
+  }
+  if (props.showBreakpoint && breakpoint.includes('min')) {
+    breakpointValue = minBreakpointValues[strippedBreakpoint];
+  }
+  if (props.showBreakpoint && breakpoint.includes('max')) {
+    breakpointValue = breakpointValue + 1;
+  }
+
+  if (!breakpoint.includes('min-') && !breakpoint.includes('max-')) {
+    if (props.showBreakpoint) {
+      return css`
+        @media screen and (max-width: ${minBreakpointValues[breakpoint]}px) {
+          display: none;
+        }
+
+        @media screen and (min-width: ${breakpointValue + 1}px) {
+          display: none;
+        }
+      `;
+    }
+    return css`
+      @media screen and (min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue}px) {
+        display: none;
+      }
+    `;
+  }
+  return css`
+    @media screen and (${key}: ${breakpointValue}px) {
+      display: none;
+    }
+  `;
 };
 
 export default {
@@ -70,5 +134,7 @@ export default {
     ${props => buildFontSizeFromTheme('font-size', props)};
 
     ${props => buildFontWeightFromTheme('font-weight', props)};
+
+    ${(props: any) => buildVisibleAttributesFromProps(props)};
   `
 };

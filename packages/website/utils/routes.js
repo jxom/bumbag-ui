@@ -67,5 +67,6 @@ export default [
   { menu: 'Styling & Theming', name: 'Styled components', path: '/styling/styled-components', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'Fonts', path: '/styling/fonts', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'Spacing', path: '/styling/spacing', breakpoint: 'tablet' },
+  { menu: 'Styling & Theming', name: 'Visiblity', path: '/styling/visibility', breakpoint: 'tablet' },
   { name: 'Component Status', path: '/component-status', breakpoint: 'tablet' }
 ];
