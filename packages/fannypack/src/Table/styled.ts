@@ -86,7 +86,7 @@ export const TableBody = styled(Box)<LocalTableBodyProps>`
   ${props =>
     props.hasBorders &&
     css`
-      & ${selector(TableRow)} {
+      & ${selector(TableRow)}:not(:last-child) {
         border-bottom: 1px solid ${theme('fannypack.Table.borderColor')};
       }
     `};
