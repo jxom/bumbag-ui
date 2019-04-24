@@ -49,6 +49,7 @@ export type LocalTableProps = {
   isHoverable?: boolean;
   isResponsive?: boolean;
   isStriped?: boolean;
+  isVerticallyCentered?: boolean;
   responsiveBreakpoint?: string;
 };
 export type TableProps = ReakitBoxProps & LocalTableProps;
@@ -108,6 +109,7 @@ export const tablePropTypes = {
   isHoverable: PropTypes.bool,
   isResponsive: PropTypes.bool,
   isStriped: PropTypes.bool,
+  isVerticallyCentered: PropTypes.bool,
   responsiveBreakpoint: PropTypes.string
 };
 Table.propTypes = tablePropTypes;
@@ -119,6 +121,7 @@ export const tableDefaultProps = {
   isHoverable: false,
   isResponsive: false,
   isStriped: false,
+  isVerticallyCentered: false,
   responsiveBreakpoint: 'mobile'
 };
 Table.defaultProps = tableDefaultProps;

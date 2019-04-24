@@ -148,6 +148,15 @@ export const Table = styled(Box)<LocalTableProps>`
   }
 
   & {
+    ${props =>
+      props.isVerticallyCentered &&
+      css`
+        & ${selector(TableCell)} {
+          vertical-align: middle;
+        }
+      `}
+  }
+  & {
     ${props => props.isResponsive && responsiveAttributes};
   }
   & {
