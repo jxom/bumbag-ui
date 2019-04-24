@@ -4,7 +4,7 @@ import _get from 'lodash/get';
 import { palette, space } from '../../styled';
 
 export default (overrides: any) => ({
-  borderColor: palette('gray100'),
+  borderColor: palette('white900'),
   spacing: space(2),
   ..._get(overrides, 'Table', {}),
   hover: {
