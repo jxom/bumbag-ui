@@ -52,46 +52,6 @@ import TableRow from 'fannypack/Table/TableRow';
 </Table>
 ```
 
-### Full width
-
-To make a table full width, add the `isFullWidth` prop to `<Table>`.
-
-```.jsx
-<Table isFullWidth>
-  <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>Name</Table.HeadCell>
-      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
-      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>
-  <Table.Body>
-    <Table.Row>
-      <Table.Cell>Nike</Table.Cell>
-      <Table.Cell textAlign="right">3</Table.Cell>
-      <Table.Cell textAlign="right">$9.00</Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell>Adidas</Table.Cell>
-      <Table.Cell textAlign="right">4</Table.Cell>
-      <Table.Cell textAlign="right">$12.00</Table.Cell>
-    </Table.Row>
-    <Table.Row>
-      <Table.Cell>North Face</Table.Cell>
-      <Table.Cell textAlign="right">5</Table.Cell>
-      <Table.Cell textAlign="right">$15.00</Table.Cell>
-    </Table.Row>
-  </Table.Body>
-  <Table.Foot>
-    <Table.Row>
-      <Table.Cell>Total</Table.Cell>
-      <Table.Cell />
-      <Table.Cell textAlign="right">$36.00</Table.Cell>
-    </Table.Row>
-  </Table.Foot>
-</Table>
-```
-
 ### Borders
 
 To add an outer border to the table, add the `hasBorder` prop to `<Table>`.

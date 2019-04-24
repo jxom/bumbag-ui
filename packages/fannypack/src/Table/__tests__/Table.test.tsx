@@ -73,38 +73,6 @@ it('renders correctly for a table with a footer', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-it('renders correctly for a full width table', () => {
-  const { container } = render(
-    <Table isFullWidth>
-      <Table.Head>
-        <Table.Row>
-          <Table.HeadCell>Name</Table.HeadCell>
-          <Table.HeadCell>Quantity</Table.HeadCell>
-          <Table.HeadCell>Price</Table.HeadCell>
-        </Table.Row>
-      </Table.Head>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell>Nike</Table.Cell>
-          <Table.Cell>3</Table.Cell>
-          <Table.Cell>$9.00</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Adidas</Table.Cell>
-          <Table.Cell>4</Table.Cell>
-          <Table.Cell>$12.00</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>North Face</Table.Cell>
-          <Table.Cell>5</Table.Cell>
-          <Table.Cell>$15.00</Table.Cell>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  );
-  expect(container.firstChild).toMatchSnapshot();
-});
-
 describe('borders', () => {
   it('renders correctly when an outer border is set', () => {
     const { container } = render(
