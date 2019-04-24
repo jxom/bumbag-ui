@@ -69,6 +69,7 @@ export const tableHeadCellText = css`
 `;
 export const TableHeadCell = styled(Box)<LocalTableHeadCellProps>`
   padding: ${theme('fannypack.Table.spacing')}rem;
+  vertical-align: middle;
   ${tableHeadCellText}
 
   & {
