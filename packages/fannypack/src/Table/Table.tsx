@@ -6,7 +6,7 @@ import ConditionalWrap from 'conditional-wrap';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box/Box';
 
 import styled, { css } from '../styled';
-import { InlineBlock } from '../primitives';
+import { Box } from '../primitives';
 import TableBody, { TableBodyProps } from './TableBody';
 import TableCaption, { TableCaptionProps } from './TableCaption';
 import TableCell, { TableCellProps } from './TableCell';
@@ -16,8 +16,7 @@ import TableHeadCell, { TableHeadCellProps } from './TableHeadCell';
 import TableRow, { TableRowProps } from './TableRow';
 import _Table from './styled';
 
-const OuterBorder = styled(InlineBlock)<{
-  isFullWidth?: boolean;
+const OuterBorder = styled(Box)<{
   isResponsive?: boolean;
   responsiveBreakpoint?: string;
 }>`
@@ -32,11 +31,6 @@ const OuterBorder = styled(InlineBlock)<{
         padding: 0px;
       }
     `};
-  ${props =>
-    props.isFullWidth &&
-    css`
-      width: 100%;
-    `};
 `;
 
 export type LocalTableProps = {
@@ -45,7 +39,6 @@ export type LocalTableProps = {
   children: React.ReactNode;
   /** Renders an outer border for the table */
   hasBorder?: boolean;
-  isFullWidth?: boolean;
   isHoverable?: boolean;
   isResponsive?: boolean;
   isStriped?: boolean;
@@ -67,7 +60,6 @@ export const Table: React.FunctionComponent<LocalTableProps> & TableComponents =
   a11yTitle,
   children,
   hasBorder,
-  isFullWidth,
   isResponsive,
   responsiveBreakpoint,
   ...props
@@ -75,7 +67,7 @@ export const Table: React.FunctionComponent<LocalTableProps> & TableComponents =
   <ConditionalWrap
     condition={hasBorder}
     wrap={(children: React.ReactNode) => (
-      <OuterBorder isFullWidth={isFullWidth} isResponsive={isResponsive} responsiveBreakpoint={responsiveBreakpoint}>
+      <OuterBorder isResponsive={isResponsive} responsiveBreakpoint={responsiveBreakpoint}>
         {children}
       </OuterBorder>
     )}
@@ -83,7 +75,6 @@ export const Table: React.FunctionComponent<LocalTableProps> & TableComponents =
     <_Table
       use="table"
       aria-label={a11yTitle}
-      isFullWidth={isFullWidth}
       isResponsive={isResponsive}
       responsiveBreakpoint={responsiveBreakpoint}
       {...props}
@@ -105,7 +96,6 @@ export const tablePropTypes = {
   a11yTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   hasBorder: PropTypes.bool,
-  isFullWidth: PropTypes.bool,
   isHoverable: PropTypes.bool,
   isResponsive: PropTypes.bool,
   isStriped: PropTypes.bool,
@@ -117,7 +107,6 @@ Table.propTypes = tablePropTypes;
 export const tableDefaultProps = {
   a11yTitle: undefined,
   hasBorder: false,
-  isFullWidth: false,
   isHoverable: false,
   isResponsive: false,
   isStriped: false,

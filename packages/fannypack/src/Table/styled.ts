@@ -96,9 +96,6 @@ export const TableBody = styled(Box)<LocalTableBodyProps>`
   }
 `;
 
-export const fullWidthProperties = css`
-  width: 100%;
-`;
 export const hoverableProperties = css`
   & ${selector(TableBody)} ${selector(TableRow)}:hover {
     background-color: ${theme('fannypack.Table.hover.backgroundColor')} !important;
@@ -142,6 +139,7 @@ export const Table = styled(Box)<LocalTableProps>`
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 
   &:not(:last-child) {
     margin-bottom: ${space(4)}rem;
@@ -158,9 +156,6 @@ export const Table = styled(Box)<LocalTableProps>`
   }
   & {
     ${props => props.isResponsive && responsiveAttributes};
-  }
-  & {
-    ${props => props.isFullWidth && fullWidthProperties};
   }
   & {
     ${props => props.isHoverable && hoverableProperties};

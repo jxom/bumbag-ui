@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`borders renders correctly when an outer border is set 1`] = `
-.c2 {
+.c1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -14,38 +14,35 @@ exports[`borders renders correctly when an outer border is set 1`] = `
   color: inherit;
 }
 
-.c2:focus:not(:focus-visible) {
+.c1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c6 {
-  padding: 0.5rem;
-}
-
-.c4 {
-  border: unset;
-}
-
-.c4 {
-  border-bottom: 2px solid #b3b3b3;
 }
 
 .c5 {
   padding: 0.5rem;
-  font-weight: bold;
 }
 
 .c3 {
+  border: unset;
+}
+
+.c3 {
+  border-bottom: 2px solid #b3b3b3;
+}
+
+.c4 {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.c2 {
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
-.c3:not(:last-child) {
+.c2:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -56,90 +53,90 @@ exports[`borders renders correctly when an outer border is set 1`] = `
 }
 
 <div
-  class="c0 c1 c2"
+  class="c0 c1"
 >
   <table
-    class="c3 c2"
+    class="c2 c1"
   >
     <thead
-      class="c4 c2"
+      class="c3 c1"
     >
       <tr
-        class="c2"
+        class="c1"
       >
         <th
-          class="c5 c2"
+          class="c4 c1"
         >
           Name
         </th>
         <th
-          class="c5 c2"
+          class="c4 c1"
         >
           Quantity
         </th>
         <th
-          class="c5 c2"
+          class="c4 c1"
         >
           Price
         </th>
       </tr>
     </thead>
     <tbody
-      class="c2"
+      class="c1"
     >
       <tr
-        class="c2"
+        class="c1"
       >
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           Nike
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           3
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           $9.00
         </td>
       </tr>
       <tr
-        class="c2"
+        class="c1"
       >
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           Adidas
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           4
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           $12.00
         </td>
       </tr>
       <tr
-        class="c2"
+        class="c1"
       >
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           North Face
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           5
         </td>
         <td
-          class="c6 c2"
+          class="c5 c1"
         >
           $15.00
         </td>
@@ -192,6 +189,7 @@ exports[`borders renders correctly when row borders are set 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -327,6 +325,7 @@ exports[`renders correctly for a basic table 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -462,14 +461,11 @@ exports[`renders correctly for a full width table 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
   margin-bottom: 1rem;
-}
-
-.c0 {
-  width: 100%;
 }
 
 <table
@@ -609,6 +605,7 @@ exports[`renders correctly for a hoverable table 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -752,6 +749,7 @@ exports[`renders correctly for a striped table 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -899,6 +897,7 @@ exports[`renders correctly for a table with a bottom caption 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -1056,6 +1055,7 @@ exports[`renders correctly for a table with a footer 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
@@ -1220,6 +1220,7 @@ exports[`renders correctly for a table with a top caption 1`] = `
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
+  width: 100%;
 }
 
 .c0:not(:last-child) {
