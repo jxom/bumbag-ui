@@ -46,9 +46,11 @@ export class TableCell extends React.Component<LocalTableCellProps, TableCellSta
         // @ts-ignore
         NodeList.prototype.find = Array.prototype.find;
         const headElement = tableElementChildren.find((child: any) => child.tagName === 'THEAD');
-        const headRowElement = headElement.childNodes[0];
-        const headCellElement = headRowElement.childNodes[cellIndex];
-        this.setState({ title: headCellElement.innerText });
+        if (headElement && headElement.childNodes) {
+          const headRowElement = headElement.childNodes[0];
+          const headCellElement = headRowElement.childNodes[cellIndex];
+          this.setState({ title: headCellElement.innerText });
+        }
       }
     }
   };
