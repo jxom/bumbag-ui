@@ -65,3 +65,13 @@ it('renders correctly for a Toast with a horizontal bar', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+it('renders correctly for a Toast without a countdown bar', () => {
+  const { container } = render(
+    <Toast showCountdownBar={false}>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+      keffiyeh helvetica.
+    </Toast>
+  );
+  expect(container.firstChild).toMatchSnapshot();
+});

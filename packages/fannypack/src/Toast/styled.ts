@@ -60,10 +60,20 @@ export const ToastIcon = styled(Icon)<LocalIconProps>`
   }
 `;
 
-export const Content = styled(Flex)`
+export const Content = styled(Flex)<{ // eslint-disable-line
+  showCountdownBar?: boolean;
+}>`
   padding: ${space(4)}rem;
-  padding-left: calc(${space(4)}rem + 5px);
   padding-right: ${space(8)}rem;
+
+  ${props =>
+    props.showCountdownBar
+      ? css`
+          padding-left: calc(${space(4)}rem + 5px);
+        `
+      : css`
+          padding-left: ${space(4)}rem;
+        `};
 
   & {
     ${theme('fannypack.Toast.Content.base')};

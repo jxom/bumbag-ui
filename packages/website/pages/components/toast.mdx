@@ -178,6 +178,42 @@ const App = () => (
 );
 ```
 
+### Disable the countdown bar
+
+Use the `showCountdownBar` prop to toggle the visibility of the countdown bar.
+
+```.jsx
+<Toast.Container>
+  {toast => (
+    <Button onClick={() => toast.info({
+      showCountdownBar: false,
+      message: 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+      title: 'Enim eiusmod'
+    })}>Add toast</Button>
+  )}
+</Toast.Container>
+```
+
+By default the prop `showCountdownBar` is set to `true`. You can change this globally by updating the `Toast.defaultProps.showCountdownBar` theme variable.
+
+```
+import { ThemeProvider } from 'fannypack';
+
+const theme = {
+  Toast: {
+    defaultProps: {
+      showCountdownBar: false
+    }
+  }
+}
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    // ... your app
+  </ThemeProvider>
+);
+```
+
 ### Custom Toast component
 
 By default, Fannypack uses a [default Toast component](#defaulttoastcomponent). You can change the default toast with the `Toast.component` theme variable. [Click here to see an example implementation of the `<Toast>` component](https://github.com/fannypackui/fannypack/tree/master/src/Toast/Toast.tsx).

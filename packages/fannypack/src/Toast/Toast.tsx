@@ -23,6 +23,7 @@ export type LocalToastProps = LocalPaneProps & {
   hasTint?: boolean;
   hideCloseButton?: boolean;
   onClickClose?: ToastCloseProps['onClickClose'];
+  showCountdownBar?: boolean;
   title?: string;
   type?: string;
 };
@@ -39,14 +40,19 @@ export const Toast: React.FunctionComponent<LocalToastProps> & ToastComponents =
   hasIcon,
   hideCloseButton,
   onClickClose,
+  showCountdownBar,
   title,
   type,
   ...props
 }) => (
   <_Toast type={type} {...props}>
-    <CountdownBar isHorizontal={hasHorizontalBar} isBackground type={type} />
-    <CountdownBar autoDismissTimeout={autoDismissTimeout} isHorizontal={hasHorizontalBar} type={type} />
-    <Content>
+    {showCountdownBar && (
+      <React.Fragment>
+        <CountdownBar isHorizontal={hasHorizontalBar} type={type} isBackground />
+        <CountdownBar isHorizontal={hasHorizontalBar} type={type} autoDismissTimeout={autoDismissTimeout} />
+      </React.Fragment>
+    )}
+    <Content showCountdownBar={showCountdownBar}>
       {hasIcon && type && <ToastIcon type={type} size={children ? '300' : undefined} />}
       <Box>
         {title && <ToastTitle marginBottom={children ? 'minor-2' : undefined}>{title}</ToastTitle>}
@@ -70,6 +76,7 @@ export const toastPropTypes = {
   hasTint: PropTypes.bool,
   hideCloseButton: PropTypes.bool,
   onClickClose: PropTypes.func,
+  showCountdownBar: PropTypes.bool,
   type: PropTypes.string,
   title: PropTypes.string,
   ...panePropTypes
@@ -87,6 +94,7 @@ export const toastDefaultProps = {
   hasTint: false,
   hideCloseButton: false,
   onClickClose: undefined,
+  showCountdownBar: true,
   title: undefined,
   type: 'info'
 };
