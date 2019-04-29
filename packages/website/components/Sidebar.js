@@ -7,6 +7,7 @@ import {
   Link as _Link,
   Menu as _Menu,
   Sidebar as PopoutSidebar,
+  Tag,
   palette,
   space,
   styled,
@@ -40,7 +41,8 @@ const Wrapper = styled(Box)`
   }
 `;
 const Menu = styled(_Menu)`
-  && button {
+  && button,
+  && a {
     border-radius: 3px;
     margin-bottom: ${space(1)}rem;
 
@@ -126,9 +128,11 @@ function Sidebar(props) {
                                   use={_Link}
                                   href={item.path}
                                   color={route.path === item.path ? 'primary' : undefined}
+                                  display="flex"
+                                  justifyContent="space-between"
                                   fontWeight="400"
                                 >
-                                  {item.name}
+                                  {item.name} {item.isBeta ? <Tag palette="primary">Beta</Tag> : undefined}
                                 </Menu.Item>
                               </Link>
                             ))}

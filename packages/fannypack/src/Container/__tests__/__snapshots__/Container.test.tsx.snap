@@ -348,7 +348,15 @@ exports[`fluid renders correctly for a fluid container 1`] = `
 
 .c0 {
   width: 100%;
-  margin: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 <div
@@ -385,7 +393,8 @@ exports[`layout renders correctly for a layout container 1`] = `
 
 @media (max-width:768px) {
   .c0 {
-    margin: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

@@ -94,6 +94,8 @@ export { default as Navigation } from './Navigation';
 export * from './Navigation';
 export { default as Overlay } from './Overlay';
 export * from './Overlay';
+export { default as Page } from './Page';
+export * from './Page';
 export { default as Pane } from './Pane';
 export * from './Pane';
 export { default as Paragraph } from './Paragraph';

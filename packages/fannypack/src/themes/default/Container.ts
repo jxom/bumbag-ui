@@ -2,7 +2,7 @@
 import _get from 'lodash/get';
 
 export default (overrides: any) => ({
-  fluidMargin: '0 2rem',
-  tabletMargin: '0 1rem',
+  fluidMargin: '2rem',
+  tabletMargin: '1rem',
   ..._get(overrides, 'Container', {})
 });

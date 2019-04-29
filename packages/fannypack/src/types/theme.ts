@@ -403,6 +403,14 @@ export type PaletteThemeConfig = {
   warningInverted?: string;
   warningTintInverted?: string;
 };
+export type PageThemeConfig = {
+  Content?: {
+    base?: Stylesheet;
+    fluid?: Stylesheet;
+    mobile?: Stylesheet;
+    defaultProps?: Object;
+  };
+};
 export type PaneThemeConfig = {
   base?: Stylesheet;
   border?: {
@@ -716,6 +724,7 @@ export type ThemeConfig = {
   Menu?: MenuThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
+  Page?: PageThemeConfig;
   Pane?: PaneThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
