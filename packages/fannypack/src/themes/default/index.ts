@@ -13,6 +13,7 @@ import Container from './Container';
 import FieldSet from './FieldSet';
 import Icon from './Icon';
 import LayoutSet from './LayoutSet';
+import Page from './Page';
 import Pane from './Pane';
 import Table from './Table';
 
@@ -32,6 +33,7 @@ function theme(overrides: ThemeConfig = {}): ThemeConfig {
     FieldSet: FieldSet(overrides),
     Icon: Icon(overrides),
     LayoutSet: LayoutSet(overrides),
+    Page: Page(overrides),
     Pane: Pane(overrides),
     Table: Table(overrides)
   };

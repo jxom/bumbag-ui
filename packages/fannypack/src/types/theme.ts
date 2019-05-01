@@ -404,11 +404,25 @@ export type PaletteThemeConfig = {
   warningTintInverted?: string;
 };
 export type PageThemeConfig = {
+  collapseBreakpoint?: string;
   Content?: {
     base?: Stylesheet;
     fluid?: Stylesheet;
     mobile?: Stylesheet;
     defaultProps?: Object;
+  };
+  WithSidebar?: {
+    base?: Stylesheet;
+    sidebarWidth?: string;
+    Spacer?: {
+      base?: Stylesheet;
+    };
+    DesktopSidebarWrapper?: {
+      base?: Stylesheet;
+    };
+    MobileSidebarWrapper?: {
+      base?: Stylesheet;
+    };
   };
 };
 export type PaneThemeConfig = {

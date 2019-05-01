@@ -30,7 +30,7 @@ export const PageContent: React.FunctionComponent<LocalPageContentProps> = ({
       isFluid={isFluid || !breakpoint}
       isLayout={isLayout}
       {...props}
-      {..._get(theme, 'fannypack.Page.PageContent.defaultProps', {})}
+      {..._get(theme, 'fannypack.Page.Content.defaultProps', {})}
     >
       {children}
     </_PageContent>

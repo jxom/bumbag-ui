@@ -4,6 +4,7 @@ module.exports = {
   components: '../fannypack/src/index.ts',
   outputPath: './out/playroom',
   frameComponent: './components/PlayroomFrame.js',
+  widths: [375, 768, 1024, 1200, 1440],
   webpackConfig: () => ({
     module: {
       rules: [

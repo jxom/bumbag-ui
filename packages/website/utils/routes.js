@@ -62,6 +62,13 @@ export default [
   { menu: 'Utilities', name: 'Set', path: '/utils/set', breakpoint: 'tablet' },
   { menu: 'Utilities', name: 'Sidebar', path: '/utils/sidebar', breakpoint: 'tablet' },
   { menu: 'Templates', name: 'Content', path: '/templates/page-content', breakpoint: 'fullHD', isBeta: true },
+  {
+    menu: 'Templates',
+    name: 'Sidebar',
+    path: '/templates/page-with-sidebar',
+    breakpoint: 'desktop',
+    isBeta: true
+  },
   { menu: 'Styling & Theming', name: 'Theming', path: '/styling/theming', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'Global styles', path: '/styling/global-styles', breakpoint: 'tablet' },
   { menu: 'Styling & Theming', name: 'CSS props', path: '/styling/css-props', breakpoint: 'tablet' },
