@@ -7,8 +7,8 @@ import { FlexProps as ReakitFlexProps } from 'reakit/ts';
 import { Omit } from '../types';
 import { Box } from '../primitives';
 import { withTheme } from '../styled';
-import { SidebarProps, sidebarPropTypes, sidebarDefaultProps } from '../Sidebar/Sidebar';
-import PageContainer from './PageContainer';
+import { SidebarProps, sidebarPropTypes } from '../Sidebar/Sidebar';
+import PageContainer, { PageState } from './PageContainer';
 import {
   PageWithSidebar as _PageWithSidebar,
   Spacer,
@@ -18,7 +18,8 @@ import {
 } from './styled';
 
 export type LocalPageWithSidebarProps = {
-  children: React.ReactNode;
+  children: (({ page }: { page: PageState }) => React.ReactNode) | React.ReactNode;
+  hideSidebarOnDesktop?: boolean;
   sidebarContent: React.ReactElement<any>;
   sidebarProps?: Omit<SidebarProps, 'children'>;
   sidebarWidth?: string;
@@ -28,17 +29,23 @@ export type PageWithSidebarProps = ReakitFlexProps & LocalPageWithSidebarProps;
 
 export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps> = ({
   children,
+  hideSidebarOnDesktop: _hideSidebarOnDesktop,
   sidebarContent,
-  sidebarProps,
-  sidebarWidth,
+  sidebarProps: _sidebarProps,
+  sidebarWidth: _sidebarWidth,
   theme,
   ...props
 }) => {
+  const defaultProps = _get(theme, 'fannypack.Page.WithSidebar.defaultProps', {});
+  const hideSidebarOnDesktop = _hideSidebarOnDesktop || defaultProps.hideSidebarOnDesktop;
+  const sidebarProps = _sidebarProps || defaultProps.sidebarProps;
+  const sidebarWidth = _sidebarWidth || defaultProps.sidebarWidth;
+  console.log('test', _hideSidebarOnDesktop, defaultProps.hideSidebarOnDesktop);
   return (
     <PageContainer>
       {page => (
         <_PageWithSidebar {...props}>
-          <Spacer sidebarWidth={sidebarWidth} />
+          <Spacer hideSidebarOnDesktop={hideSidebarOnDesktop} sidebarWidth={sidebarWidth} />
           {page && page.isCollapsed ? (
             // @ts-ignore
             <MobileSidebarWrapper
@@ -51,11 +58,20 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
               <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
             </MobileSidebarWrapper>
           ) : (
-            <DesktopSidebarWrapper>
-              <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
-            </DesktopSidebarWrapper>
+            <React.Fragment>
+              {!hideSidebarOnDesktop && (
+                <DesktopSidebarWrapper>
+                  <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
+                </DesktopSidebarWrapper>
+              )}
+            </React.Fragment>
           )}
-          <Box width="100%">{children}</Box>
+          <Box width="100%">
+            {typeof children === 'function'
+              ? // @ts-ignore
+                children({ page })
+              : children}
+          </Box>
         </_PageWithSidebar>
       )}
     </PageContainer>
@@ -64,6 +80,7 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
 
 export const PageWithSidebarPropTypes = {
   children: PropTypes.node.isRequired,
+  hideSidebarOnDesktop: PropTypes.bool,
   sidebarContent: PropTypes.element.isRequired,
   sidebarProps: PropTypes.shape(sidebarPropTypes),
   sidebarWidth: PropTypes.string,
@@ -72,6 +89,7 @@ export const PageWithSidebarPropTypes = {
 PageWithSidebar.propTypes = PageWithSidebarPropTypes;
 
 export const PageWithSidebarDefaultProps = {
+  hideSidebarOnDesktop: false,
   sidebarProps: {},
   sidebarWidth: '250px',
   theme: {}

@@ -413,7 +413,11 @@ export type PageThemeConfig = {
   };
   WithSidebar?: {
     base?: Stylesheet;
-    sidebarWidth?: string;
+    defaultProps?: {
+      hideSidebarOnDesktop?: boolean;
+      sidebarProps?: Object;
+      sidebarWidth?: string;
+    };
     Spacer?: {
       base?: Stylesheet;
     };

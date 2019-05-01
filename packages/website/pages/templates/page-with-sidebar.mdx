@@ -28,7 +28,7 @@ import { Page } from 'fannypack'
 
 ### Triggering the sidebar
 
-The `Page.Container` component and `withPage` HoC comes with three handy props to help with triggering the sidebar.
+`Page.Container`, `Page.WithSidebar` and `withPage` comes with three handy props to help with triggering the sidebar.
 
 - `page.openSidebar`: Opens the sidebar when the viewport is collapsed
 - `page.closeSidebar`: Closes the sidebar when the viewport is collapsed
@@ -73,12 +73,66 @@ function MyPage(props) {
 export default withPage(MyPage);
 ```
 
+#### Using `Page.WithSidebar`
+
+```jsx
+import { Page } from 'fannypack';
+
+...
+
+<Page.WithSidebar sidebarContent={<Box>This is a sidebar</Box>}>
+  {page => (
+    <React.Fragment>
+      <Heading>Hello world</Heading>
+      {page.isCollapsed && <Button onClick={page.openSidebar}>Open sidebar</Button>}
+    </React.Fragment>
+  )}
+</Page.WithSidebar>
+```
+
 ### Sidebar width
 
 ```jsx
 <Page.WithSidebar sidebarContent={<Box>This is a sidebar</Box>} sidebarWidth="300px">
   This is the content
 </Page.WithSidebar>
+```
+
+### Hide on desktop
+
+To hide the sidebar on a viewport above `collapseBreakpoint`. Set the `hideSidebarOnDesktop` prop to true.
+
+```jsx
+<Page.WithSidebar sidebarContent={<Box>This is a sidebar</Box>} hideSidebarOnDesktop>
+  This is the content
+</Page.WithSidebar>
+```
+
+### Styling
+
+You can style the sidebar (such as it's background color, padding, etc) using `Page.WithSidebar.Sidebar` in the theme.
+
+```jsx
+import { css, space } from 'fannypack';
+
+const theme = {
+  Page: {
+    WithSidebar: {
+      Sidebar: {
+        base: css`
+          background-color: red;
+          padding: ${space(2)}rem;
+        `
+      }
+    }
+  }
+};
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    ...
+  </ThemeProvider>
+)
 ```
 
 ### Props
@@ -93,7 +147,14 @@ export default withPage(MyPage);
     collapseBreakpoint: string, // default: 'desktop'
     WithSidebar: {
       base: css | Object,
-      sidebarWidth: string // default: '250px',
+      defaultProps: {
+        hideSidebarOnDesktop: boolean,
+        sidebarProps: Object,
+        sidebarWidth: string // default: 250px
+      }
+      Sidebar: {
+        base: css | object
+      },
       Spacer: {
         base: css | object
       },

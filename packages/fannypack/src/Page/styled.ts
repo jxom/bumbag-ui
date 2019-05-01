@@ -35,7 +35,7 @@ export const PageContent = styled(Container)<PageContentProps>`
   }
 `;
 
-export const Spacer = styled(Box)<{ sidebarWidth?: string }>`
+export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string }>`
   width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
   min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
 
@@ -48,6 +48,13 @@ export const Spacer = styled(Box)<{ sidebarWidth?: string }>`
       ${theme('fannypack.Page.WithSidebar.Spacer.mobile')};
     }
   }
+
+  ${props =>
+    props.hideSidebarOnDesktop &&
+    css`
+      width: 0px;
+      min-width: 0px;
+    `}
 
   & {
     ${theme('fannypack.Page.WithSidebar.Spacer.base')};
