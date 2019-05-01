@@ -68,7 +68,8 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
           )}
           <Box width="100%">
             {typeof children === 'function'
-              ? // @ts-ignore
+              ? /*
+                // @ts-ignore */
                 children({ page })
               : children}
           </Box>
