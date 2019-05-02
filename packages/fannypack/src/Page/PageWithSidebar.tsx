@@ -40,7 +40,6 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
   const hideSidebarOnDesktop = _hideSidebarOnDesktop || defaultProps.hideSidebarOnDesktop;
   const sidebarProps = _sidebarProps || defaultProps.sidebarProps;
   const sidebarWidth = _sidebarWidth || defaultProps.sidebarWidth;
-  console.log('test', _hideSidebarOnDesktop, defaultProps.hideSidebarOnDesktop);
   return (
     <PageContainer>
       {page => (

@@ -42,7 +42,7 @@ export const PageContainer: React.FunctionComponent<PageContainerProps> = ({ chi
   const breakpoint = _get(theme, 'fannypack.Page.collapseBreakpoint');
   const breakpointPx = _get(theme, `fannypack.layout.${breakpoint}Breakpoint`);
   return (
-    <Container context="page" initialState={initialState} actions={actions} pure>
+    <Container context="page" initialState={initialState} actions={actions}>
       {page => (
         <React.Fragment>
           <Media query={`(max-width: ${breakpointPx}px)`} onChange={page.handleChangeCollapsed} />
