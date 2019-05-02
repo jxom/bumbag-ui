@@ -3,10 +3,9 @@ import * as PropTypes from 'prop-types';
 // @ts-ignore
 import _get from 'lodash/get';
 
-import { Box } from '../primitives';
 import { withTheme } from '../styled';
 import { ContainerProps, LocalContainerProps, containerPropTypes, containerDefaultProps } from '../Container/Container';
-import { PageContent as _PageContent } from './styled';
+import { PageContent as _PageContent, PageContentWrapper } from './styled';
 
 export type LocalPageContentProps = LocalContainerProps & {
   children: React.ReactNode;
@@ -24,7 +23,7 @@ export const PageContent: React.FunctionComponent<LocalPageContentProps> = ({
   wrapperProps,
   ...props
 }) => (
-  <Box {...wrapperProps}>
+  <PageContentWrapper {...wrapperProps}>
     <_PageContent
       breakpoint={breakpoint}
       isFluid={isFluid || !breakpoint}
@@ -34,7 +33,7 @@ export const PageContent: React.FunctionComponent<LocalPageContentProps> = ({
     >
       {children}
     </_PageContent>
-  </Box>
+  </PageContentWrapper>
 );
 
 export const PageContentPropTypes = {

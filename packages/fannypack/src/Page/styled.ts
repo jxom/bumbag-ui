@@ -35,6 +35,12 @@ export const PageContent = styled(Container)<PageContentProps>`
   }
 `;
 
+export const PageContentWrapper = styled(Box)`
+  & {
+    ${theme('fannypack.Page.Content.wrapper')};
+  }
+`;
+
 export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string }>`
   width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
   min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};

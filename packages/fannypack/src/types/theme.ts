@@ -407,6 +407,7 @@ export type PageThemeConfig = {
   collapseBreakpoint?: string;
   Content?: {
     base?: Stylesheet;
+    wrapper?: Stylesheet;
     fluid?: Stylesheet;
     mobile?: Stylesheet;
     defaultProps?: Object;
