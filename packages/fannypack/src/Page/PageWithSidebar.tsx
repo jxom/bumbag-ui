@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 // @ts-ignore
 import _get from 'lodash/get';
+// @ts-ignore
+import _merge from 'lodash/merge';
 import { FlexProps as ReakitFlexProps } from 'reakit/ts';
 
 import { Omit } from '../types';
@@ -38,7 +40,7 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
 }) => {
   const defaultProps = _get(theme, 'fannypack.Page.WithSidebar.defaultProps', {});
   const hideSidebarOnDesktop = _hideSidebarOnDesktop || defaultProps.hideSidebarOnDesktop;
-  const sidebarProps = _sidebarProps || defaultProps.sidebarProps;
+  const sidebarProps = _merge(_sidebarProps, defaultProps.sidebarProps);
   const sidebarWidth = _sidebarWidth || defaultProps.sidebarWidth;
   return (
     <PageContainer>
