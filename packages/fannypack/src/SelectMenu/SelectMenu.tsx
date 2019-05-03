@@ -89,6 +89,13 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   renderEmpty?(opts: { emptyText?: string }): React.ReactNode;
   renderError?(opts: { error?: Object }): React.ReactNode;
   renderOption?(option: SelectMenuItem): React.ReactNode;
+  renderTrigger?(opts: {
+    isLoading?: boolean;
+    placeholder?: string;
+    props: any;
+    renderValue: any;
+    selectedOptions: { [key: string]: SelectMenuItem };
+  }): React.ReactNode;
   renderValue?(
     value: SelectMenuItemObject['value'],
     values: SelectMenuItemObject['value'][],
@@ -226,6 +233,20 @@ const emptyRenderer = ({ emptyText }: { emptyText: LocalSelectMenuProps['emptyTe
 );
 const errorRenderer = () => <SelectMenuStaticItem>An error occurred. Please try again.</SelectMenuStaticItem>;
 const optionRenderer: LocalSelectMenuProps['renderOption'] = option => _get(option, 'label', option);
+const triggerRenderer: LocalSelectMenuProps['renderTrigger'] = ({
+  isLoading,
+  props
+}: {
+  isLoading?: boolean;
+  props: any;
+}) => (
+  /*
+  // @ts-ignore */
+  <SelectMenuButton {...props}>
+    {props.children}
+    {isLoading ? <SelectMenuLoadingSpinner color="text" size="1rem" /> : <SelectIcon />}
+  </SelectMenuButton>
+);
 // @ts-ignore
 const valueRenderer: LocalSelectMenuProps['renderValue'] = (value, values, selectedOptions) =>
   getButtonValue(selectedOptions);
@@ -250,6 +271,7 @@ export const selectMenuPropTypes = {
   renderEmpty: PropTypes.func,
   renderError: PropTypes.func,
   renderOption: PropTypes.func,
+  renderTrigger: PropTypes.func,
   renderValue: PropTypes.func,
   searchInputProps: PropTypes.shape(selectMenuSearchInputPropTypes),
   useTags: PropTypes.bool,
@@ -275,6 +297,7 @@ export const selectMenuDefaultProps = {
   renderEmpty: emptyRenderer,
   renderError: errorRenderer,
   renderOption: optionRenderer,
+  renderTrigger: triggerRenderer,
   renderValue: valueRenderer,
   searchInputProps: {},
   useTags: false,
@@ -454,23 +477,29 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
   };
 
   render = () => {
-    const { isDropdown, isLoading, placeholder, renderValue, ...props } = this.props;
+    const { isDropdown, isLoading, placeholder, renderTrigger, renderValue, ...props } = this.props;
     const { selectedOptions } = this.state;
 
     return isDropdown ? (
       <SelectMenuPopover content={this.renderMenu}>
-        {/*
-          // @ts-ignore */}
-        <SelectMenuButton {...props}>
-          {Object.keys(selectedOptions).length > 0 && renderValue
-            ? renderValue(
-                getAttribute(selectedOptions, 'value'),
-                getAttributes(selectedOptions, 'value'),
-                selectedOptions
-              )
-            : placeholder}
-          {isLoading ? <SelectMenuLoadingSpinner color="text" size="1rem" /> : <SelectIcon />}
-        </SelectMenuButton>
+        {renderTrigger &&
+          renderTrigger({
+            isLoading,
+            placeholder,
+            props: {
+              ...props,
+              children:
+                Object.keys(selectedOptions).length > 0 && renderValue
+                  ? renderValue(
+                      getAttribute(selectedOptions, 'value'),
+                      getAttributes(selectedOptions, 'value'),
+                      selectedOptions
+                    )
+                  : placeholder
+            },
+            selectedOptions,
+            renderValue
+          })}
       </SelectMenuPopover>
     ) : (
       this.renderMenu()

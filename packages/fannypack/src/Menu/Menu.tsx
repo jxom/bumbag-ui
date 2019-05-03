@@ -15,6 +15,7 @@ import MenuDivider, { MenuDividerProps } from './MenuDivider';
 import MenuGroup, { MenuGroupProps } from './MenuGroup';
 import MenuItem, { MenuItemProps } from './MenuItem';
 import MenuPopover, { MenuPopoverProps } from './MenuPopover';
+import MenuTrigger, { MenuTriggerProps } from './MenuTrigger';
 import { withMenuContext, MenuContextState } from './MenuContext';
 
 export type LocalMenuProps = LocalNavigationProps & {
@@ -30,6 +31,7 @@ export type MenuComponents = {
   Group: React.FunctionComponent<MenuGroupProps>;
   Item: React.FunctionComponent<MenuItemProps>;
   Popover: React.FunctionComponent<MenuPopoverProps>;
+  Trigger: React.FunctionComponent<MenuTriggerProps>;
 };
 type State = {
   activeItemIndex: number;
@@ -157,4 +159,5 @@ C.Divider = MenuDivider;
 C.Group = MenuGroup;
 C.Item = MenuItem;
 C.Popover = MenuPopover;
+C.Trigger = MenuTrigger;
 export default C;

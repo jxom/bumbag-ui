@@ -6,6 +6,7 @@ export type MenuProviderProps = {
   children: React.ReactNode;
 };
 export type MenuContextState = PopoverContainerRenderProps & {
+  isVisible: boolean;
   startAt?: 'first' | 'last';
   handleMenuOpenViaKeyboard: (opts?: { startAt?: 'first' | 'last' }) => void;
   setPopoverProps: (popover: PopoverContainerRenderProps) => void;
