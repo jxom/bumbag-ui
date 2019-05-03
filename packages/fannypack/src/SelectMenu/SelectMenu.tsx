@@ -61,6 +61,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   isDropdown?: boolean;
   isLoading?: boolean;
   isMultiSelect?: boolean;
+  isRadio?: boolean;
   isSearchable?: boolean;
   loadQuery?: Object;
   loadOptions?({
@@ -261,6 +262,7 @@ export const selectMenuPropTypes = {
   isDropdown: PropTypes.bool,
   isLoading: PropTypes.bool,
   isMultiSelect: PropTypes.bool,
+  isRadio: PropTypes.bool,
   isSearchable: PropTypes.bool,
   loadQuery: PropTypes.object,
   loadOptions: PropTypes.func,
@@ -287,6 +289,7 @@ export const selectMenuDefaultProps = {
   isDropdown: false,
   isLoading: false,
   isMultiSelect: false,
+  isRadio: false,
   isSearchable: false,
   loadQuery: undefined,
   loadOptions: undefined,
@@ -339,6 +342,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       this.setState({ selectedOptions: getSelectedOptionsFromValue(value) });
     }
     if (options && _get(options, 'length') !== _get(prevOptions, 'length')) {
+      this.setState({ selectedOptions: getDefaultSelectedOptionsFromProps(this.props) });
       this.filterOptions();
     }
     if (loadQuery && loadQuery !== prevLoadQuery) {
@@ -383,13 +387,13 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
 
   handleClickOption = (option: SelectMenuItem) => {
     return () => {
-      const { isMultiSelect, onChange } = this.props;
+      const { isMultiSelect, isRadio, onChange } = this.props;
       const { selectedOptions } = this.state;
       const key = _get(option, 'key', option);
       // @ts-ignore
       const isOptionSelected = Boolean(selectedOptions[key]);
       let newSelectedOptions = isMultiSelect ? selectedOptions : {};
-      if (isOptionSelected) {
+      if (isOptionSelected && !isRadio) {
         // @ts-ignore
         delete newSelectedOptions[key];
       } else {
