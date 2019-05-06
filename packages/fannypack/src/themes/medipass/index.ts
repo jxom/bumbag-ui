@@ -13,6 +13,7 @@ import Checkbox from './Checkbox';
 import Container from './Container';
 import Heading from './Heading';
 import Label from './Label';
+import Page from './Page';
 import Table from './Table';
 import Toast from './Toast';
 
@@ -34,6 +35,7 @@ export default {
   Container,
   Heading,
   Label,
+  Page,
   Table,
   Toast
 };
