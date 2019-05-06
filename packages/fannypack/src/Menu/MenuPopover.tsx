@@ -17,7 +17,9 @@ export const menuPopoverPropTypes = {
   children: PropTypes.node.isRequired
 };
 export const menuPopoverDefaultProps = {
-  ...popoverDefaultProps
+  ...popoverDefaultProps,
+  gutter: 6,
+  placement: 'bottom-start'
 };
 
 export class MenuPopover extends React.Component<LocalMenuPopoverProps> {
@@ -28,7 +30,7 @@ export class MenuPopover extends React.Component<LocalMenuPopoverProps> {
     const { children, ...props } = this.props;
     return (
       <MenuContext.Provider>
-        <_MenuPopover {...props} gutter={6} placement="bottom-start">
+        <_MenuPopover {...props}>
           {(popover: any) => (
             <MenuContext.Consumer>
               {({ setPopoverProps }) => (
