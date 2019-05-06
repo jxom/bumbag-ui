@@ -54,7 +54,7 @@ export const PageContainer: React.FunctionComponent<PageContainerProps> = ({ chi
 };
 
 PageContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func.isRequired,
   theme: PropTypes.object
 };
 
