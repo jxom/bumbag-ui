@@ -47,7 +47,7 @@ export const PageContentWrapper = styled(Box)`
   }
 `;
 
-export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string }>`
+export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string; isMinimized?: boolean }>`
   width: ${getWidth};
   min-width: ${getWidth};
 
@@ -73,7 +73,7 @@ export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?
   }
 `;
 
-export const Sidebar = styled(Box)<{ sidebarWidth?: string }>`
+export const Sidebar = styled(Box)<{ sidebarWidth?: string; isMinimized?: boolean }>`
   background-color: ${palette('white700')};
   height: 100vh;
   min-width: ${getWidth};
