@@ -46,7 +46,11 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
     <PageContainer>
       {page => (
         <_PageWithSidebar {...props}>
-          <Spacer hideSidebarOnDesktop={hideSidebarOnDesktop} sidebarWidth={sidebarWidth} />
+          <Spacer
+            hideSidebarOnDesktop={hideSidebarOnDesktop}
+            isMinimized={page.isMinimized}
+            sidebarWidth={sidebarWidth}
+          />
           {page && page.isCollapsed ? (
             // @ts-ignore
             <MobileSidebarWrapper
@@ -62,7 +66,9 @@ export const PageWithSidebar: React.FunctionComponent<LocalPageWithSidebarProps>
             <React.Fragment>
               {!hideSidebarOnDesktop && (
                 <DesktopSidebarWrapper>
-                  <Sidebar sidebarWidth={sidebarWidth}>{sidebarContent}</Sidebar>
+                  <Sidebar isMinimized={page.isMinimized} sidebarWidth={sidebarWidth}>
+                    {sidebarContent}
+                  </Sidebar>
                 </DesktopSidebarWrapper>
               )}
             </React.Fragment>

@@ -5,7 +5,13 @@ import { Box, Flex } from '../primitives';
 import { Container } from '../Container';
 import { Sidebar as _Sidebar, SidebarProps } from '../Sidebar';
 import { PageContentProps } from './PageContent';
-import { PageWithSidebarProps } from './PageWithSidebar';
+
+export const getWidth = (props: any) => {
+  if (props.isMinimized) {
+    return theme('fannypack.Page.WithSidebar.minimizedSidebarWidth')(props);
+  }
+  return props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')(props);
+};
 
 export const PageContent = styled(Container)<PageContentProps>`
   padding: ${space(4, 'major')}rem ${space(2, 'major')}rem;
@@ -42,8 +48,8 @@ export const PageContentWrapper = styled(Box)`
 `;
 
 export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?: string }>`
-  width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
-  min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
+  width: ${getWidth};
+  min-width: ${getWidth};
 
   @media screen and (max-width: ${props =>
       theme(`fannypack.layout.${_get(props, 'theme.fannypack.Page.collapseBreakpoint')}Breakpoint`)}px) {
@@ -70,10 +76,16 @@ export const Spacer = styled(Box)<{ sidebarWidth?: string; hideSidebarOnDesktop?
 export const Sidebar = styled(Box)<{ sidebarWidth?: string }>`
   background-color: ${palette('white700')};
   height: 100vh;
-  min-width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
-  width: ${props => props.sidebarWidth || theme('fannypack.Page.WithSidebar.sidebarWidth')};
+  min-width: ${getWidth};
+  width: ${getWidth};
   overflow-y: scroll;
   transform: translateX(0px);
+
+  ${props =>
+    props.isMinimized &&
+    css`
+      overflow: visible;
+    `}
 
   & {
     ${theme('fannypack.Page.WithSidebar.Sidebar.base')};

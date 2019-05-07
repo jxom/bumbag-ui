@@ -11,10 +11,13 @@ import { withTheme } from '../styled';
 type Actions = {
   openSidebar: () => void;
   closeSidebar: () => void;
+  maximizeSidebar: () => void;
+  minimizeSidebar: () => void;
   handleChangeCollapsed: (isCollapsed: boolean) => void;
 };
 type State = {
   isCollapsed: boolean;
+  isMinimized: boolean;
   isSidebarOpen: boolean;
 };
 export type PageState = Actions & State;
@@ -23,7 +26,7 @@ export type PageContainerProps = {
   theme?: Object;
 };
 
-const initialState = { isSidebarOpen: false, isCollapsed: false };
+const initialState = { isSidebarOpen: false, isCollapsed: false, isMinimized: false };
 
 const actions: ActionMap<State, Actions> = {
   openSidebar: () => () => ({
@@ -32,8 +35,15 @@ const actions: ActionMap<State, Actions> = {
   closeSidebar: () => () => ({
     isSidebarOpen: false
   }),
-  handleChangeCollapsed: isCollapsed => () => ({
+  maximizeSidebar: () => () => ({
+    isMinimized: false
+  }),
+  minimizeSidebar: () => () => ({
+    isMinimized: true
+  }),
+  handleChangeCollapsed: isCollapsed => state => ({
     isCollapsed,
+    isMinimized: isCollapsed ? false : state.isMinimized,
     isSidebarOpen: false
   })
 };
