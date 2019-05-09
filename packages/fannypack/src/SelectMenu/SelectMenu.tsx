@@ -16,6 +16,7 @@ import { MenuButtonProps } from '../Menu/MenuButton';
 import { MenuGroupProps } from '../Menu/MenuGroup';
 import { LocalMenuItemProps, MenuItemProps, menuItemPropTypes } from '../Menu/MenuItem';
 import { MenuPopoverProps } from '../Menu/MenuPopover';
+import { PopoverProps } from '../Popover/Popover';
 import { SpinnerProps } from '../Spinner/Spinner';
 import Set from '../Set';
 import { TagProps } from '../Tag/Tag';
@@ -80,6 +81,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   ): void;
   options?: SelectMenuItems;
   placeholder?: string;
+  popoverProps?: PopoverProps;
   renderBottomActions?(opts: {
     isDropdown?: boolean;
     isMultiSelect?: boolean;
@@ -269,6 +271,7 @@ export const selectMenuPropTypes = {
   onChange: PropTypes.func,
   options: selectMenuItemsPropType,
   placeholder: PropTypes.string,
+  popoverProps: PropTypes.shape(popoverPropTypes),
   renderBottomActions: PropTypes.func,
   renderEmpty: PropTypes.func,
   renderError: PropTypes.func,
@@ -296,6 +299,7 @@ export const selectMenuDefaultProps = {
   onChange: undefined,
   options: [],
   placeholder: 'Select...',
+  popoverProps: {},
   renderBottomActions: bottomActionsRenderer,
   renderEmpty: emptyRenderer,
   renderError: errorRenderer,
@@ -481,11 +485,11 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
   };
 
   render = () => {
-    const { isDropdown, isLoading, placeholder, renderTrigger, renderValue, ...props } = this.props;
+    const { isDropdown, isLoading, popoverProps, placeholder, renderTrigger, renderValue, ...props } = this.props;
     const { selectedOptions } = this.state;
 
     return isDropdown ? (
-      <SelectMenuPopover content={this.renderMenu}>
+      <SelectMenuPopover content={this.renderMenu} {...popoverProps}>
         {renderTrigger &&
           renderTrigger({
             isLoading,
