@@ -15,8 +15,7 @@ import { LocalMenuProps, MenuProps } from '../Menu/Menu';
 import { MenuButtonProps } from '../Menu/MenuButton';
 import { MenuGroupProps } from '../Menu/MenuGroup';
 import { LocalMenuItemProps, MenuItemProps, menuItemPropTypes } from '../Menu/MenuItem';
-import { MenuPopoverProps } from '../Menu/MenuPopover';
-import { PopoverProps } from '../Popover/Popover';
+import { MenuPopoverProps, menuPopoverPropTypes } from '../Menu/MenuPopover';
 import { SpinnerProps } from '../Spinner/Spinner';
 import Set from '../Set';
 import { TagProps } from '../Tag/Tag';
@@ -81,7 +80,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   ): void;
   options?: SelectMenuItems;
   placeholder?: string;
-  popoverProps?: PopoverProps;
+  popoverProps?: MenuPopoverProps;
   renderBottomActions?(opts: {
     isDropdown?: boolean;
     isMultiSelect?: boolean;
@@ -271,7 +270,7 @@ export const selectMenuPropTypes = {
   onChange: PropTypes.func,
   options: selectMenuItemsPropType,
   placeholder: PropTypes.string,
-  popoverProps: PropTypes.shape(popoverPropTypes),
+  popoverProps: PropTypes.shape(menuPopoverPropTypes),
   renderBottomActions: PropTypes.func,
   renderEmpty: PropTypes.func,
   renderError: PropTypes.func,
