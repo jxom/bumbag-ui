@@ -15,7 +15,7 @@ import { LocalMenuProps, MenuProps } from '../Menu/Menu';
 import { MenuButtonProps } from '../Menu/MenuButton';
 import { MenuGroupProps } from '../Menu/MenuGroup';
 import { LocalMenuItemProps, MenuItemProps, menuItemPropTypes } from '../Menu/MenuItem';
-import { MenuPopoverProps, menuPopoverPropTypes } from '../Menu/MenuPopover';
+import { MenuPopoverProps, LocalMenuPopoverProps, menuPopoverPropTypes } from '../Menu/MenuPopover';
 import { SpinnerProps } from '../Spinner/Spinner';
 import Set from '../Set';
 import { TagProps } from '../Tag/Tag';
@@ -80,7 +80,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   ): void;
   options?: SelectMenuItems;
   placeholder?: string;
-  popoverProps?: MenuPopoverProps;
+  popoverProps?: Omit<LocalMenuPopoverProps, 'children'>;
   renderBottomActions?(opts: {
     isDropdown?: boolean;
     isMultiSelect?: boolean;
