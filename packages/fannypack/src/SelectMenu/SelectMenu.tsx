@@ -5,6 +5,8 @@ import _debounce from 'lodash/debounce';
 // @ts-ignore
 import _get from 'lodash/get';
 // @ts-ignore
+import _omit from 'lodash/omit';
+// @ts-ignore
 import Loads from 'react-loads';
 import { BoxProps } from 'reakit/ts/Box/Box';
 
@@ -80,7 +82,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   ): void;
   options?: SelectMenuItems;
   placeholder?: string;
-  popoverProps?: Omit<LocalMenuPopoverProps, 'children'>;
+  popoverProps?: Omit<Omit<LocalMenuPopoverProps, 'children'>, 'content'>;
   renderBottomActions?(opts: {
     isDropdown?: boolean;
     isMultiSelect?: boolean;
@@ -270,7 +272,7 @@ export const selectMenuPropTypes = {
   onChange: PropTypes.func,
   options: selectMenuItemsPropType,
   placeholder: PropTypes.string,
-  popoverProps: PropTypes.shape(menuPopoverPropTypes),
+  popoverProps: PropTypes.shape(_omit(menuPopoverPropTypes, 'children', 'content')),
   renderBottomActions: PropTypes.func,
   renderEmpty: PropTypes.func,
   renderError: PropTypes.func,
