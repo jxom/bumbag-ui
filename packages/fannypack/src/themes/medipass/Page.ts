@@ -12,6 +12,11 @@ export default {
       base: css`
         background-color: ${palette('primary800')};
       `
+    },
+    DesktopSidebarWrapper: {
+      base: css`
+        z-index: 1;
+      `
     }
   }
 };
