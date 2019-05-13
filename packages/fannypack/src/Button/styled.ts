@@ -156,6 +156,7 @@ export const interactiveProperties = css`
 export const loadingProperties = css`
   & {
     cursor: not-allowed;
+    position: relative;
 
     &:focus {
       box-shadow: unset !important;
