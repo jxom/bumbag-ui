@@ -91,7 +91,7 @@ export const SelectMenuDivider = styled(Menu.Divider)`
 
 export const SelectMenuGroup = styled(Menu.Group)<{ isDropdown?: boolean; isMultiSelect?: boolean }>`
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 300px;
 
   ${props =>

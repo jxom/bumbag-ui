@@ -78,7 +78,7 @@ export const Sidebar = styled(Box)<{ sidebarWidth?: string; isMinimized?: boolea
   height: 100vh;
   min-width: ${getWidth};
   width: ${getWidth};
-  overflow-y: scroll;
+  overflow-y: auto;
   transform: translateX(0px);
 
   ${props =>
