@@ -7,7 +7,7 @@ import _get from 'lodash/get';
 // @ts-ignore
 import _omit from 'lodash/omit';
 // @ts-ignore
-import Loads from 'react-loads';
+import { Loads } from 'react-loads';
 import { BoxProps } from 'reakit/ts/Box/Box';
 
 import { ButtonProps } from '../Button/Button';
@@ -531,13 +531,13 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     const selectedOptionsValues: SelectMenuItems = Object.values(selectedOptions);
 
     return (
-      <Loads contextKey={contextKey} delay={0} load={this.loadOptions} loadOnMount={Boolean(this.loadOptions)}>
-        {({ load, isLoading }: { load: () => any; isLoading: boolean }) => (
+      <Loads context={contextKey} delay={0} load={this.loadOptions} defer={!this.loadOptions}>
+        {({ load, isPending }: { load: () => any; isPending: boolean }) => (
           <_SelectMenu setInitialFocus={!isSearchable} {...(isDropdown ? {} : props)}>
             {isSearchable && (
               <SelectMenuSearchInput
                 isDropdownActive={popover && popover.isVisible}
-                isLoading={isLoading}
+                isLoading={isPending}
                 onChange={event => {
                   event.persist();
                   this.handleSearch({ event, load });
@@ -546,7 +546,7 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
               />
             )}
             {useTags && selectedOptionsValues.length > 0 && this.renderTopSection({ selectedOptionsValues })}
-            {this.renderOptions({ isLoading, load })}
+            {this.renderOptions({ isLoading: isPending, load })}
             {(isMultiSelect || isDropdown) && this.renderBottomSection({ popover, selectedOptionsValues })}
           </_SelectMenu>
         )}
@@ -601,13 +601,13 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
             </SelectMenuItem>
           );
         })}
-        <Loads.Loading>
+        <Loads.Pending>
           <SelectMenuStaticItem>
             <SelectMenuLoadingItemSpinner color="text" size="1rem" />
           </SelectMenuStaticItem>
-        </Loads.Loading>
-        <Loads.Success>{options.length === 0 && renderEmpty && renderEmpty({ emptyText })}</Loads.Success>
-        <Loads.Error>{({ error }: any) => renderError && renderError({ error })}</Loads.Error>
+        </Loads.Pending>
+        <Loads.Resolved>{options.length === 0 && renderEmpty && renderEmpty({ emptyText })}</Loads.Resolved>
+        <Loads.Rejected>{({ error }: any) => renderError && renderError({ error })}</Loads.Rejected>
       </SelectMenuGroup>
     );
   };

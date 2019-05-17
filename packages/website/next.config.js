@@ -41,7 +41,9 @@ module.exports = {
     });
     config.resolve.alias = {
       ...config.resolve.alias,
-      fannypack: path.resolve(__dirname, '../fannypack/src')
+      fannypack: path.resolve(__dirname, '../fannypack/src'),
+      react: path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
     };
     return config;
   }
