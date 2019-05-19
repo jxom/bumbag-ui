@@ -33,6 +33,7 @@ describe('behavior', () => {
     const handleRate = jest.fn();
     const { getByLabelText } = render(<Rating onRate={handleRate} />);
     const fifthStar = getByLabelText('5');
+    // @ts-ignore
     fireEvent.click(fifthStar);
     expect(handleRate).toHaveBeenCalledWith({ rating: 5, maxRating: 5 });
   });
@@ -41,6 +42,7 @@ describe('behavior', () => {
     const handleRate = jest.fn();
     const { getByLabelText } = render(<Rating onRate={handleRate} disabled />);
     const fifthStar = getByLabelText('5');
+    // @ts-ignore
     fireEvent.click(fifthStar);
     expect(handleRate).not.toHaveBeenCalled();
   });
