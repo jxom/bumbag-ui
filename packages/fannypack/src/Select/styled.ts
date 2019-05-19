@@ -18,6 +18,7 @@ export const Icon = styled.svg`
   z-index: 1;
   fill: ${palette('text')};
   transform: translateY(50%);
+  pointer-events: none;
 `;
 
 export const LoadingSpinner = styled(Spinner)`
