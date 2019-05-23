@@ -42,6 +42,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   className,
   defaultValue,
   disabled,
+  inputRef,
   isLoading,
   isRequired,
   name,
@@ -91,6 +92,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           className={className}
           defaultValue={defaultValue}
           disabled={disabled}
+          elementRef={inputRef}
           isLoading={isLoading}
           isRequired={isRequired}
           name={name}
