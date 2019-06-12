@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import ThemeProvider from 'reakit/Provider';
 // @ts-ignore
-import { LoadsContext } from 'react-loads';
+import { LoadsContext } from 'react-loads-next';
 // @ts-ignore
 import _get from 'lodash/get';
 

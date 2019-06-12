@@ -7,7 +7,7 @@ import _get from 'lodash/get';
 // @ts-ignore
 import _omit from 'lodash/omit';
 // @ts-ignore
-import { Loads } from 'react-loads';
+import { Loads } from 'react-loads-next';
 import { BoxProps } from 'reakit/ts/Box/Box';
 
 import { ButtonProps } from '../Button/Button';
