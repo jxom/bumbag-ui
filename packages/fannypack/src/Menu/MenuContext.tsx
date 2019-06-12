@@ -23,7 +23,7 @@ const initialState: MenuContextState = {
 };
 const Context = React.createContext(initialState);
 
-class MenuProvider extends React.Component<MenuProviderProps> {
+export class MenuProvider extends React.Component<MenuProviderProps> {
   handleMenuOpenViaKeyboard = ({ startAt = 'first' } = {}) => {
     this.setState({ startAt }, this.state.show);
   };
