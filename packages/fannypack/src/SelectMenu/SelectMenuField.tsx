@@ -48,6 +48,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   isLoading,
   isMultiSelect,
   isOptional,
+  isPaginated,
   isRequired,
   isSearchable,
   isVertical,
@@ -57,6 +58,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   onChange,
   options,
   placeholder,
+  popoverProps,
   renderBottomActions,
   renderEmpty,
   renderError,
@@ -98,6 +100,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
           isDropdown={isDropdown}
           isLoading={isLoading}
           isMultiSelect={isMultiSelect}
+          isPaginated={isPaginated}
           isRequired={isRequired}
           isSearchable={isSearchable}
           loadQuery={loadQuery}
@@ -106,6 +109,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
           onChange={onChange}
           options={options}
           placeholder={placeholder}
+          popoverProps={popoverProps}
           renderBottomActions={renderBottomActions}
           renderEmpty={renderEmpty}
           renderError={renderError}

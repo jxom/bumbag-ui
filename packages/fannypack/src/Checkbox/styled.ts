@@ -12,6 +12,8 @@ export const CheckboxIcon = styled(Box)<{ state?: string }>`
   border-radius: 0.2em;
   height: 1em;
   position: relative;
+  margin-top: 0.25em;
+  min-width: 1em;
   width: 1em;
 
   & {
@@ -65,7 +67,8 @@ export const HiddenCheckbox = HiddenInput<LocalCheckboxProps>({
 
 export const Checkbox = styled(Label)`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
 
   & {
     ${theme('fannypack.Checkbox.label')};

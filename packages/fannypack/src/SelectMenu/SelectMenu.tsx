@@ -63,6 +63,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   isDropdown?: boolean;
   isLoading?: boolean;
   isMultiSelect?: boolean;
+  isPaginated?: boolean;
   isRadio?: boolean;
   isSearchable?: boolean;
   loadQuery?: Object;
@@ -265,6 +266,7 @@ export const selectMenuPropTypes = {
   isDropdown: PropTypes.bool,
   isLoading: PropTypes.bool,
   isMultiSelect: PropTypes.bool,
+  isPaginated: PropTypes.bool,
   isRadio: PropTypes.bool,
   isSearchable: PropTypes.bool,
   loadQuery: PropTypes.object,
@@ -293,6 +295,7 @@ export const selectMenuDefaultProps = {
   isDropdown: false,
   isLoading: false,
   isMultiSelect: false,
+  isPaginated: true,
   isRadio: false,
   isSearchable: false,
   loadQuery: undefined,
@@ -447,9 +450,11 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     isLoading: boolean;
     load: () => void;
   }) => {
+    const { isPaginated } = this.props;
     const { page } = this.state;
     const target = event.currentTarget;
     if (
+      isPaginated &&
       !isLoading &&
       target.scrollHeight > target.offsetHeight &&
       target.scrollHeight - target.offsetHeight - target.scrollTop <= 200
