@@ -58,6 +58,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   defaultKeys?: Array<string>;
   defaultOption?: SelectMenuItem;
   defaultOptions?: SelectMenuItems;
+  disabled?: boolean;
   emptyText?: string;
   filterOptions: ({ options, searchText }: { options: SelectMenuItems; searchText: string }) => SelectMenuItems;
   isDropdown?: boolean;
@@ -261,6 +262,7 @@ export const selectMenuPropTypes = {
   defaultKeys: PropTypes.arrayOf(PropTypes.string),
   defaultOption: selectMenuItemPropType,
   defaultOptions: selectMenuItemsPropType,
+  disabled: PropTypes.bool,
   emptyText: PropTypes.string,
   filterOptions: PropTypes.func,
   isDropdown: PropTypes.bool,
@@ -290,6 +292,7 @@ export const selectMenuDefaultProps = {
   defaultKeys: undefined,
   defaultOption: undefined,
   defaultOptions: undefined,
+  disabled: false,
   emptyText: 'No results found',
   filterOptions: optionsFilter,
   isDropdown: false,

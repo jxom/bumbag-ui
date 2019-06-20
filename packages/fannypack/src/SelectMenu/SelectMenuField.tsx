@@ -41,6 +41,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   defaultOption,
   defaultOptions,
   description,
+  disabled,
   emptyText,
   filterOptions,
   hint,
@@ -95,6 +96,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
           defaultKeys={defaultKeys}
           defaultOption={defaultOption}
           defaultOptions={defaultOptions}
+          disabled={disabled}
           emptyText={emptyText}
           filterOptions={filterOptions}
           isDropdown={isDropdown}

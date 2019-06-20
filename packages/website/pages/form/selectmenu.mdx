@@ -182,6 +182,23 @@ To display a loading indicator, add the `isLoading` prop to the select menu.
 />
 ```
 
+### Disabled
+
+To disable the menu, add the `disabled` prop.
+
+```.jsx
+<SelectMenu
+  disabled
+  isDropdown
+  options={[
+    { key: '1', label: 'Jake Moxey', value: { _id: '1', name: 'Jake Moxey' } },
+    { key: '2', label: 'Bill Gates', value: { _id: '2', name: 'Bill Gates' } },
+    { key: '3', label: 'Steve Jobs', value: { _id: '3', name: 'Steve Jobs' } },
+    { key: '4', label: 'Mark Zuckerberg', value: { _id: '4', name: 'Mark Zuckerberg' } }
+  ]}
+/>
+```
+
 ### Custom value renderer
 
 ```.jsx
