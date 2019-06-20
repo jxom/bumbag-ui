@@ -72,8 +72,7 @@ PageContainer.defaultProps = {
   theme: {}
 };
 
-// @ts-ignore
-const _PageContainer = withTheme(PageContainer);
+const _PageContainer: any = withTheme(PageContainer);
 export default _PageContainer;
 
 export const withPage = (C: React.ComponentType<any>) => (props: any) => (

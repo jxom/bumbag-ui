@@ -65,6 +65,7 @@ export const Icon: React.FunctionComponent<LocalIconProps> = ({
       use="svg"
       aria-hidden={a11yHidden}
       role="img"
+      // @ts-ignore
       size={size}
       viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
       {...props}
