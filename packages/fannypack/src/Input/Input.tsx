@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts';
+// @ts-ignore
+import InputMask from 'react-input-mask';
 
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';
@@ -13,6 +15,7 @@ export type LocalInputProps = {
   a11yId?: string;
   /** An accessible label for the input */
   a11yLabel?: string;
+  alwaysShowMask?: boolean;
   autoComplete?: string;
   /** Automatically focus on the input */
   autoFocus?: boolean;
@@ -32,6 +35,8 @@ export type LocalInputProps = {
   name?: string;
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
+  mask?: string;
+  maskChar?: string;
   /** The maximum (numeric or date-time) value for the input. Must not be less than its minimum (min attribute) value. */
   max?: number;
   /** If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. */
@@ -73,6 +78,7 @@ export type InputComponents = {
 export const Input: React.FunctionComponent<LocalInputProps> & InputComponents = ({
   a11yLabel,
   a11yId,
+  alwaysShowMask,
   after,
   autoComplete,
   autoFocus,
@@ -82,6 +88,8 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   inputRef,
   isLoading,
   isRequired,
+  mask,
+  maskChar,
   max,
   maxLength,
   min,
@@ -113,37 +121,48 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
         {after}
       </InlineFlex>
     )}
-    <_Input
-      after={after}
-      aria-invalid={state === 'danger'}
-      aria-label={a11yLabel}
-      aria-required={isRequired}
-      autoComplete={autoComplete}
-      autoFocus={autoFocus}
-      before={before}
-      defaultValue={defaultValue}
+    <InputMask
+      alwaysShowMask={alwaysShowMask}
+      mask={mask}
+      maskChar={maskChar}
       disabled={disabled}
-      elementRef={inputRef}
-      id={a11yId}
-      max={max}
-      maxLength={maxLength}
-      min={min}
-      minLength={minLength}
-      multiple={multiple}
-      name={name}
+      defaultValue={defaultValue}
+      readOnly={readOnly}
+      value={value}
       onBlur={onBlur}
       onChange={onChange}
       onFocus={onFocus}
-      pattern={pattern}
-      placeholder={placeholder}
-      readOnly={readOnly}
-      spellCheck={spellCheck}
-      state={state}
-      step={step}
-      styledSize={size}
-      type={type}
-      value={value}
-    />
+    >
+      {(maskProps: any) => (
+        <_Input
+          after={after}
+          aria-invalid={state === 'danger'}
+          aria-label={a11yLabel}
+          aria-required={isRequired}
+          autoComplete={autoComplete}
+          autoFocus={autoFocus}
+          disabled={disabled}
+          elementRef={inputRef}
+          before={before}
+          id={a11yId}
+          max={max}
+          maxLength={maxLength}
+          min={min}
+          minLength={minLength}
+          multiple={multiple}
+          name={name}
+          pattern={pattern}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          spellCheck={spellCheck}
+          state={state}
+          step={step}
+          styledSize={size}
+          type={type}
+          {...maskProps}
+        />
+      )}
+    </InputMask>
     {isLoading && <LoadingSpinner color="text" size="small" />}
   </InputWrapper>
 );
@@ -154,6 +173,7 @@ export const inputPropTypes = {
   after: PropTypes.element,
   a11yId: PropTypes.string,
   a11yLabel: PropTypes.string,
+  alwaysShowMask: PropTypes.bool,
   autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
   before: PropTypes.element,
@@ -166,6 +186,8 @@ export const inputPropTypes = {
   isRequired: PropTypes.bool,
   name: PropTypes.string,
   size: sizePropType,
+  mask: PropTypes.string,
+  maskChar: PropTypes.string,
   max: PropTypes.number,
   maxLength: PropTypes.number,
   min: PropTypes.number,
@@ -188,6 +210,7 @@ Input.propTypes = inputPropTypes;
 export const inputDefaultProps: Partial<LocalInputProps> = {
   a11yId: undefined,
   a11yLabel: undefined,
+  alwaysShowMask: false,
   autoComplete: undefined,
   autoFocus: false,
   children: null,
@@ -199,6 +222,8 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   inputRef: undefined,
   isLoading: false,
   isRequired: false,
+  mask: undefined,
+  maskChar: undefined,
   max: undefined,
   maxLength: undefined,
   min: undefined,
