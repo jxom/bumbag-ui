@@ -10,6 +10,7 @@ const FIELDS_WITH_FIELD_WRAPPERS = [
   'SwitchField',
   'TextareaField'
 ];
+const CHECKBOX_FIELDS = ['Checkbox', 'CheckboxField'];
 const SELECT_MENUS = ['SelectMenu', 'SelectMenuField'];
 
 const bindFns = (...fns: Array<Function>) => (...args: any) => {
@@ -38,6 +39,18 @@ export function formikField(Component: any) {
       };
     }
 
+    if (CHECKBOX_FIELDS.includes(Component.name)) {
+      let checked = false;
+      const value = Boolean(form.values[field.name]);
+      if (value) {
+        checked = value;
+      }
+      if (props.checked) {
+        checked = props.checked;
+      }
+      overrideProps = { ...overrideProps, checked };
+    }
+
     let onBlur = field.onBlur;
     let onChange = field.onChange;
     if (SELECT_MENUS.includes(Component.name)) {
@@ -45,7 +58,6 @@ export function formikField(Component: any) {
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => form.setFieldValue(field.name, newValues);
     }
-
     overrideProps = {
       ...overrideProps,
       onBlur: bindFns(onBlur, props.onBlur),
@@ -76,6 +88,18 @@ export function reduxFormField(Component: any) {
         state,
         validationText
       };
+    }
+
+    if (CHECKBOX_FIELDS.includes(Component.name)) {
+      let checked = false;
+      const value = Boolean(input.value);
+      if (value) {
+        checked = value;
+      }
+      if (props.checked) {
+        checked = props.checked;
+      }
+      overrideProps = { ...overrideProps, checked };
     }
 
     let onBlur = input.onBlur;
