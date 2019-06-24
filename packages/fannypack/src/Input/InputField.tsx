@@ -27,7 +27,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   addonBefore,
   addonAfter,
   a11yId,
-  alwaysShowMask,
   description,
   hint,
   isOptional,
@@ -48,8 +47,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   isRequired,
   name,
   size,
-  mask,
-  maskChar,
   max,
   maxLength,
   min,
@@ -89,7 +86,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           after={after}
           a11yId={a11yId}
           a11yLabel={a11yLabel}
-          alwaysShowMask={alwaysShowMask}
           autoComplete={autoComplete}
           autoFocus={autoFocus}
           before={before}
@@ -101,8 +97,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           isRequired={isRequired}
           name={name}
           size={size}
-          mask={mask}
-          maskChar={maskChar}
           max={max}
           maxLength={maxLength}
           min={min}
