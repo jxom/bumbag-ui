@@ -46,7 +46,7 @@ export default [
   { menu: 'Form', name: 'FieldWrapper', path: '/form/fieldwrapper', breakpoint: 'tablet' },
   { menu: 'Form', name: 'Input', path: '/form/input', breakpoint: 'tablet' },
   { menu: 'Form', name: 'Label', path: '/form/label', breakpoint: 'tablet' },
-  { menu: 'Form', name: 'Radio', path: '/form/ra  dio', breakpoint: 'tablet' },
+  { menu: 'Form', name: 'Radio', path: '/form/radio', breakpoint: 'tablet' },
   { menu: 'Form', name: 'RadioGroup', path: '/form/radiogroup', breakpoint: 'tablet' },
   { menu: 'Form', name: 'Select', path: '/form/select', breakpoint: 'tablet' },
   { menu: 'Form', name: 'SelectMenu', path: '/form/selectmenu', breakpoint: 'tablet' },

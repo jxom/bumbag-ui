@@ -4,6 +4,7 @@ import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import * as faExclamationTriangle from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import * as faCheckCircle from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import * as faExclamationCircle from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import * as faQuestionCircle from '@fortawesome/free-solid-svg-icons/faQuestionCircle';
 import * as faTimes from '@fortawesome/free-solid-svg-icons/faTimes';
 import * as faSearch from '@fortawesome/free-solid-svg-icons/faSearch';
 
@@ -23,9 +24,12 @@ const parseOverrideIcons = (
 export default (overrides: any) => ({
   ..._get(overrides, 'Icon', {}),
   icons: {
-    ...parseIcons([faInfoCircle, faExclamationTriangle, faCheckCircle, faExclamationCircle, faTimes, faSearch], {
-      type: 'font-awesome-standalone'
-    }),
+    ...parseIcons(
+      [faInfoCircle, faExclamationTriangle, faCheckCircle, faExclamationCircle, faQuestionCircle, faTimes, faSearch],
+      {
+        type: 'font-awesome-standalone'
+      }
+    ),
     ...parseOverrideIcons(_get(overrides, 'Icon.iconSets', [])),
     ..._get(overrides, 'Icon.icons', {})
   },

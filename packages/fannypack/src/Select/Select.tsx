@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBlock/InlineBlock';
+import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 
 import { InlineBlock } from '../primitives';
 import { Omit } from '../types';
@@ -33,7 +34,7 @@ export type LocalSelectProps = {
   options: Array<{ label: string; value: string; disabled?: boolean }>;
   /** Hint text to display */
   placeholder?: string;
-  selectProps: ReakitInputProps;
+  selectProps?: ReakitInputProps;
   /** Alters the size of the select field. Can be "small", "medium" or "large" */
   size?: string;
   /** State of the select field. Can be any color in the palette. */
@@ -161,7 +162,11 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
           value={value}
           {...selectProps}
         >
-          {placeholder && <option disabled>{placeholder}</option>}
+          {placeholder && (
+            <option disabled value="">
+              {placeholder}
+            </option>
+          )}
           {options.map((option, i) => (
             <option
               key={i} // eslint-disable-line

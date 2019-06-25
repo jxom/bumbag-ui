@@ -165,6 +165,13 @@ export type FieldWrapperThemeConfig = {
   hint?: Stylesheet;
   optional?: Stylesheet;
   validation?: Stylesheet;
+  TooltipPopover?: {
+    base?: Stylesheet;
+  };
+  defaultProps?: {
+    tooltipTrigger?: any;
+    tooltipPopoverProps?: Object;
+  };
 };
 export type FieldSetThemeConfig = {
   base?: Stylesheet;

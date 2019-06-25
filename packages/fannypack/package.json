@@ -7,7 +7,7 @@
   "unpkg": "dist/fannypack.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn build:types",
+    "build": "yarn clean && yarn build:lib",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf es/ lib/ dist/ ts/",
@@ -83,5 +83,5 @@
     "accessible",
     "composable"
   ],
-  "gitHead": "613d46b6624167b65e548fe917ecfb5a9a0e2dbe"
+  "gitHead": "7b7ed3a0783df48486e43e6937f33240a8240167"
 }

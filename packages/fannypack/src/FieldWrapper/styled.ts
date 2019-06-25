@@ -5,6 +5,7 @@ import styled, { space } from '../styled';
 import { Omit } from '../types';
 // @ts-ignore
 import _Label from '../Label';
+import Popover from '../Popover';
 // @ts-ignore
 import _Text from '../Text';
 import { FieldWrapperProps } from './FieldWrapper';
@@ -44,6 +45,24 @@ export const OptionalText = styled(_Text)`
 
   & {
     ${theme('fannypack.FieldWrapper.optional')};
+  }
+`;
+
+export const RequiredText = styled(_Text)`
+  color: ${palette('danger')};
+  margin-left: ${space(1)}rem;
+  line-height: 1;
+
+  & {
+    ${theme('fannypack.FieldWrapper.required')};
+  }
+`;
+
+export const TooltipPopover = styled(Popover)`
+  padding: ${space(1, 'major')}rem;
+
+  & {
+    ${theme('fannypack.FieldWrapper.TooltipPopover.base')};
   }
 `;
 

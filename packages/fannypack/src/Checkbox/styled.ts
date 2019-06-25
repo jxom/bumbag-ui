@@ -7,6 +7,7 @@ import HiddenInput from '../_utils/HiddenInput';
 import { LocalCheckboxProps } from './Checkbox';
 
 export const CheckboxIcon = styled(Box)<{ state?: string }>`
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;

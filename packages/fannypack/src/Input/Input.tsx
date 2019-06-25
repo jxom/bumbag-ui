@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts';
+// @ts-ignore
+import _omit from 'lodash/omit';
 
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';
@@ -20,10 +22,10 @@ export type LocalInputProps = {
   children?: React.ReactNode;
   className?: string;
   /** Default value of the input */
-  defaultValue?: string;
+  defaultValue?: string | string[];
   /** Disables the input */
   disabled?: boolean;
-  inputProps?: ReakitInputProps;
+  inputProps?: Omit<ReakitInputProps, 'ref'>;
   inputRef?: React.RefObject<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
@@ -34,11 +36,11 @@ export type LocalInputProps = {
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
   /** The maximum (numeric or date-time) value for the input. Must not be less than its minimum (min attribute) value. */
-  max?: number;
+  max?: number | string;
   /** If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. */
   maxLength?: number;
   /** The minimum (numeric or date-time) value for this input, which must not be greater than its maximum (max attribute) value. */
-  min?: number;
+  min?: number | string;
   /** If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the minimum number of characters (in UTF-16 code points) that the user can enter. For other control types, it is ignored. */
   minLength?: number;
   /** This prop indicates whether the user can enter more than one value. This attribute only applies when the type attribute is set to email or file. */
@@ -52,13 +54,13 @@ export type LocalInputProps = {
   /** Setting the value of this attribute to true indicates that the element needs to have its spelling and grammar checked. The value default indicates that the element is to act according to a default behavior, possibly based on the parent element's own spellcheck value. The value false indicates that the element should not be checked. */
   spellCheck?: boolean;
   /** Works with the min and max attributes to limit the increments at which a numeric or date-time value can be set. */
-  step?: number;
+  step?: number | string;
   /** State of the input. Can be any color in the palette. */
   state?: string;
   /** Specify the type of input. */
   type?: string;
   /** Value of the input */
-  value?: string;
+  value?: string | number | string[];
   /** Function to invoke when focus is lost */
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when input has changed */
@@ -145,7 +147,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
       styledSize={size}
       type={type}
       value={value}
-      {...inputProps}
+      {..._omit(inputProps, 'size')}
     />
     {isLoading && <LoadingSpinner color="text" size="small" />}
   </InputWrapper>

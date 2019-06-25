@@ -19,6 +19,62 @@ The `<FieldWrapper>` component is a utility belt that wraps around form elements
 </FieldWrapper>
 ```
 
+### Tooltips
+
+You can show a tooltip by supplying a string or an element to the `tooltip` prop.
+
+```.jsx
+<FieldWrapper a11yId="username" label="Username" tooltip="Your username must be awesome.">
+  <Input />
+</FieldWrapper>
+```
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  tooltip={
+    <Text fontSize="150">Your username must be <Text fontWeight="bold">awesome.</Text></Text>
+  }
+>
+  <Input />
+</FieldWrapper>
+```
+
+#### Custom tooltip trigger
+
+You can modify the tooltip trigger button by supplying an element to the `tooltipTrigger` prop.
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  tooltip="Your username must be awesome."
+  tooltipTrigger={<Button size="small" minHeight="unset">Tooltip</Button>}
+>
+  <Input />
+</FieldWrapper>
+```
+
+Or you can set a default trigger via `defaultProps` [in the theme](#theming)
+
+#### Custom tooltip popover props
+
+You can modify the tooltip popover props by supplying `tooltipPopoverProps`.
+
+```.jsx
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  tooltip="Your username must be awesome."
+  tooltipPopoverProps={{ placement: 'top-start' }}
+>
+  <Input />
+</FieldWrapper>
+```
+
+Or you can set a default popover props via `defaultProps` [in the theme](#theming)
+
 ### Descriptions
 
 The description text is placed underneath the label.
@@ -50,8 +106,6 @@ To indicate a field as optional, add the `isOptional` prop.
 ```
 
 ### Required fields
-
-Required fields don't show any visual feedback. Displaying 'optional' labels (as above) instead of a red astrix is more descriptive, less fearful, and accessible. However, adding the `isRequired` prop to the field will enable screen readers to identify required fields.
 
 ```.jsx
 <FieldWrapper a11yId="username" label="Username" isRequired>
@@ -141,7 +195,16 @@ Required fields don't show any visual feedback. Displaying 'optional' labels (as
     description: css | Object,
     hint: css | Object,
     optional: css | Object,
-    validation: css | Object
+    validation: css | Object,
+
+    TooltipPopover: {
+      base: css | Object
+    },
+
+    defaultProps: {
+      tooltipPopoverProps: Object
+      tooltipTrigger: ReactElement
+    }
   }
 }
 ```

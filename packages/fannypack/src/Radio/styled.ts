@@ -9,6 +9,7 @@ import { RadioProps, LocalRadioProps } from './Radio';
 
 export const RadioIcon = styled(Box)<{ state?: string }>`
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
