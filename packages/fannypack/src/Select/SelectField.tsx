@@ -22,6 +22,7 @@ export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     addonAfter?: React.ReactElement<any>;
     /** If addonBefore or addonAfter exists, then the addons will render vertically. */
     isVertical?: boolean;
+    selectProps?: Omit<LocalSelectProps, 'options'>;
   };
 export type SelectFieldProps = LocalSelectFieldProps & SelectProps;
 
@@ -49,6 +50,7 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
   onFocus,
   options,
   placeholder,
+  selectProps,
   size,
   state,
   validationText,
@@ -86,6 +88,7 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
           name={name}
           options={options}
           placeholder={placeholder}
+          selectProps={selectProps}
           size={size}
           state={state}
           value={value}
@@ -104,6 +107,7 @@ export const selectFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
+  selectProps: PropTypes.shape(selectPropTypes),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...selectPropTypes
 };
@@ -113,6 +117,7 @@ export const selectFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
   isVertical: false,
+  selectProps: {},
   ...fieldWrapperDefaultProps,
   ...selectDefaultProps
 };

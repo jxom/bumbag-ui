@@ -14,6 +14,7 @@ import { Omit } from '../types';
 export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalCheckboxProps & {
     checkboxLabel?: string;
+    checkboxProps?: LocalCheckboxProps;
   };
 export type CheckboxFieldProps = LocalCheckboxFieldProps & CheckboxProps;
 
@@ -21,6 +22,7 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
   a11yId,
   autoFocus,
   checkboxLabel,
+  checkboxProps,
   checked,
   className,
   defaultChecked,
@@ -71,6 +73,7 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
         onChange={onChange}
         onFocus={onFocus}
         {...elementProps}
+        {...checkboxProps}
       />
     )}
   </FieldWrapper>
@@ -78,10 +81,12 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
 
 CheckboxField.propTypes = {
   checkboxLabel: PropTypes.string,
+  checkboxProps: PropTypes.shape(checkboxPropTypes),
   ...checkboxPropTypes,
   ..._omit(fieldWrapperPropTypes, 'children')
 };
 CheckboxField.defaultProps = {
+  checkboxProps: {},
   ...checkboxDefaultProps,
   ...fieldWrapperDefaultProps
 };

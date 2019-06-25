@@ -28,6 +28,7 @@ export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'>
     addonAfter?: React.ReactElement<any>;
     /** If addonBefore or addonAfter exists, then the addons will render vertically. */
     isVertical?: boolean;
+    selectMenuProps?: LocalSelectMenuProps;
   };
 export type SelectMenuFieldProps = SelectMenuProps & LocalSelectMenuFieldProps;
 
@@ -65,6 +66,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   renderError,
   renderOption,
   renderValue,
+  selectMenuProps,
   searchInputProps,
   state,
   validationText,
@@ -123,6 +125,7 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
           value={value}
           useTags={useTags}
           {...elementProps}
+          {...selectMenuProps}
         />
         {addonAfter}
       </ConditionalWrap>
@@ -134,6 +137,7 @@ export const selectMenuFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
   isVertical: PropTypes.bool,
+  selectMenuProps: PropTypes.shape(selectMenuPropTypes),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...selectMenuPropTypes
 };
@@ -145,7 +149,8 @@ export const selectMenuFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
   a11yId: getUniqueId('SelectMenuField'),
-  isVertical: false
+  isVertical: false,
+  selectMenuProps: {}
 };
 SelectMenuField.defaultProps = selectMenuFieldDefaultProps;
 

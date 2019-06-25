@@ -18,6 +18,7 @@ export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     addonBefore?: React.ReactElement<any>;
     /** Addon component to the input (after). Similar to the addon components in Input. */
     addonAfter?: React.ReactElement<any>;
+    inputProps?: LocalInputProps;
     /** If addonBefore or addonAfter exists, then the addons will render vertically. */
     isVertical?: boolean;
   };
@@ -42,6 +43,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   className,
   defaultValue,
   disabled,
+  inputProps,
   inputRef,
   isLoading,
   isRequired,
@@ -92,6 +94,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           className={className}
           defaultValue={defaultValue}
           disabled={disabled}
+          inputProps={inputProps}
           inputRef={inputRef}
           isLoading={isLoading}
           isRequired={isRequired}
@@ -126,6 +129,7 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
 export const inputFieldPropTypes = {
   addonBefore: PropTypes.element,
   addonAfter: PropTypes.element,
+  inputProps: PropTypes.shape(inputPropTypes),
   isVertical: PropTypes.bool,
   ...fieldWrapperPropTypes,
   ...inputPropTypes
@@ -135,6 +139,7 @@ InputField.propTypes = inputFieldPropTypes;
 export const inputFieldDefaultProps = {
   addonBefore: undefined,
   addonAfter: undefined,
+  inputProps: {},
   isVertical: false,
   ...fieldWrapperDefaultProps,
   ...inputDefaultProps

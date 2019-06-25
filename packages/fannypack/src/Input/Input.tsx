@@ -23,6 +23,7 @@ export type LocalInputProps = {
   defaultValue?: string;
   /** Disables the input */
   disabled?: boolean;
+  inputProps?: ReakitInputProps;
   inputRef?: React.RefObject<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
@@ -79,6 +80,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   before,
   defaultValue,
   disabled,
+  inputProps,
   inputRef,
   isLoading,
   isRequired,
@@ -143,6 +145,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
       styledSize={size}
       type={type}
       value={value}
+      {...inputProps}
     />
     {isLoading && <LoadingSpinner color="text" size="small" />}
   </InputWrapper>
@@ -161,6 +164,7 @@ export const inputPropTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
+  inputProps: PropTypes.object as PropTypes.Validator<LocalInputProps['inputProps']>,
   inputRef: PropTypes.object as PropTypes.Validator<LocalInputProps['inputRef']>,
   isLoading: PropTypes.bool,
   isRequired: PropTypes.bool,
@@ -196,6 +200,7 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   disabled: false,
   after: undefined,
   before: undefined,
+  inputProps: {},
   inputRef: undefined,
   isLoading: false,
   isRequired: false,

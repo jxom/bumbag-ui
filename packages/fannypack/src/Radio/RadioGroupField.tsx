@@ -1,5 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
+import * as PropTypes from 'prop-types';
+// @ts-ignore
 import _omit from 'lodash/omit';
 
 import RadioGroup, {
@@ -15,7 +17,10 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
 
-export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalRadioGroupProps;
+export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalRadioGroupProps & {
+    radioGroupProps?: Omit<Omit<LocalRadioGroupProps, 'options'>, 'name'>;
+  };
 export type RadioGroupFieldProps = RadioGroupProps & LocalRadioGroupFieldProps;
 
 export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> = ({
@@ -33,6 +38,7 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
   name,
   onChange,
   options,
+  radioGroupProps,
   state,
   validationText,
   value,
@@ -63,18 +69,21 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
         value={value}
         onChange={onChange}
         {...elementProps}
+        {...radioGroupProps}
       />
     )}
   </FieldWrapper>
 );
 
 export const radioGroupFieldPropTypes = {
+  radioGroupProps: PropTypes.shape(radioGroupPropTypes),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...radioGroupPropTypes
 };
 RadioGroupField.propTypes = radioGroupFieldPropTypes;
 
 export const radioGroupFieldDefaultProps = {
+  radioGroupProps: {},
   ...fieldWrapperDefaultProps,
   ...radioGroupDefaultProps
 };

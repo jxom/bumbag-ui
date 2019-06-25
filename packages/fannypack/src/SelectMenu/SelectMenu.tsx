@@ -60,7 +60,7 @@ export type LocalSelectMenuProps = Omit<LocalMenuProps, 'children'> & {
   defaultOptions?: SelectMenuItems;
   disabled?: boolean;
   emptyText?: string;
-  filterOptions: ({ options, searchText }: { options: SelectMenuItems; searchText: string }) => SelectMenuItems;
+  filterOptions?: ({ options, searchText }: { options: SelectMenuItems; searchText: string }) => SelectMenuItems;
   isDropdown?: boolean;
   isLoading?: boolean;
   isMultiSelect?: boolean;

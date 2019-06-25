@@ -16,6 +16,7 @@ export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
     a11yId?: string;
     /** Switch label */
     switchLabel?: string;
+    switchProps?: LocalSwitchProps;
   };
 export type SwitchFieldProps = LocalSwitchFieldProps & SwitchProps;
 
@@ -80,6 +81,7 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
 export const switchFieldPropTypes = {
   a11yId: PropTypes.string,
   switchLabel: PropTypes.string,
+  switchProps: PropTypes.shape(switchPropTypes),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...switchPropTypes
 };
@@ -88,6 +90,7 @@ SwitchField.propTypes = switchFieldPropTypes;
 export const switchFieldDefaultProps = {
   a11yId: undefined,
   switchLabel: undefined,
+  switchProps: {},
   ...fieldWrapperDefaultProps,
   ...switchDefaultProps
 };

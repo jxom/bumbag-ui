@@ -33,6 +33,7 @@ export type LocalSelectProps = {
   options: Array<{ label: string; value: string; disabled?: boolean }>;
   /** Hint text to display */
   placeholder?: string;
+  selectProps: ReakitInputProps;
   /** Alters the size of the select field. Can be "small", "medium" or "large" */
   size?: string;
   /** State of the select field. Can be any color in the palette. */
@@ -68,6 +69,7 @@ export const selectDefaultProps = {
   onChange: undefined,
   onFocus: undefined,
   placeholder: undefined,
+  selectProps: {},
   size: 'default',
   state: undefined,
   value: undefined
@@ -86,6 +88,7 @@ export const selectPropTypes = {
   name: PropTypes.string,
   options: PropTypes.array.isRequired,
   placeholder: PropTypes.string,
+  selectProps: PropTypes.object,
   size: PropTypes.string,
   state: PropTypes.string,
   value: PropTypes.string,
@@ -126,6 +129,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
       onFocus,
       options,
       placeholder,
+      selectProps,
       size,
       state,
       value,
@@ -155,6 +159,7 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
           styledSize={size}
           state={state}
           value={value}
+          {...selectProps}
         >
           {placeholder && <option disabled>{placeholder}</option>}
           {options.map((option, i) => (

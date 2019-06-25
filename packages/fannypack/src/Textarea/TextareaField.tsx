@@ -1,5 +1,7 @@
 import * as React from 'react';
 // @ts-ignore
+import * as PropTypes from 'prop-types';
+// @ts-ignore
 import _omit from 'lodash/omit';
 
 import { Omit } from '../types';
@@ -10,7 +12,10 @@ import FieldWrapper, {
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
 
-export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> & LocalTextareaProps;
+export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
+  LocalTextareaProps & {
+    textareaProps?: LocalTextareaProps;
+  };
 export type TextareaFieldProps = LocalTextareaFieldProps & TextareaProps;
 
 export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = ({
@@ -24,6 +29,7 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
   label,
   size,
   state,
+  textareaProps,
   validationText,
   ...props
 }) => (
@@ -36,18 +42,21 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
     label={label}
     state={state}
     validationText={validationText}
+    {...props}
   >
-    {({ elementProps }) => <Textarea {...props} {...elementProps} />}
+    {({ elementProps }) => <Textarea {...elementProps} {...textareaProps} />}
   </FieldWrapper>
 );
 
 export const textareaFieldPropTypes = {
+  textareaProps: PropTypes.shape(textareaPropTypes),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...textareaPropTypes
 };
 TextareaField.propTypes = textareaFieldPropTypes;
 
 export const textareaFieldDefaultProps = {
+  textareaProps: {},
   ...fieldWrapperDefaultProps,
   ...textareaDefaultProps
 };
