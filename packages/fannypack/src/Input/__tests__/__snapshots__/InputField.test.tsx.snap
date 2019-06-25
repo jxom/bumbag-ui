@@ -219,7 +219,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c8 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -232,7 +232,7 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c8:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -265,7 +265,7 @@ exports[`renders correctly for a required field 1`] = `
   display: inline-block;
 }
 
-.c6 {
+.c8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -274,7 +274,7 @@ exports[`renders correctly for a required field 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c9 {
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -283,33 +283,91 @@ exports[`renders correctly for a required field 1`] = `
   padding: 0.4em 0.6em;
 }
 
-.c7[disabled] {
+.c9[disabled] {
   background-color: #f2f2f2;
   box-shadow: unset;
   color: #8d8d8d;
 }
 
-.c7:focus {
+.c9:focus {
   outline: unset;
   z-index: 2;
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c7::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::-moz-placeholder {
+.c9::-moz-placeholder {
   opacity: 0.6;
 }
 
-.c7:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.c7::placeholder {
+.c9::placeholder {
   opacity: 0.6;
+}
+
+abbr.c7 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+i.c7 {
+  font-style: italic;
+}
+
+kbd.c7 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.c7 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.c7 {
+  font-weight: bold;
+}
+
+sub.c7,
+sup.c7 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.c7,
+u.c7 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
+  font-style: italic;
+}
+
+kbd.c7,
+pre.c7,
+samp.c7 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.c7 .c11 {
+  top: 0.15em;
 }
 
 .c4 {
@@ -323,6 +381,12 @@ exports[`renders correctly for a required field 1`] = `
   margin-bottom: 0 !important;
 }
 
+.c6 {
+  color: #c9444d;
+  margin-left: 0.25rem;
+  line-height: 1;
+}
+
 <div
   class="c0"
 >
@@ -331,7 +395,7 @@ exports[`renders correctly for a required field 1`] = `
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -339,16 +403,21 @@ exports[`renders correctly for a required field 1`] = `
       >
         Username
       </label>
+      <span
+        class="c6 c7 c0"
+      >
+        *
+      </span>
     </div>
     <div />
   </div>
   <div
-    class="c6 c0"
+    class="c8 c0"
   >
     <input
       aria-invalid="false"
       aria-required="true"
-      class="c7 c8"
+      class="c9 c10"
       id="username"
       type="text"
       value=""
@@ -544,7 +613,7 @@ exports[`renders correctly for addon component (after) 1`] = `
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -765,7 +834,7 @@ exports[`renders correctly for addon component (before) 1`] = `
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -986,7 +1055,7 @@ exports[`renders correctly for addon component (vertical) 1`] = `
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1232,13 +1301,6 @@ exports[`renders correctly for an input field with a description 1`] = `
   opacity: 0.6;
 }
 
-.c4 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  line-height: 1;
-}
-
 abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -1297,6 +1359,13 @@ samp.c7 {
   top: 0.15em;
 }
 
+.c4 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
 .c3 {
   margin-bottom: 0 !important;
 }
@@ -1314,7 +1383,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1456,13 +1525,6 @@ exports[`renders correctly for an input field with a hint 1`] = `
   opacity: 0.6;
 }
 
-.c4 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  line-height: 1;
-}
-
 abbr.c10 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -1521,6 +1583,13 @@ samp.c10 {
   top: 0.15em;
 }
 
+.c4 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
 .c3 {
   margin-bottom: 0 !important;
 }
@@ -1539,7 +1608,7 @@ samp.c10 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -2140,13 +2209,6 @@ exports[`renders correctly for an optional input field 1`] = `
   opacity: 0.6;
 }
 
-.c4 {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  line-height: 1;
-}
-
 abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
@@ -2205,6 +2267,13 @@ samp.c7 {
   top: 0.15em;
 }
 
+.c4 {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
 .c3 {
   margin-bottom: 0 !important;
 }
@@ -2224,7 +2293,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"

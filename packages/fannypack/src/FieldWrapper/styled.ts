@@ -60,6 +60,8 @@ export const RequiredText = styled(_Text)`
 
 export const TooltipPopover = styled(Popover)`
   padding: ${space(1, 'major')}rem;
+  width: max-content;
+  max-width: 400px;
 
   & {
     ${theme('fannypack.FieldWrapper.TooltipPopover.base')};

@@ -116,6 +116,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -334,6 +335,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -455,7 +457,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c8 {
+.c10 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -468,11 +470,11 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c8:focus:not(:focus-visible) {
+.c10:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c12 {
+.c13 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -486,7 +488,7 @@ exports[`renders correctly for a required field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c12:focus:not(:focus-visible) {
+.c13:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -519,18 +521,18 @@ exports[`renders correctly for a required field 1`] = `
   display: inline-block;
 }
 
-abbr.c11 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c11 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c11 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -538,46 +540,47 @@ kbd.c11 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c11 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c11 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c11,
-sup.c11 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c11,
-u.c11 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c11,
-cite.c11,
-var.c11,
-em.c11 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c11,
-pre.c11,
-samp.c11 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c11 .c14 {
+.c7 .c15 {
   top: 0.15em;
 }
 
-.c10 {
+.c12 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -588,7 +591,7 @@ samp.c11 {
   width: 1em;
 }
 
-.c7 {
+.c9 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -598,26 +601,26 @@ samp.c11 {
   width: 1px;
 }
 
-.c7[disabled] + .c9 {
+.c9[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c7:checked:focus + .c9 {
+.c9:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c7:focus + .c9 {
+.c9:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c7:not([disabled]):checked + .c9 {
+.c9:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c7:checked + .c9::before {
+.c9:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -625,7 +628,7 @@ samp.c11 {
   position: absolute;
 }
 
-.c7:checked + .c9::before {
+.c9:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -636,34 +639,34 @@ samp.c11 {
   width: 0.375em;
 }
 
-.c7[disabled]:checked + .c9::before {
+.c9[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c13[disabled] + .c9 {
+.c14[disabled] + .c11 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c13:checked:focus + .c9 {
+.c14:checked:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c13:focus + .c9 {
+.c14:focus + .c11 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c13:not([disabled]):checked + .c9 {
+.c14:not([disabled]):checked + .c11 {
   border-color: #444bc9;
 }
 
-.c13:checked + .c9 {
+.c14:checked + .c11 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c13:checked + .c9::before {
+.c14:checked + .c11::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -671,7 +674,7 @@ samp.c11 {
   position: absolute;
 }
 
-.c13:checked + .c9::before {
+.c14:checked + .c11::before {
   border: 0.1em solid #444bc9;
   border-left-width: 0;
   border-top-width: 0;
@@ -682,11 +685,11 @@ samp.c11 {
   width: 0.375em;
 }
 
-.c13[disabled]:checked + .c9::before {
+.c14[disabled]:checked + .c11::before {
   border-color: #9a9a9a;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -708,6 +711,12 @@ samp.c11 {
   margin-bottom: 0 !important;
 }
 
+.c6 {
+  color: #c9444d;
+  margin-left: 0.25rem;
+  line-height: 1;
+}
+
 <div
   class="c0"
 >
@@ -716,7 +725,7 @@ samp.c11 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -724,6 +733,11 @@ samp.c11 {
       >
         Username
       </label>
+      <span
+        class="c6 c7 c0"
+      >
+        *
+      </span>
     </div>
     <div />
   </div>
@@ -732,18 +746,18 @@ samp.c11 {
     aria-invalid="false"
     aria-label="Check me"
     aria-required="true"
-    class="c6 c5 c0"
+    class="c8 c5 c0"
   >
     <input
-      class="c7 c8"
+      class="c9 c10"
       type="checkbox"
       value=""
     />
     <div
-      class="c9 c10 c0"
+      class="c11 c12 c0"
     />
     <span
-      class="c11 c12"
+      class="c7 c13"
       id="label"
     >
       Check me
@@ -894,6 +908,7 @@ samp.c7 {
 }
 
 .c12 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1037,7 +1052,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1219,6 +1234,7 @@ samp.c11 {
 }
 
 .c10 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1363,7 +1379,7 @@ samp.c11 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1545,6 +1561,7 @@ samp.c7 {
 }
 
 .c12 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -1690,7 +1707,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1848,6 +1865,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2117,6 +2135,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2386,6 +2405,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
@@ -2655,6 +2675,7 @@ samp.c7 {
 }
 
 .c6 {
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;

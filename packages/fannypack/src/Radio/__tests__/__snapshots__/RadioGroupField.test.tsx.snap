@@ -84,6 +84,7 @@ exports[`renders correctly for a basic RadioGroupField 1`] = `
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -230,7 +231,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -411,6 +412,7 @@ exports[`renders correctly for a disabled RadioGroupField 1`] = `
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -557,7 +559,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -741,6 +743,7 @@ exports[`renders correctly for a disabled RadioGroupField option 1`] = `
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -887,7 +890,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1021,7 +1024,7 @@ exports[`renders correctly for a required field 1`] = `
   outline: none;
 }
 
-.c10 {
+.c12 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1034,11 +1037,11 @@ exports[`renders correctly for a required field 1`] = `
   color: inherit;
 }
 
-.c10:focus:not(:focus-visible) {
+.c12:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c14 {
+.c15 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1052,7 +1055,7 @@ exports[`renders correctly for a required field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-.c14:focus:not(:focus-visible) {
+.c15:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1067,8 +1070,9 @@ exports[`renders correctly for a required field 1`] = `
   display: inline-block;
 }
 
-.c12 {
+.c14 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -1076,7 +1080,7 @@ exports[`renders correctly for a required field 1`] = `
   width: 1em;
 }
 
-.c9 {
+.c11 {
   -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
@@ -1086,26 +1090,26 @@ exports[`renders correctly for a required field 1`] = `
   width: 1px;
 }
 
-.c9[disabled] + .c11 {
+.c11[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c9:checked:focus + .c11 {
+.c11:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c9:focus + .c11 {
+.c11:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c9:not([disabled]):checked + .c11 {
+.c11:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c9:checked + .c11::before {
+.c11:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1119,34 +1123,34 @@ exports[`renders correctly for a required field 1`] = `
   width: 0.5em;
 }
 
-.c9[disabled]:checked + .c11::before {
+.c11[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c15[disabled] + .c11 {
+.c16[disabled] + .c13 {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.c15:checked:focus + .c11 {
+.c16:checked:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:focus + .c11 {
+.c16:focus + .c13 {
   border-color: #444bc9;
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:not([disabled]):checked + .c11 {
+.c16:not([disabled]):checked + .c13 {
   border-color: #444bc9;
 }
 
-.c15:checked + .c11 {
+.c16:checked + .c13 {
   box-shadow: #444bc9 0px 0px 0px 1px !important;
 }
 
-.c15:checked + .c11::before {
+.c16:checked + .c13::before {
   background: #444bc9;
   border-radius: 50%;
   content: '';
@@ -1160,11 +1164,11 @@ exports[`renders correctly for a required field 1`] = `
   width: 0.5em;
 }
 
-.c15[disabled]:checked + .c11::before {
+.c16[disabled]:checked + .c13::before {
   background: #9a9a9a;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1175,22 +1179,22 @@ exports[`renders correctly for a required field 1`] = `
   align-items: center;
 }
 
-.c6 .c7:not(:last-child) {
+.c8 .c9:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-abbr.c13 {
+abbr.c7 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-i.c13 {
+i.c7 {
   font-style: italic;
 }
 
-kbd.c13 {
+kbd.c7 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -1198,42 +1202,42 @@ kbd.c13 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.c13 {
+mark.c7 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.c13 {
+strong.c7 {
   font-weight: bold;
 }
 
-sub.c13,
-sup.c13 {
+sub.c7,
+sup.c7 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.c13,
-u.c13 {
+ins.c7,
+u.c7 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.c13,
-cite.c13,
-var.c13,
-em.c13 {
+i.c7,
+cite.c7,
+var.c7,
+em.c7 {
   font-style: italic;
 }
 
-kbd.c13,
-pre.c13,
-samp.c13 {
+kbd.c7,
+pre.c7,
+samp.c7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.c13 .c16 {
+.c7 .c17 {
   top: 0.15em;
 }
 
@@ -1248,6 +1252,12 @@ samp.c13 {
   margin-bottom: 0 !important;
 }
 
+.c6 {
+  color: #c9444d;
+  margin-left: 0.25rem;
+  line-height: 1;
+}
+
 <div
   class="c0"
 >
@@ -1256,7 +1266,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1264,13 +1274,18 @@ samp.c13 {
       >
         Username
       </label>
+      <span
+        class="c6 c7 c0"
+      >
+        *
+      </span>
     </div>
     <div />
   </div>
   <div
     aria-describedby="label"
     aria-invalid="false"
-    class="c6 c0"
+    class="c8 c0"
     role="group"
   >
     <label
@@ -1278,20 +1293,20 @@ samp.c13 {
       aria-invalid="false"
       aria-label="Sunny"
       aria-required="false"
-      class="c7 c8 c5 c0"
+      class="c9 c10 c5 c0"
     >
       <input
-        class="c9 c10"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="sunny"
       />
       <div
-        class="c11 c12 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c13 c14"
+        class="c7 c15"
         for="username"
         id="label"
       >
@@ -1303,20 +1318,20 @@ samp.c13 {
       aria-invalid="false"
       aria-label="Windy"
       aria-required="false"
-      class="c7 c8 c5 c0"
+      class="c9 c10 c5 c0"
     >
       <input
-        class="c9 c10"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="windy"
       />
       <div
-        class="c11 c12 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c13 c14"
+        class="c7 c15"
         for="username"
         id="label"
       >
@@ -1328,20 +1343,20 @@ samp.c13 {
       aria-invalid="false"
       aria-label="Overcast"
       aria-required="false"
-      class="c7 c8 c5 c0"
+      class="c9 c10 c5 c0"
     >
       <input
-        class="c9 c10"
+        class="c11 c12"
         id="username"
         name="weather"
         type="radio"
         value="overcast"
       />
       <div
-        class="c11 c12 c0"
+        class="c13 c14 c0"
       />
       <span
-        class="c13 c14"
+        class="c7 c15"
         for="username"
         id="label"
       >
@@ -1437,6 +1452,7 @@ exports[`renders correctly for an input field with a description 1`] = `
 
 .c14 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -1629,7 +1645,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -1814,6 +1830,7 @@ exports[`renders correctly for an input field with a hint 1`] = `
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -2007,7 +2024,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -2192,6 +2209,7 @@ exports[`renders correctly for an optional input field 1`] = `
 
 .c14 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -2386,7 +2404,7 @@ samp.c7 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -2572,6 +2590,7 @@ exports[`states renders correctly for an RadioGroupField with state danger 1`] =
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -2764,7 +2783,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -2945,6 +2964,7 @@ exports[`states renders correctly for an RadioGroupField with state primary 1`] 
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -3137,7 +3157,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -3318,6 +3338,7 @@ exports[`states renders correctly for an RadioGroupField with state success 1`] 
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -3510,7 +3531,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"
@@ -3691,6 +3712,7 @@ exports[`states renders correctly for an RadioGroupField with state warning 1`] 
 
 .c12 {
   border: 1px solid #bdbdbd;
+  background-color: white;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 100%;
   height: 1em;
@@ -3883,7 +3905,7 @@ samp.c13 {
   >
     <div
       class="c2 c0"
-      style="align-items: center;"
+      style="align-items: center; line-height: 1;"
     >
       <label
         class="c3 c4 c5 c0"

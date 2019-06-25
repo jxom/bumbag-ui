@@ -80,7 +80,6 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
             {isRequired && <RequiredText>*</RequiredText>}
             {tooltip && (
               <TooltipPopover
-                isFullWidth
                 placement="bottom-start"
                 content={typeof tooltip === 'string' ? <Text fontSize="150">{tooltip}</Text> : tooltip}
                 gutter={4}
