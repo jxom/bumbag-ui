@@ -51,7 +51,8 @@ export const OptionalText = styled(_Text)`
 export const RequiredText = styled(_Text)`
   color: ${palette('danger')};
   margin-left: ${space(1)}rem;
-  line-height: 1;
+  font-weight: ${theme('fannypack.fontWeights.semibold')};
+  font-size: ${theme('fannypack.fontSizes.150')}rem;
 
   & {
     ${theme('fannypack.FieldWrapper.required')};

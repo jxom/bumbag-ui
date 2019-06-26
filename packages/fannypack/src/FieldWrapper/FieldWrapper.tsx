@@ -86,7 +86,14 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
                 {...tooltipPopoverProps}
               >
                 {tooltipTrigger || (
-                  <Button kind="ghost" size="small" marginLeft="minor-1" minHeight="unset" padding="0.1em 0.5em">
+                  <Button
+                    kind="ghost"
+                    size="small"
+                    marginLeft="minor-1"
+                    minHeight="unset"
+                    height="14px"
+                    padding="0.1em 0.5em"
+                  >
                     <VisuallyHidden>Toggle tooltip</VisuallyHidden>
                     <Icon a11yHidden icon="question-circle" />
                   </Button>

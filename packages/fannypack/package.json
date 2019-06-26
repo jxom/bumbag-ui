@@ -1,13 +1,13 @@
 {
   "name": "fannypack",
-  "version": "4.20.6",
+  "version": "4.20.7",
   "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "dist/fannypack.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn build:types",
+    "build": "yarn clean && yarn build:lib",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf es/ lib/ dist/ ts/",
