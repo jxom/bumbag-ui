@@ -12,6 +12,7 @@ import Button from './Button';
 import Checkbox from './Checkbox';
 import Container from './Container';
 import FieldSet from './FieldSet';
+import FieldWrapper from './FieldWrapper';
 import Heading from './Heading';
 import Label from './Label';
 import Page from './Page';
@@ -35,6 +36,7 @@ export default {
   Checkbox,
   Container,
   FieldSet,
+  FieldWrapper,
   Heading,
   Label,
   Page,
