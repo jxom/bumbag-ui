@@ -3,7 +3,8 @@ import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts';
 // @ts-ignore
 import _omit from 'lodash/omit';
-import useMaskedInput from '@viewstools/use-masked-input';
+// @ts-ignore
+import InputMask from 'react-input-mask';
 
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';
@@ -37,7 +38,6 @@ export type LocalInputProps = {
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
   mask?: string;
-  maskOptions?: Object;
   /** The maximum (numeric or date-time) value for the input. Must not be less than its minimum (min attribute) value. */
   max?: number | string;
   /** If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. */
@@ -86,11 +86,10 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   defaultValue,
   disabled,
   inputProps,
-  inputRef: _inputRef,
+  inputRef,
   isLoading,
   isRequired,
   mask,
-  maskOptions,
   max,
   maxLength,
   min,
@@ -98,7 +97,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   multiple,
   name,
   onBlur,
-  onChange: _onChange,
+  onChange,
   onFocus,
   pattern,
   placeholder,
@@ -111,18 +110,6 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   value,
   ...props
 }) => {
-  let inputRef = React.useRef(null);
-  if (_inputRef) {
-    inputRef = _inputRef;
-  }
-
-  const onChange = useMaskedInput({
-    input: inputRef,
-    mask,
-    onChange: _onChange,
-    ...maskOptions
-  });
-
   return (
     <InputWrapper styledSize={size} {...props}>
       {before && (
@@ -136,6 +123,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
         </InlineFlex>
       )}
       <_Input
+        use={mask ? InputMask : undefined}
         after={after}
         aria-invalid={state === 'danger'}
         aria-label={a11yLabel}
@@ -147,6 +135,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
         disabled={disabled}
         elementRef={inputRef}
         id={a11yId}
+        mask={mask}
         max={max}
         maxLength={maxLength}
         min={min}
@@ -192,7 +181,6 @@ export const inputPropTypes = {
   name: PropTypes.string,
   size: sizePropType,
   mask: PropTypes.string,
-  maskOptions: PropTypes.object,
   max: PropTypes.number,
   maxLength: PropTypes.number,
   min: PropTypes.number,
@@ -228,7 +216,6 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   isLoading: false,
   isRequired: false,
   mask: undefined,
-  maskOptions: {},
   max: undefined,
   maxLength: undefined,
   min: undefined,

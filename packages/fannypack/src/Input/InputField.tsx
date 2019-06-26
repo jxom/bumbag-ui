@@ -50,7 +50,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
   name,
   size,
   mask,
-  maskOptions,
   max,
   maxLength,
   min,
@@ -103,7 +102,6 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
           name={name}
           size={size}
           mask={mask}
-          maskOptions={maskOptions}
           max={max}
           maxLength={maxLength}
           min={min}
