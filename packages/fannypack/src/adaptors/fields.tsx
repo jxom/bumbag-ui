@@ -18,7 +18,7 @@ const bindFns = (...fns: Array<Function>) => (...args: any) => {
 };
 
 export function formikField(Component: any) {
-  return ({ field, form, ...props }: any) => {
+  return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
 
     if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name)) {
@@ -69,7 +69,7 @@ export function formikField(Component: any) {
 }
 
 export function reduxFormField(Component: any) {
-  return ({ input, meta, ...props }: any) => {
+  return ({ input = {}, meta = {}, ...props }: any) => {
     let overrideProps = {};
 
     if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name)) {
