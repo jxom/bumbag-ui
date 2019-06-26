@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts';
 // @ts-ignore
 import _omit from 'lodash/omit';
+import useMaskedInput from '@viewstools/use-masked-input';
 
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';
@@ -35,6 +36,8 @@ export type LocalInputProps = {
   name?: string;
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
+  mask?: string;
+  maskOptions?: Object;
   /** The maximum (numeric or date-time) value for the input. Must not be less than its minimum (min attribute) value. */
   max?: number | string;
   /** If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored. */
@@ -83,9 +86,11 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   defaultValue,
   disabled,
   inputProps,
-  inputRef,
+  inputRef: _inputRef,
   isLoading,
   isRequired,
+  mask,
+  maskOptions,
   max,
   maxLength,
   min,
@@ -93,7 +98,7 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   multiple,
   name,
   onBlur,
-  onChange,
+  onChange: _onChange,
   onFocus,
   pattern,
   placeholder,
@@ -105,53 +110,67 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
   state,
   value,
   ...props
-}) => (
-  <InputWrapper styledSize={size} {...props}>
-    {before && (
-      <InlineFlex absolute zIndex="3">
-        {before}
-      </InlineFlex>
-    )}
-    {after && (
-      <InlineFlex absolute right="0" zIndex="3">
-        {after}
-      </InlineFlex>
-    )}
-    <_Input
-      after={after}
-      aria-invalid={state === 'danger'}
-      aria-label={a11yLabel}
-      aria-required={isRequired}
-      autoComplete={autoComplete}
-      autoFocus={autoFocus}
-      before={before}
-      defaultValue={defaultValue}
-      disabled={disabled}
-      elementRef={inputRef}
-      id={a11yId}
-      max={max}
-      maxLength={maxLength}
-      min={min}
-      minLength={minLength}
-      multiple={multiple}
-      name={name}
-      onBlur={onBlur}
-      onChange={onChange}
-      onFocus={onFocus}
-      pattern={pattern}
-      placeholder={placeholder}
-      readOnly={readOnly}
-      spellCheck={spellCheck}
-      state={state}
-      step={step}
-      styledSize={size}
-      type={type}
-      value={value}
-      {..._omit(inputProps, 'size')}
-    />
-    {isLoading && <LoadingSpinner color="text" size="small" />}
-  </InputWrapper>
-);
+}) => {
+  let inputRef = React.useRef(null);
+  if (_inputRef) {
+    inputRef = _inputRef;
+  }
+
+  const onChange = useMaskedInput({
+    input: inputRef,
+    mask,
+    onChange: _onChange,
+    ...maskOptions
+  });
+
+  return (
+    <InputWrapper styledSize={size} {...props}>
+      {before && (
+        <InlineFlex absolute zIndex="3">
+          {before}
+        </InlineFlex>
+      )}
+      {after && (
+        <InlineFlex absolute right="0" zIndex="3">
+          {after}
+        </InlineFlex>
+      )}
+      <_Input
+        after={after}
+        aria-invalid={state === 'danger'}
+        aria-label={a11yLabel}
+        aria-required={isRequired}
+        autoComplete={autoComplete}
+        autoFocus={autoFocus}
+        before={before}
+        defaultValue={defaultValue}
+        disabled={disabled}
+        elementRef={inputRef}
+        id={a11yId}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
+        multiple={multiple}
+        name={name}
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        pattern={pattern}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        spellCheck={spellCheck}
+        state={state}
+        step={step}
+        styledSize={size}
+        type={type}
+        value={value}
+        {..._omit(inputProps, 'size')}
+      />
+      {isLoading && <LoadingSpinner color="text" size="small" />}
+    </InputWrapper>
+  );
+};
 
 Input.Icon = Icon;
 
@@ -172,6 +191,8 @@ export const inputPropTypes = {
   isRequired: PropTypes.bool,
   name: PropTypes.string,
   size: sizePropType,
+  mask: PropTypes.string,
+  maskOptions: PropTypes.object,
   max: PropTypes.number,
   maxLength: PropTypes.number,
   min: PropTypes.number,
@@ -206,6 +227,8 @@ export const inputDefaultProps: Partial<LocalInputProps> = {
   inputRef: undefined,
   isLoading: false,
   isRequired: false,
+  mask: undefined,
+  maskOptions: {},
   max: undefined,
   maxLength: undefined,
   min: undefined,
