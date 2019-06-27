@@ -76,7 +76,7 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
 );
 
 export const radioGroupFieldPropTypes = {
-  radioGroupProps: PropTypes.shape(radioGroupPropTypes),
+  radioGroupProps: PropTypes.shape(_omit(radioGroupPropTypes, 'options', 'name')),
   ..._omit(fieldWrapperPropTypes, 'children'),
   ...radioGroupPropTypes
 };

@@ -66,7 +66,6 @@ export const Textarea = styled(use(Input, 'textarea'))<LocalTextareaProps & { st
   &[disabled] {
     background-color: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Textarea.disabled')};

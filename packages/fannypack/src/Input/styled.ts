@@ -112,7 +112,6 @@ export const Input = styled(_Input)<InputProps & { styledSize?: string }>`
   &[disabled] {
     background-color: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Input.disabled')};

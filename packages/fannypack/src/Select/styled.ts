@@ -104,7 +104,6 @@ export const Select = styled(Input)`
   &[disabled] {
     background: ${palette('white700')};
     box-shadow: unset;
-    color: ${palette('gray400')};
 
     & {
       ${theme('fannypack.Select.disabled')};
