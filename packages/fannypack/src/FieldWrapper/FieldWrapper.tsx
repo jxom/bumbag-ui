@@ -12,6 +12,7 @@ import Icon from '../Icon';
 import Popover from '../Popover';
 import { LocalPopoverProps, popoverPropTypes } from '../Popover/Popover';
 import Text from '../Text';
+import { getUniqueId } from '../uniqueId';
 import VisuallyHidden from '../VisuallyHidden';
 import { withTheme } from '../styled';
 import { Omit } from '../types';
@@ -138,7 +139,7 @@ export const fieldWrapperPropTypes = {
 FieldWrapper.propTypes = fieldWrapperPropTypes;
 
 export const fieldWrapperDefaultProps = {
-  a11yId: undefined,
+  a11yId: getUniqueId('field-wrapper'),
   className: undefined,
   description: undefined,
   hint: undefined,
