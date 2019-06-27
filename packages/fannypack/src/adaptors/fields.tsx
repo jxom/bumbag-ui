@@ -66,7 +66,6 @@ export function formikField(
       onBlur: bindFns(onBlur, props.onBlur),
       onChange: bindFns(onChange, props.onChange)
     };
-    console.log('test1');
 
     return <Component {...props} {...field} {...overrideProps} />;
   };
