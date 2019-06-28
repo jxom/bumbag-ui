@@ -7,7 +7,7 @@
   "unpkg": "dist/fannypack.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:lib",
+    "build": "yarn clean && yarn build:lib && yarn build:types",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf es/ lib/ dist/ ts/",
