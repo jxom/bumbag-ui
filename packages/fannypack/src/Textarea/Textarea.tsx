@@ -67,6 +67,7 @@ export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({
 }) => (
   <Box relative>
     <_Textarea
+      use="textarea"
       aria-invalid={state === 'danger'}
       aria-label={a11yLabel}
       aria-required={isRequired}

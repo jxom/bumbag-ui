@@ -21,16 +21,33 @@ export type TextareaFieldProps = LocalTextareaFieldProps & TextareaProps;
 export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = ({
   a11yId,
   a11yLabel,
+  autoComplete,
+  autoFocus,
+  defaultValue,
   description,
+  disabled,
   hint,
+  isFullWidth,
   isLoading,
   isOptional,
   isRequired,
   label,
+  name,
+  maxLength,
+  minLength,
+  pattern,
+  placeholder,
+  readOnly,
+  rows,
+  spellCheck,
   size,
   state,
   textareaProps,
   validationText,
+  value,
+  onBlur,
+  onChange,
+  onFocus,
   ...props
 }) => (
   <FieldWrapper
@@ -44,7 +61,35 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
     validationText={validationText}
     {...props}
   >
-    {({ elementProps }) => <Textarea {...elementProps} {...textareaProps} />}
+    {({ elementProps }) => (
+      <Textarea
+        a11yId={a11yId}
+        a11yLabel={a11yLabel}
+        autoComplete={autoComplete}
+        autoFocus={autoFocus}
+        defaultValue={defaultValue}
+        disabled={disabled}
+        isFullWidth={isFullWidth}
+        isLoading={isLoading}
+        isRequired={isRequired}
+        name={name}
+        size={size}
+        maxLength={maxLength}
+        minLength={minLength}
+        pattern={pattern}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        rows={rows}
+        spellCheck={spellCheck}
+        state={state}
+        value={value}
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        {...elementProps}
+        {...textareaProps}
+      />
+    )}
   </FieldWrapper>
 );
 

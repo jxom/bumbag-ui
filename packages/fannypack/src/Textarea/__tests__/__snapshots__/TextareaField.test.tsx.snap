@@ -94,7 +94,6 @@ exports[`renders correctly for a basic input field 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -206,8 +205,6 @@ exports[`renders correctly for a disabled input field 1`] = `
 
 <div
   class="c0"
-  disabled=""
-  rows="3"
 >
   <div
     class="c1"
@@ -216,6 +213,7 @@ exports[`renders correctly for a disabled input field 1`] = `
       aria-invalid="false"
       aria-required="false"
       class="c2 c3"
+      disabled=""
       id="field-wrapper-1"
       rows="3"
       type="text"
@@ -319,7 +317,6 @@ exports[`renders correctly for a full width input field 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -536,7 +533,6 @@ samp.c7 {
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -669,7 +665,6 @@ exports[`renders correctly for an input field with a default value 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -681,7 +676,9 @@ exports[`renders correctly for an input field with a default value 1`] = `
       id="field-wrapper-1"
       rows="3"
       type="text"
-    />
+    >
+      Awesome value
+    </textarea>
   </div>
   <div />
 </div>
@@ -884,7 +881,6 @@ samp.c7 {
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1120,7 +1116,6 @@ samp.c10 {
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1252,8 +1247,6 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
 
 <div
   class="c0"
-  placeholder="Awesome placeholder"
-  rows="3"
 >
   <div
     class="c1"
@@ -1263,6 +1256,7 @@ exports[`renders correctly for an input field with a placeholder 1`] = `
       aria-required="false"
       class="c2 c3"
       id="field-wrapper-1"
+      placeholder="Awesome placeholder"
       rows="3"
       type="text"
     />
@@ -1470,7 +1464,6 @@ samp.c7 {
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1601,9 +1594,17 @@ exports[`sizes renders correctly for an input field with size large 1`] = `
   opacity: 0.6;
 }
 
+.c2 {
+  font-size: 1.5rem;
+}
+
+.c2 + .c4 {
+  top: 16px;
+  right: 12px;
+}
+
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1713,9 +1714,17 @@ exports[`sizes renders correctly for an input field with size medium 1`] = `
   opacity: 0.6;
 }
 
+.c2 {
+  font-size: 1.25rem;
+}
+
+.c2 + .c4 {
+  top: 15px;
+  right: 10px;
+}
+
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1825,9 +1834,16 @@ exports[`sizes renders correctly for an input field with size small 1`] = `
   opacity: 0.6;
 }
 
+.c2 {
+  font-size: 0.8rem;
+}
+
+.c2 + .c4 {
+  top: 10px;
+}
+
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -1944,7 +1960,6 @@ exports[`states renders correctly for an input field with state danger 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -2061,7 +2076,6 @@ exports[`states renders correctly for an input field with state primary 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -2178,7 +2192,6 @@ exports[`states renders correctly for an input field with state success 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
@@ -2295,7 +2308,6 @@ exports[`states renders correctly for an input field with state warning 1`] = `
 
 <div
   class="c0"
-  rows="3"
 >
   <div
     class="c1"
