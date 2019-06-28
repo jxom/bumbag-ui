@@ -1,4 +1,5 @@
 import * as React from 'react';
+import _get from 'lodash/get';
 
 const FIELDS_WITH_FIELD_WRAPPERS = [
   'CheckboxField',
@@ -25,12 +26,16 @@ export function formikField(
     let overrideProps = {};
 
     if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name) || hasFieldWrapper) {
-      let state = form.touched[field.name] && form.errors[field.name] ? 'danger' : undefined;
+      // todo: refactor
+      let state = _get(form, `touched.${field.name}`) && _get(form, `errors.${field.name}`) ? 'danger' : undefined;
       if (props.state) {
         state = props.state;
       }
 
-      let validationText = form.touched[field.name] && form.errors[field.name] ? form.errors[field.name] : undefined;
+      let validationText =
+        _get(form, `touched.${field.name}`) && _get(form, `errors.${field.name}`)
+          ? _get(form, `errors.${field.name}`)
+          : undefined;
       if (props.validationText) {
         validationText = props.validationText;
       }
@@ -44,7 +49,7 @@ export function formikField(
 
     if (CHECKBOX_FIELDS.includes(Component.name) || isCheckbox) {
       let checked = false;
-      const value = Boolean(form.values[field.name]);
+      const value = Boolean(_get(form, `values.${field.name}`));
       if (value) {
         checked = value;
       }
