@@ -24,18 +24,17 @@ export function formikField(
 ) {
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
+    const isTouched = _get(form, `touched.${field.name}`);
+    const error = _get(form, `errors.${field.name}`);
+    const value = _get(form, `values.${field.name}`);
 
     if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name) || hasFieldWrapper) {
-      // todo: refactor
-      let state = _get(form, `touched.${field.name}`) && _get(form, `errors.${field.name}`) ? 'danger' : undefined;
+      let state = isTouched && error ? 'danger' : undefined;
       if (props.state) {
         state = props.state;
       }
 
-      let validationText =
-        _get(form, `touched.${field.name}`) && _get(form, `errors.${field.name}`)
-          ? _get(form, `errors.${field.name}`)
-          : undefined;
+      let validationText = isTouched && error ? error : undefined;
       if (props.validationText) {
         validationText = props.validationText;
       }
@@ -49,9 +48,8 @@ export function formikField(
 
     if (CHECKBOX_FIELDS.includes(Component.name) || isCheckbox) {
       let checked = false;
-      const value = Boolean(_get(form, `values.${field.name}`));
       if (value) {
-        checked = value;
+        checked = Boolean(value);
       }
       if (props.checked) {
         checked = props.checked;
