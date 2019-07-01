@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import ConditionalWrap from 'conditional-wrap';
 
 // @ts-ignore
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 import CardCard, { LocalCardCardProps, CardCardProps, cardCardPropTypes, cardCardDefaultProps } from './CardCard';
 import CardContent, { CardContentProps } from './CardContent';
 import CardHeader, { CardHeaderProps } from './CardHeader';
@@ -31,34 +31,40 @@ export type CardComponents = {
 };
 
 export const Card: React.FunctionComponent<LocalCardProps> & CardComponents = ({
-  a11yDescriptionId,
-  a11yTitleId,
+  a11yDescriptionId: _a11yDescriptionId,
+  a11yTitleId: _a11yTitleId,
   children,
   footer,
   headerActions,
   title,
   ...props
-}) => (
-  <CardCard
-    a11yDescriptionId={title || footer ? a11yDescriptionId : undefined}
-    a11yTitleId={title ? a11yTitleId : undefined}
-    {...props}
-  >
-    {title && (
-      <CardHeader>
-        {typeof title === 'string' ? <CardTitle id={a11yTitleId}>{title}</CardTitle> : title}
-        {headerActions && <div>{headerActions}</div>}
-      </CardHeader>
-    )}
-    <ConditionalWrap
-      condition={title || footer}
-      wrap={(children: React.ReactNode) => <CardContent id={a11yDescriptionId}>{children}</CardContent>}
+}) => {
+  const titleId = useUniqueId('Card');
+  const descriptionId = useUniqueId('Card');
+  const a11yDescriptionId = _a11yDescriptionId || descriptionId;
+  const a11yTitleId = _a11yTitleId || titleId;
+  return (
+    <CardCard
+      a11yDescriptionId={title || footer ? a11yDescriptionId : undefined}
+      a11yTitleId={title ? a11yTitleId : undefined}
+      {...props}
     >
-      {children}
-    </ConditionalWrap>
-    {footer && <CardFooter>{footer}</CardFooter>}
-  </CardCard>
-);
+      {title && (
+        <CardHeader>
+          {typeof title === 'string' ? <CardTitle id={a11yTitleId}>{title}</CardTitle> : title}
+          {headerActions && <div>{headerActions}</div>}
+        </CardHeader>
+      )}
+      <ConditionalWrap
+        condition={title || footer}
+        wrap={(children: React.ReactNode) => <CardContent id={a11yDescriptionId}>{children}</CardContent>}
+      >
+        {children}
+      </ConditionalWrap>
+      {footer && <CardFooter>{footer}</CardFooter>}
+    </CardCard>
+  );
+};
 
 Card.Card = CardCard;
 Card.Header = CardHeader;
@@ -81,8 +87,8 @@ Card.propTypes = cardPropTypes;
 
 export const cardDefaultProps = {
   ...cardCardDefaultProps,
-  a11yDescriptionId: getUniqueId('Card'),
-  a11yTitleId: getUniqueId('Card'),
+  a11yDescriptionId: undefined,
+  a11yTitleId: undefined,
   className: undefined,
   footer: undefined,
   headerActions: undefined,

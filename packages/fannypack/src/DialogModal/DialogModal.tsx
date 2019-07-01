@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { ActionButtonsProps, actionButtonsPropTypes } from '../Button/ActionButtons';
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 import Dialog from '../Dialog';
 import Modal, { ModalProps, LocalModalProps, modalPropTypes, modalDefaultProps } from '../Modal/Modal';
 import { Omit } from '../types';
@@ -26,8 +26,8 @@ export type LocalDialogModalProps = Omit<LocalModalProps, 'children'> & {
 export type DialogModalProps = Omit<ModalProps, 'children'> & LocalDialogModalProps;
 
 export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
-  a11yDescriptionId,
-  a11yTitleId,
+  a11yDescriptionId: _a11yDescriptionId,
+  a11yTitleId: _a11yTitleId,
   actionButtonsProps,
   children,
   footer,
@@ -39,45 +39,51 @@ export const DialogModal: React.FunctionComponent<LocalDialogModalProps> = ({
   title,
   type,
   ...props
-}) => (
-  <Modal hide={hide} kind={kind} {...props}>
-    {({ fallbackFocusRef, initialFocusRef }) => (
-      <Dialog
-        a11yDescriptionId={a11yDescriptionId}
-        a11yTitleId={a11yTitleId}
-        actionButtonsProps={{
-          cancelProps: {
-            elementRef: initialFocusRef,
-            use: Modal.Hide,
-            // @ts-ignore
-            hide,
-            ...(actionButtonsProps || {}).cancelProps
-          },
-          palette: type,
-          ...actionButtonsProps
-        }}
-        closeButtonProps={{ elementRef: initialFocusRef }}
-        elementRef={fallbackFocusRef}
-        // @ts-ignore
-        footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
-        hasScroll={hasScroll}
-        onClickClose={hide}
-        role={kind === 'alert' ? 'alertdialog' : 'dialog'}
-        showActionButtons={showActionButtons || kind === 'alert'}
-        showCloseButton={showCloseButton && kind !== 'alert'}
-        tabIndex={-1}
-        // @ts-ignore
-        title={title}
-        type={type}
-        width="100%"
-      >
-        {/*
-         // @ts-ignore */}
-        {typeof children === 'function' ? children({ initialFocusRef }) : children}
-      </Dialog>
-    )}
-  </Modal>
-);
+}) => {
+  const titleId = useUniqueId('DialogModal');
+  const descriptionId = useUniqueId('DialogModal');
+  const a11yDescriptionId = _a11yDescriptionId || descriptionId;
+  const a11yTitleId = _a11yTitleId || titleId;
+  return (
+    <Modal hide={hide} kind={kind} {...props}>
+      {({ fallbackFocusRef, initialFocusRef }) => (
+        <Dialog
+          a11yDescriptionId={a11yDescriptionId}
+          a11yTitleId={a11yTitleId}
+          actionButtonsProps={{
+            cancelProps: {
+              elementRef: initialFocusRef,
+              use: Modal.Hide,
+              // @ts-ignore
+              hide,
+              ...(actionButtonsProps || {}).cancelProps
+            },
+            palette: type,
+            ...actionButtonsProps
+          }}
+          closeButtonProps={{ elementRef: initialFocusRef }}
+          elementRef={fallbackFocusRef}
+          // @ts-ignore
+          footer={typeof footer === 'function' ? footer({ initialFocusRef }) : footer}
+          hasScroll={hasScroll}
+          onClickClose={hide}
+          role={kind === 'alert' ? 'alertdialog' : 'dialog'}
+          showActionButtons={showActionButtons || kind === 'alert'}
+          showCloseButton={showCloseButton && kind !== 'alert'}
+          tabIndex={-1}
+          // @ts-ignore
+          title={title}
+          type={type}
+          width="100%"
+        >
+          {/*
+           // @ts-ignore */}
+          {typeof children === 'function' ? children({ initialFocusRef }) : children}
+        </Dialog>
+      )}
+    </Modal>
+  );
+};
 
 export const dialogModalPropTypes = {
   ...modalPropTypes,
@@ -96,8 +102,8 @@ DialogModal.propTypes = dialogModalPropTypes;
 export const dialogModalDefaultProps = {
   ...modalDefaultProps,
   actionButtonsProps: {},
-  a11yDescriptionId: getUniqueId('Modal'),
-  a11yTitleId: getUniqueId('Modal'),
+  a11yDescriptionId: undefined,
+  a11yTitleId: undefined,
   footer: undefined,
   hasScroll: false,
   kind: undefined,

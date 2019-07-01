@@ -12,7 +12,7 @@ import Icon from '../Icon';
 import Popover from '../Popover';
 import { LocalPopoverProps, popoverPropTypes } from '../Popover/Popover';
 import Text from '../Text';
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 import VisuallyHidden from '../VisuallyHidden';
 import { withTheme } from '../styled';
 import { Omit } from '../types';
@@ -50,7 +50,7 @@ export type FieldElementProps = {
 };
 
 export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
-  a11yId,
+  a11yId: _a11yId,
   children,
   description,
   hint,
@@ -70,6 +70,8 @@ export const FieldWrapper: React.FunctionComponent<LocalFieldWrapperProps> = ({
     _tooltipPopoverProps
   );
   const tooltipTrigger = _get(props, 'theme.fannypack.FieldWrapper.defaultProps.tooltipTrigger', _tooltipTrigger);
+  const uid = useUniqueId('FieldWrapper');
+  const a11yId = _a11yId || uid;
   const elementProps: FieldElementProps = { isRequired, a11yId, state };
   return (
     <_FieldWrapper {...props}>
@@ -139,7 +141,7 @@ export const fieldWrapperPropTypes = {
 FieldWrapper.propTypes = fieldWrapperPropTypes;
 
 export const fieldWrapperDefaultProps = {
-  a11yId: getUniqueId('field-wrapper'),
+  a11yId: undefined,
   className: undefined,
   description: undefined,
   hint: undefined,

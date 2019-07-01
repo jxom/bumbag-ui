@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import _omit from 'lodash/omit';
 
 // @ts-ignore
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 import { Box } from '../primitives';
 import { Omit } from '../types';
 import ActionButtons, { ActionButtonsProps, actionButtonsPropTypes } from '../Button/ActionButtons';
@@ -49,9 +49,9 @@ export type DialogComponents = {
 };
 
 export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponents = ({
+  a11yDescriptionId: _a11yDescriptionId,
+  a11yTitleId: _a11yTitleId,
   actionButtonsProps,
-  a11yDescriptionId,
-  a11yTitleId,
   children,
   closeButtonProps,
   footer,
@@ -62,36 +62,42 @@ export const Dialog: React.FunctionComponent<LocalDialogProps> & DialogComponent
   title,
   type,
   ...props
-}) => (
-  <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} {...props}>
-    {title && (
-      <DialogHeader>
-        {typeof title === 'string' ? (
-          <DialogTitle id={a11yTitleId}>
-            {type && <DialogIcon a11yHidden color={type} icon={type} />}
-            {title}
-          </DialogTitle>
-        ) : (
-          title
-        )}
-        {showCloseButton && <DialogClose onClick={onClickClose} {...closeButtonProps} />}
-      </DialogHeader>
-    )}
-    <DialogContent id={a11yDescriptionId} hasScroll={hasScroll}>
-      {children}
-    </DialogContent>
-    {(footer || showActionButtons) && (
-      <DialogFooter justifyContent={footer ? 'space-between' : 'flex-end'}>
-        {footer && <Box>{footer}</Box>}
-        {showActionButtons && (
-          <Box>
-            <ActionButtons {...actionButtonsProps} />
-          </Box>
-        )}
-      </DialogFooter>
-    )}
-  </DialogDialog>
-);
+}) => {
+  const titleId = useUniqueId('Dialog');
+  const descriptionId = useUniqueId('Dialog');
+  const a11yDescriptionId = _a11yDescriptionId || descriptionId;
+  const a11yTitleId = _a11yTitleId || titleId;
+  return (
+    <DialogDialog a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} {...props}>
+      {title && (
+        <DialogHeader>
+          {typeof title === 'string' ? (
+            <DialogTitle id={a11yTitleId}>
+              {type && <DialogIcon a11yHidden color={type} icon={type} />}
+              {title}
+            </DialogTitle>
+          ) : (
+            title
+          )}
+          {showCloseButton && <DialogClose onClick={onClickClose} {...closeButtonProps} />}
+        </DialogHeader>
+      )}
+      <DialogContent id={a11yDescriptionId} hasScroll={hasScroll}>
+        {children}
+      </DialogContent>
+      {(footer || showActionButtons) && (
+        <DialogFooter justifyContent={footer ? 'space-between' : 'flex-end'}>
+          {footer && <Box>{footer}</Box>}
+          {showActionButtons && (
+            <Box>
+              <ActionButtons {...actionButtonsProps} />
+            </Box>
+          )}
+        </DialogFooter>
+      )}
+    </DialogDialog>
+  );
+};
 
 Dialog.Dialog = DialogDialog;
 Dialog.Header = DialogHeader;
@@ -122,8 +128,8 @@ Dialog.propTypes = dialogPropTypes;
 export const dialogDefaultProps = {
   ...dialogDialogDefaultProps,
   actionButtonsProps: {},
-  a11yDescriptionId: getUniqueId('Dialog'),
-  a11yTitleId: getUniqueId('Dialog'),
+  a11yDescriptionId: undefined,
+  a11yTitleId: undefined,
   className: undefined,
   closeButtonProps: {},
   footer: undefined,

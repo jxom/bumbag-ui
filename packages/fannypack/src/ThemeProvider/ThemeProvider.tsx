@@ -10,6 +10,7 @@ import { ThemeConfig } from '../types';
 import Global from '../_utils/Global';
 import reakitTheme from '../_utils/reakitTheme';
 import ToastManager from '../Toast/ToastManager';
+import { IdProvider } from '../uniqueId';
 
 import defaultTheme from '../themes/default';
 
@@ -84,13 +85,15 @@ class Provider extends React.Component<LocalThemeProviderProps, State> {
     return (
       <ThemeProvider {...props} theme={theme}>
         <LoadsContext.Provider>
-          <React.Fragment>
-            {/*
+          <IdProvider>
+            <React.Fragment>
+              {/*
             // @ts-ignore */}
-            {process.env.NODE_ENV !== 'test' && <Global />}
-            {process.env.NODE_ENV !== 'test' && !_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
-            {children}
-          </React.Fragment>
+              {process.env.NODE_ENV !== 'test' && <Global />}
+              {process.env.NODE_ENV !== 'test' && !_get(theme, 'fannypack.Toast.disabled') && <ToastManager />}
+              {children}
+            </React.Fragment>
+          </IdProvider>
         </LoadsContext.Provider>
       </ThemeProvider>
     );

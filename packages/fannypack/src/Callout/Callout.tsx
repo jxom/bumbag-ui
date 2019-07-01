@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import { LocalCardCardProps, CardCardProps, cardCardPropTypes, cardCardDefaultProps } from '../Card/CardCard';
 import { Box, Flex } from '../primitives';
 // @ts-ignore
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 import _Callout, { CalloutContent, CalloutFooter, CalloutHeader, CalloutIcon, CalloutTitle } from './styled';
 import CalloutClose, { CalloutCloseProps, calloutClosePropTypes } from './CalloutClose';
 
@@ -25,8 +25,8 @@ export type LocalCalloutProps = LocalCardCardProps & {
 export type CalloutProps = CardCardProps & LocalCalloutProps;
 
 export const Callout: React.FunctionComponent<LocalCalloutProps> = ({
-  a11yDescriptionId,
-  a11yTitleId,
+  a11yDescriptionId: _a11yDescriptionId,
+  a11yTitleId: _a11yTitleId,
   children,
   closeButtonProps,
   footer,
@@ -38,6 +38,10 @@ export const Callout: React.FunctionComponent<LocalCalloutProps> = ({
   type,
   ...props
 }) => {
+  const titleId = useUniqueId('Callout');
+  const descriptionId = useUniqueId('Callout');
+  const a11yDescriptionId = _a11yDescriptionId || descriptionId;
+  const a11yTitleId = _a11yTitleId || titleId;
   return (
     <_Callout a11yDescriptionId={a11yDescriptionId} a11yTitleId={a11yTitleId} hasTint={hasTint} type={type} {...props}>
       <Flex>
@@ -82,8 +86,8 @@ Callout.propTypes = calloutPropTypes;
 
 export const calloutDefaultProps = {
   ...cardCardDefaultProps,
-  a11yDescriptionId: getUniqueId('Callout'),
-  a11yTitleId: getUniqueId('Callout'),
+  a11yDescriptionId: undefined,
+  a11yTitleId: undefined,
   children: undefined,
   className: undefined,
   closeButtonProps: {},

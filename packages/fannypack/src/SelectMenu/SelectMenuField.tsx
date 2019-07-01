@@ -18,7 +18,7 @@ import FieldWrapper, {
   fieldWrapperDefaultProps
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
-import { getUniqueId } from '../uniqueId';
+import { useUniqueId } from '../uniqueId';
 
 export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalSelectMenuProps & {
@@ -33,7 +33,7 @@ export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'>
 export type SelectMenuFieldProps = SelectMenuProps & LocalSelectMenuFieldProps;
 
 export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps> = ({
-  a11yId,
+  a11yId: _a11yId,
   addonBefore,
   addonAfter,
   className,
@@ -73,65 +73,69 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
   value,
   useTags,
   ...props
-}) => (
-  <FieldWrapper
-    a11yId={a11yId}
-    description={description}
-    hint={hint}
-    isOptional={isOptional}
-    isRequired={isRequired}
-    label={label}
-    state={state}
-    validationText={validationText}
-    {...props}
-  >
-    {({ elementProps }) => (
-      <ConditionalWrap
-        condition={addonBefore || addonAfter}
-        wrap={(children: React.ReactNode) => <Group isVertical={isVertical}>{children}</Group>}
-      >
-        {addonBefore}
-        <SelectMenu
-          id={a11yId}
-          className={className}
-          defaultKey={defaultKey}
-          defaultKeys={defaultKeys}
-          defaultOption={defaultOption}
-          defaultOptions={defaultOptions}
-          disabled={disabled}
-          emptyText={emptyText}
-          filterOptions={filterOptions}
-          isDropdown={isDropdown}
-          isLoading={isLoading}
-          isMultiSelect={isMultiSelect}
-          isPaginated={isPaginated}
-          isRequired={isRequired}
-          isSearchable={isSearchable}
-          loadQuery={loadQuery}
-          loadOptions={loadOptions}
-          // @ts-ignore
-          onChange={onChange}
-          options={options}
-          placeholder={placeholder}
-          popoverProps={popoverProps}
-          renderBottomActions={renderBottomActions}
-          renderEmpty={renderEmpty}
-          renderError={renderError}
-          renderOption={renderOption}
-          renderValue={renderValue}
-          searchInputProps={searchInputProps}
-          state={state}
-          // @ts-ignore
-          value={value}
-          useTags={useTags}
-          {...elementProps}
-          {...selectMenuProps}
-        />
-        {addonAfter}
-      </ConditionalWrap>
-    )}
-  </FieldWrapper>
-);
+}) => {
+  const uniqueId = useUniqueId('SelectMenuField');
+  const a11yId = _a11yId || uniqueId;
+  return (
+    <FieldWrapper
+      a11yId={a11yId}
+      description={description}
+      hint={hint}
+      isOptional={isOptional}
+      isRequired={isRequired}
+      label={label}
+      state={state}
+      validationText={validationText}
+      {...props}
+    >
+      {({ elementProps }) => (
+        <ConditionalWrap
+          condition={addonBefore || addonAfter}
+          wrap={(children: React.ReactNode) => <Group isVertical={isVertical}>{children}</Group>}
+        >
+          {addonBefore}
+          <SelectMenu
+            id={a11yId}
+            className={className}
+            defaultKey={defaultKey}
+            defaultKeys={defaultKeys}
+            defaultOption={defaultOption}
+            defaultOptions={defaultOptions}
+            disabled={disabled}
+            emptyText={emptyText}
+            filterOptions={filterOptions}
+            isDropdown={isDropdown}
+            isLoading={isLoading}
+            isMultiSelect={isMultiSelect}
+            isPaginated={isPaginated}
+            isRequired={isRequired}
+            isSearchable={isSearchable}
+            loadQuery={loadQuery}
+            loadOptions={loadOptions}
+            // @ts-ignore
+            onChange={onChange}
+            options={options}
+            placeholder={placeholder}
+            popoverProps={popoverProps}
+            renderBottomActions={renderBottomActions}
+            renderEmpty={renderEmpty}
+            renderError={renderError}
+            renderOption={renderOption}
+            renderValue={renderValue}
+            searchInputProps={searchInputProps}
+            state={state}
+            // @ts-ignore
+            value={value}
+            useTags={useTags}
+            {...elementProps}
+            {...selectMenuProps}
+          />
+          {addonAfter}
+        </ConditionalWrap>
+      )}
+    </FieldWrapper>
+  );
+};
 
 export const selectMenuFieldPropTypes = {
   addonBefore: PropTypes.element,
@@ -148,7 +152,7 @@ export const selectMenuFieldDefaultProps = {
   ...selectMenuDefaultProps,
   addonBefore: undefined,
   addonAfter: undefined,
-  a11yId: getUniqueId('SelectMenuField'),
+  a11yId: undefined,
   isVertical: false,
   selectMenuProps: {}
 };

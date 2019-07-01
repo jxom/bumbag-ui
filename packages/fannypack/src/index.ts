@@ -22,7 +22,7 @@ export {
 
 export { default as defaultTheme } from './themes/default';
 export { ThemeProvider } from './ThemeProvider';
-export { getUniqueId } from './uniqueId';
+export { useUniqueId } from './uniqueId';
 
 export { default as Alert } from './Alert';
 export * from './Alert';
