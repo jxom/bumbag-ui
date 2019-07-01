@@ -184,7 +184,9 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
   };
 }
 
+// @ts-ignore
 Select.Formik = formikField(Select);
+// @ts-ignore
 Select.ReduxForm = reduxFormField(Select);
 
 // @ts-ignore

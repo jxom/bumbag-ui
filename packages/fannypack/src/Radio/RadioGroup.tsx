@@ -30,8 +30,8 @@ export type LocalRadioGroupProps = {
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
 
 export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> & {
-  Formik: React.FunctionComponent<RadioGroupFieldProps>;
-  ReduxForm: React.FunctionComponent<RadioGroupFieldProps>;
+  Formik: React.FunctionComponent<RadioGroupProps>;
+  ReduxForm: React.FunctionComponent<RadioGroupProps>;
 } = ({ a11yId, a11yLabel, className, defaultValue, disabled, onChange, options, name, state, value, ...props }) => (
   <_RadioGroup
     aria-describedby="label"

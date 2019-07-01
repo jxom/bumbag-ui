@@ -644,7 +644,9 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
   };
 }
 
+// @ts-ignore
 SelectMenu.Formik = formikField(SelectMenu, { isSelectMenu: true });
+// @ts-ignore
 SelectMenu.ReduxForm = reduxFormField(SelectMenu, { isSelectMenu: true });
 
 export default SelectMenu;
