@@ -102,6 +102,7 @@ export const InputWrapper = styled(Box)<{ styledSize?: string }>`
 `;
 
 export const Input = styled(_Input)<InputProps & { styledSize?: string }>`
+  -webkit-appearance: none;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;

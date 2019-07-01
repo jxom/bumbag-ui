@@ -15,6 +15,7 @@ function HiddenInput<T>({
 }: any) {
   // @ts-ignore
   return styled(Input)<T>`
+    -webkit-appearance: none;
     clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;

@@ -57,6 +57,7 @@ export const stateProperties = css`
 `;
 
 export const Textarea = styled(Input)<LocalTextareaProps & { styledSize: LocalTextareaProps['size'] }>`
+  -webkit-appearance: none;
   border: 1px solid #bdbdbd;
   box-shadow: inset 0px 1px 2px #e5e5e5;
   border-radius: 0.2em;
