@@ -1,19 +1,6 @@
 import * as React from 'react';
 import _get from 'lodash/get';
 
-const FIELDS_WITH_FIELD_WRAPPERS = [
-  'CheckboxField',
-  'InputField',
-  'RadioField',
-  'RadioGroupField',
-  'SelectField',
-  'SelectMenuField',
-  'SwitchField',
-  'TextareaField'
-];
-const CHECKBOX_FIELDS = ['Checkbox', 'CheckboxField'];
-const SELECT_MENUS = ['SelectMenu', 'SelectMenuField'];
-
 const bindFns = (...fns: Array<Function>) => (...args: any) => {
   fns.forEach(fn => fn && fn(...args));
 };
@@ -24,11 +11,12 @@ export function formikField(
 ) {
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
+
     const isTouched = _get(form, `touched.${field.name}`);
     const error = _get(form, `errors.${field.name}`);
     const value = _get(form, `values.${field.name}`);
 
-    if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name) || hasFieldWrapper) {
+    if (hasFieldWrapper) {
       let state = isTouched && error ? 'danger' : undefined;
       if (props.state) {
         state = props.state;
@@ -46,7 +34,7 @@ export function formikField(
       };
     }
 
-    if (CHECKBOX_FIELDS.includes(Component.name) || isCheckbox) {
+    if (isCheckbox) {
       let checked = false;
       if (value) {
         checked = Boolean(value);
@@ -59,7 +47,7 @@ export function formikField(
 
     let onBlur = field.onBlur;
     let onChange = field.onChange;
-    if (SELECT_MENUS.includes(Component.name) || isSelectMenu) {
+    if (isSelectMenu) {
       onBlur = () => form.setFieldTouched(field.name);
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => form.setFieldValue(field.name, newValues);
@@ -81,7 +69,7 @@ export function reduxFormField(
   return ({ input = {}, meta = {}, ...props }: any) => {
     let overrideProps = {};
 
-    if (FIELDS_WITH_FIELD_WRAPPERS.includes(Component.name) || hasFieldWrapper) {
+    if (hasFieldWrapper) {
       let state = meta.touched && meta.error ? 'danger' : undefined;
       if (props.state) {
         state = props.state;
@@ -99,7 +87,7 @@ export function reduxFormField(
       };
     }
 
-    if (CHECKBOX_FIELDS.includes(Component.name) || isCheckbox) {
+    if (isCheckbox) {
       let checked = false;
       const value = Boolean(input.value);
       if (value) {
@@ -113,7 +101,7 @@ export function reduxFormField(
 
     let onBlur = input.onBlur;
     let onChange = input.onChange;
-    if (SELECT_MENUS.includes(Component.name) || isSelectMenu) {
+    if (isSelectMenu) {
       // @ts-ignore
       onChange = (value: any, option: any, newValues: any) => input.onChange(newValues);
       onBlur = () => input.onBlur(input.value);

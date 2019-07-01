@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import { InlineBlockProps as ReakitInlineBlockProps } from 'reakit/ts/InlineBlock/InlineBlock';
 import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { InlineBlock } from '../primitives';
 import { Omit } from '../types';
 
@@ -182,6 +183,9 @@ export class Select extends React.PureComponent<LocalSelectProps, SelectState> {
     );
   };
 }
+
+Select.Formik = formikField(Select);
+Select.ReduxForm = reduxFormField(Select);
 
 // @ts-ignore
 const C: React.FunctionComponent<SelectProps> = Select;

@@ -10,6 +10,7 @@ import _omit from 'lodash/omit';
 import { Loads } from 'react-loads-next';
 import { BoxProps } from 'reakit/ts/Box/Box';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { ButtonProps } from '../Button/Button';
 import Popover from '../Popover';
 import { PopoverContainerRenderProps } from '../Popover/PopoverContainer';
@@ -642,5 +643,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
     );
   };
 }
+
+SelectMenu.Formik = formikField(SelectMenu, { isSelectMenu: true });
+SelectMenu.ReduxForm = reduxFormField(SelectMenu, { isSelectMenu: true });
 
 export default SelectMenu;

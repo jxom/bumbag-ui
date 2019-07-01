@@ -13,6 +13,7 @@ import FieldWrapper, {
   fieldWrapperDefaultProps
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
+import { formikField, reduxFormField } from '../adaptors/fields';
 
 export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalSelectProps & {
@@ -26,7 +27,10 @@ export type LocalSelectFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   };
 export type SelectFieldProps = LocalSelectFieldProps & SelectProps;
 
-export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
+export const SelectField: React.FunctionComponent<LocalSelectFieldProps> & {
+  Formik: React.FunctionComponent<LocalSelectFieldProps>;
+  ReduxForm: React.FunctionComponent<LocalSelectFieldProps>;
+} = ({
   a11yLabel,
   a11yId,
   addonBefore,
@@ -102,6 +106,9 @@ export const SelectField: React.FunctionComponent<LocalSelectFieldProps> = ({
     )}
   </FieldWrapper>
 );
+
+SelectField.Formik = formikField(SelectField, { hasFieldWrapper: true });
+SelectField.ReduxForm = reduxFormField(SelectField, { hasFieldWrapper: true });
 
 export const selectFieldPropTypes = {
   addonBefore: PropTypes.element,

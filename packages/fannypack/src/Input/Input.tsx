@@ -6,6 +6,7 @@ import _omit from 'lodash/omit';
 // @ts-ignore
 import InputMask from 'react-input-mask';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { InlineFlex } from '../primitives';
 import { Omit, Size, sizePropType } from '../types';
 import { IconProps } from '../Icon/Icon';
@@ -74,6 +75,8 @@ export type LocalInputProps = {
 export type InputProps = Omit<ReakitInputProps, 'size'> & LocalInputProps;
 export type InputComponents = {
   Icon: React.FunctionComponent<IconProps>;
+  Formik: React.FunctionComponent<InputProps>;
+  ReduxForm: React.FunctionComponent<InputProps>;
 };
 
 export const Input: React.FunctionComponent<LocalInputProps> & InputComponents = ({
@@ -162,6 +165,8 @@ export const Input: React.FunctionComponent<LocalInputProps> & InputComponents =
 };
 
 Input.Icon = Icon;
+Input.Formik = formikField(Input);
+Input.ReduxForm = reduxFormField(Input);
 
 export const inputPropTypes = {
   after: PropTypes.element,

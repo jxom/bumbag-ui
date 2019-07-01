@@ -4,16 +4,14 @@ Fannypack provides you with field adaptors for the React form libraries [Formik]
 
 ### Formik
 
-To use Fannypack fields with Formik, import the `formikField` adaptor and create a Formik field component with it. Then use your field component with Formik's `<Field>`.
+To use Fannypack fields with Formik, import the `.Formik` component from the Fannypack form field.
 
 > Note: You must create the field outside of your component.
 
 ```jsx
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { InputField, formikField } from 'fannypack';
-
-const FormikInputField = formikField(InputField);
+import { InputField } from 'fannypack';
 
 function Form() {
   return (
@@ -23,7 +21,7 @@ function Form() {
     >
       <Form>
         <Field
-          component={FormikInputField}
+          component={InputField.Formik}
           name="username"
           label="Username"
         />
@@ -37,22 +35,18 @@ export default Form;
 
 ### Redux Form
 
-To use Fannypack fields with Redux Form, import the `reduxFormField` adaptor and create a Redux Form field component with it. Then use your field component with Redux Form's `<Field>`.
-
-> Note: You must create the field outside of your component.
+To use Redux Form fields with Formik, import the `.ReduxForm` component from the Fannypack form field.
 
 ```jsx
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { InputField, reduxFormField } from 'fannypack';
-
-const ReduxFormInputField = reduxFormField(InputField);
+import { InputField } from 'fannypack';
 
 function Form() {
   return (
     <form>
       <Field
-        component={ReduxFormInputField}
+        component={InputField.ReduxForm}
         name="username"
         label="Username"
       />

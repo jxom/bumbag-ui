@@ -4,6 +4,7 @@ import * as PropTypes from 'prop-types';
 // @ts-ignore
 import _omit from 'lodash/omit';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { Omit } from '../types';
 import Textarea, { LocalTextareaProps, TextareaProps, textareaDefaultProps, textareaPropTypes } from './Textarea';
 import FieldWrapper, {
@@ -18,7 +19,10 @@ export type LocalTextareaFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   };
 export type TextareaFieldProps = LocalTextareaFieldProps & TextareaProps;
 
-export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = ({
+export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> & {
+  Formik: React.FunctionComponent<LocalTextareaFieldProps>;
+  ReduxForm: React.FunctionComponent<LocalTextareaFieldProps>;
+} = ({
   a11yId,
   a11yLabel,
   autoComplete,
@@ -92,6 +96,9 @@ export const TextareaField: React.FunctionComponent<LocalTextareaFieldProps> = (
     )}
   </FieldWrapper>
 );
+
+TextareaField.Formik = formikField(TextareaField, { hasFieldWrapper: true });
+TextareaField.ReduxForm = reduxFormField(TextareaField, { hasFieldWrapper: true });
 
 export const textareaFieldPropTypes = {
   textareaProps: PropTypes.shape(textareaPropTypes),

@@ -11,6 +11,7 @@ import FieldWrapper, {
   fieldWrapperDefaultProps,
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
+import { formikField, reduxFormField } from '../adaptors/fields';
 
 export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalInputProps & {
@@ -24,7 +25,10 @@ export type LocalInputFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   };
 export type InputFieldProps = LocalInputFieldProps & InputProps;
 
-export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
+export const InputField: React.FunctionComponent<LocalInputFieldProps> & {
+  Formik: React.FunctionComponent<InputFieldProps>;
+  ReduxForm: React.FunctionComponent<InputFieldProps>;
+} = ({
   addonBefore,
   addonAfter,
   a11yId,
@@ -127,6 +131,9 @@ export const InputField: React.FunctionComponent<LocalInputFieldProps> = ({
     )}
   </FieldWrapper>
 );
+
+InputField.Formik = formikField(InputField, { hasFieldWrapper: true });
+InputField.ReduxForm = reduxFormField(InputField, { hasFieldWrapper: true });
 
 export const inputFieldPropTypes = {
   addonBefore: PropTypes.element,

@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import Text from '../Text';
 import _Radio, { RadioIcon, HiddenRadio } from './styled';
 
@@ -34,7 +35,10 @@ export type LocalRadioProps = {
 };
 export type RadioProps = ReakitLabelProps & LocalRadioProps;
 
-export const Radio: React.FunctionComponent<LocalRadioProps> = ({
+export const Radio: React.FunctionComponent<LocalRadioProps> & {
+  Formik: React.FunctionComponent<RadioProps>;
+  ReduxForm: React.FunctionComponent<RadioProps>;
+} = ({
   a11yId,
   autoFocus,
   checked,
@@ -78,6 +82,9 @@ export const Radio: React.FunctionComponent<LocalRadioProps> = ({
     </Text>
   </_Radio>
 );
+
+Radio.Formik = formikField(Radio, { isCheckbox: true });
+Radio.ReduxForm = reduxFormField(Radio, { isCheckbox: true });
 
 export const radioPropTypes = {
   a11yId: PropTypes.string,

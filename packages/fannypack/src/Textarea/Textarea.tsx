@@ -2,9 +2,10 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { InputProps as ReakitInputProps } from 'reakit/ts/Input/Input';
 
-import _Textarea, { LoadingSpinner } from './styled';
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { Box } from '../primitives';
 import { Omit } from '../types';
+import _Textarea, { LoadingSpinner } from './styled';
 
 export type LocalTextareaProps = {
   /** An accessible identifier for the textarea */
@@ -56,15 +57,10 @@ export type LocalTextareaProps = {
 };
 export type TextareaProps = Omit<ReakitInputProps, 'size'> & LocalTextareaProps;
 
-export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({
-  a11yId,
-  a11yLabel,
-  isLoading,
-  isRequired,
-  size,
-  state,
-  ...props
-}) => (
+export const Textarea: React.FunctionComponent<LocalTextareaProps> & {
+  Formik: React.FunctionComponent<TextareaProps>;
+  ReduxForm: React.FunctionComponent<TextareaProps>;
+} = ({ a11yId, a11yLabel, isLoading, isRequired, size, state, ...props }) => (
   <Box relative>
     <_Textarea
       use="textarea"
@@ -79,6 +75,9 @@ export const Textarea: React.FunctionComponent<LocalTextareaProps> = ({
     {isLoading && <LoadingSpinner color="text" />}
   </Box>
 );
+
+Textarea.Formik = formikField(Textarea);
+Textarea.ReduxForm = reduxFormField(Textarea);
 
 export const textareaPropTypes = {
   a11yId: PropTypes.string,

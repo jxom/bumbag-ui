@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import Text from '../Text';
 import { Omit } from '../types';
 import _Switch, { HiddenSwitch, SwitchIcon } from './styled';
@@ -36,7 +37,10 @@ export type LocalSwitchProps = {
 };
 export type SwitchProps = LocalSwitchProps & Omit<ReakitLabelProps, 'children'>;
 
-export const Switch: React.FunctionComponent<LocalSwitchProps> = ({
+export const Switch: React.FunctionComponent<LocalSwitchProps> & {
+  Formik: React.FunctionComponent<SwitchProps>;
+  ReduxForm: React.FunctionComponent<SwitchProps>;
+} = ({
   autoFocus,
   checked,
   className,
@@ -85,6 +89,9 @@ export const Switch: React.FunctionComponent<LocalSwitchProps> = ({
     )}
   </_Switch>
 );
+
+Switch.Formik = formikField(Switch, { isCheckbox: true });
+Switch.ReduxForm = reduxFormField(Switch, { isCheckbox: true });
 
 export const switchPropTypes = {
   autoFocus: PropTypes.bool,

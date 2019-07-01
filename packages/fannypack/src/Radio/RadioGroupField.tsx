@@ -16,6 +16,7 @@ import FieldWrapper, {
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
+import { formikField, reduxFormField } from '../adaptors/fields';
 
 export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalRadioGroupProps & {
@@ -23,7 +24,10 @@ export type LocalRadioGroupFieldProps = Omit<LocalFieldWrapperProps, 'children'>
   };
 export type RadioGroupFieldProps = RadioGroupProps & LocalRadioGroupFieldProps;
 
-export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> = ({
+export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps> & {
+  Formik: React.FunctionComponent<RadioGroupFieldProps>;
+  ReduxForm: React.FunctionComponent<RadioGroupFieldProps>;
+} = ({
   a11yId,
   a11yLabel,
   className,
@@ -74,6 +78,9 @@ export const RadioGroupField: React.FunctionComponent<LocalRadioGroupFieldProps>
     )}
   </FieldWrapper>
 );
+
+RadioGroupField.Formik = formikField(RadioGroupField, { hasFieldWrapper: true });
+RadioGroupField.ReduxForm = reduxFormField(RadioGroupField, { hasFieldWrapper: true });
 
 export const radioGroupFieldPropTypes = {
   radioGroupProps: PropTypes.shape(_omit(radioGroupPropTypes, 'options', 'name')),

@@ -10,6 +10,7 @@ import FieldWrapper, {
   fieldWrapperPropTypes
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
+import { formikField, reduxFormField } from '../adaptors/fields';
 
 export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalCheckboxProps & {
@@ -18,7 +19,10 @@ export type LocalCheckboxFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   };
 export type CheckboxFieldProps = LocalCheckboxFieldProps & CheckboxProps;
 
-export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = ({
+export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> & {
+  Formik: React.FunctionComponent<CheckboxFieldProps>;
+  ReduxForm: React.FunctionComponent<CheckboxFieldProps>;
+} = ({
   a11yId,
   autoFocus,
   checkboxLabel,
@@ -78,6 +82,9 @@ export const CheckboxField: React.FunctionComponent<LocalCheckboxFieldProps> = (
     )}
   </FieldWrapper>
 );
+
+CheckboxField.Formik = formikField(CheckboxField, { hasFieldWrapper: true, isCheckbox: true });
+CheckboxField.ReduxForm = reduxFormField(CheckboxField, { hasFieldWrapper: true, isCheckbox: true });
 
 CheckboxField.propTypes = {
   checkboxLabel: PropTypes.string,

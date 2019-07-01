@@ -9,6 +9,7 @@ import FieldWrapper, {
   fieldWrapperDefaultProps
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
+import { formikField, reduxFormField } from '../adaptors/fields';
 import Switch, { LocalSwitchProps, SwitchProps, switchPropTypes, switchDefaultProps } from './Switch';
 
 export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
@@ -20,7 +21,10 @@ export type LocalSwitchFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   };
 export type SwitchFieldProps = LocalSwitchFieldProps & SwitchProps;
 
-export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
+export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> & {
+  Formik: React.FunctionComponent<LocalSwitchFieldProps>;
+  ReduxForm: React.FunctionComponent<LocalSwitchFieldProps>;
+} = ({
   a11yId,
   description,
   hint,
@@ -77,6 +81,9 @@ export const SwitchField: React.FunctionComponent<LocalSwitchFieldProps> = ({
     )}
   </FieldWrapper>
 );
+
+SwitchField.Formik = formikField(SwitchField, { hasFieldWrapper: true, isCheckbox: true });
+SwitchField.ReduxForm = reduxFormField(SwitchField, { hasFieldWrapper: true, isCheckbox: true });
 
 export const switchFieldPropTypes = {
   a11yId: PropTypes.string,

@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import { LabelProps as ReakitLabelProps } from 'reakit/ts';
 
 import Text from '../Text';
+import { formikField, reduxFormField } from '../adaptors/fields';
 import _Checkbox, { CheckboxIcon, HiddenCheckbox } from './styled';
 
 export type LocalCheckboxProps = {
@@ -35,7 +36,10 @@ export type LocalCheckboxProps = {
 };
 export type CheckboxProps = LocalCheckboxProps & ReakitLabelProps;
 
-export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
+export const Checkbox: React.FunctionComponent<LocalCheckboxProps> & {
+  Formik: React.FunctionComponent<CheckboxProps>;
+  ReduxForm: React.FunctionComponent<CheckboxProps>;
+} = ({
   autoFocus,
   checked,
   className,
@@ -84,6 +88,9 @@ export const Checkbox: React.FunctionComponent<LocalCheckboxProps> = ({
     )}
   </_Checkbox>
 );
+
+Checkbox.Formik = formikField(Checkbox, { isCheckbox: true });
+Checkbox.ReduxForm = reduxFormField(Checkbox, { isCheckbox: true });
 
 export const checkboxPropTypes = {
   autoFocus: PropTypes.bool,

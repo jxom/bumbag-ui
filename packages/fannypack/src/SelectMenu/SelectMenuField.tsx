@@ -19,6 +19,7 @@ import FieldWrapper, {
 } from '../FieldWrapper/FieldWrapper';
 import { Omit } from '../types';
 import { useUniqueId } from '../uniqueId';
+import { formikField, reduxFormField } from '../adaptors/fields';
 
 export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'> &
   LocalSelectMenuProps & {
@@ -32,7 +33,10 @@ export type LocalSelectMenuFieldProps = Omit<LocalFieldWrapperProps, 'children'>
   };
 export type SelectMenuFieldProps = SelectMenuProps & LocalSelectMenuFieldProps;
 
-export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps> = ({
+export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps> & {
+  Formik: React.FunctionComponent<LocalSelectMenuFieldProps>;
+  ReduxForm: React.FunctionComponent<LocalSelectMenuFieldProps>;
+} = ({
   a11yId: _a11yId,
   addonBefore,
   addonAfter,
@@ -136,6 +140,9 @@ export const SelectMenuField: React.FunctionComponent<LocalSelectMenuFieldProps>
     </FieldWrapper>
   );
 };
+
+SelectMenuField.Formik = formikField(SelectMenuField, { hasFieldWrapper: true, isSelectMenu: true });
+SelectMenuField.ReduxForm = reduxFormField(SelectMenuField, { hasFieldWrapper: true, isSelectMenu: true });
 
 export const selectMenuFieldPropTypes = {
   addonBefore: PropTypes.element,

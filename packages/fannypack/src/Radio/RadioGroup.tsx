@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 
+import { formikField, reduxFormField } from '../adaptors/fields';
 import { RadioGroup as _RadioGroup } from './styled';
 import Radio from './Radio';
 
@@ -28,19 +29,10 @@ export type LocalRadioGroupProps = {
 };
 export type RadioGroupProps = ReakitBoxProps & LocalRadioGroupProps;
 
-export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> = ({
-  a11yId,
-  a11yLabel,
-  className,
-  defaultValue,
-  disabled,
-  onChange,
-  options,
-  name,
-  state,
-  value,
-  ...props
-}) => (
+export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> & {
+  Formik: React.FunctionComponent<RadioGroupFieldProps>;
+  ReduxForm: React.FunctionComponent<RadioGroupFieldProps>;
+} = ({ a11yId, a11yLabel, className, defaultValue, disabled, onChange, options, name, state, value, ...props }) => (
   <_RadioGroup
     aria-describedby="label"
     aria-invalid={state === 'danger'}
@@ -64,6 +56,9 @@ export const RadioGroup: React.FunctionComponent<LocalRadioGroupProps> = ({
     ))}
   </_RadioGroup>
 );
+
+RadioGroup.Formik = formikField(RadioGroup);
+RadioGroup.ReduxForm = reduxFormField(RadioGroup);
 
 export const radioGroupPropTypes = {
   a11yId: PropTypes.string,
