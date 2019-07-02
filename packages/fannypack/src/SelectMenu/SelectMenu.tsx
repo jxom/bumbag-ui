@@ -418,12 +418,10 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       if (newValues.length === 0) {
         newValues = null;
       } else if (!isMultiSelect) {
-        newValues = _get(newValues[0], 'value', newValues[0]);
-      } else if (Array.isArray(newValues)) {
-        newValues = newValues.map(option => _get(option, 'value', option));
+        newValues = newValues[0];
       }
-
       const value = _get(option, 'value', option);
+
       onChange && onChange(value, option, newValues);
     };
   };
@@ -440,11 +438,8 @@ export class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState
       if (newValues.length === 0) {
         newValues = null;
       } else if (!isMultiSelect) {
-        newValues = _get(newValues[0], 'value', newValues[0]);
-      } else if (Array.isArray(newValues)) {
-        newValues = newValues.map(option => _get(option, 'value', option));
+        newValues = newValues[0];
       }
-
       const value = _get(option, 'value', option);
       onChange && onChange(value, option, newValues);
     };
