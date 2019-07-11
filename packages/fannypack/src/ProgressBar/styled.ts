@@ -43,14 +43,14 @@ export const ProgressBarIndicator = styled(Box)`
   }
 `;
 
-export const ProgressBar = styled(Box)<LocalProgressBarProps>`
+export const ProgressBar = styled(Box)<LocalProgressBarProps & { styledSize?: string }>`
   border-radius: 3px;
   overflow: hidden;
   width: 100%;
   height: 1rem;
   background-color: ${(props: any) => tint(0.9, palette(props.color, props.color)(props))};
 
-  ${props => props.size && sizeAttributes[props.size || '']}
+  ${props => props.styledSize && sizeAttributes[props.styledSize || '']}
 
   & {
     ${theme('fannypack.ProgressBar.base')};

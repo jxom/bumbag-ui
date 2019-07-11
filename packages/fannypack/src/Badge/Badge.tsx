@@ -22,7 +22,7 @@ export const badgePropTypes = {
   size: sizePropType
 };
 
-export const badgeDefaultProps = {
+export const badgeDefaultProps: Partial<LocalBadgeProps> = {
   children: undefined,
   isAbsolute: false,
   palette: 'text',
@@ -46,9 +46,9 @@ export class Badge extends React.Component<LocalBadgeProps> {
   };
 
   render = () => {
-    const { children, ...props } = this.props;
+    const { children, size, ...props } = this.props;
     return (
-      <_Badge elementRef={this.badge} {...props}>
+      <_Badge elementRef={this.badge} styledSize={size} {...props}>
         {children}
       </_Badge>
     );

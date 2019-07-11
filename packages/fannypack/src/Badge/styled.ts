@@ -22,7 +22,7 @@ const sizeAttributes: any = {
   `
 };
 
-export default styled(InlineFlex)<LocalBadgeProps>`
+export default styled(InlineFlex)<LocalBadgeProps & { styledSize?: string }>`
   align-items: center;
   border-radius: 1rem;
   justify-content: center;
@@ -57,7 +57,7 @@ export default styled(InlineFlex)<LocalBadgeProps>`
       }
     `}
 
-  ${props => props.size && sizeAttributes[props.size]}
+  ${props => props.styledSize && sizeAttributes[props.styledSize]}
 
   & {
     ${theme('fannypack.Badge.base')};

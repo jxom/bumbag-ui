@@ -4,7 +4,7 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 
-import { Omit, Size } from '../types';
+import { Omit, Size, sizePropType } from '../types';
 import _ProgressBar, { ProgressBarIndicator } from './styled';
 
 export type LocalProgressBarProps = {
@@ -22,14 +22,21 @@ function normalizeValue(value: number, maxValue: number) {
   return newValue;
 }
 
-export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ maxValue, value, ...props }) => {
+export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ maxValue, size, value, ...props }) => {
   let newValue = value || 0;
   let newMaxValue = maxValue || 100;
   newValue = normalizeValue(newValue, newMaxValue);
   const percent = (newValue / newMaxValue) * 100;
   return (
     // @ts-ignore
-    <_ProgressBar role="progressbar" aria-valuenow={newValue} aria-valuemin={0} aria-valuemax={newMaxValue} {...props}>
+    <_ProgressBar
+      role="progressbar"
+      aria-valuenow={newValue}
+      aria-valuemin={0}
+      aria-valuemax={newMaxValue}
+      styledSize={size}
+      {...props}
+    >
       <ProgressBarIndicator color={props.color} value={percent} />
     </_ProgressBar>
   );
@@ -38,12 +45,12 @@ export const ProgressBar: React.FunctionComponent<LocalProgressBarProps> = ({ ma
 export const progressBarPropTypes = {
   color: PropTypes.string,
   maxValue: PropTypes.number,
-  size: PropTypes.string,
+  size: sizePropType,
   value: PropTypes.number
 };
 ProgressBar.propTypes = progressBarPropTypes;
 
-export const progressBarDefaultProps = {
+export const progressBarDefaultProps: Partial<LocalProgressBarProps> = {
   color: 'primary',
   maxValue: 100,
   size: 'default',
