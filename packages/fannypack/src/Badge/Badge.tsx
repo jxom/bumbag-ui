@@ -4,25 +4,29 @@ import { InlineFlexProps as ReakitInlineFlexProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 
+import { Size, sizePropType } from '../types';
 import _Badge from './styled';
 
 export type LocalBadgeProps = {
   children?: React.ReactNode;
   isAbsolute?: boolean;
   palette?: string;
+  size?: Size;
 };
 export type BadgeProps = ReakitInlineFlexProps & LocalBadgeProps;
 
 export const badgePropTypes = {
   children: PropTypes.node,
   isAbsolute: PropTypes.bool,
-  palette: PropTypes.string
+  palette: PropTypes.string,
+  size: sizePropType
 };
 
 export const badgeDefaultProps = {
   children: undefined,
   isAbsolute: false,
-  palette: 'text'
+  palette: 'text',
+  size: 'default'
 };
 
 export class Badge extends React.Component<LocalBadgeProps> {

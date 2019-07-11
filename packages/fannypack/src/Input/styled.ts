@@ -26,6 +26,11 @@ export const sizeProperties: { [key: string]: any } = {
       ${theme('fannypack.Input.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Input.sizes.default')};
+    }
+  `,
   medium: css`
     & + ${LoadingSpinner} {
       top: 10px;
@@ -54,6 +59,11 @@ export const wrapperSizeProperties: { [key: string]: any } = {
 
     & {
       ${theme('fannypack.Input.Wrapper.sizes.small')};
+    }
+  `,
+  default: css`
+    & {
+      ${theme('fannypack.Input.Wrapper.sizes.default')};
     }
   `,
   medium: css`

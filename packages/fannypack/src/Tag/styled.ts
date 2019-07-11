@@ -8,6 +8,11 @@ import { Box } from '../primitives';
 import { LocalTagProps } from './Tag';
 
 export const sizeAttributes: any = {
+  default: css`
+    & {
+      ${theme('fannypack.Tag.sizes.default')};
+    }
+  `,
   medium: css`
     font-size: 1em;
     height: 2rem;

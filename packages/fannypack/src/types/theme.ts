@@ -27,6 +27,7 @@ export type BadgeThemeConfig = {
   base?: Stylesheet;
   absolute?: Stylesheet;
   sizes?: {
+    default?: Stylesheet;
     medium?: Stylesheet;
     lərge?: Stylesheet;
   };
@@ -57,6 +58,7 @@ export type ButtonThemeConfig = {
   static?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };
@@ -257,8 +259,18 @@ export type InputThemeConfig = {
   placeholder?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
+  };
+  Wrapper?: {
+    base?: Stylesheet;
+    sizes?: {
+      small?: Stylesheet;
+      default?: Stylesheet;
+      medium?: Stylesheet;
+      large?: Stylesheet;
+    };
   };
 };
 export type LabelThemeConfig = {
@@ -470,6 +482,7 @@ export type ProgressBarThemeConfig = {
   indicator?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };
@@ -498,6 +511,7 @@ export type RatingThemeConfig = {
     color?: string;
     sizes?: {
       small?: Stylesheet;
+      default?: Stylesheet;
       medium?: Stylesheet;
       large?: Stylesheet;
     };
@@ -509,6 +523,7 @@ export type SelectThemeConfig = {
   focus?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };
@@ -586,6 +601,7 @@ export type SpinnerThemeConfig = {
   base?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };
@@ -658,6 +674,7 @@ export type TabsThemeConfig = {
 export type TagThemeConfig = {
   base?: Stylesheet;
   sizes?: {
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };
@@ -672,6 +689,7 @@ export type TextareaThemeConfig = {
   placeholder?: Stylesheet;
   sizes?: {
     small?: Stylesheet;
+    default?: Stylesheet;
     medium?: Stylesheet;
     large?: Stylesheet;
   };

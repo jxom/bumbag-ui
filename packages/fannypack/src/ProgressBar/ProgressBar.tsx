@@ -4,13 +4,13 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts';
 // @ts-ignore
 import _get from 'lodash/get';
 
-import { Omit } from '../types';
+import { Omit, Size } from '../types';
 import _ProgressBar, { ProgressBarIndicator } from './styled';
 
 export type LocalProgressBarProps = {
   color?: string;
   maxValue?: number;
-  size?: string;
+  size?: Size;
   value?: number;
 };
 export type ProgressBarProps = Omit<ReakitBoxProps, 'size'> & LocalProgressBarProps;
@@ -46,7 +46,7 @@ ProgressBar.propTypes = progressBarPropTypes;
 export const progressBarDefaultProps = {
   color: 'primary',
   maxValue: 100,
-  size: undefined,
+  size: 'default',
   value: 0
 };
 ProgressBar.defaultProps = progressBarDefaultProps;

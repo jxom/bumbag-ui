@@ -65,6 +65,11 @@ export const sizeProperties: any = {
       ${theme('fannypack.Avatar.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Avatar.sizes.default')};
+    }
+  `,
   medium: css`
     & {
       font-size: 32px;

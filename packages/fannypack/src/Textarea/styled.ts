@@ -25,6 +25,11 @@ export const sizeProperties: any = {
       ${theme('fannypack.Textarea.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Textarea.sizes.default')};
+    }
+  `,
   medium: css`
     font-size: 1.25rem;
 

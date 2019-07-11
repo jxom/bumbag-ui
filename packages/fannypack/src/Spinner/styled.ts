@@ -16,6 +16,11 @@ export const sizes: any = {
       ${theme('fannypack.Spinner.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Spinner.sizes.default')};
+    }
+  `,
   medium: css`
     & {
       font-size: 28px;

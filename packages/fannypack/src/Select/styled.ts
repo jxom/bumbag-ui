@@ -46,6 +46,11 @@ export const sizeProperties: any = {
       ${theme('fannypack.Select.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Select.sizes.default')};
+    }
+  `,
   medium: css`
     font-size: 1.25rem;
 

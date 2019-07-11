@@ -3,6 +3,11 @@ import styled, { css, palette, theme } from '../styled';
 import { LocalBadgeProps } from './Badge';
 
 const sizeAttributes: any = {
+  default: css`
+    & {
+      ${theme('fannypack.Badge.sizes.default')};
+    }
+  `,
   medium: css`
     & {
       font-size: 1rem;

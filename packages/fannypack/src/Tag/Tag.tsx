@@ -42,7 +42,7 @@ export const tagDefaultProps = {
   kind: undefined,
   onRemove: undefined,
   palette: 'text',
-  size: undefined
+  size: 'default'
 };
 Tag.defaultProps = tagDefaultProps;
 

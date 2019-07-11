@@ -25,6 +25,11 @@ export const sizeProperties: any = {
       ${theme('fannypack.Button.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.Button.sizes.default')};
+    }
+  `,
   medium: css`
     & {
       min-height: ${space(12)}em;

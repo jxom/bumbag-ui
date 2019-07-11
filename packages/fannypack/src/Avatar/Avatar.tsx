@@ -82,7 +82,7 @@ export const avatarDefaultProps: Partial<LocalAvatarProps> = {
   fitPosition: undefined,
   initials: undefined,
   palette: undefined,
-  size: undefined,
+  size: 'default',
   src: undefined
 };
 Avatar.defaultProps = avatarDefaultProps;

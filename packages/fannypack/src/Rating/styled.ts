@@ -2,7 +2,6 @@ import { theme, palette } from 'styled-tools';
 
 import { Box } from '../primitives';
 import styled, { css } from '../styled';
-import { RatingProps } from './Rating';
 import { RatingStarProps } from './RatingStar';
 
 export const Rating = styled(Box)`
@@ -19,6 +18,11 @@ export const starSizes: any = {
     }
     & {
       ${theme('fannypack.Rating.Star.sizes.small')};
+    }
+  `,
+  default: css`
+    & {
+      ${theme('fannypack.Rating.Star.sizes.default')};
     }
   `,
   medium: css`

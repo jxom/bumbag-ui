@@ -11,6 +11,11 @@ const sizeAttributes: any = {
       ${theme('fannypack.ProgressBar.sizes.small')};
     }
   `,
+  default: css`
+    & {
+      ${theme('fannypack.ProgressBar.sizes.default')};
+    }
+  `,
   medium: css`
     height: 1.5rem;
 
