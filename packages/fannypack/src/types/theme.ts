@@ -1,8 +1,8 @@
-import { InterpolationValue } from 'styled-components';
+import { SimpleInterpolation } from 'styled-components';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../parseIcons';
 
-export type Stylesheet = InterpolationValue[];
+export type Stylesheet = SimpleInterpolation;
 export type ActionButtonsThemeConfig = {
   base?: Stylesheet;
 };
