@@ -1,0 +1,36 @@
+import * as React from 'react';
+
+import { ThemeProvider } from '../styled';
+import buildTheme from '../theme';
+import { ThemeConfig } from '../types';
+
+import GlobalStyles from './GlobalStyles';
+
+export type ProviderProps = {
+  children: React.ReactNode;
+  isStandalone?: boolean;
+  theme?: ThemeConfig;
+};
+
+export default function Provider(props: ProviderProps) {
+  const { children, isStandalone, theme } = props;
+
+  const derivedTheme = React.useMemo(
+    () => {
+      if (theme && isStandalone) {
+        return theme;
+      }
+      return buildTheme(theme);
+    },
+    [isStandalone, theme]
+  );
+
+  return (
+    <ThemeProvider theme={derivedTheme}>
+      <React.Fragment>
+        {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+        {children}
+      </React.Fragment>
+    </ThemeProvider>
+  );
+}

@@ -1,22 +1,9 @@
 {
-  "include": ["src/**/*"],
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "",
-    "paths": {
-      "*": [ "./typings/*" ]
-    },
-    "skipLibCheck": true,
-    "outDir": "ts",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "strict": false,
-    "declaration": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": true,
-    "stripInternal": true
-  }
+    "outDir": "ts"
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
