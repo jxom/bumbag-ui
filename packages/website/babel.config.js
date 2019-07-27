@@ -4,19 +4,20 @@ module.exports = {
       'babel-preset-gatsby',
       {
         targets: {
-          browsers: ['>0.25%', 'not dead'],
-        },
-      },
-    ],
+          browsers: ['>0.25%', 'not dead']
+        }
+      }
+    ]
   ],
   plugins: [
+    'babel-plugin-extract-react-types',
     [
       'babel-plugin-module-resolver',
       {
         alias: {
-          fannypack: '../fannypack/src',
-        },
-      },
-    ],
-  ],
-}
+          fannypack: '../fannypack/src'
+        }
+      }
+    ]
+  ]
+};

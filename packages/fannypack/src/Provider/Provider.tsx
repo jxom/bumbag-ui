@@ -12,7 +12,7 @@ export type ProviderProps = {
   theme?: ThemeConfig;
 };
 
-export default function Provider(props: ProviderProps) {
+export function Provider(props: ProviderProps) {
   const { children, isStandalone, theme } = props;
 
   const derivedTheme = React.useMemo(

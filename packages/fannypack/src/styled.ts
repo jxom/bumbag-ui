@@ -1,4 +1,5 @@
 export {
+  default,
   default as styled,
   css,
   withTheme,
@@ -10,5 +11,5 @@ export {
   isStyledComponent,
   ServerStyleSheet,
   StyleSheetManager
-} from '@xstyled/styled-components';
+} from 'styled-components';
 export { theme, palette } from 'styled-tools';

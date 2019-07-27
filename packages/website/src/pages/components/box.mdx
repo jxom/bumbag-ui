@@ -1,5 +1,49 @@
+import Props from 'pretty-proptypes';
+import { Box } from 'fannypack/Box/Box';
+
 # Box
+
+```js
+import { Box } from 'fannypack';
+```
+
+All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use Box's props. [Read more here](https://reakit.io/docs/box/).
+
+By default it renders a `<div>` element with basic reset styles.
 
 ```jsx-live
 <Box>This is a box</Box>
 ```
+
+## Composition
+
+### `as` prop
+
+```jsx-live
+<Box as="p">This is a Box rendered as a paragraph</Box>
+```
+
+### Hooks
+
+```jsx
+const boxProps = useBox();
+
+<p {...boxProps}>This is a Box rendered as a paragraph.</p>
+```
+
+### Render props
+
+```jsx-live
+<Box>{boxProps => <p {...boxProps}>This is a Box rendered as a paragraph</p>}</Box>
+```
+
+## CSS props
+
+You're able to apply any CSS attribute as a prop to `<Box>`.
+
+```jsx-live
+<Box backgroundColor="red" color="white">This is a box</Box>
+```
+
+
+<Props component={Box}/>

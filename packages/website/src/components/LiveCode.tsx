@@ -145,8 +145,10 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
     .join('\n')
     .replace(/\s$/, '');
 
+  const noInline = props.className.includes('noInline');
+
   return (
-    <LiveProvider code={code} scope={scope} theme={theme} {...props}>
+    <LiveProvider code={code} scope={scope} theme={theme} noInline={noInline} {...props}>
       <LivePreview />
       <LiveEditor />
       <LiveError />
