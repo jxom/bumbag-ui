@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render should render correctly 1`] = `
+exports[`props should render correctly 1`] = `
 .c0 {
   margin: unset;
   padding: unset;
@@ -21,7 +21,7 @@ exports[`render should render correctly 1`] = `
 />
 `;
 
-exports[`render should render correctly with CSS props 1`] = `
+exports[`props should render correctly with CSS props 1`] = `
 .c0 {
   margin: unset;
   padding: unset;
@@ -41,5 +41,96 @@ exports[`render should render correctly with CSS props 1`] = `
   class="c0"
   color="white"
   style="background-color: red; color: white;"
+/>
+`;
+
+exports[`props should render correctly with a color CSS prop 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="c0"
+  color="primary"
+  style="background-color: rgb(217, 217, 217); color: rgb(68, 75, 201);"
+/>
+`;
+
+exports[`props should render correctly with a font size CSS prop 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="c0"
+  font-size="400"
+  style="font-size: 1.5rem;"
+/>
+`;
+
+exports[`props should render correctly with a font weight CSS prop 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="c0"
+  font-weight="semibold"
+  style="font-weight: 600;"
+/>
+`;
+
+exports[`props should render correctly with a spacing CSS prop 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="c0"
+  style="margin: 2rem; padding-left: 1rem;"
 />
 `;

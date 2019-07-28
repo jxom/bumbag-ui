@@ -1,9 +1,10 @@
 // @ts-ignore
 import _get from 'lodash/get';
+import { GlobalThemeConfig } from '../types';
 
-export default (overrides: any) => ({
+export default (overrides: GlobalThemeConfig) => ({
   fontFamily:
     "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontSize: '16px',
-  ..._get(overrides, 'global', {})
+  fontSize: 16,
+  ...overrides
 });

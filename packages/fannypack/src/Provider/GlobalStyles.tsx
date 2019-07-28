@@ -4,7 +4,7 @@ export default createGlobalStyle`
   html, body {
     box-sizing: border-box;
     font-family: ${theme('global.fontFamily')};
-    font-size: ${theme('global.fontSize')};
+    font-size: ${theme('global.fontSize')}px;
     line-height: 1.5;
     margin: 0;
     padding: 0;

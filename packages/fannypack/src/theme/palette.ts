@@ -16,7 +16,7 @@ const defaultPalette: { [key: string]: string } = {
 };
 
 export default (overrides: PaletteThemeConfig) => ({
-  ...generateTextVariants(_get(overrides, 'palette.text') || defaultPalette.text),
+  ...generateTextVariants(_get(overrides, 'text') || defaultPalette.text),
 
   black: 'black',
   black500: 'black',
@@ -44,31 +44,31 @@ export default (overrides: PaletteThemeConfig) => ({
 
   ...generateColorVariants({
     paletteKey: 'primary',
-    color: _get(overrides, `palette.primary`) || defaultPalette.primary
+    color: overrides.primary || defaultPalette.primary
   }),
   ...generateColorVariants({
     paletteKey: 'secondary',
-    color: _get(overrides, `palette.secondary`) || defaultPalette.secondary
+    color: overrides.secondary || defaultPalette.secondary
   }),
   ...generateColorVariants({
     paletteKey: 'info',
-    color: _get(overrides, `palette.info`) || defaultPalette.info
+    color: overrides.info || defaultPalette.info
   }),
   ...generateColorVariants({
     paletteKey: 'success',
-    color: _get(overrides, `palette.success`) || defaultPalette.success
+    color: overrides.success || defaultPalette.success
   }),
   ...generateColorVariants({
     paletteKey: 'danger',
-    color: _get(overrides, `palette.danger`) || defaultPalette.danger
+    color: overrides.danger || defaultPalette.danger
   }),
   ...generateColorVariants({
     paletteKey: 'warning',
-    color: _get(overrides, `palette.warning`) || defaultPalette.warning,
+    color: overrides.warning || defaultPalette.warning,
     paletteOverrides: ({ color }) => ({
       warningTintInverted: shade(0.7, color)
     })
   }),
 
-  ..._get(overrides, 'palette', {})
+  ...overrides
 });
