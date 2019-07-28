@@ -11,12 +11,13 @@ export type LocalBoxProps = {
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
-export function Box(props: BoxProps) {
+export const Box = React.forwardRef((props: BoxProps, ref: React.RefObject<HTMLDivElement>) => {
   const { children, overrides, ...restProps } = props;
   const style = utils.useStyle(props);
   const htmlProps = utils.pickHTMLProps(restProps);
   return (
     <StyledBox
+      ref={ref}
       overrides={overrides}
       // @ts-ignore
       style={style}
@@ -25,4 +26,4 @@ export function Box(props: BoxProps) {
       {children}
     </StyledBox>
   );
-}
+});
