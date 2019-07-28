@@ -20,5 +20,3 @@ export const StyledBox = styled(ReakitBox)<BoxProps>`
     ${theme('Box.base')};
   }
 `;
-
-export default StyledBox;

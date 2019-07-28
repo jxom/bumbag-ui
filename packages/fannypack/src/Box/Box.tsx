@@ -3,7 +3,8 @@ import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box';
 
 import { BoxThemeConfig, CSSProperties } from '../types';
 import * as utils from '../utils';
-import StyledBox from './styled';
+
+import { StyledBox } from './styled';
 
 export type LocalBoxProps = {
   children?: React.ReactNode | ((props: ReakitBoxProps) => React.ReactNode);
