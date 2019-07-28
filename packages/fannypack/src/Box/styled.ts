@@ -2,7 +2,7 @@ import { Box as ReakitBox } from 'reakit';
 import styled, { theme } from '../styled';
 import { BoxProps } from './Box';
 
-export const StyledBox = styled(ReakitBox)<BoxProps>`
+export const StyledBox = styled(ReakitBox)`
   margin: unset;
   padding: unset;
   border: unset;

@@ -27,7 +27,7 @@ export const useBox = createHook({
   }
 });
 
-export const Box = createComponent({
+export const Box: React.FunctionComponent<BoxProps> = createComponent({
   as: StyledBox,
   useHook: useBox
 });
