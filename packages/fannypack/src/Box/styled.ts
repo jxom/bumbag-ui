@@ -1,7 +1,8 @@
 import { Box as ReakitBox } from 'reakit';
-import * as styled from '../styled';
+import styled, { theme } from '../styled';
+import { BoxProps } from './Box';
 
-export const StyledBox = styled.styled(ReakitBox)`
+export const StyledBox = styled(ReakitBox)<BoxProps>`
   margin: unset;
   padding: unset;
   border: unset;
@@ -16,7 +17,7 @@ export const StyledBox = styled.styled(ReakitBox)`
   }
 
   & {
-    ${styled.theme('Box')};
+    ${theme('Box.base')};
   }
 `;
 

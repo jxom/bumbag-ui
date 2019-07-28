@@ -1,5 +1,7 @@
-import Props from 'pretty-proptypes';
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
 import { Box } from 'fannypack/Box/Box';
+import { BoxThemeConfig } from 'fannypack/types';
 
 # Box
 
@@ -42,8 +44,17 @@ const boxProps = useBox();
 You're able to apply any CSS attribute as a prop to `<Box>`.
 
 ```jsx-live
-<Box backgroundColor="red" color="white">This is a box</Box>
+<Box backgroundColor="red">This is a box</Box>
 ```
 
+# Props
 
-<Props component={Box}/>
+<PropTypes component={Box}/>
+
+# Theming
+
+<Theme element={<Box>This is a box</Box>} keys={['Box.base']} />
+
+
+
+

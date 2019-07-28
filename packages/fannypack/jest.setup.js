@@ -1,3 +1,3 @@
 import 'babel-polyfill';
-import 'react-testing-library/cleanup-after-each';
+import '@testing-library/react/cleanup-after-each';
 import 'jest-styled-components';

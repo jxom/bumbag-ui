@@ -1,10 +1,10 @@
-import { createGlobalStyle, palette } from '../styled';
+import { createGlobalStyle, palette, theme } from '../styled';
 
 export default createGlobalStyle`
   html, body {
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-family: ${theme('global.fontFamily')};
+    font-size: ${theme('global.fontSize')};
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -24,5 +24,7 @@ export default createGlobalStyle`
   *:focus {
     outline: 2px solid ${palette('primary')};
     outline-offset: 2px;
-}
+  }
+
+  ${theme('global.base')};
 `;

@@ -39,5 +39,3 @@ export const generateColorVariants = ({
     ...(paletteOverrides ? paletteOverrides({ color }) : {})
   };
 };
-
-export const palette = generateColorVariants;

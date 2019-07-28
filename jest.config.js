@@ -4,5 +4,5 @@ module.exports = {
   },
   testMatch: ['<rootDir>/src/**/__tests__/**/*.(js|ts)?(x)', '<rootDir>/src/**/?(*.)+(spec|test).(ts|js)?(x)'],
   moduleFileExtensions: ['js', 'ts', 'tsx'],
-  setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js'
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
 };
