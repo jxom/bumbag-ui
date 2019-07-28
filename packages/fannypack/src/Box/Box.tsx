@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { BoxProps as ReakitBoxProps } from 'reakit/ts/Box';
+import { BoxProps as ReakitBoxProps, useBox as useReakitBox } from 'reakit/Box/Box';
+import { createComponent } from 'reakit-system/createComponent';
+import { createHook } from 'reakit-system/createHook';
 
 import { BoxThemeConfig, CSSProperties } from '../types';
 import * as utils from '../utils';
@@ -12,19 +14,24 @@ export type LocalBoxProps = {
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
-export const Box = React.forwardRef((props: BoxProps, ref: React.RefObject<HTMLDivElement>) => {
-  const { children, overrides, ...restProps } = props;
-  const style = utils.useStyle(props);
-  const htmlProps = utils.pickHTMLProps(restProps);
-  return (
-    <StyledBox
-      ref={ref}
-      overrides={overrides}
-      // @ts-ignore
-      style={style}
-      {...htmlProps}
-    >
-      {children}
-    </StyledBox>
-  );
+export const useBox = createHook({
+  name: 'Box',
+  compose: useReakitBox,
+
+  useProps(_, props) {
+    const style = utils.useStyle(props);
+    return {
+      style,
+      ...props
+    };
+  }
 });
+
+export const Box = createComponent({
+  as: StyledBox,
+  useHook: useBox
+});
+
+export function BoxTypes(_: BoxProps) {
+  return null;
+}
