@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box } from '../Box';
+import { renderHook, act } from '@testing-library/react-hooks'
+import { Box, useBox } from '../Box';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -32,4 +33,11 @@ describe('props', () => {
     const { container } = render(<Box fontWeight="semibold" />);
     expect(container.firstChild).toMatchSnapshot();
   });
+});
+
+describe('hook', () => {
+  it('should return with box props', () => {
+    const { result } = renderHook(() => useBox())
+    expect(result.current).toMatchSnapshot();
+  })
 });

@@ -13,16 +13,18 @@ export type LocalBoxProps = {
   overrides?: BoxThemeConfig;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
+export type BoxOptions = {};
 
-export const useBox = createHook({
+export const useBox = createHook<BoxOptions, BoxProps>({
   name: 'Box',
   compose: useReakitBox,
 
   useProps(_, props) {
     const style = utils.useStyle(props);
+    const htmlProps = utils.pickHTMLProps(props);
     return {
       style,
-      ...props
+      ...htmlProps
     };
   }
 });
