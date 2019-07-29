@@ -9,6 +9,7 @@ import * as utils from '../utils';
 import { StyledBox } from './styled';
 
 export type LocalBoxProps = {
+  as?: React.ComponentType<any> | string,
   children?: React.ReactNode | ((props: ReakitBoxProps) => React.ReactNode);
   overrides?: BoxThemeConfig;
 };

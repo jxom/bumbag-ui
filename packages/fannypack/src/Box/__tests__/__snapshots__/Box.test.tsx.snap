@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hook should return with box props 1`] = `
+exports[`composition as should render correctly 1`] = `
+<p>
+  Hello world
+</p>
+`;
+
+exports[`composition hook should return with box props 1`] = `
 Object {
+  "overrides": undefined,
   "style": Object {},
 }
+`;
+
+exports[`composition render props should render correctly 1`] = `
+<p>
+  Hello world
+</p>
 `;
 
 exports[`props should render correctly 1`] = `
@@ -138,5 +151,31 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
 <div
   class="c0"
   style="margin: 2rem; padding-left: 1rem;"
+/>
+`;
+
+exports[`props should render correctly with overrides 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c0 {
+  background-color: red;
+}
+
+<div
+  class="c0"
+  overrides="[object Object]"
 />
 `;

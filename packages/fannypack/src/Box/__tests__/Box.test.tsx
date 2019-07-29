@@ -33,11 +33,32 @@ describe('props', () => {
     const { container } = render(<Box fontWeight="semibold" />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly with overrides', () => {
+    const { container } = render(<Box overrides={{ base: { backgroundColor: 'red' } }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
-describe('hook', () => {
-  it('should return with box props', () => {
-    const { result } = renderHook(() => useBox())
-    expect(result.current).toMatchSnapshot();
-  })
+describe('composition', () => {
+  describe('as', () => {
+    it('should render correctly', () => {
+      const { container } = render(<Box as="p">Hello world</Box>);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
+  describe('hook', () => {
+    it('should return with box props', () => {
+      const { result } = renderHook(() => useBox())
+      expect(result.current).toMatchSnapshot();
+    });
+  });
+
+  describe('render props', () => {
+    it('should render correctly', () => {
+      const { container } = render(<Box>{boxProps => <p {...boxProps}>Hello world</p>}</Box>);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
