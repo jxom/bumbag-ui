@@ -20,9 +20,11 @@ export const useBox = createHook<BoxOptions, BoxProps>({
   compose: useReakitBox,
 
   useProps(_, props) {
+    const { overrides } = props;
     const style = utils.useStyle(props);
     const htmlProps = utils.pickHTMLProps(props);
     return {
+      overrides,
       style,
       ...htmlProps
     };
