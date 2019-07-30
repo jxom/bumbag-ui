@@ -7,7 +7,7 @@ import * as utils from '../utils';
 
 
 export type LocalBoxProps = {
-  as?: any,
+  as?: string | React.ComponentType<any>,
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   overrides?: BoxThemeConfig;
 };
@@ -24,10 +24,11 @@ export function Box(props: BoxProps) {
   const { children } = props;
   const { as, ...boxProps} = useBoxProps(props);
   if (utils.isFunction(children)) {
-    return children({ as, ...boxProps });
+    return <React.Fragment>{children({ as, ...boxProps })}</React.Fragment>;
   }
   return (
     <StyledBox
+      // @ts-ignore
       as={as !== StyledBox ? as : undefined}
       {...boxProps}
     >
