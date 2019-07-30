@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks'
-import { Box, useBox } from '../Box';
+import { Box, useBoxProps } from '../Box';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -50,7 +50,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with box props', () => {
-      const { result } = renderHook(() => useBox())
+      const { result } = renderHook(() => useBoxProps())
       expect(result.current).toMatchSnapshot();
     });
   });

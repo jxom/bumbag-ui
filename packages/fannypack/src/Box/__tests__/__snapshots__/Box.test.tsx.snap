@@ -1,20 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-<p>
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<p
+  class="c0"
+>
   Hello world
 </p>
 `;
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "overrides": undefined,
+  "as": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "componentStyle": ComponentStyle {
+      "componentId": "sc-bdVaJa",
+      "isStatic": false,
+      "lastClassName": "lhjVGL",
+      "rules": Array [
+        "
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  & {
+    ",
+        [Function],
+        ";
+  }
+",
+      ],
+    },
+    "displayName": "styled.div",
+    "foldedComponentIds": Array [],
+    "render": [Function],
+    "styledComponentId": "sc-bdVaJa",
+    "target": "div",
+    "toString": [Function],
+    "warnTooManyClasses": [Function],
+    "withComponent": [Function],
+  },
+  "overrides": Object {},
   "style": Object {},
 }
 `;
 
 exports[`composition render props should render correctly 1`] = `
-<p>
+<p
+  as=".sc-bdVaJa"
+  overrides="[object Object]"
+>
   Hello world
 </p>
 `;
@@ -176,6 +235,5 @@ exports[`props should render correctly with overrides 1`] = `
 
 <div
   class="c0"
-  overrides="[object Object]"
 />
 `;

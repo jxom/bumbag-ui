@@ -1,4 +1,5 @@
 export * from './cssProps';
+export * from './isFunction';
 export * from './palette';
 export * from './pickCSSProps';
 export * from './pickHTMLProps';
