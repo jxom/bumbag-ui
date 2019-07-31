@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { renderHook, act } from '@testing-library/react-hooks'
+import { renderHook, act } from '@testing-library/react-hooks';
 import { Box, useBoxProps } from '../Box';
 import render from '../../utils/_tests/render';
 
@@ -43,14 +43,14 @@ describe('props', () => {
 describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
-      const { container } = render(<Box as="p">Hello world</Box>);
+      const { container } = render(<Box use="p">Hello world</Box>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('hook', () => {
     it('should return with box props', () => {
-      const { result } = renderHook(() => useBoxProps())
+      const { result } = renderHook(() => useBoxProps());
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -60,5 +60,12 @@ describe('composition', () => {
       const { container } = render(<Box>{boxProps => <p {...boxProps}>Hello world</p>}</Box>);
       expect(container.firstChild).toMatchSnapshot();
     });
+  });
+});
+
+describe('theming', () => {
+  it('Box.base should render correctly', () => {
+    const { container } = render(<Box>hello world</Box>, { theme: { Box: { base: { backgroundColor: 'red' } } } });
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

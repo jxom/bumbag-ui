@@ -1,3 +1,14 @@
+import _omit from 'lodash/omit';
+import _pick from 'lodash/pick';
+
+export function pickCSSProps(props) {
+  return _pick(props, Object.keys(cssProps));
+}
+
+export function omitCSSProps(props) {
+  return _omit(props, Object.keys(cssProps));
+}
+
 export const cssProps = {
   alignContent: 'align-content',
   alignSelf: 'align-self',

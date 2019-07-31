@@ -1,43 +1,50 @@
 import * as React from 'react';
-import { BoxProps as ReakitBoxProps } from 'reakit';
+import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
 
 import styled, { theme } from '../styled';
 import { BoxThemeConfig, CSSProperties } from '../types';
 import * as utils from '../utils';
 
-
 export type LocalBoxProps = {
-  as?: string | React.ComponentType<any>,
+  use?: string | React.ComponentType<any>;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
+  /* Component-level theme overrides [Read more](TODO) */
   overrides?: BoxThemeConfig;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
 export function useBoxProps(props: BoxProps | void) {
-  const { as = undefined, overrides = {}, ...restProps } = props || {};
+  const { use = undefined, ...restProps } = props || {};
+
+  // Convert CSS props to a "style" prop & remove CSS props from DOM element.
+  // Example input:
+  // restProps = { color: 'red', backgroundColor: 'blue', isEnabled: true }
+  //
+  // Example output:
+  // style = { color: 'red', backgroundColor: 'blue' }
   const style = utils.useStyle(restProps);
-  const htmlProps = utils.pickHTMLProps(restProps);
-  return { as: as || StyledBox, overrides, style, ...htmlProps };
+
+  // Since we now have a "style" prop, let's omit CSS props from the DOM element.
+  const newProps = utils.omitCSSProps(restProps);
+
+  return { use: use || StyledBox, style, ...utils.omitCSSProps(newProps) };
 }
 
 export function Box(props: BoxProps) {
-  const { children } = props;
-  const { as, ...boxProps} = useBoxProps(props);
+  const { children, ...restProps } = props;
+  const boxProps = useBoxProps(restProps);
   if (utils.isFunction(children)) {
-    return <React.Fragment>{children({ as, ...boxProps })}</React.Fragment>;
+    return <React.Fragment>{children(boxProps)}</React.Fragment>;
   }
   return (
-    <StyledBox
-      // @ts-ignore
-      as={as !== StyledBox ? as : undefined}
-      {...boxProps}
-    >
+    <StyledBox {...boxProps} as={boxProps.use !== StyledBox ? boxProps.use : undefined}>
       {children}
     </StyledBox>
-  )
+  );
 }
 
-export const StyledBox = styled.div<BoxProps>`
+// TODO: Migrate to emotion, use shouldForwardProps
+export const StyledBox = styled(ReakitBox)<BoxProps>`
   margin: unset;
   padding: unset;
   border: unset;

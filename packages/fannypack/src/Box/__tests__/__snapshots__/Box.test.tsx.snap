@@ -25,9 +25,11 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "as": Object {
+  "style": Object {},
+  "use": Object {
     "$$typeof": Symbol(react.forward_ref),
     "attrs": Array [],
+    "compare": null,
     "componentStyle": ComponentStyle {
       "componentId": "sc-bdVaJa",
       "isStatic": false,
@@ -55,24 +57,28 @@ Object {
 ",
       ],
     },
-    "displayName": "styled.div",
+    "displayName": "Styled(Component)",
     "foldedComponentIds": Array [],
     "render": [Function],
     "styledComponentId": "sc-bdVaJa",
-    "target": "div",
+    "target": Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      },
+    },
     "toString": [Function],
     "warnTooManyClasses": [Function],
     "withComponent": [Function],
   },
-  "overrides": Object {},
-  "style": Object {},
 }
 `;
 
 exports[`composition render props should render correctly 1`] = `
 <p
-  as=".sc-bdVaJa"
-  overrides="[object Object]"
+  use=".sc-bdVaJa"
 >
   Hello world
 </p>
@@ -96,6 +102,7 @@ exports[`props should render correctly 1`] = `
 
 <div
   class="c0"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -117,8 +124,8 @@ exports[`props should render correctly with CSS props 1`] = `
 
 <div
   class="c0"
-  color="white"
   style="background-color: red; color: white;"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -140,8 +147,8 @@ exports[`props should render correctly with a color CSS prop 1`] = `
 
 <div
   class="c0"
-  color="primary"
   style="background-color: rgb(217, 217, 217); color: rgb(68, 75, 201);"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -163,8 +170,8 @@ exports[`props should render correctly with a font size CSS prop 1`] = `
 
 <div
   class="c0"
-  font-size="400"
   style="font-size: 1.5rem;"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -186,8 +193,8 @@ exports[`props should render correctly with a font weight CSS prop 1`] = `
 
 <div
   class="c0"
-  font-weight="semibold"
   style="font-weight: 600;"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -210,6 +217,7 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
 <div
   class="c0"
   style="margin: 2rem; padding-left: 1rem;"
+  use=".sc-bdVaJa"
 />
 `;
 
@@ -235,5 +243,35 @@ exports[`props should render correctly with overrides 1`] = `
 
 <div
   class="c0"
+  overrides="[object Object]"
+  use=".sc-bdVaJa"
 />
+`;
+
+exports[`theming Box.base should render correctly 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.c0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.c0 {
+  background-color: red;
+}
+
+<div
+  class="c0"
+  use=".sc-bdVaJa"
+>
+  hello world
+</div>
 `;

@@ -3,7 +3,7 @@ import _get from 'lodash/get';
 
 import { ThemeContext, space } from '../styled';
 
-import { pickCSSProps } from './pickCSSProps';
+import { pickCSSProps } from './cssProps';
 
 const colorAttributes = [
   'color',
@@ -78,9 +78,10 @@ function getFontWeightValue({ theme, value }) {
 export function useStyle(props) {
   const theme = React.useContext(ThemeContext);
   const cssProps = pickCSSProps(props);
-  let styleProps = { ...cssProps };
-  if (styleProps) {
-    styleProps = Object.entries(styleProps).reduce((prevStyleProps, [attribute, value]) => {
+
+  let style = { ...cssProps };
+  if (style) {
+    style = Object.entries(style).reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
       if (colorAttributes.includes(attribute)) {
         newValue = getColorValue({ theme, value });
@@ -94,8 +95,9 @@ export function useStyle(props) {
       if (fontWeightAttributes.includes(attribute)) {
         newValue = getFontWeightValue({ theme, value });
       }
-      return { ...prevStyleProps, [attribute]: newValue };
-    }, styleProps);
+      return { ...prevStyle, [attribute]: newValue };
+    }, style);
   }
-  return styleProps;
+
+  return style;
 }

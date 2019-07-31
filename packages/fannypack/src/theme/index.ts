@@ -7,6 +7,7 @@ import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
 export default (overrides: ThemeConfig = {}) => ({
+  ...overrides,
   fontSizes: fontSizes(overrides.fontSizes || {}),
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
