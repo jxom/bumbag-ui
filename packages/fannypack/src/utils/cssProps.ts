@@ -1,6 +1,10 @@
 import _omit from 'lodash/omit';
 import _pick from 'lodash/pick';
 
+export function isCSSProp(prop) {
+  return Object.keys(cssProps).includes(prop);
+}
+
 export function pickCSSProps(props) {
   return _pick(props, Object.keys(cssProps));
 }

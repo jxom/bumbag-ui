@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
+import isPropValid from '@emotion/is-prop-valid';
 
 import styled, { theme } from '../styled';
 import { BoxThemeConfig, CSSProperties } from '../types';
@@ -24,10 +25,7 @@ export function useBoxProps(props: BoxProps | void) {
   // style = { color: 'red', backgroundColor: 'blue' }
   const style = utils.useStyle(restProps);
 
-  // Since we now have a "style" prop, let's omit CSS props from the DOM element.
-  const newProps = utils.omitCSSProps(restProps);
-
-  return { use: use || StyledBox, style, ...utils.omitCSSProps(newProps) };
+  return { use: use || StyledBox, style, ...restProps };
 }
 
 export function Box(props: BoxProps) {
@@ -43,8 +41,9 @@ export function Box(props: BoxProps) {
   );
 }
 
-// TODO: Migrate to emotion, use shouldForwardProps
-export const StyledBox = styled(ReakitBox)<BoxProps>`
+export const StyledBox = styled(ReakitBox, {
+  shouldForwardProp: prop => isPropValid(prop) && !utils.isCSSProp(prop) && prop !== 'style'
+})<BoxProps>`
   margin: unset;
   padding: unset;
   border: unset;
@@ -60,5 +59,9 @@ export const StyledBox = styled(ReakitBox)<BoxProps>`
 
   & {
     ${theme('Box.base')};
+  }
+
+  && {
+    ${(props: any) => props && props.style};
   }
 `;

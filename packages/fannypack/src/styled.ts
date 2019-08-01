@@ -2,20 +2,9 @@ import { theme as _theme } from 'styled-tools';
 import _get from 'lodash/get';
 import { ThemeConfig } from './types';
 
-export {
-  default,
-  default as styled,
-  css,
-  withTheme,
-  ThemeProvider,
-  ThemeContext,
-  ThemeConsumer,
-  keyframes,
-  createGlobalStyle,
-  isStyledComponent,
-  ServerStyleSheet,
-  StyleSheetManager
-} from 'styled-components';
+export { default, default as styled } from '@emotion/styled';
+export { css, keyframes, Global, ThemeContext } from '@emotion/core';
+export { withTheme, ThemeProvider } from 'emotion-theming';
 export { palette } from 'styled-tools';
 
 export function theme(selector: string) {

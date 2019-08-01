@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,12 +12,12 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
 <p
-  class="c0"
+  class="emotion-0"
 >
   Hello world
 </p>
@@ -28,14 +28,18 @@ Object {
   "style": Object {},
   "use": Object {
     "$$typeof": Symbol(react.forward_ref),
-    "attrs": Array [],
-    "compare": null,
-    "componentStyle": ComponentStyle {
-      "componentId": "sc-bdVaJa",
-      "isStatic": false,
-      "lastClassName": "lhjVGL",
-      "rules": Array [
-        "
+    "__emotion_base": Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      },
+    },
+    "__emotion_forwardProp": [Function],
+    "__emotion_real": [Circular],
+    "__emotion_styles": Array [
+      "
   margin: unset;
   padding: unset;
   border: unset;
@@ -51,26 +55,20 @@ Object {
 
   & {
     ",
-        [Function],
-        ";
+      [Function],
+      ";
+  }
+
+  && {
+    ",
+      [Function],
+      ";
   }
 ",
-      ],
-    },
+    ],
+    "defaultProps": undefined,
     "displayName": "Styled(Component)",
-    "foldedComponentIds": Array [],
     "render": [Function],
-    "styledComponentId": "sc-bdVaJa",
-    "target": Object {
-      "$$typeof": Symbol(react.memo),
-      "compare": null,
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "render": [Function],
-      },
-    },
-    "toString": [Function],
-    "warnTooManyClasses": [Function],
     "withComponent": [Function],
   },
 }
@@ -78,14 +76,14 @@ Object {
 
 exports[`composition render props should render correctly 1`] = `
 <p
-  use=".sc-bdVaJa"
+  use="NO_COMPONENT_SELECTOR"
 >
   Hello world
 </p>
 `;
 
 exports[`props should render correctly 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -96,18 +94,17 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
 <div
-  class="c0"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -118,19 +115,22 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-0.emotion-0 {
+  background-color: red;
+  color: white;
+}
+
 <div
-  class="c0"
-  style="background-color: red; color: white;"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with a color CSS prop 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -141,19 +141,22 @@ exports[`props should render correctly with a color CSS prop 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-0.emotion-0 {
+  background-color: #d9d9d9;
+  color: #444bc9;
+}
+
 <div
-  class="c0"
-  style="background-color: rgb(217, 217, 217); color: rgb(68, 75, 201);"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with a font size CSS prop 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -164,19 +167,21 @@ exports[`props should render correctly with a font size CSS prop 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-0.emotion-0 {
+  font-size: 1.5rem;
+}
+
 <div
-  class="c0"
-  style="font-size: 1.5rem;"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with a font weight CSS prop 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -187,19 +192,21 @@ exports[`props should render correctly with a font weight CSS prop 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-0.emotion-0 {
+  font-weight: 600;
+}
+
 <div
-  class="c0"
-  style="font-weight: 600;"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with a spacing CSS prop 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -210,19 +217,22 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-0.emotion-0 {
+  margin: 2rem;
+  padding-left: 1rem;
+}
+
 <div
-  class="c0"
-  style="margin: 2rem; padding-left: 1rem;"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`props should render correctly with overrides 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -233,23 +243,21 @@ exports[`props should render correctly with overrides 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c0 {
+.emotion-0 {
   background-color: red;
 }
 
 <div
-  class="c0"
-  overrides="[object Object]"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 />
 `;
 
 exports[`theming Box.base should render correctly 1`] = `
-.c0 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -260,17 +268,16 @@ exports[`theming Box.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c0:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.c0 {
+.emotion-0 {
   background-color: red;
 }
 
 <div
-  class="c0"
-  use=".sc-bdVaJa"
+  class="emotion-0"
 >
   hello world
 </div>

@@ -1,6 +1,4 @@
-import { SimpleInterpolation } from 'styled-components';
-
-export type Stylesheet = SimpleInterpolation;
+export type Stylesheet = any; // TODO: fix
 
 export type GlobalThemeConfig = {
   base?: Stylesheet;
