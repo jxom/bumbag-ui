@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
-import isPropValid from '@emotion/is-prop-valid';
+import _get from 'lodash/get';
 
-import styled, { theme } from '../styled';
+import { ThemeContext, theme, classNames, cssClass } from '../styled';
 import { BoxThemeConfig, CSSProperties } from '../types';
 import * as utils from '../utils';
 
@@ -14,18 +14,23 @@ export type LocalBoxProps = {
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
-export function useBoxProps(props: BoxProps | void) {
-  const { use = undefined, ...restProps } = props || {};
-
-  // Convert CSS props to a "style" prop & remove CSS props from DOM element.
+export function useBoxProps(props: BoxProps = {}) {
+  // Convert CSS props to an object.
   // Example input:
   // restProps = { color: 'red', backgroundColor: 'blue', isEnabled: true }
   //
   // Example output:
   // style = { color: 'red', backgroundColor: 'blue' }
-  const style = utils.useStyle(restProps);
+  const style = utils.useStyle(props);
 
-  return { use: use || StyledBox, style, ...restProps };
+  // Append the <Box> styles as a className on the DOM element.
+  const theme = React.useContext(ThemeContext);
+  const className = classNames(boxCSS({ style, theme, ...props }), props.className);
+
+  // Pick out and invalid HTML props & omit the CSS props.
+  const htmlProps = utils.omitCSSProps(utils.pickHTMLProps({ ...props, className }));
+
+  return { ...htmlProps, as: props.use };
 }
 
 export function Box(props: BoxProps) {
@@ -34,16 +39,10 @@ export function Box(props: BoxProps) {
   if (utils.isFunction(children)) {
     return <React.Fragment>{children(boxProps)}</React.Fragment>;
   }
-  return (
-    <StyledBox {...boxProps} as={boxProps.use !== StyledBox ? boxProps.use : undefined}>
-      {children}
-    </StyledBox>
-  );
+  return <ReakitBox {...boxProps}>{children}</ReakitBox>;
 }
 
-export const StyledBox = styled(ReakitBox, {
-  shouldForwardProp: prop => isPropValid(prop) && !utils.isCSSProp(prop) && prop !== 'style'
-})<BoxProps>`
+export const boxCSS = (props) => cssClass`
   margin: unset;
   padding: unset;
   border: unset;
@@ -58,10 +57,10 @@ export const StyledBox = styled(ReakitBox, {
   }
 
   & {
-    ${theme('Box.base')};
+    ${theme('Box.base')(props)};
   }
 
   && {
-    ${(props: any) => props && props.style};
+    ${props.style};
   }
 `;

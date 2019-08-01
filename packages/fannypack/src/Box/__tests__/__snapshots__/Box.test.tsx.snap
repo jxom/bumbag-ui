@@ -25,21 +25,13 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "style": Object {},
-  "use": Object {
-    "$$typeof": Symbol(react.forward_ref),
-    "__emotion_base": Object {
-      "$$typeof": Symbol(react.memo),
-      "compare": null,
-      "type": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "render": [Function],
-      },
-    },
-    "__emotion_forwardProp": [Function],
-    "__emotion_real": [Circular],
-    "__emotion_styles": Array [
-      "
+  "as": undefined,
+  "className": "css-1djzleh",
+}
+`;
+
+exports[`composition render props should render correctly 1`] = `
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -48,35 +40,14 @@ Object {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  & {
-    ",
-      [Function],
-      ";
-  }
-
-  && {
-    ",
-      [Function],
-      ";
-  }
-",
-    ],
-    "defaultProps": undefined,
-    "displayName": "Styled(Component)",
-    "render": [Function],
-    "withComponent": [Function],
-  },
 }
-`;
 
-exports[`composition render props should render correctly 1`] = `
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
 <p
-  use="NO_COMPONENT_SELECTOR"
+  class="emotion-0"
 >
   Hello world
 </p>
