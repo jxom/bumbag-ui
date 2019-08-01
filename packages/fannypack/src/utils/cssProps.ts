@@ -422,7 +422,6 @@ export const cssProps = {
   shapeInside: 'shape-inside',
   shapeMargin: 'shape-margin',
   shapeOutside: 'shape-outside',
-  size: 'size',
   speak: 'speak',
   speakAs: 'speak-as',
   speakHeader: 'speak-header',

@@ -1,0 +1,187 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Button } from 'fannypack/Button/Button';
+
+# Button
+
+```js
+import { Button } from 'fannypack';
+```
+
+## Basic usage
+
+```jsx-live
+<Button>Default</Button>
+```
+
+## Custom elements
+
+Button, by default, renders a `<button>` element.
+However, you are able to change it to a custom element using the `as` prop. See more [here](https://reakit.io/components/button).
+
+```jsx-live
+<Box>
+  <Button>Default</Button>
+  <Button use="a" href="#">
+    Anchor
+  </Button>
+</Box>
+```
+
+## Colors
+
+Colors can be added to a button with the `palette` prop.
+
+```jsx-live
+<Box>
+  <Button>Default</Button>
+  <Button palette="primary">Primary</Button>
+  <Button palette="secondary">Secondary</Button>
+  <Button palette="success">Success</Button>
+  <Button palette="danger">Danger</Button>
+  <Button palette="warning">Warning</Button>
+</Box>
+```
+
+## Icons
+
+You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
+
+**Note:** To use button icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
+
+```jsx-live
+TODO
+```
+
+## Loading
+
+To indicate a button is loading, use the `isLoading` prop.
+
+```jsx-live
+TODO
+```
+
+## Outlines
+
+An outline can be placed on a button by assigning `"outlined"` to the `kind` prop.
+
+```jsx-live
+<Box>
+  <Button palette="primary" kind="outlined">
+    Primary
+  </Button>
+  <Button palette="secondary" kind="outlined">
+    Secondary
+  </Button>
+  <Button palette="success" kind="outlined">
+    Success
+  </Button>
+  <Button palette="danger" kind="outlined">
+    Danger
+  </Button>
+</Box>
+```
+
+## Ghost
+
+To have a button of minimal appearence, use the assign `"ghost"` to the `kind` prop.
+
+```jsx-live
+<Box>
+  <Button kind="ghost">Default</Button>
+  <Button palette="primary" kind="ghost">
+    Primary
+  </Button>
+  <Button palette="success" kind="ghost">
+    Success
+  </Button>
+  <Button palette="danger" kind="ghost">
+    Danger
+  </Button>
+  <Button palette="warning" kind="ghost">
+    Warning
+  </Button>
+</Box>
+```
+
+## Sizes
+
+Buttons are available in four different sizes and can be added with a `size` prop.
+
+```jsx-live
+<Box>
+  <Button size="small">Small</Button>
+  <Button>Default</Button>
+  <Button size="medium">Medium</Button>
+  <Button size="large">Large</Button>
+</Box>
+```
+
+## Links
+
+A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
+
+```jsx-live
+<Button palette="primary" kind="link">
+  Default
+</Button>
+```
+
+## Static
+
+To make a button non-interactable, add the `isStatic` prop.
+
+```jsx-live
+<Button isStatic>Static</Button>
+```
+
+## Disabled
+
+To indicate a button as disabled, use the `disabled` prop.
+
+```jsx-live
+<Box>
+  <Button disabled>Default</Button>
+  <Button palette="primary" disabled>
+    Primary
+  </Button>
+  <Button palette="success" disabled>
+    Success
+  </Button>
+  <Button palette="danger" disabled>
+    Danger
+  </Button>
+  <Button palette="warning" disabled>
+    Warning
+  </Button>
+</Box>
+```
+
+## Sets
+
+To display a set of buttons, use the [`<Set>` component](/components/set).
+
+```jsx-live
+TODO
+```
+
+## Group
+
+To group a set of buttons together, use the `<Group>` component.
+
+```jsx-live
+TODO
+```
+
+
+# Props
+
+<PropTypes component={Button}/>
+
+# Theming
+
+<Theme element={<Button>Default</Button>} keys={['Button.base', 'Button.focus', 'Button.sizes.small', 'Button.sizes.default', 'Button.sizes.medium', 'Button.sizes.large']} />
+
+
+
+

@@ -2,16 +2,20 @@ import { theme as _theme } from 'styled-tools';
 import _get from 'lodash/get';
 import { ThemeConfig } from './types';
 
+export { default as classNames } from 'classnames';
 export { default, default as styled } from '@emotion/styled';
-export { css as cssClass, cx as classNames } from 'emotion';
+export { css as cssClass } from 'emotion';
 export { css, keyframes, Global, ThemeContext } from '@emotion/core';
 export { withTheme, ThemeProvider } from 'emotion-theming';
 export { palette } from 'styled-tools';
 
 export function theme(selector: string) {
   return (props: any) => {
-    const localSelector = selector.replace(/^.*\./, '');
-    return props.overrides ? props.overrides[localSelector] : _theme(selector)(props);
+    const localSelector = selector
+      .split('.')
+      .slice(1)
+      .join('.');
+    return _get(props, `overrides.${localSelector}`) || _theme(selector)(props);
   };
 }
 

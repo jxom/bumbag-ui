@@ -27,6 +27,16 @@ export type PaletteThemeConfig = {
 export type BoxThemeConfig = {
   base?: Stylesheet;
 };
+export type ButtonThemeConfig = {
+  base?: Stylesheet;
+  focus?: Stylesheet;
+  sizes?: {
+    small?: Stylesheet;
+    default?: Stylesheet;
+    medium?: Stylesheet;
+    large?: Stylesheet;
+  };
+};
 
 export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
@@ -36,4 +46,5 @@ export type ThemeConfig = {
   palette?: PaletteThemeConfig;
 
   Box?: BoxThemeConfig;
+  Button?: ButtonThemeConfig;
 };

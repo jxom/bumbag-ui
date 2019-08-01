@@ -2,9 +2,10 @@ import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
 import _get from 'lodash/get';
 
-import { ThemeContext, theme, classNames, cssClass } from '../styled';
 import { BoxThemeConfig, CSSProperties } from '../types';
 import * as utils from '../utils';
+
+import * as styles from './styles';
 
 export type LocalBoxProps = {
   use?: string | React.ComponentType<any>;
@@ -23,9 +24,9 @@ export function useBoxProps(props: BoxProps = {}) {
   // style = { color: 'red', backgroundColor: 'blue' }
   const style = utils.useStyle(props);
 
-  // Append the <Box> styles as a className on the DOM element.
-  const theme = React.useContext(ThemeContext);
-  const className = classNames(boxCSS({ style, theme, ...props }), props.className);
+  // Append the Box styles as a className on the DOM element.
+  let className = utils.useClassName({ style: styles.style, styleProps: { style } });
+  className = utils.useClassName({ style: styles.Box, styleProps: props, prevClassName: className });
 
   // Pick out and invalid HTML props & omit the CSS props.
   const htmlProps = utils.omitCSSProps(utils.pickHTMLProps({ ...props, className }));
@@ -41,26 +42,3 @@ export function Box(props: BoxProps) {
   }
   return <ReakitBox {...boxProps}>{children}</ReakitBox>;
 }
-
-export const boxCSS = (props) => cssClass`
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  & {
-    ${theme('Box.base')(props)};
-  }
-
-  && {
-    ${props.style};
-  }
-`;

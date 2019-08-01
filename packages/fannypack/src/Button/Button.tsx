@@ -1,17 +1,32 @@
 import * as React from 'react';
 import { Button as ReakitButton } from 'reakit';
 
-import styled, { theme } from '../styled';
 import * as utils from '../utils';
-import { Box, BoxProps, useBoxProps } from '../Box';
+import { BoxProps, useBoxProps } from '../Box';
 
-export type LocalButtonProps = {};
+import * as styles from './styles';
+import { ButtonThemeConfig } from '../types';
+
+export type LocalButtonProps = {
+  overrides?: ButtonThemeConfig;
+  palette: string;
+  size: 'small' | 'default' | 'medium' | 'large';
+};
 export type ButtonProps = BoxProps & LocalButtonProps;
 
-export function useButtonProps(props: ButtonProps | void) {
-  const { use = undefined, ...restProps } = props || {};
-  const boxProps = useBoxProps(restProps);
-  return { ...boxProps, use: use || StyledButton };
+Button.defaultProps = {
+  palette: 'default',
+  size: 'default'
+};
+
+export function useButtonProps(props: Partial<ButtonProps> = {}) {
+  const { className: prevClassName, ...newProps } = useBoxProps(props);
+  const className = utils.useClassName({
+    style: styles.Button,
+    styleProps: props,
+    prevClassName
+  });
+  return { ...newProps, className };
 }
 
 export function Button(props: ButtonProps) {
@@ -20,15 +35,5 @@ export function Button(props: ButtonProps) {
   if (utils.isFunction(children)) {
     return <React.Fragment>{children(buttonProps)}</React.Fragment>;
   }
-  return (
-    <StyledButton {...buttonProps} use={buttonProps.use !== StyledButton ? buttonProps.use : ReakitButton}>
-      {children}
-    </StyledButton>
-  );
+  return <ReakitButton {...buttonProps}>{children}</ReakitButton>;
 }
-
-export const StyledButton = styled(Box)<ButtonProps>`
-  & {
-    ${theme('Button.base')};
-  }
-`;
