@@ -68,4 +68,11 @@ describe('theming', () => {
     const { container } = render(<Box>hello world</Box>, { theme: { Box: { base: { backgroundColor: 'red' } } } });
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('Box.base should render correctly', () => {
+    const { container } = render(<Box color="green">hello world</Box>, {
+      theme: { Box: { base: props => ({ backgroundColor: props.color }) } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

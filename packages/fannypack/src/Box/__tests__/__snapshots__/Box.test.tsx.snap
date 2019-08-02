@@ -252,3 +252,34 @@ exports[`theming Box.base should render correctly 1`] = `
   hello world
 </div>
 `;
+
+exports[`theming Box.base should render correctly 2`] = `
+.emotion-1.emotion-1 {
+  color: green;
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: green;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  hello world
+</div>
+`;

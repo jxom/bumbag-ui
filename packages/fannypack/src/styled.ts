@@ -1,6 +1,7 @@
 import { theme as _theme } from 'styled-tools';
 import _get from 'lodash/get';
 import { ThemeConfig } from './types';
+import { isFunction } from './utils';
 
 export { default as classNames } from 'classnames';
 export { default, default as styled } from '@emotion/styled';
@@ -15,7 +16,11 @@ export function theme(selector: string) {
       .split('.')
       .slice(1)
       .join('.');
-    return _get(props, `overrides.${localSelector}`) || _theme(selector)(props);
+    const theme = _get(props, `overrides.${localSelector}`) || _theme(selector)(props);
+    if (isFunction(theme)) {
+      return theme(props);
+    }
+    return theme;
   };
 }
 
