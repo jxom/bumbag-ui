@@ -35,12 +35,9 @@ export function useButtonProps(props: Partial<ButtonProps> = {}) {
 export function Button(props: ButtonProps) {
   const { use, children, ...restProps } = props;
   const buttonProps = useButtonProps(restProps);
-  if (utils.isFunction(children)) {
-    return <React.Fragment>{children(buttonProps)}</React.Fragment>;
-  }
   return (
-    <ReakitButton as={use} {...buttonProps}>
+    <utils.Element component={ReakitButton} use={use} htmlProps={buttonProps}>
       {children}
-    </ReakitButton>
+    </utils.Element>
   );
 }

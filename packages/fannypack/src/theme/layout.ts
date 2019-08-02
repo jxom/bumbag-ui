@@ -1,11 +1,10 @@
 // @ts-ignore
 import _get from 'lodash/get';
 
-import { space } from '../styled';
 import { LayoutThemeConfig } from '../types';
 
 export default (overrides: LayoutThemeConfig) => ({
-  gapFactor: space(2),
+  gapFactor: 8,
   mobileBreakpoint: 480,
   tabletBreakpoint: 768,
   desktopBreakpoint: 1024,

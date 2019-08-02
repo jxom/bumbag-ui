@@ -37,12 +37,9 @@ export function useBoxProps(props: BoxProps = {}) {
 export function Box(props: BoxProps) {
   const { children, use, ...restProps } = props;
   const boxProps = useBoxProps(restProps);
-  if (utils.isFunction(children)) {
-    return <React.Fragment>{children(boxProps)}</React.Fragment>;
-  }
   return (
-    <ReakitBox as={use} {...boxProps}>
+    <utils.Element component={ReakitBox} use={use} htmlProps={boxProps}>
       {children}
-    </ReakitBox>
+    </utils.Element>
   );
 }
