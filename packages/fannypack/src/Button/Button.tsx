@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button as ReakitButton } from 'reakit';
+import { Button as ReakitButton, useButton as useReakitButton } from 'reakit';
 
 import * as utils from '../utils';
 import { BoxProps, useBoxProps } from '../Box';
@@ -20,20 +20,27 @@ Button.defaultProps = {
 };
 
 export function useButtonProps(props: Partial<ButtonProps> = {}) {
-  const { className: prevClassName, ...newProps } = useBoxProps(props);
+  const boxProps = useBoxProps(props);
+  const buttonProps = useReakitButton(props);
+
   const className = utils.useClassName({
     style: styles.Button,
     styleProps: props,
-    prevClassName
+    prevClassName: boxProps.className
   });
-  return { ...newProps, className };
+
+  return { ...boxProps, ...buttonProps, className };
 }
 
 export function Button(props: ButtonProps) {
-  const { children, ...restProps } = props;
+  const { use, children, ...restProps } = props;
   const buttonProps = useButtonProps(restProps);
   if (utils.isFunction(children)) {
     return <React.Fragment>{children(buttonProps)}</React.Fragment>;
   }
-  return <ReakitButton {...buttonProps}>{children}</ReakitButton>;
+  return (
+    <ReakitButton as={use} {...buttonProps}>
+      {children}
+    </ReakitButton>
+  );
 }

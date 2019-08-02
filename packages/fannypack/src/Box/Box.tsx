@@ -31,14 +31,18 @@ export function useBoxProps(props: BoxProps = {}) {
   // Pick out and invalid HTML props & omit the CSS props.
   const htmlProps = utils.omitCSSProps(utils.pickHTMLProps({ ...props, className }));
 
-  return { ...htmlProps, as: props.use };
+  return { ...htmlProps };
 }
 
 export function Box(props: BoxProps) {
-  const { children, ...restProps } = props;
+  const { children, use, ...restProps } = props;
   const boxProps = useBoxProps(restProps);
   if (utils.isFunction(children)) {
     return <React.Fragment>{children(boxProps)}</React.Fragment>;
   }
-  return <ReakitBox {...boxProps}>{children}</ReakitBox>;
+  return (
+    <ReakitBox as={use} {...boxProps}>
+      {children}
+    </ReakitBox>
+  );
 }
