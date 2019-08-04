@@ -17,7 +17,7 @@ const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;
   padding: 1.5em;
   margin: 0;
-  background-color: ${palette('white700')};
+  background-color: ${palette('black')};
   overflow-x: auto;
   outline: none;
 `;

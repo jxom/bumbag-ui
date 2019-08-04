@@ -170,20 +170,32 @@ TODO
 To group a set of buttons together, use the `<Group>` component.
 
 ```jsx-live
-TODO
+TODOs
 ```
-
 
 # Props
 
-<PropTypes component={Button}/>
+<PropTypes component={Button} />
 
 # Theming
 
-<Theme component={Button} overrides={['Button.base', 'Button.focus', 'Button.sizes.small', 'Button.sizes.default', 'Button.sizes.medium', 'Button.sizes.large']}>
+<Theme
+  component={Button}
+  overrides={[
+    'Button.base',
+    { key: 'Button.disabled', props: { disabled: true } },
+    'Button.focus',
+    'Button.hover',
+    'Button.hoveractive',
+    { key: 'Button.ghost', props: { kind: "ghost" } },
+    { key: 'Button.link', props: { kind: "link" } },
+    { key: 'Button.outlined', props: { kind: "outlined" } },
+    { key: 'Button.static', props: { isStatic: true } },
+    { key: 'Button.sizes.small', props: { size: 'small' } },
+    'Button.sizes.default',
+    { key: 'Button.sizes.medium', props: { size: 'medium' } },
+    { key: 'Button.sizes.large', props: { size: 'large' } },
+  ]}
+>
   Hello world
 </Theme>
-
-
-
-
