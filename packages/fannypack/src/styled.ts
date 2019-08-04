@@ -8,19 +8,25 @@ export { default, default as styled } from '@emotion/styled';
 export { css as cssClass } from 'emotion';
 export { css, keyframes, Global, ThemeContext } from '@emotion/core';
 export { withTheme, ThemeProvider } from 'emotion-theming';
-export { palette } from 'styled-tools';
 
-export function theme(selector: string) {
-  return (props: any) => {
+export function theme(selector: string, defaultValue?: any) {
+  return (props: { theme: ThemeConfig }) => {
     const localSelector = selector
       .split('.')
       .slice(1)
       .join('.');
-    const theme = _get(props, `overrides.${localSelector}`) || _theme(selector)(props);
+    const theme = _get(props, `overrides.${localSelector}`) || _get(props, `theme.${selector}`, defaultValue);
     if (isFunction(theme)) {
       return theme(props);
     }
     return theme;
+  };
+}
+
+export function palette(selector?: string, defaultValue?: any) {
+  return (props: { palette: string; theme: ThemeConfig }) => {
+    // TODO: error when no palette key found.
+    return theme(`palette.${selector || props.palette}`, defaultValue || 'red')(props);
   };
 }
 

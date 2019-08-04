@@ -3,8 +3,7 @@ import Props from 'pretty-proptypes';
 import { cssProps } from 'fannypack';
 
 export default function PropsTypes(props) {
-  const overrides = React.useMemo((test) => {
-    console.log(test);
+  const overrides = React.useMemo(() => {
     return Object.keys(cssProps).reduce((currentOverrrides, cssAttribute) => {
       return {
         ...currentOverrrides,

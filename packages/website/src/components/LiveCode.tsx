@@ -11,7 +11,7 @@ import {
   LivePreview as _LivePreview
 } from 'react-live';
 import * as fannypack from 'fannypack';
-import { Box, palette, styled } from 'fannypack';
+import { palette, styled } from 'fannypack';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: Menlo, monospace;

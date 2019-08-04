@@ -20,8 +20,8 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <MDXProvider components={components}>
-      <fannypack.Provider>{children}</fannypack.Provider>
-    </MDXProvider>
+    <fannypack.Provider>
+      <MDXProvider components={components}>{children}</MDXProvider>
+    </fannypack.Provider>
   );
 }

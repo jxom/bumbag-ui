@@ -46,13 +46,29 @@ exports[`composition as should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <div
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   role="button"
   tabindex="0"
@@ -65,7 +81,7 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Button props 1`] = `
 Object {
   "aria-disabled": undefined,
-  "className": "css-1l676rk css-1pwrqjj css-1j9m13w",
+  "className": "css-1xahwpn css-1pwrqjj css-1j9m13w",
   "disabled": undefined,
   "onClick": [Function],
   "onKeyDown": [Function],
@@ -124,13 +140,29 @@ exports[`composition render props should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <div
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   role="button"
   tabindex="0"
@@ -138,6 +170,1630 @@ exports[`composition render props should render correctly 1`] = `
 >
   Hello world
 </div>
+`;
+
+exports[`props disabled should render a disabled button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+<button
+  aria-disabled="true"
+  class="emotion-0 emotion-1 emotion-2"
+  disabled=""
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props disabled should render correctly with overrides 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0[disabled] {
+  background-color: red;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+<button
+  aria-disabled="true"
+  class="emotion-0 emotion-1 emotion-2"
+  disabled=""
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props iconAfter should render a button with an icon correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props iconBefore should render a button with an icon correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props isLoading should render a loading button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props isLoading should render correctly with overrides 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props isStatic should render a static button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: default;
+  outline: unset;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props isStatic should render correctly with overrides 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: default;
+  outline: unset;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render a ghost button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: unset;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="ghost"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render a link button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  border: 0;
+  background: unset;
+  color: #435a6f;
+  fill: #435a6f;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: #000;
+  fill: #000;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="link"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render a outlined button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: 1px solid #fcfcfc;
+  color: #fcfcfc;
+  fill: #fcfcfc;
+}
+
+.emotion-0:hover {
+  background-color: #fcfcfc;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="outlined"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render correctly with overrides 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: 1px solid #fcfcfc;
+  color: #fcfcfc;
+  fill: #fcfcfc;
+}
+
+.emotion-0:hover {
+  background-color: #fcfcfc;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="outlined"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render correctly with overrides 2`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: unset;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="ghost"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props kind should render correctly with overrides 3`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  border: 0;
+  background: unset;
+  color: #435a6f;
+  fill: #435a6f;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: #000;
+  fill: #000;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="link"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a danger button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #c9444d;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #d97c82 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #bd3740;
+}
+
+.emotion-0:hover:active {
+  background-color: #a93139;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a info button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #35709e;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #719abb 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #2f628b;
+}
+
+.emotion-0:hover:active {
+  background-color: #285578;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a primary button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #444bc9;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #7c81d9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #373ebd;
+}
+
+.emotion-0:hover:active {
+  background-color: #3137a9;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a secondary button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #793fb2;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #a178c9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #6c389f;
+}
+
+.emotion-0:hover:active {
+  background-color: #5f328c;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a success button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #2c8453;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #6ba886 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #267147;
+}
+
+.emotion-0:hover:active {
+  background-color: #1f5e3b;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props palette should render a warning button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f2a100;
+  border-radius: 4px;
+  color: #000;
+  fill: #000;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #f5bd4c 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #d99000;
+}
+
+.emotion-0:hover:active {
+  background-color: #bf7f00;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
 `;
 
 exports[`props should render correctly 1`] = `
@@ -186,13 +1842,29 @@ exports[`props should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -247,10 +1919,25 @@ exports[`props should render correctly with CSS props 1`] = `
   border: 1px solid #b3b3b3;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
 }
 
 .emotion-2.emotion-2 {
@@ -259,6 +1946,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -321,13 +2009,29 @@ exports[`props should render correctly with overrides 1`] = `
   background-color: red;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -336,7 +2040,7 @@ exports[`props should render correctly with overrides 1`] = `
 </button>
 `;
 
-exports[`props sizes should render a default button (no size) correctly 1`] = `
+exports[`props size should render a default button correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -382,13 +2086,29 @@ exports[`props sizes should render a default button (no size) correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #444bc9 0px 0px 0px 2px;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -397,7 +2117,7 @@ exports[`props sizes should render a default button (no size) correctly 1`] = `
 </button>
 `;
 
-exports[`props sizes should render a large button correctly 1`] = `
+exports[`props size should render a large button correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -441,6 +2161,13 @@ exports[`props sizes should render a large button correctly 1`] = `
   -ms-hyphens: auto;
   hyphens: auto;
   border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
 .emotion-0:focus {
@@ -455,7 +2182,16 @@ exports[`props sizes should render a large button correctly 1`] = `
   padding: 0 1.5rem;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -464,7 +2200,7 @@ exports[`props sizes should render a large button correctly 1`] = `
 </button>
 `;
 
-exports[`props sizes should render a medium button correctly 1`] = `
+exports[`props size should render a medium button correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -508,6 +2244,13 @@ exports[`props sizes should render a medium button correctly 1`] = `
   -ms-hyphens: auto;
   hyphens: auto;
   border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
 .emotion-0:focus {
@@ -521,7 +2264,16 @@ exports[`props sizes should render a medium button correctly 1`] = `
   padding: 0 1.25rem;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -530,7 +2282,7 @@ exports[`props sizes should render a medium button correctly 1`] = `
 </button>
 `;
 
-exports[`props sizes should render a small button correctly 1`] = `
+exports[`props size should render a small button correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -574,6 +2326,13 @@ exports[`props sizes should render a small button correctly 1`] = `
   -ms-hyphens: auto;
   hyphens: auto;
   border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
 .emotion-0:focus {
@@ -588,7 +2347,16 @@ exports[`props sizes should render a small button correctly 1`] = `
   padding: 0 0.5rem;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -597,7 +2365,7 @@ exports[`props sizes should render a small button correctly 1`] = `
 </button>
 `;
 
-exports[`props sizes should render correctly with overrides 1`] = `
+exports[`props size should render correctly with overrides 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -641,6 +2409,13 @@ exports[`props sizes should render correctly with overrides 1`] = `
   -ms-hyphens: auto;
   hyphens: auto;
   border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
 }
 
 .emotion-0:focus {
@@ -659,7 +2434,501 @@ exports[`props sizes should render correctly with overrides 1`] = `
   background-color: red;
 }
 
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
 <button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props size should render correctly with overrides 2`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props size should render correctly with overrides 3`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  min-height: 3em;
+  padding: 0 1.25rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props size should render correctly with overrides 4`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  font-size: 1.25em;
+  min-height: 3em;
+  padding: 0 1.5rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props type should render a button button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props type should render a reset button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
+exports[`props type should render a submit button correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
@@ -718,6 +2987,98 @@ exports[`theming Button.base should render correctly 1`] = `
   background-color: red;
 }
 
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0[disabled] {
+  background-color: red;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.disabled should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0[disabled] {
+  background-color: red;
+}
+
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -725,6 +3086,1030 @@ exports[`theming Button.base should render correctly 1`] = `
 }
 
 <button
+  aria-disabled="true"
+  class="emotion-0 emotion-1 emotion-2"
+  disabled=""
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.focus should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.ghost should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: unset;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="ghost"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.hover should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover {
+  background-color: red;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.hoveractive should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0:hover:active {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.link should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  border: 0;
+  background: unset;
+  color: #435a6f;
+  fill: #435a6f;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: #000;
+  fill: #000;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="link"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.loading should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: not-allowed;
+  position: relative;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.outlined should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-0 {
+  background-color: unset;
+  border: 1px solid #fcfcfc;
+  color: #fcfcfc;
+  fill: #fcfcfc;
+}
+
+.emotion-0:hover {
+  background-color: #fcfcfc;
+  color: #435a6f;
+  fill: #435a6f;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  kind="outlined"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.sizes.default should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.sizes.large should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  font-size: 1.25em;
+  min-height: 3em;
+  padding: 0 1.5rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.sizes.medium should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  min-height: 3em;
+  padding: 0 1.25rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.sizes.small should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  font-size: 0.75em;
+  min-height: 2em;
+  padding: 0 0.5rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  hello world
+</button>
+`;
+
+exports[`theming Button.static should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #435a6f;
+  fill: #435a6f;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #444bc9 0px 0px 0px 2px;
+}
+
+.emotion-0 {
+  cursor: default;
+  outline: unset;
+}
+
+.emotion-0:focus {
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+<button
+  aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
   type="button"
