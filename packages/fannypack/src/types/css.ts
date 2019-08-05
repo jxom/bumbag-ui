@@ -407,7 +407,6 @@ export type CSSProperties = {
   shapeInside?: string | number;
   shapeMargin?: string | number;
   shapeOutside?: string | number;
-  size?: string | number;
   speak?: string | number;
   speakAs?: string | number;
   speakHeader?: string | number;

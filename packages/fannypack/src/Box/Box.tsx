@@ -23,9 +23,9 @@ export function useBoxProps(props: BoxProps = {}) {
   // Example output:
   // style = { color: 'red', backgroundColor: 'blue' }
   const style = utils.useStyle(props);
-  
+
   // Append the styles from above as a className on the DOM element (with precedence).
-  let className = utils.useClassName({ style: styles.style, styleProps: { style } });
+  let className = utils.useClassName({ style: styles.style, styleProps: { style }, prevClassName: props.className });
 
   // Append the Box styles as a className on the DOM element.
   className = utils.useClassName({ style: styles.Box, styleProps: props, prevClassName: className });

@@ -1,5 +1,7 @@
+export * from './Block';
 export * from './Box';
 export * from './Button';
+export * from './Flex';
 export * from './Provider';
 export * from './styled';
 export * from './theme';

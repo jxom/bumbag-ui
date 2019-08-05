@@ -26,6 +26,9 @@ export type LayoutThemeConfig = {
 export type PaletteThemeConfig = {
   [key: string]: ThemeAttribute<string>;
 };
+export type BlockThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 export type BoxThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -47,6 +50,9 @@ export type ButtonThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
 };
+export type FlexThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 
 export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
@@ -56,5 +62,7 @@ export type ThemeConfig = {
   palette?: PaletteThemeConfig;
 
   Box?: BoxThemeConfig;
+  Block?: BlockThemeConfig;
   Button?: ButtonThemeConfig;
+  Flex?: FlexThemeConfig;
 };
