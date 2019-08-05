@@ -183,18 +183,49 @@ TODOs
   component={Button}
   overrides={[
     'Button.base',
-    { key: 'Button.disabled', props: { disabled: true } },
-    'Button.focus',
-    'Button.hover',
-    'Button.hoveractive',
-    { key: 'Button.ghost', props: { kind: "ghost" } },
-    { key: 'Button.link', props: { kind: "link" } },
-    { key: 'Button.outlined', props: { kind: "outlined" } },
-    { key: 'Button.static', props: { isStatic: true } },
-    { key: 'Button.sizes.small', props: { size: 'small' } },
-    'Button.sizes.default',
-    { key: 'Button.sizes.medium', props: { size: 'medium' } },
-    { key: 'Button.sizes.large', props: { size: 'large' } },
+    {
+      key: 'Button.disabled',
+      description: 'Applies when the button is disabled. `<Button disabled>`',
+      props: { disabled: true }
+    },
+    { key: 'Button.focus', description: 'Applies when the button has focus. Try it out by clicking the button.' },
+    { key: 'Button.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
+    {
+      key: 'Button.hoveractive',
+      description:
+        'Applies when the button is hovered and active. Try it out by hovering over the button and clicking on it.'
+    },
+    {
+      key: 'Button.ghost',
+      description: 'Applies for ghost buttons. `<Button kind="ghost">`',
+      props: { kind: 'ghost' }
+    },
+    { key: 'Button.link', description: 'Applies for link buttons. `<Button kind="link">`', props: { kind: 'link' } },
+    {
+      key: 'Button.outlined',
+      description: 'Applies for outlined buttons. `<Button kind="outlined">`',
+      props: { kind: 'outlined' }
+    },
+    { key: 'Button.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
+    {
+      key: 'Button.sizes.small',
+      description: 'Applies for small buttons. `<Button size="small">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.sizes.default',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.sizes.medium',
+      description: 'Applies for static buttons. `<Button size="medium">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.sizes.large',
+      description: 'Applies for static buttons. `<Button size="large">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    }
   ]}
 >
   Hello world

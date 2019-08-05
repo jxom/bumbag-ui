@@ -12,14 +12,7 @@ export default function Theme(props) {
       .slice(1)
       .join('.');
 
-    let props = {};
-    if (typeof override === 'object') {
-      if (Array.isArray(override.props)) {
-      } else {
-        console.log('test2', override);
-        props = { ...props, ...override.props };
-      }
-    }
+    let components = Array.isArray(override.props) ? override.props : [override.props];
 
     let overrides = {};
     _set(overrides, localKey, { backgroundColor: '#ffe3a4' });
@@ -30,10 +23,13 @@ export default function Theme(props) {
         <Box>
           <code>{key}</code>
         </Box>
+        {override.description && <Box>{override.description}</Box>}
         <Box>
-          <Component overrides={overrides} {...props}>
-            {children}
-          </Component>
+          {components.map((props, i) => (
+            <Component key={i} overrides={overrides} {...props}> {/* eslint-disable-line */}
+              {children}
+            </Component>
+          ))}
         </Box>
       </Box>
     );
