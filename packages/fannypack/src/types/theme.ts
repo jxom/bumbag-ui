@@ -53,6 +53,15 @@ export type ButtonThemeConfig = {
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
+export type InlineThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
+export type InlineBlockThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
+export type InlineFlexThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 
 export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
@@ -65,4 +74,7 @@ export type ThemeConfig = {
   Block?: BlockThemeConfig;
   Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
+  Inline?: InlineThemeConfig;
+  InlineBlock?: InlineBlockThemeConfig;
+  InlineFlex?: InlineFlexThemeConfig;
 };
