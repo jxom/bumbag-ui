@@ -17,7 +17,8 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-0 {
-  display: grid-item;
+  border-left: 4px solid #ccc;
+  padding: 1rem;
 }
 
 <p
@@ -27,9 +28,9 @@ exports[`composition as should render correctly 1`] = `
 </p>
 `;
 
-exports[`composition hook should return with GridItem props 1`] = `
+exports[`composition hook should return with Blockquote props 1`] = `
 Object {
-  "className": "css-134ef9c css-1pwrqjj css-1j9m13w",
+  "className": "css-5a25un css-1pwrqjj css-1j9m13w",
 }
 `;
 
@@ -50,7 +51,8 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 .emotion-0 {
-  display: grid-item;
+  border-left: 4px solid #ccc;
+  padding: 1rem;
 }
 
 <div
@@ -77,14 +79,15 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0 {
-  display: grid-item;
+  border-left: 4px solid #ccc;
+  padding: 1rem;
 }
 
-<div
+<blockquote
   class="emotion-0 emotion-1 emotion-2"
 >
   Hello world
-</div>
+</blockquote>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
@@ -104,18 +107,22 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-0 {
-  display: grid-item;
-  grid-area: a;
+  border-left: 4px solid #ccc;
+  padding: 1rem;
 }
 
-<div
+.emotion-2.emotion-2 {
+  border-color: #444bc9;
+}
+
+<blockquote
   class="emotion-0 emotion-1 emotion-2"
 >
   Hello world
-</div>
+</blockquote>
 `;
 
-exports[`theming GridItem.base should render correctly 1`] = `
+exports[`theming Blockquote.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -132,16 +139,17 @@ exports[`theming GridItem.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  display: grid-item;
+  border-left: 4px solid #ccc;
+  padding: 1rem;
 }
 
 .emotion-0 {
   background-color: red;
 }
 
-<div
+<blockquote
   class="emotion-0 emotion-1 emotion-2"
 >
   hello world
-</div>
+</blockquote>
 `;

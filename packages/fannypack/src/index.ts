@@ -1,4 +1,5 @@
 export * from './Block';
+export * from './Blockquote';
 export * from './Box';
 export * from './Button';
 export * from './Flex';

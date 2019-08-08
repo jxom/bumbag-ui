@@ -29,6 +29,9 @@ export type PaletteThemeConfig = {
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
+export type BlockquoteThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 export type BoxThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -78,6 +81,7 @@ export type ThemeConfig = {
 
   Box?: BoxThemeConfig;
   Block?: BlockThemeConfig;
+  Blockquote?: BlockquoteThemeConfig;
   Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;

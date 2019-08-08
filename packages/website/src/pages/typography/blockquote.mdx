@@ -1,0 +1,68 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Blockquote } from 'fannypack/Blockquote/Blockquote';
+
+# Blockquote
+
+```jsx
+import { Blockquote } from 'fannypack'
+```
+
+`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
+
+TODO: change content to `<Paragraph>` and `<Text>`
+
+```jsx-live
+<Blockquote>
+  <p>
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </p>
+  <p>- Russell Coight</p>
+</Blockquote>
+<Blockquote backgroundColor="whitesmoke" marginTop="major-2">
+  <p>
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </p>
+  <p>- Russell Coight</p>
+</Blockquote>
+```
+
+## Border styling
+
+The left border can be modified using the primitive style props:
+
+```jsx-live
+<Blockquote borderColor="primary">
+  <p>
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </p>
+  <p>- Russell Coight</p>
+</Blockquote>
+```
+
+Or you can hide the border:
+
+```jsx-live
+<Blockquote border="none">
+  <p>
+    "Out here, survival is the name of the game.
+    Only it's not a game; it's deadly serious."
+  </p>
+  <p>- Russell Coight</p>
+</Blockquote>
+```
+
+# Props
+
+<PropTypes component={Blockquote}/>
+
+# Theming
+
+<Theme component={Blockquote} overrides={['Blockquote.base']}>This is a block</Theme>
+
+
+
+
