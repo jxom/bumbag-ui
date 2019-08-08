@@ -15,7 +15,7 @@ export type LocalBoxProps = {
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
-export function useBoxProps(props: BoxProps = {}) {
+export function useProps(props: BoxProps = {}) {
   // Convert CSS props to an object.
   // Example input:
   // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
@@ -35,10 +35,11 @@ export function useBoxProps(props: BoxProps = {}) {
 
   return { ...htmlProps };
 }
+Box.useProps = useProps;
 
 export function Box(props: BoxProps) {
   const { children, use, ...restProps } = props;
-  const boxProps = useBoxProps(restProps);
+  const boxProps = useProps(restProps);
   return (
     <utils.Element component={ReakitBox} use={use} htmlProps={boxProps}>
       {children}

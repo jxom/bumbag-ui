@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { InlineBlock, useInlineBlockProps } from '../InlineBlock';
+import { InlineBlock } from '../InlineBlock';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -29,7 +29,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with InlineBlock props', () => {
-      const { result } = renderHook(() => useInlineBlockProps());
+      const { result } = renderHook(() => InlineBlock.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });

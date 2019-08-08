@@ -3,7 +3,7 @@ import { Button as ReakitButton, useButton as useReakitButton } from 'reakit';
 
 import * as utils from '../utils';
 import { ButtonThemeConfig, ButtonKind, ButtonType, Size, Palette } from '../types';
-import { BoxProps, useBoxProps } from '../Box';
+import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
@@ -39,8 +39,8 @@ Button.defaultProps = {
   type: 'button'
 };
 
-export function useButtonProps(props: Partial<ButtonProps> = {}) {
-  const boxProps = useBoxProps(props);
+function useProps(props: Partial<ButtonProps> = {}) {
+  const boxProps = Box.useProps(props);
   const buttonProps = useReakitButton(props);
 
   const className = utils.useClassName({
@@ -51,10 +51,11 @@ export function useButtonProps(props: Partial<ButtonProps> = {}) {
 
   return { ...boxProps, ...buttonProps, className };
 }
+Button.useProps = useProps;
 
 export function Button(props: ButtonProps) {
   const { use, children, ...restProps } = props;
-  const buttonProps = useButtonProps(restProps);
+  const buttonProps = useProps(restProps);
   return (
     <utils.Element component={ReakitButton} use={use} htmlProps={buttonProps}>
       {children}

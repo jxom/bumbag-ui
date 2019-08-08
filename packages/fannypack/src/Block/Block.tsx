@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
 import * as utils from '../utils';
-import { BoxProps, useBoxProps } from '../Box';
+import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
@@ -11,8 +11,8 @@ export type BlockProps = BoxProps & LocalBlockProps;
 
 Block.defaultProps = {};
 
-export function useBlockProps(props: Partial<BlockProps> = {}) {
-  const boxProps = useBoxProps(props);
+function useProps(props: Partial<BlockProps> = {}) {
+  const boxProps = Box.useProps(props);
 
   const className = utils.useClassName({
     style: styles.Block,
@@ -22,12 +22,13 @@ export function useBlockProps(props: Partial<BlockProps> = {}) {
 
   return { ...boxProps, className };
 }
+Block.useProps = useProps;
 
 export function Block(props: BlockProps) {
   const { use, children, ...restProps } = props;
-  const blockProps = useBlockProps(restProps);
+  const htmlProps = useProps(restProps);
   return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={blockProps}>
+    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
       {children}
     </utils.Element>
   );

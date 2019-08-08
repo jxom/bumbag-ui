@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Flex, useFlexProps } from '../Flex';
+import { Flex } from '../Flex';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -29,7 +29,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Flex props', () => {
-      const { result } = renderHook(() => useFlexProps());
+      const { result } = renderHook(() => Flex.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });

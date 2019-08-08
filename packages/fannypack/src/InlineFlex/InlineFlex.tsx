@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
 import * as utils from '../utils';
-import { BoxProps, useBoxProps } from '../Box';
+import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
@@ -11,8 +11,8 @@ export type InlineFlexProps = BoxProps & LocalInlineFlexProps;
 
 InlineFlex.defaultProps = {};
 
-export function useInlineFlexProps(props: Partial<InlineFlexProps> = {}) {
-  const boxProps = useBoxProps(props);
+function useProps(props: Partial<InlineFlexProps> = {}) {
+  const boxProps = Box.useProps(props);
 
   const className = utils.useClassName({
     style: styles.InlineFlex,
@@ -22,12 +22,13 @@ export function useInlineFlexProps(props: Partial<InlineFlexProps> = {}) {
 
   return { ...boxProps, className };
 }
+InlineFlex.useProps = useProps;
 
 export function InlineFlex(props: InlineFlexProps) {
   const { use, children, ...restProps } = props;
-  const flexProps = useInlineFlexProps(restProps);
+  const htmlProps = useProps(restProps);
   return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={flexProps}>
+    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
       {children}
     </utils.Element>
   );

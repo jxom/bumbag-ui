@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Block, useBlockProps } from '../Block';
+import { Block } from '../Block';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -29,7 +29,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Block props', () => {
-      const { result } = renderHook(() => useBlockProps());
+      const { result } = renderHook(() => Block.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });

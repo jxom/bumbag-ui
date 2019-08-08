@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Button, useButtonProps } from '../Button';
+import { Button } from '../Button';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -150,7 +150,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Button props', () => {
-      const { result } = renderHook(() => useButtonProps());
+      const { result } = renderHook(() => Button.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });

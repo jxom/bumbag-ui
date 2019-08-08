@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { InlineFlex, useInlineFlexProps } from '../InlineFlex';
+import { InlineFlex } from '../InlineFlex';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -29,7 +29,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with InlineFlex props', () => {
-      const { result } = renderHook(() => useInlineFlexProps());
+      const { result } = renderHook(() => InlineFlex.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });
