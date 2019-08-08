@@ -53,6 +53,12 @@ export type ButtonThemeConfig = {
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
+export type GridThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Item?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+};
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -74,6 +80,7 @@ export type ThemeConfig = {
   Block?: BlockThemeConfig;
   Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
+  Grid?: GridThemeConfig;
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;

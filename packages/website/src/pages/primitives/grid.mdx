@@ -1,0 +1,62 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Grid } from 'fannypack/Grid';
+import { GridItem } from 'fannypack/Grid/GridItem';
+
+# Grid
+
+```js
+import { Grid } from 'fannypack';
+```
+
+By default it renders a `<Box>` component with `display: grid`. It also composes of a [`Grid.Item` component](#TODO) and takes several props to layout the grid.
+
+```jsx-live
+<Grid templateColumns="repeat(2, 1fr)" autoRows="auto" gap="3vw">
+  <Grid.Item>
+    Non proident duis cupidatat veniam ea. Lorem esse ullamco do velit voluptate
+    anim eiusmod pariatur aute ullamco est. Magna incididunt elit dolor quis
+  </Grid.Item>
+  <Grid.Item>
+    Culpa aliquip ex sunt duis. Nulla magna reprehenderit fugiat in proident
+    officia laboris reprehenderit proident est pariatur eiusmod.
+  </Grid.Item>
+  <Grid.Item>
+    Commodo magna aliqua reprehenderit amet ex dolor sunt enim aliquip. Nulla
+  </Grid.Item>
+</Grid>
+```
+
+# Grid.Item
+
+```jsx-live
+
+<Grid template={`
+  "a a a" 60px
+  "b c c" minmax(200px, 1fr)
+  "d d d" 100px / 150px
+`}>
+  <Grid.Item area="a" backgroundColor="red">Header</Grid.Item>
+  <Grid.Item area="b" backgroundColor="green">Sidebar</Grid.Item>
+  <Grid.Item area="c" backgroundColor="blue">Content</Grid.Item>
+  <Grid.Item area="d" backgroundColor="yellow">Footer</Grid.Item>
+</Grid>
+```
+
+# `Grid` Props
+
+<PropTypes component={Grid} />
+
+# `Grid.Item` Props
+
+<PropTypes component={GridItem} />
+
+# `Grid` Theming
+
+<Theme component={Grid} overrides={['Grid.base']}>
+  Hello world
+</Theme>
+
+<Theme component={GridItem} overrides={['Grid.Item.base']}>
+  Hello world
+</Theme>

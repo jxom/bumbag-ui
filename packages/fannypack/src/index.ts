@@ -2,6 +2,7 @@ export * from './Block';
 export * from './Box';
 export * from './Button';
 export * from './Flex';
+export * from './Grid';
 export * from './Inline';
 export * from './InlineBlock';
 export * from './InlineFlex';
