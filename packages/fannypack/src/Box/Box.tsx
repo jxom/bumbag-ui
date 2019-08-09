@@ -12,6 +12,8 @@ export type LocalBoxProps = {
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   /* Component-level theme overrides [Read more](TODO) */
   overrides?: BoxThemeConfig;
+  showBreakpoint?: string;
+  hiddenBreakpoint?: string;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 

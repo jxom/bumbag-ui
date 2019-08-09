@@ -25,7 +25,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-1pwrqjj css-1j9m13w",
+  "className": "css-1hq7qsz css-1j9m13w",
 }
 `;
 
@@ -66,6 +66,174 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0:focus:not(:focus-visible) {
   outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for hiddenBreakpoint with a max viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (max-width:768px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for hiddenBreakpoint with a min viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (min-width:769px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for hiddenBreakpoint with a single viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for showBreakpoint with a max viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (min-width:769px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for showBreakpoint with a min viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (max-width:768px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for showBreakpoint with a single viewport 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media screen and (max-width:480px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .emotion-0 {
+    display: none;
+  }
 }
 
 <div

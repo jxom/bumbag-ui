@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../Box';
 import render from '../../utils/_tests/render';
 
@@ -31,6 +31,36 @@ describe('props', () => {
 
   it('should render correctly with a font weight CSS prop', () => {
     const { container } = render(<Box fontWeight="semibold" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for showBreakpoint with a single viewport', () => {
+    const { container } = render(<Box showBreakpoint="tablet" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for showBreakpoint with a min viewport', () => {
+    const { container } = render(<Box showBreakpoint="min-desktop" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for showBreakpoint with a max viewport', () => {
+    const { container } = render(<Box showBreakpoint="max-tablet" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for hiddenBreakpoint with a single viewport', () => {
+    const { container } = render(<Box hiddenBreakpoint="tablet" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for hiddenBreakpoint with a min viewport', () => {
+    const { container } = render(<Box hiddenBreakpoint="min-desktop" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for hiddenBreakpoint with a max viewport', () => {
+    const { container } = render(<Box hiddenBreakpoint="max-tablet" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
