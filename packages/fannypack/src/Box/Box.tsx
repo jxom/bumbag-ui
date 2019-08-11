@@ -9,6 +9,7 @@ import * as styles from './styles';
 
 export type LocalBoxProps = {
   use?: string | React.ComponentType<any>;
+  className?: string;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   /* Component-level theme overrides [Read more](TODO) */
   overrides?: BoxThemeConfig;

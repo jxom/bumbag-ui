@@ -14,6 +14,15 @@ export default function Docs(props: Props) {
   const components = React.useMemo(
     () => ({
       ...fannypack,
+      blockquote: (props: any) => (
+        <fannypack.Blockquote
+          backgroundColor="primaryTint"
+          borderColor="primary"
+          marginTop="major-2"
+          marginBottom="major-2"
+          {...props}
+        />
+      ),
       pre: (props: any) => <LiveCode {...props.children.props} />
     }),
     []

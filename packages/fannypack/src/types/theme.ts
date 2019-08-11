@@ -71,6 +71,12 @@ export type InlineBlockThemeConfig = {
 export type InlineFlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
+export type ParagraphThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
+export type TextThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 
 export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
@@ -88,4 +94,6 @@ export type ThemeConfig = {
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
+  Paragraph?: ParagraphThemeConfig;
+  Text?: TextThemeConfig;
 };

@@ -6,7 +6,7 @@ import { PaletteThemeConfig } from '../types';
 import { generateColorVariants, generateTextVariants } from '../utils/palette';
 
 const defaultPalette: { [key: string]: string } = {
-  text: '#435a6f',
+  text: '#212121',
   primary: '#444bc9',
   secondary: '#793fb2',
   info: '#35709e',
@@ -40,7 +40,7 @@ export default (overrides: PaletteThemeConfig) => ({
   gray900: darken(0.2, 'gray'),
 
   default: darken(0.01, 'white'),
-  defaultInverted: '#435a6f',
+  defaultInverted: '#212121',
 
   ...generateColorVariants({
     paletteKey: 'primary',

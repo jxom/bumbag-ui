@@ -1,2 +1,6 @@
 - Removed `absolute`, `fixed`, `static`, `sticky` props from `<Box>`
 - Removed `row`, `column`, `rowReverse`, `columnReverse` props from `<Flex>`
+- Palette changes
+  - `text`
+  - `defaultInverted`
+- Added transition to button styles

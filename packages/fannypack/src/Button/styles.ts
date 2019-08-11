@@ -18,6 +18,7 @@ export const Button = styleProps => cssClass`
   padding: 0 0.8rem;
   text-decoration: none;
   hyphens: auto;
+  transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
 
   ${styleProps.palette === 'default' &&
     css`
@@ -39,6 +40,11 @@ export const Button = styleProps => cssClass`
       styleProps
     )} 0px 0px 0px
       2px;
+
+    ${styleProps.palette === 'default' &&
+      css`
+        border-color: transparent;
+      `}
 
     ${theme('Button.focus')(styleProps)};
   }

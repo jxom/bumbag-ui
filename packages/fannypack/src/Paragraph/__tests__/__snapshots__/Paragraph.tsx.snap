@@ -16,25 +16,20 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
-}
-
 .emotion-0:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-<p
+<div
   class="emotion-0 emotion-1 emotion-2"
 >
   Hello world
-</p>
+</div>
 `;
 
-exports[`composition hook should return with Blockquote props 1`] = `
+exports[`composition hook should return with Paragraph props 1`] = `
 Object {
-  "className": "css-hqv8z2 css-1hq7qsz css-1j9m13w",
+  "className": "css-bimuxi css-1hq7qsz css-1j9m13w",
 }
 `;
 
@@ -52,11 +47,6 @@ exports[`composition render props should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
 }
 
 .emotion-0:not(:last-child) {
@@ -86,20 +76,15 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
-}
-
 .emotion-0:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-<blockquote
+<p
   class="emotion-0 emotion-1 emotion-2"
 >
   Hello world
-</blockquote>
+</p>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
@@ -118,27 +103,22 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
-}
-
 .emotion-0:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 .emotion-2.emotion-2 {
-  border-color: #444bc9;
+  color: #444bc9;
 }
 
-<blockquote
+<p
   class="emotion-0 emotion-1 emotion-2"
 >
   Hello world
-</blockquote>
+</p>
 `;
 
-exports[`theming Blockquote.base should render correctly 1`] = `
+exports[`theming Paragraph.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -154,11 +134,6 @@ exports[`theming Blockquote.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
-}
-
 .emotion-0:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -167,9 +142,9 @@ exports[`theming Blockquote.base should render correctly 1`] = `
   background-color: red;
 }
 
-<blockquote
+<p
   class="emotion-0 emotion-1 emotion-2"
 >
   hello world
-</blockquote>
+</p>
 `;
