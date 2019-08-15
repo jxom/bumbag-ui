@@ -43,15 +43,187 @@ By default it renders a `<Box>` component with `display: grid`. It also composes
 </Grid>
 ```
 
-# `Grid` Props
+# Grid Props
 
-<PropTypes component={Grid} />
+<!-- Automatically generated -->
 
-# `Grid.Item` Props
+### **`autoFlow`**
 
-<PropTypes component={GridItem} />
+```
+"row" | "column" | "dense"
+```
 
-# `Grid` Theming
+### **`gap`**
+
+```
+string | number
+```
+
+### **`template`**
+
+```
+string | number
+```
+
+### **`templateAreas`**
+
+```
+string | number
+```
+
+### **`templateColumns`**
+
+```
+string | number
+```
+
+### **`templateRows`**
+
+```
+string | number
+```
+
+### **`autoColumns`**
+
+```
+string | number
+```
+
+### **`autoRows`**
+
+```
+string | number
+```
+
+<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+### **`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+### **`className`**
+
+```
+string
+```
+
+### **`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+### **`overrides`**
+
+```
+{ base?: any; }
+```
+
+### **`showBreakpoint`**
+
+```
+string
+```
+
+### **`hiddenBreakpoint`**
+
+```
+string
+```
+
+</details>
+        
+
+# Grid.Item Props
+
+<!-- Automatically generated -->
+
+### **`area`**
+
+```
+string | number
+```
+
+### **`column`**
+
+```
+string | number
+```
+
+### **`row`**
+
+```
+string | number
+```
+
+### **`columnStart`**
+
+```
+string | number
+```
+
+### **`columnEnd`**
+
+```
+string | number
+```
+
+### **`rowStart`**
+
+```
+string | number
+```
+
+### **`rowEnd`**
+
+```
+string | number
+```
+
+<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+### **`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+### **`className`**
+
+```
+string
+```
+
+### **`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+### **`overrides`**
+
+```
+{ base?: any; }
+```
+
+### **`showBreakpoint`**
+
+```
+string
+```
+
+### **`hiddenBreakpoint`**
+
+```
+string
+```
+
+</details>
+        
+
+# Theming
 
 <Theme component={Grid} overrides={['Grid.base']}>
   Hello world

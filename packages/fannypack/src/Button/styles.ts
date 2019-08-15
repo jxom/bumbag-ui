@@ -6,10 +6,10 @@ const defaultPalette = getDefaultPalette({});
 
 export const Button = styleProps => cssClass`
   align-items: center;
-  background-color: ${palette(styleProps.palette, 'red')(styleProps)};
+  background-color: ${palette(styleProps.palette)(styleProps)};
   border-radius: 4px;
-  color: ${palette(`${styleProps.palette}Inverted`, 'red')(styleProps)};
-  fill: ${palette(`${styleProps.palette}Inverted`, 'red')(styleProps)};
+  color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+  fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fontWeights.semibold')(styleProps)};
@@ -33,22 +33,6 @@ export const Button = styleProps => cssClass`
     ${getDisabledProperties(styleProps)};
   }
 
-  &:focus {
-    outline: unset;
-    z-index: 2;
-    box-shadow: ${palette(styleProps.palette === 'default' ? 'primary' : `${styleProps.palette}300`)(
-      styleProps
-    )} 0px 0px 0px
-      2px;
-
-    ${styleProps.palette === 'default' &&
-      css`
-        border-color: transparent;
-      `}
-
-    ${theme('Button.focus')(styleProps)};
-  }
-
   ${styleProps.size && getSizeProperties(styleProps)}
   ${styleProps.isLoading && getLoadingProperties(styleProps)};
   ${styleProps.isStatic && getStaticProperties(styleProps)};
@@ -59,8 +43,7 @@ export const Button = styleProps => cssClass`
   ${styleProps.kind === 'ghost' && getGhostProperties(styleProps)};
 `;
 
-export const isInteractive = styleProps =>
-  !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled && styleProps.kind !== 'link';
+export const isInteractive = styleProps => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
 
 export const getDisabledProperties = styleProps => css`
   & {
@@ -145,18 +128,41 @@ export const getStaticProperties = styleProps => css`
 `;
 
 export const getInteractiveProperties = styleProps => css`
-  &:hover {
-    background-color: ${darken(0.05, palette(styleProps.palette, 'red')(styleProps))};
-    & {
-      ${theme('Button.hover')(styleProps)};
-    }
+  &:focus {
+    outline: unset;
+    z-index: 2;
+    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray' : styleProps.palette)(styleProps)} 0px 0px 0px 1px,
+      ${palette(styleProps.palette === 'default' ? 'gray200' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
+
+    ${styleProps.palette === 'default' &&
+      css`
+        border-color: transparent;
+      `};
+
+    ${theme('Button.focus')(styleProps)};
   }
-  &:hover:active {
-    background-color: ${darken(0.1, palette(styleProps.palette, 'red')(styleProps))};
-    & {
-      ${theme('Button.hoveractive')(styleProps)};
-    }
-  }
+
+  ${styleProps.kind !== 'link' &&
+    css`
+      &:hover {
+        background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
+
+        & {
+          ${theme('Button.hover')(styleProps)};
+        }
+      }
+    `};
+
+  ${styleProps.kind !== 'link' &&
+    css`
+      &:hover:active {
+        background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
+
+        & {
+          ${theme('Button.hoveractive')(styleProps)};
+        }
+      }
+    `};
 `;
 
 export const getLinkProperties = styleProps => css`

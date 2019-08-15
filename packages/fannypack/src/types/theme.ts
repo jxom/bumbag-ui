@@ -1,17 +1,17 @@
 export type Stylesheet = any; // TODO: fix
 
-export type ThemeAttribute<R> = ((props: { theme: ThemeConfig }) => R) | R;
+export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 
 export type GlobalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
-  fontFamily?: ThemeAttribute<string>;
-  fontSize?: ThemeAttribute<number>;
+  fontFamily?: string;
+  fontSize?: number;
 };
 export type FontSizeThemeConfig = {
-  [key: string]: ThemeAttribute<number>;
+  [key: string]: number;
 };
 export type FontWeightsThemeConfig = {
-  [key: string]: ThemeAttribute<number>;
+  [key: string]: number;
 };
 export type LayoutThemeConfig = {
   mobileBreakpoint?: ThemeAttribute<number>;
@@ -24,7 +24,7 @@ export type LayoutThemeConfig = {
   majorUnit?: ThemeAttribute<number>;
 };
 export type PaletteThemeConfig = {
-  [key: string]: ThemeAttribute<string>;
+  [key: string]: string;
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -62,6 +62,30 @@ export type GridThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
 };
+export type HeadingThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  h1?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+  h2?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+  h3?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+  h4?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+  h5?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+  h6?: {
+    base?: ThemeAttribute<Stylesheet>;
+  },
+  subHeading?: {
+    base?: ThemeAttribute<Stylesheet>;
+  }
+};
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -91,6 +115,7 @@ export type ThemeConfig = {
   Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
+  Heading?: HeadingThemeConfig;
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;

@@ -47,14 +47,46 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 <Box backgroundColor="red">This is a box</Box>
 ```
 
-# Props
+# Box Props
 
-<PropTypes component={Box}/>
+<!-- Automatically generated -->
+
+### **`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+### **`className`**
+
+```
+string
+```
+
+### **`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+### **`overrides`**
+
+```
+{ base?: any; }
+```
+
+### **`showBreakpoint`**
+
+```
+string
+```
+
+### **`hiddenBreakpoint`**
+
+```
+string
+```
 
 # Theming
 
 <Theme component={Box} overrides={['Box.base']}>This is a box</Theme>
-
-
-
-

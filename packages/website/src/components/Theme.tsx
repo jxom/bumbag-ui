@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from 'fannypack';
+import { Box, Heading } from 'fannypack';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
@@ -19,14 +19,20 @@ export default function Theme(props) {
 
     return (
       // @ts-ignore
-      <Box key={key}>
+      <Box key={key} marginBottom="major-4">
         <Box>
-          <code>{key}</code>
+          <Heading use="h3" fontSize="300">
+            <strong>
+              <code>{key}</code>
+            </strong>
+          </Heading>
         </Box>
         {override.description && <Box>{override.description}</Box>}
         <Box>
           {components.map((props, i) => (
-            <Component key={i} overrides={overrides} {...props}> {/* eslint-disable-line */}
+            <Component key={i} overrides={overrides} {...props}>
+              {' '}
+              {/* eslint-disable-line */}
               {children}
             </Component>
           ))}

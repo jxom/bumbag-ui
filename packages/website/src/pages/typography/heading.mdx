@@ -1,0 +1,155 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Heading, test } from 'fannypack/Heading/Heading';
+
+# Heading
+
+```jsx
+import { Heading } from 'fannypack';
+```
+
+By default, `<Heading>` renders a `<h1>` with default margins applied.
+
+```jsx-live
+<Heading>Heading 1</Heading>
+<Paragraph>Hello world!</Paragraph>
+```
+
+> Remember, you can also specify different colors with the `color` prop.
+
+```jsx-live
+<Heading color="success">Heading 1</Heading>
+<Heading color="danger">Heading 1</Heading>
+```
+
+### Other headers
+
+Use the `use` prop to change from the default `h1` element to `h2`, `h3`, `h4`, `h5`, `h6`, `span`, or others.
+
+```jsx-live
+<Heading>Heading 1</Heading>
+<Heading use="h2">Heading 2</Heading>
+<Heading use="h3">Heading 3</Heading>
+<Heading use="h4">Heading 4</Heading>
+<Heading use="h5">Heading 5</Heading>
+<Heading use="h6">Heading 6</Heading>
+```
+
+### Subheadings
+
+Subheading's are the same size as a normal heading, however have a slightly lower font weight.
+
+```jsx-live
+<Heading isSubHeading>Heading 1</Heading>
+<Heading use="h2" isSubHeading>Heading 2</Heading>
+<Heading use="h3" isSubHeading>Heading 3</Heading>
+<Heading use="h4" isSubHeading>Heading 4</Heading>
+<Heading use="h5" isSubHeading>Heading 5</Heading>
+<Heading use="h6" isSubHeading>Heading 6</Heading>
+```
+
+A header can also be easily grouped with a subheading
+
+```jsx-live
+<Heading>Jake's Fannypack</Heading>
+<Heading use="h3" isSubHeading>Simply the best</Heading>
+<Heading use="h3">Jake's Fannypack</Heading>
+<Heading use="h5" isSubHeading>Simply the best</Heading>
+```
+
+# Heading Props
+
+<!-- Automatically generated -->
+
+### **`isSubHeading`**
+
+```
+boolean
+```
+
+### **`overrides`**
+
+```
+{ base?: any; h1?: { base?: any; }; h2?: { base?: any; }; h3?: { base?: any; }; h4?: { base?: any; }; h5?: { base?: any; }; h6?: { base?: any; }; subHeading?: { base?: any; }; }
+```
+
+<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+### **`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+### **`className`**
+
+```
+string
+```
+
+### **`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+### **`showBreakpoint`**
+
+```
+string
+```
+
+### **`hiddenBreakpoint`**
+
+```
+string
+```
+
+</details>
+
+
+# Theming
+
+<Theme
+  component={Heading}
+  overrides={[
+    'Heading.base',
+    {
+      key: 'Heading.h1.base',
+      description: 'Applies when the heading is h1. `<Heading use="h1">`',
+      props: { use: 'h1' }
+    },
+    {
+      key: 'Heading.h2.base',
+      description: 'Applies when the heading is h2. `<Heading use="h2">`',
+      props: { use: 'h2' }
+    },
+    {
+      key: 'Heading.h3.base',
+      description: 'Applies when the heading is h3. `<Heading use="h3">`',
+      props: { use: 'h3' }
+    },
+    {
+      key: 'Heading.h4.base',
+      description: 'Applies when the heading is h4. `<Heading use="h4">`',
+      props: { use: 'h4' }
+    },
+    {
+      key: 'Heading.h5.base',
+      description: 'Applies when the heading is h5. `<Heading use="h5">`',
+      props: { use: 'h5' }
+    },
+    {
+      key: 'Heading.h6.base',
+      description: 'Applies when the heading is h6. `<Heading use="h6">`',
+      props: { use: 'h6' }
+    },
+    {
+      key: 'Heading.subHeading',
+      description: 'Applies for sub-headings. `<Heading isSubHeading>`',
+      props: { isSubHeading: true }
+    }
+  ]}
+>
+  Hello world
+</Theme>
