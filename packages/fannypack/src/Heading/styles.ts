@@ -5,7 +5,7 @@ export const Heading = styleProps => cssClass`
   line-height: 1.2;
 
   .heading& + .sub-heading {
-    margin-top: -1rem;
+    margin-top: -0.5em;
   }
 
   &:not(:last-child) {
