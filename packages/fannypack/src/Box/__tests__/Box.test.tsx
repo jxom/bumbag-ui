@@ -9,6 +9,12 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref', () => {
+    const ref = React.createRef();
+    render(<Box ref={ref}>Hello world</Box>);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Box backgroundColor="red" color="white" />);
     expect(container.firstChild).toMatchSnapshot();

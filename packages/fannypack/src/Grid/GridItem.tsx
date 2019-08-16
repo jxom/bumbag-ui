@@ -17,8 +17,6 @@ export type LocalGridItemProps = {
 };
 export type GridItemProps = BoxProps & LocalGridItemProps;
 
-GridItem.defaultProps = {};
-
 function useProps(props: Partial<GridItemProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -30,14 +28,12 @@ function useProps(props: Partial<GridItemProps> = {}) {
 
   return { ...boxProps, className };
 }
-GridItem.useProps = useProps;
 
-export function GridItem(props: GridItemProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const GridItem = utils.createComponent<GridItemProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const gridItemProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: gridItemProps });
+  },
+  { useProps }
+);

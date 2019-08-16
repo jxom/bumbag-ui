@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
+import { Box } from '../../Box';
 import { Button } from '../Button';
 import render from '../../utils/_tests/render';
 
@@ -7,6 +8,12 @@ describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(<Button>Hello world</Button>);
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should assign a ref', () => {
+    const ref = React.createRef();
+    render(<Button ref={ref}>Hello world</Button>);
+    expect(ref.current).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
@@ -143,7 +150,7 @@ describe('props', () => {
 describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
-      const { container } = render(<Button use="div">Hello world</Button>);
+      const { container } = render(<Button use={Box}>Hello world</Button>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });

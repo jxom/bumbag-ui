@@ -15,10 +15,11 @@ export type LocalBoxProps = {
   overrides?: BoxThemeConfig;
   showBreakpoint?: string;
   hiddenBreakpoint?: string;
+  elementRef?: React.Ref<any>;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
-export function useProps(props: BoxProps = {}) {
+export function useProps(props: BoxProps = {}, refs?: Array<any>) {
   // Convert CSS props to an object.
   // Example input:
   // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
@@ -36,16 +37,20 @@ export function useProps(props: BoxProps = {}) {
   // Pick out and invalid HTML props & omit the CSS props.
   const htmlProps = utils.omitCSSProps(utils.pickHTMLProps({ ...props, className }));
 
+  if (props.elementRef) {
+    htmlProps.ref = utils.mergeRefs(props.elementRef, props.ref, ...refs);
+  }
+
   return { ...htmlProps };
 }
-Box.useProps = useProps;
 
-export function Box(props: BoxProps) {
-  const { children, use, ...restProps } = props;
-  const boxProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={boxProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Box = utils.createComponent<BoxProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const boxProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: boxProps });
+  },
+  {
+    useProps
+  }
+);

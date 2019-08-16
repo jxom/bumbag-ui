@@ -9,8 +9,6 @@ import * as styles from './styles';
 export type LocalInlineBlockProps = {};
 export type InlineBlockProps = BoxProps & LocalInlineBlockProps;
 
-InlineBlock.defaultProps = {};
-
 function useProps(props: Partial<InlineBlockProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -22,14 +20,14 @@ function useProps(props: Partial<InlineBlockProps> = {}) {
 
   return { ...boxProps, className };
 }
-InlineBlock.useProps = useProps;
 
-export function InlineBlock(props: InlineBlockProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const InlineBlock = utils.createComponent<InlineBlockProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const inlineBlockProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: inlineBlockProps });
+  },
+  {
+    useProps
+  }
+);

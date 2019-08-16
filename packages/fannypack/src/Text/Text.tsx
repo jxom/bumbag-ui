@@ -9,10 +9,6 @@ import * as styles from './styles';
 export type LocalTextProps = {};
 export type TextProps = BoxProps & LocalTextProps;
 
-Text.defaultProps = {
-  use: 'span'
-};
-
 function useProps(props: Partial<TextProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -24,14 +20,17 @@ function useProps(props: Partial<TextProps> = {}) {
 
   return { ...boxProps, className };
 }
-Text.useProps = useProps;
 
-export function Text(props: TextProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Text = utils.createComponent<TextProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const textProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: textProps });
+  },
+  {
+    defaultProps: {
+      use: 'span'
+    },
+    useProps
+  }
+);

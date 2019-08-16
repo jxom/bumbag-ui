@@ -9,10 +9,6 @@ import * as styles from './styles';
 export type LocalParagraphProps = {};
 export type ParagraphProps = BoxProps & LocalParagraphProps;
 
-Paragraph.defaultProps = {
-  use: 'p'
-};
-
 function useProps(props: Partial<ParagraphProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -24,14 +20,17 @@ function useProps(props: Partial<ParagraphProps> = {}) {
 
   return { ...boxProps, className };
 }
-Paragraph.useProps = useProps;
 
-export function Paragraph(props: ParagraphProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Paragraph = utils.createComponent<ParagraphProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const paragraph = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: paragraph });
+  },
+  {
+    defaultProps: {
+      use: 'p'
+    },
+    useProps
+  }
+);

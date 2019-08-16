@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,11 +12,11 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-0:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,31 +48,31 @@ exports[`composition as should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-0[disabled] {
+.emotion-2[disabled] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0:focus {
+.emotion-2:focus {
   outline: unset;
   z-index: 2;
   box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-0:hover {
+.emotion-2:hover {
   background-color: #efefef;
 }
 
-.emotion-0:hover:active {
+.emotion-2:hover:active {
   background-color: #e3e3e3;
 }
 
 <div
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2"
+  class="emotion-0 emotion-1 emotion-2 emotion-0 emotion-1"
   role="button"
   tabindex="0"
   type="button"
@@ -1814,6 +1814,86 @@ exports[`props palette should render a warning button correctly 1`] = `
 </button>
 `;
 
+exports[`props should assign a ref 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Hello world
+</button>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -2911,7 +2991,7 @@ exports[`props type should render a reset button correctly 1`] = `
   aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
-  type="button"
+  type="reset"
 >
   Hello world
 </button>
@@ -2991,7 +3071,7 @@ exports[`props type should render a submit button correctly 1`] = `
   aria-disabled="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"
-  type="button"
+  type="submit"
 >
   Hello world
 </button>

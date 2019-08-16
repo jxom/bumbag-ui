@@ -9,8 +9,6 @@ import * as styles from './styles';
 export type LocalBlockProps = {};
 export type BlockProps = BoxProps & LocalBlockProps;
 
-Block.defaultProps = {};
-
 function useProps(props: Partial<BlockProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -22,14 +20,14 @@ function useProps(props: Partial<BlockProps> = {}) {
 
   return { ...boxProps, className };
 }
-Block.useProps = useProps;
 
-export function Block(props: BlockProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Block = utils.createComponent<BlockProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const blockProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: blockProps });
+  },
+  {
+    useProps
+  }
+);

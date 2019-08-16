@@ -9,10 +9,6 @@ import * as styles from './styles';
 export type LocalBlockquoteProps = {};
 export type BlockquoteProps = BoxProps & LocalBlockquoteProps;
 
-Blockquote.defaultProps = {
-  use: 'blockquote'
-};
-
 function useProps(props: Partial<BlockquoteProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -24,14 +20,12 @@ function useProps(props: Partial<BlockquoteProps> = {}) {
 
   return { ...boxProps, className };
 }
-Blockquote.useProps = useProps;
 
-export function Blockquote(props: BlockquoteProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Blockquote = utils.createComponent<BlockquoteProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const blockquoteProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: blockquoteProps });
+  },
+  { defaultProps: { use: 'blockquote' }, useProps }
+);

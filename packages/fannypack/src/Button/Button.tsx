@@ -27,21 +27,9 @@ export type LocalButtonProps = {
 };
 export type ButtonProps = BoxProps & LocalButtonProps;
 
-Button.defaultProps = {
-  disabled: false,
-  iconAfter: undefined,
-  iconBefore: undefined,
-  isLoading: false,
-  isStatic: false,
-  kind: undefined,
-  palette: 'default',
-  size: 'default',
-  type: 'button'
-};
-
-function useProps(props: Partial<ButtonProps> = {}) {
-  const boxProps = Box.useProps(props);
+function useProps(props: Partial<ButtonProps> = {}, refs?: Array<any>) {
   const buttonProps = useReakitButton(props);
+  const boxProps = Box.useProps(props, [buttonProps.ref, ...refs]);
 
   const className = utils.useClassName({
     style: styles.Button,
@@ -49,16 +37,27 @@ function useProps(props: Partial<ButtonProps> = {}) {
     prevClassName: boxProps.className
   });
 
-  return { ...boxProps, ...buttonProps, className };
+  return { ...buttonProps, ...boxProps, className };
 }
-Button.useProps = useProps;
 
-export function Button(props: ButtonProps) {
-  const { use, children, ...restProps } = props;
-  const buttonProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitButton} use={use} htmlProps={buttonProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Button = utils.createComponent<ButtonProps>(
+  (props: ButtonProps) => {
+    const { children, use, ...restProps } = props;
+    const buttonProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitButton, use, htmlProps: buttonProps });
+  },
+  {
+    defaultProps: {
+      disabled: false,
+      iconAfter: undefined,
+      iconBefore: undefined,
+      isLoading: false,
+      isStatic: false,
+      kind: undefined,
+      palette: 'default',
+      size: 'default',
+      type: 'button'
+    },
+    useProps
+  }
+);

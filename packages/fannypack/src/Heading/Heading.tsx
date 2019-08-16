@@ -14,11 +14,6 @@ export type LocalHeadingProps = {
 };
 export type HeadingProps = BoxProps & LocalHeadingProps;
 
-Heading.defaultProps = {
-  isSubHeading: false,
-  use: 'h1'
-};
-
 function useProps(props: Partial<HeadingProps> = {}) {
   const boxProps = Box.useProps(props);
 
@@ -30,14 +25,15 @@ function useProps(props: Partial<HeadingProps> = {}) {
 
   return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
 }
-Heading.useProps = useProps;
 
-export function Heading(props: HeadingProps) {
-  const { use, children, ...restProps } = props;
-  const htmlProps = useProps(restProps);
-  return (
-    <utils.Element component={ReakitBox} use={use} htmlProps={htmlProps}>
-      {children}
-    </utils.Element>
-  );
-}
+export const Heading = utils.createComponent<HeadingProps>(
+  props => {
+    const { children, use, ...restProps } = props;
+    const HeadingProps = useProps(restProps);
+    return utils.createElement({ children, component: ReakitBox, use, htmlProps: HeadingProps });
+  },
+  {
+    defaultProps: { isSubHeading: false, use: 'h1' },
+    useProps
+  }
+);

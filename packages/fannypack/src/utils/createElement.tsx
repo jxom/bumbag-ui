@@ -9,13 +9,9 @@ type Props = {
   htmlProps: any;
 };
 
-export function Element({ children, component: Component, use, htmlProps }: Props) {
+export function createElement({ children, component, htmlProps, use }: Props) {
   if (utils.isFunction(children)) {
-    return <React.Fragment>{children(htmlProps)}</React.Fragment>;
+    return children(htmlProps);
   }
-  return (
-    <Component as={use} {...htmlProps}>
-      {children}
-    </Component>
-  );
+  return React.createElement(component, { as: use, ...htmlProps }, children);
 }
