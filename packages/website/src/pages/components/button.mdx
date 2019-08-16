@@ -8,13 +8,13 @@ import { Button } from 'fannypack/Button/Button';
 import { Button } from 'fannypack';
 ```
 
-## Basic usage
+### Basic usage
 
 ```jsx-live
 <Button use={Box}>Default</Button>
 ```
 
-## Custom elements
+### Custom elements
 
 Button, by default, renders a `<button>` element.
 However, you are able to change it to a custom element using the `as` prop. See more [here](https://reakit.io/components/button).
@@ -28,7 +28,7 @@ However, you are able to change it to a custom element using the `as` prop. See 
 </Box>
 ```
 
-## Colors
+### Colors
 
 Colors can be added to a button with the `palette` prop.
 
@@ -43,7 +43,7 @@ Colors can be added to a button with the `palette` prop.
 </Box>
 ```
 
-## Icons
+### Icons
 
 You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
 
@@ -53,7 +53,7 @@ You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
 TODO
 ```
 
-## Loading
+### Loading
 
 To indicate a button is loading, use the `isLoading` prop.
 
@@ -61,7 +61,7 @@ To indicate a button is loading, use the `isLoading` prop.
 TODO
 ```
 
-## Outlines
+### Outlines
 
 An outline can be placed on a button by assigning `"outlined"` to the `kind` prop.
 
@@ -82,7 +82,7 @@ An outline can be placed on a button by assigning `"outlined"` to the `kind` pro
 </Box>
 ```
 
-## Ghost
+### Ghost
 
 To have a button of minimal appearence, use the assign `"ghost"` to the `kind` prop.
 
@@ -104,7 +104,7 @@ To have a button of minimal appearence, use the assign `"ghost"` to the `kind` p
 </Box>
 ```
 
-## Sizes
+### Sizes
 
 Buttons are available in four different sizes and can be added with a `size` prop.
 
@@ -117,7 +117,7 @@ Buttons are available in four different sizes and can be added with a `size` pro
 </Box>
 ```
 
-## Links
+### Links
 
 A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
 
@@ -127,7 +127,7 @@ A button can appear as a link with no styling by assigning `"link"` to the `type
 </Button>
 ```
 
-## Static
+### Static
 
 To make a button non-interactable, add the `isStatic` prop.
 
@@ -135,7 +135,7 @@ To make a button non-interactable, add the `isStatic` prop.
 <Button isStatic>Static</Button>
 ```
 
-## Disabled
+### Disabled
 
 To indicate a button as disabled, use the `disabled` prop.
 
@@ -157,7 +157,7 @@ To indicate a button as disabled, use the `disabled` prop.
 </Box>
 ```
 
-## Sets
+### Sets
 
 To display a set of buttons, use the [`<Set>` component](/components/set).
 
@@ -165,7 +165,7 @@ To display a set of buttons, use the [`<Set>` component](/components/set).
 TODO
 ```
 
-## Group
+### Group
 
 To group a set of buttons together, use the `<Group>` component.
 
@@ -173,11 +173,11 @@ To group a set of buttons together, use the `<Group>` component.
 TODOs
 ```
 
-# Button Props
+## Button Props
 
 <!-- Automatically generated -->
 
-### **`disabled`**
+**`disabled`**
 
 ```
 boolean
@@ -185,7 +185,7 @@ boolean
 
 Makes the button disabled. The user is unable to interact with the button.
 
-### **`iconAfter`**
+**`iconAfter`**
 
 ```
 any
@@ -193,7 +193,7 @@ any
 
 TODO: Icon that appears on the right side of the button.
 
-### **`iconBefore`**
+**`iconBefore`**
 
 ```
 any
@@ -201,7 +201,7 @@ any
 
 TODO: Icon that appears on the left side of the button.
 
-### **`isLoading`**
+**`isLoading`**
 
 ```
 boolean
@@ -209,7 +209,7 @@ boolean
 
 TODO: Adds a loading indicator to the button.
 
-### **`isStatic`**
+**`isStatic`**
 
 ```
 boolean
@@ -217,13 +217,13 @@ boolean
 
 Makes the button not interactable.
 
-### **`kind`**
+**`kind`**
 
 ```
 "default" | "outlined" | "link" | "ghost"
 ```
 
-### **`overrides`**
+**`overrides`**
 
 ```
 { base?: any; disabled?: any; focus?: any; ghost?: any; hover?: any; hoveractive?: any; loading?: any; link?: any; outlined?: any; static?: any; sizes?: { small?: any; default?: any; medium?: any; large?: any; }; }
@@ -231,60 +231,66 @@ Makes the button not interactable.
 
 Theming overrides. [Click here](TODO) to view the theming schema for `Button`.
 
-### **`palette`**
+**`palette`**
 
 ```
 string
 ```
 
-### **`size`**
+**`size`**
 
 ```
 "default" | "small" | "medium" | "large"
 ```
 
-### **`type`**
+**`type`**
 
 ```
 "button" | "submit" | "reset"
 ```
 
-<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
+<details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
 
-### **`use`**
+**`use`**
 
 ```
 string | ComponentClass<any, any> | FunctionComponent<any>
 ```
 
-### **`className`**
+**`className`**
 
 ```
 string
 ```
 
-### **`children`**
+**`children`**
 
 ```
 string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
 ```
 
-### **`showBreakpoint`**
+**`showBreakpoint`**
 
 ```
 string
 ```
 
-### **`hiddenBreakpoint`**
+**`hiddenBreakpoint`**
 
 ```
 string
+```
+
+**`elementRef`**
+
+```
+((instance: any) => void) | RefObject<any>
 ```
 
 </details>
 
 
-# Theming
+## Theming
 
 <Theme
   component={Button}

@@ -8,6 +8,7 @@ export * from './Heading';
 export * from './Inline';
 export * from './InlineBlock';
 export * from './InlineFlex';
+export * from './Link';
 export * from './Paragraph';
 export * from './Provider';
 export * from './Text';

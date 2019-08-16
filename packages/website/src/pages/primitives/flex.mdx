@@ -14,53 +14,57 @@ By default it renders a `<Box>` component with `display: flex`.
 <Flex>This is a flex</Flex>
 ```
 
-# Flex Props
+## Flex Props
 
 <!-- Automatically generated -->
 
-No props to show.
-
-<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
-
-### **`use`**
-
-```
-string | ComponentClass<any, any> | FunctionComponent<any>
-```
-
-### **`className`**
-
-```
-string
-```
-
-### **`children`**
-
-```
-string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
-```
-
-### **`overrides`**
+**`overrides`**
 
 ```
 { base?: any; }
 ```
 
-### **`showBreakpoint`**
+<details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+**`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+**`className`**
 
 ```
 string
 ```
 
-### **`hiddenBreakpoint`**
+**`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+**`showBreakpoint`**
 
 ```
 string
+```
+
+**`hiddenBreakpoint`**
+
+```
+string
+```
+
+**`elementRef`**
+
+```
+((instance: any) => void) | RefObject<any>
 ```
 
 </details>
         
 
-# Theming
+## Theming
 
 <Theme component={Flex} overrides={['Flex.base']}>This is a flex</Theme>

@@ -1,7 +1,7 @@
-import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import * as utils from '../utils';
+import { GridThemeConfig } from '../types';
+import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -14,13 +14,14 @@ export type LocalGridItemProps = {
   columnEnd?: string | number;
   rowStart?: string | number;
   rowEnd?: string | number;
+  overrides?: GridThemeConfig['Item'];
 };
 export type GridItemProps = BoxProps & LocalGridItemProps;
 
 function useProps(props: Partial<GridItemProps> = {}) {
   const boxProps = Box.useProps(props);
 
-  const className = utils.useClassName({
+  const className = useClassName({
     style: styles.GridItem,
     styleProps: props,
     prevClassName: boxProps.className
@@ -29,11 +30,11 @@ function useProps(props: Partial<GridItemProps> = {}) {
   return { ...boxProps, className };
 }
 
-export const GridItem = utils.createComponent<GridItemProps>(
+export const GridItem = createComponent<GridItemProps>(
   props => {
     const { children, use, ...restProps } = props;
     const gridItemProps = useProps(restProps);
-    return utils.createElement({ children, component: ReakitBox, use, htmlProps: gridItemProps });
+    return createElement({ children, component: ReakitBox, use, htmlProps: gridItemProps });
   },
   { useProps }
 );

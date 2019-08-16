@@ -7,6 +7,10 @@ export const Text = styleProps => cssClass`
     text-decoration: none;
   }
 
+  code& {
+    font-family: monospace;
+  }
+
   i& {
     font-style: italic;
   }

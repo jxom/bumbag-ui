@@ -66,25 +66,25 @@ export type HeadingThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   h1?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
   h2?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
   h3?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
   h4?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
   h5?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
   h6?: {
     base?: ThemeAttribute<Stylesheet>;
-  },
+  };
   subHeading?: {
     base?: ThemeAttribute<Stylesheet>;
-  }
+  };
 };
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -94,6 +94,11 @@ export type InlineBlockThemeConfig = {
 };
 export type InlineFlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+};
+export type LinkThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  hover?: ThemeAttribute<Stylesheet>;
+  focus?: ThemeAttribute<Stylesheet>;
 };
 export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -119,6 +124,7 @@ export type ThemeConfig = {
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
+  Link?: LinkThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Text?: TextThemeConfig;
 };

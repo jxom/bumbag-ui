@@ -82,7 +82,7 @@ function createTypeMarkdown(types) {
   return types
     .map(
       type => `
-### **\`${type.name}\`**
+**\`${type.name}\`**
 
 \`\`\`
 ${type.type}
@@ -116,7 +116,7 @@ function getTypeMarkdown(extractedType, typeReferences) {
         content = `
 ${content}
 
-<details><summary>Uses <code><strong>&#60;${use.replace(/(Local|Props)/g, '')}&#62;</strong></code> props</summary>
+<details><summary>Inherits <code><strong>&#60;${use.replace(/(Local|Props)/g, '')}&#62;</strong></code> props</summary>
 ${createTypeMarkdown(useTypes)}
 </details>
         `;

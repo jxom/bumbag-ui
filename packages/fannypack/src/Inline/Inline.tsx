@@ -1,17 +1,20 @@
 import { Box as ReakitBox } from 'reakit';
 
-import * as utils from '../utils';
+import { InlineThemeConfig } from '../types';
+import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalInlineProps = {};
+export type LocalInlineProps = {
+  overrides?: InlineThemeConfig;
+};
 export type InlineProps = BoxProps & LocalInlineProps;
 
 function useProps(props: Partial<InlineProps> = {}) {
   const boxProps = Box.useProps(props);
 
-  const className = utils.useClassName({
+  const className = useClassName({
     style: styles.Inline,
     styleProps: props,
     prevClassName: boxProps.className
@@ -20,11 +23,11 @@ function useProps(props: Partial<InlineProps> = {}) {
   return { ...boxProps, className };
 }
 
-export const Inline = utils.createComponent<InlineProps>(
+export const Inline = createComponent<InlineProps>(
   props => {
     const { children, use, ...restProps } = props;
     const inlineProps = useProps(restProps);
-    return utils.createElement({ children, component: ReakitBox, use, htmlProps: inlineProps });
+    return createElement({ children, component: ReakitBox, use, htmlProps: inlineProps });
   },
   {
     useProps

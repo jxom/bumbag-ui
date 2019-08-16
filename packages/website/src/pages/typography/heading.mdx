@@ -57,58 +57,64 @@ A header can also be easily grouped with a subheading
 <Heading use="h5" isSubHeading>Simply the best</Heading>
 ```
 
-# Heading Props
+## Heading Props
 
 <!-- Automatically generated -->
 
-### **`isSubHeading`**
+**`isSubHeading`**
 
 ```
 boolean
 ```
 
-### **`overrides`**
+**`overrides`**
 
 ```
 { base?: any; h1?: { base?: any; }; h2?: { base?: any; }; h3?: { base?: any; }; h4?: { base?: any; }; h5?: { base?: any; }; h6?: { base?: any; }; subHeading?: { base?: any; }; }
 ```
 
-<details><summary>Uses <code><strong>&#60;Box&#62;</strong></code> props</summary>
+<details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
 
-### **`use`**
+**`use`**
 
 ```
 string | ComponentClass<any, any> | FunctionComponent<any>
 ```
 
-### **`className`**
+**`className`**
 
 ```
 string
 ```
 
-### **`children`**
+**`children`**
 
 ```
 string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
 ```
 
-### **`showBreakpoint`**
+**`showBreakpoint`**
 
 ```
 string
 ```
 
-### **`hiddenBreakpoint`**
+**`hiddenBreakpoint`**
 
 ```
 string
+```
+
+**`elementRef`**
+
+```
+((instance: any) => void) | RefObject<any>
 ```
 
 </details>
 
 
-# Theming
+## Theming
 
 <Theme
   component={Heading}

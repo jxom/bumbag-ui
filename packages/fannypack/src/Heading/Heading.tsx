@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 import classNames from 'classnames';
 
-import * as utils from '../utils';
+import { useClassName, createComponent, createElement } from '../utils';
 import { HeadingThemeConfig } from '../types/theme';
 import { Box, BoxProps } from '../Box';
 
@@ -17,7 +16,7 @@ export type HeadingProps = BoxProps & LocalHeadingProps;
 function useProps(props: Partial<HeadingProps> = {}) {
   const boxProps = Box.useProps(props);
 
-  const className = utils.useClassName({
+  const className = useClassName({
     style: styles.Heading,
     styleProps: props,
     prevClassName: boxProps.className
@@ -26,11 +25,11 @@ function useProps(props: Partial<HeadingProps> = {}) {
   return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
 }
 
-export const Heading = utils.createComponent<HeadingProps>(
+export const Heading = createComponent<HeadingProps>(
   props => {
     const { children, use, ...restProps } = props;
     const HeadingProps = useProps(restProps);
-    return utils.createElement({ children, component: ReakitBox, use, htmlProps: HeadingProps });
+    return createElement({ children, component: ReakitBox, use, htmlProps: HeadingProps });
   },
   {
     defaultProps: { isSubHeading: false, use: 'h1' },

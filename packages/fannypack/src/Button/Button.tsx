@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { Button as ReakitButton, useButton as useReakitButton } from 'reakit';
 
-import * as utils from '../utils';
+import { useClassName, createComponent, createElement } from '../utils';
 import { ButtonThemeConfig, ButtonKind, ButtonType, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
 
@@ -27,11 +26,11 @@ export type LocalButtonProps = {
 };
 export type ButtonProps = BoxProps & LocalButtonProps;
 
-function useProps(props: Partial<ButtonProps> = {}, refs?: Array<any>) {
+function useProps(props: Partial<ButtonProps> = {}, refs: Array<any> = []) {
   const buttonProps = useReakitButton(props);
   const boxProps = Box.useProps(props, [buttonProps.ref, ...refs]);
 
-  const className = utils.useClassName({
+  const className = useClassName({
     style: styles.Button,
     styleProps: props,
     prevClassName: boxProps.className
@@ -40,11 +39,11 @@ function useProps(props: Partial<ButtonProps> = {}, refs?: Array<any>) {
   return { ...buttonProps, ...boxProps, className };
 }
 
-export const Button = utils.createComponent<ButtonProps>(
+export const Button = createComponent<ButtonProps>(
   (props: ButtonProps) => {
     const { children, use, ...restProps } = props;
     const buttonProps = useProps(restProps);
-    return utils.createElement({ children, component: ReakitButton, use, htmlProps: buttonProps });
+    return createElement({ children, component: ReakitButton, use, htmlProps: buttonProps });
   },
   {
     defaultProps: {

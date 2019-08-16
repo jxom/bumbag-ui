@@ -1,21 +1,21 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { FlexThemeConfig } from '../types';
+import { LinkThemeConfig } from '../types';
 import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalFlexProps = {
-  overrides?: FlexThemeConfig;
+export type LocalLinkProps = {
+  overrides?: LinkThemeConfig;
 };
-export type FlexProps = BoxProps & LocalFlexProps;
+export type LinkProps = BoxProps & LocalLinkProps;
 
-function useProps(props: Partial<FlexProps> = {}) {
+function useProps(props: Partial<LinkProps> = {}) {
   const boxProps = Box.useProps(props);
 
   const className = useClassName({
-    style: styles.Flex,
+    style: styles.Link,
     styleProps: props,
     prevClassName: boxProps.className
   });
@@ -23,13 +23,16 @@ function useProps(props: Partial<FlexProps> = {}) {
   return { ...boxProps, className };
 }
 
-export const Flex = createComponent<FlexProps>(
+export const Link = createComponent<LinkProps>(
   props => {
     const { children, use, ...restProps } = props;
-    const flexProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: flexProps });
+    const linkProps = useProps(restProps);
+    return createElement({ children, component: ReakitBox, use, htmlProps: linkProps });
   },
   {
+    defaultProps: {
+      use: 'a'
+    },
     useProps
   }
 );

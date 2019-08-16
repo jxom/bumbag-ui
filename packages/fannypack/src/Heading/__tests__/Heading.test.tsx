@@ -45,40 +45,56 @@ describe('overrides', () => {
   });
 
   it('Heading.h1 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h1: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h1: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h2 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h2: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h2: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h3 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h3: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h3: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h4 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h4: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h4: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h5 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h5: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h5: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h6 should render correctly', () => {
-    const { container } = render(<Heading overrides={{ h6: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading overrides={{ h6: { base: { backgroundColor: 'red' } } }}>hello world</Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.subHeading should render correctly', () => {
-    const { container } = render(<Heading isSubHeading overrides={{ subHeading: { base: { backgroundColor: 'red' } } }}>hello world</Heading>);
+    const { container } = render(
+      <Heading isSubHeading overrides={{ subHeading: { base: { backgroundColor: 'red' } } }}>
+        hello world
+      </Heading>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
-})
+});
 
 describe('theming', () => {
   it('Heading.base should render correctly', () => {

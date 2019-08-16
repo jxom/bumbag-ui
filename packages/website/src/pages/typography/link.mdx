@@ -1,27 +1,27 @@
 import PropTypes from '../../components/PropTypes';
 import Theme from '../../components/Theme';
-import { Inline } from 'fannypack/Inline/Inline';
+import { Link } from 'fannypack/Link/Link';
 
-# Inline
+# Link
 
-```js
-import { Inline } from 'fannypack';
+```jsx
+import { Link } from 'fannypack'
 ```
 
-By default it renders a `<Box>` component with `display: inline`.
+`<Link>` renders a `<a>` element with reset styles and basic link styling.
 
 ```jsx-live
-<Inline>This is an inline</Inline>
+<Link href="https://google.com">Click me</Link>
 ```
 
-## Inline Props
+## Link Props
 
 <!-- Automatically generated -->
 
 **`overrides`**
 
 ```
-{ base?: any; }
+{ base?: any; hover?: any; focus?: any; }
 ```
 
 <details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
@@ -67,4 +67,4 @@ string
 
 ## Theming
 
-<Theme component={Inline} overrides={['Inline.base']}>This is an inline</Theme>
+<Theme component={Link} overrides={['Link.base', 'Link.hover', 'Link.focus']}>Hello world</Theme>

@@ -23,6 +23,12 @@ export default function Docs(props: Props) {
           {...props}
         />
       ),
+      h1: (props: any) => <fannypack.Heading {...props} />,
+      h2: (props: any) => <fannypack.Heading use="h2" marginTop="major-6" {...props} />,
+      h3: (props: any) => <fannypack.Heading use="h3" marginTop="major-6" {...props} />,
+      h4: (props: any) => <fannypack.Heading use="h4" marginTop="major-6" {...props} />,
+      h5: (props: any) => <fannypack.Heading use="h5" marginTop="major-6" {...props} />,
+      h6: (props: any) => <fannypack.Heading use="h6" marginTop="major-6" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />
     }),
     []
