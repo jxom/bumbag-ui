@@ -21,11 +21,6 @@ export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
 export type LayoutThemeConfig = {
-  mobileBreakpoint?: ThemeAttribute<number>;
-  tabletBreakpoint?: ThemeAttribute<number>;
-  desktopBreakpoint?: ThemeAttribute<number>;
-  widescreenBreakpoint?: ThemeAttribute<number>;
-  fullHDBreakpoint?: ThemeAttribute<number>;
   gapFactor?: ThemeAttribute<number>;
   minorUnit?: ThemeAttribute<number>;
   majorUnit?: ThemeAttribute<number>;

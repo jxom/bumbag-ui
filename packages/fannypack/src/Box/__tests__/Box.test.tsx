@@ -20,6 +20,21 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with CSS props with breakpoints', () => {
+    const { container } = render(<Box backgroundColor={{ default: 'primary', mobile: 'secondary', desktop: 'red' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with breakpoints', () => {
+    const { container } = render(<Box backgroundColor={{ default: 'primary', 'max-tablet': 'secondary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with breakpoints', () => {
+    const { container } = render(<Box backgroundColor={{ default: 'primary', 'min-desktop': 'secondary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a color CSS prop', () => {
     const { container } = render(<Box backgroundColor="white900" color="primary" />);
     expect(container.firstChild).toMatchSnapshot();

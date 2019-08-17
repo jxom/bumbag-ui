@@ -37,7 +37,11 @@ export function useProps(props: BoxProps = {}, refs: Array<any> = []) {
   const style = useStyle(props);
 
   // Append the styles from above as a className on the DOM element (with precedence).
-  let className = useClassName({ style: styles.style, styleProps: { style }, prevClassName: props.className });
+  let className = useClassName({
+    style: styles.style,
+    styleProps: { style, ...props },
+    prevClassName: props.className
+  });
 
   // Append the Box styles as a className on the DOM element.
   className = useClassName({ style: styles.Box, styleProps: props, prevClassName: className });

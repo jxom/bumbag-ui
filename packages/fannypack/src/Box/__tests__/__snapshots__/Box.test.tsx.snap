@@ -25,7 +25,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-1hq7qsz css-1j9m13w",
+  "className": "css-1pwrqjj css-is8joc",
 }
 `;
 
@@ -113,7 +113,7 @@ exports[`props should render correctly for hiddenBreakpoint with a max viewport 
 }
 
 @media screen and (max-width:768px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -140,7 +140,7 @@ exports[`props should render correctly for hiddenBreakpoint with a min viewport 
 }
 
 @media screen and (min-width:769px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -167,7 +167,7 @@ exports[`props should render correctly for hiddenBreakpoint with a single viewpo
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -194,7 +194,7 @@ exports[`props should render correctly for showBreakpoint with a max viewport 1`
 }
 
 @media screen and (min-width:769px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -221,7 +221,7 @@ exports[`props should render correctly for showBreakpoint with a min viewport 1`
 }
 
 @media screen and (max-width:768px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -248,13 +248,13 @@ exports[`props should render correctly for showBreakpoint with a single viewport
 }
 
 @media screen and (max-width:480px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
 
 @media screen and (min-width:769px) {
-  .emotion-0 {
+  .emotion-1.emotion-1.emotion-1 {
     display: none;
   }
 }
@@ -280,9 +280,108 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   background-color: red;
   color: white;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly with CSS props with breakpoints 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  background-color: #444bc9;
+}
+
+@media screen and (min-width:1px) and (max-width:480px) {
+  .emotion-1.emotion-1.emotion-1 {
+    background-color: #793fb2;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .emotion-1.emotion-1.emotion-1 {
+    background-color: red;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly with CSS props with breakpoints 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  background-color: #444bc9;
+}
+
+@media screen and (max-width:768px) {
+  .emotion-1.emotion-1.emotion-1 {
+    background-color: #793fb2;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly with CSS props with breakpoints 3`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  background-color: #444bc9;
+}
+
+@media screen and (min-width:769px) {
+  .emotion-1.emotion-1.emotion-1 {
+    background-color: #793fb2;
+  }
 }
 
 <div
@@ -306,7 +405,7 @@ exports[`props should render correctly with a color CSS prop 1`] = `
   outline: none;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   background-color: #d9d9d9;
   color: #444bc9;
 }
@@ -332,7 +431,7 @@ exports[`props should render correctly with a font size CSS prop 1`] = `
   outline: none;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   font-size: 1.5rem;
 }
 
@@ -357,7 +456,7 @@ exports[`props should render correctly with a font weight CSS prop 1`] = `
   outline: none;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   font-weight: 600;
 }
 
@@ -382,7 +481,7 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
   outline: none;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   margin: 2rem;
   padding-left: 1rem;
 }
@@ -445,7 +544,7 @@ exports[`theming Box.base should render correctly 1`] = `
 `;
 
 exports[`theming Box.base should render correctly 2`] = `
-.emotion-1.emotion-1 {
+.emotion-1.emotion-1.emotion-1 {
   color: green;
 }
 

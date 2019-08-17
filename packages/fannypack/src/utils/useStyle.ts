@@ -1,8 +1,9 @@
 import * as React from 'react';
 import _get from 'lodash/get';
+import _kebabCase from 'lodash/kebabCase';
 
-import { ThemeContext } from '../styled';
-import { fontSize, palette, space, fontWeight } from '../utils';
+import { ThemeContext, css } from '../styled';
+import { breakpoint, fontSize, palette, space, fontWeight } from '../utils';
 
 import { pickCSSProps } from './cssProps';
 
@@ -87,20 +88,43 @@ export function useStyle(props) {
   if (style) {
     style = Object.entries(style).reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
-      if (colorAttributes.includes(attribute)) {
-        newValue = getColorValue({ theme, value });
+      if (typeof newValue === 'string') {
+        newValue = { default: value };
       }
-      if (spaceAttributes.includes(attribute)) {
-        newValue = getSpaceValue({ theme, value });
-      }
-      if (fontSizeAttributes.includes(attribute)) {
-        newValue = getFontSizeValue({ theme, value });
-      }
-      if (fontWeightAttributes.includes(attribute)) {
-        newValue = getFontWeightValue({ theme, value });
-      }
-      return { ...prevStyle, [attribute]: newValue };
-    }, style);
+      const newStyle = Object.entries(newValue).reduce((prevStyle, [bp, value]) => {
+        let newValue = value;
+        if (colorAttributes.includes(attribute)) {
+          newValue = getColorValue({ theme, value });
+        }
+        if (spaceAttributes.includes(attribute)) {
+          newValue = getSpaceValue({ theme, value });
+        }
+        if (fontSizeAttributes.includes(attribute)) {
+          newValue = getFontSizeValue({ theme, value });
+        }
+        if (fontWeightAttributes.includes(attribute)) {
+          newValue = getFontWeightValue({ theme, value });
+        }
+        if (bp === 'default') {
+          return css`
+            ${prevStyle}
+            ${_kebabCase(attribute)}: ${newValue};
+          `;
+        }
+        return css`
+          ${prevStyle};
+          ${breakpoint(
+            bp,
+            css`
+              ${_kebabCase(attribute)}: ${newValue};
+            `
+          )({ theme })};
+        `;
+      }, css``);
+      return css`
+        ${prevStyle} ${newStyle};
+      `;
+    }, css``);
   }
 
   return style;
