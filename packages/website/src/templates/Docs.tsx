@@ -29,6 +29,8 @@ export default function Docs(props: Props) {
       h4: (props: any) => <fannypack.Heading use="h4" marginTop="major-6" {...props} />,
       h5: (props: any) => <fannypack.Heading use="h5" marginTop="major-6" {...props} />,
       h6: (props: any) => <fannypack.Heading use="h6" marginTop="major-6" {...props} />,
+      p: (props: any) => <fannypack.Paragraph {...props} />,
+      strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />
     }),
     []

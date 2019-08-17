@@ -1,6 +1,7 @@
-import { lighten, tint, readableColor, shade } from 'polished';
 // @ts-ignore
 import _get from 'lodash/get';
+
+import { lighten, tint, readableColor, shade } from '../utils';
 
 export const generateTextVariants = (textColor: string) => ({
   text100: lighten(0.2, textColor),

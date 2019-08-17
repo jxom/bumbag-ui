@@ -1,4 +1,5 @@
-import { cssClass, palette, theme } from '../styled';
+import { cssClass } from '../styled';
+import { palette, theme } from '../utils';
 
 export const Link = styleProps => cssClass`
   color: ${palette('primary')(styleProps)};

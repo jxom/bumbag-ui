@@ -1,7 +1,8 @@
 import * as React from 'react';
 import _get from 'lodash/get';
 
-import { ThemeContext, space } from '../styled';
+import { ThemeContext } from '../styled';
+import { fontSize, palette, space, fontWeight } from '../utils';
 
 import { pickCSSProps } from './cssProps';
 
@@ -21,7 +22,7 @@ const colorAttributes = [
   'caretColor',
   'columnRuleColor',
   'outlineColor',
-  'text-decorationColor',
+  'textDecorationColor',
   'textEmphasisColor'
 ];
 const spaceAttributes = [
@@ -38,13 +39,16 @@ const spaceAttributes = [
   'top',
   'left',
   'bottom',
-  'right'
+  'right',
+  'grid-gap',
+  'grid-column-gap',
+  'grid-row-gap'
 ];
 const fontSizeAttributes = ['fontSize'];
 const fontWeightAttributes = ['fontWeight'];
 
 function getColorValue({ theme, value }) {
-  const color = _get(theme, `palette.${value}`);
+  const color = palette(value)({ theme });
   if (color) {
     return color;
   }
@@ -60,17 +64,17 @@ function getSpaceValue({ theme, value }) {
 }
 
 function getFontSizeValue({ theme, value }) {
-  const fontSize = _get(theme, `fontSizes.${value}`);
-  if (fontSize) {
-    return `${fontSize}rem`;
+  const size = fontSize(value)({ theme });
+  if (size) {
+    return `${size}rem`;
   }
   return value;
 }
 
 function getFontWeightValue({ theme, value }) {
-  const fontWeight = _get(theme, `fontWeights.${value}`);
-  if (fontWeight) {
-    return fontWeight;
+  const weight = fontWeight(value)({ theme });
+  if (weight) {
+    return weight;
   }
   return value;
 }

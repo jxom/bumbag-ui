@@ -119,6 +119,7 @@ ${content}
 <details><summary>Inherits <code><strong>&#60;${use.replace(/(Local|Props)/g, '')}&#62;</strong></code> props</summary>
 ${createTypeMarkdown(useTypes)}
 </details>
+
         `;
         types = [...types, ...useTypes];
       }

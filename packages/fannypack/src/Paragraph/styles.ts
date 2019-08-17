@@ -1,4 +1,5 @@
-import { cssClass, space, theme } from '../styled';
+import { cssClass } from '../styled';
+import { space, theme } from '../utils';
 
 export const Paragraph = styleProps => cssClass`
   &:not(:last-child) {

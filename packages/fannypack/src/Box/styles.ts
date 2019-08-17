@@ -1,5 +1,6 @@
 import _get from 'lodash/get';
-import { theme, css, cssClass } from '../styled';
+import { css, cssClass } from '../styled';
+import { theme } from '../utils';
 
 export const style = styleProps => cssClass`
   && {

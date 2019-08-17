@@ -1,4 +1,5 @@
-import { css, cssClass, theme } from '../styled';
+import { css, cssClass } from '../styled';
+import { theme } from '../utils';
 
 export const Grid = styleProps => cssClass`
   display: grid;

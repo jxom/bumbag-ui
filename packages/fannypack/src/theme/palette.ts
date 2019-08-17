@@ -1,9 +1,8 @@
-import { darken, lighten, shade } from 'polished';
 // @ts-ignore
 import _get from 'lodash/get';
 
 import { PaletteThemeConfig } from '../types';
-import { generateColorVariants, generateTextVariants } from '../utils/palette';
+import { darken, lighten, shade, generateColorVariants, generateTextVariants } from '../utils';
 
 const defaultPalette: { [key: string]: string } = {
   text: '#212121',

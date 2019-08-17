@@ -4,3 +4,9 @@
   - `text`
   - `defaultInverted`
 - Added transition to button styles
+
+
+- TODO: Added third parameter to `space` 'rem', 'px', 'em', etc
+- TODO: Added responsive space props
+- TODO: Add fontWeight, fontSize styled utils
+- TODO: layout.mobileBreakpoint, etc -> breakpoints.mobile

@@ -2,6 +2,13 @@ export type Stylesheet = any; // TODO: fix
 
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 
+export type BreakpointsThemeConfig = {
+  mobile?: ThemeAttribute<number>;
+  tablet?: ThemeAttribute<number>;
+  desktop?: ThemeAttribute<number>;
+  widescreen?: ThemeAttribute<number>;
+  fullHD?: ThemeAttribute<number>;
+};
 export type GlobalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   fontFamily?: string;
@@ -100,6 +107,12 @@ export type LinkThemeConfig = {
   hover?: ThemeAttribute<Stylesheet>;
   focus?: ThemeAttribute<Stylesheet>;
 };
+export type ListThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Item?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+};
 export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -108,6 +121,7 @@ export type TextThemeConfig = {
 };
 
 export type ThemeConfig = {
+  breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
@@ -125,6 +139,7 @@ export type ThemeConfig = {
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
   Link?: LinkThemeConfig;
+  List?: ListThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Text?: TextThemeConfig;
 };

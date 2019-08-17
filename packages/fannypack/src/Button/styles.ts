@@ -1,6 +1,6 @@
-import { darken } from 'polished';
 import getDefaultPalette from '../theme/palette';
-import { css, cssClass, palette, space, theme } from '../styled';
+import { css, cssClass } from '../styled';
+import { darken, palette, space, theme } from '../utils';
 
 const defaultPalette = getDefaultPalette({});
 

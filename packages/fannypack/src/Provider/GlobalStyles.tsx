@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Global, ThemeContext, css, palette, theme } from '../styled';
+import { Global, ThemeContext, css } from '../styled';
+import { theme } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
