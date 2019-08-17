@@ -46,7 +46,7 @@ export const getOrderedProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('fannypack.List.ordered')(styleProps)};
+    ${theme('List.ordered')(styleProps)};
   }
 `;
 
@@ -58,6 +58,6 @@ export const getHorizontalProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('fannypack.List.horizontal')(styleProps)};
+    ${theme('List.horizontal')(styleProps)};
   }
 `;

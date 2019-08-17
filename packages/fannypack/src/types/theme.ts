@@ -104,6 +104,8 @@ export type LinkThemeConfig = {
 };
 export type ListThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  ordered?: ThemeAttribute<Stylesheet>;
+  horizontal?: ThemeAttribute<Stylesheet>;
   Item?: {
     base?: ThemeAttribute<Stylesheet>;
   };

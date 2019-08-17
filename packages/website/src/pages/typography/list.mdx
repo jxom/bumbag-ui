@@ -1,0 +1,209 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { List } from 'fannypack/List';
+
+# List
+
+```jsx
+import { List } from 'fannypack';
+```
+
+`<List>` renders a `<ul>` element by default with reset styles and `list-style` unset.
+
+```jsx-live
+<Paragraph>My awesome list:</Paragraph>
+<List>
+  <List.Item>Item 1</List.Item>
+  <List.Item>Item 2</List.Item>
+  <List.Item>Item 3</List.Item>
+  <List.Item>Item 4</List.Item>
+</List>
+```
+
+### Types
+
+Specify if you want your list items to have a style type with the `listStyleType` CSS property.
+
+[Click here](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) to see all the `listStyleType` values.
+
+```jsx-live
+<Paragraph>My awesome list:</Paragraph>
+<List listStyleType="disc" listStylePosition="inside">
+  <List.Item>Item 1</List.Item>
+  <List.Item>Item 2</List.Item>
+</List>
+<List listStyleType="circle" listStylePosition="inside">
+  <List.Item>Item 1</List.Item>
+  <List.Item listStyleType="georgian">Item 2</List.Item>
+  <List listStyleType="circle">
+    <List.Item>Item 1</List.Item>
+    <List.Item>Item 2</List.Item>
+  </List>
+</List>
+```
+
+### Ordered lists
+
+To use an ordered list, use the `isOrdered` prop.
+
+```jsx-live
+<Paragraph>My awesome list:</Paragraph>
+<List isOrdered listStylePosition="inside">
+  <List.Item>Item 1</List.Item>
+  <List.Item>Item 2</List.Item>
+  <List isOrdered>
+    <List.Item>Item 3</List.Item>
+    <List isOrdered>
+      <List.Item>Item 4</List.Item>
+    </List>
+  </List>
+</List>
+```
+
+### Horizontal lists
+
+To use an horizontal list, use the `isHorizontal` prop.
+
+```jsx-live
+<List isHorizontal>
+  <List.Item>Item 1</List.Item>
+  <List.Item>Item 2</List.Item>
+</List>
+```
+
+## List Props
+
+<!-- Automatically generated -->
+
+**`isOrdered`**
+
+```
+boolean
+```
+
+**`isHorizontal`**
+
+```
+boolean
+```
+
+**`overrides`**
+
+```
+{ base?: any; ordered?: any; horizontal?: any; Item?: { base?: any; }; }
+```
+
+<details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+**`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+**`className`**
+
+```
+string
+```
+
+**`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+**`showBreakpoint`**
+
+```
+string
+```
+
+**`hiddenBreakpoint`**
+
+```
+string
+```
+
+**`elementRef`**
+
+```
+((instance: any) => void) | RefObject<any>
+```
+
+</details>
+
+## List.Item Props
+
+<!-- Automatically generated -->
+
+**`overrides`**
+
+```
+{ base?: any; }
+```
+
+<details><summary>Inherits <code><strong>&#60;Box&#62;</strong></code> props</summary>
+
+**`use`**
+
+```
+string | ComponentClass<any, any> | FunctionComponent<any>
+```
+
+**`className`**
+
+```
+string
+```
+
+**`children`**
+
+```
+string | number | boolean | {} | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ReactNodeArray | ReactPortal | ((props: BoxProps) => ReactNode)
+```
+
+**`showBreakpoint`**
+
+```
+string
+```
+
+**`hiddenBreakpoint`**
+
+```
+string
+```
+
+**`elementRef`**
+
+```
+((instance: any) => void) | RefObject<any>
+```
+
+</details>
+
+
+## Theming
+
+<Theme
+  component={List}
+  overrides={[
+    'List.base',
+    { key: 'List.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
+    { key: 'List.horizontal', props: { isHorizontal: true } },
+    {
+      key: 'List.Item.base',
+      props: {
+        children: props => (
+          <React.Fragment>
+            <List.Item {...props}>Item 1</List.Item>
+            <List.Item {...props}>Item 2</List.Item>
+          </React.Fragment>
+        )
+      }
+    }
+  ]}>
+  <List.Item>Item 1</List.Item>
+  <List.Item>Item 2</List.Item>
+</Theme>

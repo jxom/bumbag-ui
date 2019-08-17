@@ -450,6 +450,69 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
+exports[`theming List.Item.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<ul
+  class="emotion-12 emotion-1 emotion-2"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
 exports[`theming List.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -467,25 +530,192 @@ exports[`theming List.base should render correctly 1`] = `
 }
 
 .emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-12 {
   list-style: unset;
   list-style-type: none;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-12:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.emotion-0 .emotion-0 {
+.emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-0 {
+.emotion-12 {
   background-color: red;
 }
 
 <ul
-  class="emotion-0 emotion-1 emotion-2"
+  class="emotion-12 emotion-1 emotion-2"
 >
-  hello world
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
+exports[`theming List.ordered should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
+}
+
+.emotion-12 {
+  list-style-type: decimal;
+}
+
+.emotion-12 .emotion-12 {
+  list-style-type: lower-alpha;
+}
+
+.emotion-12 .emotion-12 .emotion-12 {
+  list-style-type: lower-roman;
+}
+
+.emotion-12 {
+  background-color: red;
+}
+
+<ol
+  class="emotion-12 emotion-1 emotion-2"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Four
+  </li>
+</ol>
+`;
+
+exports[`theming List.ordered should render correctly 2`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
+}
+
+.emotion-12 li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: unset;
+}
+
+.emotion-12 {
+  background-color: red;
+}
+
+<ul
+  class="emotion-12 emotion-1 emotion-2"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Four
+  </li>
 </ul>
 `;

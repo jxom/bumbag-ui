@@ -98,9 +98,62 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('List.base should render correctly', () => {
-    const { container } = render(<List>hello world</List>, {
-      theme: { List: { base: { backgroundColor: 'red' } } }
-    });
+    const { container } = render(
+      <List>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { base: { backgroundColor: 'red' } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('List.ordered should render correctly', () => {
+    const { container } = render(
+      <List isOrdered>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { ordered: { backgroundColor: 'red' } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('List.ordered should render correctly', () => {
+    const { container } = render(
+      <List isHorizontal>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { horizontal: { backgroundColor: 'red' } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('List.Item.base should render correctly', () => {
+    const { container } = render(
+      <List>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { Item: { base: { backgroundColor: 'red' } } } }
+      }
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });

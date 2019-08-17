@@ -27,13 +27,16 @@ export default function Theme(props) {
         </Box>
         {override.description && <Box>{override.description}</Box>}
         <Box>
-          {components.map((props, i) => (
-            <Component key={i} overrides={overrides} {...props}>
-              {' '}
-              {/* eslint-disable-line */}
-              {children}
-            </Component>
-          ))}
+          {components.map((props, i) => {
+            const newChildren = props && props.children ? props.children : children;
+            return (
+              <Component key={i} overrides={overrides} {...props}>
+                {' '}
+                {/* eslint-disable-line */}
+                {typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren}
+              </Component>
+            );
+          })}
         </Box>
       </Box>
     );
