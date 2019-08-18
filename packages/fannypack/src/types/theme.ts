@@ -55,6 +55,9 @@ export type ButtonThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
 };
+export type CodeThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+};
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
 };
@@ -129,6 +132,7 @@ export type ThemeConfig = {
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
   Button?: ButtonThemeConfig;
+  Code?: CodeThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Heading?: HeadingThemeConfig;

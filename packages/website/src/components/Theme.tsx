@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Text } from 'fannypack';
+import { Box, Code, Text } from 'fannypack';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
@@ -22,11 +22,11 @@ export default function Theme(props) {
       <Box key={key} marginBottom="major-4">
         <Box>
           <Text fontWeight="bold">
-            <Text use="code">{key}</Text>
+            <Code>{key}</Code>
           </Text>
         </Box>
-        {override.description && <Box>{override.description}</Box>}
-        <Box>
+        {override.description && <Box marginTop="major-1">{override.description}</Box>}
+        <Box marginTop="major-1">
           {components.map((props, i) => {
             const newChildren = props && props.children ? props.children : children;
             return (

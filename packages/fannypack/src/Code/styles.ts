@@ -1,0 +1,28 @@
+import { css, cssClass } from '../styled';
+import { darken, palette, theme } from '../utils';
+
+export const Code = styleProps => cssClass`
+  background-color: ${
+    styleProps.palette === 'default'
+      ? palette('white700')(styleProps)
+      : palette(`${styleProps.palette}Tint`)(styleProps)
+  };
+  border-radius: 2px;
+  color: ${
+    styleProps.palette === 'default' ? palette('text')(styleProps) : palette(`${styleProps.palette}700`)(styleProps)
+  };
+  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
+  padding: 0.1rem 0.2rem;
+
+  & {
+    ${styleProps.isBlock &&
+      css`
+        padding: 1rem;
+        ${theme('Code.block')(styleProps)};
+      `}
+  };
+
+  & {
+    ${theme('Code.base')(styleProps)};
+  };
+`;

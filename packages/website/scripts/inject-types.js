@@ -9,6 +9,31 @@ function isDirectory(path) {
   return lstatSync(path).isDirectory();
 }
 
+function formatType(type) {
+  let newType = type.slice(0);
+  if (newType[0] === '{') {
+    let level = 0;
+    let typeArray = newType.split('');
+    typeArray.forEach((char, i) => {
+      if (char === '{') {
+        level = level + 1;
+        typeArray.splice(i + 1, 1, `\n${' '.repeat(level * 2)}`);
+      }
+      if (char === '}') {
+        level = level - 1;
+        typeArray.splice(i - (level * 2 || 1), level * 2 || 1, `\n${' '.repeat(level * 2)}`);
+      }
+      if (char === ';') {
+        typeArray.splice(i + 1, 1, `\n${' '.repeat(level * 2)}`);
+      }
+    });
+    newType = typeArray.join('');
+  } else {
+    newType = newType.replace(/\s\|\s/g, '\n  | ');
+  }
+  return newType;
+}
+
 function getPaths(pagesPath, regex, initialDocPaths = []) {
   const fileNames = readdirSync(pagesPath);
   const docPaths = fileNames.reduce((currentDocPaths, fileName) => {
@@ -56,20 +81,20 @@ function getProps(node) {
     .filter(prop => !getTagNames(prop).includes('private'));
 }
 
-function getPropType(prop) {
+function getPropType(prop, shouldEncode) {
   const declaration = getDeclaration(prop);
   const type = declaration.getType().getText(undefined, ts.TypeFormatFlags.InTypeAlias);
 
-  // const encode = text => text.replace(/[\u00A0-\u9999<>&"]/gim, i => `&#${i.charCodeAt(0)};`);
+  const encode = text => text.replace(/[\u00A0-\u9999<>&"]/gim, i => `&#${i.charCodeAt(0)};`);
 
-  // return encode(type);
-  return type;
+  return shouldEncode ? encode(type) : type;
 }
 
 function createPropTypeObject(prop) {
   return {
     name: prop.getEscapedName(),
     description: getComment(prop),
+    encodedType: getPropType(prop, true),
     type: getPropType(prop)
   };
 }
@@ -80,18 +105,28 @@ function createPropTypeObjects(node) {
 
 function createTypeMarkdown(types) {
   return types
-    .map(
-      type => `
-**\`${type.name}\`**
+    .map(type => {
+      const isShort = type.type.length < 50;
+      return `
+**<Code marginRight="major-1">${type.name}</Code>** ${
+        isShort ? `<Code fontSize="150" palette="primary">${type.encodedType}</Code>` : ''
+      }
 
-\`\`\`
-${type.type}
-\`\`\`
+${
+        !isShort
+          ? `
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{\`${formatType(type.type)}\`}
+</Code>
+`
+          : ''
+      }
 
 ${type.description}
 
-`
-    )
+<Box marginBottom="major-4" />
+`;
+    })
     .join('');
 }
 
@@ -116,7 +151,10 @@ function getTypeMarkdown(extractedType, typeReferences) {
         content = `
 ${content}
 
-<details><summary>Inherits <code><strong>&#60;${use.replace(/(Local|Props)/g, '')}&#62;</strong></code> props</summary>
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;${use.replace(
+          /(Local|Props)/g,
+          ''
+        )}&#62;</strong></code> props</Box>
 ${createTypeMarkdown(useTypes)}
 </details>
 

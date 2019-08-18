@@ -2,6 +2,7 @@ export * from './Block';
 export * from './Blockquote';
 export * from './Box';
 export * from './Button';
+export * from './Code';
 export * from './Flex';
 export * from './Grid';
 export * from './Heading';

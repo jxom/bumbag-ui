@@ -18,11 +18,11 @@ export type LocalButtonProps = {
   /** Makes the button not interactable. */
   isStatic?: boolean;
   kind?: ButtonKind;
-  /** Theming overrides. [Click here](TODO) to view the theming schema for `Button`. */
-  overrides?: ButtonThemeConfig;
   palette?: Palette;
   size?: Size;
   type?: ButtonType;
+  /** Theming overrides. [Click here](TODO) to view the theming schema for `Button`. */
+  overrides?: ButtonThemeConfig;
 };
 export type ButtonProps = BoxProps & LocalButtonProps;
 
