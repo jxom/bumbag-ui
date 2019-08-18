@@ -13,6 +13,16 @@ describe('props', () => {
     const { container } = render(<Code color="primary">Hello world</Code>);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly as a block', () => {
+    const { container } = render(<Code isBlock>Hello world</Code>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with palette', () => {
+    const { container } = render(<Code palette="primary">Hello world</Code>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('composition', () => {

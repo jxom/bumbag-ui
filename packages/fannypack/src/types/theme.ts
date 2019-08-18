@@ -57,6 +57,7 @@ export type ButtonThemeConfig = {
 };
 export type CodeThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  block?: ThemeAttribute<Stylesheet>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;

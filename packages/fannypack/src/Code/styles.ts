@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { darken, palette, theme } from '../utils';
+import { palette, space, theme } from '../utils';
 
 export const Code = styleProps => cssClass`
   background-color: ${
