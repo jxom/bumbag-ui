@@ -10,7 +10,7 @@
     "build": "yarn clean && yarn build:lib && yarn build:types",
     "build:lib": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
-    "clean": "rimraf es/ lib/ dist/ ts/",
+    "clean": "rimraf es/ lib/ dist/ ts/ && node scripts/remove-proxies.js",
     "develop": "rollup -c -w",
     "prepublishOnly": "yarn build",
     "postpublish": "yarn clean",
