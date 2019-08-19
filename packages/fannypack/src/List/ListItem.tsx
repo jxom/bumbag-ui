@@ -30,7 +30,7 @@ export const ListItem = createComponent<ListItemProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: listItemProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         use: 'li'
       },

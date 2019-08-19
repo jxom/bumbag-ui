@@ -30,7 +30,7 @@ export const Paragraph = createComponent<ParagraphProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: paragraph });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         use: 'p'
       },

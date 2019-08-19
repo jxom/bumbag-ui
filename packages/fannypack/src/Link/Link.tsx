@@ -30,7 +30,7 @@ export const Link = createComponent<LinkProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: linkProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         use: 'a'
       },

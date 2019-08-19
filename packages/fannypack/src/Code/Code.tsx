@@ -39,7 +39,7 @@ export const Code = createComponent<CodeProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: codeProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         palette: 'default'
       },

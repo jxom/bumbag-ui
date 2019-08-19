@@ -38,7 +38,7 @@ export const Grid = createComponent(
     return createElement({ children, component: ReakitBox, use, htmlProps: gridProps });
   },
   {
-    assign: { useProps },
+    attach: { useProps },
     themeKey: 'Grid'
   }
 );

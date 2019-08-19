@@ -46,7 +46,7 @@ export const Button = createComponent<ButtonProps>(
     return createElement({ children, component: ReakitButton, use, htmlProps: buttonProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         disabled: false,
         iconAfter: undefined,

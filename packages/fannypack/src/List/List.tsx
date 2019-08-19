@@ -39,7 +39,7 @@ export const List = createComponent<ListProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: listProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: {
         isOrdered: false,
         isHorizontal: false

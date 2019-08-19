@@ -7,7 +7,7 @@ import { ThemeContext } from '../styled';
 export function createComponent<P>(
   Component: React.FunctionComponent<P>,
   config?: {
-    assign?: {
+    attach?: {
       useProps: (props?: Partial<P>, refs?: Array<any>) => any;
       defaultProps?: Partial<P>;
     };
@@ -20,5 +20,5 @@ export function createComponent<P>(
     const newProps = _merge({ ...props }, defaultProps);
     return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));
   });
-  return Object.assign({}, ForwardedComponent, config.assign);
+  return Object.assign({}, ForwardedComponent, config.attach);
 }

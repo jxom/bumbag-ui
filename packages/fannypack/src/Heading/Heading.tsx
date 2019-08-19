@@ -32,7 +32,7 @@ export const Heading = createComponent<HeadingProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: HeadingProps });
   },
   {
-    assign: {
+    attach: {
       defaultProps: { isSubHeading: false, use: 'h1' },
       useProps
     },

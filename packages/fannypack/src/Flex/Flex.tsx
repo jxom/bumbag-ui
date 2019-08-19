@@ -30,7 +30,7 @@ export const Flex = createComponent<FlexProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: flexProps });
   },
   {
-    assign: { useProps },
+    attach: { useProps },
     themeKey: 'Flex'
   }
 );
