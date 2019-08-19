@@ -46,3 +46,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Text>hello world</Text>, {
+      theme: { Text: { defaultProps: { className: 'test', color: 'primary' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

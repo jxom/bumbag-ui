@@ -50,3 +50,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly', () => {
+    const { container } = render(<Block>hello world</Block>, {
+      theme: { Block: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

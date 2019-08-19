@@ -63,6 +63,7 @@ export const Box = createComponent<BoxProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: boxProps });
   },
   {
-    useProps
+    assign: { useProps },
+    themeKey: 'Box'
   }
 );

@@ -39,9 +39,12 @@ export const Code = createComponent<CodeProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: codeProps });
   },
   {
-    defaultProps: {
-      palette: 'default'
+    assign: {
+      defaultProps: {
+        palette: 'default'
+      },
+      useProps
     },
-    useProps
+    themeKey: 'Code'
   }
 );

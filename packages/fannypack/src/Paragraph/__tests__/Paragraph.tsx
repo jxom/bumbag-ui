@@ -48,3 +48,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Paragraph>hello world</Paragraph>, {
+      theme: { Paragraph: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

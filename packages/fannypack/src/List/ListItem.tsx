@@ -30,9 +30,12 @@ export const ListItem = createComponent<ListItemProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: listItemProps });
   },
   {
-    defaultProps: {
-      use: 'li'
+    assign: {
+      defaultProps: {
+        use: 'li'
+      },
+      useProps
     },
-    useProps
+    themeKey: 'List.Item'
   }
 );

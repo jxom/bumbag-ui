@@ -50,3 +50,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Grid>hello world</Grid>, {
+      theme: { Grid: { defaultProps: { autoFlow: 'row', className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

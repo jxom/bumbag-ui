@@ -48,3 +48,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly', () => {
+    const { container } = render(<Blockquote>hello world</Blockquote>, {
+      theme: { Blockquote: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

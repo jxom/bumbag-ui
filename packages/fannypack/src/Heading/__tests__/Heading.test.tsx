@@ -158,3 +158,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Heading>hello world</Heading>, {
+      theme: { Heading: { defaultProps: { className: 'test', isSubHeading: true } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

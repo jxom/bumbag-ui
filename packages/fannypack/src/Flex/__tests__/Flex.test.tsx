@@ -50,3 +50,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Flex>hello world</Flex>, {
+      theme: { Flex: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

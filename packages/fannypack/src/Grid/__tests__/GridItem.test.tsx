@@ -46,3 +46,12 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<GridItem>hello world</GridItem>, {
+      theme: { Grid: { Item: { defaultProps: { area: 'test', className: 'test' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

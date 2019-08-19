@@ -30,9 +30,12 @@ export const Link = createComponent<LinkProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: linkProps });
   },
   {
-    defaultProps: {
-      use: 'a'
+    assign: {
+      defaultProps: {
+        use: 'a'
+      },
+      useProps
     },
-    useProps
+    themeKey: 'Link'
   }
 );

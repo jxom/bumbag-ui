@@ -30,6 +30,7 @@ export const Block = createComponent<BlockProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: blockProps });
   },
   {
-    useProps
+    assign: { useProps },
+    themeKey: 'Block'
   }
 );

@@ -29,5 +29,5 @@ export const Blockquote = createComponent<BlockquoteProps>(
     const blockquoteProps = useProps(restProps);
     return createElement({ children, component: ReakitBox, use, htmlProps: blockquoteProps });
   },
-  { defaultProps: { use: 'blockquote' }, useProps }
+  { assign: { defaultProps: { use: 'blockquote' }, useProps }, themeKey: 'Blockquote' }
 );

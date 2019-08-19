@@ -90,6 +90,48 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  color: #444bc9;
+  fill: #444bc9;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+.emotion-0:hover {
+  color: #14163c;
+  fill: #14163c;
+}
+
+.emotion-0:focus {
+  outline-style: dashed;
+}
+
+<a
+  class="emotion-0 emotion-1 emotion-2 test"
+>
+  hello world
+</a>
+`;
+
 exports[`overrides Link.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;

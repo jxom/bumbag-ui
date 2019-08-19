@@ -30,6 +30,7 @@ export const InlineBlock = createComponent<InlineBlockProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: inlineBlockProps });
   },
   {
-    useProps
+    assign: { useProps },
+    themeKey: 'InlineBlock'
   }
 );

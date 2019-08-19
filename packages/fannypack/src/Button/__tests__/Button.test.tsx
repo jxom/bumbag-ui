@@ -25,11 +25,6 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with overrides', () => {
-    const { container } = render(<Button overrides={{ base: { backgroundColor: 'red' } }}>Hello world</Button>);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   describe('disabled', () => {
     it('should render a disabled button correctly', () => {
       const { container } = render(<Button disabled>Hello world</Button>);
@@ -170,6 +165,97 @@ describe('composition', () => {
   });
 });
 
+describe('overrides', () => {
+  it('Button.base should render correctly', () => {
+    const { container } = render(
+      <Button overrides={{ base: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.disabled should render correctly', () => {
+    const { container } = render(
+      <Button disabled overrides={{ disabled: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.focus should render correctly', () => {
+    const { container } = render(<Button overrides={{ focus: { backgroundColor: 'red' } }}>hello world</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.ghost should render correctly', () => {
+    const { container } = render(
+      <Button kind="ghost" overrides={{ ghost: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.hover should render correctly', () => {
+    const { container } = render(<Button overrides={{ hover: { backgroundColor: 'red' } }}>hello world</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.hoveractive should render correctly', () => {
+    const { container } = render(<Button overrides={{ hoveractive: { backgroundColor: 'red' } }}>hello world</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.loading should render correctly', () => {
+    const { container } = render(
+      <Button isLoading overrides={{ loading: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.link should render correctly', () => {
+    const { container } = render(
+      <Button kind="link" overrides={{ link: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.outlined should render correctly', () => {
+    const { container } = render(
+      <Button kind="outlined" overrides={{ outlined: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Button.static should render correctly', () => {
+    const { container } = render(
+      <Button isStatic overrides={{ outlined: { backgroundColor: 'red' } }}>
+        hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  ['small', 'default', 'medium', 'large'].forEach((size: any) => {
+    it(`Button.sizes.${size} should render correctly`, () => {
+      const { container } = render(
+        <Button size={size} overrides={{ sizes: { [size]: { backgroundColor: 'red' } } }}>
+          hello world
+        </Button>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+});
+
 describe('theming', () => {
   it('Button.base should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
@@ -248,5 +334,14 @@ describe('theming', () => {
       });
       expect(container.firstChild).toMatchSnapshot();
     });
+  });
+});
+
+describe('defaultProps', () => {
+  it('should render correctly', () => {
+    const { container } = render(<Button>hello world</Button>, {
+      theme: { Button: { defaultProps: { palette: 'primary', size: 'medium' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

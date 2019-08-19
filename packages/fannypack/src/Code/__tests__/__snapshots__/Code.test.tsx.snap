@@ -68,6 +68,68 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: #f2f2f2;
+  border-radius: 2px;
+  color: #212121;
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+  padding: 0.1rem 0.2rem;
+}
+
+<code
+  class="emotion-0 emotion-1 emotion-2 test"
+>
+  hello world
+</code>
+`;
+
+exports[`defaultProps should render correctly for palette 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: #ecedf9;
+  border-radius: 2px;
+  color: #2f348c;
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+  padding: 0.1rem 0.2rem;
+}
+
+<code
+  class="emotion-0 emotion-1 emotion-2"
+>
+  hello world
+</code>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;

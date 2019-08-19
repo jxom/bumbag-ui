@@ -30,6 +30,7 @@ export const InlineFlex = createComponent<InlineFlexProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: inlineFlexProps });
   },
   {
-    useProps
+    assign: { useProps },
+    themeKey: 'InlineFlex'
   }
 );

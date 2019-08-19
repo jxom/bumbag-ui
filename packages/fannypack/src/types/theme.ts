@@ -1,3 +1,21 @@
+import { ButtonProps } from '../Button';
+import { BlockProps } from '../Block';
+import { BlockquoteProps } from '../Blockquote';
+import { BoxProps } from '../Box';
+import { CodeProps } from '../Code';
+import { FlexProps } from '../Flex';
+import { GridProps } from '../Grid/Grid';
+import { GridItemProps } from '../Grid/GridItem';
+import { HeadingProps } from '../Heading';
+import { InlineProps } from '../Inline';
+import { InlineBlockProps } from '../InlineBlock';
+import { InlineFlexProps } from '../InlineFlex';
+import { LinkProps } from '../Link';
+import { ListProps } from '../List/List';
+import { ListItemProps } from '../List/ListItem';
+import { ParagraphProps } from '../Paragraph';
+import { TextProps } from '../Text';
+
 export type Stylesheet = any; // TODO: fix
 
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
@@ -30,12 +48,15 @@ export type PaletteThemeConfig = {
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<BlockProps>;
 };
 export type BlockquoteThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<BlockquoteProps>;
 };
 export type BoxThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<BoxProps>;
 };
 export type ButtonThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -54,19 +75,24 @@ export type ButtonThemeConfig = {
     medium?: ThemeAttribute<Stylesheet>;
     large?: ThemeAttribute<Stylesheet>;
   };
+  defaultProps?: Partial<ButtonProps>;
 };
 export type CodeThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   block?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<CodeProps>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<FlexProps>;
 };
 export type GridThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   Item?: {
     base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<GridItemProps>;
   };
+  defaultProps?: Partial<GridProps>;
 };
 export type HeadingThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -91,20 +117,25 @@ export type HeadingThemeConfig = {
   subHeading?: {
     base?: ThemeAttribute<Stylesheet>;
   };
+  defaultProps?: Partial<HeadingProps>;
 };
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<InlineProps>;
 };
 export type InlineBlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<InlineBlockProps>;
 };
 export type InlineFlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<InlineFlexProps>;
 };
 export type LinkThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   hover?: ThemeAttribute<Stylesheet>;
   focus?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<LinkProps>;
 };
 export type ListThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -112,13 +143,17 @@ export type ListThemeConfig = {
   horizontal?: ThemeAttribute<Stylesheet>;
   Item?: {
     base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<ListItemProps>;
   };
+  defaultProps?: Partial<ListProps>;
 };
 export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<ParagraphProps>;
 };
 export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<TextProps>;
 };
 
 export type ThemeConfig = {

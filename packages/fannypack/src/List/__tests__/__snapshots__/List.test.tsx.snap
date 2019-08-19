@@ -78,6 +78,136 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for List.Item 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+<ul
+  class="emotion-12 emotion-1 emotion-2"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2 test"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 test"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 test"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 test"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
+exports[`defaultProps should render correctly for isOrdered 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
+}
+
+.emotion-12 {
+  list-style-type: decimal;
+}
+
+.emotion-12 .emotion-12 {
+  list-style-type: lower-alpha;
+}
+
+.emotion-12 .emotion-12 .emotion-12 {
+  list-style-type: lower-roman;
+}
+
+<ol
+  class="emotion-12 emotion-1 emotion-2 test"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Item Four
+  </li>
+</ol>
+`;
+
 exports[`overrides List.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;

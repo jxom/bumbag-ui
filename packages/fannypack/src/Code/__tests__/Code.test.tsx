@@ -56,3 +56,19 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Code>hello world</Code>, {
+      theme: { Code: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for palette', () => {
+    const { container } = render(<Code>hello world</Code>, {
+      theme: { Code: { defaultProps: { palette: 'primary' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

@@ -60,6 +60,33 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  display: inline;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 test"
+>
+  hello world
+</div>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;

@@ -7,3 +7,5 @@
 - layout.mobileBreakpoint, etc -> breakpoints.mobile
 - Add fontWeight, fontSize, breakpoint styled utils
 - Added responsive CSS props
+- Added `defaultProps` to theming
+- Changed styled exports

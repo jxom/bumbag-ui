@@ -157,3 +157,35 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('defaultProps', () => {
+  it('should render correctly for isOrdered', () => {
+    const { container } = render(
+      <List>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { defaultProps: { className: 'test', isOrdered: true } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for List.Item', () => {
+    const { container } = render(
+      <List>
+        <List.Item>Item One</List.Item>
+        <List.Item>Item Two</List.Item>
+        <List.Item>Item Three</List.Item>
+        <List.Item>Item Four</List.Item>
+      </List>,
+      {
+        theme: { List: { Item: { defaultProps: { className: 'test' } } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

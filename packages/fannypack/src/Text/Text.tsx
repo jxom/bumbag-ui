@@ -30,9 +30,12 @@ export const Text = createComponent<TextProps>(
     return createElement({ children, component: ReakitBox, use, htmlProps: textProps });
   },
   {
-    defaultProps: {
-      use: 'span'
+    assign: {
+      defaultProps: {
+        use: 'span'
+      },
+      useProps
     },
-    useProps
+    themeKey: 'Text'
   }
 );

@@ -70,6 +70,38 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  border-left: 4px solid #ccc;
+  padding: 1rem;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+<blockquote
+  class="emotion-0 emotion-1 emotion-2 test"
+>
+  hello world
+</blockquote>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
