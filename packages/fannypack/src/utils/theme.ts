@@ -5,7 +5,7 @@ import { css } from '../styled';
 import { isFunction } from './isFunction';
 
 export function theme(selector: string, defaultValue?: any) {
-  return (props: { theme: ThemeConfig }) => {
+  return (props: { theme?: ThemeConfig }) => {
     const localSelector = selector
       .split('.')
       .slice(1)
@@ -19,28 +19,28 @@ export function theme(selector: string, defaultValue?: any) {
 }
 
 export function fontSize(selector?: string, defaultValue?: any) {
-  return (props: { fontSize?: string; theme: ThemeConfig }) => {
+  return (props: { fontSize?: string; theme?: ThemeConfig }) => {
     const color = theme(`fontSizes.${selector || props.fontSize}`, defaultValue)(props);
     return color;
   };
 }
 
 export function fontWeight(selector?: string, defaultValue?: any) {
-  return (props: { fontWeight?: string; theme: ThemeConfig }) => {
+  return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
     const color = theme(`fontWeights.${selector || props.fontWeight}`, defaultValue)(props);
     return color;
   };
 }
 
 export function palette(selector?: string, defaultValue?: any) {
-  return (props: { palette?: string; theme: ThemeConfig }) => {
+  return (props: { palette?: string; theme?: ThemeConfig }) => {
     const color = theme(`palette.${selector || props.palette}`, defaultValue)(props);
     return color;
   };
 }
 
 export function space(_scalar: number | string | void, _scaleType: 'minor' | 'major' = 'minor') {
-  return (props: { theme: ThemeConfig }) => {
+  return (props: { theme?: ThemeConfig }) => {
     let scalar = _scalar;
     let scaleType = _scaleType;
     if (!scalar) return 0;

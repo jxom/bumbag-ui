@@ -4,11 +4,15 @@ import { Code } from 'fannypack/Code';
 
 # Code
 
+`<Code>` renders a `<code>` element by default with reset styles and theme styles.
+
+## Import
+
 ```jsx
 import { Code } from 'fannypack'
 ```
 
-`<Code>` renders a `<code>` element by default with reset styles and theme styles.
+## Usage
 
 ```jsx-live
 <Code>Hello world!</Code>
@@ -48,7 +52,15 @@ You can style code with colors from the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  block?: any;
+  defaultProps?: Partial<CodeProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 

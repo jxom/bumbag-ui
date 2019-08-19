@@ -4,11 +4,15 @@ import { InlineFlex } from 'fannypack/InlineFlex/InlineFlex';
 
 # InlineFlex
 
+By default it renders a `<Box>` component with `display: inline-flex`.
+
+## Import
+
 ```js
 import { InlineFlex } from 'fannypack';
 ```
 
-By default it renders a `<Box>` component with `display: inline-flex`.
+## Usage
 
 ```jsx-live
 <InlineFlex>This is an inline flex</InlineFlex>
@@ -18,13 +22,20 @@ By default it renders a `<Box>` component with `display: inline-flex`.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<InlineFlexProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>** 
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -38,7 +49,7 @@ By default it renders a `<Box>` component with `display: inline-flex`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>** 
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -71,7 +82,7 @@ By default it renders a `<Box>` component with `display: inline-flex`.
 
 </details>
 
-        
+
 
 ## Theming
 

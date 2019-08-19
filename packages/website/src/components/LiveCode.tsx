@@ -5,19 +5,20 @@
 
 import * as React from 'react';
 import {
-  LiveProvider as _LiveProvider,
+  LiveProvider,
   LiveEditor as _LiveEditor,
   LiveError as _LiveError,
   LivePreview as _LivePreview
 } from 'react-live';
 import * as fannypack from 'fannypack';
+import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
 import { palette, styled } from 'fannypack';
 
 const LiveEditor = styled(_LiveEditor)`
-  font-family: Menlo, monospace;
-  padding: 1.5em;
-  margin: 0;
-  background-color: ${palette('black')};
+  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
+  font-size: 16px;
+  padding: 0.75rem !important;
+  margin: 0 !important;
   overflow-x: auto;
   outline: none;
 `;
@@ -30,16 +31,12 @@ const LiveError = styled(_LiveError)`
   overflow-x: auto;
 `;
 const LivePreview = styled(_LivePreview)`
-  padding: 1.5em;
-`;
-const LiveProvider = styled(_LiveProvider)`
-  border: 1px solid ${palette('white700')};
-  border-radius: 2;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  border: 1px solid ${palette('white800')} !important;
+  border-bottom: none !important;
+  padding: 1.5rem !important;
 `;
 
-const REG = /language\-\jsx-live/ // eslint-disable-line
+const REG = /language\-\jsx-live/; // eslint-disable-line
 
 type Props = {
   className?: string;
@@ -55,15 +52,16 @@ LiveCode.defaultProps = {
 };
 
 export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, children, ...props }: Props) {
+  const theme = React.useContext(fannypack.ThemeContext);
   const scope = React.useMemo(
     () => ({
-      ...fannypack
+      ...fannypack,
+      HighlightedCode
     }),
     []
   );
 
   const isLive = match.test(props.className);
-  const Comp = Pre || Fallback || 'pre';
   if (!isLive) {
     const lang = (props.className || '').split('-')[1];
 
@@ -72,9 +70,7 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
     }
     return (
       // @ts-ignore
-      <Comp {...props} lang={lang}>
-        {children.replace(/\n$/, '')}
-      </Comp>
+      <HighlightedCode {...props} marginBottom="major-4" isBlock code={children.replace(/\n$/, '')} language={lang} />
     );
   }
 
@@ -84,11 +80,15 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
 
   const noInline = props.className.includes('noInline');
 
+  const codeTheme = highlightedCodeStyles.codeTheme({ theme });
+
   return (
-    <LiveProvider code={code} scope={scope} noInline={noInline} {...props}>
-      <LivePreview />
-      <LiveEditor />
-      <LiveError />
-    </LiveProvider>
+    <fannypack.Box marginBottom="major-4">
+      <LiveProvider code={code} scope={scope} noInline={noInline} theme={codeTheme} {...props}>
+        <LivePreview />
+        <LiveEditor />
+        <LiveError />
+      </LiveProvider>
+    </fannypack.Box>
   );
 }

@@ -119,6 +119,20 @@ export type HeadingThemeConfig = {
   };
   defaultProps?: Partial<HeadingProps>;
 };
+export type HighlightedCodeThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  block?: ThemeAttribute<Stylesheet>;
+  Pre?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Line?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Token?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CodeProps>;
+};
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<InlineProps>;
@@ -172,6 +186,7 @@ export type ThemeConfig = {
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Heading?: HeadingThemeConfig;
+  HighlightedCode?: HighlightedCodeThemeConfig;
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;

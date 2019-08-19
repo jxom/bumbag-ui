@@ -4,11 +4,15 @@ import { Text } from 'fannypack/Text/Text';
 
 # Text
 
+The `<Text>` component renders a `<span>` with basic reset styles by default.
+
+## Import
+
 ```jsx
 import { Text } from 'fannypack'
 ```
 
-The `<Text>` component renders a `<span>` with basic reset styles by default.
+## Usage
 
 ```jsx-live
 <Text>Hello world!</Text>
@@ -21,7 +25,7 @@ The `<Text>` component renders a `<span>` with basic reset styles by default.
 <Text color="danger">Hello world!</Text>
 ```
 
-## Other elements
+### Other elements
 
 ```jsx-live
 <Text use="strong">Bold</Text><br />
@@ -44,13 +48,20 @@ The `<Text>` component renders a `<span>` with basic reset styles by default.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<TextProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>** 
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -64,7 +75,7 @@ The `<Text>` component renders a `<span>` with basic reset styles by default.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>** 
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -97,7 +108,7 @@ The `<Text>` component renders a `<span>` with basic reset styles by default.
 
 </details>
 
-        
+
 
 ## Theming
 

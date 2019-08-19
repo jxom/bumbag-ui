@@ -4,13 +4,15 @@ import { Blockquote } from 'fannypack/Blockquote/Blockquote';
 
 # Blockquote
 
+`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
+
+## Import
+
 ```jsx
 import { Blockquote } from 'fannypack'
 ```
 
-`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
-
-TODO: change content to `<Paragraph>` and `<Text>`
+## Usage
 
 ```jsx-live
 <Blockquote>
@@ -29,7 +31,7 @@ TODO: change content to `<Paragraph>` and `<Text>`
 </Blockquote>
 ```
 
-## Border styling
+### Border styling
 
 The left border can be modified using the primitive style props:
 
@@ -59,7 +61,14 @@ Or you can hide the border:
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<BlockquoteProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 

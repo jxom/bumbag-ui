@@ -171,14 +171,16 @@ ${content}`;
 }
 
 function extractTypes(config) {
-  const { docsPath, libPath } = config;
+  const { docsPath, libPaths } = config;
 
   const project = new Project({
-    tsConfigFilePath: path.join(libPath, 'tsconfig.json'),
+    tsConfigFilePath: path.join(libPaths[0], 'tsconfig.json'),
     addFilesFromTsConfig: false
   });
 
-  const sourcePaths = getPaths(libPath, /.tsx$/);
+  const sourcePaths = libPaths.reduce((currentSourcePaths, libPath) => {
+    return [...currentSourcePaths, ...getPaths(libPath, /.tsx$/)];
+  }, []);
   const sourceFilesAst = project.addExistingSourceFiles(sourcePaths);
   project.resolveSourceFileDependencies();
 
@@ -242,6 +244,6 @@ function extractTypes(config) {
 }
 
 extractTypes({
-  libPath: path.join(__dirname, '../../fannypack'),
+  libPaths: [path.join(__dirname, '../../fannypack'), path.join(__dirname, '../../fannypack-addon-highlighted-code')],
   docsPath: path.join(__dirname, '../')
 });

@@ -4,11 +4,15 @@ import { List } from 'fannypack/List';
 
 # List
 
+`<List>` renders a `<ul>` element by default with reset styles and `list-style` unset.
+
+## Import
+
 ```jsx
 import { List } from 'fannypack';
 ```
 
-`<List>` renders a `<ul>` element by default with reset styles and `list-style` unset.
+## Usage
 
 ```jsx-live
 <Paragraph>My awesome list:</Paragraph>
@@ -151,7 +155,14 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<ListItemProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
@@ -203,6 +214,8 @@ To use an horizontal list, use the `isHorizontal` prop.
 <Box marginBottom="major-4" />
 
 </details>
+
+
 
 ## Theming
 

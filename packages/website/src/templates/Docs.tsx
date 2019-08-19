@@ -1,5 +1,6 @@
 import React from 'react';
 import * as fannypack from 'fannypack';
+import HighlightedCode from 'fannypack-addon-highlighted-code';
 import { MDXProvider } from '@mdx-js/react';
 
 import LiveCode from '../components/LiveCode';
@@ -14,6 +15,7 @@ export default function Docs(props: Props) {
   const components = React.useMemo(
     () => ({
       ...fannypack,
+      HighlightedCode,
       blockquote: (props: any) => (
         <fannypack.Blockquote
           backgroundColor="primaryTint"
@@ -24,7 +26,7 @@ export default function Docs(props: Props) {
         />
       ),
       code: (props: any) => <fannypack.Code {...props} />,
-      h1: (props: any) => <fannypack.Heading {...props} />,
+      h1: (props: any) => <fannypack.Heading marginBottom="major-4" {...props} />,
       h2: (props: any) => (
         <fannypack.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
@@ -38,7 +40,7 @@ export default function Docs(props: Props) {
       strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => (
         <LiveCode
-          pre={props => <fannypack.Code isBlock marginBottom="major-4" {...props} />}
+          // pre={props => <HighlightedCode isBlock marginBottom="major-4" {...props} code={props.children} />}
           {...props.children.props}
         />
       )

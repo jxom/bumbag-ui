@@ -15,7 +15,7 @@ export default function Theme(props) {
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
     let overrides = {};
-    _set(overrides, localKey, { backgroundColor: '#ffe3a4' });
+    _set(overrides, localKey, { backgroundColor: '#ffe3a4 !important' });
 
     return (
       // @ts-ignore

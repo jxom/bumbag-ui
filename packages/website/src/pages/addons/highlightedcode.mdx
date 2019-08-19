@@ -1,0 +1,203 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import HighlightedCode from 'fannypack-addon-highlighted-code';
+
+# HighlightedCode
+
+The <code>&#60;HighlightedCode&#62;</code> component uses [Prism React Renderer](https://github.com/FormidableLabs/prism-react-rendere) under the hood.
+
+## Install
+
+```
+yarn add @fannypack/addon-highlighted-code
+// or npm
+npm install @fannypack/addon-highlighted-code
+```
+
+## Import
+
+```javascript
+import HighlightedCode from '@fannypack/addon-highlighted-code'
+```
+
+## Usage
+
+```jsx-live
+<HighlightedCode code="console.log('Hello world')" language="javascript" />
+<HighlightedCode
+  isBlock
+  language="jsx"
+  marginTop="major-3"
+  code={`<Box>
+  <Text color="primary">Hello world</Text>
+</Box>`}
+/>
+```
+
+The following languages are supported:
+
+- <code>markup</code>
+- <code>bash</code>
+- <code>clike</code>
+- <code>c</code>
+- <code>cpp</code>
+- <code>css</code>
+- <code>"css-extras"</code>
+- <code>javascript</code>
+- <code>jsx</code>
+- <code>"js-extras"</code>
+- <code>coffeescript</code>
+- <code>diff</code>
+- <code>git</code>
+- <code>go</code>
+- <code>graphql</code>
+- <code>handlebars</code>
+- <code>json</code>
+- <code>less</code>
+- <code>makefile</code>
+- <code>markdown</code>
+- <code>objectivec</code>
+- <code>ocaml</code>
+- <code>python</code>
+- <code>reason</code>
+- <code>sass</code>
+- <code>scss</code>
+- <code>sql</code>
+- <code>stylus</code>
+- <code>typescript</code>
+- <code>wasm</code>
+- <code>yaml</code>
+
+## HighlightedCode Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">code</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+The code to be placed into the highlighted code area.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">language</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Language of the code.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isBlock</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Should the code appear as a block?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">preProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">lineProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">tokenProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">wrapperProps</Code>** <Code fontSize="150" palette="primary">Object</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  block?: any;
+  Pre?: {
+    base?: any
+  }; Line?: {
+    base?: any
+  }; Token?: {
+    base?: any
+  }; defaultProps?: Partial<CodeProps>;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
+## Theming
+
+<Theme
+  component={HighlightedCode}
+  overrides={[
+    {
+      key: 'HighlightedCode.base',
+      props: { code: 'console.log(\'hello world\')', language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.block',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.Pre.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.Line.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    },
+    {
+      key: 'HighlightedCode.Token.base',
+      props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
+    }
+  ]}/>

@@ -5,13 +5,17 @@ import { BoxThemeConfig } from 'fannypack/types';
 
 # Box
 
+All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use Box's props. [Read more here](https://reakit.io/docs/box/).
+
+By default it renders a `<div>` element with basic reset styles.
+
+## Import
+
 ```js
 import { Box } from 'fannypack';
 ```
 
-All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use Box's props. [Read more here](https://reakit.io/docs/box/).
-
-By default it renders a `<div>` element with basic reset styles.
+## Usage
 
 ```jsx-live
 <Box>This is a box</Box>
@@ -51,7 +55,7 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">use</Code>** 
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -65,7 +69,7 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>** 
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -84,7 +88,7 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; }</Code>
+**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; defaultProps?: Partial&#60;BoxProps&#62;; }</Code>
 
 <Box marginBottom="major-4" />
 

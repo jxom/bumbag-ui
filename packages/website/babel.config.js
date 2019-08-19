@@ -15,7 +15,8 @@ module.exports = {
       'babel-plugin-module-resolver',
       {
         alias: {
-          fannypack: '../fannypack/src'
+          fannypack: '../fannypack/src',
+          'fannypack-addon-highlighted-code': '../fannypack-addon-highlighted-code/src'
         }
       }
     ]
