@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as utils from '../utils';
+import { isFunction } from './isFunction';
 
 type Props = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export function createElement({ children, component, htmlProps, use }: Props) {
-  if (utils.isFunction(children)) {
+  if (isFunction(children)) {
     return children(htmlProps);
   }
   return React.createElement(component, { as: use, ...htmlProps }, children);

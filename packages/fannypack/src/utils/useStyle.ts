@@ -3,7 +3,7 @@ import _get from 'lodash/get';
 import _kebabCase from 'lodash/kebabCase';
 
 import { ThemeContext, css } from '../styled';
-import { breakpoint, fontSize, palette, space, fontWeight } from '../utils';
+import { breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
 import { pickCSSProps } from './cssProps';
 

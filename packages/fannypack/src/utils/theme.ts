@@ -2,7 +2,7 @@ import { theme as _theme } from 'styled-tools';
 import _get from 'lodash/get';
 import { ThemeConfig } from '../types';
 import { css } from '../styled';
-import { isFunction } from '../utils';
+import { isFunction } from './isFunction';
 
 export function theme(selector: string, defaultValue?: any) {
   return (props: { theme: ThemeConfig }) => {
