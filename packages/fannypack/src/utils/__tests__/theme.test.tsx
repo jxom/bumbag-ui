@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box } from '../../Box';
 import { breakpoint, theme } from '../theme';
-import styled, { css } from '../../styled';
+import { css, styled } from '../../styled';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
