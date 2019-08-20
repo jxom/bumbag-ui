@@ -9,3 +9,4 @@
 - Added responsive CSS props
 - Added `defaultProps` to theming
 - Changed styled exports
+- Moved HighlightedCode to a separate package

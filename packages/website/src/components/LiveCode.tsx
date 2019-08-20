@@ -16,8 +16,15 @@ import { palette, styled } from 'fannypack';
 
 const LiveEditor = styled(_LiveEditor)`
   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
-  font-size: 16px;
-  padding: 0.75rem !important;
+  /* font-size: 16px; */
+  padding: 1rem !important;
+
+  & textarea {
+    padding: 1rem !important;
+  }
+  & pre {
+    padding: 0 !important;
+  }
   margin: 0 !important;
   overflow-x: auto;
   outline: none;
