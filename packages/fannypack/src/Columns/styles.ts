@@ -113,18 +113,19 @@ export function getSpreadProperties(styleProps) {
     `;
   }
 
-  const getProperties = ({ breakpoint, spread }: any) => {
+  const getProperties = ({ breakpoint: _breakpoint, spread }: any) => {
     const properties = css`
       flex: none;
       width: ${getWidth(spread)};
     `;
     if (!spread) return null;
-    if (breakpoint) {
-      return css`
-        @media (max-width: ${theme(`breakpoints.${breakpoint}`)(styleProps)}px) {
+    if (_breakpoint) {
+      return breakpoint(
+        `max-${_breakpoint}`,
+        css`
           ${properties};
-        }
-      `;
+        `
+      )(styleProps);
     }
     return properties;
   };
@@ -138,19 +139,21 @@ export function getSpreadProperties(styleProps) {
       minBreakpoint !== 'mobile' &&
       !spreadTablet &&
       !spreadMobile &&
-      css`
-        @media (max-width: ${theme('breakpoints.tablet')(styleProps)}px) {
+      breakpoint(
+        `max-tablet`,
+        css`
           width: 100%;
-        }
-      `};
+        `
+      )(styleProps)};
     ${getProperties({ spread: spreadTablet, breakpoint: 'tablet' })};
     ${minBreakpoint !== 'mobile' &&
       !spreadMobile &&
-      css`
-        @media (max-width: ${theme('breakpoints.mobile')(styleProps)}px) {
+      breakpoint(
+        `max-mobile`,
+        css`
           width: 100%;
-        }
-      `};
+        `
+      )(styleProps)};
     ${getProperties({ spread: spreadMobile, breakpoint: 'mobile' })};
   `;
 }
@@ -175,17 +178,18 @@ export function getSpreadOffsetProperties(styleProps) {
     return null;
   }
 
-  const getProperties = ({ breakpoint, spreadOffset }: any) => {
+  const getProperties = ({ breakpoint: _breakpoint, spreadOffset }: any) => {
     const properties = css`
       margin-left: ${getWidth(spreadOffset)};
     `;
     if (!spreadOffset) return null;
-    if (breakpoint) {
-      return css`
-        @media (max-width: ${theme(`breakpoints.${breakpoint}`)(styleProps)}px) {
+    if (_breakpoint) {
+      return breakpoint(
+        `max-${_breakpoint}`,
+        css`
           ${properties};
-        }
-      `;
+        `
+      )(styleProps);
     }
     return properties;
   };
@@ -201,18 +205,20 @@ export function getSpreadOffsetProperties(styleProps) {
       ${getProperties({ spreadOffset: spreadDesktopOffset, breakpoint: 'desktop' })};
       ${!spreadTabletOffset &&
         !spreadMobileOffset &&
-        css`
-          @media (max-width: ${theme('breakpoints.tablet')(styleProps)}px) {
+        breakpoint(
+          `max-tablet`,
+          css`
             margin-left: 0;
-          }
-        `};
+          `
+        )(styleProps)};
       ${getProperties({ spreadOffset: spreadTabletOffset, breakpoint: 'tablet' })};
       ${!spreadMobileOffset &&
-        css`
-          @media (max-width: ${theme('breakpoints.mobile')(styleProps)}px) {
+        breakpoint(
+          `max-mobile`,
+          css`
             margin-left: 0;
-          }
-        `};
+          `
+        )(styleProps)};
       ${getProperties({ spreadOffset: spreadMobileOffset, breakpoint: 'mobile' })};
     `;
   }
