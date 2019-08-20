@@ -1,7 +1,6 @@
 // TODO:
 // - Add "Open with Playroom" button
 // - Add copy button
-// - LiveEditor theming
 
 import * as React from 'react';
 import {
@@ -12,11 +11,18 @@ import {
 } from 'react-live';
 import * as fannypack from 'fannypack';
 import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
-import { palette, styled } from 'fannypack';
+import { palette, space, styled } from 'fannypack';
+import base64url from 'base64-url';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
+const Actions = styled(fannypack.Box)`
+  background-color: ${palette('white')};
+  border: 1px solid ${palette('white800')};
+  border-top: none;
+  padding: ${space(2)}rem ${space(4)}rem;
+`;
 const LiveEditor = styled(_LiveEditor)`
   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
-  /* font-size: 16px; */
   padding: 1rem !important;
 
   & textarea {
@@ -85,6 +91,14 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
     .join('\n')
     .replace(/\s$/, '');
 
+  const playroomUrl = React.useMemo(() => {
+    return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+  }, [code]);
+
+  function handleClickPlayroom() {
+    window.open(playroomUrl, '_blank');
+  }
+
   const noInline = props.className.includes('noInline');
 
   const codeTheme = highlightedCodeStyles.codeTheme({ theme });
@@ -94,6 +108,12 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
       <LiveProvider code={code} scope={scope} noInline={noInline} theme={codeTheme} {...props}>
         <LivePreview />
         <LiveEditor />
+        <Actions>
+          <CopyToClipboard text={code}>
+            <fannypack.Button palette="primary" kind="ghost" size="small">Copy</fannypack.Button>
+          </CopyToClipboard>
+          <fannypack.Button palette="primary" kind="ghost" size="small" onClick={handleClickPlayroom}>Open in Playroom</fannypack.Button>
+        </Actions>
         <LiveError />
       </LiveProvider>
     </fannypack.Box>
