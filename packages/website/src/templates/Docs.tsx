@@ -26,6 +26,7 @@ export default function Docs(props: Props) {
         />
       ),
       code: (props: any) => <fannypack.Code {...props} />,
+      inlineCode: (props: any) => <fannypack.Code {...props} />,
       h1: (props: any) => <fannypack.Heading marginBottom="major-4" {...props} />,
       h2: (props: any) => (
         <fannypack.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
@@ -38,12 +39,7 @@ export default function Docs(props: Props) {
       h6: (props: any) => <fannypack.Heading use="h6" marginTop="major-6" marginBottom="major-2" {...props} />,
       p: (props: any) => <fannypack.Paragraph {...props} />,
       strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
-      pre: (props: any) => (
-        <LiveCode
-          // pre={props => <HighlightedCode isBlock marginBottom="major-4" {...props} code={props.children} />}
-          {...props.children.props}
-        />
-      )
+      pre: (props: any) => <LiveCode {...props.children.props} />
     }),
     []
   );

@@ -3,6 +3,7 @@ export * from './Blockquote';
 export * from './Box';
 export * from './Button';
 export * from './Code';
+export * from './Columns';
 export * from './Flex';
 export * from './Grid';
 export * from './Heading';

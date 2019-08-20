@@ -25,9 +25,8 @@ function useProps(props: Partial<ParagraphProps> = {}) {
 
 export const Paragraph = createComponent<ParagraphProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const paragraph = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: paragraph });
+    const paragraph = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: paragraph });
   },
   {
     attach: {

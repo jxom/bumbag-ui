@@ -1,7 +1,3 @@
-// TODO:
-// - Add "Open with Playroom" button
-// - Add copy button
-
 import * as React from 'react';
 import {
   LiveProvider,

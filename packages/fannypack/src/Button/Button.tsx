@@ -41,9 +41,8 @@ function useProps(props: Partial<ButtonProps> = {}, refs: Array<any> = []) {
 
 export const Button = createComponent<ButtonProps>(
   (props: ButtonProps) => {
-    const { children, use, ...restProps } = props;
-    const buttonProps = useProps(restProps);
-    return createElement({ children, component: ReakitButton, use, htmlProps: buttonProps });
+    const buttonProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitButton, use: props.use, htmlProps: buttonProps });
   },
   {
     attach: {

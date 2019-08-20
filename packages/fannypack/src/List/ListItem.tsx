@@ -25,9 +25,8 @@ function useProps(props: Partial<ListItemProps> = {}) {
 
 export const ListItem = createComponent<ListItemProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const listItemProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: listItemProps });
+    const listItemProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: listItemProps });
   },
   {
     attach: {

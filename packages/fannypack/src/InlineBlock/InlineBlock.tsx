@@ -25,9 +25,13 @@ function useProps(props: Partial<InlineBlockProps> = {}) {
 
 export const InlineBlock = createComponent<InlineBlockProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const inlineBlockProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: inlineBlockProps });
+    const inlineBlockProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: inlineBlockProps
+    });
   },
   {
     attach: { useProps },

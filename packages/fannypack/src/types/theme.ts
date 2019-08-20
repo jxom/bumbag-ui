@@ -3,6 +3,7 @@ import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
 import { BoxProps } from '../Box';
 import { CodeProps } from '../Code';
+import { ColumnsProps, ColumnProps } from '../Columns';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
@@ -39,7 +40,7 @@ export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
 export type LayoutThemeConfig = {
-  gapFactor?: ThemeAttribute<number>;
+  gapUnit?: ThemeAttribute<number>;
   minorUnit?: ThemeAttribute<number>;
   majorUnit?: ThemeAttribute<number>;
 };
@@ -81,6 +82,14 @@ export type CodeThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   block?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<CodeProps>;
+};
+export type ColumnsThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<ColumnsProps>;
+  Column?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<ColumnProps>;
+  };
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -183,6 +192,7 @@ export type ThemeConfig = {
   Blockquote?: BlockquoteThemeConfig;
   Button?: ButtonThemeConfig;
   Code?: CodeThemeConfig;
+  Columns?: ColumnsThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Heading?: HeadingThemeConfig;

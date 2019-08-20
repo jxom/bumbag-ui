@@ -27,9 +27,8 @@ function useProps(props: Partial<HeadingProps> = {}) {
 
 export const Heading = createComponent<HeadingProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const HeadingProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: HeadingProps });
+    const HeadingProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: HeadingProps });
   },
   {
     attach: {

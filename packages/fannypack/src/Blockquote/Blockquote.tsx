@@ -25,9 +25,13 @@ function useProps(props: Partial<BlockquoteProps> = {}) {
 
 export const Blockquote = createComponent<BlockquoteProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const blockquoteProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: blockquoteProps });
+    const blockquoteProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: blockquoteProps
+    });
   },
   { attach: { defaultProps: { use: 'blockquote' }, useProps }, themeKey: 'Blockquote' }
 );

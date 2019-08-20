@@ -1,0 +1,623 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Columns } from 'fannypack/Columns';
+
+# Columns
+
+Fannypack uses a **12 column** flexbox based responsive column system.
+
+## Import
+
+```jsx
+import { Columns } from 'fannypack'
+```
+
+## Usage
+
+To create a basic columned layout, add a `<Columns>` component and then add your `<Columns.Column>`s.
+
+By default, each `<Columns.Column>` will have an **equal width** and you can have up to **12** columns.
+
+```jsx-live
+<Columns>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      First column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Second column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Third column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Fourth column
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### Sizes
+
+A width for the column can also be specified using the `spread` prop. `spread` can be any number between `1` and `12`.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={3}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      3
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Auto (2)
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={1}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      1
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### Offsets
+
+To avoid using empty columns to offset, an `spreadOffset` prop can be used to offset the column.
+
+If a value of `left`, `right` or `both` is given, then the offset will apply to that area of the column.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={2} spreadOffset="left">
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      2
+    </Box>
+  </Columns.Column>
+</Columns>
+
+<Columns>
+  <Columns.Column spread={2} spreadOffset="right">
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      2
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+</Columns>
+
+<Columns>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={2} spreadOffset="both">
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      2
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+However, a more specific value (between `1` and `11`) can be provided and is offset to the left of the column.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={3} spreadOffset={3}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      3
+    </Box>
+  </Columns.Column>
+</Columns>
+
+<Columns>
+  <Columns.Column spread={2}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      2
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={6} spreadOffset={4}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+</Columns>
+
+<Columns>
+  <Columns.Column spread={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={3} spreadOffset={2}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      3
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### Variable column sizes
+
+Column sizes may depend on the viewport. The `spreadMobile`, `spreadTablet`, `spreadDesktop`, `spreadWidescreen` and `spreadFullHD` props come in handy for these scenarios.
+
+- `spreadMobile` is effective for a window width smaller than **480px**.
+- `spreadTablet` is effective for a window width smaller than **768px**.
+- `spreadDesktop` is effective for a window width smaller than **1024px**.
+- `spreadWidescreen` is effective for a window width smaller than **1200px**.
+- `spreadFullHD` is effective for a window width smaller than **1440px**.
+- `spread` is effective for every viewport size, and viewports larger than **1440px**.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={10} spreadDesktop={8} spreadMobile={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      All: 10
+      <br/>
+      Desktop: 8
+      <br/>
+      Mobile: 6
+    </Box>
+  </Columns.Column>
+  <Columns.Column spread={2} spreadDesktop={4} spreadMobile={6}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
+      All: 2
+      <br/>
+      Desktop: 4
+      <br/>
+      Mobile: 6
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+Variable spread offsets are also available with: `spreadMobileOffset`, `spreadTabletOffset`, `spreadDesktopOffset`, `spreadWidescreenOffset` and `spreadFullHDOffset`.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={10} spreadOffset={1} spreadDesktop={8} spreadDesktopOffset={2} spreadTablet={4} spreadTabletOffset={4}>
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem" >
+      All: 10
+      <br/>
+      Desktop: 8
+      <br/>
+      Tablet: 4
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+If a value of `left`, `right`, or `both` is specified as a `spreadOffset`. Then this offset will apply for all variable column sizes.
+
+This example renders identically to the above example.
+
+```jsx-live
+<Columns>
+  <Columns.Column spread={10} spreadDesktop={8} spreadTablet={4} spreadOffset="both">
+    <Box backgroundColor="#112ebb" color="white" padding="0.5rem" >
+      All: 10
+      <br/>
+      Desktop: 8
+      <br/>
+      Tablet: 4
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### Mobile columns
+
+By default, columns are only applied to screen widths of above **768px**. To enable columns for all viewports, set the `minBreakpoint` prop to `mobile` on `<Columns>`.
+
+```jsx-live
+<Columns minBreakpoint="mobile">
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      First column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Second column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Third column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Fourth column
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### One line columns
+
+By default, columns are wrapped on multiple lines if necessary. To disable this, just add the `isOneLine` prop to `<Columns>` .
+
+```jsx-live
+<Columns isOneLine>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      First column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Second column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Third column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Fourth column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Fifth column
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+### Gapless
+
+To remove the gaps between columns, set the `isGapless` prop to `true` on `<Columns>`.
+
+```jsx-live
+<Columns isGapless>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      First column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Second column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Third column
+    </Box>
+  </Columns.Column>
+  <Columns.Column>
+    <Box backgroundColor="whitesmoke" padding="0.5rem">
+      Fourth column
+    </Box>
+  </Columns.Column>
+</Columns>
+```
+
+## Columns Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">isGapless</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isOneLine</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">minBreakpoint</Code>** <Code fontSize="150" palette="primary">&#34;tablet&#34; | &#34;mobile&#34;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<ColumnsProps>;
+  Column?: {
+    base?: any;
+    defaultProps?: Partial<ColumnProps>
+  };
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+## Column Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">spread</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadMobile</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadTablet</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadDesktop</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadWidescreen</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadFullHD</Code>** <Code fontSize="150" palette="primary">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadMobileOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadTabletOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadDesktopOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadWidescreenOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spreadFullHDOffset</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | "left"
+  | "both"
+  | "right"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<ColumnProps>;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>** 
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+        
+
+## Theming
+
+<Theme component={Columns} overrides={['Columns.base']}>Hello world</Theme>

@@ -32,9 +32,8 @@ function useProps(props: Partial<GridItemProps> = {}) {
 
 export const GridItem = createComponent<GridItemProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const gridItemProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: gridItemProps });
+    const gridItemProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: gridItemProps });
   },
   {
     attach: { useProps },

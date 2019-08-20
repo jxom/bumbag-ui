@@ -25,9 +25,8 @@ function useProps(props: Partial<LinkProps> = {}) {
 
 export const Link = createComponent<LinkProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const linkProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: linkProps });
+    const linkProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: linkProps });
   },
   {
     attach: {

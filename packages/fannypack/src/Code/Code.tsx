@@ -27,16 +27,14 @@ function useProps(props: Partial<CodeProps> = {}) {
 
 export const Code = createComponent<CodeProps>(
   props => {
-    const { children, ...restProps } = props;
-
-    let use = restProps.use;
+    let use = props.use;
     if (!use) {
-      use = restProps.isBlock ? 'pre' : 'code';
+      use = props.isBlock ? 'pre' : 'code';
     }
 
-    const codeProps = useProps(restProps);
+    const codeProps = useProps(props);
 
-    return createElement({ children, component: ReakitBox, use, htmlProps: codeProps });
+    return createElement({ children: props.children, component: ReakitBox, use, htmlProps: codeProps });
   },
   {
     attach: {

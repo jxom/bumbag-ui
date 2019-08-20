@@ -13,5 +13,5 @@ export function createElement({ children, component, htmlProps, use }: Props) {
   if (isFunction(children)) {
     return children(htmlProps);
   }
-  return React.createElement(component, { as: use, ...htmlProps }, children);
+  return React.createElement(component, { as: use, ...htmlProps }, htmlProps.children || children);
 }

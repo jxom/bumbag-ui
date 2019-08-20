@@ -27,16 +27,14 @@ function useProps(props: Partial<ListProps> = {}) {
 
 export const List = createComponent<ListProps>(
   props => {
-    const { children, ...restProps } = props;
-
-    let use = restProps.use;
+    let use = props.use;
     if (!use) {
-      use = restProps.isOrdered ? 'ol' : 'ul';
+      use = props.isOrdered ? 'ol' : 'ul';
     }
 
-    const listProps = useProps(restProps);
+    const listProps = useProps(props);
 
-    return createElement({ children, component: ReakitBox, use, htmlProps: listProps });
+    return createElement({ children: props.children, component: ReakitBox, use, htmlProps: listProps });
   },
   {
     attach: {

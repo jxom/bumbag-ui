@@ -58,9 +58,8 @@ export function useProps(props: BoxProps = {}, refs: Array<any> = []) {
 
 export const Box = createComponent<BoxProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const boxProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: boxProps });
+    const boxProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: boxProps });
   },
   {
     attach: { useProps },

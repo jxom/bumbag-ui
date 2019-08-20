@@ -25,9 +25,8 @@ function useProps(props: Partial<BlockProps> = {}) {
 
 export const Block = createComponent<BlockProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const blockProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: blockProps });
+    const blockProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: blockProps });
   },
   {
     attach: { useProps },

@@ -25,9 +25,13 @@ function useProps(props: Partial<InlineFlexProps> = {}) {
 
 export const InlineFlex = createComponent<InlineFlexProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const inlineFlexProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: inlineFlexProps });
+    const inlineFlexProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: inlineFlexProps
+    });
   },
   {
     attach: { useProps },

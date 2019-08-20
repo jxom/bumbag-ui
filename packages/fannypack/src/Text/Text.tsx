@@ -25,9 +25,8 @@ function useProps(props: Partial<TextProps> = {}) {
 
 export const Text = createComponent<TextProps>(
   props => {
-    const { children, use, ...restProps } = props;
-    const textProps = useProps(restProps);
-    return createElement({ children, component: ReakitBox, use, htmlProps: textProps });
+    const textProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
