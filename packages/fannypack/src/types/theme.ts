@@ -4,6 +4,7 @@ import { BlockquoteProps } from '../Blockquote';
 import { BoxProps } from '../Box';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
+import { ContainerProps } from '../Container';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
@@ -90,6 +91,14 @@ export type ColumnsThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
     defaultProps?: Partial<ColumnProps>;
   };
+};
+export type ContainerThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  layout?: ThemeAttribute<Stylesheet>;
+  fluid?: ThemeAttribute<Stylesheet>;
+  tabletMargin?: ThemeAttribute<number>;
+  fluidMargin?: ThemeAttribute<number>;
+  defaultProps?: Partial<ContainerProps>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -193,6 +202,7 @@ export type ThemeConfig = {
   Button?: ButtonThemeConfig;
   Code?: CodeThemeConfig;
   Columns?: ColumnsThemeConfig;
+  Container?: ContainerThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Heading?: HeadingThemeConfig;

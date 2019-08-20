@@ -6,12 +6,12 @@ import { darken, lighten, shade, generateColorVariants, generateTextVariants } f
 
 const defaultPalette: { [key: string]: string } = {
   text: '#212121',
-  primary: '#444bc9',
-  secondary: '#793fb2',
-  info: '#35709e',
-  success: '#2c8453',
-  danger: '#c9444d',
-  warning: '#f2a100'
+  primary: '#3722ed',
+  secondary: '#9c22ed',
+  info: '#1e67d5',
+  success: '#107219',
+  danger: '#bb2a1a',
+  warning: '#ed9c22'
 };
 
 export default (overrides: PaletteThemeConfig) => ({

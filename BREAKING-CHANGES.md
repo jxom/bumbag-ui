@@ -10,3 +10,5 @@
 - Added `defaultProps` to theming
 - Changed styled exports
 - Moved HighlightedCode to a separate package
+- layout.gapFactor -> layout.gapUnit
+- Column -> Columns.Column

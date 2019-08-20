@@ -7,6 +7,8 @@ import layout from './layout';
 import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
+import Container from './Container';
+
 export default (overrides: ThemeConfig = {}) => ({
   ...overrides,
   breakpoints: breakpoints(overrides.breakpoints || {}),
@@ -14,5 +16,7 @@ export default (overrides: ThemeConfig = {}) => ({
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
   layout: layout(overrides.layout || {}),
-  palette: palette(overrides.palette || {})
+  palette: palette(overrides.palette || {}),
+
+  Container: Container(overrides.Container || {})
 });

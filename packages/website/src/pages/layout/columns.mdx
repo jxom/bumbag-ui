@@ -9,7 +9,7 @@ Fannypack uses a **12 column** flexbox based responsive column system.
 ## Import
 
 ```jsx
-import { Columns } from 'fannypack'
+import { Columns } from 'fannypack';
 ```
 
 ## Usage
@@ -341,7 +341,7 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 **<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
+  {`{
   base?: any;
   defaultProps?: Partial<ColumnsProps>;
   Column?: {
@@ -358,7 +358,7 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 **<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
+  {`string
   | ComponentClass<any, any>
   | FunctionComponent<any>`}
 </Code>
@@ -372,7 +372,7 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 **<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
+  {`string
   | number
   | boolean
   | {}
@@ -620,4 +620,13 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 
 ## Theming
 
-<Theme component={Columns} overrides={['Columns.base']}>Hello world</Theme>
+<Theme component={Columns} overrides={['Columns.base', 'Columns.Column.base']}>
+  {({ overrides }) => (
+    <React.Fragment>
+      <Column overrides={overrides}>Column 1</Column>
+      <Column overrides={overrides}>Column 2</Column>
+      <Column overrides={overrides}>Column 3</Column>
+      <Column overrides={overrides}>Column 4</Column>
+    </React.Fragment>
+  )}
+</Theme>

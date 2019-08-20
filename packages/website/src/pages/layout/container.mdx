@@ -1,0 +1,174 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Container } from 'fannypack/Container/Container';
+
+# Container
+
+## Import
+
+```jsx
+import { Container } from 'fannypack';
+```
+
+## Usage
+
+A container's max width is fixed, and varies per viewport breakpoint.
+
+A container's max width is defined for viewport widths of **tablet (768px)** and above. For widths below **tablet (768px)**, a left and right margin is applied.
+
+```jsx-live
+<Container>
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Fixed width
+
+A container's max width can be fixed after a certain breakpoint, meaning until that breakpoint has been reached, the width will be 100%.
+
+```jsx-live
+<Container breakpoint="desktop">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+
+<Container breakpoint="mobile" marginTop="major-2">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Alignment
+
+By default, a container is aligned to the **center**, however its alignment can be **left** or **right** aligned with the `align` prop.
+
+```jsx-live
+<Container align="left" breakpoint="mobile">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+
+<Container align="right" breakpoint="mobile" marginTop="major-2">
+  <Box backgroundColor="whitesmoke" padding="0.5rem">
+    Hello world!
+  </Box>
+</Container>
+```
+
+### Fluid containers
+
+A fluid container's width is always **100%**, but has a fixed left and right margin of `2rem` (2 \* root font size 16px). For devices under the **tablet (768px)** viewport, the margin is `1rem`.
+
+```jsx-live
+<Container isFluid>
+  <Box backgroundColor="whitesmoke" padding="major-2">
+    Hello world!
+  </Box>
+</Container>
+```
+
+## Container Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">breakpoint</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isFluid</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isLayout</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`{
+  base?: any;
+  layout?: any;
+  fluid?: any;
+  tabletMargin?: ThemeAttribute<number>;
+  fluidMargin?: ThemeAttribute<number>;
+  defaultProps?: Partial<ContainerProps>;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+## Theming
+
+<Theme
+  component={Container}
+  overrides={['Container.base', { key: 'Container.fluid', props: { isFluid: true } }, { key: 'Container.layout', props: { isLayout: true } }]}
+>
+  Hello world
+</Theme>
