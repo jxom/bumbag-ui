@@ -93,6 +93,7 @@ function getPropType(prop, shouldEncode) {
 function createPropTypeObject(prop) {
   return {
     name: prop.getEscapedName(),
+    isRequired: (prop.getFlags() & ts.SymbolFlags.Optional) === 0,
     description: getComment(prop),
     encodedType: getPropType(prop, true),
     type: getPropType(prop)
@@ -110,6 +111,10 @@ function createTypeMarkdown(types) {
       return `
 **<Code marginRight="major-1">${type.name}</Code>** ${
         isShort ? `<Code fontSize="150" palette="primary">${type.encodedType}</Code>` : ''
+      } ${
+        type.isRequired
+          ? '<Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>'
+          : ''
       }
 
 ${
@@ -225,6 +230,7 @@ function extractTypes(config) {
     if (/#\s.*\sProps/.test(mdContents)) {
       const matches = mdContents.match(/#\s.*\sProps/g);
       matches.forEach(match => {
+        const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
         const componentSection = match.split(' ')[1];
         const component = componentSection.replace(/\./g, '');
         const localType = `Local${component}Props`;

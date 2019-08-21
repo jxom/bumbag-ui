@@ -70,6 +70,17 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
     []
   );
 
+  const code = React.Children.toArray(children)
+    .join('\n')
+    .replace(/\s$/, '');
+
+  const playroomUrl = React.useMemo(
+    () => {
+      return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+    },
+    [code]
+  );
+
   const isLive = match.test(props.className);
   if (!isLive) {
     const lang = (props.className || '').split('-')[1];
@@ -82,14 +93,6 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
       <HighlightedCode {...props} marginBottom="major-4" isBlock code={children.replace(/\n$/, '')} language={lang} />
     );
   }
-
-  const code = React.Children.toArray(children)
-    .join('\n')
-    .replace(/\s$/, '');
-
-  const playroomUrl = React.useMemo(() => {
-    return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
-  }, [code]);
 
   function handleClickPlayroom() {
     window.open(playroomUrl, '_blank');
@@ -106,9 +109,13 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
         <LiveEditor />
         <Actions>
           <CopyToClipboard text={code}>
-            <fannypack.Button palette="primary" kind="ghost" size="small">Copy</fannypack.Button>
+            <fannypack.Button palette="primary" kind="ghost" size="small">
+              Copy
+            </fannypack.Button>
           </CopyToClipboard>
-          <fannypack.Button palette="primary" kind="ghost" size="small" onClick={handleClickPlayroom}>Open in Playroom</fannypack.Button>
+          <fannypack.Button palette="primary" kind="ghost" size="small" onClick={handleClickPlayroom}>
+            Open in Playroom
+          </fannypack.Button>
         </Actions>
         <LiveError />
       </LiveProvider>

@@ -79,15 +79,15 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">isOrdered</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">isOrdered</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -95,8 +95,9 @@ To use an horizontal list, use the `isHorizontal` prop.
   ordered?: any;
   horizontal?: any;
   Item?: {
-    base?: any
-  };
+    base?: any;
+    defaultProps?: Partial<ListItemProps>
+  }; defaultProps?: Partial<ListProps>;
 }`}
 </Code>
 
@@ -104,7 +105,7 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -114,11 +115,11 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -137,15 +138,15 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -155,7 +156,7 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">overrides</Code>** 
+**<Code marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -168,7 +169,7 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>** 
+**<Code marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -178,11 +179,11 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>** 
+**<Code marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -201,15 +202,15 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -224,19 +225,20 @@ To use an horizontal list, use the `isHorizontal` prop.
   overrides={[
     'List.base',
     { key: 'List.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
-    { key: 'List.horizontal', props: { isHorizontal: true } },
-    {
-      key: 'List.Item.base',
-      props: {
-        children: props => (
-          <React.Fragment>
-            <List.Item {...props}>Item 1</List.Item>
-            <List.Item {...props}>Item 2</List.Item>
-          </React.Fragment>
-        )
-      }
-    }
+    { key: 'List.horizontal', props: { isHorizontal: true } }
   ]}>
   <List.Item>Item 1</List.Item>
   <List.Item>Item 2</List.Item>
+</Theme>
+
+<Theme
+  component={List}
+  injectOverrides={false}
+  overrides={['List.Item.base']}>
+  {({ overrides }) => (
+    <React.Fragment>
+      <List.Item overrides={overrides}>Item 1</List.Item>
+      <List.Item>Item 2</List.Item>
+    </React.Fragment>
+  )}
 </Theme>

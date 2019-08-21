@@ -3,14 +3,11 @@ import { Box, Code, Text } from 'fannypack';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
-  const { component: Component, children, overrides } = props;
+  const { component: Component, children, overrides, injectOverrides = true } = props;
   return overrides.map(override => {
     let key = typeof override === 'object' ? override.key : override;
 
-    const localKey = key
-      .split('.')
-      .slice(1)
-      .join('.');
+    const localKey = key.replace(/([A-Z]([a-z]*)\.)/g, '');
 
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
@@ -30,7 +27,7 @@ export default function Theme(props) {
           {components.map((props, i) => {
             const newChildren = props && props.children ? props.children : children;
             return (
-              <Component key={i} overrides={overrides} {...props}>
+              <Component key={i} overrides={injectOverrides ? overrides : undefined} {...props}>
                 {' '}
                 {/* eslint-disable-line */}
                 {typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren}
