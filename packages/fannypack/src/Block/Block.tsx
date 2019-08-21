@@ -1,14 +1,11 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { BlockThemeConfig } from '../types';
 import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalBlockProps = {
-  overrides?: BlockThemeConfig;
-};
+export type LocalBlockProps = {};
 export type BlockProps = BoxProps & LocalBlockProps;
 
 function useProps(props: Partial<BlockProps> = {}) {

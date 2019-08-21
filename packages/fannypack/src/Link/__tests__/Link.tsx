@@ -40,12 +40,12 @@ describe('composition', () => {
 
 describe('overrides', () => {
   it('Link.base should render correctly', () => {
-    const { container } = render(<Link overrides={{ base: { backgroundColor: 'red' } }}>hello world</Link>);
+    const { container } = render(<Link overrides={{ Link: { base: { backgroundColor: 'red' } } }}>hello world</Link>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Link.hover should render correctly', () => {
-    const { container } = render(<Link overrides={{ hover: { backgroundColor: 'red' } }}>hello world</Link>);
+    const { container } = render(<Link overrides={{ Link: { hover: { backgroundColor: 'red' } } }}>hello world</Link>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -1,6 +1,3 @@
-// @ts-ignore
-import _get from 'lodash/get';
-
 import { BreakpointsThemeConfig } from '../types';
 
 export default (overrides: BreakpointsThemeConfig) => ({

@@ -25,7 +25,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-1pwrqjj css-is8joc",
+  "className": "css-1pwrqjj css-1ccgglo",
 }
 `;
 
@@ -112,6 +112,31 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0:focus:not(:focus-visible) {
   outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`props should render correctly for an altitude 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  box-shadow: 0px 12px 24px 0px rgba(0,0,0,0.1),0px 0px 12px 6px rgba(0,0,0,0.02);
 }
 
 <div

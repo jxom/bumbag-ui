@@ -7,12 +7,10 @@ export default function Theme(props) {
   return overrides.map(override => {
     let key = typeof override === 'object' ? override.key : override;
 
-    const localKey = key.replace(/([A-Z]([a-z]*)\.)/g, '');
-
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
     let overrides = {};
-    _set(overrides, localKey, { backgroundColor: '#ffe3a4 !important' });
+    _set(overrides, key, { backgroundColor: '#ffe3a4 !important' });
 
     return (
       // @ts-ignore

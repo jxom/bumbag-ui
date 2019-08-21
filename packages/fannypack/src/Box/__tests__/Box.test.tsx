@@ -85,8 +85,13 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly for an altitude', () => {
+    const { container } = render(<Box altitude="400" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with overrides', () => {
-    const { container } = render(<Box overrides={{ base: { backgroundColor: 'red' } }} />);
+    const { container } = render(<Box overrides={{ Box: { base: { backgroundColor: 'red' } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

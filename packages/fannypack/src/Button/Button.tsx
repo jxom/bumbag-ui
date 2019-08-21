@@ -1,7 +1,7 @@
 import { Button as ReakitButton, useButton as useReakitButton } from 'reakit';
 
 import { useClassName, createComponent, createElement } from '../utils';
-import { ButtonThemeConfig, ButtonKind, ButtonType, Size, Palette } from '../types';
+import { ButtonKind, ButtonType, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -21,8 +21,6 @@ export type LocalButtonProps = {
   palette?: Palette;
   size?: Size;
   type?: ButtonType;
-  /** Theming overrides. [Click here](TODO) to view the theming schema for `Button`. */
-  overrides?: ButtonThemeConfig;
 };
 export type ButtonProps = BoxProps & LocalButtonProps;
 

@@ -6,8 +6,7 @@ import { isFunction } from './isFunction';
 
 export function theme(selector: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig }) => {
-    const localSelector = selector.replace(/([A-Z]([a-z]*)\.)/g, '');
-    const theme = _get(props, `overrides.${localSelector}`) || _get(props, `theme.${selector}`, defaultValue);
+    const theme = _get(props, `overrides.${selector}`) || _get(props, `theme.${selector}`, defaultValue);
     if (isFunction(theme)) {
       return theme(props);
     }

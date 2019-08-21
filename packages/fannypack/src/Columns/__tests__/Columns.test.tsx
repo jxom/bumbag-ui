@@ -328,7 +328,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Columns.base should render correctly', () => {
     const { container } = render(
-      <Columns overrides={{ base: { backgroundColor: 'red' } }}>
+      <Columns overrides={{ Columns: { base: { backgroundColor: 'red' } } }}>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>
@@ -341,7 +341,9 @@ describe('overrides', () => {
   it('Columns.Column.base should render correctly', () => {
     const { container } = render(
       <Columns>
-        <Columns.Column overrides={{ base: { backgroundColor: 'red' } }}>Column</Columns.Column>
+        <Columns.Column overrides={{ Columns: { Column: { base: { backgroundColor: 'red' } } } }}>
+          Column
+        </Columns.Column>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>
         <Columns.Column>Column</Columns.Column>

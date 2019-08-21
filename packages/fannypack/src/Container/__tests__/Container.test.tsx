@@ -100,13 +100,15 @@ describe('composition', () => {
 
 describe('theming', () => {
   it('Container.base should render correctly', () => {
-    const { container } = render(<Container overrides={{ base: { backgroundColor: 'red' } }}>hello world</Container>);
+    const { container } = render(
+      <Container overrides={{ Container: { base: { backgroundColor: 'red' } } }}>hello world</Container>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.fluid should render correctly', () => {
     const { container } = render(
-      <Container isFluid overrides={{ fluid: { backgroundColor: 'red' } }}>
+      <Container isFluid overrides={{ Container: { fluid: { backgroundColor: 'red' } } }}>
         hello world
       </Container>
     );
@@ -115,7 +117,7 @@ describe('theming', () => {
 
   it('Container.layout should render correctly', () => {
     const { container } = render(
-      <Container isLayout overrides={{ layout: { backgroundColor: 'red' } }}>
+      <Container isLayout overrides={{ Container: { layout: { backgroundColor: 'red' } } }}>
         hello world
       </Container>
     );

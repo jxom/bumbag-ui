@@ -91,7 +91,7 @@ describe('composition', () => {
 
 describe('overrides', () => {
   it('List.base should render correctly', () => {
-    const { container } = render(<List overrides={{ base: { backgroundColor: 'red' } }}>hello world</List>);
+    const { container } = render(<List overrides={{ Link: { base: { backgroundColor: 'red' } } }}>hello world</List>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

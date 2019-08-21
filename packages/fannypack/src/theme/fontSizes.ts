@@ -1,5 +1,3 @@
-// @ts-ignore
-import _get from 'lodash/get';
 import { FontSizeThemeConfig } from '../types';
 
 export default (overrides: FontSizeThemeConfig) => ({

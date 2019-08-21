@@ -1,5 +1,3 @@
-// @ts-ignore
-import _get from 'lodash/get';
 import { GlobalThemeConfig } from '../types';
 
 export default (overrides: GlobalThemeConfig) => ({

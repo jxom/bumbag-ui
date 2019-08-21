@@ -8,6 +8,13 @@ export const style = styleProps => cssClass`
     ${styleProps.style};
     ${buildVisibleAttributes(styleProps)};
   }
+
+  ${styleProps.altitude &&
+    css`
+      & {
+        ${theme(`altitudes.${styleProps.altitude}`)(styleProps)};
+      }
+    `};
 `;
 
 export const Box = styleProps => cssClass`

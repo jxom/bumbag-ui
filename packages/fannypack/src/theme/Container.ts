@@ -1,6 +1,3 @@
-// @ts-ignore
-import _get from 'lodash/get';
-
 import { ContainerThemeConfig } from '../types';
 import { space } from '../utils';
 

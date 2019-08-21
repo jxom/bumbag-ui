@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
 import _get from 'lodash/get';
 
-import { BoxThemeConfig, CSSProperties } from '../types';
+import { ThemeConfig, CSSProperties } from '../types';
 import {
   useStyle,
   useClassName,
@@ -19,10 +19,11 @@ export type LocalBoxProps = {
   use?: string | React.ComponentType<any>;
   className?: string;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
-  /* Component-level theme overrides [Read more](TODO) */
-  overrides?: BoxThemeConfig;
+  altitude?: string;
   showBreakpoint?: string;
   hiddenBreakpoint?: string;
+  /* Component-level theme overrides [Read more](TODO) */
+  overrides?: ThemeConfig;
   elementRef?: React.Ref<any>;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;

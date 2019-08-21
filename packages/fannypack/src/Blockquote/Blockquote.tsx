@@ -1,14 +1,11 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { BlockquoteThemeConfig } from '../types';
 import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalBlockquoteProps = {
-  overrides?: BlockquoteThemeConfig;
-};
+export type LocalBlockquoteProps = {};
 export type BlockquoteProps = BoxProps & LocalBlockquoteProps;
 
 function useProps(props: Partial<BlockquoteProps> = {}) {

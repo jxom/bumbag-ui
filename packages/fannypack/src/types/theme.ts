@@ -29,6 +29,9 @@ export type BreakpointsThemeConfig = {
   widescreen?: ThemeAttribute<number>;
   fullHD?: ThemeAttribute<number>;
 };
+export type AltitudesThemeConfig = {
+  [key: string]: number;
+};
 export type GlobalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   fontFamily?: string;
@@ -189,6 +192,7 @@ export type TextThemeConfig = {
 };
 
 export type ThemeConfig = {
+  altitudes?: AltitudesThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
