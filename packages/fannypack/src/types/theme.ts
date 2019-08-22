@@ -31,7 +31,7 @@ export type BreakpointsThemeConfig = {
   fullHD?: ThemeAttribute<number>;
 };
 export type AltitudesThemeConfig = {
-  [key: string]: number;
+  [key: string]: ThemeAttribute<Stylesheet>;
 };
 export type BordersThemeConfig = {
   default?: ThemeAttribute<{ color: string; width: string }>;
