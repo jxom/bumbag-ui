@@ -17,6 +17,7 @@ import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ParagraphProps } from '../Paragraph';
 import { TextProps } from '../Text';
+import { SetProps } from '../Set';
 
 export type Stylesheet = any; // TODO: fix
 
@@ -194,6 +195,11 @@ export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
 };
+export type SetThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  child?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<SetProps>;
+};
 
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
@@ -223,4 +229,5 @@ export type ThemeConfig = {
   List?: ListThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Text?: TextThemeConfig;
+  Set?: SetThemeConfig;
 };

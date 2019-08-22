@@ -35,6 +35,13 @@ export const Line = styled(Box)<{ isBlock?: boolean }>`
 `;
 
 export const HighlightedCode = styleProps => cssClass`
+  ${styleProps.isBlock &&
+    css`
+      & {
+        ${theme('HighlightedCode.block')(styleProps)};
+      }
+    `};
+
   & {
     ${theme('HighlightedCode.base')(styleProps)};
   };

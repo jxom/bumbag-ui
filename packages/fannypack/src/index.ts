@@ -15,6 +15,7 @@ export * from './Link';
 export * from './List';
 export * from './Paragraph';
 export * from './Provider';
+export * from './Set';
 export * from './Text';
 export * from './styled';
 export * from './theme';

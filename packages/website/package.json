@@ -1,9 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "fannypack-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "5.0.0-alpha.9",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "1.1.0",
     "@mdx-js/react": "1.0.27",
@@ -29,6 +27,8 @@
     "react-live": "2.1.2"
   },
   "devDependencies": {
+    "@fab/serve": "0.2.2",
+    "@fab/static": "0.1.8",
     "@textlint/markdown-to-ast": "6.1.5",
     "ast-to-markdown": "0.2.2",
     "babel-plugin-extract-react-types": "0.1.5",
@@ -53,6 +53,9 @@
     "lint": "eslint src/ --ext js,ts,tsx",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "build:fab": "yarn build && yarn fab:compile",
+    "fab:compile": "fab-static public/",
+    "fab:serve": "fab-serve ./fab.zip",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

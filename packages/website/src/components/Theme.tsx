@@ -26,7 +26,6 @@ export default function Theme(props) {
             const newChildren = props && props.children ? props.children : children;
             return (
               <Component key={i} overrides={injectOverrides ? overrides : undefined} {...props}>
-                {' '}
                 {/* eslint-disable-line */}
                 {typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren}
               </Component>

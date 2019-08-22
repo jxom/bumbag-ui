@@ -15,7 +15,6 @@ export default function Docs(props: Props) {
   const components = React.useMemo(
     () => ({
       ...fannypack,
-      HighlightedCode,
       blockquote: (props: any) => (
         <fannypack.Blockquote
           backgroundColor="primaryTint"

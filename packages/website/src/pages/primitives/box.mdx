@@ -48,14 +48,34 @@ const boxProps = Box.useProps();
 You're able to apply any CSS attribute as a prop to `<Box>`.
 
 ```jsx-live
-<Box backgroundColor="red">This is a box</Box>
+<Box backgroundColor="primaryTint" color="primary800" padding="major-2">This is a box</Box>
+```
+
+## Altitudes
+
+```jsx-live
+<Set isVertical spacing="major-4">
+  <Box altitude="100">Altitude 100</Box>
+  <Box altitude="200">Altitude 200</Box>
+  <Box altitude="300">Altitude 300</Box>
+  <Box altitude="400">Altitude 400</Box>
+</Set>
+```
+
+## Borders
+
+```jsx-live
+<Set isVertical spacing="major-2">
+  <Box border="default">Box with a default border</Box>
+  <Box border="1px solid black">Box with a manual border</Box>
+</Set>
 ```
 
 ## Box Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -65,11 +85,11 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -88,23 +108,36 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">{ base?: any; defaultProps?: Partial&#60;BoxProps&#62;; }</Code> 
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  global?: GlobalThemeConfig;
+  ... 20 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 

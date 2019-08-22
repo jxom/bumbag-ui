@@ -24,12 +24,12 @@ Button, by default, renders a `<button>` element.
 However, you are able to change it to a custom element using the `as` prop. See more [here](https://reakit.io/components/button).
 
 ```jsx-live
-<Box>
+<Set>
   <Button>Default</Button>
   <Button use="a" href="#">
     Anchor
   </Button>
-</Box>
+</Set>
 ```
 
 ### Colors
@@ -37,14 +37,14 @@ However, you are able to change it to a custom element using the `as` prop. See 
 Colors can be added to a button with the `palette` prop.
 
 ```jsx-live
-<Box>
+<Set>
   <Button>Default</Button>
   <Button palette="primary">Primary</Button>
   <Button palette="secondary">Secondary</Button>
   <Button palette="success">Success</Button>
   <Button palette="danger">Danger</Button>
   <Button palette="warning">Warning</Button>
-</Box>
+</Set>
 ```
 
 ### Icons
@@ -70,7 +70,7 @@ TODO
 An outline can be placed on a button by assigning `"outlined"` to the `kind` prop.
 
 ```jsx-live
-<Box>
+<Set>
   <Button palette="primary" kind="outlined">
     Primary
   </Button>
@@ -83,7 +83,7 @@ An outline can be placed on a button by assigning `"outlined"` to the `kind` pro
   <Button palette="danger" kind="outlined">
     Danger
   </Button>
-</Box>
+</Set>
 ```
 
 ### Ghost
@@ -91,7 +91,7 @@ An outline can be placed on a button by assigning `"outlined"` to the `kind` pro
 To have a button of minimal appearence, use the assign `"ghost"` to the `kind` prop.
 
 ```jsx-live
-<Box>
+<Set>
   <Button kind="ghost">Default</Button>
   <Button palette="primary" kind="ghost">
     Primary
@@ -105,7 +105,7 @@ To have a button of minimal appearence, use the assign `"ghost"` to the `kind` p
   <Button palette="warning" kind="ghost">
     Warning
   </Button>
-</Box>
+</Set>
 ```
 
 ### Sizes
@@ -113,12 +113,12 @@ To have a button of minimal appearence, use the assign `"ghost"` to the `kind` p
 Buttons are available in four different sizes and can be added with a `size` prop.
 
 ```jsx-live
-<Box>
+<Set>
   <Button size="small">Small</Button>
   <Button>Default</Button>
   <Button size="medium">Medium</Button>
   <Button size="large">Large</Button>
-</Box>
+</Set>
 ```
 
 ### Links
@@ -144,7 +144,7 @@ To make a button non-interactable, add the `isStatic` prop.
 To indicate a button as disabled, use the `disabled` prop.
 
 ```jsx-live
-<Box>
+<Set>
   <Button disabled>Default</Button>
   <Button palette="primary" disabled>
     Primary
@@ -158,7 +158,7 @@ To indicate a button as disabled, use the `disabled` prop.
   <Button palette="warning" disabled>
     Warning
   </Button>
-</Box>
+</Set>
 ```
 
 ### Sets
@@ -181,82 +181,55 @@ TODOs
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Makes the button disabled. The user is unable to interact with the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconAfter</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">iconAfter</Code>** <Code fontSize="150" palette="primary">any</Code>
 
 TODO: Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBefore</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">iconBefore</Code>** <Code fontSize="150" palette="primary">any</Code>
 
 TODO: Icon that appears on the left side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 TODO: Adds a loading indicator to the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Makes the button not interactable.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;outlined&#34; | &#34;link&#34; | &#34;ghost&#34;</Code> 
+**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;outlined&#34; | &#34;link&#34; | &#34;ghost&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;button&#34; | &#34;submit&#34; | &#34;reset&#34;</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  base?: any;
-  disabled?: any;
-  focus?: any;
-  ghost?: any;
-  hover?: any;
-  hoveractive?: any;
-  loading?: any;
-  link?: any;
-  outlined?: any;
-  static?: any;
-  sizes?: {
-    small?: any;
-    default?: any;
-    medium?: any;
-    large?: any
-  }; defaultProps?: Partial<...>;
-}`}
-</Code>
-
-Theming overrides. [Click here](TODO) to view the theming schema for `Button`.
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;button&#34; | &#34;submit&#34; | &#34;reset&#34;</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -266,11 +239,11 @@ Theming overrides. [Click here](TODO) to view the theming schema for `Button`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -289,25 +262,42 @@ Theming overrides. [Click here](TODO) to view the theming schema for `Button`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  global?: GlobalThemeConfig;
+  ... 20 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
 
-        
+
 
 ## Theming
 

@@ -1,67 +1,92 @@
 import PropTypes from '../../components/PropTypes';
 import Theme from '../../components/Theme';
-import { Blockquote } from 'fannypack/Blockquote/Blockquote';
+import { Set } from 'fannypack/Set/Set';
 
-# Blockquote
-
-`<Blockquote>` renders a `<blockquote>` element with reset styles and a left border.
+# Set
 
 ## Import
 
 ```jsx
-import { Blockquote } from 'fannypack'
+import { Set } from 'fannypack';
 ```
 
 ## Usage
 
-```jsx-live
-<Blockquote>
-  <Paragraph>
-    "Out here, survival is the name of the game.
-    Only it's not a game; it's deadly serious."
-  </Paragraph>
-  <Paragraph>- Russell Coight</Paragraph>
-</Blockquote>
-<Blockquote backgroundColor="whitesmoke" marginTop="major-2">
-  <Paragraph>
-    "Out here, survival is the name of the game.
-    Only it's not a game; it's deadly serious."
-  </Paragraph>
-  <Paragraph>- Russell Coight</Paragraph>
-</Blockquote>
-```
-
-### Border styling
-
-The left border can be modified using the primitive style props:
+A `<Set>` can be used to list a set of components. It will automatically space out the components, and wrap them when they reach the width of the viewport.
 
 ```jsx-live
-<Blockquote borderColor="primary">
-  <Paragraph>
-    "Out here, survival is the name of the game.
-    Only it's not a game; it's deadly serious."
-  </Paragraph>
-  <Paragraph>- Russell Coight</Paragraph>
-</Blockquote>
+<Set>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+  <Button>Button 4</Button>
+  <Button>Button 5</Button>
+  <Button>Button 6</Button>
+  <Button>Button 7</Button>
+</Set>
 ```
 
-Or you can hide the border:
+### Spacing
+
+You can modify the spacing of the set with the `spacing` prop.
 
 ```jsx-live
-<Blockquote border="none">
-  <Paragraph>
-    "Out here, survival is the name of the game.
-    Only it's not a game; it's deadly serious."
-  </Paragraph>
-  <Paragraph>- Russell Coight</Paragraph>
-</Blockquote>
+<Set spacing="minor-1">
+  <Tag>Tag 1</Tag>
+  <Tag>Tag 2</Tag>
+  <Tag>Tag 3</Tag>
+  <Tag>Tag 4</Tag>
+  <Tag>Tag 5</Tag>
+  <Tag>Tag 6</Tag>
+  <Tag>Tag 7</Tag>
+</Set>
 ```
 
-## Blockquote Props
+### Vertical
+
+You can also have a vertical set with the `isVertical` prop.
+
+```jsx-live
+<Set isVertical spacing="minor-1">
+  <Tag>Tag 1</Tag>
+  <Tag>Tag 2</Tag>
+  <Tag>Tag 3</Tag>
+  <Tag>Tag 4</Tag>
+  <Tag>Tag 5</Tag>
+  <Tag>Tag 6</Tag>
+  <Tag>Tag 7</Tag>
+</Set>
+```
+
+By default, `<Set>` will preserve the width of it's children. However, if you'd like your children to fill the width of `<Set>`, use the `isFilled` prop:
+
+```jsx-live
+<Set isVertical isFilled spacing="minor-1">
+  <Tag>Tag 1</Tag>
+  <Tag>Tag 2</Tag>
+  <Tag>Tag 3</Tag>
+  <Tag>Tag 4</Tag>
+  <Tag>Tag 5</Tag>
+  <Tag>Tag 6</Tag>
+  <Tag>Tag 7</Tag>
+</Set>
+```
+
+## Set Props
 
 <!-- Automatically generated -->
 
-No props to show.
+**<Code marginRight="major-1">isFilled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isVertical</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
@@ -137,4 +162,9 @@ No props to show.
 
 ## Theming
 
-<Theme component={Blockquote} overrides={['Blockquote.base']}>This is a block</Theme>
+<Theme
+  component={Set}
+  overrides={['Set.base', 'Set.child']}>
+  <Button>Hello</Button>
+  <Button>World</Button>
+</Theme>

@@ -14,4 +14,4 @@
 - Column -> Columns.Column
 - Hoisted `elevation` onto the Box component
 - `elevation` -> `altitude`
--
+- Set's `spacing` -> `gap`

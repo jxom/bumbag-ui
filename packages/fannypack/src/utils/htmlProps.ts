@@ -1,10 +1,12 @@
 import isPropValid from '@emotion/is-prop-valid';
 
+const omitProps = ['spacing'];
+
 export function pickHTMLProps<P extends object>(props: P) {
   const filteredProps: Partial<P> = {};
 
   for (const prop in props) {
-    if (isPropValid(prop)) {
+    if (isPropValid(prop) && !omitProps.includes(prop)) {
       filteredProps[prop] = props[prop];
     }
   }
