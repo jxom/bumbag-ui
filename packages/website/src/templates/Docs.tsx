@@ -44,10 +44,8 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <fannypack.Provider>
-      <fannypack.Box padding="major-4">
-        <MDXProvider components={components}>{children}</MDXProvider>
-      </fannypack.Box>
-    </fannypack.Provider>
+    <fannypack.Box padding="major-4">
+      <MDXProvider components={components}>{children}</MDXProvider>
+    </fannypack.Box>
   );
 }

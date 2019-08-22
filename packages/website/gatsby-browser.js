@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+
+import React from 'react';
+
+import { Provider } from '../fannypack/src';
+
+export const wrapRootElement = ({ element, ...props }) => <Provider>{element}</Provider>;

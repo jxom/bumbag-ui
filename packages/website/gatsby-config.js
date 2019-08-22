@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -36,6 +35,7 @@ module.exports = {
         // gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-autolink-headers' }],
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    'gatsby-plugin-emotion'
   ]
 };
