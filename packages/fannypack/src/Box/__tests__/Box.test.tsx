@@ -90,6 +90,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly for a custom border', () => {
+    const { container } = render(<Box border="default" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with overrides', () => {
     const { container } = render(<Box overrides={{ Box: { base: { backgroundColor: 'red' } } }} />);
     expect(container.firstChild).toMatchSnapshot();

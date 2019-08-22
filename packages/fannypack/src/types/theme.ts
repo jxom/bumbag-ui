@@ -32,6 +32,10 @@ export type BreakpointsThemeConfig = {
 export type AltitudesThemeConfig = {
   [key: string]: number;
 };
+export type BordersThemeConfig = {
+  default?: ThemeAttribute<{ color: string; width: string }>;
+  [key: string]: ThemeAttribute<Stylesheet>;
+};
 export type GlobalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   fontFamily?: string;
@@ -193,6 +197,7 @@ export type TextThemeConfig = {
 
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;

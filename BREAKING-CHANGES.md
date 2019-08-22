@@ -12,3 +12,6 @@
 - Moved HighlightedCode to a separate package
 - layout.gapFactor -> layout.gapUnit
 - Column -> Columns.Column
+- Hoisted `elevation` onto the Box component
+- `elevation` -> `altitude`
+-

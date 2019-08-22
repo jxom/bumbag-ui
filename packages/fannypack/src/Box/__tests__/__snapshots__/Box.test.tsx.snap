@@ -119,6 +119,31 @@ exports[`props should render correctly 1`] = `
 />
 `;
 
+exports[`props should render correctly for a custom border 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  border: 1px solid #e6e6e6;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
 exports[`props should render correctly for an altitude 1`] = `
 .emotion-0 {
   margin: unset;

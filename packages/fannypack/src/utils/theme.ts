@@ -14,6 +14,13 @@ export function theme(selector: string, defaultValue?: any) {
   };
 }
 
+export function border(selector?: string, defaultValue?: any) {
+  return (props: { fontSize?: string; theme?: ThemeConfig }) => {
+    const color = theme(`borders.${selector || props.fontSize}`, defaultValue)(props);
+    return color;
+  };
+}
+
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
     const color = theme(`fontSizes.${selector || props.fontSize}`, defaultValue)(props);
