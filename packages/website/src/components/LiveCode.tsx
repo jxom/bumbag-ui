@@ -45,7 +45,8 @@ const LivePreview = styled(_LivePreview)`
   padding: 1.5rem !important;
 `;
 
-const REG = /language\-\jsx-live/; // eslint-disable-line
+const JSX_REG = /language\-\jsx-live/; // eslint-disable-line
+const FC_REG = /language\-function-live/; // eslint-disable-line
 
 type Props = {
   className?: string;
@@ -56,11 +57,10 @@ type Props = {
 };
 
 LiveCode.defaultProps = {
-  mountStylesheet: false,
-  transformCode: src => `<React.Fragment>${src}</React.Fragment>`
+  mountStylesheet: false
 };
 
-export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, children, ...props }: Props) {
+export default function LiveCode({ pre: Pre, fallback: Fallback, children, ...props }: Props) {
   const theme = React.useContext(fannypack.ThemeContext);
   const scope = React.useMemo(
     () => ({
@@ -81,7 +81,7 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
     [code]
   );
 
-  const isLive = match.test(props.className);
+  const isLive = JSX_REG.test(props.className) || FC_REG.test(props.className);
   if (!isLive) {
     const lang = (props.className || '').split('-')[1];
 
@@ -102,9 +102,21 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, match = REG, ch
 
   const codeTheme = highlightedCodeStyles.codeTheme({ theme });
 
+  let transformCode;
+  if (JSX_REG.test(props.className)) {
+    transformCode = src => `<React.Fragment>${src}</React.Fragment>`;
+  }
+
   return (
     <fannypack.Box marginBottom="major-4">
-      <LiveProvider code={code} scope={scope} noInline={noInline} theme={codeTheme} {...props}>
+      <LiveProvider
+        code={code}
+        scope={scope}
+        noInline={noInline}
+        theme={codeTheme}
+        transformCode={transformCode}
+        {...props}
+      >
         <LivePreview />
         <LiveEditor />
         <Actions>

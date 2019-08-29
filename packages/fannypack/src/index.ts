@@ -8,6 +8,7 @@ export * from './Container';
 export * from './Flex';
 export * from './Grid';
 export * from './Heading';
+export * from './Hidden';
 export * from './Inline';
 export * from './InlineBlock';
 export * from './InlineFlex';

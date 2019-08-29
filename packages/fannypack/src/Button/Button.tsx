@@ -1,4 +1,4 @@
-import { Button as ReakitButton, useButton as useReakitButton } from 'reakit';
+import { Button as ReakitButton, ButtonProps as ReakitButtonProps, useButton as useReakitButton } from 'reakit';
 
 import { useClassName, createComponent, createElement } from '../utils';
 import { ButtonKind, ButtonType, Size, Palette } from '../types';
@@ -7,8 +7,6 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalButtonProps = {
-  /** Makes the button disabled. The user is unable to interact with the button. */
-  disabled?: boolean;
   /** TODO: Icon that appears on the right side of the button. */
   iconAfter?: any;
   /** TODO: Icon that appears on the left side of the button. */
@@ -22,19 +20,20 @@ export type LocalButtonProps = {
   size?: Size;
   type?: ButtonType;
 };
-export type ButtonProps = BoxProps & LocalButtonProps;
+export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
 
-function useProps(props: Partial<ButtonProps> = {}, refs: Array<any> = []) {
-  const buttonProps = useReakitButton(props);
-  const boxProps = Box.useProps(props, [buttonProps.ref, ...refs]);
+function useProps(props: ButtonProps) {
+  let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
+  const buttonProps = useReakitButton({ disabled, focusable, unstable_clickKeys }, htmlProps);
+  htmlProps = Box.useProps({ ...props, ...buttonProps });
 
   const className = useClassName({
     style: styles.Button,
     styleProps: props,
-    prevClassName: boxProps.className
+    prevClassName: htmlProps.className
   });
 
-  return { ...buttonProps, ...boxProps, className };
+  return { ...htmlProps, className };
 }
 
 export const Button = createComponent<ButtonProps>(

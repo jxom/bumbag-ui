@@ -31,6 +31,15 @@ describe('props', () => {
       expect(container.firstChild).toMatchSnapshot();
     });
 
+    it('should render a disabled focusable button correctly', () => {
+      const { container } = render(
+        <Button disabled focusable>
+          Hello world
+        </Button>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
     it('should render correctly with overrides', () => {
       const { container } = render(
         <Button disabled overrides={{ Button: { disabled: { backgroundColor: 'red' } } }}>
@@ -152,7 +161,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Button props', () => {
-      const { result } = renderHook(() => Button.useProps());
+      const { result } = renderHook(() => Button.useProps({}));
       expect(result.current).toMatchSnapshot();
     });
   });

@@ -4,6 +4,7 @@ const inject = require('md-node-inject');
 const toMarkdown = require('ast-to-markdown');
 const { readdirSync, writeFileSync, readFileSync, lstatSync } = require('fs-extra');
 const { Project, ts } = require('ts-morph');
+const _ = require('lodash');
 
 function isDirectory(path) {
   return lstatSync(path).isDirectory();
@@ -74,11 +75,8 @@ function getTagNames(prop) {
   return jsDocs.getTags().map(tag => tag.getTagName());
 }
 
-function getProps(node) {
-  return node
-    .getType()
-    .getProperties()
-    .filter(prop => !getTagNames(prop).includes('private'));
+function getProps(type) {
+  return type.getProperties().filter(prop => !getTagNames(prop).includes('private'));
 }
 
 function getPropType(prop, shouldEncode) {
@@ -100,8 +98,8 @@ function createPropTypeObject(prop) {
   };
 }
 
-function createPropTypeObjects(node) {
-  return getProps(node).map(prop => createPropTypeObject(prop));
+function createPropTypeObjects(type) {
+  return getProps(type).map(prop => createPropTypeObject(prop));
 }
 
 function createTypeMarkdown(types) {
@@ -145,6 +143,18 @@ function getTypeMarkdown(extractedType, typeReferences) {
     content = createTypeMarkdown(types);
   } else {
     content = 'No props to show.';
+  }
+
+  if (typeMetaData.stateTypes.length > 0) {
+    content = `
+${content}
+
+<details><Box use="summary" marginBottom="major-2"><strong>${typeMetaData.stateTypes.length} state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+${createTypeMarkdown(typeMetaData.stateTypes)}
+</details>
+
+        `;
   }
 
   if (typeMetaData.uses) {
@@ -196,27 +206,46 @@ function extractTypes(config) {
       if (symbol) {
         const symbolName = symbol.getEscapedName();
         if (/Local.*Props/.test(symbolName)) {
-          const propTypes = createPropTypeObjects(node);
+          const propTypes = createPropTypeObjects(node.getType());
           typeReferences[symbolName] = {
             ...typeReferences[symbolName],
             types: propTypes
           };
         }
         if (/^(?!(Local|use))[A-Z].*Props/.test(symbolName)) {
-          const dependantTypes = node
-            .getType()
-            .getIntersectionTypes()
-            .map(type => {
-              const aliasSymbol = type.getAliasSymbol();
-              if (aliasSymbol) {
-                return aliasSymbol.getEscapedName();
+          const intersectionTypes = node.getType().getIntersectionTypes();
+          let dependantTypes = [];
+          let extraTypes = [];
+          let stateTypes = [];
+
+          intersectionTypes.forEach(type => {
+            const typeText = type.getText();
+            const aliasSymbol = type.getAliasSymbol();
+            if (aliasSymbol) {
+              const symbolName = aliasSymbol.getEscapedName();
+              dependantTypes = [...dependantTypes, symbolName];
+            }
+            if (
+              (!aliasSymbol && !typeText.includes('React.') && !typeText.includes('CSS')) ||
+              /reakit\/ts/.test(typeText)
+            ) {
+              const propTypes = createPropTypeObjects(type);
+              if (/reakit\/ts\/.*Return/.test(typeText)) {
+                stateTypes = [...stateTypes, ...propTypes].filter(Boolean);
+              } else {
+                extraTypes = [...extraTypes, ...propTypes].filter(Boolean);
               }
-              return undefined;
-            })
-            .filter(type => Boolean(type) && type !== `Local${symbolName}`)
-            .reverse();
+            }
+            return undefined;
+          });
+
+          dependantTypes = dependantTypes.filter(type => Boolean(type) && type !== `Local${symbolName}`).reverse();
+
+          const types = _.uniqBy([..._.get(typeReferences, `[Local${symbolName}].types`, []), ...extraTypes], 'name');
           typeReferences[`Local${symbolName}`] = {
             ...typeReferences[`Local${symbolName}`],
+            types,
+            stateTypes,
             uses: dependantTypes
           };
         }
