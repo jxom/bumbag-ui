@@ -19,6 +19,20 @@ describe('props', () => {
     const { container } = render(<Component />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('renders correctly when the hidden is visible', () => {
+    function Component() {
+      const hidden = Hidden.useState({ unstable_hiddenId: 'test', visible: true });
+      return (
+        <div>
+          <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>
+          <Hidden {...hidden}>Hello world</Hidden>
+        </div>
+      );
+    }
+    const { container } = render(<Component />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('composition', () => {
@@ -61,5 +75,32 @@ describe('composition', () => {
       const { container } = render(<Component />);
       expect(container.firstChild).toMatchSnapshot();
     });
+  });
+});
+
+describe('overrides', () => {
+  it('Hidden.base should render correctly', () => {
+    const { container } = render(
+      <Hidden overrides={{ Hidden: { base: { backgroundColor: 'red' } } }}>hello world</Hidden>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('theming', () => {
+  it('Hidden.base should render correctly', () => {
+    const { container } = render(<Hidden>hello world</Hidden>, {
+      theme: { Hidden: { base: { backgroundColor: 'red' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(<Hidden>hello world</Hidden>, {
+      theme: { Hidden: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

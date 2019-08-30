@@ -1,7 +1,7 @@
 import * as styles from './styles';
-import { useHiddenState } from 'reakit';
 import { Hidden as _Hidden } from './Hidden';
 import { HiddenDisclosure } from './HiddenDisclosure';
+import { useHiddenState } from './HiddenState';
 
 export * from './Hidden';
 export * from './HiddenDisclosure';

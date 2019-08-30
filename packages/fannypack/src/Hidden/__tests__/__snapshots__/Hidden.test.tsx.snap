@@ -150,6 +150,106 @@ exports[`composition use should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 hidden test"
+  hidden=""
+  role="region"
+  style="display: none;"
+>
+  hello world
+</div>
+`;
+
+exports[`overrides Hidden.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 hidden"
+  hidden=""
+  role="region"
+  style="display: none;"
+>
+  hello world
+</div>
+`;
+
+exports[`props renders correctly when the hidden is visible 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div>
+  <button
+    aria-controls="test"
+    aria-expanded="true"
+    class="emotion-0 emotion-1 emotion-2"
+    tabindex="0"
+    type="button"
+  >
+    Toggle
+  </button>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    id="test"
+    role="region"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -189,5 +289,39 @@ exports[`props should render correctly 1`] = `
   >
     Hello world
   </div>
+</div>
+`;
+
+exports[`theming Hidden.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 hidden"
+  hidden=""
+  role="region"
+  style="display: none;"
+>
+  hello world
 </div>
 `;

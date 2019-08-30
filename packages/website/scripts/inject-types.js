@@ -145,7 +145,7 @@ function getTypeMarkdown(extractedType, typeReferences) {
     content = 'No props to show.';
   }
 
-  if (typeMetaData.stateTypes.length > 0) {
+  if (typeMetaData.stateTypes && typeMetaData.stateTypes.length > 0) {
     content = `
 ${content}
 
@@ -205,7 +205,7 @@ function extractTypes(config) {
       const symbol = node.getSymbol();
       if (symbol) {
         const symbolName = symbol.getEscapedName();
-        if (/Local.*Props/.test(symbolName)) {
+        if (/(Local.*Props|.*StateReturn|.*InitialState)/.test(symbolName)) {
           const propTypes = createPropTypeObjects(node.getType());
           typeReferences[symbolName] = {
             ...typeReferences[symbolName],
@@ -261,8 +261,17 @@ function extractTypes(config) {
       matches.forEach(match => {
         const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
         const componentSection = match.split(' ')[1];
-        const component = componentSection.replace(/\./g, '');
-        const localType = `Local${component}Props`;
+        let localType;
+        if (match.includes('useState Return Values')) {
+          const component = componentSection.split('.')[0];
+          localType = `${component}StateReturn`;
+        } else if (match.includes('useState Props')) {
+          const component = componentSection.split('.')[0];
+          localType = `${component}InitialState`;
+        } else {
+          const component = componentSection.replace(/\./g, '');
+          localType = `Local${component}Props`;
+        }
         const typeMarkdown = getTypeMarkdown(localType, typeReferences);
         try {
           const tree = ast.parse(mdContents);

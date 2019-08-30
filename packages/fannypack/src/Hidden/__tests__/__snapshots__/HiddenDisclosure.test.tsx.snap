@@ -74,6 +74,64 @@ exports[`composition render props should render correctly 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<button
+  aria-controls="test"
+  aria-expanded="false"
+  class="emotion-0 emotion-1 emotion-2 red"
+  tabindex="0"
+  type="button"
+>
+  Toggle
+</button>
+`;
+
+exports[`overrides Hidden.Disclosure.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-controls="test"
+  aria-expanded="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Toggle
+</button>
+`;
+
 exports[`props should assign a ref 1`] = `
 .emotion-1 {
   margin: unset;
@@ -175,6 +233,37 @@ exports[`props should render correctly when focusable is set 1`] = `
 <button
   aria-controls="test"
   aria-disabled="true"
+  aria-expanded="false"
+  class="emotion-0 emotion-1 emotion-2"
+  tabindex="0"
+  type="button"
+>
+  Toggle
+</button>
+`;
+
+exports[`theming Hidden.Disclosure.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<button
+  aria-controls="test"
   aria-expanded="false"
   class="emotion-0 emotion-1 emotion-2"
   tabindex="0"

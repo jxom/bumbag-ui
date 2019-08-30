@@ -97,3 +97,44 @@ describe('composition', () => {
     });
   });
 });
+
+describe('overrides', () => {
+  it('Hidden.Disclosure.base should render correctly', () => {
+    function Component() {
+      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      return (
+        <Hidden.Disclosure overrides={{ Hidden: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...hidden}>
+          Toggle
+        </Hidden.Disclosure>
+      );
+    }
+    const { container } = render(<Component />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('theming', () => {
+  it('Hidden.Disclosure.base should render correctly', () => {
+    function Component() {
+      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
+    }
+    const { container } = render(<Component />, {
+      theme: { Hidden: { Disclosure: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    function Component() {
+      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
+    }
+    const { container } = render(<Component />, {
+      theme: { Hidden: { Disclosure: { defaultProps: { className: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

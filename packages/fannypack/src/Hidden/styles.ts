@@ -9,6 +9,6 @@ export const Hidden = styleProps => cssClass`
 
 export const HiddenDisclosure = styleProps => cssClass`
   & {
-    ${theme('HiddenDisclosure.base')(styleProps)};
+    ${theme('Hidden.Disclosure.base')(styleProps)};
   }
 `;
