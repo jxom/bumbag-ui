@@ -1,28 +1,45 @@
-import PropTypes from '../../components/PropTypes';
+import { Portal } from 'fannypack/Portal/Portal';
 import Theme from '../../components/Theme';
-import { Block } from 'fannypack/Block/Block';
 
-# Block
-
-By default it renders a `<Box>` component with `display: block`.
+# Portal
 
 ## Import
 
-```js
-import { Block } from 'fannypack';
+```jsx
+import { Portal } from 'fannypack';
 ```
 
 ## Usage
 
 ```jsx-live
-<Block>This is a block</Block>
+<Box>Hello world. <Portal>I am a portal attached to the bottom of the page.</Portal></Box>
 ```
 
-## Block Props
+## Props
+
+### Portal Props
 
 <!-- Automatically generated -->
 
-No props to show.
+**<Code marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal`}
+</Code>
+
+Portal's children.
+
+<Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
@@ -37,25 +54,6 @@ No props to show.
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
 
 <Box marginBottom="major-4" />
 
@@ -95,7 +93,3 @@ No props to show.
 </details>
 
         
-
-## Theming
-
-<Theme component={Block} overrides={['Block.base']}>This is a block</Theme>

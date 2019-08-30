@@ -17,6 +17,7 @@ import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ParagraphProps } from '../Paragraph';
+import { PortalProps } from '../Portal';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
 
@@ -200,6 +201,10 @@ export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<ParagraphProps>;
 };
+export type PortalThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<PortalProps>;
+};
 export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
@@ -238,6 +243,7 @@ export type ThemeConfig = {
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Paragraph?: ParagraphThemeConfig;
+  Portal?: PortalThemeConfig;
   Text?: TextThemeConfig;
   Set?: SetThemeConfig;
 };

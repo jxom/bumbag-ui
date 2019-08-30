@@ -15,6 +15,7 @@ export * from './InlineFlex';
 export * from './Link';
 export * from './List';
 export * from './Paragraph';
+export * from './Portal';
 export * from './Provider';
 export * from './Set';
 export * from './Text';
