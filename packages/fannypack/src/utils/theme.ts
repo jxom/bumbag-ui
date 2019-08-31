@@ -60,18 +60,28 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
   };
 }
 
-export function breakpoint(breakpoint: string, cssStyle, config?: { show: boolean }) {
-  const { show = false } = config || {};
+export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boolean; else? }) {
+  const { else: elseStyle = '', show = false } = config || {};
   return props => {
+    if (!breakpoint)
+      return css`
+        ${elseStyle};
+      `;
+
     let key: string | undefined;
+    let elseKey: string | undefined;
     if (!show && breakpoint.includes('max')) {
       key = 'max-width';
+      elseKey = 'min-width';
     } else if (!show && breakpoint.includes('min')) {
       key = 'min-width';
+      elseKey = 'max-width';
     } else if (show && breakpoint.includes('max')) {
       key = 'min-width';
+      elseKey = 'max-width';
     } else if (show && breakpoint.includes('min')) {
       key = 'max-width';
+      elseKey = 'min-width';
     }
 
     let strippedBreakpoint = breakpoint;
@@ -102,9 +112,13 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show: boolea
           @media screen and (max-width: ${minBreakpointValues[breakpoint]}px) {
             ${cssStyle};
           }
-
           @media screen and (min-width: ${breakpointValue + 1}px) {
             ${cssStyle};
+          }
+
+          @media screen and (min-width: ${minBreakpointValues[breakpoint] +
+              1}px) and (max-width: ${breakpointValue}px) {
+            ${elseStyle};
           }
         `;
       }
@@ -112,11 +126,21 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show: boolea
         @media screen and (min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue}px) {
           ${cssStyle};
         }
+
+        @media screen and (max-width: ${minBreakpointValues[breakpoint]}px) {
+          ${elseStyle};
+        }
+        @media screen and (min-width: ${breakpointValue + 1}px) {
+          ${elseStyle};
+        }
       `;
     }
     return css`
       @media screen and (${key}: ${breakpointValue}px) {
         ${cssStyle};
+      }
+      @media screen and (${elseKey}: ${breakpointValue}px) {
+        ${elseStyle};
       }
     `;
   };

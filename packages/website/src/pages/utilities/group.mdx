@@ -1,79 +1,83 @@
-import PropTypes from '../../components/PropTypes';
+import { Group } from 'fannypack/Group/Group';
 import Theme from '../../components/Theme';
-import { Box } from 'fannypack/Box/Box';
-import { BoxThemeConfig } from 'fannypack/types';
 
-# Box
-
-All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use Box's props. [Read more here](https://reakit.io/docs/box/).
-
-By default it renders a `<div>` element with basic reset styles.
+# Group
 
 ## Import
 
-```js
-import { Box } from 'fannypack';
+```jsx
+import { Group } from 'fannypack';
 ```
 
 ## Usage
 
-```jsx-live
-<Box>This is a box</Box>
-```
-
-## Composition
-
-### `use` prop
+The `<Group>` component groups components together with their respective `border-radius`.
 
 ```jsx-live
-<Box use={Paragraph}>This is a Box rendered as a paragraph</Box>
+<Group>
+  <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    Hello
+  </Box>
+  <Button>Send</Button>
+  <Button>Cancel</Button>
+</Group>
 ```
 
-### Hooks
+### Vertical groups
 
-```jsx
-const boxProps = Box.useProps();
-
-<p {...boxProps}>This is a Box rendered as a paragraph.</p>
-```
-
-### Render props
+A group can also be aligned vertically.
 
 ```jsx-live
-<Box>{boxProps => <p {...boxProps}>This is a Box rendered as a paragraph</p>}</Box>
+<Group isVertical>
+  <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    Hello
+  </Box>
+  <Button>Send</Button>
+  <Button>Cancel</Button>
+</Group>
 ```
 
-## CSS props
+### Responsive breakpoint
 
-You're able to apply any CSS attribute as a prop to `<Box>`.
+A group can snap from horizontal to vertical after a given breakpoint with the `verticalBreakpoint` prop.
 
 ```jsx-live
-<Box backgroundColor="primaryTint" color="primary800" padding="major-2">This is a box</Box>
+<Group verticalBreakpoint="max-desktop">
+  <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
+    Hello
+  </Box>
+  <Button>Send</Button>
+  <Button>Cancel</Button>
+</Group>
 ```
 
-## Altitudes
+## Props
 
-```jsx-live
-<Set isVertical spacing="major-4">
-  <Box altitude="100">Altitude 100</Box>
-  <Box altitude="200">Altitude 200</Box>
-  <Box altitude="300">Altitude 300</Box>
-  <Box altitude="400">Altitude 400</Box>
-</Set>
-```
-
-## Borders
-
-```jsx-live
-<Set isVertical spacing="major-2">
-  <Box border="default">Box with a default border</Box>
-  <Box border="1px solid black">Box with a manual border</Box>
-</Set>
-```
-
-## Box Props
+### Group Props
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">borderRadius</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isVertical</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">verticalBreakpoint</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
 **<Code marginRight="major-1">use</Code>**  
 
@@ -141,6 +145,17 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
+</details>
+
+        
+
 ## Theming
 
-<Theme component={Box} overrides={['Box.base']}>This is a box</Theme>
+<Theme
+  component={Group}
+  overrides={['Group.base', 'Group.Item.base', 'Group.Item.first', 'Group.Item.middle', 'Group.Item.last']}>
+  <Button>Hello</Button>
+  <Button>My</Button>
+  <Button>Good</Button>
+  <Button>Friends</Button>
+</Theme>

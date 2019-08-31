@@ -8,6 +8,7 @@ import { ContainerProps } from '../Container';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
+import { GroupProps } from '../Group';
 import { HiddenProps, HiddenDisclosureProps } from '../Hidden';
 import { HeadingProps } from '../Heading';
 import { InlineProps } from '../Inline';
@@ -122,6 +123,16 @@ export type GridThemeConfig = {
   };
   defaultProps?: Partial<GridProps>;
 };
+export type GroupThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<GroupProps>;
+  Item?: {
+    base?: ThemeAttribute<Stylesheet>;
+    first?: ThemeAttribute<Stylesheet>;
+    middle?: ThemeAttribute<Stylesheet>;
+    last?: ThemeAttribute<Stylesheet>;
+  };
+};
 export type HeadingThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   h1?: {
@@ -234,6 +245,7 @@ export type ThemeConfig = {
   Container?: ContainerThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
+  Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
   Hidden?: HiddenThemeConfig;
   HighlightedCode?: HighlightedCodeThemeConfig;

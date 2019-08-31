@@ -7,6 +7,7 @@ export * from './Columns';
 export * from './Container';
 export * from './Flex';
 export * from './Grid';
+export * from './Group';
 export * from './Heading';
 export * from './Hidden';
 export * from './Inline';
