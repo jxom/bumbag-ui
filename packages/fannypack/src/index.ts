@@ -18,6 +18,7 @@ export * from './List';
 export * from './Paragraph';
 export * from './Portal';
 export * from './Provider';
+export * from './Rover';
 export * from './Set';
 export * from './Text';
 export * from './styled';

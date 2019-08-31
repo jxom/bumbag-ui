@@ -19,6 +19,7 @@ import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ParagraphProps } from '../Paragraph';
 import { PortalProps } from '../Portal';
+import { RoverProps } from '../Rover';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
 
@@ -216,6 +217,10 @@ export type PortalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<PortalProps>;
 };
+export type RoverThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<RoverProps>;
+};
 export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
@@ -256,6 +261,7 @@ export type ThemeConfig = {
   List?: ListThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Portal?: PortalThemeConfig;
+  Rover?: RoverThemeConfig;
   Text?: TextThemeConfig;
   Set?: SetThemeConfig;
 };

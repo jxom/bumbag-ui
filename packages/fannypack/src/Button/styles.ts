@@ -29,7 +29,8 @@ export const Button = styleProps => cssClass`
     ${theme('Button.base')(styleProps)};
   }
 
-  &[disabled] {
+  &[disabled],
+  &[aria-disabled="true"] {
     ${getDisabledProperties(styleProps)};
   }
 
