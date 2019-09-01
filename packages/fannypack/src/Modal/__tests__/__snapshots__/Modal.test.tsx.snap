@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`composition hook should return with Modal props 1`] = `
+Object {
+  "aria-modal": true,
+  "className": "css-s4daff css-1pwrqjj css-h173ik hidden",
+  "data-dialog": true,
+  "hidden": true,
+  "id": "test",
+  "onAnimationEnd": [Function],
+  "onKeyDown": [Function],
+  "onTransitionEnd": [Function],
+  "ref": [Function],
+  "role": "dialog",
+  "style": Object {
+    "display": "none",
+  },
+  "tabIndex": -1,
+  "unstable_wrap": [Function],
+}
+`;
+
+exports[`composition render props should render correctly 1`] = `
+<body>
+  <div>
+    <div
+      aria-label="test"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`composition use should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8.emotion-8.emotion-8 {
+  display: none;
+}
+
+.emotion-9 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #e3e3e3;
+}
+
+.emotion-6 {
+  border-left: 4px solid #ccc;
+  padding: 1rem;
+}
+
+.emotion-6:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        aria-controls="test"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-1 emotion-2"
+        tabindex="0"
+        type="button"
+      >
+        Toggle
+      </button>
+    </div>
+  </div>
+  <div
+    class="__reakit-portal"
+  >
+    <blockquote
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-6 emotion-1 emotion-8 emotion-9 emotion-1 emotion-8 hidden"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </blockquote>
+  </div>
+</body>
+`;
+
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+.emotion-0 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+<body>
+  <div />
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-0 emotion-1 emotion-2 hidden test"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`overrides Modal.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+.emotion-0 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<body>
+  <div />
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-0 emotion-1 emotion-2 hidden"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`props should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5.emotion-5.emotion-5 {
+  display: none;
+}
+
+.emotion-3 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        aria-controls="test"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="emotion-0 emotion-1 emotion-2"
+        tabindex="0"
+        type="button"
+      >
+        Toggle
+      </button>
+    </div>
+  </div>
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-3 emotion-1 emotion-5 hidden"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`props should render correctly with non-modal modal 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5.emotion-5.emotion-5 {
+  display: none;
+}
+
+.emotion-3 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        aria-controls="test"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="emotion-0 emotion-1 emotion-2"
+        tabindex="0"
+        type="button"
+      >
+        Toggle
+      </button>
+      <div
+        aria-label="test"
+        aria-modal="false"
+        class="emotion-3 emotion-1 emotion-5 hidden"
+        data-dialog="true"
+        hidden=""
+        id="test"
+        role="dialog"
+        style="display: none;"
+        tabindex="-1"
+      >
+        Hello world
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`theming Modal.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2.emotion-2.emotion-2 {
+  display: none;
+}
+
+.emotion-0 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<body>
+  <div />
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-0 emotion-1 emotion-2 hidden"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;

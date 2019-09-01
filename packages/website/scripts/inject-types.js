@@ -89,6 +89,7 @@ function getPropType(prop, shouldEncode) {
 }
 
 function createPropTypeObject(prop) {
+  if (prop.getEscapedName() === 'unstable_wrap') return;
   return {
     name: prop.getEscapedName(),
     isRequired: (prop.getFlags() & ts.SymbolFlags.Optional) === 0,
@@ -99,7 +100,9 @@ function createPropTypeObject(prop) {
 }
 
 function createPropTypeObjects(type) {
-  return getProps(type).map(prop => createPropTypeObject(prop));
+  return getProps(type)
+    .map(prop => createPropTypeObject(prop))
+    .filter(Boolean);
 }
 
 function createTypeMarkdown(types) {
@@ -234,7 +237,7 @@ function extractTypes(config) {
               dependantTypes = [...dependantTypes, symbolName];
             }
             if (
-              (!aliasSymbol && !typeText.includes('React.') && !typeText.includes('CSS')) ||
+              (!aliasSymbol && !/^React\./.test(typeText) && !typeText.includes('CSS')) ||
               /reakit\/ts/.test(typeText)
             ) {
               const propTypes = createPropTypeObjects(type);

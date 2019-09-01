@@ -31,7 +31,7 @@ export default function Docs(props: Props) {
         <fannypack.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
       h3: (props: any) => (
-        <fannypack.Heading fontSize="400" use="h3" marginTop="major-4" marginBottom="major-2" {...props} />
+        <fannypack.Heading fontSize="400" use="h3" marginTop="major-4" marginBottom="major-3" {...props} />
       ),
       h4: (props: any) => (
         <fannypack.Heading fontSize="300" use="h4" marginTop="major-4" marginBottom="major-2" {...props} />

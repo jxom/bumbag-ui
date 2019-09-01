@@ -54,6 +54,10 @@ export function useProps(props: BoxProps = {}) {
     htmlProps.ref = mergeRefs(props.elementRef, props.ref);
   }
 
+  if (props.unstable_wrap) {
+    htmlProps.unstable_wrap = props.unstable_wrap;
+  }
+
   return { ...htmlProps };
 }
 

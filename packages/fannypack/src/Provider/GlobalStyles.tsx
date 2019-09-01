@@ -16,7 +16,6 @@ export default function GlobalStyles() {
           line-height: 1.5;
           margin: 0;
           padding: 0;
-          overflow-x: hidden;
           -webkit-font-smoothing: antialiased;
           text-rendering: optimizeLegibility;
           color: ${theme('palette.text')(styleProps)};
