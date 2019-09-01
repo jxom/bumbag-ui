@@ -20,6 +20,7 @@ import { ListItemProps } from '../List/ListItem';
 import { ParagraphProps } from '../Paragraph';
 import { PortalProps } from '../Portal';
 import { RoverProps } from '../Rover';
+import { TabbableProps } from '../Tabbable';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
 
@@ -221,6 +222,11 @@ export type RoverThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<RoverProps>;
 };
+export type TabbableThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  disabled?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<TabbableProps>;
+};
 export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
@@ -262,6 +268,7 @@ export type ThemeConfig = {
   Paragraph?: ParagraphThemeConfig;
   Portal?: PortalThemeConfig;
   Rover?: RoverThemeConfig;
+  Tabbable?: TabbableThemeConfig;
   Text?: TextThemeConfig;
   Set?: SetThemeConfig;
 };
