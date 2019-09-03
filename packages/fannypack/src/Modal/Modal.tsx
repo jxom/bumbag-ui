@@ -1,18 +1,15 @@
-import * as React from 'react';
-import {
-  Box as ReakitBox,
-  Dialog as ReakitDialog,
-  DialogProps as ReakitDialogProps,
-  useDialog as useReakitDialog
-} from 'reakit';
+import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
 import _omit from 'lodash/omit';
 
+import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalModalProps = {};
+export type LocalModalProps = {
+  placement?: Placement;
+} & AnimateProps;
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
 function useProps(props: ModalProps) {
@@ -76,7 +73,9 @@ export const Modal = createComponent<ModalProps>(
   },
   {
     attach: {
-      defaultProps: {},
+      defaultProps: {
+        placement: 'center'
+      },
       useProps
     },
     themeKey: 'Modal'

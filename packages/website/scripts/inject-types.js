@@ -119,14 +119,14 @@ function createTypeMarkdown(types) {
       }
 
 ${
-  !isShort
-    ? `
+        !isShort
+          ? `
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {\`${formatType(type.type)}\`}
 </Code>
 `
-    : ''
-}
+          : ''
+      }
 
 ${type.description}
 
@@ -136,9 +136,8 @@ ${type.description}
     .join('');
 }
 
-function getTypeMarkdown(extractedType, typeReferences, { isStateReturn } = {}) {
+function getTypeMarkdown(extractedType, typeReferences, { type } = {}) {
   let content = '';
-
   const typeMetaData = typeReferences[extractedType];
   let types = typeMetaData.types;
 
@@ -148,7 +147,7 @@ function getTypeMarkdown(extractedType, typeReferences, { isStateReturn } = {}) 
     content = 'No props to show.';
   }
 
-  if (isStateReturn) {
+  if (type === 'state-return') {
     content = `
 <details><Box use="summary" marginBottom="major-2"><strong>${types.length} values</strong></Box>
 ${content}
@@ -267,32 +266,42 @@ function extractTypes(config) {
   const docPaths = getPaths(docsPath, /\.mdx$/);
   docPaths.forEach(docPath => {
     const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
-    if (/#\s.*\s(Props|Return\sValues)/.test(mdContents)) {
-      const matches = mdContents.match(/#\s.*\s(Props|Return\sValues)/g);
+    if (/#\s.*\s(API|Props|Return\sValues)/.test(mdContents)) {
+      const matches = mdContents.match(/#\s.*\s(API|Props|Return\sValues)/g);
       matches.forEach(match => {
         const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
         const componentSection = match.split(' ')[1];
         let localType;
-        let isStateReturn = false;
+        let type;
         if (match.includes('useState Return Values')) {
           const component = componentSection.split('.')[0];
           localType = `${component}StateReturn`;
-          isStateReturn = true;
-        } else if (match.includes('useState Props')) {
+          type = 'state-return';
+        } else if (match.includes('useState API')) {
           const component = componentSection.split('.')[0];
           localType = `${component}InitialState`;
+          type = 'state-api';
         } else {
           const component = componentSection.replace(/\./g, '');
           localType = `Local${component}Props`;
+          type = 'props';
         }
-        const typeMarkdown = getTypeMarkdown(localType, typeReferences, { isStateReturn });
+        const typeMarkdown = getTypeMarkdown(localType, typeReferences, { type });
+
+        let title;
+        if (type === 'state-return') {
+          title = 'Return Values';
+        }
+        if (type === 'state-api') {
+          title = 'API';
+        }
+        if (type === 'props') {
+          title = 'Props';
+        }
+
         try {
           const tree = ast.parse(mdContents);
-          const merged = inject(
-            `${componentSection} ${isStateReturn ? 'Return Values' : 'Props'}`,
-            tree,
-            ast.parse(typeMarkdown)
-          );
+          const merged = inject(`${componentSection} ${title}`, tree, ast.parse(typeMarkdown));
           const markdown = toMarkdown(merged).trimLeft();
           writeFileSync(docPath, markdown);
           console.log(`Injected ${componentSection} props into ${docPath}`);

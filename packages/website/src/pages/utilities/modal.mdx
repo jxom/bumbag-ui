@@ -17,8 +17,183 @@ function Example() {
 
   return (
     <div>
-      <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
       <Modal {...modal}>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+### Backdrop
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal.Backdrop {...modal} />
+      <Modal {...modal}>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+### Composition
+
+#### `use`
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+
+  return (
+    <div>
+      <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
+      <Modal.Backdrop {...modal} />
+      <Modal {...modal} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Modal.Disclosure use={Button} {...modal}>Close modal</Modal.Disclosure>
+      </Modal>
+    </div>
+  )
+}
+```
+
+#### Hooks
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+  const modalProps = Modal.useProps({ ...modal });
+  const modalDisclosureProps = Modal.Disclosure.useProps({ ...modal });
+
+  return (
+    <div>
+      <Button {...modalDisclosureProps}>Open modal</Button>
+      <Box {...modalProps} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Button {...modalDisclosureProps}>Close modal</Button>
+      </Box>
+    </div>
+  )
+}
+```
+
+#### Render props
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+
+  return (
+    <Modal {...modal}>
+      {modalProps => (
+        <Modal.Disclosure {...modal}>
+          {modalDisclosureProps => (
+            <React.Fragment>
+              <Button {...modalDisclosureProps}>Open modal</Button>
+              <Box {...modalProps} backgroundColor="white" border="1px solid black" padding="major-2">
+                Nesting for dayzzz
+                <Button {...modalDisclosureProps}>Close</Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Modal.Disclosure>
+      )}
+    </Modal>
+  )
+}
+```
+
+### Placement
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} placement="bottom-end" border="2px solid red">Hello world</Modal>
+    </div>
+  )
+}
+```
+
+### Animation
+
+#### Fade
+
+```function-live
+function Example() {
+  const modal = Modal.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} fade>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+#### Slide
+
+```function-live
+function Example() {
+  const modal = Modal.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} fade slide>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+#### Expand
+
+```function-live
+function Example() {
+  const modal = Modal.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} fade expand>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+#### Duration
+
+```function-live
+function Example() {
+  const modal = Modal.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} duration="100ms" fade>Hello world</Modal>
+    </div>
+  )
+}
+```
+
+### Placement with animation
+
+```function-live
+function Example() {
+  const modal = Modal.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} placement="top" fade slide>Hello world</Modal>
     </div>
   )
 }
@@ -26,77 +201,74 @@ function Example() {
 
 ## Props
 
-### Modal.useState Props
-
-<!-- Automatically generated -->
-
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-Whether it's visible or not.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
-
-If `true`, `animating` will be set to `true` when `visible` changes.
-It'll wait for `stopAnimation` to be called or a CSS transition ends.
-If it's a number, `stopAnimation` will be called automatically after
-given milliseconds.
-
-<Box marginBottom="major-4" />
-
-### Modal.useState Return Values
-
-<!-- Automatically generated -->
-
-<details><Box use="summary" marginBottom="major-2"><strong>6 values</strong></Box>
-
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Whether it's visible or not.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-If `true`, `animating` will be set to `true` when `visible` changes.
-It'll wait for `stopAnimation` to be called or a CSS transition ends.
-If it's a number, `stopAnimation` will be called automatically after
-given milliseconds.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Changes the `visible` state to `true`
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Changes the `visible` state to `false`
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Toggles the `visible` state
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Stops animation. It's called automatically if there's a CSS transition.
-It's called after given milliseconds if `animated` is a number.
-
-<Box marginBottom="major-4" />
-
-</details>
-    
-
 ### Modal Props
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">placement</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"left"
+  | "right"
+  | "center"
+  | "top"
+  | "bottom"
+  | "top-start"
+  | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
+  | "right-end"
+  | "bottom-end"
+  | "left-end"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Delay of the animation (in s/ms).
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Duration of the animation (in s/ms).
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">expand</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`boolean
+  | "left"
+  | "right"
+  | "center"
+  | "top"
+  | "bottom"`}
+</Code>
+
+Will the component have an expand animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Will the component have a fade animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;left&#34; | &#34;right&#34; | &#34;top&#34; | &#34;bottom&#34;</Code> 
+
+Will the component have a slide animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Timing function of the animation
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
@@ -366,10 +538,189 @@ Toggles the `visible` state
 
 </details>
 
-        
+### Modal.Backdrop Props
+
+<!-- Automatically generated -->
+
+No props to show.
+
+<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  global?: GlobalThemeConfig;
+  ... 26 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+</details>
+
+## State Hooks
+
+### Modal.useState API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+### Modal.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>6 values</strong></Box>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+</details>
+    
 
 ## Theming
 
-<Theme component={Modal} overrides={[{ key: 'Modal.base' }]}>
+<Theme component={Modal} overrides={['Modal.base', 'Modal.placements.center', 'Modal.placements.left', 'Modal.placements.right', 'Modal.placements.top', 'Modal.placements.bottom', 'Modal.placements.topStart', 'Modal.placements.topEnd', 'Modal.placements.bottomStart', 'Modal.placements.bottomEnd']}>
+  Hello world
+</Theme>
+
+<Theme component={Modal.Disclosure} overrides={['Modal.Disclosure.base']}>
+  Hello world
+</Theme>
+
+<Theme component={Modal.Backdrop} overrides={['Modal.Backdrop.base']}>
   Hello world
 </Theme>

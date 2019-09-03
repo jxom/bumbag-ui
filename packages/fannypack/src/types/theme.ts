@@ -17,7 +17,7 @@ import { InlineFlexProps } from '../InlineFlex';
 import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
-import { ModalProps, ModalDisclosureProps } from '../Modal';
+import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import { ParagraphProps } from '../Paragraph';
 import { PortalProps } from '../Portal';
 import { RoverProps } from '../Rover';
@@ -213,10 +213,25 @@ export type ListThemeConfig = {
 };
 export type ModalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
+  placements?: {
+    center?: ThemeAttribute<Stylesheet>;
+    top?: ThemeAttribute<Stylesheet>;
+    left?: ThemeAttribute<Stylesheet>;
+    right?: ThemeAttribute<Stylesheet>;
+    bottom?: ThemeAttribute<Stylesheet>;
+    topStart?: ThemeAttribute<Stylesheet>;
+    topEnd?: ThemeAttribute<Stylesheet>;
+    bottomStart?: ThemeAttribute<Stylesheet>;
+    bottomEnd?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<ModalProps>;
   Disclosure?: {
     base?: ThemeAttribute<Stylesheet>;
     defaultProps?: Partial<ModalDisclosureProps>;
+  };
+  Backdrop?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<ModalBackdropProps>;
   };
 };
 export type ParagraphThemeConfig = {
