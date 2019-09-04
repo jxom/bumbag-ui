@@ -95,6 +95,13 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  ['default', '0', '1', '2', '3', '4', '5', '6'].forEach(borderRadius => {
+    it(`should render correctly for a borderRadius of ${borderRadius}`, () => {
+      const { container } = render(<Box borderRadius={borderRadius} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
   it('should render correctly with overrides', () => {
     const { container } = render(<Box overrides={{ Box: { base: { backgroundColor: 'red' } } }} />);
     expect(container.firstChild).toMatchSnapshot();

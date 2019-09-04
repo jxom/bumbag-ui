@@ -7,6 +7,10 @@ export const Modal = styleProps => cssClass`
 
   ${getPlacementAttributes(styleProps)}
 
+  &:focus {
+    outline: none;
+  }
+
   & {
     ${theme('Modal.base')(styleProps)};
   }

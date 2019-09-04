@@ -2,6 +2,7 @@ import { ThemeConfig } from '../types';
 
 import altitudes from './altitudes';
 import borders from './borders';
+import borderRadii from './borderRadii';
 import breakpoints from './breakpoints';
 import global from './global';
 import palette from './palette';
@@ -15,6 +16,7 @@ export default (overrides: ThemeConfig = {}) => ({
   ...overrides,
   altitudes: altitudes(overrides.altitudes || {}),
   borders: borders(overrides.borders || {}),
+  borderRadii: borderRadii(overrides.borderRadii || {}),
   breakpoints: breakpoints(overrides.breakpoints || {}),
   fontSizes: fontSizes(overrides.fontSizes || {}),
   fontWeights: fontWeights(overrides.fontWeights || {}),

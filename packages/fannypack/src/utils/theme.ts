@@ -15,9 +15,16 @@ export function theme(selector: string, defaultValue?: any) {
 }
 
 export function border(selector?: string, defaultValue?: any) {
-  return (props: { fontSize?: string; theme?: ThemeConfig }) => {
-    const color = theme(`borders.${selector || props.fontSize}`, defaultValue)(props);
-    return color;
+  return (props: { border?: string; theme?: ThemeConfig }) => {
+    const border = theme(`borders.${selector || props.border}`, defaultValue)(props);
+    return border;
+  };
+}
+
+export function borderRadius(selector?: string, defaultValue?: any) {
+  return (props: { borderRadius?: string; theme?: ThemeConfig }) => {
+    const borderRadius = theme(`borderRadii.${selector || props.borderRadius}`, defaultValue)(props);
+    return borderRadius;
   };
 }
 

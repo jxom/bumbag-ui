@@ -1,13 +1,13 @@
 import getDefaultPalette from '../theme/palette';
 import { css, cssClass } from '../styled';
-import { darken, palette, space, theme } from '../utils';
+import { borderRadius, darken, palette, space, theme } from '../utils';
 
 const defaultPalette = getDefaultPalette({});
 
 export const Button = styleProps => cssClass`
   align-items: center;
   background-color: ${palette(styleProps.palette)(styleProps)};
-  border-radius: 4px;
+  border-radius: ${borderRadius('default')(styleProps)};
   color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   cursor: pointer;

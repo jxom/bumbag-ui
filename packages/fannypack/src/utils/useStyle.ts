@@ -3,11 +3,12 @@ import _get from 'lodash/get';
 import _kebabCase from 'lodash/kebabCase';
 
 import { ThemeContext, css } from '../styled';
-import { border, breakpoint, fontSize, palette, space, fontWeight } from './theme';
+import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
 import { pickCSSProps } from './cssProps';
 
 const borderAttributes = ['border'];
+const borderRadiusAttributes = ['borderRadius'];
 const colorAttributes = [
   'color',
   'backgroundColor',
@@ -53,6 +54,14 @@ function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
   if (borderValue) {
     return `${borderValue.width} solid ${borderValue.color}`;
+  }
+  return value;
+}
+
+function getBorderRadiusValue({ theme, value }) {
+  const borderRadiusValue = borderRadius(value)({ theme });
+  if (borderRadiusValue) {
+    return borderRadiusValue;
   }
   return value;
 }
@@ -104,6 +113,9 @@ export function useStyle(props) {
         let newValue = value;
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });
+        }
+        if (borderRadiusAttributes.includes(attribute)) {
+          newValue = getBorderRadiusValue({ theme, value });
         }
         if (colorAttributes.includes(attribute)) {
           newValue = getColorValue({ theme, value });

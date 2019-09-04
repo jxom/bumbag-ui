@@ -41,7 +41,11 @@ export type AltitudesThemeConfig = {
 };
 export type BordersThemeConfig = {
   default?: ThemeAttribute<{ color: string; width: string }>;
-  [key: string]: ThemeAttribute<Stylesheet>;
+  [key: string]: ThemeAttribute<{ color: string; width: string }>;
+};
+export type BorderRadiiThemeConfig = {
+  default?: ThemeAttribute<string>;
+  [key: string]: ThemeAttribute<string>;
 };
 export type GlobalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -264,6 +268,7 @@ export type SetThemeConfig = {
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;

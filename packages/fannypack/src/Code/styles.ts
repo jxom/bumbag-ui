@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { palette, space, theme } from '../utils';
+import { borderRadius, palette, theme } from '../utils';
 
 export const Code = styleProps => cssClass`
   background-color: ${
@@ -7,7 +7,7 @@ export const Code = styleProps => cssClass`
       ? palette('white700')(styleProps)
       : palette(`${styleProps.palette}Tint`)(styleProps)
   };
-  border-radius: 2px;
+  border-radius: ${borderRadius('1')(styleProps)};
   color: ${
     styleProps.palette === 'default' ? palette('text')(styleProps) : palette(`${styleProps.palette}700`)(styleProps)
   };
