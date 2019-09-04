@@ -3,6 +3,8 @@ import Theme from '../../components/Theme';
 
 # Modal
 
+The Modal component inheritely uses [Reakit's Modal component](https://reakit.io/docs/dialog/) and follows the [WAI-ARIA Modal Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal). It is rendered within a [Portal](/utilities/portal) & focus is trapped by default.
+
 ## Import
 
 ```jsx
@@ -26,6 +28,8 @@ function Example() {
 
 ### Backdrop
 
+You can use the `Modal.Backdrop` component to render a backdrop for the dialog. If the modal's `onClickOutside` prop is set to true, the backdrop will act as a button.
+
 ```function-live
 function Example() {
   const modal = Modal.useState()
@@ -41,6 +45,8 @@ function Example() {
 ```
 
 ### Composition
+
+The Modal component comes with utilities to compose with other components.
 
 #### `use`
 
@@ -109,6 +115,8 @@ function Example() {
 
 ### Placement
 
+Change where your modal is positioned with the `placement` prop.
+
 ```function-live
 function Example() {
   const modal = Modal.useState()
@@ -116,7 +124,7 @@ function Example() {
   return (
     <div>
       <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal {...modal} placement="bottom-end" border="2px solid red">Hello world</Modal>
+      <Modal {...modal} placement="top">Hello world</Modal>
     </div>
   )
 }
@@ -199,13 +207,33 @@ function Example() {
 }
 ```
 
+### Restricting closure
+
+You can restrict closure with either the `hideOnEsc` or `hideOnClickOutside` prop.
+
+```function-live
+function Example() {
+  const modal = Modal.useState()
+
+  return (
+    <div>
+      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal} hideOnEsc={false} hideOnClickOutside={false}>
+        Hello world
+        <Modal.Disclosure use={Button} {...modal}>Close modal</Modal.Disclosure>
+      </Modal>
+    </div>
+  )
+}
+```
+
 ## Props
 
 ### Modal Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">placement</Code>**  
+**<Code marginRight="major-1">placement</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"left"
@@ -225,19 +253,19 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Delay of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Duration of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">expand</Code>**  
+**<Code marginRight="major-1">expand</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
@@ -252,25 +280,25 @@ Will the component have an expand animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Will the component have a fade animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;left&#34; | &#34;right&#34; | &#34;top&#34; | &#34;bottom&#34;</Code> 
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;left&#34; | &#34;right&#34; | &#34;top&#34; | &#34;bottom&#34;</Code>
 
 Will the component have a slide animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Timing function of the animation
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -281,47 +309,47 @@ by default.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by pressing `Escape`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by clicking outside it.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can't scroll on body when the dialog is visible.
 This option doesn't work if the dialog isn't modal.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> 
+**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
 
 The element that will be focused when the dialog shows.
 When not set, the first tabbable element within the dialog will be used.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> 
+**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
 
 The element that will be focused when the dialog hides.
 When not set, the disclosure component will be used.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_portal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">unstable_portal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether or not the dialog should be rendered within `Portal`.
 It's `true` by default if `modal` is `true`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether or not the dialog should be a child of its parent.
 Opening a nested orphan dialog will close its parent dialog if
@@ -333,13 +361,13 @@ It will be set to `false` if `modal` is `false`.
 <details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -348,14 +376,14 @@ given milliseconds.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Changes the `visible` state to `false`
 
@@ -365,7 +393,7 @@ Changes the `visible` state to `false`
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -375,11 +403,11 @@ Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -398,19 +426,19 @@ Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -427,7 +455,7 @@ Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
@@ -437,13 +465,13 @@ Changes the `visible` state to `false`
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -454,7 +482,7 @@ similarly to `readOnly` on form elements. In this case, only
 <details><Box use="summary" marginBottom="major-2"><strong>2 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
@@ -470,7 +498,7 @@ Toggles the `visible` state
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -480,11 +508,11 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -503,19 +531,19 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -532,7 +560,7 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
@@ -547,13 +575,13 @@ No props to show.
 <details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -562,7 +590,7 @@ given milliseconds.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 It's called after given milliseconds if `animated` is a number.
@@ -573,7 +601,7 @@ It's called after given milliseconds if `animated` is a number.
 
 <details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -583,11 +611,11 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -606,19 +634,19 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -635,7 +663,7 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
@@ -647,13 +675,13 @@ It's called after given milliseconds if `animated` is a number.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -709,7 +737,7 @@ It's called after given milliseconds if `animated` is a number.
 <Box marginBottom="major-4" />
 
 </details>
-    
+
 
 ## Theming
 
