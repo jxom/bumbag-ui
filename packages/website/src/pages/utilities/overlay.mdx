@@ -1,0 +1,583 @@
+import { Overlay } from 'fannypack/Overlay/Overlay';
+import Theme from '../../components/Theme';
+
+# Overlay
+
+The Overlay component inheritely uses the [`Modal` component](/utilities/modal), however its focus is not trapped, it is not rendered in a portal and the background is scrollable.
+
+## Import
+
+```jsx
+import { Overlay } from 'fannypack';
+```
+
+## Usage
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay}><Box>Hello world</Box></Overlay>
+    </div>
+  )
+}
+```
+
+### Composition
+
+The Overlay component comes with utilities to compose with other components.
+
+#### `use`
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+
+  return (
+    <div>
+      <Overlay.Disclosure use={Button} {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Overlay.Disclosure use={Button} {...overlay}>Close overlay</Overlay.Disclosure>
+      </Overlay>
+    </div>
+  )
+}
+```
+
+#### Hooks
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+  const overlayProps = Overlay.useProps({ ...overlay });
+  const overlayDisclosureProps = Overlay.Disclosure.useProps({ ...overlay });
+
+  return (
+    <div>
+      <Button {...overlayDisclosureProps}>Open overlay</Button>
+      <Box {...overlayProps} backgroundColor="white" border="1px solid black" padding="major-2">
+        Hello world
+        <Button {...overlayDisclosureProps}>Close overlay</Button>
+      </Box>
+    </div>
+  )
+}
+```
+
+#### Render props
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+
+  return (
+    <Overlay {...overlay}>
+      {overlayProps => (
+        <Overlay.Disclosure {...overlay}>
+          {overlayDisclosureProps => (
+            <React.Fragment>
+              <Button {...overlayDisclosureProps}>Open overlay</Button>
+              <Box {...overlayProps} backgroundColor="white" border="1px solid black" padding="major-2">
+                Nesting for dayzzz
+                <Button {...overlayDisclosureProps}>Close</Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Overlay.Disclosure>
+      )}
+    </Overlay>
+  )
+}
+```
+
+### Placement
+
+Change where your overlay is positioned with the `placement` prop.
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} placement="top">Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+### Animation
+
+#### Fade
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} fade>Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+#### Slide
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} fade slide>Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+#### Expand
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} fade expand>Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+#### Duration
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} duration="100ms" fade>Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+### Placement with animation
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState({ unstable_animated: true })
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} placement="top" fade slide>Hello world</Overlay>
+    </div>
+  )
+}
+```
+
+### Restricting closure
+
+You can restrict closure with either the `hideOnEsc` or `hideOnClickOutside` prop.
+
+```function-live
+function Example() {
+  const overlay = Overlay.useState()
+
+  return (
+    <div>
+      <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
+      <Overlay {...overlay} hideOnEsc={false} hideOnClickOutside={false}>
+        Hello world
+        <Overlay.Disclosure use={Button} {...overlay}>Close overlay</Overlay.Disclosure>
+      </Overlay>
+    </div>
+  )
+}
+```
+
+## Props
+
+### Overlay Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">overlay</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Toggles Dialog's `overlay` state.
+
+  - Non-overlay: `preventBodyScroll` doesn't work and focus is free.
+  - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+When enabled, user can hide the dialog by pressing `Escape`.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+When enabled, user can hide the dialog by clicking outside it.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+When enabled, user can't scroll on body when the dialog is visible.
+This option doesn't work if the dialog isn't overlay.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
+
+The element that will be focused when the dialog shows.
+When not set, the first tabbable element within the dialog will be used.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
+
+The element that will be focused when the dialog hides.
+When not set, the disclosure component will be used.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_portal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether or not the dialog should be rendered within `Portal`.
+It's `true` by default if `overlay` is `true`.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether or not the dialog should be a child of its parent.
+Opening a nested orphan dialog will close its parent dialog if
+`hideOnClickOutside` is set to `true` on the parent.
+It will be set to `false` if `overlay` is `false`.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">placement</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"left"
+  | "right"
+  | "center"
+  | "top"
+  | "bottom"
+  | "top-start"
+  | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
+  | "right-end"
+  | "bottom-end"
+  | "left-end"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 28 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Overlay.Disclosure Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+When an element is `disabled`, it may still be `focusable`. It works
+similarly to `readOnly` on form elements. In this case, only
+`aria-disabled` will be set.
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>2 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;Box&#62;</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 28 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+## State Hooks
+
+### Overlay.useState API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+### Overlay.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>6 values</strong></Box>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+## Theming
+
+<Theme component={Overlay} overrides={['Overlay.base', 'Overlay.placements.center', 'Overlay.placements.left', 'Overlay.placements.right', 'Overlay.placements.top', 'Overlay.placements.bottom', 'Overlay.placements.topStart', 'Overlay.placements.topEnd', 'Overlay.placements.bottomStart', 'Overlay.placements.bottomEnd']}>
+  Hello world
+</Theme>
+
+<Theme component={Overlay.Disclosure} overrides={['Overlay.Disclosure.base']}>
+  Hello world
+</Theme>

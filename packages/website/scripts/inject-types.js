@@ -119,14 +119,14 @@ function createTypeMarkdown(types) {
       }
 
 ${
-        !isShort
-          ? `
+  !isShort
+    ? `
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {\`${formatType(type.type)}\`}
 </Code>
 `
-          : ''
-      }
+    : ''
+}
 
 ${type.description}
 

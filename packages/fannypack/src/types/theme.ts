@@ -18,6 +18,7 @@ import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
+import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import { ParagraphProps } from '../Paragraph';
 import { PortalProps } from '../Portal';
 import { RoverProps } from '../Rover';
@@ -238,6 +239,25 @@ export type ModalThemeConfig = {
     defaultProps?: Partial<ModalBackdropProps>;
   };
 };
+export type OverlayThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  placements?: {
+    center?: ThemeAttribute<Stylesheet>;
+    top?: ThemeAttribute<Stylesheet>;
+    left?: ThemeAttribute<Stylesheet>;
+    right?: ThemeAttribute<Stylesheet>;
+    bottom?: ThemeAttribute<Stylesheet>;
+    topStart?: ThemeAttribute<Stylesheet>;
+    topEnd?: ThemeAttribute<Stylesheet>;
+    bottomStart?: ThemeAttribute<Stylesheet>;
+    bottomEnd?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<OverlayProps>;
+  Disclosure?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<OverlayDisclosureProps>;
+  };
+};
 export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<ParagraphProps>;
@@ -295,6 +315,7 @@ export type ThemeConfig = {
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Modal?: ModalThemeConfig;
+  Overlay?: OverlayThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Portal?: PortalThemeConfig;
   Rover?: RoverThemeConfig;
