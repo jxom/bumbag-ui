@@ -1,9 +1,11 @@
+// NOTE: This is an absolute mess. I'm sorry. I will refactor it soon. #ASTs!
+
 const path = require('path');
 const ast = require('@textlint/markdown-to-ast');
 const inject = require('md-node-inject');
 const toMarkdown = require('ast-to-markdown');
 const { readdirSync, writeFileSync, readFileSync, lstatSync } = require('fs-extra');
-const { Project, ts } = require('ts-morph');
+const { Project, ts, TypeGuards } = require('ts-morph');
 const _ = require('lodash');
 
 function isDirectory(path) {
@@ -119,14 +121,14 @@ function createTypeMarkdown(types) {
       }
 
 ${
-  !isShort
-    ? `
+        !isShort
+          ? `
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {\`${formatType(type.type)}\`}
 </Code>
 `
-    : ''
-}
+          : ''
+      }
 
 ${type.description}
 
@@ -143,7 +145,7 @@ function getTypeMarkdown(extractedType, typeReferences, { type } = {}) {
 
   if (types.length > 0) {
     content = createTypeMarkdown(types);
-  } else {
+  } else if (type.length === 0 && !typeMetaData.uses && !typeMetaData.stateTypes) {
     content = 'No props to show.';
   }
 
@@ -167,27 +169,32 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
         `;
   }
 
-  if (typeMetaData.uses) {
-    typeMetaData.uses.forEach(use => {
-      if (typeReferences[use]) {
-        const useTypes = typeReferences[use].types.filter(
-          type => !Boolean(types.find(refType => refType.name === type.name))
-        );
-        content = `
+  function populateUses(uses = []) {
+    if (uses.length > 0) {
+      uses.forEach(use => {
+        const typeReference = typeReferences[`Local${use}`];
+        if (typeReference) {
+          const useTypes = typeReference.types.filter(
+            type => !Boolean(types.find(refType => refType.name === type.name))
+          );
+          content = `
 ${content}
 
-<details><Box use="summary" marginBottom="major-4">Inherits <code><strong>&#60;${use.replace(
-          /(Local|Props)/g,
-          ''
-        )}&#62;</strong></code> props</Box>
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>${use.replace(
+            /(Local|Props)/g,
+            ''
+          )}</strong></code> props</Box>
 ${createTypeMarkdown(useTypes)}
 </details>
 
-        `;
-        types = [...types, ...useTypes];
-      }
-    });
+          `;
+          types = [...types, ...useTypes];
+          populateUses(typeReference.uses);
+        }
+      });
+    }
   }
+  populateUses(typeMetaData.uses);
 
   return `
 <!-- Automatically generated -->
@@ -223,31 +230,30 @@ function extractTypes(config) {
           };
         }
         if (/^(?!(Local|use))[A-Z].*Props/.test(symbolName)) {
-          const intersectionTypes = node.getType().getIntersectionTypes();
           let dependantTypes = [];
           let extraTypes = [];
           let stateTypes = [];
 
-          intersectionTypes.forEach(type => {
-            const typeText = type.getText();
-            const aliasSymbol = type.getAliasSymbol();
-            if (aliasSymbol) {
-              const symbolName = aliasSymbol.getEscapedName();
-              dependantTypes = [...dependantTypes, symbolName];
-            }
-            if (
-              (!aliasSymbol && !/^React\./.test(typeText) && !typeText.includes('CSS')) ||
-              /reakit\/ts/.test(typeText)
-            ) {
-              const propTypes = createPropTypeObjects(type);
-              if (/reakit\/ts\/.*Return/.test(typeText)) {
-                stateTypes = [...stateTypes, ...propTypes].filter(Boolean);
-              } else {
-                extraTypes = [...extraTypes, ...propTypes].filter(Boolean);
-              }
-            }
-            return undefined;
-          });
+          const typeNode = node.getTypeNode();
+          if (TypeGuards.isIntersectionTypeNode(typeNode)) {
+            typeNode.getTypeNodes().forEach(node => {
+              const nodeText = node.getText();
+
+              dependantTypes = [...dependantTypes, nodeText];
+
+              const types = node.getType().getIntersectionTypes();
+              types.forEach(type => {
+                const typeText = type.getText();
+                if (/reakit\/ts\/.*Return/.test(typeText)) {
+                  const propTypes = createPropTypeObjects(type);
+                  stateTypes = [...stateTypes, ...propTypes].filter(Boolean);
+                } else if (/Reakit.*/.test(nodeText) && !/^React\./.test(typeText) && !typeText.includes('CSS')) {
+                  const propTypes = createPropTypeObjects(type);
+                  extraTypes = [...extraTypes, ...propTypes].filter(Boolean);
+                }
+              });
+            });
+          }
 
           dependantTypes = dependantTypes.filter(type => Boolean(type) && type !== `Local${symbolName}`).reverse();
 
