@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { ContainerThemeConfig, Breakpoint } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -15,17 +15,21 @@ export type LocalContainerProps = {
 };
 export type ContainerProps = BoxProps & LocalContainerProps;
 
-function useProps(props: Partial<ContainerProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<ContainerProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Container,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Container,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Container' }
+);
 
 export const Container = createComponent<ContainerProps>(
   props => {
@@ -34,13 +38,13 @@ export const Container = createComponent<ContainerProps>(
   },
   {
     attach: {
-      defaultProps: {
-        align: 'center',
-        breakpoint: undefined,
-        isFluid: false,
-        isLayout: false
-      },
       useProps
+    },
+    defaultProps: {
+      align: 'center',
+      breakpoint: undefined,
+      isFluid: false,
+      isLayout: false
     },
     themeKey: 'Container'
   }

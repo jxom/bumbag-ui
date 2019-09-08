@@ -16,33 +16,30 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -57,9 +54,9 @@ exports[`composition as should render correctly 1`] = `
 </div>
 `;
 
-exports[`composition hook should return with Set props 1`] = `
+exports[`composition hook should return with LayoutSet props 1`] = `
 Object {
-  "className": "css-1a2nne4 css-1pwrqjj css-1ccgglo",
+  "className": "css-wqazo2 css-f9vkq9 css-1pwrqjj css-1ccgglo",
 }
 `;
 
@@ -79,33 +76,30 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -136,121 +130,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 test"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`defaultProps should render correctly for isFilled 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`defaultProps should render correctly for isVertical 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -264,12 +144,16 @@ exports[`defaultProps should render correctly for isVertical 1`] = `
   align-items: flex-start;
 }
 
-.emotion-4 > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1 test"
 >
   <div
     class="emotion-0 emotion-1"
@@ -284,7 +168,7 @@ exports[`defaultProps should render correctly for isVertical 1`] = `
 </div>
 `;
 
-exports[`overrides Set.base should render correctly 1`] = `
+exports[`defaultProps should render correctly for isHorizontal 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -298,6 +182,56 @@ exports[`overrides Set.base should render correctly 1`] = `
 
 .emotion-0:focus:not(:focus-visible) {
   outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width:768px) {
+  .emotion-5 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-5 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .emotion-5 > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-5 > * {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .emotion-4 {
@@ -305,32 +239,16 @@ exports[`overrides Set.base should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
 }
 
 .emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-4 {
-  background-color: red;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -345,7 +263,7 @@ exports[`overrides Set.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Set.child.base should render correctly 1`] = `
+exports[`overrides LayoutSet.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -362,125 +280,10 @@ exports[`overrides Set.child.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  display: block;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: red;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Set.child.horizontal should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-4 > * {
-  background-color: red;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Set.child.vertical should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,16 +297,16 @@ exports[`overrides Set.child.vertical should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-4 > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.emotion-4 > * {
+.emotion-5 {
   background-color: red;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -518,7 +321,7 @@ exports[`overrides Set.child.vertical should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Set.horizontal should render correctly 1`] = `
+exports[`overrides LayoutSet.child.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -535,67 +338,10 @@ exports[`overrides Set.horizontal should render correctly 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  display: block;
 }
 
-.emotion-4 {
-  background-color: red;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Set.vertical should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,16 +355,240 @@ exports[`overrides Set.vertical should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-4 {
+.emotion-5 > * {
   background-color: red;
 }
 
-.emotion-4 > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides LayoutSet.child.horizontal should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides LayoutSet.child.vertical should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-5 > * {
+  background-color: red;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides LayoutSet.horizontal should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides LayoutSet.vertical should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  background-color: red;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -649,192 +619,7 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for a vertical breakpoint 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width:768px) {
-  .emotion-4 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .emotion-4 {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    margin-left: -0.5rem;
-    margin-top: -0.5rem;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .emotion-4 > *:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .emotion-4 > * {
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-  }
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for a vertical filled set 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 > *:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for a vertical set 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -848,12 +633,111 @@ exports[`props should render correctly for a vertical set 1`] = `
   align-items: flex-start;
 }
 
-.emotion-4 > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for a horizontal set 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width:768px) {
+  .emotion-5 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-5 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .emotion-5 > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .emotion-5 > * {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 > * {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -884,37 +768,34 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.emotion-6.emotion-6.emotion-6 {
+.emotion-4 {
+  display: block;
+}
+
+.emotion-7.emotion-7.emotion-7 {
   color: #3722ed;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-6"
+  class="emotion-4 emotion-5 emotion-0 emotion-7"
 >
   <div
     class="emotion-0 emotion-1"
@@ -929,7 +810,7 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`theming Set.base should render correctly 1`] = `
+exports[`theming LayoutSet.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -946,36 +827,33 @@ exports[`theming Set.base should render correctly 1`] = `
 }
 
 .emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.emotion-4 {
+.emotion-5 {
   background-color: red;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -990,7 +868,7 @@ exports[`theming Set.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Set.child.base should render correctly 1`] = `
+exports[`theming LayoutSet.child.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1007,33 +885,145 @@ exports[`theming Set.child.base should render correctly 1`] = `
 }
 
 .emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > * {
+  background-color: red;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`theming LayoutSet.child.horizontal should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`theming LayoutSet.child.vertical should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-5 > * {
   background-color: red;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"
@@ -1048,7 +1038,61 @@ exports[`theming Set.child.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Set.child.horizontal should render correctly 1`] = `
+exports[`theming LayoutSet.horizontal should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+<div
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
+>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`theming LayoutSet.vertical should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1065,211 +1109,33 @@ exports[`theming Set.child.horizontal should render correctly 1`] = `
 }
 
 .emotion-4 {
+  display: block;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-4 > * {
+.emotion-5 {
   background-color: red;
 }
 
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Set.child.vertical should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+.emotion-5 > *:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Set.horizontal should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 {
-  background-color: red;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Set.vertical should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1"
+  class="emotion-4 emotion-5 emotion-0 emotion-1"
 >
   <div
     class="emotion-0 emotion-1"

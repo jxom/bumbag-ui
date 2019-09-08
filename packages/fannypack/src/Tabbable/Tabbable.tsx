@@ -1,7 +1,7 @@
 import { Box as ReakitBox, TabbableProps as ReakitTabbableProps, useTabbable as useReakitTabbable } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -9,26 +9,30 @@ import * as styles from './styles';
 export type LocalTabbableProps = {};
 export type TabbableProps = BoxProps & ReakitTabbableProps & LocalTabbableProps;
 
-function useProps(props: TabbableProps) {
-  let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
-  const tabbableProps = useReakitTabbable(
-    {
-      disabled,
-      focusable,
-      unstable_clickKeys
-    },
-    htmlProps
-  );
-  htmlProps = Box.useProps({ ...props, ...tabbableProps });
+const useProps = createHook<TabbableProps>(
+  (props, themeKey) => {
+    let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
+    const tabbableProps = useReakitTabbable(
+      {
+        disabled,
+        focusable,
+        unstable_clickKeys
+      },
+      htmlProps
+    );
+    htmlProps = Box.useProps({ ...props, ...tabbableProps });
 
-  const className = useClassName({
-    style: styles.Tabbable,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.Tabbable,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Tabbable' }
+);
 
 export const Tabbable = createComponent<TabbableProps>(
   props => {
@@ -37,9 +41,9 @@ export const Tabbable = createComponent<TabbableProps>(
   },
   {
     attach: {
-      defaultProps: {},
       useProps
     },
+    defaultProps: {},
     themeKey: 'Tabbable'
   }
 );

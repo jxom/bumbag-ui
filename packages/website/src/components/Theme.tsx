@@ -3,7 +3,7 @@ import { Box, Code, Text } from 'fannypack';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
-  const { component: Component, children, overrides, injectOverrides = true } = props;
+  const { component: Component, children, overrides, injectOverrides = true, ...restProps } = props;
   return overrides.map(override => {
     let key = typeof override === 'object' ? override.key : override;
 
@@ -25,8 +25,7 @@ export default function Theme(props) {
           {components.map((props, i) => {
             const newChildren = props && props.children ? props.children : children;
             return (
-              <Component key={i} overrides={injectOverrides ? overrides : undefined} {...props}>
-                {/* eslint-disable-line */}
+              <Component key={i} overrides={injectOverrides ? overrides : undefined} {...restProps} {...props}> {/* eslint-disable-line */}
                 {typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren}
               </Component>
             );

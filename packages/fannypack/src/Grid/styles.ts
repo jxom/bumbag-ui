@@ -38,7 +38,7 @@ export const Grid = styleProps => cssClass`
     `}
 
   & {
-    ${theme('Grid.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
@@ -75,6 +75,6 @@ export const GridItem = styleProps => cssClass`
     `}
 
   & {
-    ${theme('Grid.Item.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

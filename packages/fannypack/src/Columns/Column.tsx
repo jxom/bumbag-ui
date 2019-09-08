@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
 import { ColumnsThemeConfig, ColumnSpread, ColumnSpreadOffset } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { ColumnsContext } from './ColumnsContext';
@@ -25,18 +25,22 @@ export type LocalColumnProps = {
 };
 export type ColumnProps = BoxProps & LocalColumnProps;
 
-function useProps(props: Partial<ColumnProps> = {}) {
-  const boxProps = Box.useProps(props);
-  const columnsContext = React.useContext(ColumnsContext);
+const useProps = createHook<ColumnProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
+    const columnsContext = React.useContext(ColumnsContext);
 
-  const className = useClassName({
-    style: styles.Column,
-    styleProps: { ...props, ...columnsContext },
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Column,
+      styleProps: { ...props, ...columnsContext },
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Columns.Column' }
+);
 
 export const Column = createComponent<ColumnProps>(
   props => {
@@ -45,21 +49,21 @@ export const Column = createComponent<ColumnProps>(
   },
   {
     attach: {
-      defaultProps: {
-        spread: undefined,
-        spreadMobile: undefined,
-        spreadTablet: undefined,
-        spreadDesktop: undefined,
-        spreadWidescreen: undefined,
-        spreadFullHD: undefined,
-        spreadOffset: undefined,
-        spreadMobileOffset: undefined,
-        spreadTabletOffset: undefined,
-        spreadDesktopOffset: undefined,
-        spreadWidescreenOffset: undefined,
-        spreadFullHDOffset: undefined
-      },
       useProps
+    },
+    defaultProps: {
+      spread: undefined,
+      spreadMobile: undefined,
+      spreadTablet: undefined,
+      spreadDesktop: undefined,
+      spreadWidescreen: undefined,
+      spreadFullHD: undefined,
+      spreadOffset: undefined,
+      spreadMobileOffset: undefined,
+      spreadTabletOffset: undefined,
+      spreadDesktopOffset: undefined,
+      spreadWidescreenOffset: undefined,
+      spreadFullHDOffset: undefined
     },
     themeKey: 'Columns.Column'
   }

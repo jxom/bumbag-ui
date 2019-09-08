@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { ListThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalListItemProps = {
 };
 export type ListItemProps = BoxProps & LocalListItemProps;
 
-function useProps(props: Partial<ListItemProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<ListItemProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.ListItem,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.ListItem,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'List.Item' }
+);
 
 export const ListItem = createComponent<ListItemProps>(
   props => {
@@ -30,10 +34,10 @@ export const ListItem = createComponent<ListItemProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'li'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'li'
     },
     themeKey: 'List.Item'
   }

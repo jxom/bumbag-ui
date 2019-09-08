@@ -3,6 +3,6 @@ import { theme } from '../utils';
 
 export const Rover = styleProps => cssClass`
   & {
-    ${theme('Rover.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

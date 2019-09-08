@@ -10,6 +10,6 @@ export const Blockquote = styleProps => cssClass`
   }
 
   & {
-    ${theme('Blockquote.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

@@ -1,6 +1,6 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -8,17 +8,21 @@ import * as styles from './styles';
 export type LocalBlockProps = {};
 export type BlockProps = BoxProps & LocalBlockProps;
 
-function useProps(props: Partial<BlockProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<BlockProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Block,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Block,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Block' }
+);
 
 export const Block = createComponent<BlockProps>(
   props => {

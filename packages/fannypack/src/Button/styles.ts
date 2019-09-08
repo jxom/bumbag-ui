@@ -54,7 +54,7 @@ export const getDisabledProperties = styleProps => css`
     pointer-events: unset;
   }
   & {
-    ${theme('Button.disabled')(styleProps)};
+    ${theme(`${styleProps.themeKey}.disabled`)(styleProps)};
   }
 `;
 
@@ -67,12 +67,12 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(2)(styleProps)}rem;
       }
       & {
-        ${theme('Button.sizes.small')(styleProps)};
+        ${theme(`${styleProps.themeKey}.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme('Button.sizes.default')(styleProps)};
+        ${theme(`${styleProps.themeKey}.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -81,7 +81,7 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
-        ${theme('Button.sizes.medium')(styleProps)};
+        ${theme(`${styleProps.themeKey}.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
@@ -91,7 +91,7 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {
-        ${theme('Button.sizes.large')(styleProps)};
+        ${theme(`${styleProps.themeKey}.sizes.large`)(styleProps)};
       }
     `
   };
@@ -109,7 +109,7 @@ export const getLoadingProperties = styleProps => css`
     }
   }
   & {
-    ${theme('Button.loading')(styleProps)};
+    ${theme(`${styleProps.themeKey}.loading`)(styleProps)};
   }
 `;
 
@@ -124,7 +124,7 @@ export const getStaticProperties = styleProps => css`
     }
   }
   & {
-    ${theme('Button.static')(styleProps)};
+    ${theme(`${styleProps.themeKey}.static`)(styleProps)};
   }
 `;
 
@@ -140,7 +140,7 @@ export const getInteractiveProperties = styleProps => css`
         border-color: transparent;
       `};
 
-    ${theme('Button.focus')(styleProps)};
+    ${theme(`${styleProps.themeKey}.focus`)(styleProps)};
   }
 
   ${styleProps.kind !== 'link' &&
@@ -149,7 +149,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme('Button.hover')(styleProps)};
+          ${theme(`${styleProps.themeKey}.hover`)(styleProps)};
         }
       }
     `};
@@ -160,7 +160,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme('Button.hoveractive')(styleProps)};
+          ${theme(`${styleProps.themeKey}.hoveractive`)(styleProps)};
         }
       }
     `};
@@ -189,7 +189,7 @@ export const getLinkProperties = styleProps => css`
   }
 
   & {
-    ${theme('Button.link')(styleProps)};
+    ${theme(`${styleProps.themeKey}.link`)(styleProps)};
   }
 `;
 
@@ -210,7 +210,7 @@ export const getOutlinedProperties = styleProps => css`
       `};
   }
   & {
-    ${theme('Button.outlined')(styleProps)};
+    ${theme(`${styleProps.themeKey}.outlined`)(styleProps)};
   }
 `;
 
@@ -229,6 +229,6 @@ export const getGhostProperties = styleProps => css`
     }
   }
   & {
-    ${theme('Button.ghost')(styleProps)};
+    ${theme(`${styleProps.themeKey}.ghost`)(styleProps)};
   }
 `;

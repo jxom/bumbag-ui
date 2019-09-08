@@ -1,0 +1,197 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { LayoutSet } from 'fannypack/LayoutSet/LayoutSet';
+
+# LayoutSet
+
+## Import
+
+```jsx
+import { LayoutSet } from 'fannypack';
+```
+
+### Basic Usage
+
+The `<LayoutSet>` component is a utility belt that wraps around layout elements to space them out correctly. It uses the [`<Set>` utility](/utilities/set) internally.
+
+```jsx-live
+<LayoutSet>
+  <Box backgroundColor="white700" padding="major-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus at.
+    Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient montes,
+    nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et posuere
+    leo. Cras placerat sapien in consectetur aliquet.
+  </Box>
+  <Box backgroundColor="white700" padding="major-3">
+    <LayoutSet spacing="major-2">
+      <Box backgroundColor="white" padding="major-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+        at. Sed mollis eros sem, eu tincidunt lectus interdum sed.
+      </Box>
+      <Box backgroundColor="white" padding="major-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia lacinia dui id pellentesque. Orci
+        varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec laoreet magna non
+        ornare consectetur. Proin cursus consectetur ligula, et posuere leo. Cras placerat sapien in consectetur
+        aliquet.
+      </Box>
+    </LayoutSet>
+  </Box>
+  <LayoutSet isHorizontal>
+    <Box backgroundColor="white700" padding="major-3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+      at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+      posuere leo. Cras placerat sapien in consectetur aliquet.
+    </Box>
+    <Box backgroundColor="white700" padding="major-3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+      at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+      posuere leo. Cras placerat sapien in consectetur aliquet.
+    </Box>
+  </LayoutSet>
+</LayoutSet>
+```
+
+## LayoutSet Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Set</strong></code> props</Box>
+
+**<Code marginRight="major-1">isFilled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isVertical</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">verticalBreakpoint</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"
+  | "min-fullHD"
+  | "max-fullHD"
+  | "min-widescreen"
+  | "max-widescreen"
+  | "min-desktop"
+  | "max-desktop"
+  | "min-tablet"
+  | "max-tablet"
+  | "min-mobile"
+  | "max-mobile"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 29 more ...;
+  Set?: SetThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
+## Theming
+
+<Theme
+  component={LayoutSet}
+  padding="major-3"
+  overrides={['LayoutSet.base', 'LayoutSet.child.base', 'LayoutSet.vertical', 'LayoutSet.child.vertical', { key: 'LayoutSet.horizontal', props: { isHorizontal: true } }, { key: 'LayoutSet.child.horizontal', props: { isHorizontal: true } }]}>
+  <Box backgroundColor="white700" padding="major-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+    posuere leo. Cras placerat sapien in consectetur aliquet.
+  </Box>
+  <Box backgroundColor="white700" padding="major-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+    posuere leo. Cras placerat sapien in consectetur aliquet.
+  </Box>
+</Theme>

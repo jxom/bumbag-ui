@@ -5,7 +5,7 @@ import {
 } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -13,37 +13,41 @@ import * as styles from './styles';
 export type LocalModalBackdropProps = {};
 export type ModalBackdropProps = BoxProps & ReakitDialogBackdropProps & LocalModalBackdropProps;
 
-function useProps(props: ModalBackdropProps) {
-  let {
-    visible,
-    unstable_hiddenId,
-    unstable_animating,
-    unstable_animated,
-    unstable_stopAnimation,
-    unstable_setIsMounted,
-    ...htmlProps
-  } = props;
-  const modalBackdropProps = useReakitDialogBackdrop(
-    {
+const useProps = createHook<ModalBackdropProps>(
+  (props, themeKey) => {
+    let {
       visible,
       unstable_hiddenId,
       unstable_animating,
       unstable_animated,
       unstable_stopAnimation,
-      unstable_setIsMounted
-    },
-    htmlProps
-  );
-  htmlProps = Box.useProps({ ...htmlProps, ...modalBackdropProps });
+      unstable_setIsMounted,
+      ...htmlProps
+    } = props;
+    const modalBackdropProps = useReakitDialogBackdrop(
+      {
+        visible,
+        unstable_hiddenId,
+        unstable_animating,
+        unstable_animated,
+        unstable_stopAnimation,
+        unstable_setIsMounted
+      },
+      htmlProps
+    );
+    htmlProps = Box.useProps({ ...htmlProps, ...modalBackdropProps });
 
-  const className = useClassName({
-    style: styles.ModalBackdrop,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.ModalBackdrop,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Modal.Backdrop' }
+);
 
 export const ModalBackdrop = createComponent<ModalBackdropProps>(
   props => {
@@ -57,9 +61,9 @@ export const ModalBackdrop = createComponent<ModalBackdropProps>(
   },
   {
     attach: {
-      defaultProps: {},
       useProps
     },
+    defaultProps: {},
     themeKey: 'Modal.Backdrop'
   }
 );

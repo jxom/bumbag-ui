@@ -5,7 +5,7 @@ import {
 } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -13,22 +13,26 @@ import * as styles from './styles';
 export type LocalModalDisclosureProps = {};
 export type ModalDisclosureProps = BoxProps & ReakitDialogDisclosureProps & LocalModalDisclosureProps;
 
-function useProps(props: ModalDisclosureProps) {
-  let { disabled, focusable, visible, toggle, unstable_hiddenId, ...htmlProps } = props;
-  const modalDisclosureProps = useReakitDialogDisclosure(
-    { disabled, focusable, visible, toggle, unstable_hiddenId },
-    htmlProps
-  );
-  htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
+const useProps = createHook<ModalDisclosureProps>(
+  (props, themeKey) => {
+    let { disabled, focusable, visible, toggle, unstable_hiddenId, ...htmlProps } = props;
+    const modalDisclosureProps = useReakitDialogDisclosure(
+      { disabled, focusable, visible, toggle, unstable_hiddenId },
+      htmlProps
+    );
+    htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
 
-  const className = useClassName({
-    style: styles.ModalDisclosure,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.ModalDisclosure,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Modal.Disclosure' }
+);
 
 export const ModalDisclosure = createComponent<ModalDisclosureProps>(
   props => {
@@ -42,10 +46,10 @@ export const ModalDisclosure = createComponent<ModalDisclosureProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'button'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'button'
     },
     themeKey: 'Modal.Disclosure'
   }

@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { FlexThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalFlexProps = {
 };
 export type FlexProps = BoxProps & LocalFlexProps;
 
-function useProps(props: Partial<FlexProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<FlexProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Flex,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Flex,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Flex' }
+);
 
 export const Flex = createComponent<FlexProps>(
   props => {

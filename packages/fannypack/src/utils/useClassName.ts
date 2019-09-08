@@ -6,14 +6,16 @@ import { ThemeContext } from '../styled';
 export function useClassName({
   style,
   prevClassName,
-  styleProps
+  styleProps,
+  themeKey
 }: {
   style: any;
   prevClassName?: string;
   styleProps: any;
+  themeKey?: string;
 }) {
   const theme = React.useContext(ThemeContext);
-  const className = style({ theme, ...styleProps });
+  const className = style({ theme, themeKey, ...styleProps });
   const classNames = buildClassNames(className, prevClassName);
   return classNames;
 }

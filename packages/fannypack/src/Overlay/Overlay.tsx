@@ -1,8 +1,7 @@
-import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
+import { Box as ReakitBox } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
-import { BoxProps } from '../Box';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Modal, ModalProps } from '../Modal';
 
 import * as styles from './styles';
@@ -10,17 +9,21 @@ import * as styles from './styles';
 export type LocalOverlayProps = {};
 export type OverlayProps = ModalProps & LocalOverlayProps;
 
-function useProps(props: OverlayProps) {
-  const htmlProps = Modal.useProps(props);
+const useProps = createHook<OverlayProps>(
+  (props, themeKey) => {
+    const htmlProps = Modal.useProps(props, { themeKey: 'Overlay' });
 
-  const className = useClassName({
-    style: styles.Overlay,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.Overlay,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Overlay' }
+);
 
 export const Overlay = createComponent<OverlayProps>(
   props => {
@@ -29,11 +32,11 @@ export const Overlay = createComponent<OverlayProps>(
   },
   {
     attach: {
-      defaultProps: {
-        modal: false,
-        placement: 'center'
-      },
       useProps
+    },
+    defaultProps: {
+      modal: false,
+      placement: 'center'
     },
     themeKey: 'Overlay'
   }

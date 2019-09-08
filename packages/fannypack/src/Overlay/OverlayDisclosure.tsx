@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { ModalDisclosure, ModalDisclosureProps } from '../Modal';
 
 import * as styles from './styles';
@@ -9,17 +9,21 @@ import * as styles from './styles';
 export type LocalOverlayDisclosureProps = {};
 export type OverlayDisclosureProps = ModalDisclosureProps & LocalOverlayDisclosureProps;
 
-function useProps(props: OverlayDisclosureProps) {
-  const htmlProps = ModalDisclosure.useProps(props);
+const useProps = createHook<OverlayDisclosureProps>(
+  (props, themeKey) => {
+    const htmlProps = ModalDisclosure.useProps(props);
 
-  const className = useClassName({
-    style: styles.OverlayDisclosure,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.OverlayDisclosure,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Overlay.Disclosure' }
+);
 
 export const OverlayDisclosure = createComponent<OverlayDisclosureProps>(
   props => {
@@ -33,10 +37,10 @@ export const OverlayDisclosure = createComponent<OverlayDisclosureProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'button'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'button'
     },
     themeKey: 'Overlay.Disclosure'
   }

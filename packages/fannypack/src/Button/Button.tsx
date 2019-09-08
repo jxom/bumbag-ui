@@ -1,6 +1,6 @@
 import { Button as ReakitButton, ButtonProps as ReakitButtonProps, useButton as useReakitButton } from 'reakit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { ButtonKind, ButtonType, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
 
@@ -22,19 +22,23 @@ export type LocalButtonProps = {
 };
 export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
 
-function useProps(props: ButtonProps) {
-  let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
-  const buttonProps = useReakitButton({ disabled, focusable, unstable_clickKeys }, htmlProps);
-  htmlProps = Box.useProps({ ...props, ...buttonProps });
+const useProps = createHook<ButtonProps>(
+  (props, themeKey) => {
+    let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
+    const buttonProps = useReakitButton({ disabled, focusable, unstable_clickKeys }, htmlProps);
+    htmlProps = Box.useProps({ ...props, ...buttonProps });
 
-  const className = useClassName({
-    style: styles.Button,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.Button,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Button' }
+);
 
 export const Button = createComponent<ButtonProps>(
   (props: ButtonProps) => {
@@ -43,18 +47,18 @@ export const Button = createComponent<ButtonProps>(
   },
   {
     attach: {
-      defaultProps: {
-        disabled: false,
-        iconAfter: undefined,
-        iconBefore: undefined,
-        isLoading: false,
-        isStatic: false,
-        kind: undefined,
-        palette: 'default',
-        size: 'default',
-        type: 'button'
-      },
       useProps
+    },
+    defaultProps: {
+      disabled: false,
+      iconAfter: undefined,
+      iconBefore: undefined,
+      isLoading: false,
+      isStatic: false,
+      kind: undefined,
+      palette: 'default',
+      size: 'default',
+      type: 'button'
     },
     themeKey: 'Button'
   }

@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { TextThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalTextProps = {
 };
 export type TextProps = BoxProps & LocalTextProps;
 
-function useProps(props: Partial<TextProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<TextProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Text,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Text,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Text' }
+);
 
 export const Text = createComponent<TextProps>(
   props => {
@@ -30,10 +34,10 @@ export const Text = createComponent<TextProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'span'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'span'
     },
     themeKey: 'Text'
   }

@@ -7,6 +7,6 @@ export const Paragraph = styleProps => cssClass`
   }
 
   & {
-    ${theme('Paragraph.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

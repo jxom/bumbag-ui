@@ -5,6 +5,6 @@ export const Flex = styleProps => cssClass`
   display: flex;
 
   & {
-    ${theme('Flex.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

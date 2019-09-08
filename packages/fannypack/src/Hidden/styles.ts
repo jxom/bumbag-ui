@@ -3,12 +3,12 @@ import { space, theme } from '../utils';
 
 export const Hidden = styleProps => cssClass`
   & {
-    ${theme('Hidden.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
 export const HiddenDisclosure = styleProps => cssClass`
   & {
-    ${theme('Hidden.Disclosure.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

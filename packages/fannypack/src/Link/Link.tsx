@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { LinkThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalLinkProps = {
 };
 export type LinkProps = BoxProps & LocalLinkProps;
 
-function useProps(props: Partial<LinkProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<LinkProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Link,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Link,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Link' }
+);
 
 export const Link = createComponent<LinkProps>(
   props => {
@@ -30,10 +34,10 @@ export const Link = createComponent<LinkProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'a'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'a'
     },
     themeKey: 'Link'
   }

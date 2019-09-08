@@ -13,6 +13,7 @@ export * from './Hidden';
 export * from './Inline';
 export * from './InlineBlock';
 export * from './InlineFlex';
+export * from './LayoutSet';
 export * from './Link';
 export * from './List';
 export * from './Modal';

@@ -1,7 +1,9 @@
 import { css, cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { breakpoint, space, theme } from '../utils';
 
 export const Set = styleProps => cssClass`
+  display: flex;
+
   ${
     styleProps.isVertical
       ? css`
@@ -11,13 +13,40 @@ export const Set = styleProps => cssClass`
             css`
               align-items: flex-start;
             `};
+
+          & {
+            ${theme(`${styleProps.themeKey}.vertical`)(styleProps)};
+          }
         `
       : css`
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: flex-start;
-          margin-left: -${space(styleProps.spacing)(styleProps)}rem;
-          margin-top: -${space(styleProps.spacing)(styleProps)}rem;
+          ${breakpoint(
+            styleProps.verticalBreakpoint,
+            css`
+              flex-direction: column;
+
+              ${!styleProps.isFilled &&
+                css`
+                  align-items: flex-start;
+                `};
+
+              & {
+                ${theme(`${styleProps.themeKey}.vertical`)(styleProps)};
+              }
+            `,
+            {
+              else: css`
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-start;
+                margin-left: -${space(styleProps.spacing)(styleProps)}rem;
+                margin-top: -${space(styleProps.spacing)(styleProps)}rem;
+
+                & {
+                  ${theme(`${styleProps.themeKey}.horizontal`)(styleProps)};
+                }
+              `
+            }
+          )(styleProps)};
         `
   };
 
@@ -28,17 +57,41 @@ export const Set = styleProps => cssClass`
             &:not(:last-child) {
               margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
             }
+
+            & {
+              ${theme(`${styleProps.themeKey}.child.vertical`)(styleProps)};
+            }
           `
         : css`
-            margin-left: ${space(styleProps.spacing)(styleProps)}rem;
-            margin-top: ${space(styleProps.spacing)(styleProps)}rem;
+            ${breakpoint(
+              styleProps.verticalBreakpoint,
+              css`
+                &:not(:last-child) {
+                  margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
+                }
+
+                & {
+                  ${theme(`${styleProps.themeKey}.child.vertical`)(styleProps)};
+                }
+              `,
+              {
+                else: css`
+                  margin-left: ${space(styleProps.spacing)(styleProps)}rem;
+                  margin-top: ${space(styleProps.spacing)(styleProps)}rem;
+
+                  & {
+                    ${theme(`${styleProps.themeKey}.child.horizontal`)(styleProps)};
+                  }
+                `
+              }
+            )(styleProps)};
           `
     };
 
-    ${theme('Set.child')(styleProps)};
+    ${theme(`${styleProps.themeKey}.child.base`)(styleProps)};
   }
 
   & {
-    ${theme('Set.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

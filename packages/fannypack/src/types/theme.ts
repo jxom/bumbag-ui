@@ -14,6 +14,7 @@ import { HeadingProps } from '../Heading';
 import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
+import { LayoutSetProps } from '../LayoutSet';
 import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
@@ -200,6 +201,17 @@ export type InlineFlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<InlineFlexProps>;
 };
+export type LayoutSetThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  horizontal?: ThemeAttribute<Stylesheet>;
+  vertical?: ThemeAttribute<Stylesheet>;
+  child?: {
+    base?: ThemeAttribute<Stylesheet>;
+    horizontal?: ThemeAttribute<Stylesheet>;
+    vertical?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<LayoutSetProps>;
+};
 export type LinkThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   hover?: ThemeAttribute<Stylesheet>;
@@ -281,7 +293,13 @@ export type TextThemeConfig = {
 };
 export type SetThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
-  child?: ThemeAttribute<Stylesheet>;
+  horizontal?: ThemeAttribute<Stylesheet>;
+  vertical?: ThemeAttribute<Stylesheet>;
+  child?: {
+    base?: ThemeAttribute<Stylesheet>;
+    horizontal?: ThemeAttribute<Stylesheet>;
+    vertical?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<SetProps>;
 };
 
@@ -312,6 +330,7 @@ export type ThemeConfig = {
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
+  LayoutSet?: LayoutSetThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Modal?: ModalThemeConfig;

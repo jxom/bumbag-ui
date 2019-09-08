@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
 import { ColumnsThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { ColumnsContext } from './ColumnsContext';
@@ -16,29 +16,33 @@ export type LocalColumnsProps = {
 };
 export type ColumnsProps = BoxProps & LocalColumnsProps;
 
-function useProps(props: Partial<ColumnsProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<ColumnsProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Columns,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Columns,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  const contextValue = React.useMemo(
-    () => ({
-      isGapless: props.isGapless,
-      minBreakpoint: props.minBreakpoint
-    }),
-    [props.isGapless, props.minBreakpoint]
-  );
+    const contextValue = React.useMemo(
+      () => ({
+        isGapless: props.isGapless,
+        minBreakpoint: props.minBreakpoint
+      }),
+      [props.isGapless, props.minBreakpoint]
+    );
 
-  return {
-    ...boxProps,
-    className,
-    children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>
-  };
-}
+    return {
+      ...boxProps,
+      className,
+      children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>
+    };
+  },
+  { themeKey: 'Columns' }
+);
 
 export const Columns = createComponent<ColumnsProps>(
   props => {
@@ -47,12 +51,12 @@ export const Columns = createComponent<ColumnsProps>(
   },
   {
     attach: {
-      defaultProps: {
-        isGapless: false,
-        isOneLine: false,
-        minBreakpoint: undefined
-      },
       useProps
+    },
+    defaultProps: {
+      isGapless: false,
+      isOneLine: false,
+      minBreakpoint: undefined
     },
     themeKey: 'Columns'
   }

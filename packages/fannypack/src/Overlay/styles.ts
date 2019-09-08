@@ -3,12 +3,12 @@ import { space, theme } from '../utils';
 
 export const Overlay = styleProps => cssClass`
   & {
-    ${theme('Overlay.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
 export const OverlayDisclosure = styleProps => cssClass`
   & {
-    ${theme('Overlay.Disclosure.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

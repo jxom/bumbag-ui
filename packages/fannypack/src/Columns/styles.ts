@@ -18,7 +18,7 @@ export const Columns = styleProps => cssClass`
   ${getWrapProperties(styleProps)};
 
   & {
-    ${theme('Columns.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
@@ -40,7 +40,7 @@ export const Column = styleProps => cssClass`
   }
 
   & {
-    ${theme('Columns.Column.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 

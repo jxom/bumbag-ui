@@ -1,6 +1,6 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -8,17 +8,21 @@ import * as styles from './styles';
 export type LocalBlockquoteProps = {};
 export type BlockquoteProps = BoxProps & LocalBlockquoteProps;
 
-function useProps(props: Partial<BlockquoteProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<BlockquoteProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Blockquote,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Blockquote,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Blockquote' }
+);
 
 export const Blockquote = createComponent<BlockquoteProps>(
   props => {
@@ -30,5 +34,5 @@ export const Blockquote = createComponent<BlockquoteProps>(
       htmlProps: blockquoteProps
     });
   },
-  { attach: { defaultProps: { use: 'blockquote' }, useProps }, themeKey: 'Blockquote' }
+  { attach: { useProps }, defaultProps: { use: 'blockquote' }, themeKey: 'Blockquote' }
 );

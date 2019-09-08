@@ -32,7 +32,7 @@ export const Box = styleProps => cssClass`
   }
 
   & {
-    ${theme('Box.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 

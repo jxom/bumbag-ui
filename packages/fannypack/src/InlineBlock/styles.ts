@@ -5,6 +5,6 @@ export const InlineBlock = styleProps => cssClass`
   display: inline-block;
 
   & {
-    ${theme('InlineBlock.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

@@ -14,7 +14,7 @@ export const Group = styleProps => cssClass`
 
   & > * {
     border-radius: ${styleProps.borderRadius};
-    ${theme('Group.Item.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.Item.base`)(styleProps)};
   }
 
   & input:focus,
@@ -73,7 +73,7 @@ export const Group = styleProps => cssClass`
       };
     }
 
-    ${theme('Group.Item.first')(styleProps)};
+    ${theme(`${styleProps.themeKey}.Item.first`)(styleProps)};
   }
 
   & > *:last-child {
@@ -135,14 +135,14 @@ export const Group = styleProps => cssClass`
       };
     }
 
-    ${theme('Group.Item.last')(styleProps)};
+    ${theme(`${styleProps.themeKey}.Item.last`)(styleProps)};
   }
 
   & > *:not(:first-child):not(:last-child),
   & > *:not(:first-child):not(:last-child) > input,
   & > *:not(:first-child):not(:last-child) > select {
     border-radius: 0;
-    ${theme('Group.Item.middle')(styleProps)};
+    ${theme(`${styleProps.themeKey}.Item.middle`)(styleProps)};
   }
 
   & > *:not(:first-child) {
@@ -168,6 +168,6 @@ export const Group = styleProps => cssClass`
   }
 
   & {
-    ${theme('Group.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 import classNames from 'classnames';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { HeadingThemeConfig } from '../types/theme';
 import { Box, BoxProps } from '../Box';
 
@@ -13,17 +13,21 @@ export type LocalHeadingProps = {
 };
 export type HeadingProps = BoxProps & LocalHeadingProps;
 
-function useProps(props: Partial<HeadingProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<HeadingProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Heading,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Heading,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
-}
+    return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
+  },
+  { themeKey: 'Heading' }
+);
 
 export const Heading = createComponent<HeadingProps>(
   props => {
@@ -32,9 +36,9 @@ export const Heading = createComponent<HeadingProps>(
   },
   {
     attach: {
-      defaultProps: { isSubHeading: false, use: 'h1' },
       useProps
     },
+    defaultProps: { isSubHeading: false, use: 'h1' },
     themeKey: 'Heading'
   }
 );

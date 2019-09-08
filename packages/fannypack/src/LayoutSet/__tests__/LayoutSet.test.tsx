@@ -1,56 +1,36 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../../Box';
-import { Set } from '../Set';
+import { LayoutSet } from '../LayoutSet';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <Set color="primary">
+      <LayoutSet color="primary">
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for a vertical set', () => {
+  it('should render correctly for a horizontal set', () => {
     const { container } = render(
-      <Set isVertical>
+      <LayoutSet isHorizontal>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for a vertical filled set', () => {
-    const { container } = render(
-      <Set isVertical isFilled>
-        <Box>hello</Box>
-        <Box>world</Box>
-      </Set>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for a vertical breakpoint', () => {
-    const { container } = render(
-      <Set verticalBreakpoint="max-tablet">
-        <Box>hello</Box>
-        <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -60,18 +40,18 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Set use="div">
+        <LayoutSet use="div">
           <Box>hello</Box>
           <Box>world</Box>
-        </Set>
+        </LayoutSet>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('hook', () => {
-    it('should return with Set props', () => {
-      const { result } = renderHook(() => Set.useProps());
+    it('should return with LayoutSet props', () => {
+      const { result } = renderHook(() => LayoutSet.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -79,14 +59,14 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Set>
-          {SetProps => (
-            <div {...SetProps}>
+        <LayoutSet>
+          {LayoutSetProps => (
+            <div {...LayoutSetProps}>
               <Box>hello</Box>
               <Box>world</Box>
             </div>
           )}
-        </Set>
+        </LayoutSet>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -94,141 +74,141 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Set.base should render correctly', () => {
+  it('LayoutSet.base should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { base: { backgroundColor: 'red' } } }}>
+      <LayoutSet overrides={{ LayoutSet: { base: { backgroundColor: 'red' } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.base should render correctly', () => {
+  it('LayoutSet.child.base should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { child: { base: { backgroundColor: 'red' } } } }}>
+      <LayoutSet overrides={{ LayoutSet: { child: { base: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.vertical should render correctly', () => {
+  it('LayoutSet.vertical should render correctly', () => {
     const { container } = render(
-      <Set isVertical overrides={{ Set: { vertical: { backgroundColor: 'red' } } }}>
+      <LayoutSet isVertical overrides={{ LayoutSet: { vertical: { backgroundColor: 'red' } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.horizontal should render correctly', () => {
+  it('LayoutSet.horizontal should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { horizontal: { backgroundColor: 'red' } } }}>
+      <LayoutSet overrides={{ LayoutSet: { horizontal: { backgroundColor: 'red' } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.vertical should render correctly', () => {
+  it('LayoutSet.child.vertical should render correctly', () => {
     const { container } = render(
-      <Set isVertical overrides={{ Set: { child: { vertical: { backgroundColor: 'red' } } } }}>
+      <LayoutSet isVertical overrides={{ LayoutSet: { child: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.horizontal should render correctly', () => {
+  it('LayoutSet.child.horizontal should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { child: { horizontal: { backgroundColor: 'red' } } } }}>
+      <LayoutSet overrides={{ LayoutSet: { child: { horizontal: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>
+      </LayoutSet>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Set.base should render correctly', () => {
+  it('LayoutSet.base should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { base: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { base: { backgroundColor: 'red' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.base should render correctly', () => {
+  it('LayoutSet.child.base should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { child: { base: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { child: { base: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.vertical should render correctly', () => {
+  it('LayoutSet.vertical should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { vertical: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { vertical: { backgroundColor: 'red' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.horizontal should render correctly', () => {
+  it('LayoutSet.horizontal should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { horizontal: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { horizontal: { backgroundColor: 'red' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.vertical should render correctly', () => {
+  it('LayoutSet.child.vertical should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { child: { vertical: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { child: { vertical: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.horizontal should render correctly', () => {
+  it('LayoutSet.child.horizontal should render correctly', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { child: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { child: { horizontal: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -238,38 +218,25 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { defaultProps: { className: 'test' } } }
+        theme: { LayoutSet: { defaultProps: { className: 'test' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for isVertical', () => {
+  it('should render correctly for isHorizontal', () => {
     const { container } = render(
-      <Set>
+      <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
-      </Set>,
+      </LayoutSet>,
       {
-        theme: { Set: { defaultProps: { isVertical: true } } }
-      }
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for isFilled', () => {
-    const { container } = render(
-      <Set>
-        <Box>hello</Box>
-        <Box>world</Box>
-      </Set>,
-      {
-        theme: { Set: { defaultProps: { isFilled: true } } }
+        theme: { LayoutSet: { defaultProps: { isHorizontal: true } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

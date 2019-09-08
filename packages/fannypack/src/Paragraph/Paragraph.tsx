@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { ParagraphThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalParagraphProps = {
 };
 export type ParagraphProps = BoxProps & LocalParagraphProps;
 
-function useProps(props: Partial<ParagraphProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<ParagraphProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Paragraph,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Paragraph,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Paragraph' }
+);
 
 export const Paragraph = createComponent<ParagraphProps>(
   props => {
@@ -30,10 +34,10 @@ export const Paragraph = createComponent<ParagraphProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'p'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'p'
     },
     themeKey: 'Paragraph'
   }

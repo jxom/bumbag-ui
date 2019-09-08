@@ -72,7 +72,17 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
   | "mobile"
   | "fullHD"
   | "widescreen"
-  | "desktop"`}
+  | "desktop"
+  | "min-fullHD"
+  | "max-fullHD"
+  | "min-widescreen"
+  | "max-widescreen"
+  | "min-desktop"
+  | "max-desktop"
+  | "min-tablet"
+  | "max-tablet"
+  | "min-mobile"
+  | "max-mobile"`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -134,7 +144,7 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 28 more ...;
+  ... 29 more ...;
   Set?: SetThemeConfig;
 }`}
 </Code>

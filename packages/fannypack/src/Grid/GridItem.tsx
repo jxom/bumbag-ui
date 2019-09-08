@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { GridThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -18,17 +18,21 @@ export type LocalGridItemProps = {
 };
 export type GridItemProps = BoxProps & LocalGridItemProps;
 
-function useProps(props: Partial<GridItemProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<GridItemProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.GridItem,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.GridItem,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Grid.Item' }
+);
 
 export const GridItem = createComponent<GridItemProps>(
   props => {

@@ -2,7 +2,7 @@ import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useRea
 import _omit from 'lodash/omit';
 
 import { AnimateProps, Placement } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -12,29 +12,9 @@ export type LocalModalProps = {
 } & AnimateProps;
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
-function useProps(props: ModalProps) {
-  let {
-    hide,
-    hideOnEsc,
-    hideOnClickOutside,
-    modal,
-    preventBodyScroll,
-    visible,
-    unstable_animating,
-    unstable_animated,
-    unstable_hiddenId,
-    unstable_initialFocusRef,
-    unstable_finalFocusRef,
-    unstable_portal,
-    unstable_orphan,
-    unstable_autoFocusOnHide,
-    unstable_autoFocusOnShow,
-    unstable_stopAnimation,
-    unstable_setIsMounted,
-    ...htmlProps
-  } = props;
-  const modalProps = useReakitDialog(
-    {
+const useProps = createHook<ModalProps>(
+  (props, themeKey) => {
+    let {
       hide,
       hideOnEsc,
       hideOnClickOutside,
@@ -51,20 +31,44 @@ function useProps(props: ModalProps) {
       unstable_autoFocusOnHide,
       unstable_autoFocusOnShow,
       unstable_stopAnimation,
-      unstable_setIsMounted
-    },
-    htmlProps
-  );
-  htmlProps = Box.useProps({ ...props, ...modalProps });
+      unstable_setIsMounted,
+      ...htmlProps
+    } = props;
+    const modalProps = useReakitDialog(
+      {
+        hide,
+        hideOnEsc,
+        hideOnClickOutside,
+        modal,
+        preventBodyScroll,
+        visible,
+        unstable_animating,
+        unstable_animated,
+        unstable_hiddenId,
+        unstable_initialFocusRef,
+        unstable_finalFocusRef,
+        unstable_portal,
+        unstable_orphan,
+        unstable_autoFocusOnHide,
+        unstable_autoFocusOnShow,
+        unstable_stopAnimation,
+        unstable_setIsMounted
+      },
+      htmlProps
+    );
+    htmlProps = Box.useProps({ ...props, ...modalProps });
 
-  const className = useClassName({
-    style: styles.Modal,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.Modal,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Modal' }
+);
 
 export const Modal = createComponent<ModalProps>(
   props => {
@@ -73,10 +77,10 @@ export const Modal = createComponent<ModalProps>(
   },
   {
     attach: {
-      defaultProps: {
-        placement: 'center'
-      },
       useProps
+    },
+    defaultProps: {
+      placement: 'center'
     },
     themeKey: 'Modal'
   }

@@ -64,6 +64,6 @@ export const Text = styleProps => cssClass`
   }
 
   & {
-    ${theme('Text.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;

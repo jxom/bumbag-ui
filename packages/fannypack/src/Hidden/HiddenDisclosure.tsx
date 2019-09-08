@@ -5,7 +5,7 @@ import {
 } from 'reakit';
 import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -13,22 +13,26 @@ import * as styles from './styles';
 export type LocalHiddenDisclosureProps = {};
 export type HiddenDisclosureProps = BoxProps & ReakitHiddenDisclosureProps & LocalHiddenDisclosureProps;
 
-function useProps(props: HiddenDisclosureProps) {
-  let { disabled, focusable, visible, toggle, unstable_hiddenId, ...htmlProps } = props;
-  const hiddenDisclosureProps = useReakitHiddenDisclosure(
-    { disabled, focusable, visible, toggle, unstable_hiddenId },
-    htmlProps
-  );
-  htmlProps = Box.useProps({ ...htmlProps, ...hiddenDisclosureProps });
+const useProps = createHook<HiddenDisclosureProps>(
+  (props, themeKey) => {
+    let { disabled, focusable, visible, toggle, unstable_hiddenId, ...htmlProps } = props;
+    const hiddenDisclosureProps = useReakitHiddenDisclosure(
+      { disabled, focusable, visible, toggle, unstable_hiddenId },
+      htmlProps
+    );
+    htmlProps = Box.useProps({ ...htmlProps, ...hiddenDisclosureProps });
 
-  const className = useClassName({
-    style: styles.HiddenDisclosure,
-    styleProps: props,
-    prevClassName: htmlProps.className
-  });
+    const className = useClassName({
+      style: styles.HiddenDisclosure,
+      styleProps: props,
+      themeKey,
+      prevClassName: htmlProps.className
+    });
 
-  return { ...htmlProps, className };
-}
+    return { ...htmlProps, className };
+  },
+  { themeKey: 'Hidden.Disclosure' }
+);
 
 export const HiddenDisclosure = createComponent<HiddenDisclosureProps>(
   props => {

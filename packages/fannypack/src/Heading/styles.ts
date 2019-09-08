@@ -16,37 +16,37 @@ export const Heading = styleProps => cssClass`
   h1& {
     font-size: ${theme('fontSizes.700')(styleProps)}rem;
     & {
-      ${theme('Heading.h1.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h1.base`)(styleProps)};
     }
   }
   h2& {
     font-size: ${theme('fontSizes.600')(styleProps)}rem;
     & {
-      ${theme('Heading.h2.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h2.base`)(styleProps)};
     }
   }
   h3& {
     font-size: ${theme('fontSizes.500')(styleProps)}rem;
     & {
-      ${theme('Heading.h3.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h3.base`)(styleProps)};
     }
   }
   h4& {
     font-size: ${theme('fontSizes.400')(styleProps)}rem;
     & {
-      ${theme('Heading.h4.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h4.base`)(styleProps)};
     }
   }
   h5& {
     font-size: ${theme('fontSizes.300')(styleProps)}rem;
     & {
-      ${theme('Heading.h5.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h5.base`)(styleProps)};
     }
   }
   h6& {
     font-size: ${theme('fontSizes.200')(styleProps)}rem;
     & {
-      ${theme('Heading.h6.base')(styleProps)};
+      ${theme(`${styleProps.themeKey}.h6.base`)(styleProps)};
     }
   }
 
@@ -55,7 +55,7 @@ export const Heading = styleProps => cssClass`
   }
 
   & {
-    ${theme('Heading.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
@@ -63,6 +63,6 @@ export const getSubHeadingProperties = styleProps => cssClass`
   font-weight: ${theme('fontWeights.semibold')(styleProps)};
 
   & {
-    ${theme('Heading.subHeading')(styleProps)};
+    ${theme(`${styleProps.themeKey}.subHeading`)(styleProps)};
   }
 `;

@@ -12,13 +12,13 @@ export const Modal = styleProps => cssClass`
   }
 
   & {
-    ${theme('Modal.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
 export const ModalDisclosure = styleProps => cssClass`
   & {
-    ${theme('Modal.Disclosure.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
@@ -32,7 +32,7 @@ export const ModalBackdrop = styleProps => cssClass`
   z-index: 19900409;
 
   & {
-    ${theme('Modal.Backdrop.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
@@ -131,7 +131,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.center')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.center`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -147,7 +147,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.top')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.top`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -163,7 +163,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.bottom')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.bottom`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -179,7 +179,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.left')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.left`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -195,7 +195,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.right')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.right`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -211,7 +211,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.topStart')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.topStart`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -227,7 +227,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.topEnd')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.topEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -243,7 +243,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.bottomEnd')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.bottomEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -259,7 +259,7 @@ export const getPlacementAttributes = styleProps => {
       })};
 
       & {
-        ${theme('Modal.placements.bottomStart')(styleProps)};
+        ${theme(`${styleProps.themeKey}.placements.bottomStart`)(styleProps)};
       }
     `
   };

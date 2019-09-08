@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { CodeThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -13,17 +13,21 @@ export type LocalCodeProps = {
 };
 export type CodeProps = BoxProps & LocalCodeProps;
 
-function useProps(props: Partial<CodeProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<CodeProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Code,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Code,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'Code' }
+);
 
 export const Code = createComponent<CodeProps>(
   props => {
@@ -38,10 +42,10 @@ export const Code = createComponent<CodeProps>(
   },
   {
     attach: {
-      defaultProps: {
-        palette: 'default'
-      },
       useProps
+    },
+    defaultProps: {
+      palette: 'default'
     },
     themeKey: 'Code'
   }

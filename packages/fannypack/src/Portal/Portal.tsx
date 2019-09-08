@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Portal as ReakitPortal, PortalProps as ReakitPortalProps } from 'reakit';
 
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -9,17 +9,21 @@ import * as styles from './styles';
 export type LocalPortalProps = {};
 export type PortalProps = BoxProps & ReakitPortalProps & LocalPortalProps;
 
-function useProps(props: Partial<PortalProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<PortalProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.Portal,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.Portal,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, children: <Box {...props}>{boxProps.children}</Box>, className };
-}
+    return { ...boxProps, children: <Box {...props}>{boxProps.children}</Box>, className };
+  },
+  { themeKey: 'Portal' }
+);
 
 export const Portal = createComponent<PortalProps>(
   props => {

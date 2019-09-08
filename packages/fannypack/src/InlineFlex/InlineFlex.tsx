@@ -1,7 +1,7 @@
 import { Box as ReakitBox } from 'reakit';
 
 import { InlineFlexThemeConfig } from '../types';
-import { useClassName, createComponent, createElement } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -11,17 +11,21 @@ export type LocalInlineFlexProps = {
 };
 export type InlineFlexProps = BoxProps & LocalInlineFlexProps;
 
-function useProps(props: Partial<InlineFlexProps> = {}) {
-  const boxProps = Box.useProps(props);
+const useProps = createHook<InlineFlexProps>(
+  (props, themeKey) => {
+    const boxProps = Box.useProps(props);
 
-  const className = useClassName({
-    style: styles.InlineFlex,
-    styleProps: props,
-    prevClassName: boxProps.className
-  });
+    const className = useClassName({
+      style: styles.InlineFlex,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
 
-  return { ...boxProps, className };
-}
+    return { ...boxProps, className };
+  },
+  { themeKey: 'InlineFlex' }
+);
 
 export const InlineFlex = createComponent<InlineFlexProps>(
   props => {

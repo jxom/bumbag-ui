@@ -18,11 +18,11 @@ export const Code = styleProps => cssClass`
     ${styleProps.isBlock &&
       css`
         padding: 1rem;
-        ${theme('Code.block')(styleProps)};
+        ${theme(`${styleProps.themeKey}.block`)(styleProps)};
       `}
   };
 
   & {
-    ${theme('Code.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   };
 `;

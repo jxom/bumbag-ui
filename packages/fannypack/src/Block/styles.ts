@@ -5,6 +5,6 @@ export const Block = styleProps => cssClass`
   display: block;
 
   & {
-    ${theme('Block.base')(styleProps)};
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
