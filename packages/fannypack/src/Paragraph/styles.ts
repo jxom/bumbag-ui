@@ -6,6 +6,10 @@ export const Paragraph = styleProps => cssClass`
     margin-bottom: ${space(4)(styleProps)}rem;
   }
 
+  & .fp-Icon {
+    vertical-align: -0.125em;
+  }
+
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }

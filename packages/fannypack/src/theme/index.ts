@@ -11,6 +11,7 @@ import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
 import Container from './Container';
+import Icon from './Icon';
 
 export default (overrides: ThemeConfig = {}) => ({
   ...overrides,
@@ -24,5 +25,6 @@ export default (overrides: ThemeConfig = {}) => ({
   layout: layout(overrides.layout || {}),
   palette: palette(overrides.palette || {}),
 
-  Container: Container(overrides.Container || {})
+  Container: Container(overrides.Container || {}),
+  Icon: Icon(overrides.Icon || {})
 });

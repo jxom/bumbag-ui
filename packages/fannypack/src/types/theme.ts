@@ -1,3 +1,5 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+
 import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
@@ -11,6 +13,7 @@ import { GridItemProps } from '../Grid/GridItem';
 import { GroupProps } from '../Group';
 import { HiddenProps, HiddenDisclosureProps } from '../Hidden';
 import { HeadingProps } from '../Heading';
+import { IconProps } from '../Icon';
 import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
@@ -26,6 +29,7 @@ import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
+import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
 export type Stylesheet = any; // TODO: fix
 
@@ -189,6 +193,22 @@ export type HighlightedCodeThemeConfig = {
   };
   defaultProps?: Partial<CodeProps>;
 };
+export type IconThemeConfig = {
+  base?: Stylesheet;
+  iconSets?: Array<{
+    icons: IconDefinition[];
+    prefix?: ParseIconsOpts['prefix'];
+    type: ParseIconsOpts['type'];
+  }>;
+  icons?: ParsedIcons;
+  iconNames?: {
+    info?: string;
+    warning?: string;
+    success?: string;
+    danger?: string;
+  };
+  defaultProps?: Partial<IconProps>;
+};
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<InlineProps>;
@@ -327,6 +347,7 @@ export type ThemeConfig = {
   Heading?: HeadingThemeConfig;
   Hidden?: HiddenThemeConfig;
   HighlightedCode?: HighlightedCodeThemeConfig;
+  Icon?: IconThemeConfig;
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;

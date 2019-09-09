@@ -16,3 +16,5 @@
 - `elevation` -> `altitude`
 - TODO: modal changes
 - TODO: pane changes
+- Icon: `size` -> `fontSize`
+-

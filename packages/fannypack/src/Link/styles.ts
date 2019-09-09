@@ -25,6 +25,10 @@ export const Link = styleProps => cssClass`
     }
   }
 
+  & .fp-Icon {
+    vertical-align: -0.125em;
+  }
+
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }

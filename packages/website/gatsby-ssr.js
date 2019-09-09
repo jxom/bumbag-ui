@@ -11,10 +11,11 @@ import { renderToString } from 'react-dom/server';
 import { renderStylesToString } from 'emotion-server';
 
 import { Provider } from '../fannypack/src';
+import theme from './src/theme';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   const html = renderStylesToString(renderToString(bodyComponent));
   replaceBodyHTMLString(html);
 };
 
-export const wrapRootElement = ({ element, ...props }) => <Provider>{element}</Provider>;
+export const wrapRootElement = ({ element, ...props }) => <Provider theme={theme}>{element}</Provider>;

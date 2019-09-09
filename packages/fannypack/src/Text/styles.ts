@@ -58,9 +58,8 @@ export const Text = styleProps => cssClass`
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
   }
 
-  /* TODO: fix */
-  & .icon {
-    top: 0.15em;
+  & .fp-Icon {
+    vertical-align: -0.125em;
   }
 
   & {

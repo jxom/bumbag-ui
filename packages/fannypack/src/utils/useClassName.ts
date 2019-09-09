@@ -16,6 +16,6 @@ export function useClassName({
 }) {
   const theme = React.useContext(ThemeContext);
   const className = style({ theme, themeKey, ...styleProps });
-  const classNames = buildClassNames(className, prevClassName);
+  const classNames = buildClassNames(className, prevClassName, themeKey ? `fp-${themeKey}` : undefined);
   return classNames;
 }
