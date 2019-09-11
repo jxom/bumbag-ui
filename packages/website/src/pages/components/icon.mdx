@@ -3,16 +3,123 @@ import { Icon } from 'fannypack/Icon/Icon';
 
 # Icon
 
+Fannypack aims to have a **low bundle size** & be **icon agnostic**, hence it does not come with a default icon set (apart from status icons).
+
+You will need to bring your own icon set. Below is a guide & example to import the **Free Font Awesome** icon set.
+
+There are two ways to import icons for the `<Icon>` component. You can either:
+
+- [Inject the icons via the Fannypack Theme](#usage-via-fannypack-theme) **(recommended)**, or
+- [Import the icon directly](#usage-via-direct-import), or
+- [Use SVG paths](#usage-via-svg-paths)
+
 ## Import
 
 ```js
 import { Icon } from 'fannypack';
 ```
 
-## Usage
+## Usage via Fannypack Theme
+
+**Note**: Fannypack currently only supports parsing of **Font Awesome** icons. If you want to use another icon set, you will need to follow the [usage via SVG paths](#usage-via-svg-paths) instructions. Want to add a parser or an icon set? [Open a Pull Request](https://github.com/fannypackui/fannypack/pulls).
+
+**First**, you will need to inject the icons your app will use into the [Fannypack Theme](/styling#theming)
+
+This example uses [@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons) and [@fortawesome/free-regular-svg-icons](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons).
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+
+const theme = {
+  Icon: {
+    iconSets: [
+      {
+        icons: [faIgloo, faSearch, faClipboard, faThumbsUp],
+        prefix: 'solid-',
+        type: 'font-awesome'
+      },
+      {
+        icons: [faAddressBook],
+        prefix: 'regular-',
+        type: 'font-awesome'
+      }
+    ]
+  }
+};
+
+export default () => <ThemeProvider theme={theme}><App/></ThemeProvider>
+```
+
+**Then**, you can use your icons like so:
 
 ```jsx-live
-<Icon icon="solid-igloo" />
+  <Icon a11yLabel="Settings" icon="solid-igloo" />
+```
+
+## Usage via Direct Import
+
+You can also import the icons when you need them:
+
+```jsx
+import { faPen } from '@fortawesome/free-solid-svg-icons'
+
+<Icon a11yLabel="Settings" icon={faPen} type="font-awesome" />
+```
+
+## Usage with SVG paths
+
+Currently, Fannypack only supports parsing of **Font Awesome** icons, but if you want to use another icon set, you will need to use SVG paths.
+
+You can supply your SVG paths through the **Fannypack Theme** or **on the icon directly**.
+
+#### Via the Fannypack Theme
+
+Here is an example for a calendar icon:
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+
+const theme = {
+  Icon: {
+    icons: {
+      calendar: {
+        viewBoxWidth: 16,
+        viewBoxHeight: 16,
+        paths: ['M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z']
+      }
+    }
+  }
+};
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    <App/>
+  </ThemeProvider>
+);
+```
+
+```jsx-live
+<Icon a11yLabel="Calendar" icon="calendar" />
+```
+
+#### Via the icon directly
+
+```function-live
+function Example() {
+  const calendar = {
+    viewBoxWidth: 16,
+    viewBoxHeight: 16,
+    paths: ['M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z']
+  };
+
+  return (
+    <Icon a11yLabel="Calendar" icon={calendar} />
+  );
+}
 ```
 
 ### Sizes
@@ -158,3 +265,126 @@ Size of the icon.
 
 
 ## Theming
+
+<Theme component={Icon} overrides={[{ key: 'Icon.base', props: { icon: 'solid-igloo' } }]} />
+
+<Box marginBottom="major-2"><Code fontWeight="semibold">Icon.iconSets</Code></Box>
+
+<Paragraph>The icons to inject into Fannypack.</Paragraph>
+
+**Schema**
+
+```json
+{
+  Icon: {
+    iconSets: [
+      {
+        icons: Array,
+        prefix: string
+        type: string
+      }
+    ]
+  }
+}
+```
+
+**Example**
+
+```json
+{
+  Icon: {
+    iconSets: [
+      {
+        icons: [
+          faArrowLeft,
+          faArrowRight
+        ],
+        prefix: 'solid-',
+        type: 'font-awesome'
+      },
+      {
+        icons: [
+          faIgloo
+        ],
+        prefix: 'regular-',
+        type: 'font-awesome'
+      }
+    ]
+  }
+}
+```
+
+<Box marginBottom="major-2"><Code fontWeight="semibold">Icon.icons</Code></Box>
+
+<Paragraph>A map of SVG icons.</Paragraph>
+
+**Schema**
+
+```
+{
+  Icon: {
+    icons: {
+      [iconName: string]: {
+        viewBoxHeight: number,
+        viewBoxWidth: number,
+        paths: [string]
+      }
+    }
+  }
+}
+```
+
+**Example**
+
+```
+{
+  Icon: {
+    icons: {
+      calendar: {
+        viewBoxWidth: 16,
+        viewBoxHeight: 16,
+        paths: [
+          'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z'
+        ]
+      }
+    }
+  }
+}
+```
+
+<Box marginBottom="major-2"><Code fontWeight="semibold">Icon.iconNames</Code></Box>
+
+<Paragraph>Icon name aliases which map to the proper icon names (so you can use <Code><Icon icon="info" /></Code>).</Paragraph>
+
+<Paragraph>Note: you are able to add more, but these ones are required.</Paragraph>
+
+**Schema**
+
+```
+{
+  Icon: {
+    iconNames: {
+      info: string,
+      warning: string,
+      success: string,
+      danger: string
+      [key: string]: string
+    }
+  }
+}
+```
+
+**Example**
+
+```
+{
+  Icon: {
+    iconNames: {
+      info: 'info-circle',
+      warning: 'exclamation-triangle',
+      success: 'check-circle',
+      danger: 'exclamation-circle'
+    }
+  }
+}
+```

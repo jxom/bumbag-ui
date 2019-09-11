@@ -206,6 +206,7 @@ export type IconThemeConfig = {
     warning?: string;
     success?: string;
     danger?: string;
+    [key: string]: string;
   };
   defaultProps?: Partial<IconProps>;
 };

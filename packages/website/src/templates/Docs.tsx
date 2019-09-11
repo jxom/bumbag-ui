@@ -25,7 +25,7 @@ export default function Docs(props: Props) {
         />
       ),
       code: (props: any) => <fannypack.Code {...props} />,
-      inlineCode: (props: any) => <fannypack.Code {...props} />,
+      inlineCode: (props: any) => <fannypack.Code {...props} palette="primary" />,
       h1: (props: any) => <fannypack.Heading marginBottom="major-4" {...props} />,
       h2: (props: any) => (
         <fannypack.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />

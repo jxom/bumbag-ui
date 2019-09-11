@@ -6,11 +6,13 @@ export type FontAwesomeIconStandalone = {
   height?: number;
   svgPathData?: string;
 };
-export type ParsedIcon = {
-  viewBoxHeight: number;
-  viewBoxWidth: number;
-  paths: Array<string>;
-};
+export type ParsedIcon =
+  | IconDefinition
+  | {
+      viewBoxHeight: number;
+      viewBoxWidth: number;
+      paths: Array<string>;
+    };
 export type ParsedIcons = { [key: string]: ParsedIcon };
 export type Opts = {
   prefix?: string;

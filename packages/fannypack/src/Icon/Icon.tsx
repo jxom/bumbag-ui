@@ -19,10 +19,10 @@ import * as styles from './styles';
 export type LocalIconProps = {
   /** Color of the icon. Can be a color from the palette, or any other color. */
   color?: string;
-  /** The name of your icon from the free Font Awesome Icon Set (https://fontawesome.com/icons?d=gallery&m=free). */
+  /** The name of your icon or parsed icon. */
   icon: string | ParsedIcon;
   /** A label for the icon which can be read by screen readers. This is required if a11yHidden is false. */
-  label: string;
+  label?: string;
   /** Size of the icon. */
   fontSize?: string;
   type?: ParseIconOpts['type'];
