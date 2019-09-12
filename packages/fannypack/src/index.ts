@@ -24,6 +24,7 @@ export * from './Portal';
 export * from './Provider';
 export * from './Rover';
 export * from './Set';
+export * from './Spinner';
 export * from './Tabbable';
 export * from './Text';
 export * from './styled';

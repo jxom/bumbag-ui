@@ -3,6 +3,7 @@
 - Palette changes
   - `text`
   - `defaultInverted`
+- Changed color of global focus outline
 - Added transition to button styles
 - layout.mobileBreakpoint, etc -> breakpoints.mobile
 - Add fontWeight, fontSize, breakpoint styled utils
@@ -17,4 +18,4 @@
 - TODO: modal changes
 - TODO: pane changes
 - Icon: `size` -> `fontSize`
--
+- Spinner: prefer `fontSize` for arbitrary values

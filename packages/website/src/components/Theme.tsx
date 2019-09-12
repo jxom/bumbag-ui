@@ -3,14 +3,16 @@ import { Box, Code, Text } from 'fannypack';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
-  const { component: Component, children, overrides, injectOverrides = true, ...restProps } = props;
+  const { component: Component, children, overrides, highlightAttribute, injectOverrides = true, ...restProps } = props;
   return overrides.map(override => {
     let key = typeof override === 'object' ? override.key : override;
 
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
     let overrides = {};
-    _set(overrides, key, { backgroundColor: '#ffe3a4 !important' });
+    _set(overrides, key, {
+      [highlightAttribute || override.highlightAttribute || 'backgroundColor']: '#ffe3a4 !important'
+    });
 
     return (
       // @ts-ignore

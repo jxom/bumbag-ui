@@ -29,6 +29,7 @@ import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
+import { SpinnerProps } from '../Spinner';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
 export type Stylesheet = any; // TODO: fix
@@ -323,6 +324,25 @@ export type SetThemeConfig = {
   };
   defaultProps?: Partial<SetProps>;
 };
+export type SpinnerThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  vector?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  loaderCircle?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  trackCircle?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: ThemeAttribute<Stylesheet>;
+    default?: ThemeAttribute<Stylesheet>;
+    medium?: ThemeAttribute<Stylesheet>;
+    large?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SpinnerProps>;
+};
 
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
@@ -363,4 +383,5 @@ export type ThemeConfig = {
   Tabbable?: TabbableThemeConfig;
   Text?: TextThemeConfig;
   Set?: SetThemeConfig;
+  Spinner?: SpinnerThemeConfig;
 };
