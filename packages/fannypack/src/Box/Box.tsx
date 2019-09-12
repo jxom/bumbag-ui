@@ -51,7 +51,6 @@ const useProps = createHook<BoxProps>(
     className = useClassName({ style: styles.Box, styleProps: props, prevClassName: className, themeKey });
 
     // Pick out and invalid HTML props & omit the CSS props.
-    // TODO: fix for aria-* props....
     const htmlProps = omitCSSProps(pickHTMLProps({ ...props, className }));
 
     if (props.elementRef) {

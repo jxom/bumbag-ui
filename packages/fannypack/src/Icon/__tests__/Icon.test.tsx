@@ -28,6 +28,15 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with aria-hidden', () => {
+    const { container } = render(
+      <Icon aria-hidden icon="info-circle">
+        Hello world
+      </Icon>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a size', () => {
     const { container } = render(
       <Icon fontSize="400" icon="info-circle">

@@ -15,6 +15,11 @@ describe('props', () => {
     expect(ref.current).toMatchSnapshot();
   });
 
+  it('should render correctly with aria* props', () => {
+    const { container } = render(<Box aria-label="hello" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Box backgroundColor="red" color="white" />);
     expect(container.firstChild).toMatchSnapshot();
