@@ -166,31 +166,43 @@ Icons will be the same size as its text by default.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 Color of the icon. Can be a color from the palette, or any other color.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">icon</Code>** <Code fontSize="150" palette="primary">string | ParsedIcon</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">icon</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-The name of your icon from the free Font Awesome Icon Set (https://fontawesome.com/icons?d=gallery&m=free).
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | IconDefinition
+  | { viewBoxHeight: number; viewBoxWidth: number; paths: string[]; }`}
+</Code>
+
+The name of your icon or parsed icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+A label for the icon which can be read by screen readers. This is required if a11yHidden is false.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code>
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code> 
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -200,11 +212,11 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -223,19 +235,19 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -252,17 +264,17 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
 </details>
 
-
+          
 
 ## Theming
 

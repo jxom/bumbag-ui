@@ -54,7 +54,14 @@ You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
 **Note:** To use button icons, you will need to follow the [instructions to set up icons with Fannypack](/components/icon).
 
 ```jsx-live
-TODO
+<Set>
+  <Button iconBefore="solid-clipboard">Copy</Button>
+  <Button iconBefore="solid-pen" palette="primary">
+    Edit
+  </Button>
+  <Button iconAfter="solid-long-arrow-alt-right">Continue</Button>
+  <Button iconBefore="info-circle" iconBeforeProps={{ fontSize: '300' }}>Info</Button>
+</Set>
 ```
 
 ### Loading
@@ -184,15 +191,63 @@ TODOs
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconAfter</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">iconAfter</Code>**  
 
-TODO: Icon that appears on the right side of the button.
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | IconDefinition
+  | { viewBoxHeight: number; viewBoxWidth: number; paths: string[]; }`}
+</Code>
+
+Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBefore</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">iconAfterProps</Code>**  
 
-TODO: Icon that appears on the left side of the button.
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  className?: string;
+  ... 758 more ...;
+  type?: "font-awesome" | "font-awesome-standalone";
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">iconBefore</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | IconDefinition
+  | { viewBoxHeight: number; viewBoxWidth: number; paths: string[]; }`}
+</Code>
+
+Icon that appears on the left side of the button.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">iconBeforeProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  className?: string;
+  ... 758 more ...;
+  type?: "font-awesome" | "font-awesome-standalone";
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
@@ -208,7 +263,7 @@ Makes the button not interactable.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;outlined&#34; | &#34;link&#34; | &#34;ghost&#34;</Code> 
+**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;link&#34; | &#34;default&#34; | &#34;outlined&#34; | &#34;ghost&#34;</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -362,6 +417,18 @@ similarly to `readOnly` on form elements. In this case, only
       key: 'Button.sizes.large',
       description: 'Applies for static buttons. `<Button size="large">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.Icon.base',
+      props: { iconBefore: 'info-circle' }
+    },
+    {
+      key: 'Button.Icon.before',
+      props: { iconBefore: 'info-circle' }
+    },
+    {
+      key: 'Button.Icon.after',
+      props: { iconAfter: 'info-circle' }
     }
   ]}>
   Hello world

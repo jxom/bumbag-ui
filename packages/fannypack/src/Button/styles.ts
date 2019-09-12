@@ -44,6 +44,32 @@ export const Button = styleProps => cssClass`
   ${styleProps.kind === 'ghost' && getGhostProperties(styleProps)};
 `;
 
+export const ButtonIcon = styleProps => cssClass`
+  ${styleProps.isBefore &&
+    css`
+      margin-left: -${space(1)(styleProps)}em;
+      margin-right: ${space(2)(styleProps)}em;
+
+      & {
+        ${theme(`${styleProps.themeKey}.before`)(styleProps)};
+      }
+    `};
+
+  ${styleProps.isAfter &&
+    css`
+      margin-left: ${space(2)(styleProps)}em;
+      margin-right: -${space(1)(styleProps)}em;
+
+      & {
+        ${theme(`${styleProps.themeKey}.after`)(styleProps)};
+      }
+    `};
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export const isInteractive = styleProps => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
 
 export const getDisabledProperties = styleProps => css`
@@ -146,7 +172,7 @@ export const getInteractiveProperties = styleProps => css`
   ${styleProps.kind !== 'link' &&
     css`
       &:hover {
-        background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
+        background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
 
         & {
           ${theme(`${styleProps.themeKey}.hover`)(styleProps)};
@@ -157,7 +183,7 @@ export const getInteractiveProperties = styleProps => css`
   ${styleProps.kind !== 'link' &&
     css`
       &:hover:active {
-        background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
+        background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
 
         & {
           ${theme(`${styleProps.themeKey}.hoveractive`)(styleProps)};

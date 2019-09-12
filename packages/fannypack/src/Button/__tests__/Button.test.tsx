@@ -149,6 +149,34 @@ describe('props', () => {
       });
     });
   });
+
+  it('should render correctly for iconBefore', () => {
+    const { container } = render(<Button iconBefore="info-circle">Hello world</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for iconBefore with props', () => {
+    const { container } = render(
+      <Button iconBefore="info-circle" iconBeforeProps={{ color: 'primary' }}>
+        Hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for iconAfter', () => {
+    const { container } = render(<Button iconAfter="info-circle">Hello world</Button>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for iconAfter with props', () => {
+    const { container } = render(
+      <Button iconAfter="info-circle" iconAfterProps={{ color: 'primary' }}>
+        Hello world
+      </Button>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('composition', () => {

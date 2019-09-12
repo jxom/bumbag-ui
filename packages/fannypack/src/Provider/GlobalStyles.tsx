@@ -29,7 +29,7 @@ export default function GlobalStyles() {
         }
 
         *:focus {
-          outline: 2px solid ${theme('palette.primary')(styleProps)};
+          outline: 3px solid ${theme('palette.primary200')(styleProps)};
           outline-offset: 2px;
         }
 

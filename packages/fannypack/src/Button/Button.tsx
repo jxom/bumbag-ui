@@ -1,16 +1,20 @@
+import * as React from 'react';
 import { Button as ReakitButton, ButtonProps as ReakitButtonProps, useButton as useReakitButton } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { ButtonKind, ButtonType, Size, Palette } from '../types';
+import { ButtonKind, ButtonType, Omit, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
+import { Icon, IconProps } from '../Icon';
 
 import * as styles from './styles';
 
 export type LocalButtonProps = {
-  /** TODO: Icon that appears on the right side of the button. */
-  iconAfter?: any;
-  /** TODO: Icon that appears on the left side of the button. */
-  iconBefore?: any;
+  /** Icon that appears on the right side of the button. */
+  iconAfter?: IconProps['icon'];
+  iconAfterProps?: Omit<IconProps, 'icon'>;
+  /** Icon that appears on the left side of the button. */
+  iconBefore?: IconProps['icon'];
+  iconBeforeProps?: Omit<IconProps, 'icon'>;
   /** TODO: Adds a loading indicator to the button. */
   isLoading?: boolean;
   /** Makes the button not interactable. */
@@ -24,7 +28,16 @@ export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
 
 const useProps = createHook<ButtonProps>(
   (props, themeKey) => {
-    let { disabled, focusable, unstable_clickKeys, ...htmlProps } = props;
+    let {
+      disabled,
+      focusable,
+      iconAfter,
+      iconAfterProps,
+      iconBefore,
+      iconBeforeProps,
+      unstable_clickKeys,
+      ...htmlProps
+    } = props;
     const buttonProps = useReakitButton({ disabled, focusable, unstable_clickKeys }, htmlProps);
     htmlProps = Box.useProps({ ...props, ...buttonProps });
 
@@ -34,8 +47,26 @@ const useProps = createHook<ButtonProps>(
       themeKey,
       prevClassName: htmlProps.className
     });
+    const iconBeforeClassName = useClassName({
+      style: styles.ButtonIcon,
+      styleProps: { ...props, isBefore: true },
+      themeKey: 'Button.Icon'
+    });
+    const iconAfterClassName = useClassName({
+      style: styles.ButtonIcon,
+      styleProps: { ...props, isAfter: true },
+      themeKey: 'Button.Icon'
+    });
 
-    return { ...htmlProps, className };
+    const children = (
+      <React.Fragment>
+        {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
+        {htmlProps.children}
+        {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
+      </React.Fragment>
+    );
+
+    return { ...htmlProps, className, children };
   },
   { themeKey: 'Button' }
 );
