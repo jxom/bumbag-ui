@@ -1,10 +1,14 @@
 import * as React from 'react';
 import { Button as ReakitButton, ButtonProps as ReakitButtonProps, useButton as useReakitButton } from 'reakit';
+import ConditionalWrap from 'conditional-wrap';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { ButtonKind, ButtonType, Omit, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
+import { Flex } from '../Flex';
 import { Icon, IconProps } from '../Icon';
+import { Text } from '../Text';
+import { Spinner, SpinnerProps } from '../Spinner';
 
 import * as styles from './styles';
 
@@ -15,13 +19,15 @@ export type LocalButtonProps = {
   /** Icon that appears on the left side of the button. */
   iconBefore?: IconProps['icon'];
   iconBeforeProps?: Omit<IconProps, 'icon'>;
-  /** TODO: Adds a loading indicator to the button. */
+  /** Adds a loading indicator to the button. */
   isLoading?: boolean;
   /** Makes the button not interactable. */
   isStatic?: boolean;
   kind?: ButtonKind;
   palette?: Palette;
   size?: Size;
+  /** Custom props for the isLoading spinner. */
+  spinnerProps?: SpinnerProps;
   type?: ButtonType;
 };
 export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
@@ -35,6 +41,7 @@ const useProps = createHook<ButtonProps>(
       iconAfterProps,
       iconBefore,
       iconBeforeProps,
+      spinnerProps,
       unstable_clickKeys,
       ...htmlProps
     } = props;
@@ -57,12 +64,34 @@ const useProps = createHook<ButtonProps>(
       styleProps: { ...props, isAfter: true },
       themeKey: 'Button.Icon'
     });
+    const spinnerWrapperClassName = useClassName({
+      style: styles.ButtonSpinnerWrapper,
+      styleProps: props,
+      themeKey: 'Button.SpinnerWrapper'
+    });
+    const spinnerClassName = useClassName({
+      style: styles.ButtonSpinner,
+      styleProps: props,
+      themeKey: 'Button.Spinner'
+    });
 
     const children = (
       <React.Fragment>
-        {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
-        {htmlProps.children}
-        {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
+        {props.isLoading && (
+          <Box className={spinnerWrapperClassName}>
+            <Spinner
+              use={Flex}
+              className={spinnerClassName}
+              color={props.kind === 'default' ? `${props.palette}Inverted` : props.palette}
+              {...spinnerProps}
+            />
+          </Box>
+        )}
+        <ConditionalWrap condition={props.isLoading} wrap={children => <Text>{children}</Text>}>
+          {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
+          {htmlProps.children}
+          {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
+        </ConditionalWrap>
       </React.Fragment>
     );
 
@@ -75,7 +104,7 @@ const useProps = createHook<ButtonProps>(
       iconBefore: undefined,
       isLoading: false,
       isStatic: false,
-      kind: undefined,
+      kind: 'default',
       palette: 'default',
       size: 'default',
       type: 'button'

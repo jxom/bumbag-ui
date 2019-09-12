@@ -1,5 +1,5 @@
 import { css, cssClass, keyframes } from '../styled';
-import { palette, theme } from '../utils';
+import { palette, theme, tint } from '../utils';
 
 export const defaultDashArrayValueMax = 325;
 export const defaultDashOffset = 200;
@@ -31,7 +31,10 @@ export const Spinner = styleProps => cssClass`
 `;
 
 export const TrackCircle = styleProps => cssClass`
-  stroke: ${palette(styleProps.trackColor || `${styleProps.color}100`, styleProps.trackColor)(styleProps)};
+  stroke: ${palette(
+    styleProps.trackColor || `${styleProps.color}100`,
+    styleProps.trackColor || tint(0.9, styleProps.color)
+  )(styleProps)};
 
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};

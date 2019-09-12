@@ -70,6 +70,31 @@ export const ButtonIcon = styleProps => cssClass`
   }
 `;
 
+export const ButtonSpinnerWrapper = styleProps => cssClass`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & + .fp-Text {
+    opacity: 0;
+  }
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
+export const ButtonSpinner = styleProps => cssClass`
+  && {
+    font-size: 1.25em;
+  }
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export const isInteractive = styleProps => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
 
 export const getDisabledProperties = styleProps => css`
