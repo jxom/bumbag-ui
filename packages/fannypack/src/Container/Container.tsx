@@ -28,7 +28,15 @@ const useProps = createHook<ContainerProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Container' }
+  {
+    defaultProps: {
+      align: 'center',
+      breakpoint: undefined,
+      isFluid: false,
+      isLayout: false
+    },
+    themeKey: 'Container'
+  }
 );
 
 export const Container = createComponent<ContainerProps>(
@@ -39,12 +47,6 @@ export const Container = createComponent<ContainerProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      align: 'center',
-      breakpoint: undefined,
-      isFluid: false,
-      isLayout: false
     },
     themeKey: 'Container'
   }

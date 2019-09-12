@@ -46,10 +46,10 @@ export const HiddenDisclosure = createComponent<HiddenDisclosureProps>(
   },
   {
     attach: {
-      defaultProps: {
-        use: 'button'
-      },
       useProps
+    },
+    defaultProps: {
+      use: 'button'
     },
     themeKey: 'Hidden.Disclosure'
   }

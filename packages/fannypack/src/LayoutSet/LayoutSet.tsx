@@ -25,7 +25,14 @@ const useProps = createHook<LayoutSetProps>(
 
     return { ...setProps, className };
   },
-  { themeKey: 'LayoutSet' }
+  {
+    defaultProps: {
+      isHorizontal: false,
+      spacing: 'major-4',
+      verticalBreakpoint: 'max-tablet'
+    },
+    themeKey: 'LayoutSet'
+  }
 );
 
 export const LayoutSet = createComponent<LayoutSetProps>(
@@ -36,11 +43,6 @@ export const LayoutSet = createComponent<LayoutSetProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      isHorizontal: false,
-      spacing: 'major-4',
-      verticalBreakpoint: 'max-tablet'
     },
     themeKey: 'LayoutSet'
   }

@@ -26,7 +26,13 @@ const useProps = createHook<ListProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'List' }
+  {
+    defaultProps: {
+      isOrdered: false,
+      isHorizontal: false
+    },
+    themeKey: 'List'
+  }
 );
 
 export const List = createComponent<ListProps>(
@@ -43,10 +49,6 @@ export const List = createComponent<ListProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      isOrdered: false,
-      isHorizontal: false
     },
     themeKey: 'List'
   }

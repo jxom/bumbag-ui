@@ -22,7 +22,13 @@ const useProps = createHook<OverlayProps>(
 
     return { ...htmlProps, className };
   },
-  { themeKey: 'Overlay' }
+  {
+    defaultProps: {
+      modal: false,
+      placement: 'center'
+    },
+    themeKey: 'Overlay'
+  }
 );
 
 export const Overlay = createComponent<OverlayProps>(
@@ -33,10 +39,6 @@ export const Overlay = createComponent<OverlayProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      modal: false,
-      placement: 'center'
     },
     themeKey: 'Overlay'
   }

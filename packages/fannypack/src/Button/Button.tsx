@@ -68,18 +68,7 @@ const useProps = createHook<ButtonProps>(
 
     return { ...htmlProps, className, children };
   },
-  { themeKey: 'Button' }
-);
-
-export const Button = createComponent<ButtonProps>(
-  (props: ButtonProps) => {
-    const buttonProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitButton, use: props.use, htmlProps: buttonProps });
-  },
   {
-    attach: {
-      useProps
-    },
     defaultProps: {
       disabled: false,
       iconAfter: undefined,
@@ -90,6 +79,19 @@ export const Button = createComponent<ButtonProps>(
       palette: 'default',
       size: 'default',
       type: 'button'
+    },
+    themeKey: 'Button'
+  }
+);
+
+export const Button = createComponent<ButtonProps>(
+  (props: ButtonProps) => {
+    const buttonProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitButton, use: props.use, htmlProps: buttonProps });
+  },
+  {
+    attach: {
+      useProps
     },
     themeKey: 'Button'
   }

@@ -39,18 +39,7 @@ const useProps = createHook<ColumnProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Columns.Column' }
-);
-
-export const Column = createComponent<ColumnProps>(
-  props => {
-    const columnProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: columnProps });
-  },
   {
-    attach: {
-      useProps
-    },
     defaultProps: {
       spread: undefined,
       spreadMobile: undefined,
@@ -64,6 +53,19 @@ export const Column = createComponent<ColumnProps>(
       spreadDesktopOffset: undefined,
       spreadWidescreenOffset: undefined,
       spreadFullHDOffset: undefined
+    },
+    themeKey: 'Columns.Column'
+  }
+);
+
+export const Column = createComponent<ColumnProps>(
+  props => {
+    const columnProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: columnProps });
+  },
+  {
+    attach: {
+      useProps
     },
     themeKey: 'Columns.Column'
   }

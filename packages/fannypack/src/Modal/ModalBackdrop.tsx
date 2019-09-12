@@ -63,7 +63,6 @@ export const ModalBackdrop = createComponent<ModalBackdropProps>(
     attach: {
       useProps
     },
-    defaultProps: {},
     themeKey: 'Modal.Backdrop'
   }
 );

@@ -28,6 +28,12 @@ const useProps = createHook<SetProps>(
     return { ...boxProps, className };
   },
   {
+    defaultProps: {
+      isFilled: false,
+      isVertical: false,
+      spacing: 'minor-2',
+      verticalBreakpoint: undefined
+    },
     themeKey: 'Set'
   }
 );
@@ -40,12 +46,6 @@ export const Set = createComponent<SetProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      isFilled: false,
-      isVertical: false,
-      spacing: 'minor-2',
-      verticalBreakpoint: undefined
     },
     themeKey: 'Set'
   }

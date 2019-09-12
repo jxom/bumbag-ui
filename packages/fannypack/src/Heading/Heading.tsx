@@ -26,7 +26,7 @@ const useProps = createHook<HeadingProps>(
 
     return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
   },
-  { themeKey: 'Heading' }
+  { defaultProps: { isSubHeading: false }, themeKey: 'Heading' }
 );
 
 export const Heading = createComponent<HeadingProps>(
@@ -38,7 +38,7 @@ export const Heading = createComponent<HeadingProps>(
     attach: {
       useProps
     },
-    defaultProps: { isSubHeading: false, use: 'h1' },
+    defaultProps: { use: 'h1' },
     themeKey: 'Heading'
   }
 );

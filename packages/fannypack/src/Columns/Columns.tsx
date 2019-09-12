@@ -41,7 +41,14 @@ const useProps = createHook<ColumnsProps>(
       children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>
     };
   },
-  { themeKey: 'Columns' }
+  {
+    defaultProps: {
+      isGapless: false,
+      isOneLine: false,
+      minBreakpoint: undefined
+    },
+    themeKey: 'Columns'
+  }
 );
 
 export const Columns = createComponent<ColumnsProps>(
@@ -52,11 +59,6 @@ export const Columns = createComponent<ColumnsProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      isGapless: false,
-      isOneLine: false,
-      minBreakpoint: undefined
     },
     themeKey: 'Columns'
   }

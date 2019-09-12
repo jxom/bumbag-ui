@@ -28,7 +28,7 @@ const useProps = createHook<GroupProps>(
 
     return { ...htmlProps, className };
   },
-  { themeKey: 'Group' }
+  { defaultProps: { borderRadius: '4px' }, themeKey: 'Group' }
 );
 
 export const Group = createComponent<GroupProps>(
@@ -38,7 +38,6 @@ export const Group = createComponent<GroupProps>(
   },
   {
     attach: { useProps },
-    defaultProps: { borderRadius: '4px' },
     themeKey: 'Group'
   }
 );

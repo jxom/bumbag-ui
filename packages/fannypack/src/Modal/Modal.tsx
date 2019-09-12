@@ -67,7 +67,12 @@ const useProps = createHook<ModalProps>(
 
     return { ...htmlProps, className };
   },
-  { themeKey: 'Modal' }
+  {
+    defaultProps: {
+      placement: 'center'
+    },
+    themeKey: 'Modal'
+  }
 );
 
 export const Modal = createComponent<ModalProps>(
@@ -78,9 +83,6 @@ export const Modal = createComponent<ModalProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      placement: 'center'
     },
     themeKey: 'Modal'
   }

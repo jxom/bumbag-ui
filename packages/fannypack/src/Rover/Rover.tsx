@@ -72,7 +72,6 @@ export const Rover = createComponent<RoverProps>(
     attach: {
       useProps
     },
-    defaultProps: {},
     themeKey: 'Rover'
   }
 );

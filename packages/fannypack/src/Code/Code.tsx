@@ -26,7 +26,12 @@ const useProps = createHook<CodeProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Code' }
+  {
+    defaultProps: {
+      palette: 'default'
+    },
+    themeKey: 'Code'
+  }
 );
 
 export const Code = createComponent<CodeProps>(
@@ -43,9 +48,6 @@ export const Code = createComponent<CodeProps>(
   {
     attach: {
       useProps
-    },
-    defaultProps: {
-      palette: 'default'
     },
     themeKey: 'Code'
   }

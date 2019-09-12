@@ -52,7 +52,6 @@ export const Hidden = createComponent<HiddenProps>(
   },
   {
     attach: {
-      defaultProps: {},
       useProps
     },
     themeKey: 'Hidden'

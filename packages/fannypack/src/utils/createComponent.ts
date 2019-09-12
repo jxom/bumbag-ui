@@ -7,7 +7,6 @@ export function createComponent<P>(
   config?: {
     attach?: {
       useProps: (props?: Partial<P>, config?: { themeKey?: string }) => any;
-      defaultProps?: Partial<P>;
     };
     defaultProps?: Partial<P>;
     themeKey?: string;
