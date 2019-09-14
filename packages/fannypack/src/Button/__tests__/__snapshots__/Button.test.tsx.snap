@@ -85,7 +85,12 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Button props 1`] = `
 Object {
   "aria-disabled": false,
-  "children": <React.Fragment />,
+  "children": <React.Fragment>
+    <Unknown
+      condition={false}
+      wrap={[Function]}
+    />
+  </React.Fragment>,
   "className": "css-1qiqkkt css-1pwrqjj css-1ccgglo fp-Box fp-Button",
   "disabled": false,
   "onClick": [Function],
@@ -870,7 +875,21 @@ exports[`overrides Button.link should render correctly 1`] = `
 `;
 
 exports[`overrides Button.loading should render correctly 1`] = `
-.emotion-1 {
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -881,11 +900,131 @@ exports[`overrides Button.loading should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-11 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-11 + .fp-Text {
+  opacity: 0;
+}
+
+.emotion-8.emotion-8 {
+  font-size: 1.25em;
+}
+
+.emotion-7.emotion-7.emotion-7 {
+  color: #212121;
+}
+
+.emotion-5 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-1 {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: animation-0 0.6s infinite linear;
+  animation: animation-0 0.6s infinite linear;
+}
+
 .emotion-0 {
+  stroke-dasharray: 275;
+  stroke-dashoffset: 200px;
+  stroke: #212121;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+abbr.emotion-12 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-12 {
+  font-family: monospace;
+}
+
+i.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-12 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-12 {
+  font-weight: bold;
+}
+
+sub.emotion-12,
+sup.emotion-12 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-12,
+u.emotion-12 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-12,
+cite.emotion-12,
+var.emotion-12,
+em.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12,
+pre.emotion-12,
+samp.emotion-12 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-12 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -917,35 +1056,60 @@ exports[`overrides Button.loading should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-15[disabled],
+.emotion-15[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0 {
+.emotion-15 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-0:focus {
+.emotion-15:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-0 {
+.emotion-15 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
-  hello world
+  <div
+    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+    >
+      <svg
+        class="emotion-1 fp-Spinner.vector"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="emotion-0 fp-Spinner.loaderCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+  >
+    hello world
+  </span>
 </button>
 `;
 
@@ -1892,7 +2056,21 @@ exports[`props iconBefore should render a button with an icon correctly 1`] = `
 `;
 
 exports[`props isLoading should render a loading button correctly 1`] = `
-.emotion-1 {
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1903,11 +2081,35 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-11 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-11 + .fp-Text {
+  opacity: 0;
+}
+
+.emotion-8.emotion-8 {
+  font-size: 1.25em;
+}
+
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1939,36 +2141,171 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-15[disabled],
+.emotion-15[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0 {
+.emotion-15 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-0:focus {
+.emotion-15:focus {
   box-shadow: unset !important;
   outline: unset !important;
+}
+
+.emotion-7.emotion-7.emotion-7 {
+  color: #212121;
+}
+
+.emotion-5 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-1 {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: animation-0 0.6s infinite linear;
+  animation: animation-0 0.6s infinite linear;
+}
+
+.emotion-0 {
+  stroke-dasharray: 275;
+  stroke-dashoffset: 200px;
+  stroke: #212121;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+abbr.emotion-12 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-12 {
+  font-family: monospace;
+}
+
+i.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-12 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-12 {
+  font-weight: bold;
+}
+
+sub.emotion-12,
+sup.emotion-12 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-12,
+u.emotion-12 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-12,
+cite.emotion-12,
+var.emotion-12,
+em.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12,
+pre.emotion-12,
+samp.emotion-12 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-12 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
-  Hello world
+  <div
+    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+    >
+      <svg
+        class="emotion-1 fp-Spinner.vector"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="emotion-0 fp-Spinner.loaderCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+  >
+    Hello world
+  </span>
 </button>
 `;
 
 exports[`props isLoading should render correctly with overrides 1`] = `
-.emotion-1 {
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1979,11 +2316,131 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-11 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-11 + .fp-Text {
+  opacity: 0;
+}
+
+.emotion-8.emotion-8 {
+  font-size: 1.25em;
+}
+
+.emotion-7.emotion-7.emotion-7 {
+  color: #212121;
+}
+
+.emotion-5 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-1 {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: animation-0 0.6s infinite linear;
+  animation: animation-0 0.6s infinite linear;
+}
+
 .emotion-0 {
+  stroke-dasharray: 275;
+  stroke-dashoffset: 200px;
+  stroke: #212121;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+abbr.emotion-12 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-12 {
+  font-family: monospace;
+}
+
+i.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-12 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-12 {
+  font-weight: bold;
+}
+
+sub.emotion-12,
+sup.emotion-12 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-12,
+u.emotion-12 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-12,
+cite.emotion-12,
+var.emotion-12,
+em.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12,
+pre.emotion-12,
+samp.emotion-12 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-12 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2015,35 +2472,60 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-15[disabled],
+.emotion-15[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0 {
+.emotion-15 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-0:focus {
+.emotion-15:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-0 {
+.emotion-15 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
-  Hello world
+  <div
+    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+    >
+      <svg
+        class="emotion-1 fp-Spinner.vector"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="emotion-0 fp-Spinner.loaderCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+  >
+    Hello world
+  </span>
 </button>
 `;
 
@@ -5461,7 +5943,21 @@ exports[`theming Button.link should render correctly 1`] = `
 `;
 
 exports[`theming Button.loading should render correctly 1`] = `
-.emotion-1 {
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-3 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -5472,11 +5968,131 @@ exports[`theming Button.loading should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-3:focus:not(:focus-visible) {
   outline: none;
 }
 
+.emotion-11 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-11 + .fp-Text {
+  opacity: 0;
+}
+
+.emotion-8.emotion-8 {
+  font-size: 1.25em;
+}
+
+.emotion-7.emotion-7.emotion-7 {
+  color: #212121;
+}
+
+.emotion-5 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-1 {
+  width: 1em;
+  height: 1em;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-animation: animation-0 0.6s infinite linear;
+  animation: animation-0 0.6s infinite linear;
+}
+
 .emotion-0 {
+  stroke-dasharray: 275;
+  stroke-dashoffset: 200px;
+  stroke: #212121;
+  -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+abbr.emotion-12 {
+  border-bottom: 1px dotted;
+  cursor: help;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+code.emotion-12 {
+  font-family: monospace;
+}
+
+i.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12 {
+  background: #454d5d;
+  border-radius: 0.1rem;
+  color: #fff;
+  fill: #fff;
+  padding: 0.1rem 0.2rem;
+}
+
+mark.emotion-12 {
+  background: #ffe9b3;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.2rem;
+}
+
+strong.emotion-12 {
+  font-weight: bold;
+}
+
+sub.emotion-12,
+sup.emotion-12 {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+ins.emotion-12,
+u.emotion-12 {
+  -webkit-text-decoration-skip: ink edges;
+  text-decoration-skip: ink edges;
+}
+
+i.emotion-12,
+cite.emotion-12,
+var.emotion-12,
+em.emotion-12 {
+  font-style: italic;
+}
+
+kbd.emotion-12,
+pre.emotion-12,
+samp.emotion-12 {
+  font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+}
+
+.emotion-12 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5508,35 +6124,60 @@ exports[`theming Button.loading should render correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
+.emotion-15[disabled],
+.emotion-15[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-0 {
+.emotion-15 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-0:focus {
+.emotion-15:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-0 {
+.emotion-15 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
-  hello world
+  <div
+    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+    >
+      <svg
+        class="emotion-1 fp-Spinner.vector"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="emotion-0 fp-Spinner.loaderCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+  </div>
+  <span
+    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+  >
+    hello world
+  </span>
 </button>
 `;
 

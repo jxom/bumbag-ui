@@ -91,6 +91,18 @@ export const Set = styleProps => cssClass`
     ${theme(`${styleProps.themeKey}.child.base`)(styleProps)};
   }
 
+  & > *:first-child {
+    ${theme(`${styleProps.themeKey}.child.first`)(styleProps)};
+  }
+
+  & > *:not(:last-child):not(:first-child) {
+    ${theme(`${styleProps.themeKey}.child.middle`)(styleProps)};
+  }
+
+  & > *:last-child {
+    ${theme(`${styleProps.themeKey}.child.last`)(styleProps)};
+  }
+
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
