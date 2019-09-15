@@ -1,6 +1,7 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 import { ActionButtonsProps } from '../ActionButtons';
+import { AlertProps } from '../Alert';
 import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
@@ -78,6 +79,10 @@ export type PaletteThemeConfig = {
 export type ActionButtonsThemeConfig = {
   base?: Stylesheet;
   defaultProps?: Partial<ActionButtonsProps>;
+};
+export type AlertThemeConfig = {
+  base?: Stylesheet;
+  defaultProps?: Partial<AlertProps>;
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;

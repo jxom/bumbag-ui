@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { IdProvider } from '../utils/uniqueId';
 import { ThemeProvider } from '../styled';
 import buildTheme from '../theme';
 import { ThemeConfig } from '../types';
@@ -27,10 +28,12 @@ export function Provider(props: ProviderProps) {
 
   return (
     <ThemeProvider theme={derivedTheme}>
-      <React.Fragment>
-        {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-        {children}
-      </React.Fragment>
+      <IdProvider>
+        <React.Fragment>
+          {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+          {children}
+        </React.Fragment>
+      </IdProvider>
     </ThemeProvider>
   );
 }

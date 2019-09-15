@@ -98,7 +98,7 @@ describe('composition', () => {
   });
 });
 
-describe('theming', () => {
+describe('overrides', () => {
   it('Container.base should render correctly', () => {
     const { container } = render(
       <Container overrides={{ Container: { base: { backgroundColor: 'red' } } }}>hello world</Container>

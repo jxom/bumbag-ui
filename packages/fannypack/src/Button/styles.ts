@@ -273,10 +273,10 @@ export const getGhostProperties = styleProps => css`
     fill: ${styleProps.palette === 'default' ? palette('defaultInverted')(styleProps) : palette()(styleProps)};
 
     &:hover {
-      background-color: ${darken(0.05, palette('default')(styleProps))};
+      background-color: rgba(0, 0, 0, 0.05);
     }
     &:hover:active {
-      background-color: ${darken(0.1, palette('default')(styleProps))};
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
   & {

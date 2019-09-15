@@ -1,0 +1,271 @@
+import Theme from '../../components/Theme';
+import { Alert } from 'fannypack/Alert';
+
+# Alerts
+
+## Import
+
+```jsx
+import { Alert } from 'fannypack'
+```
+
+## Usage
+
+The `<Alert>` component displays a **brief** & **important** message in a way that attracts a user's attention without interrupting a user's task.
+
+If you are needing to display more descriptive, but important message to a user, consider using the [`<Callout>` component](/components/callout).
+
+```jsx-live
+<Alert
+  hasIcon
+  title="Did you know?"
+  showCloseButton
+  onClickClose={() => alert('Closed!')}
+>
+  Fannypack is a React UI Kit.
+</Alert>
+```
+
+### Accents
+
+```jsx-live
+<Alert accent>
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert accent="top" marginTop="major-2">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert accent="bottom" marginTop="major-2">
+  Fannypack is a React UI Kit.
+</Alert>
+```
+
+### Titles
+
+You can set a title with the `title` prop.
+
+```jsx-live
+<Alert title="Did you know?">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert title="Did you know?" isInline marginTop="major-2">
+  Fannypack is a React UI Kit.
+</Alert>
+```
+
+### Types
+
+An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
+
+```jsx-live
+<Alert title="Did you know?" type="info">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert title="Action applied" type="success" marginTop="major-2">
+  Your action was applied successfully.
+</Alert>
+<Alert title="Be careful" type="warning" marginTop="major-2">
+  Performing this action can be harmful.
+</Alert>
+<Alert title="An error occurred" type="danger" marginTop="major-2">
+  Unable to apply your action.
+</Alert>
+```
+
+### Fill
+
+```jsx-live
+<Alert isFilled title="Did you know?" type="info">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert isFilled title="Action applied" type="success" marginTop="major-2">
+  Your action was applied successfully.
+</Alert>
+<Alert isFilled title="Be careful" type="warning" marginTop="major-2">
+  Performing this action can be harmful.
+</Alert>
+<Alert isFilled title="An error occurred" type="danger" marginTop="major-2">
+  Unable to apply your action.
+</Alert>
+```
+
+### Icons
+
+You can add a icon to your alert by using the `hasIcon` prop. The icon will default to the status' icon. If you want to change this icon, then configure the `iconNames` attribute in the [Icon theme](/components/icon#theming).
+
+```jsx-live
+<Alert hasIcon title="Did you know?" type="info">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert hasIcon title="Action applied" type="success" marginTop="major-2">
+  Your action was applied successfully.
+</Alert>
+<Alert hasIcon title="Be careful" type="warning" marginTop="major-2">
+  Performing this action can be harmful.
+</Alert>
+<Alert hasIcon title="An error occurred" type="danger" marginTop="major-2">
+  Unable to apply your action.
+</Alert>
+```
+
+## Alert Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isFilled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">closeButtonProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  className?: string;
+  ... 778 more ...;
+  spinnerProps?: SpinnerProps;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">closeButtonIconProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">iconProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 32 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
+## Theming
+
+<Theme
+  component={Alert}
+  title="Did you know?"
+  showCloseButton
+  hasIcon
+  accent
+  overrides={['Alert.base', 'Alert.Content.base', 'Alert.Title.base', 'Alert.Description.base', 'Alert.IconWrapper.base', 'Alert.CloseButton.base']}>
+  Fannypack is a React UI Kit.
+</Theme>
