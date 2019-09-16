@@ -13,12 +13,79 @@ describe('props', () => {
     const { container } = render(<Alert color="primary">Hello world</Alert>);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly with a close button', () => {
+    const { container } = render(<Alert showCloseButton>Hello world</Alert>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with a title', () => {
+    const { container } = render(<Alert title="This is a title">Hello world</Alert>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with custom close button props', () => {
+    const { container } = render(
+      <Alert showCloseButton closeButtonProps={{ palette: 'primary' }}>
+        Hello world
+      </Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with custom close button icon props', () => {
+    const { container } = render(
+      <Alert showCloseButton closeButtonIconProps={{ marginTop: 'major-1' }}>
+        Hello world
+      </Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with custom icon props', () => {
+    const { container } = render(<Alert iconProps={{ marginTop: 'major-1' }}>Hello world</Alert>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  ['info', 'success', 'danger', 'warning'].forEach(type => {
+    it(`should render correctly for ${type} type`, () => {
+      const { container } = render(<Alert type={type}>Hello world</Alert>);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it(`should render correctly for an icon (${type})`, () => {
+      const { container } = render(
+        <Alert hasIcon type={type}>
+          Hello world
+        </Alert>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it(`should render correctly for isFilled (${type})`, () => {
+      const { container } = render(
+        <Alert isFilled type={type}>
+          Hello world
+        </Alert>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it(`should render correctly for isInline (${type})`, () => {
+      const { container } = render(
+        <Alert isInline type={type}>
+          Hello world
+        </Alert>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
 
 describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
-      const { container } = render(<Alert use="p">Hello world</Alert>);
+      const { container } = render(<Alert use="div">Hello world</Alert>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -45,6 +112,47 @@ describe('overrides', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('Alert.Content.base should render correctly', () => {
+    const { container } = render(
+      <Alert overrides={{ Alert: { Content: { base: { backgroundColor: 'red' } } } }}>hello world</Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.Title.base should render correctly', () => {
+    const { container } = render(
+      <Alert title="This is a title" overrides={{ Alert: { Title: { base: { backgroundColor: 'red' } } } }}>
+        hello world
+      </Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.Description.base should render correctly', () => {
+    const { container } = render(
+      <Alert overrides={{ Alert: { Description: { base: { backgroundColor: 'red' } } } }}>hello world</Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.IconWrapper.base should render correctly', () => {
+    const { container } = render(
+      <Alert hasIcon overrides={{ Alert: { IconWrapper: { base: { backgroundColor: 'red' } } } }}>
+        hello world
+      </Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.CloseButton.base should render correctly', () => {
+    const { container } = render(
+      <Alert showCloseButton overrides={{ Alert: { CloseButton: { base: { backgroundColor: 'red' } } } }}>
+        hello world
+      </Alert>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('theming', () => {
@@ -54,12 +162,68 @@ describe('theming', () => {
     });
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('Alert.Content.base should render correctly', () => {
+    const { container } = render(<Alert>hello world</Alert>, {
+      theme: { Alert: { Content: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.Title.base should render correctly', () => {
+    const { container } = render(<Alert title="This is a title">hello world</Alert>, {
+      theme: { Alert: { Title: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.Description.base should render correctly', () => {
+    const { container } = render(<Alert>hello world</Alert>, {
+      theme: { Alert: { Description: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.IconWrapper.base should render correctly', () => {
+    const { container } = render(<Alert hasIcon>hello world</Alert>, {
+      theme: { Alert: { IconWrapper: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Alert.CloseButton.base should render correctly', () => {
+    const { container } = render(<Alert showCloseButton>hello world</Alert>, {
+      theme: { Alert: { CloseButton: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Alert>hello world</Alert>, {
       theme: { Alert: { defaultProps: { className: 'test' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for hasIcon', () => {
+    const { container } = render(<Alert>hello world</Alert>, {
+      theme: { Alert: { defaultProps: { hasIcon: true } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for isFilled', () => {
+    const { container } = render(<Alert>hello world</Alert>, {
+      theme: { Alert: { defaultProps: { isFilled: true } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for isInline', () => {
+    const { container } = render(<Alert>hello world</Alert>, {
+      theme: { Alert: { defaultProps: { isInline: true } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

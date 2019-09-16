@@ -31,6 +31,7 @@ const useProps = createHook<AlertProps>(
       closeButtonIconProps,
       hasIcon,
       iconProps,
+      isFilled,
       isInline,
       onClickClose,
       showCloseButton,
@@ -83,7 +84,7 @@ const useProps = createHook<AlertProps>(
               <Box className={alertIconWrapperClassName}>
                 <Icon
                   aria-hidden
-                  color={type}
+                  color={isFilled ? `${type}Inverted` : type}
                   icon={type}
                   fontSize={props.children && !isInline ? '400' : '200'}
                   {...iconProps}

@@ -77,11 +77,26 @@ export type PaletteThemeConfig = {
 };
 
 export type ActionButtonsThemeConfig = {
-  base?: Stylesheet;
+  base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<ActionButtonsProps>;
 };
 export type AlertThemeConfig = {
-  base?: Stylesheet;
+  base?: ThemeAttribute<Stylesheet>;
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Description?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Title?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  IconWrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  CloseButton?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
   defaultProps?: Partial<AlertProps>;
 };
 export type BlockThemeConfig = {
@@ -367,6 +382,7 @@ export type ThemeConfig = {
   palette?: PaletteThemeConfig;
 
   ActionButtons?: ActionButtonsThemeConfig;
+  Alert?: AlertThemeConfig;
   Box?: BoxThemeConfig;
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
