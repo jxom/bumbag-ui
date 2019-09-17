@@ -275,6 +275,248 @@ exports[`defaultProps should render correctly for isLayout 1`] = `
 </div>
 `;
 
+exports[`overrides Container.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
+exports[`overrides Container.fluid should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
+exports[`overrides Container.fluidMargin should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
+exports[`overrides Container.layout should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+@media (max-width:1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
+exports[`overrides Container.tabletMargin should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width:1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
 exports[`props alignment renders correctly for a center aligned container 1`] = `
 .emotion-1 {
   margin: unset;
@@ -830,58 +1072,6 @@ exports[`theming Container.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Container.base should render correctly 2`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
 exports[`theming Container.fluid should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -922,83 +1112,7 @@ exports[`theming Container.fluid should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Container.fluid should render correctly 2`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
 exports[`theming Container.fluidMargin should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
-exports[`theming Container.fluidMargin should render correctly 2`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1093,121 +1207,7 @@ exports[`theming Container.layout should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Container.layout should render correctly 2`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
 exports[`theming Container.tabletMargin should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:768px) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
-exports[`theming Container.tabletMargin should render correctly 2`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
