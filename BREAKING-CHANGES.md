@@ -19,3 +19,4 @@
 - TODO: pane changes
 - Icon: `size` -> `fontSize`
 - Spinner: prefer `fontSize` for arbitrary values
+- TODO: alert changes
