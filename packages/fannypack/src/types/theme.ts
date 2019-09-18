@@ -6,6 +6,7 @@ import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
 import { BoxProps } from '../Box';
+import { CardProps } from '../Card';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
 import { ContainerProps } from '../Container';
@@ -129,6 +130,22 @@ export type ButtonThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ButtonProps>;
+};
+export type CardThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Header?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Footer?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Title?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CardProps>;
 };
 export type CodeThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -387,6 +404,7 @@ export type ThemeConfig = {
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
   Button?: ButtonThemeConfig;
+  Card?: CardThemeConfig;
   Code?: CodeThemeConfig;
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;

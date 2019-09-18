@@ -1,0 +1,82 @@
+import Theme from '../../components/Theme';
+import { Card } from 'fannypack/Card';
+
+# Card
+
+## Import
+
+```jsx
+import { Card } from 'fannypack'
+```
+
+## Usage
+
+```jsx-live
+<LayoutSet>
+  <Card>Hello world</Card>
+  <Card type="shadow">Hello world</Card>
+  <Card type="border">Hello world</Card>
+</LayoutSet>
+```
+
+### Header
+
+You can render a header for the card using the `title` prop.
+
+```jsx-live
+<Card title="This is a title">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Header with actions
+
+You can render a header with actions for the card using the `headerActions` prop.
+
+```jsx-live
+<Card
+  title="This is a title"
+  headerActions={
+    <Set>
+      <Button palette="primary" kind="link">Action 1</Button>
+      <Button palette="primary" kind="link">Action 2</Button>
+    </Set>
+  }
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Footer
+
+You can render a footer for the card using the `footer` prop.
+
+```jsx-live
+<Card
+  title="This is a title"
+  footer={
+    <ActionButtons
+      justifyContent="flex-end"
+      width="100%"
+    />
+  }
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+  augue sit amet justo.
+</Card>
+```
+
+### Standalone
+
+TODO
+
+## Props
+
+### Card Props
+
+## Theming

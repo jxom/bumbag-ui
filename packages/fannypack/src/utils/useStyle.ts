@@ -109,7 +109,7 @@ export function useStyle(props) {
       if (typeof newValue === 'string') {
         newValue = { default: value };
       }
-      const newStyle = Object.entries(newValue).reduce((prevStyle, [bp, value]) => {
+      const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
         let newValue = value;
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });

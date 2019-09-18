@@ -7,6 +7,7 @@ import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
 import { Text } from '../Text';
+import { VisuallyHidden } from '../VisuallyHidden';
 
 import * as styles from './styles';
 
@@ -25,7 +26,8 @@ export type LocalAlertProps = {
 };
 export type AlertProps = BoxProps & LocalAlertProps;
 
-export const AlertContext = React.createContext<AlertProps & { themeKey?: string }>({});
+export type AlertContextOptions = AlertProps & { descriptionId?: string; titleId?: string; themeKey?: string };
+export const AlertContext = React.createContext<AlertContextOptions>({});
 
 const useProps = createHook<AlertProps>(
   (props, themeKey) => {
@@ -60,8 +62,10 @@ const useProps = createHook<AlertProps>(
     const titleId = useUniqueId('calloutTitle');
     const descriptionId = useUniqueId('calloutDescription');
 
+    const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
+
     const children = (
-      <AlertContext.Provider value={props}>
+      <AlertContext.Provider value={context}>
         <Box display="flex" alignItems="center" justifyContent="space-between">
           <Box display="flex" alignItems="center">
             {standalone ? (
@@ -86,6 +90,7 @@ const useProps = createHook<AlertProps>(
                 {...closeButtonProps}
               >
                 <Icon fontSize="300" icon="close" {...closeButtonIconProps} />
+                <VisuallyHidden>Close</VisuallyHidden>
               </Button>
             </Box>
           )}
@@ -169,7 +174,7 @@ export function AlertContent(props: AlertContentProps) {
   });
 
   return (
-    <Box className={alertContentClassName} {...restProps}>
+    <Box className={alertContentClassName} id={context.descriptionId} {...restProps}>
       {children}
     </Box>
   );
@@ -194,7 +199,7 @@ export function AlertTitle(props: AlertTitleProps) {
 
   return (
     <Box className={alertTitleClassName} {...restProps}>
-      <Text fontWeight="semibold" id={titleId}>
+      <Text fontWeight="semibold" id={context.titleId || titleId}>
         {children}
       </Text>
     </Box>
