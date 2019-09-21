@@ -44,13 +44,15 @@ Object {
   "children": <Context.Provider
     value={
       Object {
+        "descriptionId": "",
+        "titleId": "",
         "type": "shadow",
       }
     }
   >
-    <CardContent
-      id=""
-    />
+    <React.Fragment>
+      <CardContent />
+    </React.Fragment>
   </Context.Provider>,
   "className": "css-gziovy css-1pwrqjj css-zp6o43 fp-Box fp-Card",
 }
@@ -118,6 +120,353 @@ exports[`defaultProps should render correctly for className 1`] = `
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`defaultProps should render correctly for title 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`defaultProps should render correctly for type 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-5.emotion-5.emotion-5 {
+  border: 1px solid #e6e6e6;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`overrides Card.Content.base should render correctly 1`] = `
+.emotion-5 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-2 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`overrides Card.Footer.base should render correctly 1`] = `
+.emotion-10 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8 {
+  padding: 1.5rem;
+}
+
+.emotion-7 {
+  margin-top: 1.5rem;
+}
+
+.emotion-7 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-8 emotion-0 emotion-10 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-7 fp-Card.Footer fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 fp-Box"
+    >
+      This is a footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`overrides Card.Header.base should render correctly 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-5 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`overrides Card.Title.base should render correctly 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.emotion-2 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
     id="cardDescription"
   >
     hello world
@@ -203,6 +552,313 @@ exports[`props should render correctly 1`] = `
 </div>
 `;
 
+exports[`props should render correctly for a footer 1`] = `
+.emotion-10 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8 {
+  padding: 1.5rem;
+}
+
+.emotion-7 {
+  margin-top: 1.5rem;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-8 emotion-0 emotion-10 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-7 fp-Card.Footer fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 fp-Box"
+    >
+      This is a footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for a title 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for headerAddon 1`] = `
+.emotion-5 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for standalone 1`] = `
+.emotion-14 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.emotion-11 {
+  margin-top: 1.5rem;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-12 emotion-0 emotion-14 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-11 fp-Card.Footer fp-Box"
+  >
+    This is a footer
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for type border 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-5.emotion-5.emotion-5 {
+  border: 1px solid #e6e6e6;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for type shadow 1`] = `
+.emotion-5 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-0 {
   margin: unset;
@@ -240,6 +896,247 @@ exports[`props should render correctly with CSS props 1`] = `
     id="cardDescription"
   >
     Hello world
+  </div>
+</div>
+`;
+
+exports[`theming Card.Content.base should render correctly 1`] = `
+.emotion-5 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-2 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`theming Card.Footer.base should render correctly 1`] = `
+.emotion-10 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8 {
+  padding: 1.5rem;
+}
+
+.emotion-7 {
+  margin-top: 1.5rem;
+}
+
+.emotion-7 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-8 emotion-0 emotion-10 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-7 fp-Card.Footer fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 fp-Box"
+    >
+      This is a footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`theming Card.Header.base should render correctly 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-5 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`theming Card.Title.base should render correctly 1`] = `
+.emotion-11 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-9 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.emotion-2 {
+  background-color: red;
+}
+
+<div
+  aria-describedby="cardDescription"
+  aria-labelledby="cardTitle"
+  class="emotion-9 emotion-0 emotion-11 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-Card.Header fp-Box"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 fp-Card.Title fp-Box"
+      id="cardTitle"
+    >
+      This is a title
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
   </div>
 </div>
 `;

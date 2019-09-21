@@ -74,8 +74,8 @@ const useProps = createHook<AlertProps>(
               <React.Fragment>
                 {hasIcon && <AlertIcon />}
                 <AlertContent>
-                  {title && <AlertTitle titleId={titleId}>{title}</AlertTitle>}
-                  <AlertDescription id={descriptionId}>{props.children}</AlertDescription>
+                  {title && <AlertTitle>{title}</AlertTitle>}
+                  <AlertDescription>{props.children}</AlertDescription>
                 </AlertContent>
               </React.Fragment>
             )}
@@ -182,13 +182,11 @@ export function AlertContent(props: AlertContentProps) {
 
 /////////////////////////////////////
 
-export type LocalAlertTitleProps = {
-  titleId?: string;
-};
+export type LocalAlertTitleProps = {};
 export type AlertTitleProps = BoxProps & LocalAlertTitleProps;
 
 export function AlertTitle(props: AlertTitleProps) {
-  const { children, titleId, ...restProps } = props;
+  const { children, ...restProps } = props;
   const context = React.useContext(AlertContext);
 
   const alertTitleClassName = useClassName({
@@ -199,7 +197,7 @@ export function AlertTitle(props: AlertTitleProps) {
 
   return (
     <Box className={alertTitleClassName} {...restProps}>
-      <Text fontWeight="semibold" id={context.titleId || titleId}>
+      <Text fontWeight="semibold" id={context.titleId}>
         {children}
       </Text>
     </Box>
@@ -222,7 +220,7 @@ export function AlertDescription(props: AlertDescriptionProps) {
   });
 
   return (
-    <Box className={alertDescriptionClassName} {...restProps}>
+    <Box className={alertDescriptionClassName} id={context.descriptionId} {...restProps}>
       {children}
     </Box>
   );

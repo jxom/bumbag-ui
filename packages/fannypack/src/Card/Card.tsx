@@ -7,16 +7,20 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalCardProps = {
-  standalone?: boolean;
   type?: 'border' | 'shadow';
+  standalone?: boolean;
+  title?: string | React.ReactElement<any>;
+  footer?: React.ReactElement<any>;
+  headerAddon?: React.ReactElement<any>;
 };
 export type CardProps = BoxProps & LocalCardProps;
 
-export const CardContext = React.createContext<CardProps & { themeKey?: string }>({});
+export type CardContextOptions = CardProps & { descriptionId?: string; titleId?: string; themeKey?: string };
+export const CardContext = React.createContext<CardContextOptions>({});
 
 const useProps = createHook<CardProps>(
   (props, themeKey) => {
-    const { type, ...restProps } = props;
+    const { footer, headerAddon, standalone, title, type, ...restProps } = props;
     const boxProps = Box.useProps({
       altitude: type === 'shadow' ? '100' : null,
       border: type === 'border' ? 'default' : null,
@@ -33,9 +37,24 @@ const useProps = createHook<CardProps>(
     const titleId = useUniqueId('cardTitle');
     const descriptionId = useUniqueId('cardDescription');
 
+    const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
+
     const children = (
-      <CardContext.Provider value={props}>
-        <CardContent id={descriptionId}>{props.children}</CardContent>
+      <CardContext.Provider value={context}>
+        {standalone ? (
+          props.children
+        ) : (
+          <React.Fragment>
+            {title && (
+              <CardHeader>
+                <CardTitle>{title}</CardTitle>
+                {headerAddon && <Box>{headerAddon}</Box>}
+              </CardHeader>
+            )}
+            <CardContent>{props.children}</CardContent>
+            {footer && <CardFooter>{footer}</CardFooter>}
+          </React.Fragment>
+        )}
       </CardContext.Provider>
     );
 
@@ -84,7 +103,73 @@ export function CardContent(props: CardContentProps) {
   });
 
   return (
-    <Box className={cardContentClassName} {...restProps}>
+    <Box className={cardContentClassName} id={context.descriptionId} {...restProps}>
+      {children}
+    </Box>
+  );
+}
+
+/////////////////////////////////////
+
+export type LocalCardTitleProps = {};
+export type CardTitleProps = BoxProps & LocalCardTitleProps;
+
+export function CardTitle(props: CardTitleProps) {
+  const { children, ...restProps } = props;
+  const context = React.useContext(CardContext);
+
+  const cardTitleClassName = useClassName({
+    style: styles.CardTitle,
+    styleProps: { ...context, ...props },
+    themeKey: `${context.themeKey || 'Card'}.Title`
+  });
+
+  return (
+    <Box className={cardTitleClassName} id={context.titleId} {...restProps}>
+      {children}
+    </Box>
+  );
+}
+
+/////////////////////////////////////
+
+export type LocalCardHeaderProps = {};
+export type CardHeaderProps = BoxProps & LocalCardHeaderProps;
+
+export function CardHeader(props: CardHeaderProps) {
+  const { children, ...restProps } = props;
+  const context = React.useContext(CardContext);
+
+  const cardHeaderClassName = useClassName({
+    style: styles.CardHeader,
+    styleProps: { ...context, ...props },
+    themeKey: `${context.themeKey || 'Card'}.Header`
+  });
+
+  return (
+    <Box className={cardHeaderClassName} {...restProps}>
+      {children}
+    </Box>
+  );
+}
+
+/////////////////////////////////////
+
+export type LocalCardFooterProps = {};
+export type CardFooterProps = BoxProps & LocalCardFooterProps;
+
+export function CardFooter(props: CardFooterProps) {
+  const { children, ...restProps } = props;
+  const context = React.useContext(CardContext);
+
+  const cardFooterClassName = useClassName({
+    style: styles.CardFooter,
+    styleProps: { ...context, ...props },
+    themeKey: `${context.themeKey || 'Card'}.Footer`
+  });
+
+  return (
+    <Box className={cardFooterClassName} {...restProps}>
       {children}
     </Box>
   );
