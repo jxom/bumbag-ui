@@ -13,12 +13,48 @@ describe('props', () => {
     const { container } = render(<Image alt="Bean" backgroundColor="red" src="test.png" />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly for fixed image', () => {
+    const { container } = render(<Image alt="Bean" isFixed src="test.png" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for fit cover', () => {
+    const { container } = render(<Image alt="Bean" fit="cover" src="test.png" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for fit contain', () => {
+    const { container } = render(<Image alt="Bean" fit="contain" src="test.png" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('theming', () => {
-  it('Text.base should render correctly', () => {
+  it('Image.base should render correctly', () => {
     const { container } = render(<Image src="test.png" />, {
-      theme: { Text: { base: { backgroundColor: 'red' } } }
+      theme: { Image: { base: { backgroundColor: 'red' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Image.fixed should render correctly', () => {
+    const { container } = render(<Image isFixed src="test.png" />, {
+      theme: { Image: { fixed: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Image.contain should render correctly', () => {
+    const { container } = render(<Image fit="contain" src="test.png" />, {
+      theme: { Image: { contain: { base: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Image.cover should render correctly', () => {
+    const { container } = render(<Image fit="cover" src="test.png" />, {
+      theme: { Image: { cover: { base: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -27,7 +63,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Image src="test.png" />, {
-      theme: { Text: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Image: { defaultProps: { className: 'test', color: 'primary' } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

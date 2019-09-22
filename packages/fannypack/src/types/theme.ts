@@ -17,6 +17,7 @@ import { GroupProps } from '../Group';
 import { HiddenProps, HiddenDisclosureProps } from '../Hidden';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
+import { ImageProps } from '../Image';
 import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
@@ -254,6 +255,19 @@ export type IconThemeConfig = {
   };
   defaultProps?: Partial<IconProps>;
 };
+export type ImageThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  fixed?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  cover?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  contain?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<ImageProps>;
+};
 export type InlineThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<InlineProps>;
@@ -415,6 +429,7 @@ export type ThemeConfig = {
   Hidden?: HiddenThemeConfig;
   HighlightedCode?: HighlightedCodeThemeConfig;
   Icon?: IconThemeConfig;
+  Image?: ImageThemeConfig;
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
