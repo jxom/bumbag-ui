@@ -1,0 +1,199 @@
+import Theme from '../../components/Theme';
+import { Image } from 'fannypack/Image';
+
+# Image
+
+## Import
+
+```jsx
+import { Image } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Image src="/bean.jpg" alt="Bean" width="500px" />
+```
+
+`<Image>` is also responsive by default, however, if you want to fix the width, add the `isFixed` prop.
+
+```jsx-live
+<Image
+  isFixed
+  src="/bean.jpg"
+  alt="Bean"
+  width="500px"
+/>
+```
+
+### Image fit
+
+Setting a `fit` prop to `"contain"` means that the whole image will fit in the bounds and it will not lose its scale.
+
+```jsx-live
+<Image
+  fit="contain"
+  height="300px"
+  width="300px"
+  src="/bean.jpg"
+  alt="Bean"
+  backgroundColor="whitesmoke"
+/>
+```
+
+Setting a `fit` prop to `"cover"` means that the image will fill the bounds and it will not lose its scale.
+
+```jsx-live
+<Image
+  fit="cover"
+  height="300px"
+  width="300px"
+  src="/bean.jpg"
+  alt="Bean"
+  backgroundColor="whitesmoke"
+/>
+```
+
+#### Positioning
+
+You can change the position of a fitted image with the `fitPosition` prop. This prop mimics the `object-position` CSS attribute.
+
+```jsx-live
+<Image
+  fit="contain"
+  fitPosition="top"
+  height="300px"
+  width="300px"
+  src="/bean.jpg"
+  alt="Bean"
+  backgroundColor="whitesmoke"
+/>
+```
+
+```jsx-live
+<Image
+  fit="cover"
+  fitPosition="20px 10px"
+  height="300px"
+  width="300px"
+  src="/bean.jpg"
+  alt="Bean"
+  backgroundColor="whitesmoke"
+/>
+```
+
+## Props
+
+### Image Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">src</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">fit</Code>** <Code fontSize="150" palette="primary">&#34;contain&#34; | &#34;cover&#34;</Code>
+
+How the image fits its bounds
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">fitPosition</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Positioning of the fitted image. Value can be "top", "left", "center", "right", "bottom" or an "x y" coordinate
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isFixed</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Fix the width of the image. It will not be responsive.
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+  {`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 34 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+## Theming
+
+<Theme
+  component={Image}
+  width="300px"
+  src="/bean.jpg"
+  overrides={[
+    'Image.base',
+    { key: 'Image.fixed', props: { isFixed: true } },
+    { key: 'Image.contain', props: { fit: 'contain', height: '300px' } },
+    { key: 'Image.cover', props: { fit: 'cover', height: '300px' } }
+  ]}
+/>

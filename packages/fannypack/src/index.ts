@@ -14,6 +14,7 @@ export * from './Group';
 export * from './Heading';
 export * from './Hidden';
 export * from './Icon';
+export * from './Image';
 export * from './Inline';
 export * from './InlineBlock';
 export * from './InlineFlex';
