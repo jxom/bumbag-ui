@@ -2,6 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 import { ActionButtonsProps } from '../ActionButtons';
 import { AlertProps } from '../Alert';
+import { AvatarProps } from '../Avatar';
 import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
@@ -100,6 +101,19 @@ export type AlertThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<AlertProps>;
+};
+export type AvatarThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  circle?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: ThemeAttribute<Stylesheet>;
+    default?: ThemeAttribute<Stylesheet>;
+    medium?: ThemeAttribute<Stylesheet>;
+    large?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<AvatarProps>;
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -414,6 +428,7 @@ export type ThemeConfig = {
 
   ActionButtons?: ActionButtonsThemeConfig;
   Alert?: AlertThemeConfig;
+  Avatar?: AvatarThemeConfig;
   Box?: BoxThemeConfig;
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;

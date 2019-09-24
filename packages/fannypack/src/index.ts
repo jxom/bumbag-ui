@@ -1,5 +1,6 @@
 export * from './ActionButtons';
 export * from './Alert';
+export * from './Avatar';
 export * from './Block';
 export * from './Blockquote';
 export * from './Box';

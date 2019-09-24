@@ -1,92 +1,78 @@
 import Theme from '../../components/Theme';
-import { Image } from 'fannypack/Image';
+import { Avatar } from 'fannypack/Avatar';
 
-# Image
+# Avatar
 
 ## Import
 
 ```jsx
-import { Image } from 'fannypack';
+import { Avatar } from 'fannypack';
 ```
 
 ## Usage
 
 ```jsx-live
-<Image src="/bean.jpg" alt="Bean" width="500px" />
+<Avatar src="/bean.jpg" alt="Bean" />
 ```
 
-`<Image>` is also responsive by default, however, if you want to fix the width, add the `isFixed` prop.
+### Shapes
+
+Avatars are available in two different shapes and can be changed using the `kind` prop.
 
 ```jsx-live
-<Image
-  isFixed
-  src="/bean.jpg"
-  alt="Bean"
-  width="500px"
-/>
+<Avatar kind="circle" src="/bean.jpg" alt="Bean" />
 ```
 
-### Image fit
+### Sizes
 
-Setting a `fit` prop to `"contain"` means that the whole image will fit in the bounds and it will not lose its scale.
+Avatars are available in five different sizes or you can set your own using the `size` prop.
 
 ```jsx-live
-<Image
-  fit="contain"
-  height="300px"
-  width="300px"
-  src="/bean.jpg"
-  alt="Bean"
-  backgroundColor="whitesmoke"
-/>
+<Set>
+  <Avatar kind="circle" src="/bean.jpg" alt="Bean" size="small" />
+  <Avatar kind="circle" src="/bean.jpg" alt="Bean" />
+  <Avatar kind="circle" src="/bean.jpg" alt="Bean" size="medium" />
+  <Avatar kind="circle" src="/bean.jpg" alt="Bean" size="large" />
+  <Avatar kind="circle" src="/bean.jpg" alt="Bean" size="150px" />
+</Set>
 ```
 
-Setting a `fit` prop to `"cover"` means that the image will fill the bounds and it will not lose its scale.
+### Initials
+
+Avatars can also be initials using the `initials` prop.
 
 ```jsx-live
-<Image
-  fit="cover"
-  height="300px"
-  width="300px"
-  src="/bean.jpg"
-  alt="Bean"
-  backgroundColor="whitesmoke"
-/>
-```
-
-#### Positioning
-
-You can change the position of a fitted image with the `fitPosition` prop. This prop mimics the `object-position` CSS attribute.
-
-```jsx-live
-<Image
-  fit="contain"
-  fitPosition="top"
-  height="300px"
-  width="300px"
-  src="/bean.jpg"
-  alt="Bean"
-  backgroundColor="whitesmoke"
-/>
-```
-
-```jsx-live
-<Image
-  fit="cover"
-  fitPosition="20px 10px"
-  height="300px"
-  width="300px"
-  src="/bean.jpg"
-  alt="Bean"
-  backgroundColor="whitesmoke"
-/>
+<Set>
+  <Avatar initials="JM" kind="circle" palette="primary" size="small" />
+  <Avatar initials="Jake Moxey" kind="circle" palette="secondary" />
+  <Avatar initials="JM" kind="circle" palette="success" size="medium" />
+  <Avatar initials="JM" kind="circle" palette="warning" size="large" />
+</Set>
 ```
 
 ## Props
 
-### Image Props
+### Avatar Props
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;circle&#34;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">initials</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Image</strong></code> props</Box>
 
 **<Code marginRight="major-1">src</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
@@ -109,6 +95,8 @@ Positioning of the fitted image. Value can be "top", "left", "center", "right", 
 Fix the width of the image. It will not be responsive.
 
 <Box marginBottom="major-4" />
+
+</details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
@@ -189,13 +177,9 @@ Fix the width of the image. It will not be responsive.
 ## Theming
 
 <Theme
-  component={Image}
-  width="300px"
+  component={Avatar}
   src="/bean.jpg"
   overrides={[
-    'Image.base',
-    { key: 'Image.fixed', props: { isFixed: true } },
-    { key: 'Image.contain', props: { fit: 'contain', height: '300px' } },
-    { key: 'Image.cover', props: { fit: 'cover', height: '300px' } }
+    'Avatar.base'
   ]}
 />
