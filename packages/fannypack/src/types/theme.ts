@@ -3,6 +3,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { ActionButtonsProps } from '../ActionButtons';
 import { AlertProps } from '../Alert';
 import { AvatarProps } from '../Avatar';
+import { BadgeProps } from '../Badge';
 import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
@@ -114,6 +115,16 @@ export type AvatarThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<AvatarProps>;
+};
+export type BadgeThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  attached?: ThemeAttribute<Stylesheet>;
+  sizes?: {
+    default?: ThemeAttribute<Stylesheet>;
+    medium?: ThemeAttribute<Stylesheet>;
+    large?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<BadgeProps>;
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -429,6 +440,7 @@ export type ThemeConfig = {
   ActionButtons?: ActionButtonsThemeConfig;
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;
+  Badge?: BadgeThemeConfig;
   Box?: BoxThemeConfig;
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
