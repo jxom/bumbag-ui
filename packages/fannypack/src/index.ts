@@ -24,6 +24,7 @@ export * from './LayoutSet';
 export * from './Link';
 export * from './List';
 export * from './Modal';
+export * from './Navigation';
 export * from './Overlay';
 export * from './Paragraph';
 export * from './Portal';

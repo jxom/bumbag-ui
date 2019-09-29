@@ -28,6 +28,7 @@ import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
+import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import { ParagraphProps } from '../Paragraph';
 import { PortalProps } from '../Portal';
@@ -355,6 +356,10 @@ export type ModalThemeConfig = {
     defaultProps?: Partial<ModalBackdropProps>;
   };
 };
+export type NavigationThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<NavigationProps>;
+};
 export type OverlayThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   placements?: {
@@ -464,6 +469,7 @@ export type ThemeConfig = {
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Modal?: ModalThemeConfig;
+  Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Portal?: PortalThemeConfig;

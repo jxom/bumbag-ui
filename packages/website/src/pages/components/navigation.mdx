@@ -1,98 +1,41 @@
 import Theme from '../../components/Theme';
-import { Badge } from 'fannypack/Badge';
+import { Navigation } from 'fannypack/Navigation';
+import { List } from 'fannypack/List';
+import { Link } from 'fannypack/Link';
 
-# Badge
+# Navigation
 
 ## Import
 
 ```jsx
-import { Badge } from 'fannypack';
+import { Navigation } from 'fannypack'
 ```
 
 ## Usage
 
 ```jsx-live
-<Badge>
-  1
-</Badge>
+<Navigation aria-label="External links">
+  <List>
+    <List.Item>
+      <Link href="https://google.com">Google</Link>
+    </List.Item>
+    <List.Item>
+      <Link href="https://github.com">GitHub</Link>
+    </List.Item>
+  </List>
+</Navigation>
 ```
 
-### No content
-
-```jsx-live
-<Badge />
-```
-
-### Colors
-
-```jsx-live
-<Set spacing="minor-1">
-  <Badge palette="primary">12</Badge>
-  <Badge palette="secondary">12</Badge>
-  <Badge palette="info">12</Badge>
-  <Badge palette="success">12</Badge>
-  <Badge palette="warning">12</Badge>
-  <Badge palette="danger">12</Badge>
-</Set>
-```
-
-### Sizes
-
-```jsx-live
-<Set spacing="minor-1">
-  <Badge>
-    1
-  </Badge>
-  <Badge size="medium">
-    1
-  </Badge>
-  <Badge size="large">
-    1
-  </Badge>
-</Set>
-```
-
-### Attachment
-
-```jsx-live
-<Button>
-  Hello world
-  <Badge isAttached palette="danger" />
-</Button>
-<Button size="large" marginLeft="major-2">
-  Hello world
-  <Badge isAttached palette="danger" size="large">1</Badge>
-</Button>
-<Box backgroundColor="primary" color="white" marginTop="major-2">
-  Hello world
-  <Badge isAttached palette="danger">1</Badge>
-</Box>
-```
-
-## Props
-
-### Badge Props
+## Navigation Props
 
 <!-- Automatically generated -->
-
-**<Code marginRight="major-1">isAttached</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code>
-
-<Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
 **<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-  {`string
+{`string
   | ComponentClass<any, any>
   | FunctionComponent<any>`}
 </Code>
@@ -106,7 +49,7 @@ import { Badge } from 'fannypack';
 **<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-  {`string
+{`string
   | number
   | boolean
   | {}
@@ -137,7 +80,7 @@ import { Badge } from 'fannypack';
 **<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-  {`{
+{`{
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
@@ -161,16 +104,19 @@ import { Badge } from 'fannypack';
 
 </details>
 
+
+
 ## Theming
 
 <Theme
-  component={Badge}
-  overrides={[
-    'Badge.base',
-    'Badge.sizes.default',
-    { key: 'Badge.sizes.medium', props: { size: 'medium' } },
-    { key: 'Badge.sizes.large', props: { size: 'large' } }
-  ]}
->
-  1
+  component={Navigation}
+  overrides={['Navigation.base']}>
+  <List>
+    <List.Item>
+      <Link href="https://google.com">Google</Link>
+    </List.Item>
+    <List.Item>
+      <Link href="https://github.com">GitHub</Link>
+    </List.Item>
+  </List>
 </Theme>
