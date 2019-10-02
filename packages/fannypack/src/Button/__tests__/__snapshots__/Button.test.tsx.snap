@@ -73,7 +73,7 @@ exports[`composition as should render correctly 1`] = `
 
 <div
   aria-disabled="false"
-  class="emotion-0 emotion-1 emotion-2 emotion-0 emotion-1 fp-Box fp-Button fp-Box"
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
   role="button"
   tabindex="0"
   type="button"
@@ -91,7 +91,7 @@ Object {
       wrap={[Function]}
     />
   </React.Fragment>,
-  "className": "css-1qiqkkt css-1pwrqjj css-1ccgglo fp-Box fp-Button",
+  "className": "css-1qiqkkt css-1pwrqjj css-3ekj6a fp-Box fp-Button",
   "disabled": false,
   "onClick": [Function],
   "onKeyDown": [Function],
@@ -904,7 +904,7 @@ exports[`overrides Button.loading should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -920,16 +920,16 @@ exports[`overrides Button.loading should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-10 + .fp-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-7.emotion-7 {
   font-size: 1.25em;
 }
 
-.emotion-7.emotion-7.emotion-7 {
-  color: #212121;
+.emotion-6 {
+  color: #212121 !important;
 }
 
 .emotion-5 {
@@ -962,22 +962,22 @@ exports[`overrides Button.loading should render correctly 1`] = `
   display: flex;
 }
 
-abbr.emotion-12 {
+abbr.emotion-11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-11 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -985,46 +985,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-11 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-11,
+sup.emotion-11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-11,
+u.emotion-11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-11,
+cite.emotion-11,
+var.emotion-11,
+em.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-11,
+pre.emotion-11,
+samp.emotion-11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-11 .fp-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1056,39 +1056,39 @@ samp.emotion-12 {
   border: 1px solid #b3b3b3;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-14[disabled],
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-14 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-14:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-14 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+  class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
   <div
-    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+    class="emotion-3 emotion-4 emotion-10 fp-Button.SpinnerWrapper fp-Box"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-Button.Spinner fp-Box fp-Spinner fp-Flex"
     >
       <svg
         class="emotion-1 fp-Spinner.vector"
@@ -1106,7 +1106,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+    class="emotion-11 emotion-3 emotion-4 fp-Box fp-Text"
   >
     hello world
   </span>
@@ -2085,7 +2085,7 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   outline: none;
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2101,15 +2101,15 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-10 + .fp-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-7.emotion-7 {
   font-size: 1.25em;
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2141,26 +2141,26 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   border: 1px solid #b3b3b3;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-14[disabled],
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-14 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-14:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-7.emotion-7.emotion-7 {
-  color: #212121;
+.emotion-6 {
+  color: #212121 !important;
 }
 
 .emotion-5 {
@@ -2193,22 +2193,22 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   display: flex;
 }
 
-abbr.emotion-12 {
+abbr.emotion-11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-11 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2216,56 +2216,56 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-11 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-11,
+sup.emotion-11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-11,
+u.emotion-11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-11,
+cite.emotion-11,
+var.emotion-11,
+em.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-11,
+pre.emotion-11,
+samp.emotion-11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-11 .fp-Icon {
   vertical-align: -0.125em;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+  class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
   <div
-    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+    class="emotion-3 emotion-4 emotion-10 fp-Button.SpinnerWrapper fp-Box"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-Button.Spinner fp-Box fp-Spinner fp-Flex"
     >
       <svg
         class="emotion-1 fp-Spinner.vector"
@@ -2283,7 +2283,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+    class="emotion-11 emotion-3 emotion-4 fp-Box fp-Text"
   >
     Hello world
   </span>
@@ -2320,7 +2320,7 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   outline: none;
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2336,16 +2336,16 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-10 + .fp-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-7.emotion-7 {
   font-size: 1.25em;
 }
 
-.emotion-7.emotion-7.emotion-7 {
-  color: #212121;
+.emotion-6 {
+  color: #212121 !important;
 }
 
 .emotion-5 {
@@ -2378,22 +2378,22 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   display: flex;
 }
 
-abbr.emotion-12 {
+abbr.emotion-11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-11 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2401,46 +2401,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-11 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-11,
+sup.emotion-11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-11,
+u.emotion-11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-11,
+cite.emotion-11,
+var.emotion-11,
+em.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-11,
+pre.emotion-11,
+samp.emotion-11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-11 .fp-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2472,39 +2472,39 @@ samp.emotion-12 {
   border: 1px solid #b3b3b3;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-14[disabled],
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-14 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-14:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-14 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+  class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
   <div
-    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+    class="emotion-3 emotion-4 emotion-10 fp-Button.SpinnerWrapper fp-Box"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-Button.Spinner fp-Box fp-Spinner fp-Flex"
     >
       <svg
         class="emotion-1 fp-Spinner.vector"
@@ -2522,7 +2522,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+    class="emotion-11 emotion-3 emotion-4 fp-Box fp-Text"
   >
     Hello world
   </span>
@@ -4067,8 +4067,8 @@ exports[`props should render correctly for iconAfter with props 1`] = `
   margin-right: -0.25em;
 }
 
-.emotion-2.emotion-2.emotion-2 {
-  color: #3722ed;
+.emotion-2 {
+  color: #3722ed !important;
 }
 
 .emotion-0 {
@@ -4279,8 +4279,8 @@ exports[`props should render correctly for iconBefore with props 1`] = `
   margin-right: 0.5em;
 }
 
-.emotion-2.emotion-2.emotion-2 {
-  color: #3722ed;
+.emotion-2 {
+  color: #3722ed !important;
 }
 
 .emotion-0 {
@@ -4382,9 +4382,9 @@ exports[`props should render correctly with CSS props 1`] = `
   background-color: #d6d6d6;
 }
 
-.emotion-2.emotion-2.emotion-2 {
-  background-color: red;
-  color: white;
+.emotion-2 {
+  background-color: red !important;
+  color: white !important;
 }
 
 <button
@@ -5972,7 +5972,7 @@ exports[`theming Button.loading should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5988,16 +5988,16 @@ exports[`theming Button.loading should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-10 + .fp-Text {
   opacity: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-7.emotion-7 {
   font-size: 1.25em;
 }
 
-.emotion-7.emotion-7.emotion-7 {
-  color: #212121;
+.emotion-6 {
+  color: #212121 !important;
 }
 
 .emotion-5 {
@@ -6030,22 +6030,22 @@ exports[`theming Button.loading should render correctly 1`] = `
   display: flex;
 }
 
-abbr.emotion-12 {
+abbr.emotion-11 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-11 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-11 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -6053,46 +6053,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-11 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-11 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-11,
+sup.emotion-11 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-11,
+u.emotion-11 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-11,
+cite.emotion-11,
+var.emotion-11,
+em.emotion-11 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-11,
+pre.emotion-11,
+samp.emotion-11 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-11 .fp-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6124,39 +6124,39 @@ samp.emotion-12 {
   border: 1px solid #b3b3b3;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-14[disabled],
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-14 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-14:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-14 {
   background-color: red;
 }
 
 <button
   aria-disabled="false"
-  class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+  class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
   tabindex="0"
   type="button"
 >
   <div
-    class="emotion-3 emotion-4 emotion-11 fp-Button.SpinnerWrapper fp-Box"
+    class="emotion-3 emotion-4 emotion-10 fp-Button.SpinnerWrapper fp-Box"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-3 emotion-7 emotion-8 fp-Button.Spinner fp-Box fp-Spinner fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-Button.Spinner fp-Box fp-Spinner fp-Flex"
     >
       <svg
         class="emotion-1 fp-Spinner.vector"
@@ -6174,7 +6174,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+    class="emotion-11 emotion-3 emotion-4 fp-Box fp-Text"
   >
     hello world
   </span>

@@ -1,0 +1,476 @@
+import Theme from '../../components/Theme';
+import { Breadcrumb } from 'fannypack/Breadcrumb';
+import { List } from 'fannypack/List';
+import { Link } from 'fannypack/Link';
+
+# Breadcrumb
+
+## Import
+
+```jsx
+import { Breadcrumb } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Breadcrumb>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
+
+### Custom separators
+
+You can render a custom separator for your breadcrumb with the `separator` prop.
+
+```jsx-live
+<Breadcrumb separator="-">
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
+
+You can even use components as a separator.
+
+```jsx-live
+<Breadcrumb separator={<Icon icon="solid-chevron-right" color="gray100" fontSize="150" />}>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
+
+You can specify the `separator` on a `<Breadcrumb.Item>` level.
+
+```jsx-live
+<Breadcrumb>
+  <Breadcrumb.Item separator={<Icon icon="solid-chevron-right" color="gray100" fontSize="150" />}>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
+
+You can use the `<Breadcrumb.Separator>` component directly.
+
+```jsx-live
+<Breadcrumb hasSeparator={false}>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+    <Breadcrumb.Separator />
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+    <Breadcrumb.Separator>
+      <Icon icon="solid-chevron-right" color="gray100" fontSize="150" />
+    </Breadcrumb.Separator>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
+
+## Props
+
+### Breadcrumb Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">hasSeparator</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">separator</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Navigation</strong></code> props</Box>
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 38 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Breadcrumb.Item Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">hasSeparator</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isCurrent</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">separator</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>ListItem</strong></code> props</Box>
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  defaultProps?: Partial<ListItemProps>;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Breadcrumb.Separator Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 38 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Breadcrumb.Link Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">isCurrent</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Link</strong></code> props</Box>
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 38 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
+## Theming
+
+<Theme component={Breadcrumb} overrides={['Breadcrumb.base', 'Breadcrumb.Item.base', 'Breadcrumb.Link.base', 'Breadcrumb.Separator.base']}>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Theme>

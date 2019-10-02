@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { breakpoint, theme } from '../utils';
+import { breakpoint, borderRadius, theme } from '../utils';
 
 export const Group = styleProps => cssClass`
   display: flex;
@@ -13,7 +13,7 @@ export const Group = styleProps => cssClass`
   )(styleProps)};
 
   & > * {
-    border-radius: ${styleProps.borderRadius};
+    border-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
     ${theme(`${styleProps.themeKey}.Item.base`)(styleProps)};
   }
 
@@ -105,7 +105,7 @@ export const Group = styleProps => cssClass`
       css`
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        border-bottom-left-radius: 4px;
+        border-bottom-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
       `
     )(styleProps)};
 

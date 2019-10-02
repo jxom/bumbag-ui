@@ -8,6 +8,7 @@ import { ButtonProps } from '../Button';
 import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
 import { BoxProps } from '../Box';
+import { BreadcrumbProps, BreadcrumbLinkProps, BreadcrumbSeparatorProps, BreadcrumbItemProps } from '../Breadcrumb';
 import { CardProps } from '../Card';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
@@ -126,6 +127,22 @@ export type BadgeThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<BadgeProps>;
+};
+export type BreadcrumbThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Item?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<BreadcrumbItemProps>;
+  };
+  Separator?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<BreadcrumbSeparatorProps>;
+  };
+  Link?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<BreadcrumbLinkProps>;
+  };
+  defaultProps?: Partial<BreadcrumbProps>;
 };
 export type BlockThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -446,6 +463,7 @@ export type ThemeConfig = {
   Alert?: AlertThemeConfig;
   Avatar?: AvatarThemeConfig;
   Badge?: BadgeThemeConfig;
+  Breadcrumb?: BreadcrumbThemeConfig;
   Box?: BoxThemeConfig;
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;

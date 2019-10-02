@@ -4,7 +4,7 @@ import { breakpoint, theme } from '../utils';
 import { ThemeConfig } from '../types';
 
 export const style = styleProps => cssClass`
-  &&& {
+  & {
     ${styleProps.style};
     ${buildVisibleAttributes(styleProps)};
   }

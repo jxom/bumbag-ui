@@ -1,5 +1,6 @@
 import * as React from 'react';
 import buildClassNames from 'classnames';
+import _uniq from 'lodash/uniq';
 
 import { ThemeContext } from '../styled';
 
@@ -17,5 +18,6 @@ export function useClassName({
   const theme = React.useContext(ThemeContext);
   const className = style({ theme, themeKey, ...styleProps });
   const classNames = buildClassNames(className, prevClassName, themeKey ? `fp-${themeKey}` : undefined);
-  return classNames;
+  const uniqueClassNames = _uniq(classNames.split(' ')).join(' ');
+  return uniqueClassNames;
 }

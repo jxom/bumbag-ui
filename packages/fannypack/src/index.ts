@@ -5,6 +5,7 @@ export * from './Badge';
 export * from './Block';
 export * from './Blockquote';
 export * from './Box';
+export * from './Breadcrumb';
 export * from './Button';
 export * from './Card';
 export * from './Code';

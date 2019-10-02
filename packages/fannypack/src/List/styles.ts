@@ -27,7 +27,13 @@ export const List = styleProps => cssClass`
 `;
 
 export const ListItem = styleProps => cssClass`
-  margin-bottom: ${space(1)(styleProps)}rem;
+  &:not(:last-child) {
+    margin-bottom: ${space(1)(styleProps)}rem;
+  }
+
+  & .fp-Icon {
+    vertical-align: -0.125em;
+  }
 
   & {
     ${theme('List.Item.base')(styleProps)};
@@ -51,10 +57,13 @@ export const getOrderedProperties = styleProps => cssClass`
 `;
 
 export const getHorizontalProperties = styleProps => cssClass`
-  & li {
+  &&& li {
     display: inline-block;
-    margin-right: 1rem;
     margin-bottom: unset;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
 
   & {

@@ -1,14 +1,11 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { ListThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalListItemProps = {
-  overrides?: ListThemeConfig['Item'];
-};
+export type LocalListItemProps = {};
 export type ListItemProps = BoxProps & LocalListItemProps;
 
 const useProps = createHook<ListItemProps>(

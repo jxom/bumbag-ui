@@ -38,7 +38,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with List props 1`] = `
 Object {
-  "className": "css-i1n9dg css-1pwrqjj css-1ccgglo fp-Box fp-List",
+  "className": "css-i1n9dg css-1pwrqjj css-3ekj6a fp-Box fp-List",
 }
 `;
 
@@ -107,8 +107,12 @@ exports[`defaultProps should render correctly for List.Item 1`] = `
   margin-left: 1rem;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 <ul
@@ -153,8 +157,12 @@ exports[`defaultProps should render correctly for isOrdered 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -273,8 +281,12 @@ exports[`props should render a basic list 1`] = `
   margin-left: 1rem;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 <ul
@@ -355,8 +367,12 @@ exports[`props should render correctly as a horizontal list 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -372,10 +388,13 @@ exports[`props should render correctly as a horizontal list 1`] = `
   margin-left: 1rem;
 }
 
-.emotion-12 li {
+.emotion-12.emotion-12.emotion-12 li {
   display: inline-block;
-  margin-right: 1rem;
   margin-bottom: unset;
+}
+
+.emotion-12.emotion-12.emotion-12 li:not(:last-child) {
+  margin-right: 1rem;
 }
 
 <ul
@@ -420,8 +439,12 @@ exports[`props should render correctly as an ordered list 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -504,26 +527,30 @@ exports[`props should render correctly with CSS props 1`] = `
   margin-left: 1rem;
 }
 
-.emotion-8.emotion-8.emotion-8 {
-  list-style-position: inside;
-  list-style-type: disc;
+.emotion-8 {
+  list-style-position: inside !important;
+  list-style-type: disc !important;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
-.emotion-26.emotion-26.emotion-26 {
-  list-style-position: inside;
-  list-style-type: circle;
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
-.emotion-14.emotion-14.emotion-14 {
-  list-style-type: georgian;
+.emotion-26 {
+  list-style-position: inside !important;
+  list-style-type: circle !important;
 }
 
-.emotion-23.emotion-23.emotion-23 {
-  list-style-type: circle;
+.emotion-14 {
+  list-style-type: georgian !important;
+}
+
+.emotion-23 {
+  list-style-type: circle !important;
 }
 
 <div>
@@ -601,8 +628,12 @@ exports[`theming List.Item.base should render correctly 1`] = `
   margin-left: 1rem;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-0 {
@@ -651,8 +682,12 @@ exports[`theming List.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -714,8 +749,12 @@ exports[`theming List.ordered should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -789,8 +828,12 @@ exports[`theming List.ordered should render correctly 2`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-0:not(:last-child) {
   margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
 }
 
 .emotion-12 {
@@ -806,10 +849,13 @@ exports[`theming List.ordered should render correctly 2`] = `
   margin-left: 1rem;
 }
 
-.emotion-12 li {
+.emotion-12.emotion-12.emotion-12 li {
   display: inline-block;
-  margin-right: 1rem;
   margin-bottom: unset;
+}
+
+.emotion-12.emotion-12.emotion-12 li:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .emotion-12 {

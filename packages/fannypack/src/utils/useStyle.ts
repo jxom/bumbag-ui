@@ -85,7 +85,7 @@ function getSpaceValue({ theme, value }) {
 function getFontSizeValue({ theme, value }) {
   const size = fontSize(value)({ theme });
   if (size) {
-    return `${size}rem`;
+    return `${size}em`;
   }
   return value;
 }
@@ -132,7 +132,7 @@ export function useStyle(props) {
         if (bp === 'default') {
           return css`
             ${prevStyle}
-            ${_kebabCase(attribute)}: ${newValue};
+            ${_kebabCase(attribute)}: ${newValue} !important;
           `;
         }
         return css`
@@ -140,7 +140,7 @@ export function useStyle(props) {
           ${breakpoint(
             bp,
             css`
-              ${_kebabCase(attribute)}: ${newValue};
+              ${_kebabCase(attribute)}: ${newValue} !important;
             `
           )({ theme })};
         `;
