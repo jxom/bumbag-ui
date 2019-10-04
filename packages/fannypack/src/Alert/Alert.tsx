@@ -82,16 +82,13 @@ const useProps = createHook<AlertProps>(
           </Box>
           {showCloseButton && (
             <Box display="flex">
-              <Button
+              <Button.Close
                 className={alertCloseButtonClassName}
-                kind="ghost"
                 onClick={onClickClose}
                 palette={props.isFilled ? `${type}Inverted` : type}
+                iconProps={closeButtonIconProps}
                 {...closeButtonProps}
-              >
-                <Icon fontSize="300" icon="close" {...closeButtonIconProps} />
-                <VisuallyHidden>Close</VisuallyHidden>
-              </Button>
+              />
             </Box>
           )}
         </Box>

@@ -95,6 +95,17 @@ export const ButtonSpinner = styleProps => cssClass`
   }
 `;
 
+export const ButtonClose = styleProps => cssClass`
+  && {
+    min-height: unset;
+    padding: ${space(2)(styleProps)}em;
+  }
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export const isInteractive = styleProps => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
 
 export const getDisabledProperties = styleProps => css`

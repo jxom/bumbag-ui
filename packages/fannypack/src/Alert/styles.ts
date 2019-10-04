@@ -53,9 +53,6 @@ export const AlertIconWrapper = styleProps => cssClass`
 
 export const AlertCloseButton = styleProps => cssClass`
   && {
-    min-height: unset;
-    padding: ${space(2)(styleProps)}rem;
-
     ${styleProps.isInline &&
       css`
         padding: 0;

@@ -128,7 +128,7 @@ export const BreadcrumbItem = createComponent<BreadcrumbItemProps>(
   },
   {
     attach: { useProps: useBreadcrumbItemProps },
-    defaultProps: { use: List.Item },
+    defaultProps: { use: 'li' },
     themeKey: 'Breadcrumb.Item'
   }
 );
@@ -221,7 +221,7 @@ export const BreadcrumbLink = createComponent<BreadcrumbLinkProps>(
   {
     attach: { useProps: useBreadcrumbLinkProps },
     defaultProps: {
-      use: Link
+      use: 'a'
     },
     themeKey: 'Breadcrumb.Link'
   }
