@@ -2,6 +2,7 @@ import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, space, theme } from '../utils';
 
 export const Card = styleProps => cssClass`
+  background-color: white;
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
