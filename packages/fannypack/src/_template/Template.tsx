@@ -5,15 +5,15 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalTextProps = {};
-export type TextProps = BoxProps & LocalTextProps;
+export type LocalTemplateProps = {};
+export type TemplateProps = BoxProps & LocalTemplateProps;
 
-const useProps = createHook<TextProps>(
+const useProps = createHook<TemplateProps>(
   (props, themeKey) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
-      style: styles.Text,
+      style: styles.Template,
       styleProps: props,
       themeKey,
       prevClassName: boxProps.className
@@ -21,10 +21,10 @@ const useProps = createHook<TextProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Text' }
+  { themeKey: 'Template' }
 );
 
-export const Text = createComponent<TextProps>(
+export const Template = createComponent<TemplateProps>(
   props => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
@@ -33,9 +33,6 @@ export const Text = createComponent<TextProps>(
     attach: {
       useProps
     },
-    defaultProps: {
-      use: 'span'
-    },
-    themeKey: 'Text'
+    themeKey: 'Template'
   }
 );

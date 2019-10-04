@@ -509,14 +509,14 @@ exports[`overrides Alert.CloseButton.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-19 {
+.emotion-20 {
   background-color: #e8effa;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -542,14 +542,14 @@ exports[`overrides Alert.CloseButton.base should render correctly 1`] = `
   display: flex !important;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -580,41 +580,46 @@ exports[`overrides Alert.CloseButton.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-11[disabled],
-.emotion-11[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #1e67d5 0px 0px 0px 1px, #8eb3ea 0px 0px 0px 3px;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: #1851a8;
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: #154792;
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: unset;
   border: unset;
   color: #1e67d5;
   fill: #1e67d5;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: rgba(0,0,0,0.1);
+}
+
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-10 {
@@ -628,22 +633,17 @@ exports[`overrides Alert.CloseButton.base should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-14.emotion-14 {
-  min-height: unset;
-  padding: 0.5rem;
-}
-
-.emotion-14 {
+.emotion-15 {
   background-color: red;
 }
 
 <div
   aria-describedby="calloutDescription"
-  class="emotion-19 emotion-0 emotion-1 fp-Box fp-Alert"
+  class="emotion-20 emotion-0 emotion-1 fp-Box fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-18 fp-Box"
+    class="emotion-0 emotion-19 fp-Box"
   >
     <div
       class="emotion-0 emotion-7 fp-Box"
@@ -661,11 +661,11 @@ exports[`overrides Alert.CloseButton.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-0 emotion-17 fp-Box"
     >
       <button
         aria-disabled="false"
-        class="emotion-11 emotion-0 emotion-1 emotion-14 fp-Alert.CloseButton fp-Box fp-Button"
+        class="emotion-11 emotion-12 emotion-0 emotion-1 emotion-15 fp-Alert.CloseButton fp-Box fp-Button fp-Button.Close"
         tabindex="0"
         type="button"
       >
@@ -2773,19 +2773,14 @@ exports[`props should render correctly with a close button 1`] = `
   outline: none;
 }
 
-.emotion-19 {
+.emotion-20 {
   background-color: #e8effa;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.emotion-14.emotion-14 {
-  min-height: unset;
-  padding: 0.5rem;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -2811,14 +2806,14 @@ exports[`props should render correctly with a close button 1`] = `
   display: flex !important;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2849,41 +2844,46 @@ exports[`props should render correctly with a close button 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-11[disabled],
-.emotion-11[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #1e67d5 0px 0px 0px 1px, #8eb3ea 0px 0px 0px 3px;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: #1851a8;
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: #154792;
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: unset;
   border: unset;
   color: #1e67d5;
   fill: #1e67d5;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: rgba(0,0,0,0.1);
+}
+
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-10 {
@@ -2899,11 +2899,11 @@ exports[`props should render correctly with a close button 1`] = `
 
 <div
   aria-describedby="calloutDescription"
-  class="emotion-19 emotion-0 emotion-1 fp-Box fp-Alert"
+  class="emotion-20 emotion-0 emotion-1 fp-Box fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-18 fp-Box"
+    class="emotion-0 emotion-19 fp-Box"
   >
     <div
       class="emotion-0 emotion-7 fp-Box"
@@ -2921,11 +2921,11 @@ exports[`props should render correctly with a close button 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-0 emotion-17 fp-Box"
     >
       <button
         aria-disabled="false"
-        class="emotion-11 emotion-0 emotion-1 emotion-14 fp-Alert.CloseButton fp-Box fp-Button"
+        class="emotion-11 emotion-12 emotion-0 emotion-1 emotion-15 fp-Alert.CloseButton fp-Box fp-Button fp-Button.Close"
         tabindex="0"
         type="button"
       >
@@ -3120,19 +3120,14 @@ exports[`props should render correctly with custom close button icon props 1`] =
   outline: none;
 }
 
-.emotion-19 {
+.emotion-20 {
   background-color: #e8effa;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.emotion-14.emotion-14 {
-  min-height: unset;
-  padding: 0.5rem;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -3158,14 +3153,14 @@ exports[`props should render correctly with custom close button icon props 1`] =
   display: flex !important;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3196,41 +3191,46 @@ exports[`props should render correctly with custom close button icon props 1`] =
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-11[disabled],
-.emotion-11[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #1e67d5 0px 0px 0px 1px, #8eb3ea 0px 0px 0px 3px;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: #1851a8;
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: #154792;
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: unset;
   border: unset;
   color: #1e67d5;
   fill: #1e67d5;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: rgba(0,0,0,0.1);
+}
+
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-8 {
@@ -3247,11 +3247,11 @@ exports[`props should render correctly with custom close button icon props 1`] =
 
 <div
   aria-describedby="calloutDescription"
-  class="emotion-19 emotion-0 emotion-1 fp-Box fp-Alert"
+  class="emotion-20 emotion-0 emotion-1 fp-Box fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-18 fp-Box"
+    class="emotion-0 emotion-19 fp-Box"
   >
     <div
       class="emotion-0 emotion-7 fp-Box"
@@ -3269,11 +3269,11 @@ exports[`props should render correctly with custom close button icon props 1`] =
       </div>
     </div>
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-0 emotion-17 fp-Box"
     >
       <button
         aria-disabled="false"
-        class="emotion-11 emotion-0 emotion-1 emotion-14 fp-Alert.CloseButton fp-Box fp-Button"
+        class="emotion-11 emotion-12 emotion-0 emotion-1 emotion-15 fp-Alert.CloseButton fp-Box fp-Button fp-Button.Close"
         tabindex="0"
         type="button"
       >
@@ -3315,19 +3315,14 @@ exports[`props should render correctly with custom close button props 1`] = `
   outline: none;
 }
 
-.emotion-19 {
+.emotion-20 {
   background-color: #e8effa;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.emotion-14.emotion-14 {
-  min-height: unset;
-  padding: 0.5rem;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -3353,11 +3348,16 @@ exports[`props should render correctly with custom close button props 1`] = `
   display: flex !important;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-10 {
@@ -3371,7 +3371,7 @@ exports[`props should render correctly with custom close button props 1`] = `
   width: 1em;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3402,50 +3402,50 @@ exports[`props should render correctly with custom close button props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-11[disabled],
-.emotion-11[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #3722ed 0px 0px 0px 1px, #9b90f6 0px 0px 0px 3px;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: #2411cb;
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: #200fb4;
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: unset;
   border: unset;
   color: #3722ed;
   fill: #3722ed;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
 <div
   aria-describedby="calloutDescription"
-  class="emotion-19 emotion-0 emotion-1 fp-Box fp-Alert"
+  class="emotion-20 emotion-0 emotion-1 fp-Box fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-18 fp-Box"
+    class="emotion-0 emotion-19 fp-Box"
   >
     <div
       class="emotion-0 emotion-7 fp-Box"
@@ -3463,11 +3463,11 @@ exports[`props should render correctly with custom close button props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-0 emotion-17 fp-Box"
     >
       <button
         aria-disabled="false"
-        class="emotion-11 emotion-0 emotion-1 emotion-14 fp-Alert.CloseButton fp-Box fp-Button"
+        class="emotion-11 emotion-12 emotion-0 emotion-1 emotion-15 fp-Alert.CloseButton fp-Box fp-Button fp-Button.Close"
         tabindex="0"
         type="button"
       >
@@ -3585,14 +3585,14 @@ exports[`theming Alert.CloseButton.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-19 {
+.emotion-20 {
   background-color: #e8effa;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
@@ -3618,14 +3618,14 @@ exports[`theming Alert.CloseButton.base should render correctly 1`] = `
   display: flex !important;
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3656,41 +3656,46 @@ exports[`theming Alert.CloseButton.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-11[disabled],
-.emotion-11[aria-disabled="true"] {
+.emotion-12[disabled],
+.emotion-12[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #1e67d5 0px 0px 0px 1px, #8eb3ea 0px 0px 0px 3px;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: #1851a8;
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: #154792;
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: unset;
   border: unset;
   color: #1e67d5;
   fill: #1e67d5;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-11:hover:active {
+.emotion-12:hover:active {
   background-color: rgba(0,0,0,0.1);
+}
+
+.emotion-11.emotion-11 {
+  min-height: unset;
+  padding: 0.5em;
 }
 
 .emotion-10 {
@@ -3704,22 +3709,17 @@ exports[`theming Alert.CloseButton.base should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-14.emotion-14 {
-  min-height: unset;
-  padding: 0.5rem;
-}
-
-.emotion-14 {
+.emotion-15 {
   background-color: red;
 }
 
 <div
   aria-describedby="calloutDescription"
-  class="emotion-19 emotion-0 emotion-1 fp-Box fp-Alert"
+  class="emotion-20 emotion-0 emotion-1 fp-Box fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-18 fp-Box"
+    class="emotion-0 emotion-19 fp-Box"
   >
     <div
       class="emotion-0 emotion-7 fp-Box"
@@ -3737,11 +3737,11 @@ exports[`theming Alert.CloseButton.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-0 emotion-17 fp-Box"
     >
       <button
         aria-disabled="false"
-        class="emotion-11 emotion-0 emotion-1 emotion-14 fp-Alert.CloseButton fp-Box fp-Button"
+        class="emotion-11 emotion-12 emotion-0 emotion-1 emotion-15 fp-Alert.CloseButton fp-Box fp-Button fp-Button.Close"
         tabindex="0"
         type="button"
       >
