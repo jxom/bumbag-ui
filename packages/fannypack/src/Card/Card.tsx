@@ -7,7 +7,7 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalCardProps = {
-  type?: 'border' | 'shadow';
+  kind?: 'border' | 'shadow';
   standalone?: boolean;
   title?: string | React.ReactElement<any>;
   footer?: React.ReactElement<any>;
@@ -20,10 +20,10 @@ export const CardContext = React.createContext<CardContextOptions>({});
 
 const useProps = createHook<CardProps>(
   (props, themeKey) => {
-    const { footer, headerAddon, standalone, title, type, ...restProps } = props;
+    const { footer, headerAddon, standalone, title, kind, ...restProps } = props;
     const boxProps = Box.useProps({
-      altitude: type === 'shadow' ? '100' : null,
-      border: type === 'border' ? 'default' : null,
+      altitude: kind === 'shadow' ? '100' : null,
+      border: kind === 'border' ? 'default' : null,
       ...restProps
     });
 
@@ -68,7 +68,7 @@ const useProps = createHook<CardProps>(
   },
   {
     defaultProps: {
-      type: 'shadow'
+      kind: 'shadow'
     },
     themeKey: 'Card'
   }

@@ -1,0 +1,367 @@
+import Theme from '../../components/Theme';
+import { Callout } from 'fannypack/Callout';
+import { List } from 'fannypack/List';
+import { Link } from 'fannypack/Link';
+
+# Callout
+
+## Import
+
+```jsx
+import { Callout } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Callout width="600px">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+  cursus id placerat congue, ultrices eget lectus. Duis posuere,
+  lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+  consectetur lectus augue sit amet justo.
+</Callout>
+```
+
+### Title
+
+```jsx-live
+<Callout title="Example callout" width="600px">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+  cursus id placerat congue, ultrices eget lectus. Duis posuere,
+  lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+  consectetur lectus augue sit amet justo.
+</Callout>
+```
+
+### Types
+
+```jsx-live
+<LayoutSet spacing="major-2">
+  <Callout type="info" title="Example info callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout type="danger" title="Example danger callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout type="success" title="Example success callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout type="warning" title="Example warning callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+</LayoutSet>
+```
+
+### Footer
+
+```jsx-live
+<Callout
+  footer={<ActionButtons palette="info" justifyContent="flex-end" />}
+  title="Example callout"
+  width="600px"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+  cursus id placerat congue, ultrices eget lectus. Duis posuere,
+  lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+  consectetur lectus augue sit amet justo.
+</Callout>
+```
+
+### Close button
+
+```jsx-live
+<LayoutSet spacing="major-2">
+  <Callout
+    showCloseButton
+    onClickClose={() => alert('Closed')}
+    title="Example callout"
+    width="600px"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout
+    showCloseButton
+    onClickClose={() => alert('Closed')}
+    width="600px"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+</LayoutSet>
+```
+
+### Tints
+
+```jsx-live
+<LayoutSet spacing="major-2">
+  <Callout hasTint type="info" title="Example info callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout hasTint type="danger" title="Example danger callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout hasTint type="success" title="Example success callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+  <Callout hasTint type="warning" title="Example warning callout" width="600px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+    cursus id placerat congue, ultrices eget lectus. Duis posuere,
+    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+    consectetur lectus augue sit amet justo.
+  </Callout>
+</LayoutSet>
+```
+
+### Custom icon
+
+```jsx-live
+<Callout
+  iconProps={{ icon: 'solid-igloo' }}
+  title="Example callout"
+  width="600px"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+  cursus id placerat congue, ultrices eget lectus. Duis posuere,
+  lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+  consectetur lectus augue sit amet justo.
+</Callout>
+```
+
+### Standalone
+
+```jsx-live
+<Callout
+  title="Example callout"
+  width="600px"
+  standalone
+>
+  <Callout.Icon />
+  <Box>
+    <Callout.Header>
+      <Callout.Title>Example callout</Callout.Title>
+    </Callout.Header>
+    <Callout.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+      cursus id placerat congue, ultrices eget lectus. Duis posuere,
+      lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+      consectetur lectus augue sit amet justo.
+    </Callout.Content>
+    <Callout.Footer>
+      <ActionButtons palette="info" justifyContent="flex-end" />
+    </Callout.Footer>
+  </Box>
+</Callout>
+```
+
+## Props
+
+### Callout Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">hasTint</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">title</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">footer</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">closeButtonProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  className?: string;
+  ... 778 more ...;
+  spinnerProps?: SpinnerProps;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">iconProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  children?: string | number | boolean | {
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Card</strong></code> props</Box>
+
+**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;border&#34; | &#34;shadow&#34;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">headerAddon</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 39 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
+## Theming
+
+<Theme component={Callout} footer={<Button>Okay</Button>} showCloseButton title="Example callout" overrides={['Callout.base', 'Callout.Header.base', 'Callout.Title.base', 'Callout.Content.base', 'Callout.Footer.base', 'Callout.Close.base', 'Callout.IconWrapper.base']}>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
+  cursus id placerat congue, ultrices eget lectus. Duis posuere,
+  lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+  consectetur lectus augue sit amet justo.
+</Theme>

@@ -45,8 +45,8 @@ Object {
     value={
       Object {
         "descriptionId": "",
+        "kind": "shadow",
         "titleId": "",
-        "type": "shadow",
       }
     }
   >
@@ -127,6 +127,43 @@ exports[`defaultProps should render correctly for className 1`] = `
 </div>
 `;
 
+exports[`defaultProps should render correctly for kind 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  border: 1px solid #e6e6e6 !important;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    hello world
+  </div>
+</div>
+`;
+
 exports[`defaultProps should render correctly for title 1`] = `
 .emotion-11 {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
@@ -189,43 +226,6 @@ exports[`defaultProps should render correctly for title 1`] = `
   </div>
   <div
     class="emotion-0 emotion-1 emotion-8 fp-Card.Content fp-Box"
-    id="cardDescription"
-  >
-    hello world
-  </div>
-</div>
-`;
-
-exports[`defaultProps should render correctly for type 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-3 {
-  padding: 1.5rem;
-}
-
-.emotion-5 {
-  border: 1px solid #e6e6e6 !important;
-}
-
-<div
-  aria-describedby="cardDescription"
-  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
     id="cardDescription"
   >
     hello world
@@ -708,6 +708,80 @@ exports[`props should render correctly for headerAddon 1`] = `
 </div>
 `;
 
+exports[`props should render correctly for kind border 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+.emotion-5 {
+  border: 1px solid #e6e6e6 !important;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for kind shadow 1`] = `
+.emotion-5 {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  padding: 1.5rem;
+}
+
+<div
+  aria-describedby="cardDescription"
+  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
+    id="cardDescription"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
 exports[`props should render correctly for standalone 1`] = `
 .emotion-14 {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
@@ -781,80 +855,6 @@ exports[`props should render correctly for standalone 1`] = `
     class="emotion-0 emotion-1 emotion-11 fp-Card.Footer fp-Box"
   >
     This is a footer
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for type border 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-3 {
-  padding: 1.5rem;
-}
-
-.emotion-5 {
-  border: 1px solid #e6e6e6 !important;
-}
-
-<div
-  aria-describedby="cardDescription"
-  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
-    id="cardDescription"
-  >
-    Hello world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly for type shadow 1`] = `
-.emotion-5 {
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1),0px 0px 2px 1px rgba(0,0,0,0.02);
-}
-
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-3 {
-  padding: 1.5rem;
-}
-
-<div
-  aria-describedby="cardDescription"
-  class="emotion-3 emotion-0 emotion-5 fp-Box fp-Card"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Card.Content fp-Box"
-    id="cardDescription"
-  >
-    Hello world
   </div>
 </div>
 `;

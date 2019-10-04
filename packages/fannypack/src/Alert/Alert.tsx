@@ -7,7 +7,6 @@ import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
 import { Text } from '../Text';
-import { VisuallyHidden } from '../VisuallyHidden';
 
 import * as styles from './styles';
 
@@ -59,8 +58,8 @@ const useProps = createHook<AlertProps>(
       themeKey: `${themeKey}.CloseButton`
     });
 
-    const titleId = useUniqueId('calloutTitle');
-    const descriptionId = useUniqueId('calloutDescription');
+    const titleId = useUniqueId('alertTitle');
+    const descriptionId = useUniqueId('alertDescription');
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
@@ -171,7 +170,7 @@ export function AlertContent(props: AlertContentProps) {
   });
 
   return (
-    <Box className={alertContentClassName} id={context.descriptionId} {...restProps}>
+    <Box className={alertContentClassName} {...restProps}>
       {children}
     </Box>
   );

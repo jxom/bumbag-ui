@@ -15,13 +15,13 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for type border', () => {
-    const { container } = render(<Card type="border">Hello world</Card>);
+  it('should render correctly for kind border', () => {
+    const { container } = render(<Card kind="border">Hello world</Card>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for type shadow', () => {
-    const { container } = render(<Card type="shadow">Hello world</Card>);
+  it('should render correctly for kind shadow', () => {
+    const { container } = render(<Card kind="shadow">Hello world</Card>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -167,9 +167,9 @@ describe('defaultProps', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for type', () => {
+  it('should render correctly for kind', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { defaultProps: { type: 'border' } } }
+      theme: { Card: { defaultProps: { kind: 'border' } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
