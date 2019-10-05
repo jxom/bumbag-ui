@@ -20,7 +20,7 @@ export type LocalIconProps = {
   /** Color of the icon. Can be a color from the palette, or any other color. */
   color?: string;
   /** The name of your icon or parsed icon. */
-  icon: string | ParsedIcon;
+  icon?: string | ParsedIcon;
   /** A label for the icon which can be read by screen readers. This is required if a11yHidden is false. */
   label?: string;
   /** Size of the icon. */

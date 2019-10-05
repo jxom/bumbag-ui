@@ -9,6 +9,14 @@ import { BlockProps } from '../Block';
 import { BlockquoteProps } from '../Blockquote';
 import { BoxProps } from '../Box';
 import { BreadcrumbProps, BreadcrumbLinkProps, BreadcrumbSeparatorProps, BreadcrumbItemProps } from '../Breadcrumb';
+import {
+  CalloutProps,
+  CalloutContentProps,
+  CalloutHeaderProps,
+  CalloutTitleProps,
+  CalloutFooterProps,
+  CalloutIconProps
+} from '../Callout';
 import { CardProps } from '../Card';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
@@ -174,6 +182,33 @@ export type ButtonThemeConfig = {
     large?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ButtonProps>;
+};
+export type CalloutThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<CalloutContentProps>;
+  };
+  Header?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<CalloutHeaderProps>;
+  };
+  Title?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<CalloutTitleProps>;
+  };
+  Footer?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<CalloutFooterProps>;
+  };
+  IconWrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<CalloutIconProps>;
+  };
+  Close?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CalloutProps>;
 };
 export type CardThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -468,6 +503,7 @@ export type ThemeConfig = {
   Block?: BlockThemeConfig;
   Blockquote?: BlockquoteThemeConfig;
   Button?: ButtonThemeConfig;
+  Callout?: CalloutThemeConfig;
   Card?: CardThemeConfig;
   Code?: CodeThemeConfig;
   Columns?: ColumnsThemeConfig;

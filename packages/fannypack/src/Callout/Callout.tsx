@@ -11,15 +11,15 @@ import { Text, TextProps } from '../Text';
 import * as styles from './styles';
 
 export type LocalCalloutProps = {
+  title?: string | React.ReactElement<any>;
   hasTint?: boolean;
   onClickClose?: ButtonProps['onClick'];
   showCloseButton?: boolean;
   standalone?: boolean;
   type?: string;
-  title?: string | React.ReactElement<any>;
   footer?: string | React.ReactElement<any>;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
-  iconProps?: Omit<IconProps, 'icon'>;
+  iconProps?: IconProps;
 };
 export type CalloutProps = CardProps & LocalCalloutProps;
 

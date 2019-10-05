@@ -10,7 +10,7 @@ export type LocalCardProps = {
   kind?: 'border' | 'shadow';
   standalone?: boolean;
   title?: string | React.ReactElement<any>;
-  footer?: React.ReactElement<any>;
+  footer?: string | React.ReactElement<any>;
   headerAddon?: React.ReactElement<any>;
 };
 export type CardProps = BoxProps & LocalCardProps;
