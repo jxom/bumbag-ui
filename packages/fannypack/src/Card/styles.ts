@@ -1,8 +1,9 @@
-import { css, cssClass } from '../styled';
-import { fontSize, fontWeight, space, theme } from '../utils';
+import { cssClass } from '../styled';
+import { borderRadius, fontSize, fontWeight, space, theme } from '../utils';
 
 export const Card = styleProps => cssClass`
   background-color: white;
+  border-radius: ${borderRadius('default')(styleProps)};
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
