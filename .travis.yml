@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10.7.0
+  - 10.16.0
 cache:
   - yarn
 before_install:
@@ -9,3 +9,4 @@ before_install:
 script:
   - yarn test
   - yarn build
+  - bash ./scripts/travis/run-chromatic.sh

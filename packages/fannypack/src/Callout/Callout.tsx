@@ -131,7 +131,7 @@ const useCalloutContentProps = createHook<CalloutContentProps>(
       prevClassName: boxProps.className
     });
 
-    return { id: contextProps.descriptionId, ...boxProps, className };
+    return { id: props.id || contextProps.descriptionId, ...boxProps, className };
   },
   { themeKey: 'Callout.Content' }
 );
@@ -300,7 +300,7 @@ const useCalloutIconProps = createHook<CalloutIconProps>(
       />
     );
 
-    let children = <CalloutContent>{icon}</CalloutContent>;
+    let children = <CalloutContent id={undefined}>{icon}</CalloutContent>;
     if (contextProps.title) {
       children = (
         <CalloutHeader>

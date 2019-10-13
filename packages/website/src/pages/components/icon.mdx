@@ -55,7 +55,7 @@ export default () => <ThemeProvider theme={theme}><App/></ThemeProvider>
 **Then**, you can use your icons like so:
 
 ```jsx-live
-  <Icon a11yLabel="Settings" icon="solid-igloo" />
+  <Icon aria-label="Settings" icon="solid-igloo" />
 ```
 
 ## Usage via Direct Import
@@ -65,7 +65,7 @@ You can also import the icons when you need them:
 ```jsx
 import { faPen } from '@fortawesome/free-solid-svg-icons'
 
-<Icon a11yLabel="Settings" icon={faPen} type="font-awesome" />
+<Icon aria-label="Settings" icon={faPen} type="font-awesome" />
 ```
 
 ## Usage with SVG paths
@@ -103,7 +103,7 @@ export default () => (
 ```
 
 ```jsx-live
-<Icon a11yLabel="Calendar" icon="calendar" />
+<Icon aria-label="Calendar" icon="calendar" />
 ```
 
 #### Via the icon directly
@@ -117,7 +117,7 @@ function Example() {
   };
 
   return (
-    <Icon a11yLabel="Calendar" icon={calendar} />
+    <Icon aria-label="Calendar" icon={calendar} />
   );
 }
 ```
@@ -127,15 +127,15 @@ function Example() {
 Change the size of an icon with the `fontSize` prop.
 
 ```jsx-live
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="100" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="300" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="400" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="500" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="600" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="700" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="800" marginLeft="major-1" />
-<Icon a11yLabel="Igloo" icon="solid-igloo" fontSize="900" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="100" />
+<Icon aria-label="Igloo" icon="solid-igloo" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="300" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="400" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="500" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="600" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="700" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="800" marginLeft="major-1" />
+<Icon aria-label="Igloo" icon="solid-igloo" fontSize="900" marginLeft="major-1" />
 ```
 
 ### Colors
@@ -143,10 +143,10 @@ Change the size of an icon with the `fontSize` prop.
 Change the color of an icon with the `color` prop. It can be any color from the [palette](/palette), or any other color like `#ff0000` or `red`.
 
 ```jsx-live
-<Icon a11yLabel="Success" icon="success" color="success" />
-<Icon a11yLabel="Error" icon="danger" color="danger" marginLeft="major-1" />
-<Icon a11yLabel="Warning" icon="warning" color="warning" marginLeft="major-1" />
-<Icon a11yLabel="Copy" icon="solid-clipboard" color="primary" marginLeft="major-1" />
+<Icon aria-label="Success" icon="success" color="success" />
+<Icon aria-label="Error" icon="danger" color="danger" marginLeft="major-1" />
+<Icon aria-label="Warning" icon="warning" color="warning" marginLeft="major-1" />
+<Icon aria-label="Copy" icon="solid-clipboard" color="primary" marginLeft="major-1" />
 ```
 
 ### Usage in text
@@ -155,10 +155,10 @@ Icons will be the same size as its text by default.
 
 ```jsx-live
 <Text>
-  This is text with an icon! <Icon a11yLabel="Thumbs up" icon="solid-thumbs-up" />
+  This is text with an icon! <Icon aria-label="Thumbs up" icon="solid-thumbs-up" />
 </Text>
 <Heading use="h3" marginTop="major-2">
-  This is a heading with an icon! <Icon a11yLabel="Thumbs up" icon="solid-thumbs-up" />
+  This is a heading with an icon! <Icon aria-label="Thumbs up" icon="solid-thumbs-up" />
 </Heading>
 ```
 
@@ -166,7 +166,7 @@ Icons will be the same size as its text by default.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Color of the icon. Can be a color from the palette, or any other color.
 
@@ -184,25 +184,25 @@ The name of your icon or parsed icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 A label for the icon which can be read by screen readers. This is required if a11yHidden is false.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -212,11 +212,11 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -235,19 +235,19 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -264,17 +264,17 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
 
-          
+
 
 ## Theming
 

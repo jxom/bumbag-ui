@@ -11,6 +11,7 @@ import { Text } from '../Text';
 import * as styles from './styles';
 
 export type LocalAlertProps = {
+  accent?: true | 'top' | 'bottom';
   hasIcon?: boolean;
   isFilled?: boolean;
   isInline?: boolean;
