@@ -185,6 +185,19 @@ import { Callout } from 'fannypack';
 
 <!-- Automatically generated -->
 
+**<Code marginRight="major-1">title</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">hasTint</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
@@ -202,19 +215,6 @@ import { Callout } from 'fannypack';
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">title</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
 
 <Box marginBottom="major-4" />
 
@@ -252,11 +252,7 @@ import { Callout } from 'fannypack';
 **<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-    ... 764 more ...;
-    label?:...`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalIconProps`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -338,7 +334,7 @@ import { Callout } from 'fannypack';
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 39 more ...;
+  ... 40 more ...;
   Spinner?: SpinnerThemeConfig;
 }`}
 </Code>
@@ -359,7 +355,7 @@ import { Callout } from 'fannypack';
 
 ## Theming
 
-<Theme component={Callout} footer={<Button>Okay</Button>} showCloseButton title="Example callout" overrides={['Callout.base', 'Callout.Header.base', 'Callout.Title.base', 'Callout.Content.base', 'Callout.Footer.base', 'Callout.Close.base', 'Callout.IconWrapper.base']}>
+<Theme component={Callout} type="info" footer={<Button>Okay</Button>} showCloseButton title="Example callout" overrides={['Callout.base', 'Callout.Header.base', 'Callout.Title.base', 'Callout.Content.base', 'Callout.Footer.base', 'Callout.Close.base', 'Callout.IconWrapper.base']}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
   cursus id placerat congue, ultrices eget lectus. Duis posuere,
   lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum

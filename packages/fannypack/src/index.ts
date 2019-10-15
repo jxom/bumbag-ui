@@ -12,6 +12,7 @@ export * from './Card';
 export * from './Code';
 export * from './Columns';
 export * from './Container';
+export * from './Dialog';
 export * from './Flex';
 export * from './Grid';
 export * from './Group';

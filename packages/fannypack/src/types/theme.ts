@@ -21,6 +21,14 @@ import { CardProps } from '../Card';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
 import { ContainerProps } from '../Container';
+import {
+  DialogProps,
+  DialogContentProps,
+  DialogHeaderProps,
+  DialogTitleProps,
+  DialogFooterProps,
+  DialogIconProps
+} from '../Dialog';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
@@ -246,6 +254,33 @@ export type ContainerThemeConfig = {
   tabletMargin?: ThemeAttribute<number>;
   fluidMargin?: ThemeAttribute<number>;
   defaultProps?: Partial<ContainerProps>;
+};
+export type DialogThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<DialogContentProps>;
+  };
+  Header?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<DialogHeaderProps>;
+  };
+  Title?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<DialogTitleProps>;
+  };
+  Footer?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<DialogFooterProps>;
+  };
+  IconWrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<DialogIconProps>;
+  };
+  Close?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<DialogProps>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -508,6 +543,7 @@ export type ThemeConfig = {
   Code?: CodeThemeConfig;
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;
+  Dialog?: DialogThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Group?: GroupThemeConfig;
