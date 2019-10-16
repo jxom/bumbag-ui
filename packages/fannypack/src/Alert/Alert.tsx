@@ -39,6 +39,7 @@ const useProps = createHook<AlertProps>(
       isFilled,
       isInline,
       onClickClose,
+      overrides,
       showCloseButton,
       standalone,
       title,
@@ -72,10 +73,10 @@ const useProps = createHook<AlertProps>(
               props.children
             ) : (
               <React.Fragment>
-                {hasIcon && <AlertIcon />}
-                <AlertContent>
-                  {title && <AlertTitle>{title}</AlertTitle>}
-                  <AlertDescription>{props.children}</AlertDescription>
+                {hasIcon && <AlertIcon overrides={overrides} />}
+                <AlertContent overrides={overrides}>
+                  {title && <AlertTitle overrides={overrides}>{title}</AlertTitle>}
+                  <AlertDescription overrides={overrides}>{props.children}</AlertDescription>
                 </AlertContent>
               </React.Fragment>
             )}

@@ -36,6 +36,7 @@ const useProps = createHook<DialogProps>(
       footer,
       iconProps = {},
       onClickClose,
+      overrides,
       showActionButtons,
       showCloseButton,
       standalone,
@@ -70,10 +71,10 @@ const useProps = createHook<DialogProps>(
         ) : (
           <React.Fragment>
             {title && (
-              <DialogHeader>
+              <DialogHeader overrides={overrides}>
                 {typeof title === 'string' ? (
-                  <DialogTitle>
-                    {type && <DialogIcon iconProps={iconProps} />}
+                  <DialogTitle overrides={overrides}>
+                    {type && <DialogIcon iconProps={iconProps} overrides={overrides} />}
                     {title}
                   </DialogTitle>
                 ) : (
@@ -89,9 +90,9 @@ const useProps = createHook<DialogProps>(
                 )}
               </DialogHeader>
             )}
-            <DialogContent>{props.children}</DialogContent>
+            <DialogContent overrides={overrides}>{props.children}</DialogContent>
             {(footer || showActionButtons) && (
-              <DialogFooter>
+              <DialogFooter overrides={overrides}>
                 {footer && <Box>{footer}</Box>}
                 {showActionButtons && (
                   <Box>

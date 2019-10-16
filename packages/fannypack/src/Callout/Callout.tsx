@@ -32,6 +32,7 @@ const useProps = createHook<CalloutProps>(
       closeButtonProps = {},
       iconProps,
       onClickClose,
+      overrides,
       footer,
       standalone,
       showCloseButton,
@@ -66,15 +67,15 @@ const useProps = createHook<CalloutProps>(
             props.children
           ) : (
             <React.Fragment>
-              <CalloutIcon iconProps={iconProps} />
+              <CalloutIcon iconProps={iconProps} overrides={overrides} />
               <Box>
                 {title && (
-                  <CalloutHeader>
-                    {typeof title === 'string' ? <CalloutTitle>{title}</CalloutTitle> : title}
+                  <CalloutHeader overrides={overrides}>
+                    {typeof title === 'string' ? <CalloutTitle overrides={overrides}>{title}</CalloutTitle> : title}
                   </CalloutHeader>
                 )}
-                <CalloutContent>{props.children}</CalloutContent>
-                {footer && <CalloutFooter>{footer}</CalloutFooter>}
+                <CalloutContent overrides={overrides}>{props.children}</CalloutContent>
+                {footer && <CalloutFooter overrides={overrides}>{footer}</CalloutFooter>}
               </Box>
             </React.Fragment>
           )}

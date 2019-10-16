@@ -20,7 +20,7 @@ export const CardContext = React.createContext<CardContextOptions>({});
 
 const useProps = createHook<CardProps>(
   (props, themeKey) => {
-    const { footer, headerAddon, standalone, title, kind, ...restProps } = props;
+    const { footer, headerAddon, overrides, standalone, title, kind, ...restProps } = props;
     const boxProps = Box.useProps({
       altitude: kind === 'shadow' ? '100' : null,
       border: kind === 'border' ? 'default' : null,
@@ -46,13 +46,13 @@ const useProps = createHook<CardProps>(
         ) : (
           <React.Fragment>
             {title && (
-              <CardHeader>
-                <CardTitle>{title}</CardTitle>
+              <CardHeader overrides={overrides}>
+                <CardTitle overrides={overrides}>{title}</CardTitle>
                 {headerAddon && <Box>{headerAddon}</Box>}
               </CardHeader>
             )}
-            <CardContent>{props.children}</CardContent>
-            {footer && <CardFooter>{footer}</CardFooter>}
+            <CardContent overrides={overrides}>{props.children}</CardContent>
+            {footer && <CardFooter overrides={overrides}>{footer}</CardFooter>}
           </React.Fragment>
         )}
       </CardContext.Provider>
