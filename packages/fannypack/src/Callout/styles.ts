@@ -51,7 +51,7 @@ export const CalloutIconWrapper = styleProps => cssClass`
   & .fp-Icon {
     vertical-align: -0.125em;
   }
-  & .fp-Callout.Content .fp-Icon {
+  & .fp-CalloutContent .fp-Icon {
     font-size: 1.25em;
   }
 

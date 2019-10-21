@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Box as ReakitBox } from 'reakit';
+import { Box as ReakitBox, DialogOptions as ReakitDialogOptions } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
-import { Flex } from '../Flex';
 import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
+import { Modal, ModalProps } from '../Modal';
 import { Text, TextProps } from '../Text';
 
 import * as styles from './styles';
@@ -329,5 +329,61 @@ export const DialogIcon = createComponent<DialogIconProps>(
       use: 'span'
     },
     themeKey: 'Dialog.IconWrapper'
+  }
+);
+
+//////////////////////////////
+
+export type LocalDialogModalProps = {
+  kind?: 'alert';
+  hasScroll?: boolean;
+};
+export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
+
+const useDialogModalProps = createHook<DialogModalProps>(
+  (props, themeKey) => {
+    const { kind, ...restProps } = props;
+
+    const dialogProps = Dialog.useProps({
+      onClickClose: restProps.hide,
+      ...restProps,
+      actionButtonsProps: {
+        onClickCancel: restProps.hide,
+        ...restProps.actionButtonsProps
+      },
+      unstable_wrap: children => (
+        // @ts-ignore
+        <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...restProps}>
+          {children}
+        </Modal>
+      )
+    });
+    const contextProps = React.useContext(DialogContext);
+
+    const className = useClassName({
+      style: styles.DialogModal,
+      styleProps: { ...contextProps, ...props },
+      themeKey,
+      prevClassName: dialogProps.className
+    });
+
+    return { ...dialogProps, className };
+  },
+  { defaultProps: { hasScroll: true }, themeKey: 'Dialog.Modal' }
+);
+
+export const DialogModal = createComponent<DialogModalProps>(
+  props => {
+    const DialogModalProps = useDialogModalProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: DialogModalProps
+    });
+  },
+  {
+    attach: { useProps: useDialogModalProps },
+    themeKey: 'Dialog.Modal'
   }
 );

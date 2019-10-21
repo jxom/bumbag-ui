@@ -17,7 +17,11 @@ export function useClassName({
 }) {
   const theme = React.useContext(ThemeContext);
   const className = style({ theme, themeKey, ...styleProps });
-  const classNames = buildClassNames(className, prevClassName, themeKey ? `fp-${themeKey}` : undefined);
+  const classNames = buildClassNames(
+    className,
+    prevClassName,
+    themeKey ? `fp-${themeKey.replace('.', '')}` : undefined
+  );
   const uniqueClassNames = _uniq(classNames.split(' ')).join(' ');
   return uniqueClassNames;
 }

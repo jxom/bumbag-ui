@@ -3,6 +3,7 @@ import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../ut
 
 export const Dialog = styleProps => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
+  background-color: white;
 
   ${theme('altitudes.100')(styleProps)};
 
@@ -71,6 +72,22 @@ export const DialogClose = styleProps => cssClass`
 
 export const DialogIconWrapper = styleProps => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
+export const DialogModal = styleProps => cssClass`
+  max-width: 600px;
+  width: 100%;
+
+  ${theme('altitudes.400')(styleProps)};
+
+  & .fp-DialogContent {
+    max-height: 70vh;
+    overflow-y: ${styleProps.hasScroll ? 'scroll' : 'visible'};
+  }
 
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
