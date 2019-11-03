@@ -48,6 +48,16 @@ import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import { ParagraphProps } from '../Paragraph';
+import {
+  PopoverProps,
+  PopoverArrowProps,
+  PopoverBackdropProps,
+  PopoverContentProps,
+  PopoverDisclosureProps,
+  PopoverFooterProps,
+  PopoverHeaderProps,
+  PopoverTitleProps
+} from '../Popover';
 import { PortalProps } from '../Portal';
 import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
@@ -470,6 +480,52 @@ export type ParagraphThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<ParagraphProps>;
 };
+export type PopoverThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Arrow?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverArrowProps>;
+  };
+  Backdrop?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverBackdropProps>;
+  };
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverContentProps>;
+  };
+  Close?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Disclosure?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverDisclosureProps>;
+  }
+  Header?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverHeaderProps>;
+  };
+  Footer?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverFooterProps>;
+  };
+  Title?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<PopoverTitleProps>;
+  };
+  placements?: {
+    center?: ThemeAttribute<Stylesheet>;
+    top?: ThemeAttribute<Stylesheet>;
+    left?: ThemeAttribute<Stylesheet>;
+    right?: ThemeAttribute<Stylesheet>;
+    bottom?: ThemeAttribute<Stylesheet>;
+    topStart?: ThemeAttribute<Stylesheet>;
+    topEnd?: ThemeAttribute<Stylesheet>;
+    bottomStart?: ThemeAttribute<Stylesheet>;
+    bottomEnd?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<PopoverProps>;
+};
 export type PortalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<PortalProps>;
@@ -562,6 +618,7 @@ export type ThemeConfig = {
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
   Paragraph?: ParagraphThemeConfig;
+  Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;
   Rover?: RoverThemeConfig;
   Tabbable?: TabbableThemeConfig;

@@ -43,7 +43,7 @@ const useProps = createHook<BoxProps>(
     // Append the styles from above as a className on the DOM element (with precedence).
     let className = useClassName({
       style: styles.style,
-      styleProps: { style, ...props },
+      styleProps: { ...props, style },
       prevClassName: props.className
     });
 

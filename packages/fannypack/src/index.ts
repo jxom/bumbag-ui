@@ -30,6 +30,7 @@ export * from './Modal';
 export * from './Navigation';
 export * from './Overlay';
 export * from './Paragraph';
+export * from './Popover';
 export * from './Portal';
 export * from './Provider';
 export * from './Rover';

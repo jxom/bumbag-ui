@@ -191,29 +191,29 @@ export const getPlacementAttributes = styleProps => {
   `;
 };
 
-const getSlideOffset = ({ position, axis, defaultSlide = undefined }) => styleProps => {
+const getSlideOffset = ({ position, axis, defaultSlide = undefined, slideOffset = '100%' }) => styleProps => {
   let newSlide = typeof styleProps.slide === 'string' ? styleProps.slide : defaultSlide;
   let offset = '';
   if (axis === 'vertical') {
     if (newSlide === 'top') {
-      offset = ' - 100%';
+      offset = ` - ${slideOffset}`;
     }
     if (newSlide === 'bottom') {
-      offset = ' + 100%';
+      offset = ` + ${slideOffset}`;
     }
   }
   if (axis === 'horizontal') {
     if (newSlide === 'left') {
-      offset = ' - 100%';
+      offset = ` - ${slideOffset}`;
     }
     if (newSlide === 'right') {
-      offset = ' + 100%';
+      offset = ` + ${slideOffset}`;
     }
   }
   return `calc(${position}${offset})`;
 };
 
-const getAnimatedAttributes = opts => styleProps => {
+export const getAnimatedAttributes = opts => styleProps => {
   if (!styleProps.slide && !styleProps.expand && !styleProps.fade) return;
 
   const transitionPropertyValue = [(styleProps.slide || styleProps.expand) && 'transform', styleProps.fade && 'opacity']
@@ -223,12 +223,14 @@ const getAnimatedAttributes = opts => styleProps => {
   const hiddenTransformX = getSlideOffset({
     position: opts.transformX,
     axis: 'horizontal',
-    defaultSlide: opts.defaultSlide
+    defaultSlide: opts.defaultSlide,
+    slideOffset: opts.slideOffset
   })(styleProps);
   const hiddenTransformY = getSlideOffset({
     position: opts.transformY,
     axis: 'vertical',
-    defaultSlide: opts.defaultSlide
+    defaultSlide: opts.defaultSlide,
+    slideOffset: opts.slideOffset
   })(styleProps);
   const slideTransformValue = `translate3d(${styleProps.slide ? hiddenTransformX : opts.transformX}, ${
     styleProps.slide ? hiddenTransformY : opts.transformY
@@ -246,7 +248,8 @@ const getAnimatedAttributes = opts => styleProps => {
   const transformValue = [slideTransformValue, expandTransformValue].filter(Boolean).join(' ');
 
   return css`
-    transform-origin: ${expandTransformOrigins[styleProps.expand || 'center']};
+    transform-origin: ${expandTransformOrigins[opts.defaultExpand || styleProps.expand || 'center']};
+    align-items: center;
     transition-property: ${transitionPropertyValue};
     transition-duration: ${styleProps.duration || '250ms'};
     transition-timing-function: ${styleProps.timingFunction || 'ease-in-out'};
@@ -258,7 +261,7 @@ const getAnimatedAttributes = opts => styleProps => {
       `};
 
     &.hidden {
-      transform: ${transformValue};
+      transform: ${opts.prevTransformValue} ${transformValue} !important;
 
       ${styleProps.fade &&
         css`

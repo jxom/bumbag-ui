@@ -20,6 +20,8 @@ export type LocalActionButtonsProps = {
   onClickCancel?(): void;
   /** Changes the color of the submit button */
   palette?: string;
+  /** Size of the buttons */
+  size?: ButtonProps['size'];
   /** Custom button props for the submit button */
   submitProps?: Omit<ButtonProps, 'children'>;
   /** Custom text for the submit button */
@@ -39,6 +41,7 @@ const useProps = createHook<ActionButtonsProps>(
       onClickCancel,
       onClickSubmit,
       palette,
+      size,
       submitProps,
       submitText,
       type,
@@ -55,11 +58,11 @@ const useProps = createHook<ActionButtonsProps>(
 
     const children = (
       <React.Fragment>
-        <Button onClick={onClickCancel} {...cancelProps}>
+        <Button onClick={onClickCancel} size={size} {...cancelProps}>
           {cancelText}
         </Button>
         {addonButtons}
-        <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} type={type} {...submitProps}>
+        <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} size={size} type={type} {...submitProps}>
           {submitText}
         </Button>
       </React.Fragment>

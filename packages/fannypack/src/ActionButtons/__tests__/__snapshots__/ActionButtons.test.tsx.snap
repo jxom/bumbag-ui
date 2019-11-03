@@ -680,6 +680,61 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   background-color: #200fb4;
 }
 
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-3[disabled],
+.emotion-3[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-3:hover {
+  background-color: #e3e3e3;
+}
+
+.emotion-3:hover:active {
+  background-color: #d6d6d6;
+}
+
 <div
   class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons"
 >
@@ -693,7 +748,7 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
     tabindex="0"
     type="button"
   >
@@ -1881,6 +1936,61 @@ exports[`props should render correctly with addon buttons 1`] = `
   background-color: #200fb4;
 }
 
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #b3b3b3;
+}
+
+.emotion-3[disabled],
+.emotion-3[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-3:hover {
+  background-color: #e3e3e3;
+}
+
+.emotion-3:hover:active {
+  background-color: #d6d6d6;
+}
+
 <div
   class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons"
 >
@@ -1894,7 +2004,7 @@ exports[`props should render correctly with addon buttons 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
     tabindex="0"
     type="button"
   >

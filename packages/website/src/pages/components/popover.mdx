@@ -1,310 +1,338 @@
+import { Box, Button, Popover } from 'fannypack';
 import Theme from '../../components/Theme';
-import { Dialog } from 'fannypack/Dialog';
 
-# Dialog
+# Popover
 
 ## Import
 
 ```jsx
-import { Dialog } from 'fannypack';
+import { Popover } from 'fannypack';
 ```
 
 ## Usage
 
-```jsx-live
-<Dialog title="This is a title" width="600px">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-</Dialog>
+```function-live
+function Example() {
+  const popover = Popover.useState();
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover hasArrow {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+### Placement
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ placement: 'top' });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover hasArrow {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+### Title
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ placement: 'top' });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover title="Attention!" {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
 ```
 
 ### Footer
 
-You can render a footer for the dialog using the `footer` prop.
+```function-live
+function Example() {
+  const popover = Popover.useState({ placement: 'top' });
 
-```jsx-live
-<Dialog
-  title="This is a title"
-  footer={<Text>This is a footer</Text>}
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover footer="This is a footer" {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ placement: 'top' });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover footer={<Button onClick={popover.hide} size="small">Close</Button>} {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
 ```
 
 ### Action buttons
 
-It is common to have action buttons in a dialog's footer. Use the `showActionButtons` prop to enable them. Dialog also accepts the `actionButtonsProps` that accepts the props of the [`<ActionButtons>` component](/components/button#actionbuttons-props).
-
-```jsx-live
-<Dialog
-  actionButtonsProps={{ onClickSubmit: () => alert('Submitted') }}
-  title="This is a title"
-  showActionButtons
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
-```
-
-### Close button
-
-To render a close icon on a dialog, use the `showCloseButton` prop.
-
-```jsx-live
-<Dialog
-  onClickClose={() => console.log('close')}
-  showCloseButton
-  title="This is a title"
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
-```
-
-### Types
-
-```jsx-live
-<LayoutSet>
-  <Dialog
-    type="info"
-    title="This is a title"
-    showActionButtons
-    width="600px"
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-  <Dialog
-    type="success"
-    title="This is a title"
-    showActionButtons
-    width="600px"
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-  <Dialog
-    type="warning"
-    title="This is a title"
-    showActionButtons
-    width="600px"
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-  <Dialog
-    type="danger"
-    title="This is a title"
-    showActionButtons
-    actionButtonsProps={{ palette: 'danger' }}
-    width="600px"
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-</LayoutSet>
-```
-
-### Modal
-
 ```function-live
 function Example() {
-  const modal = Modal.useState({ unstable_animated: true })
+  const popover = Popover.useState({ placement: 'top' });
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop fade {...modal} />
-      <Dialog.Modal title="This is a title" fade showActionButtons showCloseButton {...modal}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover showActionButtons actionButtonsProps={{ submitText: 'Save' }} {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
   )
 }
 ```
 
-#### Initial focus
+### Close within popover
 
 ```function-live
 function Example() {
-  const modal = Modal.useState();
-  const closeButtonRef = React.useRef();
+  const popover = Popover.useState({ placement: 'top' });
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
-      <Dialog.Modal
-        unstable_initialFocusRef={closeButtonRef}
-        title="This is a title"
-        showCloseButton
-        {...modal}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-        <Button ref={closeButtonRef} onClick={modal.hide}>Close</Button>
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover hasArrow {...popover}>
+        What was the best thing that happened to you today?
+        <Button onClick={popover.hide}>
+          Close
+        </Button>
+      </Popover>
+    </Box>
   )
 }
 ```
 
-#### Final focus
+Or you can display a close button:
 
 ```function-live
 function Example() {
-  const modal = Modal.useState();
-  const finalButtonRef = React.useRef();
+  const popover = Popover.useState({ placement: 'top' });
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Button ref={finalButtonRef}>Another button</Button>
-
-      <Modal.Backdrop {...modal} />
-      <Dialog.Modal
-        unstable_finalFocusRef={finalButtonRef}
-        title="This is a title"
-        showCloseButton
-        {...modal}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover title="Attention!" showCloseButton {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
   )
 }
 ```
 
-#### Action buttons
+### Render within a portal
 
 ```function-live
 function Example() {
-  const modal = Modal.useState({ unstable_animated: true })
+  const popover = Popover.useState();
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
-      <Dialog.Modal
-        title="This is a title"
-        showActionButtons
-        actionButtonsProps={{ onClickSubmit: () => alert('Hello') }}
-        {...modal}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover usePortal {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
   )
 }
 ```
 
-#### Close button
+### Setting initial focus
 
 ```function-live
 function Example() {
-  const modal = Modal.useState({ unstable_animated: true })
+  const popover = Popover.useState();
+  const buttonRef = React.useRef();
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
-      <Dialog.Modal
-        title="This is a title"
-        showCloseButton
-        closeButtonProps={{ palette: 'primary' }}
-        {...modal}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover unstable_initialFocusRef={buttonRef} {...popover}>
+        What was the best thing that happened to you today?
+        <Button>Button 1</Button>
+        <Button ref={buttonRef}>Button 2</Button>
+      </Popover>
+    </Box>
   )
 }
 ```
 
-#### Alert dialogs
+### Setting final focus
 
 ```function-live
 function Example() {
-  const modal = Modal.useState({ unstable_animated: true })
+  const popover = Popover.useState();
+  const buttonRef = React.useRef();
 
   return (
-    <div>
-      <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
-      <Dialog.Modal
-        kind="alert"
-        type="danger"
-        title="This is a title"
-        showActionButtons
-        closeButtonProps={{ palette: 'primary' }}
-        {...modal}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </div>
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Button ref={buttonRef}>Button 2</Button>
+      <Popover unstable_finalFocusRef={buttonRef} {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+### Restricting closure
+
+```function-live
+function Example() {
+  const popover = Popover.useState();
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover hideOnEsc={false} hideOnClickOutside={false} {...popover}>
+        What was the best thing that happened to you today?
+        <Button onClick={popover.hide}>
+          Close
+        </Button>
+      </Popover>
+    </Box>
+  )
+}
+```
+
+### Animation
+
+#### Fade
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover fade {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+#### Slide
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover slide fade {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
+  )
+}
+```
+
+#### Expand
+
+```function-live
+function Example() {
+  const popover = Popover.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover expand slide fade {...popover}>
+        What was the best thing that happened to you today?
+      </Popover>
+    </Box>
   )
 }
 ```
 
 ### Standalone
 
-```jsx-live
-<Dialog
-  title="Example dialog"
-  type="info"
-  width="600px"
-  standalone
->
-  <Dialog.Header>
-    <Dialog.Title>
-      <Dialog.Icon />
-      Example Dialog
-    </Dialog.Title>
-  </Dialog.Header>
-  <Dialog.Content>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum,
-    cursus id placerat congue, ultrices eget lectus. Duis posuere,
-    lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
-    consectetur lectus augue sit amet justo.
-  </Dialog.Content>
-  <Dialog.Footer justifyContent="flex-end">
-    <ActionButtons />
-  </Dialog.Footer>
-</Dialog>
+```function-live
+function Example() {
+  const popover = Popover.useState();
+
+  return (
+    <Box>
+      <Popover.Disclosure use={Button} {...popover}>Open Popover</Popover.Disclosure>
+      <Popover standalone {...popover}>
+        <Popover.Arrow />
+        <Popover.Header>
+          <Popover.Title>This is a title</Popover.Title>
+        </Popover.Header>
+        <Popover.Content>
+          What was the best thing that happened to you today?
+        </Popover.Content>
+        <Popover.Footer justifyContent="flex-end">
+          <ActionButtons size="small" />
+        </Popover.Footer>
+      </Popover>
+    </Box>
+  )
+}
 ```
 
 ## Props
 
-### Dialog Props
+### Popover Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">footer</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">hasArrow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
@@ -321,28 +349,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">footer</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
+**<Code marginRight="major-1">usePortal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
@@ -350,6 +361,15 @@ function Example() {
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">arrowProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & Pick<Partial<PopoverStateReturn>, "unstable_arrowRef"
+  | "unstable_arrowStyles"> & Pick<...> & { ...; }`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -368,565 +388,6 @@ function Example() {
   ... 778 more ...;
   spinnerProps?: SpinnerProps;
 }`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">iconProps</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalIconProps`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Header Props
-
-<!-- Automatically generated -->
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Title Props
-
-<!-- Automatically generated -->
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
-
-</details>
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Content Props
-
-<!-- Automatically generated -->
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Footer Props
-
-<!-- Automatically generated -->
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Icon Props
-
-<!-- Automatically generated -->
-
-**<Code marginRight="major-1">iconProps</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-    ... 764 more ...;
-    label?:...`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
-
-</details>
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  altitudes?: AltitudesThemeConfig;
-  borders?: BordersThemeConfig;
-  borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  fontWeights?: FontWeightsThemeConfig;
-  ... 41 more ...;
-  Spinner?: SpinnerThemeConfig;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-</details>
-
-### Dialog.Modal Props
-
-<!-- Automatically generated -->
-
-**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;alert&#34;</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hasScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
-<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
-
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Whether it's visible or not.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
-
-If `true`, `animating` will be set to `true` when `visible` changes.
-It'll wait for `stopAnimation` to be called or a CSS transition ends.
-If it's a number, `stopAnimation` will be called automatically after
-given milliseconds.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
-
-Stops animation. It's called automatically if there's a CSS transition.
-It's called after given milliseconds if `animated` is a number.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
-
-Changes the `visible` state to `false`
-
-<Box marginBottom="major-4" />
-
-</details>
-
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Modal</strong></code> props</Box>
-
-**<Code marginRight="major-1">placement</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"bottom"
-  | "left"
-  | "right"
-  | "top"
-  | "center"
-  | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
-  | "top-end"
-  | "right-end"
-  | "bottom-end"
-  | "left-end"`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -1036,6 +497,37 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
+<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
@@ -1112,85 +604,356 @@ It will be set to `false` if `modal` is `false`.
 
 </details>
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Dialog</strong></code> props</Box>
+### Popover.Header Props
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<!-- Automatically generated -->
 
-<Box marginBottom="major-4" />
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">title</Code>**
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
   | ReactElement<any, string
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
 </Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">footer</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">actionButtonsProps</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">closeButtonProps</Code>**
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  defaultChecked?: boolean;
-  defaultValue?: string | string[];
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  accessKey?: string;
-  className?: string;
-  ... 778 more ...;
-  spinnerProps?: SpinnerProps;
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
 }`}
 </Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Popover.Title Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalIconProps`}
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
 </Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Popover.Content Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Popover.Footer Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Popover.Arrow Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">string | number</Code>
+
+Arrow's size
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>1 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"bottom"
+  | "left"
+  | "right"
+  | "top"
+  | "top-start"
+  | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
+  | "right-end"
+  | "bottom-end"
+  | "left-end"
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
+</Code>
+
+Actual `placement`.
 
 <Box marginBottom="major-4" />
 
@@ -1198,28 +961,305 @@ It will be set to `false` if `modal` is `false`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
 </details>
 
+### Popover.Backdrop Props
 
+<!-- Automatically generated -->
 
-## Theming
+<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Popover.Disclosure Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+When an element is `disabled`, it may still be `focusable`. It works
+similarly to `readOnly` on form elements. In this case, only
+`aria-disabled` will be set.
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
+<blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_referenceRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
+
+The reference element.
+
+<Box marginBottom="major-4" />
+
+</details>
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 41 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+### Theming
+
+<Theme component={Popover} overrides={['Popover.base', 'Popover.Content.base', 'Popover.Header.base', 'Popover.Title.base', 'Popover.Footer.base', 'Popover.Close.base']} title="Attention!" showActionButtons showCloseButton unstable_popoverStyles={{}} visible>
+  What was the best thing that happened to you today?
+</Theme>
 
 <Theme
-  component={Dialog}
-  type="info"
-  footer={<Button>Okay</Button>}
-  showCloseButton
-  title="Example dialog"
-  overrides={[
-    'Dialog.base',
-    'Dialog.Header.base',
-    'Dialog.Title.base',
-    'Dialog.Content.base',
-    'Dialog.Footer.base',
-    'Dialog.Close.base',
-    'Dialog.IconWrapper.base'
-  ]}>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue
-  sit amet justo.
-</Theme>
+  component="div"
+  overrides={['Popover.Backdrop.base', 'Popover.Arrow.base']}
+/>
