@@ -6,6 +6,7 @@ import { Button, ButtonProps } from '../Button';
 import { Box, BoxProps } from '../Box';
 import { Card, CardProps } from '../Card';
 import { Icon, IconProps } from '../Icon';
+import { Overlay, OverlayProps } from '../Overlay';
 import { Text, TextProps } from '../Text';
 
 import * as styles from './styles';
@@ -328,5 +329,54 @@ export const CalloutIcon = createComponent<CalloutIconProps>(
   {
     attach: { useProps: useCalloutIconProps },
     themeKey: 'Callout.IconWrapper'
+  }
+);
+
+//////////////////////////////
+
+export type LocalCalloutOverlayProps = {};
+export type CalloutOverlayProps = CalloutProps & OverlayProps & LocalCalloutOverlayProps;
+
+const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
+  (props, themeKey) => {
+    const { kind, ...restProps } = props;
+
+    const calloutProps = Callout.useProps({
+      onClickClose: restProps.hide,
+      ...restProps,
+      unstable_wrap: children => (
+        // @ts-ignore
+        <Overlay placement="bottom-end" {...restProps}>
+          {children}
+        </Overlay>
+      )
+    });
+    const contextProps = React.useContext(CalloutContext);
+
+    const className = useClassName({
+      style: styles.CalloutOverlay,
+      styleProps: { ...contextProps, ...props },
+      themeKey,
+      prevClassName: calloutProps.className
+    });
+
+    return { ...calloutProps, className };
+  },
+  { defaultProps: { showCloseButton: true }, themeKey: 'Callout.Overlay' }
+);
+
+export const CalloutOverlay = createComponent<CalloutOverlayProps>(
+  props => {
+    const calloutOverlayProps = useCalloutOverlayProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: calloutOverlayProps
+    });
+  },
+  {
+    attach: { useProps: useCalloutOverlayProps },
+    themeKey: 'Callout.Overlay'
   }
 );

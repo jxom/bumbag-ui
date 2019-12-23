@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { fontSize, fontWeight, palette, space, theme } from '../utils';
+import { fontSize, fontWeight, palette, space, theme, altitude } from '../utils';
 
 export const Callout = styleProps => cssClass`
   ${styleProps.showCloseButton &&
@@ -64,6 +64,16 @@ export const CalloutClose = styleProps => cssClass`
   position: absolute;
   top: ${space(1, 'major')(styleProps)}rem;
   right: ${space(1, 'major')(styleProps)}rem;
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
+export const CalloutOverlay = styleProps => cssClass`
+  max-width: 500px;
+
+  ${altitude('200')(styleProps)};
 
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};

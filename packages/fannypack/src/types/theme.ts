@@ -500,7 +500,7 @@ export type PopoverThemeConfig = {
   Disclosure?: {
     base?: ThemeAttribute<Stylesheet>;
     defaultProps?: Partial<PopoverDisclosureProps>;
-  }
+  };
   Header?: {
     base?: ThemeAttribute<Stylesheet>;
     defaultProps?: Partial<PopoverHeaderProps>;

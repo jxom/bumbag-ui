@@ -3,8 +3,4 @@ import { Paragraph, Link, List } from '../../';
 
 export default { title: 'Paragraph' };
 
-export const _default = () => (
-  <Paragraph aria-label="External links">
-    Hello world
-  </Paragraph>
-);
+export const _default = () => <Paragraph aria-label="External links">Hello world</Paragraph>;

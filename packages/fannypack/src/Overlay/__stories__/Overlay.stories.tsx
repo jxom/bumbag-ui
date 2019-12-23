@@ -17,12 +17,14 @@ export function _default() {
 }
 
 export function placement() {
-  const overlay = Overlay.useState()
+  const overlay = Overlay.useState();
 
   return (
     <div>
       <Overlay.Disclosure {...overlay}>Open overlay</Overlay.Disclosure>
-      <Overlay {...overlay} placement="top">Hello world</Overlay>
+      <Overlay {...overlay} placement="top">
+        Hello world
+      </Overlay>
     </div>
-  )
+  );
 }

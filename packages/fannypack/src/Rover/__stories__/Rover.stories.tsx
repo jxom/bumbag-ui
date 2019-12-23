@@ -4,7 +4,7 @@ import { Button, Group, Rover, List } from '../../';
 export default { title: 'Rover' };
 
 export function _default() {
-  const rover = Rover.useState()
+  const rover = Rover.useState();
 
   return (
     <Group>
@@ -24,5 +24,5 @@ export function _default() {
         Button 5
       </Rover>
     </Group>
-  )
+  );
 }

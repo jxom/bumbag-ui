@@ -14,6 +14,13 @@ export function theme(selector: string, defaultValue?: any) {
   };
 }
 
+export function altitude(selector?: string, defaultValue?: any) {
+  return (props: { altitude?: string; theme?: ThemeConfig }) => {
+    const altitude = theme(`altitudes.${selector || props.altitude}`, defaultValue)(props);
+    return altitude;
+  };
+}
+
 export function border(selector?: string, defaultValue?: any) {
   return (props: { border?: string; theme?: ThemeConfig }) => {
     const border = theme(`borders.${selector || props.border}`, defaultValue)(props);

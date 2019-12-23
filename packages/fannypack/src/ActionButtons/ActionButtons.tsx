@@ -62,7 +62,14 @@ const useProps = createHook<ActionButtonsProps>(
           {cancelText}
         </Button>
         {addonButtons}
-        <Button isLoading={isLoading} onClick={onClickSubmit} palette={palette} size={size} type={type} {...submitProps}>
+        <Button
+          isLoading={isLoading}
+          onClick={onClickSubmit}
+          palette={palette}
+          size={size}
+          type={type}
+          {...submitProps}
+        >
           {submitText}
         </Button>
       </React.Fragment>

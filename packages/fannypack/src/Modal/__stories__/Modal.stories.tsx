@@ -29,12 +29,14 @@ export function backdrop() {
 }
 
 export function placement() {
-  const modal = Modal.useState()
+  const modal = Modal.useState();
 
   return (
     <div>
       <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal {...modal} placement="top">Hello world</Modal>
+      <Modal {...modal} placement="top">
+        Hello world
+      </Modal>
     </div>
-  )
+  );
 }

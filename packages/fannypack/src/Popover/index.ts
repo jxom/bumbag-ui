@@ -1,5 +1,12 @@
 import * as styles from './styles';
-import { Popover as _Popover, PopoverArrow, PopoverContent, PopoverFooter, PopoverHeader, PopoverTitle } from './Popover';
+import {
+  Popover as _Popover,
+  PopoverArrow,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTitle
+} from './Popover';
 import { PopoverBackdrop } from './PopoverBackdrop';
 import { PopoverDisclosure } from './PopoverDisclosure';
 import { usePopoverState } from './PopoverState';

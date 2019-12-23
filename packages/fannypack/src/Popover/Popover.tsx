@@ -119,10 +119,13 @@ const useProps = createHook<PopoverProps>(
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
-    const handleClickClose = React.useCallback(e => {
-      onClickClose && onClickClose(e);
-      hide && hide();
-    }, []);
+    const handleClickClose = React.useCallback(
+      e => {
+        onClickClose && onClickClose(e);
+        hide && hide();
+      },
+      [hide, onClickClose]
+    );
 
     const children = (
       <PopoverContext.Provider value={context}>
@@ -161,7 +164,11 @@ const useProps = createHook<PopoverProps>(
                 {footer && <Box>{footer}</Box>}
                 {showActionButtons && (
                   <Box>
-                    <ActionButtons {...actionButtonsProps} onClickCancel={actionButtonsProps.onClickCancel || hide} size="small" />
+                    <ActionButtons
+                      {...actionButtonsProps}
+                      onClickCancel={actionButtonsProps.onClickCancel || hide}
+                      size="small"
+                    />
                   </Box>
                 )}
               </PopoverFooter>
