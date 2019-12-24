@@ -1,29 +1,43 @@
-import { Portal } from 'fannypack/Portal/Portal';
 import Theme from '../../components/Theme';
+import { Divider } from 'fannypack/Divider/Divider';
 
-# Portal
+# Divider
 
 ## Import
 
 ```jsx
-import { Portal } from 'fannypack';
+import { Divider } from 'fannypack'
 ```
 
 ## Usage
 
 ```jsx-live
-<Box>Hello world. <Portal>I am a portal attached to the bottom of the page.</Portal></Box>
+<Divider />
 ```
 
-## Props
+### Vertical
 
-### Portal Props
+```jsx-live
+<Flex>
+  Hello
+  <Divider orientation="vertical" />
+  World
+</Flex>
+```
+
+## Divider Props
 
 <!-- Automatically generated -->
 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
+
+Separator's orientation.
+
+<Box marginBottom="major-4" />
+
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -33,11 +47,11 @@ import { Portal } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -56,19 +70,19 @@ import { Portal } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -85,14 +99,20 @@ import { Portal } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
 
-          
+
+
+## Theming
+
+<Theme component={Divider} highlightAttribute="border-color" overrides={['Divider.base']} />
+
+<Theme component={Divider} highlightAttribute="border-color" overrides={['Divider.vertical.base']} orientation="vertical" />

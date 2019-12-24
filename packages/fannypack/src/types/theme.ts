@@ -29,6 +29,7 @@ import {
   DialogFooterProps,
   DialogIconProps
 } from '../Dialog';
+import { DividerProps } from '../Divider';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
@@ -291,6 +292,13 @@ export type DialogThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DialogProps>;
+};
+export type DividerThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  vertical?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<DividerProps>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
