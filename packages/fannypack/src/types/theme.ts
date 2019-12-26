@@ -62,6 +62,7 @@ import {
 import { PortalProps } from '../Portal';
 import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
+import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
@@ -547,6 +548,30 @@ export type TabbableThemeConfig = {
   disabled?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TabbableProps>;
 };
+export type TagThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Close?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  outlined?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    default?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    medium?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    large?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<TagProps>;
+};
 export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
@@ -630,6 +655,7 @@ export type ThemeConfig = {
   Portal?: PortalThemeConfig;
   Rover?: RoverThemeConfig;
   Tabbable?: TabbableThemeConfig;
+  Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;

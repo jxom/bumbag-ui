@@ -1,0 +1,114 @@
+import Theme from '../../components/Theme';
+import { Tag } from 'fannypack/Tag';
+
+# Tag
+
+## Import
+
+```jsx
+import { Tag } from 'fannypack'
+```
+
+## Usage
+
+```jsx-live
+<Tag>Hello world</Tag>
+```
+
+### Colors
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag palette="primary">Primary</Tag>
+  <Tag palette="secondary">Secondary</Tag>
+  <Tag palette="info">Info</Tag>
+  <Tag palette="success">Success</Tag>
+  <Tag palette="warning">Warning</Tag>
+  <Tag palette="danger">Danger</Tag>
+</Set>
+```
+
+### Tints
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag palette="textTint">Default</Tag>
+  <Tag palette="primaryTint">Primary</Tag>
+  <Tag palette="secondaryTint">Secondary</Tag>
+  <Tag palette="infoTint">Info</Tag>
+  <Tag palette="successTint">Success</Tag>
+  <Tag palette="warningTint">Warning</Tag>
+  <Tag palette="dangerTint">Danger</Tag>
+</Set>
+```
+
+### Outlined
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag kind="outlined">Default</Tag>
+  <Tag palette="primary" kind="outlined">Primary</Tag>
+  <Tag palette="secondary" kind="outlined">Secondary</Tag>
+  <Tag palette="info" kind="outlined">Info</Tag>
+  <Tag palette="success" kind="outlined">Success</Tag>
+  <Tag palette="warning" kind="outlined">Warning</Tag>
+  <Tag palette="danger" kind="outlined">Danger</Tag>
+</Set>
+```
+
+### Sizes
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag>Default</Tag>
+  <Tag size="medium">Medium</Tag>
+  <Tag size="large">Large</Tag>
+</Set>
+```
+
+### Sets
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag>Hello</Tag>
+  <Tag>World</Tag>
+  <Tag>This</Tag>
+  <Tag>Is</Tag>
+  <Tag>Me</Tag>
+</Set>
+```
+
+### Grouping
+
+```jsx-live
+<Group>
+  <Tag>Default</Tag>
+  <Tag palette="textTint">Hello</Tag>
+</Group>
+```
+
+### Removable Tags
+
+```jsx-live
+<Set spacing="minor-1">
+  <Tag onRemove={() => alert('removed')} palette="primary">Primary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="secondary">Secondary</Tag>
+  <Tag onRemove={() => alert('removed')} palette="info">Info</Tag>
+  <Tag onRemove={() => alert('removed')} palette="success">Success</Tag>
+  <Tag onRemove={() => alert('removed')} palette="warning">Warning</Tag>
+  <Tag onRemove={() => alert('removed')} palette="danger">Danger</Tag>
+</Set>
+```
+
+## Props
+
+### Tag Props
+
+## Theming
+
+<Theme
+  component={Tag}
+  onRemove={() => {}}
+  overrides={['Tag.base', 'Tag.Content.base', 'Tag.Close.base', { key: 'Tag.sizes.default.base' }, { key: 'Tag.sizes.medium.base', props: { size: 'medium' } }, { key: 'Tag.sizes.large.base', props: { size: 'large' } }]}>
+  Hello world
+</Theme>

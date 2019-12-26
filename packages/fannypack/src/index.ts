@@ -38,6 +38,7 @@ export * from './Rover';
 export * from './Set';
 export * from './Spinner';
 export * from './Tabbable';
+export * from './Tag';
 export * from './Text';
 export * from './VisuallyHidden';
 export * from './styled';
