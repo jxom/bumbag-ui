@@ -40,6 +40,7 @@ export * from './Spinner';
 export * from './Tabbable';
 export * from './Tag';
 export * from './Text';
+export * from './Tooltip';
 export * from './VisuallyHidden';
 export * from './styled';
 export * from './theme';

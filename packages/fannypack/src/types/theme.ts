@@ -64,6 +64,7 @@ import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
+import { TooltipProps, TooltipArrowProps, TooltipReferenceProps } from '../Tooltip';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
@@ -576,6 +577,29 @@ export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
 };
+export type TooltipThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Arrow?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<TooltipArrowProps>;
+  };
+  Reference?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<TooltipReferenceProps>;
+  };
+  placements?: {
+    center?: ThemeAttribute<Stylesheet>;
+    top?: ThemeAttribute<Stylesheet>;
+    left?: ThemeAttribute<Stylesheet>;
+    right?: ThemeAttribute<Stylesheet>;
+    bottom?: ThemeAttribute<Stylesheet>;
+    topStart?: ThemeAttribute<Stylesheet>;
+    topEnd?: ThemeAttribute<Stylesheet>;
+    bottomStart?: ThemeAttribute<Stylesheet>;
+    bottomEnd?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<TooltipProps>;
+};
 export type SetThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   horizontal?: ThemeAttribute<Stylesheet>;
@@ -657,6 +681,7 @@ export type ThemeConfig = {
   Tabbable?: TabbableThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
+  Tooltip?: TooltipThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
 };

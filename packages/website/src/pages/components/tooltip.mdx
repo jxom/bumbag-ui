@@ -1,0 +1,136 @@
+import { Box, Button, Tooltip } from 'fannypack';
+import Theme from '../../components/Theme';
+
+# Tooltip
+
+## Import
+
+```jsx
+import { Tooltip } from 'fannypack';
+```
+
+## Usage
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState();
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip}>
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+### Arrow
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState();
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip} hasArrow>
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+### Placements
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState({ placement: 'right' });
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip} placement="right">
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+### Animation
+
+#### Fade
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip} fade>
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+#### Slide
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip} fade slide>
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+#### Expand
+
+```function-live
+function Example() {
+  const tooltip = Tooltip.useState({ unstable_animated: true });
+
+  return (
+    <Box>
+      <Tooltip.Reference {...tooltip} use={Button}>
+        Reference
+      </Tooltip.Reference>
+      <Tooltip {...tooltip} fade slide expand>
+        What was the best thing that happened to you today?
+      </Tooltip>
+    </Box>
+  )
+}
+```
+
+## Props
+
+### Tooltip Props
+
+## Theming
+
+<Theme component={Tooltip} overrides={['Tooltip.base']} unstable_popoverStyles={{}} unstable_portal={false} visible>
+  What was the best thing that happened to you today?
+</Theme>
