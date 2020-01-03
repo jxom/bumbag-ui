@@ -10,18 +10,76 @@ import {
 } from 'reakit';
 
 import { Box, BoxProps } from '../Box';
-import { AnimateProps } from '../types';
+import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 
+import { useTooltipState } from './TooltipState';
 import * as styles from './styles';
 
 export type LocalTooltipProps = {
+  content: string | React.ReactElement<any>;
+  placement?: Placement;
+} & LocalTooltipContentProps;
+export type TooltipProps = BoxProps & LocalTooltipProps;
+
+const useProps = createHook<TooltipProps>(
+  props => {
+    let { arrowProps, children, content, expand, fade, hasArrow, overrides, placement, slide } = props;
+
+    const boxProps = Box.useProps({ ...props, content: undefined });
+    // @ts-ignore
+    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide });
+
+    return {
+      children: (
+        <React.Fragment>
+          <TooltipReference overrides={overrides} {...boxProps} {...tooltip}>
+            {React.isValidElement(children)
+              ? /*
+                // @ts-ignore */
+                referenceProps => React.cloneElement(children, { ...referenceProps, ...children.props })
+              : children}
+          </TooltipReference>
+          <TooltipContent
+            arrowProps={arrowProps}
+            expand={expand}
+            fade={fade}
+            hasArrow={hasArrow}
+            overrides={overrides}
+            slide={slide}
+            {...tooltip}
+          >
+            {content}
+          </TooltipContent>
+        </React.Fragment>
+      )
+    };
+  },
+  { themeKey: 'Tooltip', defaultProps: { placement: 'top' } }
+);
+
+export const Tooltip = createComponent<TooltipProps>(
+  props => {
+    const tooltipProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tooltipProps });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'Tooltip'
+  }
+);
+
+////////////////////////////////////////////////////////////
+
+export type LocalTooltipContentProps = {
   hasArrow?: boolean;
   arrowProps?: TooltipArrowProps;
 } & AnimateProps;
-export type TooltipProps = BoxProps & ReakitTooltipProps & LocalTooltipProps;
+export type TooltipContentProps = BoxProps & ReakitTooltipProps & LocalTooltipContentProps;
 
-const useProps = createHook<TooltipProps>(
+const useTooltipContentProps = createHook<TooltipContentProps>(
   (props, themeKey) => {
     let {
       arrowProps,
@@ -57,7 +115,7 @@ const useProps = createHook<TooltipProps>(
     const boxProps = Box.useProps({ ...props, ...tooltipProps });
 
     const className = useClassName({
-      style: styles.Tooltip,
+      style: styles.TooltipContent,
       styleProps: props,
       themeKey,
       prevClassName: boxProps.className
@@ -85,19 +143,24 @@ const useProps = createHook<TooltipProps>(
       )
     };
   },
-  { themeKey: 'Tooltip' }
+  { themeKey: 'Tooltip.Content' }
 );
 
-export const Tooltip = createComponent<TooltipProps>(
+export const TooltipContent = createComponent<TooltipContentProps>(
   props => {
-    const textProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
+    const tooltipContentProps = useTooltipContentProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: tooltipContentProps
+    });
   },
   {
     attach: {
       useProps
     },
-    themeKey: 'Tooltip'
+    themeKey: 'Tooltip.Content'
   }
 );
 

@@ -64,7 +64,7 @@ import { RoverProps } from '../Rover';
 import { TabbableProps } from '../Tabbable';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
-import { TooltipProps, TooltipArrowProps, TooltipReferenceProps } from '../Tooltip';
+import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
@@ -582,6 +582,10 @@ export type TooltipThemeConfig = {
   Arrow?: {
     base?: ThemeAttribute<Stylesheet>;
     defaultProps?: Partial<TooltipArrowProps>;
+  };
+  Content?: {
+    base?: ThemeAttribute<Stylesheet>;
+    defaultProps?: Partial<TooltipContentProps>;
   };
   Reference?: {
     base?: ThemeAttribute<Stylesheet>;

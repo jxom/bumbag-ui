@@ -13,17 +13,10 @@ import { Tooltip } from 'fannypack';
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState();
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip}>
-        What was the best thing that happened to you today?
-      </Tooltip>
-    </Box>
+    <Tooltip content="What was the best thing that happened to you today?">
+      <Button>Hover me</Button>
+    </Tooltip>
   )
 }
 ```
@@ -32,17 +25,10 @@ function Example() {
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState();
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip} hasArrow>
-        What was the best thing that happened to you today?
-      </Tooltip>
-    </Box>
+    <Tooltip content="What was the best thing that happened to you today?" hasArrow>
+      <Button>Hover me</Button>
+    </Tooltip>
   )
 }
 ```
@@ -51,17 +37,18 @@ function Example() {
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState({ placement: 'right' });
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip} placement="right">
-        What was the best thing that happened to you today?
+    <Flex justifyContent="space-between">
+      <Tooltip content="What was the best thing that happened to you today?" placement="right">
+        <Button>Hover me</Button>
       </Tooltip>
-    </Box>
+      <Tooltip content="What was the best thing that happened to you today?" placement="bottom">
+        <Button>Hover me</Button>
+      </Tooltip>
+      <Tooltip content="What was the best thing that happened to you today?" placement="left">
+        <Button>Hover me</Button>
+      </Tooltip>
+    </Flex>
   )
 }
 ```
@@ -72,17 +59,10 @@ function Example() {
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState({ unstable_animated: true });
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip} fade>
-        What was the best thing that happened to you today?
-      </Tooltip>
-    </Box>
+    <Tooltip content="What was the best thing that happened to you today?" fade>
+      <Button>Hover me</Button>
+    </Tooltip>
   )
 }
 ```
@@ -91,17 +71,10 @@ function Example() {
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState({ unstable_animated: true });
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip} fade slide>
-        What was the best thing that happened to you today?
-      </Tooltip>
-    </Box>
+    <Tooltip content="What was the best thing that happened to you today?" fade slide>
+      <Button>Hover me</Button>
+    </Tooltip>
   )
 }
 ```
@@ -110,17 +83,10 @@ function Example() {
 
 ```function-live
 function Example() {
-  const tooltip = Tooltip.useState({ unstable_animated: true });
-
   return (
-    <Box>
-      <Tooltip.Reference {...tooltip} use={Button}>
-        Reference
-      </Tooltip.Reference>
-      <Tooltip {...tooltip} fade slide expand>
-        What was the best thing that happened to you today?
-      </Tooltip>
-    </Box>
+    <Tooltip content="What was the best thing that happened to you today?" fade slide expand>
+      <Button>Hover me</Button>
+    </Tooltip>
   )
 }
 ```
@@ -129,8 +95,176 @@ function Example() {
 
 ### Tooltip Props
 
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">content</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">placement</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"bottom"
+  | "left"
+  | "right"
+  | "top"
+  | "center"
+  | "top-start"
+  | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
+  | "right-end"
+  | "bottom-end"
+  | "left-end"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hasArrow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">arrowProps</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & Pick<Partial<PopoverStateReturn>, "unstable_arrowRef"
+  | "unstable_arrowStyles"> & Pick<...> & { ...; }`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Delay of the animation (in s/ms).
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Duration of the animation (in s/ms).
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">expand</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`boolean
+  | "bottom"
+  | "left"
+  | "right"
+  | "top"
+  | "center"`}
+</Code>
+
+Will the component have an expand animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Will the component have a fade animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code>
+
+Will the component have a slide animation when it is toggled on/off?
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Timing function of the animation
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 44 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+
 ## Theming
 
-<Theme component={Tooltip} overrides={['Tooltip.base']} unstable_popoverStyles={{}} unstable_portal={false} visible>
-  What was the best thing that happened to you today?
+<Theme component={Tooltip} hasArrow content="test" overrides={['Tooltip.Reference.base', 'Tooltip.Content.base', 'Tooltip.Arrow.base']}>
+  Hover me
 </Theme>

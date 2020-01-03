@@ -6,7 +6,7 @@ import { useDefaultProps } from './useDefaultProps';
 
 export function createHook<P>(
   useHook: (props: Partial<P>, themeKey: string) => Partial<P>,
-  config: { defaultProps?: Partial<P>; themeKey: string }
+  config?: { defaultProps?: Partial<P>; themeKey?: string }
 ) {
   return (props: Partial<P>, { themeKey: themeKeyOverride = undefined } = {}) => {
     const themeKey = themeKeyOverride || _get(config, 'themeKey');

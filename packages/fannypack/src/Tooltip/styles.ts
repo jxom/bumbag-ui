@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils';
 import { getAnimatedAttributes } from '../Modal/styles';
 
-export const Tooltip = styleProps => cssClass`
+export const TooltipContent = styleProps => cssClass`
   background: black;
   border-radius: ${borderRadius('1')(styleProps)};
   color: white;
