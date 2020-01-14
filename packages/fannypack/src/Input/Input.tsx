@@ -21,8 +21,6 @@ export type LocalInputProps = {
   defaultValue?: string | string[];
   /** Disables the input */
   disabled?: boolean;
-  inputProps?: Omit<React.InputHTMLAttributes<any>, 'ref'>;
-  inputRef?: React.RefObject<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */

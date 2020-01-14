@@ -552,6 +552,69 @@ exports[`overrides Input.placeholder.base should render correctly 1`] = `
 </div>
 `;
 
+exports[`props should assign a ref 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #3722ed 0px 0px 0px 1px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<input
+  aria-invalid="false"
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+  type="text"
+/>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-5 {
   -webkit-align-items: center;

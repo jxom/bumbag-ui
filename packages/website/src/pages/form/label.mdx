@@ -1,0 +1,40 @@
+import Theme from '../../components/Theme';
+import { Label } from 'fannypack/Label';
+
+# Label
+
+## Import
+
+```jsx
+import { Label } from 'fannypack'
+```
+
+## Usage
+
+`<Label>` renders a `<label>` by default with basic reset styling.
+
+```jsx-live
+<Label>Hello world</Label>
+This is me
+```
+
+They can also be linked with any type of field, like `<Input>`.
+
+```jsx-live
+<Label htmlFor="name" marginBottom="minor-2">Your name</Label>
+<Input id="name" />
+```
+
+## Props
+
+### Label Props
+
+## Theming
+
+<Theme
+  component={Label}
+  overrides={[
+    'Label.base'
+  ]}>
+  Hello world
+</Theme>

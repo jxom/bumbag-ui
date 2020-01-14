@@ -10,6 +10,12 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref', () => {
+    const ref = React.createRef();
+    render(<Input ref={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Input backgroundColor="primary" />);
     expect(container.firstChild).toMatchSnapshot();
