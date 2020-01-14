@@ -1,14 +1,19 @@
-import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 
-import { ActionButtonsProps } from '../ActionButtons';
-import { AlertProps } from '../Alert';
-import { AvatarProps } from '../Avatar';
-import { BadgeProps } from '../Badge';
-import { ButtonProps } from '../Button';
-import { BlockProps } from '../Block';
-import { BlockquoteProps } from '../Blockquote';
-import { BoxProps } from '../Box';
-import { BreadcrumbProps, BreadcrumbLinkProps, BreadcrumbSeparatorProps, BreadcrumbItemProps } from '../Breadcrumb';
+import { ActionButtonsProps } from "../ActionButtons";
+import { AlertProps } from "../Alert";
+import { AvatarProps } from "../Avatar";
+import { BadgeProps } from "../Badge";
+import { ButtonProps } from "../Button";
+import { BlockProps } from "../Block";
+import { BlockquoteProps } from "../Blockquote";
+import { BoxProps } from "../Box";
+import {
+  BreadcrumbProps,
+  BreadcrumbLinkProps,
+  BreadcrumbSeparatorProps,
+  BreadcrumbItemProps
+} from "../Breadcrumb";
 import {
   CalloutProps,
   CalloutContentProps,
@@ -16,11 +21,11 @@ import {
   CalloutTitleProps,
   CalloutFooterProps,
   CalloutIconProps
-} from '../Callout';
-import { CardProps } from '../Card';
-import { CodeProps } from '../Code';
-import { ColumnsProps, ColumnProps } from '../Columns';
-import { ContainerProps } from '../Container';
+} from "../Callout";
+import { CardProps } from "../Card";
+import { CodeProps } from "../Code";
+import { ColumnsProps, ColumnProps } from "../Columns";
+import { ContainerProps } from "../Container";
 import {
   DialogProps,
   DialogContentProps,
@@ -28,27 +33,28 @@ import {
   DialogTitleProps,
   DialogFooterProps,
   DialogIconProps
-} from '../Dialog';
-import { DividerProps } from '../Divider';
-import { FlexProps } from '../Flex';
-import { GridProps } from '../Grid/Grid';
-import { GridItemProps } from '../Grid/GridItem';
-import { GroupProps } from '../Group';
-import { HiddenProps, HiddenDisclosureProps } from '../Hidden';
-import { HeadingProps } from '../Heading';
-import { IconProps } from '../Icon';
-import { ImageProps } from '../Image';
-import { InlineProps } from '../Inline';
-import { InlineBlockProps } from '../InlineBlock';
-import { InlineFlexProps } from '../InlineFlex';
-import { LayoutSetProps } from '../LayoutSet';
-import { LinkProps } from '../Link';
-import { ListProps } from '../List/List';
-import { ListItemProps } from '../List/ListItem';
-import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
-import { NavigationProps } from '../Navigation';
-import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
-import { ParagraphProps } from '../Paragraph';
+} from "../Dialog";
+import { DividerProps } from "../Divider";
+import { FlexProps } from "../Flex";
+import { GridProps } from "../Grid/Grid";
+import { GridItemProps } from "../Grid/GridItem";
+import { GroupProps } from "../Group";
+import { HiddenProps, HiddenDisclosureProps } from "../Hidden";
+import { HeadingProps } from "../Heading";
+import { IconProps } from "../Icon";
+import { ImageProps } from "../Image";
+import { InlineProps } from "../Inline";
+import { InlineBlockProps } from "../InlineBlock";
+import { InlineFlexProps } from "../InlineFlex";
+import { InputProps } from "../Input";
+import { LayoutSetProps } from "../LayoutSet";
+import { LinkProps } from "../Link";
+import { ListProps } from "../List/List";
+import { ListItemProps } from "../List/ListItem";
+import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from "../Modal";
+import { NavigationProps } from "../Navigation";
+import { OverlayProps, OverlayDisclosureProps } from "../Overlay";
+import { ParagraphProps } from "../Paragraph";
 import {
   PopoverProps,
   PopoverArrowProps,
@@ -58,16 +64,21 @@ import {
   PopoverFooterProps,
   PopoverHeaderProps,
   PopoverTitleProps
-} from '../Popover';
-import { PortalProps } from '../Portal';
-import { RoverProps } from '../Rover';
-import { TabbableProps } from '../Tabbable';
-import { TagProps } from '../Tag';
-import { TextProps } from '../Text';
-import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
-import { SetProps } from '../Set';
-import { SpinnerProps } from '../Spinner';
-import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
+} from "../Popover";
+import { PortalProps } from "../Portal";
+import { RoverProps } from "../Rover";
+import { TabbableProps } from "../Tabbable";
+import { TagProps } from "../Tag";
+import { TextProps } from "../Text";
+import {
+  TooltipProps,
+  TooltipArrowProps,
+  TooltipContentProps,
+  TooltipReferenceProps
+} from "../Tooltip";
+import { SetProps } from "../Set";
+import { SpinnerProps } from "../Spinner";
+import { ParsedIcons, Opts as ParseIconsOpts } from "../utils/parseIcons";
 
 export type Stylesheet = any; // TODO: fix
 
@@ -375,8 +386,8 @@ export type IconThemeConfig = {
   base?: Stylesheet;
   iconSets?: Array<{
     icons: IconDefinition[];
-    prefix?: ParseIconsOpts['prefix'];
-    type: ParseIconsOpts['type'];
+    prefix?: ParseIconsOpts["prefix"];
+    type: ParseIconsOpts["type"];
   }>;
   icons?: ParsedIcons;
   iconNames?: {
@@ -412,6 +423,42 @@ export type InlineBlockThemeConfig = {
 export type InlineFlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<InlineFlexProps>;
+};
+export type InputThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  disabled?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  focus?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  placeholder?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    default?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    medium?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    large?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Wrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Spinner?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<InputProps>;
 };
 export type LayoutSetThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -672,6 +719,7 @@ export type ThemeConfig = {
   Inline?: InlineThemeConfig;
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
+  Input?: InputThemeConfig;
   LayoutSet?: LayoutSetThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;

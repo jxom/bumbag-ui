@@ -20,6 +20,7 @@ export * from './Group';
 export * from './Heading';
 export * from './Hidden';
 export * from './Icon';
+export * from './Input';
 export * from './Image';
 export * from './Inline';
 export * from './InlineBlock';

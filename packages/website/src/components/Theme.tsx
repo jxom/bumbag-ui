@@ -26,10 +26,10 @@ export default function Theme(props) {
         <Box marginTop="major-1">
           {components.map((props, i) => {
             const newChildren = props && props.children ? props.children : children;
-            return (
-              <Component key={i} overrides={injectOverrides ? overrides : undefined} {...restProps} {...props}> {/* eslint-disable-line */}
-                {typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren}
-              </Component>
+            return React.createElement(
+              Component,
+              { key: i, overrides: injectOverrides ? overrides : undefined, ...restProps, ...props }, // eslint-disable-line
+              typeof newChildren === 'function' ? newChildren({ overrides, ...props }) : newChildren
             );
           })}
         </Box>

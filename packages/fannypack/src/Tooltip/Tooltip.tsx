@@ -19,16 +19,28 @@ import * as styles from './styles';
 export type LocalTooltipProps = {
   content: string | React.ReactElement<any>;
   placement?: Placement;
+  unstable_hiddenId?: string;
 } & LocalTooltipContentProps;
 export type TooltipProps = BoxProps & LocalTooltipProps;
 
 const useProps = createHook<TooltipProps>(
   props => {
-    let { arrowProps, children, content, expand, fade, hasArrow, overrides, placement, slide } = props;
+    let {
+      arrowProps,
+      children,
+      content,
+      expand,
+      fade,
+      hasArrow,
+      overrides,
+      placement,
+      slide,
+      unstable_hiddenId
+    } = props;
 
     const boxProps = Box.useProps({ ...props, content: undefined });
     // @ts-ignore
-    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide });
+    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide, unstable_hiddenId });
 
     return {
       children: (

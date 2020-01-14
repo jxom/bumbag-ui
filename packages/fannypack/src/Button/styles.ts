@@ -22,7 +22,7 @@ export const Button = styleProps => cssClass`
 
   ${styleProps.palette === 'default' &&
     css`
-      border: 1px solid ${palette('gray100')(styleProps)};
+      border: 1px solid ${palette('white900')(styleProps)};
     `};
 
   & {
@@ -208,7 +208,7 @@ export const getInteractiveProperties = styleProps => css`
   ${styleProps.kind !== 'link' &&
     css`
       &:hover {
-        background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
+        background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
 
         & {
           ${theme(`${styleProps.themeKey}.hover`)(styleProps)};

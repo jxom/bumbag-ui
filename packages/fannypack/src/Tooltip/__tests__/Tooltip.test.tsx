@@ -5,13 +5,17 @@ import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
-    const { container } = render(<Tooltip content="This is content">Hello world</Tooltip>);
+    const { container } = render(
+      <Tooltip content="This is content" unstable_hiddenId="test">
+        Hello world
+      </Tooltip>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <Tooltip color="primary" content="This is content">
+      <Tooltip color="primary" content="This is content" unstable_hiddenId="test">
         Hello world
       </Tooltip>
     );
@@ -23,7 +27,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Tooltip use="p" content="This is content">
+        <Tooltip use="p" content="This is content" unstable_hiddenId="test">
           Hello world
         </Tooltip>
       );
@@ -33,7 +37,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Tooltip props', () => {
-      const { result } = renderHook(() => Tooltip.useProps({ content: 'This is content' }));
+      const { result } = renderHook(() => Tooltip.useProps({ content: 'This is content', unstable_hiddenId: 'test' }));
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -41,7 +45,9 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Tooltip content="This is content">{TooltipProps => <div {...TooltipProps}>Hello world</div>}</Tooltip>
+        <Tooltip content="This is content" unstable_hiddenId="test">
+          {TooltipProps => <div {...TooltipProps}>Hello world</div>}
+        </Tooltip>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -51,7 +57,11 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Tooltip.Content.base should render correctly', () => {
     const { container } = render(
-      <Tooltip content="This is content" overrides={{ Tooltip: { Content: { base: { backgroundColor: 'red' } } } }}>
+      <Tooltip
+        content="This is content"
+        overrides={{ Tooltip: { Content: { base: { backgroundColor: 'red' } } } }}
+        unstable_hiddenId="test"
+      >
         hello world
       </Tooltip>
     );
@@ -60,7 +70,11 @@ describe('overrides', () => {
 
   it('Tooltip.Reference.base should render correctly', () => {
     const { container } = render(
-      <Tooltip content="This is content" overrides={{ Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }}>
+      <Tooltip
+        content="This is content"
+        overrides={{ Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }}
+        unstable_hiddenId="test"
+      >
         hello world
       </Tooltip>
     );
@@ -70,28 +84,43 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('Tooltip.Content.base should render correctly', () => {
-    const { container } = render(<Tooltip content="This is content">hello world</Tooltip>, {
-      // @ts-ignore
-      theme: { Tooltip: { Content: { base: { backgroundColor: 'red' } } } }
-    });
+    const { container } = render(
+      <Tooltip content="This is content" unstable_hiddenId="test">
+        hello world
+      </Tooltip>,
+      {
+        // @ts-ignore
+        theme: { Tooltip: { Content: { base: { backgroundColor: 'red' } } } }
+      }
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Tooltip.Reference.base should render correctly', () => {
-    const { container } = render(<Tooltip content="This is content">hello world</Tooltip>, {
-      // @ts-ignore
-      theme: { Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }
-    });
+    const { container } = render(
+      <Tooltip content="This is content" unstable_hiddenId="test">
+        hello world
+      </Tooltip>,
+      {
+        // @ts-ignore
+        theme: { Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }
+      }
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Tooltip content="This is content">hello world</Tooltip>, {
-      // @ts-ignore
-      theme: { Tooltip: { defaultProps: { className: 'test', color: 'primary' } } }
-    });
+    const { container } = render(
+      <Tooltip content="This is content" unstable_hiddenId="test">
+        hello world
+      </Tooltip>,
+      {
+        // @ts-ignore
+        theme: { Tooltip: { defaultProps: { className: 'test', color: 'primary' } } }
+      }
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
