@@ -14,6 +14,7 @@ import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './styles';
 
 export type LocalFieldWrapperProps = {
+  children: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;
   description?: string | React.ReactElement<any>;
   hint?: string | React.ReactElement<any>;
   isOptional?: boolean;
@@ -148,7 +149,11 @@ const useProps = createHook<FieldWrapperProps>(
             </Box>
           )}
 
-          {React.cloneElement(children as React.ReactElement<any>, elementProps)}
+          {typeof children === 'function'
+            ? /*
+            // @ts-ignore */
+              children({ elementProps })
+            : React.cloneElement(children as React.ReactElement<any>, elementProps)}
 
           {hint && (
             <Box marginTop="minor-1">
@@ -171,7 +176,13 @@ const useProps = createHook<FieldWrapperProps>(
 export const FieldWrapper = createComponent<FieldWrapperProps>(
   props => {
     const textProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      enableRenderPropsComposition: false,
+      use: props.use,
+      htmlProps: textProps
+    });
   },
   {
     attach: {

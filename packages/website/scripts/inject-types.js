@@ -121,14 +121,14 @@ function createTypeMarkdown(types) {
       }
 
 ${
-        !isShort
-          ? `
+  !isShort
+    ? `
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {\`${formatType(type.type)}\`}
 </Code>
 `
-          : ''
-      }
+    : ''
+}
 
 ${type.description}
 
@@ -169,6 +169,7 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
         `;
   }
 
+  let populated = [];
   function populateUses(uses = []) {
     if (uses.length > 0) {
       uses.forEach(use => {
@@ -177,17 +178,19 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
           const useTypes = typeReference.types.filter(
             type => !Boolean(types.find(refType => refType.name === type.name))
           );
-          content = `
+          if (!populated.includes(use)) {
+            content = `
 ${content}
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>${use.replace(
-            /(Local|Props)/g,
-            ''
-          )}</strong></code> props</Box>
+              /(Local|Props)/g,
+              ''
+            )}</strong></code> props</Box>
 ${createTypeMarkdown(useTypes)}
 </details>
-
-          `;
+            `;
+          }
+          populated = [...populated, use];
           types = [...types, ...useTypes];
           populateUses(typeReference.uses);
         }

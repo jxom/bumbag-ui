@@ -125,21 +125,6 @@ describe('composition', () => {
       expect(result.current).toMatchSnapshot();
     });
   });
-
-  describe('render props', () => {
-    it('should render correctly', () => {
-      const { container } = render(
-        <FieldWrapper>
-          {FieldWrapperProps => (
-            <div {...FieldWrapperProps}>
-              <Input />
-            </div>
-          )}
-        </FieldWrapper>
-      );
-      expect(container.firstChild).toMatchSnapshot();
-    });
-  });
 });
 
 describe('theming', () => {

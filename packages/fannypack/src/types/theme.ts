@@ -42,7 +42,7 @@ import { ImageProps } from '../Image';
 import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
-import { InputProps } from '../Input';
+import { InputProps, InputFieldProps } from '../Input';
 import { LabelProps } from '../Label';
 import { LayoutSetProps } from '../LayoutSet';
 import { LinkProps } from '../Link';
@@ -480,6 +480,10 @@ export type InputThemeConfig = {
   };
   defaultProps?: Partial<InputProps>;
 };
+export type InputFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<InputFieldProps>;
+};
 export type LabelThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<LabelProps>;
@@ -745,6 +749,7 @@ export type ThemeConfig = {
   InlineBlock?: InlineBlockThemeConfig;
   InlineFlex?: InlineFlexThemeConfig;
   Input?: InputThemeConfig;
+  InputField?: InputFieldThemeConfig;
   LayoutSet?: LayoutSetThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;

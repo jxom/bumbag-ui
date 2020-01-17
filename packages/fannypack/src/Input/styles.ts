@@ -105,6 +105,12 @@ export const InputSpinner = styleProps => cssClass`
   }
 `;
 
+export const InputField = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export function wrapperSizeProperties(styleProps) {
   const properties = {
     small: css`

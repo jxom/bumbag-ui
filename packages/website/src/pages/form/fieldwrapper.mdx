@@ -161,7 +161,20 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">description</Code>**
+**<Code marginRight="major-1">children</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | (({ elementProps }: { ...; }) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">description</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -174,7 +187,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hint</Code>**
+**<Code marginRight="major-1">hint</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -187,15 +200,15 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">label</Code>**
+**<Code marginRight="major-1">label</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -208,11 +221,11 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">&#34;success&#34; | &#34;danger&#34; | &#34;warning&#34;</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">tooltip</Code>**
+**<Code marginRight="major-1">tooltip</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -225,7 +238,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">tooltipTriggerComponent</Code>**
+**<Code marginRight="major-1">tooltipTriggerComponent</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -237,13 +250,13 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -253,42 +266,23 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | number
-  | boolean
-  | {}
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
-  | ReactNodeArray
-  | ReactPortal
-  | ((props: BoxProps) => ReactNode)`}
-</Code>
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**
+**<Code marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -298,22 +292,23 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 45 more ...;
+  ... 46 more ...;
   Spinner?: SpinnerThemeConfig;
 }`}
 </Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
 </details>
+            
 
 ## Theming
 
