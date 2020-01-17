@@ -1,5 +1,6 @@
 import Theme from '../../components/Theme';
 import { FieldWrapper } from 'fannypack/FieldWrapper';
+import { Input } from 'fannypack/Input';
 
 # FieldWrapper
 
@@ -11,8 +12,145 @@ import { FieldWrapper } from 'fannypack'
 
 ## Usage
 
+The `<FieldWrapper>` component is a utility belt that wraps around form elements.
+
 ```jsx-live
-<FieldWrapper label="Label">
+<FieldWrapper label="Username">
+  <Input />
+</FieldWrapper>
+```
+
+### Descriptions
+
+The description text is placed underneath the label.
+
+```jsx-live
+<FieldWrapper label="Username" description="Required for your fannypack">
+  <Input />
+</FieldWrapper>
+```
+
+### Hints
+
+The hint text is placed underneath the field child.
+
+```jsx-live
+<FieldWrapper label="Username" hint="Must be awesome">
+  <Input />
+</FieldWrapper>
+```
+
+### Optional fields
+
+To indicate a field as optional, add the `isOptional` prop.
+
+```jsx-live
+<FieldWrapper label="Username" isOptional>
+  <Input />
+</FieldWrapper>
+```
+
+### Required fields
+
+```jsx-live
+<FieldWrapper label="Username" isRequired>
+  <Input />
+</FieldWrapper>
+```
+
+### States
+
+```jsx-live
+<FieldWrapper
+  label="Username"
+  validationText="This is an invalid name"
+  state="danger"
+>
+  <Input defaultValue="Jake" />
+</FieldWrapper>
+<FieldWrapper
+  label="Username"
+  validationText="Please check the box!"
+  state="primary"
+  marginTop="major-2"
+>
+  <Input defaultValue="Jake" />
+</FieldWrapper>
+<FieldWrapper
+  label="Username"
+  validationText="Nice one!"
+  state="success"
+  marginTop="major-2"
+>
+  <Input defaultValue="Jake" />
+</FieldWrapper>
+```
+
+### Tooltips
+
+You can show a tooltip by supplying a string or an element to the `tooltip` prop.
+
+```jsx-live
+<FieldWrapper label="Username" tooltip="Your username must be awesome.">
+  <Input />
+</FieldWrapper>
+```
+
+```jsx-live
+<FieldWrapper
+  label="Username"
+  tooltip={
+    <Text fontSize="150">Your username must be <Text fontWeight="bold">awesome.</Text></Text>
+  }
+>
+  <Input />
+</FieldWrapper>
+```
+
+#### Custom tooltip trigger
+
+You can modify the tooltip trigger button by supplying an element to the `tooltipTrigger` prop.
+
+```jsx-live
+<FieldWrapper
+  label="Username"
+  tooltip="Your username must be awesome."
+  tooltipTriggerComponent={<Button size="small" minHeight="unset">Tooltip</Button>}
+>
+  <Input />
+</FieldWrapper>
+```
+
+Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
+
+### Custom label
+
+```jsx-live
+<FieldWrapper label={<Text color="primary">Username</Text>}>
+  <Input />
+</FieldWrapper>
+```
+
+### Custom description
+
+```jsx-live
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  description={<Text color="primary">Required for your fannypack</Text>}
+>
+  <Input />
+</FieldWrapper>
+```
+
+### Custom hints
+
+```jsx-live
+<FieldWrapper
+  a11yId="username"
+  label="Username"
+  hint={<Text color="primary">Must be awesome</Text>}
+>
   <Input />
 </FieldWrapper>
 ```
@@ -21,5 +159,177 @@ import { FieldWrapper } from 'fannypack'
 
 ### FieldWrapper Props
 
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">description</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hint</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">label</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">tooltip</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">tooltipTriggerComponent</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ComponentClass<any, any>
+  | FunctionComponent<any>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 45 more ...;
+  Spinner?: SpinnerThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
 ## Theming
 
+<Theme
+  component={FieldWrapper}
+  label="This is a label"
+  overrides={[
+    'FieldWrapper.base',
+    { key: 'FieldWrapper.Label.base' },
+    { key: 'FieldWrapper.DescriptionText.base', props: { description: 'This is a description' } },
+    { key: 'FieldWrapper.HintText.base', props: { hint: 'This is a description' } },
+    { key: 'FieldWrapper.OptionalText.base', props: { isOptional: true } },
+    { key: 'FieldWrapper.RequiredText.base', props: { isRequired: true } },
+    { key: 'FieldWrapper.ValidationText.base', props: { validationText: 'This is validation text' } },
+    { key: 'FieldWrapper.TooltipTrigger.base', props: { tooltip: 'This is a tooltip' } },
+    { key: 'FieldWrapper.TooltipPopover.base', props: { tooltip: 'This is a tooltip' } }
+]}>
+  <Input />
+</Theme>

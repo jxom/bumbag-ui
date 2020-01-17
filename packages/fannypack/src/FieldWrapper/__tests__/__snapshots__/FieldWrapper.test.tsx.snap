@@ -16,16 +16,78 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-<p
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
 >
-  Hello world
-</p>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
 `;
 
 exports[`composition hook should return with FieldWrapper props 1`] = `
 Object {
-  "children": <React.Fragment />,
+  "children": <React.Fragment>
+    <ForwardRef
+      id=""
+    />
+  </React.Fragment>,
   "className": "css-13h683e css-1pwrqjj css-3ekj6a fp-Box fp-FieldWrapper",
 }
 `;
@@ -46,10 +108,67 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
 >
-  Hello world
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      type="text"
+    />
+  </div>
 </div>
 `;
 
@@ -69,14 +188,72 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-2 {
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8 {
   color: #3722ed !important;
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 test fp-Box fp-FieldWrapper"
+  class="emotion-6 emotion-1 emotion-8 test fp-Box fp-FieldWrapper"
 >
-  hello world
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
 </div>
 `;
 
@@ -96,10 +273,489 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
 >
-  Hello world
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for a danger state 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0 {
+  border-color: #bb2a1a;
+  box-shadow: #bb2a1a 0px 0px 0px 1px !important;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for a success state 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0 {
+  border-color: #107219;
+  box-shadow: #107219 0px 0px 0px 1px !important;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for a warning state 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0 {
+  border-color: #ed9c22;
+  box-shadow: #ed9c22 0px 0px 0px 1px !important;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly when isOptional is truthy 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly when isRequired is truthy 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      aria-required="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
 </div>
 `;
 
@@ -119,14 +775,1351 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-2 {
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8 {
   color: #3722ed !important;
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  class="emotion-6 emotion-1 emotion-8 fp-Box fp-FieldWrapper"
 >
-  Hello world
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a description 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a hint 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8 {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-10 {
+  margin-top: 0.25rem !important;
+}
+
+<div
+  class="emotion-11 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+  <div
+    class="emotion-1 emotion-10 fp-Box"
+  >
+    <div
+      class="emotion-1 emotion-2 emotion-8 fp-FieldWrapperHintText fp-Box"
+    >
+      This is a hint
+    </div>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a label 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-13 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-8[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-8:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-7 {
+  margin-bottom: 0.5rem !important;
+}
+
+.emotion-5 {
+  -webkit-align-items: center !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  line-height: 1 !important;
+}
+
+.emotion-0 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+<div
+  class="emotion-3 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  label="This is a label"
+>
+  <div
+    class="emotion-1 emotion-7 fp-Box"
+  >
+    <div
+      class="emotion-1 emotion-5 fp-Box"
+    >
+      <label
+        class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
+        for="FieldWrapper"
+      >
+        This is a label
+      </label>
+    </div>
+  </div>
+  <div
+    class="emotion-1 emotion-2 emotion-13 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-8 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a tooltip 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with a tooltip trigger component 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with validation text 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-8 {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-9 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+  <div
+    class="emotion-1 emotion-7 emotion-8 fp-FieldWrapperValidationText fp-Box"
+  >
+    This is a validation text
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.DescriptionText.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.HintText.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-10 {
+  margin-top: 0.25rem !important;
+}
+
+.emotion-8 {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.emotion-8 {
+  background-color: red;
+}
+
+<div
+  class="emotion-11 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+  <div
+    class="emotion-1 emotion-10 fp-Box"
+  >
+    <div
+      class="emotion-1 emotion-2 emotion-8 fp-FieldWrapperHintText fp-Box"
+    >
+      This is a hint
+    </div>
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.Label.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-13 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-8[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-8:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-7 {
+  margin-bottom: 0.5rem !important;
+}
+
+.emotion-5 {
+  -webkit-align-items: center !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  line-height: 1 !important;
+}
+
+.emotion-0 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-3 {
+  background-color: red;
+}
+
+<div
+  class="emotion-14 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  label="This is a label"
+>
+  <div
+    class="emotion-1 emotion-7 fp-Box"
+  >
+    <div
+      class="emotion-1 emotion-5 fp-Box"
+    >
+      <label
+        class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
+        for="FieldWrapper"
+      >
+        This is a label
+      </label>
+    </div>
+  </div>
+  <div
+    class="emotion-1 emotion-2 emotion-13 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-8 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.OptionalText.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.RequiredText.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      aria-required="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.TooltipPopover.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.TooltipTrigger.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+<div
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`theming FieldWrapper.ValidationText.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-8 {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.emotion-8 {
+  background-color: red;
+}
+
+<div
+  class="emotion-9 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+>
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
+  <div
+    class="emotion-1 emotion-7 emotion-8 fp-FieldWrapperValidationText fp-Box"
+  >
+    This is validation text
+  </div>
 </div>
 `;
 
@@ -146,13 +2139,71 @@ exports[`theming FieldWrapper.base should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
 .emotion-0 {
+  -webkit-appearance: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
+  height: 2.5em;
+  width: 100%;
+  padding: 0.4em 0.6em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled] {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #3722ed;
+  box-shadow: #ebe8fd 0px 0px 0px 3px !important;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.emotion-0::placeholder {
+  opacity: 0.6;
+}
+
+.emotion-6 {
   background-color: red;
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+  class="emotion-6 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
 >
-  hello world
+  <div
+    class="emotion-1 emotion-2 emotion-5 fp-InputWrapper fp-Box"
+  >
+    <input
+      aria-invalid="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      id="FieldWrapper"
+      type="text"
+    />
+  </div>
 </div>
 `;

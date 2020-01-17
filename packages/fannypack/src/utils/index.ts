@@ -5,6 +5,7 @@ export * from './createHook';
 export * from './cssProps';
 export * from './htmlProps';
 export * from './isFunction';
+export * from './OutsideClickHandler';
 export * from './mergeRefs';
 export * from './parseIcons';
 export * from './palette';

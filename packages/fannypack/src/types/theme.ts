@@ -30,6 +30,7 @@ import {
   DialogIconProps
 } from '../Dialog';
 import { DividerProps } from '../Divider';
+import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
@@ -303,6 +304,34 @@ export type DividerThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DividerProps>;
+};
+export type FieldWrapperThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Label?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  DescriptionText?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  HintText?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  OptionalText?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  RequiredText?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  ValidationText?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  TooltipTrigger?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  TooltipPopover?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<FieldWrapperProps>;
 };
 export type FlexThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -703,6 +732,7 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;
   Dialog?: DialogThemeConfig;
+  FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Group?: GroupThemeConfig;

@@ -36,7 +36,7 @@ export const Input = styleProps => cssClass`
     outline: unset;
     z-index: 2;
     border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primary')(styleProps)} 0px 0px 0px 1px !important;
+    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
 
     & {
       ${theme(`${styleProps.themeKey}.focus.base`)(styleProps)};
