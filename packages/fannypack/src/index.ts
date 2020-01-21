@@ -12,6 +12,7 @@ export * from './Card';
 export * from './Code';
 export * from './Columns';
 export * from './Container';
+export * from './Checkbox';
 export * from './Dialog';
 export * from './Divider';
 export * from './FieldWrapper';

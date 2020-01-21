@@ -74,12 +74,9 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, children, ...pr
     .join('\n')
     .replace(/\s$/, '');
 
-  const playroomUrl = React.useMemo(
-    () => {
-      return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
-    },
-    [code]
-  );
+  const playroomUrl = React.useMemo(() => {
+    return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
+  }, [code]);
 
   const isLive = JSX_REG.test(props.className) || FC_REG.test(props.className);
   if (!isLive) {
@@ -104,7 +101,7 @@ export default function LiveCode({ pre: Pre, fallback: Fallback, children, ...pr
 
   let transformCode;
   if (JSX_REG.test(props.className)) {
-    transformCode = src => `<React.Fragment>${src}</React.Fragment>`;
+    transformCode = src => `<React.Fragment><LayoutSet spacing="major-1">${src}</LayoutSet></React.Fragment>`;
   }
 
   return (

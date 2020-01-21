@@ -18,6 +18,7 @@ import {
   CalloutIconProps
 } from '../Callout';
 import { CardProps } from '../Card';
+import { CheckboxProps } from '../Checkbox';
 import { CodeProps } from '../Code';
 import { ColumnsProps, ColumnProps } from '../Columns';
 import { ContainerProps } from '../Container';
@@ -249,6 +250,19 @@ export type CardThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<CardProps>;
+};
+export type CheckboxThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Label?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  HiddenInput?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<CheckboxProps>;
 };
 export type CodeThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
@@ -732,6 +746,7 @@ export type ThemeConfig = {
   Button?: ButtonThemeConfig;
   Callout?: CalloutThemeConfig;
   Card?: CardThemeConfig;
+  Checkbox?: CheckboxThemeConfig;
   Code?: CodeThemeConfig;
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;

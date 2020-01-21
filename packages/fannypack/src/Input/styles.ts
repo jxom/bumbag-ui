@@ -55,7 +55,7 @@ export const Input = styleProps => cssClass`
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}`)(styleProps)} 0px 0px 0px 1px !important;
+        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
       }
     `}
 
