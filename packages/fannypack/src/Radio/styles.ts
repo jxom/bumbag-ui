@@ -66,3 +66,9 @@ export const RadioField = styleProps => cssClass`
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
+
+export const RadioGroup = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;

@@ -70,7 +70,7 @@ export type InputProps = BoxProps & LocalInputProps;
 
 const useProps = createHook<InputProps>(
   (props, themeKey) => {
-    const { before, after, isLoading, isRequired, state } = props;
+    const { before, after, isLoading, isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
@@ -83,7 +83,7 @@ const useProps = createHook<InputProps>(
       themeKey: `${themeKey}.Spinner`
     });
     const boxProps = Box.useProps({
-      ...omitCSSProps(props),
+      ...omitCSSProps(restProps),
       unstable_wrap: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (
@@ -207,7 +207,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       ...restProps
     } = props;
 
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
       style: styles.InputField,

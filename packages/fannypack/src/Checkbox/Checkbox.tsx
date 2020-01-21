@@ -52,10 +52,11 @@ const useProps = createHook<CheckboxProps>(
       onChange,
       onFocus,
       state,
-      value
+      value,
+      ...restProps
     } = props;
 
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
       style: styles.Checkbox,

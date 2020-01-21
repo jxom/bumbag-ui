@@ -50,10 +50,11 @@ const useProps = createHook<RadioProps>(
       onFocus,
       radioProps,
       state,
-      value
+      value,
+      ...restProps
     } = props;
 
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
       style: styles.Radio,
