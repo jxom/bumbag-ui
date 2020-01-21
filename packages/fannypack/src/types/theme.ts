@@ -64,13 +64,14 @@ import {
   PopoverTitleProps
 } from '../Popover';
 import { PortalProps } from '../Portal';
+import { RadioProps } from '../Radio';
 import { RoverProps } from '../Rover';
+import { SetProps } from '../Set';
+import { SpinnerProps } from '../Spinner';
 import { TabbableProps } from '../Tabbable';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
-import { SetProps } from '../Set';
-import { SpinnerProps } from '../Spinner';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
 export type Stylesheet = any; // TODO: fix
@@ -633,6 +634,19 @@ export type PortalThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<PortalProps>;
 };
+export type RadioThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Label?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  HiddenInput?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<RadioProps>;
+};
 export type RoverThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<RoverProps>;
@@ -779,11 +793,12 @@ export type ThemeConfig = {
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;
+  Radio?: RadioThemeConfig;
   Rover?: RoverThemeConfig;
+  Set?: SetThemeConfig;
+  Spinner?: SpinnerThemeConfig;
   Tabbable?: TabbableThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
   Tooltip?: TooltipThemeConfig;
-  Set?: SetThemeConfig;
-  Spinner?: SpinnerThemeConfig;
 };

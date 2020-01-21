@@ -38,6 +38,7 @@ export * from './Paragraph';
 export * from './Popover';
 export * from './Portal';
 export * from './Provider';
+export * from './Radio';
 export * from './Rover';
 export * from './Set';
 export * from './Spinner';

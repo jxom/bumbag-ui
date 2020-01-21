@@ -18,6 +18,7 @@ export function getHiddenInputStyles({
     width: 1em;
     overflow: hidden;
     position: absolute;
+    opacity: 0;
 
     &:focus {
       outline: none;

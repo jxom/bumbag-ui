@@ -106,7 +106,6 @@ const useProps = createHook<CheckboxProps>(
             onChange={onChange}
             onFocus={onFocus}
             name={name}
-            state={state}
             type="checkbox"
             // @ts-ignore
             value={value}
