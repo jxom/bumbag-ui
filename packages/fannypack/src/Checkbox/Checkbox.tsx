@@ -91,6 +91,8 @@ const useProps = createHook<CheckboxProps>(
       className,
       children: (
         <React.Fragment>
+          {/**
+            // @ts-ignore */}
           <Box
             use="input"
             className={hiddenCheckboxClassName}

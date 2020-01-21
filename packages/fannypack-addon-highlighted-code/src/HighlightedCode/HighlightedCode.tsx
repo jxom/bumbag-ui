@@ -87,15 +87,15 @@ export const HighlightedCode = createComponent<HighlightedCodeProps>(
   },
   {
     attach: {
-      defaultProps: {
-        code: '',
-        language: 'javascript',
-        preProps: {},
-        lineProps: {},
-        tokenProps: {},
-        wrapperProps: {}
-      },
       useProps
+    },
+    defaultProps: {
+      code: '',
+      language: 'javascript',
+      preProps: {},
+      lineProps: {},
+      tokenProps: {},
+      wrapperProps: {}
     },
     themeKey: 'HighlightedCode'
   }
