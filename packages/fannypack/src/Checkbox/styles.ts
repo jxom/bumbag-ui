@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { palette, theme } from '../utils';
+import { palette, theme, fontWeight } from '../utils';
 import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 
 export const Checkbox = styleProps => cssClass`
@@ -30,6 +30,10 @@ export const CheckboxIcon = styleProps => cssClass`
 `;
 
 export const CheckboxLabel = styleProps => cssClass`
+  && {
+    font-weight: ${fontWeight('normal')(styleProps)};
+  }
+
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
@@ -70,3 +74,9 @@ export const HiddenCheckbox = styleProps =>
     styleProps,
     themeKey: 'Checkbox.Icon'
   });
+
+export const CheckboxField = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;

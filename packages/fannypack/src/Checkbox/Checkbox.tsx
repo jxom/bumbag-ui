@@ -4,7 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
-import { Text } from '../Text';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
 import * as styles from './styles';
 
@@ -138,5 +138,98 @@ export const Checkbox = createComponent<CheckboxProps>(
       use: Label
     },
     themeKey: 'Checkbox'
+  }
+);
+
+////////////////////////////////////////////////////////////////
+
+export type LocalCheckboxFieldProps = {
+  /** Label for the checkbox */
+  checkboxLabel?: string;
+  /** Additional props for the Checkbox component */
+  checkboxProps?: CheckboxProps;
+};
+export type CheckboxFieldProps = BoxProps &
+  Omit<FieldWrapperProps, 'children'> &
+  CheckboxProps &
+  LocalCheckboxFieldProps;
+
+const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
+  (props, themeKey) => {
+    const {
+      autoFocus,
+      checked,
+      checkboxLabel,
+      checkboxProps,
+      defaultChecked,
+      disabled,
+      indeterminate,
+      isRequired,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      overrides,
+      state,
+      value,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(props);
+
+    const className = useClassName({
+      style: styles.CheckboxField,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <FieldWrapper isRequired={isRequired} overrides={overrides} state={state} {...restProps}>
+          {({ elementProps }) => (
+            <Checkbox
+              autoFocus={autoFocus}
+              checked={checked}
+              defaultChecked={defaultChecked}
+              disabled={disabled}
+              indeterminate={indeterminate}
+              isRequired={isRequired}
+              label={checkboxLabel}
+              name={name}
+              onBlur={onBlur}
+              onChange={onChange}
+              onFocus={onFocus}
+              overrides={overrides}
+              state={state}
+              value={value}
+              {...elementProps}
+              {...checkboxProps}
+            />
+          )}
+        </FieldWrapper>
+      )
+    };
+  },
+  { themeKey: 'CheckboxField' }
+);
+
+export const CheckboxField = createComponent<CheckboxFieldProps>(
+  props => {
+    const checkboxFieldProps = useCheckboxFieldProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: checkboxFieldProps
+    });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'CheckboxField'
   }
 );
