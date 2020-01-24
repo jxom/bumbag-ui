@@ -64,7 +64,7 @@ import {
   PopoverTitleProps
 } from '../Popover';
 import { PortalProps } from '../Portal';
-import { RadioProps } from '../Radio';
+import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { RoverProps } from '../Rover';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
@@ -647,6 +647,14 @@ export type RadioThemeConfig = {
   };
   defaultProps?: Partial<RadioProps>;
 };
+export type RadioGroupThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<RadioGroupProps>;
+};
+export type RadioGroupFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<RadioGroupFieldProps>;
+};
 export type RoverThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<RoverProps>;
@@ -794,6 +802,8 @@ export type ThemeConfig = {
   Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;
   Radio?: RadioThemeConfig;
+  RadioGroup?: RadioGroupThemeConfig;
+  RadioGroupField?: RadioGroupFieldThemeConfig;
   Rover?: RoverThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;

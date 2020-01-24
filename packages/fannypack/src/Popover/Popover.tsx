@@ -32,7 +32,7 @@ export type LocalPopoverProps = {
 } & AnimateProps;
 export type PopoverProps = BoxProps & ReakitPopoverProps & LocalPopoverProps;
 
-export type PopoverContextOptions = Omit<PopoverProps, 'unstable_hiddenId'> & {
+export type PopoverContextOptions = Omit<PopoverProps, 'baseId'> & {
   descriptionId?: string;
   titleId?: string;
   themeKey?: string;
@@ -62,7 +62,7 @@ const useProps = createHook<PopoverProps>(
       visible,
       unstable_animating,
       unstable_animated,
-      unstable_hiddenId,
+      baseId,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
       unstable_portal,
@@ -85,7 +85,7 @@ const useProps = createHook<PopoverProps>(
         visible,
         unstable_animating,
         unstable_animated,
-        unstable_hiddenId,
+        baseId,
         unstable_initialFocusRef,
         unstable_finalFocusRef,
         unstable_portal,

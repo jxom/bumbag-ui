@@ -8,7 +8,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
     }
     const { container } = render(<Component />);
@@ -18,7 +18,7 @@ describe('props', () => {
   it('should assign a ref', () => {
     const ref = React.createRef();
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return (
         <Hidden.Disclosure ref={ref} {...hidden}>
           Toggle
@@ -31,7 +31,7 @@ describe('props', () => {
 
   it('should render correctly when disabled is set', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return (
         <Hidden.Disclosure disabled {...hidden}>
           Toggle
@@ -44,7 +44,7 @@ describe('props', () => {
 
   it('should render correctly when focusable is set', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return (
         <Hidden.Disclosure disabled focusable {...hidden}>
           Toggle
@@ -60,7 +60,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return (
           <Hidden.Disclosure use={Box} {...hidden}>
             Toggle
@@ -75,7 +75,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Hidden.Disclosure props', () => {
       const { result } = renderHook(() => {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return Hidden.Disclosure.useProps(hidden);
       });
       expect(result.current).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return (
           <Hidden.Disclosure {...hidden}>
             {HiddenDisclosureProps => <div {...HiddenDisclosureProps}>Hello world</div>}
@@ -101,7 +101,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Hidden.Disclosure.base should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return (
         <Hidden.Disclosure overrides={{ Hidden: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...hidden}>
           Toggle
@@ -116,7 +116,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Hidden.Disclosure.base should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
     }
     const { container } = render(<Component />, {
@@ -129,7 +129,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
     }
     const { container } = render(<Component />, {

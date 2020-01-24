@@ -15,9 +15,9 @@ export type HiddenDisclosureProps = BoxProps & ReakitHiddenDisclosureProps & Loc
 
 const useProps = createHook<HiddenDisclosureProps>(
   (props, themeKey) => {
-    let { disabled, focusable, visible, toggle, unstable_hiddenId, ...htmlProps } = props;
+    let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
     const hiddenDisclosureProps = useReakitHiddenDisclosure(
-      { disabled, focusable, visible, toggle, unstable_hiddenId },
+      { disabled, focusable, visible, toggle, baseId },
       htmlProps
     );
     htmlProps = Box.useProps({ ...htmlProps, ...hiddenDisclosureProps });

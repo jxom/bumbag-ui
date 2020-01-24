@@ -299,6 +299,12 @@ Timing function of the animation
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
@@ -359,8 +365,14 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
@@ -387,6 +399,12 @@ It's called after given milliseconds if `animated` is a number.
 **<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
 
 Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
@@ -449,8 +467,8 @@ Changes the `visible` state to `false`
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 49 more ...;
-  Spinner?: SpinnerThemeConfig;
+  ... 50 more ...;
+  Tooltip?: TooltipThemeConfig;
 }`}
 </Code>
 
@@ -485,12 +503,18 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2"><strong>2 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
@@ -559,8 +583,8 @@ Toggles the `visible` state
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 49 more ...;
-  Spinner?: SpinnerThemeConfig;
+  ... 50 more ...;
+  Tooltip?: TooltipThemeConfig;
 }`}
 </Code>
 
@@ -581,8 +605,20 @@ Toggles the `visible` state
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
@@ -665,8 +701,8 @@ It's called after given milliseconds if `animated` is a number.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 49 more ...;
-  Spinner?: SpinnerThemeConfig;
+  ... 50 more ...;
+  Tooltip?: TooltipThemeConfig;
 }`}
 </Code>
 
@@ -689,6 +725,12 @@ It's called after given milliseconds if `animated` is a number.
 
 <!-- Automatically generated -->
 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
@@ -708,7 +750,13 @@ given milliseconds.
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>6 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>7 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 

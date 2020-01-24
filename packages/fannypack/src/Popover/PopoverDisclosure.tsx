@@ -15,9 +15,9 @@ export type PopoverDisclosureProps = BoxProps & ReakitPopoverDisclosureProps & L
 
 const useProps = createHook<PopoverDisclosureProps>(
   (props, themeKey) => {
-    let { disabled, focusable, visible, toggle, unstable_hiddenId, unstable_referenceRef, ...htmlProps } = props;
+    let { disabled, focusable, visible, toggle, baseId, unstable_referenceRef, ...htmlProps } = props;
     const popoverDisclosureProps = useReakitPopoverDisclosure(
-      { disabled, focusable, visible, toggle, unstable_hiddenId, unstable_referenceRef },
+      { disabled, focusable, visible, toggle, baseId, unstable_referenceRef },
       htmlProps
     );
     htmlProps = Box.useProps({ ...htmlProps, ...popoverDisclosureProps });

@@ -3,8 +3,9 @@ import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
-import { LayoutSet } from '../LayoutSet';
 import { Radio, RadioProps } from '../Radio';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
+import { Set, SetProps } from '../Set';
 
 import * as styles from './styles';
 
@@ -13,10 +14,12 @@ export type LocalRadioGroupProps = {
   defaultValue?: string;
   /** Disables the radio group */
   disabled?: boolean;
+  /** Are the radio inputs layed out horizontally? */
   isHorizontal?: boolean;
   name: string;
   /** Radio group options */
   options: Array<RadioProps>;
+  spacing?: SetProps['spacing'];
   /** State of the radio group. Can be any color in the palette. */
   state?: string;
   /** Controlled value of the radio group */
@@ -28,7 +31,19 @@ export type RadioGroupProps = BoxProps & LocalRadioGroupProps;
 
 const useProps = createHook<RadioGroupProps>(
   (props, themeKey) => {
-    const { defaultValue, disabled, onChange, options, overrides, name, state, value, ...restProps } = props;
+    const {
+      defaultValue,
+      disabled,
+      isHorizontal,
+      onChange,
+      options,
+      overrides,
+      name,
+      spacing,
+      state,
+      value,
+      ...restProps
+    } = props;
 
     const boxProps = Box.useProps(restProps);
 
@@ -44,7 +59,7 @@ const useProps = createHook<RadioGroupProps>(
       ...boxProps,
       className,
       children: (
-        <LayoutSet spacing="major-1">
+        <Set isVertical={!isHorizontal} spacing={spacing}>
           {options.map((option, i) => (
             <Radio
               key={i}
@@ -58,11 +73,11 @@ const useProps = createHook<RadioGroupProps>(
               disabled={disabled || option.disabled}
             />
           ))}
-        </LayoutSet>
+        </Set>
       )
     };
   },
-  { themeKey: 'RadioGroup' }
+  { defaultProps: { spacing: 'minor-2' }, themeKey: 'RadioGroup' }
 );
 
 export const RadioGroup = createComponent<RadioGroupProps>(
@@ -75,5 +90,100 @@ export const RadioGroup = createComponent<RadioGroupProps>(
       useProps
     },
     themeKey: 'RadioGroup'
+  }
+);
+
+////////////////////////////////////////////////////////////////
+
+export type LocalRadioGroupFieldProps = {
+  /** Additional props for the RadioGroup component */
+  radioGroupProps?: RadioGroupProps;
+};
+export type RadioGroupFieldProps = BoxProps & FieldWrapperProps & RadioGroupProps & LocalRadioGroupFieldProps;
+
+const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
+  (props, themeKey) => {
+    const {
+      defaultChecked,
+      description,
+      disabled,
+      hint,
+      isHorizontal,
+      isOptional,
+      isRequired,
+      label,
+      name,
+      options,
+      onChange,
+      overrides,
+      radioGroupProps,
+      state,
+      tooltip,
+      tooltipTriggerComponent,
+      value,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    const className = useClassName({
+      style: styles.RadioGroupField,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+        >
+          {({ elementProps }) => (
+            <RadioGroup
+              defaultChecked={defaultChecked}
+              disabled={disabled}
+              isHorizontal={isHorizontal}
+              name={name}
+              options={options}
+              onChange={onChange}
+              overrides={overrides}
+              state={state}
+              value={value}
+              {...elementProps}
+              {...radioGroupProps}
+            />
+          )}
+        </FieldWrapper>
+      )
+    };
+  },
+  { themeKey: 'RadioGroupField' }
+);
+
+export const RadioGroupField = createComponent<RadioGroupFieldProps>(
+  props => {
+    const radioGroupFieldProps = useRadioGroupFieldProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: radioGroupFieldProps
+    });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'RadioGroupField'
   }
 );

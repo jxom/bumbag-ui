@@ -8,11 +8,13 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+      const hidden = Hidden.useState({ baseId: 'test' });
       return (
         <div>
           <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>
-          <Hidden {...hidden}>Hello world</Hidden>
+          <Hidden {...hidden} id="test">
+            Hello world
+          </Hidden>
         </div>
       );
     }
@@ -22,7 +24,7 @@ describe('props', () => {
 
   it('renders correctly when the hidden is visible', () => {
     function Component() {
-      const hidden = Hidden.useState({ unstable_hiddenId: 'test', visible: true });
+      const hidden = Hidden.useState({ baseId: 'test', visible: true });
       return (
         <div>
           <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>
@@ -39,7 +41,7 @@ describe('composition', () => {
   describe('use', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return (
           <div>
             <Hidden.Disclosure use={Button} {...hidden}>
@@ -59,7 +61,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Hidden props', () => {
       const { result } = renderHook(() => {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return Hidden.useProps(hidden);
       });
       expect(result.current).toMatchSnapshot();
@@ -69,7 +71,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ unstable_hiddenId: 'test' });
+        const hidden = Hidden.useState({ baseId: 'test' });
         return <Hidden {...hidden}>{HiddenProps => <div {...HiddenProps}>Hello world</div>}</Hidden>;
       }
       const { container } = render(<Component />);
@@ -81,7 +83,9 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Hidden.base should render correctly', () => {
     const { container } = render(
-      <Hidden overrides={{ Hidden: { base: { backgroundColor: 'red' } } }}>hello world</Hidden>
+      <Hidden baseId="test" overrides={{ Hidden: { base: { backgroundColor: 'red' } } }}>
+        hello world
+      </Hidden>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -89,7 +93,7 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('Hidden.base should render correctly', () => {
-    const { container } = render(<Hidden>hello world</Hidden>, {
+    const { container } = render(<Hidden baseId="test">hello world</Hidden>, {
       theme: { Hidden: { base: { backgroundColor: 'red' } } }
     });
     expect(container.firstChild).toMatchSnapshot();
@@ -98,7 +102,7 @@ describe('theming', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Hidden>hello world</Hidden>, {
+    const { container } = render(<Hidden baseId="test">hello world</Hidden>, {
       theme: { Hidden: { defaultProps: { className: 'test' } } }
     });
     expect(container.firstChild).toMatchSnapshot();

@@ -9,7 +9,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <div>
           <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>
@@ -26,7 +26,7 @@ describe('props', () => {
   [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(expand => {
     it(`should render correctly for expand ${expand}`, () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           // @ts-ignore
           <Overlay {...overlay} expand={expand} aria-label="test">
@@ -42,7 +42,7 @@ describe('props', () => {
   [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
     it(`should render correctly for slide ${slide}`, () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           // @ts-ignore
           <Overlay {...overlay} slide={slide} aria-label="test">
@@ -60,7 +60,7 @@ describe('props', () => {
       placement => {
         it(`should render correctly for ${placement} placement`, () => {
           function Component() {
-            const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+            const overlay = Overlay.useState({ baseId: 'test' });
             return (
               // @ts-ignore
               <Overlay {...overlay} placement={placement} aria-label="test">
@@ -75,7 +75,7 @@ describe('props', () => {
         [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
           it(`should render correctly for placement ${placement} and slide ${slide}`, () => {
             function Component() {
-              const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+              const overlay = Overlay.useState({ baseId: 'test' });
               return (
                 // @ts-ignore
                 <Overlay {...overlay} slide={slide} aria-label="test">
@@ -96,7 +96,7 @@ describe('composition', () => {
   describe('use', () => {
     it('should render correctly', () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <div>
             <Overlay.Disclosure use={Button} {...overlay}>
@@ -116,7 +116,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Overlay props', () => {
       const { result } = renderHook(() => {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return Overlay.useProps(overlay);
       });
       expect(result.current).toMatchSnapshot();
@@ -126,7 +126,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <Overlay {...overlay}>
             {overlayProps => (
@@ -146,7 +146,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Overlay.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { base: { backgroundColor: 'red' } } }}>
           Hello world
@@ -159,7 +159,7 @@ describe('overrides', () => {
 
   it('Overlay.center.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -176,7 +176,7 @@ describe('overrides', () => {
 
   it('Overlay.top.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -194,7 +194,7 @@ describe('overrides', () => {
 
   it('Overlay.left.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -212,7 +212,7 @@ describe('overrides', () => {
 
   it('Overlay.right.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -230,7 +230,7 @@ describe('overrides', () => {
 
   it('Overlay.bottom.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -248,7 +248,7 @@ describe('overrides', () => {
 
   it('Overlay.topStart.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -266,7 +266,7 @@ describe('overrides', () => {
 
   it('Overlay.topEnd.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -284,7 +284,7 @@ describe('overrides', () => {
 
   it('Overlay.bottomStart.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -302,7 +302,7 @@ describe('overrides', () => {
 
   it('Overlay.bottomEnd.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
@@ -322,7 +322,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Overlay.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test">
           Hello world
@@ -337,7 +337,7 @@ describe('theming', () => {
 
   it('Overlay.center.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test">
           Hello world
@@ -352,7 +352,7 @@ describe('theming', () => {
 
   it('Overlay.top.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="top">
           Hello world
@@ -367,7 +367,7 @@ describe('theming', () => {
 
   it('Overlay.left.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="left">
           Hello world
@@ -382,7 +382,7 @@ describe('theming', () => {
 
   it('Overlay.right.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="right">
           Hello world
@@ -397,7 +397,7 @@ describe('theming', () => {
 
   it('Overlay.bottom.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="bottom">
           Hello world
@@ -412,7 +412,7 @@ describe('theming', () => {
 
   it('Overlay.topStart.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="top-start">
           Hello world
@@ -427,7 +427,7 @@ describe('theming', () => {
 
   it('Overlay.topEnd.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="top-end">
           Hello world
@@ -442,7 +442,7 @@ describe('theming', () => {
 
   it('Overlay.bottomStart.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="bottom-start">
           Hello world
@@ -457,7 +457,7 @@ describe('theming', () => {
 
   it('Overlay.bottomEnd.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test" placement="bottom-end">
           Hello world
@@ -474,7 +474,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay {...overlay} aria-label="test">
           Hello world

@@ -7,7 +7,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />);
@@ -17,7 +17,7 @@ describe('props', () => {
   it('should assign a ref', () => {
     const ref = React.createRef();
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal.Disclosure ref={ref} {...modal}>
           Toggle
@@ -30,7 +30,7 @@ describe('props', () => {
 
   it('should render correctly when disabled is set', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal.Disclosure disabled {...modal}>
           Toggle
@@ -43,7 +43,7 @@ describe('props', () => {
 
   it('should render correctly when focusable is set', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal.Disclosure disabled focusable {...modal}>
           Toggle
@@ -59,7 +59,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Disclosure use={Box} {...modal}>
             Toggle
@@ -74,7 +74,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Modal.Disclosure props', () => {
       const { result } = renderHook(() => {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return Modal.Disclosure.useProps(modal);
       });
       expect(result.current).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Disclosure {...modal}>
             {ModalDisclosureProps => <div {...ModalDisclosureProps}>Hello world</div>}
@@ -100,7 +100,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Modal.Disclosure.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal.Disclosure overrides={{ Modal: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...modal}>
           Toggle
@@ -115,7 +115,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Modal.Disclosure.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />, {
@@ -128,7 +128,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />, {

@@ -9,7 +9,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <div>
           <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>
@@ -25,7 +25,7 @@ describe('props', () => {
 
   it('should render correctly with non-modal modal', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <div>
           <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>
@@ -42,7 +42,7 @@ describe('props', () => {
   [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(expand => {
     it(`should render correctly for expand ${expand}`, () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           // @ts-ignore
           <Modal {...modal} expand={expand} aria-label="test">
@@ -58,7 +58,7 @@ describe('props', () => {
   [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
     it(`should render correctly for slide ${slide}`, () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           // @ts-ignore
           <Modal {...modal} slide={slide} aria-label="test">
@@ -76,7 +76,7 @@ describe('props', () => {
       placement => {
         it(`should render correctly for ${placement} placement`, () => {
           function Component() {
-            const modal = Modal.useState({ unstable_hiddenId: 'test' });
+            const modal = Modal.useState({ baseId: 'test' });
             return (
               // @ts-ignore
               <Modal {...modal} placement={placement} aria-label="test">
@@ -91,7 +91,7 @@ describe('props', () => {
         [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
           it(`should render correctly for placement ${placement} and slide ${slide}`, () => {
             function Component() {
-              const modal = Modal.useState({ unstable_hiddenId: 'test' });
+              const modal = Modal.useState({ baseId: 'test' });
               return (
                 // @ts-ignore
                 <Modal {...modal} slide={slide} aria-label="test">
@@ -112,7 +112,7 @@ describe('composition', () => {
   describe('use', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <div>
             <Modal.Disclosure use={Button} {...modal}>
@@ -132,7 +132,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Modal props', () => {
       const { result } = renderHook(() => {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return Modal.useProps(modal);
       });
       expect(result.current).toMatchSnapshot();
@@ -142,7 +142,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal {...modal}>
             {modalProps => (
@@ -162,7 +162,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Modal.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" overrides={{ Modal: { base: { backgroundColor: 'red' } } }}>
           Hello world
@@ -175,7 +175,7 @@ describe('overrides', () => {
 
   it('Modal.center.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -192,7 +192,7 @@ describe('overrides', () => {
 
   it('Modal.top.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -210,7 +210,7 @@ describe('overrides', () => {
 
   it('Modal.left.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -228,7 +228,7 @@ describe('overrides', () => {
 
   it('Modal.right.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -246,7 +246,7 @@ describe('overrides', () => {
 
   it('Modal.bottom.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -264,7 +264,7 @@ describe('overrides', () => {
 
   it('Modal.topStart.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -282,7 +282,7 @@ describe('overrides', () => {
 
   it('Modal.topEnd.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -300,7 +300,7 @@ describe('overrides', () => {
 
   it('Modal.bottomStart.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -318,7 +318,7 @@ describe('overrides', () => {
 
   it('Modal.bottomEnd.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
@@ -338,7 +338,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Modal.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test">
           Hello world
@@ -353,7 +353,7 @@ describe('theming', () => {
 
   it('Modal.center.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test">
           Hello world
@@ -368,7 +368,7 @@ describe('theming', () => {
 
   it('Modal.top.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="top">
           Hello world
@@ -383,7 +383,7 @@ describe('theming', () => {
 
   it('Modal.left.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="left">
           Hello world
@@ -398,7 +398,7 @@ describe('theming', () => {
 
   it('Modal.right.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="right">
           Hello world
@@ -413,7 +413,7 @@ describe('theming', () => {
 
   it('Modal.bottom.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="bottom">
           Hello world
@@ -428,7 +428,7 @@ describe('theming', () => {
 
   it('Modal.topStart.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="top-start">
           Hello world
@@ -443,7 +443,7 @@ describe('theming', () => {
 
   it('Modal.topEnd.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="top-end">
           Hello world
@@ -458,7 +458,7 @@ describe('theming', () => {
 
   it('Modal.bottomStart.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="bottom-start">
           Hello world
@@ -473,7 +473,7 @@ describe('theming', () => {
 
   it('Modal.bottomEnd.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test" placement="bottom-end">
           Hello world
@@ -490,7 +490,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal {...modal} aria-label="test">
           Hello world

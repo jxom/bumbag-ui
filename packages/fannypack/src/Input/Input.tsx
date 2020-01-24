@@ -166,7 +166,7 @@ export type LocalInputFieldProps = {
   /** If addonBefore or addonAfter exists, then the addons will render vertically. */
   isVertical?: boolean;
 };
-export type InputFieldProps = BoxProps & Omit<FieldWrapperProps, 'children'> & InputProps & LocalInputFieldProps;
+export type InputFieldProps = BoxProps & FieldWrapperProps & InputProps & LocalInputFieldProps;
 
 const useInputFieldProps = createHook<InputFieldProps>(
   (props, themeKey) => {
@@ -179,11 +179,15 @@ const useInputFieldProps = createHook<InputFieldProps>(
       autoFocus,
       before,
       defaultValue,
+      description,
       disabled,
+      hint,
       inputProps,
       isLoading,
+      isOptional,
       isRequired,
       isVertical,
+      label,
       name,
       size,
       mask,
@@ -198,6 +202,8 @@ const useInputFieldProps = createHook<InputFieldProps>(
       spellCheck,
       step,
       state,
+      tooltip,
+      tooltipTriggerComponent,
       type,
       value,
       onBlur,
@@ -220,7 +226,17 @@ const useInputFieldProps = createHook<InputFieldProps>(
       ...boxProps,
       className,
       children: (
-        <FieldWrapper isRequired={isRequired} overrides={overrides} state={state} {...restProps}>
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+        >
           {({ elementProps }) => (
             <ConditionalWrap
               condition={addonBefore || addonAfter}

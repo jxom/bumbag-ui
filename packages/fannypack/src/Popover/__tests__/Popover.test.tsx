@@ -8,7 +8,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible>
           Hello world
@@ -24,7 +24,7 @@ describe('props', () => {
       placement => {
         it(`should render placement correcty for ${placement}`, () => {
           function Component() {
-            const popover = Popover.useState({ unstable_hiddenId: 'test' });
+            const popover = Popover.useState({ baseId: 'test' });
             return (
               // @ts-ignore
               <Popover {...popover} visible placement={placement}>
@@ -41,7 +41,7 @@ describe('props', () => {
 
   it('should render correctly with a title', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} title="This is a title" visible>
           Hello world
@@ -54,7 +54,7 @@ describe('props', () => {
 
   it('should render correctly with a footer', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} footer="This is a footer" visible>
           Hello world
@@ -67,7 +67,7 @@ describe('props', () => {
 
   it('should render correctly with action buttons', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} showActionButtons visible>
           Hello world
@@ -83,7 +83,7 @@ describe('composition', () => {
   describe('use', () => {
     it('should render correctly', () => {
       function Component() {
-        const popover = Popover.useState({ unstable_hiddenId: 'test' });
+        const popover = Popover.useState({ baseId: 'test' });
         return (
           <Popover use={Blockquote} {...popover} aria-label="test">
             Hello world
@@ -98,7 +98,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Modal props', () => {
       const { result } = renderHook(() => {
-        const popover = Popover.useState({ unstable_hiddenId: 'test' });
+        const popover = Popover.useState({ baseId: 'test' });
         return Popover.useProps(popover);
       });
       expect(result.current).toMatchSnapshot();
@@ -108,7 +108,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const popover = Popover.useState({ unstable_hiddenId: 'test' });
+        const popover = Popover.useState({ baseId: 'test' });
         return (
           <Popover {...popover}>
             {popoverProps => (
@@ -128,7 +128,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Popover.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible>
           Hello world
@@ -141,7 +141,7 @@ describe('theming', () => {
 
   it('Popover.Arrow.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} hasArrow visible>
           Hello world
@@ -156,7 +156,7 @@ describe('theming', () => {
 
   it('Popover.Content.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible>
           Hello world
@@ -171,7 +171,7 @@ describe('theming', () => {
 
   it('Popover.Close.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} title="This is a title" showCloseButton visible>
           Hello world
@@ -186,7 +186,7 @@ describe('theming', () => {
 
   it('Popover.Header.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} title="This is a title" visible>
           Hello world
@@ -201,7 +201,7 @@ describe('theming', () => {
 
   it('Popover.Title.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} title="This is a title" visible>
           Hello world
@@ -216,7 +216,7 @@ describe('theming', () => {
 
   it('Popover.Footer.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} footer="This is a footer" visible>
           Hello world
@@ -233,7 +233,7 @@ describe('theming', () => {
     placement => {
       it(`Popover.placements.${placement} should render correctly`, () => {
         function Component() {
-          const popover = Popover.useState({ unstable_hiddenId: 'test' });
+          const popover = Popover.useState({ baseId: 'test' });
           return (
             // @ts-ignore
             <Popover {...popover} placement={placement} visible>
@@ -253,7 +253,7 @@ describe('theming', () => {
 describe('overrides', () => {
   it('Popover.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible overrides={{ Popover: { base: { backgroundColor: 'red' } } }}>
           Hello world
@@ -266,7 +266,7 @@ describe('overrides', () => {
 
   it('Popover.Arrow.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} hasArrow visible overrides={{ Popover: { Arrow: { base: { backgroundColor: 'red' } } } }}>
           Hello world
@@ -279,7 +279,7 @@ describe('overrides', () => {
 
   it('Popover.Content.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible overrides={{ Popover: { Content: { base: { backgroundColor: 'red' } } } }}>
           Hello world
@@ -292,7 +292,7 @@ describe('overrides', () => {
 
   it('Popover.Close.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover
           {...popover}
@@ -311,7 +311,7 @@ describe('overrides', () => {
 
   it('Popover.Header.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover
           {...popover}
@@ -329,7 +329,7 @@ describe('overrides', () => {
 
   it('Popover.Title.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover
           {...popover}
@@ -347,7 +347,7 @@ describe('overrides', () => {
 
   it('Popover.Footer.base should render correctly', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover
           {...popover}
@@ -367,7 +367,7 @@ describe('overrides', () => {
     placement => {
       it(`Popover.placements.${placement} should render correctly`, () => {
         function Component() {
-          const popover = Popover.useState({ unstable_hiddenId: 'test' });
+          const popover = Popover.useState({ baseId: 'test' });
           return (
             // @ts-ignore
             <Popover
@@ -390,7 +390,7 @@ describe('overrides', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible>
           Hello world
@@ -403,7 +403,7 @@ describe('defaultProps', () => {
 
   it('should render correctly for hasArrow', () => {
     function Component() {
-      const popover = Popover.useState({ unstable_hiddenId: 'test' });
+      const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover {...popover} visible>
           Hello world

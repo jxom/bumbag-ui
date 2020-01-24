@@ -57,14 +57,26 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">stopId</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 Element ID.
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2"><strong>11 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>12 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
@@ -79,7 +91,7 @@ Stores the number of moves that have been made by calling `move`, `next`,
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to a given element ID.
 
@@ -192,8 +204,8 @@ Moves focus to the last element.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 49 more ...;
-  Spinner?: SpinnerThemeConfig;
+  ... 50 more ...;
+  Tooltip?: TooltipThemeConfig;
 }`}
 </Code>
 
@@ -215,6 +227,12 @@ Moves focus to the last element.
 ### Rover.useState API
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
@@ -241,7 +259,13 @@ If enabled:
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>12 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>13 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
@@ -289,7 +313,7 @@ Unregisters the roving item.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to a given element ID.
 

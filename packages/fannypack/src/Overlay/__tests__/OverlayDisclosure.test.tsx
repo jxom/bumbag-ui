@@ -7,7 +7,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />);
@@ -17,7 +17,7 @@ describe('props', () => {
   it('should assign a ref', () => {
     const ref = React.createRef();
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay.Disclosure ref={ref} {...overlay}>
           Toggle
@@ -30,7 +30,7 @@ describe('props', () => {
 
   it('should render correctly when disabled is set', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay.Disclosure disabled {...overlay}>
           Toggle
@@ -43,7 +43,7 @@ describe('props', () => {
 
   it('should render correctly when focusable is set', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay.Disclosure disabled focusable {...overlay}>
           Toggle
@@ -59,7 +59,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <Overlay.Disclosure use={Box} {...overlay}>
             Toggle
@@ -74,7 +74,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Overlay.Disclosure props', () => {
       const { result } = renderHook(() => {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return Overlay.Disclosure.useProps(overlay);
       });
       expect(result.current).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+        const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <Overlay.Disclosure {...overlay}>
             {OverlayDisclosureProps => <div {...OverlayDisclosureProps}>Hello world</div>}
@@ -100,7 +100,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Overlay.Disclosure.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay.Disclosure overrides={{ Overlay: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...overlay}>
           Toggle
@@ -115,7 +115,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Overlay.Disclosure.base should render correctly', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />, {
@@ -128,7 +128,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const overlay = Overlay.useState({ unstable_hiddenId: 'test' });
+      const overlay = Overlay.useState({ baseId: 'test' });
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />, {

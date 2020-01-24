@@ -151,10 +151,7 @@ export type LocalCheckboxFieldProps = {
   /** Additional props for the Checkbox component */
   checkboxProps?: CheckboxProps;
 };
-export type CheckboxFieldProps = BoxProps &
-  Omit<FieldWrapperProps, 'children'> &
-  CheckboxProps &
-  LocalCheckboxFieldProps;
+export type CheckboxFieldProps = BoxProps & FieldWrapperProps & CheckboxProps & LocalCheckboxFieldProps;
 
 const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
   (props, themeKey) => {
@@ -163,21 +160,28 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       checked,
       checkboxLabel,
       checkboxProps,
+      description,
       defaultChecked,
       disabled,
+      hint,
       indeterminate,
+      isOptional,
       isRequired,
+      label,
       name,
       onBlur,
       onChange,
       onFocus,
       overrides,
       state,
+      tooltip,
+      tooltipTriggerComponent,
+      validationText,
       value,
       ...restProps
     } = props;
 
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
       style: styles.CheckboxField,
@@ -190,7 +194,17 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       ...boxProps,
       className,
       children: (
-        <FieldWrapper isRequired={isRequired} overrides={overrides} state={state} {...restProps}>
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+        >
           {({ elementProps }) => (
             <Checkbox
               autoFocus={autoFocus}

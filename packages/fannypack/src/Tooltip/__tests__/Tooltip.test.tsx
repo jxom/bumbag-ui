@@ -6,7 +6,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <Tooltip content="This is content" unstable_hiddenId="test">
+      <Tooltip content="This is content" baseId="test">
         Hello world
       </Tooltip>
     );
@@ -15,7 +15,7 @@ describe('props', () => {
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <Tooltip color="primary" content="This is content" unstable_hiddenId="test">
+      <Tooltip color="primary" content="This is content" baseId="test">
         Hello world
       </Tooltip>
     );
@@ -27,7 +27,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Tooltip use="p" content="This is content" unstable_hiddenId="test">
+        <Tooltip use="p" content="This is content" baseId="test">
           Hello world
         </Tooltip>
       );
@@ -37,7 +37,7 @@ describe('composition', () => {
 
   describe('hook', () => {
     it('should return with Tooltip props', () => {
-      const { result } = renderHook(() => Tooltip.useProps({ content: 'This is content', unstable_hiddenId: 'test' }));
+      const { result } = renderHook(() => Tooltip.useProps({ content: 'This is content', baseId: 'test' }));
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -45,7 +45,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Tooltip content="This is content" unstable_hiddenId="test">
+        <Tooltip content="This is content" baseId="test">
           {TooltipProps => <div {...TooltipProps}>Hello world</div>}
         </Tooltip>
       );
@@ -60,7 +60,7 @@ describe('overrides', () => {
       <Tooltip
         content="This is content"
         overrides={{ Tooltip: { Content: { base: { backgroundColor: 'red' } } } }}
-        unstable_hiddenId="test"
+        baseId="test"
       >
         hello world
       </Tooltip>
@@ -73,7 +73,7 @@ describe('overrides', () => {
       <Tooltip
         content="This is content"
         overrides={{ Tooltip: { Reference: { base: { backgroundColor: 'red' } } } }}
-        unstable_hiddenId="test"
+        baseId="test"
       >
         hello world
       </Tooltip>
@@ -85,7 +85,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Tooltip.Content.base should render correctly', () => {
     const { container } = render(
-      <Tooltip content="This is content" unstable_hiddenId="test">
+      <Tooltip content="This is content" baseId="test">
         hello world
       </Tooltip>,
       {
@@ -98,7 +98,7 @@ describe('theming', () => {
 
   it('Tooltip.Reference.base should render correctly', () => {
     const { container } = render(
-      <Tooltip content="This is content" unstable_hiddenId="test">
+      <Tooltip content="This is content" baseId="test">
         hello world
       </Tooltip>,
       {
@@ -113,7 +113,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <Tooltip content="This is content" unstable_hiddenId="test">
+      <Tooltip content="This is content" baseId="test">
         hello world
       </Tooltip>,
       {

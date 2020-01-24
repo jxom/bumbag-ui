@@ -17,7 +17,7 @@ const useProps = createHook<PopoverBackdropProps>(
   (props, themeKey) => {
     let {
       visible,
-      unstable_hiddenId,
+      baseId,
       unstable_animating,
       unstable_animated,
       unstable_stopAnimation,
@@ -27,7 +27,7 @@ const useProps = createHook<PopoverBackdropProps>(
     const popoverBackdropProps = useReakitPopoverBackdrop(
       {
         visible,
-        unstable_hiddenId,
+        baseId,
         unstable_animating,
         unstable_animated,
         unstable_stopAnimation,

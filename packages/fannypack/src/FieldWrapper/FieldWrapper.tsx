@@ -14,7 +14,7 @@ import { VisuallyHidden } from '../VisuallyHidden';
 import * as styles from './styles';
 
 export type LocalFieldWrapperProps = {
-  children: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;
+  children?: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;
   description?: string | React.ReactElement<any>;
   hint?: string | React.ReactElement<any>;
   isOptional?: boolean;

@@ -8,9 +8,11 @@ Object {
   "onClick": [Function],
   "onKeyDown": [Function],
   "onMouseDown": [Function],
-  "onMouseOver": [Function],
-  "ref": [Function],
-  "tabIndex": 0,
+  "ref": Object {
+    "current": null,
+  },
+  "style": undefined,
+  "tabIndex": undefined,
 }
 `;
 
@@ -75,12 +77,14 @@ exports[`composition use should render correctly 1`] = `
     aria-disabled="true"
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
     disabled=""
+    style="pointer-events: none;"
   >
     Disabled
   </div>
   <div
     aria-disabled="true"
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    style="pointer-events: none;"
     tabindex="0"
   >
     Focusable
@@ -182,12 +186,14 @@ exports[`props should render correctly 1`] = `
     aria-disabled="true"
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
     disabled=""
+    style="pointer-events: none;"
   >
     Disabled
   </div>
   <div
     aria-disabled="true"
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    style="pointer-events: none;"
     tabindex="0"
   >
     Focusable

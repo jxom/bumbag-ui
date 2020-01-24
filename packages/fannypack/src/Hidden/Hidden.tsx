@@ -12,8 +12,8 @@ export type HiddenProps = BoxProps & ReakitHiddenProps & LocalHiddenProps;
 const useProps = createHook<HiddenProps>(
   (props, themeKey) => {
     let {
+      baseId,
       visible,
-      unstable_hiddenId,
       unstable_animating,
       unstable_animated,
       unstable_stopAnimation,
@@ -22,8 +22,8 @@ const useProps = createHook<HiddenProps>(
     } = props;
     const hiddenProps = useReakitHidden(
       {
+        baseId,
         visible,
-        unstable_hiddenId,
         unstable_animating,
         unstable_animated,
         unstable_stopAnimation,

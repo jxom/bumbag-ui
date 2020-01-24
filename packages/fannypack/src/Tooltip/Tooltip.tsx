@@ -19,7 +19,7 @@ import * as styles from './styles';
 export type LocalTooltipProps = {
   content: string | React.ReactElement<any>;
   placement?: Placement;
-  unstable_hiddenId?: string;
+  baseId?: string;
 } & LocalTooltipContentProps;
 export type TooltipProps = BoxProps & LocalTooltipProps;
 
@@ -35,12 +35,12 @@ const useProps = createHook<TooltipProps>(
       overrides,
       placement,
       slide,
-      unstable_hiddenId
+      baseId
     } = props;
 
     const boxProps = Box.useProps({ ...props, content: undefined });
     // @ts-ignore
-    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide, unstable_hiddenId });
+    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide, baseId });
 
     return {
       children: (
@@ -99,7 +99,7 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       hasArrow,
       overrides,
       visible,
-      unstable_hiddenId,
+      baseId,
       unstable_animating,
       unstable_animated,
       unstable_popoverRef,
@@ -113,7 +113,7 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
     const tooltipProps = useReakitTooltip(
       {
         visible,
-        unstable_hiddenId,
+        baseId,
         unstable_animating,
         unstable_animated,
         unstable_popoverRef,
@@ -183,14 +183,14 @@ export type TooltipReferenceProps = BoxProps & ReakitTooltipReferenceProps & Loc
 
 const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
   (props, themeKey) => {
-    let { show, hide, unstable_referenceRef, unstable_hiddenId, ...restProps } = props;
+    let { show, hide, unstable_referenceRef, baseId, ...restProps } = props;
 
     const tooltipReferenceProps = useReakitTooltipReference(
       {
         show,
         hide,
         unstable_referenceRef,
-        unstable_hiddenId
+        baseId
       },
       restProps
     );

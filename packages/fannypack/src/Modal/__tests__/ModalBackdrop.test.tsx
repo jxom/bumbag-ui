@@ -7,7 +7,7 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
     }
     const { container } = render(<Component />);
@@ -19,7 +19,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Backdrop use={Box} {...modal}>
             Toggle
@@ -34,7 +34,7 @@ describe('composition', () => {
   describe('hook', () => {
     it('should return with Modal.Backdrop props', () => {
       const { result } = renderHook(() => {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return Modal.Backdrop.useProps(modal);
       });
       expect(result.current).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const modal = Modal.useState({ unstable_hiddenId: 'test' });
+        const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Backdrop {...modal}>
             {modalBackdropProps => <Box {...modalBackdropProps}>Hello world</Box>}
@@ -60,7 +60,7 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Modal.Backdrop.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal.Backdrop overrides={{ Modal: { Backdrop: { base: { backgroundColor: 'red' } } } }} {...modal}>
           Toggle
@@ -75,7 +75,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Modal.Backdrop.base should render correctly', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
     }
     const { container } = render(<Component />, {
@@ -88,7 +88,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const modal = Modal.useState({ unstable_hiddenId: 'test' });
+      const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
     }
     const { container } = render(<Component />, {

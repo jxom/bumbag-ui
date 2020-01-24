@@ -17,7 +17,7 @@ const useProps = createHook<ModalBackdropProps>(
   (props, themeKey) => {
     let {
       visible,
-      unstable_hiddenId,
+      baseId,
       unstable_animating,
       unstable_animated,
       unstable_stopAnimation,
@@ -27,7 +27,7 @@ const useProps = createHook<ModalBackdropProps>(
     const modalBackdropProps = useReakitDialogBackdrop(
       {
         visible,
-        unstable_hiddenId,
+        baseId,
         unstable_animating,
         unstable_animated,
         unstable_stopAnimation,
