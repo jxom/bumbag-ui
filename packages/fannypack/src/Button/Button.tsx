@@ -42,10 +42,14 @@ const useProps = createHook<ButtonProps>(
       iconBefore,
       iconBeforeProps,
       spinnerProps,
-      unstable_clickKeys,
+      unstable_clickOnEnter,
+      unstable_clickOnSpace,
       ...htmlProps
     } = props;
-    const buttonProps = useReakitButton({ disabled, focusable, unstable_clickKeys }, htmlProps);
+    const buttonProps = useReakitButton(
+      { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace },
+      htmlProps
+    );
     htmlProps = Box.useProps({ ...props, ...buttonProps });
 
     const className = useClassName({

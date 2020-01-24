@@ -16,10 +16,7 @@ export type ModalDisclosureProps = BoxProps & ReakitDialogDisclosureProps & Loca
 const useProps = createHook<ModalDisclosureProps>(
   (props, themeKey) => {
     let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
-    const modalDisclosureProps = useReakitDialogDisclosure(
-      { disabled, focusable, visible, toggle, baseId },
-      htmlProps
-    );
+    const modalDisclosureProps = useReakitDialogDisclosure({ disabled, focusable, visible, toggle, baseId }, htmlProps);
     htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
 
     const className = useClassName({

@@ -78,7 +78,7 @@ describe('props', () => {
       const { container } = render(
         <RadioGroupField
           label="Test label"
-          state={state}
+          state={state as any}
           name="weather"
           options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
         />

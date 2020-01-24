@@ -25,7 +25,8 @@ const useProps = createHook<RoverProps>(
       first,
       last,
       stopId,
-      unstable_clickKeys,
+      unstable_clickOnEnter,
+      unstable_clickOnSpace,
       unstable_moves,
       ...htmlProps
     } = props;
@@ -44,7 +45,8 @@ const useProps = createHook<RoverProps>(
         first,
         last,
         stopId,
-        unstable_clickKeys,
+        unstable_clickOnEnter,
+        unstable_clickOnSpace,
         unstable_moves
       },
       htmlProps

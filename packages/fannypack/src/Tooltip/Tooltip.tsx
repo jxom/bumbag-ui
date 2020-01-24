@@ -25,18 +25,7 @@ export type TooltipProps = BoxProps & LocalTooltipProps;
 
 const useProps = createHook<TooltipProps>(
   props => {
-    let {
-      arrowProps,
-      children,
-      content,
-      expand,
-      fade,
-      hasArrow,
-      overrides,
-      placement,
-      slide,
-      baseId
-    } = props;
+    let { arrowProps, children, content, expand, fade, hasArrow, overrides, placement, slide, baseId } = props;
 
     const boxProps = Box.useProps({ ...props, content: undefined });
     // @ts-ignore
