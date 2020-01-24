@@ -44,10 +44,11 @@ const useProps = createHook<FieldWrapperProps>(
       state,
       tooltip,
       tooltipTriggerComponent,
-      validationText
+      validationText,
+      ...restProps
     } = props;
 
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
     const className = useClassName({
       style: styles.FieldWrapper,
       styleProps: props,
