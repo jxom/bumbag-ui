@@ -1,0 +1,217 @@
+import Theme from '../../components/Theme';
+import { Select, SelectField } from 'fannypack/Select';
+
+# Select
+
+## Import
+
+```jsx
+import { Select, SelectField } from 'fannypack'
+```
+
+## Usage
+
+The `Select` component renders a `<select>` field with options.
+
+```jsx-live
+<Select
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Default values
+
+For uncontrolled select field, set a default value using the `defaultValue` prop.
+
+```jsx-live
+<Select
+  defaultValue="overcast"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Placeholders
+
+Add a placeholder to a select field with the `placeholder` prop.
+
+```jsx-live
+<Select
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Disabled
+
+Make the select field disabled with the `disabled` prop.
+
+```jsx-live
+<Select
+  disabled
+  placeholder="Select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+## Loading
+
+```jsx-live
+<Select
+  isLoading
+  options={[]}
+/>
+```
+
+### Sizes
+
+An input can come in different sizes - `small`, `medium`, `large`, or the default.
+
+```jsx-live
+<Select
+  size="small"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  size="medium"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  size="large"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### States
+
+An input can use different states (as per palette) such as `danger`, `success` and `warning`.
+
+```jsx-live
+<Select
+  state="danger"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  state="warning"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  state="success"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+<Select
+  state="primary"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+### Addons
+
+You can use the [Group component](/components/group) to add on stuff to your `<Select>`.
+
+```jsx-live
+<Group>
+  <Select
+    options={[
+      { label: 'Yes', value: 'yes' },
+      { label: 'No', value: 'no' }
+    ]}
+  />
+  <Button palette="primary" minWidth="max-content">Submit</Button>
+</Group>
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled inputs!
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState('');
+
+  return (
+    <Select
+      options={[
+        { label: 'Yes', value: 'yes' },
+        { label: 'No', value: 'no' }
+      ]}
+      onChange={e => setValue(e.target.value)}
+      value={value}
+    />
+  )
+}
+```
+
+## Props
+
+### Select Props
+
+## Theming
+
+<Theme
+  component={Select}
+  placeholder="Please select weather..."
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+  overrides={[
+    'Select.base',
+    {key: 'Select.disabled.base', props: { disabled: true }},
+    {key: 'Select.Wrapper.base', props: { padding: 'major-2' }},
+    {key: 'Select.Icon.base', props: {}},
+    {key: 'Select.Spinner.base', props: { isLoading: true }}
+  ]} />

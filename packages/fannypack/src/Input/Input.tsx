@@ -75,7 +75,8 @@ const useProps = createHook<InputProps>(
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
       styleProps: props,
-      themeKey: `${themeKey}.Wrapper`
+      themeKey: `${themeKey}.Wrapper`,
+      prevClassName: restProps.className
     });
     const spinnerClassName = useClassName({
       style: styles.InputSpinner,
@@ -84,6 +85,7 @@ const useProps = createHook<InputProps>(
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
+      className: undefined,
       unstable_wrap: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (

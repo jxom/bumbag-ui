@@ -66,6 +66,7 @@ import {
 import { PortalProps } from '../Portal';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { RoverProps } from '../Rover';
+import { SelectProps } from '../Select';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
 import { TabbableProps } from '../Tabbable';
@@ -727,6 +728,36 @@ export type TooltipThemeConfig = {
   };
   defaultProps?: Partial<TooltipProps>;
 };
+export type SelectThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  disabled?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Wrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Spinner?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    default?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    medium?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    large?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<SelectProps>;
+};
 export type SetThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   horizontal?: ThemeAttribute<Stylesheet>;
@@ -815,6 +846,7 @@ export type ThemeConfig = {
   RadioGroup?: RadioGroupThemeConfig;
   RadioGroupField?: RadioGroupFieldThemeConfig;
   Rover?: RoverThemeConfig;
+  Select?: SelectThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Tabbable?: TabbableThemeConfig;

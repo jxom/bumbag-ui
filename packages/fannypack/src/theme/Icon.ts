@@ -1,6 +1,7 @@
 // @ts-ignore
 import _get from 'lodash/get';
 import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
+import * as faChevronDown from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import * as faExclamationTriangle from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import * as faCheckCircle from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import * as faExclamationCircle from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
@@ -25,7 +26,16 @@ export default (overrides: any) => ({
   ...overrides,
   icons: {
     ...parseIcons(
-      [faInfoCircle, faExclamationTriangle, faCheckCircle, faExclamationCircle, faQuestionCircle, faTimes, faSearch],
+      [
+        faChevronDown,
+        faInfoCircle,
+        faExclamationTriangle,
+        faCheckCircle,
+        faExclamationCircle,
+        faQuestionCircle,
+        faTimes,
+        faSearch
+      ],
       {
         type: 'font-awesome-standalone'
       }

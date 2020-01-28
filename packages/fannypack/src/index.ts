@@ -40,6 +40,7 @@ export * from './Portal';
 export * from './Provider';
 export * from './Radio';
 export * from './Rover';
+export * from './Select';
 export * from './Set';
 export * from './Spinner';
 export * from './Tabbable';

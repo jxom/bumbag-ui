@@ -11,7 +11,7 @@ export default function Theme(props) {
 
     let overrides = {};
     _set(overrides, key, {
-      [highlightAttribute || override.highlightAttribute || 'backgroundColor']: '#ffe3a4 !important'
+      [highlightAttribute || override.highlightAttribute || 'background']: '#ffe3a4 !important'
     });
 
     return (

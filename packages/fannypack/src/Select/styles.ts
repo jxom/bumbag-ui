@@ -1,7 +1,58 @@
 import { css, cssClass } from '../styled';
-import { fontSize, palette, theme } from '../utils';
+import { fontSize, palette, tint, theme } from '../utils';
 
-export const InputWrapper = styleProps => cssClass`
+export const Select = styleProps => cssClass`
+  appearance: none;
+  background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
+  border: 1px solid ${palette('white900')(styleProps)};
+  border-radius: 0.2em;
+  color: ${styleProps.isPlaceholderSelected ? tint(0.4, palette('text')(styleProps)) : palette('text')(styleProps)};
+  height: 2.5em;
+  padding: 0.4em 1.6em 0.4em 0.6em;
+  line-height: 1.5;
+  width: 100%;
+  transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
+
+  &:hover {
+    box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
+    border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
+  }
+
+  &[disabled] {
+    background: ${palette('white700')(styleProps)};
+    box-shadow: unset;
+
+    & {
+      ${theme(`${styleProps.themeKey}.disabled.base`)(styleProps)};
+    }
+  }
+
+  &[disabled] + .fp-Icon {
+    color: ${palette('gray400')(styleProps)};
+    fill: ${palette('gray400')(styleProps)};
+  }
+
+  &:focus {
+    outline: unset;
+    z-index: 2;
+    border-color: ${palette('primary')(styleProps)};
+    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
+  }
+
+  ${styleProps.state &&
+    css`
+      & {
+        border-color: ${palette(`${styleProps.state}`)(styleProps)};
+        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
+      }
+    `}
+
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
+export const SelectWrapper = styleProps => cssClass`
   align-items: center;
   position: relative;
   width: 100%;
@@ -13,88 +64,24 @@ export const InputWrapper = styleProps => cssClass`
   }
 `;
 
-export const Input = styleProps => cssClass`
-  -webkit-appearance: none;
-  border: 1px solid ${palette('white900')(styleProps)};
-  border-radius: 0.2em;
-  height: 2.5em;
-  width: 100%;
-  padding: 0.4em 0.6em;
-  transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
-
-  &[disabled] {
-    background-color: ${palette('white700')(styleProps)};
-    box-shadow: unset;
-    cursor: not-allowed;
-
-    & {
-      ${theme(`${styleProps.themeKey}.disabled.base`)(styleProps)};
-    }
+export const SelectIcon = styleProps => cssClass`
+  && {
+    position: absolute;
+    width: 0.8em;
+    height: 2.5em;
+    right: 0.8em;
+    z-index: 1;
+    color: ${palette('text')(styleProps)};
+    fill: ${palette('text')(styleProps)};
+    pointer-events: none;
   }
-
-  &:hover {
-    box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
-    border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
-  }
-
-  &:focus {
-    outline: unset;
-    z-index: 2;
-    border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
-
-    & {
-      ${theme(`${styleProps.themeKey}.focus.base`)(styleProps)};
-    }
-  }
-
-  &::placeholder {
-    opacity: 0.6;
-
-    & {
-      ${theme(`${styleProps.themeKey}.placeholder.base`)(styleProps)};
-    }
-  }
-
-  ${styleProps.state &&
-    css`
-      & {
-        border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
-      }
-    `}
-
-  ${(styleProps.after || styleProps.isLoading) &&
-    css`
-      & {
-        padding-right: 2.3em;
-      }
-    `};
-
-  ${styleProps.before &&
-    css`
-      & {
-        padding-left: 2.3em;
-      }
-    `};
 
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
 
-export const InputIcon = styleProps => cssClass`
-  && {
-    fill: ${palette('text100')(styleProps)};
-    height: 2.5em;
-    margin: 0 0.75em;
-    top: 0;
-
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
-  }
-`;
-
-export const InputSpinner = styleProps => cssClass`
+export const SelectSpinner = styleProps => cssClass`
   && {
     font-size: inherit;
     align-items: center;
@@ -106,12 +93,6 @@ export const InputSpinner = styleProps => cssClass`
     right: 0;
     z-index: 2;
 
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
-  }
-`;
-
-export const InputField = styleProps => cssClass`
-  & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }
 `;
