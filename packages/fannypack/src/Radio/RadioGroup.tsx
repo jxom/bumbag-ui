@@ -143,6 +143,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
           isOptional={isOptional}
           isRequired={isRequired}
           label={label}
+          labelType="legend"
           overrides={overrides}
           state={state}
           tooltip={tooltip}
@@ -183,6 +184,9 @@ export const RadioGroupField = createComponent<RadioGroupFieldProps>(
   {
     attach: {
       useProps
+    },
+    defaultProps: {
+      use: 'fieldset'
     },
     themeKey: 'RadioGroupField'
   }

@@ -145,12 +145,11 @@ exports[`composition as should render correctly 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -164,7 +163,6 @@ exports[`composition as should render correctly 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -177,18 +175,17 @@ exports[`composition as should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -201,13 +198,13 @@ exports[`composition as should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
@@ -398,7 +395,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   color: #3722ed !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-47 test fp-Box fp-RadioGroupField"
 >
   <div
@@ -410,12 +407,11 @@ exports[`defaultProps should render correctly for className 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -429,7 +425,6 @@ exports[`defaultProps should render correctly for className 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -442,18 +437,17 @@ exports[`defaultProps should render correctly for className 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -466,18 +460,18 @@ exports[`defaultProps should render correctly for className 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`overrides RadioGroupField.base should render correctly 1`] = `
@@ -617,7 +611,7 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
   background-color: red;
 }
 
-<div
+<fieldset
   class="emotion-45 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -629,12 +623,11 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -648,7 +641,6 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -661,18 +653,17 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -685,18 +676,18 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly 1`] = `
@@ -832,7 +823,7 @@ exports[`props should render correctly 1`] = `
   margin-left: 0.5rem !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -844,12 +835,11 @@ exports[`props should render correctly 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -863,7 +853,6 @@ exports[`props should render correctly 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -876,18 +865,17 @@ exports[`props should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -900,18 +888,18 @@ exports[`props should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for default value 1`] = `
@@ -1047,7 +1035,7 @@ exports[`props should render correctly for default value 1`] = `
   margin-left: 0.5rem !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -1059,12 +1047,11 @@ exports[`props should render correctly for default value 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -1078,7 +1065,6 @@ exports[`props should render correctly for default value 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1091,18 +1077,17 @@ exports[`props should render correctly for default value 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1115,18 +1100,18 @@ exports[`props should render correctly for default value 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for disabled field 1`] = `
@@ -1262,7 +1247,7 @@ exports[`props should render correctly for disabled field 1`] = `
   margin-left: 0.5rem !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -1274,12 +1259,11 @@ exports[`props should render correctly for disabled field 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -1293,7 +1277,6 @@ exports[`props should render correctly for disabled field 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1307,18 +1290,17 @@ exports[`props should render correctly for disabled field 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1331,18 +1313,18 @@ exports[`props should render correctly for disabled field 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for disabled fields 1`] = `
@@ -1478,7 +1460,7 @@ exports[`props should render correctly for disabled fields 1`] = `
   margin-left: 0.5rem !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -1490,12 +1472,11 @@ exports[`props should render correctly for disabled fields 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -1509,7 +1490,6 @@ exports[`props should render correctly for disabled fields 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1523,18 +1503,17 @@ exports[`props should render correctly for disabled fields 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1548,18 +1527,18 @@ exports[`props should render correctly for disabled fields 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for horizontal fields 1`] = `
@@ -1702,7 +1681,7 @@ exports[`props should render correctly for horizontal fields 1`] = `
   margin-top: 0.5rem;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -1714,12 +1693,11 @@ exports[`props should render correctly for horizontal fields 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -1733,7 +1711,6 @@ exports[`props should render correctly for horizontal fields 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1746,18 +1723,17 @@ exports[`props should render correctly for horizontal fields 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1770,18 +1746,18 @@ exports[`props should render correctly for horizontal fields 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for state danger 1`] = `
@@ -1925,7 +1901,7 @@ exports[`props should render correctly for state danger 1`] = `
   background: #9a9a9a;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -1937,12 +1913,11 @@ exports[`props should render correctly for state danger 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -1956,7 +1931,6 @@ exports[`props should render correctly for state danger 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="true"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1969,18 +1943,17 @@ exports[`props should render correctly for state danger 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="true"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -1993,18 +1966,18 @@ exports[`props should render correctly for state danger 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for state success 1`] = `
@@ -2148,7 +2121,7 @@ exports[`props should render correctly for state success 1`] = `
   background: #9a9a9a;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -2160,12 +2133,11 @@ exports[`props should render correctly for state success 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -2179,7 +2151,6 @@ exports[`props should render correctly for state success 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2192,18 +2163,17 @@ exports[`props should render correctly for state success 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2216,18 +2186,18 @@ exports[`props should render correctly for state success 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly for state warning 1`] = `
@@ -2371,7 +2341,7 @@ exports[`props should render correctly for state warning 1`] = `
   background: #9a9a9a;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -2383,12 +2353,11 @@ exports[`props should render correctly for state warning 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -2402,7 +2371,6 @@ exports[`props should render correctly for state warning 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2415,18 +2383,17 @@ exports[`props should render correctly for state warning 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2439,18 +2406,18 @@ exports[`props should render correctly for state warning 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
@@ -2586,7 +2553,7 @@ exports[`props should render correctly with CSS props 1`] = `
   margin-left: 0.5rem !important;
 }
 
-<div
+<fieldset
   class="emotion-3 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -2598,12 +2565,11 @@ exports[`props should render correctly with CSS props 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -2617,7 +2583,6 @@ exports[`props should render correctly with CSS props 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2630,18 +2595,17 @@ exports[`props should render correctly with CSS props 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2654,18 +2618,18 @@ exports[`props should render correctly with CSS props 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;
 
 exports[`theming RadioGroupField.base should render correctly 1`] = `
@@ -2805,7 +2769,7 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
   background-color: red;
 }
 
-<div
+<fieldset
   class="emotion-45 emotion-1 emotion-2 fp-Box fp-RadioGroupField"
 >
   <div
@@ -2817,12 +2781,11 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
       <div
         class="emotion-1 emotion-5 fp-Box"
       >
-        <label
+        <legend
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
-          for="FieldWrapper"
         >
           Test label
-        </label>
+        </legend>
       </div>
     </div>
     <div
@@ -2836,7 +2799,6 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="Hello"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2849,18 +2811,17 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             Hello
-          </label>
+          </span>
         </label>
         <label
           aria-describedby="label"
           aria-invalid="false"
-          aria-label="This is"
           class="emotion-0 emotion-1 emotion-2 emotion-21 fp-Box fp-Radio fp-Label"
         >
           <input
@@ -2873,16 +2834,16 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
           <div
             class="emotion-1 emotion-2 emotion-13 fp-RadioIcon fp-Box"
           />
-          <label
+          <span
             class="emotion-0 emotion-1 emotion-16 emotion-17 fp-RadioLabel fp-Box fp-Label"
             for="radio"
             id="label"
           >
             This is
-          </label>
+          </span>
         </label>
       </div>
     </div>
   </div>
-</div>
+</fieldset>
 `;

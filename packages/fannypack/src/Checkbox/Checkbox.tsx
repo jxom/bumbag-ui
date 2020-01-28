@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
+import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -12,7 +13,7 @@ export type LocalCheckboxProps = {
   /** Automatically focus on the checkbox */
   autoFocus?: boolean;
   checked?: boolean;
-  checkboxProps?: React.InputHTMLAttributes<any>;
+  inputProps?: React.InputHTMLAttributes<any>;
   /** Is the checkbox checked by default? */
   defaultChecked?: boolean;
   /** Disables the checkbox */
@@ -41,7 +42,7 @@ const useProps = createHook<CheckboxProps>(
     const {
       autoFocus,
       checked,
-      checkboxProps,
+      inputProps,
       defaultChecked,
       disabled,
       indeterminate,
@@ -87,7 +88,6 @@ const useProps = createHook<CheckboxProps>(
       ...boxProps,
       'aria-describedby': labelId,
       'aria-invalid': state === 'danger',
-      'aria-label': label,
       'aria-required': isRequired,
       className,
       children: (
@@ -112,11 +112,11 @@ const useProps = createHook<CheckboxProps>(
             type="checkbox"
             // @ts-ignore
             value={value}
-            {...checkboxProps}
+            {...inputProps}
           />
           <Box className={checkboxIconClassName} />
           {label && (
-            <Label id={labelId} className={checkboxLabelClassName} htmlFor={checkboxId} marginLeft="minor-2">
+            <Label use="span" id={labelId} className={checkboxLabelClassName} htmlFor={checkboxId} marginLeft="minor-2">
               {label}
             </Label>
           )}
@@ -200,6 +200,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
           isOptional={isOptional}
           isRequired={isRequired}
           label={label}
+          labelType="legend"
           overrides={overrides}
           state={state}
           tooltip={tooltip}
@@ -221,15 +222,19 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
               overrides={overrides}
               state={state}
               value={value}
-              {...elementProps}
+              {..._omit(elementProps, 'id')}
               {...checkboxProps}
+              inputProps={{
+                id: elementProps.id,
+                ...checkboxProps.inputProps
+              }}
             />
           )}
         </FieldWrapper>
       )
     };
   },
-  { themeKey: 'CheckboxField' }
+  { defaultProps: { checkboxProps: {} }, themeKey: 'CheckboxField' }
 );
 
 export const CheckboxField = createComponent<CheckboxFieldProps>(

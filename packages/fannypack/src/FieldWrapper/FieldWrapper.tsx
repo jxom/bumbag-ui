@@ -20,6 +20,7 @@ export type LocalFieldWrapperProps = {
   isOptional?: boolean;
   isRequired?: boolean;
   label?: string | React.ReactElement<any>;
+  labelType?: 'legend' | 'label';
   state?: 'success' | 'danger' | 'warning';
   tooltip?: string | React.ReactElement<any>;
   tooltipTriggerComponent?: React.ReactElement<any>;
@@ -40,6 +41,7 @@ const useProps = createHook<FieldWrapperProps>(
       hint,
       isOptional,
       label,
+      labelType,
       isRequired,
       state,
       tooltip,
@@ -109,10 +111,18 @@ const useProps = createHook<FieldWrapperProps>(
             <Box marginBottom="minor-2">
               <Box display="flex" alignItems="center" lineHeight="1">
                 {typeof label === 'string' ? (
-                  // @ts-ignore
-                  <Label className={labelClassName} htmlFor={uid}>
-                    {label}
-                  </Label>
+                  <React.Fragment>
+                    {labelType === 'legend' ? (
+                      <Label use="legend" className={labelClassName}>
+                        {label}
+                      </Label>
+                    ) : (
+                      // @ts-ignore
+                      <Label className={labelClassName} htmlFor={uid}>
+                        {label}
+                      </Label>
+                    )}
+                  </React.Fragment>
                 ) : (
                   label
                 )}

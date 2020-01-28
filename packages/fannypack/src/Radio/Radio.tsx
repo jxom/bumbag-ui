@@ -4,7 +4,6 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
-import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
 import * as styles from './styles';
 
@@ -85,7 +84,6 @@ const useProps = createHook<RadioProps>(
       ...boxProps,
       'aria-describedby': labelId,
       'aria-invalid': state === 'danger',
-      'aria-label': label,
       'aria-required': isRequired,
       className,
       children: (
@@ -110,7 +108,7 @@ const useProps = createHook<RadioProps>(
           />
           <Box className={radioIconClassName} />
           {label && (
-            <Label id={labelId} className={radioLabelClassName} htmlFor={radioId} marginLeft="minor-2">
+            <Label use="span" id={labelId} className={radioLabelClassName} htmlFor={radioId} marginLeft="minor-2">
               {label}
             </Label>
           )}
