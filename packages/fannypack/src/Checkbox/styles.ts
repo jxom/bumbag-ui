@@ -75,7 +75,19 @@ export const HiddenCheckbox = styleProps =>
     themeKey: 'Checkbox.Icon'
   });
 
+export const CheckboxGroup = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export const CheckboxField = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
+export const CheckboxGroupField = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
   }

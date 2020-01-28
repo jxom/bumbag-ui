@@ -1,0 +1,2588 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`composition as should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`composition hook should return with CheckboxGroup props 1`] = `
+Object {
+  "children": <ForwardRef
+    isVertical={true}
+    spacing="minor-2"
+  >
+    <ForwardRef
+      label="Hello"
+      name="weather"
+      value="world"
+    />
+    <ForwardRef
+      label="This is"
+      name="weather"
+      value="me"
+    />
+  </ForwardRef>,
+  "className": "css-13h683e css-1pwrqjj css-3ekj6a fp-Box fp-CheckboxGroup",
+  "role": "CheckboxGroup",
+}
+`;
+
+exports[`composition render props should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  Hello world
+</div>
+`;
+
+exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-33 {
+  color: #3722ed !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-33 test fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`overrides CheckboxGroup.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-31 {
+  background-color: red;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for default value (array) 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        checked=""
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        checked=""
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for default value 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        checked=""
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for disabled field 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        disabled=""
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for disabled fields 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        disabled=""
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        disabled=""
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for horizontal fields 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-28 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for state danger 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-CheckboxIcon {
+  border-color: #bb2a1a;
+}
+
+.emotion-2:not(:checked) + .fp-CheckboxIcon {
+  box-shadow: #f8e9e8 0px 0px 0px 3px !important;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="true"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="true"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for state success 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-CheckboxIcon {
+  border-color: #107219;
+}
+
+.emotion-2:not(:checked) + .fp-CheckboxIcon {
+  box-shadow: #e7f0e8 0px 0px 0px 3px !important;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for state warning 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-CheckboxIcon {
+  border-color: #ed9c22;
+}
+
+.emotion-2:not(:checked) + .fp-CheckboxIcon {
+  box-shadow: #fdf5e8 0px 0px 0px 3px !important;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`theming CheckboxGroup.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-5 {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.2em;
+  height: 1em;
+  position: relative;
+  min-width: 1em;
+  width: 1em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #3722ed;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1em solid #3722ed;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #9a9a9a;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+.emotion-31 {
+  background-color: red;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-CheckboxGroup"
+  role="CheckboxGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Checkbox fp-Label"
+    >
+      <input
+        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        id="checkbox"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        for="checkbox"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;

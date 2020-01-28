@@ -210,6 +210,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       onChange,
       onFocus,
       overrides,
+      validationText,
       ...restProps
     } = props;
 
@@ -236,6 +237,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
           state={state}
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
+          validationText={validationText}
         >
           {({ elementProps }) => (
             <ConditionalWrap

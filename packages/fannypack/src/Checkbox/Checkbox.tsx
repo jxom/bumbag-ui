@@ -205,6 +205,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
           state={state}
           tooltip={tooltip}
           tooltipTriggerComponent={tooltipTriggerComponent}
+          validationText={validationText}
         >
           {({ elementProps }) => (
             <Checkbox

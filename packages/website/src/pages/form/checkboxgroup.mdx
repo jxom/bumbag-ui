@@ -1,20 +1,20 @@
 import Theme from '../../components/Theme';
-import { RadioGroup } from 'fannypack/Radio';
+import { CheckboxGroup } from 'fannypack/Checkbox';
 
-# RadioGroup
+# CheckboxGroup
 
 ## Import
 
 ```jsx
-import { RadioGroup } from 'fannypack'
+import { CheckboxGroup } from 'fannypack'
 ```
 
 ## Usage
 
-The `RadioGroup` component renders a group of [`<Radio>` fields](/form/radio).
+The `CheckboxGroup` component renders a group of [`<Checkbox>` fields](/form/checkbox).
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   name="weather"
   options={[
     { label: 'Sunny', value: 'sunny' },
@@ -27,7 +27,7 @@ The `RadioGroup` component renders a group of [`<Radio>` fields](/form/radio).
 ### Horizontal group
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   isHorizontal
   name="weather2"
   options={[
@@ -43,7 +43,7 @@ The `RadioGroup` component renders a group of [`<Radio>` fields](/form/radio).
 You can disable a radio group with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   name="weather"
   options={[
     { label: 'Sunny', value: 'sunny' },
@@ -54,7 +54,7 @@ You can disable a radio group with the `disabled` prop. If you only want to disa
 ```
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   disabled
   name="weather"
   options={[
@@ -67,10 +67,10 @@ You can disable a radio group with the `disabled` prop. If you only want to disa
 
 ### States
 
-A RadioGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
+A CheckboxGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   state="danger"
   name="weather4"
   options={[
@@ -86,8 +86,22 @@ A RadioGroup can use different states (as per palette) such as `danger`, `succes
 Specify a default checked value with the `defaultValue` prop.
 
 ```jsx-live
-<RadioGroup
+<CheckboxGroup
   defaultValue="overcast"
+  name="weather5"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+You can also supply an array of strings for multiple default values:
+
+```jsx-live
+<CheckboxGroup
+  defaultValue={['overcast', 'sunny']}
   name="weather5"
   options={[
     { label: 'Sunny', value: 'sunny' },
@@ -99,12 +113,12 @@ Specify a default checked value with the `defaultValue` prop.
 
 ### Fields
 
-The `<RadioGroupField>` component contains of the [`<RadioGroup>` component](#radiogroup) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+The `<CheckboxGroupField>` component contains of the [`<CheckboxGroup>` component](#CheckboxGroup) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
 
-It accepts a combination of [`<RadioGroup>` props](#TODO) and [`<FieldWrapper>` props](#TODO).
+It accepts a combination of [`<CheckboxGroup>` props](#TODO) and [`<FieldWrapper>` props](#TODO).
 
 ```jsx-live
-<RadioGroupField
+<CheckboxGroupField
   label="What's the weather?"
   name="weather5"
   options={[
@@ -115,51 +129,27 @@ It accepts a combination of [`<RadioGroup>` props](#TODO) and [`<FieldWrapper>` 
 />
 ```
 
-### Controlled Usage
-
-The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
-
-Note: Do not use `defaultValue` with controlled inputs!
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState('');
-
-  return (
-    <RadioGroup
-      options={[
-        { label: 'Sunny', value: 'sunny' },
-        { label: 'Windy', value: 'windy' },
-        { label: 'Overcast', value: 'overcast' }
-      ]}
-      onChange={e => setValue(e.target.value)}
-      value={value}
-    />
-  )
-}
-```
-
 ## Props
 
-### RadioGroup Props
+### CheckboxGroup Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
 
-Default value of the radio group
+Default value(s) of the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Disables the radio group
+Disables the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Are the radio inputs layed out horizontally?
+Are the checkbox inputs layed out horizontally?
 
 <Box marginBottom="major-4" />
 
@@ -167,9 +157,9 @@ Are the radio inputs layed out horizontally?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">RadioProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">CheckboxProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-Radio group options
+Checkbox group options
 
 <Box marginBottom="major-4" />
 
@@ -179,19 +169,19 @@ Radio group options
 
 **<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-State of the radio group. Can be any color in the palette.
+State of the checkbox group. Can be any color in the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
 
-Controlled value of the radio group
+Controlled value of the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
 
-Function to invoke when radio group has changed
+Function to invoke when checkbox group has changed
 
 <Box marginBottom="major-4" />
 
@@ -270,37 +260,37 @@ Function to invoke when radio group has changed
 </details>
             
 
-### RadioGroupField Props
+### CheckboxGroupField Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">radioGroupProps</Code>**  
+**<Code marginRight="major-1">checkboxGroupProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalRadioGroupProps`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalCheckboxGroupProps`}
 </Code>
 
-Additional props for the RadioGroup component
+Additional props for the CheckboxGroup component
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>RadioGroup</strong></code> props</Box>
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>CheckboxGroup</strong></code> props</Box>
 
-**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
 
-Default value of the radio group
+Default value(s) of the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Disables the radio group
+Disables the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Are the radio inputs layed out horizontally?
+Are the checkbox inputs layed out horizontally?
 
 <Box marginBottom="major-4" />
 
@@ -308,9 +298,9 @@ Are the radio inputs layed out horizontally?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">RadioProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">CheckboxProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-Radio group options
+Checkbox group options
 
 <Box marginBottom="major-4" />
 
@@ -320,19 +310,19 @@ Radio group options
 
 **<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-State of the radio group. Can be any color in the palette.
+State of the checkbox group. Can be any color in the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
 
-Controlled value of the radio group
+Controlled value of the checkbox group
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
 
-Function to invoke when radio group has changed
+Function to invoke when checkbox group has changed
 
 <Box marginBottom="major-4" />
 
@@ -502,16 +492,16 @@ Function to invoke when radio group has changed
 ## Theming
 
 <Theme
-  component={RadioGroup}
+  component={CheckboxGroup}
   options={[
     { label: 'Sunny', value: 'sunny' },
     { label: 'Windy', value: 'windy' },
     { label: 'Overcast', value: 'overcast' }
   ]}
   overrides={[
-    'RadioGroup.base',
-    'Radio.base',
-    'Radio.Icon.base',
-    'Radio.Label.base',
-    'Radio.HiddenInput.base'
+    'CheckboxGroup.base',
+    'Checkbox.base',
+    'Checkbox.Icon.base',
+    'Checkbox.Label.base',
+    'Checkbox.HiddenInput.base'
   ]} />

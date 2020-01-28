@@ -3,36 +3,36 @@ import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
-import { Radio, RadioProps } from '../Radio';
+import { Checkbox, CheckboxProps } from '../Checkbox';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
 import * as styles from './styles';
 
-export type LocalRadioGroupProps = {
-  /** Default value of the radio group */
-  defaultValue?: string;
-  /** Disables the radio group */
+export type LocalCheckboxGroupProps = {
+  /** Default value(s) of the checkbox group */
+  defaultValue?: Array<string> | string;
+  /** Disables the checkbox group */
   disabled?: boolean;
-  /** Are the radio inputs layed out horizontally? */
+  /** Are the checkbox inputs layed out horizontally? */
   isHorizontal?: boolean;
   name: string;
-  /** Radio group options */
-  options: Array<RadioProps>;
+  /** Checkbox group options */
+  options: Array<CheckboxProps>;
   spacing?: SetProps['spacing'];
-  /** State of the radio group. Can be any color in the palette. */
+  /** State of the checkbox group. Can be any color in the palette. */
   state?: string;
-  /** Controlled value of the radio group */
-  value?: string;
-  /** Function to invoke when radio group has changed */
+  /** Controlled value of the checkbox group */
+  value?: Array<string> | string;
+  /** Function to invoke when checkbox group has changed */
   onChange?: React.FormEventHandler<HTMLInputElement>;
 };
-export type RadioGroupProps = BoxProps & LocalRadioGroupProps;
+export type CheckboxGroupProps = BoxProps & LocalCheckboxGroupProps;
 
-const useProps = createHook<RadioGroupProps>(
+const useProps = createHook<CheckboxGroupProps>(
   (props, themeKey) => {
     const {
-      defaultValue,
+      defaultValue: initialDefaultValue,
       disabled,
       isHorizontal,
       onChange,
@@ -41,31 +41,43 @@ const useProps = createHook<RadioGroupProps>(
       name,
       spacing,
       state,
-      value,
+      value: initialValue,
       ...restProps
     } = props;
 
     const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
-      style: styles.RadioGroup,
+      style: styles.CheckboxGroup,
       styleProps: props,
       themeKey,
       prevClassName: boxProps.className
     });
 
+    let defaultValue = initialDefaultValue;
+    if (typeof initialDefaultValue === 'string') {
+      defaultValue = [initialDefaultValue];
+    }
+
+    let value = initialValue;
+    if (typeof initialValue === 'string') {
+      value = [initialValue];
+    }
+
     return {
-      role: 'radiogroup',
+      role: 'CheckboxGroup',
       ...boxProps,
       className,
       children: (
         <Set isVertical={!isHorizontal} spacing={spacing}>
           {options.map((option, i) => (
-            <Radio
+            <Checkbox
               key={i}
               {...option}
-              checked={typeof value === 'undefined' ? undefined : option.value === value}
-              defaultChecked={typeof defaultValue === 'undefined' ? undefined : option.value === defaultValue}
+              // @ts-ignore
+              checked={value ? value.includes(option.value) : undefined}
+              // @ts-ignore
+              defaultChecked={defaultValue ? defaultValue.includes(option.value) : undefined}
               name={name}
               onChange={onChange}
               overrides={overrides}
@@ -77,10 +89,10 @@ const useProps = createHook<RadioGroupProps>(
       )
     };
   },
-  { defaultProps: { spacing: 'minor-2' }, themeKey: 'RadioGroup' }
+  { defaultProps: { spacing: 'minor-2' }, themeKey: 'CheckboxGroup' }
 );
 
-export const RadioGroup = createComponent<RadioGroupProps>(
+export const CheckboxGroup = createComponent<CheckboxGroupProps>(
   props => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
@@ -89,19 +101,19 @@ export const RadioGroup = createComponent<RadioGroupProps>(
     attach: {
       useProps
     },
-    themeKey: 'RadioGroup'
+    themeKey: 'CheckboxGroup'
   }
 );
 
 ////////////////////////////////////////////////////////////////
 
-export type LocalRadioGroupFieldProps = {
-  /** Additional props for the RadioGroup component */
-  radioGroupProps?: RadioGroupProps;
+export type LocalCheckboxGroupFieldProps = {
+  /** Additional props for the CheckboxGroup component */
+  checkboxGroupProps?: CheckboxGroupProps;
 };
-export type RadioGroupFieldProps = BoxProps & FieldWrapperProps & RadioGroupProps & LocalRadioGroupFieldProps;
+export type CheckboxGroupFieldProps = BoxProps & FieldWrapperProps & CheckboxGroupProps & LocalCheckboxGroupFieldProps;
 
-const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
+const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
   (props, themeKey) => {
     const {
       defaultChecked,
@@ -116,7 +128,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
       options,
       onChange,
       overrides,
-      radioGroupProps,
+      checkboxGroupProps,
       state,
       tooltip,
       tooltipTriggerComponent,
@@ -128,7 +140,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
     const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
-      style: styles.RadioGroupField,
+      style: styles.CheckboxGroupField,
       styleProps: props,
       themeKey,
       prevClassName: boxProps.className
@@ -152,7 +164,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
           validationText={validationText}
         >
           {({ elementProps }) => (
-            <RadioGroup
+            <CheckboxGroup
               defaultChecked={defaultChecked}
               disabled={disabled}
               isHorizontal={isHorizontal}
@@ -163,24 +175,24 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
               state={state}
               value={value}
               {...elementProps}
-              {...radioGroupProps}
+              {...checkboxGroupProps}
             />
           )}
         </FieldWrapper>
       )
     };
   },
-  { themeKey: 'RadioGroupField' }
+  { themeKey: 'CheckboxGroupField' }
 );
 
-export const RadioGroupField = createComponent<RadioGroupFieldProps>(
+export const CheckboxGroupField = createComponent<CheckboxGroupFieldProps>(
   props => {
-    const radioGroupFieldProps = useRadioGroupFieldProps(props);
+    const checkboxGroupFieldProps = useCheckboxGroupFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: radioGroupFieldProps
+      htmlProps: checkboxGroupFieldProps
     });
   },
   {
@@ -190,6 +202,6 @@ export const RadioGroupField = createComponent<RadioGroupFieldProps>(
     defaultProps: {
       use: 'fieldset'
     },
-    themeKey: 'RadioGroupField'
+    themeKey: 'CheckboxGroupField'
   }
 );
