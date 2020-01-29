@@ -97,6 +97,12 @@ export const SelectSpinner = styleProps => cssClass`
   }
 `;
 
+export const SelectField = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+  }
+`;
+
 export function wrapperSizeProperties(styleProps) {
   const properties = {
     small: css`

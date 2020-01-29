@@ -66,7 +66,7 @@ import {
 import { PortalProps } from '../Portal';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { RoverProps } from '../Rover';
-import { SelectProps } from '../Select';
+import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
 import { TabbableProps } from '../Tabbable';
@@ -758,6 +758,10 @@ export type SelectThemeConfig = {
   };
   defaultProps?: Partial<SelectProps>;
 };
+export type SelectFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<SelectFieldProps>;
+};
 export type SetThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   horizontal?: ThemeAttribute<Stylesheet>;
@@ -847,6 +851,7 @@ export type ThemeConfig = {
   RadioGroupField?: RadioGroupFieldThemeConfig;
   Rover?: RoverThemeConfig;
   Select?: SelectThemeConfig;
+  SelectField?: SelectFieldThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Tabbable?: TabbableThemeConfig;

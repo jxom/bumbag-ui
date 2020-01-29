@@ -171,6 +171,49 @@ You can use the [Group component](/components/group) to add on stuff to your `<S
 </Group>
 ```
 
+### Fields
+
+The `<SelectField>` component contains of the [`<Select>` component](#select) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+
+It accepts a combination of [`<Select>` props](#TODO) and [`<FieldWrapper>` props](#TODO).
+
+```jsx-live
+<SelectField
+  label="Condition"
+  options={[
+    { label: 'Sunny', value: 'sunny' },
+    { label: 'Windy', value: 'windy' },
+    { label: 'Overcast', value: 'overcast' }
+  ]}
+/>
+```
+
+#### Addons
+
+```jsx-live
+<SelectField
+  addonBefore={<Button isStatic>$</Button>}
+  label="Price"
+  options={[
+    { label: '10', value: '10' },
+    { label: '20', value: '20' },
+    { label: '30', value: '30' }
+  ]}
+/>
+```
+
+```jsx-live
+<SelectField
+  addonAfter={<Button isStatic>km</Button>}
+  label="Distance"
+  options={[
+    { label: '10', value: '10' },
+    { label: '20', value: '20' },
+    { label: '30', value: '30' }
+  ]}
+/>
+```
+
 ### Controlled Usage
 
 The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.

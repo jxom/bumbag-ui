@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
+import ConditionalWrap from 'conditional-wrap';
 
 import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
-import { Icon, IconProps } from '../Icon';
-import { Spinner, SpinnerProps } from '../Spinner';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
+import { Group } from '../Group';
+import { Icon } from '../Icon';
+import { Spinner } from '../Spinner';
 
 import * as styles from './styles';
 
@@ -155,5 +158,134 @@ export const Select = createComponent<SelectProps>(
       use: 'select'
     },
     themeKey: 'Select'
+  }
+);
+
+////////////////////////////////////////////////////////////////
+
+export type LocalSelectFieldProps = {
+  /** Addon component to the input (before). Similar to the addon components in Input. */
+  addonBefore?: React.ReactElement<any>;
+  /** Addon component to the input (after). Similar to the addon components in Input. */
+  addonAfter?: React.ReactElement<any>;
+  /** Additional props for the Select component */
+  selectProps?: SelectProps;
+  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+  isVertical?: boolean;
+};
+export type SelectFieldProps = BoxProps & FieldWrapperProps & SelectProps & LocalSelectFieldProps;
+
+const useSelectFieldProps = createHook<SelectFieldProps>(
+  (props, themeKey) => {
+    const {
+      addonAfter,
+      addonBefore,
+      children,
+      autoFocus,
+      defaultValue,
+      description,
+      disabled,
+      hint,
+      selectProps,
+      isLoading,
+      isOptional,
+      isRequired,
+      isVertical,
+      label,
+      name,
+      options,
+      size,
+      placeholder,
+      state,
+      tooltip,
+      tooltipTriggerComponent,
+      value,
+      onBlur,
+      onChange,
+      onFocus,
+      overrides,
+      validationText,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    const className = useClassName({
+      style: styles.SelectField,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+          validationText={validationText}
+        >
+          {({ elementProps }) => (
+            <ConditionalWrap
+              condition={addonBefore || addonAfter}
+              wrap={(children: React.ReactNode) => (
+                <Group isVertical={isVertical} overrides={overrides}>
+                  {children}
+                </Group>
+              )}
+            >
+              {addonBefore}
+              <Select
+                autoFocus={autoFocus}
+                defaultValue={defaultValue}
+                disabled={disabled}
+                isLoading={isLoading}
+                isRequired={isRequired}
+                name={name}
+                size={size}
+                options={options}
+                placeholder={placeholder}
+                state={state}
+                value={value}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
+                overrides={overrides}
+                {...elementProps}
+                {...selectProps}
+              />
+              {addonAfter}
+            </ConditionalWrap>
+          )}
+        </FieldWrapper>
+      )
+    };
+  },
+  { themeKey: 'SelectField' }
+);
+
+export const SelectField = createComponent<SelectFieldProps>(
+  props => {
+    const SelectFieldProps = useSelectFieldProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: SelectFieldProps
+    });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'SelectField'
   }
 );
