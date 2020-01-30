@@ -4,6 +4,7 @@ const replace = require('rollup-plugin-replace');
 const commonjs = require('rollup-plugin-commonjs');
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
+const size = require('rollup-plugin-size');
 const { camelCase, upperFirst } = require('lodash');
 const { getIndexPath, getPublicFiles, getSourcePath, getPackage, getModuleDir, getMainDir } = require('./utils');
 
@@ -34,7 +35,8 @@ function getPlugins(isUMD) {
       extensions,
       exclude: ['node_modules/**', '../../node_modules/**']
     }),
-    resolve({ extensions, preferBuiltins: false })
+    resolve({ extensions, preferBuiltins: false }),
+    size()
   ];
 
   if (isUMD) {
