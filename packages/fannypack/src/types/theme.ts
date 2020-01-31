@@ -69,6 +69,7 @@ import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
+import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
@@ -792,6 +793,31 @@ export type SpinnerThemeConfig = {
   };
   defaultProps?: Partial<SpinnerProps>;
 };
+export type SwitchThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Label?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  HiddenInput?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SwitchProps>;
+};
+export type SwitchFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<SwitchFieldProps>;
+};
+export type SwitchGroupThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<SwitchGroupProps>;
+};
+export type SwitchGroupFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<SwitchGroupFieldProps>;
+};
 
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
@@ -854,6 +880,10 @@ export type ThemeConfig = {
   SelectField?: SelectFieldThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
+  Switch?: SwitchThemeConfig;
+  SwitchField?: SwitchFieldThemeConfig;
+  SwitchGroup?: SwitchGroupThemeConfig;
+  SwitchGroupField?: SwitchGroupFieldThemeConfig;
   Tabbable?: TabbableThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;

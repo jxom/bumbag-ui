@@ -43,6 +43,7 @@ export * from './Rover';
 export * from './Select';
 export * from './Set';
 export * from './Spinner';
+export * from './Switch';
 export * from './Tabbable';
 export * from './Tag';
 export * from './Text';

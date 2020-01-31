@@ -1,187 +1,163 @@
 import Theme from '../../components/Theme';
-import { CheckboxGroup } from 'fannypack/Checkbox';
+import { Switch, SwitchField } from 'fannypack/Switch';
 
-# CheckboxGroup
+# Switch
 
 ## Import
 
 ```jsx
-import { CheckboxGroup } from 'fannypack'
+import { Switch, SwitchField } from 'fannypack'
 ```
 
 ## Usage
 
-The `CheckboxGroup` component renders a group of [`<Checkbox>` fields](/form/checkbox).
-
 ```jsx-live
-<CheckboxGroup
-  name="weather"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
-```
-
-### Horizontal group
-
-```jsx-live
-<CheckboxGroup
-  isHorizontal
-  name="weather2"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
+<Switch label="Check me" />
 ```
 
 ### Disabled
 
-You can disable a radio group with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
+Make the switch disabled with the `disabled` prop.
 
 ```jsx-live
-<CheckboxGroup
-  name="weather"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy', disabled: true },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
+<Switch disabled label="Click me" />
+<Switch checked disabled label="Click me" />
 ```
 
+### Colors
+
+Add colors to your switch by using the `palette` prop.
+
 ```jsx-live
-<CheckboxGroup
-  disabled
-  name="weather"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
+<Switch defaultChecked palette="secondary" label="Check me" />
+<Switch defaultChecked palette="success" label="Check me" />
+<Switch defaultChecked palette="danger" label="Check me" />
+<Switch defaultChecked palette="warning" label="Check me" />
 ```
 
 ### States
 
-A CheckboxGroup can use different states (as per palette) such as `danger`, `success` and `warning`.
+A switch can use different states (as per palette) such as `danger`, `success` and `warning`.
 
 ```jsx-live
-<CheckboxGroup
-  state="danger"
-  name="weather4"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
-```
-
-### Default value
-
-Specify a default checked value with the `defaultValue` prop.
-
-```jsx-live
-<CheckboxGroup
-  defaultValue="overcast"
-  name="weather5"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
-```
-
-You can also supply an array of strings for multiple default values:
-
-```jsx-live
-<CheckboxGroup
-  defaultValue={['overcast', 'sunny']}
-  name="weather5"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
-/>
+<Switch state="danger" label="Click me" />
+<Switch state="success" label="Click me" />
+<Switch state="warning" label="Click me" />
+<Switch state="primary" label="Click me" />
 ```
 
 ### Fields
 
-The `<CheckboxGroupField>` component contains of the [`<CheckboxGroup>` component](#CheckboxGroup) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
+The `<SwitchField>` component contains of the [`<Switch>` component](#input) wrapped by the [`<FieldWrapper>` component](/form/fieldwrapper).
 
-It accepts a combination of [`<CheckboxGroup>` props](#TODO) and [`<FieldWrapper>` props](#TODO).
+It accepts a combination of [`<Switch>` props](#TODO) and [`<FieldWrapper>` props](#TODO).
 
 ```jsx-live
-<CheckboxGroupField
-  label="What's the weather?"
-  name="weather5"
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
+<SwitchField
+  switchLabel="Check me"
+  label="Check below to subscribe"
 />
+```
+
+### Controlled Usage
+
+The previous examples are examples of uncontrolled usage. To control the value yourself, use a combination of `onChange` and `value`.
+
+Note: Do not use `defaultValue` with controlled inputs!
+
+```function-live
+function Example() {
+  const [checked, setChecked] = React.useState(true);
+
+  return (
+    <Switch
+      label="Click me"
+      checked={checked}
+      onChange={e => setChecked(e.target.checked)}
+    />
+  );
+}
 ```
 
 ## Props
 
-### CheckboxGroup Props
+### Switch Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
+**<Code marginRight="major-1">autoFocus</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Default value(s) of the checkbox group
+Automatically focus on the switch
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">checked</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">inputProps</Code>** <Code fontSize="150" palette="primary">InputHTMLAttributes&#60;any&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">defaultChecked</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Is the switch checked by default?
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Disables the checkbox group
+Disables the switch
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Are the checkbox inputs layed out horizontally?
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">name</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+Makes the switch required and sets aria-invalid to true
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">CheckboxProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-Checkbox group options
+Switch label
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">name</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-State of the checkbox group. Can be any color in the palette.
+State of the switch. Can be any color in the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
+**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | boolean</Code> 
 
-Controlled value of the checkbox group
+Initial value of the switch
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onBlur</Code>** <Code fontSize="150" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when focus is lost
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
 
-Function to invoke when checkbox group has changed
+Function to invoke when switch has changed
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onFocus</Code>** <Code fontSize="150" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when switch is focused
 
 <Box marginBottom="major-4" />
 
@@ -260,69 +236,101 @@ Function to invoke when checkbox group has changed
 </details>
             
 
-### CheckboxGroupField Props
+### SwitchField Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">checkboxGroupProps</Code>**  
+**<Code marginRight="major-1">switchLabel</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalCheckboxGroupProps`}
-</Code>
-
-Additional props for the CheckboxGroup component
+Label for the switch
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>CheckboxGroup</strong></code> props</Box>
+**<Code marginRight="major-1">switchProps</Code>**  
 
-**<Code marginRight="major-1">defaultValue</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { unstable_wrap?: (children: ReactNode) => Element; } & CSSProperties & LocalBoxProps & LocalSwitchProps`}
+</Code>
 
-Default value(s) of the checkbox group
+Additional props for the Switch component
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Switch</strong></code> props</Box>
+
+**<Code marginRight="major-1">autoFocus</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Automatically focus on the switch
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">checked</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">inputProps</Code>** <Code fontSize="150" palette="primary">InputHTMLAttributes&#60;any&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">defaultChecked</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Is the switch checked by default?
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Disables the checkbox group
+Disables the switch
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isHorizontal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
-Are the checkbox inputs layed out horizontally?
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">name</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+Makes the switch required and sets aria-invalid to true
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">CheckboxProps[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-Checkbox group options
+Switch label
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">name</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
-State of the checkbox group. Can be any color in the palette.
+State of the switch. Can be any color in the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | string[]</Code> 
+**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string | boolean</Code> 
 
-Controlled value of the checkbox group
+Initial value of the switch
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onBlur</Code>** <Code fontSize="150" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when focus is lost
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(event: FormEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
 
-Function to invoke when checkbox group has changed
+Function to invoke when switch has changed
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onFocus</Code>** <Code fontSize="150" palette="primary">(event: FocusEvent&#60;HTMLInputElement&#62;) =&#62; void</Code> 
+
+Function to invoke when switch is focused
 
 <Box marginBottom="major-4" />
 
@@ -436,23 +444,6 @@ Function to invoke when checkbox group has changed
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">label</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">labelType</Code>** <Code fontSize="150" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code> 
 
 <Box marginBottom="major-4" />
@@ -491,17 +482,24 @@ Function to invoke when checkbox group has changed
 
 ## Theming
 
+### Switch
+
 <Theme
-  component={CheckboxGroup}
-  options={[
-    { label: 'Sunny', value: 'sunny' },
-    { label: 'Windy', value: 'windy' },
-    { label: 'Overcast', value: 'overcast' }
-  ]}
+  component={Switch}
+  label="Click me"
   overrides={[
-    'CheckboxGroup.base',
-    'Checkbox.base',
-    'Checkbox.Icon.base',
-    'Checkbox.Label.base',
-    'Checkbox.HiddenInput.base'
+    'Switch.base',
+    'Switch.Icon.base',
+    'Switch.Label.base',
+    'Switch.HiddenInput.base'
+  ]} />
+
+### SwitchField
+
+<Theme
+  component={SwitchField}
+  label="Check below to subscribe"
+  switchLabel="Click me"
+  overrides={[
+    'SwitchField.base'
   ]} />

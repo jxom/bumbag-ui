@@ -39,21 +39,19 @@ exports[`composition as should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -70,42 +68,58 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -123,8 +137,8 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -132,21 +146,21 @@ exports[`composition as should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -155,21 +169,21 @@ exports[`composition as should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -179,7 +193,7 @@ exports[`composition as should render correctly 1`] = `
 </div>
 `;
 
-exports[`composition hook should return with RadioGroup props 1`] = `
+exports[`composition hook should return with SwitchGroup props 1`] = `
 Object {
   "children": <ForwardRef
     isVertical={true}
@@ -196,8 +210,8 @@ Object {
       value="me"
     />
   </ForwardRef>,
-  "className": "css-13h683e css-1pwrqjj css-3ekj6a fp-Box fp-RadioGroup",
-  "role": "radiogroup",
+  "className": "css-13h683e css-1pwrqjj css-3ekj6a fp-Box fp-SwitchGroup",
+  "role": "SwitchGroup",
 }
 `;
 
@@ -218,8 +232,8 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   Hello world
 </div>
@@ -264,21 +278,19 @@ exports[`defaultProps should render correctly for className 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -295,42 +307,58 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -352,8 +380,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-33 test fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-33 test fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -361,21 +389,21 @@ exports[`defaultProps should render correctly for className 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -384,21 +412,21 @@ exports[`defaultProps should render correctly for className 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -408,7 +436,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 </div>
 `;
 
-exports[`overrides RadioGroup.base should render correctly 1`] = `
+exports[`overrides SwitchGroup.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -447,21 +475,19 @@ exports[`overrides RadioGroup.base should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -478,42 +504,58 @@ exports[`overrides RadioGroup.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -535,8 +577,8 @@ exports[`overrides RadioGroup.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -544,21 +586,21 @@ exports[`overrides RadioGroup.base should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -567,21 +609,21 @@ exports[`overrides RadioGroup.base should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -630,21 +672,19 @@ exports[`props should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -661,42 +701,58 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -714,8 +770,8 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -723,21 +779,21 @@ exports[`props should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -746,21 +802,216 @@ exports[`props should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
+        id="label"
+      >
+        This is
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for default value (array) 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-28 > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-13.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
+  background-color: #f2f2f2;
+  box-shadow: unset;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
+  box-shadow: #ebe8fd 0px 0px 0px 2px !important;
+  border-color: #c3bcf9;
+}
+
+.emotion-2:focus + .fp-SwitchIcon {
+  border-color: #3722ed;
+  box-shadow: #c3bcf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+  border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
+}
+
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
+}
+
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
+<div
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
+>
+  <div
+    class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
+  >
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
+    >
+      <input
+        checked=""
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
+        name="weather"
+        type="checkbox"
+        value="world"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
+        id="label"
+      >
+        Hello
+      </span>
+    </label>
+    <label
+      aria-describedby="label"
+      aria-invalid="false"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
+    >
+      <input
+        checked=""
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
+        name="weather"
+        type="checkbox"
+        value="me"
+      />
+      <div
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+      />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -809,21 +1060,19 @@ exports[`props should render correctly for default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -840,42 +1089,58 @@ exports[`props should render correctly for default value 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -893,8 +1158,8 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -902,22 +1167,22 @@ exports[`props should render correctly for default value 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
         checked=""
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -926,21 +1191,21 @@ exports[`props should render correctly for default value 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -989,21 +1254,19 @@ exports[`props should render correctly for disabled field 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1020,42 +1283,58 @@ exports[`props should render correctly for disabled field 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -1073,8 +1352,8 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -1082,22 +1361,22 @@ exports[`props should render correctly for disabled field 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
         disabled=""
-        id="radio"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -1106,21 +1385,21 @@ exports[`props should render correctly for disabled field 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -1169,21 +1448,19 @@ exports[`props should render correctly for disabled fields 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1200,42 +1477,58 @@ exports[`props should render correctly for disabled fields 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -1253,8 +1546,8 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -1262,22 +1555,22 @@ exports[`props should render correctly for disabled fields 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
         disabled=""
-        id="radio"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -1286,22 +1579,22 @@ exports[`props should render correctly for disabled fields 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
         disabled=""
-        id="radio"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -1332,21 +1625,19 @@ exports[`props should render correctly for horizontal fields 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1363,42 +1654,58 @@ exports[`props should render correctly for horizontal fields 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -1441,8 +1748,8 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -1450,21 +1757,21 @@ exports[`props should render correctly for horizontal fields 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -1473,21 +1780,21 @@ exports[`props should render correctly for horizontal fields 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -1536,21 +1843,19 @@ exports[`props should render correctly for state danger 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1581,55 +1886,71 @@ exports[`props should render correctly for state danger 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon {
   border-color: #bb2a1a;
 }
 
-.emotion-2:not(:checked) + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2:not(:checked) + .fp-SwitchIcon {
   box-shadow: #f8e9e8 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #f8e9e8 0px 0px 0px 2px !important;
   border-color: #eabfba;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -1637,21 +1958,21 @@ exports[`props should render correctly for state danger 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="true"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -1660,21 +1981,21 @@ exports[`props should render correctly for state danger 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="true"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -1723,21 +2044,19 @@ exports[`props should render correctly for state success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1768,55 +2087,71 @@ exports[`props should render correctly for state success 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon {
   border-color: #107219;
 }
 
-.emotion-2:not(:checked) + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2:not(:checked) + .fp-SwitchIcon {
   box-shadow: #e7f0e8 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #e7f0e8 0px 0px 0px 2px !important;
   border-color: #b7d4ba;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -1824,21 +2159,21 @@ exports[`props should render correctly for state success 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -1847,21 +2182,21 @@ exports[`props should render correctly for state success 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -1910,21 +2245,19 @@ exports[`props should render correctly for state warning 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -1955,55 +2288,71 @@ exports[`props should render correctly for state warning 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon {
   border-color: #ed9c22;
 }
 
-.emotion-2:not(:checked) + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2:not(:checked) + .fp-SwitchIcon {
   box-shadow: #fdf5e8 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #fdf5e8 0px 0px 0px 2px !important;
   border-color: #f9e1bc;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -2011,21 +2360,21 @@ exports[`props should render correctly for state warning 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -2034,21 +2383,21 @@ exports[`props should render correctly for state warning 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -2097,21 +2446,19 @@ exports[`props should render correctly with CSS props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -2128,42 +2475,58 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -2181,8 +2544,8 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -2190,21 +2553,21 @@ exports[`props should render correctly with CSS props 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -2213,21 +2576,21 @@ exports[`props should render correctly with CSS props 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is
@@ -2237,7 +2600,7 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`theming RadioGroup.base should render correctly 1`] = `
+exports[`theming SwitchGroup.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2276,21 +2639,19 @@ exports[`theming RadioGroup.base should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-5 {
-  -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
-  border-radius: 100%;
-  height: 1em;
+  border-radius: 1em;
+  height: 1.5em;
   position: relative;
-  min-width: 1em;
-  width: 1em;
+  width: 2.5em;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
@@ -2307,42 +2668,58 @@ exports[`theming RadioGroup.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-RadioIcon {
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
   background-color: #f2f2f2;
   box-shadow: unset;
 }
 
-.emotion-2:not([disabled]):hover + .fp-RadioIcon {
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f2;
+}
+
+.emotion-2:not([disabled]):hover + .fp-SwitchIcon {
   box-shadow: #ebe8fd 0px 0px 0px 2px !important;
   border-color: #c3bcf9;
 }
 
-.emotion-2:focus + .fp-RadioIcon {
+.emotion-2:focus + .fp-SwitchIcon {
   border-color: #3722ed;
   box-shadow: #c3bcf9 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-RadioIcon {
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
   border-color: #3722ed;
+  background-color: #3722ed;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-RadioIcon::before {
-  background: #3722ed;
-  border-radius: 50%;
-  content: '';
-  height: 0.5em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5em;
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #9b90f6;
+  border-color: #9b90f6;
 }
 
-.emotion-2[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #9a9a9a;
-  background: #9a9a9a;
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #3722ed;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #9b90f6;
 }
 
 .emotion-9.emotion-9 {
@@ -2364,8 +2741,8 @@ exports[`theming RadioGroup.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-31 emotion-0 emotion-1 fp-Box fp-RadioGroup"
-  role="radiogroup"
+  class="emotion-31 emotion-0 emotion-1 fp-Box fp-SwitchGroup"
+  role="SwitchGroup"
 >
   <div
     class="emotion-28 emotion-0 emotion-1 fp-Box fp-Set"
@@ -2373,21 +2750,21 @@ exports[`theming RadioGroup.base should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="world"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         Hello
@@ -2396,21 +2773,21 @@ exports[`theming RadioGroup.base should render correctly 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Radio fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-RadioHiddenInput fp-Box"
-        id="radio"
+        class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+        id="switch"
         name="weather"
-        type="radio"
+        type="checkbox"
         value="me"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-RadioIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-RadioLabel fp-Box fp-Label"
-        for="radio"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
         id="label"
       >
         This is

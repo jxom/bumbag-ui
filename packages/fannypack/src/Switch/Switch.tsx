@@ -1,0 +1,252 @@
+import * as React from 'react';
+import { Box as ReakitBox } from 'reakit';
+import _omit from 'lodash/omit';
+
+import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
+import { Box, BoxProps } from '../Box';
+import { Label } from '../Label';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
+
+import * as styles from './styles';
+
+export type LocalSwitchProps = {
+  /** Automatically focus on the switch */
+  autoFocus?: boolean;
+  checked?: boolean;
+  inputProps?: React.InputHTMLAttributes<any>;
+  /** Is the switch checked by default? */
+  defaultChecked?: boolean;
+  /** Disables the switch */
+  disabled?: boolean;
+  /** Makes the switch required and sets aria-invalid to true */
+  isRequired?: boolean;
+  /** Switch label */
+  label?: string;
+  palette?: string;
+  name?: string;
+  /** State of the switch. Can be any color in the palette. */
+  state?: string;
+  /** Initial value of the switch */
+  value?: boolean | string;
+  /** Function to invoke when focus is lost */
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  /** Function to invoke when switch has changed */
+  onChange?: React.FormEventHandler<HTMLInputElement>;
+  /** Function to invoke when switch is focused */
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+};
+export type SwitchProps = BoxProps & LocalSwitchProps;
+
+const useProps = createHook<SwitchProps>(
+  (props, themeKey) => {
+    const {
+      autoFocus,
+      checked,
+      inputProps,
+      defaultChecked,
+      disabled,
+      isRequired,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      state,
+      value,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    const className = useClassName({
+      style: styles.Switch,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
+    const switchIconClassName = useClassName({
+      style: styles.SwitchIcon,
+      styleProps: props,
+      themeKey: 'Switch.Icon'
+    });
+    const hiddenSwitchClassName = useClassName({
+      style: styles.HiddenSwitch,
+      styleProps: props,
+      themeKey: 'Switch.HiddenInput'
+    });
+    const switchLabelClassName = useClassName({
+      style: styles.SwitchLabel,
+      styleProps: props,
+      themeKey: 'Switch.Label'
+    });
+
+    const labelId = useUniqueId('label');
+    const switchId = useUniqueId('switch');
+
+    return {
+      ...boxProps,
+      'aria-describedby': labelId,
+      'aria-invalid': state === 'danger',
+      'aria-required': isRequired,
+      className,
+      children: (
+        <React.Fragment>
+          {/**
+            // @ts-ignore */}
+          <Box
+            use="input"
+            className={hiddenSwitchClassName}
+            // @ts-ignore
+            autoFocus={autoFocus}
+            checked={checked}
+            defaultChecked={defaultChecked}
+            disabled={disabled}
+            id={switchId}
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            name={name}
+            type="checkbox"
+            // @ts-ignore
+            value={value}
+            {...inputProps}
+          />
+          <Box className={switchIconClassName} />
+          {label && (
+            <Label use="span" id={labelId} className={switchLabelClassName} htmlFor={switchId} marginLeft="minor-2">
+              {label}
+            </Label>
+          )}
+        </React.Fragment>
+      )
+    };
+  },
+  { themeKey: 'Switch' }
+);
+
+export const Switch = createComponent<SwitchProps>(
+  props => {
+    const textProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
+  },
+  {
+    attach: {
+      useProps
+    },
+    defaultProps: {
+      use: Label
+    },
+    themeKey: 'Switch'
+  }
+);
+
+////////////////////////////////////////////////////////////////
+
+export type LocalSwitchFieldProps = {
+  /** Label for the switch */
+  switchLabel?: string;
+  /** Additional props for the Switch component */
+  switchProps?: SwitchProps;
+};
+export type SwitchFieldProps = BoxProps & FieldWrapperProps & SwitchProps & LocalSwitchFieldProps;
+
+const useSwitchFieldProps = createHook<SwitchFieldProps>(
+  (props, themeKey) => {
+    const {
+      autoFocus,
+      checked,
+      switchLabel,
+      switchProps,
+      description,
+      defaultChecked,
+      disabled,
+      hint,
+      isOptional,
+      isRequired,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onFocus,
+      overrides,
+      state,
+      tooltip,
+      tooltipTriggerComponent,
+      validationText,
+      value,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    const className = useClassName({
+      style: styles.SwitchField,
+      styleProps: props,
+      themeKey,
+      prevClassName: boxProps.className
+    });
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          labelType="legend"
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+          validationText={validationText}
+        >
+          {({ elementProps }) => (
+            <Switch
+              autoFocus={autoFocus}
+              checked={checked}
+              defaultChecked={defaultChecked}
+              disabled={disabled}
+              isRequired={isRequired}
+              label={switchLabel}
+              name={name}
+              onBlur={onBlur}
+              onChange={onChange}
+              onFocus={onFocus}
+              overrides={overrides}
+              state={state}
+              value={value}
+              {..._omit(elementProps, 'id')}
+              {...switchProps}
+              inputProps={{
+                id: elementProps.id,
+                ...switchProps.inputProps
+              }}
+            />
+          )}
+        </FieldWrapper>
+      )
+    };
+  },
+  { defaultProps: { switchProps: {} }, themeKey: 'SwitchField' }
+);
+
+export const SwitchField = createComponent<SwitchFieldProps>(
+  props => {
+    const switchFieldProps = useSwitchFieldProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: switchFieldProps
+    });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'SwitchField'
+  }
+);
