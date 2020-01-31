@@ -5,7 +5,16 @@ import InputMask from 'react-input-mask';
 import ConditionalWrap from 'conditional-wrap';
 
 import { Size } from '../types';
-import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
+import {
+  formikField,
+  reduxFormField,
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  pickCSSProps,
+  omitCSSProps
+} from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Group } from '../Group';

@@ -3,6 +3,7 @@ export * from './createComponent';
 export * from './createElement';
 export * from './createHook';
 export * from './cssProps';
+export * from './fieldAdaptors';
 export * from './htmlProps';
 export * from './isFunction';
 export * from './OutsideClickHandler';
