@@ -47,6 +47,7 @@ export * from './Switch';
 export * from './Tabbable';
 export * from './Tag';
 export * from './Text';
+export * from './Textarea';
 export * from './Tooltip';
 export * from './VisuallyHidden';
 export * from './styled';

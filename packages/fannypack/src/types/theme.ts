@@ -73,6 +73,7 @@ import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps 
 import { TabbableProps } from '../Tabbable';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
+import { TextareaProps, TextareaFieldProps } from '../Textarea';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
@@ -702,6 +703,46 @@ export type TextThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   defaultProps?: Partial<TextProps>;
 };
+export type TextareaThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  disabled?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  focus?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  placeholder?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    default?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    medium?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    large?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Wrapper?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Icon?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  Spinner?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<TextareaProps>;
+};
+export type TextareaFieldThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<TextareaFieldProps>;
+};
 export type TooltipThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;
   Arrow?: {
@@ -887,5 +928,7 @@ export type ThemeConfig = {
   Tabbable?: TabbableThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
+  Textarea?: TextareaThemeConfig;
+  TextareaField?: TextareaFieldThemeConfig;
   Tooltip?: TooltipThemeConfig;
 };
