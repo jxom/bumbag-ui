@@ -54,9 +54,9 @@ export const RequiredText = styleProps => cssClass`
 `;
 
 export const ValidationText = styleProps => cssClass`
+  position: absolute;
   display: block;
   font-size: ${fontSize('150')(styleProps)}rem;
-  margin-top: ${space(1)(styleProps)}rem;
 
   & {
     ${theme(`${styleProps.themeKey}.base`)(styleProps)};
