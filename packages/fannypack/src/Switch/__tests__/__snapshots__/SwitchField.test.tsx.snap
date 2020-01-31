@@ -1159,7 +1159,7 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`props should render correctly with a checkboxLabel 1`] = `
+exports[`props should render correctly with a switchLabel 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1175,7 +1175,7 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
   outline: none;
 }
 
-.emotion-9.emotion-9 {
+.emotion-13.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1263,22 +1263,30 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
   border-color: #9b90f6;
 }
 
+.emotion-9.emotion-9 {
+  font-weight: 400;
+}
+
 .emotion-6 {
   display: block;
   font-weight: 600;
   line-height: 1;
 }
 
+.emotion-8 {
+  margin-left: 0.5rem !important;
+}
+
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-SwitchField"
+  class="emotion-14 emotion-0 emotion-1 fp-Box fp-SwitchField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-14 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Switch fp-Label"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Switch fp-Label"
     >
       <input
         class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
@@ -1289,6 +1297,13 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
       <div
         class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
       />
+      <span
+        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+        for="switch"
+        id="label"
+      >
+        Hello world
+      </span>
     </label>
   </div>
 </div>

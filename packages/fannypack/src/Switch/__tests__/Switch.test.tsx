@@ -92,9 +92,7 @@ describe('overrides', () => {
   });
 
   it('Switch.Label.base should render correctly', () => {
-    const { container } = render(
-      <Switch overrides={{ Switch: { Label: { base: { backgroundColor: 'red' } } } }} />
-    );
+    const { container } = render(<Switch overrides={{ Switch: { Label: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

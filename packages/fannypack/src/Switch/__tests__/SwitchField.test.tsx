@@ -39,8 +39,8 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with a checkboxLabel', () => {
-    const { container } = render(<SwitchField checkboxLabel="Hello world" />);
+  it('should render correctly with a switchLabel', () => {
+    const { container } = render(<SwitchField switchLabel="Hello world" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

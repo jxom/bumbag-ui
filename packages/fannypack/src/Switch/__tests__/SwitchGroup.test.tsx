@@ -140,10 +140,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('SwitchGroup.base should render correctly', () => {
     const { container } = render(
-      <SwitchGroup
-        name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-      />,
+      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {
         // @ts-ignore
         theme: { SwitchGroup: { base: { backgroundColor: 'red' } } }
@@ -156,10 +153,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <SwitchGroup
-        name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-      />,
+      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {
         // @ts-ignore
         theme: { SwitchGroup: { defaultProps: { className: 'test', color: 'primary' } } }
