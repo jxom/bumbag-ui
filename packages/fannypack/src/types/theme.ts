@@ -31,6 +31,7 @@ import {
   DialogIconProps
 } from '../Dialog';
 import { DividerProps } from '../Divider';
+import { FieldSetProps } from '../FieldSet';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
@@ -334,6 +335,10 @@ export type DividerThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DividerProps>;
+};
+export type FieldSetThemeConfig = {
+  base?: ThemeAttribute<Stylesheet>;
+  defaultProps?: Partial<FieldSetProps>;
 };
 export type FieldWrapperThemeConfig = {
   base?: ThemeAttribute<Stylesheet>;

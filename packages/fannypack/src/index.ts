@@ -15,6 +15,7 @@ export * from './Container';
 export * from './Checkbox';
 export * from './Dialog';
 export * from './Divider';
+export * from './FieldSet';
 export * from './FieldWrapper';
 export * from './Flex';
 export * from './Grid';
