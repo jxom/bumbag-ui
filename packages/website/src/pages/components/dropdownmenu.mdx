@@ -1,0 +1,57 @@
+import Theme from '../../components/Theme';
+import { DropdownMenu } from 'fannypack/DropdownMenu';
+
+# DropdownMenu
+
+## Import
+
+```jsx
+import { DropdownMenu } from 'fannypack';
+```
+
+## Usage
+
+```function-live
+function Example() {
+  const menu = DropdownMenu.useState();
+
+  return (
+    <>
+      <DropdownMenu.Button iconAfter="chevron-down" {...menu}>Actions</DropdownMenu.Button>
+      <DropdownMenu {...menu} aria-label="Actions">
+        <DropdownMenu.Group title="Actions">
+          <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+            Edit
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+            Share
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+            Rename
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+            Delete
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+        <DropdownMenu.Divider {...menu} />
+        <DropdownMenu.Group title="Links">
+          <DropdownMenu.Item
+            use={Link}
+            iconAfter="solid-external-link-alt"
+            href="https://google.com"
+            {...menu}
+          >
+            Go to Google
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+      </DropdownMenu>
+    </>
+  )
+}
+```
+
+## Props
+
+### DropdownMenu Props
+
+## Theming

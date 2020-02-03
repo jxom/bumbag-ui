@@ -16,9 +16,14 @@ export function useClassName({
   themeKey?: string;
 }) {
   const theme = React.useContext(ThemeContext);
-  const className = style({ theme, themeKey, ...styleProps });
+  let className;
+  if (Array.isArray(style)) {
+    className = style.map(style => style({ theme, themeKey, ...styleProps }));
+  } else {
+    className = [style({ theme, themeKey, ...styleProps })];
+  }
   const classNames = buildClassNames(
-    className,
+    ...className,
     prevClassName,
     themeKey ? `fp-${themeKey.replace('.', '')}` : undefined
   );
