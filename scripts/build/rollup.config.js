@@ -34,8 +34,7 @@ function getPlugins(isUMD) {
       extensions,
       exclude: ['node_modules/**', '../../node_modules/**']
     }),
-    resolve({ extensions, preferBuiltins: false }),
-    size()
+    resolve({ extensions, preferBuiltins: false })
   ];
 
   if (isUMD) {
