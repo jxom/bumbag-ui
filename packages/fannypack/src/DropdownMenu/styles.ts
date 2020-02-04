@@ -27,6 +27,7 @@ export const DropdownMenuItem = styleProps => cssClass`
   padding: ${space(1.5)(styleProps)}rem ${space(4)(styleProps)}rem;
   text-align: left;
   width: 100%;
+  transition: background-color 0.1s;
 
   a& {
     color: unset;
