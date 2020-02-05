@@ -11,7 +11,8 @@ import { DropdownMenu } from 'fannypack';
 
 ## Usage
 
-```function-live
+```live
+###tab=Hook,type=function-live
 function Example() {
   const menu = DropdownMenu.useState();
 
@@ -34,7 +35,7 @@ function Example() {
             Delete
           </DropdownMenu.Item>
         </DropdownMenu.Group>
-        <DropdownMenu.Divider {...menu} />
+        <DropdownMenu.Divider />
         <DropdownMenu.Group title="Links">
           <DropdownMenu.Item
             use={Link}
@@ -49,9 +50,9 @@ function Example() {
     </>
   )
 }
-```
+###
 
-```jsx-live
+###tab=Render Props,type=jsx-live
 <DropdownMenu.State>
   {menu => (
     <>
@@ -72,7 +73,7 @@ function Example() {
             Delete
           </DropdownMenu.Item>
         </DropdownMenu.Group>
-        <DropdownMenu.Divider {...menu} />
+        <DropdownMenu.Divider />
         <DropdownMenu.Group title="Links">
           <DropdownMenu.Item
             use={Link}
@@ -87,6 +88,7 @@ function Example() {
     </>
   )}
 </DropdownMenu.State>
+###
 ```
 
 ## Props
