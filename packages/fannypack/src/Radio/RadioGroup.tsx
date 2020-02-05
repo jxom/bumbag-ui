@@ -3,10 +3,10 @@ import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
-import { Radio, RadioProps } from '../Radio';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
+import { Radio, RadioProps } from './Radio';
 import * as styles from './styles';
 
 export type LocalRadioGroupProps = {

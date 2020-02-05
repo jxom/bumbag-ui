@@ -8,7 +8,7 @@ export const Input = Object.assign(_Input, {
   Formik: formikField(_Input),
   ReduxForm: reduxFormField(_Input)
 });
-export const InputField = Object.assign(_Input, {
+export const InputField = Object.assign(_InputField, {
   Formik: formikField(_InputField, { hasFieldWrapper: true }),
   ReduxForm: reduxFormField(_InputField, { hasFieldWrapper: true })
 });

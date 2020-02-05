@@ -5,7 +5,7 @@ import { DropdownMenuItem } from './DropdownMenuItem';
 import { DropdownMenuDisclosure } from './DropdownMenuDisclosure';
 import { DropdownMenuDivider } from './DropdownMenuDivider';
 import { DropdownMenuGroup } from './DropdownMenuGroup';
-import { useDropdownMenuState } from './DropdownMenuState';
+import { useDropdownMenuState, DropdownMenuState } from './DropdownMenuState';
 
 export * from './DropdownMenu';
 export * from './DropdownMenuButton';
@@ -18,6 +18,7 @@ export const DropdownMenu = Object.assign(_DropdownMenu, {
   Disclosure: DropdownMenuDisclosure,
   Divider: DropdownMenuDivider,
   Group: DropdownMenuGroup,
-  useState: useDropdownMenuState
+  useState: useDropdownMenuState,
+  State: DropdownMenuState
 });
 export { styles as DropdownMenuStyles };

@@ -18,6 +18,7 @@ function Example() {
   return (
     <>
       <DropdownMenu.Button iconAfter="chevron-down" {...menu}>Actions</DropdownMenu.Button>
+
       <DropdownMenu {...menu} aria-label="Actions">
         <DropdownMenu.Group title="Actions">
           <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
@@ -48,6 +49,44 @@ function Example() {
     </>
   )
 }
+```
+
+```jsx-live
+<DropdownMenu.State>
+  {menu => (
+    <>
+      <DropdownMenu.Button iconAfter="chevron-down" {...menu}>Actions</DropdownMenu.Button>
+
+      <DropdownMenu {...menu} aria-label="Actions">
+        <DropdownMenu.Group title="Actions">
+          <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+            Edit
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+            Share
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+            Rename
+          </DropdownMenu.Item>
+          <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+            Delete
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+        <DropdownMenu.Divider {...menu} />
+        <DropdownMenu.Group title="Links">
+          <DropdownMenu.Item
+            use={Link}
+            iconAfter="solid-external-link-alt"
+            href="https://google.com"
+            {...menu}
+          >
+            Go to Google
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+      </DropdownMenu>
+    </>
+  )}
+</DropdownMenu.State>
 ```
 
 ## Props

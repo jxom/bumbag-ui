@@ -3,6 +3,7 @@ import { Radio as _Radio } from './Radio';
 import { RadioGroup as _RadioGroup, RadioGroupField as _RadioGroupField } from './RadioGroup';
 import * as styles from './styles';
 
+console.log('test');
 export * from './Radio';
 export * from './RadioGroup';
 export const Radio = Object.assign(_Radio, {

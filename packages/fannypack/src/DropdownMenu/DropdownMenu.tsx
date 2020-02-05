@@ -91,8 +91,13 @@ const useProps = createHook<DropdownMenuProps>(
 
 export const DropdownMenu = createComponent<DropdownMenuProps>(
   props => {
-    const textProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
+    const dropdownMenuProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: dropdownMenuProps
+    });
   },
   {
     attach: {
