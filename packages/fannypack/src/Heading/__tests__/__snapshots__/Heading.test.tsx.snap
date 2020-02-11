@@ -202,74 +202,6 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`overrides Heading.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.25em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
 exports[`overrides Heading.h1 should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -678,6 +610,74 @@ h6.emotion-0 {
 </h1>
 `;
 
+exports[`overrides Heading.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
 exports[`overrides Heading.subHeading should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -735,7 +735,7 @@ h6.emotion-0 {
   font-weight: 600;
 }
 
-.emotion-0 base {
+.emotion-0 {
   background-color: red;
 }
 
@@ -952,75 +952,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.25em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h1.base should render correctly 1`] = `
+exports[`theming Heading.h1.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1088,7 +1020,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h2.base should render correctly 1`] = `
+exports[`theming Heading.h2.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1156,7 +1088,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h3.base should render correctly 1`] = `
+exports[`theming Heading.h3.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1224,7 +1156,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h4.base should render correctly 1`] = `
+exports[`theming Heading.h4.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1292,7 +1224,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h5.base should render correctly 1`] = `
+exports[`theming Heading.h5.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1360,7 +1292,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h6.base should render correctly 1`] = `
+exports[`theming Heading.h6.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1428,7 +1360,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h6.base should render correctly 2`] = `
+exports[`theming Heading.h6.root should render correctly 2`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1485,7 +1417,7 @@ h6.emotion-0 {
   font-weight: 600;
 }
 
-.emotion-0 base {
+.emotion-0 {
   background-color: red;
 }
 
@@ -1495,6 +1427,74 @@ h6.emotion-0 {
 
 <h1
   class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading sub-heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
 >
   hello world
 </h1>

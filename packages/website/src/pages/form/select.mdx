@@ -419,9 +419,9 @@ Function to invoke when input is focused
     { label: 'Overcast', value: 'overcast' }
   ]}
   overrides={[
-    'Select.base',
-    {key: 'Select.disabled.base', props: { disabled: true }},
-    {key: 'Select.Wrapper.base', props: { padding: 'major-2' }},
-    {key: 'Select.Icon.base', props: {}},
-    {key: 'Select.Spinner.base', props: { isLoading: true }}
+    'Select.css.root',
+    {key: 'Select.css.disabled', props: { disabled: true }},
+    {key: 'Select.Wrapper.css.root', props: { padding: 'major-2' }},
+    {key: 'Select.Icon.css.root', props: {}},
+    {key: 'Select.Spinner.css.root', props: { isLoading: true }}
   ]} />

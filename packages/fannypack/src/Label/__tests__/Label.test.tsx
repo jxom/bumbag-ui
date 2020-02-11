@@ -44,10 +44,10 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Label.base should render correctly', () => {
+  it('Label.root should render correctly', () => {
     const { container } = render(<Label>hello world</Label>, {
       // @ts-ignore
-      theme: { Label: { base: { backgroundColor: 'red' } } }
+      theme: { Label: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

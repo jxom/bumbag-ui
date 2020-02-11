@@ -42,7 +42,7 @@ describe('props', () => {
 
     it('should render correctly with overrides', () => {
       const { container } = render(
-        <Button disabled overrides={{ Button: { disabled: { backgroundColor: 'red' } } }}>
+        <Button disabled overrides={{ Button: { css: { disabled: { backgroundColor: 'red' } } } }}>
           Hello world
         </Button>
       );
@@ -72,7 +72,7 @@ describe('props', () => {
 
     it('should render correctly with overrides', () => {
       const { container } = render(
-        <Button isLoading overrides={{ Button: { loading: { backgroundColor: 'red' } } }}>
+        <Button isLoading overrides={{ Button: { css: { loading: { backgroundColor: 'red' } } } }}>
           Hello world
         </Button>
       );
@@ -88,7 +88,7 @@ describe('props', () => {
 
     it('should render correctly with overrides', () => {
       const { container } = render(
-        <Button isStatic overrides={{ Button: { static: { backgroundColor: 'red' } } }}>
+        <Button isStatic overrides={{ Button: { css: { static: { backgroundColor: 'red' } } } }}>
           Hello world
         </Button>
       );
@@ -105,7 +105,7 @@ describe('props', () => {
 
       it('should render correctly with overrides', () => {
         const { container } = render(
-          <Button kind={kind} overrides={{ Button: { [kind]: { backgroundColor: 'red' } } }}>
+          <Button kind={kind} overrides={{ Button: { css: { [kind]: { backgroundColor: 'red' } } } }}>
             Hello world
           </Button>
         );
@@ -132,7 +132,7 @@ describe('props', () => {
 
       it('should render correctly with overrides', () => {
         const { container } = render(
-          <Button size={size} overrides={{ Button: { sizes: { [size]: { backgroundColor: 'red' } } } }}>
+          <Button size={size} overrides={{ Button: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }}>
             Hello world
           </Button>
         );
@@ -203,9 +203,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Button.base should render correctly', () => {
+  it('Button.root should render correctly', () => {
     const { container } = render(
-      <Button overrides={{ Button: { base: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } }}>
+      <Button
+        overrides={{ Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } }}
+      >
         hello world
       </Button>
     );
@@ -214,7 +216,7 @@ describe('overrides', () => {
 
   it('Button.disabled should render correctly', () => {
     const { container } = render(
-      <Button disabled overrides={{ Button: { disabled: { backgroundColor: 'red' } } }}>
+      <Button disabled overrides={{ Button: { css: { disabled: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -223,14 +225,14 @@ describe('overrides', () => {
 
   it('Button.focus should render correctly', () => {
     const { container } = render(
-      <Button overrides={{ Button: { focus: { backgroundColor: 'red' } } }}>hello world</Button>
+      <Button overrides={{ Button: { css: { focus: { backgroundColor: 'red' } } } }}>hello world</Button>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.ghost should render correctly', () => {
     const { container } = render(
-      <Button kind="ghost" overrides={{ Button: { ghost: { backgroundColor: 'red' } } }}>
+      <Button kind="ghost" overrides={{ Button: { css: { ghost: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -239,21 +241,21 @@ describe('overrides', () => {
 
   it('Button.hover should render correctly', () => {
     const { container } = render(
-      <Button overrides={{ Button: { hover: { backgroundColor: 'red' } } }}>hello world</Button>
+      <Button overrides={{ Button: { css: { hover: { backgroundColor: 'red' } } } }}>hello world</Button>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.hoveractive should render correctly', () => {
     const { container } = render(
-      <Button overrides={{ Button: { hoveractive: { backgroundColor: 'red' } } }}>hello world</Button>
+      <Button overrides={{ Button: { css: { hoveractive: { backgroundColor: 'red' } } } }}>hello world</Button>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.loading should render correctly', () => {
     const { container } = render(
-      <Button isLoading overrides={{ Button: { loading: { backgroundColor: 'red' } } }}>
+      <Button isLoading overrides={{ Button: { css: { loading: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -262,7 +264,7 @@ describe('overrides', () => {
 
   it('Button.link should render correctly', () => {
     const { container } = render(
-      <Button kind="link" overrides={{ Button: { link: { backgroundColor: 'red' } } }}>
+      <Button kind="link" overrides={{ Button: { css: { link: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -271,7 +273,7 @@ describe('overrides', () => {
 
   it('Button.outlined should render correctly', () => {
     const { container } = render(
-      <Button kind="outlined" overrides={{ Button: { outlined: { backgroundColor: 'red' } } }}>
+      <Button kind="outlined" overrides={{ Button: { css: { outlined: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -280,7 +282,7 @@ describe('overrides', () => {
 
   it('Button.static should render correctly', () => {
     const { container } = render(
-      <Button isStatic overrides={{ Button: { outlined: { backgroundColor: 'red' } } }}>
+      <Button isStatic overrides={{ Button: { css: { outlined: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -290,7 +292,7 @@ describe('overrides', () => {
   ['small', 'default', 'medium', 'large'].forEach((size: any) => {
     it(`Button.sizes.${size} should render correctly`, () => {
       const { container } = render(
-        <Button size={size} overrides={{ Button: { sizes: { [size]: { backgroundColor: 'red' } } } }}>
+        <Button size={size} overrides={{ Button: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }}>
           hello world
         </Button>
       );
@@ -300,72 +302,72 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Button.base should render correctly', () => {
+  it('Button.root should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { base: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.disabled should render correctly', () => {
     const { container } = render(<Button disabled>hello world</Button>, {
-      theme: { Button: { disabled: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { disabled: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.focus should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { focus: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { focus: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.ghost should render correctly', () => {
     const { container } = render(<Button kind="ghost">hello world</Button>, {
-      theme: { Button: { ghost: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { ghost: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.hover should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { hover: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { hover: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.hoveractive should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { hoveractive: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { hoveractive: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.loading should render correctly', () => {
     const { container } = render(<Button isLoading>hello world</Button>, {
-      theme: { Button: { loading: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { loading: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.link should render correctly', () => {
     const { container } = render(<Button kind="link">hello world</Button>, {
-      theme: { Button: { link: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { link: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.outlined should render correctly', () => {
     const { container } = render(<Button kind="outlined">hello world</Button>, {
-      theme: { Button: { outlined: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.static should render correctly', () => {
     const { container } = render(<Button isStatic>hello world</Button>, {
-      theme: { Button: { outlined: { backgroundColor: 'red' } } }
+      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -373,7 +375,7 @@ describe('theming', () => {
   ['small', 'default', 'medium', 'large'].forEach((size: any) => {
     it(`Button.sizes.${size} should render correctly`, () => {
       const { container } = render(<Button size={size}>hello world</Button>, {
-        theme: { Button: { sizes: { [size]: { backgroundColor: 'red' } } } }
+        theme: { Button: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }
       });
       expect(container.firstChild).toMatchSnapshot();
     });

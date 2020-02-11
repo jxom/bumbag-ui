@@ -9,7 +9,7 @@ export const TextareaWrapper = styleProps => cssClass`
   ${styleProps.size && wrapperSizeProperties(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -27,7 +27,7 @@ export const Textarea = styleProps => cssClass`
     cursor: not-allowed;
 
     & {
-      ${theme(`${styleProps.themeKey}.disabled.base`)(styleProps)};
+      ${theme(`${styleProps.themeKey}.css.disabled`)(styleProps)};
     }
   }
 
@@ -43,7 +43,7 @@ export const Textarea = styleProps => cssClass`
     box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
 
     & {
-      ${theme(`${styleProps.themeKey}.focus.base`)(styleProps)};
+      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
     }
   }
 
@@ -51,7 +51,7 @@ export const Textarea = styleProps => cssClass`
     opacity: 0.6;
 
     & {
-      ${theme(`${styleProps.themeKey}.placeholder.base`)(styleProps)};
+      ${theme(`${styleProps.themeKey}.css.placeholder`)(styleProps)};
     }
   }
 
@@ -64,29 +64,13 @@ export const Textarea = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
-  }
-`;
-
-export const TextareaSpinner = styleProps => cssClass`
-  && {
-    font-size: inherit;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    height: 2.5em;
-    margin: 0 0.75em;
-    top: 0;
-    right: 0;
-    z-index: 2;
-
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const TextareaField = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -96,26 +80,26 @@ export function wrapperSizeProperties(styleProps) {
       font-size: ${fontSize('150')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.small.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.sizes.default.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
       font-size: ${fontSize('300')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.medium.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       font-size: ${fontSize('400')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.large.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
       }
     `
   };

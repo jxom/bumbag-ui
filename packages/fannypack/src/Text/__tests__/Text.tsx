@@ -39,9 +39,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Text.base should render correctly', () => {
+  it('Text.css.root should render correctly', () => {
     const { container } = render(<Text>hello world</Text>, {
-      theme: { Text: { base: { backgroundColor: 'red' } } }
+      theme: { Text: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

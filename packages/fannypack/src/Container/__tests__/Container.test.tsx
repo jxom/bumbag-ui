@@ -99,16 +99,16 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Container.base should render correctly', () => {
+  it('Container.root should render correctly', () => {
     const { container } = render(
-      <Container overrides={{ Container: { base: { backgroundColor: 'red' } } }}>hello world</Container>
+      <Container overrides={{ Container: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Container>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.fluid should render correctly', () => {
     const { container } = render(
-      <Container isFluid overrides={{ Container: { fluid: { backgroundColor: 'red' } } }}>
+      <Container isFluid overrides={{ Container: { css: { fluid: { backgroundColor: 'red' } } } }}>
         hello world
       </Container>
     );
@@ -117,7 +117,7 @@ describe('overrides', () => {
 
   it('Container.layout should render correctly', () => {
     const { container } = render(
-      <Container isLayout overrides={{ Container: { layout: { backgroundColor: 'red' } } }}>
+      <Container isLayout overrides={{ Container: { css: { layout: { backgroundColor: 'red' } } } }}>
         hello world
       </Container>
     );
@@ -144,23 +144,23 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Container.base should render correctly', () => {
+  it('Container.root should render correctly', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { base: { backgroundColor: 'red' } } }
+      theme: { Container: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.fluid should render correctly', () => {
     const { container } = render(<Container isFluid>hello world</Container>, {
-      theme: { Container: { fluid: { backgroundColor: 'red' } } }
+      theme: { Container: { css: { fluid: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.layout should render correctly', () => {
     const { container } = render(<Container isLayout>hello world</Container>, {
-      theme: { Container: { layout: { backgroundColor: 'red' } } }
+      theme: { Container: { css: { layout: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

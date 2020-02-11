@@ -70,16 +70,16 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Badge.base should render correctly', () => {
+  it('Badge.root should render correctly', () => {
     const { container } = render(
-      <Badge overrides={{ Badge: { base: { backgroundColor: 'red' } } }}>hello world</Badge>
+      <Badge overrides={{ Badge: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Badge>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.attached should render correctly', () => {
     const { container } = render(
-      <Badge isAttached overrides={{ Badge: { attached: { backgroundColor: 'red' } } }}>
+      <Badge isAttached overrides={{ Badge: { css: { attached: { backgroundColor: 'red' } } } }}>
         hello world
       </Badge>
     );
@@ -88,14 +88,14 @@ describe('overrides', () => {
 
   it('Badge.sizes.default should render correctly', () => {
     const { container } = render(
-      <Badge overrides={{ Badge: { sizes: { default: { backgroundColor: 'red' } } } }}>hello world</Badge>
+      <Badge overrides={{ Badge: { css: { sizes: { default: { backgroundColor: 'red' } } } } }}>hello world</Badge>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.medium should render correctly', () => {
     const { container } = render(
-      <Badge size="medium" overrides={{ Badge: { sizes: { medium: { backgroundColor: 'red' } } } }}>
+      <Badge size="medium" overrides={{ Badge: { css: { sizes: { medium: { backgroundColor: 'red' } } } } }}>
         hello world
       </Badge>
     );
@@ -104,7 +104,7 @@ describe('overrides', () => {
 
   it('Badge.sizes.large should render correctly', () => {
     const { container } = render(
-      <Badge size="large" overrides={{ Badge: { sizes: { large: { backgroundColor: 'red' } } } }}>
+      <Badge size="large" overrides={{ Badge: { css: { sizes: { large: { backgroundColor: 'red' } } } } }}>
         hello world
       </Badge>
     );
@@ -113,37 +113,37 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Badge.base should render correctly', () => {
+  it('Badge.root should render correctly', () => {
     const { container } = render(<Badge>hello world</Badge>, {
-      theme: { Badge: { base: { backgroundColor: 'red' } } }
+      theme: { Badge: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.attached should render correctly', () => {
     const { container } = render(<Badge isAttached>hello world</Badge>, {
-      theme: { Badge: { attached: { backgroundColor: 'red' } } }
+      theme: { Badge: { css: { attached: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.default should render correctly', () => {
     const { container } = render(<Badge>hello world</Badge>, {
-      theme: { Badge: { sizes: { default: { backgroundColor: 'red' } } } }
+      theme: { Badge: { css: { sizes: { default: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.medium should render correctly', () => {
     const { container } = render(<Badge size="medium">hello world</Badge>, {
-      theme: { Badge: { sizes: { medium: { backgroundColor: 'red' } } } }
+      theme: { Badge: { css: { sizes: { medium: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.large should render correctly', () => {
     const { container } = render(<Badge size="large">hello world</Badge>, {
-      theme: { Badge: { sizes: { large: { backgroundColor: 'red' } } } }
+      theme: { Badge: { css: { sizes: { large: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

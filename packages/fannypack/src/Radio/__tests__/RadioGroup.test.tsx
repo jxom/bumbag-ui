@@ -114,12 +114,12 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('RadioGroup.base should render correctly', () => {
+  it('RadioGroup.root should render correctly', () => {
     const { container } = render(
       <RadioGroup
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-        overrides={{ RadioGroup: { base: { backgroundColor: 'red' } } }}
+        overrides={{ RadioGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -127,12 +127,12 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('RadioGroup.base should render correctly', () => {
+  it('RadioGroup.root should render correctly', () => {
     const { container } = render(
       <RadioGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
       {
         // @ts-ignore
-        theme: { RadioGroup: { base: { backgroundColor: 'red' } } }
+        theme: { RadioGroup: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

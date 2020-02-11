@@ -39,7 +39,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Template.base should render correctly', () => {
+  it('Template.root should render correctly', () => {
     const { container } = render(<Template>hello world</Template>, {
       // @ts-ignore
       theme: { Template: { base: { backgroundColor: 'red' } } }

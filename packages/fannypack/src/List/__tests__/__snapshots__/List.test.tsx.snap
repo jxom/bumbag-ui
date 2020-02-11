@@ -216,7 +216,7 @@ exports[`defaultProps should render correctly for isOrdered 1`] = `
 </ol>
 `;
 
-exports[`overrides List.base should render correctly 1`] = `
+exports[`overrides List.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -599,7 +599,7 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`theming List.Item.base should render correctly 1`] = `
+exports[`theming List.Item.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -637,73 +637,6 @@ exports[`theming List.Item.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
-}
-
-<ul
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
->
-  <li
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
-  >
-    Item One
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
-  >
-    Item Two
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
-  >
-    Item Three
-  </li>
-  <li
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
-  >
-    Item Four
-  </li>
-</ul>
-`;
-
-exports[`theming List.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-12 {
-  list-style: unset;
-  list-style-type: none;
-}
-
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.emotion-12 .emotion-12 {
-  margin-left: 1rem;
-}
-
-.emotion-12 {
   background-color: red;
 }
 
@@ -856,6 +789,73 @@ exports[`theming List.ordered should render correctly 2`] = `
 
 .emotion-12.emotion-12.emotion-12 li:not(:last-child) {
   margin-right: 1rem;
+}
+
+.emotion-12 {
+  background-color: red;
+}
+
+<ul
+  class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
+>
+  <li
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
+  >
+    Item One
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
+  >
+    Item Two
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
+  >
+    Item Three
+  </li>
+  <li
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ListItem"
+  >
+    Item Four
+  </li>
+</ul>
+`;
+
+exports[`theming List.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-12 {
+  list-style: unset;
+  list-style-type: none;
+}
+
+.emotion-12:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-12 .emotion-12 {
+  margin-left: 1rem;
 }
 
 .emotion-12 {

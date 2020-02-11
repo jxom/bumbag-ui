@@ -39,17 +39,19 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('TextareaField.base should render correctly', () => {
-    const { container } = render(<TextareaField overrides={{ TextareaField: { base: { backgroundColor: 'red' } } }} />);
+  it('TextareaField.root should render correctly', () => {
+    const { container } = render(
+      <TextareaField overrides={{ TextareaField: { css: { root: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('TextareaField.base should render correctly', () => {
+  it('TextareaField.root should render correctly', () => {
     const { container } = render(<TextareaField />, {
       // @ts-ignore
-      theme: { TextareaField: { base: { backgroundColor: 'red' } } }
+      theme: { TextareaField: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -58,11 +58,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Modal.Backdrop.base should render correctly', () => {
+  it('Modal.Backdrop.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
-        <Modal.Backdrop overrides={{ Modal: { Backdrop: { base: { backgroundColor: 'red' } } } }} {...modal}>
+        <Modal.Backdrop overrides={{ Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }} {...modal}>
           Toggle
         </Modal.Backdrop>
       );
@@ -73,13 +73,13 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Modal.Backdrop.base should render correctly', () => {
+  it('Modal.Backdrop.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Backdrop: { base: { backgroundColor: 'red' } } } }
+      theme: { Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

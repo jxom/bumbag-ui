@@ -6,7 +6,7 @@ import { palette, space, theme } from 'fannypack/utils';
 
 export const Token = styled(Text)`
   & {
-    ${theme('HighlightedCode.Token.base')};
+    ${theme('HighlightedCode.Token.css.root')};
   }
 `;
 
@@ -20,7 +20,7 @@ export const Pre = styled(Code)<{ isBlock?: boolean }>`
     `};
 
   & {
-    ${theme('HighlightedCode.Pre.base')};
+    ${theme('HighlightedCode.Pre.css.root')};
   }
 `;
 
@@ -32,7 +32,7 @@ export const Line = styled(Box)<{ isBlock?: boolean }>`
     `};
 
   & {
-    ${theme('HighlightedCode.Line.base')};
+    ${theme('HighlightedCode.Line.css.root')};
   }
 `;
 
@@ -40,12 +40,12 @@ export const HighlightedCode = styleProps => cssClass`
   ${styleProps.isBlock &&
     css`
       & {
-        ${theme('HighlightedCode.block')(styleProps)};
+        ${theme('HighlightedCode.css.block')(styleProps)};
       }
     `};
 
   & {
-    ${theme('HighlightedCode.base')(styleProps)};
+    ${theme('HighlightedCode.css.root')(styleProps)};
   };
 `;
 

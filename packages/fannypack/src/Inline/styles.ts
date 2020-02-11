@@ -5,6 +5,6 @@ export const Inline = styleProps => cssClass`
   display: inline;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

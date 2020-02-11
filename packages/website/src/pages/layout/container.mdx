@@ -104,10 +104,11 @@ A fluid container's width is always **100%**, but has a fixed left and right mar
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  layout?: any;
-  fluid?: any;
-  tabletMargin?: ThemeAttribute<number>;
+  css?: {
+    root?: any;
+    layout?: any;
+    fluid?: any
+  }; tabletMargin?: ThemeAttribute<number>;
   fluidMargin?: ThemeAttribute<number>;
   defaultProps?: Partial<ContainerProps>;
 }`}
@@ -177,6 +178,6 @@ A fluid container's width is always **100%**, but has a fixed left and right mar
 
 <Theme
   component={Container}
-  overrides={['Container.base', { key: 'Container.fluid', props: { isFluid: true } }, { key: 'Container.layout', props: { isLayout: true } }]}>
+  overrides={['Container.css.root', { key: 'Container.css.fluid', props: { isFluid: true } }, { key: 'Container.css.layout', props: { isLayout: true } }]}>
   Hello world
 </Theme>

@@ -16,11 +16,11 @@ export const Divider = styleProps => cssClass`
       height: auto;
 
       & {
-        ${theme(`${styleProps.themeKey}.vertical.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.vertical`)(styleProps)};
       }
     }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

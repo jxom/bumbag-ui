@@ -15,7 +15,7 @@ export const DropdownMenu = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -88,19 +88,19 @@ export const DropdownMenuItem = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const DropdownMenuDisclosure = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const DropdownMenuButton = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -115,7 +115,7 @@ export const DropdownMenuItemIcon = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -125,13 +125,13 @@ export const DropdownMenuDivider = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const DropdownMenuGroup = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -145,6 +145,6 @@ export const DropdownMenuGroupTitle = styleProps => cssClass`
   text-transform: uppercase;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

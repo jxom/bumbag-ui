@@ -26,8 +26,9 @@ import { InlineFlex } from 'fannypack';
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  defaultProps?: Partial<InlineFlexProps>;
+  css?: {
+    root?: any
+  }; defaultProps?: Partial<InlineFlexProps>;
 }`}
 </Code>
 
@@ -93,4 +94,4 @@ import { InlineFlex } from 'fannypack';
 
 ## Theming
 
-<Theme component={InlineFlex} overrides={['InlineFlex.base']}>This is an inline flex</Theme>
+<Theme component={InlineFlex} overrides={['InlineFlex.css.root']}>This is an inline flex</Theme>

@@ -233,46 +233,6 @@ exports[`defaultProps should render correctly for label 1`] = `
 </svg>
 `;
 
-exports[`overrides Icon.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<svg
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Icon"
-  role="img"
-  viewBox="0 0 512 512"
->
-  <path
-    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-    fill="currentColor"
-    fill-rule="evenodd"
-  />
-</svg>
-`;
-
 exports[`overrides Icon.iconNames should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -361,6 +321,46 @@ exports[`overrides Icon.icons should render correctly 1`] = `
   role="img"
   viewBox="0 0 0 0"
 />
+`;
+
+exports[`overrides Icon.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<svg
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Icon"
+  role="img"
+  viewBox="0 0 512 512"
+>
+  <path
+    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+    fill="currentColor"
+    fill-rule="evenodd"
+  />
+</svg>
 `;
 
 exports[`props should render correctly 1`] = `
@@ -629,46 +629,6 @@ exports[`props should render correctly with aria-hidden 1`] = `
 </svg>
 `;
 
-exports[`theming Icon.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  fill: inherit;
-  position: relative;
-  height: 1em;
-  width: 1em;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<svg
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Icon"
-  role="img"
-  viewBox="0 0 512 512"
->
-  <path
-    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-    fill="currentColor"
-    fill-rule="evenodd"
-  />
-</svg>
-`;
-
 exports[`theming Icon.iconNames should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -771,6 +731,46 @@ exports[`theming Icon.icons should render correctly 1`] = `
 >
   <path
     d="M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z"
+    fill="currentColor"
+    fill-rule="evenodd"
+  />
+</svg>
+`;
+
+exports[`theming Icon.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<svg
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Icon"
+  role="img"
+  viewBox="0 0 512 512"
+>
+  <path
+    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
     fill="currentColor"
     fill-rule="evenodd"
   />

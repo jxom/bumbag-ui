@@ -81,12 +81,12 @@ Avatars can also be initials using the `initials` prop.
 <Theme
   component={Avatar}
   src="/bean.jpg"
+  padding="major-1"
   overrides={[
-    'Avatar.base',
-    { key: 'Avatar.circle.base', props: { kind: 'circle' } },
-    { key: 'Avatar.sizes.small', props: { size: 'small' } },
-    'Avatar.sizes.default',
-    { key: 'Avatar.sizes.medium', props: { size: 'medium' } },
-    { key: 'Avatar.sizes.large', props: { size: 'large' } }
+    'Avatar.css.root',
+    { key: 'Avatar.css.sizes.small', props: { size: 'small' } },
+    'Avatar.css.sizes.default',
+    { key: 'Avatar.css.sizes.medium', props: { size: 'medium' } },
+    { key: 'Avatar.css.sizes.large', props: { size: 'large' } }
   ]}
 />

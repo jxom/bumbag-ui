@@ -73,23 +73,30 @@ A header can also be easily grouped with a subheading
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  h1?: {
-    base?: any
-  }; h2?: {
-    base?: any
-  }; h3?: {
-    base?: any
-  }; h4?: {
-    base?: any
-  }; h5?: {
-    base?: any
-  }; h6?: {
-    base?: any
-  }; subHeading?: {
-    base?: any
-  }; defaultProps?: Partial<HeadingProps>;
-}`}
+  css?: {
+    root?: any
+  }; h1?: {
+    css?: {
+      root?: a
+    }; };
+    h2?: {
+      css?: {
+        root?:
+      }; }; h3?: {
+        css?: {
+          root
+        }; }; h4?: {
+          css?: {
+            ro
+          }; }; h5?: {
+            css?: {
+              
+            }; }; h6?: { css?: {
+              
+            }; }; subHeading?: {
+              css?: 
+              }; }; defaultProps?: Pa
+            }`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -157,39 +164,39 @@ A header can also be easily grouped with a subheading
 <Theme
   component={Heading}
   overrides={[
-    'Heading.base',
+    'Heading.css.root',
     {
-      key: 'Heading.h1.base',
+      key: 'Heading.h1.css.root',
       description: 'Applies when the heading is h1. `<Heading use="h1">`',
       props: { use: 'h1' }
     },
     {
-      key: 'Heading.h2.base',
+      key: 'Heading.h2.css.root',
       description: 'Applies when the heading is h2. `<Heading use="h2">`',
       props: { use: 'h2' }
     },
     {
-      key: 'Heading.h3.base',
+      key: 'Heading.h3.css.root',
       description: 'Applies when the heading is h3. `<Heading use="h3">`',
       props: { use: 'h3' }
     },
     {
-      key: 'Heading.h4.base',
+      key: 'Heading.h4.css.root',
       description: 'Applies when the heading is h4. `<Heading use="h4">`',
       props: { use: 'h4' }
     },
     {
-      key: 'Heading.h5.base',
+      key: 'Heading.h5.css.root',
       description: 'Applies when the heading is h5. `<Heading use="h5">`',
       props: { use: 'h5' }
     },
     {
-      key: 'Heading.h6.base',
+      key: 'Heading.h6.css.root',
       description: 'Applies when the heading is h6. `<Heading use="h6">`',
       props: { use: 'h6' }
     },
     {
-      key: 'Heading.subHeading',
+      key: 'Heading.subHeading.css.root',
       description: 'Applies for sub-headings. `<Heading isSubHeading>`',
       props: { isSubHeading: true }
     }

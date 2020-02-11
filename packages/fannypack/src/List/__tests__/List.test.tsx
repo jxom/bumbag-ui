@@ -90,14 +90,16 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('List.base should render correctly', () => {
-    const { container } = render(<List overrides={{ Link: { base: { backgroundColor: 'red' } } }}>hello world</List>);
+  it('List.root should render correctly', () => {
+    const { container } = render(
+      <List overrides={{ Link: { css: { root: { backgroundColor: 'red' } } } }}>hello world</List>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('List.base should render correctly', () => {
+  it('List.root should render correctly', () => {
     const { container } = render(
       <List>
         <List.Item>Item One</List.Item>
@@ -106,7 +108,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { base: { backgroundColor: 'red' } } }
+        theme: { List: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -121,7 +123,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { ordered: { backgroundColor: 'red' } } }
+        theme: { List: { css: { ordered: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -136,13 +138,13 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { horizontal: { backgroundColor: 'red' } } }
+        theme: { List: { css: { horizontal: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('List.Item.base should render correctly', () => {
+  it('List.Item.root should render correctly', () => {
     const { container } = render(
       <List>
         <List.Item>Item One</List.Item>
@@ -151,7 +153,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { Item: { base: { backgroundColor: 'red' } } } }
+        theme: { List: { Item: { css: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

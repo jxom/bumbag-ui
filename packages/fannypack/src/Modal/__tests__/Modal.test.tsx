@@ -160,11 +160,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Modal.base should render correctly', () => {
+  it('Modal.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
-        <Modal {...modal} aria-label="test" overrides={{ Modal: { base: { backgroundColor: 'red' } } }}>
+        <Modal {...modal} aria-label="test" overrides={{ Modal: { css: { root: { backgroundColor: 'red' } } } }}>
           Hello world
         </Modal>
       );
@@ -173,14 +173,14 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.center.base should render correctly', () => {
+  it('Modal.center.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
         <Modal
           {...modal}
           aria-label="test"
-          overrides={{ Modal: { placements: { center: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { center: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -190,7 +190,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.top.base should render correctly', () => {
+  it('Modal.top.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -198,7 +198,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="top"
-          overrides={{ Modal: { placements: { top: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { top: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -208,7 +208,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.left.base should render correctly', () => {
+  it('Modal.left.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -216,7 +216,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="left"
-          overrides={{ Modal: { placements: { left: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { left: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -226,7 +226,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.right.base should render correctly', () => {
+  it('Modal.right.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -234,7 +234,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="right"
-          overrides={{ Modal: { placements: { right: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { right: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -244,7 +244,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottom.base should render correctly', () => {
+  it('Modal.bottom.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -252,7 +252,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="bottom"
-          overrides={{ Modal: { placements: { bottom: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -262,7 +262,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topStart.base should render correctly', () => {
+  it('Modal.topStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -270,7 +270,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="top-start"
-          overrides={{ Modal: { placements: { topStart: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -280,7 +280,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topEnd.base should render correctly', () => {
+  it('Modal.topEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -288,7 +288,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="top-end"
-          overrides={{ Modal: { placements: { topEnd: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -298,7 +298,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomStart.base should render correctly', () => {
+  it('Modal.bottomStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -306,7 +306,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="bottom-start"
-          overrides={{ Modal: { placements: { bottomStart: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -316,7 +316,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomEnd.base should render correctly', () => {
+  it('Modal.bottomEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -324,7 +324,7 @@ describe('overrides', () => {
           {...modal}
           aria-label="test"
           placement="bottom-end"
-          overrides={{ Modal: { placements: { bottomEnd: { backgroundColor: 'red' } } } }}
+          overrides={{ Modal: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Modal>
@@ -336,7 +336,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Modal.base should render correctly', () => {
+  it('Modal.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -346,12 +346,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { base: { backgroundColor: 'red' } } }
+      theme: { Modal: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.center.base should render correctly', () => {
+  it('Modal.center.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -361,12 +361,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { center: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { center: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.top.base should render correctly', () => {
+  it('Modal.top.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -376,12 +376,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { top: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { top: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.left.base should render correctly', () => {
+  it('Modal.left.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -391,12 +391,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { left: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { left: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.right.base should render correctly', () => {
+  it('Modal.right.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -406,12 +406,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { right: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { right: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottom.base should render correctly', () => {
+  it('Modal.bottom.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -421,12 +421,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { bottom: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topStart.base should render correctly', () => {
+  it('Modal.topStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -436,12 +436,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { topStart: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.topEnd.base should render correctly', () => {
+  it('Modal.topEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -451,12 +451,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { topEnd: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomStart.base should render correctly', () => {
+  it('Modal.bottomStart.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -466,12 +466,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { bottomStart: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Modal.bottomEnd.base should render correctly', () => {
+  it('Modal.bottomEnd.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
@@ -481,7 +481,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Modal: { placements: { bottomEnd: { backgroundColor: 'red' } } } }
+      theme: { Modal: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }
     });
     expect(baseElement).toMatchSnapshot();
   });

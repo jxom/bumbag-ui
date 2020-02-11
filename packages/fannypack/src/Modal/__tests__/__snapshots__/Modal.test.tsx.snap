@@ -254,63 +254,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-}
-
-.emotion-0:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
-    </div>
-  </div>
-</body>
-`;
-
-exports[`overrides Modal.bottom.base should render correctly 1`] = `
+exports[`overrides Modal.bottom.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -366,7 +310,7 @@ exports[`overrides Modal.bottom.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.bottomEnd.base should render correctly 1`] = `
+exports[`overrides Modal.bottomEnd.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -422,7 +366,7 @@ exports[`overrides Modal.bottomEnd.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.bottomStart.base should render correctly 1`] = `
+exports[`overrides Modal.bottomStart.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -478,7 +422,7 @@ exports[`overrides Modal.bottomStart.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.center.base should render correctly 1`] = `
+exports[`overrides Modal.center.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -534,7 +478,7 @@ exports[`overrides Modal.center.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.left.base should render correctly 1`] = `
+exports[`overrides Modal.left.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -590,7 +534,7 @@ exports[`overrides Modal.left.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.right.base should render correctly 1`] = `
+exports[`overrides Modal.right.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -646,7 +590,63 @@ exports[`overrides Modal.right.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.top.base should render correctly 1`] = `
+exports[`overrides Modal.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<body>
+  <div />
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`overrides Modal.top.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -702,7 +702,7 @@ exports[`overrides Modal.top.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.topEnd.base should render correctly 1`] = `
+exports[`overrides Modal.topEnd.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -758,7 +758,7 @@ exports[`overrides Modal.topEnd.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Modal.topStart.base should render correctly 1`] = `
+exports[`overrides Modal.topStart.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6286,63 +6286,7 @@ exports[`props should render correctly with non-modal modal 1`] = `
 </body>
 `;
 
-exports[`theming Modal.base should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  position: fixed;
-  z-index: 19900410;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate3d(-50%,-50%,0px);
-  -ms-transform: translate3d(-50%,-50%,0px);
-  transform: translate3d(-50%,-50%,0px);
-}
-
-.emotion-0:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
-    </div>
-  </div>
-</body>
-`;
-
-exports[`theming Modal.bottom.base should render correctly 1`] = `
+exports[`theming Modal.bottom.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6398,7 +6342,7 @@ exports[`theming Modal.bottom.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.bottomEnd.base should render correctly 1`] = `
+exports[`theming Modal.bottomEnd.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6454,7 +6398,7 @@ exports[`theming Modal.bottomEnd.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.bottomStart.base should render correctly 1`] = `
+exports[`theming Modal.bottomStart.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6510,7 +6454,7 @@ exports[`theming Modal.bottomStart.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.center.base should render correctly 1`] = `
+exports[`theming Modal.center.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6566,7 +6510,7 @@ exports[`theming Modal.center.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.left.base should render correctly 1`] = `
+exports[`theming Modal.left.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6622,7 +6566,7 @@ exports[`theming Modal.left.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.right.base should render correctly 1`] = `
+exports[`theming Modal.right.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6678,7 +6622,63 @@ exports[`theming Modal.right.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.top.base should render correctly 1`] = `
+exports[`theming Modal.root should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  position: fixed;
+  z-index: 19900410;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0px);
+  -ms-transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%,-50%,0px);
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+<body>
+  <div />
+  <div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="test"
+      aria-modal="true"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="display: none;"
+      tabindex="-1"
+    >
+      Hello world
+    </div>
+  </div>
+</body>
+`;
+
+exports[`theming Modal.top.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6734,7 +6734,7 @@ exports[`theming Modal.top.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.topEnd.base should render correctly 1`] = `
+exports[`theming Modal.topEnd.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -6790,7 +6790,7 @@ exports[`theming Modal.topEnd.base should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Modal.topStart.base should render correctly 1`] = `
+exports[`theming Modal.topStart.root should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;

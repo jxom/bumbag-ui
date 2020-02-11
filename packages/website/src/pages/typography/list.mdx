@@ -91,12 +91,14 @@ To use an horizontal list, use the `isHorizontal` prop.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  ordered?: any;
-  horizontal?: any;
-  Item?: {
-    base?: any;
-    defaultProps?: Partial<BoxProps>
+  css?: {
+    root?: any;
+    ordered?: any;
+    horizontal?: any
+  }; Item?: {
+    css?: {
+      root?: a
+    }; defaultProps?: Partial<BoxProps>
   }; defaultProps?: Partial<ListProps>;
 }`}
 </Code>
@@ -245,9 +247,9 @@ To use an horizontal list, use the `isHorizontal` prop.
 <Theme
   component={List}
   overrides={[
-    'List.base',
-    { key: 'List.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
-    { key: 'List.horizontal', props: { isHorizontal: true } }
+    'List.css.root',
+    { key: 'List.css.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
+    { key: 'List.css.horizontal', props: { isHorizontal: true } }
   ]}>
   <List.Item>Item 1</List.Item>
   <List.Item>Item 2</List.Item>
@@ -256,7 +258,7 @@ To use an horizontal list, use the `isHorizontal` prop.
 <Theme
   component={List}
   injectOverrides={false}
-  overrides={['List.Item.base']}>
+  overrides={['List.Item.css.root']}>
   {({ overrides }) => (
     <React.Fragment>
       <List.Item overrides={overrides}>Item 1</List.Item>

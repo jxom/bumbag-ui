@@ -33,7 +33,7 @@ export default function GlobalStyles() {
           outline-offset: 2px;
         }
 
-        ${theme('global.base')(styleProps)};
+        ${theme('global.css.root')(styleProps)};
       `}
     />
   );

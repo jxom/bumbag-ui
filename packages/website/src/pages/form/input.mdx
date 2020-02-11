@@ -779,10 +779,10 @@ Function to invoke when input is focused
 <Theme
   component={Input}
   overrides={[
-    'Input.base',
-    {key: 'Input.Wrapper.base', props: { padding: 'major-2' }},
-    {key: 'Input.Spinner.base', props: { isLoading: true }},
-    {key: 'Input.placeholder.base', props: { placeholder: 'I am a placeholder' }}
+    'Input.css.root',
+    {key: 'Input.css.placeholder', props: { placeholder: 'I am a placeholder' }},
+    {key: 'Input.Wrapper.css.root', props: { padding: 'major-2' }},
+    {key: 'Input.Spinner.css.root', props: { isLoading: true }}
   ]} />
 
 ### InputField
@@ -791,5 +791,5 @@ Function to invoke when input is focused
   component={InputField}
   label="This is a label"
   overrides={[
-    'InputField.base'
+    'InputField.css.root'
   ]} />

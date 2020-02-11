@@ -31,14 +31,6 @@ Make the input disabled with the `disabled` prop.
 <Textarea disabled defaultValue="Disabled field" />
 ```
 
-### Loading
-
-Show a loading indicator with the `isLoading` prop.
-
-```jsx-live
-<Textarea isLoading />
-```
-
 ### Sizes
 
 An input can come in different sizes - `small`, `medium`, `large`, or the default.
@@ -596,10 +588,9 @@ Function to invoke when textarea is focused
 <Theme
   component={Textarea}
   overrides={[
-    'Textarea.base',
-    {key: 'Textarea.Wrapper.base', props: { padding: 'major-2' }},
-    {key: 'Textarea.Spinner.base', props: { isLoading: true }},
-    {key: 'Textarea.placeholder.base', props: { placeholder: 'I am a placeholder' }}
+    'Textarea.css.root',
+    {key: 'Textarea.css.placeholder', props: { placeholder: 'I am a placeholder' }},
+    {key: 'Textarea.Wrapper.css.root', props: { padding: 'major-2' }}
   ]} />
 
 ### TextareaField
@@ -608,5 +599,5 @@ Function to invoke when textarea is focused
   component={TextareaField}
   label="This is a label"
   overrides={[
-    'TextareaField.base'
+    'TextareaField.css.root'
   ]} />

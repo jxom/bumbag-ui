@@ -615,60 +615,60 @@ similarly to `readOnly` on form elements. In this case, only
 <Theme
   component={Button}
   overrides={[
-    'Button.base',
+    'Button.css.root',
     {
-      key: 'Button.disabled',
+      key: 'Button.css.disabled',
       description: 'Applies when the button is disabled. `<Button disabled>`',
       props: { disabled: true }
     },
-    { key: 'Button.focus', description: 'Applies when the button has focus. Try it out by clicking the button.' },
-    { key: 'Button.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
+    { key: 'Button.css.focus', description: 'Applies when the button has focus. Try it out by clicking the button.' },
+    { key: 'Button.css.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
     {
-      key: 'Button.hoveractive',
+      key: 'Button.css.hoveractive',
       description:
         'Applies when the button is hovered and active. Try it out by hovering over the button and clicking on it.'
     },
     {
-      key: 'Button.ghost',
+      key: 'Button.css.ghost',
       description: 'Applies for ghost buttons. `<Button kind="ghost">`',
       props: { kind: 'ghost' }
     },
-    { key: 'Button.link', description: 'Applies for link buttons. `<Button kind="link">`', props: { kind: 'link' } },
+    { key: 'Button.css.link', description: 'Applies for link buttons. `<Button kind="link">`', props: { kind: 'link' } },
     {
-      key: 'Button.outlined',
+      key: 'Button.css.outlined',
       description: 'Applies for outlined buttons. `<Button kind="outlined">`',
       props: { kind: 'outlined' }
     },
-    { key: 'Button.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
+    { key: 'Button.css.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
     {
-      key: 'Button.sizes.small',
+      key: 'Button.css.sizes.small',
       description: 'Applies for small buttons. `<Button size="small">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.sizes.default',
+      key: 'Button.css.sizes.default',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.sizes.medium',
+      key: 'Button.css.sizes.medium',
       description: 'Applies for static buttons. `<Button size="medium">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.sizes.large',
+      key: 'Button.css.sizes.large',
       description: 'Applies for static buttons. `<Button size="large">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.Icon.base',
+      key: 'Button.Icon.css.root',
       props: { iconBefore: 'info-circle' }
     },
     {
-      key: 'Button.Icon.before',
+      key: 'Button.Icon.css.before',
       props: { iconBefore: 'info-circle' }
     },
     {
-      key: 'Button.Icon.after',
+      key: 'Button.Icon.css.after',
       props: { iconAfter: 'info-circle' }
     }
   ]}>

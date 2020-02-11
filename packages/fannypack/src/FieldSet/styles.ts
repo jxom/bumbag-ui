@@ -20,19 +20,19 @@ ${
         )(styleProps)}
 
         & {
-          ${theme(`${styleProps.themeKey}.horizontal.base`)(styleProps)};
+          ${theme(`${styleProps.themeKey}.css.horizontal`)(styleProps)};
         }
       `
     : css`
         display: block;
 
         & {
-          ${theme(`${styleProps.themeKey}.vertical.base`)(styleProps)};
+          ${theme(`${styleProps.themeKey}.css.vertical`)(styleProps)};
         }
       `
 };
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
