@@ -7,13 +7,6 @@ export const DropdownMenu = styleProps => cssClass`
 
   ${altitude(styleProps.altitude)(styleProps)} !important;
 
-  &:focus {
-    ${altitude(styleProps.altitude)(styleProps)} !important;
-  }
-  &:hover {
-    ${altitude(styleProps.altitude)(styleProps)} !important;
-  }
-
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }

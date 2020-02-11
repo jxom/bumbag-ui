@@ -5,15 +5,15 @@ import {
   MenuInitialState as ReakitMenuInitialState
 } from 'reakit';
 
-export type MenuStateReturn = ReakitMenuStateReturn;
-export type MenuInitialState = ReakitMenuInitialState;
+export type DropdownMenuStateReturn = ReakitMenuStateReturn;
+export type DropdownMenuInitialState = ReakitMenuInitialState;
 
-export function useDropdownMenuState(initialState: MenuInitialState) {
+export function useDropdownMenuState(initialState: DropdownMenuInitialState) {
   return useReakitMenuState({ gutter: 8, ...initialState });
 }
 
 export function DropdownMenuState(
-  props: { children?: (state: MenuInitialState) => React.ReactNode } & MenuInitialState
+  props: { children?: (state: DropdownMenuInitialState) => React.ReactNode } & DropdownMenuInitialState
 ) {
   const { children, ...restProps } = props;
   const state = useDropdownMenuState(restProps);
