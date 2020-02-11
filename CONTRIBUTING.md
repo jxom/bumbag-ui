@@ -121,15 +121,15 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
 
   Ensure that the component is themeable:
 
-  > Every component has a `base` in it's theme config. It's nice to add theme keys (e.g. `MyComponent.hover`) to stuff you think would be themeable inside the styled component.
+  > Every component has a `root` in it's theme config. It's nice to add theme keys (e.g. `MyComponent.css.hover`) to stuff you think would be themeable inside the styled component.
 
   ```tsx
     export const MyComponent = styleProps => cssClass`
       &:hover {
-        ${theme('MyComponent.hover')(styleProps)};
+        ${theme('MyComponent.css.hover')(styleProps)};
       }
       & {
-        ${theme('MyComponent.base')(styleProps)};
+        ${theme('MyComponent.css.root')(styleProps)};
       }
     `
   ```

@@ -3,13 +3,13 @@ import { altitude, palette, space, theme, fontSize, fontWeight } from '../utils'
 
 export const FieldWrapper = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const Label = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -18,7 +18,7 @@ export const DescriptionText = styleProps => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -27,7 +27,7 @@ export const HintText = styleProps => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -38,7 +38,7 @@ export const OptionalText = styleProps => cssClass`
   line-height: 1;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -49,7 +49,7 @@ export const RequiredText = styleProps => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -59,7 +59,7 @@ export const ValidationText = styleProps => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -71,7 +71,7 @@ export const TooltipTrigger = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -87,6 +87,6 @@ export const TooltipPopover = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

@@ -5,6 +5,6 @@ export const InlineFlex = styleProps => cssClass`
   display: inline-flex;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

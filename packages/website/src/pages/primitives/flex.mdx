@@ -26,8 +26,9 @@ import { Flex } from 'fannypack';
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  defaultProps?: Partial<FlexProps>;
+  css?: {
+    root?: any
+  }; defaultProps?: Partial<FlexProps>;
 }`}
 </Code>
 
@@ -93,4 +94,4 @@ import { Flex } from 'fannypack';
 
 ## Theming
 
-<Theme component={Flex} overrides={['Flex.base']}>This is a flex</Theme>
+<Theme component={Flex} overrides={['Flex.css.root']}>This is a flex</Theme>

@@ -15,7 +15,7 @@ export const Set = styleProps => cssClass`
             `};
 
           & {
-            ${theme(`${styleProps.themeKey}.vertical`)(styleProps)};
+            ${theme(`${styleProps.themeKey}.css.vertical`)(styleProps)};
           }
         `
       : css`
@@ -30,7 +30,7 @@ export const Set = styleProps => cssClass`
                 `};
 
               & {
-                ${theme(`${styleProps.themeKey}.vertical`)(styleProps)};
+                ${theme(`${styleProps.themeKey}.css.vertical`)(styleProps)};
               }
             `,
             {
@@ -42,7 +42,7 @@ export const Set = styleProps => cssClass`
                 margin-top: -${space(styleProps.spacing)(styleProps)}rem;
 
                 & {
-                  ${theme(`${styleProps.themeKey}.horizontal`)(styleProps)};
+                  ${theme(`${styleProps.themeKey}.css.horizontal`)(styleProps)};
                 }
               `
             }
@@ -59,7 +59,7 @@ export const Set = styleProps => cssClass`
             }
 
             & {
-              ${theme(`${styleProps.themeKey}.child.vertical`)(styleProps)};
+              ${theme(`${styleProps.themeKey}.css.child.vertical`)(styleProps)};
             }
           `
         : css`
@@ -71,7 +71,7 @@ export const Set = styleProps => cssClass`
                 }
 
                 & {
-                  ${theme(`${styleProps.themeKey}.child.vertical`)(styleProps)};
+                  ${theme(`${styleProps.themeKey}.css.child.vertical`)(styleProps)};
                 }
               `,
               {
@@ -80,7 +80,7 @@ export const Set = styleProps => cssClass`
                   margin-top: ${space(styleProps.spacing)(styleProps)}rem;
 
                   & {
-                    ${theme(`${styleProps.themeKey}.child.horizontal`)(styleProps)};
+                    ${theme(`${styleProps.themeKey}.css.child.horizontal`)(styleProps)};
                   }
                 `
               }
@@ -88,22 +88,22 @@ export const Set = styleProps => cssClass`
           `
     };
 
-    ${theme(`${styleProps.themeKey}.child.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.child.root`)(styleProps)};
   }
 
   & > *:first-child {
-    ${theme(`${styleProps.themeKey}.child.first`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.child.first`)(styleProps)};
   }
 
   & > *:not(:last-child):not(:first-child) {
-    ${theme(`${styleProps.themeKey}.child.middle`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.child.middle`)(styleProps)};
   }
 
   & > *:last-child {
-    ${theme(`${styleProps.themeKey}.child.last`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.child.last`)(styleProps)};
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

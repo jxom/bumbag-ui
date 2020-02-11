@@ -43,9 +43,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Inline.base should render correctly', () => {
+  it('Inline.root should render correctly', () => {
     const { container } = render(<Inline>hello world</Inline>, {
-      theme: { Inline: { base: { backgroundColor: 'red' } } }
+      theme: { Inline: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

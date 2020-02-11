@@ -803,14 +803,14 @@ It's called after given milliseconds if `animated` is a number.
 
 ## Theming
 
-<Theme component={Modal} overrides={['Modal.base', 'Modal.placements.center', 'Modal.placements.left', 'Modal.placements.right', 'Modal.placements.top', 'Modal.placements.bottom', 'Modal.placements.topStart', 'Modal.placements.topEnd', 'Modal.placements.bottomStart', 'Modal.placements.bottomEnd']}>
+<Theme component={Modal} overrides={['Modal.css.root', 'Modal.css.placements.center', 'Modal.css.placements.left', 'Modal.css.placements.right', 'Modal.css.placements.top', 'Modal.css.placements.bottom', 'Modal.css.placements.topStart', 'Modal.css.placements.topEnd', 'Modal.css.placements.bottomStart', 'Modal.css.placements.bottomEnd']}>
   Hello world
 </Theme>
 
-<Theme component={Modal.Disclosure} overrides={['Modal.Disclosure.base']}>
+<Theme component={Modal.Disclosure} overrides={['Modal.Disclosure.css.root']}>
   Hello world
 </Theme>
 
-<Theme component={Modal.Backdrop} overrides={['Modal.Backdrop.base']}>
+<Theme component={Modal.Backdrop} overrides={['Modal.Backdrop.css.root']}>
   Hello world
 </Theme>

@@ -22,7 +22,7 @@ export const List = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.base')(styleProps)};
+    ${theme('List.css.root')(styleProps)};
   }
 `;
 
@@ -36,7 +36,7 @@ export const ListItem = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.Item.base')(styleProps)};
+    ${theme('List.Item.css.root')(styleProps)};
   }
 `;
 
@@ -52,7 +52,7 @@ export const getOrderedProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.ordered')(styleProps)};
+    ${theme('List.css.ordered')(styleProps)};
   }
 `;
 
@@ -67,6 +67,6 @@ export const getHorizontalProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.horizontal')(styleProps)};
+    ${theme('List.css.horizontal')(styleProps)};
   }
 `;

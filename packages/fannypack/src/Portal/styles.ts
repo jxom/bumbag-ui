@@ -3,6 +3,6 @@ import { theme } from '../utils';
 
 export const Portal = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

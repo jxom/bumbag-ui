@@ -12,7 +12,7 @@ export const Avatar = styleProps => cssClass`
       border-radius: 50%;
 
       & {
-        ${theme(`${styleProps.themeKey}.circle.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.circle.root`)(styleProps)};
       }
     `}
 
@@ -28,7 +28,7 @@ export const Avatar = styleProps => cssClass`
   ${getSizeAttributes(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -39,7 +39,7 @@ function getSizeAttributes(styleProps) {
       height: 40px;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.small`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
@@ -48,7 +48,7 @@ function getSizeAttributes(styleProps) {
       font-size: 24px;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.default`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -57,7 +57,7 @@ function getSizeAttributes(styleProps) {
       font-size: 36px;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.medium`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
@@ -66,7 +66,7 @@ function getSizeAttributes(styleProps) {
       font-size: 48px;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.large`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
       }
     `
   };

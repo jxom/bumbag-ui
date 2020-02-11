@@ -98,11 +98,14 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Modal.Disclosure.base should render correctly', () => {
+  it('Modal.Disclosure.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
-        <Modal.Disclosure overrides={{ Modal: { Disclosure: { base: { backgroundColor: 'red' } } } }} {...modal}>
+        <Modal.Disclosure
+          overrides={{ Modal: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
+          {...modal}
+        >
           Toggle
         </Modal.Disclosure>
       );
@@ -113,13 +116,13 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Modal.Disclosure.base should render correctly', () => {
+  it('Modal.Disclosure.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Disclosure: { base: { backgroundColor: 'red' } } } }
+      theme: { Modal: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

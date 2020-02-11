@@ -125,12 +125,12 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('CheckboxGroup.base should render correctly', () => {
+  it('CheckboxGroup.root should render correctly', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
-        overrides={{ CheckboxGroup: { base: { backgroundColor: 'red' } } }}
+        overrides={{ CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -138,7 +138,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('CheckboxGroup.base should render correctly', () => {
+  it('CheckboxGroup.root should render correctly', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
@@ -146,7 +146,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { CheckboxGroup: { base: { backgroundColor: 'red' } } }
+        theme: { CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -23,7 +23,7 @@ export const Select = styleProps => cssClass`
     box-shadow: unset;
 
     & {
-      ${theme(`${styleProps.themeKey}.disabled.base`)(styleProps)};
+      ${theme(`${styleProps.themeKey}.css.disabled`)(styleProps)};
     }
   }
 
@@ -48,7 +48,7 @@ export const Select = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -60,7 +60,7 @@ export const SelectWrapper = styleProps => cssClass`
   ${styleProps.size && wrapperSizeProperties(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -77,7 +77,7 @@ export const SelectIcon = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -93,13 +93,13 @@ export const SelectSpinner = styleProps => cssClass`
     right: 0;
     z-index: 2;
 
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const SelectField = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -109,26 +109,26 @@ export function wrapperSizeProperties(styleProps) {
       font-size: ${fontSize('150')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.small.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.sizes.default.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
       font-size: ${fontSize('300')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.medium.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       font-size: ${fontSize('400')(styleProps)}rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.sizes.large.base`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
       }
     `
   };

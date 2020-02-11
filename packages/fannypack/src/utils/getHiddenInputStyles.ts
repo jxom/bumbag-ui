@@ -95,7 +95,7 @@ export function getHiddenInputStyles({
     }
 
     & {
-      ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+      ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
     }
   `;
 }

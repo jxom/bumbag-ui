@@ -26,7 +26,7 @@ export const Button = styleProps => cssClass`
     `};
 
   & {
-    ${theme('Button.base')(styleProps)};
+    ${theme('Button.css.root')(styleProps)};
   }
 
   &[disabled],
@@ -51,7 +51,7 @@ export const ButtonIcon = styleProps => cssClass`
       margin-right: ${space(2)(styleProps)}em;
 
       & {
-        ${theme(`${styleProps.themeKey}.before`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.before`)(styleProps)};
       }
     `};
 
@@ -61,12 +61,12 @@ export const ButtonIcon = styleProps => cssClass`
       margin-right: -${space(1)(styleProps)}em;
 
       & {
-        ${theme(`${styleProps.themeKey}.after`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.after`)(styleProps)};
       }
     `};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -81,7 +81,7 @@ export const ButtonSpinnerWrapper = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -91,7 +91,7 @@ export const ButtonSpinner = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -102,7 +102,7 @@ export const ButtonClose = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -116,7 +116,7 @@ export const getDisabledProperties = styleProps => css`
     pointer-events: unset;
   }
   & {
-    ${theme(`${styleProps.themeKey}.disabled`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.disabled`)(styleProps)};
   }
 `;
 
@@ -129,12 +129,12 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(2)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.sizes.small`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.sizes.default`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -143,7 +143,7 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.sizes.medium`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
@@ -153,7 +153,7 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.sizes.large`)(styleProps)};
+        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
       }
     `
   };
@@ -171,7 +171,7 @@ export const getLoadingProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.loading`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.loading`)(styleProps)};
   }
 `;
 
@@ -186,7 +186,7 @@ export const getStaticProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.static`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.static`)(styleProps)};
   }
 `;
 
@@ -202,7 +202,7 @@ export const getInteractiveProperties = styleProps => css`
         border-color: transparent;
       `};
 
-    ${theme(`${styleProps.themeKey}.focus`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
   }
 
   ${styleProps.kind !== 'link' &&
@@ -211,7 +211,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme(`${styleProps.themeKey}.hover`)(styleProps)};
+          ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
         }
       }
     `};
@@ -222,7 +222,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme(`${styleProps.themeKey}.hoveractive`)(styleProps)};
+          ${theme(`${styleProps.themeKey}.css.hoveractive`)(styleProps)};
         }
       }
     `};
@@ -251,7 +251,7 @@ export const getLinkProperties = styleProps => css`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.link`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.link`)(styleProps)};
   }
 `;
 
@@ -272,7 +272,7 @@ export const getOutlinedProperties = styleProps => css`
       `};
   }
   & {
-    ${theme(`${styleProps.themeKey}.outlined`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.outlined`)(styleProps)};
   }
 `;
 
@@ -291,6 +291,6 @@ export const getGhostProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.ghost`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.ghost`)(styleProps)};
   }
 `;

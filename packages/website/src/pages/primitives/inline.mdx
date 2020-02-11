@@ -26,8 +26,9 @@ import { Inline } from 'fannypack';
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  defaultProps?: Partial<InlineProps>;
+  css?: {
+    root?: any
+  }; defaultProps?: Partial<InlineProps>;
 }`}
 </Code>
 
@@ -93,4 +94,4 @@ import { Inline } from 'fannypack';
 
 ## Theming
 
-<Theme component={Inline} overrides={['Inline.base']}>This is an inline</Theme>
+<Theme component={Inline} overrides={['Inline.css.root']}>This is an inline</Theme>

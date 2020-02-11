@@ -8,7 +8,7 @@ export const Dialog = styleProps => cssClass`
   ${theme('altitudes.100')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -16,7 +16,7 @@ export const DialogContent = styleProps => cssClass`
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const DialogHeader = styleProps => cssClass`
   padding: ${space(5, 'minor')(styleProps)}rem ${space(6, 'minor')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -37,7 +37,7 @@ export const DialogTitle = styleProps => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -60,13 +60,13 @@ export const DialogFooter = styleProps => cssClass`
     `};
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const DialogClose = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -74,7 +74,7 @@ export const DialogIconWrapper = styleProps => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -90,6 +90,6 @@ export const DialogModal = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

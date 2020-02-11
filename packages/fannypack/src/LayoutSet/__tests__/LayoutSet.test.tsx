@@ -74,9 +74,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('LayoutSet.base should render correctly', () => {
+  it('LayoutSet.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { base: { backgroundColor: 'red' } } }}>
+      <LayoutSet overrides={{ LayoutSet: { css: { root: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -84,9 +84,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.base should render correctly', () => {
+  it('LayoutSet.child.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { child: { base: { backgroundColor: 'red' } } } }}>
+      <LayoutSet overrides={{ LayoutSet: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -96,7 +96,7 @@ describe('overrides', () => {
 
   it('LayoutSet.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet isVertical overrides={{ LayoutSet: { vertical: { backgroundColor: 'red' } } }}>
+      <LayoutSet isVertical overrides={{ LayoutSet: { css: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -106,7 +106,7 @@ describe('overrides', () => {
 
   it('LayoutSet.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { horizontal: { backgroundColor: 'red' } } }}>
+      <LayoutSet overrides={{ LayoutSet: { css: { horizontal: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -116,7 +116,7 @@ describe('overrides', () => {
 
   it('LayoutSet.child.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet isVertical overrides={{ LayoutSet: { child: { vertical: { backgroundColor: 'red' } } } }}>
+      <LayoutSet isVertical overrides={{ LayoutSet: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -126,7 +126,7 @@ describe('overrides', () => {
 
   it('LayoutSet.child.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { child: { horizontal: { backgroundColor: 'red' } } } }}>
+      <LayoutSet overrides={{ LayoutSet: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>
@@ -136,79 +136,79 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('LayoutSet.base should render correctly', () => {
+  it('LayoutSet.css.root should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { base: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.base should render correctly', () => {
+  it('LayoutSet.css.child.root should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { child: { base: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { css: { child: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.vertical should render correctly', () => {
+  it('LayoutSet.css.vertical should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { vertical: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { css: { vertical: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.horizontal should render correctly', () => {
+  it('LayoutSet.css.horizontal should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { horizontal: { backgroundColor: 'red' } } }
+        theme: { LayoutSet: { css: { horizontal: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.vertical should render correctly', () => {
+  it('LayoutSet.css.child.vertical should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { child: { vertical: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { css: { child: { vertical: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.horizontal should render correctly', () => {
+  it('LayoutSet.css.child.horizontal should render correctly', () => {
     const { container } = render(
       <LayoutSet>
         <Box>hello</Box>
         <Box>world</Box>
       </LayoutSet>,
       {
-        theme: { LayoutSet: { child: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { LayoutSet: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -7,13 +7,13 @@ export const Card = styleProps => cssClass`
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
 export const CardContent = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -24,7 +24,7 @@ export const CardHeader = styleProps => cssClass`
   justify-content: space-between;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -33,7 +33,7 @@ export const CardTitle = styleProps => cssClass`
   font-size: ${fontSize('300')(styleProps)}em;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
@@ -41,6 +41,6 @@ export const CardFooter = styleProps => cssClass`
   margin-top: ${space(3, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.base`)(styleProps)};
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;

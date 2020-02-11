@@ -106,7 +106,21 @@ Should the code appear as a block?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>** <Code fontSize="150" palette="primary">any</Code> 
+**<Code marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  base?: any;
+  block?: any;
+  Pre?: {
+    base?: any
+  }; Line?: {
+    base?: any
+  }; Token?: {
+    base?: any
+  }; defaultProps?: Partial<CodeProps>;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
@@ -174,23 +188,23 @@ Should the code appear as a block?
   component={HighlightedCode}
   overrides={[
     {
-      key: 'HighlightedCode.base',
+      key: 'HighlightedCode.css.root',
       props: { code: 'console.log(\'hello world\')', language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.block',
+      key: 'HighlightedCode.css.block',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript', padding: 'major-2' }
     },
     {
-      key: 'HighlightedCode.Pre.base',
+      key: 'HighlightedCode.Pre.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.Line.base',
+      key: 'HighlightedCode.Line.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     },
     {
-      key: 'HighlightedCode.Token.base',
+      key: 'HighlightedCode.Token.css.root',
       props: { code: 'console.log(\'hello world\')', isBlock: true, language: 'javascript' }
     }
   ]}/>

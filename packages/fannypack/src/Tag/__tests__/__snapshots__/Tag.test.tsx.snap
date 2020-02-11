@@ -184,7 +184,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 </div>
 `;
 
-exports[`overrides Tag.Close.base should render correctly 1`] = `
+exports[`overrides Tag.Close.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -376,7 +376,7 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tag.Content.base should render correctly 1`] = `
+exports[`overrides Tag.Content.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -442,73 +442,7 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tag.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: inherit;
-  padding: 0 0.5em;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #212121;
-  border-radius: 4px;
-  color: #fff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: #fff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  background-color: red;
-}
-
-<div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
-  >
-    hello world
-  </div>
-</div>
-`;
-
-exports[`overrides Tag.outlined.base should render correctly 1`] = `
+exports[`overrides Tag.outlined.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -581,7 +515,7 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
+exports[`overrides Tag.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -647,7 +581,73 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
+exports[`overrides sizes Tag.sizes.default.root should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  padding: 0 0.5em;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #212121;
+  border-radius: 4px;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  background-color: red;
+}
+
+<div
+  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`overrides sizes Tag.sizes.large.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -715,7 +715,7 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
+exports[`overrides sizes Tag.sizes.medium.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -783,7 +783,7 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
+exports[`overrides sizes Tag.sizes.small.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2049,7 +2049,7 @@ exports[`props size should render correctly with overrides 4`] = `
 </div>
 `;
 
-exports[`theming Tag.Close.base should render correctly 1`] = `
+exports[`theming Tag.Close.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2241,7 +2241,7 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tag.Content.base should render correctly 1`] = `
+exports[`theming Tag.Content.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2307,73 +2307,7 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tag.base should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: inherit;
-  padding: 0 0.5em;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #212121;
-  border-radius: 4px;
-  color: #fff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: #fff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  background-color: red;
-}
-
-<div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
-  >
-    hello world
-  </div>
-</div>
-`;
-
-exports[`theming Tag.outlined.base should render correctly 1`] = `
+exports[`theming Tag.outlined.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2446,7 +2380,7 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
+exports[`theming Tag.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2512,7 +2446,73 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
+exports[`theming sizes Tag.sizes.default.root should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  padding: 0 0.5em;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #212121;
+  border-radius: 4px;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  background-color: red;
+}
+
+<div
+  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`theming sizes Tag.sizes.large.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2580,7 +2580,7 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
+exports[`theming sizes Tag.sizes.medium.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -2648,7 +2648,7 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
+exports[`theming sizes Tag.sizes.small.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;

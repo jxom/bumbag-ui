@@ -93,17 +93,19 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('CheckboxField.base should render correctly', () => {
-    const { container } = render(<CheckboxField overrides={{ CheckboxField: { base: { backgroundColor: 'red' } } }} />);
+  it('CheckboxField.root should render correctly', () => {
+    const { container } = render(
+      <CheckboxField overrides={{ CheckboxField: { css: { root: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('CheckboxField.base should render correctly', () => {
+  it('CheckboxField.root should render correctly', () => {
     const { container } = render(<CheckboxField />, {
       // @ts-ignore
-      theme: { CheckboxField: { base: { backgroundColor: 'red' } } }
+      theme: { CheckboxField: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

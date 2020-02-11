@@ -191,10 +191,11 @@ Fix the width of the image. It will not be responsive.
   component={Image}
   width="300px"
   src="/bean.jpg"
+  padding="major-1"
   overrides={[
-    'Image.base',
-    { key: 'Image.fixed', props: { isFixed: true } },
-    { key: 'Image.contain', props: { fit: 'contain', height: '300px' } },
-    { key: 'Image.cover', props: { fit: 'cover', height: '300px' } }
+    'Image.css.root',
+    { key: 'Image.css.fixed', props: { isFixed: true } },
+    { key: 'Image.css.contain', props: { fit: 'contain', height: '300px' } },
+    { key: 'Image.css.cover', props: { fit: 'cover', height: '300px' } }
   ]}
 />

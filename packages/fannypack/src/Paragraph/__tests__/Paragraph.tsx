@@ -41,9 +41,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Paragraph.base should render correctly', () => {
+  it('Paragraph.root should render correctly', () => {
     const { container } = render(<Paragraph>hello world</Paragraph>, {
-      theme: { Paragraph: { base: { backgroundColor: 'red' } } }
+      theme: { Paragraph: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

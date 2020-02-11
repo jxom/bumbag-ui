@@ -342,12 +342,13 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  defaultProps?: Partial<ColumnsProps>;
-  Column?: {
-    base?: any;
-    defaultProps?: Partial<ColumnProps>
-  };
+  css?: {
+    root?: any
+  }; Column?: {
+    css?: {
+      root?: a
+    }; defaultProps?: Partial<ColumnProps>
+  }; defaultProps?: Partial<ColumnsProps>;
 }`}
 </Code>
 
@@ -569,8 +570,9 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  base?: any;
-  defaultProps?: Partial<ColumnProps>;
+  css?: {
+    root?: any
+  }; defaultProps?: Partial<ColumnProps>;
 }`}
 </Code>
 
@@ -636,14 +638,14 @@ To remove the gaps between columns, set the `isGapless` prop to `true` on `<Colu
 
 ## Theming
 
-<Theme component={Columns} overrides={['Columns.base']}>
+<Theme component={Columns} overrides={['Columns.css.root']}>
   <Column>Column 1</Column>
   <Column>Column 2</Column>
   <Column>Column 3</Column>
   <Column>Column 4</Column>
 </Theme>
 
-<Theme component={Columns} injectOverrides={false} overrides={['Columns.Column.base']}>
+<Theme component={Columns} injectOverrides={false} overrides={['Columns.Column.css.root']}>
   {({ overrides }) => (
     <React.Fragment>
       <Column overrides={overrides}>Column 1</Column>

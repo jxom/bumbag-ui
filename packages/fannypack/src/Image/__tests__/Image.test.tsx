@@ -31,30 +31,30 @@ describe('props', () => {
 });
 
 describe('theming', () => {
-  it('Image.base should render correctly', () => {
+  it('Image.root should render correctly', () => {
     const { container } = render(<Image src="test.png" />, {
-      theme: { Image: { base: { backgroundColor: 'red' } } }
+      theme: { Image: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Image.fixed should render correctly', () => {
     const { container } = render(<Image isFixed src="test.png" />, {
-      theme: { Image: { fixed: { base: { backgroundColor: 'red' } } } }
+      theme: { Image: { css: { fixed: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Image.contain should render correctly', () => {
     const { container } = render(<Image fit="contain" src="test.png" />, {
-      theme: { Image: { contain: { base: { backgroundColor: 'red' } } } }
+      theme: { Image: { css: { contain: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Image.cover should render correctly', () => {
     const { container } = render(<Image fit="cover" src="test.png" />, {
-      theme: { Image: { cover: { base: { backgroundColor: 'red' } } } }
+      theme: { Image: { css: { cover: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
