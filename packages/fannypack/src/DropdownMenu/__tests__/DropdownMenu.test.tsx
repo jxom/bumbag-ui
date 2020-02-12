@@ -1,60 +1,168 @@
-test.todo('');
-// import * as React from 'react';
-// import { renderHook } from '@testing-library/react-hooks';
-// import { Template } from '../Template';
-// import render from '../../utils/_tests/render';
+import * as React from 'react';
+import { renderHook } from '@testing-library/react-hooks';
+import { DropdownMenu } from '../index';
+import render from '../../utils/_tests/render';
 
-// describe('props', () => {
-//   it('should render correctly', () => {
-//     const { container } = render(<Template>Hello world</Template>);
-//     expect(container.firstChild).toMatchSnapshot();
-//   });
+describe('props', () => {
+  it('should render correctly', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test" visible>
+        {menu => (
+          <DropdownMenu {...menu} aria-label="Actions">
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 
-//   it('should render correctly with CSS props', () => {
-//     const { container } = render(<Template color="primary">Hello world</Template>);
-//     expect(container.firstChild).toMatchSnapshot();
-//   });
-// });
+  it('should render correctly for an invisible dropdown menu', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test">
+        {menu => (
+          <DropdownMenu {...menu} aria-label="Actions">
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 
-// describe('composition', () => {
-//   describe('as', () => {
-//     it('should render correctly', () => {
-//       const { container } = render(<Template use="p">Hello world</Template>);
-//       expect(container.firstChild).toMatchSnapshot();
-//     });
-//   });
+  it('should render correctly for CSS props', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test">
+        {menu => (
+          <DropdownMenu {...menu} aria-label="Actions" backgroundColor="red">
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
 
-//   describe('hook', () => {
-//     it('should return with Template props', () => {
-//       const { result } = renderHook(() => Template.useProps());
-//       expect(result.current).toMatchSnapshot();
-//     });
-//   });
+describe('overrides', () => {
+  it('DropdownMenu.css.root should render correctly', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test">
+        {menu => (
+          <DropdownMenu
+            {...menu}
+            overrides={{ DropdownMenu: { css: { root: { backgroundColor: 'red' } } } }}
+            aria-label="Actions"
+          >
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
 
-//   describe('render props', () => {
-//     it('should render correctly', () => {
-//       const { container } = render(<Template>{TemplateProps => <div {...TemplateProps}>Hello world</div>}</Template>);
-//       expect(container.firstChild).toMatchSnapshot();
-//     });
-//   });
-// });
+describe('theming', () => {
+  it('DropdownMenu.css.root should render correctly', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test">
+        {menu => (
+          <DropdownMenu {...menu} aria-label="Actions" backgroundColor="red">
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>,
+      {
+        // @ts-ignore
+        theme: { DropdownMenu: { css: { root: { backgroundColor: 'red' } } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
 
-// describe('theming', () => {
-//   it('Template.root should render correctly', () => {
-//     const { container } = render(<Template>hello world</Template>, {
-//       // @ts-ignore
-//       theme: { Template: { base: { backgroundColor: 'red' } } }
-//     });
-//     expect(container.firstChild).toMatchSnapshot();
-//   });
-// });
-
-// describe('defaultProps', () => {
-//   it('should render correctly for className', () => {
-//     const { container } = render(<Template>hello world</Template>, {
-//       // @ts-ignore
-//       theme: { Template: { defaultProps: { className: 'test', color: 'primary' } } }
-//     });
-//     expect(container.firstChild).toMatchSnapshot();
-//   });
-// });
+describe('defaultProps', () => {
+  it('should render correctly for className', () => {
+    const { container } = render(
+      <DropdownMenu.State baseId="test">
+        {menu => (
+          <DropdownMenu {...menu} aria-label="Actions" backgroundColor="red">
+            <DropdownMenu.Item iconBefore="solid-pen" {...menu}>
+              Edit
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-share" {...menu}>
+              Share
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-file-signature" {...menu}>
+              Rename
+            </DropdownMenu.Item>
+            <DropdownMenu.Item iconBefore="solid-trash-alt" color="danger" {...menu}>
+              Delete
+            </DropdownMenu.Item>
+          </DropdownMenu>
+        )}
+      </DropdownMenu.State>,
+      {
+        // @ts-ignore
+        theme: { DropdownMenu: { defaultProps: { className: 'test', color: 'primary' } } }
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});

@@ -31,6 +31,14 @@ import {
   DialogIconProps
 } from '../Dialog';
 import { DividerProps } from '../Divider';
+import {
+  DropdownMenuProps,
+  DropdownMenuButtonProps,
+  DropdownMenuDisclosureProps,
+  DropdownMenuDividerProps,
+  DropdownMenuGroupProps,
+  DropdownMenuItemProps
+} from '../DropdownMenu';
 import { FieldSetProps } from '../FieldSet';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
@@ -429,6 +437,42 @@ export type DividerThemeConfig = {
     vertical?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DividerProps>;
+};
+export type DropdownMenuThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Button?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuButtonProps>;
+  };
+  Disclosure?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuDisclosureProps>;
+  };
+  Divider?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuDividerProps>;
+  };
+  Group?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuGroupProps>;
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuItemProps>;
+  };
+  defaultProps?: Partial<DropdownMenuProps>;
 };
 export type FieldSetThemeConfig = {
   css?: {
@@ -1135,6 +1179,7 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;
   Dialog?: DialogThemeConfig;
+  DropdownMenu?: DropdownMenuThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;

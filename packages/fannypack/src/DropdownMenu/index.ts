@@ -11,6 +11,8 @@ export * from './DropdownMenu';
 export * from './DropdownMenuButton';
 export * from './DropdownMenuItem';
 export * from './DropdownMenuDisclosure';
+export * from './DropdownMenuGroup';
+export * from './DropdownMenuDivider';
 export * from './DropdownMenuState';
 export const DropdownMenu = Object.assign(_DropdownMenu, {
   Button: DropdownMenuButton,

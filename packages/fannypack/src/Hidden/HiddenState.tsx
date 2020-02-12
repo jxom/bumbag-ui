@@ -7,7 +7,7 @@ import {
 export type HiddenStateReturn = ReakitHiddenStateReturn;
 export type HiddenInitialState = ReakitHiddenInitialState;
 
-export function useHiddenState(initialState: ReakitHiddenInitialState) {
+export function useHiddenState(initialState?: ReakitHiddenInitialState) {
   return useReakitHiddenState(initialState);
 }
 
