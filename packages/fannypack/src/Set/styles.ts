@@ -50,7 +50,7 @@ export const Set = styleProps => cssClass`
         `
   };
 
-  & > * {
+  &&& > * {
     ${
       styleProps.isVertical
         ? css`
@@ -91,15 +91,15 @@ export const Set = styleProps => cssClass`
     ${theme(`${styleProps.themeKey}.css.child.root`)(styleProps)};
   }
 
-  & > *:first-child {
+  &&& > *:first-child {
     ${theme(`${styleProps.themeKey}.css.child.first`)(styleProps)};
   }
 
-  & > *:not(:last-child):not(:first-child) {
+  &&& > *:not(:last-child):not(:first-child) {
     ${theme(`${styleProps.themeKey}.css.child.middle`)(styleProps)};
   }
 
-  & > *:last-child {
+  &&& > *:last-child {
     ${theme(`${styleProps.themeKey}.css.child.last`)(styleProps)};
   }
 

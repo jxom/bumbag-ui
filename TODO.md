@@ -1,0 +1,2 @@
+- Add `overrides` to internal components
+- Add "Composition" section in docs

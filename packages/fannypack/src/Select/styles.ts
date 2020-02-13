@@ -8,9 +8,8 @@ export const Select = styleProps => cssClass`
   border-radius: 0.2em;
   color: ${styleProps.isPlaceholderSelected ? tint(0.4, palette('text')(styleProps)) : palette('text')(styleProps)};
   height: 2.5em;
-  padding: 0.4em 1.6em 0.4em 0.6em;
+  padding: 0.4em 2em 0.4em 0.6em;
   line-height: 1.5;
-  width: 100%;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   &:hover {
@@ -55,7 +54,7 @@ export const Select = styleProps => cssClass`
 export const SelectWrapper = styleProps => cssClass`
   align-items: center;
   position: relative;
-  width: 100%;
+  width: fit-content;
 
   ${styleProps.size && wrapperSizeProperties(styleProps)};
 

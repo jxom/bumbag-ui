@@ -50,7 +50,7 @@ const useProps = createHook<ButtonProps>(
       { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace },
       htmlProps
     );
-    htmlProps = Box.useProps({ ...props, ...buttonProps });
+    htmlProps = Box.useProps({ ...htmlProps, ...buttonProps });
 
     const className = useClassName({
       style: styles.Button,
@@ -61,22 +61,26 @@ const useProps = createHook<ButtonProps>(
     const iconBeforeClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isBefore: true },
-      themeKey: 'Button.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const iconAfterClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isAfter: true },
-      themeKey: 'Button.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const spinnerWrapperClassName = useClassName({
       style: styles.ButtonSpinnerWrapper,
       styleProps: props,
-      themeKey: 'Button.SpinnerWrapper'
+      themeKey,
+      themeKeySuffix: 'SpinnerWrapper'
     });
     const spinnerClassName = useClassName({
       style: styles.ButtonSpinner,
       styleProps: props,
-      themeKey: 'Button.Spinner'
+      themeKey,
+      themeKeySuffix: 'Spinner'
     });
 
     const children = (

@@ -30,7 +30,7 @@ export const customSeparators = () => (
         <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
       </Breadcrumb.Item>
     </Breadcrumb>
-    <Breadcrumb separator={<Icon icon="solid-chevron-right" color="gray100" fontSize="150" />}>
+    <Breadcrumb separator={<Icon icon="chevron-right" color="gray100" fontSize="150" />}>
       <Breadcrumb.Item>
         <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
       </Breadcrumb.Item>
@@ -42,7 +42,7 @@ export const customSeparators = () => (
       </Breadcrumb.Item>
     </Breadcrumb>
     <Breadcrumb>
-      <Breadcrumb.Item separator={<Icon icon="solid-chevron-right" color="gray100" fontSize="150" />}>
+      <Breadcrumb.Item separator={<Icon icon="chevron-right" color="gray100" fontSize="150" />}>
         <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
@@ -60,7 +60,7 @@ export const customSeparators = () => (
       <Breadcrumb.Item>
         <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
         <Breadcrumb.Separator>
-          <Icon icon="solid-chevron-right" color="gray100" fontSize="150" />
+          <Icon icon="chevron-right" color="gray100" fontSize="150" />
         </Breadcrumb.Separator>
       </Breadcrumb.Item>
       <Breadcrumb.Item isCurrent>

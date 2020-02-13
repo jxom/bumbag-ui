@@ -25,7 +25,7 @@ export type LocalSelectProps = {
   isRequired?: boolean;
   /** Name of the input field */
   name?: string;
-  options: Array<{ label: string; value: string; disabled?: boolean }>;
+  options: Array<{ label: string; value: any; disabled?: boolean }>;
   /** Alters the size of the input. Can be "small", "medium" or "large" */
   size?: Size;
   /** Hint text to display */
@@ -33,7 +33,7 @@ export type LocalSelectProps = {
   /** State of the input. Can be any color in the palette. */
   state?: string;
   /** Value of the input */
-  value?: string;
+  value?: any;
   /** Function to invoke when focus is lost */
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   /** Function to invoke when input has changed */
@@ -73,18 +73,21 @@ const useProps = createHook<SelectProps>(
     const wrapperClassName = useClassName({
       style: styles.SelectWrapper,
       styleProps: props,
-      themeKey: `${themeKey}.Wrapper`,
+      themeKey,
+      themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
     const iconClassName = useClassName({
       style: styles.SelectIcon,
       styleProps: props,
-      themeKey: `${themeKey}.Icon`
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const spinnerClassName = useClassName({
       style: styles.SelectSpinner,
       styleProps: props,
-      themeKey: `${themeKey}.Spinner`
+      themeKey,
+      themeKeySuffix: 'Spinner'
     });
 
     const boxProps = Box.useProps({

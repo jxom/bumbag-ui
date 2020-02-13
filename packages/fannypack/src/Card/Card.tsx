@@ -99,7 +99,8 @@ export function CardContent(props: CardContentProps) {
   const cardContentClassName = useClassName({
     style: styles.CardContent,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Card'}.Content`
+    themeKey: context.themeKey || 'Card',
+    themeKeySuffix: 'Content'
   });
 
   return (
@@ -121,7 +122,8 @@ export function CardTitle(props: CardTitleProps) {
   const cardTitleClassName = useClassName({
     style: styles.CardTitle,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Card'}.Title`
+    themeKey: context.themeKey || 'Card',
+    themeKeySuffix: 'Title'
   });
 
   return (
@@ -143,7 +145,8 @@ export function CardHeader(props: CardHeaderProps) {
   const cardHeaderClassName = useClassName({
     style: styles.CardHeader,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Card'}.Header`
+    themeKey: context.themeKey || 'Card',
+    themeKeySuffix: 'Header'
   });
 
   return (
@@ -165,7 +168,8 @@ export function CardFooter(props: CardFooterProps) {
   const cardFooterClassName = useClassName({
     style: styles.CardFooter,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Card'}.Footer`
+    themeKey: context.themeKey || 'Card',
+    themeKeySuffix: 'Footer'
   });
 
   return (

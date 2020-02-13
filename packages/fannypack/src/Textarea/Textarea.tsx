@@ -60,7 +60,8 @@ const useProps = createHook<TextareaProps>(
     const wrapperClassName = useClassName({
       style: styles.TextareaWrapper,
       styleProps: props,
-      themeKey: `${themeKey}.Wrapper`,
+      themeKey,
+      themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
     const boxProps = Box.useProps({

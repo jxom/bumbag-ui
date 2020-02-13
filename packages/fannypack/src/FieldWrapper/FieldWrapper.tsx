@@ -60,42 +60,50 @@ const useProps = createHook<FieldWrapperProps>(
     const labelClassName = useClassName({
       style: styles.Label,
       styleProps: props,
-      themeKey: `${themeKey}.Label`
+      themeKey,
+      themeKeySuffix: 'Label'
     });
     const descriptionClassName = useClassName({
       style: styles.DescriptionText,
       styleProps: props,
-      themeKey: `${themeKey}.DescriptionText`
+      themeKey,
+      themeKeySuffix: 'DescriptionText'
     });
     const hintClassName = useClassName({
       style: styles.HintText,
       styleProps: props,
-      themeKey: `${themeKey}.HintText`
+      themeKey,
+      themeKeySuffix: 'HintText'
     });
     const optionalClassName = useClassName({
       style: styles.OptionalText,
       styleProps: props,
-      themeKey: `${themeKey}.OptionalText`
+      themeKey,
+      themeKeySuffix: 'OptionalText'
     });
     const requiredClassName = useClassName({
       style: styles.RequiredText,
       styleProps: props,
-      themeKey: `${themeKey}.RequiredText`
+      themeKey,
+      themeKeySuffix: 'RequiredText'
     });
     const validationClassName = useClassName({
       style: styles.ValidationText,
       styleProps: props,
-      themeKey: `${themeKey}.ValidationText`
+      themeKey,
+      themeKeySuffix: 'ValidationText'
     });
     const tooltipTriggerClassName = useClassName({
       style: styles.TooltipTrigger,
       styleProps: props,
-      themeKey: `${themeKey}.TooltipTrigger`
+      themeKey,
+      themeKeySuffix: 'TooltipTrigger'
     });
     const tooltipPopoverClassName = useClassName({
       style: styles.TooltipPopover,
       styleProps: props,
-      themeKey: `${themeKey}.TooltipPopover`
+      themeKey,
+      themeKeySuffix: 'TooltipPopover'
     });
     const hidden = Hidden.useState();
     const uid = useUniqueId('FieldWrapper');

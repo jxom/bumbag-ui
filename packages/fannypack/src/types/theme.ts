@@ -61,6 +61,7 @@ import { ListItemProps } from '../List/ListItem';
 import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
+import { PaginationProps } from '../Pagination';
 import { ParagraphProps } from '../Paragraph';
 import {
   PopoverProps,
@@ -814,6 +815,15 @@ export type OverlayThemeConfig = {
     defaultProps?: Partial<ModalDisclosureProps>;
   };
 };
+export type PaginationThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  PrepositionText?: { css?: { root?: ThemeAttribute<Stylesheet> } };
+  Button?: ButtonThemeConfig;
+  Select?: SelectThemeConfig;
+  defaultProps?: Partial<PaginationProps>;
+};
 export type ParagraphThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1200,6 +1210,7 @@ export type ThemeConfig = {
   Modal?: ModalThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
+  Pagination?: PaginationThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;

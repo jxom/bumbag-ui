@@ -23,7 +23,8 @@ const useProps = createHook<DropdownMenuGroupProps>(
     const titleClassName = useClassName({
       style: styles.DropdownMenuGroupTitle,
       styleProps: props,
-      themeKey: `${themeKey}.Title`,
+      themeKey,
+      themeKeySuffix: 'Title',
       prevClassName: boxProps.className
     });
 

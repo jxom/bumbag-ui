@@ -2,6 +2,8 @@
 import _get from 'lodash/get';
 import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import * as faChevronDown from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import * as faChevronLeft from '@fortawesome/free-solid-svg-icons/faChevronLeft';
+import * as faChevronRight from '@fortawesome/free-solid-svg-icons/faChevronRight';
 import * as faExclamationTriangle from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import * as faCheckCircle from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import * as faExclamationCircle from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
@@ -28,6 +30,8 @@ export default (overrides: any) => ({
     ...parseIcons(
       [
         faChevronDown,
+        faChevronLeft,
+        faChevronRight,
         faInfoCircle,
         faExclamationTriangle,
         faCheckCircle,

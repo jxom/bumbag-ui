@@ -68,17 +68,20 @@ const useProps = createHook<CheckboxProps>(
     const checkboxIconClassName = useClassName({
       style: styles.CheckboxIcon,
       styleProps: props,
-      themeKey: 'Checkbox.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const hiddenCheckboxClassName = useClassName({
       style: styles.HiddenCheckbox,
       styleProps: props,
-      themeKey: 'Checkbox.HiddenInput'
+      themeKey,
+      themeKeySuffix: 'HiddenInput'
     });
     const checkboxLabelClassName = useClassName({
       style: styles.CheckboxLabel,
       styleProps: props,
-      themeKey: 'Checkbox.Label'
+      themeKey,
+      themeKeySuffix: 'Label'
     });
 
     const labelId = useUniqueId('label');

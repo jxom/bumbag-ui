@@ -38,17 +38,20 @@ const useProps = createHook<SpinnerProps>(
     const spinnerClassName = useClassName({
       style: styles.Spinner,
       styleProps: props,
-      themeKey: `${themeKey}.vector`
+      themeKey,
+      themeKeySuffix: 'vector'
     });
     const trackCircleClassName = useClassName({
       style: styles.TrackCircle,
       styleProps: props,
-      themeKey: `${themeKey}.trackCircle`
+      themeKey,
+      themeKeySuffix: 'trackCircle'
     });
     const loaderCircleClassName = useClassName({
       style: styles.LoaderCircle,
       styleProps: props,
-      themeKey: `${themeKey}.loaderCircle`
+      themeKey,
+      themeKeySuffix: 'loaderCircle'
     });
 
     const children = (

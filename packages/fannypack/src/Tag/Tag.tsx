@@ -30,13 +30,15 @@ const useProps = createHook<TagProps>(
     const tagContentClassName = useClassName({
       style: styles.TagContent,
       styleProps: props,
-      themeKey: `${themeKey}.Content`,
+      themeKey,
+      themeKeySuffix: 'Content',
       prevClassName: boxProps.className
     });
     const tagCloseClassName = useClassName({
       style: styles.TagClose,
       styleProps: props,
-      themeKey: `${themeKey}.Close`,
+      themeKey,
+      themeKeySuffix: 'Close',
       prevClassName: boxProps.className
     });
 

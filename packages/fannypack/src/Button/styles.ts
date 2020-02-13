@@ -25,10 +25,6 @@ export const Button = styleProps => cssClass`
       border: 1px solid ${palette('white900')(styleProps)};
     `};
 
-  & {
-    ${theme('Button.css.root')(styleProps)};
-  }
-
   &[disabled],
   &[aria-disabled="true"] {
     ${getDisabledProperties(styleProps)};
@@ -42,6 +38,10 @@ export const Button = styleProps => cssClass`
   ${styleProps.kind === 'outlined' && getOutlinedProperties(styleProps)};
   ${styleProps.kind === 'link' && getLinkProperties(styleProps)};
   ${styleProps.kind === 'ghost' && getGhostProperties(styleProps)};
+
+  & {
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+  }
 `;
 
 export const ButtonIcon = styleProps => cssClass`

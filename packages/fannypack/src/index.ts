@@ -36,6 +36,7 @@ export * from './List';
 export * from './Modal';
 export * from './Navigation';
 export * from './Overlay';
+export * from './Pagination';
 export * from './Paragraph';
 export * from './Popover';
 export * from './Portal';

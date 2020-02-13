@@ -8,24 +8,27 @@ export function useClassName({
   style,
   prevClassName,
   styleProps,
-  themeKey
+  themeKey,
+  themeKeySuffix
 }: {
   style: any;
   prevClassName?: string;
   styleProps: any;
   themeKey?: string;
+  themeKeySuffix?: string;
 }) {
   const theme = React.useContext(ThemeContext);
   let className;
+  let newThemeKey = `${styleProps.themeKey || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
   if (Array.isArray(style)) {
-    className = style.map(style => style({ theme, themeKey, ...styleProps }));
+    className = style.map(style => style({ theme, ...styleProps, themeKey: newThemeKey }));
   } else {
-    className = [style({ theme, themeKey, ...styleProps })];
+    className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
   }
   const classNames = buildClassNames(
     ...className,
     prevClassName,
-    themeKey ? `fp-${themeKey.replace('.', '')}` : undefined
+    newThemeKey ? `fp-${newThemeKey.replace(/\./g, '')}` : undefined
   );
   const uniqueClassNames = _uniq(classNames.split(' ')).join(' ');
   return uniqueClassNames;

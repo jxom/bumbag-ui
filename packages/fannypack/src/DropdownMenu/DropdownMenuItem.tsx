@@ -86,12 +86,14 @@ const useProps = createHook<DropdownMenuItemProps>(
     const iconBeforeClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, isBefore: true },
-      themeKey: 'DropdownMenu.Item.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const iconAfterClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, isAfter: true },
-      themeKey: 'DropdownMenu.Item.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
 
     return {

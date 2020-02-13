@@ -84,13 +84,15 @@ const useProps = createHook<InputProps>(
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
       styleProps: props,
-      themeKey: `${themeKey}.Wrapper`,
+      themeKey,
+      themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
     const spinnerClassName = useClassName({
       style: styles.InputSpinner,
       styleProps: props,
-      themeKey: `${themeKey}.Spinner`
+      themeKey,
+      themeKeySuffix: 'Spinner'
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),

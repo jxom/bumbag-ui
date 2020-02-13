@@ -64,17 +64,20 @@ const useProps = createHook<RadioProps>(
     const radioIconClassName = useClassName({
       style: styles.RadioIcon,
       styleProps: props,
-      themeKey: 'Radio.Icon'
+      themeKey,
+      themeKeySuffix: 'Icon'
     });
     const hiddenRadioClassName = useClassName({
       style: styles.HiddenRadio,
       styleProps: props,
-      themeKey: 'Radio.HiddenInput'
+      themeKey,
+      themeKeySuffix: 'HiddenInput'
     });
     const radioLabelClassName = useClassName({
       style: styles.RadioLabel,
       styleProps: props,
-      themeKey: 'Radio.Label'
+      themeKey,
+      themeKeySuffix: 'Label'
     });
 
     const labelId = useUniqueId('label');

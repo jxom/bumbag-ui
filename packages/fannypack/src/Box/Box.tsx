@@ -26,7 +26,7 @@ export type LocalBoxProps = {
   /* Component-level theme overrides [Read more](TODO) */
   overrides?: ThemeConfig;
   elementRef?: React.Ref<any>;
-  themeKeyOverride?: string;
+  themeKey?: string;
 };
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 

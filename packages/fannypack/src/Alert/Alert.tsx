@@ -57,7 +57,8 @@ const useProps = createHook<AlertProps>(
     const alertCloseButtonClassName = useClassName({
       style: styles.AlertCloseButton,
       styleProps: props,
-      themeKey: `${themeKey}.CloseButton`
+      themeKey,
+      themeKeySuffix: 'CloseButton'
     });
 
     const titleId = useUniqueId('alertTitle');
@@ -140,7 +141,8 @@ export function AlertIcon(props: AlertIconProps) {
   const alertIconWrapperClassName = useClassName({
     style: styles.AlertIconWrapper,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Alert'}.IconWrapper`
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'IconWrapper'
   });
 
   return (
@@ -168,7 +170,8 @@ export function AlertContent(props: AlertContentProps) {
   const alertContentClassName = useClassName({
     style: styles.AlertContent,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Alert'}.Content`
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'Content'
   });
 
   return (
@@ -190,7 +193,8 @@ export function AlertTitle(props: AlertTitleProps) {
   const alertTitleClassName = useClassName({
     style: styles.AlertTitle,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Alert'}.Title`
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'Title'
   });
 
   return (
@@ -214,7 +218,8 @@ export function AlertDescription(props: AlertDescriptionProps) {
   const alertDescriptionClassName = useClassName({
     style: styles.AlertDescription,
     styleProps: { ...context, ...props },
-    themeKey: `${context.themeKey || 'Alert'}.Description`
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'Description'
   });
 
   return (
