@@ -14,7 +14,7 @@ export type LocalPopoverBackdropProps = {};
 export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & LocalPopoverBackdropProps;
 
 const useProps = createHook<PopoverBackdropProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let {
       visible,
       baseId,
@@ -41,6 +41,7 @@ const useProps = createHook<PopoverBackdropProps>(
       style: styles.PopoverBackdrop,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

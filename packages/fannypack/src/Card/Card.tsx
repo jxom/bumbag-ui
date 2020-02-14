@@ -19,7 +19,7 @@ export type CardContextOptions = CardProps & { descriptionId?: string; titleId?:
 export const CardContext = React.createContext<CardContextOptions>({});
 
 const useProps = createHook<CardProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { footer, headerAddon, overrides, standalone, title, kind, ...restProps } = props;
     const boxProps = Box.useProps({
       altitude: kind === 'shadow' ? '100' : null,
@@ -31,6 +31,7 @@ const useProps = createHook<CardProps>(
       style: styles.Card,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

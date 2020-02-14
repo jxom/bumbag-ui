@@ -54,13 +54,14 @@ export type LocalTextareaProps = {
 export type TextareaProps = BoxProps & LocalTextareaProps;
 
 const useProps = createHook<TextareaProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.TextareaWrapper,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
@@ -78,6 +79,7 @@ const useProps = createHook<TextareaProps>(
       style: styles.Textarea,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -116,7 +118,7 @@ export type LocalTextareaFieldProps = {
 export type TextareaFieldProps = BoxProps & FieldWrapperProps & TextareaProps & LocalTextareaFieldProps;
 
 const useTextareaFieldProps = createHook<TextareaFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       children,
       autoComplete,
@@ -159,6 +161,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       style: styles.TextareaField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

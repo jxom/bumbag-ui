@@ -5,16 +5,7 @@ import InputMask from 'react-input-mask';
 import ConditionalWrap from 'conditional-wrap';
 
 import { Size } from '../types';
-import {
-  formikField,
-  reduxFormField,
-  useClassName,
-  createComponent,
-  createElement,
-  createHook,
-  pickCSSProps,
-  omitCSSProps
-} from '../utils';
+import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Group } from '../Group';
@@ -78,13 +69,14 @@ export type LocalInputProps = {
 export type InputProps = BoxProps & LocalInputProps;
 
 const useProps = createHook<InputProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { before, after, isLoading, isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
@@ -92,6 +84,7 @@ const useProps = createHook<InputProps>(
       style: styles.InputSpinner,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Spinner'
     });
     const boxProps = Box.useProps({
@@ -119,6 +112,7 @@ const useProps = createHook<InputProps>(
       style: styles.Input,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -182,7 +176,7 @@ export type LocalInputFieldProps = {
 export type InputFieldProps = BoxProps & FieldWrapperProps & InputProps & LocalInputFieldProps;
 
 const useInputFieldProps = createHook<InputFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       addonAfter,
       addonBefore,
@@ -233,6 +227,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       style: styles.InputField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

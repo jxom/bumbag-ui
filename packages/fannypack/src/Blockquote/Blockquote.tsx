@@ -9,13 +9,14 @@ export type LocalBlockquoteProps = {};
 export type BlockquoteProps = BoxProps & LocalBlockquoteProps;
 
 const useProps = createHook<BlockquoteProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Blockquote,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

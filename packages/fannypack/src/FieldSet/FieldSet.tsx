@@ -12,7 +12,7 @@ export type LocalFieldSetProps = {
 export type FieldSetProps = Omit<SetProps, 'isVertical'> & LocalFieldSetProps;
 
 const useProps = createHook<FieldSetProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { isHorizontal, ...restProps } = props;
     const setProps = Set.useProps({ ...restProps, isVertical: !isHorizontal });
 
@@ -20,6 +20,7 @@ const useProps = createHook<FieldSetProps>(
       style: styles.FieldSet,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: setProps.className
     });
 

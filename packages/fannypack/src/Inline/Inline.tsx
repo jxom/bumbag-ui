@@ -12,13 +12,14 @@ export type LocalInlineProps = {
 export type InlineProps = BoxProps & LocalInlineProps;
 
 const useProps = createHook<InlineProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Inline,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

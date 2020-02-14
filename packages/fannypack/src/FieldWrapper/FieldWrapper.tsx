@@ -1,7 +1,14 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook, OutsideClickHandler, useUniqueId } from '../utils';
+import {
+  useClassName,
+  createComponent,
+  createElement,
+  createHook,
+  OutsideClickHandler,
+  useUniqueId
+} from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Button } from '../Button';
 import { Card } from '../Card';
@@ -34,7 +41,7 @@ export type FieldElementProps = {
 };
 
 const useProps = createHook<FieldWrapperProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       children,
       description,
@@ -55,24 +62,28 @@ const useProps = createHook<FieldWrapperProps>(
       style: styles.FieldWrapper,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const labelClassName = useClassName({
       style: styles.Label,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Label'
     });
     const descriptionClassName = useClassName({
       style: styles.DescriptionText,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'DescriptionText'
     });
     const hintClassName = useClassName({
       style: styles.HintText,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'HintText'
     });
     const optionalClassName = useClassName({

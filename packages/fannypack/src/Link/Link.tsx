@@ -1,6 +1,5 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { LinkThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -10,13 +9,14 @@ export type LocalLinkProps = {};
 export type LinkProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkProps;
 
 const useProps = createHook<LinkProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Link,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

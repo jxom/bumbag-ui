@@ -10,13 +10,14 @@ export type LocalOverlayDisclosureProps = {};
 export type OverlayDisclosureProps = ModalDisclosureProps & LocalOverlayDisclosureProps;
 
 const useProps = createHook<OverlayDisclosureProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const htmlProps = ModalDisclosure.useProps(props);
 
     const className = useClassName({
       style: styles.OverlayDisclosure,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

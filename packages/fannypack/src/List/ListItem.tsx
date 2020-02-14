@@ -9,13 +9,14 @@ export type LocalListItemProps = {};
 export type ListItemProps = BoxProps & LocalListItemProps;
 
 const useProps = createHook<ListItemProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.ListItem,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

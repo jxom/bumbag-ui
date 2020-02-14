@@ -14,13 +14,14 @@ export type LocalHeadingProps = {
 export type HeadingProps = BoxProps & LocalHeadingProps;
 
 const useProps = createHook<HeadingProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Heading,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

@@ -11,13 +11,14 @@ export type LocalLabelProps = {
 export type LabelProps = BoxProps & LocalLabelProps;
 
 const useProps = createHook<LabelProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Label,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

@@ -9,7 +9,7 @@ export type LocalDividerProps = {};
 export type DividerProps = BoxProps & ReakitSeparatorProps & LocalDividerProps;
 
 const useProps = createHook<DividerProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let { orientation, ...htmlProps } = props;
     const separatorProps = useReakitSeparator(
       {
@@ -23,6 +23,7 @@ const useProps = createHook<DividerProps>(
       style: styles.Divider,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

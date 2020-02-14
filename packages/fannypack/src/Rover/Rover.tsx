@@ -10,7 +10,7 @@ export type LocalRoverProps = {};
 export type RoverProps = BoxProps & ReakitRoverProps & LocalRoverProps;
 
 const useProps = createHook<RoverProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let {
       disabled,
       focusable,
@@ -57,6 +57,7 @@ const useProps = createHook<RoverProps>(
       style: styles.Rover,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

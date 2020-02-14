@@ -31,7 +31,7 @@ export type LocalBoxProps = {
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     // Convert CSS props to an object.
     // Example input:
     // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
@@ -44,11 +44,19 @@ const useProps = createHook<BoxProps>(
     let className = useClassName({
       style: styles.style,
       styleProps: { ...props, style },
+      themeKey,
+      themeKeyOverride,
       prevClassName: props.className
     });
 
     // Append the Box styles as a className on the DOM element.
-    className = useClassName({ style: styles.Box, styleProps: props, prevClassName: className, themeKey });
+    className = useClassName({
+      style: styles.Box,
+      styleProps: props,
+      prevClassName: className,
+      themeKey,
+      themeKeyOverride
+    });
 
     // Pick out and invalid HTML props & omit the CSS props.
     const htmlProps = omitCSSProps(pickHTMLProps({ ...props, className }));

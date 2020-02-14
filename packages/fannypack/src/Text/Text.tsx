@@ -9,13 +9,14 @@ export type LocalTextProps = {};
 export type TextProps = BoxProps & LocalTextProps;
 
 const useProps = createHook<TextProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Text,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

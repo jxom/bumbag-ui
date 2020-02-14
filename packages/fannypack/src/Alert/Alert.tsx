@@ -30,7 +30,7 @@ export type AlertContextOptions = AlertProps & { descriptionId?: string; titleId
 export const AlertContext = React.createContext<AlertContextOptions>({});
 
 const useProps = createHook<AlertProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       closeButtonProps,
       closeButtonIconProps,
@@ -52,12 +52,14 @@ const useProps = createHook<AlertProps>(
       style: styles.Alert,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const alertCloseButtonClassName = useClassName({
       style: styles.AlertCloseButton,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'CloseButton'
     });
 

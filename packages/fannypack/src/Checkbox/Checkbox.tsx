@@ -38,7 +38,7 @@ export type LocalCheckboxProps = {
 export type CheckboxProps = BoxProps & LocalCheckboxProps;
 
 const useProps = createHook<CheckboxProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       autoFocus,
       checked,
@@ -63,24 +63,28 @@ const useProps = createHook<CheckboxProps>(
       style: styles.Checkbox,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const checkboxIconClassName = useClassName({
       style: styles.CheckboxIcon,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const hiddenCheckboxClassName = useClassName({
       style: styles.HiddenCheckbox,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'HiddenInput'
     });
     const checkboxLabelClassName = useClassName({
       style: styles.CheckboxLabel,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Label'
     });
 
@@ -157,7 +161,7 @@ export type LocalCheckboxFieldProps = {
 export type CheckboxFieldProps = BoxProps & FieldWrapperProps & CheckboxProps & LocalCheckboxFieldProps;
 
 const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       autoFocus,
       checked,
@@ -190,6 +194,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       style: styles.CheckboxField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

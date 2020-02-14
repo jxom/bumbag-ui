@@ -20,13 +20,14 @@ export type LocalGridProps = {
 export type GridProps = BoxProps & LocalGridProps;
 
 const useProps = createHook<GridProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Grid,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

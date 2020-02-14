@@ -14,7 +14,7 @@ export type LocalDropdownMenuDividerProps = {};
 export type DropdownMenuDividerProps = BoxProps & ReakitMenuSeparatorProps & LocalDropdownMenuDividerProps;
 
 const useProps = createHook<DropdownMenuDividerProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { orientation, ...restProps } = props;
     const dropdownMenuDividerProps = useReakitMenuSeparator(
       {
@@ -28,6 +28,7 @@ const useProps = createHook<DropdownMenuDividerProps>(
       style: styles.DropdownMenuDivider,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: dividerProps.className
     });
 

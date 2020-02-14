@@ -150,18 +150,18 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -172,18 +172,21 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with ActionButtons props 1`] = `
 Object {
   "children": <React.Fragment>
-    <ForwardRef>
+    <ForwardRef
+      themeKey="ActionButtons.Button"
+    >
       Cancel
     </ForwardRef>
     <ForwardRef
       isLoading={false}
       palette="primary"
+      themeKey="ActionButtons.Button"
       type="submit"
     >
       Submit
     </ForwardRef>
   </React.Fragment>,
-  "className": "css-13h683e css-y98i43 css-1pwrqjj css-3ekj6a fp-Box fp-ActionButtons",
+  "className": "css-13h683e css-y98i43 css-1pwrqjj css-3ekj6a fp-Box fp-ActionButtons fp-Set",
 }
 `;
 
@@ -337,18 +340,18 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -506,18 +509,18 @@ exports[`defaultProps should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 test fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 test fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -730,11 +733,11 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
@@ -748,7 +751,7 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="emotion-6 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-6 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1035,19 +1038,19 @@ samp.emotion-11 {
 }
 
 <div
-  class="emotion-20 emotion-21 emotion-3 emotion-4 fp-Box fp-ActionButtons"
+  class="emotion-20 emotion-21 emotion-3 emotion-4 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="true"
-    class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-14 emotion-3 emotion-4 fp-Box fp-ActionButtonsButton fp-Button"
     disabled=""
     type="button"
   >
     <div
-      class="emotion-3 emotion-4 emotion-10 fp-ButtonSpinnerWrapper fp-Box"
+      class="emotion-3 emotion-4 emotion-10 fp-ActionButtonsButtonSpinnerWrapper fp-ButtonSpinnerWrapper fp-Box"
     >
       <div
-        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
+        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ActionButtonsButtonSpinner fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
       >
         <svg
           class="emotion-1 fp-Spinnervector"
@@ -1072,7 +1075,7 @@ samp.emotion-11 {
   </button>
   <button
     aria-disabled="false"
-    class="emotion-17 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-17 emotion-3 emotion-4 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1230,18 +1233,18 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Close
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1407,18 +1410,18 @@ exports[`overrides ActionButtons.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1576,18 +1579,18 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1750,18 +1753,18 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-9 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-9 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -1974,11 +1977,11 @@ exports[`props should render correctly with addon buttons 1`] = `
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
@@ -1992,7 +1995,7 @@ exports[`props should render correctly with addon buttons 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="emotion-6 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-6 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -2279,19 +2282,19 @@ samp.emotion-11 {
 }
 
 <div
-  class="emotion-20 emotion-21 emotion-3 emotion-4 fp-Box fp-ActionButtons"
+  class="emotion-20 emotion-21 emotion-3 emotion-4 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="true"
-    class="emotion-14 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-14 emotion-3 emotion-4 fp-Box fp-ActionButtonsButton fp-Button"
     disabled=""
     type="button"
   >
     <div
-      class="emotion-3 emotion-4 emotion-10 fp-ButtonSpinnerWrapper fp-Box"
+      class="emotion-3 emotion-4 emotion-10 fp-ActionButtonsButtonSpinnerWrapper fp-ButtonSpinnerWrapper fp-Box"
     >
       <div
-        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
+        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ActionButtonsButtonSpinner fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
       >
         <svg
           class="emotion-1 fp-Spinnervector"
@@ -2316,7 +2319,7 @@ samp.emotion-11 {
   </button>
   <button
     aria-disabled="false"
-    class="emotion-17 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-17 emotion-3 emotion-4 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -2474,18 +2477,18 @@ exports[`props should render correctly with cancel text 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Close
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -2773,25 +2776,25 @@ samp.emotion-14 {
 }
 
 <div
-  class="emotion-20 emotion-21 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-20 emotion-21 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-17 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-17 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     <div
-      class="emotion-1 emotion-2 emotion-13 fp-ButtonSpinnerWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-13 fp-ActionButtonsButtonSpinnerWrapper fp-ButtonSpinnerWrapper fp-Box"
     >
       <div
-        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
+        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ActionButtonsButtonSpinner fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
       >
         <svg
           class="emotion-4 fp-Spinnervector"
@@ -2967,18 +2970,18 @@ exports[`props should render correctly with onClickCancel 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -3136,18 +3139,18 @@ exports[`props should render correctly with onClickSubmit 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -3305,18 +3308,18 @@ exports[`props should render correctly with palette 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit
@@ -3604,26 +3607,26 @@ samp.emotion-14 {
 }
 
 <div
-  class="emotion-20 emotion-21 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-20 emotion-21 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="true"
-    class="emotion-17 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-17 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     disabled=""
     type="submit"
   >
     <div
-      class="emotion-1 emotion-2 emotion-13 fp-ButtonSpinnerWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-13 fp-ActionButtonsButtonSpinnerWrapper fp-ButtonSpinnerWrapper fp-Box"
     >
       <div
-        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
+        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ActionButtonsButtonSpinner fp-ButtonSpinner fp-Box fp-Spinner fp-Flex"
       >
         <svg
           class="emotion-4 fp-Spinnervector"
@@ -3799,18 +3802,18 @@ exports[`props should render correctly with submitText 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Save
@@ -3968,18 +3971,18 @@ exports[`props should render correctly with type 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Submit
@@ -4145,18 +4148,18 @@ exports[`theming ActionButtons.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
 >
   <button
     aria-disabled="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="false"
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ActionButtonsButton fp-Button"
     type="submit"
   >
     Submit

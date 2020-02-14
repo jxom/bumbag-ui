@@ -14,7 +14,7 @@ export type LocalPopoverDisclosureProps = {};
 export type PopoverDisclosureProps = BoxProps & ReakitPopoverDisclosureProps & LocalPopoverDisclosureProps;
 
 const useProps = createHook<PopoverDisclosureProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let { disabled, focusable, visible, toggle, baseId, unstable_referenceRef, ...htmlProps } = props;
     const popoverDisclosureProps = useReakitPopoverDisclosure(
       { disabled, focusable, visible, toggle, baseId, unstable_referenceRef },
@@ -26,6 +26,7 @@ const useProps = createHook<PopoverDisclosureProps>(
       style: styles.PopoverDisclosure,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

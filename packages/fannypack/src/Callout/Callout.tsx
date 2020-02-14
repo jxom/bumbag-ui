@@ -28,7 +28,7 @@ export type CalloutContextOptions = CalloutProps & { descriptionId?: string; tit
 export const CalloutContext = React.createContext<CalloutContextOptions>({});
 
 const useProps = createHook<CalloutProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       closeButtonProps = {},
       iconProps,
@@ -47,12 +47,15 @@ const useProps = createHook<CalloutProps>(
       style: styles.Callout,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: cardProps.className
     });
     const calloutCloseClassName = useClassName({
       style: styles.CalloutClose,
       styleProps: props,
-      themeKey: 'Callout.Close',
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'Close',
       prevClassName: closeButtonProps.className
     });
 
@@ -122,7 +125,7 @@ export type LocalCalloutContentProps = {};
 export type CalloutContentProps = BoxProps & LocalCalloutContentProps;
 
 const useCalloutContentProps = createHook<CalloutContentProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(CalloutContext);
 
@@ -130,6 +133,7 @@ const useCalloutContentProps = createHook<CalloutContentProps>(
       style: styles.CalloutContent,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -160,7 +164,7 @@ export type LocalCalloutHeaderProps = {};
 export type CalloutHeaderProps = BoxProps & LocalCalloutHeaderProps;
 
 const useCalloutHeaderProps = createHook<CalloutHeaderProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(CalloutContext);
 
@@ -168,6 +172,7 @@ const useCalloutHeaderProps = createHook<CalloutHeaderProps>(
       style: styles.CalloutHeader,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -198,7 +203,7 @@ export type LocalCalloutTitleProps = {};
 export type CalloutTitleProps = TextProps & LocalCalloutTitleProps;
 
 const useCalloutTitleProps = createHook<CalloutTitleProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const textProps = Text.useProps(props);
     const contextProps = React.useContext(CalloutContext);
 
@@ -206,6 +211,7 @@ const useCalloutTitleProps = createHook<CalloutTitleProps>(
       style: styles.CalloutTitle,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: textProps.className
     });
 
@@ -239,7 +245,7 @@ export type LocalCalloutFooterProps = {};
 export type CalloutFooterProps = BoxProps & LocalCalloutFooterProps;
 
 const useCalloutFooterProps = createHook<CalloutFooterProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(CalloutContext);
 
@@ -247,6 +253,7 @@ const useCalloutFooterProps = createHook<CalloutFooterProps>(
       style: styles.CalloutFooter,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -279,7 +286,7 @@ export type LocalCalloutIconProps = {
 export type CalloutIconProps = BoxProps & LocalCalloutIconProps;
 
 const useCalloutIconProps = createHook<CalloutIconProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { iconProps, ...restProps } = props;
 
     const boxProps = Box.useProps(restProps);
@@ -289,6 +296,7 @@ const useCalloutIconProps = createHook<CalloutIconProps>(
       style: styles.CalloutIconWrapper,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -338,7 +346,7 @@ export type LocalCalloutOverlayProps = {};
 export type CalloutOverlayProps = CalloutProps & OverlayProps & LocalCalloutOverlayProps;
 
 const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { kind, ...restProps } = props;
 
     const calloutProps = Callout.useProps({
@@ -357,6 +365,7 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
       style: styles.CalloutOverlay,
       styleProps: { ...contextProps, ...props },
       themeKey,
+      themeKeyOverride,
       prevClassName: calloutProps.className
     });
 

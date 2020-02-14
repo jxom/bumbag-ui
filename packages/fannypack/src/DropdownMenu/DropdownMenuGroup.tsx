@@ -10,7 +10,7 @@ export type LocalDropdownMenuGroupProps = { title?: string };
 export type DropdownMenuGroupProps = BoxProps & LocalDropdownMenuGroupProps;
 
 const useProps = createHook<DropdownMenuGroupProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { children, title, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -18,12 +18,14 @@ const useProps = createHook<DropdownMenuGroupProps>(
       style: styles.DropdownMenuGroup,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const titleClassName = useClassName({
       style: styles.DropdownMenuGroupTitle,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Title',
       prevClassName: boxProps.className
     });

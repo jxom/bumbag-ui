@@ -13,7 +13,7 @@ export type LocalModalProps = {
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
 const useProps = createHook<ModalProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let {
       hide,
       hideOnEsc,
@@ -62,6 +62,7 @@ const useProps = createHook<ModalProps>(
       style: styles.Modal,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

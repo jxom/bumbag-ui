@@ -30,7 +30,7 @@ export type LocalRadioGroupProps = {
 export type RadioGroupProps = BoxProps & LocalRadioGroupProps;
 
 const useProps = createHook<RadioGroupProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultValue,
       disabled,
@@ -51,6 +51,7 @@ const useProps = createHook<RadioGroupProps>(
       style: styles.RadioGroup,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -59,7 +60,7 @@ const useProps = createHook<RadioGroupProps>(
       ...boxProps,
       className,
       children: (
-        <Set isVertical={!isHorizontal} spacing={spacing}>
+        <Set isVertical={!isHorizontal} overrides={overrides} spacing={spacing}>
           {options.map((option, i) => (
             <Radio
               key={i}
@@ -102,7 +103,7 @@ export type LocalRadioGroupFieldProps = {
 export type RadioGroupFieldProps = BoxProps & FieldWrapperProps & RadioGroupProps & LocalRadioGroupFieldProps;
 
 const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultChecked,
       description,
@@ -125,12 +126,13 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
       ...restProps
     } = props;
 
-    const boxProps = Box.useProps(restProps);
+    const boxProps = Box.useProps({ ...restProps, overrides });
 
     const className = useClassName({
       style: styles.RadioGroupField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

@@ -35,7 +35,7 @@ export type LocalRadioProps = {
 export type RadioProps = BoxProps & LocalRadioProps;
 
 const useProps = createHook<RadioProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       autoFocus,
       checked,
@@ -47,36 +47,41 @@ const useProps = createHook<RadioProps>(
       onBlur,
       onChange,
       onFocus,
+      overrides,
       radioProps,
       state,
       value,
       ...restProps
     } = props;
 
-    const boxProps = Box.useProps(restProps);
+    const boxProps = Box.useProps({ ...restProps, overrides });
 
     const className = useClassName({
       style: styles.Radio,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const radioIconClassName = useClassName({
       style: styles.RadioIcon,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const hiddenRadioClassName = useClassName({
       style: styles.HiddenRadio,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'HiddenInput'
     });
     const radioLabelClassName = useClassName({
       style: styles.RadioLabel,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Label'
     });
 
@@ -107,11 +112,19 @@ const useProps = createHook<RadioProps>(
             type="radio"
             // @ts-ignore
             value={value}
+            overrides={overrides}
             {...radioProps}
           />
-          <Box className={radioIconClassName} />
+          <Box className={radioIconClassName} overrides={overrides} />
           {label && (
-            <Label use="span" id={labelId} className={radioLabelClassName} htmlFor={radioId} marginLeft="minor-2">
+            <Label
+              use="span"
+              id={labelId}
+              className={radioLabelClassName}
+              htmlFor={radioId}
+              overrides={overrides}
+              marginLeft="minor-2"
+            >
               {label}
             </Label>
           )}

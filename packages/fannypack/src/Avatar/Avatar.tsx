@@ -17,13 +17,14 @@ export type LocalAvatarProps = {
 export type AvatarProps = Omit<ImageProps, 'src'> & LocalAvatarProps;
 
 const useProps = createHook<AvatarProps>(
-  (props = {}, themeKey) => {
+  (props = {}, { themeKey, themeKeyOverride }) => {
     const imageProps = Image.useProps({ ...props }, { themeKey: 'Avatar' });
 
     const className = useClassName({
       style: styles.Avatar,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: imageProps.className
     });
 

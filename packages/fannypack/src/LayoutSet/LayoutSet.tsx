@@ -11,7 +11,7 @@ export type LocalLayoutSetProps = {
 export type LayoutSetProps = SetProps & LocalLayoutSetProps;
 
 const useProps = createHook<LayoutSetProps>(
-  (props = {}, themeKey) => {
+  (props = {}, { themeKey, themeKeyOverride }) => {
     let isVertical = props.isVertical || !props.isHorizontal;
 
     const setProps = Set.useProps({ ...props, isVertical }, { themeKey: 'LayoutSet' });
@@ -20,6 +20,7 @@ const useProps = createHook<LayoutSetProps>(
       style: styles.LayoutSet,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: setProps.className
     });
 

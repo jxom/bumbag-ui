@@ -44,7 +44,7 @@ export type LocalSelectProps = {
 export type SelectProps = BoxProps & LocalSelectProps;
 
 const useProps = createHook<SelectProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       disabled,
       isLoading,
@@ -74,6 +74,7 @@ const useProps = createHook<SelectProps>(
       style: styles.SelectWrapper,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className
     });
@@ -81,12 +82,14 @@ const useProps = createHook<SelectProps>(
       style: styles.SelectIcon,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const spinnerClassName = useClassName({
       style: styles.SelectSpinner,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Spinner'
     });
 
@@ -109,6 +112,7 @@ const useProps = createHook<SelectProps>(
       style: styles.Select,
       styleProps: { ...props, isPlaceholderSelected },
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -179,7 +183,7 @@ export type LocalSelectFieldProps = {
 export type SelectFieldProps = BoxProps & FieldWrapperProps & SelectProps & LocalSelectFieldProps;
 
 const useSelectFieldProps = createHook<SelectFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       addonAfter,
       addonBefore,
@@ -217,6 +221,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       style: styles.SelectField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

@@ -30,7 +30,7 @@ export type LocalCheckboxGroupProps = {
 export type CheckboxGroupProps = BoxProps & LocalCheckboxGroupProps;
 
 const useProps = createHook<CheckboxGroupProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultValue: initialDefaultValue,
       disabled,
@@ -51,6 +51,7 @@ const useProps = createHook<CheckboxGroupProps>(
       style: styles.CheckboxGroup,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -114,7 +115,7 @@ export type LocalCheckboxGroupFieldProps = {
 export type CheckboxGroupFieldProps = BoxProps & FieldWrapperProps & CheckboxGroupProps & LocalCheckboxGroupFieldProps;
 
 const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultChecked,
       description,
@@ -143,6 +144,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
       style: styles.CheckboxGroupField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

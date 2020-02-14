@@ -10,13 +10,14 @@ export type LocalOverlayProps = {};
 export type OverlayProps = ModalProps & LocalOverlayProps;
 
 const useProps = createHook<OverlayProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const htmlProps = Modal.useProps(props, { themeKey: 'Overlay' });
 
     const className = useClassName({
       style: styles.Overlay,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

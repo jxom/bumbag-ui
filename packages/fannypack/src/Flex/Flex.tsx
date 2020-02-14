@@ -12,13 +12,14 @@ export type LocalFlexProps = {
 export type FlexProps = BoxProps & LocalFlexProps;
 
 const useProps = createHook<FlexProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Flex,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

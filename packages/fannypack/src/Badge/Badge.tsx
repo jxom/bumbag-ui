@@ -15,7 +15,7 @@ export type LocalBadgeProps = {
 export type BadgeProps = BoxProps & LocalBadgeProps;
 
 const useProps = createHook<BadgeProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const ref = React.useRef();
     const boxProps = Box.useProps({ ...props, ref });
 
@@ -23,6 +23,7 @@ const useProps = createHook<BadgeProps>(
       style: styles.Badge,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

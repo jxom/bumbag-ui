@@ -30,7 +30,7 @@ export type LocalSwitchGroupProps = {
 export type SwitchGroupProps = BoxProps & LocalSwitchGroupProps;
 
 const useProps = createHook<SwitchGroupProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultValue: initialDefaultValue,
       disabled,
@@ -51,6 +51,7 @@ const useProps = createHook<SwitchGroupProps>(
       style: styles.SwitchGroup,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
@@ -114,7 +115,7 @@ export type LocalSwitchGroupFieldProps = {
 export type SwitchGroupFieldProps = BoxProps & FieldWrapperProps & SwitchGroupProps & LocalSwitchGroupFieldProps;
 
 const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       defaultChecked,
       description,
@@ -143,6 +144,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
       style: styles.SwitchGroupField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

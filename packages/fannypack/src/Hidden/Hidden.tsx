@@ -10,7 +10,7 @@ export type LocalHiddenProps = {};
 export type HiddenProps = BoxProps & ReakitHiddenProps & LocalHiddenProps;
 
 const useProps = createHook<HiddenProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let {
       baseId,
       visible,
@@ -37,6 +37,7 @@ const useProps = createHook<HiddenProps>(
       style: styles.Hidden,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

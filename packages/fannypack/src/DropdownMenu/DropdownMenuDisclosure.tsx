@@ -13,7 +13,7 @@ export type LocalDropdownMenuDisclosureProps = {};
 export type DropdownMenuDisclosureProps = BoxProps & ReakitMenuDisclosureProps & LocalDropdownMenuDisclosureProps;
 
 const useProps = createHook<DropdownMenuDisclosureProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       baseId,
       disabled,
@@ -54,6 +54,7 @@ const useProps = createHook<DropdownMenuDisclosureProps>(
       style: styles.DropdownMenuDisclosure,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

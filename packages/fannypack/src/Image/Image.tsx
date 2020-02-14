@@ -17,13 +17,14 @@ export type LocalImageProps = {
 export type ImageProps = BoxProps & React.ImgHTMLAttributes<any> & LocalImageProps;
 
 const useProps = createHook<ImageProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Image,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

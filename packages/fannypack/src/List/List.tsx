@@ -14,13 +14,14 @@ export type LocalListProps = {
 export type ListProps = BoxProps & LocalListProps;
 
 const useProps = createHook<ListProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.List,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

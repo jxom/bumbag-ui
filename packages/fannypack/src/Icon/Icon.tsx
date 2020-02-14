@@ -30,13 +30,14 @@ export type LocalIconProps = {
 export type IconProps = BoxProps & LocalIconProps;
 
 const useProps = createHook<IconProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Icon,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

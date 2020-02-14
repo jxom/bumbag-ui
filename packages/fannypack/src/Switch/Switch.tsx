@@ -38,7 +38,7 @@ export type LocalSwitchProps = {
 export type SwitchProps = BoxProps & LocalSwitchProps;
 
 const useProps = createHook<SwitchProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       autoFocus,
       checked,
@@ -51,33 +51,41 @@ const useProps = createHook<SwitchProps>(
       onBlur,
       onChange,
       onFocus,
+      overrides,
       state,
       value,
       ...restProps
     } = props;
 
-    const boxProps = Box.useProps(restProps);
+    const boxProps = Box.useProps({ ...restProps, overrides });
 
     const className = useClassName({
       style: styles.Switch,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const switchIconClassName = useClassName({
       style: styles.SwitchIcon,
       styleProps: props,
-      themeKey: 'Switch.Icon'
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'Icon'
     });
     const hiddenSwitchClassName = useClassName({
       style: styles.HiddenSwitch,
       styleProps: props,
-      themeKey: 'Switch.HiddenInput'
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'HiddenInput'
     });
     const switchLabelClassName = useClassName({
       style: styles.SwitchLabel,
       styleProps: props,
-      themeKey: 'Switch.Label'
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'Label'
     });
 
     const labelId = useUniqueId('label');
@@ -105,15 +113,23 @@ const useProps = createHook<SwitchProps>(
             onBlur={onBlur}
             onChange={onChange}
             onFocus={onFocus}
+            overrides={overrides}
             name={name}
             type="checkbox"
             // @ts-ignore
             value={value}
             {...inputProps}
           />
-          <Box className={switchIconClassName} />
+          <Box className={switchIconClassName} overrides={overrides} />
           {label && (
-            <Label use="span" id={labelId} className={switchLabelClassName} htmlFor={switchId} marginLeft="minor-2">
+            <Label
+              use="span"
+              id={labelId}
+              className={switchLabelClassName}
+              htmlFor={switchId}
+              overrides={overrides}
+              marginLeft="minor-2"
+            >
               {label}
             </Label>
           )}
@@ -151,7 +167,7 @@ export type LocalSwitchFieldProps = {
 export type SwitchFieldProps = BoxProps & FieldWrapperProps & SwitchProps & LocalSwitchFieldProps;
 
 const useSwitchFieldProps = createHook<SwitchFieldProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       autoFocus,
       checked,
@@ -183,6 +199,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
       style: styles.SwitchField,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

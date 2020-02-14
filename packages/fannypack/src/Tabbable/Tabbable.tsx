@@ -10,7 +10,7 @@ export type LocalTabbableProps = {};
 export type TabbableProps = BoxProps & ReakitTabbableProps & LocalTabbableProps;
 
 const useProps = createHook<TabbableProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace, ...htmlProps } = props;
     const tabbableProps = useReakitTabbable(
       {
@@ -27,6 +27,7 @@ const useProps = createHook<TabbableProps>(
       style: styles.Tabbable,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
 

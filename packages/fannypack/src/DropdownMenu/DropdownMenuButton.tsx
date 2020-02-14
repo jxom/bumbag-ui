@@ -1,8 +1,4 @@
-import {
-  Box as ReakitBox,
-  useMenuDisclosure as useReakitMenuDisclosure,
-  MenuDisclosureProps as ReakitMenuDisclosureProps
-} from 'reakit';
+import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Button, ButtonProps } from '../Button';
@@ -14,7 +10,7 @@ export type LocalDropdownMenuButtonProps = {};
 export type DropdownMenuButtonProps = ButtonProps & DropdownMenuDisclosureProps & LocalDropdownMenuButtonProps;
 
 const useProps = createHook<DropdownMenuButtonProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { ...restProps } = props;
     const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps({ ...restProps });
     const buttonProps = Button.useProps({ ...dropdownMenuDisclosureProps, ...restProps });
@@ -23,6 +19,7 @@ const useProps = createHook<DropdownMenuButtonProps>(
       style: styles.DropdownMenuButton,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: buttonProps.className
     });
 

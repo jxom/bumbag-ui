@@ -32,7 +32,7 @@ export type LocalActionButtonsProps = {
 export type ActionButtonsProps = SetProps & LocalActionButtonsProps;
 
 const useProps = createHook<ActionButtonsProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const {
       addonButtons,
       cancelProps,
@@ -40,6 +40,7 @@ const useProps = createHook<ActionButtonsProps>(
       isLoading,
       onClickCancel,
       onClickSubmit,
+      overrides,
       palette,
       size,
       submitProps,
@@ -47,26 +48,35 @@ const useProps = createHook<ActionButtonsProps>(
       type,
       ...restProps
     } = props;
-    const setProps = Set.useProps(restProps, { themeKey: 'ActionButtons' });
+    const setProps = Set.useProps({ ...restProps, overrides }, { themeKey: 'ActionButtons' });
 
     const className = useClassName({
       style: styles.ActionButtons,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: setProps.className
     });
 
     const children = (
       <React.Fragment>
-        <Button onClick={onClickCancel} size={size} {...cancelProps}>
+        <Button
+          onClick={onClickCancel}
+          overrides={overrides}
+          size={size}
+          themeKey={`${themeKey}.Button`}
+          {...cancelProps}
+        >
           {cancelText}
         </Button>
         {addonButtons}
         <Button
           isLoading={isLoading}
           onClick={onClickSubmit}
+          overrides={overrides}
           palette={palette}
           size={size}
+          themeKey={`${themeKey}.Button`}
           type={type}
           {...submitProps}
         >

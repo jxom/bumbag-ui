@@ -33,7 +33,7 @@ export type LocalButtonProps = {
 export type ButtonProps = BoxProps & ReakitButtonProps & LocalButtonProps;
 
 const useProps = createHook<ButtonProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     let {
       disabled,
       focusable,
@@ -56,30 +56,35 @@ const useProps = createHook<ButtonProps>(
       style: styles.Button,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: htmlProps.className
     });
     const iconBeforeClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isBefore: true },
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const iconAfterClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isAfter: true },
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const spinnerWrapperClassName = useClassName({
       style: styles.ButtonSpinnerWrapper,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'SpinnerWrapper'
     });
     const spinnerClassName = useClassName({
       style: styles.ButtonSpinner,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Spinner'
     });
 

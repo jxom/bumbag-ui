@@ -17,7 +17,7 @@ export type LocalTagProps = {
 export type TagProps = BoxProps & LocalTagProps;
 
 const useProps = createHook<TagProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const { children, onRemove, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -25,12 +25,14 @@ const useProps = createHook<TagProps>(
       style: styles.Tag,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
     const tagContentClassName = useClassName({
       style: styles.TagContent,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Content',
       prevClassName: boxProps.className
     });
@@ -38,6 +40,7 @@ const useProps = createHook<TagProps>(
       style: styles.TagClose,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       themeKeySuffix: 'Close',
       prevClassName: boxProps.className
     });

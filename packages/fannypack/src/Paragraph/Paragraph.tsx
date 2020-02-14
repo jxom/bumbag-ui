@@ -12,13 +12,14 @@ export type LocalParagraphProps = {
 export type ParagraphProps = BoxProps & LocalParagraphProps;
 
 const useProps = createHook<ParagraphProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Paragraph,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 
