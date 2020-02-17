@@ -38,11 +38,19 @@ describe('composition', () => {
   });
 });
 
+describe('overrides', () => {
+  it('Template.root should render correctly', () => {
+    const { container } = render(
+      <Template overrides={{ Template: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Template>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
 describe('theming', () => {
   it('Template.root should render correctly', () => {
     const { container } = render(<Template>hello world</Template>, {
-      // @ts-ignore
-      theme: { Template: { base: { backgroundColor: 'red' } } }
+      theme: { Template: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

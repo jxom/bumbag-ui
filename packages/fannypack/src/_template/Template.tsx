@@ -9,13 +9,14 @@ export type LocalTemplateProps = {};
 export type TemplateProps = BoxProps & LocalTemplateProps;
 
 const useProps = createHook<TemplateProps>(
-  (props, themeKey) => {
+  (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Template,
       styleProps: props,
       themeKey,
+      themeKeyOverride,
       prevClassName: boxProps.className
     });
 

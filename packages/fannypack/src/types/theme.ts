@@ -85,6 +85,7 @@ import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TextareaProps, TextareaFieldProps } from '../Textarea';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
+import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
 export type Stylesheet = any; // TODO: fix
@@ -1158,6 +1159,12 @@ export type SwitchGroupFieldThemeConfig = {
   };
   defaultProps?: Partial<SwitchGroupFieldProps>;
 };
+export type TemplateThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<TemplateProps>;
+};
 
 export type ThemeConfig = {
   altitudes?: AltitudesThemeConfig;
@@ -1232,4 +1239,5 @@ export type ThemeConfig = {
   Textarea?: TextareaThemeConfig;
   TextareaField?: TextareaFieldThemeConfig;
   Tooltip?: TooltipThemeConfig;
+  Template?: TemplateThemeConfig;
 };
