@@ -40,6 +40,7 @@ export * from './Pagination';
 export * from './Paragraph';
 export * from './Popover';
 export * from './Portal';
+export * from './ProgressBar';
 export * from './Provider';
 export * from './Radio';
 export * from './Rover';

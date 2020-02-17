@@ -250,7 +250,12 @@ function extractTypes(config) {
                 if (/reakit\/ts\/.*Return/.test(typeText)) {
                   const propTypes = createPropTypeObjects(type);
                   stateTypes = [...stateTypes, ...propTypes].filter(Boolean);
-                } else if (/Reakit.*/.test(nodeText) && !/^React\./.test(typeText) && !typeText.includes('CSS')) {
+                } else if (
+                  /Reakit.*/.test(nodeText) &&
+                  !/ReakitBoxProps/.test(nodeText) &&
+                  !/^React\./.test(typeText) &&
+                  !typeText.includes('CSS')
+                ) {
                   const propTypes = createPropTypeObjects(type);
                   extraTypes = [...extraTypes, ...propTypes].filter(Boolean);
                 }

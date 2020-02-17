@@ -284,7 +284,7 @@ Name of the input field
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   label: string;
-  value: string;
+  value: any;
   disabled?: boolean;
 }[]`}
 </Code>
@@ -309,7 +309,7 @@ State of the input. Can be any color in the palette.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">any</Code> 
 
 Value of the input
 
@@ -390,8 +390,8 @@ Function to invoke when input is focused
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 62 more ...;
-  Tooltip?: TooltipThemeConfig;
+  ... 66 more ...;
+  Template?: TemplateThemeConfig;
 }`}
 </Code>
 
@@ -401,7 +401,7 @@ Function to invoke when input is focused
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKeyOverride</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 

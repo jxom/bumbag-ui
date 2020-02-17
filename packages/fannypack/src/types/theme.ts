@@ -74,6 +74,7 @@ import {
   PopoverTitleProps
 } from '../Popover';
 import { PortalProps } from '../Portal';
+import { ProgressBarProps } from '../ProgressBar';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
@@ -901,6 +902,17 @@ export type PortalThemeConfig = {
   };
   defaultProps?: Partial<PortalProps>;
 };
+export type ProgressBarThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Indicator?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<ProgressBarProps>;
+};
 export type RadioThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1221,6 +1233,7 @@ export type ThemeConfig = {
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
   Portal?: PortalThemeConfig;
+  ProgressBar?: ProgressBarThemeConfig;
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
   RadioGroupField?: RadioGroupFieldThemeConfig;
