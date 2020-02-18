@@ -10,6 +10,7 @@ import * as faExclamationCircle from '@fortawesome/free-solid-svg-icons/faExclam
 import * as faQuestionCircle from '@fortawesome/free-solid-svg-icons/faQuestionCircle';
 import * as faTimes from '@fortawesome/free-solid-svg-icons/faTimes';
 import * as faSearch from '@fortawesome/free-solid-svg-icons/faSearch';
+import * as faStar from '@fortawesome/free-solid-svg-icons/faStar';
 
 import { parseIcons, Opts as ParseIconsOpts, Icons } from '../utils/parseIcons';
 
@@ -38,7 +39,8 @@ export default (overrides: any) => ({
         faExclamationCircle,
         faQuestionCircle,
         faTimes,
-        faSearch
+        faSearch,
+        faStar
       ],
       {
         type: 'font-awesome-standalone'

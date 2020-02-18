@@ -43,6 +43,7 @@ export * from './Portal';
 export * from './ProgressBar';
 export * from './Provider';
 export * from './Radio';
+export * from './Rating';
 export * from './Rover';
 export * from './Select';
 export * from './Set';

@@ -76,6 +76,7 @@ import {
 import { PortalProps } from '../Portal';
 import { ProgressBarProps } from '../ProgressBar';
 import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
+import { RatingProps } from '../Rating';
 import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
@@ -934,6 +935,12 @@ export type RadioThemeConfig = {
   };
   defaultProps?: Partial<RadioProps>;
 };
+export type RatingThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<RatingProps>;
+};
 export type RadioGroupThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1237,6 +1244,7 @@ export type ThemeConfig = {
   Radio?: RadioThemeConfig;
   RadioGroup?: RadioGroupThemeConfig;
   RadioGroupField?: RadioGroupFieldThemeConfig;
+  Rating?: RatingThemeConfig;
   Rover?: RoverThemeConfig;
   Select?: SelectThemeConfig;
   SelectField?: SelectFieldThemeConfig;
