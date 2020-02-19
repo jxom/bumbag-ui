@@ -1,3 +1,5 @@
+const prod = process.env.NODE_ENV === 'production';
+
 module.exports = {
   presets: [
     [
@@ -11,7 +13,7 @@ module.exports = {
   ],
   plugins: [
     'babel-plugin-extract-react-types',
-    [
+    !prod && [
       'babel-plugin-module-resolver',
       {
         alias: {
@@ -20,5 +22,5 @@ module.exports = {
         }
       }
     ]
-  ]
+  ].filter(Boolean)
 };

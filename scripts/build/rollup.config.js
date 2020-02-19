@@ -34,18 +34,18 @@ function getPlugins(isUMD) {
       extensions,
       exclude: ['node_modules/**', '../../node_modules/**']
     }),
+    commonjs({
+      include: /node_modules/,
+      namedExports: {
+        'body-scroll-lock': ['enableBodyScroll', 'disableBodyScroll']
+      }
+    }),
     resolve({ extensions, preferBuiltins: false })
   ];
 
   if (isUMD) {
     return [
       ...commonPlugins,
-      commonjs({
-        include: /node_modules/,
-        namedExports: {
-          'body-scroll-lock': ['enableBodyScroll', 'disableBodyScroll']
-        }
-      }),
       ignore(['stream']),
       terser(),
       replace({

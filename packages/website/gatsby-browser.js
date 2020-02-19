@@ -8,7 +8,7 @@
 
 import React from 'react';
 
-import { Provider } from '../fannypack/src';
+import { Provider } from 'fannypack';
 import theme from './src/theme';
 
 export const wrapRootElement = ({ element, ...props }) => <Provider theme={theme}>{element}</Provider>;

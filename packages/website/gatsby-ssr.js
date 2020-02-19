@@ -10,7 +10,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { renderStylesToString } from 'emotion-server';
 
-import { Provider } from '../fannypack/src';
+import { Provider } from 'fannypack';
 import theme from './src/theme';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
