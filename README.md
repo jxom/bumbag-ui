@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/fannypackui/fannypack.svg?style=flat-square)](https://travis-ci.org/fannypackui/fannypack)
 [![NPM](https://img.shields.io/npm/v/fannypack/latest.svg?style=flat-square)](https://www.npmjs.com/package/fannypack)
 
-<p align="center"><img src="./logo.png" width="500px"></img></p>
+<p align="center"><img src="./fannypack-logo.png" width="500px"></img></p>
 
 ## [Go to the Fannypack Docs](https://fannypack.style)
 
