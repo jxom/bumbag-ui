@@ -11,8 +11,31 @@ import { Rating } from 'fannypack';
 
 ## Usage
 
-```jsx-live
-<Rating value={5} />
+```function-live
+function Example() {
+  const [value, setValue] = React.useState(3);
+  return (
+    <Rating
+      onChange={value => setValue(value)}
+      value={value}
+    />
+  );
+}
+```
+
+### Disabled
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState(3);
+  return (
+    <Rating
+      disabled
+      onChange={value => setValue(value)}
+      value={value}
+    />
+  );
+}
 ```
 
 ## Props
