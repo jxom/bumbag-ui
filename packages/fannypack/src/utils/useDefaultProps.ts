@@ -9,9 +9,9 @@ import { ThemeContext } from '../styled';
 export function useDefaultProps(props, config) {
   const { themeKey } = config;
   const theme = React.useContext(ThemeContext);
-  const configDefaultProps = _get(config, 'defaultProps', {});
-  const themeDefaultProps = _get(theme, `${themeKey}.defaultProps`, {});
-  const overridesDefaultProps = _get(props, `overrides.${themeKey}.defaultProps`, {});
+  const configDefaultProps = _omitBy(_get(config, 'defaultProps', {}), _isUndefined);
+  const themeDefaultProps = _omitBy(_get(theme, `${themeKey}.defaultProps`, {}), _isUndefined);
+  const overridesDefaultProps = _omitBy(_get(props, `overrides.${themeKey}.defaultProps`, {}), _isUndefined);
   const newProps = {
     ...configDefaultProps,
     ...themeDefaultProps,

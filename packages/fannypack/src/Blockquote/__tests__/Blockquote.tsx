@@ -17,7 +17,7 @@ describe('props', () => {
 
 describe('composition', () => {
   describe('as', () => {
-    it('should render correctly', () => {
+    it.only('should render correctly', () => {
       const { container } = render(<Blockquote use="p">Hello world</Blockquote>);
       expect(container.firstChild).toMatchSnapshot();
     });

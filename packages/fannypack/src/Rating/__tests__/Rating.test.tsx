@@ -1,56 +1,81 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Template } from '../Template';
+import { Rating } from '../Rating';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
-    const { container } = render(<Template>Hello world</Template>);
+    const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
-    const { container } = render(<Template color="primary">Hello world</Template>);
+    const { container } = render(
+      <Rating backgroundColor="primary" roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('composition', () => {
-  describe('as', () => {
-    it('should render correctly', () => {
-      const { container } = render(<Template use="p">Hello world</Template>);
-      expect(container.firstChild).toMatchSnapshot();
-    });
-  });
-
   describe('hook', () => {
-    it('should return with Template props', () => {
-      const { result } = renderHook(() => Template.useProps());
+    it('should return with Rating props', () => {
+      const { result } = renderHook(() =>
+        Rating.useProps({ roverProps: { baseId: 'test', stopId: 'test' }, onChange: () => {}, value: 3 })
+      );
       expect(result.current).toMatchSnapshot();
     });
   });
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Template>{TemplateProps => <div {...TemplateProps}>Hello world</div>}</Template>);
+      const { container } = render(
+        <Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3}>
+          {RatingProps => <div {...RatingProps} />}
+        </Rating>
+      );
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 });
 
 describe('overrides', () => {
-  it('Template.root should render correctly', () => {
+  it('Rating.css.root should render correctly', () => {
     const { container } = render(
-      <Template overrides={{ Template: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Template>
+      <Rating
+        roverProps={{ stopId: 'test' }}
+        onChange={() => {}}
+        value={3}
+        overrides={{ Rating: { css: { root: { backgroundColor: 'red' } } } }}
+      />
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Rating.Item.css.root should render correctly', () => {
+    const { container } = render(
+      <Rating
+        roverProps={{ stopId: 'test' }}
+        onChange={() => {}}
+        value={3}
+        overrides={{ Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } }}
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Template.root should render correctly', () => {
-    const { container } = render(<Template>hello world</Template>, {
-      theme: { Template: { css: { root: { backgroundColor: 'red' } } } }
+  it('Rating.css.root should render correctly', () => {
+    const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
+      theme: { Rating: { css: { root: { backgroundColor: 'red' } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Rating.Item.css.root should render correctly', () => {
+    const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
+      theme: { Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -58,9 +83,15 @@ describe('theming', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Template>hello world</Template>, {
-      // @ts-ignore
-      theme: { Template: { defaultProps: { className: 'test', color: 'primary' } } }
+    const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
+      theme: { Rating: { defaultProps: { className: 'test', color: 'primary' } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for item', () => {
+    const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
+      theme: { Rating: { defaultProps: { className: 'test', color: 'primary', item: <span>x</span> } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -7,7 +7,7 @@ import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Rover } from '../Rover';
-import { Icon, IconProps } from '../Icon';
+import { Icon } from '../Icon';
 
 import * as styles from './styles';
 
@@ -19,6 +19,7 @@ export type LocalRatingProps = {
   isSingular?: boolean;
   maxValue?: number;
   onChange: (index: number) => void;
+  roverProps?: { baseId?: string; stopId?: string };
   size?: Size;
   value: number | void;
 };
@@ -35,6 +36,7 @@ const useProps = createHook<RatingProps>(
       onChange,
       overrides,
       maxValue,
+      roverProps,
       size,
       value,
       ...restProps
@@ -60,7 +62,7 @@ const useProps = createHook<RatingProps>(
       overrides,
       role: 'radiogroup',
       children: _times(items ? items.length : maxValue, index => (
-        <Rover {...rover} disabled={disabled}>
+        <Rover {...rover} {...roverProps} disabled={disabled}>
           {props => (
             /*
             // @ts-ignore */
