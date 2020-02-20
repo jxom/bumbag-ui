@@ -136,10 +136,10 @@ const useRatingItemProps = createHook<RatingItemProps>(
       ...boxProps,
       className,
       role: 'radio',
-      children: children || <Icon icon="star" />
+      children
     };
   },
-  { defaultProps: { color: 'gold' }, themeKey: 'Rating.Item' }
+  { defaultProps: { children: <Icon icon="star" />, color: 'gold' }, themeKey: 'Rating.Item' }
 );
 
 export const RatingItem = createComponent<RatingItemProps>(
