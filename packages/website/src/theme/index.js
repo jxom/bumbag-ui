@@ -1,26 +1,24 @@
-import {
-  faArrowLeft,
-  faArrowRight,
-  faBars,
-  faIgloo,
-  faSearch,
-  faClipboard,
-  faChevronDown,
-  faChevronRight,
-  faChevronUp,
-  faThumbsUp,
-  faCog,
-  faPen,
-  faLongArrowAltRight,
-  faFile,
-  faComments,
-  faUser,
-  faHandPaper,
-  faFileSignature,
-  faShare,
-  faExternalLinkAlt,
-  faTrashAlt
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faIgloo } from '@fortawesome/free-solid-svg-icons/faIgloo';
+import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { faClipboard } from '@fortawesome/free-solid-svg-icons/faClipboard';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp';
+import { faCog } from '@fortawesome/free-solid-svg-icons/faCog';
+import { faPen } from '@fortawesome/free-solid-svg-icons/faPen';
+import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons/faLongArrowAltRight';
+import { faFile } from '@fortawesome/free-solid-svg-icons/faFile';
+import { faComments } from '@fortawesome/free-solid-svg-icons/faComments';
+import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
+import { faHandPaper } from '@fortawesome/free-solid-svg-icons/faHandPaper';
+import { faFileSignature } from '@fortawesome/free-solid-svg-icons/faFileSignature';
+import { faShare } from '@fortawesome/free-solid-svg-icons/faShare';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 
 export default {
   Icon: {
