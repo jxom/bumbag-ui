@@ -11,9 +11,10 @@ export const Rating = styleProps => cssClass`
 `;
 
 export const RatingItem = styleProps => cssClass`
-  color: ${styleProps.isActive ? 'gold' : palette('white900')(styleProps)};
+  color: ${
+    styleProps.isActive ? palette(styleProps.color, styleProps.color)(styleProps) : palette('white900')(styleProps)
+  };
   display: inline-flex;
-  font-size: ${fontSize('400')(styleProps)}rem;
   transition: color 0.1s, transform 0.2s;
 
   ${!styleProps.disabled &&
@@ -36,7 +37,43 @@ export const RatingItem = styleProps => cssClass`
     margin-left: ${space(1)(styleProps)}rem;
   }
 
+  ${getSizeAttributes(styleProps)};
+
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
+
+function getSizeAttributes(styleProps) {
+  const sizeAttributes = {
+    small: css`
+      font-size: ${fontSize('300')(styleProps)}rem;
+
+      & {
+        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
+      }
+    `,
+    default: css`
+      font-size: ${fontSize('400')(styleProps)}rem;
+
+      & {
+        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
+      }
+    `,
+    medium: css`
+      font-size: ${fontSize('500')(styleProps)}rem;
+
+      & {
+        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
+      }
+    `,
+    large: css`
+      font-size: ${fontSize('600')(styleProps)}rem;
+
+      & {
+        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
+      }
+    `
+  };
+  return sizeAttributes[styleProps.size || 'default'];
+}

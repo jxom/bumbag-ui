@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
+import _get from 'lodash/get';
 import _times from 'lodash/times';
 
+import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Rover } from '../Rover';
@@ -12,15 +14,31 @@ import * as styles from './styles';
 export type LocalRatingProps = {
   color?: string;
   disabled?: boolean;
+  item?: React.ReactElement<any>;
+  items?: Array<React.ReactElement<any>>;
+  isSingular?: boolean;
   maxValue?: number;
   onChange: (index: number) => void;
+  size?: Size;
   value: number | void;
 };
 export type RatingProps = BoxProps & LocalRatingProps;
 
 const useProps = createHook<RatingProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { disabled, onChange, maxValue, value, ...restProps } = props;
+    const {
+      color,
+      disabled,
+      item,
+      items,
+      isSingular,
+      onChange,
+      overrides,
+      maxValue,
+      size,
+      value,
+      ...restProps
+    } = props;
     const boxProps = Box.useProps(restProps);
 
     const rover = Rover.useState();
@@ -39,8 +57,9 @@ const useProps = createHook<RatingProps>(
       ...boxProps,
       className,
       onMouseLeave: !disabled ? () => setHoveringIndex(-1) : undefined,
+      overrides,
       role: 'radiogroup',
-      children: _times(maxValue, index => (
+      children: _times(items ? items.length : maxValue, index => (
         <Rover {...rover} disabled={disabled}>
           {props => (
             /*
@@ -48,13 +67,26 @@ const useProps = createHook<RatingProps>(
             <RatingItem
               key={index}
               {...props}
-              aria-setsize={maxValue}
-              aria-posinset={index + 1}
               aria-checked={value === index + 1}
-              isActive={hoveringIndex >= 0 ? hoveringIndex >= index : value > index}
+              aria-posinset={index + 1}
+              aria-setsize={maxValue}
+              color={color}
+              isActive={
+                hoveringIndex >= 0
+                  ? isSingular
+                    ? hoveringIndex === index
+                    : hoveringIndex >= index
+                  : isSingular
+                  ? value === index + 1
+                  : value > index
+              }
               onClick={!disabled ? () => onChange(index + 1) : undefined}
               onMouseEnter={!disabled ? () => setHoveringIndex(index) : undefined}
-            />
+              overrides={overrides}
+              size={size}
+            >
+              {item || _get(items, `[${index}]`)}
+            </RatingItem>
           )}
         </Rover>
       ))
@@ -80,16 +112,19 @@ export const Rating = createComponent<RatingProps>(
 
 export type LocalRatingItemProps = {
   isActive?: boolean;
+  size?: Size;
 };
 export type RatingItemProps = BoxProps & LocalRatingItemProps;
 
 const useRatingItemProps = createHook<RatingItemProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const { children, color, ...restProps } = props;
+
+    const boxProps = Box.useProps(restProps);
 
     const className = useClassName({
       style: styles.RatingItem,
-      styleProps: props,
+      styleProps: { ...props, color },
       themeKey,
       themeKeyOverride,
       prevClassName: boxProps.className
@@ -99,14 +134,10 @@ const useRatingItemProps = createHook<RatingItemProps>(
       ...boxProps,
       className,
       role: 'radio',
-      children: (
-        /*
-        // @ts-ignore */
-        <Icon icon="star" />
-      )
+      children: children || <Icon icon="star" />
     };
   },
-  { themeKey: 'Rating.Item' }
+  { defaultProps: { color: 'gold' }, themeKey: 'Rating.Item' }
 );
 
 export const RatingItem = createComponent<RatingItemProps>(

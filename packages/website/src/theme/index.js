@@ -9,14 +9,17 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp';
 import { faCog } from '@fortawesome/free-solid-svg-icons/faCog';
+import { faFrown } from '@fortawesome/free-solid-svg-icons/faFrown';
 import { faPen } from '@fortawesome/free-solid-svg-icons/faPen';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons/faLongArrowAltRight';
 import { faFile } from '@fortawesome/free-solid-svg-icons/faFile';
+import { faMeh } from '@fortawesome/free-solid-svg-icons/faMeh';
 import { faComments } from '@fortawesome/free-solid-svg-icons/faComments';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 import { faHandPaper } from '@fortawesome/free-solid-svg-icons/faHandPaper';
 import { faFileSignature } from '@fortawesome/free-solid-svg-icons/faFileSignature';
 import { faShare } from '@fortawesome/free-solid-svg-icons/faShare';
+import { faSmile } from '@fortawesome/free-solid-svg-icons/faSmile';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 
@@ -54,7 +57,10 @@ export default {
           faShare,
           faFileSignature,
           faExternalLinkAlt,
-          faTrashAlt
+          faTrashAlt,
+          faSmile,
+          faFrown,
+          faMeh
         ],
         prefix: 'solid-',
         type: 'font-awesome'
