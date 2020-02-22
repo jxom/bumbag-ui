@@ -1,14 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import {
-  useClassName,
-  createComponent,
-  createElement,
-  createHook,
-  OutsideClickHandler,
-  useUniqueId
-} from '../utils';
+import { useClassName, createComponent, createElement, createHook, OutsideClickHandler, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Button } from '../Button';
 import { Card } from '../Card';

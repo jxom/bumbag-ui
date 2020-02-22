@@ -50,6 +50,7 @@ export * from './Set';
 export * from './Spinner';
 export * from './Switch';
 export * from './Tabbable';
+export * from './Tabs';
 export * from './Tag';
 export * from './Text';
 export * from './Textarea';

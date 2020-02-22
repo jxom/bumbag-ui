@@ -254,7 +254,8 @@ function extractTypes(config) {
                   /Reakit.*/.test(nodeText) &&
                   !/ReakitBoxProps/.test(nodeText) &&
                   !/^React\./.test(typeText) &&
-                  !typeText.includes('CSS')
+                  !typeText.includes('CSS') &&
+                  !typeText.includes('HTMLAttributes')
                 ) {
                   const propTypes = createPropTypeObjects(type);
                   extraTypes = [...extraTypes, ...propTypes].filter(Boolean);

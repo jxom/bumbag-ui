@@ -83,6 +83,7 @@ import { SetProps } from '../Set';
 import { SpinnerProps } from '../Spinner';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
+import { TabsProps, TabsListProps, TabsTabProps, TabsPanelProps } from '../Tabs';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TextareaProps, TextareaFieldProps } from '../Textarea';
@@ -972,6 +973,33 @@ export type TabbableThemeConfig = {
   };
   defaultProps?: Partial<TabbableProps>;
 };
+export type TabsThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  List?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TabsListProps>;
+  };
+  Tab?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+      selected?: ThemeAttribute<Stylesheet>;
+      focus?: ThemeAttribute<Stylesheet>;
+      hover?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TabsTabProps>;
+  };
+  Panel?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TabsPanelProps>;
+  };
+  defaultProps?: Partial<TabsProps>;
+};
 export type TagThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1261,6 +1289,7 @@ export type ThemeConfig = {
   SwitchGroup?: SwitchGroupThemeConfig;
   SwitchGroupField?: SwitchGroupFieldThemeConfig;
   Tabbable?: TabbableThemeConfig;
+  Tabs?: TabsThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;
   Textarea?: TextareaThemeConfig;

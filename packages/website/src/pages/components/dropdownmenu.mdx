@@ -154,6 +154,12 @@ function Example() {
 
 <!-- Automatically generated -->
 
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+Same as the HTML attribute.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
@@ -185,12 +191,6 @@ It's called after given milliseconds if `animated` is a number.
 **<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Changes the `visible` state to `false`
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
@@ -248,6 +248,14 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
+
+<Box marginBottom="major-4" />
+
 <details><Box use="summary" marginBottom="major-2"><strong>8 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
@@ -293,15 +301,15 @@ Defines the orientation of the rover list.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">stops</Code>** <Code fontSize="150" palette="primary">Stop[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-A list of element refs and IDs of the roving items.
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to a given element ID.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">stops</Code>** <Code fontSize="150" palette="primary">Stop[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+A list of element refs and IDs of the roving items.
 
 <Box marginBottom="major-4" />
 
@@ -431,6 +439,12 @@ Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -467,12 +481,6 @@ Moves focus to the last element.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Changes the `visible` state to `true`
-
-<Box marginBottom="major-4" />
-
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>DropdownMenuDisclosure</strong></code> props</Box>
@@ -488,6 +496,14 @@ Same as the HTML attribute.
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
 `aria-disabled` will be set.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
@@ -587,10 +603,10 @@ Icon that appears on the right side of the button.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -611,10 +627,10 @@ Icon that appears on the left side of the button.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -680,10 +696,10 @@ Icon that appears on the right side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -704,10 +720,10 @@ Icon that appears on the left side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -738,6 +754,14 @@ Element ID.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
+
+<Box marginBottom="major-4" />
+
 <details><Box use="summary" marginBottom="major-2"><strong>18 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
@@ -760,6 +784,12 @@ Stores the number of moves that have been made by calling `move`, `next`,
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to a given element ID.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">first</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to the first element.
@@ -775,12 +805,6 @@ Moves focus to the last element.
 **<Code marginRight="major-1">stops</Code>** <Code fontSize="150" palette="primary">Stop[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 A list of element refs and IDs of the roving items.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Moves focus to a given element ID.
 
 <Box marginBottom="major-4" />
 
@@ -952,6 +976,14 @@ Moves focus to the previous element.
 **<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 Separator's orientation.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 

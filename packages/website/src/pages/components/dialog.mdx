@@ -359,13 +359,13 @@ function Example() {
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: unknown;
-  id?: string;
   defaultChecked?: boolean;
   defaultValue?: string | string[];
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 778 more ...;
+  className?: string;
+  ... 779 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -784,10 +784,10 @@ function Example() {
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 764 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -1062,6 +1062,14 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+
+<Box marginBottom="major-4" />
+
 </details>
             
 
@@ -1201,13 +1209,13 @@ It will be set to `false` if `modal` is `false`.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: unknown;
-  id?: string;
   defaultChecked?: boolean;
   defaultValue?: string | string[];
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 778 more ...;
+  className?: string;
+  ... 779 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
