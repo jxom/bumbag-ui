@@ -136,6 +136,8 @@ export const Tab = styleProps => cssClass`
 `;
 
 export const Tabs = styleProps => cssClass`
+  width: 100%;
+
   ${styleProps.isFitted &&
     css`
       & .fp-TabsTab {
