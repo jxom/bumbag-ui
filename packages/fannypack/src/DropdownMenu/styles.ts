@@ -2,6 +2,12 @@ import { css, cssClass } from '../styled';
 import { palette, space, theme, fontSize, fontWeight, altitude } from '../utils';
 
 export const DropdownMenu = styleProps => cssClass`
+  & {
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+  }
+`;
+
+export const DropdownMenuPopover = styleProps => cssClass`
   padding: ${space(2)(styleProps)}rem 0;
   min-width: 200px;
 
@@ -86,12 +92,6 @@ export const DropdownMenuItem = styleProps => cssClass`
 `;
 
 export const DropdownMenuDisclosure = styleProps => cssClass`
-  & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
-  }
-`;
-
-export const DropdownMenuButton = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }

@@ -33,7 +33,7 @@ import {
 import { DividerProps } from '../Divider';
 import {
   DropdownMenuProps,
-  DropdownMenuButtonProps,
+  DropdownMenuPopoverProps,
   DropdownMenuDisclosureProps,
   DropdownMenuDividerProps,
   DropdownMenuGroupProps,
@@ -447,11 +447,11 @@ export type DropdownMenuThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
-  Button?: {
+  Popover?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
-    defaultProps?: Partial<DropdownMenuButtonProps>;
+    defaultProps?: Partial<DropdownMenuPopoverProps>;
   };
   Disclosure?: {
     css?: {

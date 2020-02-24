@@ -27,7 +27,7 @@ const useProps = createHook<TabsProps>(
     const { baseId, children, loop, manual, orientation, overrides, selectedId, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
-    const tabs = useTabState({ baseId: 'test', loop, manual, orientation, selectedId });
+    const tabs = useTabState({ baseId, loop, manual, orientation, selectedId });
 
     const className = useClassName({
       style: styles.Tabs,

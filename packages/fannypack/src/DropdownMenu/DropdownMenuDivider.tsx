@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   useMenuSeparator as useReakitMenuSeparator,
@@ -6,16 +7,20 @@ import {
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
-
-import * as styles from './styles';
 import { Divider } from '../Divider';
+
+import { DropdownMenuContext } from './DropdownMenu';
+import * as styles from './styles';
 
 export type LocalDropdownMenuDividerProps = {};
 export type DropdownMenuDividerProps = BoxProps & ReakitMenuSeparatorProps & LocalDropdownMenuDividerProps;
 
 const useProps = createHook<DropdownMenuDividerProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { orientation, ...restProps } = props;
+    const { orientation, overrides, ...restProps } = props;
+
+    const { overrides: dropdownMenuOverrides } = React.useContext(DropdownMenuContext);
+
     const dropdownMenuDividerProps = useReakitMenuSeparator(
       {
         orientation
@@ -26,7 +31,7 @@ const useProps = createHook<DropdownMenuDividerProps>(
 
     const className = useClassName({
       style: styles.DropdownMenuDivider,
-      styleProps: props,
+      styleProps: { ...props, overrides: { ...dropdownMenuOverrides, overrides } },
       themeKey,
       themeKeyOverride,
       prevClassName: dividerProps.className

@@ -1,104 +1,72 @@
-import { Box as ReakitBox, useMenu as useReakitMenu, MenuProps as ReakitMenuProps } from 'reakit';
+import * as React from 'react';
+import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { DropdownMenuDisclosure } from './DropdownMenuDisclosure';
+import { DropdownMenuPopover } from './DropdownMenuPopover';
+import { useDropdownMenuState, DropdownMenuInitialState, DropdownMenuStateReturn } from './DropdownMenuState';
 import * as styles from './styles';
-import { Popover as popoverStyles } from '../Popover/styles';
 
-export type LocalDropdownMenuProps = {};
-export type DropdownMenuProps = BoxProps & ReakitMenuProps & LocalDropdownMenuProps;
+export type LocalDropdownMenuProps = {
+  baseId?: DropdownMenuInitialState['baseId'];
+  children: React.ReactElement<any>;
+  content: any;
+  visible?: DropdownMenuInitialState['visible'];
+};
+export type DropdownMenuProps = BoxProps & LocalDropdownMenuProps;
+
+export const DropdownMenuContext = React.createContext<{
+  dropdownMenu: Partial<DropdownMenuStateReturn>;
+  overrides: any;
+}>({
+  dropdownMenu: {},
+  overrides: {}
+});
 
 const useProps = createHook<DropdownMenuProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const {
-      baseId,
-      first,
-      hide,
-      hideOnClickOutside,
-      last,
-      modal,
-      move,
-      next,
-      orientation,
-      placement,
-      preventBodyScroll,
-      previous,
-      stops,
-      unstable_initialFocusRef,
-      unstable_finalFocusRef,
-      unstable_popoverRef,
-      unstable_popoverStyles,
-      unstable_portal,
-      unstable_orphan,
-      unstable_autoFocusOnShow,
-      unstable_autoFocusOnHide,
-      unstable_animating,
-      unstable_animated,
-      unstable_setIsMounted,
-      unstable_setBaseId,
-      unstable_idCountRef,
-      unstable_stopAnimation,
-      visible,
-      ...restProps
-    } = props;
-    const dropdownMenuProps = useReakitMenu(
-      {
-        baseId,
-        first,
-        hide,
-        hideOnClickOutside,
-        last,
-        modal,
-        move,
-        next,
-        orientation,
-        placement,
-        preventBodyScroll,
-        previous,
-        stops,
-        unstable_initialFocusRef,
-        unstable_finalFocusRef,
-        unstable_popoverRef,
-        unstable_popoverStyles,
-        unstable_portal,
-        unstable_orphan,
-        unstable_autoFocusOnShow,
-        unstable_autoFocusOnHide,
-        unstable_animating,
-        unstable_animated,
-        unstable_setIsMounted,
-        unstable_setBaseId,
-        unstable_idCountRef,
-        unstable_stopAnimation,
-        visible
-      },
-      restProps
-    );
-    const boxProps = Box.useProps({ ...restProps, ...dropdownMenuProps });
+    const { baseId, children, content, overrides, visible, ...restProps } = props;
+    const boxProps = Box.useProps(restProps);
+
+    const dropdownMenu = useDropdownMenuState({ baseId, visible });
+
+    const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps({
+      ...dropdownMenu,
+      overrides
+    });
 
     const className = useClassName({
-      style: [styles.DropdownMenu, popoverStyles],
+      style: styles.DropdownMenu,
       styleProps: props,
       themeKey,
       themeKeyOverride,
       prevClassName: boxProps.className
     });
 
-    return { ...boxProps, className };
+    const contextValue = React.useMemo(() => ({ dropdownMenu, overrides }), [dropdownMenu, overrides]);
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <DropdownMenuContext.Provider value={contextValue}>
+          {React.cloneElement(children, { ...dropdownMenuDisclosureProps })}
+          <DropdownMenuPopover {...dropdownMenu} overrides={overrides}>
+            {content}
+          </DropdownMenuPopover>
+        </DropdownMenuContext.Provider>
+      )
+    };
   },
-  { defaultProps: { altitude: '200' }, themeKey: 'DropdownMenu' }
+  { themeKey: 'DropdownMenu' }
 );
 
 export const DropdownMenu = createComponent<DropdownMenuProps>(
   props => {
-    const dropdownMenuProps = useProps(props);
-    return createElement({
-      children: props.children,
-      component: ReakitBox,
-      use: props.use,
-      htmlProps: dropdownMenuProps
-    });
+    const textProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {

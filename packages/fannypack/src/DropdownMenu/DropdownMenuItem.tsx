@@ -5,6 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 
+import { DropdownMenuContext } from './DropdownMenu';
 import * as styles from './styles';
 
 export type LocalDropdownMenuItemProps = {
@@ -15,7 +16,7 @@ export type LocalDropdownMenuItemProps = {
   iconBefore?: IconProps['icon'];
   iconBeforeProps?: Omit<IconProps, 'icon'>;
 };
-export type DropdownMenuItemProps = BoxProps & ReakitMenuItemProps & LocalDropdownMenuItemProps;
+export type DropdownMenuItemProps = BoxProps & Partial<ReakitMenuItemProps> & LocalDropdownMenuItemProps;
 
 const useProps = createHook<DropdownMenuItemProps>(
   (props, { themeKey, themeKeyOverride }) => {
@@ -38,6 +39,7 @@ const useProps = createHook<DropdownMenuItemProps>(
       move,
       next,
       orientation,
+      overrides,
       placement,
       previous,
       stopId,
@@ -49,6 +51,8 @@ const useProps = createHook<DropdownMenuItemProps>(
       unstable_moves,
       ...restProps
     } = props;
+
+    const { overrides: dropdownMenuOverrides, dropdownMenu } = React.useContext(DropdownMenuContext);
     const dropdownMenuItemProps = useReakitMenuItem(
       {
         baseId,
@@ -71,7 +75,8 @@ const useProps = createHook<DropdownMenuItemProps>(
         unstable_clickOnEnter,
         unstable_clickOnSpace,
         unstable_idCountRef,
-        unstable_moves
+        unstable_moves,
+        ...dropdownMenu
       },
       restProps
     );
@@ -79,21 +84,21 @@ const useProps = createHook<DropdownMenuItemProps>(
 
     const className = useClassName({
       style: styles.DropdownMenuItem,
-      styleProps: props,
+      styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
       prevClassName: boxProps.className
     });
     const iconBeforeClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
-      styleProps: { ...props, isBefore: true },
+      styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isBefore: true },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Icon'
     });
     const iconAfterClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
-      styleProps: { ...props, isAfter: true },
+      styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isAfter: true },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Icon'
