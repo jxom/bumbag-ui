@@ -53,6 +53,7 @@ const useProps = createHook<MenuItemProps>(
     return {
       ...roverProps,
       className,
+      role: 'menuitem',
       children: (
         <React.Fragment>
           {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}

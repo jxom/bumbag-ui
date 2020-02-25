@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { MenuContext } from './Menu';
@@ -33,13 +33,20 @@ const useProps = createHook<MenuGroupProps>(
       prevClassName: boxProps.className
     });
 
+    const titleId = useUniqueId('menuTitle');
+
     return {
       ...boxProps,
+      'aria-labelledby': titleId,
       role: 'group',
       className,
       children: (
         <React.Fragment>
-          {title && <Box className={titleClassName}>{title}</Box>}
+          {title && (
+            <Box className={titleClassName} id={titleId}>
+              {title}
+            </Box>
+          )}
           {children}
         </React.Fragment>
       )

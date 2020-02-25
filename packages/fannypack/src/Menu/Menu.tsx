@@ -40,6 +40,7 @@ const useProps = createHook<MenuProps>(
     return {
       ...boxProps,
       className,
+      role: 'menu',
       children: <MenuContext.Provider value={contextValue}>{children}</MenuContext.Provider>
     };
   },

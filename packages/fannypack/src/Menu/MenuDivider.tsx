@@ -37,7 +37,7 @@ const useProps = createHook<MenuDividerProps>(
       prevClassName: dividerProps.className
     });
 
-    return { ...dividerProps, className };
+    return { ...dividerProps, role: 'separator', className };
   },
   { themeKey: 'Menu.Divider' }
 );
