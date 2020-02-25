@@ -33,6 +33,7 @@ export * from './Label';
 export * from './LayoutSet';
 export * from './Link';
 export * from './List';
+export * from './Menu';
 export * from './Modal';
 export * from './Navigation';
 export * from './Overlay';

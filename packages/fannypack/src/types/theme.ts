@@ -59,6 +59,7 @@ import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
+import { MenuProps, MenuDividerProps, MenuGroupProps, MenuItemProps } from '../Menu';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import { PaginationProps } from '../Pagination';
@@ -761,6 +762,30 @@ export type ListThemeConfig = {
   };
   defaultProps?: Partial<ListProps>;
 };
+export type MenuThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Divider?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuDividerProps>;
+  };
+  Group?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuGroupProps>;
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuItemProps>;
+  };
+  defaultProps?: Partial<MenuProps>;
+};
 export type ModalThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1267,6 +1292,7 @@ export type ThemeConfig = {
   LayoutSet?: LayoutSetThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
+  Menu?: MenuThemeConfig;
   Modal?: ModalThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;

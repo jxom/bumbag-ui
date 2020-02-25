@@ -1,0 +1,104 @@
+import Theme from '../../components/Theme';
+import { Menu } from 'fannypack';
+import { Link } from 'fannypack';
+
+# Menu
+
+## Import
+
+```jsx
+import { Menu } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Menu>
+  <Menu.Item iconBefore="solid-pen">
+    Edit
+  </Menu.Item>
+  <Menu.Item iconBefore="solid-share">
+    Share
+  </Menu.Item>
+  <Menu.Item iconBefore="solid-file-signature">
+    Rename
+  </Menu.Item>
+  <Menu.Item iconBefore="solid-trash-alt" color="danger">
+    Delete
+  </Menu.Item>
+</Menu>
+```
+
+### Grouped items
+
+```jsx-live
+<Menu>
+  <Menu.Group title="Actions">
+    <Menu.Item iconBefore="solid-pen">
+      Edit
+    </Menu.Item>
+    <Menu.Item iconBefore="solid-share">
+      Share
+    </Menu.Item>
+    <Menu.Item iconBefore="solid-file-signature">
+      Rename
+    </Menu.Item>
+    <Menu.Item iconBefore="solid-trash-alt" color="danger">
+      Delete
+    </Menu.Item>
+  </Menu.Group>
+  <Menu.Divider />
+  <Menu.Group title="Links">
+    <Menu.Item
+      use={Link}
+      iconAfter="solid-external-link-alt"
+      href="https://google.com"
+    >
+      Go to Google
+    </Menu.Item>
+  </Menu.Group>
+</Menu>
+```
+
+## Props
+
+### Menu Props
+
+### Menu.Item Props
+
+### Menu.Group Props
+
+### Menu.Divider Props
+
+## Theming
+
+<Theme component="div" overrides={['Menu.css.root', 'Menu.Item.css.root', 'Menu.Item.Icon.css.root', 'Menu.Divider.css.root', 'Menu.Group.css.root', 'Menu.Group.Title.css.root']}>
+  {props => (
+    <Menu overrides={props.overrides}>
+      <Menu.Group title="Actions">
+        <Menu.Item iconBefore="solid-pen">
+          Edit
+        </Menu.Item>
+        <Menu.Item iconBefore="solid-share">
+          Share
+        </Menu.Item>
+        <Menu.Item iconBefore="solid-file-signature">
+          Rename
+        </Menu.Item>
+        <Menu.Item iconBefore="solid-trash-alt" color="danger">
+          Delete
+        </Menu.Item>
+      </Menu.Group>
+      <Menu.Divider />
+      <Menu.Group title="Links">
+        <Menu.Item
+          use={Link}
+          iconAfter="solid-external-link-alt"
+          href="https://google.com"
+        >
+          Go to Google
+        </Menu.Item>
+      </Menu.Group>
+    </Menu>
+  )}
+</Theme>
