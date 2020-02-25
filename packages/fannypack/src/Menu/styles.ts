@@ -3,7 +3,7 @@ import { palette, space, theme, fontSize, fontWeight } from '../utils';
 
 export const Menu = styleProps => cssClass`
   padding: ${space(2)(styleProps)}rem 0;
-  min-width: 200px;
+  width: 100%;
 
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};

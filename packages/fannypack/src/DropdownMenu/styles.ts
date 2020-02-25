@@ -12,6 +12,9 @@ export const DropdownMenuPopover = styleProps => cssClass`
   ${altitude(styleProps.altitude)(styleProps)} !important;
 
   ${menuStyles.Menu(styleProps)}
+
+  min-width: 200px;
+  width: unset;
 `;
 
 export const DropdownMenuItem = styleProps => cssClass`
