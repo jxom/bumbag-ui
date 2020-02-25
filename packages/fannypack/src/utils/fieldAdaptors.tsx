@@ -1,9 +1,7 @@
 import * as React from 'react';
 import _get from 'lodash/get';
 
-const bindFns = (...fns: Array<Function>) => (...args: any) => {
-  fns.forEach(fn => fn && fn(...args));
-};
+import { bindFns } from './bindFns';
 
 export function formikField(
   Component: any,

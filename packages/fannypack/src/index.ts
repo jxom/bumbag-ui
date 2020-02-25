@@ -48,6 +48,7 @@ export * from './Rating';
 export * from './Rover';
 export * from './Select';
 export * from './Set';
+export * from './SideNav';
 export * from './Spinner';
 export * from './Switch';
 export * from './Tabbable';
