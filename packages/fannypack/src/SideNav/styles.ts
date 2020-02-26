@@ -10,7 +10,7 @@ export const SideNav = styleProps => cssClass`
 `;
 
 export const SideNavLevel = styleProps => cssClass`
-  && {
+  &&& {
     margin-left: unset;
   }
 
