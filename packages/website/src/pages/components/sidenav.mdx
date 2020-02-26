@@ -72,3 +72,29 @@ function Example() {
 ### SideNav Props
 
 ## Theming
+
+<Theme component="div" overrides={['SideNav.css.root', 'SideNav.Level.css.root', 'SideNav.Level.Title.css.root', 'SideNav.Item.css.root', 'SideNav.Item.css.active']}>
+  {props => (
+    <SideNav defaultSelectedId="list" overrides={props.overrides}>
+      <SideNav.Level title="Components">
+        <SideNav.Item href="#" navId="button">Button</SideNav.Item>
+        <SideNav.Item href="#" navId="list">List</SideNav.Item>
+        <SideNav.Item href="#" navId="menu">Menu</SideNav.Item>
+        <SideNav.Level>
+          <SideNav.Item href="#" navId="menuItem">Menu.Item</SideNav.Item>
+          <SideNav.Item href="#" navId="menuGroup">Menu.Group</SideNav.Item>
+          <SideNav.Level>
+            <SideNav.Item navId="menuGroupProps" onClick={() => console.log('props')}>Props</SideNav.Item>
+          </SideNav.Level>
+        </SideNav.Level>
+      </SideNav.Level>
+      <SideNav.Level title="Utilities">
+        <SideNav.Item href="#" navId="hidden">Hidden</SideNav.Item>
+        <SideNav.Item href="#" navId="rover">Rover</SideNav.Item>
+        <SideNav.Level>
+          <SideNav.Item navId="roverProps" onClick={() => console.log('props')}>Props</SideNav.Item>
+        </SideNav.Level>
+      </SideNav.Level>
+    </SideNav>
+  )}
+</Theme>

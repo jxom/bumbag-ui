@@ -81,6 +81,7 @@ import { RatingProps, RatingItemProps } from '../Rating';
 import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
+import { SideNavProps, SideNavItemProps, SideNavLevelProps } from '../SideNav';
 import { SpinnerProps } from '../Spinner';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
@@ -991,6 +992,32 @@ export type RoverThemeConfig = {
   };
   defaultProps?: Partial<RoverProps>;
 };
+export type SideNavThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Level?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    Title?: {
+      css?: {
+        root?: ThemeAttribute<Stylesheet>;
+      };
+    };
+    defaultProps?: Partial<SideNavLevelProps>;
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+      active?: ThemeAttribute<Stylesheet>;
+      focus?: ThemeAttribute<Stylesheet>;
+      hover?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<SideNavItemProps>;
+  };
+  defaultProps?: Partial<SideNavProps>;
+};
 export type TabbableThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1309,6 +1336,7 @@ export type ThemeConfig = {
   Select?: SelectThemeConfig;
   SelectField?: SelectFieldThemeConfig;
   Set?: SetThemeConfig;
+  SideNav?: SideNavThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Switch?: SwitchThemeConfig;
   SwitchField?: SwitchFieldThemeConfig;

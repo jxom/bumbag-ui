@@ -2,6 +2,8 @@ import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, palette, space, theme } from '../utils';
 
 export const SideNav = styleProps => cssClass`
+  width: 100%;
+
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
@@ -51,17 +53,29 @@ export const SideNavItem = styleProps => cssClass`
 
   &&&:hover {
     color: ${palette('primary')(styleProps)};
+
+    & {
+      ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+    }
   }
 
   &:focus {
     outline: unset;
     background-color: ${palette('primaryTint')(styleProps)};
+
+    & {
+      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+    }
   }
 
   ${styleProps.isActive &&
     css`
       background-color: ${palette('primaryTint')(styleProps)};
       box-shadow: inset 3px 0 0 0 ${palette('primary')(styleProps)};
+
+      & {
+        ${theme(`${styleProps.themeKey}.css.active`)(styleProps)};
+      }
     `}
 
   & {

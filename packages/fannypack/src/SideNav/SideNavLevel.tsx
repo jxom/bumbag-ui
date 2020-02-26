@@ -5,6 +5,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { Box, BoxProps } from '../Box';
 import { List, ListProps } from '../List';
 
+import { SideNavContext } from './SideNav';
 import * as styles from './styles';
 
 export type LocalSideNavLevelProps = {
@@ -16,22 +17,23 @@ export const SideNavLevelContext = React.createContext({ level: 0 });
 
 const useProps = createHook<SideNavLevelProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { children, title, ...restProps } = props;
+    const { children, overrides, title, ...restProps } = props;
 
     const listProps = List.useProps(restProps);
 
+    const { overrides: sideNavOverrides } = React.useContext(SideNavContext);
     const { level } = React.useContext(SideNavLevelContext);
 
     const className = useClassName({
       style: styles.SideNavLevel,
-      styleProps: { ...props, level },
+      styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
       prevClassName: listProps.className
     });
     const titleClassName = useClassName({
       style: styles.SideNavLevelTitle,
-      styleProps: { ...props, level },
+      styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Title'
