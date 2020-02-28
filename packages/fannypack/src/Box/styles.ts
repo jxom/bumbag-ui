@@ -1,4 +1,4 @@
-import _get from 'lodash/get';
+import _get from 'lodash-es/get';
 import { css, cssClass } from '../styled';
 import { breakpoint, theme } from '../utils';
 import { ThemeConfig } from '../types';

@@ -1,7 +1,7 @@
 import { BreakpointsThemeConfig } from '../types';
 
 export default (overrides: BreakpointsThemeConfig) => ({
-  mobile: 480,
+  mobile: 375,
   tablet: 768,
   desktop: 1024,
   widescreen: 1200,

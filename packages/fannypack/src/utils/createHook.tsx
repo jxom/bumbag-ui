@@ -1,7 +1,7 @@
 import * as React from 'react';
-import _get from 'lodash/get';
-import _merge from 'lodash/merge';
-import _omit from 'lodash/omit';
+import _get from 'lodash-es/get';
+import _merge from 'lodash-es/merge';
+import _omit from 'lodash-es/omit';
 
 import { useDefaultProps } from './useDefaultProps';
 

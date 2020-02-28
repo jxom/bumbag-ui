@@ -1,5 +1,5 @@
 import { Box as ReakitBox, HiddenProps as ReakitHiddenProps, useHidden as useReakitHidden } from 'reakit';
-import _omit from 'lodash/omit';
+import _omit from 'lodash-es/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';

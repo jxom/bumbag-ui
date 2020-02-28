@@ -1,6 +1,6 @@
 import * as React from 'react';
-import _get from 'lodash/get';
-import _kebabCase from 'lodash/kebabCase';
+import _get from 'lodash-es/get';
+import _kebabCase from 'lodash-es/kebabCase';
 
 import { ThemeContext, css } from '../styled';
 import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';

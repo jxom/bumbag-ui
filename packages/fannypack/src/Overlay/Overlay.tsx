@@ -1,5 +1,5 @@
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
+import _omit from 'lodash-es/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Modal, ModalProps } from '../Modal';

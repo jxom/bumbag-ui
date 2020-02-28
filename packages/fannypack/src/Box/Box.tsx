@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
-import _get from 'lodash/get';
+import _get from 'lodash-es/get';
 
 import { ThemeConfig, CSSProperties } from '../types';
 import {

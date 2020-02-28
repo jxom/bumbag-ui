@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
+import { ThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Navigation, NavigationProps } from '../Navigation';
 
@@ -13,8 +14,12 @@ export type LocalSideNavProps = {
 };
 export type SideNavProps = NavigationProps & LocalSideNavProps;
 
-export const SideNavContext = React.createContext({
-  onChangeSelectedId: (id: string) => {},
+export const SideNavContext = React.createContext<{
+  onChangeSelectedId: (id: string) => void;
+  selectedId?: string;
+  overrides?: ThemeConfig;
+}>({
+  onChangeSelectedId: () => {},
   selectedId: undefined,
   overrides: {}
 });

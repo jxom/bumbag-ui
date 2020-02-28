@@ -3,7 +3,7 @@ import {
   PopoverDisclosureProps as ReakitPopoverDisclosureProps,
   usePopoverDisclosure as useReakitPopoverDisclosure
 } from 'reakit';
-import _omit from 'lodash/omit';
+import _omit from 'lodash-es/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';

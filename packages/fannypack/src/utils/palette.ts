@@ -1,5 +1,5 @@
 // @ts-ignore
-import _get from 'lodash/get';
+import _get from 'lodash-es/get';
 
 import { lighten, tint, readableColor, shade } from './colors';
 
