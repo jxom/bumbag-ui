@@ -23,7 +23,7 @@ export const MenuContext = React.createContext<{
 const useProps = createHook<MenuProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const { baseId, children, overrides, ...restProps } = props;
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(restProps);
 
     const rover = Rover.useState({ baseId });
 

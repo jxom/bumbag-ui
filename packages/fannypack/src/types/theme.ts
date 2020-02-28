@@ -82,6 +82,7 @@ import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
 import { SideNavProps, SideNavItemProps, SideNavLevelProps } from '../SideNav';
+import { DrawerProps, DrawerBackdropProps, DrawerDisclosureProps } from '../Drawer';
 import { SpinnerProps } from '../Spinner';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
@@ -1198,6 +1199,28 @@ export type SetThemeConfig = {
   };
   defaultProps?: Partial<SetProps>;
 };
+export type DrawerThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+    placements?: {
+      left?: ThemeAttribute<Stylesheet>;
+      right?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<DrawerProps>;
+  Disclosure?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DrawerDisclosureProps>;
+  };
+  Backdrop?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DrawerBackdropProps>;
+  };
+};
 export type SpinnerThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1337,6 +1360,7 @@ export type ThemeConfig = {
   SelectField?: SelectFieldThemeConfig;
   Set?: SetThemeConfig;
   SideNav?: SideNavThemeConfig;
+  Drawer?: DrawerThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Switch?: SwitchThemeConfig;
   SwitchField?: SwitchFieldThemeConfig;

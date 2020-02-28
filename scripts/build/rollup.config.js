@@ -13,7 +13,7 @@ const sourcePath = getSourcePath(cwd);
 const extensions = ['.ts', '.tsx', '.js', '.jsx', '.json'];
 
 // Keeps subdirectories and files belonging to our dependencies as external too
-// (i.e. lodash/pick)
+// (i.e. lodash-es/pick)
 function makeExternalPredicate(externalArr) {
   if (!externalArr.length) {
     return () => false;

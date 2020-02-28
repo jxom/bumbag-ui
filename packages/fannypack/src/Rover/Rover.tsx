@@ -44,7 +44,7 @@ const useProps = createHook<RoverProps>(
         previous,
         first,
         last,
-        stopId,
+        stopId: process.env.NODE_ENV === 'test' ? 'test' : stopId,
         unstable_clickOnEnter,
         unstable_clickOnSpace,
         unstable_moves
