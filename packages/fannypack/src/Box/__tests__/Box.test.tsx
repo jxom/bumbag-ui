@@ -50,6 +50,16 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with a spacing CSS prop (marginX, paddingX)', () => {
+    const { container } = render(<Box marginX="major-4" paddingX="major-2" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with a spacing CSS prop (marginY, paddingY)', () => {
+    const { container } = render(<Box marginY="major-4" paddingY="major-2" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a font size CSS prop', () => {
     const { container } = render(<Box fontSize="400" />);
     expect(container.firstChild).toMatchSnapshot();

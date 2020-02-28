@@ -263,6 +263,8 @@ export type CSSProperties = {
   marginLeft?: string | number | { [key: string]: string };
   marginRight?: string | number | { [key: string]: string };
   marginTop?: string | number | { [key: string]: string };
+  marginX?: string | number | { [key: string]: string };
+  marginY?: string | number | { [key: string]: string };
   marker?: string | number | { [key: string]: string };
   markerEnd?: string | number | { [key: string]: string };
   markerKnockoutLeft?: string | number | { [key: string]: string };
@@ -343,6 +345,8 @@ export type CSSProperties = {
   paddingLeft?: string | number | { [key: string]: string };
   paddingRight?: string | number | { [key: string]: string };
   paddingTop?: string | number | { [key: string]: string };
+  paddingX?: string | number | { [key: string]: string };
+  paddingY?: string | number | { [key: string]: string };
   page?: string | number | { [key: string]: string };
   pageBreakAfter?: string | number | { [key: string]: string };
   pageBreakBefore?: string | number | { [key: string]: string };

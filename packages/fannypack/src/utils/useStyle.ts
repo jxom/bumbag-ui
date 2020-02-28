@@ -34,11 +34,15 @@ const spaceAttributes = [
   'marginRight',
   'marginTop',
   'marginBottom',
+  'marginX',
+  'marginY',
   'padding',
   'paddingLeft',
   'paddingRight',
   'paddingTop',
   'paddingBottom',
+  'paddingX',
+  'paddingY',
   'top',
   'left',
   'bottom',
@@ -49,6 +53,13 @@ const spaceAttributes = [
 ];
 const fontSizeAttributes = ['fontSize'];
 const fontWeightAttributes = ['fontWeight'];
+
+const attributeMaps = {
+  marginY: ['marginTop', 'marginBottom'],
+  paddingY: ['paddingTop', 'paddingBottom'],
+  marginX: ['marginLeft', 'marginRight'],
+  paddingX: ['paddingLeft', 'paddingRight']
+};
 
 function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
@@ -104,7 +115,16 @@ export function useStyle(props) {
 
   let style = { ...cssProps };
   if (style) {
-    style = Object.entries(style).reduce((prevStyle, [attribute, value]) => {
+    let styleEntries = Object.entries(style);
+    styleEntries = styleEntries.reduce((prevStyle, [attribute, value]) => {
+      let entries = [[attribute, value]];
+      if (attributeMaps[attribute]) {
+        entries = attributeMaps[attribute].map(attribute => [attribute, value]);
+      }
+      return [...prevStyle, ...entries];
+    }, []);
+
+    style = styleEntries.reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
       if (typeof newValue === 'string') {
         newValue = { default: value };
