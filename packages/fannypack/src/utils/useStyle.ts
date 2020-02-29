@@ -96,7 +96,7 @@ function getSpaceValue({ theme, value }) {
 function getFontSizeValue({ theme, value }) {
   const size = fontSize(value)({ theme });
   if (size) {
-    return `${size}em`;
+    return `${size}rem`;
   }
   return value;
 }
