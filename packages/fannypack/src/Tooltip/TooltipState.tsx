@@ -1,5 +1,5 @@
 import {
-  useTooltipState,
+  useTooltipState as useReakitTooltipState,
   TooltipStateReturn as ReakitTooltipStateReturn,
   TooltipInitialState as ReakitTooltipInitialState
 } from 'reakit';
@@ -7,4 +7,16 @@ import {
 export type TooltipStateReturn = ReakitTooltipStateReturn;
 export type TooltipInitialState = ReakitTooltipInitialState;
 
-export { useTooltipState };
+export function useTooltipState(initialState?: TooltipInitialState) {
+  return useReakitTooltipState(initialState);
+}
+
+export function TooltipState(
+  props: {
+    children?: (state: TooltipStateReturn) => React.ReactElement<any>;
+  } & TooltipInitialState
+) {
+  const { children, ...restProps } = props;
+  const state = useTooltipState(restProps);
+  return props.children(state);
+}

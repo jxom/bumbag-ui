@@ -1,5 +1,5 @@
 import {
-  useRoverState,
+  useRoverState as useReakitRoverState,
   RoverStateReturn as ReakitRoverStateReturn,
   RoverInitialState as ReakitRoverInitialState
 } from 'reakit';
@@ -7,4 +7,16 @@ import {
 export type RoverStateReturn = ReakitRoverStateReturn;
 export type RoverInitialState = ReakitRoverInitialState;
 
-export { useRoverState };
+export function useRoverState(initialState?: RoverInitialState) {
+  return useReakitRoverState(initialState);
+}
+
+export function RoverState(
+  props: {
+    children?: (state: RoverStateReturn) => React.ReactElement<any>;
+  } & RoverInitialState
+) {
+  const { children, ...restProps } = props;
+  const state = useRoverState(restProps);
+  return props.children(state);
+}

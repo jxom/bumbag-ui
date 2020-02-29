@@ -1,8 +1,8 @@
 import * as styles from './styles';
 import { Rover as _Rover } from './Rover';
-import { useRoverState } from './RoverState';
+import { useRoverState, RoverState } from './RoverState';
 
 export * from './Rover';
 export * from './RoverState';
-export const Rover = Object.assign(_Rover, { useState: useRoverState });
+export const Rover = Object.assign(_Rover, { useState: useRoverState, State: RoverState });
 export { styles as roverStyles };
