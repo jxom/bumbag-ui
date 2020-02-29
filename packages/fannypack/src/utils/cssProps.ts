@@ -1,5 +1,5 @@
-import _omit from 'lodash-es/omit';
-import _pick from 'lodash-es/pick';
+import _omit from 'lodash/omit';
+import _pick from 'lodash/pick';
 
 export function isCSSProp(prop) {
   return Object.keys(cssProps).includes(prop);

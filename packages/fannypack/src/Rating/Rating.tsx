@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _get from 'lodash-es/get';
-import _times from 'lodash-es/times';
+import _get from 'lodash/get';
+import _times from 'lodash/times';
 
 import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';

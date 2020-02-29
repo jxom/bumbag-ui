@@ -1,8 +1,8 @@
 import * as React from 'react';
-import _get from 'lodash-es/get';
-import _merge from 'lodash-es/merge';
-import _omitBy from 'lodash-es/omitBy';
-import _isUndefined from 'lodash-es/isUndefined';
+import _get from 'lodash/get';
+import _merge from 'lodash/merge';
+import _omitBy from 'lodash/omitBy';
+import _isUndefined from 'lodash/isUndefined';
 
 import { ThemeContext } from '../styled';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import buildClassNames from 'classnames';
-import _uniq from 'lodash-es/uniq';
+import _uniq from 'lodash/uniq';
 
 import { ThemeContext } from '../styled';
 

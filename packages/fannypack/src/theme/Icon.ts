@@ -1,5 +1,5 @@
 // @ts-ignore
-import _get from 'lodash-es/get';
+import _get from 'lodash/get';
 import * as faInfoCircle from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import * as faChevronDown from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import * as faChevronLeft from '@fortawesome/free-solid-svg-icons/faChevronLeft';

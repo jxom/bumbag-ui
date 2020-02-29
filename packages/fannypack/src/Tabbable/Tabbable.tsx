@@ -1,5 +1,5 @@
 import { Box as ReakitBox, TabbableProps as ReakitTabbableProps, useTabbable as useReakitTabbable } from 'reakit';
-import _omit from 'lodash-es/omit';
+import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';

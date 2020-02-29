@@ -1,5 +1,5 @@
 // @ts-ignore
-import _get from 'lodash-es/get';
+import _get from 'lodash/get';
 
 import { PaletteThemeConfig } from '../types';
 import { darken, lighten, shade, generateColorVariants, generateTextVariants } from '../utils';

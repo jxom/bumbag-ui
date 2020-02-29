@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Button, Code, Hidden, Text } from 'fannypack';
 import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
-import _set from 'lodash-es/set';
+import _set from 'lodash/set';
 
 export default function Theme(props) {
   const { component: Component, children, overrides, highlightAttribute, injectOverrides = true, ...restProps } = props;

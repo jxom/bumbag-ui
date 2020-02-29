@@ -1,5 +1,5 @@
 import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
-import _omit from 'lodash-es/omit';
+import _omit from 'lodash/omit';
 
 import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';

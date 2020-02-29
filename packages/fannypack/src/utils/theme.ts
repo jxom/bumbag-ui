@@ -1,5 +1,5 @@
 import { theme as _theme } from 'styled-tools';
-import _get from 'lodash-es/get';
+import _get from 'lodash/get';
 import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';

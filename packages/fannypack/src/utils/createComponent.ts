@@ -1,5 +1,5 @@
 import * as React from 'react';
-import _get from 'lodash-es/get';
+import _get from 'lodash/get';
 import { useDefaultProps } from './useDefaultProps';
 
 export function createComponent<P>(
