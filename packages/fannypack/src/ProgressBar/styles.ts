@@ -1,8 +1,8 @@
 import { css, cssClass } from '../styled';
-import { tint, palette, theme } from '../utils';
+import { borderRadius, tint, palette, theme } from '../utils';
 
 export const ProgressBar = styleProps => cssClass`
-  border-radius: 3px;
+  border-radius: ${borderRadius('default')(styleProps)};
   overflow: hidden;
   width: 100%;
   height: 1rem;

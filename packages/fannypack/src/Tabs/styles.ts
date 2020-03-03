@@ -5,7 +5,7 @@ export const Tab = styleProps => cssClass`
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 2.5em;
+  height: 2.75em;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 0.8rem;

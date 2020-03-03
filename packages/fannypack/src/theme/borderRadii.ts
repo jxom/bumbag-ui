@@ -1,7 +1,7 @@
 import { BorderRadiiThemeConfig } from '../types';
 
 export default (overrides: BorderRadiiThemeConfig) => ({
-  default: '4px',
+  default: '8px',
   '0': '0px',
   '1': '2px',
   '2': '4px',

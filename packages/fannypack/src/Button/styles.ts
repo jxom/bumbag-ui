@@ -1,6 +1,6 @@
 import getDefaultPalette from '../theme/palette';
 import { css, cssClass } from '../styled';
-import { borderRadius, darken, palette, space, theme } from '../utils';
+import { borderRadius, darken, palette, space, theme, fontSize } from '../utils';
 
 const defaultPalette = getDefaultPalette({});
 
@@ -13,9 +13,9 @@ export const Button = styleProps => cssClass`
   cursor: pointer;
   display: inline-flex;
   font-weight: ${theme('fontWeights.semibold')(styleProps)};
-  min-height: 2.5em;
+  min-height: 2.75rem;
   justify-content: center;
-  padding: 0 0.8rem;
+  padding: 0 1rem;
   text-decoration: none;
   hyphens: auto;
   transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
@@ -125,8 +125,8 @@ export const getSizeProperties = styleProps => {
     small: css`
       & {
         font-size: ${theme('fontSizes.100')(styleProps)}em;
-        min-height: ${space(8)(styleProps)}em;
-        padding: 0 ${space(2)(styleProps)}rem;
+        min-height: ${space(10)(styleProps)}em;
+        padding: 0 ${space(3)(styleProps)}rem;
       }
       & {
         ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
@@ -139,7 +139,7 @@ export const getSizeProperties = styleProps => {
     `,
     medium: css`
       & {
-        min-height: ${space(12)(styleProps)}em;
+        min-height: ${space(14)(styleProps)}em;
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
@@ -149,7 +149,7 @@ export const getSizeProperties = styleProps => {
     large: css`
       & {
         font-size: ${theme('fontSizes.300')(styleProps)}em;
-        min-height: ${space(12)(styleProps)}em;
+        min-height: ${space(14)(styleProps)}em;
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {

@@ -6,11 +6,11 @@ import { darken, lighten, shade, generateColorVariants, generateTextVariants } f
 
 const defaultPalette: { [key: string]: string } = {
   text: '#212121',
-  primary: '#3722ed',
-  secondary: '#9c22ed',
+  primary: '#574feb',
+  secondary: '#9e46d8',
   info: '#1e67d5',
-  success: '#107219',
-  danger: '#bb2a1a',
+  success: '#0a7d33',
+  danger: '#da1717',
   warning: '#ed9c22'
 };
 

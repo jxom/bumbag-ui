@@ -1,13 +1,13 @@
 import { css, cssClass } from '../styled';
-import { fontSize, palette, tint, theme } from '../utils';
+import { borderRadius, fontSize, palette, tint, theme } from '../utils';
 
 export const Select = styleProps => cssClass`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid ${palette('white900')(styleProps)};
-  border-radius: 0.2em;
+  border-radius: ${borderRadius('default')(styleProps)};
   color: ${styleProps.isPlaceholderSelected ? tint(0.4, palette('text')(styleProps)) : palette('text')(styleProps)};
-  height: 2.5em;
+  height: 2.75em;
   padding: 0.4em 2em 0.4em 0.6em;
   line-height: 1.5;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
@@ -67,7 +67,7 @@ export const SelectIcon = styleProps => cssClass`
   && {
     position: absolute;
     width: 0.8em;
-    height: 2.5em;
+    height: 2.75em;
     right: 0.8em;
     z-index: 1;
     color: ${palette('text')(styleProps)};
@@ -86,7 +86,7 @@ export const SelectSpinner = styleProps => cssClass`
     align-items: center;
     display: flex;
     position: absolute;
-    height: 2.5em;
+    height: 2.75em;
     margin: 0 0.75em;
     top: 0;
     right: 0;

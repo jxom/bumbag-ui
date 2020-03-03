@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { fontSize, palette, theme } from '../utils';
+import { borderRadius, fontSize, palette, theme } from '../utils';
 
 export const TextareaWrapper = styleProps => cssClass`
   align-items: center;
@@ -16,7 +16,7 @@ export const TextareaWrapper = styleProps => cssClass`
 export const Textarea = styleProps => cssClass`
   -webkit-appearance: none;
   border: 1px solid ${palette('white900')(styleProps)};
-  border-radius: 0.2em;
+  border-radius: ${borderRadius('default')(styleProps)};
   width: 100%;
   padding: 0.4em 0.6em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;

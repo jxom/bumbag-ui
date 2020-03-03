@@ -1,9 +1,9 @@
 import { css, cssClass } from '../styled';
-import { palette, space, theme } from '../utils';
+import { borderRadius, palette, space, theme } from '../utils';
 
 export const Alert = styleProps => cssClass`
   background-color: ${palette(`${styleProps.type}Tint`)(styleProps)};
-  border-radius: 4px;
+  border-radius: ${borderRadius('default')(styleProps)};
   padding: ${space(1, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
   position: relative;
 

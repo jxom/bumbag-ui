@@ -51,7 +51,9 @@ const useProps = createHook<TagProps>(
       children: (
         <React.Fragment>
           <Box className={tagContentClassName}>{children}</Box>
-          {onRemove && <Button.Close className={tagCloseClassName} onClick={onRemove} />}
+          {onRemove && (
+            <Button.Close className={tagCloseClassName} onClick={onRemove} iconProps={{ fontSize: '200' }} />
+          )}
         </React.Fragment>
       )
     };

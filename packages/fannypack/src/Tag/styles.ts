@@ -1,10 +1,10 @@
 import { cssClass, css } from '../styled';
-import { darken, fontSize, fontWeight, palette, space, theme } from '../utils';
+import { borderRadius, darken, fontSize, fontWeight, palette, space, theme } from '../utils';
 
 export const Tag = styleProps => cssClass`
   align-items: center;
   background-color: ${palette(styleProps.palette)(styleProps)};
-  border-radius: 4px;
+  border-radius: ${borderRadius('default')(styleProps)};
   color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   display: inline-flex;
   fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
@@ -25,7 +25,7 @@ export const TagContent = styleProps => cssClass`
   align-items: center;
   display: flex;
   height: inherit;
-  padding: 0 ${space(2)(styleProps)}em;
+  padding: 0 ${space(3)(styleProps)}em;
 
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
