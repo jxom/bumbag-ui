@@ -4,6 +4,7 @@ import { space, theme } from '../utils';
 export const Modal = styleProps => cssClass`
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
 
   ${getPlacementAttributes(styleProps)}
 

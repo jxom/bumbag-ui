@@ -49,6 +49,7 @@ const LivePreview = styled(_LivePreview)`
   border: 1px solid ${palette('white800')} !important;
   border-bottom: none !important;
   padding: 1.5rem !important;
+  overflow: scroll !important;
 `;
 
 const JSX_REG = /language\-\jsx-live/; // eslint-disable-line

@@ -73,27 +73,25 @@ const useProps = createHook<DialogProps>(
           props.children
         ) : (
           <React.Fragment>
-            {title && (
-              <DialogHeader overrides={overrides}>
-                {typeof title === 'string' ? (
-                  <DialogTitle overrides={overrides}>
-                    {type && <DialogIcon iconProps={iconProps} overrides={overrides} />}
-                    {title}
-                  </DialogTitle>
-                ) : (
-                  title
+            <DialogContent overrides={overrides}>
+              {type && <DialogIcon iconProps={iconProps} overrides={overrides} />}
+              <Box>
+                {title && (
+                  <DialogHeader overrides={overrides}>
+                    {typeof title === 'string' ? <DialogTitle overrides={overrides}>{title}</DialogTitle> : title}
+                    {showCloseButton && (
+                      <Button.Close
+                        className={dialogCloseClassName}
+                        onClick={onClickClose}
+                        size={title ? undefined : 'small'}
+                        {...closeButtonProps}
+                      />
+                    )}
+                  </DialogHeader>
                 )}
-                {showCloseButton && (
-                  <Button.Close
-                    className={dialogCloseClassName}
-                    onClick={onClickClose}
-                    size={title ? undefined : 'small'}
-                    {...closeButtonProps}
-                  />
-                )}
-              </DialogHeader>
-            )}
-            <DialogContent overrides={overrides}>{props.children}</DialogContent>
+                {props.children}
+              </Box>
+            </DialogContent>
             {(footer || showActionButtons) && (
               <DialogFooter overrides={overrides}>
                 {footer && <Box>{footer}</Box>}
@@ -314,7 +312,24 @@ const useDialogIconProps = createHook<DialogIconProps>(
       prevClassName: textProps.className
     });
 
-    const children = <Icon aria-hidden color={contextProps.type} icon={contextProps.type} {...iconProps} />;
+    const icon = (
+      <Icon
+        aria-hidden
+        color={contextProps.type}
+        fontSize={!contextProps.title ? '300' : undefined}
+        icon={contextProps.type}
+        {...iconProps}
+      />
+    );
+
+    let children = icon;
+    if (contextProps.title) {
+      children = (
+        <DialogHeader>
+          <DialogTitle id={undefined}>{icon}</DialogTitle>
+        </DialogHeader>
+      );
+    }
 
     return { ...textProps, className, children };
   },

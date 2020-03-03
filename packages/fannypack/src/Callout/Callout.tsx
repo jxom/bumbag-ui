@@ -74,9 +74,9 @@ const useProps = createHook<CalloutProps>(
               <CalloutIcon iconProps={iconProps} overrides={overrides} />
               <Box>
                 {title && (
-                  <CalloutHeader overrides={overrides}>
+                  <React.Fragment>
                     {typeof title === 'string' ? <CalloutTitle overrides={overrides}>{title}</CalloutTitle> : title}
-                  </CalloutHeader>
+                  </React.Fragment>
                 )}
                 <CalloutContent overrides={overrides}>{props.children}</CalloutContent>
                 {footer && <CalloutFooter overrides={overrides}>{footer}</CalloutFooter>}

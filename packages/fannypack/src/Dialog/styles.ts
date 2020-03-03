@@ -4,6 +4,8 @@ import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../ut
 export const Dialog = styleProps => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
   background-color: white;
+  overflow: hidden;
+  position: relative;
 
   ${theme('altitudes.100')(styleProps)};
 
@@ -13,6 +15,7 @@ export const Dialog = styleProps => cssClass`
 `;
 
 export const DialogContent = styleProps => cssClass`
+  display: flex;
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
@@ -21,11 +24,7 @@ export const DialogContent = styleProps => cssClass`
 `;
 
 export const DialogHeader = styleProps => cssClass`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid ${palette('white800')(styleProps)};
-  padding: ${space(5, 'minor')(styleProps)}rem ${space(6, 'minor')(styleProps)}rem;
+  margin-bottom: ${space(2, 'major')(styleProps)}rem;
 
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
@@ -43,7 +42,7 @@ export const DialogTitle = styleProps => cssClass`
 
 export const DialogFooter = styleProps => cssClass`
   align-items: center;
-  border-top: 1px solid ${palette('white800')(styleProps)};
+  background-color: ${palette('white600')(styleProps)};
   display: flex;
   padding: ${space(5, 'minor')(styleProps)}rem ${space(6, 'minor')(styleProps)}rem;
 
@@ -65,6 +64,10 @@ export const DialogFooter = styleProps => cssClass`
 `;
 
 export const DialogClose = styleProps => cssClass`
+  position: absolute;
+  top: ${space(2, 'major')(styleProps)}rem;
+  right: ${space(2, 'major')(styleProps)}rem;
+
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
@@ -72,6 +75,13 @@ export const DialogClose = styleProps => cssClass`
 
 export const DialogIconWrapper = styleProps => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
+
+  & .fp-Icon {
+    vertical-align: -0.125em;
+  }
+  & .fp-CalloutContent .fp-Icon {
+    font-size: 1.25em;
+  }
 
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
