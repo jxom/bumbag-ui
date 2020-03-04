@@ -122,26 +122,6 @@ describe('overrides', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
-
-  it('Drawer.Backdrop.css.root should render correctly', () => {
-    const { container } = render(
-      <Drawer.State baseId="test" visible>
-        {drawer => (
-          <div>
-            <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer
-              {...drawer}
-              modal={false}
-              overrides={{ Drawer: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }}
-            >
-              This is a side overlay
-            </Drawer>
-          </div>
-        )}
-      </Drawer.State>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
 
 describe('theming', () => {
@@ -175,23 +155,6 @@ describe('theming', () => {
         )}
       </Drawer.State>,
       { theme: { Drawer: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } } }
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('Drawer.Backdrop.css.root should render correctly', () => {
-    const { container } = render(
-      <Drawer.State baseId="test" visible>
-        {drawer => (
-          <div>
-            <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer {...drawer} modal={false}>
-              This is a side overlay
-            </Drawer>
-          </div>
-        )}
-      </Drawer.State>,
-      { theme: { Drawer: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

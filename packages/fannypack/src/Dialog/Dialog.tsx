@@ -375,6 +375,7 @@ const useDialogModalProps = createHook<DialogModalProps>(
         ...restProps.actionButtonsProps
       },
       wrapElement: children => (
+        // @ts-ignore
         <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
           {children}
         </Modal>

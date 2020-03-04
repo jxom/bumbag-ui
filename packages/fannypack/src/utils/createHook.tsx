@@ -12,6 +12,7 @@ export function createHook<P>(
   return (props: Partial<P>, { themeKey: themeKeyOverride = undefined } = {}) => {
     const themeKey = themeKeyOverride || _get(props, 'themeKey') || _get(config, 'themeKey');
     const { props: newProps, themeKey: newThemeKey } = useDefaultProps(props, { ...config, themeKey });
+    // @ts-ignore
     return useHook(_omit(newProps, 'themeKey'), { themeKey: _get(config, 'themeKey'), themeKeyOverride: newThemeKey });
   };
 }

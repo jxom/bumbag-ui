@@ -14,6 +14,7 @@ export function createComponent<P>(
 ) {
   const ForwardedComponent = React.forwardRef((props: P, ref) => {
     const { props: newProps } = useDefaultProps(props, config);
+    // @ts-ignore
     return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));
   });
   return Object.assign({}, ForwardedComponent, config.attach);

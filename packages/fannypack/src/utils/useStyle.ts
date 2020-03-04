@@ -150,6 +150,7 @@ export function useStyle(props) {
           newValue = getFontWeightValue({ theme, value });
         }
         if (bp === 'default') {
+          // @ts-ignore
           return css`
             ${prevStyle}
             ${_kebabCase(attribute)}: ${newValue} !important;
@@ -159,6 +160,7 @@ export function useStyle(props) {
           ${prevStyle};
           ${breakpoint(
             bp,
+            // @ts-ignore
             css`
               ${_kebabCase(attribute)}: ${newValue} !important;
             `

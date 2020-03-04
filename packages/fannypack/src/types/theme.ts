@@ -82,7 +82,7 @@ import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
 import { SetProps } from '../Set';
 import { SideNavProps, SideNavItemProps, SideNavLevelProps } from '../SideNav';
-import { DrawerProps, DrawerBackdropProps, DrawerDisclosureProps } from '../Drawer';
+import { DrawerProps, DrawerDisclosureProps } from '../Drawer';
 import { SpinnerProps } from '../Spinner';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
@@ -1213,12 +1213,6 @@ export type DrawerThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DrawerDisclosureProps>;
-  };
-  Backdrop?: {
-    css?: {
-      root?: ThemeAttribute<Stylesheet>;
-    };
-    defaultProps?: Partial<DrawerBackdropProps>;
   };
 };
 export type SpinnerThemeConfig = {

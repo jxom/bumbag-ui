@@ -62,10 +62,12 @@ const useProps = createHook<BoxProps>(
     const htmlProps = omitCSSProps(pickHTMLProps({ ...props, className }));
 
     if (props.elementRef) {
+      // @ts-ignore
       htmlProps.ref = mergeRefs(props.elementRef, props.ref);
     }
 
     if (props.wrapElement) {
+      // @ts-ignore
       htmlProps.wrapElement = props.wrapElement;
     }
 
