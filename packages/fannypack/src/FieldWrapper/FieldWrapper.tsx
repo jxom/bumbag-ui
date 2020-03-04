@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook, OutsideClickH
 import { Box, BoxProps } from '../Box';
 import { Button } from '../Button';
 import { Card } from '../Card';
-import { Hidden } from '../Hidden';
+import { Disclosure } from '../Disclosure';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { Text } from '../Text';
@@ -109,7 +109,7 @@ const useProps = createHook<FieldWrapperProps>(
       themeKey,
       themeKeySuffix: 'TooltipPopover'
     });
-    const hidden = Hidden.useState();
+    const disclosure = Disclosure.useState();
     const uid = useUniqueId('FieldWrapper');
 
     const elementProps = { isRequired, id: uid, state };
@@ -142,17 +142,17 @@ const useProps = createHook<FieldWrapperProps>(
                 {isRequired && <Box className={requiredClassName}>*</Box>}
                 {tooltip && (
                   <Box position="relative" marginLeft="minor-2">
-                    <OutsideClickHandler onOutsideClick={hidden.hide}>
+                    <OutsideClickHandler onOutsideClick={disclosure.hide}>
                       {tooltipTriggerComponent ? (
-                        React.cloneElement(tooltipTriggerComponent, { onClick: hidden.toggle })
+                        React.cloneElement(tooltipTriggerComponent, { onClick: disclosure.toggle })
                       ) : (
-                        <Button className={tooltipTriggerClassName} onClick={hidden.toggle}>
+                        <Button className={tooltipTriggerClassName} onClick={disclosure.toggle}>
                           <VisuallyHidden>Toggle tooltip</VisuallyHidden>
                           <Icon aria-hidden icon="question-circle" verticalAlign="-0.125rem" />
                         </Button>
                       )}
                     </OutsideClickHandler>
-                    {hidden.visible && (
+                    {disclosure.visible && (
                       <Card className={tooltipPopoverClassName}>
                         {typeof tooltip === 'string' ? <Text fontSize="150">{tooltip}</Text> : tooltip}
                       </Card>

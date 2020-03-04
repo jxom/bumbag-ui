@@ -1,7 +1,7 @@
 import {
   Box as ReakitBox,
-  useMenuDisclosure as useReakitMenuDisclosure,
-  MenuDisclosureProps as ReakitMenuDisclosureProps
+  useMenuButton as useReakitMenuButton,
+  MenuButtonProps as ReakitMenuButtonProps
 } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -9,10 +9,10 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalDropdownMenuDisclosureProps = {};
-export type DropdownMenuDisclosureProps = BoxProps & ReakitMenuDisclosureProps & LocalDropdownMenuDisclosureProps;
+export type LocalDropdownMenuButtonProps = {};
+export type DropdownMenuButtonProps = BoxProps & ReakitMenuButtonProps & LocalDropdownMenuButtonProps;
 
-const useProps = createHook<DropdownMenuDisclosureProps>(
+const useProps = createHook<DropdownMenuButtonProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       baseId,
@@ -30,7 +30,7 @@ const useProps = createHook<DropdownMenuDisclosureProps>(
       unstable_referenceRef,
       ...restProps
     } = props;
-    const dropdownMenuDisclosureProps = useReakitMenuDisclosure(
+    const dropdownMenuButtonProps = useReakitMenuButton(
       {
         baseId,
         disabled,
@@ -48,10 +48,10 @@ const useProps = createHook<DropdownMenuDisclosureProps>(
       },
       restProps
     );
-    const boxProps = Box.useProps({ ...restProps, ...dropdownMenuDisclosureProps });
+    const boxProps = Box.useProps({ ...restProps, ...dropdownMenuButtonProps });
 
     const className = useClassName({
-      style: styles.DropdownMenuDisclosure,
+      style: styles.DropdownMenuButton,
       styleProps: props,
       themeKey,
       themeKeyOverride,
@@ -60,10 +60,10 @@ const useProps = createHook<DropdownMenuDisclosureProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'DropdownMenu.Disclosure' }
+  { themeKey: 'DropdownMenu.Button' }
 );
 
-export const DropdownMenuDisclosure = createComponent<DropdownMenuDisclosureProps>(
+export const DropdownMenuButton = createComponent<DropdownMenuButtonProps>(
   props => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
@@ -72,6 +72,6 @@ export const DropdownMenuDisclosure = createComponent<DropdownMenuDisclosureProp
     attach: {
       useProps
     },
-    themeKey: 'DropdownMenu.Disclosure'
+    themeKey: 'DropdownMenu.Button'
   }
 );

@@ -1,24 +1,24 @@
-import { Hidden } from 'fannypack';
+import { Disclosure } from 'fannypack';
 import Theme from '../../components/Theme';
 
-# Hidden
+# Disclosure
 
 ## Import
 
 ```jsx
-import { Hidden } from 'fannypack';
+import { Disclosure } from 'fannypack';
 ```
 
 ## Usage
 
 ```function-live
 function Example() {
-  const hidden = Hidden.useState({ visible: true })
+  const disclosure = Disclosure.useState()
 
   return (
     <div>
-      <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>
-      <Hidden {...hidden}>Hello world</Hidden>
+      <Disclosure {...disclosure}>Toggle</Disclosure>
+      <Disclosure.Region {...disclosure}>Hello world</Disclosure.Region>
     </div>
   )
 }
@@ -30,12 +30,12 @@ function Example() {
 
 ```function-live
 function Example() {
-  const hidden = Hidden.useState({ visible: true })
+  const disclosure = Disclosure.useState({ visible: true })
 
   return (
     <div>
-      <Hidden.Disclosure use={Button} {...hidden}>Toggle</Hidden.Disclosure>
-      <Hidden use={Blockquote} borderColor="primary" backgroundColor="primaryTint" {...hidden}>Hello world</Hidden>
+      <Disclosure use={Button} {...disclosure}>Toggle</Disclosure>
+      <Disclosure.Region use={Blockquote} borderColor="primary" backgroundColor="primaryTint" {...disclosure}>Hello world</Disclosure.Region>
     </div>
   )
 }
@@ -45,14 +45,15 @@ function Example() {
 
 ```function-live
 function Example() {
-  const hidden = Hidden.useState({ visible: true })
-  const hiddenDisclosureProps = Hidden.Disclosure.useProps({ ...hidden });
-  const hiddenProps = Hidden.useProps({ ...hidden });
+  const disclosure = Disclosure.useState({ visible: true });
+
+  const disclosureProps = Disclosure.useProps({ ...disclosure });
+  const disclosureRegionProps = Disclosure.Region.useProps({ ...disclosure });
 
   return (
     <div>
-      <Button {...hiddenDisclosureProps}>Toggle</Button>
-      <Blockquote borderColor="primary" backgroundColor="primaryTint" {...hiddenProps}>Hello world</Blockquote>
+      <Button {...disclosureProps}>Toggle</Button>
+      <Blockquote borderColor="primary" backgroundColor="primaryTint" {...disclosureRegionProps}>Hello world</Blockquote>
     </div>
   )
 }
@@ -60,40 +61,40 @@ function Example() {
 
 ## Props
 
-### Hidden Props
+### Disclosure Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -102,7 +103,7 @@ given milliseconds.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 It's called after given milliseconds if `animated` is a number.
@@ -113,7 +114,7 @@ It's called after given milliseconds if `animated` is a number.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -123,11 +124,11 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -146,19 +147,19 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">disclosureBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -175,28 +176,28 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
 
-### Hidden.Disclosure Props
+
+### Disclosure.Region Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -204,18 +205,18 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
@@ -237,7 +238,7 @@ Toggles the `visible` state
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -247,11 +248,11 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -270,19 +271,19 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">disclosureBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -299,36 +300,36 @@ Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## State Hooks
 
-### Hidden.useState API
+### Disclosure.useState API
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -337,7 +338,7 @@ given milliseconds.
 
 <Box marginBottom="major-4" />
 
-### Hidden.useState Return Values
+### Disclosure.useState Return Values
 
 <!-- Automatically generated -->
 
@@ -390,14 +391,14 @@ It's called after given milliseconds if `animated` is a number.
 <Box marginBottom="major-4" />
 
 </details>
-    
+
 
 ## Theming
 
-<Theme component={Hidden} overrides={[{ key: 'Hidden.css.root', props: { visible: true } }]}>
+<Theme component={Disclosure} overrides={[{ key: 'Disclosure.css.root' }]}>
   Hello world
 </Theme>
 
-<Theme component={Hidden.Disclosure} overrides={['Hidden.Disclosure.css.root']}>
+<Theme component={Disclosure.Region} overrides={[{ key: 'Disclosure.Region.css.root', props: { visible: true } }]}>
   Hello world
 </Theme>

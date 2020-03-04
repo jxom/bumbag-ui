@@ -145,11 +145,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Disclosure.css.root should render correctly', () => {
+  it('DropdownMenu.Button.css.root should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Button: { css: { root: { backgroundColor: 'red' } } } } }}
         content={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -299,7 +299,7 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Disclosure.css.root should render correctly', () => {
+  it('DropdownMenu.Button.css.root should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -316,7 +316,7 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Button: { css: { root: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

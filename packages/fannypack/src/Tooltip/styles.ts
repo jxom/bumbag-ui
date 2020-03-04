@@ -26,6 +26,7 @@ export const TooltipReference = styleProps => cssClass`
 `;
 
 export const TooltipArrow = styleProps => cssClass`
+  display: grid;
   overflow: hidden;
 
   & > svg {

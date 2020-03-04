@@ -21,7 +21,7 @@ export const DropdownMenuItem = styleProps => cssClass`
   ${menuStyles.MenuItem(styleProps)}
 `;
 
-export const DropdownMenuDisclosure = styleProps => cssClass`
+export const DropdownMenuButton = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }

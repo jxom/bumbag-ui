@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { useHiddenState } from 'reakit';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../../Box';
-import { Hidden } from '../index';
+import { Disclosure } from '../index';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
-      return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
+      const hidden = Disclosure.useState({ baseId: 'test' });
+      return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />);
     expect(container.firstChild).toMatchSnapshot();
@@ -18,11 +17,11 @@ describe('props', () => {
   it('should assign a ref', () => {
     const ref = React.createRef();
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
+      const hidden = Disclosure.useState({ baseId: 'test' });
       return (
-        <Hidden.Disclosure ref={ref} {...hidden}>
+        <Disclosure ref={ref} {...hidden}>
           Toggle
-        </Hidden.Disclosure>
+        </Disclosure>
       );
     }
     render(<Component />);
@@ -31,11 +30,11 @@ describe('props', () => {
 
   it('should render correctly when disabled is set', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
+      const hidden = Disclosure.useState({ baseId: 'test' });
       return (
-        <Hidden.Disclosure disabled {...hidden}>
+        <Disclosure disabled {...hidden}>
           Toggle
-        </Hidden.Disclosure>
+        </Disclosure>
       );
     }
     const { container } = render(<Component />);
@@ -44,11 +43,11 @@ describe('props', () => {
 
   it('should render correctly when focusable is set', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
+      const hidden = Disclosure.useState({ baseId: 'test' });
       return (
-        <Hidden.Disclosure disabled focusable {...hidden}>
+        <Disclosure disabled focusable {...hidden}>
           Toggle
-        </Hidden.Disclosure>
+        </Disclosure>
       );
     }
     const { container } = render(<Component />);
@@ -60,11 +59,11 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ baseId: 'test' });
+        const hidden = Disclosure.useState({ baseId: 'test' });
         return (
-          <Hidden.Disclosure use={Box} {...hidden}>
+          <Disclosure use={Box} {...hidden}>
             Toggle
-          </Hidden.Disclosure>
+          </Disclosure>
         );
       }
       const { container } = render(<Component />);
@@ -73,10 +72,10 @@ describe('composition', () => {
   });
 
   describe('hook', () => {
-    it('should return with Hidden.Disclosure props', () => {
+    it('should return with Disclosure props', () => {
       const { result } = renderHook(() => {
-        const hidden = Hidden.useState({ baseId: 'test' });
-        return Hidden.Disclosure.useProps(hidden);
+        const hidden = Disclosure.useState({ baseId: 'test' });
+        return Disclosure.useProps(hidden);
       });
       expect(result.current).toMatchSnapshot();
     });
@@ -85,11 +84,11 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        const hidden = Hidden.useState({ baseId: 'test' });
+        const hidden = Disclosure.useState({ baseId: 'test' });
         return (
-          <Hidden.Disclosure {...hidden}>
-            {HiddenDisclosureProps => <div {...HiddenDisclosureProps}>Hello world</div>}
-          </Hidden.Disclosure>
+          <Disclosure {...hidden}>
+            {DisclosureDisclosureProps => <div {...DisclosureDisclosureProps}>Hello world</div>}
+          </Disclosure>
         );
       }
       const { container } = render(<Component />);
@@ -99,16 +98,13 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Hidden.Disclosure.root should render correctly', () => {
+  it('Disclosure.root should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
+      const hidden = Disclosure.useState({ baseId: 'test' });
       return (
-        <Hidden.Disclosure
-          overrides={{ Hidden: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
-          {...hidden}
-        >
+        <Disclosure overrides={{ Disclosure: { css: { root: { backgroundColor: 'red' } } } }} {...hidden}>
           Toggle
-        </Hidden.Disclosure>
+        </Disclosure>
       );
     }
     const { container } = render(<Component />);
@@ -117,13 +113,13 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Hidden.Disclosure.root should render correctly', () => {
+  it('Disclosure.root should render correctly', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
-      return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
+      const hidden = Disclosure.useState({ baseId: 'test' });
+      return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Hidden: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Disclosure: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -132,11 +128,11 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
-      const hidden = Hidden.useState({ baseId: 'test' });
-      return <Hidden.Disclosure {...hidden}>Toggle</Hidden.Disclosure>;
+      const hidden = Disclosure.useState({ baseId: 'test' });
+      return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Hidden: { Disclosure: { defaultProps: { className: 'red' } } } }
+      theme: { Disclosure: { defaultProps: { className: 'red' } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

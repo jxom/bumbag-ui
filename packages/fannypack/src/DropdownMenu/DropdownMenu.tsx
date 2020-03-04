@@ -4,7 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import { DropdownMenuDisclosure } from './DropdownMenuDisclosure';
+import { DropdownMenuButton } from './DropdownMenuButton';
 import { DropdownMenuPopover } from './DropdownMenuPopover';
 import { useDropdownMenuState, DropdownMenuInitialState, DropdownMenuStateReturn } from './DropdownMenuState';
 import * as styles from './styles';
@@ -32,7 +32,7 @@ const useProps = createHook<DropdownMenuProps>(
 
     const dropdownMenu = useDropdownMenuState({ baseId, visible });
 
-    const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps({
+    const dropdownMenuButtonProps = DropdownMenuButton.useProps({
       ...dropdownMenu,
       overrides
     });
@@ -52,7 +52,7 @@ const useProps = createHook<DropdownMenuProps>(
       className,
       children: (
         <DropdownMenuContext.Provider value={contextValue}>
-          {React.cloneElement(children, { ...dropdownMenuDisclosureProps })}
+          {React.cloneElement(children, { ...dropdownMenuButtonProps })}
           <DropdownMenuPopover {...dropdownMenu} overrides={overrides}>
             {content}
           </DropdownMenuPopover>

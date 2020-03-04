@@ -104,6 +104,7 @@ export const PopoverDisclosure = styleProps => cssClass`
 `;
 
 export const PopoverArrow = styleProps => cssClass`
+  display: grid;
   overflow: hidden;
 
   & > svg {

@@ -1,13 +1,13 @@
 import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
 
-export const Hidden = styleProps => cssClass`
+export const Disclosure = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
 `;
 
-export const HiddenDisclosure = styleProps => cssClass`
+export const DisclosureRegion = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }

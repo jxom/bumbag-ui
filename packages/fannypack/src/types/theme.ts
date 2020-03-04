@@ -30,11 +30,12 @@ import {
   DialogFooterProps,
   DialogIconProps
 } from '../Dialog';
+import { DisclosureProps, DisclosureRegionProps } from '../Disclosure';
 import { DividerProps } from '../Divider';
 import {
   DropdownMenuProps,
   DropdownMenuPopoverProps,
-  DropdownMenuDisclosureProps,
+  DropdownMenuButtonProps,
   DropdownMenuDividerProps,
   DropdownMenuGroupProps,
   DropdownMenuItemProps
@@ -45,7 +46,6 @@ import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
 import { GridItemProps } from '../Grid/GridItem';
 import { GroupProps } from '../Group';
-import { HiddenProps, HiddenDisclosureProps } from '../Hidden';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
@@ -456,11 +456,11 @@ export type DropdownMenuThemeConfig = {
     };
     defaultProps?: Partial<DropdownMenuPopoverProps>;
   };
-  Disclosure?: {
+  Button?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
-    defaultProps?: Partial<DropdownMenuDisclosureProps>;
+    defaultProps?: Partial<DropdownMenuButtonProps>;
   };
   Divider?: {
     css?: {
@@ -607,16 +607,16 @@ export type HeadingThemeConfig = {
   };
   defaultProps?: Partial<HeadingProps>;
 };
-export type HiddenThemeConfig = {
+export type DisclosureThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
-  defaultProps?: Partial<HiddenProps>;
-  Disclosure?: {
+  defaultProps?: Partial<DisclosureProps>;
+  Region?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
-    defaultProps?: Partial<HiddenDisclosureProps>;
+    defaultProps?: Partial<DisclosureRegionProps>;
   };
 };
 export type HighlightedCodeThemeConfig = {
@@ -1318,13 +1318,13 @@ export type ThemeConfig = {
   Columns?: ColumnsThemeConfig;
   Container?: ContainerThemeConfig;
   Dialog?: DialogThemeConfig;
+  Disclosure?: DisclosureThemeConfig;
   DropdownMenu?: DropdownMenuThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
   Grid?: GridThemeConfig;
   Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
-  Hidden?: HiddenThemeConfig;
   HighlightedCode?: HighlightedCodeThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;

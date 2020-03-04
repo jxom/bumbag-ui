@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Code, Hidden, Text } from 'fannypack';
+import { Box, Button, Code, Disclosure, Text } from 'fannypack';
 import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
 import _set from 'lodash/set';
 
@@ -42,22 +42,22 @@ const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g
             );
           })}
         </Box>
-        <Hidden.State>
-          {hidden => (
+        <Disclosure.State>
+          {disclosure => (
             <React.Fragment>
-              <Hidden.Disclosure {...hidden}>
+              <Disclosure {...disclosure}>
                 {props => (
                   <Button marginTop="major-1" kind="ghost" palette="primary" size="small" {...props}>
-                    {hidden.visible ? 'Hide' : 'Show'} example
+                    {disclosure.visible ? 'Hide' : 'Show'} example
                   </Button>
                 )}
-              </Hidden.Disclosure>
-              <Hidden {...hidden}>
+              </Disclosure>
+              <Disclosure.Region {...disclosure}>
                 <HighlightedCode marginTop="major-1" isBlock code={themeExample} language="js" />
-              </Hidden>
+              </Disclosure.Region>
             </React.Fragment>
           )}
-        </Hidden.State>
+        </Disclosure.State>
       </Box>
     );
   });
