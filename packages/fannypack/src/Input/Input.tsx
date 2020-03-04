@@ -90,7 +90,7 @@ const useProps = createHook<InputProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      unstable_wrap: children => (
+      wrapElement: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (
             <Box display="inline-flex" position="absolute" zIndex="3">

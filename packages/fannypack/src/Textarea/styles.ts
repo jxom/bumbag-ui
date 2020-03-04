@@ -18,7 +18,7 @@ export const Textarea = styleProps => cssClass`
   border: 1px solid ${palette('white900')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   width: 100%;
-  padding: 0.4em 0.6em;
+  padding: 0.4em 0.8em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   &[disabled] {

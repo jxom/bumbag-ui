@@ -8,7 +8,7 @@ export const Select = styleProps => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
   color: ${styleProps.isPlaceholderSelected ? tint(0.4, palette('text')(styleProps)) : palette('text')(styleProps)};
   height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.6em;
+  padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 

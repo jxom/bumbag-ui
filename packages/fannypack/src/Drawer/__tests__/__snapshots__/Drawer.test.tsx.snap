@@ -63,18 +63,18 @@ exports[`defaultProps should render correctly for className 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 test fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 test fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 test fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -143,18 +143,18 @@ exports[`overrides Drawer.Backdrop.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -227,18 +227,18 @@ exports[`overrides Drawer.Disclosure.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-7 emotion-8 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -315,18 +315,18 @@ exports[`overrides Drawer.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -395,18 +395,18 @@ exports[`props should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -475,14 +475,6 @@ exports[`props should render correctly for an invisible overlay 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
-    hidden=""
-    role="presentation"
-    style="display: none;"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
@@ -491,6 +483,14 @@ exports[`props should render correctly for an invisible overlay 1`] = `
     style="display: none;"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+      hidden=""
+      style="display: none;"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -560,18 +560,18 @@ exports[`props should render correctly for full screen 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -644,14 +644,6 @@ exports[`props should render correctly with CSS props 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
-    hidden=""
-    role="presentation"
-    style="display: none;"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-9 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
@@ -660,6 +652,14 @@ exports[`props should render correctly with CSS props 1`] = `
     style="display: none;"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+      hidden=""
+      style="display: none;"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -794,18 +794,18 @@ exports[`theming Drawer.Backdrop.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -878,18 +878,18 @@ exports[`theming Drawer.Disclosure.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-7 emotion-8 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>
@@ -966,18 +966,18 @@ exports[`theming Drawer.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
-    role="presentation"
-  >
-    <div />
-  </div>
-  <div
     class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
     tabindex="-1"
   >
+    <div
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+      data-dialog-ref="test"
+    >
+      <div />
+    </div>
     This is a side overlay
   </div>
 </div>

@@ -17,19 +17,21 @@ export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 const useProps = createHook<ModalProps>(
   (props, { themeKey, themeKeyOverride }) => {
     let {
+      children,
       hideBackdrop,
       hide,
       hideOnEsc,
       hideOnClickOutside,
       modal,
       preventBodyScroll,
+      setModal,
       visible,
       unstable_animating,
       unstable_animated,
       baseId,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
-      unstable_portal,
+      unstable_modal,
       unstable_orphan,
       unstable_autoFocusOnHide,
       unstable_autoFocusOnShow,
@@ -44,13 +46,14 @@ const useProps = createHook<ModalProps>(
         hideOnClickOutside,
         modal,
         preventBodyScroll,
+        setModal,
         visible,
         unstable_animating,
         unstable_animated,
         baseId,
         unstable_initialFocusRef,
         unstable_finalFocusRef,
-        unstable_portal,
+        unstable_modal,
         unstable_orphan,
         unstable_autoFocusOnHide,
         unstable_autoFocusOnShow,
@@ -61,17 +64,7 @@ const useProps = createHook<ModalProps>(
     );
     htmlProps = Box.useProps({
       ...props,
-      ...modalProps,
-      unstable_wrap: children => (
-        <React.Fragment>
-          {!hideBackdrop && (
-            <ModalBackdrop {...omitCSSProps(props)}>
-              <div />
-            </ModalBackdrop>
-          )}
-          {children}
-        </React.Fragment>
-      )
+      ...modalProps
     });
 
     const className = useClassName({
@@ -82,7 +75,20 @@ const useProps = createHook<ModalProps>(
       prevClassName: htmlProps.className
     });
 
-    return { ...htmlProps, className };
+    return {
+      ...htmlProps,
+      className,
+      children: (
+        <React.Fragment>
+          {!hideBackdrop && (
+            <ModalBackdrop {...omitCSSProps(props)}>
+              <div />
+            </ModalBackdrop>
+          )}
+          {children}
+        </React.Fragment>
+      )
+    };
   },
   {
     defaultProps: {

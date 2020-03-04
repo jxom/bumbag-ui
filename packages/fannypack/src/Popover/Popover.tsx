@@ -6,7 +6,6 @@ import {
   PopoverArrowProps as ReakitPopoverArrowProps,
   usePopoverArrow as useReakitPopoverArrow
 } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { AnimateProps } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
@@ -54,6 +53,7 @@ const useProps = createHook<PopoverProps>(
       onClickClose,
       overrides,
       preventBodyScroll,
+      setModal,
       showActionButtons,
       showCloseButton,
       standalone,
@@ -65,7 +65,7 @@ const useProps = createHook<PopoverProps>(
       baseId,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
-      unstable_portal,
+      unstable_modal,
       unstable_orphan,
       unstable_autoFocusOnHide,
       unstable_autoFocusOnShow,
@@ -82,13 +82,14 @@ const useProps = createHook<PopoverProps>(
         hideOnClickOutside,
         modal: usePortal || modal,
         preventBodyScroll,
+        setModal,
         visible,
         unstable_animating,
         unstable_animated,
         baseId,
         unstable_initialFocusRef,
         unstable_finalFocusRef,
-        unstable_portal,
+        unstable_modal,
         unstable_orphan,
         unstable_autoFocusOnHide,
         unstable_autoFocusOnShow,

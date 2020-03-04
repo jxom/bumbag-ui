@@ -68,7 +68,7 @@ const useProps = createHook<TextareaProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      unstable_wrap: children => (
+      wrapElement: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
         </Box>

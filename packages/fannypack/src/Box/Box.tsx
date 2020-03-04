@@ -65,8 +65,8 @@ const useProps = createHook<BoxProps>(
       htmlProps.ref = mergeRefs(props.elementRef, props.ref);
     }
 
-    if (props.unstable_wrap) {
-      htmlProps.unstable_wrap = props.unstable_wrap;
+    if (props.wrapElement) {
+      htmlProps.wrapElement = props.wrapElement;
     }
 
     return { ...htmlProps };

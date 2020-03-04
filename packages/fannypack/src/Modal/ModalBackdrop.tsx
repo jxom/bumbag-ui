@@ -3,7 +3,6 @@ import {
   DialogBackdropProps as ReakitDialogBackdropProps,
   useDialogBackdrop as useReakitDialogBackdrop
 } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -18,6 +17,7 @@ const useProps = createHook<ModalBackdropProps>(
     let {
       visible,
       baseId,
+      modal,
       unstable_animating,
       unstable_animated,
       unstable_stopAnimation,
@@ -28,6 +28,7 @@ const useProps = createHook<ModalBackdropProps>(
       {
         visible,
         baseId,
+        modal,
         unstable_animating,
         unstable_animated,
         unstable_stopAnimation,

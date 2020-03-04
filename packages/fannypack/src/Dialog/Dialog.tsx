@@ -374,7 +374,7 @@ const useDialogModalProps = createHook<DialogModalProps>(
         onClickCancel: restProps.hide,
         ...restProps.actionButtonsProps
       },
-      unstable_wrap: children => (
+      wrapElement: children => (
         <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
           {children}
         </Modal>

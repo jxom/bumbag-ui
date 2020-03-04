@@ -96,7 +96,7 @@ const useProps = createHook<SelectProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      unstable_wrap: children => (
+      wrapElement: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
           {isLoading ? (

@@ -91,7 +91,7 @@ function getPropType(prop, shouldEncode) {
 }
 
 function createPropTypeObject(prop) {
-  if (prop.getEscapedName() === 'unstable_wrap') return;
+  if (prop.getEscapedName() === 'wrapElement') return;
   return {
     name: prop.getEscapedName(),
     isRequired: (prop.getFlags() & ts.SymbolFlags.Optional) === 0,

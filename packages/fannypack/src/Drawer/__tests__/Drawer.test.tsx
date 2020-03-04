@@ -10,7 +10,7 @@ describe('props', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -26,7 +26,7 @@ describe('props', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -42,7 +42,7 @@ describe('props', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer} backgroundColor="primary">
+            <Drawer {...drawer} modal={false} backgroundColor="primary">
               This is a side overlay
             </Drawer>
           </div>
@@ -58,7 +58,7 @@ describe('props', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer} hideBackdrop>
+            <Drawer {...drawer} modal={false} hideBackdrop>
               This is a side overlay
             </Drawer>
           </div>
@@ -74,7 +74,7 @@ describe('props', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer} isFullScreen>
+            <Drawer {...drawer} modal={false} isFullScreen>
               This is a side overlay
             </Drawer>
           </div>
@@ -92,7 +92,7 @@ describe('overrides', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer} overrides={{ Drawer: { css: { root: { backgroundColor: 'red' } } } }}>
+            <Drawer {...drawer} modal={false} overrides={{ Drawer: { css: { root: { backgroundColor: 'red' } } } }}>
               This is a side overlay
             </Drawer>
           </div>
@@ -113,7 +113,7 @@ describe('overrides', () => {
             >
               Toggle
             </Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -130,8 +130,8 @@ describe('overrides', () => {
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer
-              modal={false}
               {...drawer}
+              modal={false}
               overrides={{ Drawer: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }}
             >
               This is a side overlay
@@ -151,7 +151,7 @@ describe('theming', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -168,7 +168,7 @@ describe('theming', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -185,7 +185,7 @@ describe('theming', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>
@@ -204,7 +204,7 @@ describe('defaultProps', () => {
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer}>
+            <Drawer {...drawer} modal={false}>
               This is a side overlay
             </Drawer>
           </div>

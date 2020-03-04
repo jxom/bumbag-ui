@@ -352,7 +352,7 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
     const calloutProps = Callout.useProps({
       onClickClose: restProps.hide,
       ...restProps,
-      unstable_wrap: children => (
+      wrapElement: children => (
         // @ts-ignore
         <Overlay placement="bottom-end" {...restProps}>
           {children}

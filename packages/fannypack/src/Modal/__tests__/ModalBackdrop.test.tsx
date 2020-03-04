@@ -8,7 +8,11 @@ describe('props', () => {
   it('should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
-      return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
+      return (
+        <Modal.Backdrop {...modal} modal={false}>
+          Toggle
+        </Modal.Backdrop>
+      );
     }
     const { container } = render(<Component />);
     expect(container.firstChild).toMatchSnapshot();
@@ -21,7 +25,7 @@ describe('composition', () => {
       function Component() {
         const modal = Modal.useState({ baseId: 'test' });
         return (
-          <Modal.Backdrop use={Box} {...modal}>
+          <Modal.Backdrop use={Box} {...modal} modal={false}>
             Toggle
           </Modal.Backdrop>
         );
@@ -46,7 +50,7 @@ describe('composition', () => {
       function Component() {
         const modal = Modal.useState({ baseId: 'test' });
         return (
-          <Modal.Backdrop {...modal}>
+          <Modal.Backdrop {...modal} modal={false}>
             {modalBackdropProps => <Box {...modalBackdropProps}>Hello world</Box>}
           </Modal.Backdrop>
         );
@@ -62,7 +66,11 @@ describe('overrides', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
       return (
-        <Modal.Backdrop overrides={{ Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }} {...modal}>
+        <Modal.Backdrop
+          overrides={{ Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }}
+          {...modal}
+          modal={false}
+        >
           Toggle
         </Modal.Backdrop>
       );
@@ -76,7 +84,11 @@ describe('theming', () => {
   it('Modal.Backdrop.root should render correctly', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
-      return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
+      return (
+        <Modal.Backdrop {...modal} modal={false}>
+          Toggle
+        </Modal.Backdrop>
+      );
     }
     const { container } = render(<Component />, {
       theme: { Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }
@@ -89,7 +101,11 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     function Component() {
       const modal = Modal.useState({ baseId: 'test' });
-      return <Modal.Backdrop {...modal}>Toggle</Modal.Backdrop>;
+      return (
+        <Modal.Backdrop {...modal} modal={false}>
+          Toggle
+        </Modal.Backdrop>
+      );
     }
     const { container } = render(<Component />, {
       theme: { Modal: { Backdrop: { defaultProps: { className: 'red' } } } }
