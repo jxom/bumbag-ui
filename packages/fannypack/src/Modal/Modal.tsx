@@ -1,13 +1,15 @@
+import * as React from 'react';
 import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { AnimateProps, Placement } from '../types';
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { ModalBackdrop } from './ModalBackdrop';
 import * as styles from './styles';
 
 export type LocalModalProps = {
+  hideBackdrop?: boolean;
   placement?: Placement;
 } & AnimateProps;
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
@@ -15,6 +17,7 @@ export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 const useProps = createHook<ModalProps>(
   (props, { themeKey, themeKeyOverride }) => {
     let {
+      hideBackdrop,
       hide,
       hideOnEsc,
       hideOnClickOutside,
@@ -56,7 +59,20 @@ const useProps = createHook<ModalProps>(
       },
       htmlProps
     );
-    htmlProps = Box.useProps({ ...props, ...modalProps });
+    htmlProps = Box.useProps({
+      ...props,
+      ...modalProps,
+      unstable_wrap: children => (
+        <React.Fragment>
+          {!hideBackdrop && (
+            <ModalBackdrop {...omitCSSProps(props)}>
+              <div />
+            </ModalBackdrop>
+          )}
+          {children}
+        </React.Fragment>
+      )
+    });
 
     const className = useClassName({
       style: styles.Modal,

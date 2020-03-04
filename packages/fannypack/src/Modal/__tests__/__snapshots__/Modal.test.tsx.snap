@@ -3,7 +3,7 @@
 exports[`composition hook should return with Modal props 1`] = `
 Object {
   "aria-modal": true,
-  "className": "css-15aokrc css-1pwrqjj css-3ekj6a hidden fp-Box fp-Modal",
+  "className": "css-ptg581 css-1pwrqjj css-3ekj6a hidden fp-Box fp-Modal",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -23,7 +23,7 @@ Object {
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -34,13 +34,14 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -48,19 +49,34 @@ exports[`composition render props should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-2:focus {
+.emotion-5:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-1 emotion-2 emotion-5 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -90,9 +106,10 @@ exports[`composition use should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -100,8 +117,18 @@ exports[`composition use should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-7:focus {
+.emotion-11:focus {
   outline: none;
+}
+
+.emotion-7 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 .emotion-0 {
@@ -181,24 +208,29 @@ exports[`composition use should render correctly 1`] = `
       >
         Toggle
       </button>
+      <blockquote
+        aria-label="test"
+        class="emotion-4 emotion-1 emotion-2 emotion-7 hidden fp-Box fp-ModalBackdrop fp-Blockquote"
+        hidden=""
+        role="presentation"
+        style="display: none;"
+      >
+        <div />
+      </blockquote>
+      <blockquote
+        aria-label="test"
+        aria-modal="true"
+        class="emotion-4 emotion-1 emotion-2 emotion-11 hidden fp-Box fp-Modal fp-Blockquote"
+        data-dialog="true"
+        hidden=""
+        id="test"
+        role="dialog"
+        style="display: none;"
+        tabindex="-1"
+      >
+        Hello world
+      </blockquote>
     </div>
-  </div>
-  <div
-    class="__reakit-portal"
-  >
-    <blockquote
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-4 emotion-1 emotion-2 emotion-7 hidden fp-Box fp-Modal fp-Blockquote"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
-    </blockquote>
   </div>
 </body>
 `;
@@ -219,9 +251,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -229,19 +262,35 @@ exports[`defaultProps should render correctly for className 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden test fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden test fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden test fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -272,8 +321,19 @@ exports[`overrides Modal.bottom.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -281,23 +341,29 @@ exports[`overrides Modal.bottom.root should render correctly 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -328,8 +394,19 @@ exports[`overrides Modal.bottomEnd.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -337,23 +414,29 @@ exports[`overrides Modal.bottomEnd.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -384,8 +467,19 @@ exports[`overrides Modal.bottomStart.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -393,23 +487,29 @@ exports[`overrides Modal.bottomStart.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -440,8 +540,19 @@ exports[`overrides Modal.center.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -449,23 +560,29 @@ exports[`overrides Modal.center.root should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -496,8 +613,19 @@ exports[`overrides Modal.left.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -505,23 +633,29 @@ exports[`overrides Modal.left.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -552,8 +686,19 @@ exports[`overrides Modal.right.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   right: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -561,23 +706,29 @@ exports[`overrides Modal.right.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -608,8 +759,19 @@ exports[`overrides Modal.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -617,23 +779,29 @@ exports[`overrides Modal.root should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -664,8 +832,19 @@ exports[`overrides Modal.top.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -673,23 +852,29 @@ exports[`overrides Modal.top.root should render correctly 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -720,8 +905,19 @@ exports[`overrides Modal.topEnd.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -729,23 +925,29 @@ exports[`overrides Modal.topEnd.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -776,8 +978,19 @@ exports[`overrides Modal.topStart.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -785,23 +998,29 @@ exports[`overrides Modal.topStart.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -832,8 +1051,19 @@ exports[`props placement should render correctly for bottom placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -841,19 +1071,25 @@ exports[`props placement should render correctly for bottom placement 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -884,8 +1120,19 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -893,19 +1140,25 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -936,8 +1189,19 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -945,19 +1209,25 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -987,9 +1257,10 @@ exports[`props placement should render correctly for center placement 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -997,19 +1268,35 @@ exports[`props placement should render correctly for center placement 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1040,8 +1327,19 @@ exports[`props placement should render correctly for left placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -1049,19 +1347,25 @@ exports[`props placement should render correctly for left placement 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1091,9 +1395,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1117,25 +1422,63 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1166,8 +1509,41 @@ exports[`props placement should render correctly for placement bottom and slide 
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1191,25 +1567,31 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1239,9 +1621,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1265,25 +1648,63 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1313,9 +1734,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1339,25 +1761,63 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1387,9 +1847,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1413,25 +1874,63 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1461,9 +1960,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1487,25 +1987,63 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1535,9 +2073,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1561,25 +2100,63 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1610,8 +2187,41 @@ exports[`props placement should render correctly for placement bottom-end and sl
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1635,25 +2245,31 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1683,9 +2299,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1709,25 +2326,63 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1757,9 +2412,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1783,25 +2439,63 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1831,9 +2525,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1857,25 +2552,63 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1905,9 +2638,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -1931,25 +2665,63 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1979,9 +2751,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2005,25 +2778,63 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2054,8 +2865,41 @@ exports[`props placement should render correctly for placement bottom-start and 
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2079,25 +2923,31 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2127,9 +2977,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2153,25 +3004,63 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2201,9 +3090,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2227,25 +3117,63 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2275,9 +3203,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2301,25 +3230,63 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2349,9 +3316,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2375,25 +3343,63 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2423,9 +3429,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2449,25 +3456,63 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2498,8 +3543,41 @@ exports[`props placement should render correctly for placement center and slide 
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2523,25 +3601,31 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2571,9 +3655,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2597,25 +3682,63 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2645,9 +3768,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2671,25 +3795,63 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2719,9 +3881,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2745,25 +3908,63 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2793,9 +3994,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2819,25 +4021,63 @@ exports[`props placement should render correctly for placement center and slide 
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2867,9 +4107,10 @@ exports[`props placement should render correctly for placement left and slide bo
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2893,25 +4134,63 @@ exports[`props placement should render correctly for placement left and slide bo
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2942,8 +4221,41 @@ exports[`props placement should render correctly for placement left and slide ce
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -2967,25 +4279,31 @@ exports[`props placement should render correctly for placement left and slide ce
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3015,9 +4333,10 @@ exports[`props placement should render correctly for placement left and slide le
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3041,25 +4360,63 @@ exports[`props placement should render correctly for placement left and slide le
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3089,9 +4446,10 @@ exports[`props placement should render correctly for placement left and slide ri
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3115,25 +4473,63 @@ exports[`props placement should render correctly for placement left and slide ri
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3163,9 +4559,10 @@ exports[`props placement should render correctly for placement left and slide to
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3189,25 +4586,63 @@ exports[`props placement should render correctly for placement left and slide to
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3237,9 +4672,10 @@ exports[`props placement should render correctly for placement left and slide tr
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3263,25 +4699,63 @@ exports[`props placement should render correctly for placement left and slide tr
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3311,9 +4785,10 @@ exports[`props placement should render correctly for placement right and slide b
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3337,25 +4812,63 @@ exports[`props placement should render correctly for placement right and slide b
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3386,8 +4899,41 @@ exports[`props placement should render correctly for placement right and slide c
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3411,25 +4957,31 @@ exports[`props placement should render correctly for placement right and slide c
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3459,9 +5011,10 @@ exports[`props placement should render correctly for placement right and slide l
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3485,25 +5038,63 @@ exports[`props placement should render correctly for placement right and slide l
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3533,9 +5124,10 @@ exports[`props placement should render correctly for placement right and slide r
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3559,25 +5151,63 @@ exports[`props placement should render correctly for placement right and slide r
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3607,9 +5237,10 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3633,25 +5264,63 @@ exports[`props placement should render correctly for placement right and slide t
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3681,9 +5350,10 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3707,25 +5377,63 @@ exports[`props placement should render correctly for placement right and slide t
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3755,9 +5463,10 @@ exports[`props placement should render correctly for placement top and slide bot
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3781,25 +5490,63 @@ exports[`props placement should render correctly for placement top and slide bot
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3830,8 +5577,41 @@ exports[`props placement should render correctly for placement top and slide cen
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3855,25 +5635,31 @@ exports[`props placement should render correctly for placement top and slide cen
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3903,9 +5689,10 @@ exports[`props placement should render correctly for placement top and slide lef
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -3929,25 +5716,63 @@ exports[`props placement should render correctly for placement top and slide lef
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3977,9 +5802,10 @@ exports[`props placement should render correctly for placement top and slide rig
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4003,25 +5829,63 @@ exports[`props placement should render correctly for placement top and slide rig
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4051,9 +5915,10 @@ exports[`props placement should render correctly for placement top and slide top
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4077,25 +5942,63 @@ exports[`props placement should render correctly for placement top and slide top
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4125,9 +6028,10 @@ exports[`props placement should render correctly for placement top and slide tru
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4151,25 +6055,63 @@ exports[`props placement should render correctly for placement top and slide tru
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4199,9 +6141,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4225,25 +6168,63 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4274,8 +6255,41 @@ exports[`props placement should render correctly for placement top-end and slide
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4299,25 +6313,31 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4347,9 +6367,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4373,25 +6394,63 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4421,9 +6480,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4447,25 +6507,63 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4495,9 +6593,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4521,25 +6620,63 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4569,9 +6706,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4595,25 +6733,63 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4643,9 +6819,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4669,25 +6846,63 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4718,8 +6933,41 @@ exports[`props placement should render correctly for placement top-start and sli
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4743,25 +6991,31 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4791,9 +7045,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4817,25 +7072,63 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4865,9 +7158,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4891,25 +7185,63 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4939,9 +7271,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -4965,25 +7298,63 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5013,9 +7384,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5039,25 +7411,63 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5088,8 +7498,19 @@ exports[`props placement should render correctly for right placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   right: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -5097,19 +7518,25 @@ exports[`props placement should render correctly for right placement 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5140,8 +7567,19 @@ exports[`props placement should render correctly for top placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -5149,19 +7587,25 @@ exports[`props placement should render correctly for top placement 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5192,8 +7636,19 @@ exports[`props placement should render correctly for top-end placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -5201,19 +7656,25 @@ exports[`props placement should render correctly for top-end placement 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5244,8 +7705,19 @@ exports[`props placement should render correctly for top-start placement 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -5253,19 +7725,25 @@ exports[`props placement should render correctly for top-start placement 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5295,9 +7773,10 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-3 {
+.emotion-6 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5305,8 +7784,18 @@ exports[`props should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-3:focus {
+.emotion-6:focus {
   outline: none;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <body>
@@ -5321,23 +7810,28 @@ exports[`props should render correctly 1`] = `
       >
         Toggle
       </button>
-    </div>
-  </div>
-  <div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
+      <div
+        aria-label="test"
+        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        hidden=""
+        role="presentation"
+        style="display: none;"
+      >
+        <div />
+      </div>
+      <div
+        aria-label="test"
+        aria-modal="true"
+        class="emotion-6 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+        data-dialog="true"
+        hidden=""
+        id="test"
+        role="dialog"
+        style="display: none;"
+        tabindex="-1"
+      >
+        Hello world
+      </div>
     </div>
   </div>
 </body>
@@ -5359,9 +7853,10 @@ exports[`props should render correctly for expand bottom 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5385,25 +7880,63 @@ exports[`props should render correctly for expand bottom 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5433,9 +7966,10 @@ exports[`props should render correctly for expand center 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5459,25 +7993,63 @@ exports[`props should render correctly for expand center 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5507,9 +8079,10 @@ exports[`props should render correctly for expand left 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5533,25 +8106,63 @@ exports[`props should render correctly for expand left 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5581,9 +8192,10 @@ exports[`props should render correctly for expand right 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5607,25 +8219,63 @@ exports[`props should render correctly for expand right 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5655,9 +8305,10 @@ exports[`props should render correctly for expand top 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5681,25 +8332,63 @@ exports[`props should render correctly for expand top 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5729,9 +8418,10 @@ exports[`props should render correctly for expand true 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5752,25 +8442,60 @@ exports[`props should render correctly for expand true 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
   transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5800,9 +8525,10 @@ exports[`props should render correctly for slide bottom 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5826,25 +8552,63 @@ exports[`props should render correctly for slide bottom 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5875,8 +8639,41 @@ exports[`props should render correctly for slide center 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5900,25 +8697,31 @@ exports[`props should render correctly for slide center 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5948,9 +8751,10 @@ exports[`props should render correctly for slide left 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -5974,25 +8778,63 @@ exports[`props should render correctly for slide left 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6022,9 +8864,10 @@ exports[`props should render correctly for slide right 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6048,25 +8891,63 @@ exports[`props should render correctly for slide right 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
   transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6096,9 +8977,10 @@ exports[`props should render correctly for slide top 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6122,25 +9004,63 @@ exports[`props should render correctly for slide top 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6170,9 +9090,10 @@ exports[`props should render correctly for slide true 1`] = `
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6196,25 +9117,63 @@ exports[`props should render correctly for slide true 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-0.hidden {
+.emotion-3.hidden {
   -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
   transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
+.emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-0.hidden {
+  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6244,9 +9203,10 @@ exports[`props should render correctly with non-modal modal 1`] = `
   outline: none;
 }
 
-.emotion-3 {
+.emotion-6 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6254,8 +9214,18 @@ exports[`props should render correctly with non-modal modal 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-3:focus {
+.emotion-6:focus {
   outline: none;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <body>
@@ -6272,7 +9242,16 @@ exports[`props should render correctly with non-modal modal 1`] = `
       </button>
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        hidden=""
+        role="presentation"
+        style="display: none;"
+      >
+        <div />
+      </div>
+      <div
+        aria-label="test"
+        class="emotion-6 emotion-1 emotion-2 hidden fp-Box fp-Modal"
         data-dialog="true"
         hidden=""
         id="test"
@@ -6304,8 +9283,19 @@ exports[`theming Modal.bottom.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -6313,23 +9303,29 @@ exports[`theming Modal.bottom.root should render correctly 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6360,8 +9356,19 @@ exports[`theming Modal.bottomEnd.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -6369,23 +9376,29 @@ exports[`theming Modal.bottomEnd.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6416,8 +9429,19 @@ exports[`theming Modal.bottomStart.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   bottom: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -6425,23 +9449,29 @@ exports[`theming Modal.bottomStart.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6472,8 +9502,19 @@ exports[`theming Modal.center.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6481,23 +9522,29 @@ exports[`theming Modal.center.root should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6528,8 +9575,19 @@ exports[`theming Modal.left.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -6537,23 +9595,29 @@ exports[`theming Modal.left.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6584,8 +9648,19 @@ exports[`theming Modal.right.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   right: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -6593,23 +9668,29 @@ exports[`theming Modal.right.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6640,8 +9721,19 @@ exports[`theming Modal.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate3d(-50%,-50%,0px);
@@ -6649,23 +9741,29 @@ exports[`theming Modal.root should render correctly 1`] = `
   transform: translate3d(-50%,-50%,0px);
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6696,8 +9794,19 @@ exports[`theming Modal.top.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 50%;
   -webkit-transform: translate3d(-50%,0,0px);
@@ -6705,23 +9814,29 @@ exports[`theming Modal.top.root should render correctly 1`] = `
   transform: translate3d(-50%,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6752,8 +9867,19 @@ exports[`theming Modal.topEnd.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   right: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -6761,23 +9887,29 @@ exports[`theming Modal.topEnd.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6808,8 +9940,19 @@ exports[`theming Modal.topStart.root should render correctly 1`] = `
 }
 
 .emotion-0 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-3 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 1.25em;
   left: 1.25em;
   -webkit-transform: translate3d(0,0,0px);
@@ -6817,23 +9960,29 @@ exports[`theming Modal.topStart.root should render correctly 1`] = `
   transform: translate3d(0,0,0px);
 }
 
-.emotion-0 {
+.emotion-3 {
   background-color: red;
 }
 
-.emotion-0:focus {
+.emotion-3:focus {
   outline: none;
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
+    <div
+      aria-label="test"
+      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+      hidden=""
+      role="presentation"
+      style="display: none;"
+    >
+      <div />
+    </div>
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"

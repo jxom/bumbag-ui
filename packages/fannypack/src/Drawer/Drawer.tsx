@@ -1,45 +1,30 @@
-import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook, omitCSSProps } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { Modal, ModalProps } from '../Modal';
 
-import { DrawerBackdrop } from './DrawerBackdrop';
-import { DrawerContent, DrawerContentProps } from './DrawerContent';
 import * as styles from './styles';
 
 export type LocalDrawerProps = {
-  hasBackdrop?: boolean;
+  isFullScreen?: boolean;
 };
-export type DrawerProps = DrawerContentProps & LocalDrawerProps;
+export type DrawerProps = ModalProps & LocalDrawerProps;
 
 const useProps = createHook<DrawerProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { hasBackdrop, ...restProps } = props;
-    const boxProps = DrawerContent.useProps({
-      ...restProps,
-      unstable_wrap: children => (
-        <React.Fragment>
-          {hasBackdrop && (
-            <DrawerBackdrop {...omitCSSProps(restProps)}>
-              <div />
-            </DrawerBackdrop>
-          )}
-          {children}
-        </React.Fragment>
-      )
-    });
+    const modalProps = Modal.useProps({ ...props }, { themeKey: 'Drawer' });
 
     const className = useClassName({
       style: styles.Drawer,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: modalProps.className
     });
 
-    return { ...boxProps, className };
+    return { ...modalProps, className };
   },
-  { themeKey: 'Drawer.Wrapper' }
+  { defaultProps: { duration: '0.2s', placement: 'left' }, themeKey: 'Drawer' }
 );
 
 export const Drawer = createComponent<DrawerProps>(
@@ -51,6 +36,6 @@ export const Drawer = createComponent<DrawerProps>(
     attach: {
       useProps
     },
-    themeKey: 'Drawer.Wrapper'
+    themeKey: 'Drawer'
   }
 );

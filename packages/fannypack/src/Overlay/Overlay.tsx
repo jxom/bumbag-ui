@@ -1,5 +1,4 @@
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Modal, ModalProps } from '../Modal';
@@ -25,6 +24,7 @@ const useProps = createHook<OverlayProps>(
   },
   {
     defaultProps: {
+      hideBackdrop: true,
       modal: false,
       placement: 'center'
     },

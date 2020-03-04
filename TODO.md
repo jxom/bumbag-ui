@@ -1,4 +1,4 @@
 - Add `overrides` to internal components
 - Add "Composition" section in docs
-- Refactor `DropdownMenu` & `Popover` APIs
+- Refactor components which use `useState` to use context
 - Add descriptions to props for docs

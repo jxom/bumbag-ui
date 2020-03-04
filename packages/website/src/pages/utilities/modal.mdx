@@ -28,7 +28,7 @@ function Example() {
 
 ### Backdrop
 
-You can use the `Modal.Backdrop` component to render a backdrop for the dialog. If the modal's `onClickOutside` prop is set to true, the backdrop will act as a button.
+You can hide the backdrop with the `hideBackdrop` prop.
 
 ```function-live
 function Example() {
@@ -37,8 +37,7 @@ function Example() {
   return (
     <div>
       <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
-      <Modal {...modal}>Hello world</Modal>
+      <Modal {...modal} hideBackdrop>Hello world</Modal>
     </div>
   )
 }
@@ -57,7 +56,6 @@ function Example() {
   return (
     <div>
       <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop {...modal} />
       <Modal {...modal} backgroundColor="white" border="1px solid black" padding="major-2">
         Hello world
         <Modal.Disclosure use={Button} {...modal}>Close modal</Modal.Disclosure>
@@ -141,7 +139,6 @@ function Example() {
   return (
     <div>
       <Modal.Disclosure {...modal}>Open modal</Modal.Disclosure>
-      <Modal.Backdrop fade {...modal} />
       <Modal {...modal} fade>Hello world</Modal>
     </div>
   )
@@ -233,6 +230,10 @@ function Example() {
 ### Modal Props
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">hideBackdrop</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">placement</Code>**  
 
@@ -475,7 +476,7 @@ ID that will serve as a base for all the items IDs.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 70 more ...;
+  ... 71 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -599,7 +600,7 @@ Toggles the `visible` state
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 70 more ...;
+  ... 71 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -725,7 +726,7 @@ It's called after given milliseconds if `animated` is a number.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 70 more ...;
+  ... 71 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

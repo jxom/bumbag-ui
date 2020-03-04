@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, DialogOptions as ReakitDialogOptions } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
+import { useClassName, createComponent, createElement, createHook, omitCSSProps, useUniqueId } from '../utils';
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
@@ -375,8 +375,7 @@ const useDialogModalProps = createHook<DialogModalProps>(
         ...restProps.actionButtonsProps
       },
       unstable_wrap: children => (
-        // @ts-ignore
-        <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...restProps}>
+        <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
           {children}
         </Modal>
       )

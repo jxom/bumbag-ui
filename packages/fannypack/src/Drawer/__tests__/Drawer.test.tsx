@@ -52,13 +52,13 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with a backdrop', () => {
+  it('should render correctly without backdrop', () => {
     const { container } = render(
       <Drawer.State baseId="test">
         {drawer => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer modal={false} {...drawer} hasBackdrop>
+            <Drawer modal={false} {...drawer} hideBackdrop>
               This is a side overlay
             </Drawer>
           </div>

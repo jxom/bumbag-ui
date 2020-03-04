@@ -16,9 +16,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -26,19 +27,29 @@ exports[`defaultProps should render correctly for className 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <div>
@@ -52,7 +63,13 @@ exports[`defaultProps should render correctly for className 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 test fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 test fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 test fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -79,9 +96,10 @@ exports[`overrides Drawer.Backdrop.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -89,19 +107,29 @@ exports[`overrides Drawer.Backdrop.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <div>
@@ -115,7 +143,13 @@ exports[`overrides Drawer.Backdrop.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -142,9 +176,10 @@ exports[`overrides Drawer.Disclosure.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -152,19 +187,29 @@ exports[`overrides Drawer.Disclosure.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-6:focus {
+.emotion-8:focus {
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-5.emotion-5 {
+.emotion-7.emotion-7 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-4 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 .emotion-0 {
@@ -182,7 +227,13 @@ exports[`overrides Drawer.Disclosure.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-1 emotion-5 emotion-6 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-7 emotion-8 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -209,9 +260,20 @@ exports[`overrides Drawer.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -219,26 +281,26 @@ exports[`overrides Drawer.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   background-color: red;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
 }
 
-.emotion-4 {
+.emotion-6 {
   background-color: red;
 }
 
@@ -253,7 +315,13 @@ exports[`overrides Drawer.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -280,9 +348,10 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -290,19 +359,29 @@ exports[`props should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <div>
@@ -316,7 +395,13 @@ exports[`props should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -343,9 +428,10 @@ exports[`props should render correctly for an invisible overlay 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -353,19 +439,29 @@ exports[`props should render correctly for an invisible overlay 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <div>
@@ -379,7 +475,15 @@ exports[`props should render correctly for an invisible overlay 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+    hidden=""
+    role="presentation"
+    style="display: none;"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
     id="test"
@@ -408,9 +512,10 @@ exports[`props should render correctly for full screen 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -418,15 +523,25 @@ exports[`props should render correctly for full screen 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
@@ -445,7 +560,13 @@ exports[`props should render correctly for full screen 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -472,9 +593,10 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -482,22 +604,32 @@ exports[`props should render correctly with CSS props 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
 }
 
-.emotion-7 {
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-9 {
   background-color: #574feb !important;
 }
 
@@ -512,7 +644,15 @@ exports[`props should render correctly with CSS props 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-7 hidden fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+    hidden=""
+    role="presentation"
+    style="display: none;"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-9 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
     id="test"
@@ -525,7 +665,7 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`props should render correctly with a backdrop 1`] = `
+exports[`props should render correctly without backdrop 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -541,9 +681,10 @@ exports[`props should render correctly with a backdrop 1`] = `
   outline: none;
 }
 
-.emotion-9 {
+.emotion-4 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -551,29 +692,19 @@ exports[`props should render correctly with a backdrop 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-9:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-8 {
+.emotion-3 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-8.emotion-8 {
+.emotion-3.emotion-3 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 <div>
@@ -587,15 +718,7 @@ exports[`props should render correctly with a backdrop 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop fp-DrawerBackdrop"
-    hidden=""
-    role="presentation"
-    style="display: none;"
-  >
-    <div />
-  </div>
-  <div
-    class="emotion-0 emotion-8 emotion-9 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
     id="test"
@@ -624,9 +747,10 @@ exports[`theming Drawer.Backdrop.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -634,19 +758,29 @@ exports[`theming Drawer.Backdrop.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 <div>
@@ -660,7 +794,13 @@ exports[`theming Drawer.Backdrop.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -687,9 +827,10 @@ exports[`theming Drawer.Disclosure.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -697,19 +838,29 @@ exports[`theming Drawer.Disclosure.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-6:focus {
+.emotion-8:focus {
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-5.emotion-5 {
+.emotion-7.emotion-7 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
+}
+
+.emotion-4 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
 }
 
 .emotion-0 {
@@ -727,7 +878,13 @@ exports[`theming Drawer.Disclosure.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-1 emotion-5 emotion-6 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-4 emotion-2 emotion-3 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-7 emotion-8 emotion-2 emotion-3 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"
@@ -754,9 +911,20 @@ exports[`theming Drawer.css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-5 {
+.emotion-3 {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19900409;
+}
+
+.emotion-7 {
   position: fixed;
   z-index: 19900410;
+  min-width: 320px;
   top: 50%;
   left: 1.25em;
   -webkit-transform: translate3d(0px,-50%,0px);
@@ -764,26 +932,26 @@ exports[`theming Drawer.css.root should render correctly 1`] = `
   transform: translate3d(0px,-50%,0px);
 }
 
-.emotion-5:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   background-color: red;
 }
 
-.emotion-4 {
+.emotion-6 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
 }
 
-.emotion-4 {
+.emotion-6 {
   background-color: red;
 }
 
@@ -798,7 +966,13 @@ exports[`theming Drawer.css.root should render correctly 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-0 emotion-4 emotion-5 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal fp-DrawerWrapper"
+    class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+    role="presentation"
+  >
+    <div />
+  </div>
+  <div
+    class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     id="test"
     role="dialog"

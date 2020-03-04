@@ -2,12 +2,6 @@ import { css, cssClass } from '../styled';
 import { altitude, theme } from '../utils';
 
 export const Drawer = styleProps => cssClass`
-  & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
-  }
-`;
-
-export const DrawerContent = styleProps => cssClass`
   && {
     position: fixed;
     background-color: white;
@@ -45,12 +39,6 @@ export const DrawerContent = styleProps => cssClass`
 
   ${altitude('300')(styleProps)};
 
-  & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
-  }
-`;
-
-export const DrawerBackdrop = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
