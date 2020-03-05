@@ -1,13 +1,15 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   DialogDisclosureProps as ReakitDialogDisclosureProps,
   useDialogDisclosure as useReakitDialogDisclosure
 } from 'reakit';
-import _omit from 'lodash/omit';
+import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { ModalContext } from './ModalState';
 import * as styles from './styles';
 
 export type LocalModalDisclosureProps = {};
@@ -16,7 +18,11 @@ export type ModalDisclosureProps = BoxProps & ReakitDialogDisclosureProps & Loca
 const useProps = createHook<ModalDisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
     let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
-    const modalDisclosureProps = useReakitDialogDisclosure({ disabled, focusable, visible, toggle, baseId }, htmlProps);
+    const modalContext = React.useContext(ModalContext);
+    const modalDisclosureProps = useReakitDialogDisclosure(
+      _merge({ disabled, focusable, visible, toggle, baseId }, modalContext.modal),
+      htmlProps
+    );
     htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
 
     const className = useClassName({
@@ -38,8 +44,8 @@ export const ModalDisclosure = createComponent<ModalDisclosureProps>(
     return createElement({
       children: props.children,
       component: ReakitBox,
-      use: props.use,
-      htmlProps: modalDisclosureProps
+      htmlProps: modalDisclosureProps,
+      use: props.use
     });
   },
   {

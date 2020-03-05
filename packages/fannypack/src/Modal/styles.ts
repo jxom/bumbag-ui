@@ -6,12 +6,23 @@ export const Modal = styleProps => cssClass`
   z-index: 19900410;
   min-width: 320px;
 
+  @media screen and (max-width: 320px) {
+    min-width: unset;
+    width: 100%;
+  }
+
   ${getPlacementAttributes(styleProps)}
 
   &:focus {
     outline: none;
   }
 
+  & {
+    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+  }
+`;
+
+export const ModalContainer = styleProps => cssClass`
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }
@@ -24,7 +35,7 @@ export const ModalDisclosure = styleProps => cssClass`
 `;
 
 export const ModalBackdrop = styleProps => cssClass`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, ${styleProps.hideBackdrop ? '0' : '0.5'});
   position: fixed;
   top: 0;
   right: 0;

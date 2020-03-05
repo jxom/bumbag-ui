@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Box as ReakitBox, DialogProps as ReakitDialogProps, useDialog as useReakitDialog } from 'reakit';
+import _merge from 'lodash/merge';
 
 import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement, createHook, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { ModalBackdrop } from './ModalBackdrop';
+import { ModalContext } from './ModalState';
 import * as styles from './styles';
 
 export type LocalModalProps = {
@@ -39,27 +41,31 @@ const useProps = createHook<ModalProps>(
       unstable_setIsMounted,
       ...htmlProps
     } = props;
+    const modalContext = React.useContext(ModalContext);
     const modalProps = useReakitDialog(
-      {
-        hide,
-        hideOnEsc,
-        hideOnClickOutside,
-        modal,
-        preventBodyScroll,
-        setModal,
-        visible,
-        unstable_animating,
-        unstable_animated,
-        baseId,
-        unstable_initialFocusRef,
-        unstable_finalFocusRef,
-        unstable_modal,
-        unstable_orphan,
-        unstable_autoFocusOnHide,
-        unstable_autoFocusOnShow,
-        unstable_stopAnimation,
-        unstable_setIsMounted
-      },
+      _merge(
+        {
+          hide,
+          hideOnEsc,
+          hideOnClickOutside,
+          modal,
+          preventBodyScroll,
+          setModal,
+          visible,
+          unstable_animating,
+          unstable_animated,
+          baseId,
+          unstable_initialFocusRef,
+          unstable_finalFocusRef,
+          unstable_modal,
+          unstable_orphan,
+          unstable_autoFocusOnHide,
+          unstable_autoFocusOnShow,
+          unstable_stopAnimation,
+          unstable_setIsMounted
+        },
+        modalContext.modal
+      ),
       htmlProps
     );
     htmlProps = Box.useProps({
@@ -80,11 +86,9 @@ const useProps = createHook<ModalProps>(
       className,
       children: (
         <React.Fragment>
-          {!hideBackdrop && (
-            <ModalBackdrop {...omitCSSProps(props)}>
-              <div />
-            </ModalBackdrop>
-          )}
+          <ModalBackdrop {...omitCSSProps(props)}>
+            <div />
+          </ModalBackdrop>
           {children}
         </React.Fragment>
       )

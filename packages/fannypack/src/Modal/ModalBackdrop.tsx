@@ -1,12 +1,15 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   DialogBackdropProps as ReakitDialogBackdropProps,
   useDialogBackdrop as useReakitDialogBackdrop
 } from 'reakit';
+import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { ModalContext } from './ModalState';
 import * as styles from './styles';
 
 export type LocalModalBackdropProps = {};
@@ -24,16 +27,20 @@ const useProps = createHook<ModalBackdropProps>(
       unstable_setIsMounted,
       ...htmlProps
     } = props;
+    const modalContext = React.useContext(ModalContext);
     const modalBackdropProps = useReakitDialogBackdrop(
-      {
-        visible,
-        baseId,
-        modal,
-        unstable_animating,
-        unstable_animated,
-        unstable_stopAnimation,
-        unstable_setIsMounted
-      },
+      _merge(
+        {
+          visible,
+          baseId,
+          modal,
+          unstable_animating,
+          unstable_animated,
+          unstable_stopAnimation,
+          unstable_setIsMounted
+        },
+        modalContext.modal
+      ),
       htmlProps
     );
     htmlProps = Box.useProps({ ...htmlProps, ...modalBackdropProps });
