@@ -196,20 +196,26 @@ It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
-
-Changes the `visible` state to `false`
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
-  - Non-modal: `preventBodyScroll` doesn't work and focus is free.
-  - Modal: `preventBodyScroll` is automatically enabled, focus is
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code>
+
+Sets `modal`.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
@@ -237,13 +243,6 @@ When not set, the first tabbable element within the dialog will be used.
 
 The element that will be focused when the dialog hides.
 When not set, the disclosure component will be used.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_portal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Whether or not the dialog should be rendered within `Portal`.
-It's `true` by default if `modal` is `true`.
 
 <Box marginBottom="major-4" />
 
@@ -739,8 +738,8 @@ The current focused element ID.
 
 If enabled:
 
-  - Jumps to the first item when moving next from the last item.
-  - Jumps to the last item when moving previous from the first item.
+   - Jumps to the first item when moving next from the last item.
+   - Jumps to the last item when moving previous from the first item.
 
 <Box marginBottom="major-4" />
 
@@ -762,6 +761,17 @@ If `true`, `animating` will be set to `true` when `visible` changes.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If it's a number, `stopAnimation` will be called automatically after
 given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
 
 <Box marginBottom="major-4" />
 
@@ -802,33 +812,21 @@ element.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_shift</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code marginRight="major-1">unstable_offset</Code>** <Code fontSize="150" palette="primary">[Key, Key]</Code>
 
-Shift popover on the start or end of its reference element.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_inner</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Position the popover inside the reference element.
+Offset between the reference and the popover: [main axis, alt axis]. Should not be combined with `gutter`.
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">gutter</Code>** <Code fontSize="150" palette="primary">number</Code>
 
-Offset between the reference and the popover.
+Offset between the reference and the popover on the main axis. Should not be combined with `unstable_offset`.
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">unstable_preventOverflow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Prevents popover from being positioned outside the boundary.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_boundariesElement</Code>** <Code fontSize="150" palette="primary">&#34;scrollParent&#34; | &#34;viewport&#34; | &#34;window&#34;</Code>
-
-Boundaries element used by `preventOverflow`.
 
 <Box marginBottom="major-4" />
 

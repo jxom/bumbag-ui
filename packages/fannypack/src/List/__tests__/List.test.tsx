@@ -55,7 +55,7 @@ describe('props', () => {
 
   it('should render correctly as a horizontal list', () => {
     const { container } = render(
-      <List isHorizontal>
+      <List orientation="horizontal">
         <List.Item>Item One</List.Item>
         <List.Item>Item Two</List.Item>
         <List.Item>Item Three</List.Item>
@@ -131,7 +131,7 @@ describe('theming', () => {
 
   it('List.ordered should render correctly', () => {
     const { container } = render(
-      <List isHorizontal>
+      <List orientation="horizontal">
         <List.Item>Item One</List.Item>
         <List.Item>Item Two</List.Item>
         <List.Item>Item Three</List.Item>

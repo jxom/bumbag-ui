@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Alert, LayoutSet } from '../../';
+import { Alert, Stack } from '../../';
 
 export default { title: 'Alert' };
 
@@ -10,7 +10,7 @@ export const _default = () => (
 );
 
 export const accents = () => (
-  <LayoutSet>
+  <Stack>
     <Alert accent>Fannypack is a React UI Kit.</Alert>
     <Alert accent="top" marginTop="major-2">
       Fannypack is a React UI Kit.
@@ -18,20 +18,20 @@ export const accents = () => (
     <Alert accent="bottom" marginTop="major-2">
       Fannypack is a React UI Kit.
     </Alert>
-  </LayoutSet>
+  </Stack>
 );
 
 export const titles = () => (
-  <LayoutSet>
+  <Stack>
     <Alert title="Did you know?">Fannypack is a React UI Kit.</Alert>
     <Alert title="Did you know?" isInline marginTop="major-2">
       Fannypack is a React UI Kit.
     </Alert>
-  </LayoutSet>
+  </Stack>
 );
 
 export const types = () => (
-  <LayoutSet>
+  <Stack>
     <Alert title="Did you know?" type="info">
       Fannypack is a React UI Kit.
     </Alert>
@@ -44,11 +44,11 @@ export const types = () => (
     <Alert title="An error occurred" type="danger" marginTop="major-2">
       Unable to apply your action.
     </Alert>
-  </LayoutSet>
+  </Stack>
 );
 
 export const fill = () => (
-  <LayoutSet>
+  <Stack>
     <Alert isFilled title="Did you know?" type="info">
       Fannypack is a React UI Kit.
     </Alert>
@@ -61,11 +61,11 @@ export const fill = () => (
     <Alert isFilled title="An error occurred" type="danger" marginTop="major-2">
       Unable to apply your action.
     </Alert>
-  </LayoutSet>
+  </Stack>
 );
 
 export const icons = () => (
-  <LayoutSet>
+  <Stack>
     <Alert hasIcon title="Did you know?" type="info">
       Fannypack is a React UI Kit.
     </Alert>
@@ -78,5 +78,5 @@ export const icons = () => (
     <Alert hasIcon title="An error occurred" type="danger" marginTop="major-2">
       Unable to apply your action.
     </Alert>
-  </LayoutSet>
+  </Stack>
 );

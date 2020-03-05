@@ -65,7 +65,7 @@ describe('props', () => {
     const { container } = render(
       <RadioGroupField
         label="Test label"
-        isHorizontal
+        orientation="horizontal"
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
       />

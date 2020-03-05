@@ -6,7 +6,7 @@ export default { title: 'Spinner' };
 export const _default = () => <Spinner />;
 
 export const sizes = () => (
-  <Set isVertical>
+  <Set orientation="vertical">
     <Spinner size="small" />
     <Spinner />
     <Spinner size="medium" />
@@ -16,7 +16,7 @@ export const sizes = () => (
 );
 
 export const colors = () => (
-  <Set isVertical>
+  <Set orientation="vertical">
     <Spinner color="success" />
     <Spinner color="danger" />
     <Spinner color="warning" />
@@ -24,7 +24,7 @@ export const colors = () => (
 );
 
 export const duration = () => (
-  <Set isVertical>
+  <Set orientation="vertical">
     <Spinner duration="0.2s" />
     <Spinner duration="0.6s" />
     <Spinner duration="1.2s" />
@@ -32,7 +32,7 @@ export const duration = () => (
 );
 
 export const track = () => (
-  <Set isVertical>
+  <Set orientation="vertical">
     <Spinner hasTrack size="large" />
     <Spinner hasTrack trackColor="red" size="large" />
   </Set>

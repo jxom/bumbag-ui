@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Code, LayoutSet, Button, Set } from '../../';
+import { Box, Code, Stack, Button, Set } from '../../';
 
 export default { title: 'Code' };
 

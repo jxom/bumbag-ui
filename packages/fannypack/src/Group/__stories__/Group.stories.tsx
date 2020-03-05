@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Group, LayoutSet, Button, Set } from '../../';
+import { Box, Group, Stack, Button, Set } from '../../';
 
 export default { title: 'Group' };
 
@@ -14,7 +14,7 @@ export const _default = () => (
 );
 
 export const verticalGroups = () => (
-  <Group isVertical>
+  <Group orientation="vertical">
     <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
       Hello
     </Box>

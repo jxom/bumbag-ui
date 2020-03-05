@@ -64,7 +64,7 @@ describe('props', () => {
   it('should render correctly for horizontal fields', () => {
     const { container } = render(
       <SwitchGroup
-        isHorizontal
+        orientation="horizontal"
         name="weather"
         options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
       />

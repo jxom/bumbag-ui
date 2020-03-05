@@ -1,4 +1,4 @@
 - Add `overrides` to internal components
-- Add "Composition" section in docs
 - Refactor components which use `useState` to use context
+- Add "Composition" section in docs
 - Add descriptions to props for docs

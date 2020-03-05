@@ -5,7 +5,7 @@ export const Set = styleProps => cssClass`
   display: flex;
 
   ${
-    styleProps.isVertical
+    styleProps.orientation === 'vertical'
       ? css`
           flex-direction: column;
 
@@ -52,7 +52,7 @@ export const Set = styleProps => cssClass`
 
   &&& > * {
     ${
-      styleProps.isVertical
+      styleProps.orientation === 'vertical'
         ? css`
             &:not(:last-child) {
               margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;

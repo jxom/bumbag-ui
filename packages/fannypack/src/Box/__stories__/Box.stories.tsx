@@ -12,7 +12,7 @@ export const cssProps = () => (
 );
 
 export const altitudes = () => (
-  <Set isVertical spacing="major-4">
+  <Set orientation="vertical" spacing="major-4">
     <Box altitude="100">Altitude 100</Box>
     <Box altitude="200">Altitude 200</Box>
     <Box altitude="300">Altitude 300</Box>
@@ -21,14 +21,14 @@ export const altitudes = () => (
 );
 
 export const borders = () => (
-  <Set isVertical spacing="major-2">
+  <Set orientation="vertical" spacing="major-2">
     <Box border="default">Box with a default border</Box>
     <Box border="1px solid black">Box with a manual border</Box>
   </Set>
 );
 
 export const borderRadius = () => (
-  <Set isVertical spacing="major-2">
+  <Set orientation="vertical" spacing="major-2">
     <Box borderRadius="default" border="1px solid black" padding="major-3">
       Box with a default border radius
     </Box>

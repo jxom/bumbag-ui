@@ -37,7 +37,7 @@ const useProps = createHook<BreadcrumbProps>(
 
     const children = (
       <BreadcrumbContext.Provider value={context}>
-        <List isOrdered isHorizontal listStyleType="none" overrides={overrides}>
+        <List isOrdered orientation="horizontal" listStyleType="none" overrides={overrides}>
           {React.Children.map(props.children, (child, index) => {
             if (!React.isValidElement(child)) return child;
 

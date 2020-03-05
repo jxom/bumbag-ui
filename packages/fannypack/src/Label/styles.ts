@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { theme, fontWeight } from '../utils';
+import { fontSize, theme, fontWeight } from '../utils';
 
 export const Label = styleProps => cssClass`
   display: block;

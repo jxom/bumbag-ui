@@ -18,7 +18,7 @@ export const List = styleProps => cssClass`
   }
 
   & {
-    ${styleProps.isHorizontal && getHorizontalProperties(styleProps)};
+    ${styleProps.orientation === 'horizontal' && getHorizontalProperties(styleProps)};
   }
 
   & {

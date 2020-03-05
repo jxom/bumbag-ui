@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Heading, LayoutSet, Button, Set } from '../../';
+import { Box, Heading, Stack, Button, Set } from '../../';
 
 export default { title: 'Heading' };
 

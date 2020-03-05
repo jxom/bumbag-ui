@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { ActionButtons, Card, LayoutSet, Button, Set } from '../../';
+import { ActionButtons, Card, Stack, Button, Set } from '../../';
 
 export default { title: 'Card' };
 
 export const _default = () => (
-  <LayoutSet>
+  <Stack>
     <Card>Hello world</Card>
     <Card kind="shadow">Hello world</Card>
     <Card kind="border">Hello world</Card>
-  </LayoutSet>
+  </Stack>
 );
 
 export const header = () => (

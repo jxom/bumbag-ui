@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Dialog, LayoutSet, Text } from '../../';
+import { Dialog, Stack, Text } from '../../';
 
 export default { title: 'Dialog' };
 
@@ -35,7 +35,7 @@ export const closeButton = () => (
 );
 
 export const types = () => (
-  <LayoutSet>
+  <Stack>
     <Dialog type="info" title="This is a title" showActionButtons width="600px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
@@ -62,5 +62,5 @@ export const types = () => (
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
       lectus augue sit amet justo.
     </Dialog>
-  </LayoutSet>
+  </Stack>
 );

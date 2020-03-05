@@ -1,36 +1,46 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../../Box';
-import { LayoutSet } from '../LayoutSet';
+import { Stack } from '../Stack';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <LayoutSet color="primary">
+      <Stack color="primary">
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for a horizontal set', () => {
     const { container } = render(
-      <LayoutSet isHorizontal>
+      <Stack orientation="horizontal">
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for a horizontal set with breakpoint', () => {
+    const { container } = render(
+      <Stack orientation="horizontal" verticalAt="desktop">
+        <Box>hello</Box>
+        <Box>world</Box>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -40,18 +50,18 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <LayoutSet use="div">
+        <Stack use="div">
           <Box>hello</Box>
           <Box>world</Box>
-        </LayoutSet>
+        </Stack>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('hook', () => {
-    it('should return with LayoutSet props', () => {
-      const { result } = renderHook(() => LayoutSet.useProps());
+    it('should return with Stack props', () => {
+      const { result } = renderHook(() => Stack.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -59,14 +69,14 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <LayoutSet>
-          {LayoutSetProps => (
-            <div {...LayoutSetProps}>
+        <Stack>
+          {StackProps => (
+            <div {...StackProps}>
               <Box>hello</Box>
               <Box>world</Box>
             </div>
           )}
-        </LayoutSet>
+        </Stack>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -74,141 +84,144 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('LayoutSet.root should render correctly', () => {
+  it('Stack.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Stack overrides={{ Stack: { css: { root: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.root should render correctly', () => {
+  it('Stack.child.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
+      <Stack overrides={{ Stack: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.vertical should render correctly', () => {
+  it('Stack.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet isVertical overrides={{ LayoutSet: { css: { vertical: { backgroundColor: 'red' } } } }}>
+      <Stack overrides={{ Stack: { css: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.horizontal should render correctly', () => {
+  it('Stack.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { css: { horizontal: { backgroundColor: 'red' } } } }}>
+      <Stack orientation="horizontal" overrides={{ Stack: { css: { horizontal: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.vertical should render correctly', () => {
+  it('Stack.child.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet isVertical overrides={{ LayoutSet: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
+      <Stack overrides={{ Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.child.horizontal should render correctly', () => {
+  it('Stack.child.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet overrides={{ LayoutSet: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }}>
+      <Stack
+        orientation="horizontal"
+        overrides={{ Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }}
+      >
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>
+      </Stack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('LayoutSet.css.root should render correctly', () => {
+  it('Stack.css.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.css.child.root should render correctly', () => {
+  it('Stack.css.child.root should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { child: { root: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { root: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.css.vertical should render correctly', () => {
+  it('Stack.css.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { vertical: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { vertical: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.css.horizontal should render correctly', () => {
+  it('Stack.css.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { horizontal: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.css.child.vertical should render correctly', () => {
+  it('Stack.css.child.vertical should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { child: { vertical: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('LayoutSet.css.child.horizontal should render correctly', () => {
+  it('Stack.css.child.horizontal should render correctly', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -218,25 +231,25 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { defaultProps: { className: 'test' } } }
+        theme: { Stack: { defaultProps: { className: 'test' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for isHorizontal', () => {
+  it('should render correctly for orientation', () => {
     const { container } = render(
-      <LayoutSet>
+      <Stack>
         <Box>hello</Box>
         <Box>world</Box>
-      </LayoutSet>,
+      </Stack>,
       {
-        theme: { LayoutSet: { defaultProps: { isHorizontal: true } } }
+        theme: { Stack: { defaultProps: { orientation: 'horizontal' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

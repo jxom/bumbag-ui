@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Grid, LayoutSet, Button, Set } from '../../';
+import { Box, Grid, Stack, Button, Set } from '../../';
 
 export default { title: 'Grid' };
 

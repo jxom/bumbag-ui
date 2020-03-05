@@ -159,7 +159,7 @@ export default function LiveCode(props: Props) {
 function getCodeTabs(props) {
   const getTransformCode = string => {
     return JSX_REG.test(string)
-      ? src => `<React.Fragment><LayoutSet spacing="major-1">${src}</LayoutSet></React.Fragment>`
+      ? src => `<React.Fragment><Stack spacing="major-1">${src}</Stack></React.Fragment>`
       : undefined;
   };
   const code = React.Children.toArray(props.children)

@@ -3,7 +3,7 @@ import { breakpoint, borderRadius, theme } from '../utils';
 
 export const Group = styleProps => cssClass`
   display: flex;
-  flex-direction: ${styleProps.isVertical ? 'column' : 'row'};
+  flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
 
   ${breakpoint(
     styleProps.verticalBreakpoint,
@@ -25,7 +25,7 @@ export const Group = styleProps => cssClass`
 
   & > *:first-child {
     ${
-      styleProps.isVertical
+      styleProps.orientation === 'vertical'
         ? css`
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
@@ -50,7 +50,7 @@ export const Group = styleProps => cssClass`
     & input,
     & select {
       ${
-        styleProps.isVertical
+        styleProps.orientation === 'vertical'
           ? css`
               border-bottom-right-radius: 0;
               border-bottom-left-radius: 0;
@@ -78,7 +78,7 @@ export const Group = styleProps => cssClass`
 
   & > *:last-child {
     ${
-      styleProps.isVertical
+      styleProps.orientation === 'vertical'
         ? css`
             border-top-right-radius: 0;
             border-top-left-radius: 0;
@@ -112,7 +112,7 @@ export const Group = styleProps => cssClass`
     & input,
     & select {
       ${
-        styleProps.isVertical
+        styleProps.orientation === 'vertical'
           ? css`
               border-top-left-radius: 0;
               border-top-right-radius: 0;
@@ -147,7 +147,7 @@ export const Group = styleProps => cssClass`
 
   & > *:not(:first-child) {
     ${
-      styleProps.isVertical
+      styleProps.orientation === 'vertical'
         ? css`
             border-top-width: 0;
           `

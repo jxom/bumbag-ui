@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Container, LayoutSet, Button, Set } from '../../';
+import { Box, Container, Stack, Button, Set } from '../../';
 
 export default { title: 'Container' };
 

@@ -8,7 +8,7 @@ import * as styles from './styles';
 
 export type LocalListProps = {
   isOrdered?: boolean;
-  isHorizontal?: boolean;
+  orientation?: 'horizontal' | 'vertical';
   overrides?: ListThemeConfig;
 };
 export type ListProps = BoxProps & LocalListProps;
@@ -30,7 +30,7 @@ const useProps = createHook<ListProps>(
   {
     defaultProps: {
       isOrdered: false,
-      isHorizontal: false
+      orientation: 'vertical'
     },
     themeKey: 'List'
   }

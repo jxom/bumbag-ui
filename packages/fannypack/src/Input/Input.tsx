@@ -171,7 +171,7 @@ export type LocalInputFieldProps = {
   /** Additional props for the Input component */
   inputProps?: InputProps;
   /** If addonBefore or addonAfter exists, then the addons will render vertically. */
-  isVertical?: boolean;
+  orientation?: 'vertical' | 'horizontal';
 };
 export type InputFieldProps = BoxProps & FieldWrapperProps & InputProps & LocalInputFieldProps;
 
@@ -193,7 +193,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       isLoading,
       isOptional,
       isRequired,
-      isVertical,
+      orientation,
       label,
       name,
       size,
@@ -251,7 +251,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
             <ConditionalWrap
               condition={addonBefore || addonAfter}
               wrap={(children: React.ReactNode) => (
-                <Group isVertical={isVertical} overrides={overrides}>
+                <Group orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}
@@ -296,7 +296,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       )
     };
   },
-  { themeKey: 'InputField' }
+  { defaultProps: { orientation: 'horizontal' }, themeKey: 'InputField' }
 );
 
 export const InputField = createComponent<InputFieldProps>(

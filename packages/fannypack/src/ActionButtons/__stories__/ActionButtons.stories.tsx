@@ -6,7 +6,7 @@ export default { title: 'ActionButtons' };
 export const _default = () => <ActionButtons />;
 
 export const colors = () => (
-  <Set isVertical>
+  <Set orientation="vertical">
     <ActionButtons
       palette="text"
       onClickSubmit={() => console.log('submitted')}

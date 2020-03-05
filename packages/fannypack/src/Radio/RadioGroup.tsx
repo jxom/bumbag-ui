@@ -14,9 +14,9 @@ export type LocalRadioGroupProps = {
   defaultValue?: string;
   /** Disables the radio group */
   disabled?: boolean;
-  /** Are the radio inputs layed out horizontally? */
-  isHorizontal?: boolean;
   name: string;
+  /** Are the radio inputs layed out horizontally? */
+  orientation?: 'horizontal' | 'vertical';
   /** Radio group options */
   options: Array<RadioProps>;
   spacing?: SetProps['spacing'];
@@ -34,7 +34,7 @@ const useProps = createHook<RadioGroupProps>(
     const {
       defaultValue,
       disabled,
-      isHorizontal,
+      orientation,
       onChange,
       options,
       overrides,
@@ -60,7 +60,7 @@ const useProps = createHook<RadioGroupProps>(
       ...boxProps,
       className,
       children: (
-        <Set isVertical={!isHorizontal} overrides={overrides} spacing={spacing}>
+        <Set orientation={orientation} overrides={overrides} spacing={spacing}>
           {options.map((option, i) => (
             <Radio
               key={i}
@@ -78,7 +78,7 @@ const useProps = createHook<RadioGroupProps>(
       )
     };
   },
-  { defaultProps: { spacing: 'minor-2' }, themeKey: 'RadioGroup' }
+  { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'RadioGroup' }
 );
 
 export const RadioGroup = createComponent<RadioGroupProps>(
@@ -109,7 +109,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
       description,
       disabled,
       hint,
-      isHorizontal,
+      orientation,
       isOptional,
       isRequired,
       label,
@@ -157,7 +157,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
             <RadioGroup
               defaultChecked={defaultChecked}
               disabled={disabled}
-              isHorizontal={isHorizontal}
+              orientation={orientation}
               name={name}
               options={options}
               onChange={onChange}

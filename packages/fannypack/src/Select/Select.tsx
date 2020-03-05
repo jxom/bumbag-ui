@@ -178,7 +178,7 @@ export type LocalSelectFieldProps = {
   /** Additional props for the Select component */
   selectProps?: SelectProps;
   /** If addonBefore or addonAfter exists, then the addons will render vertically. */
-  isVertical?: boolean;
+  orientation?: 'vertical' | 'horizontal';
 };
 export type SelectFieldProps = BoxProps & FieldWrapperProps & SelectProps & LocalSelectFieldProps;
 
@@ -197,7 +197,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       isLoading,
       isOptional,
       isRequired,
-      isVertical,
+      orientation,
       label,
       name,
       options,
@@ -245,7 +245,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
             <ConditionalWrap
               condition={addonBefore || addonAfter}
               wrap={(children: React.ReactNode) => (
-                <Group isVertical={isVertical} overrides={overrides}>
+                <Group orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Flex, LayoutSet, Button, Set } from '../../';
+import { Box, Flex, Stack, Button, Set } from '../../';
 
 export default { title: 'Flex' };
 

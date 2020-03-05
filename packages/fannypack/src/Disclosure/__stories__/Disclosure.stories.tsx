@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Disclosure, LayoutSet, Button, Set } from '../../';
+import { Box, Disclosure, Stack, Button, Set } from '../../';
 
 export default { title: 'Disclosure' };
 

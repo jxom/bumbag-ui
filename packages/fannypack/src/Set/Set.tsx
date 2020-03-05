@@ -8,7 +8,7 @@ import * as styles from './styles';
 
 export type LocalSetProps = {
   isFilled?: boolean;
-  isVertical?: boolean;
+  orientation?: 'vertical' | 'horizontal';
   spacing?: string;
   verticalBreakpoint?: LayoutBreakpoint;
 };
@@ -31,7 +31,7 @@ const useProps = createHook<SetProps>(
   {
     defaultProps: {
       isFilled: false,
-      isVertical: false,
+      orientation: 'horizontal',
       spacing: 'minor-2',
       verticalBreakpoint: undefined
     },

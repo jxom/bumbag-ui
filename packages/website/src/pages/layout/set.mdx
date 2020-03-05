@@ -44,10 +44,10 @@ You can modify the spacing of the set with the `spacing` prop.
 
 ### Vertical
 
-You can also have a vertical set with the `isVertical` prop.
+You can also have a vertical set with the `orientation` prop.
 
 ```jsx-live
-<Set isVertical spacing="minor-1">
+<Set orientation="vertical" spacing="minor-1">
   <Tag>Tag 1</Tag>
   <Tag>Tag 2</Tag>
   <Tag>Tag 3</Tag>
@@ -61,7 +61,7 @@ You can also have a vertical set with the `isVertical` prop.
 By default, `<Set>` will preserve the width of it's children. However, if you'd like your children to fill the width of `<Set>`, use the `isFilled` prop:
 
 ```jsx-live
-<Set isVertical isFilled>
+<Set orientation="vertical" isFilled>
   <Button>Button 1</Button>
   <Button>Button 2</Button>
   <Button>Button 3</Button>
@@ -96,7 +96,7 @@ A set can snap from horizontal to vertical after a given breakpoint with the `ve
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isVertical</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -205,7 +205,7 @@ A set can snap from horizontal to vertical after a given breakpoint with the `ve
 
 <Theme
   component={Set}
-  overrides={['Set.css.root', 'Set.css.child.root', 'Set.css.child.first', 'Set.css.child.middle', 'Set.css.child.last', 'Set.css.horizontal', 'Set.css.child.horizontal', { key: 'Set.css.vertical', props: { isVertical: true } }, { key: 'Set.css.child.vertical', props: { isVertical: true } }]}>
+  overrides={['Set.css.root', 'Set.css.child.root', 'Set.css.child.first', 'Set.css.child.middle', 'Set.css.child.last', 'Set.css.horizontal', 'Set.css.child.horizontal', { key: 'Set.css.vertical', props: { orientation: 'vertical' } }, { key: 'Set.css.child.vertical', props: { orientation: 'vertical' } }]}>
   <Button>Hello</Button>
   <Button>My</Button>
   <Button>World</Button>

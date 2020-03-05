@@ -8,7 +8,7 @@ import * as styles from './styles';
 
 export type LocalGroupProps = {
   borderRadius?: string;
-  isVertical?: boolean;
+  orientation?: 'vertical' | 'horizontal';
   verticalBreakpoint?: LayoutBreakpoint;
 };
 export type GroupProps = BoxProps & LocalGroupProps;

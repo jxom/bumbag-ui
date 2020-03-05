@@ -27,7 +27,7 @@ describe('props', () => {
 
   it('should render correctly for a vertical set', () => {
     const { container } = render(
-      <Set isVertical>
+      <Set orientation="vertical">
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -37,7 +37,7 @@ describe('props', () => {
 
   it('should render correctly for a vertical filled set', () => {
     const { container } = render(
-      <Set isVertical isFilled>
+      <Set orientation="vertical" isFilled>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -116,7 +116,7 @@ describe('overrides', () => {
 
   it('Set.vertical should render correctly', () => {
     const { container } = render(
-      <Set isVertical overrides={{ Set: { css: { vertical: { backgroundColor: 'red' } } } }}>
+      <Set orientation="vertical" overrides={{ Set: { css: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -136,7 +136,7 @@ describe('overrides', () => {
 
   it('Set.child.vertical should render correctly', () => {
     const { container } = render(
-      <Set isVertical overrides={{ Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
+      <Set orientation="vertical" overrides={{ Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -249,14 +249,14 @@ describe('defaultProps', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for isVertical', () => {
+  it('should render correctly for orientation="vertical"', () => {
     const { container } = render(
       <Set>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { defaultProps: { isVertical: true } } }
+        theme: { Set: { defaultProps: { orientation: 'vertical' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

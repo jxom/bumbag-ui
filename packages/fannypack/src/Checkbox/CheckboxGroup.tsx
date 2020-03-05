@@ -14,11 +14,11 @@ export type LocalCheckboxGroupProps = {
   defaultValue?: Array<string> | string;
   /** Disables the checkbox group */
   disabled?: boolean;
-  /** Are the checkbox inputs layed out horizontally? */
-  isHorizontal?: boolean;
   name: string;
   /** Checkbox group options */
   options: Array<CheckboxProps>;
+  /** Are the checkbox inputs layed out horizontally or vertically? */
+  orientation?: 'vertical' | 'horizontal';
   spacing?: SetProps['spacing'];
   /** State of the checkbox group. Can be any color in the palette. */
   state?: string;
@@ -34,9 +34,9 @@ const useProps = createHook<CheckboxGroupProps>(
     const {
       defaultValue: initialDefaultValue,
       disabled,
-      isHorizontal,
       onChange,
       options,
+      orientation,
       overrides,
       name,
       spacing,
@@ -70,7 +70,7 @@ const useProps = createHook<CheckboxGroupProps>(
       ...boxProps,
       className,
       children: (
-        <Set isVertical={!isHorizontal} spacing={spacing}>
+        <Set orientation={orientation} spacing={spacing}>
           {options.map((option, i) => (
             <Checkbox
               key={i}
@@ -90,7 +90,7 @@ const useProps = createHook<CheckboxGroupProps>(
       )
     };
   },
-  { defaultProps: { spacing: 'minor-2' }, themeKey: 'CheckboxGroup' }
+  { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'CheckboxGroup' }
 );
 
 export const CheckboxGroup = createComponent<CheckboxGroupProps>(
@@ -121,12 +121,12 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
       description,
       disabled,
       hint,
-      isHorizontal,
       isOptional,
       isRequired,
       label,
       name,
       options,
+      orientation,
       onChange,
       overrides,
       checkboxGroupProps,
@@ -169,7 +169,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
             <CheckboxGroup
               defaultChecked={defaultChecked}
               disabled={disabled}
-              isHorizontal={isHorizontal}
+              orientation={orientation}
               name={name}
               options={options}
               onChange={onChange}

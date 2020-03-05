@@ -1,46 +1,46 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../../Box';
-import { FieldSet } from '../FieldSet';
+import { FieldStack } from '../FieldStack';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <FieldSet>
+      <FieldStack>
         <Box />
         <Box />
-      </FieldSet>
+      </FieldStack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <FieldSet color="primary">
+      <FieldStack color="primary">
         <Box />
         <Box />
-      </FieldSet>
+      </FieldStack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with spacing prop', () => {
     const { container } = render(
-      <FieldSet spacing="major-4">
+      <FieldStack spacing="major-4">
         <Box />
         <Box />
-      </FieldSet>
+      </FieldStack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with isHorizontal prop', () => {
+  it('should render correctly with orientation prop', () => {
     const { container } = render(
-      <FieldSet isHorizontal>
+      <FieldStack orientation="horizontal">
         <Box />
         <Box />
-      </FieldSet>
+      </FieldStack>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -50,18 +50,18 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <FieldSet use="div">
+        <FieldStack use="div">
           <Box />
           <Box />
-        </FieldSet>
+        </FieldStack>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('hook', () => {
-    it('should return with FieldSet props', () => {
-      const { result } = renderHook(() => FieldSet.useProps());
+    it('should return with FieldStack props', () => {
+      const { result } = renderHook(() => FieldStack.useProps());
       expect(result.current).toMatchSnapshot();
     });
   });
@@ -69,14 +69,14 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <FieldSet>
-          {FieldSetProps => (
-            <div {...FieldSetProps}>
+        <FieldStack>
+          {FieldStackProps => (
+            <div {...FieldStackProps}>
               <Box />
               <Box />
             </div>
           )}
-        </FieldSet>
+        </FieldStack>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -84,15 +84,15 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('FieldSet.root should render correctly', () => {
+  it('FieldStack.root should render correctly', () => {
     const { container } = render(
-      <FieldSet>
+      <FieldStack>
         <Box />
         <Box />
-      </FieldSet>,
+      </FieldStack>,
       {
         // @ts-ignore
-        theme: { FieldSet: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { FieldStack: { css: { root: { backgroundColor: 'red' } } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -102,13 +102,13 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <FieldSet>
+      <FieldStack>
         <Box />
         <Box />
-      </FieldSet>,
+      </FieldStack>,
       {
         // @ts-ignore
-        theme: { FieldSet: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { FieldStack: { defaultProps: { className: 'test', color: 'primary' } } }
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Box, LayoutSet, Text, Heading, Set } from '../../';
+import { Box, Stack, Text, Heading, Set } from '../../';
 
-export default { title: 'LayoutSet' };
+export default { title: 'Stack' };
 
 export const _default = () => (
-  <LayoutSet>
+  <Stack>
     <Box backgroundColor="white700" padding="major-3">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus at.
       Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -13,7 +13,7 @@ export const _default = () => (
       leo. Cras placerat sapien in consectetur aliquet.
     </Box>
     <Box backgroundColor="white700" padding="major-3">
-      <LayoutSet spacing="major-2">
+      <Stack spacing="major-2">
         <Box backgroundColor="white" padding="major-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
           at. Sed mollis eros sem, eu tincidunt lectus interdum sed.
@@ -24,9 +24,9 @@ export const _default = () => (
           ornare consectetur. Proin cursus consectetur ligula, et posuere leo. Cras placerat sapien in consectetur
           aliquet.
         </Box>
-      </LayoutSet>
+      </Stack>
     </Box>
-    <LayoutSet isHorizontal>
+    <Stack orientation="horizontal">
       <Box backgroundColor="white700" padding="major-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
         at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -41,6 +41,6 @@ export const _default = () => (
         montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
         posuere leo. Cras placerat sapien in consectetur aliquet.
       </Box>
-    </LayoutSet>
-  </LayoutSet>
+    </Stack>
+  </Stack>
 );

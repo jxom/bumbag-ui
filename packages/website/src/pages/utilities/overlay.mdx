@@ -214,7 +214,7 @@ function Example() {
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>8 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
@@ -242,6 +242,23 @@ given milliseconds.
 
 Stops animation. It's called automatically if there's a CSS transition.
 It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> 
+
+Sets `modal`.
 
 <Box marginBottom="major-4" />
 
@@ -336,17 +353,6 @@ Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-Toggles Dialog's `modal` state.
-
-  - Non-modal: `preventBodyScroll` doesn't work and focus is free.
-  - Modal: `preventBodyScroll` is automatically enabled, focus is
-trapped within the dialog and the dialog is rendered within a `Portal`
-by default.
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 When enabled, user can hide the dialog by pressing `Escape`.
@@ -377,13 +383,6 @@ When not set, the first tabbable element within the dialog will be used.
 
 The element that will be focused when the dialog hides.
 When not set, the disclosure component will be used.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_portal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-Whether or not the dialog should be rendered within `Portal`.
-It's `true` by default if `modal` is `true`.
 
 <Box marginBottom="major-4" />
 
@@ -638,11 +637,22 @@ given milliseconds.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
 ### Overlay.useState Return Values
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>7 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>9 values</strong></Box>
 
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
@@ -687,6 +697,23 @@ Toggles the `visible` state
 
 Stops animation. It's called automatically if there's a CSS transition.
 It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
 
 <Box marginBottom="major-4" />
 

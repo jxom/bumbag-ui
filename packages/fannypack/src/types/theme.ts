@@ -40,7 +40,7 @@ import {
   DropdownMenuGroupProps,
   DropdownMenuItemProps
 } from '../DropdownMenu';
-import { FieldSetProps } from '../FieldSet';
+import { FieldStackProps } from '../FieldStack';
 import { FieldWrapperProps } from '../FieldWrapper';
 import { FlexProps } from '../Flex';
 import { GridProps } from '../Grid/Grid';
@@ -54,7 +54,7 @@ import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
 import { InputProps, InputFieldProps } from '../Input';
 import { LabelProps } from '../Label';
-import { LayoutSetProps } from '../LayoutSet';
+import { StackProps } from '../Stack';
 import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
@@ -482,11 +482,11 @@ export type DropdownMenuThemeConfig = {
   };
   defaultProps?: Partial<DropdownMenuProps>;
 };
-export type FieldSetThemeConfig = {
+export type FieldStackThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
-  defaultProps?: Partial<FieldSetProps>;
+  defaultProps?: Partial<FieldStackProps>;
 };
 export type FieldWrapperThemeConfig = {
   css?: {
@@ -729,7 +729,7 @@ export type LabelThemeConfig = {
   };
   defaultProps?: Partial<LabelProps>;
 };
-export type LayoutSetThemeConfig = {
+export type StackThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
     horizontal?: ThemeAttribute<Stylesheet>;
@@ -740,7 +740,7 @@ export type LayoutSetThemeConfig = {
       vertical?: ThemeAttribute<Stylesheet>;
     };
   };
-  defaultProps?: Partial<LayoutSetProps>;
+  defaultProps?: Partial<StackProps>;
 };
 export type LinkThemeConfig = {
   css?: {
@@ -1333,7 +1333,7 @@ export type ThemeConfig = {
   InlineFlex?: InlineFlexThemeConfig;
   Input?: InputThemeConfig;
   InputField?: InputFieldThemeConfig;
-  LayoutSet?: LayoutSetThemeConfig;
+  Stack?: StackThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Menu?: MenuThemeConfig;

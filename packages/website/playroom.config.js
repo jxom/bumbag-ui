@@ -30,7 +30,7 @@ module.exports = {
   }),
   exampleCode: `
     <Container breakpoint="mobile" padding="major-2">
-      <FieldSet>
+      <FieldStack>
         <Heading fontSize="500">Log in</Heading>
         <InputField label="Username" size="medium" />
         <InputField label="Password" size="medium" type="password" />
@@ -40,7 +40,7 @@ module.exports = {
         <Button palette="primary" size="large" kind="ghost" width="100%">
           Sign up
         </Button>
-      </FieldSet>
+      </FieldStack>
     </Container>
   `
 };

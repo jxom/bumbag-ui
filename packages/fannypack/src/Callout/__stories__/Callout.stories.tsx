@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActionButtons, Callout, LayoutSet, Button, Set } from '../../';
+import { ActionButtons, Callout, Stack, Button, Set } from '../../';
 
 export default { title: 'Callout' };
 
@@ -20,7 +20,7 @@ export const title = () => (
 );
 
 export const types = () => (
-  <LayoutSet spacing="major-2">
+  <Stack spacing="major-2">
     <Callout type="info" title="Example info callout" width="600px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
@@ -41,7 +41,7 @@ export const types = () => (
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
       lectus augue sit amet justo.
     </Callout>
-  </LayoutSet>
+  </Stack>
 );
 
 export const footer = () => (
@@ -53,7 +53,7 @@ export const footer = () => (
 );
 
 export const closeButton = () => (
-  <LayoutSet spacing="major-2">
+  <Stack spacing="major-2">
     <Callout showCloseButton onClickClose={() => alert('Closed')} title="Example callout" width="600px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
@@ -64,11 +64,11 @@ export const closeButton = () => (
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
       lectus augue sit amet justo.
     </Callout>
-  </LayoutSet>
+  </Stack>
 );
 
 export const tints = () => (
-  <LayoutSet spacing="major-2">
+  <Stack spacing="major-2">
     <Callout hasTint type="info" title="Example info callout" width="600px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
@@ -89,7 +89,7 @@ export const tints = () => (
       ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur
       lectus augue sit amet justo.
     </Callout>
-  </LayoutSet>
+  </Stack>
 );
 
 export const customIcon = () => (

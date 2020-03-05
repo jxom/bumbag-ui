@@ -44,7 +44,7 @@ function Example() {
 function Example() {
   const [value, setValue] = React.useState(3);
   return (
-    <LayoutSet spacing="major-2">
+    <Stack spacing="major-2">
       <Rating
         size="small"
         onChange={value => setValue(value)}
@@ -64,7 +64,7 @@ function Example() {
         onChange={value => setValue(value)}
         value={value}
       />
-    </LayoutSet>
+    </Stack>
   );
 }
 ```

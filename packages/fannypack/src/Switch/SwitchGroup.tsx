@@ -15,7 +15,7 @@ export type LocalSwitchGroupProps = {
   /** Disables the switch group */
   disabled?: boolean;
   /** Are the switch inputs layed out horizontally? */
-  isHorizontal?: boolean;
+  orientation?: 'vertical' | 'horizontal';
   name: string;
   /** Switch group options */
   options: Array<SwitchProps>;
@@ -34,7 +34,7 @@ const useProps = createHook<SwitchGroupProps>(
     const {
       defaultValue: initialDefaultValue,
       disabled,
-      isHorizontal,
+      orientation,
       onChange,
       options,
       overrides,
@@ -70,7 +70,7 @@ const useProps = createHook<SwitchGroupProps>(
       ...boxProps,
       className,
       children: (
-        <Set isVertical={!isHorizontal} spacing={spacing}>
+        <Set orientation={orientation} spacing={spacing}>
           {options.map((option, i) => (
             <Switch
               key={i}
@@ -90,7 +90,7 @@ const useProps = createHook<SwitchGroupProps>(
       )
     };
   },
-  { defaultProps: { spacing: 'minor-2' }, themeKey: 'SwitchGroup' }
+  { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'SwitchGroup' }
 );
 
 export const SwitchGroup = createComponent<SwitchGroupProps>(
@@ -121,7 +121,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
       description,
       disabled,
       hint,
-      isHorizontal,
+      orientation,
       isOptional,
       isRequired,
       label,
@@ -169,7 +169,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
             <SwitchGroup
               defaultChecked={defaultChecked}
               disabled={disabled}
-              isHorizontal={isHorizontal}
+              orientation={orientation}
               name={name}
               options={options}
               onChange={onChange}
