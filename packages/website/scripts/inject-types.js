@@ -288,11 +288,11 @@ function extractTypes(config) {
         const componentSection = match.split(' ')[1];
         let localType;
         let type;
-        if (match.includes('useState Return Values')) {
+        if (match.includes('useState Return Values') || match.includes('State Return Values')) {
           const component = componentSection.split('.')[0];
           localType = `${component}StateReturn`;
           type = 'state-return';
-        } else if (match.includes('useState API')) {
+        } else if (match.includes('useState API') || match.includes('State API')) {
           const component = componentSection.split('.')[0];
           localType = `${component}InitialState`;
           type = 'state-api';

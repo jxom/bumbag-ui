@@ -40,8 +40,8 @@ import { Inline } from 'fannypack';
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
-  | ComponentClass<any, any>
-  | FunctionComponent<any>`}
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
 <Box marginBottom="major-4" />
