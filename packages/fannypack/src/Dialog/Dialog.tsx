@@ -6,7 +6,7 @@ import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
-import { Modal, ModalProps } from '../Modal';
+import { Modal, ModalContext, ModalProps } from '../Modal';
 import { Text, TextProps } from '../Text';
 
 import * as styles from './styles';
@@ -365,7 +365,8 @@ export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
 
 const useDialogModalProps = createHook<DialogModalProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { kind, ...restProps } = props;
+    const { modal } = React.useContext(ModalContext);
+    const { kind, ...restProps } = { ...modal, ...props };
 
     const dialogProps = Dialog.useProps({
       onClickClose: restProps.hide,
