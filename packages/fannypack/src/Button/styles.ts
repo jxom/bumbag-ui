@@ -19,11 +19,7 @@ export const Button = styleProps => cssClass`
   text-decoration: none;
   hyphens: auto;
   transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
-
-  ${styleProps.palette === 'default' &&
-    css`
-      border: 1px solid ${palette('white900')(styleProps)};
-    `};
+  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 
   &[disabled],
   &[aria-disabled="true"] {
@@ -125,7 +121,7 @@ export const getSizeProperties = styleProps => {
     small: css`
       & {
         font-size: ${theme('fontSizes.100')(styleProps)}em;
-        min-height: ${space(10)(styleProps)}em;
+        min-height: 2.5rem;
         padding: 0 ${space(3)(styleProps)}rem;
       }
       & {
@@ -139,7 +135,7 @@ export const getSizeProperties = styleProps => {
     `,
     medium: css`
       & {
-        min-height: ${space(14)(styleProps)}em;
+        min-height: 3rem;
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
@@ -149,7 +145,7 @@ export const getSizeProperties = styleProps => {
     large: css`
       & {
         font-size: ${theme('fontSizes.300')(styleProps)}em;
-        min-height: ${space(14)(styleProps)}em;
+        min-height: 3rem;
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {
@@ -194,8 +190,9 @@ export const getInteractiveProperties = styleProps => css`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray' : styleProps.palette)(styleProps)} 0px 0px 0px 1px,
-      ${palette(styleProps.palette === 'default' ? 'gray200' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
+    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray100' : styleProps.palette)(styleProps)} 0px 0px 0px
+        1px,
+      ${palette(styleProps.palette === 'default' ? 'white900' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
 
     ${styleProps.palette === 'default' &&
       css`
@@ -239,6 +236,7 @@ export const getLinkProperties = styleProps => css`
       ? palette('text', defaultPalette.text)(styleProps)
       : palette(styleProps.palette)(styleProps)};
     text-decoration: underline;
+    box-shadow: unset;
 
     &:hover {
       color: ${styleProps.palette === 'default'
@@ -261,6 +259,7 @@ export const getOutlinedProperties = styleProps => css`
     border: 1px solid ${palette()(styleProps)};
     color: ${palette()(styleProps)};
     fill: ${palette()(styleProps)};
+    box-shadow: unset;
 
     ${isInteractive(styleProps) &&
       css`
@@ -282,6 +281,7 @@ export const getGhostProperties = styleProps => css`
     border: unset;
     color: ${styleProps.palette === 'default' ? palette('defaultInverted')(styleProps) : palette()(styleProps)};
     fill: ${styleProps.palette === 'default' ? palette('defaultInverted')(styleProps) : palette()(styleProps)};
+    box-shadow: unset;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.05);
