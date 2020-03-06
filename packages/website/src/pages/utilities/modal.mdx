@@ -150,15 +150,15 @@ You can restrict closure with either the `hideOnEsc` or `hideOnClickOutside` pro
 ```live
 ###tab=Hook,type=function-live
 function Example() {
-  const { visible, show, hide } = Modal.useState();
+  const modal = Modal.useState();
 
   return (
     <React.Fragment>
-      <Modal.Disclosure use={Button} onClick={show}>Open modal</Modal.Disclosure>
-      <Modal visible={visible} hide={hide}>
+      <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal}>
         <Card>
           <Box>Hello world</Box>
-          <Modal.Disclosure use={Button} onClick={hide}>Close</Modal.Disclosure>
+          <Modal.Disclosure use={Button} {...modal}>Close</Modal.Disclosure>
         </Card>
       </Modal>
     </React.Fragment>
@@ -168,13 +168,13 @@ function Example() {
 
 ###tab=Render Props,type=jsx-live
 <Modal.State>
-  {({ visible, show, hide }) => (
+  {modal => (
     <React.Fragment>
-      <Modal.Disclosure use={Button} onClick={show}>Open modal</Modal.Disclosure>
-      <Modal visible={visible} hide={hide}>
+      <Modal.Disclosure use={Button} {...modal}>Open modal</Modal.Disclosure>
+      <Modal {...modal}>
         <Card>
           <Box>Hello world</Box>
-          <Modal.Disclosure use={Button} onClick={hide}>Close</Modal.Disclosure>
+          <Modal.Disclosure use={Button} {...modal}>Close</Modal.Disclosure>
         </Card>
       </Modal>
     </React.Fragment>
