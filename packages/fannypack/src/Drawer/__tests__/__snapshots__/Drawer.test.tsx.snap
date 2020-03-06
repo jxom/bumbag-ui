@@ -650,7 +650,7 @@ exports[`props should render correctly without backdrop 1`] = `
   outline: none;
 }
 
-.emotion-7 {
+.emotion-4 {
   position: fixed;
   z-index: 19900410;
   min-width: 320px;
@@ -662,35 +662,25 @@ exports[`props should render correctly without backdrop 1`] = `
 }
 
 @media screen and (max-width:320px) {
-  .emotion-7 {
+  .emotion-4 {
     min-width: unset;
     width: 100%;
   }
 }
 
-.emotion-7:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-6 {
+.emotion-3 {
   box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15),0px 0px 6px 3px rgba(0,0,0,0.02);
 }
 
-.emotion-6.emotion-6 {
+.emotion-3.emotion-3 {
   position: fixed;
   background-color: white;
   left: 0;
   height: 100vh;
-}
-
-.emotion-3 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 <div>
@@ -704,7 +694,7 @@ exports[`props should render correctly without backdrop 1`] = `
     Toggle
   </button>
   <div
-    class="emotion-6 emotion-7 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal"
+    class="emotion-3 emotion-4 emotion-1 emotion-2 hidden fp-Box fp-Drawer fp-Modal"
     data-dialog="true"
     hidden=""
     id="test"
@@ -712,14 +702,6 @@ exports[`props should render correctly without backdrop 1`] = `
     style="display: none;"
     tabindex="-1"
   >
-    <div
-      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
-      data-dialog-ref="test"
-      hidden=""
-      style="display: none;"
-    >
-      <div />
-    </div>
     This is a side overlay
   </div>
 </div>

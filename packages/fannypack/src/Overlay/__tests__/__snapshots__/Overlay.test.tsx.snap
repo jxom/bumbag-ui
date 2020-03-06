@@ -2,33 +2,7 @@
 
 exports[`composition hook should return with Overlay props 1`] = `
 Object {
-  "aria-modal": true,
-  "children": <React.Fragment>
-    <ForwardRef
-      baseId="test"
-      hide={[Function]}
-      hideBackdrop={true}
-      modal={true}
-      placement="center"
-      setModal={[Function]}
-      show={[Function]}
-      toggle={[Function]}
-      unstable_animated={false}
-      unstable_animating={false}
-      unstable_idCountRef={
-        Object {
-          "current": 0,
-        }
-      }
-      unstable_modal={true}
-      unstable_setBaseId={[Function]}
-      unstable_setIsMounted={[Function]}
-      unstable_stopAnimation={[Function]}
-      visible={false}
-    >
-      <div />
-    </ForwardRef>
-  </React.Fragment>,
+  "children": <React.Fragment />,
   "className": "css-13h683e css-1mhpz2e css-1pwrqjj css-3ekj6a hidden fp-Box fp-Overlay fp-Modal",
   "data-dialog": true,
   "hidden": true,
@@ -85,13 +59,9 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -142,16 +112,6 @@ exports[`composition use should render correctly 1`] = `
 
 .emotion-8:focus {
   outline: none;
-}
-
-.emotion-12 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-0 {
@@ -231,35 +191,17 @@ exports[`composition use should render correctly 1`] = `
       >
         Toggle
       </button>
-    </div>
-  </div>
-  <div
-    class="__reakit-portal"
-  >
-    <blockquote
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-4 emotion-1 emotion-2 emotion-3 emotion-8 hidden fp-Box fp-Blockquote fp-Overlay fp-Modal"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
-    </blockquote>
-    <div
-      class="__reakit-portal"
-    >
       <blockquote
         aria-label="test"
-        class="emotion-4 emotion-1 emotion-2 emotion-12 hidden fp-Box fp-Blockquote fp-ModalBackdrop"
-        data-dialog-ref="test"
+        class="emotion-4 emotion-1 emotion-2 emotion-3 emotion-8 hidden fp-Box fp-Blockquote fp-Overlay fp-Modal"
+        data-dialog="true"
         hidden=""
+        id="test"
+        role="dialog"
         style="display: none;"
+        tabindex="-1"
       >
-        <div />
+        Hello world
       </blockquote>
     </div>
   </div>
@@ -304,24 +246,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden test fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -331,19 +259,6 @@ exports[`defaultProps should render correctly for className 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden test fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -363,16 +278,6 @@ exports[`overrides Overlay.bottom.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -402,13 +307,9 @@ exports[`overrides Overlay.bottom.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -418,19 +319,6 @@ exports[`overrides Overlay.bottom.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -450,16 +338,6 @@ exports[`overrides Overlay.bottomEnd.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -489,13 +367,9 @@ exports[`overrides Overlay.bottomEnd.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -505,19 +379,6 @@ exports[`overrides Overlay.bottomEnd.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -537,16 +398,6 @@ exports[`overrides Overlay.bottomStart.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -576,13 +427,9 @@ exports[`overrides Overlay.bottomStart.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -592,19 +439,6 @@ exports[`overrides Overlay.bottomStart.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -624,16 +458,6 @@ exports[`overrides Overlay.center.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -663,13 +487,9 @@ exports[`overrides Overlay.center.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -679,19 +499,6 @@ exports[`overrides Overlay.center.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -711,16 +518,6 @@ exports[`overrides Overlay.left.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -750,13 +547,9 @@ exports[`overrides Overlay.left.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -766,19 +559,6 @@ exports[`overrides Overlay.left.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -798,16 +578,6 @@ exports[`overrides Overlay.right.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -837,13 +607,9 @@ exports[`overrides Overlay.right.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -853,19 +619,6 @@ exports[`overrides Overlay.right.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -885,16 +638,6 @@ exports[`overrides Overlay.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -928,13 +671,9 @@ exports[`overrides Overlay.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -944,19 +683,6 @@ exports[`overrides Overlay.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -978,16 +704,6 @@ exports[`overrides Overlay.top.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-}
-
 .emotion-1 {
   position: fixed;
   z-index: 19900410;
@@ -1015,13 +731,9 @@ exports[`overrides Overlay.top.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1031,19 +743,6 @@ exports[`overrides Overlay.top.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1065,16 +764,6 @@ exports[`overrides Overlay.topEnd.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-}
-
 .emotion-1 {
   position: fixed;
   z-index: 19900410;
@@ -1102,13 +791,9 @@ exports[`overrides Overlay.topEnd.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1118,19 +803,6 @@ exports[`overrides Overlay.topEnd.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1150,16 +822,6 @@ exports[`overrides Overlay.topStart.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -1189,13 +851,9 @@ exports[`overrides Overlay.topStart.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1205,19 +863,6 @@ exports[`overrides Overlay.topStart.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1237,16 +882,6 @@ exports[`props placement should render correctly for bottom placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -1272,13 +907,9 @@ exports[`props placement should render correctly for bottom placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1288,19 +919,6 @@ exports[`props placement should render correctly for bottom placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1320,16 +938,6 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -1355,13 +963,9 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1371,19 +975,6 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1403,16 +994,6 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -1438,13 +1019,9 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1454,19 +1031,6 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1510,24 +1074,10 @@ exports[`props placement should render correctly for center placement 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1537,19 +1087,6 @@ exports[`props placement should render correctly for center placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1569,16 +1106,6 @@ exports[`props placement should render correctly for left placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -1604,13 +1131,9 @@ exports[`props placement should render correctly for left placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1620,19 +1143,6 @@ exports[`props placement should render correctly for left placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1698,46 +1208,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1747,19 +1221,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1779,38 +1240,6 @@ exports[`props placement should render correctly for placement bottom and slide 
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -1858,13 +1287,9 @@ exports[`props placement should render correctly for placement bottom and slide 
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -1874,19 +1299,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -1952,46 +1364,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2001,19 +1377,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2079,46 +1442,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2128,19 +1455,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2206,46 +1520,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2255,19 +1533,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2333,46 +1598,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2382,19 +1611,6 @@ exports[`props placement should render correctly for placement bottom and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2460,46 +1676,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2509,19 +1689,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2541,38 +1708,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -2620,13 +1755,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2636,19 +1767,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2714,46 +1832,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2763,19 +1845,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2841,46 +1910,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -2890,19 +1923,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -2968,46 +1988,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3017,19 +2001,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3095,46 +2066,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3144,19 +2079,6 @@ exports[`props placement should render correctly for placement bottom-end and sl
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3222,46 +2144,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3271,19 +2157,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3303,38 +2176,6 @@ exports[`props placement should render correctly for placement bottom-start and 
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -3382,13 +2223,9 @@ exports[`props placement should render correctly for placement bottom-start and 
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3398,19 +2235,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3476,46 +2300,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3525,19 +2313,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3603,46 +2378,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3652,19 +2391,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3730,46 +2456,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3779,19 +2469,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3857,46 +2534,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -3906,19 +2547,6 @@ exports[`props placement should render correctly for placement bottom-start and 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -3984,46 +2612,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4033,19 +2625,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4065,38 +2644,6 @@ exports[`props placement should render correctly for placement center and slide 
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -4144,13 +2691,9 @@ exports[`props placement should render correctly for placement center and slide 
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4160,19 +2703,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4238,46 +2768,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4287,19 +2781,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4365,46 +2846,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4414,19 +2859,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4492,46 +2924,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4541,19 +2937,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4619,46 +3002,10 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4668,19 +3015,6 @@ exports[`props placement should render correctly for placement center and slide 
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4746,46 +3080,10 @@ exports[`props placement should render correctly for placement left and slide bo
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4795,19 +3093,6 @@ exports[`props placement should render correctly for placement left and slide bo
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -4827,38 +3112,6 @@ exports[`props placement should render correctly for placement left and slide ce
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -4906,13 +3159,9 @@ exports[`props placement should render correctly for placement left and slide ce
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -4922,19 +3171,6 @@ exports[`props placement should render correctly for placement left and slide ce
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5000,46 +3236,10 @@ exports[`props placement should render correctly for placement left and slide le
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5049,19 +3249,6 @@ exports[`props placement should render correctly for placement left and slide le
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5127,46 +3314,10 @@ exports[`props placement should render correctly for placement left and slide ri
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5176,19 +3327,6 @@ exports[`props placement should render correctly for placement left and slide ri
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5254,46 +3392,10 @@ exports[`props placement should render correctly for placement left and slide to
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5303,19 +3405,6 @@ exports[`props placement should render correctly for placement left and slide to
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5381,46 +3470,10 @@ exports[`props placement should render correctly for placement left and slide tr
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5430,19 +3483,6 @@ exports[`props placement should render correctly for placement left and slide tr
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5508,46 +3548,10 @@ exports[`props placement should render correctly for placement right and slide b
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5557,19 +3561,6 @@ exports[`props placement should render correctly for placement right and slide b
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5589,38 +3580,6 @@ exports[`props placement should render correctly for placement right and slide c
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -5668,13 +3627,9 @@ exports[`props placement should render correctly for placement right and slide c
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5684,19 +3639,6 @@ exports[`props placement should render correctly for placement right and slide c
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5762,46 +3704,10 @@ exports[`props placement should render correctly for placement right and slide l
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5811,19 +3717,6 @@ exports[`props placement should render correctly for placement right and slide l
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -5889,46 +3782,10 @@ exports[`props placement should render correctly for placement right and slide r
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -5938,19 +3795,6 @@ exports[`props placement should render correctly for placement right and slide r
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6016,46 +3860,10 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6065,19 +3873,6 @@ exports[`props placement should render correctly for placement right and slide t
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6143,46 +3938,10 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6192,19 +3951,6 @@ exports[`props placement should render correctly for placement right and slide t
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6270,46 +4016,10 @@ exports[`props placement should render correctly for placement top and slide bot
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6319,19 +4029,6 @@ exports[`props placement should render correctly for placement top and slide bot
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6351,38 +4048,6 @@ exports[`props placement should render correctly for placement top and slide cen
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -6430,13 +4095,9 @@ exports[`props placement should render correctly for placement top and slide cen
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6446,19 +4107,6 @@ exports[`props placement should render correctly for placement top and slide cen
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6524,46 +4172,10 @@ exports[`props placement should render correctly for placement top and slide lef
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6573,19 +4185,6 @@ exports[`props placement should render correctly for placement top and slide lef
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6651,46 +4250,10 @@ exports[`props placement should render correctly for placement top and slide rig
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6700,19 +4263,6 @@ exports[`props placement should render correctly for placement top and slide rig
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6778,46 +4328,10 @@ exports[`props placement should render correctly for placement top and slide top
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6827,19 +4341,6 @@ exports[`props placement should render correctly for placement top and slide top
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -6905,46 +4406,10 @@ exports[`props placement should render correctly for placement top and slide tru
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -6954,19 +4419,6 @@ exports[`props placement should render correctly for placement top and slide tru
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7032,46 +4484,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7081,19 +4497,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7113,38 +4516,6 @@ exports[`props placement should render correctly for placement top-end and slide
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -7192,13 +4563,9 @@ exports[`props placement should render correctly for placement top-end and slide
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7208,19 +4575,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7286,46 +4640,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7335,19 +4653,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7413,46 +4718,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7462,19 +4731,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7540,46 +4796,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7589,19 +4809,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7667,46 +4874,10 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7716,19 +4887,6 @@ exports[`props placement should render correctly for placement top-end and slide
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7794,46 +4952,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7843,19 +4965,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -7875,38 +4984,6 @@ exports[`props placement should render correctly for placement top-start and sli
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -7954,13 +5031,9 @@ exports[`props placement should render correctly for placement top-start and sli
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -7970,19 +5043,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8048,46 +5108,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8097,19 +5121,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8175,46 +5186,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8224,19 +5199,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8302,46 +5264,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8351,19 +5277,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8429,46 +5342,10 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8478,19 +5355,6 @@ exports[`props placement should render correctly for placement top-start and sli
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8510,16 +5374,6 @@ exports[`props placement should render correctly for right placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -8545,13 +5399,9 @@ exports[`props placement should render correctly for right placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8561,19 +5411,6 @@ exports[`props placement should render correctly for right placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8593,16 +5430,6 @@ exports[`props placement should render correctly for top placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -8628,13 +5455,9 @@ exports[`props placement should render correctly for top placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8644,19 +5467,6 @@ exports[`props placement should render correctly for top placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8676,16 +5486,6 @@ exports[`props placement should render correctly for top-end placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -8711,13 +5511,9 @@ exports[`props placement should render correctly for top-end placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8727,19 +5523,6 @@ exports[`props placement should render correctly for top-end placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8759,16 +5542,6 @@ exports[`props placement should render correctly for top-start placement 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -8794,13 +5567,9 @@ exports[`props placement should render correctly for top-start placement 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -8810,19 +5579,6 @@ exports[`props placement should render correctly for top-start placement 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -8866,16 +5622,6 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-7 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-}
-
 <body>
   <div>
     <div>
@@ -8888,35 +5634,17 @@ exports[`props should render correctly 1`] = `
       >
         Toggle
       </button>
-    </div>
-  </div>
-  <div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="test"
-      aria-modal="true"
-      class="emotion-0 emotion-4 emotion-1 emotion-2 hidden fp-Box fp-Overlay fp-Modal"
-      data-dialog="true"
-      hidden=""
-      id="test"
-      role="dialog"
-      style="display: none;"
-      tabindex="-1"
-    >
-      Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
       <div
         aria-label="test"
-        class="emotion-7 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
+        class="emotion-0 emotion-4 emotion-1 emotion-2 hidden fp-Box fp-Overlay fp-Modal"
+        data-dialog="true"
         hidden=""
+        id="test"
+        role="dialog"
         style="display: none;"
+        tabindex="-1"
       >
-        <div />
+        Hello world
       </div>
     </div>
   </div>
@@ -8983,46 +5711,10 @@ exports[`props should render correctly for expand bottom 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9032,19 +5724,6 @@ exports[`props should render correctly for expand bottom 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9110,46 +5789,10 @@ exports[`props should render correctly for expand center 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9159,19 +5802,6 @@ exports[`props should render correctly for expand center 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9237,46 +5867,10 @@ exports[`props should render correctly for expand left 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 0% 50%;
-  -ms-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9286,19 +5880,6 @@ exports[`props should render correctly for expand left 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9364,46 +5945,10 @@ exports[`props should render correctly for expand right 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9413,19 +5958,6 @@ exports[`props should render correctly for expand right 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9491,46 +6023,10 @@ exports[`props should render correctly for expand top 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9540,19 +6036,6 @@ exports[`props should render correctly for expand top 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9615,43 +6098,10 @@ exports[`props should render correctly for expand true 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-  transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9661,19 +6111,6 @@ exports[`props should render correctly for expand true 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9739,46 +6176,10 @@ exports[`props should render correctly for slide bottom 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9788,19 +6189,6 @@ exports[`props should render correctly for slide bottom 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9820,38 +6208,6 @@ exports[`props should render correctly for slide center 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
 }
 
 .emotion-1 {
@@ -9899,13 +6255,9 @@ exports[`props should render correctly for slide center 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -9915,19 +6267,6 @@ exports[`props should render correctly for slide center 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -9993,46 +6332,10 @@ exports[`props should render correctly for slide left 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10042,19 +6345,6 @@ exports[`props should render correctly for slide left 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10120,46 +6410,10 @@ exports[`props should render correctly for slide right 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10169,19 +6423,6 @@ exports[`props should render correctly for slide right 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10247,46 +6488,10 @@ exports[`props should render correctly for slide top 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10296,19 +6501,6 @@ exports[`props should render correctly for slide top 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10374,46 +6566,10 @@ exports[`props should render correctly for slide true 1`] = `
   outline: none;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.emotion-4.hidden {
-  -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-  transform: translate3d(calc(undefined),calc(undefined),0px) !important;
-}
-
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10423,19 +6579,6 @@ exports[`props should render correctly for slide true 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10455,16 +6598,6 @@ exports[`theming Overlay.bottom.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10494,13 +6627,9 @@ exports[`theming Overlay.bottom.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10510,19 +6639,6 @@ exports[`theming Overlay.bottom.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10542,16 +6658,6 @@ exports[`theming Overlay.bottomEnd.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10581,13 +6687,9 @@ exports[`theming Overlay.bottomEnd.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10597,19 +6699,6 @@ exports[`theming Overlay.bottomEnd.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10629,16 +6718,6 @@ exports[`theming Overlay.bottomStart.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10668,13 +6747,9 @@ exports[`theming Overlay.bottomStart.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10684,19 +6759,6 @@ exports[`theming Overlay.bottomStart.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10716,16 +6778,6 @@ exports[`theming Overlay.center.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10755,13 +6807,9 @@ exports[`theming Overlay.center.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10771,19 +6819,6 @@ exports[`theming Overlay.center.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10803,16 +6838,6 @@ exports[`theming Overlay.left.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10842,13 +6867,9 @@ exports[`theming Overlay.left.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10858,19 +6879,6 @@ exports[`theming Overlay.left.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10890,16 +6898,6 @@ exports[`theming Overlay.right.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -10929,13 +6927,9 @@ exports[`theming Overlay.right.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -10945,19 +6939,6 @@ exports[`theming Overlay.right.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -10977,16 +6958,6 @@ exports[`theming Overlay.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -11020,13 +6991,9 @@ exports[`theming Overlay.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -11036,19 +7003,6 @@ exports[`theming Overlay.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -11068,16 +7022,6 @@ exports[`theming Overlay.top.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -11107,13 +7051,9 @@ exports[`theming Overlay.top.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -11123,19 +7063,6 @@ exports[`theming Overlay.top.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -11155,16 +7082,6 @@ exports[`theming Overlay.topEnd.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -11194,13 +7111,9 @@ exports[`theming Overlay.topEnd.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -11210,19 +7123,6 @@ exports[`theming Overlay.topEnd.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>
@@ -11242,16 +7142,6 @@ exports[`theming Overlay.topStart.root should render correctly 1`] = `
 
 .emotion-2:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-4 {
-  background-color: rgba(0,0,0,0);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 19900409;
 }
 
 .emotion-1 {
@@ -11281,13 +7171,9 @@ exports[`theming Overlay.topStart.root should render correctly 1`] = `
 }
 
 <body>
-  <div />
-  <div
-    class="__reakit-portal"
-  >
+  <div>
     <div
       aria-label="test"
-      aria-modal="true"
       class="emotion-0 emotion-1 emotion-2 emotion-3 hidden fp-Box fp-Overlay fp-Modal"
       data-dialog="true"
       hidden=""
@@ -11297,19 +7183,6 @@ exports[`theming Overlay.topStart.root should render correctly 1`] = `
       tabindex="-1"
     >
       Hello world
-    </div>
-    <div
-      class="__reakit-portal"
-    >
-      <div
-        aria-label="test"
-        class="emotion-4 emotion-2 emotion-3 hidden fp-Box fp-ModalBackdrop"
-        data-dialog-ref="test"
-        hidden=""
-        style="display: none;"
-      >
-        <div />
-      </div>
     </div>
   </div>
 </body>

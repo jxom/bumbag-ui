@@ -1,18 +1,19 @@
-import { ModalStateReturn, ModalInitialState, useModalState } from '../Modal';
+import React from 'react';
+import { ModalInitialState, ModalStateReturn, useModalState, ModalState } from '../Modal';
 
-export type OverlayStateReturn = ModalStateReturn;
-export type OverlayInitialState = ModalInitialState;
-
-export function useOverlayState(initialState?: OverlayInitialState) {
-  return useModalState(initialState);
+export function useOverlayState(initialState?: ModalInitialState) {
+  return useModalState({ ...initialState, modal: false });
 }
 
 export function OverlayState(
   props: {
-    children?: (state: OverlayStateReturn) => React.ReactElement<any>;
-  } & OverlayInitialState
+    children?: React.ReactNode | ((state: ModalStateReturn) => React.ReactElement<any>);
+  } & ModalInitialState
 ) {
   const { children, ...restProps } = props;
-  const state = useOverlayState(restProps);
-  return props.children(state);
+  return (
+    <ModalState {...restProps} modal={false}>
+      {children}
+    </ModalState>
+  );
 }

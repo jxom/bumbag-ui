@@ -25,7 +25,6 @@ const useProps = createHook<OverlayProps>(
   {
     defaultProps: {
       hideBackdrop: true,
-      modal: false,
       placement: 'center'
     },
     themeKey: 'Overlay'

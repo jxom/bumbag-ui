@@ -86,9 +86,11 @@ const useProps = createHook<ModalProps>(
       className,
       children: (
         <React.Fragment>
-          <ModalBackdrop {...omitCSSProps(props)}>
-            <div />
-          </ModalBackdrop>
+          {!hideBackdrop && (
+            <ModalBackdrop {...omitCSSProps(props)}>
+              <div />
+            </ModalBackdrop>
+          )}
           {children}
         </React.Fragment>
       )
