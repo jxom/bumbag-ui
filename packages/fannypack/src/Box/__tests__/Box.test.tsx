@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Box } from '../Box';
+import { Box } from '../index';
+import { Button } from '../../Button';
+import { Link } from '../../Link';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -124,9 +126,19 @@ describe('props', () => {
 });
 
 describe('composition', () => {
-  describe('as', () => {
+  describe('use', () => {
     it('should render correctly', () => {
       const { container } = render(<Box use="p">Hello world</Box>);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should render correctly for a Button component with props', () => {
+      const { container } = render(
+        // @ts-ignore
+        <Box use={Button} palette="primary" kind="outlined">
+          Hello world
+        </Box>
+      );
       expect(container.firstChild).toMatchSnapshot();
     });
   });

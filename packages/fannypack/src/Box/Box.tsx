@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
 import _get from 'lodash/get';
+import classNames from 'classnames';
 
 import { ThemeConfig, CSSProperties } from '../types';
 import {
@@ -16,8 +17,10 @@ import {
 
 import * as styles from './styles';
 
+type ComponentType<R> = React.ComponentType<R> & { useProps: any };
+
 export type LocalBoxProps = {
-  use?: string | React.ComponentType<any>;
+  use?: string | ComponentType<any>;
   className?: string;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   altitude?: string;
@@ -31,7 +34,15 @@ export type LocalBoxProps = {
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (_props, { themeKey, themeKeyOverride }) => {
+    let props = _props;
+    const { use } = props;
+
+    if (use && typeof use !== 'string' && use.useProps) {
+      const newProps = use.useProps({ ...props, use: undefined });
+      props = { ...props, ...newProps };
+    }
+
     // Convert CSS props to an object.
     // Example input:
     // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
@@ -70,7 +81,6 @@ const useProps = createHook<BoxProps>(
       // @ts-ignore
       htmlProps.wrapElement = props.wrapElement;
     }
-
     return { ...htmlProps };
   },
   { themeKey: 'Box' }

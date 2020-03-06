@@ -1,28 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`composition as should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-<p
-  class="emotion-0 emotion-1 fp-Box"
->
-  Hello world
-</p>
-`;
-
 exports[`composition hook should return with box props 1`] = `
 Object {
   "className": "css-1pwrqjj css-3ekj6a fp-Box",
@@ -50,6 +27,175 @@ exports[`composition render props should render correctly 1`] = `
 >
   Hello world
 </p>
+`;
+
+exports[`composition use should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<p
+  class="emotion-0 emotion-1 fp-Box"
+>
+  Hello world
+</p>
+`;
+
+exports[`composition use should render correctly for a Button component with props 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #574feb;
+  border-radius: 8px;
+  color: #fff;
+  fill: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+}
+
+.emotion-3[disabled],
+.emotion-3[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-3:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+}
+
+.emotion-3:hover {
+  background-color: #4138e8;
+}
+
+.emotion-3:hover:active {
+  background-color: #2218d5;
+}
+
+.emotion-3 {
+  background-color: unset;
+  border: 1px solid #574feb;
+  color: #574feb;
+  fill: #574feb;
+}
+
+.emotion-3:hover {
+  background-color: #574feb;
+  color: #fff;
+  fill: #fff;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #d9d9d9;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #efefef;
+}
+
+.emotion-0:hover:active {
+  background-color: #d6d6d6;
+}
+
+<button
+  aria-disabled="false"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button"
+  type="button"
+>
+  Hello world
+</button>
 `;
 
 exports[`defaultProps should render correctly 1`] = `
