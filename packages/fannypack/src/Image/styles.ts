@@ -2,8 +2,6 @@ import { css, cssClass } from '../styled';
 import { theme } from '../utils';
 
 export const Image = styleProps => cssClass`
-  max-width: 100%;
-
   ${styleProps.isFixed &&
     css`
       max-width: unset;

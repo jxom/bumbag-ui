@@ -28,7 +28,7 @@ const useProps = createHook<ListItemProps>(
 export const ListItem = createComponent<ListItemProps>(
   props => {
     const listItemProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: listItemProps });
+    return createElement({ children: props.children, component: ReakitBox, htmlProps: listItemProps });
   },
   {
     attach: {

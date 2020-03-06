@@ -14,6 +14,11 @@ export const SideNavLevel = styleProps => cssClass`
     margin-left: unset;
   }
 
+  ${styleProps.level === 0 &&
+    css`
+      margin-bottom: ${space(2, 'major')(styleProps)}rem;
+    `}
+
   & {
     ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
   }

@@ -45,13 +45,15 @@ const useProps = createHook<SideNavLevelProps>(
 
     return {
       ...listProps,
-      'aria-labelledby': titleId,
+      'aria-labelledby': title ? titleId : undefined,
       className,
       children: (
         <SideNavLevelContext.Provider value={contextValue}>
-          <Box id={titleId} className={titleClassName}>
-            {title}
-          </Box>
+          {title && (
+            <Box id={titleId} className={titleClassName}>
+              {title}
+            </Box>
+          )}
           {children}
         </SideNavLevelContext.Provider>
       )
