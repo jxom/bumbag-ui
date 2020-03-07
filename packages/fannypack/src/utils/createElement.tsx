@@ -14,5 +14,6 @@ export function createElement({ children, component, enableRenderPropsCompositio
   if (enableRenderPropsComposition && isFunction(children)) {
     return children(htmlProps);
   }
+  console.log('test', use);
   return React.createElement(component, { as: use, ...htmlProps }, htmlProps.children || children);
 }

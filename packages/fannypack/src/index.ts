@@ -58,6 +58,7 @@ export * from './Tag';
 export * from './Text';
 export * from './Textarea';
 export * from './Tooltip';
+export * from './TopNav';
 export * from './VisuallyHidden';
 export * from './styled';
 export * from './theme';

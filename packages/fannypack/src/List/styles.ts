@@ -5,12 +5,14 @@ export const List = styleProps => cssClass`
   list-style: unset;
   list-style-type: none;
 
-  &:not(:last-child) {
-    margin-bottom: ${space(4)(styleProps)}rem;
-  }
-
   & & {
     margin-left: ${space(4)(styleProps)}rem;
+  }
+
+  & li {
+    &:not(:last-child) {
+      margin-bottom: ${space(1)(styleProps)}rem;
+    }
   }
 
   & {
@@ -27,10 +29,6 @@ export const List = styleProps => cssClass`
 `;
 
 export const ListItem = styleProps => cssClass`
-  &:not(:last-child) {
-    margin-bottom: ${space(1)(styleProps)}rem;
-  }
-
   & .fp-Icon {
     vertical-align: -0.125em;
   }
