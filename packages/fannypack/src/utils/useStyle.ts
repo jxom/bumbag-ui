@@ -5,7 +5,7 @@ import _kebabCase from 'lodash/kebabCase';
 import { ThemeContext, css } from '../styled';
 import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
-import { pickCSSProps } from './cssProps';
+import { cssProps as cssPropsMap, pickCSSProps } from './cssProps';
 
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
@@ -109,8 +109,7 @@ function getFontWeightValue({ theme, value }) {
   return value;
 }
 
-export function useStyle(props) {
-  const theme = React.useContext(ThemeContext);
+function getStyleFromProps(props, theme) {
   const cssProps = pickCSSProps(props);
 
   let style = { ...cssProps };
@@ -128,6 +127,16 @@ export function useStyle(props) {
       let newValue = value;
       if (typeof newValue === 'string') {
         newValue = { default: value };
+      }
+      if (attribute.includes('_')) {
+        const pseudoSelector = cssPropsMap[attribute];
+        return css`
+          ${prevStyle};
+
+          ${pseudoSelector} {
+            ${getStyleFromProps(value, theme)}
+          }
+        `;
       }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
         let newValue = value;
@@ -174,4 +183,9 @@ export function useStyle(props) {
   }
 
   return style;
+}
+
+export function useStyle(props) {
+  const theme = React.useContext(ThemeContext);
+  return getStyleFromProps(props, theme);
 }

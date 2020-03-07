@@ -1,4 +1,9 @@
 export type CSSProperties = {
+  _hover?: CSSProperties;
+  _hoveractive?: CSSProperties;
+  _focus?: CSSProperties;
+  _active?: CSSProperties;
+  _visited?: CSSProperties;
   alignContent?: string | number | { [key: string]: string };
   alignSelf?: string | number | { [key: string]: string };
   alignItems?: string | number | { [key: string]: string };

@@ -14,6 +14,11 @@ export function omitCSSProps(props) {
 }
 
 export const cssProps = {
+  _hover: ':hover',
+  _hoveractive: ':hover:active',
+  _focus: ':focus',
+  _visited: ':visited',
+  _active: ':active',
   alignContent: 'align-content',
   alignSelf: 'align-self',
   alignItems: 'align-items',

@@ -97,6 +97,7 @@ exports[`composition use should render correctly for a Button component with pro
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.15),0px 1px 2px 0px rgba(0,0,0,0.05);
 }
 
 .emotion-3[disabled],
@@ -126,6 +127,7 @@ exports[`composition use should render correctly for a Button component with pro
   border: 1px solid #574feb;
   color: #574feb;
   fill: #574feb;
+  box-shadow: unset;
 }
 
 .emotion-3:hover {
@@ -163,7 +165,7 @@ exports[`composition use should render correctly for a Button component with pro
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.15),0px 1px 2px 0px rgba(0,0,0,0.05);
 }
 
 .emotion-0[disabled],
@@ -177,7 +179,7 @@ exports[`composition use should render correctly for a Button component with pro
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: gray 0px 0px 0px 1px, #a6a6a6 0px 0px 0px 3px;
+  box-shadow: #b3b3b3 0px 0px 0px 1px, #d9d9d9 0px 0px 0px 3px;
   border-color: transparent;
 }
 
@@ -709,6 +711,31 @@ exports[`props should render correctly with CSS props 1`] = `
 />
 `;
 
+exports[`props should render correctly with CSS props with active 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1:active {
+  background-color: #574feb !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
 exports[`props should render correctly with CSS props with breakpoints 1`] = `
 .emotion-0 {
   margin: unset;
@@ -801,6 +828,106 @@ exports[`props should render correctly with CSS props with breakpoints 3`] = `
   .emotion-1 {
     background-color: #9e46d8 !important;
   }
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
+exports[`props should render correctly with CSS props with focus 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1:focus {
+  background-color: #574feb !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
+exports[`props should render correctly with CSS props with hover 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1:hover {
+  background-color: #574feb !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
+exports[`props should render correctly with CSS props with hoveractive 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1:hover:active {
+  background-color: #574feb !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
+exports[`props should render correctly with CSS props with visited 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1:visited {
+  background-color: #574feb !important;
 }
 
 <div

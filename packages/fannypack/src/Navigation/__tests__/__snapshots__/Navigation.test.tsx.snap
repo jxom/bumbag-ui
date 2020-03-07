@@ -28,15 +28,11 @@ exports[`composition render props should render correctly 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -73,7 +69,7 @@ exports[`composition render props should render correctly 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -82,8 +78,8 @@ exports[`composition render props should render correctly 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -92,7 +88,7 @@ exports[`composition render props should render correctly 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </div>
 `;
@@ -118,15 +114,11 @@ exports[`composition use should render correctly 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -164,7 +156,7 @@ exports[`composition use should render correctly 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -173,8 +165,8 @@ exports[`composition use should render correctly 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -183,7 +175,7 @@ exports[`composition use should render correctly 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </div>
 `;
@@ -209,15 +201,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -254,7 +242,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -263,8 +251,8 @@ exports[`defaultProps should render correctly for className 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -273,7 +261,7 @@ exports[`defaultProps should render correctly for className 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
 `;
@@ -299,15 +287,11 @@ exports[`overrides Navigation.root should render correctly 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -348,7 +332,7 @@ exports[`overrides Navigation.root should render correctly 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -357,8 +341,8 @@ exports[`overrides Navigation.root should render correctly 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -367,7 +351,7 @@ exports[`overrides Navigation.root should render correctly 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
 `;
@@ -393,15 +377,11 @@ exports[`props should render correctly 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -438,7 +418,7 @@ exports[`props should render correctly 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -447,8 +427,8 @@ exports[`props should render correctly 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -457,7 +437,7 @@ exports[`props should render correctly 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
 `;
@@ -483,15 +463,11 @@ exports[`props should render correctly with CSS props 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -532,7 +508,7 @@ exports[`props should render correctly with CSS props 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -541,8 +517,8 @@ exports[`props should render correctly with CSS props 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -551,7 +527,7 @@ exports[`props should render correctly with CSS props 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
 `;
@@ -577,15 +553,11 @@ exports[`theming Navigation.root should render correctly 1`] = `
   list-style-type: none;
 }
 
-.emotion-12:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 .emotion-12 .emotion-12 {
   margin-left: 1rem;
 }
 
-.emotion-3:not(:last-child) {
+.emotion-12 li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
 
@@ -626,7 +598,7 @@ exports[`theming Navigation.root should render correctly 1`] = `
   <ul
     class="emotion-12 emotion-1 emotion-2 fp-Box fp-List"
   >
-    <li
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -635,8 +607,8 @@ exports[`theming Navigation.root should render correctly 1`] = `
       >
         Google
       </a>
-    </li>
-    <li
+    </div>
+    <div
       class="emotion-3 emotion-1 emotion-2 fp-Box fp-ListItem"
     >
       <a
@@ -645,7 +617,7 @@ exports[`theming Navigation.root should render correctly 1`] = `
       >
         GitHub
       </a>
-    </li>
+    </div>
   </ul>
 </nav>
 `;

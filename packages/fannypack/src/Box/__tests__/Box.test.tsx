@@ -42,6 +42,31 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with CSS props with hover', () => {
+    const { container } = render(<Box _hover={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with hoveractive', () => {
+    const { container } = render(<Box _hoveractive={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with focus', () => {
+    const { container } = render(<Box _focus={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with visited', () => {
+    const { container } = render(<Box _visited={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with active', () => {
+    const { container } = render(<Box _active={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a color CSS prop', () => {
     const { container } = render(<Box backgroundColor="white900" color="primary" />);
     expect(container.firstChild).toMatchSnapshot();
