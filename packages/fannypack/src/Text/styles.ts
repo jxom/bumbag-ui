@@ -2,6 +2,8 @@ import { cssClass } from '../styled';
 import { theme } from '../utils';
 
 export const Text = styleProps => cssClass`
+  line-height: 1.2;
+
   abbr& {
     border-bottom: 1px dotted;
     cursor: help;

@@ -68,19 +68,17 @@
 ## With image
 
 ```jsx-live
-<Flex height="400px">
+<Stack height={{ 'min-desktop': '400px' }} orientation="horizontal" spacing="0">
   <Box
-    display={{ 'max-tablet': 'none' }}
-    flex="1"
-    backgroundImage="url('https://i.dailymail.co.uk/i/pix/2017/07/18/14/427394C200000578-0-image-a-24_1500384481554.jpg')"
+    backgroundImage="url('/redguy.jpg')"
     backgroundPosition="center"
     backgroundSize="cover"
+    height={{ 'max-tablet': '250px' }}
     position="relative"
   >
     <Box position="absolute" backgroundColor="primary" opacity="0.7" width="100%" height="100%" />
   </Box>
   <Flex
-    flex="1"
     alignItems="center"
     backgroundColor="#253652"
     color="white"
@@ -88,15 +86,17 @@
   >
     <Stack spacing="major-2">
       <Box>
-        <Text color="white900" fontWeight="700">EVERYTHING IS FREE</Text>
+        <Text opacity="0.8" fontWeight="700">EVERYTHING IS FREE</Text>
         <br />
         <Text fontSize="500" fontWeight="800">Make your users happy again</Text>
       </Box>
-      <Paragraph marginTop="major-2" color="white700" fontSize="300">
-        Yes that's right folks! All of Fannypack's templates are free. You don't have to pay a cent!
-      </Paragraph>
+      <Box>
+        <Text marginTop="major-2" opacity="0.8" fontSize="300">
+          Yes that's right folks! All of Fannypack's templates are free. You don't have to pay a cent!
+        </Text>
+      </Box>
       <Button marginTop="major-2" size="medium">Get started for free</Button>
     </Stack>
   </Flex>
-</Flex>
+</Stack>
 ```
