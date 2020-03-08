@@ -199,6 +199,15 @@ describe('theming', () => {
   });
 });
 
+describe('variants', () => {
+  it('css.root should render correctly', () => {
+    const { container } = render(<Box variant="test">hello world</Box>, {
+      theme: { Box: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {

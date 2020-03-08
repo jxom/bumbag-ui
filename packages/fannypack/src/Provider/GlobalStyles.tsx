@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Global, ThemeContext, css } from '../styled';
-import { theme } from '../utils';
+import { palette, theme } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
@@ -10,16 +10,17 @@ export default function GlobalStyles() {
       styles={css`
         html,
         body {
+          background-color: ${palette('background')(styleProps)};
           box-sizing: border-box;
-          font-family: ${theme('global.fontFamily')(styleProps)};
-          font-size: ${theme('global.fontSize')(styleProps)}px;
+          font-family: ${theme('global', 'fontFamily')(styleProps)};
+          font-size: ${theme('global', 'fontSize')(styleProps)}px;
           line-height: 1.5;
           margin: 0;
           padding: 0;
           -webkit-font-smoothing: antialiased;
           text-rendering: optimizeLegibility;
-          color: ${theme('palette.text')(styleProps)};
-          fill: ${theme('palette.text')(styleProps)};
+          color: ${palette('text')(styleProps)};
+          fill: ${palette('text')(styleProps)};
         }
 
         *,
@@ -29,7 +30,7 @@ export default function GlobalStyles() {
         }
 
         *:focus {
-          outline: 3px solid ${theme('palette.primary200')(styleProps)};
+          outline: 3px solid ${palette('primary200')(styleProps)};
           outline-offset: 2px;
         }
 

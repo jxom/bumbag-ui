@@ -9,7 +9,7 @@ export const Radio = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -25,7 +25,7 @@ export const RadioIcon = styleProps => cssClass`
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -35,7 +35,7 @@ export const RadioLabel = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -63,18 +63,18 @@ export const HiddenRadio = styleProps =>
 
 export const RadioField = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const RadioGroup = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const RadioGroupField = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

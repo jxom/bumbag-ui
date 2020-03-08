@@ -11,7 +11,7 @@ export const ProgressBar = styleProps => cssClass`
   ${getSizeAttributes(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -22,7 +22,7 @@ export const ProgressBarIndicator = styleProps => cssClass`
   width: ${styleProps.value || '0'}%;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -32,26 +32,26 @@ function getSizeAttributes(styleProps) {
       height: 0.6rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
       height: 1.5rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       height: 2rem;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
     `
   };

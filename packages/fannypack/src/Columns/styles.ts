@@ -6,19 +6,19 @@ export const Columns = styleProps => cssClass`
 
   ${!styleProps.isGapless &&
     css`
-      margin-left: -${theme('layout.gapUnit')(styleProps)}rem;
-      margin-right: -${theme('layout.gapUnit')(styleProps)}rem;
-      margin-top: -${theme('layout.gapUnit')(styleProps)}rem;
+      margin-left: -${theme('layout', 'gapUnit')(styleProps)}rem;
+      margin-right: -${theme('layout', 'gapUnit')(styleProps)}rem;
+      margin-top: -${theme('layout', 'gapUnit')(styleProps)}rem;
 
       &:last-child {
-        margin-bottom: -${theme('layout.gapUnit')(styleProps)}rem;
+        margin-bottom: -${theme('layout', 'gapUnit')(styleProps)}rem;
       }
     `};
 
   ${getWrapProperties(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const Column = styleProps => cssClass`
 
   ${!styleProps.isGapless &&
     css`
-      padding: ${theme('layout.gapUnit')(styleProps)}rem;
+      padding: ${theme('layout', 'gapUnit')(styleProps)}rem;
     `};
 
   & {
@@ -40,7 +40,7 @@ export const Column = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -106,7 +106,7 @@ export function getSpreadProperties(styleProps) {
     !spreadFullHD
   ) {
     return css`
-      @media (max-width: ${theme('breakpoints.tablet')(styleProps)}px) {
+      @media (max-width: ${theme('breakpoints', 'tablet')(styleProps)}px) {
         flex: none;
         width: 100%;
       }

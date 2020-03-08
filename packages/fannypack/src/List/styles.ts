@@ -24,7 +24,7 @@ export const List = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.css.root')(styleProps)};
+    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
 
@@ -34,7 +34,7 @@ export const ListItem = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.Item.css.root')(styleProps)};
+    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
 
@@ -50,7 +50,7 @@ export const getOrderedProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.css.ordered')(styleProps)};
+    ${theme(styleProps.themeKey, 'css.ordered')(styleProps)};
   }
 `;
 
@@ -65,6 +65,6 @@ export const getHorizontalProperties = styleProps => cssClass`
   }
 
   & {
-    ${theme('List.css.horizontal')(styleProps)};
+    ${theme(styleProps.themeKey, 'css.horizontal')(styleProps)};
   }
 `;

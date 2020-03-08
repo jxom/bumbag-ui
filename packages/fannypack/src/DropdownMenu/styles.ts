@@ -4,7 +4,7 @@ import * as menuStyles from '../Menu/styles';
 
 export const DropdownMenu = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -23,7 +23,7 @@ export const DropdownMenuItem = styleProps => cssClass`
 
 export const DropdownMenuButton = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 

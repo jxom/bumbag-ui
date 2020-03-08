@@ -17,7 +17,7 @@ export const Tag = styleProps => cssClass`
   ${styleProps.size && sizeProperties(styleProps)}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const TagContent = styleProps => cssClass`
   padding: 0 ${space(3)(styleProps)}em;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -61,7 +61,7 @@ export const TagClose = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.root`)(styleProps)};
     }
   }
 `;
@@ -74,7 +74,7 @@ export const outlinedProperties = styleProps => cssClass`
     fill: ${palette(styleProps.palette)(styleProps)};
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.outlined`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};
   }
 `;
 
@@ -82,21 +82,21 @@ export const sizeProperties = styleProps => {
   const sizes = {
     default: cssClass`
     & {
-      ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
     }
   `,
     medium: cssClass`
     font-size: 1em;
     height: 2rem;
     & {
-      ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
     }
   `,
     large: cssClass`
     font-size: 1.25em;
     height: 2.5rem;
     & {
-      ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
     }
   `
   };

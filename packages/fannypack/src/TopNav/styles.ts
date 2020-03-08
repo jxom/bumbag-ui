@@ -7,7 +7,7 @@ export const TopNav = styleProps => cssClass`
   min-height: 60px;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const TopNavSection = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -71,7 +71,7 @@ export const TopNavItem = styleProps => cssClass`
         `}
 
       & {
-        ${theme(`${styleProps.themeKey}.css.active`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.active`)(styleProps)};
       }
     `}
 
@@ -87,7 +87,7 @@ export const TopNavItem = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
     }
   }
 
@@ -102,11 +102,11 @@ export const TopNavItem = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
     }
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

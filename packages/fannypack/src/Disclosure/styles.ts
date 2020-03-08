@@ -3,12 +3,12 @@ import { space, theme } from '../utils';
 
 export const Disclosure = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const DisclosureRegion = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

@@ -1,8 +1,8 @@
 import { cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { fontSize, fontWeight, space, theme } from '../utils';
 
 export const Heading = styleProps => cssClass`
-  font-weight: ${theme('fontWeights.bold')(styleProps)};
+  font-weight: ${fontWeight('bold')(styleProps)};
   line-height: 1.2;
 
   .heading& + .sub-heading {
@@ -14,39 +14,39 @@ export const Heading = styleProps => cssClass`
   }
 
   h1& {
-    font-size: ${theme('fontSizes.700')(styleProps)}rem;
+    font-size: ${fontSize('700')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h1.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h1.css.root`)(styleProps)};
     }
   }
   h2& {
-    font-size: ${theme('fontSizes.600')(styleProps)}rem;
+    font-size: ${fontSize('600')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h2.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h2.css.root`)(styleProps)};
     }
   }
   h3& {
-    font-size: ${theme('fontSizes.500')(styleProps)}rem;
+    font-size: ${fontSize('500')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h3.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h3.css.root`)(styleProps)};
     }
   }
   h4& {
-    font-size: ${theme('fontSizes.400')(styleProps)}rem;
+    font-size: ${fontSize('400')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h4.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h4.css.root`)(styleProps)};
     }
   }
   h5& {
-    font-size: ${theme('fontSizes.300')(styleProps)}rem;
+    font-size: ${fontSize('300')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h5.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h5.css.root`)(styleProps)};
     }
   }
   h6& {
-    font-size: ${theme('fontSizes.200')(styleProps)}rem;
+    font-size: ${fontSize('200')(styleProps)}rem;
     & {
-      ${theme(`${styleProps.themeKey}.h6.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h6.css.root`)(styleProps)};
     }
   }
 
@@ -59,14 +59,14 @@ export const Heading = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const getSubHeadingProperties = styleProps => cssClass`
-  font-weight: ${theme('fontWeights.semibold')(styleProps)};
+  font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.subHeading.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `subHeading.css.root`)(styleProps)};
   }
 `;

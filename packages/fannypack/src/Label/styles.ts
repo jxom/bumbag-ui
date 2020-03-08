@@ -7,6 +7,6 @@ export const Label = styleProps => cssClass`
   line-height: 1;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

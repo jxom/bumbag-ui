@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils';
+import { altitude, borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils';
 
 export const Dialog = styleProps => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
@@ -7,10 +7,10 @@ export const Dialog = styleProps => cssClass`
   overflow: hidden;
   position: relative;
 
-  ${theme('altitudes.100')(styleProps)};
+  ${altitude('100')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -19,7 +19,7 @@ export const DialogContent = styleProps => cssClass`
   padding: ${space(3, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -27,7 +27,7 @@ export const DialogHeader = styleProps => cssClass`
   margin-bottom: ${space(2, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -36,7 +36,7 @@ export const DialogTitle = styleProps => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -59,7 +59,7 @@ export const DialogFooter = styleProps => cssClass`
     `};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -69,7 +69,7 @@ export const DialogClose = styleProps => cssClass`
   right: ${space(2, 'major')(styleProps)}rem;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -84,7 +84,7 @@ export const DialogIconWrapper = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -92,7 +92,7 @@ export const DialogModal = styleProps => cssClass`
   max-width: 600px;
   width: 100%;
 
-  ${theme('altitudes.400')(styleProps)};
+  ${altitude('400')(styleProps)};
 
   & .fp-DialogContent {
     max-height: 70vh;
@@ -100,6 +100,6 @@ export const DialogModal = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

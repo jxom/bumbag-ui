@@ -24,6 +24,7 @@ export type LocalBoxProps = {
   className?: string;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   altitude?: string;
+  variant?: string;
   showBreakpoint?: string;
   hiddenBreakpoint?: string;
   /* Component-level theme overrides [Read more](TODO) */

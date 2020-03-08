@@ -85,7 +85,7 @@ export const Tab = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.selected`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.selected`)(styleProps)};
     }
   }
 
@@ -110,7 +110,7 @@ export const Tab = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
     }
   }
 
@@ -126,12 +126,12 @@ export const Tab = styleProps => cssClass`
       `}
 
     & {
-      ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
     }
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -151,7 +151,7 @@ export const Tabs = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -180,7 +180,7 @@ export const TabsList = styleProps => cssClass`
   ${getAlignAttributes(styleProps)}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -190,7 +190,7 @@ export const TabsPanel = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -200,21 +200,21 @@ function getAlignAttributes(styleProps) {
       & {
         justify-content: start;
 
-        ${theme(`${styleProps.themeKey}.css.align.left`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.align.left`)(styleProps)};
       }
     `,
     center: css`
       justify-content: center;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.align.center`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.align.center`)(styleProps)};
       }
     `,
     right: css`
       justify-content: flex-end;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.align.right`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.align.right`)(styleProps)};
       }
     `
   };

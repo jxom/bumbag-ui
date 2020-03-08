@@ -79,11 +79,44 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 <Box borderRadius="6" border="1px solid black" padding="major-3">Box with a border radius of 6</Box>
 ```
 
+## Variants
+
+```function-live noInline
+const theme = {
+  Box: {
+    variants: {
+      dopebox: {
+        defaultProps: {
+          altitude: '400',
+          backgroundColor: 'hotpink',
+          fontFamily: '"Comic Sans MS", sans-serif',
+          padding: 'major-2',
+          _hover: {
+            backgroundColor: 'purple',
+            color: 'white'
+          }
+        }
+      }
+    }
+  }
+};
+
+function Example() {
+  return (
+    <Provider theme={theme}>
+      <Box variant="dopebox">A box straight from the Fannypack.</Box>
+    </Provider>
+  )
+}
+
+render(Example)
+```
+
 ## Box Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -93,11 +126,11 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -116,19 +149,19 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -145,11 +178,11 @@ You're able to apply any CSS attribute as a prop to `<Box>`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 

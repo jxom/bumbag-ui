@@ -6,7 +6,7 @@ export const Menu = styleProps => cssClass`
   width: 100%;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -36,7 +36,7 @@ export const MenuItem = styleProps => cssClass`
     opacity: 0.5;
 
     & {
-      ${theme(`${styleProps.themeKey}.disabled`)(styleProps)};
+      ${theme(styleProps.themeKey, `disabled`)(styleProps)};
     }
   }
 
@@ -45,14 +45,14 @@ export const MenuItem = styleProps => cssClass`
     background-color: ${palette('white600')(styleProps)};
 
     & {
-      ${theme(`${styleProps.themeKey}.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `focus`)(styleProps)};
     }
   }
   &:not(:disabled):hover {
     background-color: ${palette('white600')(styleProps)};
 
     & {
-      ${theme(`${styleProps.themeKey}.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `hover`)(styleProps)};
     }
   }
   &:not(:disabled):focus:active,
@@ -70,7 +70,7 @@ export const MenuItem = styleProps => cssClass`
       }
 
       & {
-        ${theme(`${styleProps.themeKey}.active`)(styleProps)};
+        ${theme(styleProps.themeKey, `active`)(styleProps)};
       }
     `}
 
@@ -79,7 +79,7 @@ export const MenuItem = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -94,7 +94,7 @@ export const MenuItemIcon = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -104,13 +104,13 @@ export const MenuDivider = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const MenuGroup = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -124,6 +124,6 @@ export const MenuGroupTitle = styleProps => cssClass`
   text-transform: uppercase;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

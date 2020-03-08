@@ -40,12 +40,12 @@ export const Drawer = styleProps => cssClass`
   ${altitude('300')(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
 export const DrawerDisclosure = styleProps => cssClass`
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

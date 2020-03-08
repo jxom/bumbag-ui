@@ -13,7 +13,7 @@ export const Link = styleProps => cssClass`
     fill: ${palette('primary900')(styleProps)};
 
     & {
-      ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
     }
   }
 
@@ -21,7 +21,7 @@ export const Link = styleProps => cssClass`
     outline-style: dashed;
 
     & {
-      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
     }
   }
 
@@ -30,6 +30,6 @@ export const Link = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

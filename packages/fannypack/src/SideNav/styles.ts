@@ -5,7 +5,7 @@ export const SideNav = styleProps => cssClass`
   width: 100%;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -20,7 +20,7 @@ export const SideNavLevel = styleProps => cssClass`
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -32,7 +32,7 @@ export const SideNavLevelTitle = styleProps => cssClass`
   text-transform: uppercase;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -60,7 +60,7 @@ export const SideNavItem = styleProps => cssClass`
     color: ${palette('primary')(styleProps)};
 
     & {
-      ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
     }
   }
 
@@ -69,7 +69,7 @@ export const SideNavItem = styleProps => cssClass`
     background-color: ${palette('primaryTint')(styleProps)};
 
     & {
-      ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
     }
   }
 
@@ -79,11 +79,11 @@ export const SideNavItem = styleProps => cssClass`
       box-shadow: inset 3px 0 0 0 ${palette('primary')(styleProps)};
 
       & {
-        ${theme(`${styleProps.themeKey}.css.active`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.active`)(styleProps)};
       }
     `}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

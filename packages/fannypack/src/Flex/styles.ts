@@ -5,6 +5,6 @@ export const Flex = styleProps => cssClass`
   display: flex;
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;

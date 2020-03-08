@@ -1,6 +1,6 @@
 import getDefaultPalette from '../theme/palette';
 import { css, cssClass } from '../styled';
-import { borderRadius, darken, palette, space, theme, fontSize } from '../utils';
+import { borderRadius, darken, palette, space, theme, fontSize, fontWeight } from '../utils';
 
 const defaultPalette = getDefaultPalette({});
 
@@ -12,7 +12,7 @@ export const Button = styleProps => cssClass`
   fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   cursor: pointer;
   display: inline-flex;
-  font-weight: ${theme('fontWeights.semibold')(styleProps)};
+  font-weight: ${fontWeight('semibold')(styleProps)};
   min-height: 2.75rem;
   justify-content: center;
   padding: 0 1rem;
@@ -36,7 +36,7 @@ export const Button = styleProps => cssClass`
   ${styleProps.kind === 'ghost' && getGhostProperties(styleProps)};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -47,7 +47,7 @@ export const ButtonIcon = styleProps => cssClass`
       margin-right: ${space(2)(styleProps)}em;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.before`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.before`)(styleProps)};
       }
     `};
 
@@ -57,12 +57,12 @@ export const ButtonIcon = styleProps => cssClass`
       margin-right: -${space(1)(styleProps)}em;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.after`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.after`)(styleProps)};
       }
     `};
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -77,7 +77,7 @@ export const ButtonSpinnerWrapper = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -87,7 +87,7 @@ export const ButtonSpinner = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -98,7 +98,7 @@ export const ButtonClose = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -112,7 +112,7 @@ export const getDisabledProperties = styleProps => css`
     pointer-events: unset;
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.disabled`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.disabled`)(styleProps)};
   }
 `;
 
@@ -120,17 +120,17 @@ export const getSizeProperties = styleProps => {
   const styles = {
     small: css`
       & {
-        font-size: ${theme('fontSizes.100')(styleProps)}em;
+        font-size: ${fontSize('100')(styleProps)}em;
         min-height: 2.5rem;
         padding: 0 ${space(3)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.small`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -139,17 +139,17 @@ export const getSizeProperties = styleProps => {
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       & {
-        font-size: ${theme('fontSizes.300')(styleProps)}em;
+        font-size: ${fontSize('300')(styleProps)}em;
         min-height: 3rem;
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
     `
   };
@@ -167,7 +167,7 @@ export const getLoadingProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.loading`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.loading`)(styleProps)};
   }
 `;
 
@@ -182,7 +182,7 @@ export const getStaticProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.static`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.static`)(styleProps)};
   }
 `;
 
@@ -199,7 +199,7 @@ export const getInteractiveProperties = styleProps => css`
         border-color: transparent;
       `};
 
-    ${theme(`${styleProps.themeKey}.css.focus`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
   }
 
   ${styleProps.kind !== 'link' &&
@@ -208,7 +208,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme(`${styleProps.themeKey}.css.hover`)(styleProps)};
+          ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
         }
       }
     `};
@@ -219,7 +219,7 @@ export const getInteractiveProperties = styleProps => css`
         background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
 
         & {
-          ${theme(`${styleProps.themeKey}.css.hoveractive`)(styleProps)};
+          ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
         }
       }
     `};
@@ -249,7 +249,7 @@ export const getLinkProperties = styleProps => css`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.link`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.link`)(styleProps)};
   }
 `;
 
@@ -271,7 +271,7 @@ export const getOutlinedProperties = styleProps => css`
       `};
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.outlined`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};
   }
 `;
 
@@ -291,6 +291,6 @@ export const getGhostProperties = styleProps => css`
     }
   }
   & {
-    ${theme(`${styleProps.themeKey}.css.ghost`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.ghost`)(styleProps)};
   }
 `;

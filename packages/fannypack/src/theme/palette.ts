@@ -17,6 +17,8 @@ const defaultPalette: { [key: string]: string } = {
 export default (overrides: PaletteThemeConfig) => ({
   ...generateTextVariants(_get(overrides, 'text') || defaultPalette.text),
 
+  background: 'white',
+
   black: 'black',
   black500: 'black',
 

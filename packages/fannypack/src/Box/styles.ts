@@ -1,6 +1,6 @@
 import _get from 'lodash/get';
 import { css, cssClass } from '../styled';
-import { breakpoint, theme } from '../utils';
+import { altitude, breakpoint, theme } from '../utils';
 import { ThemeConfig } from '../types';
 
 export const style = styleProps => cssClass`
@@ -12,7 +12,7 @@ export const style = styleProps => cssClass`
   ${styleProps.altitude &&
     css`
       & {
-        ${theme(`altitudes.${styleProps.altitude}`)(styleProps)};
+        ${altitude(styleProps.altitude)(styleProps)};
       }
     `};
 `;
@@ -32,7 +32,7 @@ export const Box = styleProps => cssClass`
   }
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
 

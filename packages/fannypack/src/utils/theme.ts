@@ -4,9 +4,17 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 
-export function theme(selector: string, defaultValue?: any) {
-  return (props: { theme?: ThemeConfig }) => {
-    const theme = _get(props, `overrides.${selector}`) || _get(props, `theme.${selector}`, defaultValue);
+export function theme(themeKey: string, path?: string, defaultValue?: any) {
+  return (props: { theme?: ThemeConfig; variant?: string }) => {
+    const { variant } = props;
+
+    const selector = `${themeKey}${path ? `.${path}` : ''}`;
+    const variantSelector = `${themeKey}.variants.${variant}.${path}`;
+
+    const defaultTheme = _get(props, `overrides.${selector}`) || _get(props, `theme.${selector}`);
+    const variantTheme = _get(props, `overrides.${variantSelector}`) || _get(props, `theme.${variantSelector}`);
+    const theme = variantTheme || defaultTheme || defaultValue;
+
     if (isFunction(theme)) {
       return theme(props);
     }
@@ -16,42 +24,42 @@ export function theme(selector: string, defaultValue?: any) {
 
 export function altitude(selector?: string, defaultValue?: any) {
   return (props: { altitude?: string; theme?: ThemeConfig }) => {
-    const altitude = theme(`altitudes.${selector || props.altitude}`, defaultValue)(props);
+    const altitude = theme('altitudes', selector || props.altitude, defaultValue)(props);
     return altitude;
   };
 }
 
 export function border(selector?: string, defaultValue?: any) {
   return (props: { border?: string; theme?: ThemeConfig }) => {
-    const border = theme(`borders.${selector || props.border}`, defaultValue)(props);
+    const border = theme('borders', selector || props.border, defaultValue)(props);
     return border;
   };
 }
 
 export function borderRadius(selector?: string, defaultValue?: any) {
   return (props: { borderRadius?: string; theme?: ThemeConfig }) => {
-    const borderRadius = theme(`borderRadii.${selector || props.borderRadius}`, defaultValue)(props);
+    const borderRadius = theme('borderRadii', selector || props.borderRadius, defaultValue)(props);
     return borderRadius;
   };
 }
 
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
-    const color = theme(`fontSizes.${selector || props.fontSize}`, defaultValue)(props);
+    const color = theme('fontSizes', selector || props.fontSize, defaultValue)(props);
     return color;
   };
 }
 
 export function fontWeight(selector?: string, defaultValue?: any) {
   return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
-    const color = theme(`fontWeights.${selector || props.fontWeight}`, defaultValue)(props);
+    const color = theme('fontWeights', selector || props.fontWeight, defaultValue)(props);
     return color;
   };
 }
 
 export function palette(selector?: string, defaultValue?: any) {
   return (props: { palette?: string; theme?: ThemeConfig }) => {
-    const color = theme(`palette.${selector || props.palette}`, defaultValue)(props);
+    const color = theme('palette', selector || props.palette, defaultValue)(props);
     return color;
   };
 }

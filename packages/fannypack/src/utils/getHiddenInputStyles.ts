@@ -34,7 +34,7 @@ export function getHiddenInputStyles({
         ${uncheckedIconCss};
 
         & {
-          ${theme(`${themeKey}.unchecked`)(styleProps)};
+          ${theme(themeKey, `unchecked`)(styleProps)};
         }
       }
     }
@@ -51,12 +51,12 @@ export function getHiddenInputStyles({
       &::before {
         ${disabledUncheckedIconCss};
         & {
-          ${theme(`${themeKey}.uncheckedDisabled`)(styleProps)};
+          ${theme(themeKey, `uncheckedDisabled`)(styleProps)};
         }
       }
 
       & {
-        ${theme(`${themeKey}.disabled`)(styleProps)};
+        ${theme(themeKey, `disabled`)(styleProps)};
       }
     }
     &:not([disabled]):hover + .${iconClassName} {
@@ -68,7 +68,7 @@ export function getHiddenInputStyles({
       box-shadow: ${palette(`${styleProps.palette || 'primary'}100`)(styleProps)} 0px 0px 0px 3px !important;
 
       & {
-        ${theme(`${themeKey}.focusChecked`)(styleProps)};
+        ${theme(themeKey, `focusChecked`)(styleProps)};
       }
     }
     &:not([disabled]):checked + .${iconClassName} {
@@ -83,19 +83,19 @@ export function getHiddenInputStyles({
       }
 
       & {
-        ${theme(`${themeKey}.checked`)(styleProps)};
+        ${theme(themeKey, `checked`)(styleProps)};
       }
     }
     &[disabled]:checked + .${iconClassName}::before {
       ${disabledCheckedIconCss};
 
       & {
-        ${theme(`${themeKey}.checkedDisabled`)(styleProps)};
+        ${theme(themeKey, `checkedDisabled`)(styleProps)};
       }
     }
 
     & {
-      ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `css.root`)(styleProps)};
     }
   `;
 }

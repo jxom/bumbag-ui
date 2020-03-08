@@ -29,14 +29,14 @@ export const Badge = styleProps => cssClass`
       right: -0.5em;
 
       & {
-        ${theme(`${styleProps.themeKey}.css.attached`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.attached`)(styleProps)};
       }
     `}
 
   ${getSizeAttributes(styleProps)}
 
   & {
-    ${theme(`${styleProps.themeKey}.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
@@ -44,19 +44,19 @@ function getSizeAttributes(styleProps) {
   const sizeAttributes = {
     default: css`
       & {
-        ${theme(`${styleProps.themeKey}.css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
       & {
         font-size: ${fontSize('200')(styleProps)}rem;
-        ${theme(`${styleProps.themeKey}.css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       & {
         font-size: ${fontSize('300')(styleProps)}rem;
-        ${theme(`${styleProps.themeKey}.css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
     `
   };

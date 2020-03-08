@@ -6,31 +6,31 @@ export const Container = styleProps => cssClass`
 
   ${!styleProps.isFluid &&
     css`
-      max-width: ${theme('breakpoints.fullHD')(styleProps)}px;
+      max-width: ${theme('breakpoints', 'fullHD')(styleProps)}px;
     `};
 
   ${styleProps.isFluid &&
     css`
-      padding-left: ${theme('Container.fluidMargin')(styleProps)}rem;
-      padding-right: ${theme('Container.fluidMargin')(styleProps)}rem;
+      padding-left: ${theme(styleProps.themeKey, 'fluidMargin')(styleProps)}rem;
+      padding-right: ${theme(styleProps.themeKey, 'fluidMargin')(styleProps)}rem;
 
       & {
-        ${theme('Container.css.fluid')(styleProps)};
+        ${theme(styleProps.themeKey, 'css.fluid')(styleProps)};
       }
     `};
 
   ${(styleProps.isLayout || styleProps.isFluid) &&
     css`
       @media (max-width: ${theme('breakpoints.tablet')(styleProps)}px) {
-        padding-left: ${theme('Container.tabletMargin')(styleProps)}rem;
-        padding-right: ${theme('Container.tabletMargin')(styleProps)}rem;
+        padding-left: ${theme(styleProps.themeKey, 'tabletMargin')(styleProps)}rem;
+        padding-right: ${theme(styleProps.themeKey, 'tabletMargin')(styleProps)}rem;
       }
     `};
 
   ${styleProps.isLayout &&
     css`
       & {
-        ${theme('Container.css.layout')(styleProps)};
+        ${theme(styleProps.themeKey, 'css.layout')(styleProps)};
       }
     `};
 
@@ -38,7 +38,7 @@ export const Container = styleProps => cssClass`
   ${styleProps.align && !styleProps.isFluid ? alignProperties[styleProps.align] : null};
 
   & {
-    ${theme('Container.css.root')(styleProps)};
+    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
 
@@ -61,21 +61,21 @@ export function getResponsiveProperties(styleProps) {
   if (breakpoint) {
     return css`
       & {
-        max-width: ${theme(`breakpoints.${breakpoint}`)(styleProps)}px;
+        max-width: ${theme('breakpoints', breakpoint)(styleProps)}px;
       }
     `;
   }
   return css`
-    @media (max-width: ${theme('breakpoints.fullHD')(styleProps) + 128}px) {
-      max-width: ${theme('breakpoints.widescreen')(styleProps)}px;
+    @media (max-width: ${theme('breakpoints', 'fullHD')(styleProps) + 128}px) {
+      max-width: ${theme('breakpoints', 'widescreen')(styleProps)}px;
     }
 
-    @media (max-width: ${theme('breakpoints.widescreen')(styleProps) + 128}px) {
-      max-width: ${theme('breakpoints.desktop')(styleProps)}px;
+    @media (max-width: ${theme('breakpoints', 'widescreen')(styleProps) + 128}px) {
+      max-width: ${theme('breakpoints', 'desktop')(styleProps)}px;
     }
 
-    @media (max-width: ${theme('breakpoints.desktop')(styleProps) + 128}px) {
-      max-width: ${theme('breakpoints.tablet')(styleProps)}px;
+    @media (max-width: ${theme('breakpoints', 'desktop')(styleProps) + 128}px) {
+      max-width: ${theme('breakpoints', 'tablet')(styleProps)}px;
     }
   `;
 }

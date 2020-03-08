@@ -96,8 +96,8 @@ import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
 export type Stylesheet = any; // TODO: fix
-
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
+export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 
 export type BreakpointsThemeConfig = {
   mobile?: ThemeAttribute<number>;
@@ -242,6 +242,7 @@ export type BoxThemeConfig = {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<BoxProps>;
+  variants?: Variant<BoxThemeConfig>;
 };
 export type ButtonThemeConfig = {
   css?: {
