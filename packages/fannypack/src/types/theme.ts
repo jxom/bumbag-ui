@@ -91,6 +91,7 @@ import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TextareaProps, TextareaFieldProps } from '../Textarea';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
+import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
 import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 
@@ -1152,6 +1153,27 @@ export type TooltipThemeConfig = {
   };
   defaultProps?: Partial<TooltipProps>;
 };
+export type TopNavThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Section?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TopNavSectionProps>;
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+      active?: ThemeAttribute<Stylesheet>;
+      focus?: ThemeAttribute<Stylesheet>;
+      hover?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TopNavItemProps>;
+  };
+  defaultProps?: Partial<TopNavProps>;
+};
 export type SelectThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1319,6 +1341,7 @@ export type ThemeConfig = {
   Container?: ContainerThemeConfig;
   Dialog?: DialogThemeConfig;
   Disclosure?: DisclosureThemeConfig;
+  Drawer?: DrawerThemeConfig;
   DropdownMenu?: DropdownMenuThemeConfig;
   FieldWrapper?: FieldWrapperThemeConfig;
   Flex?: FlexThemeConfig;
@@ -1354,7 +1377,6 @@ export type ThemeConfig = {
   SelectField?: SelectFieldThemeConfig;
   Set?: SetThemeConfig;
   SideNav?: SideNavThemeConfig;
-  Drawer?: DrawerThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Switch?: SwitchThemeConfig;
   SwitchField?: SwitchFieldThemeConfig;
@@ -1367,5 +1389,6 @@ export type ThemeConfig = {
   Textarea?: TextareaThemeConfig;
   TextareaField?: TextareaFieldThemeConfig;
   Tooltip?: TooltipThemeConfig;
+  TopNav?: TopNavThemeConfig;
   Template?: TemplateThemeConfig;
 };

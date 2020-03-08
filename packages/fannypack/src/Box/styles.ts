@@ -43,7 +43,7 @@ function buildVisibleAttributes(props: { hiddenBreakpoint?: string; showBreakpoi
   return breakpoint(
     _breakpoint,
     css`
-      display: none;
+      display: none !important;
     `,
     { show: Boolean(props.showBreakpoint) }
   )(props);

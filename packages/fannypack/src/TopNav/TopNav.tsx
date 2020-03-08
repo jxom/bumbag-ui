@@ -38,14 +38,14 @@ const useProps = createHook<TopNavProps>(
       prevClassName: navigationProps.className
     });
 
-    const [selectedId, setSelectedId] = React.useState(defaultSelectedId);
+    const [selectedId, setSelectedId] = React.useState(defaultSelectedId || '');
 
     const handleChangeSelectedId = React.useCallback(
       id => {
         if (onChange) {
           onChange(id);
         } else {
-          setSelectedId(id);
+          setSelectedId(id || '');
         }
       },
       [onChange]

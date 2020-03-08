@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box as ReakitBox } from 'reakit';
+import { Box as ReakitBox, useButton as useReakitButton } from 'reakit';
 import buildClassNames from 'classnames';
 
 import { bindFns, useClassName, createComponent, createElement, createHook } from '../utils';
@@ -11,14 +11,21 @@ import * as styles from './styles';
 export type LocalTopNavItemProps = {
   href?: string;
   isActive?: boolean;
+  palette?: string;
   navId?: string;
+  variant?: string;
 };
 export type TopNavItemProps = ListItemProps & LocalTopNavItemProps;
 
 const useProps = createHook<TopNavItemProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const { children, href, isActive, navId, onClick, overrides, ...restProps } = props;
-    const listItemProps = ListItem.useProps(restProps);
+
+    let htmlProps;
+    if (navId) {
+      htmlProps = useReakitButton(restProps);
+    }
+    htmlProps = ListItem.useProps({ ...htmlProps, ...restProps });
 
     const { onChangeSelectedId, selectedId, overrides: topNavOverrides } = React.useContext(TopNavContext);
 
@@ -34,8 +41,9 @@ const useProps = createHook<TopNavItemProps>(
     });
 
     return {
-      ...listItemProps,
-      className: buildClassNames(listItemProps.className, href ? undefined : className),
+      ...htmlProps,
+      'aria-current': isActive || selectedId === navId ? 'page' : undefined,
+      className: buildClassNames(htmlProps.className, href ? undefined : className),
       onClick: href ? undefined : bindFns(onClick, () => onChangeSelectedId(navId)),
       children: href ? (
         <a className={className} href={href} onClick={bindFns(onClick, () => onChangeSelectedId(navId))}>
@@ -46,7 +54,7 @@ const useProps = createHook<TopNavItemProps>(
       )
     };
   },
-  { themeKey: 'TopNav.Item' }
+  { defaultProps: { palette: 'primary', variant: 'default' }, themeKey: 'TopNav.Item' }
 );
 
 export const TopNavItem = createComponent<TopNavItemProps>(

@@ -14,15 +14,88 @@ import { TopNav } from 'fannypack'
 ## Usage
 
 ```jsx-live
-<TopNav defaultSelectedId="list">
+<TopNav>
   <TopNav.Section>
-    <TopNav.Item fontWeight="semibold">
-      Fannypack
+    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
     </TopNav.Item>
+    <TopNav.Item href="#">Get started</TopNav.Item>
+    <TopNav.Item href="#">Components</TopNav.Item>
   </TopNav.Section>
   <TopNav.Section>
-    <TopNav.Item navId="get-started">Get started</TopNav.Item>
-    <TopNav.Item navId="components">Components</TopNav.Item>
+    <TopNav.Item>
+      <Button kind="ghost" palette="primary">Sign up</Button>
+    </TopNav.Item>
+    <TopNav.Item>
+      <Button palette="primary">Login</Button>
+    </TopNav.Item>
+  </TopNav.Section>
+</TopNav>
+```
+
+### Variants
+
+#### Pill
+
+```jsx-live
+<TopNav>
+  <TopNav.Section>
+    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
+    </TopNav.Item>
+    <TopNav.Item href="#" variant="pill">Get started</TopNav.Item>
+    <TopNav.Item href="#" variant="pill">Components</TopNav.Item>
+  </TopNav.Section>
+  <TopNav.Section>
+    <TopNav.Item>
+      <Button kind="ghost" palette="primary">Sign up</Button>
+    </TopNav.Item>
+    <TopNav.Item>
+      <Button palette="primary">Login</Button>
+    </TopNav.Item>
+  </TopNav.Section>
+</TopNav>
+```
+
+### Selected items
+
+#### Controlled
+
+```function-live
+function Example() {
+  const [selectedId, setSelectedId] = React.useState('get-started');
+  return (
+    <TopNav selectedId={selectedId} onChange={id => setSelectedId(id)}>
+      <TopNav.Section>
+        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
+        <TopNav.Item navId="components" href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section>
+        <TopNav.Item>
+          <Button kind="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  )
+}
+```
+
+#### Uncontrolled
+
+```jsx-live
+<TopNav defaultSelectedId="get-started">
+  <TopNav.Section>
+    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+      <Image src="/logo.png" height="44px" />
+    </TopNav.Item>
+    <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
+    <TopNav.Item navId="components" href="#">Components</TopNav.Item>
   </TopNav.Section>
   <TopNav.Section>
     <TopNav.Item>
@@ -39,4 +112,120 @@ import { TopNav } from 'fannypack'
 
 ### TopNav Props
 
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">defaultSelectedId</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">any</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">selectedId</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Navigation</strong></code> props</Box>
+
+</details>
+
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 71 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
 ## Theming
+
+<Theme component="div" overrides={['TopNav.css.root', 'TopNav.Section.css.root', 'TopNav.Item.css.root', 'TopNav.Item.css.active', 'TopNav.Item.css.hover', 'TopNav.Item.css.focus']}>
+  {props => (
+    <TopNav defaultSelectedId="get-started" overrides={props.overrides}>
+      <TopNav.Section>
+        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
+        <TopNav.Item navId="components" href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section>
+        <TopNav.Item>
+          <Button kind="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  )}
+</Theme>
