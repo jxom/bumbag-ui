@@ -1,0 +1,955 @@
+import Theme from '../../components/Theme';
+import { Table } from 'fannypack';
+
+# Table
+
+## Import
+
+```jsx
+import { Table } from 'fannypack'
+```
+
+## Usage
+
+```jsx-live
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+### Dividers
+
+```jsx-live
+<Table hasDividers>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+### Striped
+
+```jsx-live
+<Table isStriped>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+### Hoverable
+
+```jsx-live
+<Table isHoverable>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+### Variants
+
+#### Minimal
+
+```jsx-live
+<Table variant="minimal">
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+#### Shadowed
+
+```jsx-live
+<Table variant="shadowed">
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Foot fontWeight="semibold">
+    <Table.Row>
+      <Table.Cell>Total</Table.Cell>
+      <Table.Cell />
+      <Table.Cell textAlign="right">$36.00</Table.Cell>
+    </Table.Row>
+  </Table.Foot>
+</Table>
+```
+
+### Responsive
+
+```jsx-live
+<Table isResponsive>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+```
+
+```jsx-live
+<Table isResponsive responsiveBreakpoint="tablet">
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Name</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+      <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Nike</Table.Cell>
+      <Table.Cell textAlign="right">3</Table.Cell>
+      <Table.Cell textAlign="right">$9.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>Adidas</Table.Cell>
+      <Table.Cell textAlign="right">4</Table.Cell>
+      <Table.Cell textAlign="right">$12.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>North Face</Table.Cell>
+      <Table.Cell textAlign="right">5</Table.Cell>
+      <Table.Cell textAlign="right">$15.00</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+```
+
+## Props
+
+### Table Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">hasDividers</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isStriped</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isHoverable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isResponsive</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">responsiveBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">dividerColor</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">stripeColor</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hoverColor</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.Head Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.HeadCell Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.Body Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.Row Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.Cell Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+### Table.Foot Props
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 72 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+<Box marginBottom="major-4" />
+
+</details>
+
+
+## Theming
+
+<Theme component="div" overrides={['Table.css.root', 'Table.Head.css.root', 'Table.HeadCell.css.root', 'Table.Body.css.root', 'Table.Row.css.root', 'Table.Cell.css.root', 'Table.Foot.css.root', 'Table.css.responsive.root', 'Table.css.responsive.headCellText']}>
+  {props => (
+    <Table overrides={props.overrides} isResponsive>
+      <Table.Head>
+        <Table.Row>
+          <Table.HeadCell>Name</Table.HeadCell>
+          <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
+          <Table.HeadCell textAlign="right">Price</Table.HeadCell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>Nike</Table.Cell>
+          <Table.Cell textAlign="right">3</Table.Cell>
+          <Table.Cell textAlign="right">$9.00</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Adidas</Table.Cell>
+          <Table.Cell textAlign="right">4</Table.Cell>
+          <Table.Cell textAlign="right">$12.00</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>North Face</Table.Cell>
+          <Table.Cell textAlign="right">5</Table.Cell>
+          <Table.Cell textAlign="right">$15.00</Table.Cell>
+        </Table.Row>
+      </Table.Body>
+      <Table.Foot fontWeight="semibold">
+        <Table.Row>
+          <Table.Cell>Total</Table.Cell>
+          <Table.Cell />
+          <Table.Cell textAlign="right">$36.00</Table.Cell>
+        </Table.Row>
+      </Table.Foot>
+    </Table>
+  )}
+</Theme>

@@ -87,6 +87,15 @@ import { SpinnerProps } from '../Spinner';
 import { SwitchProps, SwitchFieldProps, SwitchGroupProps, SwitchGroupFieldProps } from '../Switch';
 import { TabbableProps } from '../Tabbable';
 import { TabsProps, TabsListProps, TabsTabProps, TabsPanelProps } from '../Tabs';
+import {
+  TableProps,
+  TableRowProps,
+  TableBodyProps,
+  TableCellProps,
+  TableHeadProps,
+  TableHeadCellProps,
+  TableFootProps
+} from '../Table';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TextareaProps, TextareaFieldProps } from '../Textarea';
@@ -1028,6 +1037,48 @@ export type TabbableThemeConfig = {
   };
   defaultProps?: Partial<TabbableProps>;
 };
+export type TableThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Head?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableHeadProps>;
+  };
+  HeadCell?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableHeadCellProps>;
+  };
+  Body?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableBodyProps>;
+  };
+  Cell?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableCellProps>;
+  };
+  Row?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableRowProps>;
+  };
+  Foot?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<TableFootProps>;
+  };
+  defaultProps?: Partial<TableProps>;
+};
 export type TabsThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1384,6 +1435,7 @@ export type ThemeConfig = {
   SwitchGroup?: SwitchGroupThemeConfig;
   SwitchGroupField?: SwitchGroupFieldThemeConfig;
   Tabbable?: TabbableThemeConfig;
+  Table?: TableThemeConfig;
   Tabs?: TabsThemeConfig;
   Tag?: TagThemeConfig;
   Text?: TextThemeConfig;

@@ -53,6 +53,7 @@ export * from './Spinner';
 export * from './Stack';
 export * from './Switch';
 export * from './Tabbable';
+export * from './Table';
 export * from './Tabs';
 export * from './Tag';
 export * from './Text';
