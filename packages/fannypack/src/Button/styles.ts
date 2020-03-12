@@ -19,7 +19,11 @@ export const Button = styleProps => cssClass`
   text-decoration: none;
   hyphens: auto;
   transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
-  box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+  ${styleProps.palette === 'default' &&
+    css`
+      border: 1px solid ${palette('white900')(styleProps)};
+    `}
 
   &[disabled],
   &[aria-disabled="true"] {
