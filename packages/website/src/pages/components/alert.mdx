@@ -17,25 +17,10 @@ If you are needing to display more descriptive, but important message to a user,
 
 ```jsx-live
 <Alert
-  hasIcon
   title="Did you know?"
   showCloseButton
   onClickClose={() => alert('Closed!')}
 >
-  Fannypack is a React UI Kit.
-</Alert>
-```
-
-### Accents
-
-```jsx-live
-<Alert accent>
-  Fannypack is a React UI Kit.
-</Alert>
-<Alert accent="top" marginTop="major-2">
-  Fannypack is a React UI Kit.
-</Alert>
-<Alert accent="bottom" marginTop="major-2">
   Fannypack is a React UI Kit.
 </Alert>
 ```
@@ -72,51 +57,70 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 </Alert>
 ```
 
-### Fill
+### Accents
 
 ```jsx-live
-<Alert isFilled title="Did you know?" type="info">
+<Alert accent>
   Fannypack is a React UI Kit.
 </Alert>
-<Alert isFilled title="Action applied" type="success" marginTop="major-2">
+<Alert accent="top" marginTop="major-2">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert accent="bottom" marginTop="major-2">
+  Fannypack is a React UI Kit.
+</Alert>
+```
+
+### Variants
+
+#### Bordered
+
+```jsx-live
+<Alert variant="bordered" title="Did you know?" type="info">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert variant="bordered" title="Action applied" type="success" marginTop="major-2">
   Your action was applied successfully.
 </Alert>
-<Alert isFilled title="Be careful" type="warning" marginTop="major-2">
+<Alert variant="bordered" title="Be careful" type="warning" marginTop="major-2">
   Performing this action can be harmful.
 </Alert>
-<Alert isFilled title="An error occurred" type="danger" marginTop="major-2">
+<Alert variant="bordered" title="An error occurred" type="danger" marginTop="major-2">
   Unable to apply your action.
 </Alert>
 ```
 
-### Icons
-
-You can add a icon to your alert by using the `hasIcon` prop. The icon will default to the status' icon. If you want to change this icon, then configure the `iconNames` attribute in the [Icon theme](/components/icon#theming).
+#### Tint
 
 ```jsx-live
-<Alert hasIcon title="Did you know?" type="info">
+<Alert variant="tint" title="Did you know?" type="info">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert hasIcon title="Action applied" type="success" marginTop="major-2">
+<Alert variant="tint" title="Action applied" type="success" marginTop="major-2">
   Your action was applied successfully.
 </Alert>
-<Alert hasIcon title="Be careful" type="warning" marginTop="major-2">
+<Alert variant="tint" title="Be careful" type="warning" marginTop="major-2">
   Performing this action can be harmful.
 </Alert>
-<Alert hasIcon title="An error occurred" type="danger" marginTop="major-2">
+<Alert variant="tint" title="An error occurred" type="danger" marginTop="major-2">
   Unable to apply your action.
 </Alert>
 ```
 
-### Standalone
+#### Fill
 
 ```jsx-live
-<Alert standalone>
-  <Alert.Icon />
-  <Alert.Content>
-    <Alert.Title>Did you know?</Alert.Title>
-    <Alert.Description>Fannypack is a React UI Kit</Alert.Description>
-  </Alert.Content>
+<Alert variant="fill" title="Did you know?" type="info">
+  Fannypack is a React UI Kit.
+</Alert>
+<Alert variant="fill" title="Action applied" type="success" marginTop="major-2">
+  Your action was applied successfully.
+</Alert>
+<Alert variant="fill" title="Be careful" type="warning" marginTop="major-2">
+  Performing this action can be harmful.
+</Alert>
+<Alert variant="fill" title="An error occurred" type="danger" marginTop="major-2">
+  Unable to apply your action.
 </Alert>
 ```
 
@@ -126,43 +130,43 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code> 
+**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isFilled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isFilled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**  
+**<Code marginRight="major-1">closeButtonProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -180,7 +184,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonIconProps</Code>**  
+**<Code marginRight="major-1">closeButtonIconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -192,7 +196,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -206,7 +210,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -216,11 +220,11 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -239,23 +243,23 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -272,22 +276,22 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Icon Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -301,7 +305,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -311,11 +315,11 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -334,23 +338,23 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -367,16 +371,16 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Content Props
 
@@ -384,7 +388,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -394,11 +398,11 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -417,23 +421,23 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -450,16 +454,16 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Title Props
 
@@ -467,7 +471,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -477,11 +481,11 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -500,23 +504,23 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -533,16 +537,16 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Description Props
 
@@ -550,7 +554,7 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -560,11 +564,11 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -583,23 +587,23 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -616,16 +620,16 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
@@ -633,7 +637,6 @@ You can add a icon to your alert by using the `hasIcon` prop. The icon will defa
   component={Alert}
   title="Did you know?"
   showCloseButton
-  hasIcon
   accent
   overrides={['Alert.css.root', 'Alert.Content.css.root', 'Alert.Title.css.root', 'Alert.Description.css.root', 'Alert.IconWrapper.css.root', 'Alert.CloseButton.css.root']}>
   Fannypack is a React UI Kit.

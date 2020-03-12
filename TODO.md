@@ -2,3 +2,4 @@
 - Refactor components which use `useState` to use context
 - Add "Composition" section in docs
 - Add descriptions to props for docs
+- Refactor "kind" to "variant"?

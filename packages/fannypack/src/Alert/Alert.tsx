@@ -13,11 +13,9 @@ import * as styles from './styles';
 export type LocalAlertProps = {
   accent?: true | 'top' | 'bottom';
   hasIcon?: boolean;
-  isFilled?: boolean;
   isInline?: boolean;
   onClickClose?: ButtonProps['onClick'];
   showCloseButton?: boolean;
-  standalone?: boolean;
   title?: string;
   type?: string;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
@@ -32,18 +30,18 @@ export const AlertContext = React.createContext<AlertContextOptions>({});
 const useProps = createHook<AlertProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
+      accent,
       closeButtonProps,
       closeButtonIconProps,
       hasIcon,
       iconProps,
-      isFilled,
       isInline,
       onClickClose,
       overrides,
       showCloseButton,
-      standalone,
       title,
       type,
+      variant,
       ...restProps
     } = props;
     const boxProps = Box.useProps(restProps);
@@ -68,34 +66,38 @@ const useProps = createHook<AlertProps>(
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
+    let palette = 'default';
+    if (variant === 'fill') {
+      palette = `${type}Inverted`;
+    }
+    if (variant === 'tint') {
+      palette = type;
+    }
+
     const children = (
       <AlertContext.Provider value={context}>
-        <Box display="flex" alignItems="center" justifyContent="space-between">
-          <Box display="flex" alignItems="center">
-            {standalone ? (
-              props.children
-            ) : (
-              <React.Fragment>
-                {hasIcon && <AlertIcon overrides={overrides} />}
-                <AlertContent overrides={overrides}>
-                  {title && <AlertTitle overrides={overrides}>{title}</AlertTitle>}
-                  <AlertDescription overrides={overrides}>{props.children}</AlertDescription>
-                </AlertContent>
-              </React.Fragment>
-            )}
+        {accent !== 'bottom' && <AlertAccent overrides={overrides} />}
+        <AlertWrapper overrides={overrides}>
+          <Box alignItems="center" display="flex">
+            {hasIcon && <AlertIcon overrides={overrides} />}
+            <AlertContent overrides={overrides}>
+              {title && <AlertTitle overrides={overrides}>{title}</AlertTitle>}
+              <AlertDescription overrides={overrides}>{props.children}</AlertDescription>
+            </AlertContent>
           </Box>
           {showCloseButton && (
             <Box display="flex">
               <Button.Close
                 className={alertCloseButtonClassName}
                 onClick={onClickClose}
-                palette={props.isFilled ? `${type}Inverted` : type}
+                palette={palette}
                 iconProps={closeButtonIconProps}
                 {...closeButtonProps}
               />
             </Box>
           )}
-        </Box>
+        </AlertWrapper>
+        {accent === 'bottom' && <AlertAccent overrides={overrides} />}
       </AlertContext.Provider>
     );
 
@@ -110,7 +112,9 @@ const useProps = createHook<AlertProps>(
   },
   {
     defaultProps: {
-      type: 'info'
+      hasIcon: true,
+      type: 'info',
+      variant: 'shadowed'
     },
     themeKey: 'Alert'
   }
@@ -147,12 +151,17 @@ export function AlertIcon(props: AlertIconProps) {
     themeKeySuffix: 'IconWrapper'
   });
 
+  let fontSize = '400';
+  if (!context.title || context.isInline) {
+    fontSize = '200';
+  }
+
   return (
     <Box className={alertIconWrapperClassName} {...restProps}>
       <Icon
         aria-hidden
-        color={context.isFilled ? `${context.type}Inverted` : context.type}
-        fontSize={props.children || !context.isInline ? '400' : '200'}
+        color={context.variant === 'fill' ? `${context.type}Inverted` : context.type}
+        fontSize={fontSize}
         icon={context.type}
         {...iconProps}
       />
@@ -178,6 +187,52 @@ export function AlertContent(props: AlertContentProps) {
 
   return (
     <Box className={alertContentClassName} {...restProps}>
+      {children}
+    </Box>
+  );
+}
+
+/////////////////////////////////////
+
+export type LocalAlertWrapperProps = {};
+export type AlertWrapperProps = BoxProps & LocalAlertWrapperProps;
+
+export function AlertWrapper(props: AlertWrapperProps) {
+  const { children, ...restProps } = props;
+  const context = React.useContext(AlertContext);
+
+  const alertWrapperClassName = useClassName({
+    style: styles.AlertWrapper,
+    styleProps: { ...context, ...props },
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'Wrapper'
+  });
+
+  return (
+    <Box className={alertWrapperClassName} {...restProps}>
+      {children}
+    </Box>
+  );
+}
+
+/////////////////////////////////////
+
+export type LocalAlertAccentProps = {};
+export type AlertAccentProps = BoxProps & LocalAlertAccentProps;
+
+export function AlertAccent(props: AlertAccentProps) {
+  const { children, ...restProps } = props;
+  const context = React.useContext(AlertContext);
+
+  const alertAccentClassName = useClassName({
+    style: styles.AlertAccent,
+    styleProps: { ...context, ...props },
+    themeKey: context.themeKey || 'Alert',
+    themeKeySuffix: 'Accent'
+  });
+
+  return (
+    <Box className={alertAccentClassName} {...restProps}>
       {children}
     </Box>
   );
