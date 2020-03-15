@@ -9,7 +9,6 @@ import * as styles from './styles';
 import { Palette, Size } from '../types';
 
 export type LocalTagProps = {
-  kind?: string;
   onRemove?: () => any;
   palette?: Palette;
   size?: Size;

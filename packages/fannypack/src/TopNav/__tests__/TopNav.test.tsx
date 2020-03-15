@@ -21,7 +21,7 @@ describe('props', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -50,7 +50,7 @@ describe('props', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -79,7 +79,7 @@ describe('props', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -108,7 +108,7 @@ describe('props', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -139,7 +139,7 @@ describe('overrides', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -171,7 +171,7 @@ describe('overrides', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -203,7 +203,7 @@ describe('overrides', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -234,7 +234,7 @@ describe('theming', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -264,7 +264,7 @@ describe('theming', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -294,7 +294,7 @@ describe('theming', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>
@@ -326,7 +326,7 @@ describe('defaultProps', () => {
         </TopNav.Section>
         <TopNav.Section>
           <TopNav.Item>
-            <Button kind="ghost" palette="primary">
+            <Button variant="ghost" palette="primary">
               Sign up
             </Button>
           </TopNav.Item>

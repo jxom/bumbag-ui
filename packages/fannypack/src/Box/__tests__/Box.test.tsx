@@ -160,7 +160,7 @@ describe('composition', () => {
     it('should render correctly for a Button component with props', () => {
       const { container } = render(
         // @ts-ignore
-        <Box use={Button} palette="primary" kind="outlined">
+        <Box use={Button} palette="primary" variant="outlined">
           Hello world
         </Box>
       );

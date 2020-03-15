@@ -35,9 +35,9 @@ export const Button = styleProps => cssClass`
   ${styleProps.isStatic && getStaticProperties(styleProps)};
   ${isInteractive(styleProps) && getInteractiveProperties(styleProps)};
 
-  ${styleProps.kind === 'outlined' && getOutlinedProperties(styleProps)};
-  ${styleProps.kind === 'link' && getLinkProperties(styleProps)};
-  ${styleProps.kind === 'ghost' && getGhostProperties(styleProps)};
+  ${styleProps.variant === 'outlined' && getOutlinedProperties(styleProps)};
+  ${styleProps.variant === 'link' && getLinkProperties(styleProps)};
+  ${styleProps.variant === 'ghost' && getGhostProperties(styleProps)};
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
@@ -206,7 +206,7 @@ export const getInteractiveProperties = styleProps => css`
     ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
   }
 
-  ${styleProps.kind !== 'link' &&
+  ${styleProps.variant !== 'link' &&
     css`
       &:hover {
         background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
@@ -217,7 +217,7 @@ export const getInteractiveProperties = styleProps => css`
       }
     `};
 
-  ${styleProps.kind !== 'link' &&
+  ${styleProps.variant !== 'link' &&
     css`
       &:hover:active {
         background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};

@@ -358,7 +358,7 @@ export const DialogIcon = createComponent<DialogIconProps>(
 //////////////////////////////
 
 export type LocalDialogModalProps = {
-  kind?: 'alert';
+  variant?: 'alert';
   hasScroll?: boolean;
 };
 export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
@@ -366,7 +366,7 @@ export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
 const useDialogModalProps = createHook<DialogModalProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const { modal } = React.useContext(ModalContext);
-    const { kind, ...restProps } = { ...modal, ...props };
+    const { variant, ...restProps } = { ...modal, ...props };
 
     const dialogProps = Dialog.useProps({
       onClickClose: restProps.hide,
@@ -377,7 +377,7 @@ const useDialogModalProps = createHook<DialogModalProps>(
       },
       wrapElement: children => (
         // @ts-ignore
-        <Modal role={kind === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
+        <Modal role={variant === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
           {children}
         </Modal>
       )

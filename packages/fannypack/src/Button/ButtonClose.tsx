@@ -37,7 +37,7 @@ const useProps = createHook<ButtonCloseProps>(
 
     return { ...buttonProps, className, children };
   },
-  { defaultProps: { label: 'Close', kind: 'ghost' }, themeKey: 'Button.Close' }
+  { defaultProps: { label: 'Close', variant: 'ghost' }, themeKey: 'Button.Close' }
 );
 
 export const ButtonClose = createComponent<ButtonCloseProps>(

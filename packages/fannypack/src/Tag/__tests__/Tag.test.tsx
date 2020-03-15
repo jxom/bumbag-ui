@@ -101,7 +101,7 @@ describe('theming', () => {
   });
 
   it('Tag.outlined.root should render correctly', () => {
-    const { container } = render(<Tag kind="outlined">hello world</Tag>, {
+    const { container } = render(<Tag variant="outlined">hello world</Tag>, {
       // @ts-ignore
       theme: { Tag: { css: { outlined: { backgroundColor: 'red' } } } }
     });
@@ -147,7 +147,7 @@ describe('overrides', () => {
 
   it('Tag.outlined.root should render correctly', () => {
     const { container } = render(
-      <Tag kind="outlined" overrides={{ Tag: { css: { outlined: { backgroundColor: 'red' } } } }}>
+      <Tag variant="outlined" overrides={{ Tag: { css: { outlined: { backgroundColor: 'red' } } } }}>
         hello world
       </Tag>
     );

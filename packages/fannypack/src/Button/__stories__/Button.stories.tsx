@@ -40,16 +40,16 @@ export const loading = () => (
 
 export const outlines = () => (
   <Set>
-    <Button palette="primary" kind="outlined">
+    <Button palette="primary" variant="outlined">
       Primary
     </Button>
-    <Button palette="secondary" kind="outlined">
+    <Button palette="secondary" variant="outlined">
       Secondary
     </Button>
-    <Button palette="success" kind="outlined">
+    <Button palette="success" variant="outlined">
       Success
     </Button>
-    <Button palette="danger" kind="outlined">
+    <Button palette="danger" variant="outlined">
       Danger
     </Button>
   </Set>
@@ -57,14 +57,14 @@ export const outlines = () => (
 
 export const ghost = () => (
   <Set>
-    <Button kind="ghost">Default</Button>
-    <Button palette="primary" kind="ghost">
+    <Button variant="ghost">Default</Button>
+    <Button palette="primary" variant="ghost">
       Primary
     </Button>
-    <Button palette="success" kind="ghost">
+    <Button palette="success" variant="ghost">
       Success
     </Button>
-    <Button palette="danger" kind="ghost">
+    <Button palette="danger" variant="ghost">
       Danger
     </Button>
   </Set>
@@ -80,7 +80,7 @@ export const sizes = () => (
 );
 
 export const links = () => (
-  <Button palette="primary" kind="link">
+  <Button palette="primary" variant="link">
     Default
   </Button>
 );

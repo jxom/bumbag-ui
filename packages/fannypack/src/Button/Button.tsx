@@ -3,7 +3,7 @@ import { Button as ReakitButton, ButtonProps as ReakitButtonProps, useButton as 
 import ConditionalWrap from 'conditional-wrap';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { ButtonKind, ButtonType, Omit, Size, Palette } from '../types';
+import { ButtonType, Omit, Size, Palette } from '../types';
 import { Box, BoxProps } from '../Box';
 import { Flex } from '../Flex';
 import { Icon, IconProps } from '../Icon';
@@ -23,7 +23,6 @@ export type LocalButtonProps = {
   isLoading?: boolean;
   /** Makes the button not interactable. */
   isStatic?: boolean;
-  kind?: ButtonKind;
   palette?: Palette;
   size?: Size;
   /** Custom props for the isLoading spinner. */
@@ -95,7 +94,7 @@ const useProps = createHook<ButtonProps>(
             <Spinner
               use={Flex}
               className={spinnerClassName}
-              color={props.kind === 'default' ? `${props.palette}Inverted` : props.palette}
+              color={props.variant === 'default' ? `${props.palette}Inverted` : props.palette}
               {...spinnerProps}
             />
           </Box>
@@ -117,7 +116,7 @@ const useProps = createHook<ButtonProps>(
       iconBefore: undefined,
       isLoading: false,
       isStatic: false,
-      kind: 'default',
+      variant: 'default',
       palette: 'default',
       size: 'default',
       type: 'button'

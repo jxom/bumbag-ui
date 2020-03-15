@@ -103,7 +103,7 @@ const useProps = createHook<PaginationProps>(
             disabled={currentPage === 1}
             onClick={() => handleChangePage(currentPage - 1)}
             iconBefore="chevron-left"
-            kind="ghost"
+            variant="ghost"
             themeKey={`${themeKey}.Button`}
             overrides={overrides}
             {...previousButtonProps}
@@ -130,7 +130,7 @@ const useProps = createHook<PaginationProps>(
             disabled={currentPage === numberOfPages}
             onClick={() => handleChangePage(currentPage + 1)}
             iconAfter="chevron-right"
-            kind="ghost"
+            variant="ghost"
             themeKey={`${themeKey}.Button`}
             overrides={overrides}
             {...nextButtonProps}

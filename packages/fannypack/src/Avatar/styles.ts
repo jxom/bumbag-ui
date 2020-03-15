@@ -7,7 +7,7 @@ export const Avatar = styleProps => cssClass`
   overflow: hidden;
   object-fit: cover;
 
-  ${styleProps.kind === 'circle' &&
+  ${styleProps.variant === 'circle' &&
     css`
       border-radius: 50%;
 

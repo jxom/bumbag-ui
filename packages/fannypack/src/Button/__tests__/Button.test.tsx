@@ -96,16 +96,16 @@ describe('props', () => {
     });
   });
 
-  describe('kind', () => {
-    ['outlined', 'ghost', 'link'].forEach((kind: any) => {
-      it(`should render a ${kind} button correctly`, () => {
-        const { container } = render(<Button kind={kind}>Hello world</Button>);
+  describe('variant', () => {
+    ['outlined', 'ghost', 'link'].forEach((variant: any) => {
+      it(`should render a ${variant} button correctly`, () => {
+        const { container } = render(<Button variant={variant}>Hello world</Button>);
         expect(container.firstChild).toMatchSnapshot();
       });
 
       it('should render correctly with overrides', () => {
         const { container } = render(
-          <Button kind={kind} overrides={{ Button: { css: { [kind]: { backgroundColor: 'red' } } } }}>
+          <Button variant={variant} overrides={{ Button: { css: { [variant]: { backgroundColor: 'red' } } } }}>
             Hello world
           </Button>
         );
@@ -232,7 +232,7 @@ describe('overrides', () => {
 
   it('Button.ghost should render correctly', () => {
     const { container } = render(
-      <Button kind="ghost" overrides={{ Button: { css: { ghost: { backgroundColor: 'red' } } } }}>
+      <Button variant="ghost" overrides={{ Button: { css: { ghost: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -264,7 +264,7 @@ describe('overrides', () => {
 
   it('Button.link should render correctly', () => {
     const { container } = render(
-      <Button kind="link" overrides={{ Button: { css: { link: { backgroundColor: 'red' } } } }}>
+      <Button variant="link" overrides={{ Button: { css: { link: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -273,7 +273,7 @@ describe('overrides', () => {
 
   it('Button.outlined should render correctly', () => {
     const { container } = render(
-      <Button kind="outlined" overrides={{ Button: { css: { outlined: { backgroundColor: 'red' } } } }}>
+      <Button variant="outlined" overrides={{ Button: { css: { outlined: { backgroundColor: 'red' } } } }}>
         hello world
       </Button>
     );
@@ -324,7 +324,7 @@ describe('theming', () => {
   });
 
   it('Button.ghost should render correctly', () => {
-    const { container } = render(<Button kind="ghost">hello world</Button>, {
+    const { container } = render(<Button variant="ghost">hello world</Button>, {
       theme: { Button: { css: { ghost: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
@@ -352,14 +352,14 @@ describe('theming', () => {
   });
 
   it('Button.link should render correctly', () => {
-    const { container } = render(<Button kind="link">hello world</Button>, {
+    const { container } = render(<Button variant="link">hello world</Button>, {
       theme: { Button: { css: { link: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.outlined should render correctly', () => {
-    const { container } = render(<Button kind="outlined">hello world</Button>, {
+    const { container } = render(<Button variant="outlined">hello world</Button>, {
       theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();

@@ -6,8 +6,8 @@ export default { title: 'Card' };
 export const _default = () => (
   <Stack>
     <Card>Hello world</Card>
-    <Card kind="shadow">Hello world</Card>
-    <Card kind="border">Hello world</Card>
+    <Card variant="shadow">Hello world</Card>
+    <Card variant="border">Hello world</Card>
   </Stack>
 );
 
@@ -24,10 +24,10 @@ export const headerWithAddons = () => (
     title="This is a title"
     headerAddon={
       <Set>
-        <Button palette="primary" kind="link">
+        <Button palette="primary" variant="link">
           Action 1
         </Button>
-        <Button palette="primary" kind="link">
+        <Button palette="primary" variant="link">
           Action 2
         </Button>
       </Set>

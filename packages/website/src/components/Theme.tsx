@@ -47,7 +47,7 @@ const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g
             <React.Fragment>
               <Disclosure {...disclosure}>
                 {props => (
-                  <Button marginTop="major-1" kind="ghost" palette="primary" size="small" {...props}>
+                  <Button marginTop="major-1" variant="ghost" palette="primary" size="small" {...props}>
                     {disclosure.visible ? 'Hide' : 'Show'} example
                   </Button>
                 )}

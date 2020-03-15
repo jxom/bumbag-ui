@@ -35,12 +35,12 @@ describe('props', () => {
   });
 
   it('should render correctly with nextButtonProps', () => {
-    const { container } = render(<Pagination nextButtonProps={{ kind: 'outlined' }} numberOfPages={10} />);
+    const { container } = render(<Pagination nextButtonProps={{ variant: 'outlined' }} numberOfPages={10} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with previousButtonProps', () => {
-    const { container } = render(<Pagination previousButtonProps={{ kind: 'outlined' }} numberOfPages={10} />);
+    const { container } = render(<Pagination previousButtonProps={{ variant: 'outlined' }} numberOfPages={10} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

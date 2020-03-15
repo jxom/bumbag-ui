@@ -8,7 +8,7 @@ import { Image, ImageProps } from '../Image';
 import * as styles from './styles';
 
 export type LocalAvatarProps = {
-  kind?: 'circle';
+  variant?: 'circle';
   src?: string;
   size?: Size | string;
   initials?: string;

@@ -63,20 +63,20 @@ To indicate a button is loading, use the `isLoading` prop.
 
 ### Outlines
 
-An outline can be placed on a button by assigning `"outlined"` to the `kind` prop.
+An outline can be placed on a button by assigning `"outlined"` to the `variant` prop.
 
 ```jsx-live
 <Set>
-  <Button palette="primary" kind="outlined">
+  <Button palette="primary" variant="outlined">
     Primary
   </Button>
-  <Button palette="secondary" kind="outlined">
+  <Button palette="secondary" variant="outlined">
     Secondary
   </Button>
-  <Button palette="success" kind="outlined">
+  <Button palette="success" variant="outlined">
     Success
   </Button>
-  <Button palette="danger" kind="outlined">
+  <Button palette="danger" variant="outlined">
     Danger
   </Button>
 </Set>
@@ -84,21 +84,21 @@ An outline can be placed on a button by assigning `"outlined"` to the `kind` pro
 
 ### Ghost
 
-To have a button of minimal appearence, use the assign `"ghost"` to the `kind` prop.
+To have a button of minimal appearence, use the assign `"ghost"` to the `variant` prop.
 
 ```jsx-live
 <Set>
-  <Button kind="ghost">Default</Button>
-  <Button palette="primary" kind="ghost">
+  <Button variant="ghost">Default</Button>
+  <Button palette="primary" variant="ghost">
     Primary
   </Button>
-  <Button palette="success" kind="ghost">
+  <Button palette="success" variant="ghost">
     Success
   </Button>
-  <Button palette="danger" kind="ghost">
+  <Button palette="danger" variant="ghost">
     Danger
   </Button>
-  <Button palette="warning" kind="ghost">
+  <Button palette="warning" variant="ghost">
     Warning
   </Button>
 </Set>
@@ -122,7 +122,7 @@ Buttons are available in four different sizes and can be added with a `size` pro
 A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
 
 ```jsx-live
-<Button palette="primary" kind="link">
+<Button palette="primary" variant="link">
   Default
 </Button>
 ```
@@ -233,7 +233,7 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconAfter</Code>**  
+**<Code marginRight="major-1">iconAfter</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -245,7 +245,7 @@ Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconAfterProps</Code>**  
+**<Code marginRight="major-1">iconAfterProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -257,7 +257,7 @@ Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBefore</Code>**  
+**<Code marginRight="major-1">iconBefore</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -269,7 +269,7 @@ Icon that appears on the left side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBeforeProps</Code>**  
+**<Code marginRight="major-1">iconBeforeProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -281,31 +281,31 @@ Icon that appears on the left side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Adds a loading indicator to the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Makes the button not interactable.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;link&#34; | &#34;default&#34; | &#34;outlined&#34; | &#34;ghost&#34;</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">&#34;link&#34; | &#34;default&#34; | &#34;outlined&#34; | &#34;ghost&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spinnerProps</Code>**  
+**<Code marginRight="major-1">spinnerProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSpinnerProps`}
@@ -315,17 +315,17 @@ Custom props for the isLoading spinner.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;submit&#34; | &#34;reset&#34; | &#34;button&#34;</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;submit&#34; | &#34;reset&#34; | &#34;button&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -333,17 +333,17 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -353,11 +353,11 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -376,23 +376,23 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -409,22 +409,22 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Button.Close Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -436,7 +436,7 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Accessible label for the button. Default: `"Close"`
 
@@ -444,7 +444,7 @@ Accessible label for the button. Default: `"Close"`
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Button</strong></code> props</Box>
 
-**<Code marginRight="major-1">iconAfter</Code>**  
+**<Code marginRight="major-1">iconAfter</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -456,7 +456,7 @@ Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconAfterProps</Code>**  
+**<Code marginRight="major-1">iconAfterProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -468,7 +468,7 @@ Icon that appears on the right side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBefore</Code>**  
+**<Code marginRight="major-1">iconBefore</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -480,7 +480,7 @@ Icon that appears on the left side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconBeforeProps</Code>**  
+**<Code marginRight="major-1">iconBeforeProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -492,31 +492,31 @@ Icon that appears on the left side of the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Adds a loading indicator to the button.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isStatic</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Makes the button not interactable.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">kind</Code>** <Code fontSize="150" palette="primary">&#34;link&#34; | &#34;default&#34; | &#34;outlined&#34; | &#34;ghost&#34;</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">&#34;link&#34; | &#34;default&#34; | &#34;outlined&#34; | &#34;ghost&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spinnerProps</Code>**  
+**<Code marginRight="major-1">spinnerProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSpinnerProps`}
@@ -526,17 +526,17 @@ Custom props for the isLoading spinner.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;submit&#34; | &#34;reset&#34; | &#34;button&#34;</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;submit&#34; | &#34;reset&#34; | &#34;button&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -544,20 +544,20 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -567,11 +567,11 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -590,23 +590,23 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -623,16 +623,16 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
@@ -654,14 +654,14 @@ similarly to `readOnly` on form elements. In this case, only
     },
     {
       key: 'Button.css.ghost',
-      description: 'Applies for ghost buttons. `<Button kind="ghost">`',
-      props: { kind: 'ghost' }
+      description: 'Applies for ghost buttons. `<Button variant="ghost">`',
+      props: { variant: 'ghost' }
     },
-    { key: 'Button.css.link', description: 'Applies for link buttons. `<Button kind="link">`', props: { kind: 'link' } },
+    { key: 'Button.css.link', description: 'Applies for link buttons. `<Button variant="link">`', props: { variant: 'link' } },
     {
       key: 'Button.css.outlined',
-      description: 'Applies for outlined buttons. `<Button kind="outlined">`',
-      props: { kind: 'outlined' }
+      description: 'Applies for outlined buttons. `<Button variant="outlined">`',
+      props: { variant: 'outlined' }
     },
     { key: 'Button.css.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
     {

@@ -16,12 +16,12 @@ export const Tab = styleProps => cssClass`
       color: ${palette('gray300')(styleProps)};
     `}
 
-  ${styleProps.kind === 'boxed' &&
+  ${styleProps.variant === 'boxed' &&
     css`
       border: 1px solid transparent;
     `}
 
-  ${styleProps.kind === 'button' &&
+  ${styleProps.variant === 'button' &&
     css`
       border-radius: ${borderRadius('default')(styleProps)};
     `}
@@ -52,7 +52,7 @@ export const Tab = styleProps => cssClass`
     color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
     fill: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
 
-    ${styleProps.kind === 'default' &&
+    ${styleProps.variant === 'default' &&
       css`
         background-color: white;
 
@@ -65,7 +65,7 @@ export const Tab = styleProps => cssClass`
             `}
       `}
 
-    ${styleProps.kind === 'boxed' &&
+    ${styleProps.variant === 'boxed' &&
       css`
         border: 1px solid ${palette('white900')(styleProps)};
 
@@ -78,7 +78,7 @@ export const Tab = styleProps => cssClass`
             `}
       `}
 
-    ${styleProps.kind === 'button' &&
+    ${styleProps.variant === 'button' &&
       css`
         background-color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
@@ -92,7 +92,7 @@ export const Tab = styleProps => cssClass`
   &:focus {
     outline: unset;
 
-    ${styleProps.kind === 'default' &&
+    ${styleProps.variant === 'default' &&
       css`
         ${styleProps.orientation === 'vertical'
           ? css`
@@ -103,7 +103,7 @@ export const Tab = styleProps => cssClass`
             `}
       `}
 
-    ${(styleProps.kind === 'boxed' || styleProps.kind === 'button') &&
+    ${(styleProps.variant === 'boxed' || styleProps.variant === 'button') &&
       css`
         box-shadow: ${palette(styleProps.palette, styleProps.palette)(styleProps)} 0px 0px 0px 1px,
           ${palette(`${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
@@ -115,12 +115,12 @@ export const Tab = styleProps => cssClass`
   }
 
   &:not([aria-selected='true']):hover {
-    ${styleProps.kind !== 'button' &&
+    ${styleProps.variant !== 'button' &&
       css`
         color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
       `}
 
-    ${styleProps.kind === 'button' &&
+    ${styleProps.variant === 'button' &&
       css`
         background-color: ${palette('white700')(styleProps)};
       `}
@@ -165,7 +165,7 @@ export const TabsList = styleProps => cssClass`
       flex-direction: column;
     `}
 
-  ${(styleProps.kind === 'boxed' || styleProps.kind === 'default') &&
+  ${(styleProps.variant === 'boxed' || styleProps.variant === 'default') &&
     css`
       ${styleProps.orientation === 'vertical'
         ? css`

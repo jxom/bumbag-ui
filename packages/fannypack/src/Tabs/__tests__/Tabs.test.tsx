@@ -138,7 +138,7 @@ describe('props', () => {
   it('should render correctly for boxed tabs', () => {
     const { container } = render(
       <Tabs baseId="test" selectedId="tab1">
-        <Tabs.List kind="boxed">
+        <Tabs.List variant="boxed">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
           <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
@@ -160,7 +160,7 @@ describe('props', () => {
   it('should render correctly for button tabs', () => {
     const { container } = render(
       <Tabs baseId="test" selectedId="tab1">
-        <Tabs.List kind="button">
+        <Tabs.List variant="button">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
           <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
@@ -182,7 +182,7 @@ describe('props', () => {
   it('should render correctly for unstyled tabs', () => {
     const { container } = render(
       <Tabs baseId="test" selectedId="tab1">
-        <Tabs.List kind="unstyled">
+        <Tabs.List variant="unstyled">
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
           <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
           <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
@@ -599,7 +599,7 @@ describe('defaultProps', () => {
       </Tabs>,
       {
         theme: {
-          Tabs: { defaultProps: { className: 'test', color: 'primary' }, List: { defaultProps: { kind: 'boxed' } } }
+          Tabs: { defaultProps: { className: 'test', color: 'primary' }, List: { defaultProps: { variant: 'boxed' } } }
         }
       }
     );

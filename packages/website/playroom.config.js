@@ -37,7 +37,7 @@ module.exports = {
         <Button palette="primary" size="large" width="100%">
           Log in
         </Button>
-        <Button palette="primary" size="large" kind="ghost" width="100%">
+        <Button palette="primary" size="large" variant="ghost" width="100%">
           Sign up
         </Button>
       </FieldStack>

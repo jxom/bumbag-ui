@@ -1,4 +1,3 @@
-export type ButtonKind = 'default' | 'outlined' | 'link' | 'ghost';
 export type ButtonType = 'button' | 'submit' | 'reset';
 export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
 export type ColumnSpread = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;

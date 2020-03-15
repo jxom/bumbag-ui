@@ -13,7 +13,7 @@ export const Tag = styleProps => cssClass`
   height: 1.5rem;
   justify-content: center;
 
-  ${styleProps.kind === 'outlined' && outlinedProperties(styleProps)}
+  ${styleProps.variant === 'outlined' && outlinedProperties(styleProps)}
   ${styleProps.size && sizeProperties(styleProps)}
 
   & {
@@ -50,7 +50,7 @@ export const TagClose = styleProps => cssClass`
       box-shadow: unset;
     }
 
-    ${styleProps.kind === 'outlined' &&
+    ${styleProps.variant === 'outlined' &&
       css`
         background-color: unset;
         color: ${palette(styleProps.palette)(styleProps)};

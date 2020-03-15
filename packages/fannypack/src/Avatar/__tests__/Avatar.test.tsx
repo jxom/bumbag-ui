@@ -14,8 +14,8 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with kind circle', () => {
-    const { container } = render(<Avatar alt="Bean" kind="circle" src="test.png" />);
+  it('should render correctly with variant circle', () => {
+    const { container } = render(<Avatar alt="Bean" variant="circle" src="test.png" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 

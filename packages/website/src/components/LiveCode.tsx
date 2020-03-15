@@ -130,7 +130,7 @@ export default function LiveCode(props: Props) {
                 key={i}
                 onClick={() => setCurrentTab(codeTab)}
                 palette="primary"
-                kind={currentTab.tab === codeTab.tab ? undefined : 'ghost'}
+                variant={currentTab.tab === codeTab.tab ? undefined : 'ghost'}
                 marginRight="major-1"
                 size="small"
               >
@@ -142,11 +142,11 @@ export default function LiveCode(props: Props) {
         <LiveEditor />
         <Actions>
           <CopyToClipboard text={code}>
-            <fannypack.Button palette="primary" kind="ghost" size="small">
+            <fannypack.Button palette="primary" variant="ghost" size="small">
               Copy
             </fannypack.Button>
           </CopyToClipboard>
-          <fannypack.Button palette="primary" kind="ghost" size="small" onClick={handleClickPlayroom}>
+          <fannypack.Button palette="primary" variant="ghost" size="small" onClick={handleClickPlayroom}>
             Open in Playroom
           </fannypack.Button>
         </Actions>

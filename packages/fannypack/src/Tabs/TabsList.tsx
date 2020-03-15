@@ -10,7 +10,6 @@ import * as styles from './styles';
 export type LocalTabsListProps = {
   align?: 'left' | 'center' | 'right';
   palette?: string;
-  kind?: 'default' | 'boxed' | 'button' | 'unstyled';
 };
 export type TabsListProps = BoxProps & ReakitTabListProps & LocalTabsListProps;
 
@@ -23,7 +22,7 @@ const useProps = createHook<TabsListProps>(
       baseId,
       children,
       id,
-      kind,
+      variant,
       orientation,
       overrides,
       palette,
@@ -54,7 +53,7 @@ const useProps = createHook<TabsListProps>(
       prevClassName: boxProps.className
     });
 
-    const contextValue = React.useMemo(() => ({ align, kind, overrides, palette }), [align, kind, overrides, palette]);
+    const contextValue = React.useMemo(() => ({ align, variant, overrides, palette }), [align, variant, overrides, palette]);
 
     return {
       ...boxProps,
@@ -62,7 +61,7 @@ const useProps = createHook<TabsListProps>(
       children: <TabsListContext.Provider value={contextValue}>{children}</TabsListContext.Provider>
     };
   },
-  { defaultProps: { align: 'left', kind: 'default', palette: 'primary' }, themeKey: 'Tabs.List' }
+  { defaultProps: { align: 'left', variant: 'default', palette: 'primary' }, themeKey: 'Tabs.List' }
 );
 
 export const TabsList = createComponent<TabsListProps>(

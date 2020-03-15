@@ -74,9 +74,9 @@ const useProps = createHook<CalloutProps>(
               <CalloutIcon iconProps={iconProps} overrides={overrides} />
               <Box>
                 {title && (
-                  <React.Fragment>
+                  <CalloutHeader overrides={overrides}>
                     {typeof title === 'string' ? <CalloutTitle overrides={overrides}>{title}</CalloutTitle> : title}
-                  </React.Fragment>
+                  </CalloutHeader>
                 )}
                 <CalloutContent overrides={overrides}>{props.children}</CalloutContent>
                 {footer && <CalloutFooter overrides={overrides}>{footer}</CalloutFooter>}
@@ -347,7 +347,7 @@ export type CalloutOverlayProps = CalloutProps & OverlayProps & LocalCalloutOver
 
 const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { kind, ...restProps } = props;
+    const { variant, ...restProps } = props;
 
     const calloutProps = Callout.useProps({
       onClickClose: restProps.hide,
