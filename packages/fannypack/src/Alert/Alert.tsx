@@ -12,6 +12,8 @@ import * as styles from './styles';
 
 export type LocalAlertProps = {
   accent?: true | 'top' | 'bottom';
+  accentSize?: string;
+  countdown?: number;
   hasIcon?: boolean;
   isInline?: boolean;
   onClickClose?: ButtonProps['onClick'];
@@ -24,13 +26,19 @@ export type LocalAlertProps = {
 };
 export type AlertProps = BoxProps & LocalAlertProps;
 
-export type AlertContextOptions = AlertProps & { descriptionId?: string; titleId?: string; themeKey?: string };
+export type AlertContextOptions = AlertProps & {
+  descriptionId?: string;
+  titleId?: string;
+  themeKey?: string;
+  themeKeyOverride?: string;
+};
 export const AlertContext = React.createContext<AlertContextOptions>({});
 
 const useProps = createHook<AlertProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       accent,
+      countdown,
       closeButtonProps,
       closeButtonIconProps,
       hasIcon,
@@ -64,7 +72,12 @@ const useProps = createHook<AlertProps>(
     const titleId = useUniqueId('alertTitle');
     const descriptionId = useUniqueId('alertDescription');
 
-    const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
+    const context = React.useMemo(() => ({ descriptionId, themeKeyOverride, titleId, ...props }), [
+      descriptionId,
+      props,
+      themeKeyOverride,
+      titleId
+    ]);
 
     let palette = 'default';
     if (variant === 'fill') {
@@ -76,7 +89,12 @@ const useProps = createHook<AlertProps>(
 
     const children = (
       <AlertContext.Provider value={context}>
-        {accent !== 'bottom' && <AlertAccent overrides={overrides} />}
+        {accent && (
+          <React.Fragment>
+            <AlertAccent overrides={overrides} />
+            {countdown ? <AlertAccent overrides={overrides} isBackground /> : null}
+          </React.Fragment>
+        )}
         <AlertWrapper overrides={overrides}>
           <Box alignItems="center" display="flex">
             {hasIcon && <AlertIcon overrides={overrides} />}
@@ -97,7 +115,6 @@ const useProps = createHook<AlertProps>(
             </Box>
           )}
         </AlertWrapper>
-        {accent === 'bottom' && <AlertAccent overrides={overrides} />}
       </AlertContext.Provider>
     );
 
@@ -112,6 +129,7 @@ const useProps = createHook<AlertProps>(
   },
   {
     defaultProps: {
+      accentSize: '4px',
       hasIcon: true,
       type: 'info',
       variant: 'shadowed'
@@ -148,6 +166,7 @@ export function AlertIcon(props: AlertIconProps) {
     style: styles.AlertIconWrapper,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'IconWrapper'
   });
 
@@ -182,6 +201,7 @@ export function AlertContent(props: AlertContentProps) {
     style: styles.AlertContent,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Content'
   });
 
@@ -205,6 +225,7 @@ export function AlertWrapper(props: AlertWrapperProps) {
     style: styles.AlertWrapper,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Wrapper'
   });
 
@@ -217,7 +238,9 @@ export function AlertWrapper(props: AlertWrapperProps) {
 
 /////////////////////////////////////
 
-export type LocalAlertAccentProps = {};
+export type LocalAlertAccentProps = {
+  isBackground?: boolean;
+};
 export type AlertAccentProps = BoxProps & LocalAlertAccentProps;
 
 export function AlertAccent(props: AlertAccentProps) {
@@ -228,6 +251,7 @@ export function AlertAccent(props: AlertAccentProps) {
     style: styles.AlertAccent,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Accent'
   });
 
@@ -251,6 +275,7 @@ export function AlertTitle(props: AlertTitleProps) {
     style: styles.AlertTitle,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Title'
   });
 
@@ -276,6 +301,7 @@ export function AlertDescription(props: AlertDescriptionProps) {
     style: styles.AlertDescription,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
+    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Description'
   });
 

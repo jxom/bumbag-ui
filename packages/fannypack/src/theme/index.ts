@@ -12,6 +12,7 @@ import fontSizes from './fontSizes';
 
 import Container from './Container';
 import Icon from './Icon';
+import Toast from './Toast';
 
 export default (overrides: ThemeConfig = {}) => ({
   ...overrides,
@@ -26,5 +27,6 @@ export default (overrides: ThemeConfig = {}) => ({
   palette: palette(overrides.palette || {}),
 
   Container: Container(overrides.Container || {}),
-  Icon: Icon(overrides.Icon || {})
+  Icon: Icon(overrides.Icon || {}),
+  Toast: Toast(overrides.Toast || {})
 });

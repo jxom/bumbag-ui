@@ -10,7 +10,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { renderStylesToString } from 'emotion-server';
 
-import { Provider } from 'fannypack';
+import { Provider, ToastManager } from 'fannypack';
 import theme from './src/theme';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
@@ -18,4 +18,9 @@ export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   replaceBodyHTMLString(html);
 };
 
-export const wrapRootElement = ({ element, ...props }) => <Provider theme={theme}>{element}</Provider>;
+export const wrapRootElement = ({ element, ...props }) => (
+  <Provider theme={theme}>
+    {element}
+    <ToastManager isStacked={false} />
+  </Provider>
+);

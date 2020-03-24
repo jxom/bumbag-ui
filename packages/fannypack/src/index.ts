@@ -58,6 +58,7 @@ export * from './Tabs';
 export * from './Tag';
 export * from './Text';
 export * from './Textarea';
+export * from './Toast';
 export * from './Tooltip';
 export * from './TopNav';
 export * from './VisuallyHidden';

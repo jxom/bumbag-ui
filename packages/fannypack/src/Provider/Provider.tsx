@@ -4,6 +4,7 @@ import { IdProvider } from '../utils/uniqueId';
 import { ThemeProvider } from '../styled';
 import buildTheme from '../theme';
 import { ThemeConfig } from '../types';
+import { ToastProvider } from '../Toast';
 
 import GlobalStyles from './GlobalStyles';
 
@@ -26,10 +27,12 @@ export function Provider(props: ProviderProps) {
   return (
     <ThemeProvider theme={derivedTheme}>
       <IdProvider>
-        <React.Fragment>
-          {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-          {children}
-        </React.Fragment>
+        <ToastProvider>
+          <React.Fragment>
+            {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+            {children}
+          </React.Fragment>
+        </ToastProvider>
       </IdProvider>
     </ThemeProvider>
   );

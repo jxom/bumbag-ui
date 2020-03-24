@@ -1,4 +1,4 @@
-import { css, cssClass } from '../styled';
+import { css, cssClass, keyframes } from '../styled';
 import { altitude, borderRadius, palette, space, theme } from '../utils';
 
 export const Alert = styleProps => cssClass`
@@ -66,6 +66,19 @@ export const AlertWrapper = styleProps => cssClass`
       }
     `}
 
+  ${styleProps.accent === true &&
+    css`
+      margin-left: ${styleProps.accentSize};
+    `}
+  ${styleProps.accent === 'bottom' &&
+    css`
+      margin-bottom: ${styleProps.accentSize};
+    `}
+  ${styleProps.accent === 'top' &&
+    css`
+      margin-top: ${styleProps.accentSize};
+    `}
+
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
@@ -106,15 +119,47 @@ export const AlertCloseButton = styleProps => cssClass`
 `;
 
 export const AlertAccent = styleProps => cssClass`
+  position: absolute;
   background-color: ${palette(styleProps.type)(styleProps)};
+
+  ${(styleProps.accent === true || styleProps.accent === 'bottom') &&
+    css`
+      bottom: 0;
+    `}
+
+  ${styleProps.accent === 'top' &&
+    css`
+      top: 0;
+    `}
 
   ${(styleProps.accent === true || styleProps.accent === 'left') &&
     css`
-      width: 4px;
+      height: 100%;
+      width: ${styleProps.accentSize};
     `}
   ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
     css`
-      height: 4px;
+      width: 100%;
+      height: ${styleProps.accentSize};
+    `}
+
+  ${styleProps.isBackground &&
+    css`
+      opacity: 0.3;
+      left: 0;
+    `}
+
+  ${!styleProps.isBackground &&
+    styleProps.countdown &&
+    css`
+      ${styleProps.accent === true &&
+        css`
+          animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
+        `}
+      ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
+        css`
+          animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
+        `}
     `}
 
   & {
@@ -122,34 +167,26 @@ export const AlertAccent = styleProps => cssClass`
   }
 `;
 
-export const getAccentAttributes = styleProps => {
-  const cssValue = `4px solid ${styleProps.type && palette(styleProps.type)(styleProps)}`;
-  switch (styleProps.accent) {
-    case 'top': {
-      return css`
-        border-top: ${cssValue};
-      `;
-    }
-    case 'right': {
-      return css`
-        border-right: ${cssValue};
-      `;
-    }
-    case 'bottom': {
-      return css`
-        border-bottom: ${cssValue};
-      `;
-    }
-    case 'left':
-    default: {
-      return css`
-        border-left: ${cssValue};
-      `;
-    }
-  }
-};
-
 export const getFillAttributes = styleProps => css`
   background-color: ${palette(styleProps.type)(styleProps)};
   color: ${palette(`${styleProps.type}Inverted`)(styleProps)};
+`;
+
+export const heightCountdown = keyframes`
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0%;
+  }
+`;
+export const widthCountdown = keyframes`
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
 `;
