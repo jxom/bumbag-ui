@@ -1,8 +1,8 @@
-type TODO = any;
+import { ToastThemeConfig } from '../types';
 
-export default (overrides: TODO) => ({
+export default (overrides: ToastThemeConfig) => ({
   placement: 'top-end',
   showCountdown: true,
-  timeout: 0,
+  timeout: 5000,
   ...overrides
 });

@@ -99,10 +99,12 @@ import {
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';
 import { TextareaProps, TextareaFieldProps } from '../Textarea';
+import { ToastProps } from '../Toast';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
 import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
 import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
+import { Placement } from './props';
 
 export type Stylesheet = any; // TODO: fix
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
@@ -1170,6 +1172,21 @@ export type TextareaFieldThemeConfig = {
   };
   defaultProps?: Partial<TextareaFieldProps>;
 };
+export type ToastThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  Overlay?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<ToastProps>;
+  variants?: Variant<ToastThemeConfig>;
+  placement?: Placement;
+  showCountdown?: boolean;
+  timeout?: number;
+};
 export type TooltipThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1441,6 +1458,7 @@ export type ThemeConfig = {
   Text?: TextThemeConfig;
   Textarea?: TextareaThemeConfig;
   TextareaField?: TextareaFieldThemeConfig;
+  Toast?: ToastThemeConfig;
   Tooltip?: TooltipThemeConfig;
   TopNav?: TopNavThemeConfig;
   Template?: TemplateThemeConfig;

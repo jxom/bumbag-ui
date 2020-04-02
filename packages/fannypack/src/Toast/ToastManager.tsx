@@ -23,7 +23,7 @@ export type ToastManagerProps = BoxProps & LocalToastManagerProps;
 
 const useProps = createHook<ToastManagerProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { children, fade, slide, isStacked, overlayProps, spacing, ...restProps } = props;
+    const { children, isStacked, overlayProps, spacing, ...restProps } = props;
 
     const theme = useTheme();
     const boxProps = Box.useProps(restProps);
