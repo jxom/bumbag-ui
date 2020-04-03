@@ -1,11 +1,15 @@
+import * as React from 'react';
 import {
   usePopoverState as useReakitPopoverState,
   PopoverStateReturn as ReakitPopoverStateReturn,
   PopoverInitialState as ReakitPopoverInitialState
 } from 'reakit';
+import { isFunction } from '../utils';
 
 export type PopoverStateReturn = ReakitPopoverStateReturn;
 export type PopoverInitialState = ReakitPopoverInitialState;
+
+export const PopoverContext = React.createContext({ popover: {} });
 
 export function usePopoverState(initialState?: PopoverInitialState) {
   return useReakitPopoverState(initialState);
@@ -13,10 +17,15 @@ export function usePopoverState(initialState?: PopoverInitialState) {
 
 export function PopoverState(
   props: {
-    children?: (state: PopoverStateReturn) => React.ReactElement<any>;
+    children?: React.ReactNode | ((state: PopoverStateReturn) => React.ReactElement<any>);
   } & PopoverInitialState
 ) {
   const { children, ...restProps } = props;
-  const state = usePopoverState(restProps);
-  return props.children(state);
+  const popover = usePopoverState(restProps);
+  const contextValue = React.useMemo(() => ({ popover }), [popover]);
+  return (
+    <PopoverContext.Provider value={contextValue}>
+      {isFunction(props.children) ? props.children(popover) : props.children}
+    </PopoverContext.Provider>
+  );
 }

@@ -1,13 +1,16 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   PopoverBackdropProps as ReakitPopoverBackdropProps,
   usePopoverBackdrop as useReakitPopoverBackdrop
 } from 'reakit';
 import _omit from 'lodash/omit';
+import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { PopoverContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverBackdropProps = {};
@@ -15,6 +18,9 @@ export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & Local
 
 const useProps = createHook<PopoverBackdropProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const popoverContext = React.useContext(PopoverContext);
+    props = { ...props, ...popoverContext.popover };
+
     let {
       visible,
       baseId,

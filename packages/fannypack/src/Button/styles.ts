@@ -125,7 +125,7 @@ export const getSizeProperties = styleProps => {
     small: css`
       & {
         font-size: ${fontSize('100')(styleProps)}em;
-        min-height: 2.5rem;
+        min-height: 2rem;
         padding: 0 ${space(3)(styleProps)}rem;
       }
       & {

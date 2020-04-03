@@ -6,6 +6,7 @@ import {
   PopoverArrowProps as ReakitPopoverArrowProps,
   usePopoverArrow as useReakitPopoverArrow
 } from 'reakit';
+import _merge from 'lodash/merge';
 
 import { AnimateProps } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
@@ -14,6 +15,7 @@ import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Text, TextProps } from '../Text';
 
+import { PopoverContext as PopoverStateContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverProps = {
@@ -40,6 +42,9 @@ export const PopoverContext = React.createContext<PopoverContextOptions>({});
 
 const useProps = createHook<PopoverProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const popoverContext = React.useContext(PopoverStateContext);
+    props = { ...props, ...popoverContext.popover };
+
     const {
       actionButtonsProps = {},
       arrowProps = {},
@@ -377,6 +382,9 @@ export type PopoverArrowProps = BoxProps & ReakitPopoverArrowProps & LocalPopove
 
 const usePopoverArrowProps = createHook<PopoverArrowProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const popoverContext = React.useContext(PopoverStateContext);
+    props = { ...props, ...popoverContext.popover };
+
     let { placement, size, unstable_arrowRef, unstable_arrowStyles, ...htmlProps } = props;
 
     const contextProps = React.useContext(PopoverContext);

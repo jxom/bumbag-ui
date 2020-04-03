@@ -1,13 +1,16 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   PopoverDisclosureProps as ReakitPopoverDisclosureProps,
   usePopoverDisclosure as useReakitPopoverDisclosure
 } from 'reakit';
 import _omit from 'lodash/omit';
+import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { PopoverContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverDisclosureProps = {};
@@ -15,6 +18,9 @@ export type PopoverDisclosureProps = BoxProps & ReakitPopoverDisclosureProps & L
 
 const useProps = createHook<PopoverDisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const popoverContext = React.useContext(PopoverContext);
+    props = { ...props, ...popoverContext.popover };
+
     let { disabled, focusable, visible, toggle, baseId, unstable_referenceRef, ...htmlProps } = props;
     const popoverDisclosureProps = useReakitPopoverDisclosure(
       { disabled, focusable, visible, toggle, baseId, unstable_referenceRef },
