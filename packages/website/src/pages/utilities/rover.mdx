@@ -11,30 +11,84 @@ import { Rover } from 'fannypack';
 
 ## Usage
 
-```function-live
+```jsx-live
+<Rover.State>
+  <Group>
+    <Rover use={Button}>
+      Button 1
+    </Rover>
+    <Rover use={Button} disabled>
+      Button 2
+    </Rover>
+    <Rover use={Button} disabled focusable>
+      Button 3
+    </Rover>
+    <Rover use={Button}>
+      Button 4
+    </Rover>
+    <Rover use={Button}>
+      Button 5
+    </Rover>
+  </Group>
+</Rover.State>
+```
+
+### Controlled
+
+```live
+###tab=Hook,type=function-live
 function Example() {
-  const rover = Rover.useState()
+  const rover = Rover.useState();
 
   return (
-    <Group>
-      <Rover {...rover} use={Button}>
-        Button 1
-      </Rover>
-      <Rover {...rover} use={Button} disabled>
-        Button 2
-      </Rover>
-      <Rover {...rover} use={Button} disabled focusable>
-        Button 3
-      </Rover>
-      <Rover {...rover} use={Button}>
-        Button 4
-      </Rover>
-      <Rover {...rover} use={Button}>
-        Button 5
-      </Rover>
-    </Group>
+    <React.Fragment>
+      <Group>
+        <Rover {...rover} use={Button}>
+          Button 1
+        </Rover>
+        <Rover {...rover} use={Button} disabled>
+          Button 2
+        </Rover>
+        <Rover {...rover} use={Button} disabled focusable>
+          Button 3
+        </Rover>
+        <Rover {...rover} use={Button}>
+          Button 4
+        </Rover>
+        <Rover {...rover} use={Button}>
+          Button 5
+        </Rover>
+      </Group>
+    </React.Fragment>
   )
 }
+###
+
+###tab=Render Props,type=jsx-live
+<Rover.State>
+  {rover => (
+    <React.Fragment>
+      <Group>
+        <Rover {...rover} use={Button}>
+          Button 1
+        </Rover>
+        <Rover {...rover} use={Button} disabled>
+          Button 2
+        </Rover>
+        <Rover {...rover} use={Button} disabled focusable>
+          Button 3
+        </Rover>
+        <Rover {...rover} use={Button}>
+          Button 4
+        </Rover>
+        <Rover {...rover} use={Button}>
+          Button 5
+        </Rover>
+      </Group>
+    </React.Fragment>
+  )}
+</Rover.State>
+###
 ```
 
 ## Props
@@ -43,13 +97,13 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -57,42 +111,42 @@ similarly to `readOnly` on form elements. In this case, only
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">stopId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">stopId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Element ID.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code> 
+**<Code marginRight="major-1">ref</Code>** <Code fontSize="150" palette="primary">((instance: T) =&#62; void) | RefObject&#60;T&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code> 
+**<Code marginRight="major-1">key</Code>** <Code fontSize="150" palette="primary">string | number</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2"><strong>12 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 Defines the orientation of the rover list.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_moves</Code>** <Code fontSize="150" palette="primary">number</Code> 
+**<Code marginRight="major-1">unstable_moves</Code>** <Code fontSize="150" palette="primary">number</Code>
 
 Stores the number of moves that have been made by calling `move`, `next`,
 `previous`, `first` or `last`.
@@ -157,7 +211,7 @@ Moves focus to the previous element.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -167,11 +221,11 @@ Moves focus to the previous element.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -190,23 +244,23 @@ Moves focus to the previous element.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -223,42 +277,42 @@ Moves focus to the previous element.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
 
-## State Hooks
 
-### Rover.useState API
+## State
+
+### Rover.State API
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 Defines the orientation of the rover list.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 The current focused element ID.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 If enabled:
 
@@ -267,7 +321,7 @@ If enabled:
 
 <Box marginBottom="major-4" />
 
-### Rover.useState Return Values
+### Rover.State Return Values
 
 <!-- Automatically generated -->
 
@@ -279,7 +333,7 @@ ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 Defines the orientation of the rover list.
 
@@ -356,7 +410,129 @@ Moves focus to the last element.
 <Box marginBottom="major-4" />
 
 </details>
-    
+
+
+### Rover.useState API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
+
+Defines the orientation of the rover list.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+The current focused element ID.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+If enabled:
+
+   - Jumps to the first item when moving next from the last item.
+   - Jumps to the last item when moving previous from the first item.
+
+<Box marginBottom="major-4" />
+
+### Rover.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>13 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
+
+Defines the orientation of the rover list.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">stops</Code>** <Code fontSize="150" palette="primary">Stop[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+A list of element refs and IDs of the roving items.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+The current focused element ID.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_moves</Code>** <Code fontSize="150" palette="primary">number</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stores the number of moves that have been made by calling `move`, `next`,
+`previous`, `first` or `last`.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If enabled:
+
+   - Jumps to the first item when moving next from the last item.
+   - Jumps to the last item when moving previous from the first item.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">register</Code>** <Code fontSize="150" palette="primary">(id: string, ref: RefObject&#60;HTMLElement&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Registers the element ID and ref in the roving tab index list.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unregister</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Unregisters the roving item.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string, unstable_silent?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to a given element ID.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">next</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to the next element.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">previous</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to the previous element.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">first</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to the first element.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">last</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to the last element.
+
+<Box marginBottom="major-4" />
+
+</details>
+
 
 ## Theming
 

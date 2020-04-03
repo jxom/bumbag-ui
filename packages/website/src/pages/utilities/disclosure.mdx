@@ -11,52 +11,39 @@ import { Disclosure } from 'fannypack';
 
 ## Usage
 
-```function-live
+```jsx-live
+<Disclosure.State>
+  <Disclosure>Toggle</Disclosure>
+  <Disclosure.Region>Hello world</Disclosure.Region>
+</Disclosure.State>
+```
+
+## Controlled
+
+```live
+###tab=Hook,type=function-live
 function Example() {
-  const disclosure = Disclosure.useState()
+  const disclosure = Disclosure.useState();
 
   return (
-    <div>
+    <React.Fragment>
       <Disclosure {...disclosure}>Toggle</Disclosure>
       <Disclosure.Region {...disclosure}>Hello world</Disclosure.Region>
-    </div>
+    </React.Fragment>
   )
 }
-```
+###
 
-### Composition
-
-#### With `use`
-
-```function-live
-function Example() {
-  const disclosure = Disclosure.useState({ visible: true })
-
-  return (
-    <div>
-      <Disclosure use={Button} {...disclosure}>Toggle</Disclosure>
-      <Disclosure.Region use={Blockquote} borderColor="primary" backgroundColor="primaryTint" {...disclosure}>Hello world</Disclosure.Region>
-    </div>
-  )
-}
-```
-
-#### With Hooks
-
-```function-live
-function Example() {
-  const disclosure = Disclosure.useState({ visible: true });
-
-  const disclosureProps = Disclosure.useProps({ ...disclosure });
-  const disclosureRegionProps = Disclosure.Region.useProps({ ...disclosure });
-
-  return (
-    <div>
-      <Button {...disclosureProps}>Toggle</Button>
-      <Blockquote borderColor="primary" backgroundColor="primaryTint" {...disclosureRegionProps}>Hello world</Blockquote>
-    </div>
-  )
-}
+###tab=Render Props,type=jsx-live
+<Disclosure.State>
+  {disclosure => (
+    <React.Fragment>
+      <Disclosure {...disclosure}>Toggle</Disclosure>
+      <Disclosure.Region {...disclosure}>Hello world</Disclosure.Region>
+    </React.Fragment>
+  )}
+</Disclosure.State>
+###
 ```
 
 ## Props
@@ -319,7 +306,87 @@ It's called after given milliseconds if `animated` is a number.
 </details>
             
 
-## State Hooks
+## State
+
+### Disclosure.State API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+### Disclosure.State Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>7 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+</details>
+    
 
 ### Disclosure.useState API
 

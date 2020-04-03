@@ -11,126 +11,114 @@ import { Drawer } from 'fannypack';
 
 ## Usage
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
-      </Drawer>
-    </div>
-  )
-}
+```jsx-live
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer>
+    This is a side drawer
+  </Drawer>
+</Drawer.State>
 ```
 
 ### Backdrop
 
 You can hide the backdrop with the `hideBackdrop` prop.
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer hideBackdrop {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
-      </Drawer>
-    </div>
-  )
-}
+```jsx-live
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer hideBackdrop>
+    This is a side drawer
+  </Drawer>
+</Drawer.State>
 ```
 
 ### Placement
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer placement="right" {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
-      </Drawer>
-    </div>
-  )
-}
+```jsx-live
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer placement="right">
+    This is a drawer
+  </Drawer>
+</Drawer.State>
 ```
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer placement="top" {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
-      </Drawer>
-    </div>
-  )
-}
+```jsx-live
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer placement="top">
+    This is a drawer
+  </Drawer>
+</Drawer.State>
 ```
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer placement="bottom" {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
-      </Drawer>
-    </div>
-  )
-}
+```jsx-live
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer placement="bottom">
+    This is a drawer
+  </Drawer>
+</Drawer.State>
 ```
 
 ## Full screen
 
-```function-live
-function Example() {
-  const drawer = Drawer.useState();
-
-  return (
-    <div>
-      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer isFullScreen {...drawer}>
-        This is a side overlay
+```jsx-live
+<Drawer.State>
+  {drawer => (
+    <>
+      <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+      <Drawer isFullScreen>
+        This is a drawer
         <Button onClick={drawer.hide}>Close</Button>
       </Drawer>
-    </div>
-  )
-}
+    </>
+  )}
+</Drawer.State>
 ```
 
 ### Animation
 
-```function-live
+```jsx-live
+<Drawer.State unstable_animated>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer fade slide>
+    This is a side drawer
+  </Drawer>
+</Drawer.State>
+```
+
+### Controlled
+
+```live
+###tab=Hook,type=function-live
 function Example() {
-  const drawer = Drawer.useState({ unstable_animated: true });
+  const drawer = Drawer.useState();
 
   return (
-    <div>
+    <React.Fragment>
       <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-      <Drawer fade slide {...drawer}>
-        This is a side overlay
-        <Button onClick={drawer.hide}>Close</Button>
+      <Drawer {...drawer}>
+        This is a side drawer
       </Drawer>
-    </div>
+    </React.Fragment>
   )
 }
+###
+
+###tab=Render Props,type=jsx-live
+<Drawer.State>
+  {drawer => (
+    <React.Fragment>
+      <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
+      <Drawer {...drawer}>
+        This is a side drawer
+      </Drawer>
+    </React.Fragment>
+  )}
+</Drawer.State>
+###
 ```
 
 ## Props
@@ -546,6 +534,224 @@ similarly to `readOnly` on form elements. In this case, only
 
 </details>
             
+
+## State
+
+### Drawer.State API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+### Drawer.State Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>9 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Box marginBottom="major-4" />
+
+</details>
+    
+
+### Drawer.useState API
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+### Drawer.useState Return Values
+
+<!-- Automatically generated -->
+
+<details><Box use="summary" marginBottom="major-2"><strong>9 values</strong></Box>
+
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Whether it's visible or not.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+If `true`, `animating` will be set to `true` when `visible` changes.
+It'll wait for `stopAnimation` to be called or a CSS transition ends.
+If it's a number, `stopAnimation` will be called automatically after
+given milliseconds.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `true`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">unstable_stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Stops animation. It's called automatically if there's a CSS transition.
+It's called after given milliseconds if `animated` is a number.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles Dialog's `modal` state.
+
+   - Non-modal: `preventBodyScroll` doesn't work and focus is free.
+   - Modal: `preventBodyScroll` is automatically enabled, focus is
+trapped within the dialog and the dialog is rendered within a `Portal`
+by default.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `modal`.
+
+<Box marginBottom="major-4" />
+
+</details>
+    
 
 ## Theming
 

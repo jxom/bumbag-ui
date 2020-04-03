@@ -1,9 +1,11 @@
+import React from 'react';
 import { Box as ReakitBox, RoverProps as ReakitRoverProps, useRover as useReakitRover } from 'reakit';
 import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { RoverContext } from './RoverState';
 import * as styles from './styles';
 
 export type LocalRoverProps = {};
@@ -11,6 +13,9 @@ export type RoverProps = BoxProps & ReakitRoverProps & LocalRoverProps;
 
 const useProps = createHook<RoverProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const roverContext = React.useContext(RoverContext);
+    props = { ...props, ...roverContext.rover };
+
     let {
       disabled,
       focusable,

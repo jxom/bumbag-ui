@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
   Box as ReakitBox,
   DisclosureProps as ReakitDisclosureProps,
@@ -7,6 +8,7 @@ import {
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
+import { DisclosureContext } from './DisclosureState';
 import * as styles from './styles';
 
 export type LocalDisclosureProps = {};
@@ -14,6 +16,9 @@ export type DisclosureProps = BoxProps & ReakitDisclosureProps & LocalDisclosure
 
 const useProps = createHook<DisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const disclosureContext = React.useContext(DisclosureContext);
+    props = { ...props, ...disclosureContext.disclosure };
+
     let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
     const DisclosureProps = useReakitDisclosure({ disabled, focusable, visible, toggle, baseId }, htmlProps);
     htmlProps = Box.useProps({ ...htmlProps, ...DisclosureProps });
