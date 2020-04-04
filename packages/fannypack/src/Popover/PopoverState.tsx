@@ -9,7 +9,7 @@ import { isFunction } from '../utils';
 export type PopoverStateReturn = ReakitPopoverStateReturn;
 export type PopoverInitialState = ReakitPopoverInitialState;
 
-export const PopoverContext = React.createContext({ popover: {} });
+export const PopoverStateContext = React.createContext({ popover: {} });
 
 export function usePopoverState(initialState?: PopoverInitialState) {
   return useReakitPopoverState(initialState);
@@ -24,8 +24,8 @@ export function PopoverState(
   const popover = usePopoverState(restProps);
   const contextValue = React.useMemo(() => ({ popover }), [popover]);
   return (
-    <PopoverContext.Provider value={contextValue}>
+    <PopoverStateContext.Provider value={contextValue}>
       {isFunction(props.children) ? props.children(popover) : props.children}
-    </PopoverContext.Provider>
+    </PopoverStateContext.Provider>
   );
 }

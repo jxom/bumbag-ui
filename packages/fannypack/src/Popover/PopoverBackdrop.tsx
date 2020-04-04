@@ -10,7 +10,7 @@ import _merge from 'lodash/merge';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import { PopoverContext } from './PopoverState';
+import { PopoverStateContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverBackdropProps = {};
@@ -18,7 +18,7 @@ export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & Local
 
 const useProps = createHook<PopoverBackdropProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const popoverContext = React.useContext(PopoverContext);
+    const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
     let {

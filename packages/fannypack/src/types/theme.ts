@@ -104,7 +104,6 @@ import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceP
 import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
 import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
-import { Placement } from './props';
 
 export type Stylesheet = any; // TODO: fix
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
@@ -1270,7 +1269,7 @@ export type ToastThemeConfig = {
   };
   defaultProps?: Partial<ToastProps>;
   variants?: Variant<ToastThemeConfig>;
-  placement?: Placement;
+  placement?: string;
   showCountdown?: boolean;
   timeout?: number;
 };

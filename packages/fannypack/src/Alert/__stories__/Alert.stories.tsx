@@ -47,23 +47,6 @@ export const types = () => (
   </Stack>
 );
 
-export const fill = () => (
-  <Stack>
-    <Alert isFilled title="Did you know?" type="info">
-      Fannypack is a React UI Kit.
-    </Alert>
-    <Alert isFilled title="Action applied" type="success" marginTop="major-2">
-      Your action was applied successfully.
-    </Alert>
-    <Alert isFilled title="Be careful" type="warning" marginTop="major-2">
-      Performing this action can be harmful.
-    </Alert>
-    <Alert isFilled title="An error occurred" type="danger" marginTop="major-2">
-      Unable to apply your action.
-    </Alert>
-  </Stack>
-);
-
 export const icons = () => (
   <Stack>
     <Alert hasIcon title="Did you know?" type="info">

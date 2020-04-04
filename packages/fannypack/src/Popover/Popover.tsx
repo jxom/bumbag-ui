@@ -15,7 +15,7 @@ import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Text, TextProps } from '../Text';
 
-import { PopoverContext as PopoverStateContext } from './PopoverState';
+import { PopoverStateContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverProps = {

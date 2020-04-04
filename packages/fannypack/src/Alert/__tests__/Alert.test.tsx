@@ -62,15 +62,6 @@ describe('props', () => {
       expect(container.firstChild).toMatchSnapshot();
     });
 
-    it(`should render correctly for isFilled (${type})`, () => {
-      const { container } = render(
-        <Alert isFilled type={type}>
-          Hello world
-        </Alert>
-      );
-      expect(container.firstChild).toMatchSnapshot();
-    });
-
     it(`should render correctly for isInline (${type})`, () => {
       const { container } = render(
         <Alert isInline type={type}>
@@ -210,13 +201,6 @@ describe('defaultProps', () => {
   it('should render correctly for hasIcon', () => {
     const { container } = render(<Alert>hello world</Alert>, {
       theme: { Alert: { defaultProps: { hasIcon: true } } }
-    });
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for isFilled', () => {
-    const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { defaultProps: { isFilled: true } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
