@@ -155,6 +155,7 @@ export type ActionButtonsThemeConfig = {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ActionButtonsProps>;
+  variants?: Variant<ActionButtonsThemeConfig>;
 };
 export type AlertThemeConfig = {
   css?: {
@@ -186,6 +187,7 @@ export type AlertThemeConfig = {
     };
   };
   defaultProps?: Partial<AlertProps>;
+  variants?: Variant<AlertThemeConfig>;
 };
 export type AvatarThemeConfig = {
   css?: {
@@ -199,6 +201,7 @@ export type AvatarThemeConfig = {
     };
   };
   defaultProps?: Partial<AvatarProps>;
+  variants?: Variant<AvatarThemeConfig>;
 };
 export type BadgeThemeConfig = {
   css?: {
@@ -211,6 +214,7 @@ export type BadgeThemeConfig = {
     };
   };
   defaultProps?: Partial<BadgeProps>;
+  variants?: Variant<BadgeThemeConfig>;
 };
 export type BreadcrumbThemeConfig = {
   css?: {
@@ -235,12 +239,14 @@ export type BreadcrumbThemeConfig = {
     defaultProps?: Partial<BreadcrumbLinkProps>;
   };
   defaultProps?: Partial<BreadcrumbProps>;
+  variants?: Variant<BreadcrumbThemeConfig>;
 };
 export type BlockThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<BlockProps>;
+  variants?: Variant<BlockThemeConfig>;
 };
 export type BlockquoteThemeConfig = {
   css?: {
@@ -275,6 +281,7 @@ export type ButtonThemeConfig = {
     };
   };
   defaultProps?: Partial<ButtonProps>;
+  variants?: Variant<ButtonThemeConfig>;
 };
 export type CalloutThemeConfig = {
   css?: {
@@ -316,6 +323,7 @@ export type CalloutThemeConfig = {
     };
   };
   defaultProps?: Partial<CalloutProps>;
+  variants?: Variant<CalloutThemeConfig>;
 };
 export type CardThemeConfig = {
   css?: {
@@ -342,6 +350,7 @@ export type CardThemeConfig = {
     };
   };
   defaultProps?: Partial<CardProps>;
+  variants?: Variant<CardThemeConfig>;
 };
 export type CheckboxThemeConfig = {
   css?: {
@@ -363,24 +372,28 @@ export type CheckboxThemeConfig = {
     };
   };
   defaultProps?: Partial<CheckboxProps>;
+  variants?: Variant<CheckboxThemeConfig>;
 };
 export type CheckboxFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<CheckboxFieldProps>;
+  variants?: Variant<CheckboxFieldThemeConfig>;
 };
 export type CheckboxGroupThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<CheckboxGroupProps>;
+  variants?: Variant<CheckboxGroupThemeConfig>;
 };
 export type CheckboxGroupFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<CheckboxGroupFieldProps>;
+  variants?: Variant<CheckboxGroupFieldThemeConfig>;
 };
 export type CodeThemeConfig = {
   css?: {
@@ -388,6 +401,7 @@ export type CodeThemeConfig = {
     block?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<CodeProps>;
+  variants?: Variant<CodeThemeConfig>;
 };
 export type ColumnsThemeConfig = {
   css?: {
@@ -400,6 +414,7 @@ export type ColumnsThemeConfig = {
     defaultProps?: Partial<ColumnProps>;
   };
   defaultProps?: Partial<ColumnsProps>;
+  variants?: Variant<ColumnsThemeConfig>;
 };
 export type ContainerThemeConfig = {
   css?: {
@@ -410,6 +425,7 @@ export type ContainerThemeConfig = {
   tabletMargin?: ThemeAttribute<number>;
   fluidMargin?: ThemeAttribute<number>;
   defaultProps?: Partial<ContainerProps>;
+  variants?: Variant<ContainerThemeConfig>;
 };
 export type DialogThemeConfig = {
   css?: {
@@ -451,6 +467,7 @@ export type DialogThemeConfig = {
     };
   };
   defaultProps?: Partial<DialogProps>;
+  variants?: Variant<DialogThemeConfig>;
 };
 export type DividerThemeConfig = {
   css?: {
@@ -458,6 +475,7 @@ export type DividerThemeConfig = {
     vertical?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DividerProps>;
+  variants?: Variant<DividerThemeConfig>;
 };
 export type DropdownMenuThemeConfig = {
   css?: {
@@ -494,12 +512,14 @@ export type DropdownMenuThemeConfig = {
     defaultProps?: Partial<DropdownMenuItemProps>;
   };
   defaultProps?: Partial<DropdownMenuProps>;
+  variants?: Variant<DropdownMenuThemeConfig>;
 };
 export type FieldStackThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<FieldStackProps>;
+  variants?: Variant<FieldStackThemeConfig>;
 };
 export type FieldWrapperThemeConfig = {
   css?: {
@@ -546,12 +566,14 @@ export type FieldWrapperThemeConfig = {
     };
   };
   defaultProps?: Partial<FieldWrapperProps>;
+  variants?: Variant<FieldWrapperThemeConfig>;
 };
 export type FlexThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<FlexProps>;
+  variants?: Variant<FlexThemeConfig>;
 };
 export type GridThemeConfig = {
   css?: {
@@ -564,6 +586,7 @@ export type GridThemeConfig = {
     defaultProps?: Partial<GridItemProps>;
   };
   defaultProps?: Partial<GridProps>;
+  variants?: Variant<GridThemeConfig>;
 };
 export type GroupThemeConfig = {
   css?: {
@@ -578,6 +601,7 @@ export type GroupThemeConfig = {
       last?: ThemeAttribute<Stylesheet>;
     };
   };
+  variants?: Variant<GroupThemeConfig>;
 };
 export type HeadingThemeConfig = {
   css?: {
@@ -619,17 +643,20 @@ export type HeadingThemeConfig = {
     };
   };
   defaultProps?: Partial<HeadingProps>;
+  variants?: Variant<HeadingThemeConfig>;
 };
 export type DisclosureThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<DisclosureProps>;
+  variants?: Variant<DisclosureThemeConfig>;
   Region?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DisclosureRegionProps>;
+    variants?: Variant<DisclosureThemeConfig['Region']>;
   };
 };
 export type HighlightedCodeThemeConfig = {
@@ -653,6 +680,7 @@ export type HighlightedCodeThemeConfig = {
     };
   };
   defaultProps?: Partial<CodeProps>;
+  variants?: Variant<CodeThemeConfig>;
 };
 export type IconThemeConfig = {
   css?: {
@@ -672,6 +700,7 @@ export type IconThemeConfig = {
     [key: string]: string;
   };
   defaultProps?: Partial<IconProps>;
+  variants?: Variant<IconThemeConfig>;
 };
 export type ImageThemeConfig = {
   css?: {
@@ -681,24 +710,28 @@ export type ImageThemeConfig = {
     contain?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ImageProps>;
+  variants?: Variant<ImageThemeConfig>;
 };
 export type InlineThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<InlineProps>;
+  variants?: Variant<InlineThemeConfig>;
 };
 export type InlineBlockThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<InlineBlockProps>;
+  variants?: Variant<InlineBlockThemeConfig>;
 };
 export type InlineFlexThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<InlineFlexProps>;
+  variants?: Variant<InlineFlexThemeConfig>;
 };
 export type InputThemeConfig = {
   css?: {
@@ -729,18 +762,21 @@ export type InputThemeConfig = {
     };
   };
   defaultProps?: Partial<InputProps>;
+  variants?: Variant<InputThemeConfig>;
 };
 export type InputFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<InputFieldProps>;
+  variants?: Variant<InputFieldThemeConfig>;
 };
 export type LabelThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<LabelProps>;
+  variants?: Variant<LabelThemeConfig>;
 };
 export type StackThemeConfig = {
   css?: {
@@ -754,6 +790,7 @@ export type StackThemeConfig = {
     };
   };
   defaultProps?: Partial<StackProps>;
+  variants?: Variant<StackThemeConfig>;
 };
 export type LinkThemeConfig = {
   css?: {
@@ -762,6 +799,7 @@ export type LinkThemeConfig = {
     focus?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<LinkProps>;
+  variants?: Variant<LinkThemeConfig>;
 };
 export type ListThemeConfig = {
   css?: {
@@ -774,8 +812,10 @@ export type ListThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ListItemProps>;
+    variants?: Variant<ListThemeConfig['Item']>;
   };
   defaultProps?: Partial<ListProps>;
+  variants?: Variant<ListThemeConfig>;
 };
 export type MenuThemeConfig = {
   css?: {
@@ -786,20 +826,24 @@ export type MenuThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuDividerProps>;
+    variants?: Variant<MenuThemeConfig['Divider']>;
   };
   Group?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuGroupProps>;
+    variants?: Variant<MenuThemeConfig['Group']>;
   };
   Item?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<MenuItemProps>;
+    variants?: Variant<MenuThemeConfig['Item']>;
   };
   defaultProps?: Partial<MenuProps>;
+  variants?: Variant<MenuThemeConfig>;
 };
 export type ModalThemeConfig = {
   css?: {
@@ -817,17 +861,20 @@ export type ModalThemeConfig = {
     };
   };
   defaultProps?: Partial<ModalProps>;
+  variants?: Variant<ModalThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
+    variants?: Variant<ModalThemeConfig['Disclosure']>;
   };
   Backdrop?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalBackdropProps>;
+    variants?: Variant<ModalThemeConfig['Backdrop']>;
   };
 };
 export type NavigationThemeConfig = {
@@ -835,6 +882,7 @@ export type NavigationThemeConfig = {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<NavigationProps>;
+  variants?: Variant<NavigationThemeConfig>;
 };
 export type OverlayThemeConfig = {
   css?: {
@@ -852,11 +900,13 @@ export type OverlayThemeConfig = {
     };
   };
   defaultProps?: Partial<OverlayProps>;
+  variants?: Variant<OverlayThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
+    variants?: Variant<OverlayThemeConfig['Disclosure']>;
   };
 };
 export type PaginationThemeConfig = {
@@ -867,12 +917,14 @@ export type PaginationThemeConfig = {
   Button?: ButtonThemeConfig;
   Select?: SelectThemeConfig;
   defaultProps?: Partial<PaginationProps>;
+  variants?: Variant<PaginationThemeConfig>;
 };
 export type ParagraphThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<ParagraphProps>;
+  variants?: Variant<ParagraphThemeConfig>;
 };
 export type PopoverThemeConfig = {
   css?: {
@@ -894,18 +946,21 @@ export type PopoverThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverArrowProps>;
+    variants?: Variant<PopoverThemeConfig['Arrow']>;
   };
   Backdrop?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverBackdropProps>;
+    variants?: Variant<PopoverThemeConfig['Backdrop']>;
   };
   Content?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverContentProps>;
+    variants?: Variant<PopoverThemeConfig['Content']>;
   };
   Close?: {
     css?: {
@@ -917,32 +972,38 @@ export type PopoverThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverDisclosureProps>;
+    variants?: Variant<PopoverThemeConfig['Disclosure']>;
   };
   Header?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverHeaderProps>;
+    variants?: Variant<PopoverThemeConfig['Header']>;
   };
   Footer?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverFooterProps>;
+    variants?: Variant<PopoverThemeConfig['Footer']>;
   };
   Title?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PopoverTitleProps>;
+    variants?: Variant<PopoverThemeConfig['Title']>;
   };
   defaultProps?: Partial<PopoverProps>;
+  variants?: Variant<PopoverThemeConfig>;
 };
 export type PortalThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<PortalProps>;
+  variants?: Variant<PortalThemeConfig>;
 };
 export type ProgressBarThemeConfig = {
   css?: {
@@ -954,6 +1015,7 @@ export type ProgressBarThemeConfig = {
     };
   };
   defaultProps?: Partial<ProgressBarProps>;
+  variants?: Variant<ProgressBarThemeConfig>;
 };
 export type RadioThemeConfig = {
   css?: {
@@ -975,6 +1037,7 @@ export type RadioThemeConfig = {
     };
   };
   defaultProps?: Partial<RadioProps>;
+  variants?: Variant<RadioThemeConfig>;
 };
 export type RatingThemeConfig = {
   css?: {
@@ -985,26 +1048,31 @@ export type RatingThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<RatingItemProps>;
+    variants?: Variant<RatingThemeConfig['Item']>;
   };
   defaultProps?: Partial<RatingProps>;
+  variants?: Variant<RatingThemeConfig>;
 };
 export type RadioGroupThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<RadioGroupProps>;
+  variants?: Variant<RadioGroupThemeConfig>;
 };
 export type RadioGroupFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<RadioGroupFieldProps>;
+  variants?: Variant<RadioGroupFieldThemeConfig>;
 };
 export type RoverThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<RoverProps>;
+  variants?: Variant<RoverThemeConfig>;
 };
 export type SideNavThemeConfig = {
   css?: {
@@ -1020,6 +1088,7 @@ export type SideNavThemeConfig = {
       };
     };
     defaultProps?: Partial<SideNavLevelProps>;
+    variants?: Variant<SideNavThemeConfig['Level']>;
   };
   Item?: {
     css?: {
@@ -1029,8 +1098,10 @@ export type SideNavThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<SideNavItemProps>;
+    variants?: Variant<SideNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<SideNavProps>;
+  variants?: Variant<SideNavThemeConfig>;
 };
 export type TabbableThemeConfig = {
   css?: {
@@ -1038,6 +1109,7 @@ export type TabbableThemeConfig = {
     disabled?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<TabbableProps>;
+  variants?: Variant<TabbableThemeConfig>;
 };
 export type TableThemeConfig = {
   css?: {
@@ -1048,38 +1120,45 @@ export type TableThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableHeadProps>;
+    variants?: Variant<TableThemeConfig['Head']>;
   };
   HeadCell?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableHeadCellProps>;
+    variants?: Variant<TableThemeConfig['HeadCell']>;
   };
   Body?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableBodyProps>;
+    variants?: Variant<TableThemeConfig['Body']>;
   };
   Cell?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableCellProps>;
+    variants?: Variant<TableThemeConfig['Cell']>;
   };
   Row?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableRowProps>;
+    variants?: Variant<TableThemeConfig['Row']>;
   };
   Foot?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TableFootProps>;
+    variants?: Variant<TableThemeConfig['Foot']>;
   };
   defaultProps?: Partial<TableProps>;
+  variants?: Variant<TableThemeConfig>;
 };
 export type TabsThemeConfig = {
   css?: {
@@ -1090,6 +1169,7 @@ export type TabsThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsListProps>;
+    variants?: Variant<TabsThemeConfig['List']>;
   };
   Tab?: {
     css?: {
@@ -1099,14 +1179,17 @@ export type TabsThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsTabProps>;
+    variants?: Variant<TabsThemeConfig['Tab']>;
   };
   Panel?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TabsPanelProps>;
+    variants?: Variant<TabsThemeConfig['Panel']>;
   };
   defaultProps?: Partial<TabsProps>;
+  variants?: Variant<TabsThemeConfig>;
 };
 export type TagThemeConfig = {
   css?: {
@@ -1129,12 +1212,14 @@ export type TagThemeConfig = {
     };
   };
   defaultProps?: Partial<TagProps>;
+  variants?: Variant<TagThemeConfig>;
 };
 export type TextThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<TextProps>;
+  variants?: Variant<TextThemeConfig>;
 };
 export type TextareaThemeConfig = {
   css?: {
@@ -1165,12 +1250,14 @@ export type TextareaThemeConfig = {
     };
   };
   defaultProps?: Partial<TextareaProps>;
+  variants?: Variant<TextareaThemeConfig>;
 };
 export type TextareaFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<TextareaFieldProps>;
+  variants?: Variant<TextareaFieldThemeConfig>;
 };
 export type ToastThemeConfig = {
   css?: {
@@ -1207,20 +1294,24 @@ export type TooltipThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipArrowProps>;
+    variants?: Variant<TooltipThemeConfig['Arrow']>;
   };
   Content?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipContentProps>;
+    variants?: Variant<TooltipThemeConfig['Content']>;
   };
   Reference?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TooltipReferenceProps>;
+    variants?: Variant<TooltipThemeConfig['Reference']>;
   };
   defaultProps?: Partial<TooltipProps>;
+  variants?: Variant<TooltipThemeConfig>;
 };
 export type TopNavThemeConfig = {
   css?: {
@@ -1231,6 +1322,7 @@ export type TopNavThemeConfig = {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TopNavSectionProps>;
+    variants?: Variant<TopNavThemeConfig['Section']>;
   };
   Item?: {
     css?: {
@@ -1240,8 +1332,10 @@ export type TopNavThemeConfig = {
       hover?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<TopNavItemProps>;
+    variants?: Variant<TopNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<TopNavProps>;
+  variants?: Variant<TopNavThemeConfig>;
 };
 export type SelectThemeConfig = {
   css?: {
@@ -1270,12 +1364,14 @@ export type SelectThemeConfig = {
     };
   };
   defaultProps?: Partial<SelectProps>;
+  variants?: Variant<SelectThemeConfig>;
 };
 export type SelectFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<SelectFieldProps>;
+  variants?: Variant<SelectFieldThemeConfig>;
 };
 export type SetThemeConfig = {
   css?: {
@@ -1289,6 +1385,7 @@ export type SetThemeConfig = {
     };
   };
   defaultProps?: Partial<SetProps>;
+  variants?: Variant<SetThemeConfig>;
 };
 export type DrawerThemeConfig = {
   css?: {
@@ -1299,11 +1396,13 @@ export type DrawerThemeConfig = {
     };
   };
   defaultProps?: Partial<DrawerProps>;
+  variants?: Variant<DrawerThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DrawerDisclosureProps>;
+    variants?: Variant<DrawerThemeConfig['Disclosure']>;
   };
 };
 export type SpinnerThemeConfig = {
@@ -1332,6 +1431,7 @@ export type SpinnerThemeConfig = {
     };
   };
   defaultProps?: Partial<SpinnerProps>;
+  variants?: Variant<SpinnerThemeConfig>;
 };
 export type SwitchThemeConfig = {
   css?: {
@@ -1353,30 +1453,35 @@ export type SwitchThemeConfig = {
     };
   };
   defaultProps?: Partial<SwitchProps>;
+  variants?: Variant<SwitchThemeConfig>;
 };
 export type SwitchFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<SwitchFieldProps>;
+  variants?: Variant<SwitchFieldThemeConfig>;
 };
 export type SwitchGroupThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<SwitchGroupProps>;
+  variants?: Variant<SwitchGroupThemeConfig>;
 };
 export type SwitchGroupFieldThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<SwitchGroupFieldProps>;
+  variants?: Variant<SwitchGroupFieldThemeConfig>;
 };
 export type TemplateThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
   };
   defaultProps?: Partial<TemplateProps>;
+  variants?: Variant<TemplateThemeConfig>;
 };
 
 export type ThemeConfig = {
