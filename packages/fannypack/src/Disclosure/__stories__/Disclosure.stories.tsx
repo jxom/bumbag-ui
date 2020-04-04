@@ -9,7 +9,7 @@ export function _default() {
   return (
     <div>
       <Disclosure {...disclosure}>Toggle</Disclosure>
-      <Disclosure.Region {...disclosure}>Hello world</Disclosure.Region>
+      <Disclosure.Content {...disclosure}>Hello world</Disclosure.Content>
     </div>
   );
 }

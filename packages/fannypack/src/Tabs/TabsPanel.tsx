@@ -9,7 +9,6 @@ import * as styles from './styles';
 
 export type LocalTabsPanelProps = {
   tabId?: string;
-  stopId?: string;
 };
 export type TabsPanelProps = BoxProps & Partial<ReakitTabPanelProps> & LocalTabsPanelProps;
 
@@ -37,7 +36,7 @@ const useProps = createHook<TabsPanelProps>(
         baseId,
         id,
         selectedId,
-        stopId: tabId,
+        tabId,
         unstable_animating,
         unstable_animated,
         unstable_stopAnimation,

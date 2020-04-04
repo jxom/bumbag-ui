@@ -7,7 +7,7 @@ export const Disclosure = styleProps => cssClass`
   }
 `;
 
-export const DisclosureRegion = styleProps => cssClass`
+export const DisclosureContent = styleProps => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

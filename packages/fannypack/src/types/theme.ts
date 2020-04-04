@@ -30,7 +30,7 @@ import {
   DialogFooterProps,
   DialogIconProps
 } from '../Dialog';
-import { DisclosureProps, DisclosureRegionProps } from '../Disclosure';
+import { DisclosureProps, DisclosureContentProps } from '../Disclosure';
 import { DividerProps } from '../Divider';
 import {
   DropdownMenuProps,
@@ -650,12 +650,12 @@ export type DisclosureThemeConfig = {
   };
   defaultProps?: Partial<DisclosureProps>;
   variants?: Variant<DisclosureThemeConfig>;
-  Region?: {
+  Content?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
-    defaultProps?: Partial<DisclosureRegionProps>;
-    variants?: Variant<DisclosureThemeConfig['Region']>;
+    defaultProps?: Partial<DisclosureContentProps>;
+    variants?: Variant<DisclosureThemeConfig['Content']>;
   };
 };
 export type HighlightedCodeThemeConfig = {

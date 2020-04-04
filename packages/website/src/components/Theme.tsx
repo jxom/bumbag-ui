@@ -52,9 +52,9 @@ const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g
                   </Button>
                 )}
               </Disclosure>
-              <Disclosure.Region {...disclosure}>
+              <Disclosure.Content {...disclosure}>
                 <HighlightedCode marginTop="major-1" isBlock code={themeExample} language="js" />
-              </Disclosure.Region>
+              </Disclosure.Content>
             </React.Fragment>
           )}
         </Disclosure.State>

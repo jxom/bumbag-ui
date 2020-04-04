@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   Box as ReakitBox,
-  DisclosureRegionProps as ReakitDisclosureRegionProps,
-  useDisclosureRegion as useReakitDisclosureRegion
+  DisclosureContentProps as ReakitDisclosureContentProps,
+  useDisclosureContent as useReakitDisclosureContent
 } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -11,10 +11,10 @@ import { Box, BoxProps } from '../Box';
 import { DisclosureContext } from './DisclosureState';
 import * as styles from './styles';
 
-export type LocalDisclosureRegionProps = {};
-export type DisclosureRegionProps = BoxProps & ReakitDisclosureRegionProps & LocalDisclosureRegionProps;
+export type LocalDisclosureContentProps = {};
+export type DisclosureContentProps = BoxProps & ReakitDisclosureContentProps & LocalDisclosureContentProps;
 
-const useProps = createHook<DisclosureRegionProps>(
+const useProps = createHook<DisclosureContentProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const disclosureContext = React.useContext(DisclosureContext);
     props = { ...props, ...disclosureContext.disclosure };
@@ -28,7 +28,7 @@ const useProps = createHook<DisclosureRegionProps>(
       unstable_setIsMounted,
       ...htmlProps
     } = props;
-    const disclosureRegionProps = useReakitDisclosureRegion(
+    const disclosureContentProps = useReakitDisclosureContent(
       {
         baseId,
         visible,
@@ -39,10 +39,10 @@ const useProps = createHook<DisclosureRegionProps>(
       },
       htmlProps
     );
-    htmlProps = Box.useProps({ ...props, ...disclosureRegionProps });
+    htmlProps = Box.useProps({ ...props, ...disclosureContentProps });
 
     const className = useClassName({
-      style: styles.DisclosureRegion,
+      style: styles.DisclosureContent,
       styleProps: props,
       themeKey,
       themeKeyOverride,
@@ -51,23 +51,23 @@ const useProps = createHook<DisclosureRegionProps>(
 
     return { ...htmlProps, className };
   },
-  { themeKey: 'Disclosure.Region' }
+  { themeKey: 'Disclosure.Content' }
 );
 
-export const DisclosureRegion = createComponent<DisclosureRegionProps>(
+export const DisclosureContent = createComponent<DisclosureContentProps>(
   props => {
-    const disclosureRegionProps = useProps(props);
+    const disclosureContentProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: disclosureRegionProps
+      htmlProps: disclosureContentProps
     });
   },
   {
     attach: {
       useProps
     },
-    themeKey: 'Disclosure.Region'
+    themeKey: 'Disclosure.Content'
   }
 );

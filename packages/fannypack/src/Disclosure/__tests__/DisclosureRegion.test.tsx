@@ -12,9 +12,9 @@ describe('props', () => {
       return (
         <div>
           <Disclosure {...hidden}>Toggle</Disclosure>
-          <Disclosure.Region {...hidden} id="test">
+          <Disclosure.Content {...hidden} id="test">
             Hello world
-          </Disclosure.Region>
+          </Disclosure.Content>
         </div>
       );
     }
@@ -28,7 +28,7 @@ describe('props', () => {
       return (
         <div>
           <Disclosure {...hidden}>Toggle</Disclosure>
-          <Disclosure.Region {...hidden}>Hello world</Disclosure.Region>
+          <Disclosure.Content {...hidden}>Hello world</Disclosure.Content>
         </div>
       );
     }
@@ -47,9 +47,9 @@ describe('composition', () => {
             <Disclosure use={Button} {...hidden}>
               Toggle
             </Disclosure>
-            <Disclosure.Region use={Blockquote} {...hidden}>
+            <Disclosure.Content use={Blockquote} {...hidden}>
               Hello world
-            </Disclosure.Region>
+            </Disclosure.Content>
           </div>
         );
       }
@@ -62,7 +62,7 @@ describe('composition', () => {
     it('should return with Disclosure props', () => {
       const { result } = renderHook(() => {
         const hidden = Disclosure.useState({ baseId: 'test' });
-        return Disclosure.Region.useProps(hidden);
+        return Disclosure.Content.useProps(hidden);
       });
       expect(result.current).toMatchSnapshot();
     });
@@ -73,9 +73,9 @@ describe('composition', () => {
       function Component() {
         const hidden = Disclosure.useState({ baseId: 'test' });
         return (
-          <Disclosure.Region {...hidden}>
+          <Disclosure.Content {...hidden}>
             {DisclosureProps => <div {...DisclosureProps}>Hello world</div>}
-          </Disclosure.Region>
+          </Disclosure.Content>
         );
       }
       const { container } = render(<Component />);
@@ -87,12 +87,12 @@ describe('composition', () => {
 describe('overrides', () => {
   it('Disclosure.root should render correctly', () => {
     const { container } = render(
-      <Disclosure.Region
+      <Disclosure.Content
         baseId="test"
-        overrides={{ Disclosure: { Region: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } }}
       >
         hello world
-      </Disclosure.Region>
+      </Disclosure.Content>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -100,8 +100,8 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('Disclosure.root should render correctly', () => {
-    const { container } = render(<Disclosure.Region baseId="test">hello world</Disclosure.Region>, {
-      theme: { Disclosure: { Region: { css: { root: { backgroundColor: 'red' } } } } }
+    const { container } = render(<Disclosure.Content baseId="test">hello world</Disclosure.Content>, {
+      theme: { Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -109,8 +109,8 @@ describe('theming', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Disclosure.Region baseId="test">hello world</Disclosure.Region>, {
-      theme: { Disclosure: { Region: { defaultProps: { className: 'test' } } } }
+    const { container } = render(<Disclosure.Content baseId="test">hello world</Disclosure.Content>, {
+      theme: { Disclosure: { Content: { defaultProps: { className: 'test' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

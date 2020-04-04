@@ -1,12 +1,12 @@
 import * as styles from './styles';
 import { Disclosure as _Disclosure } from './Disclosure';
-import { DisclosureRegion } from './DisclosureRegion';
+import { DisclosureContent } from './DisclosureContent';
 import { useDisclosureState, DisclosureState } from './DisclosureState';
 
 export * from './Disclosure';
-export * from './DisclosureRegion';
+export * from './DisclosureContent';
 export const Disclosure = Object.assign(_Disclosure, {
-  Region: DisclosureRegion,
+  Content: DisclosureContent,
   useState: useDisclosureState,
   State: DisclosureState
 });
