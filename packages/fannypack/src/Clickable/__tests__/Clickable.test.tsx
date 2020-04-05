@@ -1,24 +1,24 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Template } from '../Template';
+import { Clickable } from '../Clickable';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
-    const { container } = render(<Template>Hello world</Template>);
+    const { container } = render(<Clickable>Hello world</Clickable>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
-    const { container } = render(<Template color="primary">Hello world</Template>);
+    const { container } = render(<Clickable color="primary">Hello world</Clickable>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('variants', () => {
   it('css.root should render correctly', () => {
-    const { container } = render(<Template variant="test">hello world</Template>, {
-      theme: { Template: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+    const { container } = render(<Clickable variant="test">hello world</Clickable>, {
+      theme: { Clickable: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -27,7 +27,7 @@ describe('variants', () => {
 describe('overrides', () => {
   it('css.root should render correctly', () => {
     const { container } = render(
-      <Template overrides={{ Template: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Template>
+      <Clickable overrides={{ Clickable: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Clickable>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -35,8 +35,8 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('css.root should render correctly', () => {
-    const { container } = render(<Template>hello world</Template>, {
-      theme: { Template: { css: { root: { backgroundColor: 'red' } } } }
+    const { container } = render(<Clickable>hello world</Clickable>, {
+      theme: { Clickable: { css: { root: { backgroundColor: 'red' } } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -44,9 +44,9 @@ describe('theming', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Template>hello world</Template>, {
+    const { container } = render(<Clickable>hello world</Clickable>, {
       // @ts-ignore
-      theme: { Template: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Clickable: { defaultProps: { className: 'test', color: 'primary' } } }
     });
     expect(container.firstChild).toMatchSnapshot();
   });

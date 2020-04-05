@@ -1,0 +1,47 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Clickable } from 'fannypack';
+
+# Clickable
+
+## import
+
+```js
+import { Clickable } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Set>
+  <Clickable
+    use={Button}
+    onClick={() => alert('Clicked')}
+  >
+    Clickable
+  </Clickable>
+  <Clickable
+    use={Button}
+    disabled
+    onClick={() => alert('Clicked')}
+  >
+    Clickable
+  </Clickable>
+  <Clickable
+    use={Button}
+    disabled
+    focusable
+    onClick={() => alert('Clicked')}
+  >
+    Clickable
+  </Clickable>
+</Set>
+```
+
+## Props
+
+### Clickable Props
+
+## Theming
+
+<Theme component={Clickable} overrides={['Clickable.css.root']}>This is a clickable</Theme>

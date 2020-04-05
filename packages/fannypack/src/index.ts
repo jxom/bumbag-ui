@@ -9,6 +9,7 @@ export * from './Breadcrumb';
 export * from './Button';
 export * from './Callout';
 export * from './Card';
+export * from './Clickable';
 export * from './Code';
 export * from './Columns';
 export * from './Container';
