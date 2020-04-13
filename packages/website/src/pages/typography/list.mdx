@@ -98,8 +98,10 @@ To use an horizontal list, use the `orientation` prop.
   }; Item?: {
     css?: {
       root?: a
-    }; defaultProps?: Partial<BoxProps>
+    }; defaultProps?: Partial<BoxProps>;
+    variants?: Variant<...>
   }; defaultProps?: Partial<ListProps>;
+  variants?: Variant<ListThemeConfig>;
 }`}
 </Code>
 
@@ -232,7 +234,7 @@ To use an horizontal list, use the `orientation` prop.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 74 more ...;
+  ... 76 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

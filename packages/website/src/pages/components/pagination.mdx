@@ -78,7 +78,7 @@ function Example() {
 **<Code marginRight="major-1">nextButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & { disabled?: boolean; focusable?: boolean; unstable_clickOnEnter?: boolean; unstable_clickOnSpace?: boolean; } & { ...; } & ButtonHTMLAttributes<...> & LocalButtonProps`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & { disabled?: boolean; focusable?: boolean; } & { ...; } & { ...; } & ButtonHTMLAttributes<...> & LocalButtonProps`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -86,7 +86,7 @@ function Example() {
 **<Code marginRight="major-1">previousButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & { disabled?: boolean; focusable?: boolean; unstable_clickOnEnter?: boolean; unstable_clickOnSpace?: boolean; } & { ...; } & ButtonHTMLAttributes<...> & LocalButtonProps`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & { disabled?: boolean; focusable?: boolean; } & { ...; } & { ...; } & ButtonHTMLAttributes<...> & LocalButtonProps`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -95,10 +95,10 @@ function Example() {
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  unstable_system?: unknown;
+  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 53 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-    ... 780 more ...;
-    state?:...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -164,7 +164,7 @@ function Example() {
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 74 more ...;
+  ... 76 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

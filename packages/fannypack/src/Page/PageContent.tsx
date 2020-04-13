@@ -34,7 +34,7 @@ const useProps = createHook<PageContentProps>(
 
     return { ...containerProps, className };
   },
-  { themeKey: 'Page.Content' }
+  { defaultProps: { breakpoint: 'tablet', isLayout: true }, themeKey: 'Page.Content' }
 );
 
 export const PageContent = createComponent<PageContentProps>(

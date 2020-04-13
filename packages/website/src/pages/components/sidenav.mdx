@@ -153,7 +153,7 @@ function Example() {
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 74 more ...;
+  ... 76 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -209,8 +209,10 @@ function Example() {
   }; Item?: {
     css?: {
       root?: a
-    }; defaultProps?: Partial<BoxProps>
+    }; defaultProps?: Partial<BoxProps>;
+    variants?: Variant<...>
   }; defaultProps?: Partial<ListProps>;
+  variants?: Variant<ListThemeConfig>;
 }`}
 </Code>
 
@@ -363,7 +365,7 @@ function Example() {
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 74 more ...;
+  ... 76 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
