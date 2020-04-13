@@ -1,0 +1,68 @@
+import Theme from "../../components/Theme";
+import { Page } from "fannypack";
+
+# Page
+
+## Import
+
+```jsx
+import { Page } from 'fannypack';
+```
+
+## Usage
+
+```jsx-live
+<Box>
+  <Page.Content>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </Page.Content>
+  <Page.Content wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </Page.Content>
+</Box>
+```
+
+### Breakpoints
+
+```jsx-live
+<Box>
+  <Page.Content breakpoint="mobile">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </Page.Content>
+  <Page.Content breakpoint="mobile" wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
+  </Page.Content>
+</Box>
+```
+
+### Fluid
+
+```jsx-live
+<Box>
+  <Page.Content isFluid>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat. Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
+  </Page.Content>
+  <Page.Content isFluid wrapperProps={{ backgroundColor: 'white900' }}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat. Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.
+  </Page.Content>
+</Box>
+```
+
+## Props
+
+### Page.Content Props
+
+## Theming
+
+<Theme component={Page.Content} overrides={["Page.Content.css.root", 'Page.ContentWrapper.css.root']}>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel.
+  Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium
+  vulputate sapien nec. Faucibus pulvinar elementum integer enim neque volutpat.
+  Cum sociis natoque penatibus et magnis dis parturient montes. Maecenas
+  accumsan lacus vel facilisis. Mauris pellentesque pulvinar pellentesque
+  habitant morbi tristique senectus. Gravida cum sociis natoque penatibus et
+  magnis dis parturient montes. Massa sapien faucibus et molestie ac feugiat sed
+  lectus vestibulum. Nisi est sit amet facilisis magna etiam tempor. Eget nulla
+  facilisi etiam dignissim diam quis enim lobortis scelerisque
+</Theme>

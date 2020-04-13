@@ -63,6 +63,7 @@ import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import { MenuProps, MenuDividerProps, MenuGroupProps, MenuItemProps } from '../Menu';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
+import { PageContentProps, PageContentWrapperProps } from '../Page';
 import { PaginationProps } from '../Pagination';
 import { ParagraphProps } from '../Paragraph';
 import {
@@ -916,6 +917,22 @@ export type OverlayThemeConfig = {
     variants?: Variant<OverlayThemeConfig['Disclosure']>;
   };
 };
+export type PageThemeConfig = {
+  Content?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<PageContentProps>;
+    variants?: Variant<PageThemeConfig['Content']>;
+  };
+  ContentWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<PageContentWrapperProps>;
+    variants?: Variant<PageThemeConfig['ContentWrapper']>;
+  };
+};
 export type PaginationThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1545,6 +1562,7 @@ export type ThemeConfig = {
   Modal?: ModalThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
+  Page?: PageThemeConfig;
   Pagination?: PaginationThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
