@@ -23,7 +23,7 @@ const useProps = createHook<PageContentWrapperProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Page.ContentWrapper' }
+  { themeKey: 'PageContent.Wrapper' }
 );
 
 export const PageContentWrapper = createComponent<PageContentWrapperProps>(
@@ -40,6 +40,6 @@ export const PageContentWrapper = createComponent<PageContentWrapperProps>(
     attach: {
       useProps
     },
-    themeKey: 'Page.ContentWrapper'
+    themeKey: 'PageContent.Wrapper'
   }
 );

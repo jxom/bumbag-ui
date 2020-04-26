@@ -1,28 +1,26 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { Page } from '../index';
+import { PageContent } from '../index';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
   it('should render correctly', () => {
-    const { container } = render(<Page.Content>Hello world</Page.Content>);
+    const { container } = render(<PageContent>Hello world</PageContent>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
-    const { container } = render(<Page.Content color="primary">Hello world</Page.Content>);
+    const { container } = render(<PageContent color="primary">Hello world</PageContent>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('variants', () => {
   it('css.root should render correctly', () => {
-    const { container } = render(<Page.Content variant="test">hello world</Page.Content>, {
+    const { container } = render(<PageContent variant="test">hello world</PageContent>, {
       theme: {
-        Page: {
-          Content: {
-            variants: { test: { css: { root: { backgroundColor: 'red' } } } }
-          }
+        PageContent: {
+          variants: { test: { css: { root: { backgroundColor: 'red' } } } }
         }
       }
     });
@@ -33,13 +31,13 @@ describe('variants', () => {
 describe('overrides', () => {
   it('css.root should render correctly', () => {
     const { container } = render(
-      <Page.Content
+      <PageContent
         overrides={{
-          Page: { Content: { css: { root: { backgroundColor: 'red' } } } }
+          PageContent: { css: { root: { backgroundColor: 'red' } } }
         }}
       >
         hello world
-      </Page.Content>
+      </PageContent>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -47,9 +45,9 @@ describe('overrides', () => {
 
 describe('theming', () => {
   it('css.root should render correctly', () => {
-    const { container } = render(<Page.Content>hello world</Page.Content>, {
+    const { container } = render(<PageContent>hello world</PageContent>, {
       theme: {
-        Page: { Content: { css: { root: { backgroundColor: 'red' } } } }
+        PageContent: { css: { root: { backgroundColor: 'red' } } }
       }
     });
     expect(container.firstChild).toMatchSnapshot();
@@ -58,11 +56,9 @@ describe('theming', () => {
 
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
-    const { container } = render(<Page.Content>hello world</Page.Content>, {
+    const { container } = render(<PageContent>hello world</PageContent>, {
       theme: {
-        Page: {
-          Content: { defaultProps: { className: 'test', color: 'primary' } }
-        }
+        PageContent: { defaultProps: { className: 'test', color: 'primary' } }
       }
     });
     expect(container.firstChild).toMatchSnapshot();

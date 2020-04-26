@@ -7,6 +7,8 @@ global.document.createRange = () => ({
   setEnd: () => {},
   commonAncestorContainer: {
     nodeName: 'BODY',
-    ownerDocument: document,
-  },
+    ownerDocument: document
+  }
 });
+
+window.matchMedia = jest.fn().mockReturnValue({ addListener: jest.fn(), removeListener: jest.fn(), matches: [] });

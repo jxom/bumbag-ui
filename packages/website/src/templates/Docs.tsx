@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import * as fannypack from 'fannypack';
 import HighlightedCode from 'fannypack-addon-highlighted-code';
 import { MDXProvider } from '@mdx-js/react';
@@ -9,8 +10,24 @@ type Props = {
   children: React.ReactNode;
 };
 
+const query = graphql`
+  query {
+    allFile(filter: { extension: { eq: "mdx" } }) {
+      edges {
+        node {
+          extension
+          name
+          relativeDirectory
+        }
+      }
+    }
+  }
+`;
+
 export default function Docs(props: Props) {
   const { children } = props;
+
+  const data = useStaticQuery(query);
 
   const components = React.useMemo(
     () => ({
@@ -46,8 +63,10 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <fannypack.Box padding="major-4">
-      <MDXProvider components={components}>{children}</MDXProvider>
-    </fannypack.Box>
+    <fannypack.PageWithSidebar defaultIsVisible={false} sidebar={<fannypack.Box>This is a sidebar</fannypack.Box>}>
+      <fannypack.PageContent>
+        <MDXProvider components={components}>{children}</MDXProvider>
+      </fannypack.PageContent>
+    </fannypack.PageWithSidebar>
   );
 }

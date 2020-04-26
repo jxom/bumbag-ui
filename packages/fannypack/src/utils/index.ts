@@ -13,6 +13,7 @@ export * from './parseIcons';
 export * from './palette';
 export * from './theme';
 export * from './uniqueId';
+export * from './useBreakpoint';
 export * from './useClassName';
 export * from './useStyle';
 export * from './useTheme';

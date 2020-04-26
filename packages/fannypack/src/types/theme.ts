@@ -63,7 +63,13 @@ import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
 import { MenuProps, MenuDividerProps, MenuGroupProps, MenuItemProps } from '../Menu';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
-import { PageContentProps, PageContentWrapperProps } from '../Page';
+import {
+  PageContentProps,
+  PageContentWrapperProps,
+  PageWithSidebarProps,
+  PageWithSidebarDisclosureProps,
+  PageWithSidebarMinimizeProps
+} from '../Page';
 import { PaginationProps } from '../Pagination';
 import { ParagraphProps } from '../Paragraph';
 import {
@@ -917,20 +923,64 @@ export type OverlayThemeConfig = {
     variants?: Variant<OverlayThemeConfig['Disclosure']>;
   };
 };
-export type PageThemeConfig = {
-  Content?: {
-    css?: {
-      root?: ThemeAttribute<Stylesheet>;
-    };
-    defaultProps?: Partial<PageContentProps>;
-    variants?: Variant<PageThemeConfig['Content']>;
+export type PageContentThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
   };
-  ContentWrapper?: {
+  defaultProps?: Partial<PageContentProps>;
+  variants?: Variant<PageContentThemeConfig>;
+  Wrapper?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageContentWrapperProps>;
-    variants?: Variant<PageThemeConfig['ContentWrapper']>;
+    variants?: Variant<PageContentThemeConfig['Wrapper']>;
+  };
+};
+export type PageWithSidebarThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<PageWithSidebarProps>;
+  variants?: Variant<PageWithSidebarThemeConfig>;
+  Spacer?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Sidebar?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  SidebarExpandedWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  SidebarCollapsedWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Content?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Disclosure?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<PageWithSidebarDisclosureProps>;
+    variants?: Variant<PageWithSidebarThemeConfig['Disclosure']>;
+  };
+  Minimize?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<PageWithSidebarMinimizeProps>;
+    variants?: Variant<PageWithSidebarThemeConfig['Minimize']>;
   };
 };
 export type PaginationThemeConfig = {
@@ -1562,7 +1612,8 @@ export type ThemeConfig = {
   Modal?: ModalThemeConfig;
   Navigation?: NavigationThemeConfig;
   Overlay?: OverlayThemeConfig;
-  Page?: PageThemeConfig;
+  PageContent?: PageContentThemeConfig;
+  PageWithSidebar?: PageWithSidebarThemeConfig;
   Pagination?: PaginationThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;
