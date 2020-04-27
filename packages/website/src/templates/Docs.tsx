@@ -1,7 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import * as fannypack from 'fannypack';
-import HighlightedCode from 'fannypack-addon-highlighted-code';
 import { MDXProvider } from '@mdx-js/react';
 
 import LiveCode from '../components/LiveCode';
@@ -9,11 +7,12 @@ import Sidebar from '../components/Sidebar';
 
 type Props = {
   children: React.ReactNode;
+  pageContext: any;
   path: string;
 };
 
 export default function Docs(props: Props) {
-  const { children, path } = props;
+  const { children, pageContext, path } = props;
 
   const components = React.useMemo(
     () => ({
@@ -50,7 +49,7 @@ export default function Docs(props: Props) {
 
   return (
     <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
-      <fannypack.PageContent breakpoint="desktop">
+      <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
         <MDXProvider components={components}>{children}</MDXProvider>
       </fannypack.PageContent>
     </fannypack.PageWithSidebar>

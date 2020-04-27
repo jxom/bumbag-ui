@@ -43,12 +43,17 @@ const useProps = createHook<DropdownMenuItemProps>(
       placement,
       previous,
       stopId,
+      setCurrentId,
       items,
       visible,
+      up,
+      down,
       unstable_clickOnEnter,
       unstable_clickOnSpace,
+      unstable_hasActiveWidget,
       unstable_idCountRef,
       unstable_moves,
+      unstable_virtual,
       ...restProps
     } = props;
 
@@ -70,12 +75,17 @@ const useProps = createHook<DropdownMenuItemProps>(
         placement,
         previous,
         stopId,
+        setCurrentId,
         items,
         visible,
+        up,
+        down,
         unstable_clickOnEnter,
         unstable_clickOnSpace,
+        unstable_hasActiveWidget,
         unstable_idCountRef,
         unstable_moves,
+        unstable_virtual,
         ...dropdownMenu
       },
       restProps

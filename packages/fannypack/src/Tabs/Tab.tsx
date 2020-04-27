@@ -24,21 +24,27 @@ const useProps = createHook<TabsTabProps>(
       id,
       last,
       manual,
-      move,
       next,
       orientation,
       overrides,
+      panels,
       previous,
       registerItem,
       selectedId,
       select,
       tabId,
+      setCurrentId,
+      stopId,
       items,
+      up,
+      down,
       unregisterItem,
       unstable_clickOnEnter,
       unstable_clickOnSpace,
+      unstable_hasActiveWidget,
       unstable_idCountRef,
       unstable_moves,
+      unstable_virtual,
       ...htmlProps
     } = props;
 
@@ -53,23 +59,29 @@ const useProps = createHook<TabsTabProps>(
         id: tabId,
         last,
         manual,
-        move,
         next,
         orientation,
+        panels,
         previous,
         registerItem,
         selectedId,
         select,
+        setCurrentId,
         items,
+        up,
+        down,
         unregisterItem,
         unstable_clickOnEnter,
         unstable_clickOnSpace,
+        unstable_hasActiveWidget,
         unstable_idCountRef,
         unstable_moves,
+        unstable_virtual,
         ...tabs
       },
       htmlProps
     );
+
     const boxProps = Box.useProps({ ...htmlProps, ...tabProps });
 
     const tabsListContext = React.useContext(TabsListContext);

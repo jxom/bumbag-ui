@@ -64,13 +64,10 @@ export default function Sidebar(props) {
           return (
             <SideNav.Level key={key} title={_startCase(key)}>
               {(items || []).map(item => (
-                <SideNav.Item
-                  key={item.name}
-                  use={Link}
-                  to={`/${item.relativeDirectory}/${item.name}/`}
-                  navId={`/${item.relativeDirectory}/${item.name}/`}
-                >
-                  {_startCase(item.name).replace(/\s/g, '')}
+                <SideNav.Item key={item.name} navId={`/${item.relativeDirectory}/${item.name}/`}>
+                  <Link to={`/${item.relativeDirectory}/${item.name}/`}>
+                    {_startCase(item.name).replace(/\s/g, '')}
+                  </Link>
                 </SideNav.Item>
               ))}
             </SideNav.Level>

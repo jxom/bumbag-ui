@@ -13,9 +13,11 @@ const useProps = createHook<DropdownMenuPopoverProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       baseId,
+      currentId,
       first,
       hide,
       hideOnClickOutside,
+      groups,
       last,
       modal,
       move,
@@ -26,11 +28,14 @@ const useProps = createHook<DropdownMenuPopoverProps>(
       previous,
       setModal,
       items,
+      setCurrentId,
+      wrap,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
       unstable_popoverRef,
       unstable_popoverStyles,
       unstable_modal,
+      unstable_moves,
       unstable_orphan,
       unstable_autoFocusOnShow,
       unstable_autoFocusOnHide,
@@ -40,15 +45,18 @@ const useProps = createHook<DropdownMenuPopoverProps>(
       unstable_setBaseId,
       unstable_idCountRef,
       unstable_stopAnimation,
+      unstable_virtual,
       visible,
       ...restProps
     } = props;
     const dropdownMenuPopoverProps = useReakitMenu(
       {
         baseId,
+        currentId,
         first,
         hide,
         hideOnClickOutside,
+        groups,
         last,
         modal,
         move,
@@ -59,11 +67,14 @@ const useProps = createHook<DropdownMenuPopoverProps>(
         previous,
         setModal,
         items,
+        setCurrentId,
+        wrap,
         unstable_initialFocusRef,
         unstable_finalFocusRef,
         unstable_popoverRef,
         unstable_popoverStyles,
         unstable_modal,
+        unstable_moves,
         unstable_orphan,
         unstable_autoFocusOnShow,
         unstable_autoFocusOnHide,
@@ -73,6 +84,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
         unstable_setBaseId,
         unstable_idCountRef,
         unstable_stopAnimation,
+        unstable_virtual,
         visible
       },
       restProps

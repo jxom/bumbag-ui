@@ -11,7 +11,7 @@ export type LocalTabsListProps = {
   align?: 'left' | 'center' | 'right';
   palette?: string;
 };
-export type TabsListProps = BoxProps & ReakitTabListProps & LocalTabsListProps;
+export type TabsListProps = BoxProps & Partial<ReakitTabListProps> & LocalTabsListProps;
 
 export const TabsListContext = React.createContext<TabsListProps>({});
 
@@ -23,9 +23,21 @@ const useProps = createHook<TabsListProps>(
       children,
       id,
       variant,
-      orientation,
       overrides,
       palette,
+      disabled,
+      focusable,
+      first,
+      last,
+      move,
+      currentId,
+      wrap,
+      groups,
+      items,
+      setCurrentId,
+      orientation,
+      unstable_virtual,
+      unstable_moves,
       unstable_setBaseId,
       unstable_idCountRef,
       ...htmlProps
@@ -35,8 +47,20 @@ const useProps = createHook<TabsListProps>(
     const tabsListProps = useReakitTabList(
       {
         baseId,
-        id,
+        disabled,
+        focusable,
+        first,
+        last,
+        move,
+        currentId,
         orientation,
+        wrap,
+        groups,
+        id,
+        items,
+        setCurrentId,
+        unstable_virtual,
+        unstable_moves,
         unstable_setBaseId,
         unstable_idCountRef,
         ...tabs
@@ -53,7 +77,12 @@ const useProps = createHook<TabsListProps>(
       prevClassName: boxProps.className
     });
 
-    const contextValue = React.useMemo(() => ({ align, variant, overrides, palette }), [align, variant, overrides, palette]);
+    const contextValue = React.useMemo(() => ({ align, variant, overrides, palette }), [
+      align,
+      variant,
+      overrides,
+      palette
+    ]);
 
     return {
       ...boxProps,

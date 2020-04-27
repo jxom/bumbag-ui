@@ -3,6 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 import buildClassNames from 'classnames';
 
 import { bindFns, useClassName, createComponent, createElement, createHook } from '../utils';
+import { Box, BoxProps } from '../Box';
 import { ListItem, ListItemProps } from '../List';
 
 import { SideNavContext } from './SideNav';
@@ -38,15 +39,20 @@ const useProps = createHook<SideNavItemProps>(
 
     return {
       ...listItemProps,
-      className: buildClassNames(listItemProps.className, href ? undefined : className),
-      onClick: href ? undefined : bindFns(onClick, () => onChangeSelectedId(navId)),
-      children: href ? (
-        <a className={className} href={href} onClick={bindFns(onClick, () => onChangeSelectedId(navId))}>
-          {children}
-        </a>
-      ) : (
-        children
-      )
+      className: buildClassNames(
+        listItemProps.className,
+        href || React.isValidElement(children) ? undefined : className
+      ),
+      onClick: href || React.isValidElement(children) ? undefined : bindFns(onClick, () => onChangeSelectedId(navId)),
+      children:
+        href || React.isValidElement(children)
+          ? /*
+            // @ts-ignore */
+            React.cloneElement(href ? <a href={href}>{children}</a> : children, {
+              className,
+              onClick: bindFns(onClick, () => onChangeSelectedId(navId))
+            })
+          : children
     };
   },
   { themeKey: 'SideNav.Item' }

@@ -11,13 +11,11 @@ export type TabbableProps = BoxProps & ReakitTabbableProps & LocalTabbableProps;
 
 const useProps = createHook<TabbableProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    let { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace, ...htmlProps } = props;
+    let { disabled, focusable, ...htmlProps } = props;
     const tabbableProps = useReakitTabbable(
       {
         disabled,
-        focusable,
-        unstable_clickOnEnter,
-        unstable_clickOnSpace
+        focusable
       },
       htmlProps
     );
