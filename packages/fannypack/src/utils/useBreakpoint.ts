@@ -30,7 +30,10 @@ export function useBreakpoint(_breakpoint) {
     ? `(${key}: ${breakpointValue}px)`
     : `(min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue}px)`;
 
-  const mediaQueryList = window.matchMedia(query);
+  const mediaQueryList =
+    typeof window !== 'undefined'
+      ? window.matchMedia(query)
+      : { matches: undefined, addListener: () => null, removeListener: () => null };
   const [doesMatch, setDoesMatch] = React.useState(mediaQueryList.matches);
 
   const onMediaChange = React.useCallback(e => {
