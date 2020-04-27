@@ -5,29 +5,15 @@ import HighlightedCode from 'fannypack-addon-highlighted-code';
 import { MDXProvider } from '@mdx-js/react';
 
 import LiveCode from '../components/LiveCode';
+import Sidebar from '../components/Sidebar';
 
 type Props = {
   children: React.ReactNode;
+  path: string;
 };
 
-const query = graphql`
-  query {
-    allFile(filter: { extension: { eq: "mdx" } }) {
-      edges {
-        node {
-          extension
-          name
-          relativeDirectory
-        }
-      }
-    }
-  }
-`;
-
 export default function Docs(props: Props) {
-  const { children } = props;
-
-  const data = useStaticQuery(query);
+  const { children, path } = props;
 
   const components = React.useMemo(
     () => ({
@@ -63,8 +49,8 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <fannypack.PageWithSidebar defaultIsVisible={false} sidebar={<fannypack.Box>This is a sidebar</fannypack.Box>}>
-      <fannypack.PageContent>
+    <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+      <fannypack.PageContent breakpoint="desktop">
         <MDXProvider components={components}>{children}</MDXProvider>
       </fannypack.PageContent>
     </fannypack.PageWithSidebar>
