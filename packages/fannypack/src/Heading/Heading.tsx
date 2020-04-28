@@ -9,7 +9,6 @@ import * as styles from './styles';
 
 export type LocalHeadingProps = {
   isSubHeading?: boolean;
-  overrides?: HeadingThemeConfig;
 };
 export type HeadingProps = BoxProps & LocalHeadingProps;
 

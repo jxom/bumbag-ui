@@ -6,9 +6,7 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalInlineFlexProps = {
-  overrides?: InlineFlexThemeConfig;
-};
+export type LocalInlineFlexProps = {};
 export type InlineFlexProps = BoxProps & LocalInlineFlexProps;
 
 const useProps = createHook<InlineFlexProps>(

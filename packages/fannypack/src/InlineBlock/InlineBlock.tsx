@@ -6,9 +6,7 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalInlineBlockProps = {
-  overrides?: InlineBlockThemeConfig;
-};
+export type LocalInlineBlockProps = {};
 export type InlineBlockProps = BoxProps & LocalInlineBlockProps;
 
 const useProps = createHook<InlineBlockProps>(

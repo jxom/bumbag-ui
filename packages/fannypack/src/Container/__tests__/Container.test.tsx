@@ -126,7 +126,7 @@ describe('overrides', () => {
 
   it('Container.fluidMargin should render correctly', () => {
     const { container } = render(
-      <Container isFluid overrides={{ fluidMargin: 3 }}>
+      <Container isFluid overrides={{ Container: { fluidMargin: 3 } }}>
         hello world
       </Container>
     );
@@ -135,7 +135,7 @@ describe('overrides', () => {
 
   it('Container.tabletMargin should render correctly', () => {
     const { container } = render(
-      <Container isLayout overrides={{ tabletMargin: 5 }}>
+      <Container isLayout overrides={{ Container: { tabletMargin: 5 } }}>
         hello world
       </Container>
     );

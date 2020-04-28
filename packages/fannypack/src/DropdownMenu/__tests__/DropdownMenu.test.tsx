@@ -10,7 +10,7 @@ describe('props', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -32,7 +32,7 @@ describe('props', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -54,7 +54,7 @@ describe('props', () => {
       <DropdownMenu
         baseId="test"
         backgroundColor="red"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -75,7 +75,7 @@ describe('props', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -106,7 +106,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { css: { root: { backgroundColor: 'red' } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -128,7 +128,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { Popover: { css: { root: { backgroundColor: 'red' } } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -150,7 +150,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { Button: { css: { root: { backgroundColor: 'red' } } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -172,7 +172,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { Divider: { css: { root: { backgroundColor: 'red' } } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -200,7 +200,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { Group: { css: { root: { backgroundColor: 'red' } } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -228,7 +228,7 @@ describe('overrides', () => {
       <DropdownMenu
         baseId="test"
         overrides={{ DropdownMenu: { Item: { css: { root: { backgroundColor: 'red' } } } } }}
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -257,7 +257,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -281,7 +281,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -303,7 +303,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>
@@ -325,7 +325,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -353,7 +353,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -381,7 +381,7 @@ describe('theming', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
               <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -411,7 +411,7 @@ describe('defaultProps', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        content={
+        menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
             <DropdownMenu.Item iconBefore="solid-share">Share</DropdownMenu.Item>

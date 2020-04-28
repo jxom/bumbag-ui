@@ -12,7 +12,6 @@ export type LocalColumnsProps = {
   isGapless?: boolean;
   isOneLine?: boolean;
   minBreakpoint?: 'tablet' | 'mobile';
-  overrides?: ColumnsThemeConfig;
 };
 export type ColumnsProps = BoxProps & LocalColumnsProps;
 

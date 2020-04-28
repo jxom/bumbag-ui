@@ -15,7 +15,6 @@ export type LocalGridProps = {
   templateRows?: string | number;
   autoColumns?: string | number;
   autoRows?: string | number;
-  overrides?: GridThemeConfig;
 };
 export type GridProps = BoxProps & LocalGridProps;
 

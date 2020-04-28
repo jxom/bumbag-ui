@@ -6,9 +6,7 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalParagraphProps = {
-  overrides?: ParagraphThemeConfig;
-};
+export type LocalParagraphProps = {};
 export type ParagraphProps = BoxProps & LocalParagraphProps;
 
 const useProps = createHook<ParagraphProps>(

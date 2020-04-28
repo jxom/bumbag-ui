@@ -1,18 +1,19 @@
 import * as React from 'react';
 import _get from 'lodash/get';
 import { useDefaultProps } from './useDefaultProps';
+import { forwardRefWithUse } from './forwardRefWithUse';
 
-export function createComponent<P>(
-  Component: React.FunctionComponent<P>,
+export function createComponent<Props>(
+  Component: React.FunctionComponent<Props>,
   config?: {
     attach?: {
-      useProps: (props?: Partial<P>, config?: { themeKey?: string }) => any;
+      useProps: (props?: Partial<Props>, config?: { themeKey?: string }) => any;
     };
-    defaultProps?: Partial<P>;
+    defaultProps?: Partial<Props>;
     themeKey?: string;
   }
 ) {
-  const ForwardedComponent = React.forwardRef((props: P, ref) => {
+  const ForwardedComponent = forwardRefWithUse<Props, any>((props: Props, ref) => {
     const { props: newProps } = useDefaultProps(props, config);
     // @ts-ignore
     return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));

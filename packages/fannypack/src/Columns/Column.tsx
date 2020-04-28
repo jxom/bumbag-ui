@@ -21,7 +21,6 @@ export type LocalColumnProps = {
   spreadDesktopOffset?: ColumnSpreadOffset;
   spreadWidescreenOffset?: ColumnSpreadOffset;
   spreadFullHDOffset?: ColumnSpreadOffset;
-  overrides?: ColumnsThemeConfig['Column'];
 };
 export type ColumnProps = BoxProps & LocalColumnProps;
 

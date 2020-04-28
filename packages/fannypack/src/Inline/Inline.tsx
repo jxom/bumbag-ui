@@ -6,9 +6,7 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalInlineProps = {
-  overrides?: InlineThemeConfig;
-};
+export type LocalInlineProps = {};
 export type InlineProps = BoxProps & LocalInlineProps;
 
 const useProps = createHook<InlineProps>(

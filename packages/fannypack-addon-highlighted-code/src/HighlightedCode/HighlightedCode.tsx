@@ -20,7 +20,6 @@ export type LocalHighlightedCodeProps = {
   lineProps?: Object;
   tokenProps?: Object;
   wrapperProps?: Object;
-  overrides?: HighlightedCodeThemeConfig;
 };
 export type HighlightedCodeProps = BoxProps & LocalHighlightedCodeProps;
 

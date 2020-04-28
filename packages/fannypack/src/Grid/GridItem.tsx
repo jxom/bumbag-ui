@@ -14,7 +14,6 @@ export type LocalGridItemProps = {
   columnEnd?: string | number;
   rowStart?: string | number;
   rowEnd?: string | number;
-  overrides?: GridThemeConfig['Item'];
 };
 export type GridItemProps = BoxProps & LocalGridItemProps;
 

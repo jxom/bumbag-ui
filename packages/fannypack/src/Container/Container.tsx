@@ -11,7 +11,6 @@ export type LocalContainerProps = {
   breakpoint?: Breakpoint;
   isFluid?: boolean;
   isLayout?: boolean;
-  overrides?: ContainerThemeConfig;
 };
 export type ContainerProps = BoxProps & LocalContainerProps;
 

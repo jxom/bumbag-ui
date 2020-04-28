@@ -9,7 +9,6 @@ import * as styles from './styles';
 export type LocalListProps = {
   isOrdered?: boolean;
   orientation?: 'horizontal' | 'vertical';
-  overrides?: ListThemeConfig;
 };
 export type ListProps = BoxProps & LocalListProps;
 

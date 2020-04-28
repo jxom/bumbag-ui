@@ -12,7 +12,7 @@ import * as styles from './styles';
 export type LocalDropdownMenuProps = {
   baseId?: DropdownMenuInitialState['baseId'];
   children: React.ReactElement<any>;
-  content: any;
+  menu: any;
   visible?: DropdownMenuInitialState['visible'];
 };
 export type DropdownMenuProps = BoxProps & LocalDropdownMenuProps;
@@ -27,7 +27,7 @@ export const DropdownMenuContext = React.createContext<{
 
 const useProps = createHook<DropdownMenuProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { baseId, children, content, overrides, visible, ...restProps } = props;
+    const { baseId, children, menu, overrides, visible, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
     const dropdownMenu = useDropdownMenuState({ baseId, visible });
@@ -54,7 +54,7 @@ const useProps = createHook<DropdownMenuProps>(
         <DropdownMenuContext.Provider value={contextValue}>
           {React.cloneElement(children, { ...dropdownMenuButtonProps })}
           <DropdownMenuPopover {...dropdownMenu} overrides={overrides}>
-            {content}
+            {menu}
           </DropdownMenuPopover>
         </DropdownMenuContext.Provider>
       )

@@ -4,6 +4,7 @@ export * from './createComponent';
 export * from './createElement';
 export * from './createHook';
 export * from './cssProps';
+export * from './forwardRefWithUse';
 export * from './fieldAdaptors';
 export * from './htmlProps';
 export * from './isFunction';

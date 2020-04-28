@@ -9,7 +9,6 @@ import * as styles from './styles';
 export type LocalCodeProps = {
   isBlock?: boolean;
   palette?: string;
-  overrides?: CodeThemeConfig;
 };
 export type CodeProps = BoxProps & LocalCodeProps;
 
