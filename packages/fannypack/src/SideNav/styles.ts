@@ -40,7 +40,7 @@ export const SideNavItem = styleProps => cssClass`
   align-items: center;
   cursor: pointer;
   display: flex;
-  min-height: 2.75em;
+  min-height: 2.5em;
   padding: 0 1rem;
   padding-left: ${styleProps.level === 1 ? space(3, 'major')(styleProps) : styleProps.level}rem;
   transition: box-shadow 0.1s ease-in-out 0s, background-color 0.1s, color 0.1s;

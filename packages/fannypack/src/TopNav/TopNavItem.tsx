@@ -43,15 +43,23 @@ const useProps = createHook<TopNavItemProps>(
     return {
       ...htmlProps,
       'aria-current': isActive || selectedId === navId ? 'page' : undefined,
-      className: buildClassNames(htmlProps.className, href ? undefined : className),
-      onClick: href ? undefined : bindFns(onClick, () => onChangeSelectedId(navId)),
-      children: href ? (
-        <a className={className} href={href} onClick={bindFns(onClick, () => onChangeSelectedId(navId))}>
-          {children}
-        </a>
-      ) : (
-        children
-      )
+      className: buildClassNames(
+        htmlProps.className,
+        href || (navId && React.isValidElement(children)) ? undefined : className
+      ),
+      onClick:
+        href || (navId && React.isValidElement(children))
+          ? undefined
+          : bindFns(onClick, () => onChangeSelectedId(navId)),
+      children:
+        href || (navId && React.isValidElement(children))
+          ? /*
+            // @ts-ignore */
+            React.cloneElement(href ? <a href={href}>{children}</a> : children, {
+              className,
+              onClick: bindFns(onClick, () => onChangeSelectedId(navId))
+            })
+          : children
     };
   },
   { defaultProps: { palette: 'primary', variant: 'default' }, themeKey: 'TopNav.Item' }

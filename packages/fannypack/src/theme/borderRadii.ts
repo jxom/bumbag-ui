@@ -1,13 +1,14 @@
 import { BorderRadiiThemeConfig } from '../types';
 
 export default (overrides: BorderRadiiThemeConfig) => ({
-  default: '8px',
+  default: '6px',
   '0': '0px',
   '1': '2px',
   '2': '4px',
-  '3': '8px',
-  '4': '16px',
-  '5': '32px',
-  '6': '64px',
+  '3': '6px',
+  '4': '8px',
+  '5': '16px',
+  '6': '32px',
+  '7': '64px',
   ...overrides
 });

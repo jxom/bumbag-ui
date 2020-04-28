@@ -22,7 +22,7 @@ const useProps = createHook<FieldStackProps>(
 
     return { ...stackProps, className };
   },
-  { defaultProps: { orientation: 'vertical', spacing: 'major-3' }, themeKey: 'FieldStack' }
+  { defaultProps: { orientation: 'vertical', spacing: 'major-2' }, themeKey: 'FieldStack' }
 );
 
 export const FieldStack = createComponent<FieldStackProps>(
