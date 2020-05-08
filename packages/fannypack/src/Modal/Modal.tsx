@@ -28,8 +28,8 @@ const useProps = createHook<ModalProps>(
       preventBodyScroll,
       setModal,
       visible,
-      unstable_animating,
-      unstable_animated,
+      animating,
+      animated,
       baseId,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
@@ -37,7 +37,7 @@ const useProps = createHook<ModalProps>(
       unstable_orphan,
       unstable_autoFocusOnHide,
       unstable_autoFocusOnShow,
-      unstable_stopAnimation,
+      stopAnimation,
       unstable_setIsMounted,
       ...htmlProps
     } = props;
@@ -52,8 +52,8 @@ const useProps = createHook<ModalProps>(
           preventBodyScroll,
           setModal,
           visible,
-          unstable_animating,
-          unstable_animated,
+          animating,
+          animated,
           baseId,
           unstable_initialFocusRef,
           unstable_finalFocusRef,
@@ -61,7 +61,7 @@ const useProps = createHook<ModalProps>(
           unstable_orphan,
           unstable_autoFocusOnHide,
           unstable_autoFocusOnShow,
-          unstable_stopAnimation,
+          stopAnimation,
           unstable_setIsMounted
         },
         modalContext.modal

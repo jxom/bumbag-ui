@@ -266,18 +266,20 @@ export const getAnimatedAttributes = opts => styleProps => {
     transition-duration: ${styleProps.duration || '250ms'};
     transition-timing-function: ${styleProps.timingFunction || 'ease-in-out'};
     transition-delay: ${styleProps.delay || '0s'};
+    transform: ${opts.prevTransformValue} ${transformValue} !important;
 
     ${styleProps.fade &&
       css`
-        opacity: 1;
+        opacity: 0;
       `};
 
-    &.hidden {
-      transform: ${opts.prevTransformValue} ${transformValue} !important;
+    &[data-enter] {
+      /* TODO: Create transform values based off placement */
+      /* transform: translate3d(-50%, -50%, 0) !important; */
 
       ${styleProps.fade &&
         css`
-          opacity: 0;
+          opacity: 1;
         `};
     }
   `;

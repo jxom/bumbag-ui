@@ -19,22 +19,14 @@ const useProps = createHook<DisclosureContentProps>(
     const disclosureContext = React.useContext(DisclosureContext);
     props = { ...props, ...disclosureContext.disclosure };
 
-    let {
-      baseId,
-      visible,
-      unstable_animating,
-      unstable_animated,
-      unstable_stopAnimation,
-      unstable_setIsMounted,
-      ...htmlProps
-    } = props;
+    let { baseId, visible, animating, animated, stopAnimation, unstable_setIsMounted, ...htmlProps } = props;
     const disclosureContentProps = useReakitDisclosureContent(
       {
         baseId,
         visible,
-        unstable_animating,
-        unstable_animated,
-        unstable_stopAnimation,
+        animating,
+        animated,
+        stopAnimation,
         unstable_setIsMounted
       },
       htmlProps

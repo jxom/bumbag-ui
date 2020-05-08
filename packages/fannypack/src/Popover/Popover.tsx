@@ -65,8 +65,8 @@ const useProps = createHook<PopoverProps>(
       title,
       usePortal,
       visible,
-      unstable_animating,
-      unstable_animated,
+      animating,
+      animated,
       baseId,
       unstable_initialFocusRef,
       unstable_finalFocusRef,
@@ -76,7 +76,7 @@ const useProps = createHook<PopoverProps>(
       unstable_autoFocusOnShow,
       unstable_popoverRef,
       unstable_popoverStyles,
-      unstable_stopAnimation,
+      stopAnimation,
       unstable_setIsMounted,
       ...restProps
     } = props;
@@ -89,8 +89,8 @@ const useProps = createHook<PopoverProps>(
         preventBodyScroll,
         setModal,
         visible,
-        unstable_animating,
-        unstable_animated,
+        animating,
+        animated,
         baseId,
         unstable_initialFocusRef,
         unstable_finalFocusRef,
@@ -100,7 +100,7 @@ const useProps = createHook<PopoverProps>(
         unstable_autoFocusOnShow,
         unstable_popoverRef,
         unstable_popoverStyles,
-        unstable_stopAnimation,
+        stopAnimation,
         unstable_setIsMounted
       },
       restProps

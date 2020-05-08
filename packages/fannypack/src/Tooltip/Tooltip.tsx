@@ -29,7 +29,7 @@ const useProps = createHook<TooltipProps>(
 
     const boxProps = Box.useProps({ ...props, content: undefined });
     // @ts-ignore
-    const tooltip = useTooltipState({ placement, unstable_animated: expand || fade || slide, baseId });
+    const tooltip = useTooltipState({ placement, animated: expand || fade || slide, baseId });
 
     return {
       children: (
@@ -89,12 +89,12 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       overrides,
       visible,
       baseId,
-      unstable_animating,
-      unstable_animated,
+      animating,
+      animated,
       unstable_popoverRef,
       unstable_popoverStyles,
       unstable_portal,
-      unstable_stopAnimation,
+      stopAnimation,
       unstable_setIsMounted,
       ...restProps
     } = props;
@@ -103,12 +103,12 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       {
         visible,
         baseId,
-        unstable_animating,
-        unstable_animated,
+        animating,
+        animated,
         unstable_popoverRef,
         unstable_popoverStyles,
         unstable_portal,
-        unstable_stopAnimation,
+        stopAnimation,
         unstable_setIsMounted
       },
       restProps
