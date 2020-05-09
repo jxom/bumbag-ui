@@ -5,15 +5,17 @@ Object {
   "aria-modal": true,
   "children": <React.Fragment>
     <ForwardRef
+      animated={false}
+      animating={false}
       baseId="test"
       hide={[Function]}
       modal={true}
       placement="center"
+      setAnimated={[Function]}
       setModal={[Function]}
       show={[Function]}
+      stopAnimation={[Function]}
       toggle={[Function]}
-      animated={false}
-      animating={false}
       unstable_idCountRef={
         Object {
           "current": 0,
@@ -21,14 +23,12 @@ Object {
       }
       unstable_modal={true}
       unstable_setBaseId={[Function]}
-      unstable_setIsMounted={[Function]}
-      stopAnimation={[Function]}
       visible={false}
     >
       <div />
     </ForwardRef>
   </React.Fragment>,
-  "className": "css-1mhpz2e css-1pwrqjj css-3ekj6a hidden fp-Box fp-Modal",
+  "className": "css-1mhpz2e css-1pwrqjj css-3ekj6a fp-Box fp-Modal",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -91,7 +91,7 @@ exports[`composition render props should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -237,7 +237,7 @@ exports[`composition use should render correctly 1`] = `
     <blockquote
       aria-label="test"
       aria-modal="true"
-      class="emotion-4 emotion-1 emotion-2 emotion-7 hidden fp-Box fp-Blockquote fp-Modal"
+      class="emotion-4 emotion-1 emotion-2 emotion-7 fp-Box fp-Blockquote fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -252,7 +252,7 @@ exports[`composition use should render correctly 1`] = `
     >
       <blockquote
         aria-label="test"
-        class="emotion-4 emotion-1 emotion-2 emotion-11 hidden fp-Box fp-Blockquote fp-ModalBackdrop"
+        class="emotion-4 emotion-1 emotion-2 emotion-11 fp-Box fp-Blockquote fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -320,7 +320,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden test fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -335,7 +335,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden test fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 test fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -407,7 +407,7 @@ exports[`overrides Modal.bottom.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -422,7 +422,7 @@ exports[`overrides Modal.bottom.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -494,7 +494,7 @@ exports[`overrides Modal.bottomEnd.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -509,7 +509,7 @@ exports[`overrides Modal.bottomEnd.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -581,7 +581,7 @@ exports[`overrides Modal.bottomStart.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -596,7 +596,7 @@ exports[`overrides Modal.bottomStart.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -668,7 +668,7 @@ exports[`overrides Modal.center.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -683,7 +683,7 @@ exports[`overrides Modal.center.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -755,7 +755,7 @@ exports[`overrides Modal.left.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -770,7 +770,7 @@ exports[`overrides Modal.left.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -842,7 +842,7 @@ exports[`overrides Modal.right.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -857,7 +857,7 @@ exports[`overrides Modal.right.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -929,7 +929,7 @@ exports[`overrides Modal.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -944,7 +944,7 @@ exports[`overrides Modal.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1016,7 +1016,7 @@ exports[`overrides Modal.top.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1031,7 +1031,7 @@ exports[`overrides Modal.top.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1103,7 +1103,7 @@ exports[`overrides Modal.topEnd.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1118,7 +1118,7 @@ exports[`overrides Modal.topEnd.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1190,7 +1190,7 @@ exports[`overrides Modal.topStart.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1205,7 +1205,7 @@ exports[`overrides Modal.topStart.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1273,7 +1273,7 @@ exports[`props placement should render correctly for bottom placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1288,7 +1288,7 @@ exports[`props placement should render correctly for bottom placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1356,7 +1356,7 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1371,7 +1371,7 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1439,7 +1439,7 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1454,7 +1454,7 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1522,7 +1522,7 @@ exports[`props placement should render correctly for center placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1537,7 +1537,7 @@ exports[`props placement should render correctly for center placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1605,7 +1605,7 @@ exports[`props placement should render correctly for left placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1620,7 +1620,7 @@ exports[`props placement should render correctly for left placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1673,6 +1673,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -1682,10 +1685,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -1716,12 +1719,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -1732,7 +1738,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1747,7 +1753,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1799,12 +1805,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -1832,6 +1841,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -1841,10 +1853,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -1859,7 +1871,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1874,7 +1886,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1927,6 +1939,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -1936,10 +1951,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -1970,12 +1985,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -1986,7 +2004,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2001,7 +2019,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2054,6 +2072,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2063,10 +2084,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2097,12 +2118,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2113,7 +2137,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2128,7 +2152,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2181,6 +2205,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2190,10 +2217,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2224,12 +2251,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2240,7 +2270,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2255,7 +2285,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2308,6 +2338,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2317,10 +2350,10 @@ exports[`props placement should render correctly for placement bottom and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2351,12 +2384,15 @@ exports[`props placement should render correctly for placement bottom and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2367,7 +2403,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2382,7 +2418,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2435,6 +2471,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2444,10 +2483,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2478,12 +2517,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2494,7 +2536,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2509,7 +2551,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2561,12 +2603,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -2594,6 +2639,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2603,10 +2651,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2621,7 +2669,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2636,7 +2684,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2689,6 +2737,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2698,10 +2749,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2732,12 +2783,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2748,7 +2802,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2763,7 +2817,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2816,6 +2870,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2825,10 +2882,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2859,12 +2916,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -2875,7 +2935,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2890,7 +2950,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2943,6 +3003,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -2952,10 +3015,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -2986,12 +3049,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3002,7 +3068,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3017,7 +3083,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3070,6 +3136,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3079,10 +3148,10 @@ exports[`props placement should render correctly for placement bottom-end and sl
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3113,12 +3182,15 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3129,7 +3201,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3144,7 +3216,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3197,6 +3269,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3206,10 +3281,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3240,12 +3315,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3256,7 +3334,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3271,7 +3349,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3323,12 +3401,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -3356,6 +3437,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3365,10 +3449,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3383,7 +3467,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3398,7 +3482,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3451,6 +3535,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3460,10 +3547,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3494,12 +3581,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3510,7 +3600,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3525,7 +3615,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3578,6 +3668,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3587,10 +3680,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3621,12 +3714,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3637,7 +3733,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3652,7 +3748,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3705,6 +3801,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3714,10 +3813,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3748,12 +3847,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3764,7 +3866,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3779,7 +3881,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3832,6 +3934,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3841,10 +3946,10 @@ exports[`props placement should render correctly for placement bottom-start and 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -3875,12 +3980,15 @@ exports[`props placement should render correctly for placement bottom-start and 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -3891,7 +3999,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3906,7 +4014,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3959,6 +4067,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -3968,10 +4079,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4002,12 +4113,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4018,7 +4132,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4033,7 +4147,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4085,12 +4199,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -4118,6 +4235,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4127,10 +4247,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4145,7 +4265,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4160,7 +4280,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4213,6 +4333,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4222,10 +4345,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4256,12 +4379,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4272,7 +4398,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4287,7 +4413,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4340,6 +4466,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4349,10 +4478,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4383,12 +4512,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4399,7 +4531,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4414,7 +4546,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4467,6 +4599,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4476,10 +4611,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4510,12 +4645,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4526,7 +4664,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4541,7 +4679,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4594,6 +4732,9 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4603,10 +4744,10 @@ exports[`props placement should render correctly for placement center and slide 
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4637,12 +4778,15 @@ exports[`props placement should render correctly for placement center and slide 
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4653,7 +4797,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4668,7 +4812,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4721,6 +4865,9 @@ exports[`props placement should render correctly for placement left and slide bo
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4730,10 +4877,10 @@ exports[`props placement should render correctly for placement left and slide bo
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4764,12 +4911,15 @@ exports[`props placement should render correctly for placement left and slide bo
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -4780,7 +4930,7 @@ exports[`props placement should render correctly for placement left and slide bo
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4795,7 +4945,7 @@ exports[`props placement should render correctly for placement left and slide bo
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4847,12 +4997,15 @@ exports[`props placement should render correctly for placement left and slide ce
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -4880,6 +5033,9 @@ exports[`props placement should render correctly for placement left and slide ce
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4889,10 +5045,10 @@ exports[`props placement should render correctly for placement left and slide ce
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -4907,7 +5063,7 @@ exports[`props placement should render correctly for placement left and slide ce
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4922,7 +5078,7 @@ exports[`props placement should render correctly for placement left and slide ce
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4975,6 +5131,9 @@ exports[`props placement should render correctly for placement left and slide le
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -4984,10 +5143,10 @@ exports[`props placement should render correctly for placement left and slide le
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5018,12 +5177,15 @@ exports[`props placement should render correctly for placement left and slide le
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5034,7 +5196,7 @@ exports[`props placement should render correctly for placement left and slide le
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5049,7 +5211,7 @@ exports[`props placement should render correctly for placement left and slide le
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5102,6 +5264,9 @@ exports[`props placement should render correctly for placement left and slide ri
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5111,10 +5276,10 @@ exports[`props placement should render correctly for placement left and slide ri
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5145,12 +5310,15 @@ exports[`props placement should render correctly for placement left and slide ri
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5161,7 +5329,7 @@ exports[`props placement should render correctly for placement left and slide ri
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5176,7 +5344,7 @@ exports[`props placement should render correctly for placement left and slide ri
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5229,6 +5397,9 @@ exports[`props placement should render correctly for placement left and slide to
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5238,10 +5409,10 @@ exports[`props placement should render correctly for placement left and slide to
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5272,12 +5443,15 @@ exports[`props placement should render correctly for placement left and slide to
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5288,7 +5462,7 @@ exports[`props placement should render correctly for placement left and slide to
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5303,7 +5477,7 @@ exports[`props placement should render correctly for placement left and slide to
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5356,6 +5530,9 @@ exports[`props placement should render correctly for placement left and slide tr
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5365,10 +5542,10 @@ exports[`props placement should render correctly for placement left and slide tr
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5399,12 +5576,15 @@ exports[`props placement should render correctly for placement left and slide tr
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5415,7 +5595,7 @@ exports[`props placement should render correctly for placement left and slide tr
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5430,7 +5610,7 @@ exports[`props placement should render correctly for placement left and slide tr
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5483,6 +5663,9 @@ exports[`props placement should render correctly for placement right and slide b
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5492,10 +5675,10 @@ exports[`props placement should render correctly for placement right and slide b
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5526,12 +5709,15 @@ exports[`props placement should render correctly for placement right and slide b
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5542,7 +5728,7 @@ exports[`props placement should render correctly for placement right and slide b
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5557,7 +5743,7 @@ exports[`props placement should render correctly for placement right and slide b
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5609,12 +5795,15 @@ exports[`props placement should render correctly for placement right and slide c
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -5642,6 +5831,9 @@ exports[`props placement should render correctly for placement right and slide c
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5651,10 +5843,10 @@ exports[`props placement should render correctly for placement right and slide c
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5669,7 +5861,7 @@ exports[`props placement should render correctly for placement right and slide c
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5684,7 +5876,7 @@ exports[`props placement should render correctly for placement right and slide c
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5737,6 +5929,9 @@ exports[`props placement should render correctly for placement right and slide l
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5746,10 +5941,10 @@ exports[`props placement should render correctly for placement right and slide l
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5780,12 +5975,15 @@ exports[`props placement should render correctly for placement right and slide l
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5796,7 +5994,7 @@ exports[`props placement should render correctly for placement right and slide l
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5811,7 +6009,7 @@ exports[`props placement should render correctly for placement right and slide l
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5864,6 +6062,9 @@ exports[`props placement should render correctly for placement right and slide r
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -5873,10 +6074,10 @@ exports[`props placement should render correctly for placement right and slide r
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -5907,12 +6108,15 @@ exports[`props placement should render correctly for placement right and slide r
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -5923,7 +6127,7 @@ exports[`props placement should render correctly for placement right and slide r
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5938,7 +6142,7 @@ exports[`props placement should render correctly for placement right and slide r
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5991,6 +6195,9 @@ exports[`props placement should render correctly for placement right and slide t
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6000,10 +6207,10 @@ exports[`props placement should render correctly for placement right and slide t
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6034,12 +6241,15 @@ exports[`props placement should render correctly for placement right and slide t
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6050,7 +6260,7 @@ exports[`props placement should render correctly for placement right and slide t
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6065,7 +6275,7 @@ exports[`props placement should render correctly for placement right and slide t
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6118,6 +6328,9 @@ exports[`props placement should render correctly for placement right and slide t
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6127,10 +6340,10 @@ exports[`props placement should render correctly for placement right and slide t
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6161,12 +6374,15 @@ exports[`props placement should render correctly for placement right and slide t
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6177,7 +6393,7 @@ exports[`props placement should render correctly for placement right and slide t
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6192,7 +6408,7 @@ exports[`props placement should render correctly for placement right and slide t
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6245,6 +6461,9 @@ exports[`props placement should render correctly for placement top and slide bot
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6254,10 +6473,10 @@ exports[`props placement should render correctly for placement top and slide bot
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6288,12 +6507,15 @@ exports[`props placement should render correctly for placement top and slide bot
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6304,7 +6526,7 @@ exports[`props placement should render correctly for placement top and slide bot
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6319,7 +6541,7 @@ exports[`props placement should render correctly for placement top and slide bot
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6371,12 +6593,15 @@ exports[`props placement should render correctly for placement top and slide cen
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -6404,6 +6629,9 @@ exports[`props placement should render correctly for placement top and slide cen
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6413,10 +6641,10 @@ exports[`props placement should render correctly for placement top and slide cen
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6431,7 +6659,7 @@ exports[`props placement should render correctly for placement top and slide cen
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6446,7 +6674,7 @@ exports[`props placement should render correctly for placement top and slide cen
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6499,6 +6727,9 @@ exports[`props placement should render correctly for placement top and slide lef
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6508,10 +6739,10 @@ exports[`props placement should render correctly for placement top and slide lef
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6542,12 +6773,15 @@ exports[`props placement should render correctly for placement top and slide lef
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6558,7 +6792,7 @@ exports[`props placement should render correctly for placement top and slide lef
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6573,7 +6807,7 @@ exports[`props placement should render correctly for placement top and slide lef
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6626,6 +6860,9 @@ exports[`props placement should render correctly for placement top and slide rig
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6635,10 +6872,10 @@ exports[`props placement should render correctly for placement top and slide rig
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6669,12 +6906,15 @@ exports[`props placement should render correctly for placement top and slide rig
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6685,7 +6925,7 @@ exports[`props placement should render correctly for placement top and slide rig
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6700,7 +6940,7 @@ exports[`props placement should render correctly for placement top and slide rig
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6753,6 +6993,9 @@ exports[`props placement should render correctly for placement top and slide top
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6762,10 +7005,10 @@ exports[`props placement should render correctly for placement top and slide top
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6796,12 +7039,15 @@ exports[`props placement should render correctly for placement top and slide top
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6812,7 +7058,7 @@ exports[`props placement should render correctly for placement top and slide top
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6827,7 +7073,7 @@ exports[`props placement should render correctly for placement top and slide top
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6880,6 +7126,9 @@ exports[`props placement should render correctly for placement top and slide tru
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -6889,10 +7138,10 @@ exports[`props placement should render correctly for placement top and slide tru
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -6923,12 +7172,15 @@ exports[`props placement should render correctly for placement top and slide tru
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -6939,7 +7191,7 @@ exports[`props placement should render correctly for placement top and slide tru
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6954,7 +7206,7 @@ exports[`props placement should render correctly for placement top and slide tru
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7007,6 +7259,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7016,10 +7271,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7050,12 +7305,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7066,7 +7324,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7081,7 +7339,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7133,12 +7391,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -7166,6 +7427,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7175,10 +7439,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7193,7 +7457,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7208,7 +7472,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7261,6 +7525,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7270,10 +7537,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7304,12 +7571,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7320,7 +7590,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7335,7 +7605,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7388,6 +7658,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7397,10 +7670,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7431,12 +7704,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7447,7 +7723,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7462,7 +7738,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7515,6 +7791,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7524,10 +7803,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7558,12 +7837,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7574,7 +7856,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7589,7 +7871,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7642,6 +7924,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7651,10 +7936,10 @@ exports[`props placement should render correctly for placement top-end and slide
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7685,12 +7970,15 @@ exports[`props placement should render correctly for placement top-end and slide
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7701,7 +7989,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7716,7 +8004,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7769,6 +8057,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7778,10 +8069,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7812,12 +8103,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -7828,7 +8122,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7843,7 +8137,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7895,12 +8189,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -7928,6 +8225,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -7937,10 +8237,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -7955,7 +8255,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7970,7 +8270,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8023,6 +8323,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -8032,10 +8335,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -8066,12 +8369,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -8082,7 +8388,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8097,7 +8403,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8150,6 +8456,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -8159,10 +8468,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -8193,12 +8502,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -8209,7 +8521,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8224,7 +8536,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8277,6 +8589,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -8286,10 +8601,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -8320,12 +8635,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -8336,7 +8654,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8351,7 +8669,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8404,6 +8722,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -8413,10 +8734,10 @@ exports[`props placement should render correctly for placement top-start and sli
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -8447,12 +8768,15 @@ exports[`props placement should render correctly for placement top-start and sli
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -8463,7 +8787,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8478,7 +8802,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8546,7 +8870,7 @@ exports[`props placement should render correctly for right placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8561,7 +8885,7 @@ exports[`props placement should render correctly for right placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8629,7 +8953,7 @@ exports[`props placement should render correctly for top placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8644,7 +8968,7 @@ exports[`props placement should render correctly for top placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8712,7 +9036,7 @@ exports[`props placement should render correctly for top-end placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8727,7 +9051,7 @@ exports[`props placement should render correctly for top-end placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8795,7 +9119,7 @@ exports[`props placement should render correctly for top-start placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8810,7 +9134,7 @@ exports[`props placement should render correctly for top-start placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8890,7 +9214,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8905,7 +9229,7 @@ exports[`props should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-6 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-6 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8958,6 +9282,9 @@ exports[`props should render correctly for expand bottom 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -8967,10 +9294,10 @@ exports[`props should render correctly for expand bottom 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9001,12 +9328,15 @@ exports[`props should render correctly for expand bottom 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9017,7 +9347,7 @@ exports[`props should render correctly for expand bottom 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9032,7 +9362,7 @@ exports[`props should render correctly for expand bottom 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9085,6 +9415,9 @@ exports[`props should render correctly for expand center 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9094,10 +9427,10 @@ exports[`props should render correctly for expand center 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9128,12 +9461,15 @@ exports[`props should render correctly for expand center 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9144,7 +9480,7 @@ exports[`props should render correctly for expand center 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9159,7 +9495,7 @@ exports[`props should render correctly for expand center 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9212,6 +9548,9 @@ exports[`props should render correctly for expand left 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9221,10 +9560,10 @@ exports[`props should render correctly for expand left 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9255,12 +9594,15 @@ exports[`props should render correctly for expand left 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9271,7 +9613,7 @@ exports[`props should render correctly for expand left 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9286,7 +9628,7 @@ exports[`props should render correctly for expand left 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9339,6 +9681,9 @@ exports[`props should render correctly for expand right 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9348,10 +9693,10 @@ exports[`props should render correctly for expand right 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9382,12 +9727,15 @@ exports[`props should render correctly for expand right 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9398,7 +9746,7 @@ exports[`props should render correctly for expand right 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9413,7 +9761,7 @@ exports[`props should render correctly for expand right 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9466,6 +9814,9 @@ exports[`props should render correctly for expand top 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9475,10 +9826,10 @@ exports[`props should render correctly for expand top 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9509,12 +9860,15 @@ exports[`props should render correctly for expand top 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9525,7 +9879,7 @@ exports[`props should render correctly for expand top 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9540,7 +9894,7 @@ exports[`props should render correctly for expand top 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9590,6 +9944,9 @@ exports[`props should render correctly for expand true 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9599,10 +9956,10 @@ exports[`props should render correctly for expand true 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  -ms-transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
-  transform: translate3d(-50%,-50%,0px) scale(0.01) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9630,12 +9987,15 @@ exports[`props should render correctly for expand true 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   -ms-transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
   transform: translate3d(undefined,undefined,0px) scale(0.01) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9646,7 +10006,7 @@ exports[`props should render correctly for expand true 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9661,7 +10021,7 @@ exports[`props should render correctly for expand true 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9714,6 +10074,9 @@ exports[`props should render correctly for slide bottom 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9723,10 +10086,10 @@ exports[`props should render correctly for slide bottom 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% + 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9757,12 +10120,15 @@ exports[`props should render correctly for slide bottom 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined + 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -9773,7 +10139,7 @@ exports[`props should render correctly for slide bottom 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9788,7 +10154,7 @@ exports[`props should render correctly for slide bottom 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9840,12 +10206,15 @@ exports[`props should render correctly for slide center 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 .emotion-0 {
@@ -9873,6 +10242,9 @@ exports[`props should render correctly for slide center 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9882,10 +10254,10 @@ exports[`props should render correctly for slide center 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -9900,7 +10272,7 @@ exports[`props should render correctly for slide center 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9915,7 +10287,7 @@ exports[`props should render correctly for slide center 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9968,6 +10340,9 @@ exports[`props should render correctly for slide left 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -9977,10 +10352,10 @@ exports[`props should render correctly for slide left 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% - 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -10011,12 +10386,15 @@ exports[`props should render correctly for slide left 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined - 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -10027,7 +10405,7 @@ exports[`props should render correctly for slide left 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10042,7 +10420,7 @@ exports[`props should render correctly for slide left 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10095,6 +10473,9 @@ exports[`props should render correctly for slide right 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -10104,10 +10485,10 @@ exports[`props should render correctly for slide right 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  -ms-transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
-  transform: translate3d(calc(-50% + 100%),calc(-50%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -10138,12 +10519,15 @@ exports[`props should render correctly for slide right 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined + 100%),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -10154,7 +10538,7 @@ exports[`props should render correctly for slide right 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10169,7 +10553,7 @@ exports[`props should render correctly for slide right 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10222,6 +10606,9 @@ exports[`props should render correctly for slide top 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -10231,10 +10618,10 @@ exports[`props should render correctly for slide top 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -10265,12 +10652,15 @@ exports[`props should render correctly for slide top 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined - 100%),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -10281,7 +10671,7 @@ exports[`props should render correctly for slide top 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10296,7 +10686,7 @@ exports[`props should render correctly for slide top 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10349,6 +10739,9 @@ exports[`props should render correctly for slide true 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
 }
 
 @media screen and (max-width:320px) {
@@ -10358,10 +10751,10 @@ exports[`props should render correctly for slide true 1`] = `
   }
 }
 
-.emotion-0.hidden {
-  -webkit-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  -ms-transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
-  transform: translate3d(calc(-50%),calc(-50% - 100%),0px) !important;
+.emotion-0[data-enter] {
+  -webkit-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  -ms-transform: translate3d(-50%,-50%,0px) scale(1) !important;
+  transform: translate3d(-50%,-50%,0px) scale(1) !important;
 }
 
 .emotion-0:focus {
@@ -10392,12 +10785,15 @@ exports[`props should render correctly for slide true 1`] = `
   transition-timing-function: ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-}
-
-.emotion-3.hidden {
   -webkit-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   -ms-transform: translate3d(calc(undefined),calc(undefined),0px) !important;
   transform: translate3d(calc(undefined),calc(undefined),0px) !important;
+}
+
+.emotion-3[data-enter] {
+  -webkit-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  -ms-transform: translate3d(undefined,undefined,0px) scale(1) !important;
+  transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
 <body>
@@ -10408,7 +10804,7 @@ exports[`props should render correctly for slide true 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10423,7 +10819,7 @@ exports[`props should render correctly for slide true 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10497,7 +10893,7 @@ exports[`props should render correctly with non-modal modal 1`] = `
       </button>
       <div
         aria-label="test"
-        class="emotion-6 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+        class="emotion-6 emotion-1 emotion-2 fp-Box fp-Modal"
         data-dialog="true"
         hidden=""
         id="test"
@@ -10507,7 +10903,7 @@ exports[`props should render correctly with non-modal modal 1`] = `
       >
         <div
           aria-label="test"
-          class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+          class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
           data-dialog-ref="test"
           hidden=""
           style="display: none;"
@@ -10581,7 +10977,7 @@ exports[`theming Modal.bottom.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10596,7 +10992,7 @@ exports[`theming Modal.bottom.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10668,7 +11064,7 @@ exports[`theming Modal.bottomEnd.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10683,7 +11079,7 @@ exports[`theming Modal.bottomEnd.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10755,7 +11151,7 @@ exports[`theming Modal.bottomStart.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10770,7 +11166,7 @@ exports[`theming Modal.bottomStart.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10842,7 +11238,7 @@ exports[`theming Modal.center.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10857,7 +11253,7 @@ exports[`theming Modal.center.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10929,7 +11325,7 @@ exports[`theming Modal.left.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10944,7 +11340,7 @@ exports[`theming Modal.left.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11016,7 +11412,7 @@ exports[`theming Modal.right.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11031,7 +11427,7 @@ exports[`theming Modal.right.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11103,7 +11499,7 @@ exports[`theming Modal.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11118,7 +11514,7 @@ exports[`theming Modal.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11190,7 +11586,7 @@ exports[`theming Modal.top.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11205,7 +11601,7 @@ exports[`theming Modal.top.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11277,7 +11673,7 @@ exports[`theming Modal.topEnd.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11292,7 +11688,7 @@ exports[`theming Modal.topEnd.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11364,7 +11760,7 @@ exports[`theming Modal.topStart.root should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 hidden fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11379,7 +11775,7 @@ exports[`theming Modal.topStart.root should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 hidden fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"

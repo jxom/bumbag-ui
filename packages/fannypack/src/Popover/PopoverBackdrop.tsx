@@ -21,15 +21,14 @@ const useProps = createHook<PopoverBackdropProps>(
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
-    let { visible, baseId, animating, animated, stopAnimation, unstable_setIsMounted, ...htmlProps } = props;
+    let { visible, baseId, animating, animated, stopAnimation, ...htmlProps } = props;
     const popoverBackdropProps = useReakitPopoverBackdrop(
       {
         visible,
         baseId,
         animating,
         animated,
-        stopAnimation,
-        unstable_setIsMounted
+        stopAnimation
       },
       htmlProps
     );

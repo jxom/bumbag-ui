@@ -29,8 +29,6 @@ const useProps = createHook<TabsPanelProps>(
       animating,
       animated,
       stopAnimation,
-      unstable_setIsMounted,
-      unstable_setBaseId,
       unstable_idCountRef,
       ...htmlProps
     } = props;
@@ -50,8 +48,6 @@ const useProps = createHook<TabsPanelProps>(
         animating,
         animated,
         stopAnimation,
-        unstable_setIsMounted,
-        unstable_setBaseId,
         unstable_idCountRef,
         ...tabs,
         visible: tabs ? tabId === tabs.selectedId : tabId === selectedId

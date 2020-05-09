@@ -38,7 +38,6 @@ const useProps = createHook<ModalProps>(
       unstable_autoFocusOnHide,
       unstable_autoFocusOnShow,
       stopAnimation,
-      unstable_setIsMounted,
       ...htmlProps
     } = props;
     const modalContext = React.useContext(ModalContext);
@@ -61,8 +60,7 @@ const useProps = createHook<ModalProps>(
           unstable_orphan,
           unstable_autoFocusOnHide,
           unstable_autoFocusOnShow,
-          stopAnimation,
-          unstable_setIsMounted
+          stopAnimation
         },
         modalContext.modal
       ),

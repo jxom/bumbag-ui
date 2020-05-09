@@ -95,7 +95,6 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       unstable_popoverStyles,
       unstable_portal,
       stopAnimation,
-      unstable_setIsMounted,
       ...restProps
     } = props;
 
@@ -108,8 +107,7 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
         unstable_popoverRef,
         unstable_popoverStyles,
         unstable_portal,
-        stopAnimation,
-        unstable_setIsMounted
+        stopAnimation
       },
       restProps
     );

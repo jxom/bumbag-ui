@@ -244,9 +244,13 @@ export const getAnimatedAttributes = opts => styleProps => {
     defaultSlide: opts.defaultSlide,
     slideOffset: opts.slideOffset
   })(styleProps);
-  const slideTransformValue = `translate3d(${styleProps.slide ? hiddenTransformX : opts.transformX}, ${
+  const hiddenSlideTransformValue = `translate3d(${styleProps.slide ? hiddenTransformX : opts.transformX}, ${
     styleProps.slide ? hiddenTransformY : opts.transformY
   }, 0px)`;
+  const hiddenExpandTransformValue = styleProps.expand ? `scale(0.01)` : undefined;
+  const hiddenTransformValue = [hiddenSlideTransformValue, hiddenExpandTransformValue].filter(Boolean).join(' ');
+
+  const showTransformValue = `translate3d(${opts.transformX}, ${opts.transformY}, 0px) scale(1)`;
 
   const expandTransformOrigins = {
     center: '50% 50%',
@@ -255,9 +259,6 @@ export const getAnimatedAttributes = opts => styleProps => {
     top: '50% 0%',
     bottom: '50% 100%'
   };
-  const expandTransformValue = styleProps.expand ? `scale(0.01)` : undefined;
-
-  const transformValue = [slideTransformValue, expandTransformValue].filter(Boolean).join(' ');
 
   return css`
     transform-origin: ${expandTransformOrigins[opts.defaultExpand || styleProps.expand || 'center']};
@@ -266,7 +267,7 @@ export const getAnimatedAttributes = opts => styleProps => {
     transition-duration: ${styleProps.duration || '250ms'};
     transition-timing-function: ${styleProps.timingFunction || 'ease-in-out'};
     transition-delay: ${styleProps.delay || '0s'};
-    transform: ${opts.prevTransformValue} ${transformValue} !important;
+    transform: ${opts.prevTransformValue} ${hiddenTransformValue} !important;
 
     ${styleProps.fade &&
       css`
@@ -274,8 +275,7 @@ export const getAnimatedAttributes = opts => styleProps => {
       `};
 
     &[data-enter] {
-      /* TODO: Create transform values based off placement */
-      /* transform: translate3d(-50%, -50%, 0) !important; */
+      transform: ${opts.prevTransformValue} ${showTransformValue} !important;
 
       ${styleProps.fade &&
         css`

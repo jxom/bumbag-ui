@@ -14,7 +14,7 @@ import { DropdownMenu } from 'fannypack';
 
 ```jsx-live
 <DropdownMenu
-  content={
+  menu={
     <React.Fragment>
       <DropdownMenu.Item iconBefore="solid-pen">
         Edit
@@ -39,7 +39,7 @@ import { DropdownMenu } from 'fannypack';
 
 ```jsx-live
 <DropdownMenu
-  content={
+  menu={
     <React.Fragment>
       <DropdownMenu.Group title="Actions">
         <DropdownMenu.Item iconBefore="solid-pen">
@@ -838,7 +838,7 @@ Separator's orientation.
   {props => (
     <DropdownMenu
       overrides={props.overrides}
-      content={
+      menu={
         <React.Fragment>
           <DropdownMenu.Group title="Actions">
             <DropdownMenu.Item iconBefore="solid-pen">

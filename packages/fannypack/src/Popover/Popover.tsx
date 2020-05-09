@@ -77,7 +77,6 @@ const useProps = createHook<PopoverProps>(
       unstable_popoverRef,
       unstable_popoverStyles,
       stopAnimation,
-      unstable_setIsMounted,
       ...restProps
     } = props;
     const popoverProps = useReakitPopover(
@@ -100,8 +99,7 @@ const useProps = createHook<PopoverProps>(
         unstable_autoFocusOnShow,
         unstable_popoverRef,
         unstable_popoverStyles,
-        stopAnimation,
-        unstable_setIsMounted
+        stopAnimation
       },
       restProps
     );

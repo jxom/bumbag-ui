@@ -38,8 +38,6 @@ const useProps = createHook<TabsListProps>(
       orientation,
       unstable_virtual,
       unstable_moves,
-      unstable_setBaseId,
-      unstable_idCountRef,
       ...htmlProps
     } = props;
 
@@ -56,13 +54,10 @@ const useProps = createHook<TabsListProps>(
         orientation,
         wrap,
         groups,
-        id,
         items,
         setCurrentId,
         unstable_virtual,
         unstable_moves,
-        unstable_setBaseId,
-        unstable_idCountRef,
         ...tabs
       },
       htmlProps
