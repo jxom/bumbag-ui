@@ -6,7 +6,9 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 import { Popover as popoverStyles } from '../Popover/styles';
 
-export type LocalDropdownMenuPopoverProps = {};
+export type LocalDropdownMenuPopoverProps = {
+  isTabbable?: boolean;
+};
 export type DropdownMenuPopoverProps = BoxProps & ReakitMenuProps & LocalDropdownMenuPopoverProps;
 
 const useProps = createHook<DropdownMenuPopoverProps>(
@@ -93,9 +95,9 @@ const useProps = createHook<DropdownMenuPopoverProps>(
       prevClassName: boxProps.className
     });
 
-    return { ...boxProps, className };
+    return { ...boxProps, className, tabIndex: props.isTabbable ? boxProps.tabIndex : undefined };
   },
-  { defaultProps: { altitude: '200' }, themeKey: 'DropdownMenu.Popover' }
+  { defaultProps: { altitude: '200', isTabbable: true }, themeKey: 'DropdownMenu.Popover' }
 );
 
 export const DropdownMenuPopover = createComponent<DropdownMenuPopoverProps>(

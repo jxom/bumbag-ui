@@ -13,6 +13,7 @@ export const DropdownMenuPopover = styleProps => cssClass`
 
   ${menuStyles.Menu(styleProps)}
 
+  position: absolute;
   min-width: 200px;
   width: unset;
 `;
@@ -22,6 +23,12 @@ export const DropdownMenuItem = styleProps => cssClass`
 `;
 
 export const DropdownMenuButton = styleProps => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const DropdownMenuDisclosure = styleProps => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

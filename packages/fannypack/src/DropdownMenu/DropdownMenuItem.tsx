@@ -15,6 +15,7 @@ export type LocalDropdownMenuItemProps = {
   /** Icon that appears on the left side of the menu item. */
   iconBefore?: IconProps['icon'];
   iconBeforeProps?: Omit<IconProps, 'icon'>;
+  isTabbable?: boolean;
 };
 export type DropdownMenuItemProps = BoxProps & Partial<ReakitMenuItemProps> & LocalDropdownMenuItemProps;
 
@@ -123,10 +124,11 @@ const useProps = createHook<DropdownMenuItemProps>(
           {children}
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
         </React.Fragment>
-      )
+      ),
+      tabIndex: props.isTabbable ? boxProps.tabIndex : undefined
     };
   },
-  { themeKey: 'DropdownMenu.Item' }
+  { defaultProps: { isTabbable: true }, themeKey: 'DropdownMenu.Item' }
 );
 
 export const DropdownMenuItem = createComponent<DropdownMenuItemProps>(

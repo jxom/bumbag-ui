@@ -5,7 +5,7 @@ import _startCase from 'lodash/startCase';
 
 const query = graphql`
   query {
-    allFile(filter: { extension: { eq: "mdx" } }) {
+    allFile(sort: { fields: name }, filter: { extension: { eq: "mdx" } }) {
       edges {
         node {
           extension
