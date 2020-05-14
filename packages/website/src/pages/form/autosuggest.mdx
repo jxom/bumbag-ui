@@ -11,16 +11,25 @@ import { Autosuggest } from 'fannypack'
 
 ## Usage
 
-```jsx-live
-<Autosuggest
-  options={[
-    { key: 1, label: 'Apples', value: 'apples' },
-    { key: 2, label: 'Bananas', value: 'bananas' },
-    { key: 3, label: 'Oranges', value: 'oranges' },
-    { key: 4, label: 'Mangos', value: 'mangos' }
-  ]}
-  placeholder="Search for a fruit..."
-/>
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      automaticSelection
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
 ```
 
 ## Props

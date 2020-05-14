@@ -21,8 +21,12 @@ import { Text, TextProps } from '../Text';
 import * as styles from './styles';
 
 export type LocalAutosuggestProps = {
+  automaticSelection?: boolean;
   options: any;
+  onChange: any;
   placeholder?: InputProps['placeholder'];
+  restrictToOptions?: boolean;
+  value: any;
 
   inputProps?: Partial<InputProps>;
   itemProps?: Partial<DropdownMenuItemProps>;
@@ -42,15 +46,22 @@ function reducer(state, event) {
     case 'INPUT_CHANGE': {
       return {
         ...state,
-        highlightedIndex: -1,
-        inputValue: event.value,
         selectedOption: undefined
+      };
+    }
+    case 'VALUE_CHANGE': {
+      return {
+        ...state,
+        highlightedIndex: event.value && event.automaticSelection ? 0 : -1,
+        inputValue: _get(event, 'value.label', ''),
+        value: event.value
       };
     }
     case 'INPUT_BLUR': {
       return {
         ...state,
-        highlightedIndex: -1
+        highlightedIndex: -1,
+        inputValue: event.restrictToOptions && !state.selectedOption ? '' : state.inputValue
       };
     }
     case 'KEY_UP': {
@@ -77,7 +88,11 @@ function reducer(state, event) {
       return { ...state, highlightedIndex: -1, inputValue: '' };
     }
     case 'KEY_ENTER': {
-      return { ...state, highlightedIndex: -1 };
+      return {
+        ...state,
+        highlightedIndex: -1,
+        inputValue: event.restrictToOptions && state.highlightedIndex === -1 ? '' : state.inputValue
+      };
     }
     case 'MOUSE_ENTER_ITEM': {
       const newHighlightedIndex = event.index;
@@ -100,10 +115,13 @@ function reducer(state, event) {
       return { ...state, filteredOptions: event.filteredOptions };
     }
     case 'OPTION_SELECTED': {
-      return { ...state, filteredOptions: [event.option], selectedOption: event.option };
+      return { ...state, filteredOptions: [event.option], selectedOption: event.option, value: event.option };
     }
     case 'OPTION_CLEARED': {
-      return { ...state, filteredOptions: state.options, inputValue: '', selectedOption: undefined };
+      return { ...state, filteredOptions: state.options, inputValue: '', selectedOption: undefined, value: undefined };
+    }
+    case 'MOUSE_LEAVE_POPOVER': {
+      return { ...state, highlightedIndex: state.inputValue && event.automaticSelection ? 0 : -1 };
     }
     default: {
       return state;
@@ -113,7 +131,19 @@ function reducer(state, event) {
 
 const useProps = createHook<AutosuggestProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { dropdownMenuInitialState, popoverProps, itemProps, inputProps, options, placeholder, ...restProps } = props;
+    const {
+      automaticSelection,
+      dropdownMenuInitialState,
+      popoverProps,
+      itemProps,
+      inputProps,
+      onChange,
+      options,
+      placeholder,
+      restrictToOptions,
+      value,
+      ...restProps
+    } = props;
 
     //////////////////////////////////////////////////
 
@@ -152,9 +182,10 @@ const useProps = createHook<AutosuggestProps>(
 
     const [{ highlightedIndex, inputValue, filteredOptions, selectedOption }, dispatch] = React.useReducer(reducer, {
       highlightedIndex: -1,
-      inputValue: '',
+      inputValue: _get(value, 'label'),
       filteredOptions: options,
-      options
+      options,
+      value: undefined
     });
 
     //////////////////////////////////////////////////
@@ -181,9 +212,10 @@ const useProps = createHook<AutosuggestProps>(
       ({ index }) => {
         const option = filteredOptions[index];
         dispatch({ type: 'OPTION_SELECTED', option });
+        onChange && onChange(option);
         return option;
       },
-      [dispatch, filteredOptions]
+      [filteredOptions, onChange]
     );
 
     //////////////////////////////////////////////////
@@ -191,22 +223,26 @@ const useProps = createHook<AutosuggestProps>(
     const handleBlurInput = React.useCallback(
       event => {
         const value = event.target.value;
-        dispatch({ type: 'INPUT_BLUR', value });
-        if (highlightedIndex === -1) {
+        dispatch({ type: 'INPUT_BLUR', restrictToOptions, value });
+        if (automaticSelection && inputValue) {
+          selectOption({ index: highlightedIndex >= 0 ? highlightedIndex : 0 });
+        }
+        if (automaticSelection || highlightedIndex === -1) {
           filterOptions({ searchText: value });
           dropdownMenu.hide();
         }
       },
-      [dispatch, dropdownMenu, filterOptions, highlightedIndex]
+      [automaticSelection, dropdownMenu, filterOptions, highlightedIndex, inputValue, restrictToOptions, selectOption]
     );
 
     const handleChangeInput = React.useCallback(
       event => {
-        const value = event.target.value;
-        dispatch({ type: 'INPUT_CHANGE', value });
+        const value = event.target.value || '';
+        dispatch({ type: 'INPUT_CHANGE' });
         filterOptions({ controlsVisibility: true, searchText: value });
+        onChange && onChange({ label: value });
       },
-      [dispatch, filterOptions]
+      [filterOptions, onChange]
     );
 
     const handleClickInput = React.useCallback(
@@ -219,9 +255,10 @@ const useProps = createHook<AutosuggestProps>(
 
     const handleFocusInput = React.useCallback(
       event => {
-        dropdownMenu.show();
+        const value = event.target.value;
+        filterOptions({ controlsVisibility: true, searchText: value });
       },
-      [dropdownMenu]
+      [filterOptions]
     );
 
     const handleKeyDownInput = React.useCallback(
@@ -243,14 +280,14 @@ const useProps = createHook<AutosuggestProps>(
         }
         if (event.keyCode === KEY_ENTER) {
           event.preventDefault();
-          dispatch({ type: 'KEY_ENTER' });
-          if (highlightedIndex >= 0) {
-            dropdownMenu.hide();
+          dispatch({ type: 'KEY_ENTER', restrictToOptions });
+          dropdownMenu.hide();
+          if (highlightedIndex >= 0 || (automaticSelection && inputValue)) {
             selectOption({ index: highlightedIndex });
           }
         }
       },
-      [dispatch, dropdownMenu, highlightedIndex, selectOption]
+      [automaticSelection, dropdownMenu, highlightedIndex, inputValue, restrictToOptions, selectOption]
     );
 
     const handleClickItem = React.useCallback(
@@ -280,6 +317,18 @@ const useProps = createHook<AutosuggestProps>(
       dispatch({ type: 'OPTION_CLEARED' });
     }, []);
 
+    const handleMouseLeavePopover = React.useCallback(() => {
+      dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
+    }, [automaticSelection]);
+
+    //////////////////////////////////////////////////
+
+    React.useEffect(() => {
+      if (value) {
+        dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
+      }
+    }, [automaticSelection, value]);
+
     //////////////////////////////////////////////////
 
     return {
@@ -293,7 +342,7 @@ const useProps = createHook<AutosuggestProps>(
           <Input
             {..._pick(dropdownMenuDisclosureProps, 'aria-controls', 'ref')}
             after={
-              selectedOption && (
+              inputValue && (
                 <Box display="flex" alignItems="center" justify-content="center" paddingY="minor-1" paddingX="minor-2">
                   <Button.Close onClick={handleClear} iconProps={{ fontSize: '200' }} size="small" />
                 </Box>
@@ -315,6 +364,7 @@ const useProps = createHook<AutosuggestProps>(
             use="ul"
             className={dropdownMenuPopoverClassname}
             isTabbable={false}
+            onMouseLeave={handleMouseLeavePopover}
             role="listbox"
             hideOnEsc={false}
             hideOnClickOutside={false}
