@@ -24,6 +24,7 @@ export type LocalAutosuggestProps = {
   automaticSelection?: boolean;
   options: any;
   onChange: any;
+  renderOption?: any;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
   value: any;
@@ -61,7 +62,8 @@ function reducer(state, event) {
       return {
         ...state,
         highlightedIndex: -1,
-        inputValue: event.restrictToOptions && !state.selectedOption ? '' : state.inputValue
+        inputValue:
+          event.restrictToOptions && (state.highlightedIndex === -1 && !state.selectedOption) ? '' : state.inputValue
       };
     }
     case 'KEY_UP': {
@@ -139,6 +141,7 @@ const useProps = createHook<AutosuggestProps>(
       inputProps,
       onChange,
       options,
+      renderOption: Option,
       placeholder,
       restrictToOptions,
       value,
@@ -185,7 +188,7 @@ const useProps = createHook<AutosuggestProps>(
       inputValue: _get(value, 'label'),
       filteredOptions: options,
       options,
-      value: undefined
+      value: { label: '' }
     });
 
     //////////////////////////////////////////////////
@@ -224,15 +227,26 @@ const useProps = createHook<AutosuggestProps>(
       event => {
         const value = event.target.value;
         dispatch({ type: 'INPUT_BLUR', restrictToOptions, value });
-        if (automaticSelection && inputValue) {
+        if ((inputValue && automaticSelection) || highlightedIndex >= 0) {
           selectOption({ index: highlightedIndex >= 0 ? highlightedIndex : 0 });
         }
-        if (automaticSelection || highlightedIndex === -1) {
-          filterOptions({ searchText: value });
-          dropdownMenu.hide();
+        if (restrictToOptions && (!selectedOption && highlightedIndex === -1)) {
+          onChange && onChange({ label: '' });
         }
+        filterOptions({ searchText: value });
+        dropdownMenu.hide();
       },
-      [automaticSelection, dropdownMenu, filterOptions, highlightedIndex, inputValue, restrictToOptions, selectOption]
+      [
+        automaticSelection,
+        dropdownMenu,
+        filterOptions,
+        highlightedIndex,
+        inputValue,
+        onChange,
+        restrictToOptions,
+        selectOption,
+        selectedOption
+      ]
     );
 
     const handleChangeInput = React.useCallback(
@@ -315,7 +329,8 @@ const useProps = createHook<AutosuggestProps>(
 
     const handleClear = React.useCallback(() => {
       dispatch({ type: 'OPTION_CLEARED' });
-    }, []);
+      onChange && onChange({ label: '' });
+    }, [onChange]);
 
     const handleMouseLeavePopover = React.useCallback(() => {
       dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
@@ -378,6 +393,10 @@ const useProps = createHook<AutosuggestProps>(
                 use="li"
                 aria-selected={highlightedIndex === index}
                 className={dropdownMenuItemClassname}
+                iconAfter={option.iconAfter}
+                iconAfterProps={option.iconAfterProps}
+                iconBefore={option.iconBefore}
+                iconBeforeProps={option.iconBeforeProps}
                 isTabbable={false}
                 onClick={handleClickItem(index)}
                 onMouseEnter={handleMouseEnterItem(index)}
@@ -385,7 +404,12 @@ const useProps = createHook<AutosuggestProps>(
                 role="option"
                 {...itemProps}
               >
-                <Option label={option.label} inputValue={inputValue} />
+                <Option
+                  label={option.label}
+                  inputValue={inputValue}
+                  option={option}
+                  MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
+                />
               </DropdownMenuItem>
             ))}
           </DropdownMenuPopover>
@@ -393,7 +417,7 @@ const useProps = createHook<AutosuggestProps>(
       )
     };
   },
-  { themeKey: 'Autosuggest' }
+  { defaultProps: { renderOption: MatchedLabel }, themeKey: 'Autosuggest' }
 );
 
 export const Autosuggest = createComponent<AutosuggestProps>(
@@ -409,8 +433,8 @@ export const Autosuggest = createComponent<AutosuggestProps>(
   }
 );
 
-function Option(props: { label: string; inputValue: string }) {
-  const { label, inputValue } = props;
+function MatchedLabel(props: { label: string; inputValue: string }) {
+  const { label, inputValue, ...restProps } = props;
 
   const escapeStringRegexp = string => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   const match = label.match(new RegExp(escapeStringRegexp(inputValue), 'i')) || [];
@@ -420,12 +444,12 @@ function Option(props: { label: string; inputValue: string }) {
   const postText = label.slice(match.index + (match[0] || '').length);
 
   return highlightedText ? (
-    <React.Fragment>
+    <Text {...restProps}>
       {preText && <Text>{preText}</Text>}
       {highlightedText && <Text fontWeight="semibold">{highlightedText}</Text>}
       {postText && <Text>{postText}</Text>}
-    </React.Fragment>
+    </Text>
   ) : (
-    <Text>{label}</Text>
+    <Text {...restProps}>{label}</Text>
   );
 }

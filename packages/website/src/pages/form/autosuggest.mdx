@@ -17,10 +17,107 @@ function Example() {
 
   return (
     <Autosuggest
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Automatic selection
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
       automaticSelection
       onChange={setValue}
       options={[
         { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Restrict to options
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Custom option component
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      renderOption={({ MatchedLabel, option }) =>
+        <React.Fragment>
+          <MatchedLabel />
+          <br/>
+          <Text fontSize="100">Rating: {option.rating}</Text>
+        </React.Fragment>
+      }
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', rating: 5 },
+        { key: 2, label: 'Bananas', value: 'bananas', rating: 7 },
+        { key: 3, label: 'Oranges', value: 'oranges', rating: 9 },
+        { key: 4, label: 'Mangos', value: 'mangos', rating: 3 }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Option attributes
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', iconBefore: 'solid-apple-alt' },
         { key: 2, label: 'Bananas', value: 'bananas' },
         { key: 3, label: 'Oranges', value: 'oranges' },
         { key: 4, label: 'Mangos', value: 'mangos' }
