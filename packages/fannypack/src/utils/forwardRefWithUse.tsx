@@ -36,10 +36,11 @@ export interface ComponentWithUse<ComponentType extends Use, ComponentProps> {
   propTypes?: React.WeakValidationMap<PropsWithUse<ComponentType, ComponentProps>>;
   contextTypes?: React.ValidationMap<any>;
   defaultProps?: Partial<PropsWithUse<ComponentType, ComponentProps>>;
+  useProps?: (props?: Partial<ComponentProps>, config?: { themeKey?: string }) => any;
 }
 
-export function forwardRefWithUse<Props, ComponentType extends Use>(
-  comp: (props: PropsFromUse<ComponentType, Props>, ref: React.RefObject<any>) => React.ReactElement | null
-) {
-  return (React.forwardRef(comp as any) as unknown) as ComponentWithUse<ComponentType, Props>;
-}
+// export function forwardRefWithUse<Props, ComponentType extends Use>(
+//   comp: (props: PropsFromUse<ComponentType, Props>, ref: React.RefObject<any>) => React.ReactElement | null
+// ) {
+//   return (React.forwardRef(comp as any) as unknown) as ComponentWithUse<ComponentType, Props>;
+// }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import _get from 'lodash/get';
 import { useDefaultProps } from './useDefaultProps';
-import { forwardRefWithUse } from './forwardRefWithUse';
+import { ComponentWithUse } from './forwardRefWithUse';
 
 export function createComponent<Props>(
   Component: React.FunctionComponent<Props>,
@@ -11,12 +11,17 @@ export function createComponent<Props>(
     };
     defaultProps?: Partial<Props>;
     themeKey?: string;
+    shouldMemo?: boolean;
   }
 ) {
-  const ForwardedComponent = forwardRefWithUse<Props, any>((props: Props, ref) => {
+  const Comp = (props: Props, ref) => {
     const { props: newProps } = useDefaultProps(props, config);
     // @ts-ignore
     return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));
-  });
-  return Object.assign({}, ForwardedComponent, config.attach);
+  };
+  let ForwardedComponent = (React.forwardRef(Comp as any) as unknown) as ComponentWithUse<any, Props>;
+  if (config.shouldMemo) {
+    ForwardedComponent = React.memo(ForwardedComponent);
+  }
+  return Object.assign(ForwardedComponent, config.attach);
 }
