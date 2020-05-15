@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 import _pick from 'lodash/pick';
+import _omit from 'lodash/omit';
 import _get from 'lodash/get';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -53,7 +54,7 @@ function reducer(state, event) {
     case 'VALUE_CHANGE': {
       return {
         ...state,
-        highlightedIndex: event.value && event.automaticSelection ? 0 : -1,
+        highlightedIndex: _get(event, 'value.label', '') && event.automaticSelection ? 0 : -1,
         inputValue: _get(event, 'value.label', ''),
         value: event.value
       };
@@ -122,8 +123,15 @@ function reducer(state, event) {
     case 'OPTION_CLEARED': {
       return { ...state, filteredOptions: state.options, inputValue: '', selectedOption: undefined, value: undefined };
     }
+    case 'MOUSE_ENTER_POPOVER': {
+      return { ...state, isMouseInsidePopover: true };
+    }
     case 'MOUSE_LEAVE_POPOVER': {
-      return { ...state, highlightedIndex: state.inputValue && event.automaticSelection ? 0 : -1 };
+      return {
+        ...state,
+        highlightedIndex: state.inputValue && event.automaticSelection ? 0 : -1,
+        isMouseInsidePopover: false
+      };
     }
     default: {
       return state;
@@ -154,8 +162,31 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
-    const dropdownMenu = DropdownMenu.useState({ loop: true, gutter: 4, ...dropdownMenuInitialState });
+    const dropdownMenu = DropdownMenu.useState({
+      loop: true,
+      gutter: 4,
+      ...dropdownMenuInitialState
+    });
     const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps(dropdownMenu);
+
+    //////////////////////////////////////////////////
+
+    const mousePositionRef = React.useRef();
+    const popoverRef = React.useRef();
+
+    //////////////////////////////////////////////////
+
+    React.useEffect(() => {
+      function handleMouseMove(e) {
+        mousePositionRef.current = e;
+      }
+      if (typeof window !== 'undefined') {
+        window.document.addEventListener('mousemove', handleMouseMove);
+      }
+      return function cleanup() {
+        window.document.removeEventListener('mousemove', handleMouseMove);
+      };
+    });
 
     //////////////////////////////////////////////////
 
@@ -180,12 +211,23 @@ const useProps = createHook<AutosuggestProps>(
       themeKeyOverride,
       themeKeySuffix: 'Item'
     });
+    const dropdownMenuStaticItemClassname = useClassName({
+      style: styles.AutosuggestStaticItem,
+      styleProps: props,
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'StaticItem'
+    });
 
     //////////////////////////////////////////////////
 
-    const [{ highlightedIndex, inputValue, filteredOptions, selectedOption }, dispatch] = React.useReducer(reducer, {
+    const [
+      { highlightedIndex, inputValue, isMouseInsidePopover, filteredOptions, selectedOption },
+      dispatch
+    ] = React.useReducer(reducer, {
       highlightedIndex: -1,
       inputValue: _get(value, 'label'),
+      isMouseInsidePopover: false,
       filteredOptions: options,
       options,
       value: { label: '' }
@@ -194,12 +236,12 @@ const useProps = createHook<AutosuggestProps>(
     //////////////////////////////////////////////////
 
     const filterOptions = React.useCallback(
-      ({ controlsVisibility, searchText }) => {
+      ({ controlsVisibility, hideIfNoOptions = true, searchText }) => {
         const filteredOptions = options.filter(option =>
           option.label.toLowerCase().includes(searchText.trim().toLowerCase())
         );
         if (controlsVisibility) {
-          if (filteredOptions.length === 0) {
+          if (filteredOptions.length === 0 && hideIfNoOptions) {
             dropdownMenu.hide();
           } else {
             dropdownMenu.show();
@@ -234,11 +276,11 @@ const useProps = createHook<AutosuggestProps>(
           onChange && onChange({ label: '' });
         }
         filterOptions({ searchText: value });
-        dropdownMenu.hide();
+        console.log(mousePositionRef.current);
+        console.dir(popoverRef.current.getBoundingClientRect());
       },
       [
         automaticSelection,
-        dropdownMenu,
         filterOptions,
         highlightedIndex,
         inputValue,
@@ -253,10 +295,10 @@ const useProps = createHook<AutosuggestProps>(
       event => {
         const value = event.target.value || '';
         dispatch({ type: 'INPUT_CHANGE' });
-        filterOptions({ controlsVisibility: true, searchText: value });
+        filterOptions({ controlsVisibility: true, hideIfNoOptions: !restrictToOptions, searchText: value });
         onChange && onChange({ label: value });
       },
-      [filterOptions, onChange]
+      [filterOptions, onChange, restrictToOptions]
     );
 
     const handleClickInput = React.useCallback(
@@ -332,6 +374,10 @@ const useProps = createHook<AutosuggestProps>(
       onChange && onChange({ label: '' });
     }, [onChange]);
 
+    const handleMouseEnterPopover = React.useCallback(() => {
+      dispatch({ type: 'MOUSE_ENTER_POPOVER', automaticSelection });
+    }, [automaticSelection]);
+
     const handleMouseLeavePopover = React.useCallback(() => {
       dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
     }, [automaticSelection]);
@@ -355,7 +401,7 @@ const useProps = createHook<AutosuggestProps>(
       children: (
         <React.Fragment>
           <Input
-            {..._pick(dropdownMenuDisclosureProps, 'aria-controls', 'ref')}
+            {..._omit(dropdownMenuDisclosureProps, 'type', 'className')}
             after={
               inputValue && (
                 <Box display="flex" alignItems="center" justify-content="center" paddingY="minor-1" paddingX="minor-2">
@@ -376,42 +422,48 @@ const useProps = createHook<AutosuggestProps>(
           />
           <DropdownMenuPopover
             {...dropdownMenu}
+            ref={popoverRef}
             use="ul"
             className={dropdownMenuPopoverClassname}
             isTabbable={false}
+            onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
             role="listbox"
-            hideOnEsc={false}
+            hideOnClickEsc={false}
             hideOnClickOutside={false}
             unstable_autoFocusOnHide={false}
             {...popoverProps}
           >
-            {filteredOptions.map((option, index) => (
-              <DropdownMenuItem
-                key={option.key}
-                {...dropdownMenu}
-                use="li"
-                aria-selected={highlightedIndex === index}
-                className={dropdownMenuItemClassname}
-                iconAfter={option.iconAfter}
-                iconAfterProps={option.iconAfterProps}
-                iconBefore={option.iconBefore}
-                iconBeforeProps={option.iconBeforeProps}
-                isTabbable={false}
-                onClick={handleClickItem(index)}
-                onMouseEnter={handleMouseEnterItem(index)}
-                onMouseLeave={handleMouseLeaveItem(index)}
-                role="option"
-                {...itemProps}
-              >
-                <Option
-                  label={option.label}
-                  inputValue={inputValue}
-                  option={option}
-                  MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
-                />
-              </DropdownMenuItem>
-            ))}
+            {filteredOptions.length > 0 ? (
+              filteredOptions.map((option, index) => (
+                <DropdownMenuItem
+                  key={option.key}
+                  {...dropdownMenu}
+                  use="li"
+                  aria-selected={highlightedIndex === index}
+                  className={dropdownMenuItemClassname}
+                  iconAfter={option.iconAfter}
+                  iconAfterProps={option.iconAfterProps}
+                  iconBefore={option.iconBefore}
+                  iconBeforeProps={option.iconBeforeProps}
+                  isTabbable={false}
+                  onClick={handleClickItem(index)}
+                  onMouseEnter={handleMouseEnterItem(index)}
+                  onMouseLeave={handleMouseLeaveItem(index)}
+                  role="option"
+                  {...itemProps}
+                >
+                  <Option
+                    label={option.label}
+                    inputValue={inputValue}
+                    option={option}
+                    MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
+                  />
+                </DropdownMenuItem>
+              ))
+            ) : (
+              <Box className={dropdownMenuStaticItemClassname}>No results found</Box>
+            )}
           </DropdownMenuPopover>
         </React.Fragment>
       )

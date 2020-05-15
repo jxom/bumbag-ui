@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { theme } from '../utils';
+import { space, theme } from '../utils';
 
 export const Autosuggest = styleProps => cssClass`
   position: relative;
@@ -28,6 +28,15 @@ export const AutosuggestItem = styleProps => cssClass`
       background-color: whitesmoke;
     }
   }
+
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const AutosuggestStaticItem = styleProps => cssClass`
+  padding: ${space(1.5)(styleProps)}rem ${space(4)(styleProps)}rem;
+  width: 100%;
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
