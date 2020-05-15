@@ -19,7 +19,7 @@ export function createComponent<Props>(
     // @ts-ignore
     return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));
   };
-  let ForwardedComponent = (React.forwardRef(Comp as any) as unknown) as ComponentWithUse<any, Props>;
+  let ForwardedComponent = React.forwardRef(Comp);
   if (config.shouldMemo) {
     ForwardedComponent = React.memo(ForwardedComponent);
   }
