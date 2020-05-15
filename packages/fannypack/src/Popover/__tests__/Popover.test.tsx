@@ -21,13 +21,13 @@ describe('props', () => {
 
   describe('placement', () => {
     ['top-start', 'top', 'top-end', 'left', 'center', 'right', 'bottom-start', 'bottom', 'bottom-end'].forEach(
-      placement => {
+      (placement: any) => {
         it(`should render placement correcty for ${placement}`, () => {
           function Component() {
-            const popover = Popover.useState({ baseId: 'test' });
+            const popover = Popover.useState({ baseId: 'test', placement });
             return (
               // @ts-ignore
-              <Popover {...popover} visible placement={placement}>
+              <Popover {...popover} visible>
                 Hello world
               </Popover>
             );
@@ -232,13 +232,13 @@ describe('theming', () => {
   });
 
   ['top-start', 'top', 'top-end', 'left', 'center', 'right', 'bottom-start', 'bottom', 'bottom-end'].forEach(
-    placement => {
+    (placement: any) => {
       it(`Popover.placements.${placement} should render correctly`, () => {
         function Component() {
-          const popover = Popover.useState({ baseId: 'test' });
+          const popover = Popover.useState({ baseId: 'test', placement });
           return (
             // @ts-ignore
-            <Popover {...popover} placement={placement} visible>
+            <Popover {...popover} visible>
               Hello world
             </Popover>
           );
@@ -375,15 +375,14 @@ describe('overrides', () => {
   });
 
   ['top-start', 'top', 'top-end', 'left', 'center', 'right', 'bottom-start', 'bottom', 'bottom-end'].forEach(
-    placement => {
+    (placement: any) => {
       it(`Popover.placements.${placement} should render correctly`, () => {
         function Component() {
-          const popover = Popover.useState({ baseId: 'test' });
+          const popover = Popover.useState({ baseId: 'test', placement });
           return (
             // @ts-ignore
             <Popover
               {...popover}
-              placement={placement}
               visible
               overrides={{ Popover: { css: { placements: { [placement]: { backgroundColor: 'red' } } } } }}
             >

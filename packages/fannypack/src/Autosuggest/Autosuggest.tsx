@@ -429,7 +429,6 @@ const useProps = createHook<AutosuggestProps>(
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
             role="listbox"
-            hideOnClickEsc={false}
             hideOnClickOutside={false}
             unstable_autoFocusOnHide={false}
             {...popoverProps}
