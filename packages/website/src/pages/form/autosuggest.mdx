@@ -106,6 +106,88 @@ function Example() {
 }
 ```
 
+### Custom empty text
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      emptyText="No fruits found."
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Custom empty component [WIP]
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      renderEmpty={({ emptyText, inputValue }) =>
+        <Autosuggest.StaticItem>
+          {emptyText}
+          <br />
+          <Link>Create <Text fontWeight="semibold">{inputValue}</Text></Link>
+        </Autosuggest.StaticItem>
+      }
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  // TODO: Persist input value if clicked...
+
+  return (
+    <Autosuggest
+      renderEmpty={({ emptyText, inputValue }) =>
+        <Autosuggest.Item onClick={() => alert('Created!')}>
+          Create <Text fontWeight="semibold">{inputValue}</Text>
+        </Autosuggest.Item>
+      }
+      restrictToOptions
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
 ### Option icons
 
 ```function-live
@@ -120,6 +202,51 @@ function Example() {
         { key: 1, label: 'Apples', value: 'apples', iconBefore: 'solid-apple-alt' },
         { key: 2, label: 'Bananas', value: 'bananas', iconAfter: 'solid-apple-alt' },
         { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Disabled
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      disabled
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Disabled item [WIP]
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas', disabled: true },
+        { key: 3, label: 'Oranges', value: 'oranges', disabled: true },
         { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
       placeholder="Search for a fruit..."

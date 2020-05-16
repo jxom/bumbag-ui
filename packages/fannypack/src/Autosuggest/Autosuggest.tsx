@@ -19,16 +19,22 @@ import {
 } from '../DropdownMenu';
 import { Text, TextProps } from '../Text';
 
+import { AutosuggestItem } from './AutosuggestItem';
+import { AutosuggestStaticItem } from './AutosuggestStaticItem';
 import * as styles from './styles';
 
 export type LocalAutosuggestProps = {
   automaticSelection?: boolean;
+  disabled?: boolean;
+  emptyText?: string;
   options: any;
   onChange: any;
-  renderOption?: any;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
   value: any;
+
+  renderEmpty?: any;
+  renderOption?: any;
 
   inputProps?: Partial<InputProps>;
   itemProps?: Partial<DropdownMenuItemProps>;
@@ -37,6 +43,12 @@ export type LocalAutosuggestProps = {
   dropdownMenuInitialState?: Partial<DropdownMenuInitialState>;
 };
 export type AutosuggestProps = BoxProps & LocalAutosuggestProps;
+export type AutosuggestContextOptions = {
+  themeKey?: string;
+  themeKeyOverride?: string;
+};
+
+export const AutosuggestContext = React.createContext<AutosuggestContextOptions>({});
 
 const KEY_ENTER = 13;
 const KEY_ESC = 27;
@@ -73,8 +85,7 @@ function reducer(state, event) {
 
       return {
         ...state,
-        highlightedIndex: newHighlightedIndex,
-        inputValue: newHighlightedIndex >= 0 ? state.filteredOptions[newHighlightedIndex].label : ''
+        highlightedIndex: newHighlightedIndex
       };
     }
     case 'KEY_DOWN': {
@@ -83,8 +94,7 @@ function reducer(state, event) {
 
       return {
         ...state,
-        highlightedIndex: newHighlightedIndex,
-        inputValue: newHighlightedIndex >= 0 ? state.filteredOptions[newHighlightedIndex].label : ''
+        highlightedIndex: newHighlightedIndex
       };
     }
     case 'KEY_ESC': {
@@ -143,12 +153,15 @@ const useProps = createHook<AutosuggestProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       automaticSelection,
+      disabled,
       dropdownMenuInitialState,
+      emptyText,
       popoverProps,
       itemProps,
       inputProps,
       onChange,
       options,
+      renderEmpty: Empty,
       renderOption: Option,
       placeholder,
       restrictToOptions,
@@ -203,20 +216,6 @@ const useProps = createHook<AutosuggestProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Popover'
-    });
-    const dropdownMenuItemClassname = useClassName({
-      style: styles.AutosuggestItem,
-      styleProps: props,
-      themeKey,
-      themeKeyOverride,
-      themeKeySuffix: 'Item'
-    });
-    const dropdownMenuStaticItemClassname = useClassName({
-      style: styles.AutosuggestStaticItem,
-      styleProps: props,
-      themeKey,
-      themeKeyOverride,
-      themeKeySuffix: 'StaticItem'
     });
 
     //////////////////////////////////////////////////
@@ -276,11 +275,13 @@ const useProps = createHook<AutosuggestProps>(
           onChange && onChange({ label: '' });
         }
         filterOptions({ searchText: value });
-        console.log(mousePositionRef.current);
-        console.dir(popoverRef.current.getBoundingClientRect());
+        if (isMouseOutsidePopover({ mousePositionRef, popoverRef })) {
+          dropdownMenu.hide();
+        }
       },
       [
         automaticSelection,
+        dropdownMenu,
         filterOptions,
         highlightedIndex,
         inputValue,
@@ -392,6 +393,16 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
+    const context = React.useMemo(
+      () => ({
+        themeKey,
+        themeKeyOverride
+      }),
+      [themeKey, themeKeyOverride]
+    );
+
+    //////////////////////////////////////////////////
+
     return {
       ...boxProps,
       ..._pick(dropdownMenuDisclosureProps, 'aria-expanded'),
@@ -399,18 +410,24 @@ const useProps = createHook<AutosuggestProps>(
       'aria-owns': dropdownMenu.baseId,
       className,
       children: (
-        <React.Fragment>
+        <AutosuggestContext.Provider value={context}>
           <Input
-            {..._omit(dropdownMenuDisclosureProps, 'type', 'className')}
+            {..._omit(dropdownMenuDisclosureProps, 'type', 'className', 'role')}
             after={
               inputValue && (
                 <Box display="flex" alignItems="center" justify-content="center" paddingY="minor-1" paddingX="minor-2">
-                  <Button.Close onClick={handleClear} iconProps={{ fontSize: '200' }} size="small" />
+                  <Button.Close
+                    onClick={handleClear}
+                    iconProps={{ fontSize: '200' }}
+                    size="small"
+                    onMouseDown={e => e.preventDefault()}
+                  />
                 </Box>
               )
             }
             aria-autocomplete="list"
             aria-activedescendant={_get(dropdownMenu, `items[${highlightedIndex}].id`)}
+            disabled={disabled}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
             onChange={handleChangeInput}
@@ -426,6 +443,7 @@ const useProps = createHook<AutosuggestProps>(
             use="ul"
             className={dropdownMenuPopoverClassname}
             isTabbable={false}
+            onMouseDown={e => e.preventDefault()}
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
             role="listbox"
@@ -435,21 +453,17 @@ const useProps = createHook<AutosuggestProps>(
           >
             {filteredOptions.length > 0 ? (
               filteredOptions.map((option, index) => (
-                <DropdownMenuItem
+                <AutosuggestItem
                   key={option.key}
                   {...dropdownMenu}
-                  use="li"
                   aria-selected={highlightedIndex === index}
-                  className={dropdownMenuItemClassname}
                   iconAfter={option.iconAfter}
                   iconAfterProps={option.iconAfterProps}
                   iconBefore={option.iconBefore}
                   iconBeforeProps={option.iconBeforeProps}
-                  isTabbable={false}
                   onClick={handleClickItem(index)}
                   onMouseEnter={handleMouseEnterItem(index)}
                   onMouseLeave={handleMouseLeaveItem(index)}
-                  role="option"
                   {...itemProps}
                 >
                   <Option
@@ -458,17 +472,20 @@ const useProps = createHook<AutosuggestProps>(
                     option={option}
                     MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
                   />
-                </DropdownMenuItem>
+                </AutosuggestItem>
               ))
             ) : (
-              <Box className={dropdownMenuStaticItemClassname}>No results found</Box>
+              <Empty emptyText={emptyText} inputValue={inputValue} />
             )}
           </DropdownMenuPopover>
-        </React.Fragment>
+        </AutosuggestContext.Provider>
       )
     };
   },
-  { defaultProps: { renderOption: MatchedLabel }, themeKey: 'Autosuggest' }
+  {
+    defaultProps: { disabled: false, emptyText: 'No results found', renderEmpty: Empty, renderOption: MatchedLabel },
+    themeKey: 'Autosuggest'
+  }
 );
 
 export const Autosuggest = createComponent<AutosuggestProps>(
@@ -503,4 +520,15 @@ function MatchedLabel(props: { label: string; inputValue: string }) {
   ) : (
     <Text {...restProps}>{label}</Text>
   );
+}
+
+function Empty(props: { emptyText: string }) {
+  const { emptyText, ...restProps } = props;
+  return <AutosuggestStaticItem {...restProps}>{emptyText}</AutosuggestStaticItem>;
+}
+
+function isMouseOutsidePopover({ mousePositionRef, popoverRef }) {
+  const { left, right, top, bottom } = popoverRef.current.getBoundingClientRect();
+  const { clientX, clientY } = mousePositionRef.current;
+  return left > clientX || right < clientX || top > clientY || bottom < clientY;
 }
