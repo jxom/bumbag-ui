@@ -134,7 +134,7 @@ function getStyleFromProps(props, theme) {
           ${prevStyle};
 
           ${pseudoSelector} {
-            ${getStyleFromProps(value, theme)}
+            ${getStyleFromProps(value, theme)};
           }
         `;
       }

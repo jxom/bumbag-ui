@@ -67,7 +67,7 @@ export const Table = styleProps => cssClass`
             ${theme(styleProps.themeKey, `css.responsive.root`)(styleProps)};
           }
         `
-      )(styleProps)}
+      )(styleProps)};
     `}
 
   & {

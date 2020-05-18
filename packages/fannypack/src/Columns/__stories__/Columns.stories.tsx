@@ -141,17 +141,14 @@ export const variableColumnSizes = () => (
         <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
           All: 10
           <br />
-          Desktop: 8
-          <br />
+          Desktop: 8<br />
           Mobile: 6
         </Box>
       </Columns.Column>
       <Columns.Column spread={2} spreadDesktop={4} spreadMobile={6}>
         <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
-          All: 2
-          <br />
-          Desktop: 4
-          <br />
+          All: 2<br />
+          Desktop: 4<br />
           Mobile: 6
         </Box>
       </Columns.Column>
@@ -168,8 +165,7 @@ export const variableColumnSizes = () => (
         <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
           All: 10
           <br />
-          Desktop: 8
-          <br />
+          Desktop: 8<br />
           Tablet: 4
         </Box>
       </Columns.Column>
@@ -179,8 +175,7 @@ export const variableColumnSizes = () => (
         <Box backgroundColor="#112ebb" color="white" padding="0.5rem">
           All: 10
           <br />
-          Desktop: 8
-          <br />
+          Desktop: 8<br />
           Tablet: 4
         </Box>
       </Columns.Column>

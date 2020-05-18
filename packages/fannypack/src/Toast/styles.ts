@@ -60,11 +60,10 @@ const getAnimation = styleProps => keyframes`
         ${['top-end', 'right', 'bottom-end', 'top-start', 'left', 'bottom-start'].includes(styleProps.placement) &&
           css`
             transform: translateX(0);
-          `}
-        ${['bottom', 'top'].includes(styleProps.placement) &&
+          `} ${['bottom', 'top'].includes(styleProps.placement) &&
           css`
             transform: translateY(0);
-          `}
+          `};
       `}
   }
 `;

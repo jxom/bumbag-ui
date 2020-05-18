@@ -79,8 +79,8 @@ const useProps = createHook<RatingProps>(
                     ? hoveringIndex === index
                     : hoveringIndex >= index
                   : isSingular
-                  ? value === index + 1
-                  : value > index
+                    ? value === index + 1
+                    : value > index
               }
               onClick={!disabled ? () => onChange(index + 1) : undefined}
               onMouseEnter={!disabled ? () => setHoveringIndex(index) : undefined}

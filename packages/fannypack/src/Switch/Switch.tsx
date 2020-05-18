@@ -100,7 +100,7 @@ const useProps = createHook<SwitchProps>(
       children: (
         <React.Fragment>
           {/**
-            // @ts-ignore */}
+           // @ts-ignore */}
           <Box
             use="input"
             className={hiddenSwitchClassName}

@@ -155,11 +155,10 @@ export const AlertAccent = styleProps => cssClass`
       ${styleProps.accent === true &&
         css`
           animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
-        `}
-      ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
+        `} ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
         css`
           animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
-        `}
+        `};
     `}
 
   & {

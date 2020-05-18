@@ -41,9 +41,12 @@ const useProps = createHook<PaginationProps>(
     const setProps = Set.useProps({ ...restProps, overrides });
 
     const [currentPage, setCurrentPage] = React.useState(1);
-    React.useEffect(() => {
-      setCurrentPage(_currentPage || 1);
-    }, [_currentPage]);
+    React.useEffect(
+      () => {
+        setCurrentPage(_currentPage || 1);
+      },
+      [_currentPage]
+    );
 
     const className = useClassName({
       style: styles.Pagination,
