@@ -49,7 +49,7 @@ const getHorizontalAttributes = styleProps => {
     }
 
     @media screen and (max-width: ${breakpoint}) {
-      ${getVerticalAttributes(styleProps)}
+      ${getVerticalAttributes(styleProps)};
     }
   `;
 };

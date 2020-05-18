@@ -127,13 +127,16 @@ const useProps = createHook<PageWithSidebarProps>(
       ]
     );
 
-    React.useEffect(() => {
-      if (isCollapsed) {
-        setIsSidebarMinimized(false);
-      } else {
-        drawer.hide();
-      }
-    }, [drawer, isCollapsed]);
+    React.useEffect(
+      () => {
+        if (isCollapsed) {
+          setIsSidebarMinimized(false);
+        } else {
+          drawer.hide();
+        }
+      },
+      [drawer, isCollapsed]
+    );
 
     return {
       ...boxProps,

@@ -62,7 +62,7 @@ export const Tab = styleProps => cssClass`
             `
           : css`
               box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-            `}
+            `};
       `}
 
     ${styleProps.variant === 'boxed' &&
@@ -75,7 +75,7 @@ export const Tab = styleProps => cssClass`
             `
           : css`
               border-bottom-color: white;
-            `}
+            `};
       `}
 
     ${styleProps.variant === 'button' &&
@@ -100,7 +100,7 @@ export const Tab = styleProps => cssClass`
             `
           : css`
               box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-            `}
+            `};
       `}
 
     ${(styleProps.variant === 'boxed' || styleProps.variant === 'button') &&
@@ -173,7 +173,7 @@ export const TabsList = styleProps => cssClass`
           `
         : css`
             border-bottom: 1px solid ${palette('white900')(styleProps)};
-          `}
+          `};
     `}
 
 

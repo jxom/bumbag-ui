@@ -40,12 +40,15 @@ export function useBreakpoint(_breakpoint) {
     setDoesMatch(e.matches);
   }, []);
 
-  React.useEffect(() => {
-    mediaQueryList.addListener(onMediaChange);
-    return function cleanup() {
-      mediaQueryList.removeListener(onMediaChange);
-    };
-  }, [mediaQueryList, onMediaChange]);
+  React.useEffect(
+    () => {
+      mediaQueryList.addListener(onMediaChange);
+      return function cleanup() {
+        mediaQueryList.removeListener(onMediaChange);
+      };
+    },
+    [mediaQueryList, onMediaChange]
+  );
 
   return doesMatch;
 }

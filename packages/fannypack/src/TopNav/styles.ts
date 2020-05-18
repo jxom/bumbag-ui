@@ -68,9 +68,7 @@ export const TopNavItem = styleProps => cssClass`
       ${styleProps.variant === 'default' &&
         css`
           box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-        `}
-
-      & {
+        `} & {
         ${theme(styleProps.themeKey, `css.active`)(styleProps)};
       }
     `}
