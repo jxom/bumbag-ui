@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { palette, space, theme } from '../utils';
 
 export const Autosuggest = styleProps => cssClass`
   position: relative;
@@ -25,7 +25,11 @@ export const AutosuggestItem = styleProps => cssClass`
     font-weight: 300;
 
     &[aria-selected="true"] {
-      background-color: whitesmoke;
+      background-color: ${palette('white600')(styleProps)};
+    }
+
+    &[aria-disabled="true"] {
+      color: ${palette('gray100')(styleProps)};
     }
   }
 

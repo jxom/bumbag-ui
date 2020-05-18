@@ -66,7 +66,14 @@ function reducer(state, event) {
     case 'VALUE_CHANGE': {
       return {
         ...state,
-        highlightedIndex: _get(event, 'value.label', '') && event.automaticSelection ? 0 : -1,
+        highlightedIndex:
+          _get(event, 'value.label', '') && event.automaticSelection
+            ? getNewHighlightedIndex({
+                compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
+                highlightedIndex: -1,
+                filteredOptions: state.filteredOptions
+              })
+            : -1,
         inputValue: _get(event, 'value.label', ''),
         value: event.value
       };
@@ -80,8 +87,11 @@ function reducer(state, event) {
       };
     }
     case 'KEY_UP': {
-      const newHighlightedIndex =
-        state.highlightedIndex > 0 ? state.highlightedIndex - 1 : state.filteredOptions.length - 1;
+      const newHighlightedIndex = getNewHighlightedIndex({
+        compare: ({ index, optionsLength }) => (index > 0 ? index - 1 : optionsLength),
+        highlightedIndex: state.highlightedIndex,
+        filteredOptions: state.filteredOptions
+      });
 
       return {
         ...state,
@@ -89,8 +99,11 @@ function reducer(state, event) {
       };
     }
     case 'KEY_DOWN': {
-      const newHighlightedIndex =
-        state.highlightedIndex < state.filteredOptions.length - 1 ? state.highlightedIndex + 1 : 0;
+      const newHighlightedIndex = getNewHighlightedIndex({
+        compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
+        highlightedIndex: state.highlightedIndex,
+        filteredOptions: state.filteredOptions
+      });
 
       return {
         ...state,
@@ -108,6 +121,8 @@ function reducer(state, event) {
       };
     }
     case 'MOUSE_ENTER_ITEM': {
+      if (event.option && event.option.disabled) return state;
+
       const newHighlightedIndex = event.index;
       return {
         ...state,
@@ -115,6 +130,8 @@ function reducer(state, event) {
       };
     }
     case 'MOUSE_LEAVE_ITEM': {
+      if (event.option && event.option.disabled) return state;
+
       const newHighlightedIndex = state.highlightedIndex === event.index ? -1 : state.highlightedIndex;
       return {
         ...state,
@@ -122,6 +139,8 @@ function reducer(state, event) {
       };
     }
     case 'MOUSE_CLICK_ITEM': {
+      if (event.option && event.option.disabled) return state;
+
       return { ...state, highlightedIndex: -1, inputValue: state.filteredOptions[event.index].label };
     }
     case 'OPTIONS_FILTERED': {
@@ -234,6 +253,15 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
+    const setOption = React.useCallback(
+      option => {
+        dispatch({ type: 'OPTION_SELECTED', option });
+        onChange && onChange(option);
+        return option;
+      },
+      [onChange]
+    );
+
     const filterOptions = React.useCallback(
       ({ controlsVisibility, hideIfNoOptions = true, searchText }) => {
         const filteredOptions = options.filter(option =>
@@ -254,12 +282,15 @@ const useProps = createHook<AutosuggestProps>(
 
     const selectOption = React.useCallback(
       ({ index }) => {
-        const option = filteredOptions[index];
-        dispatch({ type: 'OPTION_SELECTED', option });
-        onChange && onChange(option);
+        if (filteredOptions.length === 0) {
+          return undefined;
+        }
+
+        let option = filteredOptions[index];
+        option = setOption(option);
         return option;
       },
-      [filteredOptions, onChange]
+      [filteredOptions, setOption]
     );
 
     //////////////////////////////////////////////////
@@ -348,8 +379,8 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleClickItem = React.useCallback(
-      index => () => {
-        dispatch({ type: 'MOUSE_CLICK_ITEM', index });
+      (index, option) => () => {
+        dispatch({ type: 'MOUSE_CLICK_ITEM', index, option });
         dropdownMenu.hide();
         selectOption({ index });
       },
@@ -357,39 +388,59 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleMouseEnterItem = React.useCallback(
-      index => () => {
-        dispatch({ type: 'MOUSE_ENTER_ITEM', index });
+      (index, option) => () => {
+        dispatch({ type: 'MOUSE_ENTER_ITEM', index, option });
       },
       [dispatch]
     );
 
     const handleMouseLeaveItem = React.useCallback(
-      index => () => {
-        dispatch({ type: 'MOUSE_LEAVE_ITEM', index });
+      (index, option) => () => {
+        dispatch({ type: 'MOUSE_LEAVE_ITEM', index, option });
       },
       [dispatch]
     );
 
-    const handleClear = React.useCallback(() => {
-      dispatch({ type: 'OPTION_CLEARED' });
-      onChange && onChange({ label: '' });
-    }, [onChange]);
+    const handleClear = React.useCallback(
+      () => {
+        dispatch({ type: 'OPTION_CLEARED' });
+        onChange && onChange({ label: '' });
+      },
+      [onChange]
+    );
 
-    const handleMouseEnterPopover = React.useCallback(() => {
-      dispatch({ type: 'MOUSE_ENTER_POPOVER', automaticSelection });
-    }, [automaticSelection]);
+    const handleMouseEnterPopover = React.useCallback(
+      () => {
+        dispatch({ type: 'MOUSE_ENTER_POPOVER', automaticSelection });
+      },
+      [automaticSelection]
+    );
 
-    const handleMouseLeavePopover = React.useCallback(() => {
-      dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
-    }, [automaticSelection]);
+    const handleMouseLeavePopover = React.useCallback(
+      () => {
+        dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
+      },
+      [automaticSelection]
+    );
+
+    const handleCreate = React.useCallback(
+      option => {
+        setOption(option);
+        dropdownMenu.hide();
+      },
+      [dropdownMenu, setOption]
+    );
 
     //////////////////////////////////////////////////
 
-    React.useEffect(() => {
-      if (value) {
-        dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
-      }
-    }, [automaticSelection, value]);
+    React.useEffect(
+      () => {
+        if (value) {
+          dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
+        }
+      },
+      [automaticSelection, value]
+    );
 
     //////////////////////////////////////////////////
 
@@ -452,18 +503,20 @@ const useProps = createHook<AutosuggestProps>(
             {...popoverProps}
           >
             {filteredOptions.length > 0 ? (
-              filteredOptions.map((option, index) => (
+              filteredOptions.filter(Boolean).map((option, index) => (
                 <AutosuggestItem
-                  key={option.key}
+                  key={option.key || index}
                   {...dropdownMenu}
                   aria-selected={highlightedIndex === index}
+                  aria-disabled={option.disabled}
+                  disabled={option.disabled}
                   iconAfter={option.iconAfter}
                   iconAfterProps={option.iconAfterProps}
                   iconBefore={option.iconBefore}
                   iconBeforeProps={option.iconBeforeProps}
-                  onClick={handleClickItem(index)}
-                  onMouseEnter={handleMouseEnterItem(index)}
-                  onMouseLeave={handleMouseLeaveItem(index)}
+                  onClick={handleClickItem(index, option)}
+                  onMouseEnter={handleMouseEnterItem(index, option)}
+                  onMouseLeave={handleMouseLeaveItem(index, option)}
                   {...itemProps}
                 >
                   <Option
@@ -475,7 +528,12 @@ const useProps = createHook<AutosuggestProps>(
                 </AutosuggestItem>
               ))
             ) : (
-              <Empty emptyText={emptyText} inputValue={inputValue} />
+              <Empty
+                emptyText={emptyText}
+                inputValue={inputValue}
+                create={handleCreate}
+                itemProps={{ 'aria-selected': highlightedIndex === 0 }}
+              />
             )}
           </DropdownMenuPopover>
         </AutosuggestContext.Provider>
@@ -531,4 +589,21 @@ function isMouseOutsidePopover({ mousePositionRef, popoverRef }) {
   const { left, right, top, bottom } = popoverRef.current.getBoundingClientRect();
   const { clientX, clientY } = mousePositionRef.current;
   return left > clientX || right < clientX || top > clientY || bottom < clientY;
+}
+
+function getNewHighlightedIndex({ compare, highlightedIndex = -1, filteredOptions, count = 0 }) {
+  const newHighlightedIndex = compare({ index: highlightedIndex, optionsLength: filteredOptions.length - 1 });
+  if (_get(filteredOptions, `[${newHighlightedIndex}].disabled`) && count < filteredOptions.length) {
+    return getNewHighlightedIndex({
+      compare,
+      highlightedIndex: newHighlightedIndex,
+      filteredOptions,
+      count: count + 1
+    });
+  } else {
+    if (count === filteredOptions.length) {
+      return -1;
+    }
+    return newHighlightedIndex;
+  }
 }
