@@ -3,6 +3,8 @@ import { Box as ReakitBox } from 'reakit';
 import _pick from 'lodash/pick';
 import _omit from 'lodash/omit';
 import _get from 'lodash/get';
+import _debounce from 'lodash/debounce';
+import * as Loads from 'react-loads-next';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -17,6 +19,7 @@ import {
   DropdownMenuItemProps,
   DropdownMenuInitialState
 } from '../DropdownMenu';
+import { Spinner, SpinnerProps } from '../Spinner';
 import { Text, TextProps } from '../Text';
 
 import { AutosuggestItem } from './AutosuggestItem';
@@ -25,15 +28,28 @@ import * as styles from './styles';
 
 export type LocalAutosuggestProps = {
   automaticSelection?: boolean;
+  cacheKey?: string;
+  defer?: boolean;
   disabled?: boolean;
-  emptyText?: string;
-  options: any;
+  limit?: number;
+  loadOptions?: any;
+  loadVariables?: any;
+  options?: any;
   onChange: any;
+  pagination?: boolean;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
   value: any;
 
+  errorText?: string;
+  emptyText?: string;
+  loadingText?: string;
+  loadingMoreText?: string;
+
+  renderError?: any;
   renderEmpty?: any;
+  renderLoading?: any;
+  renderLoadingMore?: any;
   renderOption?: any;
 
   inputProps?: Partial<InputProps>;
@@ -60,12 +76,14 @@ function reducer(state, event) {
     case 'INPUT_CHANGE': {
       return {
         ...state,
+        page: 1,
         selectedOption: undefined
       };
     }
     case 'VALUE_CHANGE': {
       return {
         ...state,
+        page: 1,
         highlightedIndex:
           _get(event, 'value.label', '') && event.automaticSelection
             ? getNewHighlightedIndex({
@@ -82,6 +100,7 @@ function reducer(state, event) {
       return {
         ...state,
         highlightedIndex: -1,
+        page: 1,
         inputValue:
           event.restrictToOptions && (state.highlightedIndex === -1 && !state.selectedOption) ? '' : state.inputValue
       };
@@ -120,28 +139,13 @@ function reducer(state, event) {
         inputValue: event.restrictToOptions && state.highlightedIndex === -1 ? '' : state.inputValue
       };
     }
-    case 'MOUSE_ENTER_ITEM': {
-      if (event.option && event.option.disabled) return state;
-
-      const newHighlightedIndex = event.index;
-      return {
-        ...state,
-        highlightedIndex: newHighlightedIndex
-      };
-    }
-    case 'MOUSE_LEAVE_ITEM': {
-      if (event.option && event.option.disabled) return state;
-
-      const newHighlightedIndex = state.highlightedIndex === event.index ? -1 : state.highlightedIndex;
-      return {
-        ...state,
-        highlightedIndex: newHighlightedIndex
-      };
-    }
     case 'MOUSE_CLICK_ITEM': {
       if (event.option && event.option.disabled) return state;
 
       return { ...state, highlightedIndex: -1, inputValue: state.filteredOptions[event.index].label };
+    }
+    case 'OPTIONS_SET': {
+      return { ...state, options: event.options };
     }
     case 'OPTIONS_FILTERED': {
       return { ...state, filteredOptions: event.filteredOptions };
@@ -162,6 +166,9 @@ function reducer(state, event) {
         isMouseInsidePopover: false
       };
     }
+    case 'PAGE_INCREMENT': {
+      return { ...state, page: state.page + 1 };
+    }
     default: {
       return state;
     }
@@ -172,15 +179,26 @@ const useProps = createHook<AutosuggestProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       automaticSelection,
+      cacheKey,
       disabled,
       dropdownMenuInitialState,
       emptyText,
+      errorText,
+      loadingText,
+      loadingMoreText,
       popoverProps,
       itemProps,
       inputProps,
+      limit,
+      loadOptions,
+      loadVariables,
       onChange,
-      options,
+      options: initialOptions,
+      pagination,
       renderEmpty: Empty,
+      renderError: Error,
+      renderLoading: Loading,
+      renderLoadingMore: LoadingMore,
       renderOption: Option,
       placeholder,
       restrictToOptions,
@@ -205,6 +223,7 @@ const useProps = createHook<AutosuggestProps>(
 
     const mousePositionRef = React.useRef();
     const popoverRef = React.useRef();
+    const [defer, setDefer] = React.useState(props.defer || !loadOptions);
 
     //////////////////////////////////////////////////
 
@@ -240,16 +259,73 @@ const useProps = createHook<AutosuggestProps>(
     //////////////////////////////////////////////////
 
     const [
-      { highlightedIndex, inputValue, isMouseInsidePopover, filteredOptions, selectedOption },
+      { highlightedIndex, inputValue, filteredOptions, options, page, selectedOption },
       dispatch
     ] = React.useReducer(reducer, {
       highlightedIndex: -1,
       inputValue: _get(value, 'label'),
       isMouseInsidePopover: false,
-      filteredOptions: options,
-      options,
+      filteredOptions: initialOptions,
+      options: initialOptions,
+      page: 1,
       value: { label: '' }
     });
+
+    //////////////////////////////////////////////////
+
+    const getOptions = React.useCallback(
+      async ({ loadVariables, page, searchText = '' }) => {
+        if (typeof loadOptions === 'function') {
+          const { options: fetchedOptions } = await loadOptions({ page, searchText, variables: loadVariables });
+
+          let newOptions = [...options, ...fetchedOptions];
+          if (page === 1) {
+            newOptions = fetchedOptions;
+          }
+
+          return { options: newOptions };
+        }
+        return undefined;
+      },
+      [loadOptions, options]
+    );
+    const optionsRecord = Loads.useLoads(cacheKey, getOptions, {
+      debounce: 500,
+      debounceCache: false,
+      defer,
+      variables: [{ loadVariables, page, searchText: inputValue }]
+    });
+
+    //////////////////////////////////////////////////
+
+    React.useEffect(
+      () => {
+        dispatch({ type: 'OPTIONS_SET', options: initialOptions });
+      },
+      [initialOptions]
+    );
+
+    React.useEffect(
+      () => {
+        if (loadOptions && optionsRecord.isResolved) {
+          const options = _get(optionsRecord.response, 'options', []);
+          dispatch({ type: 'OPTIONS_SET', options });
+          dispatch({ type: 'OPTIONS_FILTERED', filteredOptions: options });
+        }
+      },
+      [loadOptions, optionsRecord.isResolved, optionsRecord.response]
+    );
+
+    //////////////////////////////////////////////////
+
+    const isLoading = loadOptions && (optionsRecord.isPending || optionsRecord.isIdle) && page === 1;
+    const isLoadingMore = loadOptions && (optionsRecord.isPending || optionsRecord.isIdle) && page > 1;
+    const isError = loadOptions && optionsRecord.isRejected;
+
+    let isSuccess = filteredOptions.length > 0;
+    if (loadOptions) {
+      isSuccess = (optionsRecord.isResolved && filteredOptions.length > 0) || isLoadingMore;
+    }
 
     //////////////////////////////////////////////////
 
@@ -264,6 +340,7 @@ const useProps = createHook<AutosuggestProps>(
 
     const filterOptions = React.useCallback(
       ({ controlsVisibility, hideIfNoOptions = true, searchText }) => {
+        if (loadOptions) return;
         const filteredOptions = options.filter(option =>
           option.label.toLowerCase().includes(searchText.trim().toLowerCase())
         );
@@ -277,7 +354,7 @@ const useProps = createHook<AutosuggestProps>(
         dispatch({ type: 'OPTIONS_FILTERED', filteredOptions, controlsVisibility });
         return filteredOptions;
       },
-      [dispatch, dropdownMenu, options]
+      [dropdownMenu, loadOptions, options]
     );
 
     const selectOption = React.useCallback(
@@ -337,8 +414,15 @@ const useProps = createHook<AutosuggestProps>(
       event => {
         const value = event.target.value;
         filterOptions({ controlsVisibility: true, searchText: value });
+        if (loadOptions) {
+          if (defer) {
+            setDefer(false);
+            optionsRecord.load();
+          }
+          dropdownMenu.show();
+        }
       },
-      [filterOptions]
+      [defer, dropdownMenu, filterOptions, loadOptions, optionsRecord]
     );
 
     const handleFocusInput = React.useCallback(
@@ -387,20 +471,6 @@ const useProps = createHook<AutosuggestProps>(
       [dispatch, dropdownMenu, selectOption]
     );
 
-    const handleMouseEnterItem = React.useCallback(
-      (index, option) => () => {
-        dispatch({ type: 'MOUSE_ENTER_ITEM', index, option });
-      },
-      [dispatch]
-    );
-
-    const handleMouseLeaveItem = React.useCallback(
-      (index, option) => () => {
-        dispatch({ type: 'MOUSE_LEAVE_ITEM', index, option });
-      },
-      [dispatch]
-    );
-
     const handleClear = React.useCallback(
       () => {
         dispatch({ type: 'OPTION_CLEARED' });
@@ -421,6 +491,23 @@ const useProps = createHook<AutosuggestProps>(
         dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
       },
       [automaticSelection]
+    );
+
+    const handleScrollPopover = React.useCallback(
+      event => {
+        const target = event.currentTarget;
+        // TODO: test when at end of page count
+        if (
+          pagination &&
+          !isLoadingMore &&
+          target.scrollHeight > target.offsetHeight &&
+          target.scrollHeight - target.offsetHeight - target.scrollTop <= 200
+        ) {
+          dispatch({ type: 'PAGE_INCREMENT' });
+        }
+        return;
+      },
+      [isLoadingMore, pagination]
     );
 
     const handleCreate = React.useCallback(
@@ -497,36 +584,45 @@ const useProps = createHook<AutosuggestProps>(
             onMouseDown={e => e.preventDefault()}
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
+            onScroll={handleScrollPopover}
             role="listbox"
             hideOnClickOutside={false}
             unstable_autoFocusOnHide={false}
             {...popoverProps}
           >
-            {filteredOptions.length > 0 ? (
-              filteredOptions.filter(Boolean).map((option, index) => (
-                <AutosuggestItem
-                  key={option.key || index}
-                  {...dropdownMenu}
-                  aria-selected={highlightedIndex === index}
-                  aria-disabled={option.disabled}
-                  disabled={option.disabled}
-                  iconAfter={option.iconAfter}
-                  iconAfterProps={option.iconAfterProps}
-                  iconBefore={option.iconBefore}
-                  iconBeforeProps={option.iconBeforeProps}
-                  onClick={handleClickItem(index, option)}
-                  onMouseEnter={handleMouseEnterItem(index, option)}
-                  onMouseLeave={handleMouseLeaveItem(index, option)}
-                  {...itemProps}
-                >
-                  <Option
-                    label={option.label}
-                    inputValue={inputValue}
-                    option={option}
-                    MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
-                  />
-                </AutosuggestItem>
-              ))
+            {isSuccess ? (
+              <React.Fragment>
+                {filteredOptions
+                  .slice(0, limit)
+                  .filter(Boolean)
+                  .map((option, index) => (
+                    <AutosuggestItem
+                      key={option.key || index}
+                      {...dropdownMenu}
+                      aria-selected={highlightedIndex === index}
+                      aria-disabled={option.disabled}
+                      disabled={option.disabled}
+                      iconAfter={option.iconAfter}
+                      iconAfterProps={option.iconAfterProps}
+                      iconBefore={option.iconBefore}
+                      iconBeforeProps={option.iconBeforeProps}
+                      onClick={handleClickItem(index, option)}
+                      {...itemProps}
+                    >
+                      <Option
+                        label={option.label}
+                        inputValue={inputValue}
+                        option={option}
+                        MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
+                      />
+                    </AutosuggestItem>
+                  ))}
+                {isLoadingMore && <LoadingMore loadingText={loadingMoreText} />}
+              </React.Fragment>
+            ) : isLoading ? (
+              <Loading loadingText={loadingText} />
+            ) : isError ? (
+              <Error errorText={errorText} />
             ) : (
               <Empty
                 emptyText={emptyText}
@@ -541,7 +637,20 @@ const useProps = createHook<AutosuggestProps>(
     };
   },
   {
-    defaultProps: { disabled: false, emptyText: 'No results found', renderEmpty: Empty, renderOption: MatchedLabel },
+    defaultProps: {
+      cacheKey: 'fp-options',
+      disabled: false,
+      emptyText: 'No results found',
+      errorText: 'An error occurred',
+      loadingText: 'Loading...',
+      loadingMoreText: 'Loading...',
+      options: [],
+      renderEmpty: Empty,
+      renderError: Error,
+      renderLoading: Loading,
+      renderLoadingMore: Loading,
+      renderOption: MatchedLabel
+    },
     themeKey: 'Autosuggest'
   }
 );
@@ -558,6 +667,8 @@ export const Autosuggest = createComponent<AutosuggestProps>(
     themeKey: 'Autosuggest'
   }
 );
+
+//////////////////////////////////////////////////////////////////
 
 function MatchedLabel(props: { label: string; inputValue: string }) {
   const { label, inputValue, ...restProps } = props;
@@ -584,6 +695,23 @@ function Empty(props: { emptyText: string }) {
   const { emptyText, ...restProps } = props;
   return <AutosuggestStaticItem {...restProps}>{emptyText}</AutosuggestStaticItem>;
 }
+
+function Error(props: { errorText: string }) {
+  const { errorText, ...restProps } = props;
+  return <AutosuggestStaticItem {...restProps}>{errorText}</AutosuggestStaticItem>;
+}
+
+function Loading(props: { loadingText: string }) {
+  const { loadingText, ...restProps } = props;
+  return (
+    <AutosuggestStaticItem display="flex" alignItems="center" {...restProps}>
+      <Spinner size="small" />
+      <Text marginLeft="major-1">{loadingText}</Text>
+    </AutosuggestStaticItem>
+  );
+}
+
+//////////////////////////////////////////////////////////////////
 
 function isMouseOutsidePopover({ mousePositionRef, popoverRef }) {
   const { left, right, top, bottom } = popoverRef.current.getBoundingClientRect();

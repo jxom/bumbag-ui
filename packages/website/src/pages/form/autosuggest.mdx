@@ -258,6 +258,35 @@ function Example() {
 }
 ```
 
+### Fetching data (async)
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  const getOptions = React.useCallback(async ({ page, searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <Autosuggest
+      cacheKey="fruits"
+      defer
+      pagination
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
 ## Props
 
 ## Theming

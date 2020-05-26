@@ -13,6 +13,8 @@ export const AutosuggestPopover = styleProps => cssClass`
   &&& {
     max-width: 100%;
     width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
   }
 
   & {
