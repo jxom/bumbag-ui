@@ -15,6 +15,8 @@ import { Autosuggest } from 'fannypack'
 function Example() {
   const [value, setValue] = React.useState({ label: '' });
 
+  console.log(value);
+
   return (
     <Autosuggest
       onChange={setValue}
@@ -22,7 +24,27 @@ function Example() {
         { key: 1, label: 'Apples', value: 'apples' },
         { key: 2, label: 'Bananas', value: 'bananas' },
         { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
+        { key: 4, label: 'Mangos', value: 'mangos' },
+        { key: 11, label: 'Apples', value: 'apples' },
+        { key: 12, label: 'Bananas', value: 'bananas' },
+        { key: 13, label: 'Oranges', value: 'oranges' },
+        { key: 14, label: 'Mangos', value: 'mangos' },
+        { key: 21, label: 'Apples', value: 'apples' },
+        { key: 22, label: 'Bananas', value: 'bananas' },
+        { key: 23, label: 'Oranges', value: 'oranges' },
+        { key: 24, label: 'Mangos', value: 'mangos' },
+        { key: 31, label: 'Apples', value: 'apples' },
+        { key: 32, label: 'Bananas', value: 'bananas' },
+        { key: 33, label: 'Oranges', value: 'oranges' },
+        { key: 34, label: 'Mangos', value: 'mangos' },
+        { key: 41, label: 'Apples', value: 'apples' },
+        { key: 42, label: 'Bananas', value: 'bananas' },
+        { key: 43, label: 'Oranges', value: 'oranges' },
+        { key: 44, label: 'Mangos', value: 'mangos' },
+        { key: 51, label: 'Apples', value: 'apples' },
+        { key: 62, label: 'Bananas', value: 'bananas' },
+        { key: 673, label: 'Oranges', value: 'oranges' },
+        { key: 74, label: 'Mangos', value: 'mangos' }
       ]}
       placeholder="Search for a fruit..."
       value={value}

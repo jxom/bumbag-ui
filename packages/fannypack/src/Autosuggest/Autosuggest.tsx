@@ -77,6 +77,14 @@ function reducer(state, event) {
       return {
         ...state,
         page: 1,
+        highlightedIndex: event.automaticSelection
+          ? getNewHighlightedIndex({
+              compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
+              highlightedIndex: -1,
+              filteredOptions: state.filteredOptions
+            })
+          : -1,
+        inputValue: event.inputValue,
         selectedOption: undefined
       };
     }
@@ -84,15 +92,6 @@ function reducer(state, event) {
       return {
         ...state,
         page: 1,
-        highlightedIndex:
-          _get(event, 'value.label', '') && event.automaticSelection
-            ? getNewHighlightedIndex({
-                compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
-                highlightedIndex: -1,
-                filteredOptions: state.filteredOptions
-              })
-            : -1,
-        inputValue: _get(event, 'value.label', ''),
         value: event.value
       };
     }
@@ -151,7 +150,13 @@ function reducer(state, event) {
       return { ...state, filteredOptions: event.filteredOptions };
     }
     case 'OPTION_SELECTED': {
-      return { ...state, filteredOptions: [event.option], selectedOption: event.option, value: event.option };
+      return {
+        ...state,
+        filteredOptions: [event.option],
+        inputValue: _get(event, 'option.label', ''),
+        selectedOption: event.option,
+        value: event.option
+      };
     }
     case 'OPTION_CLEARED': {
       return { ...state, filteredOptions: state.options, inputValue: '', selectedOption: undefined, value: undefined };
@@ -386,6 +391,9 @@ const useProps = createHook<AutosuggestProps>(
         if (isMouseOutsidePopover({ mousePositionRef, popoverRef })) {
           dropdownMenu.hide();
         }
+        if (!selectedOption) {
+          onChange && onChange({ label: value });
+        }
       },
       [
         automaticSelection,
@@ -402,12 +410,11 @@ const useProps = createHook<AutosuggestProps>(
 
     const handleChangeInput = React.useCallback(
       event => {
-        const value = event.target.value || '';
-        dispatch({ type: 'INPUT_CHANGE' });
-        filterOptions({ controlsVisibility: true, hideIfNoOptions: !restrictToOptions, searchText: value });
-        onChange && onChange({ label: value });
+        const inputValue = event.target.value || '';
+        dispatch({ type: 'INPUT_CHANGE', automaticSelection, inputValue });
+        filterOptions({ controlsVisibility: true, hideIfNoOptions: !restrictToOptions, searchText: inputValue });
       },
-      [filterOptions, onChange, restrictToOptions]
+      [automaticSelection, filterOptions, restrictToOptions]
     );
 
     const handleClickInput = React.useCallback(
@@ -455,6 +462,7 @@ const useProps = createHook<AutosuggestProps>(
           dispatch({ type: 'KEY_ENTER', restrictToOptions });
           dropdownMenu.hide();
           if (highlightedIndex >= 0 || (automaticSelection && inputValue)) {
+            console.log('test');
             selectOption({ index: highlightedIndex });
           }
         }
