@@ -15,8 +15,6 @@ import { Autosuggest } from 'fannypack'
 function Example() {
   const [value, setValue] = React.useState({ label: '' });
 
-  console.log(value);
-
   return (
     <Autosuggest
       onChange={setValue}
@@ -24,27 +22,7 @@ function Example() {
         { key: 1, label: 'Apples', value: 'apples' },
         { key: 2, label: 'Bananas', value: 'bananas' },
         { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' },
-        { key: 11, label: 'Apples', value: 'apples' },
-        { key: 12, label: 'Bananas', value: 'bananas' },
-        { key: 13, label: 'Oranges', value: 'oranges' },
-        { key: 14, label: 'Mangos', value: 'mangos' },
-        { key: 21, label: 'Apples', value: 'apples' },
-        { key: 22, label: 'Bananas', value: 'bananas' },
-        { key: 23, label: 'Oranges', value: 'oranges' },
-        { key: 24, label: 'Mangos', value: 'mangos' },
-        { key: 31, label: 'Apples', value: 'apples' },
-        { key: 32, label: 'Bananas', value: 'bananas' },
-        { key: 33, label: 'Oranges', value: 'oranges' },
-        { key: 34, label: 'Mangos', value: 'mangos' },
-        { key: 41, label: 'Apples', value: 'apples' },
-        { key: 42, label: 'Bananas', value: 'bananas' },
-        { key: 43, label: 'Oranges', value: 'oranges' },
-        { key: 44, label: 'Mangos', value: 'mangos' },
-        { key: 51, label: 'Apples', value: 'apples' },
-        { key: 62, label: 'Bananas', value: 'bananas' },
-        { key: 673, label: 'Oranges', value: 'oranges' },
-        { key: 74, label: 'Mangos', value: 'mangos' }
+        { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
       placeholder="Search for a fruit..."
       value={value}
@@ -92,6 +70,24 @@ function Example() {
         { key: 3, label: 'Oranges', value: 'oranges' },
         { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Loading indicator
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  return (
+    <Autosuggest
+      isLoading
+      onChange={setValue}
+      options={[]}
       placeholder="Search for a fruit..."
       value={value}
     />
@@ -286,6 +282,33 @@ function Example() {
 function Example() {
   const [value, setValue] = React.useState({ label: '' });
 
+  const getOptions = React.useCallback(async ({ searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <Autosuggest
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+#### Pagination
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
   const getOptions = React.useCallback(async ({ page, searchText }) => {
     return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
       .then(res => res.json())
@@ -297,9 +320,36 @@ function Example() {
 
   return (
     <Autosuggest
-      cacheKey="fruits"
-      defer
       pagination
+      cacheKey="pagination"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Search for a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+#### Deferred
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState({ label: '' });
+
+  const getOptions = React.useCallback(async ({ searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <Autosuggest
+      defer
+      cacheKey="defer"
       onChange={setValue}
       loadOptions={getOptions}
       placeholder="Search for a fruit..."

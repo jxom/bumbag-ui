@@ -14,7 +14,6 @@ import {
   DropdownMenu,
   DropdownMenuPopover,
   DropdownMenuDisclosure,
-  DropdownMenuItem,
   DropdownMenuPopoverProps,
   DropdownMenuItemProps,
   DropdownMenuInitialState
@@ -31,6 +30,7 @@ export type LocalAutosuggestProps = {
   cacheKey?: string;
   defer?: boolean;
   disabled?: boolean;
+  isLoading?: boolean;
   limit?: number;
   loadOptions?: any;
   loadVariables?: any;
@@ -46,12 +46,14 @@ export type LocalAutosuggestProps = {
   loadingText?: string;
   loadingMoreText?: string;
 
+  renderClearButton?: any;
   renderError?: any;
   renderEmpty?: any;
   renderLoading?: any;
   renderLoadingMore?: any;
   renderOption?: any;
 
+  clearButtonProps?: Partial<ButtonProps>;
   inputProps?: Partial<InputProps>;
   itemProps?: Partial<DropdownMenuItemProps>;
   popoverProps?: Partial<DropdownMenuPopoverProps>;
@@ -60,6 +62,7 @@ export type LocalAutosuggestProps = {
 };
 export type AutosuggestProps = BoxProps & LocalAutosuggestProps;
 export type AutosuggestContextOptions = {
+  overrides?: any;
   themeKey?: string;
   themeKeyOverride?: string;
 };
@@ -185,6 +188,7 @@ const useProps = createHook<AutosuggestProps>(
     const {
       automaticSelection,
       cacheKey,
+      clearButtonProps,
       disabled,
       dropdownMenuInitialState,
       emptyText,
@@ -194,12 +198,15 @@ const useProps = createHook<AutosuggestProps>(
       popoverProps,
       itemProps,
       inputProps,
+      isLoading: isInputLoading,
       limit,
       loadOptions,
       loadVariables,
       onChange,
       options: initialOptions,
+      overrides,
       pagination,
+      renderClearButton: ClearButton,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
@@ -229,6 +236,7 @@ const useProps = createHook<AutosuggestProps>(
     const mousePositionRef = React.useRef();
     const popoverRef = React.useRef();
     const [defer, setDefer] = React.useState(props.defer || !loadOptions);
+    const [blockLoad, setBlockLoad] = React.useState(false);
 
     //////////////////////////////////////////////////
 
@@ -281,18 +289,23 @@ const useProps = createHook<AutosuggestProps>(
     const getOptions = React.useCallback(
       async ({ loadVariables, page, searchText = '' }) => {
         if (typeof loadOptions === 'function') {
+          if (blockLoad) return { options };
+
           const { options: fetchedOptions } = await loadOptions({ page, searchText, variables: loadVariables });
 
           let newOptions = [...options, ...fetchedOptions];
           if (page === 1) {
             newOptions = fetchedOptions;
           }
+          if (page > 1 && fetchedOptions.length === 0) {
+            setBlockLoad(true);
+          }
 
           return { options: newOptions };
         }
         return undefined;
       },
-      [loadOptions, options]
+      [blockLoad, loadOptions, options]
     );
     const optionsRecord = Loads.useLoads(cacheKey, getOptions, {
       debounce: 500,
@@ -411,6 +424,7 @@ const useProps = createHook<AutosuggestProps>(
     const handleChangeInput = React.useCallback(
       event => {
         const inputValue = event.target.value || '';
+        setBlockLoad(false);
         dispatch({ type: 'INPUT_CHANGE', automaticSelection, inputValue });
         filterOptions({ controlsVisibility: true, hideIfNoOptions: !restrictToOptions, searchText: inputValue });
       },
@@ -462,7 +476,6 @@ const useProps = createHook<AutosuggestProps>(
           dispatch({ type: 'KEY_ENTER', restrictToOptions });
           dropdownMenu.hide();
           if (highlightedIndex >= 0 || (automaticSelection && inputValue)) {
-            console.log('test');
             selectOption({ index: highlightedIndex });
           }
         }
@@ -504,10 +517,10 @@ const useProps = createHook<AutosuggestProps>(
     const handleScrollPopover = React.useCallback(
       event => {
         const target = event.currentTarget;
-        // TODO: test when at end of page count
         if (
           pagination &&
           !isLoadingMore &&
+          !blockLoad &&
           target.scrollHeight > target.offsetHeight &&
           target.scrollHeight - target.offsetHeight - target.scrollTop <= 200
         ) {
@@ -515,7 +528,7 @@ const useProps = createHook<AutosuggestProps>(
         }
         return;
       },
-      [isLoadingMore, pagination]
+      [blockLoad, isLoadingMore, pagination]
     );
 
     const handleCreate = React.useCallback(
@@ -559,26 +572,17 @@ const useProps = createHook<AutosuggestProps>(
         <AutosuggestContext.Provider value={context}>
           <Input
             {..._omit(dropdownMenuDisclosureProps, 'type', 'className', 'role')}
-            after={
-              inputValue && (
-                <Box display="flex" alignItems="center" justify-content="center" paddingY="minor-1" paddingX="minor-2">
-                  <Button.Close
-                    onClick={handleClear}
-                    iconProps={{ fontSize: '200' }}
-                    size="small"
-                    onMouseDown={e => e.preventDefault()}
-                  />
-                </Box>
-              )
-            }
+            after={inputValue && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
             aria-autocomplete="list"
             aria-activedescendant={_get(dropdownMenu, `items[${highlightedIndex}].id`)}
             disabled={disabled}
+            isLoading={isInputLoading}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
             onChange={handleChangeInput}
             onKeyDown={handleKeyDownInput}
             onFocus={handleFocusInput}
+            overrides={overrides}
             placeholder={placeholder}
             value={inputValue}
             {...inputProps}
@@ -593,6 +597,7 @@ const useProps = createHook<AutosuggestProps>(
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
             onScroll={handleScrollPopover}
+            overrides={overrides}
             role="listbox"
             hideOnClickOutside={false}
             unstable_autoFocusOnHide={false}
@@ -615,28 +620,31 @@ const useProps = createHook<AutosuggestProps>(
                       iconBefore={option.iconBefore}
                       iconBeforeProps={option.iconBeforeProps}
                       onClick={handleClickItem(index, option)}
+                      overrides={overrides}
                       {...itemProps}
                     >
                       <Option
                         label={option.label}
                         inputValue={inputValue}
                         option={option}
+                        overrides={overrides}
                         MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
                       />
                     </AutosuggestItem>
                   ))}
-                {isLoadingMore && <LoadingMore loadingText={loadingMoreText} />}
+                {isLoadingMore && <LoadingMore loadingText={loadingMoreText} overrides={overrides} />}
               </React.Fragment>
             ) : isLoading ? (
-              <Loading loadingText={loadingText} />
+              <Loading loadingText={loadingText} overrides={overrides} />
             ) : isError ? (
-              <Error errorText={errorText} />
+              <Error errorText={errorText} overrides={overrides} />
             ) : (
               <Empty
                 emptyText={emptyText}
                 inputValue={inputValue}
                 create={handleCreate}
                 itemProps={{ 'aria-selected': highlightedIndex === 0 }}
+                overrides={overrides}
               />
             )}
           </DropdownMenuPopover>
@@ -653,6 +661,7 @@ const useProps = createHook<AutosuggestProps>(
       loadingText: 'Loading...',
       loadingMoreText: 'Loading...',
       options: [],
+      renderClearButton: ClearButton,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
@@ -678,8 +687,41 @@ export const Autosuggest = createComponent<AutosuggestProps>(
 
 //////////////////////////////////////////////////////////////////
 
-function MatchedLabel(props: { label: string; inputValue: string }) {
-  const { label, inputValue, ...restProps } = props;
+function ClearButton(props: any) {
+  const { buttonProps, onClick, ...restProps } = props;
+
+  const { overrides, themeKey, themeKeyOverride } = React.useContext(AutosuggestContext);
+
+  const wrapperClassName = useClassName({
+    style: styles.AutosuggestClearButtonWrapper,
+    styleProps: props,
+    themeKey,
+    themeKeyOverride
+  });
+  const buttonClassName = useClassName({
+    style: styles.AutosuggestClearButton,
+    styleProps: props,
+    themeKey,
+    themeKeyOverride
+  });
+
+  return (
+    <Box className={wrapperClassName} overrides={overrides} {...restProps}>
+      <Button.Close
+        className={buttonClassName}
+        onClick={onClick}
+        iconProps={{ fontSize: '200' }}
+        size="small"
+        onMouseDown={e => e.preventDefault()}
+        overrides={overrides}
+        {...buttonProps}
+      />
+    </Box>
+  );
+}
+
+function MatchedLabel(props: { label: string; inputValue: string; overrides: any }) {
+  const { label, inputValue, overrides, ...restProps } = props;
 
   const escapeStringRegexp = string => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   const match = label.match(new RegExp(escapeStringRegexp(inputValue), 'i')) || [];
@@ -689,32 +731,48 @@ function MatchedLabel(props: { label: string; inputValue: string }) {
   const postText = label.slice(match.index + (match[0] || '').length);
 
   return highlightedText ? (
-    <Text {...restProps}>
-      {preText && <Text>{preText}</Text>}
-      {highlightedText && <Text fontWeight="semibold">{highlightedText}</Text>}
-      {postText && <Text>{postText}</Text>}
+    <Text overrides={overrides} {...restProps}>
+      {preText && <Text overrides={overrides}>{preText}</Text>}
+      {highlightedText && (
+        <Text fontWeight="semibold" overrides={overrides}>
+          {highlightedText}
+        </Text>
+      )}
+      {postText && <Text overrides={overrides}>{postText}</Text>}
     </Text>
   ) : (
-    <Text {...restProps}>{label}</Text>
+    <Text overrides={overrides} {...restProps}>
+      {label}
+    </Text>
   );
 }
 
-function Empty(props: { emptyText: string }) {
-  const { emptyText, ...restProps } = props;
-  return <AutosuggestStaticItem {...restProps}>{emptyText}</AutosuggestStaticItem>;
-}
-
-function Error(props: { errorText: string }) {
-  const { errorText, ...restProps } = props;
-  return <AutosuggestStaticItem {...restProps}>{errorText}</AutosuggestStaticItem>;
-}
-
-function Loading(props: { loadingText: string }) {
-  const { loadingText, ...restProps } = props;
+function Empty(props: { emptyText: string; overrides: any }) {
+  const { emptyText, overrides, ...restProps } = props;
   return (
-    <AutosuggestStaticItem display="flex" alignItems="center" {...restProps}>
-      <Spinner size="small" />
-      <Text marginLeft="major-1">{loadingText}</Text>
+    <AutosuggestStaticItem overrides={overrides} {...restProps}>
+      {emptyText}
+    </AutosuggestStaticItem>
+  );
+}
+
+function Error(props: { errorText: string; overrides: any }) {
+  const { errorText, overrides, ...restProps } = props;
+  return (
+    <AutosuggestStaticItem overrides={overrides} {...restProps}>
+      {errorText}
+    </AutosuggestStaticItem>
+  );
+}
+
+function Loading(props: { loadingText: string; overrides: any }) {
+  const { loadingText, overrides, ...restProps } = props;
+  return (
+    <AutosuggestStaticItem display="flex" alignItems="center" overrides={overrides} {...restProps}>
+      <Spinner size="small" overrides={overrides} />
+      <Text marginLeft="major-1" overrides={overrides}>
+        {loadingText}
+      </Text>
     </AutosuggestStaticItem>
   );
 }
