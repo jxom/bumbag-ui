@@ -93,12 +93,12 @@ const useProps = createHook<InputProps>(
       wrapElement: children => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (
-            <Box display="inline-flex" position="absolute" zIndex="3">
+            <Box display="inline-flex" position="absolute" zIndex="3" height="100%">
               {before}
             </Box>
           )}
           {after && (
-            <Box display="inline-flex" position="absolute" right="0" zIndex="3">
+            <Box display="inline-flex" position="absolute" right="0" zIndex="3" height="100%">
               {after}
             </Box>
           )}

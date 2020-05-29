@@ -1,5 +1,6 @@
 export * from './ActionButtons';
 export * from './Alert';
+export * from './Autosuggest';
 export * from './Avatar';
 export * from './Badge';
 export * from './Block';
