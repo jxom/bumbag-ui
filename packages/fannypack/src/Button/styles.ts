@@ -139,7 +139,7 @@ export const getSizeProperties = styleProps => {
     `,
     medium: css`
       & {
-        min-height: 2.75rem;
+        min-height: 3rem;
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
@@ -149,7 +149,7 @@ export const getSizeProperties = styleProps => {
     large: css`
       & {
         font-size: ${fontSize('300')(styleProps)}em;
-        min-height: 3rem;
+        min-height: 3.25rem;
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {

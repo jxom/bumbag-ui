@@ -7,6 +7,7 @@ describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         onChange={jest.fn()}
         options={[
           { key: 1, label: 'Apples', value: 'apples' },
@@ -24,6 +25,7 @@ describe('props', () => {
   it('should render correctly with CSS props', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         color="primary"
         onChange={jest.fn()}
         options={[
@@ -44,6 +46,7 @@ describe('variants', () => {
   it('css.root should render correctly', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         variant="test"
         onChange={jest.fn()}
         options={[
@@ -67,6 +70,7 @@ describe('overrides', () => {
   it('css.root should render correctly', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         overrides={{ Autosuggest: { css: { root: { backgroundColor: 'red' } } } }}
         onChange={jest.fn()}
         options={[
@@ -87,6 +91,7 @@ describe('theming', () => {
   it('css.root should render correctly', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         onChange={jest.fn()}
         options={[
           { key: 1, label: 'Apples', value: 'apples' },
@@ -109,6 +114,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
       <Autosuggest
+        dropdownMenuInitialState={{ baseId: 'test' }}
         onChange={jest.fn()}
         options={[
           { key: 1, label: 'Apples', value: 'apples' },
