@@ -82,3 +82,9 @@ export const AutosuggestInput = styleProps => cssClass`
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
+
+export const AutosuggestField = styleProps => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;

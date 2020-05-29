@@ -359,6 +359,23 @@ function Example() {
 }
 ```
 
+### Fields
+
+```jsx-live
+<AutosuggestField
+  label="Choose your fruit"
+  options={[
+    { key: 1, label: 'Apples', value: 'apples' },
+    { key: 2, label: 'Bananas', value: 'bananas' },
+    { key: 3, label: 'Oranges', value: 'oranges' },
+    { key: 4, label: 'Mangos', value: 'mangos' }
+  ]}
+  placeholder="Search for a fruit..."
+  value={{ label: '' }}
+/>
+```
+
+
 ## Props
 
 ### Autosuggest Props
@@ -632,6 +649,8 @@ function Example() {
 <Box marginBottom="major-4" />
 
 </details>
+
+### AutosuggestField Props
 
 
 ## Theming

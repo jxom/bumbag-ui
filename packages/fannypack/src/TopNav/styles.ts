@@ -51,7 +51,7 @@ export const TopNavItem = styleProps => cssClass`
 
   ${styleProps.variant === 'default' &&
     css`
-      min-height: 2.5rem;
+      min-height: 2.75rem;
     `}
 
   ${styleProps.variant === 'pill' &&

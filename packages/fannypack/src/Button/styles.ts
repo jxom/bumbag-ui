@@ -13,9 +13,9 @@ export const Button = styleProps => cssClass`
   cursor: pointer;
   display: inline-flex;
   font-weight: ${fontWeight('semibold')(styleProps)};
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   justify-content: center;
-  padding: 0 0.8rem;
+  padding: 0 ${space(4)(styleProps)}rem;
   text-decoration: none;
   hyphens: auto;
   transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
@@ -140,7 +140,7 @@ export const getSizeProperties = styleProps => {
     medium: css`
       & {
         min-height: 2.75rem;
-        padding: 0 ${space(4)(styleProps)}rem;
+        padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
         ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};

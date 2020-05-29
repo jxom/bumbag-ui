@@ -5,10 +5,10 @@ export const Tab = styleProps => cssClass`
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 2.5em;
+  height: 2.75em;
   justify-content: center;
   margin-bottom: -1px;
-  padding: 0 0.8rem;
+  padding: 0 1rem;
   transition: box-shadow 0.1s ease-in-out 0s, background-color 0.1s, color 0.1s;
 
   ${styleProps.disabled &&

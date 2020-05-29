@@ -1,0 +1,177 @@
+import * as React from 'react';
+import { Box as ReakitBox } from 'reakit';
+import _pick from 'lodash/pick';
+import _omit from 'lodash/omit';
+import _get from 'lodash/get';
+import _debounce from 'lodash/debounce';
+import ConditionalWrap from 'conditional-wrap';
+
+import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { Box, BoxProps } from '../Box';
+import { Group, GroupProps } from '../Group';
+import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
+
+import { Autosuggest, AutosuggestProps } from './Autosuggest';
+import * as styles from './styles';
+
+export type LocalAutosuggestFieldProps = {
+  /** Addon component to the input (before). Similar to the addon components in Input. */
+  addonBefore?: React.ReactElement<any>;
+  /** Addon component to the input (after). Similar to the addon components in Input. */
+  addonAfter?: React.ReactElement<any>;
+  /** Additional props for the Autosuggest component */
+  autosuggestProps?: Partial<AutosuggestProps>;
+  /** If addonBefore or addonAfter exists, then the addons will render vertically. */
+  orientation?: 'vertical' | 'horizontal';
+};
+export type AutosuggestFieldProps = BoxProps & FieldWrapperProps & AutosuggestProps & LocalAutosuggestFieldProps;
+
+const useProps = createHook<AutosuggestFieldProps>(
+  (props, { themeKey, themeKeyOverride }) => {
+    const {
+      addonAfter,
+      addonBefore,
+      automaticSelection,
+      autosuggestProps,
+      cacheKey,
+      children,
+      defaultValue,
+      defer,
+      description,
+      disabled,
+      errorText,
+      emptyText,
+      hint,
+      isLoading,
+      isOptional,
+      isRequired,
+      orientation,
+      label,
+      limit,
+      loadingText,
+      loadingMoreText,
+      loadOptions,
+      loadVariables,
+      options,
+      pagination,
+      placeholder,
+      restrictToOptions,
+      renderError,
+      renderClearButton,
+      renderEmpty,
+      renderLoading,
+      renderLoadingMore,
+      renderOption,
+      clearButtonProps,
+      inputProps,
+      itemProps,
+      popoverProps,
+      dropdownMenuInitialState,
+      state,
+      tooltip,
+      tooltipTriggerComponent,
+      value,
+      onChange,
+      overrides,
+      validationText,
+      ...restProps
+    } = props;
+
+    const boxProps = Box.useProps(restProps);
+
+    const className = useClassName({
+      style: styles.AutosuggestField,
+      styleProps: props,
+      themeKey,
+      themeKeyOverride,
+      prevClassName: boxProps.className
+    });
+
+    return {
+      ...boxProps,
+      className,
+      children: (
+        <FieldWrapper
+          description={description}
+          hint={hint}
+          isOptional={isOptional}
+          isRequired={isRequired}
+          label={label}
+          overrides={overrides}
+          state={state}
+          tooltip={tooltip}
+          tooltipTriggerComponent={tooltipTriggerComponent}
+          validationText={validationText}
+        >
+          {({ elementProps }) => (
+            <ConditionalWrap
+              condition={addonBefore || addonAfter}
+              wrap={(children: React.ReactNode) => (
+                <Group orientation={orientation} overrides={overrides}>
+                  {children}
+                </Group>
+              )}
+            >
+              {addonBefore}
+              <Autosuggest
+                flex={addonBefore || addonAfter ? '1' : undefined}
+                automaticSelection={automaticSelection}
+                cacheKey={cacheKey}
+                defer={defer}
+                disabled={disabled}
+                isLoading={isLoading}
+                limit={limit}
+                loadOptions={loadOptions}
+                loadVariables={loadVariables}
+                options={options}
+                onChange={onChange}
+                pagination={pagination}
+                placeholder={placeholder}
+                restrictToOptions={restrictToOptions}
+                value={value}
+                errorText={errorText}
+                emptyText={emptyText}
+                loadingText={loadingText}
+                loadingMoreText={loadingMoreText}
+                renderClearButton={renderClearButton}
+                renderError={renderError}
+                renderEmpty={renderEmpty}
+                renderLoading={renderLoading}
+                renderLoadingMore={renderLoadingMore}
+                renderOption={renderOption}
+                clearButtonProps={clearButtonProps}
+                inputProps={{ isRequired, state, ...inputProps }}
+                itemProps={itemProps}
+                popoverProps={popoverProps}
+                dropdownMenuInitialState={dropdownMenuInitialState}
+                overrides={overrides}
+                {...elementProps}
+                {...autosuggestProps}
+              />
+              {addonAfter}
+            </ConditionalWrap>
+          )}
+        </FieldWrapper>
+      )
+    };
+  },
+  { themeKey: 'AutosuggestField' }
+);
+
+export const AutosuggestField = createComponent<AutosuggestFieldProps>(
+  props => {
+    const AutosuggestFieldProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: AutosuggestFieldProps
+    });
+  },
+  {
+    attach: {
+      useProps
+    },
+    themeKey: 'AutosuggestField'
+  }
+);

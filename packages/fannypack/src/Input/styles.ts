@@ -17,7 +17,7 @@ export const Input = styleProps => cssClass`
   -webkit-appearance: none;
   border: 1px solid ${palette('white900')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
-  height: 2.5em;
+  height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
@@ -86,7 +86,7 @@ export const Input = styleProps => cssClass`
 export const InputIcon = styleProps => cssClass`
   && {
     fill: ${palette('text100')(styleProps)};
-    height: 2.5em;
+    height: 2.75em;
     margin: 0 0.75em;
     top: 0;
 
@@ -100,7 +100,7 @@ export const InputSpinner = styleProps => cssClass`
     align-items: center;
     display: flex;
     position: absolute;
-    height: 2.5em;
+    height: 2.75em;
     margin: 0 0.75em;
     top: 0;
     right: 0;
