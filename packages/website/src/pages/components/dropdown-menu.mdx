@@ -94,7 +94,7 @@ import { DropdownMenu } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">content</Code>** <Code fontSize="150" palette="primary">any</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">menu</Code>** <Code fontSize="150" palette="primary">any</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Box marginBottom="major-4" />
 
@@ -166,6 +166,10 @@ import { DropdownMenu } from 'fannypack';
 
 <!-- Automatically generated -->
 
+**<Code marginRight="major-1">isTabbable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
@@ -178,19 +182,30 @@ Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+
+Changes the `visible` state to `false`
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
-If `true`, `animating` will be set to `true` when `visible` changes.
+If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
-If it's a number, `stopAnimation` will be called automatically after
-given milliseconds.
+If `animated` is set to a `number`, `stopAnimation` will be called only
+after the same number of milliseconds have passed.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+
+Whether it's animating or not.
 
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
-It's called after given milliseconds if `animated` is a number.
 
 <Box marginBottom="major-4" />
 
@@ -208,18 +223,6 @@ by default.
 **<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code>
 
 Sets `modal`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
-
-Changes the `visible` state to `false`
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">id</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-Same as the HTML attribute.
 
 <Box marginBottom="major-4" />
 
@@ -283,17 +286,17 @@ similarly to `readOnly` on form elements. In this case, only
   | "left"
   | "right"
   | "top"
-  | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
-  | "top-end"
-  | "right-end"
-  | "bottom-end"
-  | "left-end"
   | "auto-start"
   | "auto"
-  | "auto-end"`}
+  | "auto-end"
+  | "top-start"
+  | "top-end"
+  | "right-start"
+  | "right-end"
+  | "bottom-end"
+  | "bottom-start"
+  | "left-end"
+  | "left-start"`}
 </Code>
 
 Actual `placement`.
@@ -313,19 +316,6 @@ If enabled, the composite element will act as an
 container instead of
 [roving tabindex](https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex).
 DOM focus will remain on the composite while its items receive virtual focus.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code>
-
-The current focused item `id`.
-
-   - `undefined` will automatically focus the first enabled composite item.
-   - `null` will focus the composite container and users will be able to
-navigate out of it using arrow keys.
-   - If `currentId` is initially set to `null`, the composite element
-itself will have focus and users will be able to navigate to it using
-arrow keys.
 
 <Box marginBottom="major-4" />
 
@@ -350,6 +340,27 @@ Stores the number of moves that have been performed by calling `move`,
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">currentId</Code>** <Code fontSize="150" palette="primary">string</Code>
+
+The current focused item `id`.
+
+   - `undefined` will automatically focus the first enabled composite item.
+   - `null` will focus the composite container and users will be able to
+navigate out of it using arrow keys.
+   - If `currentId` is initially set to `null`, the composite element
+itself will have focus and users will be able to navigate to it using
+arrow keys.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">groups</Code>** <Code fontSize="150" palette="primary">Group[]</Code>
+
+Lists all the composite groups with their `id` and DOM `ref`. This state
+is automatically updated when `registerGroup` and `unregisterGroup` are
+called.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">wrap</Code>** <Code fontSize="150" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 If enabled, moving to the next item from the last one in a row or column
@@ -364,11 +375,9 @@ column and vice-versa.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">groups</Code>** <Code fontSize="150" palette="primary">Group[]</Code>
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-Lists all the composite groups with their `id` and DOM `ref`. This state
-is automatically updated when `registerGroup` and `unregisterGroup` are
-called.
+Moves focus to a given item ID.
 
 <Box marginBottom="major-4" />
 
@@ -398,12 +407,6 @@ Moves focus to the last item.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Moves focus to a given item ID.
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 Defines the orientation of the composite widget. If the composite has a
@@ -418,17 +421,17 @@ It doesn't have any effect on two-dimensional composites.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to a given item ID.
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">items</Code>** <Code fontSize="150" palette="primary">Item[]</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Lists all the composite items with their `id`, DOM `ref`, `disabled` state
 and `groupId` if any. This state is automatically updated when
 `registerItem` and `unregisterItem` are called.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">move</Code>** <Code fontSize="150" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Moves focus to a given item ID.
 
 <Box marginBottom="major-4" />
 
@@ -545,10 +548,10 @@ Icon that appears on the right side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 774 more ...;
+    label?:...`}
 </Code>
 
 <Box marginBottom="major-4" />
@@ -569,11 +572,15 @@ Icon that appears on the left side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  unstable_system?: unknown;
-  id?: string;
   children?: string | number | boolean | {
-     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNod...`}
+     | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<any, any, any>)> | ... 47 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
+    ... 774 more ...;
+    label?:...`}
 </Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isTabbable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 

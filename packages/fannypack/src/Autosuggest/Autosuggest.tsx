@@ -18,12 +18,15 @@ import {
   DropdownMenuItemProps,
   DropdownMenuInitialState
 } from '../DropdownMenu';
-import { Spinner, SpinnerProps } from '../Spinner';
-import { Text, TextProps } from '../Text';
+import { Spinner } from '../Spinner';
+import { Text } from '../Text';
 
 import { AutosuggestItem } from './AutosuggestItem';
 import { AutosuggestStaticItem } from './AutosuggestStaticItem';
 import * as styles from './styles';
+
+type Option = { key: number | string; label: string; value: any };
+type Options = Array<Option>;
 
 export type LocalAutosuggestProps = {
   automaticSelection?: boolean;
@@ -32,14 +35,14 @@ export type LocalAutosuggestProps = {
   disabled?: boolean;
   isLoading?: boolean;
   limit?: number;
-  loadOptions?: any;
-  loadVariables?: any;
-  options?: any;
-  onChange: any;
+  loadOptions?: (options: { page?: number; searchText?: string; variables?: any }) => Promise<{ options: Options }>;
+  loadVariables?: { [key: string]: any };
+  options?: Options;
+  onChange: (Option) => void;
   pagination?: boolean;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
-  value: any;
+  value: Partial<Option>;
 
   errorText?: string;
   emptyText?: string;
@@ -261,12 +264,19 @@ const useProps = createHook<AutosuggestProps>(
       themeKeyOverride,
       prevClassName: boxProps.className
     });
-    const dropdownMenuPopoverClassname = useClassName({
+    const dropdownMenuPopoverClassName = useClassName({
       style: styles.AutosuggestPopover,
       styleProps: props,
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Popover'
+    });
+    const inputClassName = useClassName({
+      style: styles.AutosuggestInput,
+      styleProps: props,
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'Input'
     });
 
     //////////////////////////////////////////////////
@@ -554,10 +564,11 @@ const useProps = createHook<AutosuggestProps>(
 
     const context = React.useMemo(
       () => ({
+        overrides,
         themeKey,
         themeKeyOverride
       }),
-      [themeKey, themeKeyOverride]
+      [overrides, themeKey, themeKeyOverride]
     );
 
     //////////////////////////////////////////////////
@@ -575,6 +586,7 @@ const useProps = createHook<AutosuggestProps>(
             after={inputValue && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
             aria-autocomplete="list"
             aria-activedescendant={_get(dropdownMenu, `items[${highlightedIndex}].id`)}
+            className={inputClassName}
             disabled={disabled}
             isLoading={isInputLoading}
             onBlur={handleBlurInput}
@@ -591,7 +603,7 @@ const useProps = createHook<AutosuggestProps>(
             {...dropdownMenu}
             ref={popoverRef}
             use="ul"
-            className={dropdownMenuPopoverClassname}
+            className={dropdownMenuPopoverClassName}
             isTabbable={false}
             onMouseDown={e => e.preventDefault()}
             onMouseEnter={handleMouseEnterPopover}
@@ -694,15 +706,17 @@ function ClearButton(props: any) {
 
   const wrapperClassName = useClassName({
     style: styles.AutosuggestClearButtonWrapper,
-    styleProps: props,
+    styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride
+    themeKeyOverride,
+    themeKeySuffix: 'ClearButtonWrapper'
   });
   const buttonClassName = useClassName({
     style: styles.AutosuggestClearButton,
-    styleProps: props,
+    styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride
+    themeKeyOverride,
+    themeKeySuffix: 'ClearButton'
   });
 
   return (
@@ -721,7 +735,16 @@ function ClearButton(props: any) {
 }
 
 function MatchedLabel(props: { label: string; inputValue: string; overrides: any }) {
-  const { label, inputValue, overrides, ...restProps } = props;
+  const { label, inputValue, ...restProps } = props;
+
+  const { overrides, themeKey, themeKeyOverride } = React.useContext(AutosuggestContext);
+  const className = useClassName({
+    style: styles.AutosuggestItemText,
+    styleProps: props,
+    themeKey,
+    themeKeyOverride,
+    themeKeySuffix: 'ItemText'
+  });
 
   const escapeStringRegexp = string => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   const match = label.match(new RegExp(escapeStringRegexp(inputValue), 'i')) || [];
@@ -731,7 +754,7 @@ function MatchedLabel(props: { label: string; inputValue: string; overrides: any
   const postText = label.slice(match.index + (match[0] || '').length);
 
   return highlightedText ? (
-    <Text overrides={overrides} {...restProps}>
+    <Text className={className} overrides={overrides} {...restProps}>
       {preText && <Text overrides={overrides}>{preText}</Text>}
       {highlightedText && (
         <Text fontWeight="semibold" overrides={overrides}>
@@ -741,7 +764,7 @@ function MatchedLabel(props: { label: string; inputValue: string; overrides: any
       {postText && <Text overrides={overrides}>{postText}</Text>}
     </Text>
   ) : (
-    <Text overrides={overrides} {...restProps}>
+    <Text className={className} overrides={overrides} {...restProps}>
       {label}
     </Text>
   );

@@ -2,6 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 import { ActionButtonsProps } from '../ActionButtons';
 import { AlertProps } from '../Alert';
+import { AutosuggestProps } from '../Autosuggest';
 import { AvatarProps } from '../Avatar';
 import { BadgeProps } from '../Badge';
 import { ButtonProps } from '../Button';
@@ -195,6 +196,48 @@ export type AlertThemeConfig = {
   };
   defaultProps?: Partial<AlertProps>;
   variants?: Variant<AlertThemeConfig>;
+};
+export type AutosuggestThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  StaticItem?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ClearButton?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ClearButtonWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Input?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Popover?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ItemText?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<AutosuggestProps>;
+  variants?: Variant<AutosuggestThemeConfig>;
 };
 export type AvatarThemeConfig = {
   css?: {
@@ -1571,6 +1614,7 @@ export type ThemeConfig = {
 
   ActionButtons?: ActionButtonsThemeConfig;
   Alert?: AlertThemeConfig;
+  Autosuggest?: AutosuggestThemeConfig;
   Avatar?: AvatarThemeConfig;
   Badge?: BadgeThemeConfig;
   Breadcrumb?: BreadcrumbThemeConfig;

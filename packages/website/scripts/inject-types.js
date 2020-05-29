@@ -330,5 +330,5 @@ function extractTypes(config) {
 
 extractTypes({
   libPaths: [path.join(__dirname, '../../fannypack'), path.join(__dirname, '../../fannypack-addon-highlighted-code')],
-  docsPath: path.join(__dirname, '../')
+  docsPath: path.join(__dirname, '../src/')
 });

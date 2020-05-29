@@ -40,6 +40,12 @@ export const AutosuggestItem = styleProps => cssClass`
   }
 `;
 
+export const AutosuggestItemText = styleProps => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
 export const AutosuggestStaticItem = styleProps => cssClass`
   padding: ${space(1.5)(styleProps)}rem ${space(4)(styleProps)}rem;
   width: 100%;
@@ -66,6 +72,12 @@ export const AutosuggestClearButton = styleProps => cssClass`
   justify-content: center;
   padding: ${space(1)(styleProps)}rem ${space(2)(styleProps)}rem;
 
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const AutosuggestInput = styleProps => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

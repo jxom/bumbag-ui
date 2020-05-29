@@ -65,7 +65,7 @@ import { PageContent } from 'fannypack';
   suppressHydrationWarning?: boolean;
   accessKey?: string;
   className?: string;
-  ... 765 more ...;
+  ... 766 more ...;
   themeKey?: string;
 }`}
 </Code>
@@ -95,23 +95,6 @@ import { PageContent } from 'fannypack';
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">isLayout</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">overrides</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  css?: {
-    root?: any;
-    layout?: any;
-    fluid?: any
-  }; tabletMargin?: ThemeAttribute<number>;
-  fluidMargin?: ThemeAttribute<number>;
-  defaultProps?: Partial<ContainerProps>;
-  variants?: Variant<ContainerThemeConfig>;
-}`}
-</Code>
 
 <Box marginBottom="major-4" />
 
@@ -166,6 +149,23 @@ import { PageContent } from 'fannypack';
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 77 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
 
 <Box marginBottom="major-4" />
 
