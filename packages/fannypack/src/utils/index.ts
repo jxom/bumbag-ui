@@ -16,5 +16,6 @@ export * from './theme';
 export * from './uniqueId';
 export * from './useBreakpoint';
 export * from './useClassName';
+export * from './useDebounce';
 export * from './useStyle';
 export * from './useTheme';

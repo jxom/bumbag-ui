@@ -6,7 +6,7 @@ import _get from 'lodash/get';
 import _debounce from 'lodash/debounce';
 import * as Loads from 'react-loads-next';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, useDebounce } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Input, InputProps } from '../Input';
@@ -296,6 +296,8 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
+    const debouncedInputValue = useDebounce(inputValue, 500);
+
     const getOptions = React.useCallback(
       async ({ loadVariables, page, searchText = '' }) => {
         if (typeof loadOptions === 'function') {
@@ -318,10 +320,8 @@ const useProps = createHook<AutosuggestProps>(
       [blockLoad, loadOptions, options]
     );
     const optionsRecord = Loads.useLoads(cacheKey, getOptions, {
-      debounce: 500,
-      debounceCache: false,
       defer,
-      variables: [{ loadVariables, page, searchText: inputValue }]
+      variables: [{ loadVariables, page, searchText: debouncedInputValue }]
     });
 
     //////////////////////////////////////////////////
