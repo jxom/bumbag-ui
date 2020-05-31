@@ -1,4 +1,5 @@
 import * as React from 'react';
+import _get from 'lodash/get';
 
 import { bindFns } from './bindFns';
 
@@ -16,9 +17,9 @@ export function formikField(
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
 
-    const isTouched = form?.touched?.[field.name];
-    const error = form?.errors?.[field.name];
-    const value = form?.values?.[field.name];
+    const isTouched = _get(form, `touched.${field.name}`);
+    const error = _get(form, `errors.${field.name}`);
+    const value = _get(form, `values.${field.name}`);
 
     if (hasFieldWrapper) {
       let state = isTouched && error ? 'danger' : undefined;
