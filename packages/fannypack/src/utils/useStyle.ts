@@ -109,9 +109,7 @@ function getFontWeightValue({ theme, value }) {
 }
 
 function getStyleFromProps(props, theme) {
-  const cssProps = pickCSSProps(props);
-
-  let style = { ...cssProps };
+  let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
     styleEntries = styleEntries.reduce((prevStyle, [attribute, value]) => {
@@ -186,5 +184,6 @@ function getStyleFromProps(props, theme) {
 
 export function useStyle(props) {
   const theme = React.useContext(ThemeContext);
-  return getStyleFromProps(props, theme);
+  const cssProps = pickCSSProps(props);
+  return React.useMemo(() => getStyleFromProps(cssProps, theme), [theme, ...Object.values(cssProps)]);
 }
