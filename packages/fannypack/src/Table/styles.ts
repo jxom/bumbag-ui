@@ -1,35 +1,42 @@
 import { css, cssClass } from '../styled';
 import { altitude, breakpoint, fontSize, fontWeight, palette, space, theme, borderRadius } from '../utils';
 
-export const Table = styleProps => cssClass`
+export const Table = (styleProps) => cssClass`
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
   width: 100%;
   color: ${palette('text200')(styleProps)};
 
-  ${styleProps.hasDividers &&
+  ${
+    styleProps.hasDividers &&
     css`
       & tbody tr:not(:last-child) {
         border-bottom: 1px solid ${palette(styleProps.dividerColor, styleProps.dividerColor)(styleProps)};
       }
-    `}
+    `
+  }
 
-  ${styleProps.isHoverable &&
+  ${
+    styleProps.isHoverable &&
     css`
       & tbody tr:hover {
         background-color: ${palette(styleProps.hoverColor, styleProps.hoverColor)(styleProps)};
       }
-    `}
+    `
+  }
 
-  ${styleProps.isStriped &&
+  ${
+    styleProps.isStriped &&
     css`
       & tbody tr:nth-child(even) {
         background-color: ${palette(styleProps.stripeColor, styleProps.stripeColor)(styleProps)};
       }
-    `}
+    `
+  }
 
-  ${styleProps.isResponsive &&
+  ${
+    styleProps.isResponsive &&
     css`
       ${breakpoint(
         `max-${styleProps.responsiveBreakpoint}`,
@@ -68,33 +75,36 @@ export const Table = styleProps => cssClass`
           }
         `
       )(styleProps)};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TableHead = styleProps => cssClass`
+export const TableHead = (styleProps) => cssClass`
   border-bottom: 1px solid ${palette('white800')(styleProps)};
 
-  ${styleProps.tableVariant !== 'minimal' &&
+  ${
+    styleProps.tableVariant !== 'minimal' &&
     css`
       background-color: ${palette('white600')(styleProps)};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TableRow = styleProps => cssClass`
+export const TableRow = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TableHeadCell = styleProps => cssClass`
+export const TableHeadCell = (styleProps) => cssClass`
   padding: ${space(3)(styleProps)}rem ${space(4)(styleProps)}rem;
   vertical-align: middle;
   ${tableHeadCellText(styleProps)};
@@ -104,7 +114,7 @@ export const TableHeadCell = styleProps => cssClass`
   }
 `;
 
-export const TableCell = styleProps => cssClass`
+export const TableCell = (styleProps) => cssClass`
   padding: ${space(3)(styleProps)}rem ${space(4)(styleProps)}rem;
 
   & {
@@ -112,38 +122,44 @@ export const TableCell = styleProps => cssClass`
   }
 `;
 
-export const TableFoot = styleProps => cssClass`
+export const TableFoot = (styleProps) => cssClass`
   border-top: 1px solid ${palette('white800')(styleProps)};
 
-  ${styleProps.tableVariant !== 'minimal' &&
+  ${
+    styleProps.tableVariant !== 'minimal' &&
     css`
       background-color: ${palette('white600')(styleProps)};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TableBody = styleProps => cssClass`
+export const TableBody = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TableWrapper = styleProps => cssClass`
+export const TableWrapper = (styleProps) => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
   overflow: hidden;
 
-  ${styleProps.variant === 'default' &&
+  ${
+    styleProps.variant === 'default' &&
     css`
       border: 1px solid ${palette('white800')(styleProps)};
-    `}
+    `
+  }
 
-  ${styleProps.variant === 'shadowed' &&
+  ${
+    styleProps.variant === 'shadowed' &&
     css`
       ${altitude('100')(styleProps)};
-    `}
+    `
+  }
 
 
   & {
@@ -151,7 +167,7 @@ export const TableWrapper = styleProps => cssClass`
   }
 `;
 
-export const tableHeadCellText = styleProps => css`
+export const tableHeadCellText = (styleProps) => css`
   color: ${palette('text100')(styleProps)};
   font-weight: ${fontWeight('semibold')(styleProps)};
   font-size: ${fontSize('100')(styleProps)}rem;

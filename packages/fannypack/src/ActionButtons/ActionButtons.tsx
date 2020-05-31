@@ -55,7 +55,7 @@ const useProps = createHook<ActionButtonsProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: setProps.className
+      prevClassName: setProps.className,
     });
 
     const children = (
@@ -98,24 +98,24 @@ const useProps = createHook<ActionButtonsProps>(
       palette: 'primary',
       submitProps: {},
       submitText: 'Submit',
-      type: 'submit'
+      type: 'submit',
     },
-    themeKey: 'ActionButtons'
+    themeKey: 'ActionButtons',
   }
 );
 
 export const ActionButtons = createComponent<ActionButtonsProps>(
-  props => {
+  (props) => {
     const actionButtonsProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: actionButtonsProps
+      htmlProps: actionButtonsProps,
     });
   },
   {
     attach: { useProps },
-    themeKey: 'ActionButtons'
+    themeKey: 'ActionButtons',
   }
 );

@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { palette, fontSize, space, theme } from '../utils';
 
-export const Rating = styleProps => cssClass`
+export const Rating = (styleProps) => cssClass`
   align-items: center;
   display: flex;
 
@@ -10,14 +10,15 @@ export const Rating = styleProps => cssClass`
   }
 `;
 
-export const RatingItem = styleProps => cssClass`
+export const RatingItem = (styleProps) => cssClass`
   color: ${
     styleProps.isActive ? palette(styleProps.color, styleProps.color)(styleProps) : palette('white900')(styleProps)
   };
   display: inline-flex;
   transition: color 0.1s, transform 0.2s;
 
-  ${!styleProps.disabled &&
+  ${
+    !styleProps.disabled &&
     css`
       &:hover {
         transform: scale(1.2);
@@ -25,13 +26,16 @@ export const RatingItem = styleProps => cssClass`
       &:hover:active {
         transform: scale(1.1);
       }
-    `}
+    `
+  }
 
-  ${styleProps.disabled &&
+  ${
+    styleProps.disabled &&
     css`
       cursor: not-allowed;
       opacity: 0.5;
-    `}
+    `
+  }
 
   &:not(:first-of-type) {
     margin-left: ${space(1)(styleProps)}rem;
@@ -73,7 +77,7 @@ function getSizeAttributes(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return sizeAttributes[styleProps.size || 'default'];
 }

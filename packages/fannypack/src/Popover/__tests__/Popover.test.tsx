@@ -111,7 +111,7 @@ describe('composition', () => {
         const popover = Popover.useState({ baseId: 'test' });
         return (
           <Popover {...popover}>
-            {popoverProps => (
+            {(popoverProps) => (
               <Box {...popoverProps} aria-label="test">
                 Hello world
               </Box>
@@ -136,7 +136,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Popover: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -151,7 +151,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Arrow: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Arrow: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -166,7 +166,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -181,7 +181,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Close: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Close: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -196,7 +196,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Header: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Header: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -211,7 +211,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Title: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Title: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -226,7 +226,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Footer: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Popover: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -244,7 +244,7 @@ describe('theming', () => {
           );
         }
         const { baseElement } = render(<Component />, {
-          theme: { Popover: { css: { placements: { [placement]: { backgroundColor: 'red' } } } } }
+          theme: { Popover: { css: { placements: { [placement]: { backgroundColor: 'red' } } } } },
         });
         expect(baseElement).toMatchSnapshot();
       });

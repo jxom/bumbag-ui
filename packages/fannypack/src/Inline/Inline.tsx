@@ -18,7 +18,7 @@ const useProps = createHook<InlineProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,12 +27,12 @@ const useProps = createHook<InlineProps>(
 );
 
 export const Inline = createComponent<InlineProps>(
-  props => {
+  (props) => {
     const inlineProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: inlineProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Inline'
+    themeKey: 'Inline',
   }
 );

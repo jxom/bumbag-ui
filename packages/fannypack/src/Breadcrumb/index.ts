@@ -5,6 +5,6 @@ export * from './Breadcrumb';
 export const Breadcrumb = Object.assign(_Breadcrumb, {
   Item: BreadcrumbItem,
   Separator: BreadcrumbSeparator,
-  Link: BreadcrumbLink
+  Link: BreadcrumbLink,
 });
 export { styles as breadcrumbStyles };

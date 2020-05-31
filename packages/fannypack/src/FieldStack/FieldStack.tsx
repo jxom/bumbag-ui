@@ -17,7 +17,7 @@ const useProps = createHook<FieldStackProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: stackProps.className
+      prevClassName: stackProps.className,
     });
 
     return { ...stackProps, className };
@@ -26,14 +26,14 @@ const useProps = createHook<FieldStackProps>(
 );
 
 export const FieldStack = createComponent<FieldStackProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'FieldStack'
+    themeKey: 'FieldStack',
   }
 );

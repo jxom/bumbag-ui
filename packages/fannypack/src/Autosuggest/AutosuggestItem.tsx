@@ -18,7 +18,7 @@ const useProps = createHook<AutosuggestItemProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: dropdownMenuItemProps.className
+      prevClassName: dropdownMenuItemProps.className,
     });
 
     return { ...dropdownMenuItemProps, className };
@@ -27,17 +27,17 @@ const useProps = createHook<AutosuggestItemProps>(
 );
 
 export const AutosuggestItem = createComponent<AutosuggestItemProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'li'
+      use: 'li',
     },
-    themeKey: 'Autosuggest.Item'
+    themeKey: 'Autosuggest.Item',
   }
 );

@@ -23,29 +23,29 @@ const useProps = createHook<TopNavSectionProps>(
       styleProps: { ...props, overrides: { ...topNavOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: listProps.className
+      prevClassName: listProps.className,
     });
 
     return {
       ...listProps,
-      className
+      className,
     };
   },
   { themeKey: 'TopNav.Section' }
 );
 
 export const TopNavSection = createComponent<TopNavSectionProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'ul'
+      use: 'ul',
     },
-    themeKey: 'TopNav.Section'
+    themeKey: 'TopNav.Section',
   }
 );

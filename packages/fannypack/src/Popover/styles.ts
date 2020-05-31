@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { altitude, palette, space, theme, borderRadius, fontWeight } from '../utils';
 import { getAnimatedAttributes } from '../Modal/styles';
 
-export const Popover = styleProps => cssClass`
+export const Popover = (styleProps) => cssClass`
   background-color: white;
   border-radius: ${borderRadius('default')(styleProps)};
   max-width: 350px;
@@ -22,7 +22,7 @@ export const Popover = styleProps => cssClass`
   }
 `;
 
-export const PopoverContent = styleProps => cssClass`
+export const PopoverContent = (styleProps) => cssClass`
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
   & {
@@ -30,7 +30,7 @@ export const PopoverContent = styleProps => cssClass`
   }
 `;
 
-export const PopoverHeader = styleProps => cssClass`
+export const PopoverHeader = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ export const PopoverHeader = styleProps => cssClass`
   }
 `;
 
-export const PopoverTitle = styleProps => cssClass`
+export const PopoverTitle = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
@@ -50,37 +50,41 @@ export const PopoverTitle = styleProps => cssClass`
   }
 `;
 
-export const PopoverFooter = styleProps => cssClass`
+export const PopoverFooter = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid ${palette('white800')(styleProps)};
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
-  ${styleProps.showActionButtons &&
+  ${
+    styleProps.showActionButtons &&
     styleProps.footer &&
     css`
       justify-content: space-between;
-    `};
+    `
+  };
 
-  ${styleProps.showActionButtons &&
+  ${
+    styleProps.showActionButtons &&
     !styleProps.footer &&
     css`
       justify-content: flex-end;
-    `};
+    `
+  };
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PopoverClose = styleProps => cssClass`
+export const PopoverClose = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PopoverBackdrop = styleProps => cssClass`
+export const PopoverBackdrop = (styleProps) => cssClass`
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -97,13 +101,13 @@ export const PopoverBackdrop = styleProps => cssClass`
   }
 `;
 
-export const PopoverDisclosure = styleProps => cssClass`
+export const PopoverDisclosure = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PopoverArrow = styleProps => cssClass`
+export const PopoverArrow = (styleProps) => cssClass`
   display: grid;
   overflow: hidden;
 
@@ -123,7 +127,7 @@ export const PopoverArrow = styleProps => cssClass`
   }
 `;
 
-export const getPlacementAttributes = styleProps => {
+export const getPlacementAttributes = (styleProps) => {
   const placementAttributes: { [key: string]: any } = {
     // @ts-ignore
     top: css`
@@ -133,7 +137,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -148,7 +152,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -163,7 +167,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'right',
         defaultExpand: 'right',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -178,7 +182,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'left',
         defaultExpand: 'left',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -193,7 +197,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -208,7 +212,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -223,7 +227,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -238,13 +242,13 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.placements.bottomStart`)(styleProps)};
       }
-    `
+    `,
   };
   return css`
     ${placementAttributes[styleProps.placement || 'center']};

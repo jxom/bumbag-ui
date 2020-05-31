@@ -32,7 +32,7 @@ describe('props', () => {
   });
 
   describe('types', () => {
-    ['number', 'tel', 'date', 'email', 'password', 'search', 'time', 'url'].forEach(type => {
+    ['number', 'tel', 'date', 'email', 'password', 'search', 'time', 'url'].forEach((type) => {
       it(`should render ${type} correctly`, () => {
         const { container } = render(<Input type={type} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('props', () => {
   });
 
   describe('sizes', () => {
-    ['small', 'medium', 'large'].forEach(size => {
+    ['small', 'medium', 'large'].forEach((size) => {
       it(`should render ${size} correctly`, () => {
         const { container } = render(<Input size={size as Size} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -50,7 +50,7 @@ describe('props', () => {
   });
 
   describe('states', () => {
-    ['danger', 'success', 'warning', 'primary'].forEach(state => {
+    ['danger', 'success', 'warning', 'primary'].forEach((state) => {
       it(`should render ${state} correctly`, () => {
         const { container } = render(<Input state={state} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -89,7 +89,7 @@ describe('theming', () => {
   it('Input.root should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Input: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -97,7 +97,7 @@ describe('theming', () => {
   it('Input.Wrapper.root should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Input: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -105,7 +105,7 @@ describe('theming', () => {
   it('Input.Spinner.root should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { Spinner: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Input: { Spinner: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -113,7 +113,7 @@ describe('theming', () => {
   it('Input.placeholder.root should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { css: { placeholder: { backgroundColor: 'red' } } } }
+      theme: { Input: { css: { placeholder: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -124,8 +124,8 @@ describe('defaultProps', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
       theme: {
-        Input: { defaultProps: { className: 'test', color: 'primary' } }
-      }
+        Input: { defaultProps: { className: 'test', color: 'primary' } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -134,8 +134,8 @@ describe('defaultProps', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
       theme: {
-        Input: { defaultProps: { isLoading: true } }
-      }
+        Input: { defaultProps: { isLoading: true } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

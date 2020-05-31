@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { theme } from '../utils';
 
-export const Text = styleProps => cssClass`
+export const Text = (styleProps) => cssClass`
   line-height: 1.2;
 
   abbr& {

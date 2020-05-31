@@ -24,7 +24,7 @@ const useProps = createHook<BadgeProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     React.useEffect(() => {
@@ -41,15 +41,15 @@ const useProps = createHook<BadgeProps>(
 );
 
 export const Badge = createComponent<BadgeProps>(
-  props => {
+  (props) => {
     const badgeProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: badgeProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {},
-    themeKey: 'Badge'
+    themeKey: 'Badge',
   }
 );

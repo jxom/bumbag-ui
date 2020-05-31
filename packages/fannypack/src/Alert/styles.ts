@@ -1,102 +1,120 @@
 import { css, cssClass, keyframes } from '../styled';
 import { altitude, borderRadius, palette, space, theme } from '../utils';
 
-export const Alert = styleProps => cssClass`
+export const Alert = (styleProps) => cssClass`
   background-color: white;
   border-radius: ${borderRadius('default')(styleProps)};
   position: relative;
   display: flex;
   overflow: hidden;
 
-  ${styleProps.variant === 'bordered' &&
+  ${
+    styleProps.variant === 'bordered' &&
     css`
       border: 1px solid ${palette('white800')(styleProps)};
-    `}
+    `
+  }
 
-  ${styleProps.variant === 'shadowed' &&
+  ${
+    styleProps.variant === 'shadowed' &&
     css`
       ${altitude('100')(styleProps)};
-    `}
+    `
+  }
 
-  ${styleProps.variant === 'tint' &&
+  ${
+    styleProps.variant === 'tint' &&
     css`
       background-color: ${palette(`${styleProps.type}Tint`)(styleProps)};
-    `}
+    `
+  }
 
   ${styleProps.variant === 'fill' && getFillAttributes(styleProps)}
 
-  ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
+  ${
+    (styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
     css`
       display: block;
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AlertContent = styleProps => cssClass`
-  ${styleProps.isInline &&
+export const AlertContent = (styleProps) => cssClass`
+  ${
+    styleProps.isInline &&
     css`
       display: flex;
 
       & > *:first-child {
         margin-right: ${space(1)(styleProps)}rem;
       }
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AlertWrapper = styleProps => cssClass`
+export const AlertWrapper = (styleProps) => cssClass`
   align-items: center;
   justify-content: space-between;
   display: flex;
   flex: 1;
   padding: ${space(1, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
 
-  ${styleProps.isInline &&
+  ${
+    styleProps.isInline &&
     css`
       display: flex;
 
       & > *:first-child {
         margin-right: ${space(1)(styleProps)}rem;
       }
-    `}
+    `
+  }
 
-  ${styleProps.accent === true &&
+  ${
+    styleProps.accent === true &&
     css`
       margin-left: ${styleProps.accentSize};
-    `}
-  ${styleProps.accent === 'bottom' &&
+    `
+  }
+  ${
+    styleProps.accent === 'bottom' &&
     css`
       margin-bottom: ${styleProps.accentSize};
-    `}
-  ${styleProps.accent === 'top' &&
+    `
+  }
+  ${
+    styleProps.accent === 'top' &&
     css`
       margin-top: ${styleProps.accentSize};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AlertTitle = styleProps => cssClass`
+export const AlertTitle = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AlertDescription = styleProps => cssClass`
+export const AlertDescription = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AlertIconWrapper = styleProps => cssClass`
+export const AlertIconWrapper = (styleProps) => cssClass`
   line-height: 0.9;
   margin-right: ${space(4)(styleProps)}rem;
 
@@ -105,12 +123,14 @@ export const AlertIconWrapper = styleProps => cssClass`
   }
 `;
 
-export const AlertCloseButton = styleProps => cssClass`
+export const AlertCloseButton = (styleProps) => cssClass`
   && {
-    ${styleProps.isInline &&
+    ${
+      styleProps.isInline &&
       css`
         padding: 0;
-      `}
+      `
+    }
   }
 
   & {
@@ -118,55 +138,67 @@ export const AlertCloseButton = styleProps => cssClass`
   }
 `;
 
-export const AlertAccent = styleProps => cssClass`
+export const AlertAccent = (styleProps) => cssClass`
   position: absolute;
   background-color: ${palette(styleProps.type)(styleProps)};
 
-  ${(styleProps.accent === true || styleProps.accent === 'bottom') &&
+  ${
+    (styleProps.accent === true || styleProps.accent === 'bottom') &&
     css`
       bottom: 0;
-    `}
+    `
+  }
 
-  ${styleProps.accent === 'top' &&
+  ${
+    styleProps.accent === 'top' &&
     css`
       top: 0;
-    `}
+    `
+  }
 
-  ${(styleProps.accent === true || styleProps.accent === 'left') &&
+  ${
+    (styleProps.accent === true || styleProps.accent === 'left') &&
     css`
       height: 100%;
       width: ${styleProps.accentSize};
-    `}
-  ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
+    `
+  }
+  ${
+    (styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
     css`
       width: 100%;
       height: ${styleProps.accentSize};
-    `}
+    `
+  }
 
-  ${styleProps.isBackground &&
+  ${
+    styleProps.isBackground &&
     css`
       opacity: 0.3;
       left: 0;
-    `}
+    `
+  }
 
-  ${!styleProps.isBackground &&
+  ${
+    !styleProps.isBackground &&
     styleProps.countdown &&
     css`
       ${styleProps.accent === true &&
-        css`
-          animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
-        `} ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
-        css`
-          animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
-        `};
-    `}
+      css`
+        animation: ${heightCountdown} ${styleProps.countdown}ms linear forwards;
+      `} ${(styleProps.accent === 'top' || styleProps.accent === 'bottom') &&
+      css`
+        animation: ${widthCountdown} ${styleProps.countdown}ms linear forwards;
+      `};
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const getFillAttributes = styleProps => css`
+export const getFillAttributes = (styleProps) => css`
   background-color: ${palette(styleProps.type)(styleProps)};
   color: ${palette(`${styleProps.type}Inverted`)(styleProps)};
 `;

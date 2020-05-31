@@ -1,5 +1,4 @@
 import * as React from 'react';
-import _get from 'lodash/get';
 
 import { bindFns } from './bindFns';
 
@@ -11,15 +10,15 @@ export function formikField(
     hasFieldWrapper = false,
     isCheckbox = false,
     isSelectMenu = false,
-    useValue = false
+    useValue = false,
   } = {}
 ) {
   return ({ field = {}, form = {}, ...props }: any) => {
     let overrideProps = {};
 
-    const isTouched = _get(form, `touched.${field.name}`);
-    const error = _get(form, `errors.${field.name}`);
-    const value = _get(form, `values.${field.name}`);
+    const isTouched = form?.touched?.[field.name];
+    const error = form?.errors?.[field.name];
+    const value = form?.values?.[field.name];
 
     if (hasFieldWrapper) {
       let state = isTouched && error ? 'danger' : undefined;
@@ -35,7 +34,7 @@ export function formikField(
       overrideProps = {
         ...overrideProps,
         state,
-        validationText
+        validationText,
       };
     }
 
@@ -65,7 +64,7 @@ export function formikField(
       ...overrideProps,
       onBlur: bindFns(disableBlurEvent ? () => {} : onBlur, props.onBlur),
       onChange: bindFns(onChange, props.onChange),
-      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus)
+      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus),
     };
 
     return <Component {...props} {...field} {...overrideProps} />;
@@ -80,7 +79,7 @@ export function reduxFormField(
     hasFieldWrapper = false,
     isCheckbox = false,
     isSelectMenu = false,
-    useValue = false
+    useValue = false,
   } = {}
 ) {
   return ({ input = {}, meta = {}, ...props }: any) => {
@@ -100,7 +99,7 @@ export function reduxFormField(
       overrideProps = {
         ...overrideProps,
         state,
-        validationText
+        validationText,
       };
     }
 
@@ -132,7 +131,7 @@ export function reduxFormField(
       ...overrideProps,
       onBlur: bindFns(disableBlurEvent ? () => {} : onBlur, props.onBlur),
       onChange: bindFns(onChange, props.onChange),
-      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus)
+      onFocus: bindFns(disableFocusEvent ? () => {} : onFocus, props.onFocus),
     };
 
     return <Component {...props} {...input} {...overrideProps} />;

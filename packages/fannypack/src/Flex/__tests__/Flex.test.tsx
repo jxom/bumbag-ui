@@ -36,7 +36,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Flex>{FlexProps => <div {...FlexProps}>Hello world</div>}</Flex>);
+      const { container } = render(<Flex>{(FlexProps) => <div {...FlexProps}>Hello world</div>}</Flex>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Flex.root should render correctly', () => {
     const { container } = render(<Flex>hello world</Flex>, {
-      theme: { Flex: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Flex: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Flex>hello world</Flex>, {
-      theme: { Flex: { defaultProps: { className: 'test' } } }
+      theme: { Flex: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

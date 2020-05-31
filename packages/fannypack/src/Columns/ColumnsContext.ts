@@ -8,5 +8,5 @@ export type ColumnsContextProps = {
 
 export const ColumnsContext = React.createContext({
   isGapless: false,
-  minBreakpoint: undefined
+  minBreakpoint: undefined,
 } as ColumnsContextProps);

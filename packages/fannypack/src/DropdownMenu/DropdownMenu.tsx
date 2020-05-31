@@ -22,7 +22,7 @@ export const DropdownMenuContext = React.createContext<{
   overrides: any;
 }>({
   dropdownMenu: {},
-  overrides: {}
+  overrides: {},
 });
 
 const useProps = createHook<DropdownMenuProps>(
@@ -34,7 +34,7 @@ const useProps = createHook<DropdownMenuProps>(
 
     const dropdownMenuButtonProps = DropdownMenuButton.useProps({
       ...dropdownMenu,
-      overrides
+      overrides,
     });
 
     const className = useClassName({
@@ -42,7 +42,7 @@ const useProps = createHook<DropdownMenuProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(() => ({ dropdownMenu, overrides }), [dropdownMenu, overrides]);
@@ -57,21 +57,21 @@ const useProps = createHook<DropdownMenuProps>(
             {menu}
           </DropdownMenuPopover>
         </DropdownMenuContext.Provider>
-      )
+      ),
     };
   },
   { themeKey: 'DropdownMenu' }
 );
 
 export const DropdownMenu = createComponent<DropdownMenuProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'DropdownMenu'
+    themeKey: 'DropdownMenu',
   }
 );

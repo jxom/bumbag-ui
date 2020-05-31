@@ -6,6 +6,6 @@ export const Alert = Object.assign(_Alert, {
   Icon: AlertIcon,
   Content: AlertContent,
   Description: AlertDescription,
-  Title: AlertTitle
+  Title: AlertTitle,
 });
 export { styles as alertStyles };

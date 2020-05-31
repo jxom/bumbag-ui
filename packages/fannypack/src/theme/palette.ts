@@ -1,5 +1,4 @@
 // @ts-ignore
-import _get from 'lodash/get';
 
 import { PaletteThemeConfig } from '../types';
 import { darken, lighten, shade, generateColorVariants, generateTextVariants } from '../utils';
@@ -11,11 +10,11 @@ const defaultPalette: { [key: string]: string } = {
   info: '#1e67d5',
   success: '#0a7d33',
   danger: '#da1717',
-  warning: '#ed9c22'
+  warning: '#ed9c22',
 };
 
 export default (overrides: PaletteThemeConfig) => ({
-  ...generateTextVariants(_get(overrides, 'text') || defaultPalette.text),
+  ...generateTextVariants(overrides?.text ?? defaultPalette.text),
 
   background: 'white',
 
@@ -45,31 +44,31 @@ export default (overrides: PaletteThemeConfig) => ({
 
   ...generateColorVariants({
     paletteKey: 'primary',
-    color: overrides.primary || defaultPalette.primary
+    color: overrides.primary || defaultPalette.primary,
   }),
   ...generateColorVariants({
     paletteKey: 'secondary',
-    color: overrides.secondary || defaultPalette.secondary
+    color: overrides.secondary || defaultPalette.secondary,
   }),
   ...generateColorVariants({
     paletteKey: 'info',
-    color: overrides.info || defaultPalette.info
+    color: overrides.info || defaultPalette.info,
   }),
   ...generateColorVariants({
     paletteKey: 'success',
-    color: overrides.success || defaultPalette.success
+    color: overrides.success || defaultPalette.success,
   }),
   ...generateColorVariants({
     paletteKey: 'danger',
-    color: overrides.danger || defaultPalette.danger
+    color: overrides.danger || defaultPalette.danger,
   }),
   ...generateColorVariants({
     paletteKey: 'warning',
     color: overrides.warning || defaultPalette.warning,
     paletteOverrides: ({ color }) => ({
-      warningTintInverted: shade(0.7, color)
-    })
+      warningTintInverted: shade(0.7, color),
+    }),
   }),
 
-  ...overrides
+  ...overrides,
 });

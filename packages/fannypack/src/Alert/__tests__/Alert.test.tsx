@@ -47,7 +47,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['info', 'success', 'danger', 'warning'].forEach(type => {
+  ['info', 'success', 'danger', 'warning'].forEach((type) => {
     it(`should render correctly for ${type} type`, () => {
       const { container } = render(<Alert type={type}>Hello world</Alert>);
       expect(container.firstChild).toMatchSnapshot();
@@ -90,7 +90,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Alert>{AlertProps => <div {...AlertProps}>Hello world</div>}</Alert>);
+      const { container } = render(<Alert>{(AlertProps) => <div {...AlertProps}>Hello world</div>}</Alert>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -149,42 +149,42 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Alert.root should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Alert: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Content.root should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Alert: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Title.root should render correctly', () => {
     const { container } = render(<Alert title="This is a title">hello world</Alert>, {
-      theme: { Alert: { Title: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Alert: { Title: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.Description.root should render correctly', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { Description: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Alert: { Description: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.IconWrapper.root should render correctly', () => {
     const { container } = render(<Alert hasIcon>hello world</Alert>, {
-      theme: { Alert: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Alert: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Alert.CloseButton.root should render correctly', () => {
     const { container } = render(<Alert showCloseButton>hello world</Alert>, {
-      theme: { Alert: { CloseButton: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Alert: { CloseButton: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -193,21 +193,21 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { defaultProps: { className: 'test' } } }
+      theme: { Alert: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for hasIcon', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { defaultProps: { hasIcon: true } } }
+      theme: { Alert: { defaultProps: { hasIcon: true } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for isInline', () => {
     const { container } = render(<Alert>hello world</Alert>, {
-      theme: { Alert: { defaultProps: { isInline: true } } }
+      theme: { Alert: { defaultProps: { isInline: true } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -19,7 +19,7 @@ const useProps = createHook<DrawerProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: modalProps.className
+      prevClassName: modalProps.className,
     });
 
     return { ...modalProps, className };
@@ -28,14 +28,14 @@ const useProps = createHook<DrawerProps>(
 );
 
 export const Drawer = createComponent<DrawerProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Drawer'
+    themeKey: 'Drawer',
   }
 );

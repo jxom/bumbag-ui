@@ -25,7 +25,7 @@ const useProps = createHook<ImageProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, children: undefined };
@@ -34,17 +34,17 @@ const useProps = createHook<ImageProps>(
 );
 
 export const Image = createComponent<ImageProps>(
-  props => {
+  (props) => {
     const imageProps = useProps(props);
     return createElement({ component: ReakitBox, use: props.use, htmlProps: imageProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'img'
+      use: 'img',
     },
-    themeKey: 'Image'
+    themeKey: 'Image',
   }
 );

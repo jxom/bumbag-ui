@@ -784,7 +784,7 @@ describe('theming', () => {
         </Table.Foot>
       </Table>,
       {
-        theme: { Table: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Table: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -1069,7 +1069,7 @@ describe('defaultProps', () => {
       </Table>,
       {
         // @ts-ignore
-        theme: { Table: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { Table: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

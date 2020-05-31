@@ -9,6 +9,6 @@ export const Tooltip = Object.assign(_Tooltip, {
   Content: TooltipContent,
   Reference: TooltipReference,
   useState: useTooltipState,
-  State: TooltipState
+  State: TooltipState,
 });
 export { styles as tooltipStyles };

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
+import { useClassName, createComponent, createElement, createHook, omit, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
@@ -64,28 +63,28 @@ const useProps = createHook<CheckboxProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const checkboxIconClassName = useClassName({
       style: styles.CheckboxIcon,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const hiddenCheckboxClassName = useClassName({
       style: styles.HiddenCheckbox,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'HiddenInput'
+      themeKeySuffix: 'HiddenInput',
     });
     const checkboxLabelClassName = useClassName({
       style: styles.CheckboxLabel,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Label'
+      themeKeySuffix: 'Label',
     });
 
     const labelId = useUniqueId('label');
@@ -128,25 +127,25 @@ const useProps = createHook<CheckboxProps>(
             </Label>
           )}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Checkbox' }
 );
 
 export const Checkbox = createComponent<CheckboxProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: Label
+      use: Label,
     },
-    themeKey: 'Checkbox'
+    themeKey: 'Checkbox',
   }
 );
 
@@ -195,7 +194,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -231,35 +230,35 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
               overrides={overrides}
               state={state}
               value={value}
-              {..._omit(elementProps, 'id')}
+              {...omit(elementProps, 'id')}
               {...checkboxProps}
               inputProps={{
                 id: elementProps.id,
-                ...checkboxProps.inputProps
+                ...checkboxProps.inputProps,
               }}
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { defaultProps: { checkboxProps: {} }, themeKey: 'CheckboxField' }
 );
 
 export const CheckboxField = createComponent<CheckboxFieldProps>(
-  props => {
+  (props) => {
     const checkboxFieldProps = useCheckboxFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: checkboxFieldProps
+      htmlProps: checkboxFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'CheckboxField'
+    themeKey: 'CheckboxField',
   }
 );

@@ -51,7 +51,7 @@ describe('composition', () => {
         const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Backdrop {...modal} modal={false}>
-            {modalBackdropProps => <Box {...modalBackdropProps}>Hello world</Box>}
+            {(modalBackdropProps) => <Box {...modalBackdropProps}>Hello world</Box>}
           </Modal.Backdrop>
         );
       }
@@ -91,7 +91,7 @@ describe('theming', () => {
       );
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Modal: { Backdrop: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -108,7 +108,7 @@ describe('defaultProps', () => {
       );
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Backdrop: { defaultProps: { className: 'red' } } } }
+      theme: { Modal: { Backdrop: { defaultProps: { className: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

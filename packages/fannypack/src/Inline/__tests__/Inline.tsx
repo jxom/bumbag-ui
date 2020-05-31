@@ -36,7 +36,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Inline>{InlineProps => <div {...InlineProps}>Hello world</div>}</Inline>);
+      const { container } = render(<Inline>{(InlineProps) => <div {...InlineProps}>Hello world</div>}</Inline>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Inline.root should render correctly', () => {
     const { container } = render(<Inline>hello world</Inline>, {
-      theme: { Inline: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Inline: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Inline>hello world</Inline>, {
-      theme: { Inline: { defaultProps: { className: 'test' } } }
+      theme: { Inline: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

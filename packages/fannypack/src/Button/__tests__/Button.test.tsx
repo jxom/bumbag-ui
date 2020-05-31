@@ -196,7 +196,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Button>{ButtonProps => <div {...ButtonProps}>Hello world</div>}</Button>);
+      const { container } = render(<Button>{(ButtonProps) => <div {...ButtonProps}>Hello world</div>}</Button>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -304,70 +304,70 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Button.root should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { root: { backgroundColor: 'red' }, disabled: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.disabled should render correctly', () => {
     const { container } = render(<Button disabled>hello world</Button>, {
-      theme: { Button: { css: { disabled: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { disabled: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.focus should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { css: { focus: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { focus: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.ghost should render correctly', () => {
     const { container } = render(<Button variant="ghost">hello world</Button>, {
-      theme: { Button: { css: { ghost: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { ghost: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.hover should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { css: { hover: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { hover: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.hoveractive should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { css: { hoveractive: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { hoveractive: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.loading should render correctly', () => {
     const { container } = render(<Button isLoading>hello world</Button>, {
-      theme: { Button: { css: { loading: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { loading: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.link should render correctly', () => {
     const { container } = render(<Button variant="link">hello world</Button>, {
-      theme: { Button: { css: { link: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { link: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.outlined should render correctly', () => {
     const { container } = render(<Button variant="outlined">hello world</Button>, {
-      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Button.static should render correctly', () => {
     const { container } = render(<Button isStatic>hello world</Button>, {
-      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } }
+      theme: { Button: { css: { outlined: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -375,7 +375,7 @@ describe('theming', () => {
   ['small', 'default', 'medium', 'large'].forEach((size: any) => {
     it(`Button.sizes.${size} should render correctly`, () => {
       const { container } = render(<Button size={size}>hello world</Button>, {
-        theme: { Button: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }
+        theme: { Button: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } },
       });
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -385,7 +385,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<Button>hello world</Button>, {
-      theme: { Button: { defaultProps: { palette: 'primary', size: 'medium' } } }
+      theme: { Button: { defaultProps: { palette: 'primary', size: 'medium' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

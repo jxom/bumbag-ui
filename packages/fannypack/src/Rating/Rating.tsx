@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _get from 'lodash/get';
-import _times from 'lodash/times';
 
 import { Size } from '../types';
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, times } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Rover } from '../Rover';
 import { Icon } from '../Icon';
@@ -52,7 +50,7 @@ const useProps = createHook<RatingProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -61,9 +59,9 @@ const useProps = createHook<RatingProps>(
       onMouseLeave: !disabled ? () => setHoveringIndex(-1) : undefined,
       overrides,
       role: 'radiogroup',
-      children: _times(items ? items.length : maxValue, index => (
+      children: times(items ? items.length : maxValue, (index) => (
         <Rover {...rover} {...roverProps} disabled={disabled}>
-          {props => (
+          {(props) => (
             /*
             // @ts-ignore */
             <RatingItem
@@ -79,34 +77,34 @@ const useProps = createHook<RatingProps>(
                     ? hoveringIndex === index
                     : hoveringIndex >= index
                   : isSingular
-                    ? value === index + 1
-                    : value > index
+                  ? value === index + 1
+                  : value > index
               }
               onClick={!disabled ? () => onChange(index + 1) : undefined}
               onMouseEnter={!disabled ? () => setHoveringIndex(index) : undefined}
               overrides={overrides}
               size={size}
             >
-              {item || _get(items, `[${index}]`)}
+              {item || items?.[index]}
             </RatingItem>
           )}
         </Rover>
-      ))
+      )),
     };
   },
   { defaultProps: { maxValue: 5, value: 0 }, themeKey: 'Rating' }
 );
 
 export const Rating = createComponent<RatingProps>(
-  props => {
+  (props) => {
     const ratingProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: ratingProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Rating'
+    themeKey: 'Rating',
   }
 );
 
@@ -129,33 +127,33 @@ const useRatingItemProps = createHook<RatingItemProps>(
       styleProps: { ...props, color },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
       ...boxProps,
       className,
       role: 'radio',
-      children
+      children,
     };
   },
   { defaultProps: { children: <Icon icon="star" />, color: 'gold' }, themeKey: 'Rating.Item' }
 );
 
 export const RatingItem = createComponent<RatingItemProps>(
-  props => {
+  (props) => {
     const ratingItemProps = useRatingItemProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: ratingItemProps
+      htmlProps: ratingItemProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Rating.Item'
+    themeKey: 'Rating.Item',
   }
 );

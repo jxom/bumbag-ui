@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, palette, theme, fontWeight } from '../utils';
 
-export const Tab = styleProps => cssClass`
+export const Tab = (styleProps) => cssClass`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -11,20 +11,26 @@ export const Tab = styleProps => cssClass`
   padding: 0 1rem;
   transition: box-shadow 0.1s ease-in-out 0s, background-color 0.1s, color 0.1s;
 
-  ${styleProps.disabled &&
+  ${
+    styleProps.disabled &&
     css`
       color: ${palette('gray300')(styleProps)};
-    `}
+    `
+  }
 
-  ${styleProps.variant === 'boxed' &&
+  ${
+    styleProps.variant === 'boxed' &&
     css`
       border: 1px solid transparent;
-    `}
+    `
+  }
 
-  ${styleProps.variant === 'button' &&
+  ${
+    styleProps.variant === 'button' &&
     css`
       border-radius: ${borderRadius('default')(styleProps)};
-    `}
+    `
+  }
 
     ${
       styleProps.orientation === 'vertical'
@@ -52,7 +58,8 @@ export const Tab = styleProps => cssClass`
     color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
     fill: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
 
-    ${styleProps.variant === 'default' &&
+    ${
+      styleProps.variant === 'default' &&
       css`
         background-color: white;
 
@@ -63,9 +70,11 @@ export const Tab = styleProps => cssClass`
           : css`
               box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
             `};
-      `}
+      `
+    }
 
-    ${styleProps.variant === 'boxed' &&
+    ${
+      styleProps.variant === 'boxed' &&
       css`
         border: 1px solid ${palette('white900')(styleProps)};
 
@@ -76,13 +85,16 @@ export const Tab = styleProps => cssClass`
           : css`
               border-bottom-color: white;
             `};
-      `}
+      `
+    }
 
-    ${styleProps.variant === 'button' &&
+    ${
+      styleProps.variant === 'button' &&
       css`
         background-color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-      `}
+      `
+    }
 
     & {
       ${theme(styleProps.themeKey, `css.selected`)(styleProps)};
@@ -92,7 +104,8 @@ export const Tab = styleProps => cssClass`
   &:focus {
     outline: unset;
 
-    ${styleProps.variant === 'default' &&
+    ${
+      styleProps.variant === 'default' &&
       css`
         ${styleProps.orientation === 'vertical'
           ? css`
@@ -101,13 +114,16 @@ export const Tab = styleProps => cssClass`
           : css`
               box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
             `};
-      `}
+      `
+    }
 
-    ${(styleProps.variant === 'boxed' || styleProps.variant === 'button') &&
+    ${
+      (styleProps.variant === 'boxed' || styleProps.variant === 'button') &&
       css`
         box-shadow: ${palette(styleProps.palette, styleProps.palette)(styleProps)} 0px 0px 0px 1px,
           ${palette(`${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
-      `}
+      `
+    }
 
     & {
       ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
@@ -115,15 +131,19 @@ export const Tab = styleProps => cssClass`
   }
 
   &:not([aria-selected='true']):hover {
-    ${styleProps.variant !== 'button' &&
+    ${
+      styleProps.variant !== 'button' &&
       css`
         color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-      `}
+      `
+    }
 
-    ${styleProps.variant === 'button' &&
+    ${
+      styleProps.variant === 'button' &&
       css`
         background-color: ${palette('white700')(styleProps)};
-      `}
+      `
+    }
 
     & {
       ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
@@ -135,37 +155,44 @@ export const Tab = styleProps => cssClass`
   }
 `;
 
-export const Tabs = styleProps => cssClass`
+export const Tabs = (styleProps) => cssClass`
   width: 100%;
 
-  ${styleProps.isFitted &&
+  ${
+    styleProps.isFitted &&
     css`
       & .fp-TabsTab {
         flex: 1;
       }
-    `}
+    `
+  }
 
-  ${styleProps.orientation === 'vertical' &&
+  ${
+    styleProps.orientation === 'vertical' &&
     css`
       display: flex;
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TabsList = styleProps => cssClass`
+export const TabsList = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   font-weight: ${fontWeight('semibold')(styleProps)};
 
-  ${styleProps.orientation === 'vertical' &&
+  ${
+    styleProps.orientation === 'vertical' &&
     css`
       flex-direction: column;
-    `}
+    `
+  }
 
-  ${(styleProps.variant === 'boxed' || styleProps.variant === 'default') &&
+  ${
+    (styleProps.variant === 'boxed' || styleProps.variant === 'default') &&
     css`
       ${styleProps.orientation === 'vertical'
         ? css`
@@ -174,7 +201,8 @@ export const TabsList = styleProps => cssClass`
         : css`
             border-bottom: 1px solid ${palette('white900')(styleProps)};
           `};
-    `}
+    `
+  }
 
 
   ${getAlignAttributes(styleProps)}
@@ -184,7 +212,7 @@ export const TabsList = styleProps => cssClass`
   }
 `;
 
-export const TabsPanel = styleProps => cssClass`
+export const TabsPanel = (styleProps) => cssClass`
   &:focus {
     outline: none;
   }
@@ -216,7 +244,7 @@ function getAlignAttributes(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.align.right`)(styleProps)};
       }
-    `
+    `,
   };
   return sizeAttributes[styleProps.align || 'left'];
 }

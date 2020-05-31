@@ -599,8 +599,8 @@ describe('defaultProps', () => {
       </Tabs>,
       {
         theme: {
-          Tabs: { defaultProps: { className: 'test', color: 'primary' }, List: { defaultProps: { variant: 'boxed' } } }
-        }
+          Tabs: { defaultProps: { className: 'test', color: 'primary' }, List: { defaultProps: { variant: 'boxed' } } },
+        },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

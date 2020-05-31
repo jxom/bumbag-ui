@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   usePopoverState as useReakitPopoverState,
   PopoverStateReturn as ReakitPopoverStateReturn,
-  PopoverInitialState as ReakitPopoverInitialState
+  PopoverInitialState as ReakitPopoverInitialState,
 } from 'reakit';
 import { isFunction } from '../utils';
 

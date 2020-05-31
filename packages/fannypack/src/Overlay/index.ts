@@ -8,6 +8,6 @@ export * from './OverlayDisclosure';
 export const Overlay = Object.assign(_Overlay, {
   Disclosure: OverlayDisclosure,
   useState: useOverlayState,
-  State: OverlayState
+  State: OverlayState,
 });
 export { styles as overlayStyles };

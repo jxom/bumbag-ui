@@ -37,7 +37,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Label>{LabelProps => <div {...LabelProps}>Hello world</div>}</Label>);
+      const { container } = render(<Label>{(LabelProps) => <div {...LabelProps}>Hello world</div>}</Label>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -47,7 +47,7 @@ describe('theming', () => {
   it('Label.root should render correctly', () => {
     const { container } = render(<Label>hello world</Label>, {
       // @ts-ignore
-      theme: { Label: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Label: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -57,7 +57,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Label>hello world</Label>, {
       // @ts-ignore
-      theme: { Label: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Label: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

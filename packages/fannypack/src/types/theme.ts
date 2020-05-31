@@ -16,7 +16,7 @@ import {
   CalloutHeaderProps,
   CalloutTitleProps,
   CalloutFooterProps,
-  CalloutIconProps
+  CalloutIconProps,
 } from '../Callout';
 import { CardProps } from '../Card';
 import { ClickableProps } from '../Clickable';
@@ -30,7 +30,7 @@ import {
   DialogHeaderProps,
   DialogTitleProps,
   DialogFooterProps,
-  DialogIconProps
+  DialogIconProps,
 } from '../Dialog';
 import { DisclosureProps, DisclosureContentProps } from '../Disclosure';
 import { DividerProps } from '../Divider';
@@ -40,7 +40,7 @@ import {
   DropdownMenuButtonProps,
   DropdownMenuDividerProps,
   DropdownMenuGroupProps,
-  DropdownMenuItemProps
+  DropdownMenuItemProps,
 } from '../DropdownMenu';
 import { FieldStackProps } from '../FieldStack';
 import { FieldWrapperProps } from '../FieldWrapper';
@@ -69,7 +69,7 @@ import {
   PageContentWrapperProps,
   PageWithSidebarProps,
   PageWithSidebarDisclosureProps,
-  PageWithSidebarMinimizeProps
+  PageWithSidebarMinimizeProps,
 } from '../Page';
 import { PaginationProps } from '../Pagination';
 import { ParagraphProps } from '../Paragraph';
@@ -81,7 +81,7 @@ import {
   PopoverDisclosureProps,
   PopoverFooterProps,
   PopoverHeaderProps,
-  PopoverTitleProps
+  PopoverTitleProps,
 } from '../Popover';
 import { PortalProps } from '../Portal';
 import { ProgressBarProps } from '../ProgressBar';
@@ -103,7 +103,7 @@ import {
   TableCellProps,
   TableHeadProps,
   TableHeadCellProps,
-  TableFootProps
+  TableFootProps,
 } from '../Table';
 import { TagProps } from '../Tag';
 import { TextProps } from '../Text';

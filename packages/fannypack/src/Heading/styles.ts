@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { fontSize, fontWeight, space, theme } from '../utils';
 
-export const Heading = styleProps => cssClass`
+export const Heading = (styleProps) => cssClass`
   font-weight: ${fontWeight('bold')(styleProps)};
   line-height: 1.2;
 
@@ -63,7 +63,7 @@ export const Heading = styleProps => cssClass`
   }
 `;
 
-export const getSubHeadingProperties = styleProps => cssClass`
+export const getSubHeadingProperties = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {

@@ -1,29 +1,33 @@
 import { css, cssClass } from '../styled';
 import { palette, theme } from '../utils';
 
-export const Avatar = styleProps => cssClass`
+export const Avatar = (styleProps) => cssClass`
   width: 60px;
   height: 60px;
   overflow: hidden;
   object-fit: cover;
 
-  ${styleProps.variant === 'circle' &&
+  ${
+    styleProps.variant === 'circle' &&
     css`
       border-radius: 50%;
 
       & {
         ${theme(styleProps.themeKey, `circle.root`)(styleProps)};
       }
-    `}
+    `
+  }
 
-  ${styleProps.initials &&
+  ${
+    styleProps.initials &&
     css`
       background-color: ${palette(styleProps.palette)(styleProps)};
       color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
       display: flex;
       justify-content: center;
       align-items: center;
-    `}
+    `
+  }
 
   ${getSizeAttributes(styleProps)};
 
@@ -68,7 +72,7 @@ function getSizeAttributes(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return (
     sizeAttributes[styleProps.size] ||

@@ -80,7 +80,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Set>
-          {SetProps => (
+          {(SetProps) => (
             <div {...SetProps}>
               <Box>hello</Box>
               <Box>world</Box>
@@ -163,7 +163,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Set: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -176,7 +176,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { root: { backgroundColor: 'red' } } } } }
+        theme: { Set: { css: { child: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -189,7 +189,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { vertical: { backgroundColor: 'red' } } } }
+        theme: { Set: { css: { vertical: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -202,7 +202,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { Set: { css: { horizontal: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -215,7 +215,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } }
+        theme: { Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -228,7 +228,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }
+        theme: { Set: { css: { child: { horizontal: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -243,7 +243,7 @@ describe('defaultProps', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { defaultProps: { className: 'test' } } }
+        theme: { Set: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -256,7 +256,7 @@ describe('defaultProps', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { defaultProps: { orientation: 'vertical' } } }
+        theme: { Set: { defaultProps: { orientation: 'vertical' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -269,7 +269,7 @@ describe('defaultProps', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { defaultProps: { isFilled: true } } }
+        theme: { Set: { defaultProps: { isFilled: true } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

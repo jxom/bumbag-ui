@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
-import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
+import { useClassName, createComponent, createElement, createHook, useUniqueId, omit } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
@@ -64,28 +63,28 @@ const useProps = createHook<SwitchProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const switchIconClassName = useClassName({
       style: styles.SwitchIcon,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const hiddenSwitchClassName = useClassName({
       style: styles.HiddenSwitch,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'HiddenInput'
+      themeKeySuffix: 'HiddenInput',
     });
     const switchLabelClassName = useClassName({
       style: styles.SwitchLabel,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Label'
+      themeKeySuffix: 'Label',
     });
 
     const labelId = useUniqueId('label');
@@ -134,25 +133,25 @@ const useProps = createHook<SwitchProps>(
             </Label>
           )}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Switch' }
 );
 
 export const Switch = createComponent<SwitchProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: Label
+      use: Label,
     },
-    themeKey: 'Switch'
+    themeKey: 'Switch',
   }
 );
 
@@ -200,7 +199,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -235,35 +234,35 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
               overrides={overrides}
               state={state}
               value={value}
-              {..._omit(elementProps, 'id')}
+              {...omit(elementProps, 'id')}
               {...switchProps}
               inputProps={{
                 id: elementProps.id,
-                ...switchProps.inputProps
+                ...switchProps.inputProps,
               }}
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { defaultProps: { switchProps: {} }, themeKey: 'SwitchField' }
 );
 
 export const SwitchField = createComponent<SwitchFieldProps>(
-  props => {
+  (props) => {
     const switchFieldProps = useSwitchFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: switchFieldProps
+      htmlProps: switchFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'SwitchField'
+    themeKey: 'SwitchField',
   }
 );

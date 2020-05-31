@@ -63,7 +63,7 @@ const useProps = createHook<SelectProps>(
 
     const [isPlaceholderSelected, setIsPlaceholderSelected] = React.useState(Boolean(placeholder));
     const handleChange = React.useCallback(
-      e => {
+      (e) => {
         setIsPlaceholderSelected(false);
         onChange && onChange(e);
       },
@@ -76,27 +76,27 @@ const useProps = createHook<SelectProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Wrapper',
-      prevClassName: restProps.className
+      prevClassName: restProps.className,
     });
     const iconClassName = useClassName({
       style: styles.SelectIcon,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const spinnerClassName = useClassName({
       style: styles.SelectSpinner,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Spinner'
+      themeKeySuffix: 'Spinner',
     });
 
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      wrapElement: children => (
+      wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
           {isLoading ? (
@@ -105,7 +105,7 @@ const useProps = createHook<SelectProps>(
             <Icon className={iconClassName} icon="chevron-down" />
           )}
         </Box>
-      )
+      ),
     });
 
     const className = useClassName({
@@ -113,7 +113,7 @@ const useProps = createHook<SelectProps>(
       styleProps: { ...props, isPlaceholderSelected },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -140,31 +140,31 @@ const useProps = createHook<SelectProps>(
             </option>
           ))}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Select' }
 );
 
 export const Select = createComponent<SelectProps>(
-  props => {
+  (props) => {
     const selectProps = useProps(props);
 
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: selectProps
+      htmlProps: selectProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'select'
+      use: 'select',
     },
-    themeKey: 'Select'
+    themeKey: 'Select',
   }
 );
 
@@ -222,7 +222,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -274,26 +274,26 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
             </ConditionalWrap>
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'SelectField' }
 );
 
 export const SelectField = createComponent<SelectFieldProps>(
-  props => {
+  (props) => {
     const SelectFieldProps = useSelectFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: SelectFieldProps
+      htmlProps: SelectFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'SelectField'
+    themeKey: 'SelectField',
   }
 );

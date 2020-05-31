@@ -27,7 +27,7 @@ const useProps = createHook<GridProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -42,6 +42,6 @@ export const Grid = createComponent(
   },
   {
     attach: { useProps },
-    themeKey: 'Grid'
+    themeKey: 'Grid',
   }
 );

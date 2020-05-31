@@ -6,6 +6,6 @@ export * from './Toast';
 export * from './ToastManager';
 export * from './ToastContext';
 export const Toast = Object.assign(_Toast, {
-  Manager: ToastManager
+  Manager: ToastManager,
 });
 export { styles as ToastStyles };

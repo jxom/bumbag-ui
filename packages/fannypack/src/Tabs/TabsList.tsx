@@ -58,7 +58,7 @@ const useProps = createHook<TabsListProps>(
         setCurrentId,
         unstable_virtual,
         unstable_moves,
-        ...tabs
+        ...tabs,
       },
       htmlProps
     );
@@ -69,34 +69,34 @@ const useProps = createHook<TabsListProps>(
       styleProps: { ...tabs, ...props, overrides: { ...tabOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(() => ({ align, variant, overrides, palette }), [
       align,
       variant,
       overrides,
-      palette
+      palette,
     ]);
 
     return {
       ...boxProps,
       className,
-      children: <TabsListContext.Provider value={contextValue}>{children}</TabsListContext.Provider>
+      children: <TabsListContext.Provider value={contextValue}>{children}</TabsListContext.Provider>,
     };
   },
   { defaultProps: { align: 'left', variant: 'default', palette: 'primary' }, themeKey: 'Tabs.List' }
 );
 
 export const TabsList = createComponent<TabsListProps>(
-  props => {
+  (props) => {
     const tabsListProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabsListProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tabs.List'
+    themeKey: 'Tabs.List',
   }
 );

@@ -74,7 +74,7 @@ describe('composition', () => {
         const hidden = Disclosure.useState({ baseId: 'test' });
         return (
           <Disclosure.Content {...hidden}>
-            {DisclosureProps => <div {...DisclosureProps}>Hello world</div>}
+            {(DisclosureProps) => <div {...DisclosureProps}>Hello world</div>}
           </Disclosure.Content>
         );
       }
@@ -101,7 +101,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Disclosure.root should render correctly', () => {
     const { container } = render(<Disclosure.Content baseId="test">hello world</Disclosure.Content>, {
-      theme: { Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -110,7 +110,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Disclosure.Content baseId="test">hello world</Disclosure.Content>, {
-      theme: { Disclosure: { Content: { defaultProps: { className: 'test' } } } }
+      theme: { Disclosure: { Content: { defaultProps: { className: 'test' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

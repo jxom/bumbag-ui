@@ -1,6 +1,4 @@
 // @ts-ignore
-import _get from 'lodash/get';
-
 import { lighten, tint, readableColor, shade } from './colors';
 
 export const generateTextVariants = (textColor: string) => ({
@@ -11,13 +9,13 @@ export const generateTextVariants = (textColor: string) => ({
   text: textColor,
   textTint: tint(0.8, textColor),
   textInverted: readableColor(textColor),
-  textTintInverted: shade(0.3, textColor)
+  textTintInverted: shade(0.3, textColor),
 });
 
 export const generateColorVariants = ({
   color,
   paletteKey,
-  paletteOverrides
+  paletteOverrides,
 }: {
   color: string;
   paletteKey: string;
@@ -37,6 +35,6 @@ export const generateColorVariants = ({
     [`${paletteKey}Tint`]: tint(0.9, color),
     [`${paletteKey}Inverted`]: readableColor(color),
     [`${paletteKey}TintInverted`]: shade(0.5, color),
-    ...(paletteOverrides ? paletteOverrides({ color }) : {})
+    ...(paletteOverrides ? paletteOverrides({ color }) : {}),
   };
 };

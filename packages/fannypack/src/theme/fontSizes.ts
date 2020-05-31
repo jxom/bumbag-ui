@@ -11,5 +11,5 @@ export default (overrides: FontSizeThemeConfig) => ({
   700: 3,
   800: 3.75,
   900: 4.5,
-  ...overrides
+  ...overrides,
 });

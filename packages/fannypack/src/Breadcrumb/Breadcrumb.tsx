@@ -30,7 +30,7 @@ const useProps = createHook<BreadcrumbProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: navigationProps.className
+      prevClassName: navigationProps.className,
     });
 
     const context = React.useMemo(() => ({ overrides: props.overrides }), [props.overrides]);
@@ -45,7 +45,7 @@ const useProps = createHook<BreadcrumbProps>(
             return React.cloneElement(child, {
               hasSeparator: typeof hasSeparator !== 'undefined' ? hasSeparator : !isLastChild,
               separator,
-              ...child.props
+              ...child.props,
             });
           })}
         </List>
@@ -58,19 +58,19 @@ const useProps = createHook<BreadcrumbProps>(
 );
 
 export const Breadcrumb = createComponent<BreadcrumbProps>(
-  props => {
+  (props) => {
     const breadcrumbProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: breadcrumbProps
+      htmlProps: breadcrumbProps,
     });
   },
   {
     attach: { useProps },
     defaultProps: { use: 'nav' },
-    themeKey: 'Breadcrumb'
+    themeKey: 'Breadcrumb',
   }
 );
 
@@ -95,13 +95,13 @@ const useBreadcrumbItemProps = createHook<BreadcrumbItemProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const children = (
       <React.Fragment>
         {React.Children.count(props.children) > 0
-          ? React.Children.map(props.children, child => {
+          ? React.Children.map(props.children, (child) => {
               if (!React.isValidElement(child)) return child;
               if (child.type === BreadcrumbLink) {
                 return React.cloneElement(child, { isCurrent, ...child.props });
@@ -119,19 +119,19 @@ const useBreadcrumbItemProps = createHook<BreadcrumbItemProps>(
 );
 
 export const BreadcrumbItem = createComponent<BreadcrumbItemProps>(
-  props => {
+  (props) => {
     const breadcrumbItemProps = useBreadcrumbItemProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: breadcrumbItemProps
+      htmlProps: breadcrumbItemProps,
     });
   },
   {
     attach: { useProps: useBreadcrumbItemProps },
     defaultProps: { use: 'li' },
-    themeKey: 'Breadcrumb.Item'
+    themeKey: 'Breadcrumb.Item',
   }
 );
 
@@ -150,7 +150,7 @@ const useBreadcrumbSeparatorProps = createHook<BreadcrumbSeparatorProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, role: 'presentation', children: boxProps.children || '/' };
@@ -159,18 +159,18 @@ const useBreadcrumbSeparatorProps = createHook<BreadcrumbSeparatorProps>(
 );
 
 export const BreadcrumbSeparator = createComponent<BreadcrumbSeparatorProps>(
-  props => {
+  (props) => {
     const breadcrumbItemProps = useBreadcrumbSeparatorProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: breadcrumbItemProps
+      htmlProps: breadcrumbItemProps,
     });
   },
   {
     attach: { useProps: useBreadcrumbSeparatorProps },
-    themeKey: 'Breadcrumb.Separator'
+    themeKey: 'Breadcrumb.Separator',
   }
 );
 
@@ -193,21 +193,21 @@ const useBreadcrumbLinkProps = createHook<BreadcrumbLinkProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: linkProps.className
+      prevClassName: linkProps.className,
     });
 
     return {
       ...linkProps,
       className,
       'aria-current': isCurrent ? 'page' : linkProps['aria-current'],
-      href: isCurrent ? undefined : linkProps.href
+      href: isCurrent ? undefined : linkProps.href,
     };
   },
   { themeKey: 'Breadcrumb.Link' }
 );
 
 export const BreadcrumbLink = createComponent<BreadcrumbLinkProps>(
-  props => {
+  (props) => {
     const breadcrumbItemProps = useBreadcrumbLinkProps(props);
 
     let use = props.use;
@@ -219,14 +219,14 @@ export const BreadcrumbLink = createComponent<BreadcrumbLinkProps>(
       children: props.children,
       component: ReakitBox,
       use,
-      htmlProps: breadcrumbItemProps
+      htmlProps: breadcrumbItemProps,
     });
   },
   {
     attach: { useProps: useBreadcrumbLinkProps },
     defaultProps: {
-      use: 'a'
+      use: 'a',
     },
-    themeKey: 'Breadcrumb.Link'
+    themeKey: 'Breadcrumb.Link',
   }
 );

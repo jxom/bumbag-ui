@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, palette, space, theme } from '../utils';
 
-export const SideNav = styleProps => cssClass`
+export const SideNav = (styleProps) => cssClass`
   width: 100%;
 
   & {
@@ -9,22 +9,24 @@ export const SideNav = styleProps => cssClass`
   }
 `;
 
-export const SideNavLevel = styleProps => cssClass`
+export const SideNavLevel = (styleProps) => cssClass`
   &&& {
     margin-left: unset;
   }
 
-  ${styleProps.level === 0 &&
+  ${
+    styleProps.level === 0 &&
     css`
       margin-bottom: ${space(2, 'major')(styleProps)}rem;
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const SideNavLevelTitle = styleProps => cssClass`
+export const SideNavLevelTitle = (styleProps) => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
   font-weight: ${fontWeight('semibold')(styleProps)};
   margin-bottom: ${space(2)(styleProps)}rem;
@@ -36,7 +38,7 @@ export const SideNavLevelTitle = styleProps => cssClass`
   }
 `;
 
-export const SideNavItem = styleProps => cssClass`
+export const SideNavItem = (styleProps) => cssClass`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -73,7 +75,8 @@ export const SideNavItem = styleProps => cssClass`
     }
   }
 
-  ${styleProps.isActive &&
+  ${
+    styleProps.isActive &&
     css`
       background-color: ${palette('primaryTint')(styleProps)};
       box-shadow: inset 3px 0 0 0 ${palette('primary')(styleProps)};
@@ -81,7 +84,8 @@ export const SideNavItem = styleProps => cssClass`
       & {
         ${theme(styleProps.themeKey, `css.active`)(styleProps)};
       }
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

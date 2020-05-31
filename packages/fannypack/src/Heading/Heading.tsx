@@ -21,7 +21,7 @@ const useProps = createHook<HeadingProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className: classNames(className, props.isSubHeading ? 'sub-heading' : 'heading') };
@@ -30,15 +30,15 @@ const useProps = createHook<HeadingProps>(
 );
 
 export const Heading = createComponent<HeadingProps>(
-  props => {
+  (props) => {
     const HeadingProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: HeadingProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: { use: 'h1' },
-    themeKey: 'Heading'
+    themeKey: 'Heading',
   }
 );

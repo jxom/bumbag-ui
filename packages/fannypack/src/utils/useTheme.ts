@@ -3,5 +3,5 @@ import { ThemeContext } from '../styled';
 
 export function useTheme() {
   const theme = React.useContext(ThemeContext);
-  return theme;
+  return theme as any;
 }

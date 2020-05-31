@@ -22,7 +22,7 @@ describe('props', () => {
 describe('variants', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<Toast variant="test">hello world</Toast>, {
-      theme: { Toast: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+      theme: { Toast: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -40,7 +40,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Toast.root should render correctly', () => {
     const { container } = render(<Toast>hello world</Toast>, {
-      theme: { Toast: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Toast: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -50,7 +50,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Toast>hello world</Toast>, {
       // @ts-ignore
-      theme: { Toast: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Toast: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

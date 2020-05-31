@@ -87,7 +87,7 @@ describe('composition', () => {
         const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <Overlay.Disclosure {...overlay}>
-            {OverlayDisclosureProps => <div {...OverlayDisclosureProps}>Hello world</div>}
+            {(OverlayDisclosureProps) => <div {...OverlayDisclosureProps}>Hello world</div>}
           </Overlay.Disclosure>
         );
       }
@@ -122,7 +122,7 @@ describe('theming', () => {
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Overlay: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -135,7 +135,7 @@ describe('defaultProps', () => {
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Overlay: { Disclosure: { defaultProps: { className: 'red' } } } }
+      theme: { Overlay: { Disclosure: { defaultProps: { className: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

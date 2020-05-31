@@ -23,7 +23,7 @@ describe('props', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(expand => {
+  [true, 'center', 'top', 'left', 'right', 'bottom'].forEach((expand) => {
     it(`should render correctly for expand ${expand}`, () => {
       function Component() {
         const overlay = Overlay.useState({ baseId: 'test' });
@@ -39,7 +39,7 @@ describe('props', () => {
     });
   });
 
-  [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
+  [true, 'center', 'top', 'left', 'right', 'bottom'].forEach((slide) => {
     it(`should render correctly for slide ${slide}`, () => {
       function Component() {
         const overlay = Overlay.useState({ baseId: 'test' });
@@ -57,7 +57,7 @@ describe('props', () => {
 
   describe('placement', () => {
     ['center', 'top-start', 'top', 'top-end', 'left', 'right', 'bottom-start', 'bottom', 'bottom-end'].forEach(
-      placement => {
+      (placement) => {
         it(`should render correctly for ${placement} placement`, () => {
           function Component() {
             const overlay = Overlay.useState({ baseId: 'test' });
@@ -72,7 +72,7 @@ describe('props', () => {
           expect(baseElement).toMatchSnapshot();
         });
 
-        [true, 'center', 'top', 'left', 'right', 'bottom'].forEach(slide => {
+        [true, 'center', 'top', 'left', 'right', 'bottom'].forEach((slide) => {
           it(`should render correctly for placement ${placement} and slide ${slide}`, () => {
             function Component() {
               const overlay = Overlay.useState({ baseId: 'test' });
@@ -129,7 +129,7 @@ describe('composition', () => {
         const overlay = Overlay.useState({ baseId: 'test' });
         return (
           <Overlay {...overlay}>
-            {overlayProps => (
+            {(overlayProps) => (
               <Box {...overlayProps} aria-label="test">
                 Hello world
               </Box>
@@ -330,7 +330,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Overlay: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -345,7 +345,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -360,7 +360,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -375,7 +375,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -390,7 +390,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -405,7 +405,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -420,7 +420,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -435,7 +435,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -450,7 +450,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -465,7 +465,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }
+      theme: { Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -482,7 +482,7 @@ describe('defaultProps', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { defaultProps: { className: 'test' } } }
+      theme: { Overlay: { defaultProps: { className: 'test' } } },
     });
     expect(baseElement).toMatchSnapshot();
   });

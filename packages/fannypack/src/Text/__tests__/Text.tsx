@@ -32,7 +32,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Text>{TextProps => <div {...TextProps}>Hello world</div>}</Text>);
+      const { container } = render(<Text>{(TextProps) => <div {...TextProps}>Hello world</div>}</Text>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -41,7 +41,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Text.css.root should render correctly', () => {
     const { container } = render(<Text>hello world</Text>, {
-      theme: { Text: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Text: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -50,7 +50,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Text>hello world</Text>, {
-      theme: { Text: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Text: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

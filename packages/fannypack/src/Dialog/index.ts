@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogFooter,
   DialogIcon,
-  DialogModal
+  DialogModal,
 } from './Dialog';
 
 export * from './Dialog';
@@ -16,6 +16,6 @@ export const Dialog = Object.assign(_Dialog, {
   Content: DialogContent,
   Footer: DialogFooter,
   Icon: DialogIcon,
-  Modal: DialogModal
+  Modal: DialogModal,
 });
 export { styles as DialogStyles };

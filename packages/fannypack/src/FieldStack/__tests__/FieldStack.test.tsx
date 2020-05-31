@@ -70,7 +70,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <FieldStack>
-          {FieldStackProps => (
+          {(FieldStackProps) => (
             <div {...FieldStackProps}>
               <Box />
               <Box />
@@ -92,7 +92,7 @@ describe('theming', () => {
       </FieldStack>,
       {
         // @ts-ignore
-        theme: { FieldStack: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { FieldStack: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -108,7 +108,7 @@ describe('defaultProps', () => {
       </FieldStack>,
       {
         // @ts-ignore
-        theme: { FieldStack: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { FieldStack: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

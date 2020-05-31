@@ -21,21 +21,21 @@ const useProps = createHook<CodeProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
   },
   {
     defaultProps: {
-      palette: 'default'
+      palette: 'default',
     },
-    themeKey: 'Code'
+    themeKey: 'Code',
   }
 );
 
 export const Code = createComponent<CodeProps>(
-  props => {
+  (props) => {
     let use = props.use;
     if (!use) {
       use = props.isBlock ? 'pre' : 'code';
@@ -47,8 +47,8 @@ export const Code = createComponent<CodeProps>(
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Code'
+    themeKey: 'Code',
   }
 );

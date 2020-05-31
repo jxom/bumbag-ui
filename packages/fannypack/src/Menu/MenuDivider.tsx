@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Box as ReakitBox,
   useMenuSeparator as useReakitMenuSeparator,
-  MenuSeparatorProps as ReakitMenuSeparatorProps
+  MenuSeparatorProps as ReakitMenuSeparatorProps,
 } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -23,7 +23,7 @@ const useProps = createHook<MenuDividerProps>(
 
     const MenuDividerProps = useReakitMenuSeparator(
       {
-        orientation
+        orientation,
       },
       restProps
     );
@@ -34,7 +34,7 @@ const useProps = createHook<MenuDividerProps>(
       styleProps: { ...props, overrides: { ...menuOverrides, overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: dividerProps.className
+      prevClassName: dividerProps.className,
     });
 
     return { ...dividerProps, role: 'separator', className };
@@ -43,14 +43,14 @@ const useProps = createHook<MenuDividerProps>(
 );
 
 export const MenuDivider = createComponent<MenuDividerProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Menu.Divider'
+    themeKey: 'Menu.Divider',
   }
 );

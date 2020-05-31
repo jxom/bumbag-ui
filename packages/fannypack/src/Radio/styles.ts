@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { palette, theme, fontWeight } from '../utils';
 import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 
-export const Radio = styleProps => cssClass`
+export const Radio = (styleProps) => cssClass`
   && {
     display: flex;
     align-items: flex-start;
@@ -13,7 +13,7 @@ export const Radio = styleProps => cssClass`
   }
 `;
 
-export const RadioIcon = styleProps => cssClass`
+export const RadioIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
@@ -29,7 +29,7 @@ export const RadioIcon = styleProps => cssClass`
   }
 `;
 
-export const RadioLabel = styleProps => cssClass`
+export const RadioLabel = (styleProps) => cssClass`
   && {
     font-weight: ${fontWeight('normal')(styleProps)};
   }
@@ -39,7 +39,7 @@ export const RadioLabel = styleProps => cssClass`
   }
 `;
 
-export const HiddenRadio = styleProps =>
+export const HiddenRadio = (styleProps) =>
   getHiddenInputStyles({
     iconClassName: 'fp-RadioIcon',
     checkedIconCss: css`
@@ -58,22 +58,22 @@ export const HiddenRadio = styleProps =>
       background: ${palette('gray300')(styleProps)};
     `,
     styleProps,
-    themeKey: 'Radio.Icon'
+    themeKey: 'Radio.Icon',
   });
 
-export const RadioField = styleProps => cssClass`
+export const RadioField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const RadioGroup = styleProps => cssClass`
+export const RadioGroup = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const RadioGroupField = styleProps => cssClass`
+export const RadioGroupField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

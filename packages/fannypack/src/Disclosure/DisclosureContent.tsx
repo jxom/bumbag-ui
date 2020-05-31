@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Box as ReakitBox,
   DisclosureContentProps as ReakitDisclosureContentProps,
-  useDisclosureContent as useReakitDisclosureContent
+  useDisclosureContent as useReakitDisclosureContent,
 } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -26,7 +26,7 @@ const useProps = createHook<DisclosureContentProps>(
         visible,
         animating,
         animated,
-        stopAnimation
+        stopAnimation,
       },
       htmlProps
     );
@@ -37,7 +37,7 @@ const useProps = createHook<DisclosureContentProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -46,19 +46,19 @@ const useProps = createHook<DisclosureContentProps>(
 );
 
 export const DisclosureContent = createComponent<DisclosureContentProps>(
-  props => {
+  (props) => {
     const disclosureContentProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: disclosureContentProps
+      htmlProps: disclosureContentProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Disclosure.Content'
+    themeKey: 'Disclosure.Content',
   }
 );

@@ -6,14 +6,26 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />
+      <SwitchGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />
+      <SwitchGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -23,7 +35,10 @@ describe('props', () => {
       <SwitchGroup
         defaultValue="world"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -34,7 +49,10 @@ describe('props', () => {
       <SwitchGroup
         defaultValue={['world', 'me']}
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -45,7 +63,10 @@ describe('props', () => {
       <SwitchGroup
         disabled
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -55,7 +76,10 @@ describe('props', () => {
     const { container } = render(
       <SwitchGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world', disabled: true }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world', disabled: true },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -66,19 +90,25 @@ describe('props', () => {
       <SwitchGroup
         orientation="horizontal"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for state ${state}`, () => {
       const { container } = render(
         <SwitchGroup
           state={state}
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -93,7 +123,10 @@ describe('composition', () => {
         <SwitchGroup
           use="div"
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -105,7 +138,10 @@ describe('composition', () => {
       const { result } = renderHook(() =>
         SwitchGroup.useProps({
           name: 'weather',
-          options: [{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]
+          options: [
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ],
         })
       );
       expect(result.current).toMatchSnapshot();
@@ -115,8 +151,14 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}>
-          {SwitchGroupProps => <div {...SwitchGroupProps}>Hello world</div>}
+        <SwitchGroup
+          name="weather"
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
+        >
+          {(SwitchGroupProps) => <div {...SwitchGroupProps}>Hello world</div>}
         </SwitchGroup>
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -129,7 +171,10 @@ describe('overrides', () => {
     const { container } = render(
       <SwitchGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
         overrides={{ SwitchGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
@@ -140,10 +185,16 @@ describe('overrides', () => {
 describe('theming', () => {
   it('SwitchGroup.root should render correctly', () => {
     const { container } = render(
-      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
+      <SwitchGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />,
       {
         // @ts-ignore
-        theme: { SwitchGroup: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { SwitchGroup: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -153,10 +204,16 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
-      <SwitchGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />,
+      <SwitchGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />,
       {
         // @ts-ignore
-        theme: { SwitchGroup: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { SwitchGroup: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

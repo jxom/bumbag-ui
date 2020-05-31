@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { theme } from '../utils';
 
-export const Block = styleProps => cssClass`
+export const Block = (styleProps) => cssClass`
   display: block;
 
   & {

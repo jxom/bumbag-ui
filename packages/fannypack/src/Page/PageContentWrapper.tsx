@@ -18,7 +18,7 @@ const useProps = createHook<PageContentWrapperProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,19 +27,19 @@ const useProps = createHook<PageContentWrapperProps>(
 );
 
 export const PageContentWrapper = createComponent<PageContentWrapperProps>(
-  props => {
+  (props) => {
     const pageContentWrapperProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: pageContentWrapperProps
+      htmlProps: pageContentWrapperProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'PageContent.Wrapper'
+    themeKey: 'PageContent.Wrapper',
   }
 );

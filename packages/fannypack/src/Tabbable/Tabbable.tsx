@@ -1,5 +1,4 @@
 import { Box as ReakitBox, TabbableProps as ReakitTabbableProps, useTabbable as useReakitTabbable } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -15,7 +14,7 @@ const useProps = createHook<TabbableProps>(
     const tabbableProps = useReakitTabbable(
       {
         disabled,
-        focusable
+        focusable,
       },
       htmlProps
     );
@@ -26,7 +25,7 @@ const useProps = createHook<TabbableProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -35,14 +34,14 @@ const useProps = createHook<TabbableProps>(
 );
 
 export const Tabbable = createComponent<TabbableProps>(
-  props => {
+  (props) => {
     const tabbableProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabbableProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tabbable'
+    themeKey: 'Tabbable',
   }
 );

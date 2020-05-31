@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, fontSize, palette, theme } from '../utils';
 
-export const InputWrapper = styleProps => cssClass`
+export const InputWrapper = (styleProps) => cssClass`
   align-items: center;
   position: relative;
   width: 100%;
@@ -13,7 +13,7 @@ export const InputWrapper = styleProps => cssClass`
   }
 `;
 
-export const Input = styleProps => cssClass`
+export const Input = (styleProps) => cssClass`
   -webkit-appearance: none;
   border: 1px solid ${palette('white900')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
@@ -56,34 +56,40 @@ export const Input = styleProps => cssClass`
     }
   }
 
-  ${styleProps.state &&
+  ${
+    styleProps.state &&
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
         box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
       }
-    `}
+    `
+  }
 
-  ${(styleProps.after || styleProps.isLoading) &&
+  ${
+    (styleProps.after || styleProps.isLoading) &&
     css`
       & {
         padding-right: 2.3em;
       }
-    `};
+    `
+  };
 
-  ${styleProps.before &&
+  ${
+    styleProps.before &&
     css`
       & {
         padding-left: 2.3em;
       }
-    `};
+    `
+  };
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const InputIcon = styleProps => cssClass`
+export const InputIcon = (styleProps) => cssClass`
   && {
     fill: ${palette('text100')(styleProps)};
     height: 2.75em;
@@ -94,7 +100,7 @@ export const InputIcon = styleProps => cssClass`
   }
 `;
 
-export const InputSpinner = styleProps => cssClass`
+export const InputSpinner = (styleProps) => cssClass`
   && {
     font-size: inherit;
     align-items: center;
@@ -110,7 +116,7 @@ export const InputSpinner = styleProps => cssClass`
   }
 `;
 
-export const InputField = styleProps => cssClass`
+export const InputField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
@@ -143,7 +149,7 @@ export function wrapperSizeProperties(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return properties[styleProps.size];
 }

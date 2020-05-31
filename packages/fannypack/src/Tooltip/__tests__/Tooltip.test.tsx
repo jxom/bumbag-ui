@@ -46,7 +46,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Tooltip content="This is content" baseId="test">
-          {TooltipProps => <div {...TooltipProps}>Hello world</div>}
+          {(TooltipProps) => <div {...TooltipProps}>Hello world</div>}
         </Tooltip>
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -90,7 +90,7 @@ describe('theming', () => {
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe('theming', () => {
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -118,7 +118,7 @@ describe('defaultProps', () => {
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { Tooltip: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

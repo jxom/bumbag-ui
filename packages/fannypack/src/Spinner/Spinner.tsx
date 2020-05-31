@@ -34,28 +34,28 @@ const useProps = createHook<SpinnerProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const spinnerClassName = useClassName({
       style: styles.Spinner,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'vector'
+      themeKeySuffix: 'vector',
     });
     const trackCircleClassName = useClassName({
       style: styles.TrackCircle,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'trackCircle'
+      themeKeySuffix: 'trackCircle',
     });
     const loaderCircleClassName = useClassName({
       style: styles.LoaderCircle,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'loaderCircle'
+      themeKeySuffix: 'loaderCircle',
     });
 
     const children = (
@@ -73,14 +73,14 @@ const useProps = createHook<SpinnerProps>(
 );
 
 export const Spinner = createComponent<SpinnerProps>(
-  props => {
+  (props) => {
     const spinnerProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: spinnerProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Spinner'
+    themeKey: 'Spinner',
   }
 );

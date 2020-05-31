@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, fontSize, palette, theme } from '../utils';
 
-export const TextareaWrapper = styleProps => cssClass`
+export const TextareaWrapper = (styleProps) => cssClass`
   align-items: center;
   position: relative;
   width: 100%;
@@ -13,7 +13,7 @@ export const TextareaWrapper = styleProps => cssClass`
   }
 `;
 
-export const Textarea = styleProps => cssClass`
+export const Textarea = (styleProps) => cssClass`
   -webkit-appearance: none;
   border: 1px solid ${palette('white900')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
@@ -55,20 +55,22 @@ export const Textarea = styleProps => cssClass`
     }
   }
 
-  ${styleProps.state &&
+  ${
+    styleProps.state &&
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
         box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
       }
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TextareaField = styleProps => cssClass`
+export const TextareaField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
@@ -101,7 +103,7 @@ export function wrapperSizeProperties(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return properties[styleProps.size];
 }

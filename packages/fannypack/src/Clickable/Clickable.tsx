@@ -22,7 +22,7 @@ const useProps = createHook<ClickableProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -31,14 +31,14 @@ const useProps = createHook<ClickableProps>(
 );
 
 export const Clickable = createComponent<ClickableProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Clickable'
+    themeKey: 'Clickable',
   }
 );

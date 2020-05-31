@@ -4,7 +4,7 @@ import {
   PopoverProps as ReakitPopoverProps,
   usePopover as useReakitPopover,
   PopoverArrowProps as ReakitPopoverArrowProps,
-  usePopoverArrow as useReakitPopoverArrow
+  usePopoverArrow as useReakitPopoverArrow,
 } from 'reakit';
 import _merge from 'lodash/merge';
 
@@ -99,7 +99,7 @@ const useProps = createHook<PopoverProps>(
         unstable_autoFocusOnShow,
         unstable_popoverRef,
         unstable_popoverStyles,
-        stopAnimation
+        stopAnimation,
       },
       restProps
     );
@@ -110,7 +110,7 @@ const useProps = createHook<PopoverProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const popoverCloseClassName = useClassName({
       style: styles.PopoverClose,
@@ -118,7 +118,7 @@ const useProps = createHook<PopoverProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Close',
-      prevClassName: closeButtonProps.className
+      prevClassName: closeButtonProps.className,
     });
 
     const titleId = useUniqueId('popoverTitle');
@@ -127,7 +127,7 @@ const useProps = createHook<PopoverProps>(
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
     const handleClickClose = React.useCallback(
-      e => {
+      (e) => {
         onClickClose && onClickClose(e);
         hide && hide();
       },
@@ -190,27 +190,27 @@ const useProps = createHook<PopoverProps>(
       'aria-labelledby': props.title ? titleId : undefined,
       ...boxProps,
       children,
-      className
+      className,
     };
   },
   {
     defaultProps: {
-      duration: '150ms'
+      duration: '150ms',
     },
-    themeKey: 'Popover'
+    themeKey: 'Popover',
   }
 );
 
 export const Popover = createComponent<PopoverProps>(
-  props => {
+  (props) => {
     const popoverProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: popoverProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Popover'
+    themeKey: 'Popover',
   }
 );
 
@@ -229,7 +229,7 @@ const usePopoverContentProps = createHook<PopoverContentProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { id: props.id || contextProps.descriptionId, ...boxProps, className };
@@ -238,18 +238,18 @@ const usePopoverContentProps = createHook<PopoverContentProps>(
 );
 
 export const PopoverContent = createComponent<PopoverContentProps>(
-  props => {
+  (props) => {
     const calloutContentProps = usePopoverContentProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutContentProps
+      htmlProps: calloutContentProps,
     });
   },
   {
     attach: { useProps: usePopoverContentProps },
-    themeKey: 'Popover.Content'
+    themeKey: 'Popover.Content',
   }
 );
 
@@ -268,7 +268,7 @@ const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -277,18 +277,18 @@ const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
 );
 
 export const PopoverHeader = createComponent<PopoverHeaderProps>(
-  props => {
+  (props) => {
     const calloutHeaderProps = usePopoverHeaderProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutHeaderProps
+      htmlProps: calloutHeaderProps,
     });
   },
   {
     attach: { useProps: usePopoverHeaderProps },
-    themeKey: 'Popover.Header'
+    themeKey: 'Popover.Header',
   }
 );
 
@@ -307,7 +307,7 @@ const usePopoverTitleProps = createHook<PopoverTitleProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: textProps.className
+      prevClassName: textProps.className,
     });
 
     return { id: contextProps.titleId, ...textProps, className };
@@ -316,21 +316,21 @@ const usePopoverTitleProps = createHook<PopoverTitleProps>(
 );
 
 export const PopoverTitle = createComponent<PopoverTitleProps>(
-  props => {
+  (props) => {
     const calloutTitleProps = usePopoverTitleProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutTitleProps
+      htmlProps: calloutTitleProps,
     });
   },
   {
     attach: { useProps: usePopoverTitleProps },
     defaultProps: {
-      use: 'span'
+      use: 'span',
     },
-    themeKey: 'Popover.Title'
+    themeKey: 'Popover.Title',
   }
 );
 
@@ -349,7 +349,7 @@ const usePopoverFooterProps = createHook<PopoverFooterProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -358,18 +358,18 @@ const usePopoverFooterProps = createHook<PopoverFooterProps>(
 );
 
 export const PopoverFooter = createComponent<PopoverFooterProps>(
-  props => {
+  (props) => {
     const calloutFooterProps = usePopoverFooterProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutFooterProps
+      htmlProps: calloutFooterProps,
     });
   },
   {
     attach: { useProps: usePopoverFooterProps },
-    themeKey: 'Popover.Footer'
+    themeKey: 'Popover.Footer',
   }
 );
 
@@ -394,7 +394,7 @@ const usePopoverArrowProps = createHook<PopoverArrowProps>(
         // @ts-ignore
         unstable_arrowRef: unstable_arrowRef || contextProps.unstable_arrowRef,
         // @ts-ignore
-        unstable_arrowStyles: unstable_arrowStyles || contextProps.unstable_arrowRef
+        unstable_arrowStyles: unstable_arrowStyles || contextProps.unstable_arrowRef,
       },
       htmlProps
     );
@@ -405,31 +405,31 @@ const usePopoverArrowProps = createHook<PopoverArrowProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return {
       ...htmlProps,
-      className
+      className,
     };
   },
   { themeKey: 'Popover.Arrow' }
 );
 
 export const PopoverArrow = createComponent<PopoverArrowProps>(
-  props => {
+  (props) => {
     const popoverArrowProps = usePopoverArrowProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: popoverArrowProps
+      htmlProps: popoverArrowProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Popover.Arrow'
+    themeKey: 'Popover.Arrow',
   }
 );

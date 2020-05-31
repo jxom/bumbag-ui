@@ -4,7 +4,7 @@ import { borderRadius, darken, palette, space, theme, fontSize, fontWeight } fro
 
 const defaultPalette = getDefaultPalette({});
 
-export const Button = styleProps => cssClass`
+export const Button = (styleProps) => cssClass`
   align-items: center;
   background-color: ${palette(styleProps.palette)(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
@@ -21,10 +21,12 @@ export const Button = styleProps => cssClass`
   hyphens: auto;
   transition: box-shadow 0.1s ease-in-out 0s, border 0.1s, background-color 0.1s;
 
-  ${styleProps.palette === 'default' &&
+  ${
+    styleProps.palette === 'default' &&
     css`
       border: 1px solid ${palette('white900')(styleProps)};
-    `}
+    `
+  }
 
   &[disabled],
   &[aria-disabled="true"] {
@@ -45,8 +47,9 @@ export const Button = styleProps => cssClass`
   }
 `;
 
-export const ButtonIcon = styleProps => cssClass`
-  ${styleProps.isBefore &&
+export const ButtonIcon = (styleProps) => cssClass`
+  ${
+    styleProps.isBefore &&
     css`
       margin-left: -${space(1)(styleProps)}em;
       margin-right: ${space(2)(styleProps)}em;
@@ -54,9 +57,11 @@ export const ButtonIcon = styleProps => cssClass`
       & {
         ${theme(styleProps.themeKey, `css.before`)(styleProps)};
       }
-    `};
+    `
+  };
 
-  ${styleProps.isAfter &&
+  ${
+    styleProps.isAfter &&
     css`
       margin-left: ${space(2)(styleProps)}em;
       margin-right: -${space(1)(styleProps)}em;
@@ -64,14 +69,15 @@ export const ButtonIcon = styleProps => cssClass`
       & {
         ${theme(styleProps.themeKey, `css.after`)(styleProps)};
       }
-    `};
+    `
+  };
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const ButtonSpinnerWrapper = styleProps => cssClass`
+export const ButtonSpinnerWrapper = (styleProps) => cssClass`
   position: absolute;
   display: flex;
   align-items: center;
@@ -86,7 +92,7 @@ export const ButtonSpinnerWrapper = styleProps => cssClass`
   }
 `;
 
-export const ButtonSpinner = styleProps => cssClass`
+export const ButtonSpinner = (styleProps) => cssClass`
   && {
     font-size: 1.25em;
   }
@@ -96,7 +102,7 @@ export const ButtonSpinner = styleProps => cssClass`
   }
 `;
 
-export const ButtonClose = styleProps => cssClass`
+export const ButtonClose = (styleProps) => cssClass`
   && {
     min-height: unset;
     padding: ${space(2)(styleProps)}em;
@@ -107,9 +113,9 @@ export const ButtonClose = styleProps => cssClass`
   }
 `;
 
-export const isInteractive = styleProps => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
+export const isInteractive = (styleProps) => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
 
-export const getDisabledProperties = styleProps => css`
+export const getDisabledProperties = (styleProps) => css`
   & {
     cursor: not-allowed;
     opacity: 0.7;
@@ -121,7 +127,7 @@ export const getDisabledProperties = styleProps => css`
   }
 `;
 
-export const getSizeProperties = styleProps => {
+export const getSizeProperties = (styleProps) => {
   const styles = {
     small: css`
       & {
@@ -156,12 +162,12 @@ export const getSizeProperties = styleProps => {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return styles[styleProps.size];
 };
 
-export const getLoadingProperties = styleProps => css`
+export const getLoadingProperties = (styleProps) => css`
   & {
     cursor: not-allowed;
     position: relative;
@@ -176,7 +182,7 @@ export const getLoadingProperties = styleProps => css`
   }
 `;
 
-export const getStaticProperties = styleProps => css`
+export const getStaticProperties = (styleProps) => css`
   & {
     cursor: default;
     outline: unset;
@@ -191,7 +197,7 @@ export const getStaticProperties = styleProps => css`
   }
 `;
 
-export const getInteractiveProperties = styleProps => css`
+export const getInteractiveProperties = (styleProps) => css`
   &:focus {
     outline: unset;
     z-index: 2;
@@ -200,37 +206,37 @@ export const getInteractiveProperties = styleProps => css`
       ${palette(styleProps.palette === 'default' ? 'white900' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
 
     ${styleProps.palette === 'default' &&
-      css`
-        border-color: transparent;
-      `};
+    css`
+      border-color: transparent;
+    `};
 
     ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
   }
 
   ${styleProps.variant !== 'link' &&
-    css`
-      &:hover {
-        background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
+  css`
+    &:hover {
+      background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
 
-        & {
-          ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
-        }
+      & {
+        ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
       }
-    `};
+    }
+  `};
 
   ${styleProps.variant !== 'link' &&
-    css`
-      &:hover:active {
-        background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
+  css`
+    &:hover:active {
+      background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
 
-        & {
-          ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
-        }
+      & {
+        ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
       }
-    `};
+    }
+  `};
 `;
 
-export const getLinkProperties = styleProps => css`
+export const getLinkProperties = (styleProps) => css`
   & {
     border: 0;
     background: unset;
@@ -258,7 +264,7 @@ export const getLinkProperties = styleProps => css`
   }
 `;
 
-export const getOutlinedProperties = styleProps => css`
+export const getOutlinedProperties = (styleProps) => css`
   & {
     background-color: unset;
     border: 1px solid ${palette()(styleProps)};
@@ -267,20 +273,20 @@ export const getOutlinedProperties = styleProps => css`
     box-shadow: unset;
 
     ${isInteractive(styleProps) &&
-      css`
-        &:hover {
-          background-color: ${palette()(styleProps)};
-          color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-          fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-        }
-      `};
+    css`
+      &:hover {
+        background-color: ${palette()(styleProps)};
+        color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+        fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+      }
+    `};
   }
   & {
     ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};
   }
 `;
 
-export const getGhostProperties = styleProps => css`
+export const getGhostProperties = (styleProps) => css`
   & {
     background-color: unset;
     border: unset;

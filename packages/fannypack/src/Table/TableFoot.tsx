@@ -21,7 +21,7 @@ const useProps = createHook<TableFootProps>(
       styleProps: { ...tableContext, ...props, overrides: { ...tableContext.overrides, ...props.overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -30,17 +30,17 @@ const useProps = createHook<TableFootProps>(
 );
 
 export const TableFoot = createComponent<TableFootProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'tfoot'
+      use: 'tfoot',
     },
-    themeKey: 'Table.Foot'
+    themeKey: 'Table.Foot',
   }
 );

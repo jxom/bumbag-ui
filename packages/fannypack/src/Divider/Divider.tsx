@@ -13,7 +13,7 @@ const useProps = createHook<DividerProps>(
     let { orientation, ...htmlProps } = props;
     const separatorProps = useReakitSeparator(
       {
-        orientation
+        orientation,
       },
       htmlProps
     );
@@ -24,7 +24,7 @@ const useProps = createHook<DividerProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, children: undefined };
@@ -33,17 +33,17 @@ const useProps = createHook<DividerProps>(
 );
 
 export const Divider = createComponent<DividerProps>(
-  props => {
+  (props) => {
     const dividerProps = useProps(props);
     return createElement({ component: ReakitBox, use: props.use, htmlProps: dividerProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'hr'
+      use: 'hr',
     },
-    themeKey: 'Divider'
+    themeKey: 'Divider',
   }
 );

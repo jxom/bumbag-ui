@@ -33,7 +33,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Blockquote>{BlockquoteProps => <div {...BlockquoteProps}>Hello world</div>}</Blockquote>
+        <Blockquote>{(BlockquoteProps) => <div {...BlockquoteProps}>Hello world</div>}</Blockquote>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -43,7 +43,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Blockquote.root should render correctly', () => {
     const { container } = render(<Blockquote>hello world</Blockquote>, {
-      theme: { Blockquote: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Blockquote: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -52,7 +52,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<Blockquote>hello world</Blockquote>, {
-      theme: { Blockquote: { defaultProps: { className: 'test' } } }
+      theme: { Blockquote: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

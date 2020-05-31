@@ -27,7 +27,7 @@ describe('props', () => {
   });
 
   describe('sizes', () => {
-    ['small', 'medium', 'large'].forEach(size => {
+    ['small', 'medium', 'large'].forEach((size) => {
       it(`should render ${size} correctly`, () => {
         const { container } = render(<Textarea size={size as Size} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('props', () => {
   });
 
   describe('states', () => {
-    ['danger', 'success', 'warning', 'primary'].forEach(state => {
+    ['danger', 'success', 'warning', 'primary'].forEach((state) => {
       it(`should render ${state} correctly`, () => {
         const { container } = render(<Textarea state={state} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -70,7 +70,7 @@ describe('theming', () => {
   it('Textarea.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Textarea: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -78,7 +78,7 @@ describe('theming', () => {
   it('Textarea.Wrapper.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Textarea: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -86,7 +86,7 @@ describe('theming', () => {
   it('Textarea.placeholder.root should render correctly', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
-      theme: { Textarea: { css: { placeholder: { backgroundColor: 'red' } } } }
+      theme: { Textarea: { css: { placeholder: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -97,8 +97,8 @@ describe('defaultProps', () => {
     const { container } = render(<Textarea />, {
       // @ts-ignore
       theme: {
-        Textarea: { defaultProps: { className: 'test', color: 'primary' } }
-      }
+        Textarea: { defaultProps: { className: 'test', color: 'primary' } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

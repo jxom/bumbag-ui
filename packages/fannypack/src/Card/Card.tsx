@@ -24,7 +24,7 @@ const useProps = createHook<CardProps>(
     const boxProps = Box.useProps({
       altitude: variant === 'shadowed' ? '100' : null,
       border: variant === 'bordered' ? 'default' : null,
-      ...restProps
+      ...restProps,
     });
 
     const className = useClassName({
@@ -32,7 +32,7 @@ const useProps = createHook<CardProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const titleId = useUniqueId('cardTitle');
@@ -64,27 +64,27 @@ const useProps = createHook<CardProps>(
       'aria-labelledby': props.title ? titleId : undefined,
       ...boxProps,
       className,
-      children
+      children,
     };
   },
   {
     defaultProps: {
-      variant: 'shadowed'
+      variant: 'shadowed',
     },
-    themeKey: 'Card'
+    themeKey: 'Card',
   }
 );
 
 export const Card = createComponent<CardProps>(
-  props => {
+  (props) => {
     const cardProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: cardProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Card'
+    themeKey: 'Card',
   }
 );
 
@@ -101,7 +101,7 @@ export function CardContent(props: CardContentProps) {
     style: styles.CardContent,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Card',
-    themeKeySuffix: 'Content'
+    themeKeySuffix: 'Content',
   });
 
   return (
@@ -124,7 +124,7 @@ export function CardTitle(props: CardTitleProps) {
     style: styles.CardTitle,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Card',
-    themeKeySuffix: 'Title'
+    themeKeySuffix: 'Title',
   });
 
   return (
@@ -147,7 +147,7 @@ export function CardHeader(props: CardHeaderProps) {
     style: styles.CardHeader,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Card',
-    themeKeySuffix: 'Header'
+    themeKeySuffix: 'Header',
   });
 
   return (
@@ -170,7 +170,7 @@ export function CardFooter(props: CardFooterProps) {
     style: styles.CardFooter,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Card',
-    themeKeySuffix: 'Footer'
+    themeKeySuffix: 'Footer',
   });
 
   return (

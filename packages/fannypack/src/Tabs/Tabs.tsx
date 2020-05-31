@@ -19,7 +19,7 @@ export type TabsProps = BoxProps & LocalTabsProps;
 
 export const TabsContext = React.createContext<{ tabs: Partial<TabStateReturn>; overrides: any }>({
   tabs: {},
-  overrides: {}
+  overrides: {},
 });
 
 const useProps = createHook<TabsProps>(
@@ -34,7 +34,7 @@ const useProps = createHook<TabsProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(() => ({ tabs, overrides }), [overrides, tabs]);
@@ -42,21 +42,21 @@ const useProps = createHook<TabsProps>(
     return {
       ...boxProps,
       className,
-      children: <TabsContext.Provider value={contextValue}>{children}</TabsContext.Provider>
+      children: <TabsContext.Provider value={contextValue}>{children}</TabsContext.Provider>,
     };
   },
   { themeKey: 'Tabs' }
 );
 
 export const Tabs = createComponent<TabsProps>(
-  props => {
+  (props) => {
     const tabsProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabsProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tabs'
+    themeKey: 'Tabs',
   }
 );

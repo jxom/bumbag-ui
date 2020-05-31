@@ -25,7 +25,7 @@ const useProps = createHook<AvatarProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: imageProps.className
+      prevClassName: imageProps.className,
     });
 
     let children;
@@ -38,14 +38,14 @@ const useProps = createHook<AvatarProps>(
   },
   {
     defaultProps: {
-      size: 'default'
+      size: 'default',
     },
-    themeKey: 'Avatar'
+    themeKey: 'Avatar',
   }
 );
 
 export const Avatar = createComponent<AvatarProps>(
-  props => {
+  (props) => {
     const imageProps = useProps(props);
 
     let use = props.use;
@@ -57,11 +57,11 @@ export const Avatar = createComponent<AvatarProps>(
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'img'
+      use: 'img',
     },
-    themeKey: 'Avatar'
+    themeKey: 'Avatar',
   }
 );

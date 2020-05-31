@@ -67,7 +67,7 @@ describe('composition', () => {
         const hidden = Rover.useState();
         return (
           <Rover {...hidden} stopId="test1">
-            {RoverProps => <p {...RoverProps}>Hello world</p>}
+            {(RoverProps) => <p {...RoverProps}>Hello world</p>}
           </Rover>
         );
       }
@@ -103,7 +103,7 @@ describe('theming', () => {
       );
     }
     const { container } = render(<Component />, {
-      theme: { Rover: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Rover: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -120,7 +120,7 @@ describe('defaultProps', () => {
       );
     }
     const { container } = render(<Component />, {
-      theme: { Rover: { defaultProps: { className: 'test' } } }
+      theme: { Rover: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

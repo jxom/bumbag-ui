@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _get from 'lodash/get';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -25,7 +24,7 @@ const useProps = createHook<TableCellProps>(
       styleProps: { ...tableContext, ...props, overrides: { ...tableContext.overrides, ...props.overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     React.useEffect(() => {
@@ -36,15 +35,15 @@ const useProps = createHook<TableCellProps>(
         const rowElement = tableCellRef.current.parentNode;
         const bodyElement = rowElement.parentNode;
         const tableElement = bodyElement.parentNode;
-        const tableElementChildren = _get(tableElement, 'childNodes', []);
+        const tableElementChildren = tableElement?.childNodes ?? [];
         if (tableElementChildren.length > 0) {
           // @ts-ignore
           NodeList.prototype.find = Array.prototype.find;
           const headElement = tableElementChildren.find((child: any) => child.tagName === 'THEAD');
           if (headElement && headElement.childNodes) {
-            const headRowElement = _get(headElement, 'childNodes[0]');
-            const headCellElement = _get(headRowElement, `childNodes[${cellIndex}]`);
-            setTitle(_get(headCellElement, 'innerText'));
+            const headRowElement = headElement?.childNodes[0];
+            const headCellElement = headRowElement?.childNodes?.[cellIndex];
+            setTitle(headCellElement?.innerText);
           }
         }
       }
@@ -56,17 +55,17 @@ const useProps = createHook<TableCellProps>(
 );
 
 export const TableCell = createComponent<TableCellProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'td'
+      use: 'td',
     },
-    themeKey: 'Table.Cell'
+    themeKey: 'Table.Cell',
   }
 );

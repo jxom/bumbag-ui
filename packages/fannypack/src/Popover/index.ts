@@ -5,7 +5,7 @@ import {
   PopoverContent,
   PopoverFooter,
   PopoverHeader,
-  PopoverTitle
+  PopoverTitle,
 } from './Popover';
 import { PopoverBackdrop } from './PopoverBackdrop';
 import { PopoverDisclosure } from './PopoverDisclosure';
@@ -24,6 +24,6 @@ export const Popover = Object.assign(_Popover, {
   Header: PopoverHeader,
   Title: PopoverTitle,
   useState: usePopoverState,
-  State: PopoverState
+  State: PopoverState,
 });
 export { styles as popoverStyles };

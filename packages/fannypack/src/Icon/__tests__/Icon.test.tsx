@@ -60,8 +60,8 @@ describe('props', () => {
       viewBoxWidth: 16,
       viewBoxHeight: 16,
       paths: [
-        'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z'
-      ]
+        'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z',
+      ],
     };
 
     const { container } = render(<Icon icon={calendar}>Hello world</Icon>);
@@ -91,7 +91,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Icon icon="info-circle">{iconProps => <div {...iconProps}>Hello world</div>}</Icon>
+        <Icon icon="info-circle">{(iconProps) => <div {...iconProps}>Hello world</div>}</Icon>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -118,10 +118,10 @@ describe('overrides', () => {
               {
                 icons: [faArrowLeft],
                 prefix: 'solid-',
-                type: 'font-awesome'
-              }
-            ]
-          }
+                type: 'font-awesome',
+              },
+            ],
+          },
         }}
       >
         hello world
@@ -141,11 +141,11 @@ describe('overrides', () => {
                 viewBoxWidth: 16,
                 viewBoxHeight: 16,
                 paths: [
-                  'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z'
-                ]
-              }
-            }
-          }
+                  'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z',
+                ],
+              },
+            },
+          },
         }}
       >
         hello world
@@ -164,13 +164,13 @@ describe('overrides', () => {
               {
                 icons: [faArrowLeft],
                 prefix: 'solid-',
-                type: 'font-awesome'
-              }
+                type: 'font-awesome',
+              },
             ],
             iconNames: {
-              foo: 'solid-arrow-left'
-            }
-          }
+              foo: 'solid-arrow-left',
+            },
+          },
         }}
       >
         hello world
@@ -183,7 +183,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Icon.root should render correctly', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Icon: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -196,11 +196,11 @@ describe('theming', () => {
             {
               icons: [faArrowLeft],
               prefix: 'solid-',
-              type: 'font-awesome'
-            }
-          ]
-        }
-      }
+              type: 'font-awesome',
+            },
+          ],
+        },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -214,12 +214,12 @@ describe('theming', () => {
               viewBoxWidth: 16,
               viewBoxHeight: 16,
               paths: [
-                'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z'
-              ]
-            }
-          }
-        }
-      }
+                'M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z',
+              ],
+            },
+          },
+        },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -232,14 +232,14 @@ describe('theming', () => {
             {
               icons: [faArrowLeft],
               prefix: 'solid-',
-              type: 'font-awesome'
-            }
+              type: 'font-awesome',
+            },
           ],
           iconNames: {
-            foo: 'solid-arrow-left'
-          }
-        }
-      }
+            foo: 'solid-arrow-left',
+          },
+        },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -248,28 +248,28 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { defaultProps: { className: 'test' } } }
+      theme: { Icon: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for color', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { defaultProps: { color: 'primary' } } }
+      theme: { Icon: { defaultProps: { color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for label', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { defaultProps: { label: 'Circle' } } }
+      theme: { Icon: { defaultProps: { label: 'Circle' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for fontSize', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { defaultProps: { fontSize: '300' } } }
+      theme: { Icon: { defaultProps: { fontSize: '300' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

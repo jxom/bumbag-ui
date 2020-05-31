@@ -52,7 +52,7 @@ const useProps = createHook<RadioGroupProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -75,22 +75,22 @@ const useProps = createHook<RadioGroupProps>(
             />
           ))}
         </Set>
-      )
+      ),
     };
   },
   { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'RadioGroup' }
 );
 
 export const RadioGroup = createComponent<RadioGroupProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'RadioGroup'
+    themeKey: 'RadioGroup',
   }
 );
 
@@ -133,7 +133,7 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -169,29 +169,29 @@ const useRadioGroupFieldProps = createHook<RadioGroupFieldProps>(
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'RadioGroupField' }
 );
 
 export const RadioGroupField = createComponent<RadioGroupFieldProps>(
-  props => {
+  (props) => {
     const radioGroupFieldProps = useRadioGroupFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: radioGroupFieldProps
+      htmlProps: radioGroupFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'fieldset'
+      use: 'fieldset',
     },
-    themeKey: 'RadioGroupField'
+    themeKey: 'RadioGroupField',
   }
 );

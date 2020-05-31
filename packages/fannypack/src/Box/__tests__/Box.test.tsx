@@ -137,7 +137,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['default', '0', '1', '2', '3', '4', '5', '6'].forEach(borderRadius => {
+  ['default', '0', '1', '2', '3', '4', '5', '6'].forEach((borderRadius) => {
     it(`should render correctly for a borderRadius of ${borderRadius}`, () => {
       const { container } = render(<Box borderRadius={borderRadius} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -177,7 +177,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Box>{boxProps => <p {...boxProps}>Hello world</p>}</Box>);
+      const { container } = render(<Box>{(boxProps) => <p {...boxProps}>Hello world</p>}</Box>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -186,14 +186,14 @@ describe('composition', () => {
 describe('theming', () => {
   it('Box.root should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {
-      theme: { Box: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Box: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Box.root should render correctly', () => {
     const { container } = render(<Box color="green">hello world</Box>, {
-      theme: { Box: { css: { root: props => ({ backgroundColor: props.color }) } } }
+      theme: { Box: { css: { root: (props) => ({ backgroundColor: props.color }) } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -202,7 +202,7 @@ describe('theming', () => {
 describe('variants', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<Box variant="test">hello world</Box>, {
-      theme: { Box: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+      theme: { Box: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -211,7 +211,7 @@ describe('variants', () => {
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {
-      theme: { Box: { defaultProps: { className: 'test' } } }
+      theme: { Box: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

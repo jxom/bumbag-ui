@@ -595,7 +595,7 @@ describe('defaultProps', () => {
         </SideNav.Level>
       </SideNav>,
       {
-        theme: { SideNav: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { SideNav: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

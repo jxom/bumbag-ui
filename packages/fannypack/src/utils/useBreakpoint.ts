@@ -1,5 +1,4 @@
 import * as React from 'react';
-import _get from 'lodash/get';
 
 import { useTheme } from './useTheme';
 
@@ -8,10 +7,10 @@ export function useBreakpoint(_breakpoint) {
 
   const minBreakpointValues: { [key: string]: number } = {
     mobile: 0,
-    tablet: _get(theme, 'breakpoints.mobile'),
-    desktop: _get(theme, 'breakpoints.tablet'),
-    widescreen: _get(theme, 'breakpoints.desktop'),
-    fullHD: _get(theme, 'breakpoints.widescreen')
+    tablet: theme?.breakpoints?.mobile,
+    desktop: theme?.breakpoints?.tablet,
+    widescreen: theme?.breakpoints?.desktop,
+    fullHD: theme?.breakpoints?.widescreen,
   };
 
   let breakpoint = _breakpoint;
@@ -24,7 +23,7 @@ export function useBreakpoint(_breakpoint) {
     key = 'max-width';
   }
 
-  const breakpointValue = _get(theme, `breakpoints.${breakpoint}`);
+  const breakpointValue = theme?.breakpoints?.[breakpoint];
 
   let query = key
     ? `(${key}: ${breakpointValue}px)`
@@ -36,19 +35,16 @@ export function useBreakpoint(_breakpoint) {
       : { matches: undefined, addListener: () => null, removeListener: () => null };
   const [doesMatch, setDoesMatch] = React.useState(mediaQueryList.matches);
 
-  const onMediaChange = React.useCallback(e => {
+  const onMediaChange = React.useCallback((e) => {
     setDoesMatch(e.matches);
   }, []);
 
-  React.useEffect(
-    () => {
-      mediaQueryList.addListener(onMediaChange);
-      return function cleanup() {
-        mediaQueryList.removeListener(onMediaChange);
-      };
-    },
-    [mediaQueryList, onMediaChange]
-  );
+  React.useEffect(() => {
+    mediaQueryList.addListener(onMediaChange);
+    return function cleanup() {
+      mediaQueryList.removeListener(onMediaChange);
+    };
+  }, [mediaQueryList, onMediaChange]);
 
   return doesMatch;
 }

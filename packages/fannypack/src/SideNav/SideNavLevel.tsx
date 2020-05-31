@@ -29,14 +29,14 @@ const useProps = createHook<SideNavLevelProps>(
       styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: listProps.className
+      prevClassName: listProps.className,
     });
     const titleClassName = useClassName({
       style: styles.SideNavLevelTitle,
       styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Title'
+      themeKeySuffix: 'Title',
     });
 
     const contextValue = React.useMemo(() => ({ level: level + 1 }), [level]);
@@ -56,24 +56,24 @@ const useProps = createHook<SideNavLevelProps>(
           )}
           {children}
         </SideNavLevelContext.Provider>
-      )
+      ),
     };
   },
   { themeKey: 'SideNav.Level' }
 );
 
 export const SideNavLevel = createComponent<SideNavLevelProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'ul'
+      use: 'ul',
     },
-    themeKey: 'SideNav.Level'
+    themeKey: 'SideNav.Level',
   }
 );

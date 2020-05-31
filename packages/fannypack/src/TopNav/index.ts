@@ -8,6 +8,6 @@ export * from './TopNavSection';
 export * from './TopNavItem';
 export const TopNav = Object.assign(_TopNav, {
   Section: TopNavSection,
-  Item: TopNavItem
+  Item: TopNavItem,
 });
 export { styles as topNavStyles };

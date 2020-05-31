@@ -28,5 +28,5 @@ export default (overrides: ThemeConfig = {}) => ({
 
   Container: Container(overrides.Container || {}),
   Icon: Icon(overrides.Icon || {}),
-  Toast: Toast(overrides.Toast || {})
+  Toast: Toast(overrides.Toast || {}),
 });

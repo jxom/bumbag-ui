@@ -37,7 +37,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Divider>{DividerProps => <div {...DividerProps} />}</Divider>);
+      const { container } = render(<Divider>{(DividerProps) => <div {...DividerProps} />}</Divider>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -47,7 +47,7 @@ describe('theming', () => {
   it('Divider.root should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
-      theme: { Divider: { css: { root: { borderColor: 'red' } } } }
+      theme: { Divider: { css: { root: { borderColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -55,7 +55,7 @@ describe('theming', () => {
   it('Divider.vertical.root should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
-      theme: { Divider: { css: { vertical: { borderColor: 'red' } } } }
+      theme: { Divider: { css: { vertical: { borderColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -65,7 +65,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
-      theme: { Divider: { defaultProps: { className: 'test', borderColor: 'primary' } } }
+      theme: { Divider: { defaultProps: { className: 'test', borderColor: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

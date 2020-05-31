@@ -17,11 +17,11 @@ const useProps = createHook<PageContentProps>(
     const { overrides, wrapperProps, ...restProps } = props;
     const containerProps = Container.useProps({
       ...restProps,
-      wrapElement: element => (
+      wrapElement: (element) => (
         <PageContentWrapper overrides={overrides} {...wrapperProps}>
           {element}
         </PageContentWrapper>
-      )
+      ),
     });
 
     const className = useClassName({
@@ -29,7 +29,7 @@ const useProps = createHook<PageContentProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: containerProps.className
+      prevClassName: containerProps.className,
     });
 
     return { ...containerProps, className };
@@ -38,19 +38,19 @@ const useProps = createHook<PageContentProps>(
 );
 
 export const PageContent = createComponent<PageContentProps>(
-  props => {
+  (props) => {
     const pageContentProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: pageContentProps
+      htmlProps: pageContentProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'PageContent'
+    themeKey: 'PageContent',
   }
 );

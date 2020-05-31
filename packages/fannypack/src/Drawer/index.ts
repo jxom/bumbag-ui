@@ -9,6 +9,6 @@ export * from './DrawerState';
 export const Drawer = Object.assign(_Drawer, {
   Disclosure: DrawerDisclosure,
   useState: useDrawerState,
-  State: DrawerState
+  State: DrawerState,
 });
 export { styles as drawerStyles };

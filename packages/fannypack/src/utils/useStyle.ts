@@ -1,5 +1,4 @@
 import * as React from 'react';
-import _get from 'lodash/get';
 import _kebabCase from 'lodash/kebabCase';
 
 import { ThemeContext, css } from '../styled';
@@ -26,7 +25,7 @@ const colorAttributes = [
   'columnRuleColor',
   'outlineColor',
   'textDecorationColor',
-  'textEmphasisColor'
+  'textEmphasisColor',
 ];
 const spaceAttributes = [
   'margin',
@@ -49,7 +48,7 @@ const spaceAttributes = [
   'right',
   'grid-gap',
   'grid-column-gap',
-  'grid-row-gap'
+  'grid-row-gap',
 ];
 const fontSizeAttributes = ['fontSize'];
 const fontWeightAttributes = ['fontWeight'];
@@ -58,7 +57,7 @@ const attributeMaps = {
   marginY: ['marginTop', 'marginBottom'],
   paddingY: ['paddingTop', 'paddingBottom'],
   marginX: ['marginLeft', 'marginRight'],
-  paddingX: ['paddingLeft', 'paddingRight']
+  paddingX: ['paddingLeft', 'paddingRight'],
 };
 
 function getBorderValue({ theme, value }) {
@@ -118,7 +117,7 @@ function getStyleFromProps(props, theme) {
     styleEntries = styleEntries.reduce((prevStyle, [attribute, value]) => {
       let entries = [[attribute, value]];
       if (attributeMaps[attribute]) {
-        entries = attributeMaps[attribute].map(attribute => [attribute, value]);
+        entries = attributeMaps[attribute].map((attribute) => [attribute, value]);
       }
       return [...prevStyle, ...entries];
     }, []);

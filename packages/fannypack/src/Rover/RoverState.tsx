@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useRoverState as useReakitRoverState,
   RoverStateReturn as ReakitRoverStateReturn,
-  RoverInitialState as ReakitRoverInitialState
+  RoverInitialState as ReakitRoverInitialState,
 } from 'reakit';
 import { isFunction } from '../utils';
 

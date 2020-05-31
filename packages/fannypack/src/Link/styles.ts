@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { palette, theme } from '../utils';
 
-export const Link = styleProps => cssClass`
+export const Link = (styleProps) => cssClass`
   color: ${palette('primary')(styleProps)};
   fill: ${palette('primary')(styleProps)};
   cursor: pointer;

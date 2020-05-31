@@ -34,10 +34,10 @@ const useProps = createHook<TopNavItemProps>(
       styleProps: {
         ...props,
         isActive: typeof isActive === 'boolean' ? isActive : selectedId === navId,
-        overrides: { ...topNavOverrides, ...overrides }
+        overrides: { ...topNavOverrides, ...overrides },
       },
       themeKey,
-      themeKeyOverride
+      themeKeyOverride,
     });
 
     return {
@@ -57,31 +57,31 @@ const useProps = createHook<TopNavItemProps>(
             // @ts-ignore */
             React.cloneElement(href ? <a href={href}>{children}</a> : children, {
               className,
-              onClick: bindFns(onClick, () => onChangeSelectedId(navId))
+              onClick: bindFns(onClick, () => onChangeSelectedId(navId)),
             })
-          : children
+          : children,
     };
   },
   { defaultProps: { palette: 'primary', variant: 'default' }, themeKey: 'TopNav.Item' }
 );
 
 export const TopNavItem = createComponent<TopNavItemProps>(
-  props => {
+  (props) => {
     const TopNavItemProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: TopNavItemProps
+      htmlProps: TopNavItemProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'li'
+      use: 'li',
     },
-    themeKey: 'TopNav.Item'
+    themeKey: 'TopNav.Item',
   }
 );

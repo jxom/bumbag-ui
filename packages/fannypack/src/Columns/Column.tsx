@@ -34,7 +34,7 @@ const useProps = createHook<ColumnProps>(
       styleProps: { ...props, ...columnsContext },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -52,21 +52,21 @@ const useProps = createHook<ColumnProps>(
       spreadTabletOffset: undefined,
       spreadDesktopOffset: undefined,
       spreadWidescreenOffset: undefined,
-      spreadFullHDOffset: undefined
+      spreadFullHDOffset: undefined,
     },
-    themeKey: 'Columns.Column'
+    themeKey: 'Columns.Column',
   }
 );
 
 export const Column = createComponent<ColumnProps>(
-  props => {
+  (props) => {
     const columnProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: columnProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Columns.Column'
+    themeKey: 'Columns.Column',
   }
 );

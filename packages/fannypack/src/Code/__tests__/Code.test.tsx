@@ -42,7 +42,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Code>{CodeProps => <div {...CodeProps}>Hello world</div>}</Code>);
+      const { container } = render(<Code>{(CodeProps) => <div {...CodeProps}>Hello world</div>}</Code>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -51,7 +51,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Code.root should render correctly', () => {
     const { container } = render(<Code>hello world</Code>, {
-      theme: { Code: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Code: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -60,14 +60,14 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Code>hello world</Code>, {
-      theme: { Code: { defaultProps: { className: 'test' } } }
+      theme: { Code: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for palette', () => {
     const { container } = render(<Code>hello world</Code>, {
-      theme: { Code: { defaultProps: { palette: 'primary' } } }
+      theme: { Code: { defaultProps: { palette: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

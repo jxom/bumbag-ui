@@ -47,7 +47,7 @@ describe('props', () => {
   });
 
   describe('type', () => {
-    ['info', 'success', 'danger', 'warning'].forEach(type => {
+    ['info', 'success', 'danger', 'warning'].forEach((type) => {
       it(`should render correctly with type ${type}`, () => {
         const { container } = render(
           <Dialog type={type} title="This is a dialog">
@@ -97,7 +97,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Dialog>{DialogProps => <div {...DialogProps}>Hello world</div>}</Dialog>);
+      const { container } = render(<Dialog>{(DialogProps) => <div {...DialogProps}>Hello world</div>}</Dialog>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -170,49 +170,49 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Dialog.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
-      theme: { Dialog: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Dialog: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.Content.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
-      theme: { Dialog: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.Header.root should render correctly', () => {
     const { container } = render(<Dialog title="This is a title">hello world</Dialog>, {
-      theme: { Dialog: { Header: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { Header: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.Title.root should render correctly', () => {
     const { container } = render(<Dialog title="This is a title">hello world</Dialog>, {
-      theme: { Dialog: { Title: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { Title: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.Footer.root should render correctly', () => {
     const { container } = render(<Dialog footer="This is a footer">hello world</Dialog>, {
-      theme: { Dialog: { Footer: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.IconWrapper.root should render correctly', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
-      theme: { Dialog: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Dialog.Close.root should render correctly', () => {
     const { container } = render(<Dialog showCloseButton>hello world</Dialog>, {
-      theme: { Dialog: { Close: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Dialog: { Close: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -221,7 +221,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Dialog>hello world</Dialog>, {
-      theme: { Dialog: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Dialog: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

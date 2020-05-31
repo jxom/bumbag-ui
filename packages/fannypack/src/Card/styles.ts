@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { borderRadius, fontSize, fontWeight, space, theme } from '../utils';
 
-export const Card = styleProps => cssClass`
+export const Card = (styleProps) => cssClass`
   background-color: white;
   border-radius: ${borderRadius('default')(styleProps)};
   padding: ${space(3, 'major')(styleProps)}rem;
@@ -11,13 +11,13 @@ export const Card = styleProps => cssClass`
   }
 `;
 
-export const CardContent = styleProps => cssClass`
+export const CardContent = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const CardHeader = styleProps => cssClass`
+export const CardHeader = (styleProps) => cssClass`
   display: flex;
   margin-bottom: ${space(1, 'major')(styleProps)}rem;
   align-items: center;
@@ -28,7 +28,7 @@ export const CardHeader = styleProps => cssClass`
   }
 `;
 
-export const CardTitle = styleProps => cssClass`
+export const CardTitle = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
   font-size: ${fontSize('300')(styleProps)}em;
 
@@ -37,7 +37,7 @@ export const CardTitle = styleProps => cssClass`
   }
 `;
 
-export const CardFooter = styleProps => cssClass`
+export const CardFooter = (styleProps) => cssClass`
   margin-top: ${space(3, 'major')(styleProps)}rem;
 
   & {

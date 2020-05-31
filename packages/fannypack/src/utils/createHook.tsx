@@ -1,18 +1,15 @@
-import * as React from 'react';
-import _get from 'lodash/get';
-import _merge from 'lodash/merge';
-import _omit from 'lodash/omit';
-
 import { useDefaultProps } from './useDefaultProps';
+import { omit } from './omit';
 
 export function createHook<P>(
   useHook: (props: Partial<P>, options: { themeKey: string; themeKeyOverride: string }) => Partial<P>,
   config?: { defaultProps?: Partial<P>; themeKey?: string }
 ) {
   return (props: Partial<P>, { themeKey: themeKeyOverride = undefined } = {}) => {
-    const themeKey = themeKeyOverride || _get(props, 'themeKey') || _get(config, 'themeKey');
+    // @ts-ignore
+    const themeKey = themeKeyOverride || props?.themeKey || config?.themeKey;
     const { props: newProps, themeKey: newThemeKey } = useDefaultProps(props, { ...config, themeKey });
     // @ts-ignore
-    return useHook(_omit(newProps, 'themeKey'), { themeKey: _get(config, 'themeKey'), themeKeyOverride: newThemeKey });
+    return useHook(omit(newProps, 'themeKey'), { themeKey: config?.themeKey, themeKeyOverride: newThemeKey });
   };
 }

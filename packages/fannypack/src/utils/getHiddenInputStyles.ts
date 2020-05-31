@@ -10,7 +10,7 @@ export function getHiddenInputStyles({
   checkedIconCss,
   uncheckedIconCss,
   styleProps,
-  themeKey
+  themeKey,
 }: any) {
   // @ts-ignore
   return cssClass`
@@ -25,10 +25,12 @@ export function getHiddenInputStyles({
     }
 
     & + .${iconClassName} {
-      ${styleProps.state &&
+      ${
+        styleProps.state &&
         css`
           border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        `}
+        `
+      }
 
       &::before {
         ${uncheckedIconCss};
@@ -39,10 +41,12 @@ export function getHiddenInputStyles({
       }
     }
     &:not(:checked) + .${iconClassName} {
-      ${styleProps.state &&
+      ${
+        styleProps.state &&
         css`
           box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
-        `}
+        `
+      }
     }
     &[disabled] + .${iconClassName} {
       background-color: ${palette('white700')(styleProps)};

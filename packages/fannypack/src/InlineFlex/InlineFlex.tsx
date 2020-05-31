@@ -18,7 +18,7 @@ const useProps = createHook<InlineFlexProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,17 +27,17 @@ const useProps = createHook<InlineFlexProps>(
 );
 
 export const InlineFlex = createComponent<InlineFlexProps>(
-  props => {
+  (props) => {
     const inlineFlexProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: inlineFlexProps
+      htmlProps: inlineFlexProps,
     });
   },
   {
     attach: { useProps },
-    themeKey: 'InlineFlex'
+    themeKey: 'InlineFlex',
   }
 );

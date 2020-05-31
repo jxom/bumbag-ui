@@ -61,28 +61,28 @@ const useProps = createHook<RadioProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const radioIconClassName = useClassName({
       style: styles.RadioIcon,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const hiddenRadioClassName = useClassName({
       style: styles.HiddenRadio,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'HiddenInput'
+      themeKeySuffix: 'HiddenInput',
     });
     const radioLabelClassName = useClassName({
       style: styles.RadioLabel,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Label'
+      themeKeySuffix: 'Label',
     });
 
     const labelId = useUniqueId('label');
@@ -129,24 +129,24 @@ const useProps = createHook<RadioProps>(
             </Label>
           )}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Radio' }
 );
 
 export const Radio = createComponent<RadioProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: Label
+      use: Label,
     },
-    themeKey: 'Radio'
+    themeKey: 'Radio',
   }
 );

@@ -7,7 +7,7 @@ export const defaultDashOffset = 200;
 export const progressDashArrayValue = 126;
 export const progressDashOffset = 60;
 
-export const SpinnerWrapper = styleProps => cssClass`
+export const SpinnerWrapper = (styleProps) => cssClass`
   line-height: 1rem;
   font-size: 20px;
 
@@ -18,7 +18,7 @@ export const SpinnerWrapper = styleProps => cssClass`
   }
 `;
 
-export const Spinner = styleProps => cssClass`
+export const Spinner = (styleProps) => cssClass`
   width: 1em;
   height: 1em;
   transform: rotate(-90deg);
@@ -30,7 +30,7 @@ export const Spinner = styleProps => cssClass`
   }
 `;
 
-export const TrackCircle = styleProps => cssClass`
+export const TrackCircle = (styleProps) => cssClass`
   stroke: ${palette(
     styleProps.trackColor || `${styleProps.color}100`,
     styleProps.trackColor || tint(0.9, styleProps.color)
@@ -41,7 +41,7 @@ export const TrackCircle = styleProps => cssClass`
   }
 `;
 
-export const LoaderCircle = styleProps => cssClass`
+export const LoaderCircle = (styleProps) => cssClass`
   stroke-dasharray: ${typeof styleProps.value === 'number' ? progressDashArrayValue : getDashArrayValue(styleProps)};
   stroke-dashoffset: ${
     typeof styleProps.value === 'number'
@@ -56,14 +56,14 @@ export const LoaderCircle = styleProps => cssClass`
   }
 `;
 
-export const getDashArrayValue = styleProps => {
+export const getDashArrayValue = (styleProps) => {
   const percentageString = styleProps.perimeter.split('%')[0];
   const percentage = parseFloat(percentageString);
   const scalar = percentage / 100;
   return defaultDashOffset + scalar * (defaultDashArrayValueMax - defaultDashOffset);
 };
 
-export const getSizeProperties = styleProps => {
+export const getSizeProperties = (styleProps) => {
   const sizeProperties = {
     small: css`
       & svg {
@@ -95,7 +95,7 @@ export const getSizeProperties = styleProps => {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return sizeProperties[styleProps.size];
 };
@@ -110,6 +110,6 @@ export const rotate = keyframes`
   }
 `;
 
-export const getSpinnerAnimation = styleProps => css`
+export const getSpinnerAnimation = (styleProps) => css`
   animation: ${rotate} ${styleProps.duration} infinite linear;
 `;

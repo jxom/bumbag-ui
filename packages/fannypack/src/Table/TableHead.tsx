@@ -21,7 +21,7 @@ const useProps = createHook<TableHeadProps>(
       styleProps: { ...tableContext, ...props, overrides: { ...tableContext.overrides, ...props.overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -30,17 +30,17 @@ const useProps = createHook<TableHeadProps>(
 );
 
 export const TableHead = createComponent<TableHeadProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'thead'
+      use: 'thead',
     },
-    themeKey: 'Table.Head'
+    themeKey: 'Table.Head',
   }
 );

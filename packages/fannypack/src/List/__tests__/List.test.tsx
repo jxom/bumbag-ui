@@ -83,7 +83,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<List>{ListProps => <div {...ListProps}>Hello world</div>}</List>);
+      const { container } = render(<List>{(ListProps) => <div {...ListProps}>Hello world</div>}</List>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -108,7 +108,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { List: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -123,7 +123,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { css: { ordered: { backgroundColor: 'red' } } } }
+        theme: { List: { css: { ordered: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -138,7 +138,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { css: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { List: { css: { horizontal: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -153,7 +153,7 @@ describe('theming', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { Item: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { List: { Item: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -170,7 +170,7 @@ describe('defaultProps', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { defaultProps: { className: 'test', isOrdered: true } } }
+        theme: { List: { defaultProps: { className: 'test', isOrdered: true } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -185,7 +185,7 @@ describe('defaultProps', () => {
         <List.Item>Item Four</List.Item>
       </List>,
       {
-        theme: { List: { Item: { defaultProps: { className: 'test' } } } }
+        theme: { List: { Item: { defaultProps: { className: 'test' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -51,7 +51,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       function Component() {
-        return <Tabbable>{tabbableProps => <p {...tabbableProps}>Hello world</p>}</Tabbable>;
+        return <Tabbable>{(tabbableProps) => <p {...tabbableProps}>Hello world</p>}</Tabbable>;
       }
       const { container } = render(<Component />);
       expect(container.firstChild).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Tabbable.root should render correctly', () => {
     const { container } = render(<Tabbable use="div">Tabbable</Tabbable>, {
-      theme: { Tabbable: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Tabbable: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -82,7 +82,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Tabbable use="div">Tabbable</Tabbable>, {
-      theme: { Tabbable: { defaultProps: { className: 'test' } } }
+      theme: { Tabbable: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

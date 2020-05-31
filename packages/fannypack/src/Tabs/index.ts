@@ -14,6 +14,6 @@ export const Tabs = Object.assign(_Tabs, {
   List: TabsList,
   Panel: TabsPanel,
   useState: useTabState,
-  State: TabState
+  State: TabState,
 });
 export { styles as tabsStyles };

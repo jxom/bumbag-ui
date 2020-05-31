@@ -87,7 +87,7 @@ describe('composition', () => {
         const modal = Modal.useState({ baseId: 'test' });
         return (
           <Modal.Disclosure {...modal}>
-            {ModalDisclosureProps => <div {...ModalDisclosureProps}>Hello world</div>}
+            {(ModalDisclosureProps) => <div {...ModalDisclosureProps}>Hello world</div>}
           </Modal.Disclosure>
         );
       }
@@ -122,7 +122,7 @@ describe('theming', () => {
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Modal: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -135,7 +135,7 @@ describe('defaultProps', () => {
       return <Modal.Disclosure {...modal}>Toggle</Modal.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Modal: { Disclosure: { defaultProps: { className: 'red' } } } }
+      theme: { Modal: { Disclosure: { defaultProps: { className: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

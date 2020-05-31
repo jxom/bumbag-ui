@@ -25,7 +25,7 @@ const useProps = createHook<TagProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const tagContentClassName = useClassName({
       style: styles.TagContent,
@@ -33,7 +33,7 @@ const useProps = createHook<TagProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Content',
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const tagCloseClassName = useClassName({
       style: styles.TagClose,
@@ -41,7 +41,7 @@ const useProps = createHook<TagProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Close',
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -54,21 +54,21 @@ const useProps = createHook<TagProps>(
             <Button.Close className={tagCloseClassName} onClick={onRemove} iconProps={{ fontSize: '200' }} />
           )}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Tag', defaultProps: { palette: 'text', size: 'default' } }
 );
 
 export const Tag = createComponent<TagProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tag'
+    themeKey: 'Tag',
   }
 );

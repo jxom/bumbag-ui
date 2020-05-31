@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
 
-export const Stack = styleProps => cssClass`
+export const Stack = (styleProps) => cssClass`
   ${styleProps.orientation === 'vertical' && getVerticalAttributes(styleProps)}
   ${styleProps.orientation === 'horizontal' && getHorizontalAttributes(styleProps)}
 
@@ -10,7 +10,7 @@ export const Stack = styleProps => cssClass`
   }
 `;
 
-const getVerticalAttributes = styleProps => css`
+const getVerticalAttributes = (styleProps) => css`
   & > *:not(:last-child) {
     margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
 
@@ -24,7 +24,7 @@ const getVerticalAttributes = styleProps => css`
   }
 `;
 
-const getHorizontalAttributes = styleProps => {
+const getHorizontalAttributes = (styleProps) => {
   let breakpoint = theme('breakpoints', styleProps.verticalAt)(styleProps);
   breakpoint = breakpoint ? `${breakpoint}px` : styleProps.verticalAt;
   return css`

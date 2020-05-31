@@ -10,7 +10,7 @@ export function useClassName({
   styleProps,
   themeKey,
   themeKeyOverride,
-  themeKeySuffix
+  themeKeySuffix,
 }: {
   style: any;
   prevClassName?: string;
@@ -24,7 +24,7 @@ export function useClassName({
   let className;
   let newThemeKey = `${themeKeyOverride || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
   if (Array.isArray(style)) {
-    className = style.map(style => style({ theme, ...styleProps, themeKey: newThemeKey }));
+    className = style.map((style) => style({ theme, ...styleProps, themeKey: newThemeKey }));
   } else {
     className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
   }

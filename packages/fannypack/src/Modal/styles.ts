@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
 
-export const Modal = styleProps => cssClass`
+export const Modal = (styleProps) => cssClass`
   position: fixed;
   z-index: 19900410;
   min-width: 320px;
@@ -22,19 +22,19 @@ export const Modal = styleProps => cssClass`
   }
 `;
 
-export const ModalContainer = styleProps => cssClass`
+export const ModalContainer = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const ModalDisclosure = styleProps => cssClass`
+export const ModalDisclosure = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const ModalBackdrop = styleProps => cssClass`
+export const ModalBackdrop = (styleProps) => cssClass`
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -51,7 +51,7 @@ export const ModalBackdrop = styleProps => cssClass`
   }
 `;
 
-export const getPlacementAttributes = styleProps => {
+export const getPlacementAttributes = (styleProps) => {
   const placementAttributes: { [key: string]: any } = {
     // @ts-ignore
     center: css`
@@ -62,7 +62,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '-50%',
         transformY: '-50%',
-        defaultSlide: 'top'
+        defaultSlide: 'top',
       })(styleProps)};
 
       & {
@@ -78,7 +78,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '-50%',
         transformY: '0px',
-        defaultSlide: 'top'
+        defaultSlide: 'top',
       })(styleProps)};
 
       & {
@@ -94,7 +94,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '-50%',
         transformY: '0px',
-        defaultSlide: 'bottom'
+        defaultSlide: 'bottom',
       })(styleProps)};
 
       & {
@@ -110,7 +110,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '-50%',
-        defaultSlide: 'left'
+        defaultSlide: 'left',
       })(styleProps)};
 
       & {
@@ -126,7 +126,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '-50%',
-        defaultSlide: 'right'
+        defaultSlide: 'right',
       })(styleProps)};
 
       & {
@@ -142,7 +142,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '0px',
-        defaultSlide: 'left'
+        defaultSlide: 'left',
       })(styleProps)};
 
       & {
@@ -158,7 +158,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '0px',
-        defaultSlide: 'right'
+        defaultSlide: 'right',
       })(styleProps)};
 
       & {
@@ -174,7 +174,7 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '0px',
-        defaultSlide: 'bottom'
+        defaultSlide: 'bottom',
       })(styleProps)};
 
       & {
@@ -190,20 +190,20 @@ export const getPlacementAttributes = styleProps => {
       ${getAnimatedAttributes({
         transformX: '0px',
         transformY: '0px',
-        defaultSlide: 'bottom'
+        defaultSlide: 'bottom',
       })(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.placements.bottomStart`)(styleProps)};
       }
-    `
+    `,
   };
   return css`
     ${placementAttributes[styleProps.placement || 'center']};
   `;
 };
 
-const getSlideOffset = ({ position, axis, defaultSlide = undefined, slideOffset = '100%' }) => styleProps => {
+const getSlideOffset = ({ position, axis, defaultSlide = undefined, slideOffset = '100%' }) => (styleProps) => {
   let newSlide = typeof styleProps.slide === 'string' ? styleProps.slide : defaultSlide;
   let offset = '';
   if (axis === 'vertical') {
@@ -225,7 +225,7 @@ const getSlideOffset = ({ position, axis, defaultSlide = undefined, slideOffset 
   return `calc(${position}${offset})`;
 };
 
-export const getAnimatedAttributes = opts => styleProps => {
+export const getAnimatedAttributes = (opts) => (styleProps) => {
   if (!styleProps.slide && !styleProps.expand && !styleProps.fade) return;
 
   const transitionPropertyValue = [(styleProps.slide || styleProps.expand) && 'transform', styleProps.fade && 'opacity']
@@ -236,13 +236,13 @@ export const getAnimatedAttributes = opts => styleProps => {
     position: opts.transformX,
     axis: 'horizontal',
     defaultSlide: opts.defaultSlide,
-    slideOffset: opts.slideOffset
+    slideOffset: opts.slideOffset,
   })(styleProps);
   const hiddenTransformY = getSlideOffset({
     position: opts.transformY,
     axis: 'vertical',
     defaultSlide: opts.defaultSlide,
-    slideOffset: opts.slideOffset
+    slideOffset: opts.slideOffset,
   })(styleProps);
   const hiddenSlideTransformValue = `translate3d(${styleProps.slide ? hiddenTransformX : opts.transformX}, ${
     styleProps.slide ? hiddenTransformY : opts.transformY
@@ -257,7 +257,7 @@ export const getAnimatedAttributes = opts => styleProps => {
     left: '0% 50%',
     right: '100% 50%',
     top: '50% 0%',
-    bottom: '50% 100%'
+    bottom: '50% 100%',
   };
 
   return css`
@@ -270,17 +270,17 @@ export const getAnimatedAttributes = opts => styleProps => {
     transform: ${opts.prevTransformValue} ${hiddenTransformValue} !important;
 
     ${styleProps.fade &&
-      css`
-        opacity: 0;
-      `};
+    css`
+      opacity: 0;
+    `};
 
     &[data-enter] {
       transform: ${opts.prevTransformValue} ${showTransformValue} !important;
 
       ${styleProps.fade &&
-        css`
-          opacity: 1;
-        `};
+      css`
+        opacity: 1;
+      `};
     }
   `;
 };

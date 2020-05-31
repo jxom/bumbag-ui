@@ -22,7 +22,7 @@ const useProps = createHook<StackProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -31,21 +31,21 @@ const useProps = createHook<StackProps>(
     defaultProps: {
       orientation: 'vertical',
       spacing: 'major-4',
-      verticalAt: 'tablet'
+      verticalAt: 'tablet',
     },
-    themeKey: 'Stack'
+    themeKey: 'Stack',
   }
 );
 
 export const Stack = createComponent<StackProps>(
-  props => {
+  (props) => {
     const StackProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: StackProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Stack'
+    themeKey: 'Stack',
   }
 );

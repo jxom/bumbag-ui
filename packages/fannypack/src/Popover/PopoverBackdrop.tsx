@@ -2,9 +2,8 @@ import * as React from 'react';
 import {
   Box as ReakitBox,
   PopoverBackdropProps as ReakitPopoverBackdropProps,
-  usePopoverBackdrop as useReakitPopoverBackdrop
+  usePopoverBackdrop as useReakitPopoverBackdrop,
 } from 'reakit';
-import _omit from 'lodash/omit';
 import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -28,7 +27,7 @@ const useProps = createHook<PopoverBackdropProps>(
         baseId,
         animating,
         animated,
-        stopAnimation
+        stopAnimation,
       },
       htmlProps
     );
@@ -39,7 +38,7 @@ const useProps = createHook<PopoverBackdropProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -48,19 +47,19 @@ const useProps = createHook<PopoverBackdropProps>(
 );
 
 export const PopoverBackdrop = createComponent<PopoverBackdropProps>(
-  props => {
+  (props) => {
     const popoverBackdropProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: popoverBackdropProps
+      htmlProps: popoverBackdropProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Popover.Backdrop'
+    themeKey: 'Popover.Backdrop',
   }
 );

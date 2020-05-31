@@ -59,14 +59,14 @@ const useProps = createHook<AlertProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const alertCloseButtonClassName = useClassName({
       style: styles.AlertCloseButton,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'CloseButton'
+      themeKeySuffix: 'CloseButton',
     });
 
     const titleId = useUniqueId('alertTitle');
@@ -76,7 +76,7 @@ const useProps = createHook<AlertProps>(
       descriptionId,
       props,
       themeKeyOverride,
-      titleId
+      titleId,
     ]);
 
     let palette = 'default';
@@ -124,7 +124,7 @@ const useProps = createHook<AlertProps>(
       'aria-labelledby': props.title ? titleId : undefined,
       className,
       children,
-      role: 'alert'
+      role: 'alert',
     };
   },
   {
@@ -132,22 +132,22 @@ const useProps = createHook<AlertProps>(
       accentSize: '4px',
       hasIcon: true,
       type: 'info',
-      variant: 'shadowed'
+      variant: 'shadowed',
     },
-    themeKey: 'Alert'
+    themeKey: 'Alert',
   }
 );
 
 export const Alert = createComponent<AlertProps>(
-  props => {
+  (props) => {
     const alertProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: alertProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Alert'
+    themeKey: 'Alert',
   }
 );
 
@@ -167,7 +167,7 @@ export function AlertIcon(props: AlertIconProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'IconWrapper'
+    themeKeySuffix: 'IconWrapper',
   });
 
   let fontSize = '400';
@@ -202,7 +202,7 @@ export function AlertContent(props: AlertContentProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'Content'
+    themeKeySuffix: 'Content',
   });
 
   return (
@@ -226,7 +226,7 @@ export function AlertWrapper(props: AlertWrapperProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'Wrapper'
+    themeKeySuffix: 'Wrapper',
   });
 
   return (
@@ -252,7 +252,7 @@ export function AlertAccent(props: AlertAccentProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'Accent'
+    themeKeySuffix: 'Accent',
   });
 
   return (
@@ -276,7 +276,7 @@ export function AlertTitle(props: AlertTitleProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'Title'
+    themeKeySuffix: 'Title',
   });
 
   return (
@@ -302,7 +302,7 @@ export function AlertDescription(props: AlertDescriptionProps) {
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
     themeKeyOverride: context.themeKeyOverride,
-    themeKeySuffix: 'Description'
+    themeKeySuffix: 'Description',
   });
 
   return (

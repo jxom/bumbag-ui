@@ -5,10 +5,10 @@ import { Textarea as _Textarea, TextareaField as _TextareaField } from './Textar
 export * from './Textarea';
 export const Textarea = Object.assign(_Textarea, {
   Formik: formikField(_Textarea),
-  ReduxForm: reduxFormField(_Textarea)
+  ReduxForm: reduxFormField(_Textarea),
 });
 export const TextareaField = Object.assign(_TextareaField, {
   Formik: formikField(_TextareaField, { hasFieldWrapper: true }),
-  ReduxForm: reduxFormField(_TextareaField, { hasFieldWrapper: true })
+  ReduxForm: reduxFormField(_TextareaField, { hasFieldWrapper: true }),
 });
 export { styles as textareaStyles };

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _get from 'lodash/get';
 
 import {
   useClassName,
@@ -10,7 +9,7 @@ import {
   parseIcons,
   useTheme,
   ParsedIcon,
-  Opts as ParseIconOpts
+  Opts as ParseIconOpts,
 } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -38,12 +37,12 @@ const useProps = createHook<IconProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const theme = useTheme();
-    const icon = _get(theme, `Icon.iconNames[${props.icon}]`) || props.icon;
-    const icons = _get(theme, `Icon.icons`, {});
+    const icon = theme?.Icon?.iconNames?.[props.icon] ?? props.icon;
+    const icons = theme?.Icon?.icons ?? {};
 
     let iconInfo = icons[icon];
     if (props.type) {
@@ -67,24 +66,24 @@ const useProps = createHook<IconProps>(
             <path key={path} d={path} fill="currentColor" fillRule="evenodd" />
           ))}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Icon' }
 );
 
 export const Icon = createComponent<IconProps>(
-  props => {
+  (props) => {
     const iconProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: iconProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'svg'
+      use: 'svg',
     },
-    themeKey: 'Icon'
+    themeKey: 'Icon',
   }
 );

@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Box as ReakitBox,
   DialogBackdropProps as ReakitDialogBackdropProps,
-  useDialogBackdrop as useReakitDialogBackdrop
+  useDialogBackdrop as useReakitDialogBackdrop,
 } from 'reakit';
 import _merge from 'lodash/merge';
 
@@ -27,7 +27,7 @@ const useProps = createHook<ModalBackdropProps>(
           modal,
           animating,
           animated,
-          stopAnimation
+          stopAnimation,
         },
         modalContext.modal
       ),
@@ -40,7 +40,7 @@ const useProps = createHook<ModalBackdropProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -49,19 +49,19 @@ const useProps = createHook<ModalBackdropProps>(
 );
 
 export const ModalBackdrop = createComponent<ModalBackdropProps>(
-  props => {
+  (props) => {
     const modalBackdropProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: modalBackdropProps
+      htmlProps: modalBackdropProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Modal.Backdrop'
+    themeKey: 'Modal.Backdrop',
   }
 );

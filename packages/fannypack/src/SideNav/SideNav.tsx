@@ -21,7 +21,7 @@ export const SideNavContext = React.createContext<{
 }>({
   onChangeSelectedId: () => {},
   selectedId: undefined,
-  overrides: {}
+  overrides: {},
 });
 
 const useProps = createHook<SideNavProps>(
@@ -35,13 +35,13 @@ const useProps = createHook<SideNavProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: navigationProps.className
+      prevClassName: navigationProps.className,
     });
 
     const [selectedId, setSelectedId] = React.useState(defaultSelectedId);
 
     const handleChangeSelectedId = React.useCallback(
-      id => {
+      (id) => {
         if (onChange) {
           onChange(id);
         } else {
@@ -59,21 +59,21 @@ const useProps = createHook<SideNavProps>(
     return {
       ...navigationProps,
       className,
-      children: <SideNavContext.Provider value={contextValue}>{children}</SideNavContext.Provider>
+      children: <SideNavContext.Provider value={contextValue}>{children}</SideNavContext.Provider>,
     };
   },
   { themeKey: 'SideNav' }
 );
 
 export const SideNav = createComponent<SideNavProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'SideNav'
+    themeKey: 'SideNav',
   }
 );

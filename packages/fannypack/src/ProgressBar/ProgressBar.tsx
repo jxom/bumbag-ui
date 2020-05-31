@@ -37,7 +37,7 @@ const useProps = createHook<ProgressBarProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const indicatorClassName = useClassName({
       style: styles.ProgressBarIndicator,
@@ -45,7 +45,7 @@ const useProps = createHook<ProgressBarProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Indicator',
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -55,21 +55,21 @@ const useProps = createHook<ProgressBarProps>(
       'aria-valuemax': newMaxValue,
       className,
       role: 'progressbar',
-      children: <Box className={indicatorClassName} />
+      children: <Box className={indicatorClassName} />,
     };
   },
   { defaultProps: { color: 'primary', maxValue: 100, size: 'default', value: 0 }, themeKey: 'ProgressBar' }
 );
 
 export const ProgressBar = createComponent<ProgressBarProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'ProgressBar'
+    themeKey: 'ProgressBar',
   }
 );

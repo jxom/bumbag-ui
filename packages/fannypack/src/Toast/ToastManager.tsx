@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _get from 'lodash/get';
 
 import { useClassName, createComponent, createElement, createHook, useTheme } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -29,21 +28,21 @@ const useProps = createHook<ToastManagerProps>(
     const boxProps = Box.useProps(restProps);
     const overlay = Overlay.useState({ visible: true, animated: true });
     const { toasts } = React.useContext(ToastContext);
-    const placement = _get(theme, 'Toast.placement');
+    const placement = theme?.Toast?.placement;
 
     const className = useClassName({
       style: styles.Toast,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const overlayClassName = useClassName({
       style: styles.ToastOverlay,
       styleProps: { ...props, placement },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Overlay'
+      themeKeySuffix: 'Overlay',
     });
 
     return {
@@ -52,33 +51,33 @@ const useProps = createHook<ToastManagerProps>(
       children: (
         <Overlay {...overlay} {...overlayProps} className={overlayClassName} placement={placement}>
           <Stack spacing={spacing}>
-            {toasts.map(toast => (
+            {toasts.map((toast) => (
               <Toast key={toast.key} {...toast}>
                 {toast.message}
               </Toast>
             ))}
           </Stack>
         </Overlay>
-      )
+      ),
     };
   },
   { defaultProps: { fade: true, slide: true, spacing: 'major-2' }, themeKey: 'Toast.Manager' }
 );
 
 export const ToastManager = createComponent<ToastManagerProps>(
-  props => {
+  (props) => {
     const toastManagerProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: toastManagerProps
+      htmlProps: toastManagerProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Toast.Manager'
+    themeKey: 'Toast.Manager',
   }
 );

@@ -31,10 +31,10 @@ const useProps = createHook<SideNavItemProps>(
         ...props,
         isActive: typeof isActive === 'boolean' ? isActive : selectedId === navId,
         level,
-        overrides: { ...sideNavOverrides, ...overrides }
+        overrides: { ...sideNavOverrides, ...overrides },
       },
       themeKey,
-      themeKeyOverride
+      themeKeyOverride,
     });
 
     return {
@@ -50,31 +50,31 @@ const useProps = createHook<SideNavItemProps>(
             // @ts-ignore */
             React.cloneElement(href ? <a href={href}>{children}</a> : children, {
               className,
-              onClick: bindFns(onClick, () => onChangeSelectedId(navId))
+              onClick: bindFns(onClick, () => onChangeSelectedId(navId)),
             })
-          : children
+          : children,
     };
   },
   { themeKey: 'SideNav.Item' }
 );
 
 export const SideNavItem = createComponent<SideNavItemProps>(
-  props => {
+  (props) => {
     const sideNavItemProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: sideNavItemProps
+      htmlProps: sideNavItemProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'li'
+      use: 'li',
     },
-    themeKey: 'SideNav.Item'
+    themeKey: 'SideNav.Item',
   }
 );

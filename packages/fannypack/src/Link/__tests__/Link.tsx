@@ -32,7 +32,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Link>{LinkProps => <div {...LinkProps}>Hello world</div>}</Link>);
+      const { container } = render(<Link>{(LinkProps) => <div {...LinkProps}>Hello world</div>}</Link>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -57,14 +57,14 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Link.root should render correctly', () => {
     const { container } = render(<Link>hello world</Link>, {
-      theme: { Link: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Link: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Link.hover should render correctly', () => {
     const { container } = render(<Link>hello world</Link>, {
-      theme: { Link: { css: { hover: { backgroundColor: 'red' } } } }
+      theme: { Link: { css: { hover: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -73,7 +73,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Link>hello world</Link>, {
-      theme: { Link: { defaultProps: { className: 'test' } } }
+      theme: { Link: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

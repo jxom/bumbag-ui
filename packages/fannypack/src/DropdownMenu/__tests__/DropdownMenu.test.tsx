@@ -271,7 +271,7 @@ describe('theming', () => {
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
       {
-        theme: { DropdownMenu: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { DropdownMenu: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -425,7 +425,7 @@ describe('defaultProps', () => {
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
       {
-        theme: { DropdownMenu: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { DropdownMenu: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

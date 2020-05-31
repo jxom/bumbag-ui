@@ -48,7 +48,7 @@ const useProps = createHook<CalloutProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: cardProps.className
+      prevClassName: cardProps.className,
     });
     const calloutCloseClassName = useClassName({
       style: styles.CalloutClose,
@@ -56,7 +56,7 @@ const useProps = createHook<CalloutProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Close',
-      prevClassName: closeButtonProps.className
+      prevClassName: closeButtonProps.className,
     });
 
     const titleId = useUniqueId('calloutTitle');
@@ -100,22 +100,22 @@ const useProps = createHook<CalloutProps>(
       'aria-describedby': props.children ? descriptionId : undefined,
       'aria-labelledby': props.title ? titleId : undefined,
       className,
-      children
+      children,
     };
   },
   { defaultProps: { type: 'info' }, themeKey: 'Callout' }
 );
 
 export const Callout = createComponent<CalloutProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Callout'
+    themeKey: 'Callout',
   }
 );
 
@@ -134,7 +134,7 @@ const useCalloutContentProps = createHook<CalloutContentProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { id: props.id || contextProps.descriptionId, ...boxProps, className };
@@ -143,18 +143,18 @@ const useCalloutContentProps = createHook<CalloutContentProps>(
 );
 
 export const CalloutContent = createComponent<CalloutContentProps>(
-  props => {
+  (props) => {
     const calloutContentProps = useCalloutContentProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutContentProps
+      htmlProps: calloutContentProps,
     });
   },
   {
     attach: { useProps: useCalloutContentProps },
-    themeKey: 'Callout.Content'
+    themeKey: 'Callout.Content',
   }
 );
 
@@ -173,7 +173,7 @@ const useCalloutHeaderProps = createHook<CalloutHeaderProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -182,18 +182,18 @@ const useCalloutHeaderProps = createHook<CalloutHeaderProps>(
 );
 
 export const CalloutHeader = createComponent<CalloutHeaderProps>(
-  props => {
+  (props) => {
     const calloutHeaderProps = useCalloutHeaderProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutHeaderProps
+      htmlProps: calloutHeaderProps,
     });
   },
   {
     attach: { useProps: useCalloutHeaderProps },
-    themeKey: 'Callout.Header'
+    themeKey: 'Callout.Header',
   }
 );
 
@@ -212,7 +212,7 @@ const useCalloutTitleProps = createHook<CalloutTitleProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: textProps.className
+      prevClassName: textProps.className,
     });
 
     return { id: contextProps.titleId, ...textProps, className };
@@ -221,21 +221,21 @@ const useCalloutTitleProps = createHook<CalloutTitleProps>(
 );
 
 export const CalloutTitle = createComponent<CalloutTitleProps>(
-  props => {
+  (props) => {
     const calloutTitleProps = useCalloutTitleProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutTitleProps
+      htmlProps: calloutTitleProps,
     });
   },
   {
     attach: { useProps: useCalloutTitleProps },
     defaultProps: {
-      use: 'span'
+      use: 'span',
     },
-    themeKey: 'Callout.Title'
+    themeKey: 'Callout.Title',
   }
 );
 
@@ -254,7 +254,7 @@ const useCalloutFooterProps = createHook<CalloutFooterProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -263,18 +263,18 @@ const useCalloutFooterProps = createHook<CalloutFooterProps>(
 );
 
 export const CalloutFooter = createComponent<CalloutFooterProps>(
-  props => {
+  (props) => {
     const calloutFooterProps = useCalloutFooterProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutFooterProps
+      htmlProps: calloutFooterProps,
     });
   },
   {
     attach: { useProps: useCalloutFooterProps },
-    themeKey: 'Callout.Footer'
+    themeKey: 'Callout.Footer',
   }
 );
 
@@ -297,7 +297,7 @@ const useCalloutIconProps = createHook<CalloutIconProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const icon = (
@@ -325,18 +325,18 @@ const useCalloutIconProps = createHook<CalloutIconProps>(
 );
 
 export const CalloutIcon = createComponent<CalloutIconProps>(
-  props => {
+  (props) => {
     const calloutIconProps = useCalloutIconProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutIconProps
+      htmlProps: calloutIconProps,
     });
   },
   {
     attach: { useProps: useCalloutIconProps },
-    themeKey: 'Callout.IconWrapper'
+    themeKey: 'Callout.IconWrapper',
   }
 );
 
@@ -352,12 +352,12 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
     const calloutProps = Callout.useProps({
       onClickClose: restProps.hide,
       ...restProps,
-      wrapElement: children => (
+      wrapElement: (children) => (
         // @ts-ignore
         <Overlay placement="bottom-end" {...restProps}>
           {children}
         </Overlay>
-      )
+      ),
     });
     const contextProps = React.useContext(CalloutContext);
 
@@ -366,7 +366,7 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: calloutProps.className
+      prevClassName: calloutProps.className,
     });
 
     return { ...calloutProps, className };
@@ -375,17 +375,17 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
 );
 
 export const CalloutOverlay = createComponent<CalloutOverlayProps>(
-  props => {
+  (props) => {
     const calloutOverlayProps = useCalloutOverlayProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutOverlayProps
+      htmlProps: calloutOverlayProps,
     });
   },
   {
     attach: { useProps: useCalloutOverlayProps },
-    themeKey: 'Callout.Overlay'
+    themeKey: 'Callout.Overlay',
   }
 );

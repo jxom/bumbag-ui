@@ -24,6 +24,6 @@ export const DropdownMenu = Object.assign(_DropdownMenu, {
   Divider: DropdownMenuDivider,
   Group: DropdownMenuGroup,
   useState: useDropdownMenuState,
-  State: DropdownMenuState
+  State: DropdownMenuState,
 });
 export { styles as DropdownMenuStyles };

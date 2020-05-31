@@ -17,7 +17,7 @@ export const MenuContext = React.createContext<{
   overrides: any;
 }>({
   rover: {},
-  overrides: {}
+  overrides: {},
 });
 
 const useProps = createHook<MenuProps>(
@@ -32,7 +32,7 @@ const useProps = createHook<MenuProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(() => ({ rover, overrides }), [rover, overrides]);
@@ -41,21 +41,21 @@ const useProps = createHook<MenuProps>(
       ...boxProps,
       className,
       role: 'menu',
-      children: <MenuContext.Provider value={contextValue}>{children}</MenuContext.Provider>
+      children: <MenuContext.Provider value={contextValue}>{children}</MenuContext.Provider>,
     };
   },
   { themeKey: 'Menu' }
 );
 
 export const Menu = createComponent<MenuProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Menu'
+    themeKey: 'Menu',
   }
 );

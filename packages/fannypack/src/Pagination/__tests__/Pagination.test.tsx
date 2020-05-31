@@ -92,28 +92,28 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Pagination.root should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Pagination: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Pagination.Button.css.root should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { Button: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Pagination: { Button: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Pagination.Select.css.root should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { Select: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Pagination: { Select: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Pagination.PrepositionText.css.root should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { PrepositionText: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Pagination: { PrepositionText: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -122,7 +122,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Pagination: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -77,7 +77,7 @@ const useProps = createHook<TabsTabProps>(
         unstable_idCountRef,
         unstable_moves,
         unstable_virtual,
-        ...tabs
+        ...tabs,
       },
       htmlProps
     );
@@ -92,11 +92,11 @@ const useProps = createHook<TabsTabProps>(
         ...tabs,
         ...props,
         ...tabsListContext,
-        overrides: { ...tabOverrides, ...tabsListContext.overrides, ...overrides }
+        overrides: { ...tabOverrides, ...tabsListContext.overrides, ...overrides },
       },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -105,14 +105,14 @@ const useProps = createHook<TabsTabProps>(
 );
 
 export const Tab = createComponent<TabsTabProps>(
-  props => {
+  (props) => {
     const tabProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tabs.Tab'
+    themeKey: 'Tabs.Tab',
   }
 );

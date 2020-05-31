@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { palette, tint, theme, fontWeight } from '../utils';
 import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 
-export const Switch = styleProps => cssClass`
+export const Switch = (styleProps) => cssClass`
   && {
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@ export const Switch = styleProps => cssClass`
   }
 `;
 
-export const SwitchIcon = styleProps => cssClass`
+export const SwitchIcon = (styleProps) => cssClass`
   background-color: white;
   border: 1px solid #bdbdbd;
   border-radius: 1em;
@@ -27,7 +27,7 @@ export const SwitchIcon = styleProps => cssClass`
   }
 `;
 
-export const SwitchLabel = styleProps => cssClass`
+export const SwitchLabel = (styleProps) => cssClass`
   && {
     font-weight: ${fontWeight('normal')(styleProps)};
   }
@@ -37,7 +37,7 @@ export const SwitchLabel = styleProps => cssClass`
   }
 `;
 
-export const HiddenSwitch = styleProps =>
+export const HiddenSwitch = (styleProps) =>
   getHiddenInputStyles({
     iconClassName: 'fp-SwitchIcon',
     checkedCss: css`
@@ -71,22 +71,22 @@ export const HiddenSwitch = styleProps =>
       position: absolute;
     `,
     styleProps,
-    themeKey: 'Switch.Icon'
+    themeKey: 'Switch.Icon',
   });
 
-export const SwitchGroup = styleProps => cssClass`
+export const SwitchGroup = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const SwitchField = styleProps => cssClass`
+export const SwitchField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const SwitchGroupField = styleProps => cssClass`
+export const SwitchGroupField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

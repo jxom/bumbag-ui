@@ -17,7 +17,7 @@ const useProps = createHook<OverlayProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -25,21 +25,21 @@ const useProps = createHook<OverlayProps>(
   {
     defaultProps: {
       hideBackdrop: true,
-      placement: 'center'
+      placement: 'center',
     },
-    themeKey: 'Overlay'
+    themeKey: 'Overlay',
   }
 );
 
 export const Overlay = createComponent<OverlayProps>(
-  props => {
+  (props) => {
     const overlayProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: overlayProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Overlay'
+    themeKey: 'Overlay',
   }
 );

@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
 
-export const Set = styleProps => cssClass`
+export const Set = (styleProps) => cssClass`
   display: flex;
 
   ${
@@ -10,9 +10,9 @@ export const Set = styleProps => cssClass`
           flex-direction: column;
 
           ${!styleProps.isFilled &&
-            css`
-              align-items: flex-start;
-            `};
+          css`
+            align-items: flex-start;
+          `};
 
           & {
             ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
@@ -25,9 +25,9 @@ export const Set = styleProps => cssClass`
               flex-direction: column;
 
               ${!styleProps.isFilled &&
-                css`
-                  align-items: flex-start;
-                `};
+              css`
+                align-items: flex-start;
+              `};
 
               & {
                 ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
@@ -44,7 +44,7 @@ export const Set = styleProps => cssClass`
                 & {
                   ${theme(styleProps.themeKey, `css.horizontal`)(styleProps)};
                 }
-              `
+              `,
             }
           )(styleProps)};
         `
@@ -82,7 +82,7 @@ export const Set = styleProps => cssClass`
                   & {
                     ${theme(styleProps.themeKey, `css.child.horizontal`)(styleProps)};
                   }
-                `
+                `,
               }
             )(styleProps)};
           `

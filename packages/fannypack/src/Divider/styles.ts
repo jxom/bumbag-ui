@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { palette, space, theme } from '../utils';
 
-export const Divider = styleProps => cssClass`
+export const Divider = (styleProps) => cssClass`
     border: 1px solid ${palette('white800')(styleProps)};
     border-width: 0 0 1px 0;
     padding: 0;

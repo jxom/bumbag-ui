@@ -35,7 +35,7 @@ describe('props', () => {
           <Tag
             size={size}
             overrides={{
-              Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } }
+              Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } },
             }}
           >
             Hello world
@@ -69,7 +69,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Tag>{TagProps => <div {...TagProps}>Hello world</div>}</Tag>);
+      const { container } = render(<Tag>{(TagProps) => <div {...TagProps}>Hello world</div>}</Tag>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -79,7 +79,7 @@ describe('theming', () => {
   it('Tag.root should render correctly', () => {
     const { container } = render(<Tag>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Tag: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -87,7 +87,7 @@ describe('theming', () => {
   it('Tag.Content.root should render correctly', () => {
     const { container } = render(<Tag>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Tag: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -95,7 +95,7 @@ describe('theming', () => {
   it('Tag.Close.root should render correctly', () => {
     const { container } = render(<Tag onRemove={() => {}}>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { Close: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Tag: { Close: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -103,7 +103,7 @@ describe('theming', () => {
   it('Tag.outlined.root should render correctly', () => {
     const { container } = render(<Tag variant="outlined">hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { css: { outlined: { backgroundColor: 'red' } } } }
+      theme: { Tag: { css: { outlined: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -113,7 +113,7 @@ describe('theming', () => {
       it(`Tag.sizes.${size}.root should render correctly`, () => {
         const { container } = render(<Tag size={size}>hello world</Tag>, {
           // @ts-ignore
-          theme: { Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }
+          theme: { Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } },
         });
         expect(container.firstChild).toMatchSnapshot();
       });
@@ -172,7 +172,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Tag>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Tag: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

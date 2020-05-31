@@ -7,6 +7,6 @@ export * from './Autosuggest';
 export * from './AutosuggestField';
 export const Autosuggest = Object.assign(_Autosuggest, {
   StaticItem: AutosuggestStaticItem,
-  Item: AutosuggestItem
+  Item: AutosuggestItem,
 });
 export { styles as autosuggestStyles };

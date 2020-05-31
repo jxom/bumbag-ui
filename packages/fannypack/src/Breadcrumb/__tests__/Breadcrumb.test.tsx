@@ -72,7 +72,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Breadcrumb>
-          {BreadcrumbProps => (
+          {(BreadcrumbProps) => (
             <div {...BreadcrumbProps}>
               <Breadcrumb.Item>
                 <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
@@ -182,7 +182,7 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Breadcrumb: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -202,7 +202,7 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Item: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Breadcrumb: { Item: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -222,7 +222,7 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Link: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Breadcrumb: { Link: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -242,7 +242,7 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Separator: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Breadcrumb: { Separator: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -264,7 +264,7 @@ describe('defaultProps', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { defaultProps: { className: 'test' } } }
+        theme: { Breadcrumb: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -284,7 +284,7 @@ describe('defaultProps', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { defaultProps: { separator: '-' } } }
+        theme: { Breadcrumb: { defaultProps: { separator: '-' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -304,7 +304,7 @@ describe('defaultProps', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Item: { defaultProps: { className: 'test' } } } }
+        theme: { Breadcrumb: { Item: { defaultProps: { className: 'test' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

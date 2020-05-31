@@ -51,7 +51,7 @@ const useProps = createHook<DialogProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const dialogCloseClassName = useClassName({
       style: styles.DialogClose,
@@ -59,7 +59,7 @@ const useProps = createHook<DialogProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Close',
-      prevClassName: closeButtonProps.className
+      prevClassName: closeButtonProps.className,
     });
 
     const titleId = useUniqueId('dialogTitle');
@@ -112,22 +112,22 @@ const useProps = createHook<DialogProps>(
       'aria-labelledby': props.title ? titleId : undefined,
       ...boxProps,
       className,
-      children
+      children,
     };
   },
   { themeKey: 'Dialog' }
 );
 
 export const Dialog = createComponent<DialogProps>(
-  props => {
+  (props) => {
     const dialogProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: dialogProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Dialog'
+    themeKey: 'Dialog',
   }
 );
 
@@ -146,7 +146,7 @@ const useDialogContentProps = createHook<DialogContentProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { id: props.id || contextProps.descriptionId, ...boxProps, className };
@@ -155,18 +155,18 @@ const useDialogContentProps = createHook<DialogContentProps>(
 );
 
 export const DialogContent = createComponent<DialogContentProps>(
-  props => {
+  (props) => {
     const calloutContentProps = useDialogContentProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutContentProps
+      htmlProps: calloutContentProps,
     });
   },
   {
     attach: { useProps: useDialogContentProps },
-    themeKey: 'Dialog.Content'
+    themeKey: 'Dialog.Content',
   }
 );
 
@@ -185,7 +185,7 @@ const useDialogHeaderProps = createHook<DialogHeaderProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -194,18 +194,18 @@ const useDialogHeaderProps = createHook<DialogHeaderProps>(
 );
 
 export const DialogHeader = createComponent<DialogHeaderProps>(
-  props => {
+  (props) => {
     const calloutHeaderProps = useDialogHeaderProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutHeaderProps
+      htmlProps: calloutHeaderProps,
     });
   },
   {
     attach: { useProps: useDialogHeaderProps },
-    themeKey: 'Dialog.Header'
+    themeKey: 'Dialog.Header',
   }
 );
 
@@ -224,7 +224,7 @@ const useDialogTitleProps = createHook<DialogTitleProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: textProps.className
+      prevClassName: textProps.className,
     });
 
     return { id: contextProps.titleId, ...textProps, className };
@@ -233,21 +233,21 @@ const useDialogTitleProps = createHook<DialogTitleProps>(
 );
 
 export const DialogTitle = createComponent<DialogTitleProps>(
-  props => {
+  (props) => {
     const calloutTitleProps = useDialogTitleProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutTitleProps
+      htmlProps: calloutTitleProps,
     });
   },
   {
     attach: { useProps: useDialogTitleProps },
     defaultProps: {
-      use: 'span'
+      use: 'span',
     },
-    themeKey: 'Dialog.Title'
+    themeKey: 'Dialog.Title',
   }
 );
 
@@ -266,7 +266,7 @@ const useDialogFooterProps = createHook<DialogFooterProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -275,18 +275,18 @@ const useDialogFooterProps = createHook<DialogFooterProps>(
 );
 
 export const DialogFooter = createComponent<DialogFooterProps>(
-  props => {
+  (props) => {
     const calloutFooterProps = useDialogFooterProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: calloutFooterProps
+      htmlProps: calloutFooterProps,
     });
   },
   {
     attach: { useProps: useDialogFooterProps },
-    themeKey: 'Dialog.Footer'
+    themeKey: 'Dialog.Footer',
   }
 );
 
@@ -309,7 +309,7 @@ const useDialogIconProps = createHook<DialogIconProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: textProps.className
+      prevClassName: textProps.className,
     });
 
     const icon = (
@@ -337,21 +337,21 @@ const useDialogIconProps = createHook<DialogIconProps>(
 );
 
 export const DialogIcon = createComponent<DialogIconProps>(
-  props => {
+  (props) => {
     const DialogIconProps = useDialogIconProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: DialogIconProps
+      htmlProps: DialogIconProps,
     });
   },
   {
     attach: { useProps: useDialogIconProps },
     defaultProps: {
-      use: 'span'
+      use: 'span',
     },
-    themeKey: 'Dialog.IconWrapper'
+    themeKey: 'Dialog.IconWrapper',
   }
 );
 
@@ -373,14 +373,14 @@ const useDialogModalProps = createHook<DialogModalProps>(
       ...restProps,
       actionButtonsProps: {
         onClickCancel: restProps.hide,
-        ...restProps.actionButtonsProps
+        ...restProps.actionButtonsProps,
       },
-      wrapElement: children => (
+      wrapElement: (children) => (
         // @ts-ignore
         <Modal role={variant === 'alert' ? 'alertdialog' : 'dialog'} {...omitCSSProps(restProps)}>
           {children}
         </Modal>
-      )
+      ),
     });
     const contextProps = React.useContext(DialogContext);
 
@@ -389,7 +389,7 @@ const useDialogModalProps = createHook<DialogModalProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: dialogProps.className
+      prevClassName: dialogProps.className,
     });
 
     return { ...dialogProps, className };
@@ -398,17 +398,17 @@ const useDialogModalProps = createHook<DialogModalProps>(
 );
 
 export const DialogModal = createComponent<DialogModalProps>(
-  props => {
+  (props) => {
     const DialogModalProps = useDialogModalProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: DialogModalProps
+      htmlProps: DialogModalProps,
     });
   },
   {
     attach: { useProps: useDialogModalProps },
-    themeKey: 'Dialog.Modal'
+    themeKey: 'Dialog.Modal',
   }
 );

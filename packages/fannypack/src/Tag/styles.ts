@@ -1,7 +1,7 @@
 import { cssClass, css } from '../styled';
 import { borderRadius, darken, fontSize, fontWeight, palette, space, theme } from '../utils';
 
-export const Tag = styleProps => cssClass`
+export const Tag = (styleProps) => cssClass`
   align-items: center;
   background-color: ${palette(styleProps.palette)(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
@@ -21,7 +21,7 @@ export const Tag = styleProps => cssClass`
   }
 `;
 
-export const TagContent = styleProps => cssClass`
+export const TagContent = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   height: inherit;
@@ -32,7 +32,7 @@ export const TagContent = styleProps => cssClass`
   }
 `;
 
-export const TagClose = styleProps => cssClass`
+export const TagClose = (styleProps) => cssClass`
   &&& {
     background-color: ${palette(styleProps.palette)(styleProps)};
     color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
@@ -50,7 +50,8 @@ export const TagClose = styleProps => cssClass`
       box-shadow: unset;
     }
 
-    ${styleProps.variant === 'outlined' &&
+    ${
+      styleProps.variant === 'outlined' &&
       css`
         background-color: unset;
         color: ${palette(styleProps.palette)(styleProps)};
@@ -58,7 +59,8 @@ export const TagClose = styleProps => cssClass`
         &:hover {
           background-color: ${palette('white700')(styleProps)};
         }
-      `}
+      `
+    }
 
     & {
       ${theme(styleProps.themeKey, `css.root`)(styleProps)};
@@ -66,7 +68,7 @@ export const TagClose = styleProps => cssClass`
   }
 `;
 
-export const outlinedProperties = styleProps => cssClass`
+export const outlinedProperties = (styleProps) => cssClass`
   & {
     background-color: unset;
     border: 1px solid ${palette(styleProps.palette)(styleProps)};
@@ -78,7 +80,7 @@ export const outlinedProperties = styleProps => cssClass`
   }
 `;
 
-export const sizeProperties = styleProps => {
+export const sizeProperties = (styleProps) => {
   const sizes = {
     default: cssClass`
     & {
@@ -98,7 +100,7 @@ export const sizeProperties = styleProps => {
     & {
       ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
     }
-  `
+  `,
   };
   return sizes[styleProps.size];
 };

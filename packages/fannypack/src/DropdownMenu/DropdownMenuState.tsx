@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useMenuState as useReakitMenuState,
   MenuStateReturn as ReakitMenuStateReturn,
-  MenuInitialState as ReakitMenuInitialState
+  MenuInitialState as ReakitMenuInitialState,
 } from 'reakit';
 
 export type DropdownMenuStateReturn = ReakitMenuStateReturn;

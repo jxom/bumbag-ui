@@ -18,7 +18,7 @@ const useProps = createHook<ParagraphProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,17 +27,17 @@ const useProps = createHook<ParagraphProps>(
 );
 
 export const Paragraph = createComponent<ParagraphProps>(
-  props => {
+  (props) => {
     const paragraph = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: paragraph });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'p'
+      use: 'p',
     },
-    themeKey: 'Paragraph'
+    themeKey: 'Paragraph',
   }
 );

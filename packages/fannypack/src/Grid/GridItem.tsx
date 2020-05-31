@@ -26,7 +26,7 @@ const useProps = createHook<GridItemProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -35,12 +35,12 @@ const useProps = createHook<GridItemProps>(
 );
 
 export const GridItem = createComponent<GridItemProps>(
-  props => {
+  (props) => {
     const gridItemProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: gridItemProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Grid.Item'
+    themeKey: 'Grid.Item',
   }
 );

@@ -8,6 +8,6 @@ export * from './DisclosureContent';
 export const Disclosure = Object.assign(_Disclosure, {
   Content: DisclosureContent,
   useState: useDisclosureState,
-  State: DisclosureState
+  State: DisclosureState,
 });
 export { styles as disclosureStyles };

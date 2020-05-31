@@ -31,7 +31,7 @@ export const PageWithSidebarContext = React.createContext({
   maximizeSidebar: () => undefined,
   toggleMinimize: () => undefined,
   drawer: {},
-  disclosure: {}
+  disclosure: {},
 });
 
 const useProps = createHook<PageWithSidebarProps>(
@@ -56,42 +56,42 @@ const useProps = createHook<PageWithSidebarProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const spacerClassName = useClassName({
       style: styles.PageWithSidebarSpacer,
       styleProps: { ...props, isCollapsed, isSidebarMinimized },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Spacer'
+      themeKeySuffix: 'Spacer',
     });
     const sidebarClassName = useClassName({
       style: styles.PageWithSidebarSidebar,
       styleProps: { ...props, isCollapsed, isSidebarMinimized },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Sidebar'
+      themeKeySuffix: 'Sidebar',
     });
     const sidebarExpandedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarExpandedWrapper,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'SidebarExpandedWrapper'
+      themeKeySuffix: 'SidebarExpandedWrapper',
     });
     const sidebarCollapsedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarCollapsedWrapper,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'SidebarCollapsedWrapper'
+      themeKeySuffix: 'SidebarCollapsedWrapper',
     });
     const contentClassName = useClassName({
       style: styles.PageWithSidebarContent,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Content'
+      themeKeySuffix: 'Content',
     });
 
     const drawer = Drawer.useState();
@@ -110,10 +110,10 @@ const useProps = createHook<PageWithSidebarProps>(
         isSidebarMinimized,
         minimizeSidebar: () => setIsSidebarMinimized(true),
         maximizeSidebar: () => setIsSidebarMinimized(false),
-        toggleMinimize: () => setIsSidebarMinimized(isMinimized => !isMinimized),
+        toggleMinimize: () => setIsSidebarMinimized((isMinimized) => !isMinimized),
 
         drawer,
-        disclosure
+        disclosure,
       }),
       [
         disclosure,
@@ -123,20 +123,17 @@ const useProps = createHook<PageWithSidebarProps>(
         sidebarState.hide,
         sidebarState.show,
         sidebarState.toggle,
-        sidebarState.visible
+        sidebarState.visible,
       ]
     );
 
-    React.useEffect(
-      () => {
-        if (isCollapsed) {
-          setIsSidebarMinimized(false);
-        } else {
-          drawer.hide();
-        }
-      },
-      [drawer, isCollapsed]
-    );
+    React.useEffect(() => {
+      if (isCollapsed) {
+        setIsSidebarMinimized(false);
+      } else {
+        drawer.hide();
+      }
+    }, [drawer, isCollapsed]);
 
     return {
       ...boxProps,
@@ -168,7 +165,7 @@ const useProps = createHook<PageWithSidebarProps>(
             {children}
           </Box>
         </PageWithSidebarContext.Provider>
-      )
+      ),
     };
   },
   {
@@ -179,26 +176,26 @@ const useProps = createHook<PageWithSidebarProps>(
       defaultIsVisible: true,
       minimizedSidebarWidth: '60px',
       sidebarWidth: '250px',
-      collapsedSidebarWidth: '320px'
+      collapsedSidebarWidth: '320px',
     },
-    themeKey: 'PageWithSidebar'
+    themeKey: 'PageWithSidebar',
   }
 );
 
 export const PageWithSidebar = createComponent<PageWithSidebarProps>(
-  props => {
+  (props) => {
     const pageWithSidebarProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: pageWithSidebarProps
+      htmlProps: pageWithSidebarProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'PageWithSidebar'
+    themeKey: 'PageWithSidebar',
   }
 );

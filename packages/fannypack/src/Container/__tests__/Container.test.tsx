@@ -91,7 +91,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Container>{ContainerProps => <div {...ContainerProps}>Hello world</div>}</Container>
+        <Container>{(ContainerProps) => <div {...ContainerProps}>Hello world</div>}</Container>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -146,35 +146,35 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Container.root should render correctly', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Container: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.fluid should render correctly', () => {
     const { container } = render(<Container isFluid>hello world</Container>, {
-      theme: { Container: { css: { fluid: { backgroundColor: 'red' } } } }
+      theme: { Container: { css: { fluid: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.layout should render correctly', () => {
     const { container } = render(<Container isLayout>hello world</Container>, {
-      theme: { Container: { css: { layout: { backgroundColor: 'red' } } } }
+      theme: { Container: { css: { layout: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.fluidMargin should render correctly', () => {
     const { container } = render(<Container isFluid>hello world</Container>, {
-      theme: { Container: { fluidMargin: 3 } }
+      theme: { Container: { fluidMargin: 3 } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Container.tabletMargin should render correctly', () => {
     const { container } = render(<Container isLayout>hello world</Container>, {
-      theme: { Container: { tabletMargin: 5 } }
+      theme: { Container: { tabletMargin: 5 } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -183,28 +183,28 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { defaultProps: { className: 'test' } } }
+      theme: { Container: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for breakpoint', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { defaultProps: { breakpoint: 'desktop' } } }
+      theme: { Container: { defaultProps: { breakpoint: 'desktop' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for isFluid', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { defaultProps: { isFluid: true } } }
+      theme: { Container: { defaultProps: { isFluid: true } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for isLayout', () => {
     const { container } = render(<Container>hello world</Container>, {
-      theme: { Container: { defaultProps: { isLayout: true } } }
+      theme: { Container: { defaultProps: { isLayout: true } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

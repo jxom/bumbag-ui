@@ -8,11 +8,7 @@ export type IdProviderProps = {
 const defaultPrefix = 'id-';
 
 const generateId = (prefix = defaultPrefix) =>
-  process.env.NODE_ENV === 'test'
-    ? ''
-    : `${prefix}${Math.random()
-        .toString(32)
-        .substr(2, 6)}`;
+  process.env.NODE_ENV === 'test' ? '' : `${prefix}${Math.random().toString(32).substr(2, 6)}`;
 
 const Context = React.createContext(generateId);
 

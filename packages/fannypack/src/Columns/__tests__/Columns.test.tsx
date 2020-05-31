@@ -319,7 +319,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Columns>{ColumnsProps => <div {...ColumnsProps}>Hello world</div>}</Columns>);
+      const { container } = render(<Columns>{(ColumnsProps) => <div {...ColumnsProps}>Hello world</div>}</Columns>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -363,7 +363,7 @@ describe('theming', () => {
         <Columns.Column>Column</Columns.Column>
       </Columns>,
       {
-        theme: { Columns: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Columns: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -378,7 +378,7 @@ describe('theming', () => {
         <Columns.Column>Column</Columns.Column>
       </Columns>,
       {
-        theme: { Columns: { Column: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Columns: { Column: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -395,7 +395,7 @@ describe('defaultProps', () => {
         <Columns.Column>Column</Columns.Column>
       </Columns>,
       {
-        theme: { Columns: { defaultProps: { className: 'test' } } }
+        theme: { Columns: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

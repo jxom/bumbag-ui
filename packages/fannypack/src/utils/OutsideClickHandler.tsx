@@ -9,7 +9,7 @@ export function OutsideClickHandler(props) {
   const childNodeRef = React.useRef();
 
   const handleOutsideClick = React.useCallback(
-    e => {
+    (e) => {
       // @ts-ignore
       const isDescendantOfRoot = childNodeRef.current && childNodeRef.current.contains(e.target);
       if (!isDescendantOfRoot) {
@@ -31,5 +31,5 @@ export function OutsideClickHandler(props) {
 
 OutsideClickHandler.defaultProps = {
   children: <span />,
-  onOutsideClick: () => {}
+  onOutsideClick: () => {},
 };

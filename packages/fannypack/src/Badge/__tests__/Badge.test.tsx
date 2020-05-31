@@ -21,14 +21,14 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['primary', 'secondary', 'success', 'warning', 'danger'].forEach(palette => {
+  ['primary', 'secondary', 'success', 'warning', 'danger'].forEach((palette) => {
     it(`should render correctly for palette ${palette}`, () => {
       const { container } = render(<Badge palette={palette} />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
 
-  ['default', 'medium', 'large'].forEach(size => {
+  ['default', 'medium', 'large'].forEach((size) => {
     it(`should render correctly for size ${size}`, () => {
       const { container } = render(<Badge size={size as Size} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Badge>{BadgeProps => <div {...BadgeProps}>Hello world</div>}</Badge>);
+      const { container } = render(<Badge>{(BadgeProps) => <div {...BadgeProps}>Hello world</div>}</Badge>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -115,35 +115,35 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Badge.root should render correctly', () => {
     const { container } = render(<Badge>hello world</Badge>, {
-      theme: { Badge: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Badge: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.attached should render correctly', () => {
     const { container } = render(<Badge isAttached>hello world</Badge>, {
-      theme: { Badge: { css: { attached: { backgroundColor: 'red' } } } }
+      theme: { Badge: { css: { attached: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.default should render correctly', () => {
     const { container } = render(<Badge>hello world</Badge>, {
-      theme: { Badge: { css: { sizes: { default: { backgroundColor: 'red' } } } } }
+      theme: { Badge: { css: { sizes: { default: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.medium should render correctly', () => {
     const { container } = render(<Badge size="medium">hello world</Badge>, {
-      theme: { Badge: { css: { sizes: { medium: { backgroundColor: 'red' } } } } }
+      theme: { Badge: { css: { sizes: { medium: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Badge.sizes.large should render correctly', () => {
     const { container } = render(<Badge size="large">hello world</Badge>, {
-      theme: { Badge: { css: { sizes: { large: { backgroundColor: 'red' } } } } }
+      theme: { Badge: { css: { sizes: { large: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -152,7 +152,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Badge>hello world</Badge>, {
-      theme: { Badge: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Badge: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

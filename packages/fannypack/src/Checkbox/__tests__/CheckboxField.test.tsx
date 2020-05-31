@@ -54,7 +54,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for ${state} state`, () => {
       const { container } = render(<CheckboxField state={state as any} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <CheckboxField>{CheckboxFieldProps => <div {...CheckboxFieldProps}>Hello world</div>}</CheckboxField>
+        <CheckboxField>{(CheckboxFieldProps) => <div {...CheckboxFieldProps}>Hello world</div>}</CheckboxField>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -105,7 +105,7 @@ describe('theming', () => {
   it('CheckboxField.root should render correctly', () => {
     const { container } = render(<CheckboxField />, {
       // @ts-ignore
-      theme: { CheckboxField: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { CheckboxField: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -115,7 +115,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<CheckboxField />, {
       // @ts-ignore
-      theme: { CheckboxField: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { CheckboxField: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

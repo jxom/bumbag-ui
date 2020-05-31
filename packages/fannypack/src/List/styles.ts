@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { space, theme } from '../utils';
 
-export const List = styleProps => cssClass`
+export const List = (styleProps) => cssClass`
   list-style: unset;
   list-style-type: none;
 
@@ -28,7 +28,7 @@ export const List = styleProps => cssClass`
   }
 `;
 
-export const ListItem = styleProps => cssClass`
+export const ListItem = (styleProps) => cssClass`
   & .fp-Icon {
     vertical-align: -0.125em;
   }
@@ -38,7 +38,7 @@ export const ListItem = styleProps => cssClass`
   }
 `;
 
-export const getOrderedProperties = styleProps => cssClass`
+export const getOrderedProperties = (styleProps) => cssClass`
   list-style-type: decimal;
 
   & & {
@@ -54,7 +54,7 @@ export const getOrderedProperties = styleProps => cssClass`
   }
 `;
 
-export const getHorizontalProperties = styleProps => cssClass`
+export const getHorizontalProperties = (styleProps) => cssClass`
   &&& li {
     display: inline-block;
     margin-bottom: unset;

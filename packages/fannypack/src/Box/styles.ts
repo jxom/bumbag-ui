@@ -1,23 +1,24 @@
-import _get from 'lodash/get';
 import { css, cssClass } from '../styled';
 import { altitude, breakpoint, theme } from '../utils';
 import { ThemeConfig } from '../types';
 
-export const style = styleProps => cssClass`
+export const style = (styleProps) => cssClass`
   & {
     ${styleProps.style};
     ${buildVisibleAttributes(styleProps)};
   }
 
-  ${styleProps.altitude &&
+  ${
+    styleProps.altitude &&
     css`
       & {
         ${altitude(styleProps.altitude)(styleProps)};
       }
-    `};
+    `
+  };
 `;
 
-export const Box = styleProps => cssClass`
+export const Box = (styleProps) => cssClass`
   margin: unset;
   padding: unset;
   border: unset;

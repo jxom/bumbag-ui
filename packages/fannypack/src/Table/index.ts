@@ -20,6 +20,6 @@ export const Table = Object.assign(_Table, {
   Foot: TableFoot,
   Row: TableRow,
   Body: TableBody,
-  HeadCell: TableHeadCell
+  HeadCell: TableHeadCell,
 });
 export { styles as tableStyles };

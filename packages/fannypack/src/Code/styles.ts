@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, palette, theme } from '../utils';
 
-export const Code = styleProps => cssClass`
+export const Code = (styleProps) => cssClass`
   background-color: ${
     styleProps.palette === 'default'
       ? palette('white700')(styleProps)
@@ -16,11 +16,13 @@ export const Code = styleProps => cssClass`
   overflow: scroll;
 
   & {
-    ${styleProps.isBlock &&
+    ${
+      styleProps.isBlock &&
       css`
         padding: 1rem;
         ${theme(styleProps.themeKey, `css.block`)(styleProps)};
-      `}
+      `
+    }
   };
 
   & {

@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, tint, palette, theme } from '../utils';
 
-export const ProgressBar = styleProps => cssClass`
+export const ProgressBar = (styleProps) => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
   overflow: hidden;
   width: 100%;
@@ -15,7 +15,7 @@ export const ProgressBar = styleProps => cssClass`
   }
 `;
 
-export const ProgressBarIndicator = styleProps => cssClass`
+export const ProgressBarIndicator = (styleProps) => cssClass`
   height: 100%;
   background-color: ${palette(styleProps.color, styleProps.color)(styleProps)};
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -53,7 +53,7 @@ function getSizeAttributes(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return sizeAttributes[styleProps.size || 'default'];
 }

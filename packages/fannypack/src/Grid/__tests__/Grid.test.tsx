@@ -36,7 +36,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Grid>{GridProps => <div {...GridProps}>Hello world</div>}</Grid>);
+      const { container } = render(<Grid>{(GridProps) => <div {...GridProps}>Hello world</div>}</Grid>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Grid.root should render correctly', () => {
     const { container } = render(<Grid>hello world</Grid>, {
-      theme: { Grid: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Grid: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Grid>hello world</Grid>, {
-      theme: { Grid: { defaultProps: { autoFlow: 'row', className: 'test' } } }
+      theme: { Grid: { defaultProps: { autoFlow: 'row', className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

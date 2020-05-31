@@ -18,7 +18,7 @@ const useProps = createHook<FlexProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,12 +27,12 @@ const useProps = createHook<FlexProps>(
 );
 
 export const Flex = createComponent<FlexProps>(
-  props => {
+  (props) => {
     const flexProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: flexProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Flex'
+    themeKey: 'Flex',
   }
 );

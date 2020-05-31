@@ -52,7 +52,7 @@ const useProps = createHook<CheckboxGroupProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     let defaultValue = initialDefaultValue;
@@ -87,22 +87,22 @@ const useProps = createHook<CheckboxGroupProps>(
             />
           ))}
         </Set>
-      )
+      ),
     };
   },
   { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'CheckboxGroup' }
 );
 
 export const CheckboxGroup = createComponent<CheckboxGroupProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'CheckboxGroup'
+    themeKey: 'CheckboxGroup',
   }
 );
 
@@ -145,7 +145,7 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -181,29 +181,29 @@ const useCheckboxGroupFieldProps = createHook<CheckboxGroupFieldProps>(
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'CheckboxGroupField' }
 );
 
 export const CheckboxGroupField = createComponent<CheckboxGroupFieldProps>(
-  props => {
+  (props) => {
     const checkboxGroupFieldProps = useCheckboxGroupFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: checkboxGroupFieldProps
+      htmlProps: checkboxGroupFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'fieldset'
+      use: 'fieldset',
     },
-    themeKey: 'CheckboxGroupField'
+    themeKey: 'CheckboxGroupField',
   }
 );

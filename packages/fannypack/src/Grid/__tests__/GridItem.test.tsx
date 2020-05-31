@@ -32,7 +32,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<GridItem>{GridItemProps => <div {...GridItemProps}>Hello world</div>}</GridItem>);
+      const { container } = render(<GridItem>{(GridItemProps) => <div {...GridItemProps}>Hello world</div>}</GridItem>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -41,7 +41,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('GridItem.root should render correctly', () => {
     const { container } = render(<GridItem>hello world</GridItem>, {
-      theme: { Grid: { Item: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Grid: { Item: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -50,7 +50,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<GridItem>hello world</GridItem>, {
-      theme: { Grid: { Item: { defaultProps: { area: 'test', className: 'test' } } } }
+      theme: { Grid: { Item: { defaultProps: { area: 'test', className: 'test' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

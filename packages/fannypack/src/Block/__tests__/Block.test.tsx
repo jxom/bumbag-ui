@@ -36,7 +36,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Block>{BlockProps => <div {...BlockProps}>Hello world</div>}</Block>);
+      const { container } = render(<Block>{(BlockProps) => <div {...BlockProps}>Hello world</div>}</Block>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -45,7 +45,7 @@ describe('composition', () => {
 describe('theming', () => {
   it('Block.root should render correctly', () => {
     const { container } = render(<Block>hello world</Block>, {
-      theme: { Block: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Block: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<Block>hello world</Block>, {
-      theme: { Block: { defaultProps: { className: 'test' } } }
+      theme: { Block: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -6,14 +6,26 @@ import render from '../../utils/_tests/render';
 describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <CheckboxGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />
+      <CheckboxGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with CSS props', () => {
     const { container } = render(
-      <CheckboxGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]} />
+      <CheckboxGroup
+        name="weather"
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -23,7 +35,10 @@ describe('props', () => {
       <CheckboxGroup
         defaultValue="world"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -34,7 +49,10 @@ describe('props', () => {
       <CheckboxGroup
         defaultValue={['world', 'me']}
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -45,7 +63,10 @@ describe('props', () => {
       <CheckboxGroup
         disabled
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -55,7 +76,10 @@ describe('props', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world', disabled: true }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world', disabled: true },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -66,19 +90,25 @@ describe('props', () => {
       <CheckboxGroup
         orientation="horizontal"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for state ${state}`, () => {
       const { container } = render(
         <CheckboxGroup
           state={state}
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -93,7 +123,10 @@ describe('composition', () => {
         <CheckboxGroup
           use="div"
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -105,7 +138,10 @@ describe('composition', () => {
       const { result } = renderHook(() =>
         CheckboxGroup.useProps({
           name: 'weather',
-          options: [{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]
+          options: [
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ],
         })
       );
       expect(result.current).toMatchSnapshot();
@@ -115,8 +151,14 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <CheckboxGroup name="weather" options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}>
-          {CheckboxGroupProps => <div {...CheckboxGroupProps}>Hello world</div>}
+        <CheckboxGroup
+          name="weather"
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
+        >
+          {(CheckboxGroupProps) => <div {...CheckboxGroupProps}>Hello world</div>}
         </CheckboxGroup>
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -129,7 +171,10 @@ describe('overrides', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
         overrides={{ CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
@@ -142,11 +187,14 @@ describe('theming', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />,
       {
         // @ts-ignore
-        theme: { CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { CheckboxGroup: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -158,11 +206,14 @@ describe('defaultProps', () => {
     const { container } = render(
       <CheckboxGroup
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />,
       {
         // @ts-ignore
-        theme: { CheckboxGroup: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { CheckboxGroup: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

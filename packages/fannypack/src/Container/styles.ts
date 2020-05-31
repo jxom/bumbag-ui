@@ -1,15 +1,18 @@
 import { css, cssClass } from '../styled';
 import { theme } from '../utils';
 
-export const Container = styleProps => cssClass`
+export const Container = (styleProps) => cssClass`
   width: 100%;
 
-  ${!styleProps.isFluid &&
+  ${
+    !styleProps.isFluid &&
     css`
       max-width: ${theme('breakpoints', 'fullHD')(styleProps)}px;
-    `};
+    `
+  };
 
-  ${styleProps.isFluid &&
+  ${
+    styleProps.isFluid &&
     css`
       padding-left: ${theme(styleProps.themeKey, 'fluidMargin')(styleProps)}rem;
       padding-right: ${theme(styleProps.themeKey, 'fluidMargin')(styleProps)}rem;
@@ -17,22 +20,27 @@ export const Container = styleProps => cssClass`
       & {
         ${theme(styleProps.themeKey, 'css.fluid')(styleProps)};
       }
-    `};
+    `
+  };
 
-  ${(styleProps.isLayout || styleProps.isFluid) &&
+  ${
+    (styleProps.isLayout || styleProps.isFluid) &&
     css`
       @media (max-width: ${theme('breakpoints.tablet')(styleProps)}px) {
         padding-left: ${theme(styleProps.themeKey, 'tabletMargin')(styleProps)}rem;
         padding-right: ${theme(styleProps.themeKey, 'tabletMargin')(styleProps)}rem;
       }
-    `};
+    `
+  };
 
-  ${styleProps.isLayout &&
+  ${
+    styleProps.isLayout &&
     css`
       & {
         ${theme(styleProps.themeKey, 'css.layout')(styleProps)};
       }
-    `};
+    `
+  };
 
   ${getResponsiveProperties(styleProps)};
   ${styleProps.align && !styleProps.isFluid ? alignProperties[styleProps.align] : null};
@@ -52,7 +60,7 @@ export const alignProperties = {
   `,
   right: css`
     margin-left: auto;
-  `
+  `,
 };
 
 export function getResponsiveProperties(styleProps) {

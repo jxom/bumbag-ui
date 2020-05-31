@@ -18,7 +18,7 @@ const useProps = createHook<InlineBlockProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -27,17 +27,17 @@ const useProps = createHook<InlineBlockProps>(
 );
 
 export const InlineBlock = createComponent<InlineBlockProps>(
-  props => {
+  (props) => {
     const inlineBlockProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: inlineBlockProps
+      htmlProps: inlineBlockProps,
     });
   },
   {
     attach: { useProps },
-    themeKey: 'InlineBlock'
+    themeKey: 'InlineBlock',
   }
 );

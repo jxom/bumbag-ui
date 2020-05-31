@@ -50,7 +50,7 @@ const useProps = createHook<TabsPanelProps>(
         stopAnimation,
         unstable_idCountRef,
         ...tabs,
-        visible: tabs ? tabId === tabs.selectedId : tabId === selectedId
+        visible: tabs ? tabId === tabs.selectedId : tabId === selectedId,
       },
       htmlProps
     );
@@ -61,7 +61,7 @@ const useProps = createHook<TabsPanelProps>(
       styleProps: { props, overrides: { ...tabOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -70,14 +70,14 @@ const useProps = createHook<TabsPanelProps>(
 );
 
 export const TabsPanel = createComponent<TabsPanelProps>(
-  props => {
+  (props) => {
     const tabsPanelProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tabsPanelProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tabs.Panel'
+    themeKey: 'Tabs.Panel',
   }
 );

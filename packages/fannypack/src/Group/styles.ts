@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, borderRadius, theme } from '../utils';
 
-export const Group = styleProps => cssClass`
+export const Group = (styleProps) => cssClass`
   display: flex;
   flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
 
@@ -41,7 +41,7 @@ export const Group = styleProps => cssClass`
                 else: css`
                   border-bottom-right-radius: 0;
                   border-top-right-radius: 0;
-                `
+                `,
               }
             )(styleProps)};
           `
@@ -66,7 +66,7 @@ export const Group = styleProps => cssClass`
                   else: css`
                     border-bottom-right-radius: 0;
                     border-top-right-radius: 0;
-                  `
+                  `,
                 }
               )(styleProps)};
             `
@@ -94,7 +94,7 @@ export const Group = styleProps => cssClass`
                 else: css`
                   border-top-left-radius: 0;
                   border-bottom-left-radius: 0;
-                `
+                `,
               }
             )(styleProps)};
           `
@@ -128,7 +128,7 @@ export const Group = styleProps => cssClass`
                   else: css`
                     border-top-left-radius: 0;
                     border-bottom-left-radius: 0;
-                  `
+                  `,
                 }
               )(styleProps)};
             `
@@ -160,7 +160,7 @@ export const Group = styleProps => cssClass`
               {
                 else: css`
                   border-left-width: 0;
-                `
+                `,
               }
             )(styleProps)};
           `

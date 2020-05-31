@@ -60,7 +60,7 @@ const useProps = createHook<ModalProps>(
           unstable_orphan,
           unstable_autoFocusOnHide,
           unstable_autoFocusOnShow,
-          stopAnimation
+          stopAnimation,
         },
         modalContext.modal
       ),
@@ -68,7 +68,7 @@ const useProps = createHook<ModalProps>(
     );
     htmlProps = Box.useProps({
       ...props,
-      ...modalProps
+      ...modalProps,
     });
 
     const className = useClassName({
@@ -76,7 +76,7 @@ const useProps = createHook<ModalProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return {
@@ -91,26 +91,26 @@ const useProps = createHook<ModalProps>(
           )}
           {children}
         </React.Fragment>
-      )
+      ),
     };
   },
   {
     defaultProps: {
-      placement: 'center'
+      placement: 'center',
     },
-    themeKey: 'Modal'
+    themeKey: 'Modal',
   }
 );
 
 export const Modal = createComponent<ModalProps>(
-  props => {
+  (props) => {
     const modalProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: modalProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Modal'
+    themeKey: 'Modal',
   }
 );

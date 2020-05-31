@@ -78,19 +78,19 @@ const useProps = createHook<InputProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Wrapper',
-      prevClassName: restProps.className
+      prevClassName: restProps.className,
     });
     const spinnerClassName = useClassName({
       style: styles.InputSpinner,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Spinner'
+      themeKeySuffix: 'Spinner',
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      wrapElement: children => (
+      wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (
             <Box display="inline-flex" position="absolute" zIndex="3" height="100%">
@@ -105,7 +105,7 @@ const useProps = createHook<InputProps>(
           {children}
           {isLoading && <Spinner className={spinnerClassName} color="text" />}
         </Box>
-      )
+      ),
     });
 
     const className = useClassName({
@@ -113,7 +113,7 @@ const useProps = createHook<InputProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, 'aria-invalid': state === 'danger', 'aria-required': isRequired };
@@ -122,7 +122,7 @@ const useProps = createHook<InputProps>(
 );
 
 export const Input = createComponent<InputProps>(
-  props => {
+  (props) => {
     const inputProps = useProps(props);
 
     let use = props.use;
@@ -134,17 +134,17 @@ export const Input = createComponent<InputProps>(
       children: props.children,
       component: ReakitBox,
       use,
-      htmlProps: { ...inputProps, ...(props.mask ? { mask: props.mask } : {}) }
+      htmlProps: { ...inputProps, ...(props.mask ? { mask: props.mask } : {}) },
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'input'
+      use: 'input',
     },
-    themeKey: 'Input'
+    themeKey: 'Input',
   }
 );
 
@@ -155,7 +155,7 @@ export function InputIcon(props: IconProps) {
     style: styles.InputIcon,
     styleProps: props,
     themeKey: 'Input.Icon',
-    prevClassName: props.className
+    prevClassName: props.className,
   });
 
   return <Icon {...props} className={className} />;
@@ -228,7 +228,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -293,26 +293,26 @@ const useInputFieldProps = createHook<InputFieldProps>(
             </ConditionalWrap>
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { defaultProps: { orientation: 'horizontal' }, themeKey: 'InputField' }
 );
 
 export const InputField = createComponent<InputFieldProps>(
-  props => {
+  (props) => {
     const inputFieldProps = useInputFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: inputFieldProps
+      htmlProps: inputFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'InputField'
+    themeKey: 'InputField',
   }
 );

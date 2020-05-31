@@ -6,7 +6,7 @@ import {
   useTooltipReference as useReakitTooltipReference,
   TooltipProps as ReakitTooltipProps,
   TooltipArrowProps as ReakitTooltipArrowProps,
-  TooltipReferenceProps as ReakitTooltipReferenceProps
+  TooltipReferenceProps as ReakitTooltipReferenceProps,
 } from 'reakit';
 
 import { Box, BoxProps } from '../Box';
@@ -24,7 +24,7 @@ export type LocalTooltipProps = {
 export type TooltipProps = BoxProps & LocalTooltipProps;
 
 const useProps = createHook<TooltipProps>(
-  props => {
+  (props) => {
     let { arrowProps, children, content, expand, fade, hasArrow, overrides, placement, slide, baseId } = props;
 
     const boxProps = Box.useProps({ ...props, content: undefined });
@@ -38,7 +38,7 @@ const useProps = createHook<TooltipProps>(
             {React.isValidElement(children)
               ? /*
                 // @ts-ignore */
-                referenceProps => React.cloneElement(children, { ...referenceProps, ...children.props })
+                (referenceProps) => React.cloneElement(children, { ...referenceProps, ...children.props })
               : children}
           </TooltipReference>
           <TooltipContent
@@ -53,22 +53,22 @@ const useProps = createHook<TooltipProps>(
             {content}
           </TooltipContent>
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Tooltip', defaultProps: { placement: 'top' } }
 );
 
 export const Tooltip = createComponent<TooltipProps>(
-  props => {
+  (props) => {
     const tooltipProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: tooltipProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tooltip'
+    themeKey: 'Tooltip',
   }
 );
 
@@ -107,7 +107,7 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
         unstable_popoverRef,
         unstable_popoverStyles,
         unstable_portal,
-        stopAnimation
+        stopAnimation,
       },
       restProps
     );
@@ -118,7 +118,7 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -140,27 +140,27 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
           )}
           {children}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Tooltip.Content' }
 );
 
 export const TooltipContent = createComponent<TooltipContentProps>(
-  props => {
+  (props) => {
     const tooltipContentProps = useTooltipContentProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: tooltipContentProps
+      htmlProps: tooltipContentProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Tooltip.Content'
+    themeKey: 'Tooltip.Content',
   }
 );
 
@@ -178,7 +178,7 @@ const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
         show,
         hide,
         unstable_referenceRef,
-        baseId
+        baseId,
       },
       restProps
     );
@@ -189,7 +189,7 @@ const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -198,20 +198,20 @@ const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
 );
 
 export const TooltipReference = createComponent<TooltipReferenceProps>(
-  props => {
+  (props) => {
     const tooltipReferenceProps = useTooltipReferenceProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: tooltipReferenceProps
+      htmlProps: tooltipReferenceProps,
     });
   },
   {
     attach: {
-      useProps: useTooltipReferenceProps
+      useProps: useTooltipReferenceProps,
     },
-    themeKey: 'Tooltip.Reference'
+    themeKey: 'Tooltip.Reference',
   }
 );
 
@@ -229,7 +229,7 @@ const useTooltipArrowProps = createHook<TooltipArrowProps>(
         placement,
         size,
         unstable_arrowRef,
-        unstable_arrowStyles
+        unstable_arrowStyles,
       },
       restProps
     );
@@ -240,31 +240,31 @@ const useTooltipArrowProps = createHook<TooltipArrowProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
       ...boxProps,
-      className
+      className,
     };
   },
   { themeKey: 'Tooltip.Arrow' }
 );
 
 export const TooltipArrow = createComponent<TooltipArrowProps>(
-  props => {
+  (props) => {
     const tooltipArrowProps = useTooltipArrowProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: tooltipArrowProps
+      htmlProps: tooltipArrowProps,
     });
   },
   {
     attach: {
-      useProps: useTooltipArrowProps
+      useProps: useTooltipArrowProps,
     },
-    themeKey: 'Tooltip.Arrow'
+    themeKey: 'Tooltip.Arrow',
   }
 );

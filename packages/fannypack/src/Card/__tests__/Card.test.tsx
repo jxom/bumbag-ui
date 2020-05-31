@@ -75,7 +75,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Card>{CardProps => <div {...CardProps}>Hello world</div>}</Card>);
+      const { container } = render(<Card>{(CardProps) => <div {...CardProps}>Hello world</div>}</Card>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -130,35 +130,35 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Card.css.root should render correctly', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Card: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Card.Content.css.root should render correctly', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { Content: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Card: { Content: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Card.Header.css.root should render correctly', () => {
     const { container } = render(<Card title="This is a title">hello world</Card>, {
-      theme: { Card: { Header: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Card: { Header: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Card.Title.css.root should render correctly', () => {
     const { container } = render(<Card title="This is a title">hello world</Card>, {
-      theme: { Card: { Title: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Card: { Title: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Card.Footer.css.root should render correctly', () => {
     const { container } = render(<Card footer={<Box>This is a footer</Box>}>hello world</Card>, {
-      theme: { Card: { Footer: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Card: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -167,21 +167,21 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { defaultProps: { className: 'test' } } }
+      theme: { Card: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for variant', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { defaultProps: { variant: 'border' } } }
+      theme: { Card: { defaultProps: { variant: 'border' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for title', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { defaultProps: { title: 'This is a title' } } }
+      theme: { Card: { defaultProps: { title: 'This is a title' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

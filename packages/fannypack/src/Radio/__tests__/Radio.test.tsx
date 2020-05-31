@@ -44,7 +44,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for ${state} state`, () => {
       const { container } = render(<Radio state={state} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Radio>{RadioProps => <div {...RadioProps}>Hello world</div>}</Radio>);
+      const { container } = render(<Radio>{(RadioProps) => <div {...RadioProps}>Hello world</div>}</Radio>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -112,7 +112,7 @@ describe('theming', () => {
   it('Radio.root should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Radio: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -120,7 +120,7 @@ describe('theming', () => {
   it('Radio.Icon.root should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { Icon: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Radio: { Icon: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -128,7 +128,7 @@ describe('theming', () => {
   it('Radio.Label.root should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { Label: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Radio: { Label: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -136,7 +136,7 @@ describe('theming', () => {
   it('Radio.HiddenInput.root should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Radio: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -146,7 +146,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Radio: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

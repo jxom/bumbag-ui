@@ -1,5 +1,4 @@
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { ModalDisclosure, ModalDisclosureProps } from '../Modal';
@@ -18,7 +17,7 @@ const useProps = createHook<OverlayDisclosureProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -27,22 +26,22 @@ const useProps = createHook<OverlayDisclosureProps>(
 );
 
 export const OverlayDisclosure = createComponent<OverlayDisclosureProps>(
-  props => {
+  (props) => {
     const overlayDisclosureProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: overlayDisclosureProps
+      htmlProps: overlayDisclosureProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'button'
+      use: 'button',
     },
-    themeKey: 'Overlay.Disclosure'
+    themeKey: 'Overlay.Disclosure',
   }
 );

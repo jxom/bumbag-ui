@@ -17,7 +17,7 @@ const useProps = createHook<NavigationProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, role: props.use !== 'nav' ? 'navigation' : undefined };
@@ -26,20 +26,20 @@ const useProps = createHook<NavigationProps>(
 );
 
 export const Navigation = createComponent<NavigationProps>(
-  props => {
+  (props) => {
     const navigationProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: navigationProps
+      htmlProps: navigationProps,
     });
   },
   {
     attach: { useProps },
     defaultProps: {
-      use: 'nav'
+      use: 'nav',
     },
-    themeKey: 'Navigation'
+    themeKey: 'Navigation',
   }
 );

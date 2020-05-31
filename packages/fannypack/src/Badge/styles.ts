@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, palette, theme } from '../utils';
 
-export const Badge = styleProps => cssClass`
+export const Badge = (styleProps) => cssClass`
   align-items: center;
   border-radius: 1rem;
   display: inline-flex;
@@ -15,14 +15,17 @@ export const Badge = styleProps => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
   height: 1.2em;
 
-  ${!styleProps.children &&
+  ${
+    !styleProps.children &&
     css`
       height: 1em;
       width: 1em;
       padding: 0px;
-    `}
+    `
+  }
 
-  ${styleProps.isAttached &&
+  ${
+    styleProps.isAttached &&
     css`
       position: absolute;
       top: -0.5em;
@@ -31,7 +34,8 @@ export const Badge = styleProps => cssClass`
       & {
         ${theme(styleProps.themeKey, `css.attached`)(styleProps)};
       }
-    `}
+    `
+  }
 
   ${getSizeAttributes(styleProps)}
 
@@ -58,7 +62,7 @@ function getSizeAttributes(styleProps) {
         font-size: ${fontSize('300')(styleProps)}rem;
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return sizeAttributes[styleProps.size || 'default'];
 }

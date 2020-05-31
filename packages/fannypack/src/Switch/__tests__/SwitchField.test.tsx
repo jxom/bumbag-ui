@@ -49,7 +49,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for ${state} state`, () => {
       const { container } = render(<SwitchField state={state as any} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -80,7 +80,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <SwitchField>{SwitchFieldProps => <div {...SwitchFieldProps}>Hello world</div>}</SwitchField>
+        <SwitchField>{(SwitchFieldProps) => <div {...SwitchFieldProps}>Hello world</div>}</SwitchField>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -100,7 +100,7 @@ describe('theming', () => {
   it('SwitchField.root should render correctly', () => {
     const { container } = render(<SwitchField />, {
       // @ts-ignore
-      theme: { SwitchField: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { SwitchField: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -110,7 +110,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<SwitchField />, {
       // @ts-ignore
-      theme: { SwitchField: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { SwitchField: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

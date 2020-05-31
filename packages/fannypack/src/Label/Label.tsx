@@ -19,7 +19,7 @@ const useProps = createHook<LabelProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -28,17 +28,17 @@ const useProps = createHook<LabelProps>(
 );
 
 export const Label = createComponent<LabelProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'label'
+      use: 'label',
     },
-    themeKey: 'Label'
+    themeKey: 'Label',
   }
 );

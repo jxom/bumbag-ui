@@ -6,5 +6,5 @@ export default (overrides: BreakpointsThemeConfig) => ({
   desktop: 1024,
   widescreen: 1200,
   fullHD: 1440,
-  ...overrides
+  ...overrides,
 });

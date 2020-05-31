@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useDialogState,
   DialogStateReturn as ReakitDialogStateReturn,
-  DialogInitialState as ReakitDialogInitialState
+  DialogInitialState as ReakitDialogInitialState,
 } from 'reakit';
 import { isFunction } from '../utils';
 

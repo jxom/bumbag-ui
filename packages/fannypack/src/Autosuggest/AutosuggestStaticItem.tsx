@@ -17,7 +17,7 @@ const useProps = createHook<AutosuggestStaticItemProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,14 +26,14 @@ const useProps = createHook<AutosuggestStaticItemProps>(
 );
 
 export const AutosuggestStaticItem = createComponent<AutosuggestStaticItemProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Autosuggest.StaticItem'
+    themeKey: 'Autosuggest.StaticItem',
   }
 );

@@ -17,7 +17,7 @@ const useProps = createHook<ListItemProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,17 +26,17 @@ const useProps = createHook<ListItemProps>(
 );
 
 export const ListItem = createComponent<ListItemProps>(
-  props => {
+  (props) => {
     const listItemProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, htmlProps: listItemProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'li'
+      use: 'li',
     },
-    themeKey: 'List.Item'
+    themeKey: 'List.Item',
   }
 );

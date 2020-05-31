@@ -81,7 +81,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
         animated,
         stopAnimation,
         unstable_virtual,
-        visible
+        visible,
       },
       restProps
     );
@@ -92,7 +92,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, tabIndex: props.isTabbable ? boxProps.tabIndex : undefined };
@@ -101,19 +101,19 @@ const useProps = createHook<DropdownMenuPopoverProps>(
 );
 
 export const DropdownMenuPopover = createComponent<DropdownMenuPopoverProps>(
-  props => {
+  (props) => {
     const dropdownMenuPopoverProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: dropdownMenuPopoverProps
+      htmlProps: dropdownMenuPopoverProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'DropdownMenu.Popover'
+    themeKey: 'DropdownMenu.Popover',
   }
 );

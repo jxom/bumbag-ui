@@ -56,58 +56,58 @@ const useProps = createHook<FieldWrapperProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const labelClassName = useClassName({
       style: styles.Label,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Label'
+      themeKeySuffix: 'Label',
     });
     const descriptionClassName = useClassName({
       style: styles.DescriptionText,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'DescriptionText'
+      themeKeySuffix: 'DescriptionText',
     });
     const hintClassName = useClassName({
       style: styles.HintText,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'HintText'
+      themeKeySuffix: 'HintText',
     });
     const optionalClassName = useClassName({
       style: styles.OptionalText,
       styleProps: props,
       themeKey,
-      themeKeySuffix: 'OptionalText'
+      themeKeySuffix: 'OptionalText',
     });
     const requiredClassName = useClassName({
       style: styles.RequiredText,
       styleProps: props,
       themeKey,
-      themeKeySuffix: 'RequiredText'
+      themeKeySuffix: 'RequiredText',
     });
     const validationClassName = useClassName({
       style: styles.ValidationText,
       styleProps: props,
       themeKey,
-      themeKeySuffix: 'ValidationText'
+      themeKeySuffix: 'ValidationText',
     });
     const tooltipTriggerClassName = useClassName({
       style: styles.TooltipTrigger,
       styleProps: props,
       themeKey,
-      themeKeySuffix: 'TooltipTrigger'
+      themeKeySuffix: 'TooltipTrigger',
     });
     const tooltipPopoverClassName = useClassName({
       style: styles.TooltipPopover,
       styleProps: props,
       themeKey,
-      themeKeySuffix: 'TooltipPopover'
+      themeKeySuffix: 'TooltipPopover',
     });
     const disclosure = Disclosure.useState();
     const uid = useUniqueId('FieldWrapper');
@@ -190,27 +190,27 @@ const useProps = createHook<FieldWrapperProps>(
             </Box>
           )}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'FieldWrapper' }
 );
 
 export const FieldWrapper = createComponent<FieldWrapperProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       enableRenderPropsComposition: false,
       use: props.use,
-      htmlProps: textProps
+      htmlProps: textProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'FieldWrapper'
+    themeKey: 'FieldWrapper',
   }
 );

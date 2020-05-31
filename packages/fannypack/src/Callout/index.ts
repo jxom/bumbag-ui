@@ -6,7 +6,7 @@ import {
   CalloutContent,
   CalloutFooter,
   CalloutIcon,
-  CalloutOverlay
+  CalloutOverlay,
 } from './Callout';
 
 export * from './Callout';
@@ -16,6 +16,6 @@ export const Callout = Object.assign(_Callout, {
   Content: CalloutContent,
   Footer: CalloutFooter,
   Icon: CalloutIcon,
-  Overlay: CalloutOverlay
+  Overlay: CalloutOverlay,
 });
 export { styles as CalloutStyles };

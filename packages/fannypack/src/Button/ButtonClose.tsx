@@ -25,7 +25,7 @@ const useProps = createHook<ButtonCloseProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: buttonProps.className
+      prevClassName: buttonProps.className,
     });
 
     const children = (
@@ -41,19 +41,19 @@ const useProps = createHook<ButtonCloseProps>(
 );
 
 export const ButtonClose = createComponent<ButtonCloseProps>(
-  props => {
+  (props) => {
     const buttonCloseProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitButton,
       use: props.use,
-      htmlProps: buttonCloseProps
+      htmlProps: buttonCloseProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Button.Close'
+    themeKey: 'Button.Close',
   }
 );

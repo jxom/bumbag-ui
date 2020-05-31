@@ -1,10 +1,11 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, theme } from '../utils';
 
-export const Columns = styleProps => cssClass`
+export const Columns = (styleProps) => cssClass`
   display: flex;
 
-  ${!styleProps.isGapless &&
+  ${
+    !styleProps.isGapless &&
     css`
       margin-left: -${theme('layout', 'gapUnit')(styleProps)}rem;
       margin-right: -${theme('layout', 'gapUnit')(styleProps)}rem;
@@ -13,7 +14,8 @@ export const Columns = styleProps => cssClass`
       &:last-child {
         margin-bottom: -${theme('layout', 'gapUnit')(styleProps)}rem;
       }
-    `};
+    `
+  };
 
   ${getWrapProperties(styleProps)};
 
@@ -22,14 +24,16 @@ export const Columns = styleProps => cssClass`
   }
 `;
 
-export const Column = styleProps => cssClass`
+export const Column = (styleProps) => cssClass`
   flex: 1;
   max-width: 100%;
 
-  ${!styleProps.isGapless &&
+  ${
+    !styleProps.isGapless &&
     css`
       padding: ${theme('layout', 'gapUnit')(styleProps)}rem;
-    `};
+    `
+  };
 
   & {
     ${getSpreadProperties(styleProps)};
@@ -54,10 +58,10 @@ export const marginAutoOffsets: { [key: string]: any } = {
   `,
   right: css`
     margin-right: auto;
-  `
+  `,
 };
 
-export const getWidth = spread => `${(spread / 12) * 100}%`;
+export const getWidth = (spread) => `${(spread / 12) * 100}%`;
 
 export function getWrapProperties(styleProps) {
   const { isOneLine, minBreakpoint } = styleProps;
@@ -94,7 +98,7 @@ export function getSpreadProperties(styleProps) {
     spreadTablet,
     spreadDesktop,
     spreadWidescreen,
-    spreadFullHD
+    spreadFullHD,
   } = styleProps;
   if (
     !minBreakpoint &&
@@ -136,24 +140,24 @@ export function getSpreadProperties(styleProps) {
     ${getProperties({ spread: spreadWidescreen, breakpoint: 'widescreen' })};
     ${getProperties({ spread: spreadDesktop, breakpoint: 'desktop' })};
     ${minBreakpoint !== 'tablet' &&
-      minBreakpoint !== 'mobile' &&
-      !spreadTablet &&
-      !spreadMobile &&
-      breakpoint(
-        `max-tablet`,
-        css`
-          width: 100%;
-        `
-      )(styleProps)};
+    minBreakpoint !== 'mobile' &&
+    !spreadTablet &&
+    !spreadMobile &&
+    breakpoint(
+      `max-tablet`,
+      css`
+        width: 100%;
+      `
+    )(styleProps)};
     ${getProperties({ spread: spreadTablet, breakpoint: 'tablet' })};
     ${minBreakpoint !== 'mobile' &&
-      !spreadMobile &&
-      breakpoint(
-        `max-mobile`,
-        css`
-          width: 100%;
-        `
-      )(styleProps)};
+    !spreadMobile &&
+    breakpoint(
+      `max-mobile`,
+      css`
+        width: 100%;
+      `
+    )(styleProps)};
     ${getProperties({ spread: spreadMobile, breakpoint: 'mobile' })};
   `;
 }
@@ -165,7 +169,7 @@ export function getSpreadOffsetProperties(styleProps) {
     spreadTabletOffset,
     spreadDesktopOffset,
     spreadWidescreenOffset,
-    spreadFullHDOffset
+    spreadFullHDOffset,
   } = styleProps;
   if (
     !spreadOffset &&
@@ -199,26 +203,26 @@ export function getSpreadOffsetProperties(styleProps) {
       ${getProperties({ spreadOffset })};
       ${getProperties({
         spreadOffset: spreadFullHDOffset,
-        breakpoint: 'fullHD'
+        breakpoint: 'fullHD',
       })};
       ${getProperties({ spreadOffset: spreadWidescreenOffset, breakpoint: 'widescreen' })};
       ${getProperties({ spreadOffset: spreadDesktopOffset, breakpoint: 'desktop' })};
       ${!spreadTabletOffset &&
-        !spreadMobileOffset &&
-        breakpoint(
-          `max-tablet`,
-          css`
-            margin-left: 0;
-          `
-        )(styleProps)};
+      !spreadMobileOffset &&
+      breakpoint(
+        `max-tablet`,
+        css`
+          margin-left: 0;
+        `
+      )(styleProps)};
       ${getProperties({ spreadOffset: spreadTabletOffset, breakpoint: 'tablet' })};
       ${!spreadMobileOffset &&
-        breakpoint(
-          `max-mobile`,
-          css`
-            margin-left: 0;
-          `
-        )(styleProps)};
+      breakpoint(
+        `max-mobile`,
+        css`
+          margin-left: 0;
+        `
+      )(styleProps)};
       ${getProperties({ spreadOffset: spreadMobileOffset, breakpoint: 'mobile' })};
     `;
   }

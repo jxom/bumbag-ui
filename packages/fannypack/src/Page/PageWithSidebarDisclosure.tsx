@@ -1,5 +1,4 @@
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -22,7 +21,7 @@ const useProps = createHook<PageWithSidebarDisclosureProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -31,22 +30,22 @@ const useProps = createHook<PageWithSidebarDisclosureProps>(
 );
 
 export const PageWithSidebarDisclosure = createComponent<PageWithSidebarDisclosureProps>(
-  props => {
+  (props) => {
     const PageWithSidebarDisclosureProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: PageWithSidebarDisclosureProps
+      htmlProps: PageWithSidebarDisclosureProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'button'
+      use: 'button',
     },
-    themeKey: 'PageWithSidebar.Disclosure'
+    themeKey: 'PageWithSidebar.Disclosure',
   }
 );

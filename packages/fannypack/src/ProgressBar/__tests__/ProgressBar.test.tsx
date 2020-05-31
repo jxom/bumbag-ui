@@ -56,14 +56,14 @@ describe('overrides', () => {
 describe('theming', () => {
   it('ProgressBar.root should render correctly', () => {
     const { container } = render(<ProgressBar value={50} />, {
-      theme: { ProgressBar: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { ProgressBar: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('ProgressBar.Indicator.root should render correctly', () => {
     const { container } = render(<ProgressBar value={50} />, {
-      theme: { ProgressBar: { Indicator: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { ProgressBar: { Indicator: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -72,7 +72,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<ProgressBar value={50} />, {
-      theme: { ProgressBar: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { ProgressBar: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

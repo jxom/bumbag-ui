@@ -1,11 +1,13 @@
 import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, palette, space, theme, altitude } from '../utils';
 
-export const Callout = styleProps => cssClass`
-  ${styleProps.showCloseButton &&
+export const Callout = (styleProps) => cssClass`
+  ${
+    styleProps.showCloseButton &&
     css`
       position: relative;
-    `}
+    `
+  }
 
   ${styleProps.hasTint && getTintAttributes(styleProps)};
 
@@ -14,13 +16,13 @@ export const Callout = styleProps => cssClass`
   }
 `;
 
-export const CalloutContent = styleProps => cssClass`
+export const CalloutContent = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const CalloutHeader = styleProps => cssClass`
+export const CalloutHeader = (styleProps) => cssClass`
   margin-bottom: ${space(1, 'major')(styleProps)}rem;
 
   & {
@@ -28,7 +30,7 @@ export const CalloutHeader = styleProps => cssClass`
   }
 `;
 
-export const CalloutTitle = styleProps => cssClass`
+export const CalloutTitle = (styleProps) => cssClass`
   font-size: ${fontSize('300')(styleProps)}em;
   font-weight: ${fontWeight('semibold')(styleProps)};
 
@@ -37,7 +39,7 @@ export const CalloutTitle = styleProps => cssClass`
   }
 `;
 
-export const CalloutFooter = styleProps => cssClass`
+export const CalloutFooter = (styleProps) => cssClass`
   margin-top: ${space(3, 'major')(styleProps)}rem;
 
   & {
@@ -45,7 +47,7 @@ export const CalloutFooter = styleProps => cssClass`
   }
 `;
 
-export const CalloutIconWrapper = styleProps => cssClass`
+export const CalloutIconWrapper = (styleProps) => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
 
   & .fp-Icon {
@@ -60,7 +62,7 @@ export const CalloutIconWrapper = styleProps => cssClass`
   }
 `;
 
-export const CalloutClose = styleProps => cssClass`
+export const CalloutClose = (styleProps) => cssClass`
   position: absolute;
   top: ${space(1, 'major')(styleProps)}rem;
   right: ${space(1, 'major')(styleProps)}rem;
@@ -70,7 +72,7 @@ export const CalloutClose = styleProps => cssClass`
   }
 `;
 
-export const CalloutOverlay = styleProps => cssClass`
+export const CalloutOverlay = (styleProps) => cssClass`
   max-width: 500px;
 
   ${altitude('200')(styleProps)};

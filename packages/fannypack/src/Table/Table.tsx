@@ -29,11 +29,11 @@ const useProps = createHook<TableProps>(
       style: styles.TableWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride
+      themeKeyOverride,
     });
     const boxProps = Box.useProps({
       ...props,
-      wrapElement: element => <Box className={tableWrapperClassName}>{element}</Box>
+      wrapElement: (element) => <Box className={tableWrapperClassName}>{element}</Box>,
     });
 
     const className = useClassName({
@@ -41,7 +41,7 @@ const useProps = createHook<TableProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(() => ({ overrides, tableVariant: variant }), [overrides, variant]);
@@ -49,7 +49,7 @@ const useProps = createHook<TableProps>(
     return {
       ...boxProps,
       className,
-      children: <TableContext.Provider value={contextValue}>{children}</TableContext.Provider>
+      children: <TableContext.Provider value={contextValue}>{children}</TableContext.Provider>,
     };
   },
   {
@@ -58,24 +58,24 @@ const useProps = createHook<TableProps>(
       hoverColor: 'white600',
       stripeColor: 'white600',
       responsiveBreakpoint: 'mobile',
-      variant: 'default'
+      variant: 'default',
     },
-    themeKey: 'Table'
+    themeKey: 'Table',
   }
 );
 
 export const Table = createComponent<TableProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'table'
+      use: 'table',
     },
-    themeKey: 'Table'
+    themeKey: 'Table',
   }
 );

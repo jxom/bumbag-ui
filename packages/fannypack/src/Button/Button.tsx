@@ -56,35 +56,35 @@ const useProps = createHook<ButtonProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
     const iconBeforeClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isBefore: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const iconAfterClassName = useClassName({
       style: styles.ButtonIcon,
       styleProps: { ...props, isAfter: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const spinnerWrapperClassName = useClassName({
       style: styles.ButtonSpinnerWrapper,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'SpinnerWrapper'
+      themeKeySuffix: 'SpinnerWrapper',
     });
     const spinnerClassName = useClassName({
       style: styles.ButtonSpinner,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Spinner'
+      themeKeySuffix: 'Spinner',
     });
 
     const children = (
@@ -99,7 +99,7 @@ const useProps = createHook<ButtonProps>(
             />
           </Box>
         )}
-        <ConditionalWrap condition={props.isLoading} wrap={children => <Text>{children}</Text>}>
+        <ConditionalWrap condition={props.isLoading} wrap={(children) => <Text>{children}</Text>}>
           {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
           {htmlProps.children}
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
@@ -119,9 +119,9 @@ const useProps = createHook<ButtonProps>(
       variant: 'default',
       palette: 'default',
       size: 'default',
-      type: 'button'
+      type: 'button',
     },
-    themeKey: 'Button'
+    themeKey: 'Button',
   }
 );
 
@@ -132,8 +132,8 @@ export const Button = createComponent<ButtonProps>(
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Button'
+    themeKey: 'Button',
   }
 );

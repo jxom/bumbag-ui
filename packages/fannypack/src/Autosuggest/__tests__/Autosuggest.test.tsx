@@ -13,7 +13,7 @@ describe('props', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
@@ -32,7 +32,7 @@ describe('props', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
@@ -53,13 +53,13 @@ describe('variants', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
       />,
       {
-        theme: { Autosuggest: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+        theme: { Autosuggest: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -77,7 +77,7 @@ describe('overrides', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
@@ -97,13 +97,13 @@ describe('theming', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
       />,
       {
-        theme: { Autosuggest: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Autosuggest: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -120,13 +120,13 @@ describe('defaultProps', () => {
           { key: 1, label: 'Apples', value: 'apples' },
           { key: 2, label: 'Bananas', value: 'bananas' },
           { key: 3, label: 'Oranges', value: 'oranges' },
-          { key: 4, label: 'Mangos', value: 'mangos' }
+          { key: 4, label: 'Mangos', value: 'mangos' },
         ]}
         placeholder="Search for a fruit..."
         value={{ label: '' }}
       />,
       {
-        theme: { Autosuggest: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { Autosuggest: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

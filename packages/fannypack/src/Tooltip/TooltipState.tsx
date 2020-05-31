@@ -1,7 +1,7 @@
 import {
   useTooltipState as useReakitTooltipState,
   TooltipStateReturn as ReakitTooltipStateReturn,
-  TooltipInitialState as ReakitTooltipInitialState
+  TooltipInitialState as ReakitTooltipInitialState,
 } from 'reakit';
 
 export type TooltipStateReturn = ReakitTooltipStateReturn;

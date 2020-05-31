@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box as ReakitBox, RoverProps as ReakitRoverProps, useRover as useReakitRover } from 'reakit';
-import _omit from 'lodash/omit';
 import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -59,7 +58,7 @@ const useProps = createHook<RoverProps>(
         unstable_clickOnEnter,
         unstable_clickOnSpace,
         unstable_idCountRef,
-        unstable_moves
+        unstable_moves,
       },
       htmlProps
     );
@@ -70,7 +69,7 @@ const useProps = createHook<RoverProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -79,14 +78,14 @@ const useProps = createHook<RoverProps>(
 );
 
 export const Rover = createComponent<RoverProps>(
-  props => {
+  (props) => {
     const roverProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: roverProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Rover'
+    themeKey: 'Rover',
   }
 );

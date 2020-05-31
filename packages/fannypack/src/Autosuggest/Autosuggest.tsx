@@ -1,12 +1,8 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _pick from 'lodash/pick';
-import _omit from 'lodash/omit';
-import _get from 'lodash/get';
-import _debounce from 'lodash/debounce';
 import * as Loads from 'react-loads-next';
 
-import { useClassName, createComponent, createElement, createHook, useDebounce } from '../utils';
+import { useClassName, createComponent, createElement, createHook, omit, useDebounce } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Input, InputProps } from '../Input';
@@ -16,7 +12,7 @@ import {
   DropdownMenuDisclosure,
   DropdownMenuPopoverProps,
   DropdownMenuItemProps,
-  DropdownMenuInitialState
+  DropdownMenuInitialState,
 } from '../DropdownMenu';
 import { Spinner } from '../Spinner';
 import { Text } from '../Text';
@@ -87,18 +83,18 @@ function reducer(state, event) {
           ? getNewHighlightedIndex({
               compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
               highlightedIndex: -1,
-              filteredOptions: state.filteredOptions
+              filteredOptions: state.filteredOptions,
             })
           : -1,
         inputValue: event.inputValue,
-        selectedOption: undefined
+        selectedOption: undefined,
       };
     }
     case 'VALUE_CHANGE': {
       return {
         ...state,
         page: 1,
-        value: event.value
+        value: event.value,
       };
     }
     case 'INPUT_BLUR': {
@@ -107,31 +103,31 @@ function reducer(state, event) {
         highlightedIndex: -1,
         page: 1,
         inputValue:
-          event.restrictToOptions && (state.highlightedIndex === -1 && !state.selectedOption) ? '' : state.inputValue
+          event.restrictToOptions && state.highlightedIndex === -1 && !state.selectedOption ? '' : state.inputValue,
       };
     }
     case 'KEY_UP': {
       const newHighlightedIndex = getNewHighlightedIndex({
         compare: ({ index, optionsLength }) => (index > 0 ? index - 1 : optionsLength),
         highlightedIndex: state.highlightedIndex,
-        filteredOptions: state.filteredOptions
+        filteredOptions: state.filteredOptions,
       });
 
       return {
         ...state,
-        highlightedIndex: newHighlightedIndex
+        highlightedIndex: newHighlightedIndex,
       };
     }
     case 'KEY_DOWN': {
       const newHighlightedIndex = getNewHighlightedIndex({
         compare: ({ index, optionsLength }) => (index < optionsLength ? index + 1 : 0),
         highlightedIndex: state.highlightedIndex,
-        filteredOptions: state.filteredOptions
+        filteredOptions: state.filteredOptions,
       });
 
       return {
         ...state,
-        highlightedIndex: newHighlightedIndex
+        highlightedIndex: newHighlightedIndex,
       };
     }
     case 'KEY_ESC': {
@@ -141,7 +137,7 @@ function reducer(state, event) {
       return {
         ...state,
         highlightedIndex: -1,
-        inputValue: event.restrictToOptions && state.highlightedIndex === -1 ? '' : state.inputValue
+        inputValue: event.restrictToOptions && state.highlightedIndex === -1 ? '' : state.inputValue,
       };
     }
     case 'MOUSE_CLICK_ITEM': {
@@ -159,9 +155,9 @@ function reducer(state, event) {
       return {
         ...state,
         filteredOptions: [event.option],
-        inputValue: _get(event, 'option.label', ''),
+        inputValue: event?.option?.label ?? '',
         selectedOption: event.option,
-        value: event.option
+        value: event.option,
       };
     }
     case 'OPTION_CLEARED': {
@@ -174,7 +170,7 @@ function reducer(state, event) {
       return {
         ...state,
         highlightedIndex: state.inputValue && event.automaticSelection ? 0 : -1,
-        isMouseInsidePopover: false
+        isMouseInsidePopover: false,
       };
     }
     case 'PAGE_INCREMENT': {
@@ -230,7 +226,7 @@ const useProps = createHook<AutosuggestProps>(
     const dropdownMenu = DropdownMenu.useState({
       loop: true,
       gutter: 4,
-      ...dropdownMenuInitialState
+      ...dropdownMenuInitialState,
     });
     const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps(dropdownMenu);
 
@@ -262,36 +258,36 @@ const useProps = createHook<AutosuggestProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const dropdownMenuPopoverClassName = useClassName({
       style: styles.AutosuggestPopover,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Popover'
+      themeKeySuffix: 'Popover',
     });
     const inputClassName = useClassName({
       style: styles.AutosuggestInput,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Input'
+      themeKeySuffix: 'Input',
     });
 
     //////////////////////////////////////////////////
 
     const [
       { highlightedIndex, inputValue, filteredOptions, options, page, selectedOption },
-      dispatch
+      dispatch,
     ] = React.useReducer(reducer, {
       highlightedIndex: -1,
-      inputValue: _get(value, 'label'),
+      inputValue: value?.label,
       isMouseInsidePopover: false,
       filteredOptions: initialOptions,
       options: initialOptions,
       page: 1,
-      value: { label: '' }
+      value: { label: '' },
     });
 
     //////////////////////////////////////////////////
@@ -321,28 +317,22 @@ const useProps = createHook<AutosuggestProps>(
     );
     const optionsRecord = Loads.useLoads(cacheKey, getOptions, {
       defer,
-      variables: [{ loadVariables, page, searchText: debouncedInputValue }]
+      variables: [{ loadVariables, page, searchText: debouncedInputValue }],
     });
 
     //////////////////////////////////////////////////
 
-    React.useEffect(
-      () => {
-        dispatch({ type: 'OPTIONS_SET', options: initialOptions });
-      },
-      [initialOptions]
-    );
+    React.useEffect(() => {
+      dispatch({ type: 'OPTIONS_SET', options: initialOptions });
+    }, [initialOptions]);
 
-    React.useEffect(
-      () => {
-        if (loadOptions && optionsRecord.isResolved) {
-          const options = _get(optionsRecord.response, 'options', []);
-          dispatch({ type: 'OPTIONS_SET', options });
-          dispatch({ type: 'OPTIONS_FILTERED', filteredOptions: options });
-        }
-      },
-      [loadOptions, optionsRecord.isResolved, optionsRecord.response]
-    );
+    React.useEffect(() => {
+      if (loadOptions && optionsRecord.isResolved) {
+        const options = optionsRecord.response?.options ?? [];
+        dispatch({ type: 'OPTIONS_SET', options });
+        dispatch({ type: 'OPTIONS_FILTERED', filteredOptions: options });
+      }
+    }, [loadOptions, optionsRecord.isResolved, optionsRecord.response]);
 
     //////////////////////////////////////////////////
 
@@ -358,7 +348,7 @@ const useProps = createHook<AutosuggestProps>(
     //////////////////////////////////////////////////
 
     const setOption = React.useCallback(
-      option => {
+      (option) => {
         dispatch({ type: 'OPTION_SELECTED', option });
         onChange && onChange(option);
         return option;
@@ -369,7 +359,7 @@ const useProps = createHook<AutosuggestProps>(
     const filterOptions = React.useCallback(
       ({ controlsVisibility, hideIfNoOptions = true, searchText }) => {
         if (loadOptions) return;
-        const filteredOptions = options.filter(option =>
+        const filteredOptions = options.filter((option) =>
           option.label.toLowerCase().includes(searchText.trim().toLowerCase())
         );
         if (controlsVisibility) {
@@ -401,13 +391,13 @@ const useProps = createHook<AutosuggestProps>(
     //////////////////////////////////////////////////
 
     const handleBlurInput = React.useCallback(
-      event => {
+      (event) => {
         const value = event.target.value;
         dispatch({ type: 'INPUT_BLUR', restrictToOptions, value });
         if ((inputValue && automaticSelection) || highlightedIndex >= 0) {
           selectOption({ index: highlightedIndex >= 0 ? highlightedIndex : 0 });
         }
-        if (restrictToOptions && (!selectedOption && highlightedIndex === -1)) {
+        if (restrictToOptions && !selectedOption && highlightedIndex === -1) {
           onChange && onChange({ label: '' });
         }
         filterOptions({ searchText: value });
@@ -427,12 +417,12 @@ const useProps = createHook<AutosuggestProps>(
         onChange,
         restrictToOptions,
         selectOption,
-        selectedOption
+        selectedOption,
       ]
     );
 
     const handleChangeInput = React.useCallback(
-      event => {
+      (event) => {
         const inputValue = event.target.value || '';
         setBlockLoad(false);
         dispatch({ type: 'INPUT_CHANGE', automaticSelection, inputValue });
@@ -442,7 +432,7 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleClickInput = React.useCallback(
-      event => {
+      (event) => {
         const value = event.target.value;
         filterOptions({ controlsVisibility: true, searchText: value });
         if (loadOptions) {
@@ -457,7 +447,7 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleFocusInput = React.useCallback(
-      event => {
+      (event) => {
         const value = event.target.value;
         filterOptions({ controlsVisibility: true, searchText: value });
       },
@@ -465,7 +455,7 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleKeyDownInput = React.useCallback(
-      event => {
+      (event) => {
         if (event.keyCode === KEY_ESC) {
           event.preventDefault();
           dropdownMenu.hide();
@@ -502,30 +492,21 @@ const useProps = createHook<AutosuggestProps>(
       [dispatch, dropdownMenu, selectOption]
     );
 
-    const handleClear = React.useCallback(
-      () => {
-        dispatch({ type: 'OPTION_CLEARED' });
-        onChange && onChange({ label: '' });
-      },
-      [onChange]
-    );
+    const handleClear = React.useCallback(() => {
+      dispatch({ type: 'OPTION_CLEARED' });
+      onChange && onChange({ label: '' });
+    }, [onChange]);
 
-    const handleMouseEnterPopover = React.useCallback(
-      () => {
-        dispatch({ type: 'MOUSE_ENTER_POPOVER', automaticSelection });
-      },
-      [automaticSelection]
-    );
+    const handleMouseEnterPopover = React.useCallback(() => {
+      dispatch({ type: 'MOUSE_ENTER_POPOVER', automaticSelection });
+    }, [automaticSelection]);
 
-    const handleMouseLeavePopover = React.useCallback(
-      () => {
-        dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
-      },
-      [automaticSelection]
-    );
+    const handleMouseLeavePopover = React.useCallback(() => {
+      dispatch({ type: 'MOUSE_LEAVE_POPOVER', automaticSelection });
+    }, [automaticSelection]);
 
     const handleScrollPopover = React.useCallback(
-      event => {
+      (event) => {
         const target = event.currentTarget;
         if (
           pagination &&
@@ -542,7 +523,7 @@ const useProps = createHook<AutosuggestProps>(
     );
 
     const handleCreate = React.useCallback(
-      option => {
+      (option) => {
         setOption(option);
         dropdownMenu.hide();
       },
@@ -551,14 +532,11 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
-    React.useEffect(
-      () => {
-        if (value) {
-          dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
-        }
-      },
-      [automaticSelection, value]
-    );
+    React.useEffect(() => {
+      if (value) {
+        dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
+      }
+    }, [automaticSelection, value]);
 
     //////////////////////////////////////////////////
 
@@ -566,7 +544,7 @@ const useProps = createHook<AutosuggestProps>(
       () => ({
         overrides,
         themeKey,
-        themeKeyOverride
+        themeKeyOverride,
       }),
       [overrides, themeKey, themeKeyOverride]
     );
@@ -575,17 +553,17 @@ const useProps = createHook<AutosuggestProps>(
 
     return {
       ...boxProps,
-      ..._pick(dropdownMenuDisclosureProps, 'aria-expanded'),
+      'aria-expanded': dropdownMenuDisclosureProps['aria-expanded'],
       'aria-haspopup': 'listbox',
       'aria-owns': dropdownMenu.baseId,
       className,
       children: (
         <AutosuggestContext.Provider value={context}>
           <Input
-            {..._omit(dropdownMenuDisclosureProps, 'type', 'className', 'role')}
+            {...omit(dropdownMenuDisclosureProps, 'type', 'className', 'role')}
             after={inputValue && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
             aria-autocomplete="list"
-            aria-activedescendant={_get(dropdownMenu, `items[${highlightedIndex}].id`)}
+            aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
             disabled={disabled}
             isLoading={isInputLoading}
@@ -605,7 +583,7 @@ const useProps = createHook<AutosuggestProps>(
             use="ul"
             className={dropdownMenuPopoverClassName}
             isTabbable={false}
-            onMouseDown={e => e.preventDefault()}
+            onMouseDown={(e) => e.preventDefault()}
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
             onScroll={handleScrollPopover}
@@ -640,7 +618,9 @@ const useProps = createHook<AutosuggestProps>(
                         inputValue={inputValue}
                         option={option}
                         overrides={overrides}
-                        MatchedLabel={props => <MatchedLabel label={option.label} inputValue={inputValue} {...props} />}
+                        MatchedLabel={(props) => (
+                          <MatchedLabel label={option.label} inputValue={inputValue} {...props} />
+                        )}
                       />
                     </AutosuggestItem>
                   ))}
@@ -661,7 +641,7 @@ const useProps = createHook<AutosuggestProps>(
             )}
           </DropdownMenuPopover>
         </AutosuggestContext.Provider>
-      )
+      ),
     };
   },
   {
@@ -678,22 +658,22 @@ const useProps = createHook<AutosuggestProps>(
       renderError: Error,
       renderLoading: Loading,
       renderLoadingMore: Loading,
-      renderOption: MatchedLabel
+      renderOption: MatchedLabel,
     },
-    themeKey: 'Autosuggest'
+    themeKey: 'Autosuggest',
   }
 );
 
 export const Autosuggest = createComponent<AutosuggestProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Autosuggest'
+    themeKey: 'Autosuggest',
   }
 );
 
@@ -709,14 +689,14 @@ function ClearButton(props: any) {
     styleProps: { ...props, overrides },
     themeKey,
     themeKeyOverride,
-    themeKeySuffix: 'ClearButtonWrapper'
+    themeKeySuffix: 'ClearButtonWrapper',
   });
   const buttonClassName = useClassName({
     style: styles.AutosuggestClearButton,
     styleProps: { ...props, overrides },
     themeKey,
     themeKeyOverride,
-    themeKeySuffix: 'ClearButton'
+    themeKeySuffix: 'ClearButton',
   });
 
   return (
@@ -726,7 +706,7 @@ function ClearButton(props: any) {
         onClick={onClick}
         iconProps={{ fontSize: '200' }}
         size="small"
-        onMouseDown={e => e.preventDefault()}
+        onMouseDown={(e) => e.preventDefault()}
         overrides={overrides}
         {...buttonProps}
       />
@@ -743,10 +723,10 @@ function MatchedLabel(props: { label: string; inputValue: string; overrides: any
     styleProps: props,
     themeKey,
     themeKeyOverride,
-    themeKeySuffix: 'ItemText'
+    themeKeySuffix: 'ItemText',
   });
 
-  const escapeStringRegexp = string => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
+  const escapeStringRegexp = (string) => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   const match = label.match(new RegExp(escapeStringRegexp(inputValue), 'i')) || [];
 
   const preText = label.slice(0, match.index);
@@ -810,12 +790,12 @@ function isMouseOutsidePopover({ mousePositionRef, popoverRef }) {
 
 function getNewHighlightedIndex({ compare, highlightedIndex = -1, filteredOptions, count = 0 }) {
   const newHighlightedIndex = compare({ index: highlightedIndex, optionsLength: filteredOptions.length - 1 });
-  if (_get(filteredOptions, `[${newHighlightedIndex}].disabled`) && count < filteredOptions.length) {
+  if (filteredOptions?.[newHighlightedIndex]?.disabled && count < filteredOptions.length) {
     return getNewHighlightedIndex({
       compare,
       highlightedIndex: newHighlightedIndex,
       filteredOptions,
-      count: count + 1
+      count: count + 1,
     });
   } else {
     if (count === filteredOptions.length) {

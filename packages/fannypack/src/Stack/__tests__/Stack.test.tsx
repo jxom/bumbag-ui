@@ -70,7 +70,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Stack>
-          {StackProps => (
+          {(StackProps) => (
             <div {...StackProps}>
               <Box>hello</Box>
               <Box>world</Box>
@@ -156,7 +156,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -169,7 +169,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { root: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -182,7 +182,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { vertical: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { vertical: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -195,7 +195,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { horizontal: { backgroundColor: 'red' } } } }
+        theme: { Stack: { css: { horizontal: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -208,7 +208,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -221,7 +221,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }
+        theme: { Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -236,7 +236,7 @@ describe('defaultProps', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { defaultProps: { className: 'test' } } }
+        theme: { Stack: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -249,7 +249,7 @@ describe('defaultProps', () => {
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { defaultProps: { orientation: 'horizontal' } } }
+        theme: { Stack: { defaultProps: { orientation: 'horizontal' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

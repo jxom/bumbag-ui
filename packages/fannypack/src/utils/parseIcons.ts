@@ -29,8 +29,8 @@ export function parseIcons(icons: Icons, { prefix, type }: Opts = {}): ParsedIco
         [`${prefix || ''}${iconName}`]: {
           viewBoxWidth: iconDetails[0],
           viewBoxHeight: iconDetails[1],
-          paths: [iconDetails[4]]
-        }
+          paths: [iconDetails[4]],
+        },
       };
     }, {});
     return parsedIcons as ParsedIcons;
@@ -44,8 +44,8 @@ export function parseIcons(icons: Icons, { prefix, type }: Opts = {}): ParsedIco
           [`${prefix || ''}${iconName}`]: {
             viewBoxWidth: width,
             viewBoxHeight: height,
-            paths: [svgPathData]
-          }
+            paths: [svgPathData],
+          },
         };
       },
       {}

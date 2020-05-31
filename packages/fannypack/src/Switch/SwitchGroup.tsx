@@ -52,7 +52,7 @@ const useProps = createHook<SwitchGroupProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     let defaultValue = initialDefaultValue;
@@ -87,22 +87,22 @@ const useProps = createHook<SwitchGroupProps>(
             />
           ))}
         </Set>
-      )
+      ),
     };
   },
   { defaultProps: { orientation: 'vertical', spacing: 'minor-2' }, themeKey: 'SwitchGroup' }
 );
 
 export const SwitchGroup = createComponent<SwitchGroupProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'SwitchGroup'
+    themeKey: 'SwitchGroup',
   }
 );
 
@@ -145,7 +145,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -181,29 +181,29 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'SwitchGroupField' }
 );
 
 export const SwitchGroupField = createComponent<SwitchGroupFieldProps>(
-  props => {
+  (props) => {
     const switchGroupFieldProps = useSwitchGroupFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: switchGroupFieldProps
+      htmlProps: switchGroupFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'fieldset'
+      use: 'fieldset',
     },
-    themeKey: 'SwitchGroupField'
+    themeKey: 'SwitchGroupField',
   }
 );

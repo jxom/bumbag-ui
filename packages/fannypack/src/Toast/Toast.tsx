@@ -19,7 +19,7 @@ const useProps = createHook<ToastProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: alertProps.className
+      prevClassName: alertProps.className,
     });
 
     return { ...alertProps, className };
@@ -28,14 +28,14 @@ const useProps = createHook<ToastProps>(
 );
 
 export const Toast = createComponent<ToastProps>(
-  props => {
+  (props) => {
     const toastProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: toastProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Toast'
+    themeKey: 'Toast',
   }
 );

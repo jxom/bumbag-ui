@@ -10,5 +10,5 @@ export default (overrides: BorderRadiiThemeConfig) => ({
   '5': '16px',
   '6': '32px',
   '7': '64px',
-  ...overrides
+  ...overrides,
 });

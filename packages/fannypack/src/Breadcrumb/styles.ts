@@ -1,13 +1,13 @@
 import { css, cssClass } from '../styled';
 import { fontWeight, space, theme } from '../utils';
 
-export const Breadcrumb = styleProps => cssClass`
+export const Breadcrumb = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const BreadcrumbItem = styleProps => cssClass`
+export const BreadcrumbItem = (styleProps) => cssClass`
   &&&&&:not(:last-child) {
     margin-right: ${space(2)(styleProps)}rem;
   }
@@ -17,7 +17,7 @@ export const BreadcrumbItem = styleProps => cssClass`
   }
 `;
 
-export const BreadcrumbSeparator = styleProps => cssClass`
+export const BreadcrumbSeparator = (styleProps) => cssClass`
   display: inline;
   margin-left: ${space(2)(styleProps)}rem;
 
@@ -26,7 +26,7 @@ export const BreadcrumbSeparator = styleProps => cssClass`
   }
 `;
 
-export const BreadcrumbLink = styleProps => cssClass`
+export const BreadcrumbLink = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

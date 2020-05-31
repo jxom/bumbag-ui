@@ -51,7 +51,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Group>
-          {GroupProps => (
+          {(GroupProps) => (
             <div {...GroupProps}>
               <Button>Hello</Button>
               <Box>World</Box>
@@ -124,7 +124,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Group: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -137,7 +137,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { root: { backgroundColor: 'red' } } } } }
+        theme: { Group: { Item: { css: { root: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -150,7 +150,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { first: { backgroundColor: 'red' } } } } }
+        theme: { Group: { Item: { css: { first: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -163,7 +163,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { last: { backgroundColor: 'red' } } } } }
+        theme: { Group: { Item: { css: { last: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -176,7 +176,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } }
+        theme: { Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -191,7 +191,7 @@ describe('defaultProps', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { defaultProps: { className: 'test' } } }
+        theme: { Group: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

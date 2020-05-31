@@ -25,7 +25,7 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['small', 'default', 'medium', 'large'].forEach(size => {
+  ['small', 'default', 'medium', 'large'].forEach((size) => {
     it(`should render correctly for size ${size}`, () => {
       const { container } = render(<Spinner size={size as Size} />);
       expect(container.firstChild).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Spinner>{spinnerProps => <div {...spinnerProps} />}</Spinner>);
+      const { container } = render(<Spinner>{(spinnerProps) => <div {...spinnerProps} />}</Spinner>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -97,28 +97,28 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Spinner.root should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Spinner: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Spinner.vector.root should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { vector: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Spinner: { vector: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Spinner.trackCircle.root should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { trackCircle: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Spinner: { trackCircle: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Spinner.loaderCircle.root should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { loaderCircle: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Spinner: { loaderCircle: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -127,14 +127,14 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Spinner: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for duration', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { defaultProps: { duration: '2s' } } }
+      theme: { Spinner: { defaultProps: { duration: '2s' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

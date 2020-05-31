@@ -17,7 +17,7 @@ const useProps = createHook<LinkProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,17 +26,17 @@ const useProps = createHook<LinkProps>(
 );
 
 export const Link = createComponent<LinkProps>(
-  props => {
+  (props) => {
     const linkProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: linkProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'a'
+      use: 'a',
     },
-    themeKey: 'Link'
+    themeKey: 'Link',
   }
 );

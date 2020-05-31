@@ -12,7 +12,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -27,7 +27,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -42,7 +42,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -57,7 +57,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -72,7 +72,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -87,7 +87,7 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
@@ -102,14 +102,14 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['small', 'medium', 'large'].forEach(size => {
+  ['small', 'medium', 'large'].forEach((size) => {
     it(`should render correctly for ${size} size`, () => {
       const { container } = render(
         <SelectField
@@ -118,7 +118,7 @@ describe('props', () => {
           options={[
             { label: 'Sunny', value: 'sunny' },
             { label: 'Windy', value: 'windy' },
-            { label: 'Overcast', value: 'overcast' }
+            { label: 'Overcast', value: 'overcast' },
           ]}
         />
       );
@@ -134,14 +134,14 @@ describe('props', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['danger', 'warning', 'success'].forEach(state => {
+  ['danger', 'warning', 'success'].forEach((state) => {
     it(`should render correctly for ${state} state`, () => {
       const { container } = render(
         <SelectField
@@ -150,7 +150,7 @@ describe('props', () => {
           options={[
             { label: 'Sunny', value: 'sunny' },
             { label: 'Windy', value: 'windy' },
-            { label: 'Overcast', value: 'overcast' }
+            { label: 'Overcast', value: 'overcast' },
           ]}
         />
       );
@@ -168,8 +168,8 @@ describe('composition', () => {
           options: [
             { label: 'Sunny', value: 'sunny' },
             { label: 'Windy', value: 'windy' },
-            { label: 'Overcast', value: 'overcast' }
-          ]
+            { label: 'Overcast', value: 'overcast' },
+          ],
         })
       );
       expect(result.current).toMatchSnapshot();
@@ -186,7 +186,7 @@ describe('overrides', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
         overrides={{ SelectField: { css: { root: { backgroundColor: 'red' } } } }}
       />
@@ -204,12 +204,12 @@ describe('theming', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />,
       {
         // @ts-ignore
-        theme: { SelectField: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { SelectField: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -225,12 +225,12 @@ describe('defaultProps', () => {
         options={[
           { label: 'Sunny', value: 'sunny' },
           { label: 'Windy', value: 'windy' },
-          { label: 'Overcast', value: 'overcast' }
+          { label: 'Overcast', value: 'overcast' },
         ]}
       />,
       {
         // @ts-ignore
-        theme: { SelectField: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { SelectField: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

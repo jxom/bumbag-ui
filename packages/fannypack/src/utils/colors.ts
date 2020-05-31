@@ -3,7 +3,7 @@ import {
   lighten as _lighten,
   shade as _shade,
   readableColor as _readableColor,
-  tint as _tint
+  tint as _tint,
 } from 'polished';
 
 export function darken(scale, color) {

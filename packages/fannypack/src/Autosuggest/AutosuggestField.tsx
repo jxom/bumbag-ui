@@ -1,9 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _pick from 'lodash/pick';
-import _omit from 'lodash/omit';
-import _get from 'lodash/get';
-import _debounce from 'lodash/debounce';
 import ConditionalWrap from 'conditional-wrap';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -84,7 +80,7 @@ const useProps = createHook<AutosuggestFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -152,26 +148,26 @@ const useProps = createHook<AutosuggestFieldProps>(
             </ConditionalWrap>
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'AutosuggestField' }
 );
 
 export const AutosuggestField = createComponent<AutosuggestFieldProps>(
-  props => {
+  (props) => {
     const AutosuggestFieldProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: AutosuggestFieldProps
+      htmlProps: AutosuggestFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'AutosuggestField'
+    themeKey: 'AutosuggestField',
   }
 );

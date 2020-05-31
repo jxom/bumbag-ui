@@ -84,7 +84,7 @@ describe('composition', () => {
   describe('render props', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <ActionButtons>{actionButtonsProps => <div {...actionButtonsProps} />}</ActionButtons>
+        <ActionButtons>{(actionButtonsProps) => <div {...actionButtonsProps} />}</ActionButtons>
       );
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -103,7 +103,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('ActionButtons.root should render correctly', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { ActionButtons: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -112,28 +112,28 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { defaultProps: { className: 'test' } } }
+      theme: { ActionButtons: { defaultProps: { className: 'test' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with addon buttons', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { defaultProps: { addonButtons: <Button>Addon</Button> } } }
+      theme: { ActionButtons: { defaultProps: { addonButtons: <Button>Addon</Button> } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with cancel props', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { defaultProps: { cancelProps: { disabled: true, isLoading: true } } } }
+      theme: { ActionButtons: { defaultProps: { cancelProps: { disabled: true, isLoading: true } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with cancel text', () => {
     const { container } = render(<ActionButtons />, {
-      theme: { ActionButtons: { defaultProps: { cancelText: 'Close' } } }
+      theme: { ActionButtons: { defaultProps: { cancelText: 'Close' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

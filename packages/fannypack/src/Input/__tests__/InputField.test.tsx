@@ -26,7 +26,7 @@ describe('props', () => {
   });
 
   describe('types', () => {
-    ['number', 'tel', 'date', 'email', 'password', 'search', 'time', 'url'].forEach(type => {
+    ['number', 'tel', 'date', 'email', 'password', 'search', 'time', 'url'].forEach((type) => {
       it(`should render ${type} correctly`, () => {
         const { container } = render(<InputField type={type} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe('props', () => {
   });
 
   describe('sizes', () => {
-    ['small', 'medium', 'large'].forEach(size => {
+    ['small', 'medium', 'large'].forEach((size) => {
       it(`should render ${size} correctly`, () => {
         const { container } = render(<InputField size={size as Size} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('props', () => {
   });
 
   describe('states', () => {
-    ['danger', 'success', 'warning', 'primary'].forEach(state => {
+    ['danger', 'success', 'warning', 'primary'].forEach((state) => {
       it(`should render ${state} correctly`, () => {
         const { container } = render(<InputField state={state as any} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -66,7 +66,7 @@ describe('theming', () => {
   it('InputField.root should render correctly', () => {
     const { container } = render(<InputField />, {
       // @ts-ignore
-      theme: { InputField: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { InputField: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -77,8 +77,8 @@ describe('defaultProps', () => {
     const { container } = render(<InputField />, {
       // @ts-ignore
       theme: {
-        InputField: { defaultProps: { className: 'test', color: 'primary' } }
-      }
+        InputField: { defaultProps: { className: 'test', color: 'primary' } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

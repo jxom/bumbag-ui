@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Box as ReakitBox,
   DialogDisclosureProps as ReakitDialogDisclosureProps,
-  useDialogDisclosure as useReakitDialogDisclosure
+  useDialogDisclosure as useReakitDialogDisclosure,
 } from 'reakit';
 import _merge from 'lodash/merge';
 
@@ -30,7 +30,7 @@ const useProps = createHook<ModalDisclosureProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -39,22 +39,22 @@ const useProps = createHook<ModalDisclosureProps>(
 );
 
 export const ModalDisclosure = createComponent<ModalDisclosureProps>(
-  props => {
+  (props) => {
     const modalDisclosureProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       htmlProps: modalDisclosureProps,
-      use: props.use
+      use: props.use,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'button'
+      use: 'button',
     },
-    themeKey: 'Modal.Disclosure'
+    themeKey: 'Modal.Disclosure',
   }
 );

@@ -17,7 +17,7 @@ const useProps = createHook<BlockquoteProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,13 +26,13 @@ const useProps = createHook<BlockquoteProps>(
 );
 
 export const Blockquote = createComponent<BlockquoteProps>(
-  props => {
+  (props) => {
     const blockquoteProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: blockquoteProps
+      htmlProps: blockquoteProps,
     });
   },
   { attach: { useProps }, defaultProps: { use: 'blockquote' }, themeKey: 'Blockquote' }

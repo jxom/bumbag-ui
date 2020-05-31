@@ -41,44 +41,41 @@ const useProps = createHook<PaginationProps>(
     const setProps = Set.useProps({ ...restProps, overrides });
 
     const [currentPage, setCurrentPage] = React.useState(1);
-    React.useEffect(
-      () => {
-        setCurrentPage(_currentPage || 1);
-      },
-      [_currentPage]
-    );
+    React.useEffect(() => {
+      setCurrentPage(_currentPage || 1);
+    }, [_currentPage]);
 
     const className = useClassName({
       style: styles.Pagination,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: setProps.className
+      prevClassName: setProps.className,
     });
     const buttonClassName = useClassName({
       style: styles.PaginationButton,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Button'
+      themeKeySuffix: 'Button',
     });
     const selectClassName = useClassName({
       style: styles.PaginationSelect,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Select'
+      themeKeySuffix: 'Select',
     });
     const prepositionClassName = useClassName({
       style: styles.PaginationPrepositionText,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'PrepositionText'
+      themeKeySuffix: 'PrepositionText',
     });
 
     const handleChangePage = React.useCallback(
-      page => {
+      (page) => {
         if (onChangePage) {
           onChangePage(page);
         } else {
@@ -89,7 +86,7 @@ const useProps = createHook<PaginationProps>(
     );
 
     const handleChangePageDropdown = React.useCallback(
-      e => {
+      (e) => {
         const index = parseInt(e.target.value, 10);
         handleChangePage(index + 1);
       },
@@ -116,9 +113,9 @@ const useProps = createHook<PaginationProps>(
           <Select
             className={selectClassName}
             onChange={handleChangePageDropdown}
-            options={[...Array(10).keys()].map(index => ({
+            options={[...Array(10).keys()].map((index) => ({
               label: `${index + 1}`,
-              value: index
+              value: index,
             }))}
             value={currentPage - 1}
             themeKey={`${themeKey}.Select`}
@@ -141,26 +138,26 @@ const useProps = createHook<PaginationProps>(
             {nextText}
           </Button>
         </React.Fragment>
-      )
+      ),
     };
   },
   { defaultProps: { prepositionText: 'of', previousText: 'Previous', nextText: 'Next' }, themeKey: 'Pagination' }
 );
 
 export const Pagination = createComponent<PaginationProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: textProps
+      htmlProps: textProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Pagination'
+    themeKey: 'Pagination',
   }
 );

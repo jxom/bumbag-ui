@@ -11,6 +11,6 @@ export * from './MenuGroup';
 export const Menu = Object.assign(_Menu, {
   Divider: MenuDivider,
   Item: MenuItem,
-  Group: MenuGroup
+  Group: MenuGroup,
 });
 export { styles as menuStyles };

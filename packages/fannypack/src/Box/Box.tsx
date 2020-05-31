@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
-import _get from 'lodash/get';
 import classNames from 'classnames';
 
 import { ThemeConfig, CSSProperties } from '../types';
@@ -12,7 +11,7 @@ import {
   mergeRefs,
   createComponent,
   createElement,
-  createHook
+  createHook,
 } from '../utils';
 
 import * as styles from './styles';
@@ -58,7 +57,7 @@ const useProps = createHook<BoxProps>(
       styleProps: { ...props, style },
       themeKey,
       themeKeyOverride,
-      prevClassName: props.className
+      prevClassName: props.className,
     });
 
     // Append the Box styles as a className on the DOM element.
@@ -67,7 +66,7 @@ const useProps = createHook<BoxProps>(
       styleProps: props,
       prevClassName: className,
       themeKey,
-      themeKeyOverride
+      themeKeyOverride,
     });
 
     // Pick out and invalid HTML props & omit the CSS props.
@@ -88,12 +87,12 @@ const useProps = createHook<BoxProps>(
 );
 
 export const Box = createComponent<BoxProps>(
-  props => {
+  (props) => {
     const boxProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: boxProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Box'
+    themeKey: 'Box',
   }
 );

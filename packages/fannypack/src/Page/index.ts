@@ -13,5 +13,5 @@ export { styles as pageContentStyles };
 
 export const PageWithSidebar = Object.assign(_PageWithSidebar, {
   Disclosure: PageWithSidebarDisclosure,
-  Minimize: PageWithSidebarMinimize
+  Minimize: PageWithSidebarMinimize,
 });

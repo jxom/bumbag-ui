@@ -1,16 +1,16 @@
-import _omit from 'lodash/omit';
-import _pick from 'lodash/pick';
+import { omit } from './omit';
+import { pick } from './pick';
 
 export function isCSSProp(prop) {
   return Object.keys(cssProps).includes(prop);
 }
 
 export function pickCSSProps(props) {
-  return _pick(props, Object.keys(cssProps));
+  return pick(props, ...Object.keys(cssProps));
 }
 
 export function omitCSSProps(props) {
-  return _omit(props, Object.keys(cssProps));
+  return omit(props, ...Object.keys(cssProps));
 }
 
 export const cssProps = {
@@ -522,5 +522,5 @@ export const cssProps = {
   wrapInside: 'wrap-inside',
   wrapThrough: 'wrap-through',
   writingMode: 'writing-mode',
-  zIndex: 'z-index'
+  zIndex: 'z-index',
 };

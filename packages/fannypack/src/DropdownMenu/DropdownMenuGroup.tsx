@@ -22,7 +22,7 @@ const useProps = createHook<DropdownMenuGroupProps>(
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const titleClassName = useClassName({
       style: styles.DropdownMenuGroupTitle,
@@ -30,7 +30,7 @@ const useProps = createHook<DropdownMenuGroupProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Title',
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const titleId = useUniqueId('dropdownMenuTitle');
@@ -49,21 +49,21 @@ const useProps = createHook<DropdownMenuGroupProps>(
           )}
           {children}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'DropdownMenu.Group' }
 );
 
 export const DropdownMenuGroup = createComponent<DropdownMenuGroupProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'DropdownMenu.Group'
+    themeKey: 'DropdownMenu.Group',
   }
 );

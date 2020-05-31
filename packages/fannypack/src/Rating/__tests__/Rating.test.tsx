@@ -31,7 +31,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3}>
-          {RatingProps => <div {...RatingProps} />}
+          {(RatingProps) => <div {...RatingProps} />}
         </Rating>
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -68,14 +68,14 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Rating.css.root should render correctly', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Rating: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Rating.Item.css.root should render correctly', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -84,14 +84,14 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Rating: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render correctly for item', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { defaultProps: { className: 'test', color: 'primary', item: <span>x</span> } } }
+      theme: { Rating: { defaultProps: { className: 'test', color: 'primary', item: <span>x</span> } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -6,5 +6,5 @@ export default (overrides: AltitudesThemeConfig) => ({
   200: 'box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15), 0px 0px 4px 2px rgba(0, 0, 0, 0.02)',
   300: 'box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15), 0px 0px 6px 3px rgba(0, 0, 0, 0.02)',
   400: 'box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15), 0px 0px 12px 6px rgba(0, 0, 0, 0.02)',
-  ...overrides
+  ...overrides,
 });

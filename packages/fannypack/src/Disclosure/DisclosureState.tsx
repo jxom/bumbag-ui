@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useDisclosureState as useReakitDisclosureState,
   DisclosureStateReturn as ReakitDisclosureStateReturn,
-  DisclosureInitialState as ReakitDisclosureInitialState
+  DisclosureInitialState as ReakitDisclosureInitialState,
 } from 'reakit';
 import { isFunction } from '../utils';
 

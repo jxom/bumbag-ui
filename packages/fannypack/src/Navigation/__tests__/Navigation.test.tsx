@@ -69,7 +69,7 @@ describe('composition', () => {
     it('should render correctly', () => {
       const { container } = render(
         <Navigation>
-          {NavigationProps => (
+          {(NavigationProps) => (
             <div {...NavigationProps}>
               <List>
                 <List.Item>
@@ -120,7 +120,7 @@ describe('theming', () => {
         </List>
       </Navigation>,
       {
-        theme: { Navigation: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Navigation: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -141,7 +141,7 @@ describe('defaultProps', () => {
         </List>
       </Navigation>,
       {
-        theme: { Navigation: { defaultProps: { className: 'test' } } }
+        theme: { Navigation: { defaultProps: { className: 'test' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

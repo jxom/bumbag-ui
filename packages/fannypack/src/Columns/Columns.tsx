@@ -24,13 +24,13 @@ const useProps = createHook<ColumnsProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const contextValue = React.useMemo(
       () => ({
         isGapless: props.isGapless,
-        minBreakpoint: props.minBreakpoint
+        minBreakpoint: props.minBreakpoint,
       }),
       [props.isGapless, props.minBreakpoint]
     );
@@ -38,28 +38,28 @@ const useProps = createHook<ColumnsProps>(
     return {
       ...boxProps,
       className,
-      children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>
+      children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>,
     };
   },
   {
     defaultProps: {
       isGapless: false,
       isOneLine: false,
-      minBreakpoint: undefined
+      minBreakpoint: undefined,
     },
-    themeKey: 'Columns'
+    themeKey: 'Columns',
   }
 );
 
 export const Columns = createComponent<ColumnsProps>(
-  props => {
+  (props) => {
     const columnsProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: columnsProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Columns'
+    themeKey: 'Columns',
   }
 );

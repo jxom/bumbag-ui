@@ -1,78 +1,108 @@
 import { css, cssClass } from '../styled';
 import { theme } from '../utils';
 
-export const Grid = styleProps => cssClass`
+export const Grid = (styleProps) => cssClass`
   display: grid;
 
-  ${styleProps.autoFlow &&
+  ${
+    styleProps.autoFlow &&
     css`
       grid-auto-flow: ${styleProps.autoFlow};
-    `}
-  ${styleProps.gap &&
+    `
+  }
+  ${
+    styleProps.gap &&
     css`
       grid-gap: ${styleProps.gap};
-    `}
-  ${styleProps.template &&
+    `
+  }
+  ${
+    styleProps.template &&
     css`
       grid-template: ${styleProps.template};
-    `}
-  ${styleProps.templateAreas &&
+    `
+  }
+  ${
+    styleProps.templateAreas &&
     css`
       grid-template-areas: ${styleProps.templateAreas};
-    `}
-  ${styleProps.templateColumns &&
+    `
+  }
+  ${
+    styleProps.templateColumns &&
     css`
       grid-template-columns: ${styleProps.templateColumns};
-    `}
-  ${styleProps.templateRows &&
+    `
+  }
+  ${
+    styleProps.templateRows &&
     css`
       grid-template-rows: ${styleProps.templateRows};
-    `}
-  ${styleProps.autoColumns &&
+    `
+  }
+  ${
+    styleProps.autoColumns &&
     css`
       grid-auto-columns: ${styleProps.autoColumns};
-    `}
-  ${styleProps.autoRows &&
+    `
+  }
+  ${
+    styleProps.autoRows &&
     css`
       grid-auto-rows: ${styleProps.autoRows};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const GridItem = styleProps => cssClass`
+export const GridItem = (styleProps) => cssClass`
   display: grid-item;
 
-  ${styleProps.area &&
+  ${
+    styleProps.area &&
     css`
       grid-area: ${styleProps.area};
-    `}
-  ${styleProps.column &&
+    `
+  }
+  ${
+    styleProps.column &&
     css`
       grid-column: ${styleProps.column};
-    `}
-  ${styleProps.row &&
+    `
+  }
+  ${
+    styleProps.row &&
     css`
       grid-row: ${styleProps.row};
-    `}
-  ${styleProps.columnStart &&
+    `
+  }
+  ${
+    styleProps.columnStart &&
     css`
       grid-column-start: ${styleProps.columnStart};
-    `}
-  ${styleProps.columnEnd &&
+    `
+  }
+  ${
+    styleProps.columnEnd &&
     css`
       grid-column-end: ${styleProps.columnEnd};
-    `}
-  ${styleProps.rowStart &&
+    `
+  }
+  ${
+    styleProps.rowStart &&
     css`
       grid-row-start: ${styleProps.rowStart};
-    `}
-  ${styleProps.rowEnd &&
+    `
+  }
+  ${
+    styleProps.rowEnd &&
     css`
       grid-row-end: ${styleProps.rowEnd};
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

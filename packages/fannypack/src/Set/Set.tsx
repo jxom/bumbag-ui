@@ -23,7 +23,7 @@ const useProps = createHook<SetProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -33,21 +33,21 @@ const useProps = createHook<SetProps>(
       isFilled: false,
       orientation: 'horizontal',
       spacing: 'minor-2',
-      verticalBreakpoint: undefined
+      verticalBreakpoint: undefined,
     },
-    themeKey: 'Set'
+    themeKey: 'Set',
   }
 );
 
 export const Set = createComponent<SetProps>(
-  props => {
+  (props) => {
     const setProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: setProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Set'
+    themeKey: 'Set',
   }
 );

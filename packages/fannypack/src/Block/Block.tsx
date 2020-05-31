@@ -17,7 +17,7 @@ const useProps = createHook<BlockProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,12 +26,12 @@ const useProps = createHook<BlockProps>(
 );
 
 export const Block = createComponent<BlockProps>(
-  props => {
+  (props) => {
     const blockProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: blockProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Block'
+    themeKey: 'Block',
   }
 );

@@ -20,7 +20,7 @@ describe('props', () => {
   });
 
   describe('sizes', () => {
-    ['small', 'medium', 'large'].forEach(size => {
+    ['small', 'medium', 'large'].forEach((size) => {
       it(`should render ${size} correctly`, () => {
         const { container } = render(<TextareaField size={size as Size} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('props', () => {
   });
 
   describe('states', () => {
-    ['danger', 'success', 'warning', 'primary'].forEach(state => {
+    ['danger', 'success', 'warning', 'primary'].forEach((state) => {
       it(`should render ${state} correctly`, () => {
         const { container } = render(<TextareaField state={state as any} />);
         expect(container.firstChild).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('theming', () => {
   it('TextareaField.root should render correctly', () => {
     const { container } = render(<TextareaField />, {
       // @ts-ignore
-      theme: { TextareaField: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { TextareaField: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -62,8 +62,8 @@ describe('defaultProps', () => {
     const { container } = render(<TextareaField />, {
       // @ts-ignore
       theme: {
-        TextareaField: { defaultProps: { className: 'test', color: 'primary' } }
-      }
+        TextareaField: { defaultProps: { className: 'test', color: 'primary' } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

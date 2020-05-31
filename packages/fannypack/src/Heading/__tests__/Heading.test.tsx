@@ -37,7 +37,7 @@ describe('composition', () => {
 
   describe('render props', () => {
     it('should render correctly', () => {
-      const { container } = render(<Heading>{HeadingProps => <div {...HeadingProps}>Hello world</div>}</Heading>);
+      const { container } = render(<Heading>{(HeadingProps) => <div {...HeadingProps}>Hello world</div>}</Heading>);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
@@ -106,56 +106,56 @@ describe('overrides', () => {
 describe('theming', () => {
   it('Heading.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Heading: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h1.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h1: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h1: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h2.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h2: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h2: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h3.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h3: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h3: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h4.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h4: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h4: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h5.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h5: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h5: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h6.root should render correctly', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { h6: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { h6: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Heading.h6.root should render correctly', () => {
     const { container } = render(<Heading isSubHeading>hello world</Heading>, {
-      theme: { Heading: { subHeading: { css: { root: { backgroundColor: 'red' } } } } }
+      theme: { Heading: { subHeading: { css: { root: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -164,7 +164,7 @@ describe('theming', () => {
 describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Heading>hello world</Heading>, {
-      theme: { Heading: { defaultProps: { className: 'test', isSubHeading: true } } }
+      theme: { Heading: { defaultProps: { className: 'test', isSubHeading: true } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

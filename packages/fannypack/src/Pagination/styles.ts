@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { fontWeight, theme } from '../utils';
 
-export const Pagination = styleProps => cssClass`
+export const Pagination = (styleProps) => cssClass`
   display: flex;
 
   & {
@@ -9,19 +9,19 @@ export const Pagination = styleProps => cssClass`
   }
 `;
 
-export const PaginationButton = styleProps => cssClass`
+export const PaginationButton = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PaginationSelect = styleProps => cssClass`
+export const PaginationSelect = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PaginationPrepositionText = styleProps => cssClass`
+export const PaginationPrepositionText = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {

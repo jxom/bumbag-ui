@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   useTabState as useReakitTabState,
   TabStateReturn as ReakitTabStateReturn,
-  TabInitialState as ReakitTabInitialState
+  TabInitialState as ReakitTabInitialState,
 } from 'reakit';
 
 export type TabStateReturn = ReakitTabStateReturn;

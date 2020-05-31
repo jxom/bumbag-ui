@@ -1,7 +1,7 @@
 import { cssClass } from '../styled';
 import { palette, space, theme } from '../utils';
 
-export const Autosuggest = styleProps => cssClass`
+export const Autosuggest = (styleProps) => cssClass`
   position: relative;
 
   & {
@@ -9,7 +9,7 @@ export const Autosuggest = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestPopover = styleProps => cssClass`
+export const AutosuggestPopover = (styleProps) => cssClass`
   &&& {
     max-width: 100%;
     width: 100%;
@@ -22,7 +22,7 @@ export const AutosuggestPopover = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestItem = styleProps => cssClass`
+export const AutosuggestItem = (styleProps) => cssClass`
   &&& {
     font-weight: 300;
 
@@ -40,13 +40,13 @@ export const AutosuggestItem = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestItemText = styleProps => cssClass`
+export const AutosuggestItemText = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AutosuggestStaticItem = styleProps => cssClass`
+export const AutosuggestStaticItem = (styleProps) => cssClass`
   padding: ${space(1.5)(styleProps)}rem ${space(4)(styleProps)}rem;
   width: 100%;
 
@@ -55,7 +55,7 @@ export const AutosuggestStaticItem = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestClearButtonWrapper = styleProps => cssClass`
+export const AutosuggestClearButtonWrapper = (styleProps) => cssClass`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@ export const AutosuggestClearButtonWrapper = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestClearButton = styleProps => cssClass`
+export const AutosuggestClearButton = (styleProps) => cssClass`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,13 +77,13 @@ export const AutosuggestClearButton = styleProps => cssClass`
   }
 `;
 
-export const AutosuggestInput = styleProps => cssClass`
+export const AutosuggestInput = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const AutosuggestField = styleProps => cssClass`
+export const AutosuggestField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

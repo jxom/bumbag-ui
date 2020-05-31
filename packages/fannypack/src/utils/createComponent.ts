@@ -1,5 +1,4 @@
 import * as React from 'react';
-import _get from 'lodash/get';
 import { useDefaultProps } from './useDefaultProps';
 import { ComponentWithUse } from './forwardRefWithUse';
 
@@ -17,7 +16,7 @@ export function createComponent<Props>(
   const Comp = (props: Props, ref) => {
     const { props: newProps } = useDefaultProps(props, config);
     // @ts-ignore
-    return React.createElement(Component, { ...newProps, elementRef: ref }, _get(props, 'children'));
+    return React.createElement(Component, { ...newProps, elementRef: ref }, props?.children);
   };
   let ForwardedComponent = React.forwardRef(Comp);
   if (config.shouldMemo) {

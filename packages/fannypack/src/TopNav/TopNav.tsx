@@ -21,7 +21,7 @@ export const TopNavContext = React.createContext<{
 }>({
   onChangeSelectedId: () => {},
   selectedId: undefined,
-  overrides: {}
+  overrides: {},
 });
 
 const useProps = createHook<TopNavProps>(
@@ -35,13 +35,13 @@ const useProps = createHook<TopNavProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: navigationProps.className
+      prevClassName: navigationProps.className,
     });
 
     const [selectedId, setSelectedId] = React.useState(defaultSelectedId || '');
 
     const handleChangeSelectedId = React.useCallback(
-      id => {
+      (id) => {
         if (onChange) {
           onChange(id);
         } else {
@@ -59,21 +59,21 @@ const useProps = createHook<TopNavProps>(
     return {
       ...navigationProps,
       className,
-      children: <TopNavContext.Provider value={contextValue}>{children}</TopNavContext.Provider>
+      children: <TopNavContext.Provider value={contextValue}>{children}</TopNavContext.Provider>,
     };
   },
   { themeKey: 'TopNav' }
 );
 
 export const TopNav = createComponent<TopNavProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'TopNav'
+    themeKey: 'TopNav',
   }
 );

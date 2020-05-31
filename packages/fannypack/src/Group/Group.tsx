@@ -24,7 +24,7 @@ const useProps = createHook<GroupProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -33,12 +33,12 @@ const useProps = createHook<GroupProps>(
 );
 
 export const Group = createComponent<GroupProps>(
-  props => {
+  (props) => {
     const groupProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: groupProps });
   },
   {
     attach: { useProps },
-    themeKey: 'Group'
+    themeKey: 'Group',
   }
 );

@@ -336,7 +336,7 @@ describe('defaultProps', () => {
         </TopNav.Section>
       </TopNav>,
       {
-        theme: { TopNav: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { TopNav: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

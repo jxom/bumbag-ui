@@ -17,7 +17,7 @@ const useProps = createHook<TextProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -26,17 +26,17 @@ const useProps = createHook<TextProps>(
 );
 
 export const Text = createComponent<TextProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'span'
+      use: 'span',
     },
-    themeKey: 'Text'
+    themeKey: 'Text',
   }
 );

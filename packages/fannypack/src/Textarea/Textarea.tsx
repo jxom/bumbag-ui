@@ -63,16 +63,16 @@ const useProps = createHook<TextareaProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Wrapper',
-      prevClassName: restProps.className
+      prevClassName: restProps.className,
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
-      wrapElement: children => (
+      wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
         </Box>
-      )
+      ),
     });
 
     const className = useClassName({
@@ -80,7 +80,7 @@ const useProps = createHook<TextareaProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className, 'aria-invalid': state === 'danger', 'aria-required': isRequired };
@@ -89,23 +89,23 @@ const useProps = createHook<TextareaProps>(
 );
 
 export const Textarea = createComponent<TextareaProps>(
-  props => {
+  (props) => {
     const textareaProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: { ...textareaProps, ...(props.mask ? { mask: props.mask } : {}) }
+      htmlProps: { ...textareaProps, ...(props.mask ? { mask: props.mask } : {}) },
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'textarea'
+      use: 'textarea',
     },
-    themeKey: 'Textarea'
+    themeKey: 'Textarea',
   }
 );
 
@@ -162,7 +162,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return {
@@ -211,26 +211,26 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
             />
           )}
         </FieldWrapper>
-      )
+      ),
     };
   },
   { themeKey: 'TextareaField' }
 );
 
 export const TextareaField = createComponent<TextareaFieldProps>(
-  props => {
+  (props) => {
     const textareaFieldProps = useTextareaFieldProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: textareaFieldProps
+      htmlProps: textareaFieldProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'TextareaField'
+    themeKey: 'TextareaField',
   }
 );

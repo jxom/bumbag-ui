@@ -133,7 +133,7 @@ describe('theming', () => {
         </Menu.Item>
       </Menu>,
       {
-        theme: { Menu: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { Menu: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -197,7 +197,7 @@ describe('defaultProps', () => {
         </Menu.Item>
       </Menu>,
       {
-        theme: { Menu: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { Menu: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

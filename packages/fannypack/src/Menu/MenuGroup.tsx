@@ -22,7 +22,7 @@ const useProps = createHook<MenuGroupProps>(
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const titleClassName = useClassName({
       style: styles.MenuGroupTitle,
@@ -30,7 +30,7 @@ const useProps = createHook<MenuGroupProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Title',
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     const titleId = useUniqueId('menuTitle');
@@ -49,21 +49,21 @@ const useProps = createHook<MenuGroupProps>(
           )}
           {children}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Menu.Group' }
 );
 
 export const MenuGroup = createComponent<MenuGroupProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Menu.Group'
+    themeKey: 'Menu.Group',
   }
 );

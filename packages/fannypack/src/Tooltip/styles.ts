@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils';
 import { getAnimatedAttributes } from '../Modal/styles';
 
-export const TooltipContent = styleProps => cssClass`
+export const TooltipContent = (styleProps) => cssClass`
   background: black;
   border-radius: ${borderRadius('1')(styleProps)};
   color: white;
@@ -19,13 +19,13 @@ export const TooltipContent = styleProps => cssClass`
   }
 `;
 
-export const TooltipReference = styleProps => cssClass`
+export const TooltipReference = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const TooltipArrow = styleProps => cssClass`
+export const TooltipArrow = (styleProps) => cssClass`
   display: grid;
   overflow: hidden;
 
@@ -45,7 +45,7 @@ export const TooltipArrow = styleProps => cssClass`
   }
 `;
 
-export const getPlacementAttributes = styleProps => {
+export const getPlacementAttributes = (styleProps) => {
   const placementAttributes: { [key: string]: any } = {
     // @ts-ignore
     top: css`
@@ -55,7 +55,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -70,7 +70,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -85,7 +85,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'right',
         defaultExpand: 'right',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -100,7 +100,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'left',
         defaultExpand: 'left',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -115,7 +115,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -130,7 +130,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'bottom',
         defaultExpand: 'bottom',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -145,7 +145,7 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
@@ -160,13 +160,13 @@ export const getPlacementAttributes = styleProps => {
         transformY: '0px',
         defaultSlide: 'top',
         defaultExpand: 'top',
-        slideOffset: `${styleProps.gutter || '10'}px`
+        slideOffset: `${styleProps.gutter || '10'}px`,
       })(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.placements.bottomStart`)(styleProps)};
       }
-    `
+    `,
   };
   return css`
     ${placementAttributes[styleProps.placement || 'center']};

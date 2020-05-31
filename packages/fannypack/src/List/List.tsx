@@ -21,7 +21,7 @@ const useProps = createHook<ListProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -29,14 +29,14 @@ const useProps = createHook<ListProps>(
   {
     defaultProps: {
       isOrdered: false,
-      orientation: 'vertical'
+      orientation: 'vertical',
     },
-    themeKey: 'List'
+    themeKey: 'List',
   }
 );
 
 export const List = createComponent<ListProps>(
-  props => {
+  (props) => {
     let use = props.use;
     if (!use) {
       use = props.isOrdered ? 'ol' : 'ul';
@@ -48,8 +48,8 @@ export const List = createComponent<ListProps>(
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'List'
+    themeKey: 'List',
   }
 );

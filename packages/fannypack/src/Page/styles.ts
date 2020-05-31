@@ -1,17 +1,19 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, palette, space, theme } from '../utils';
 
-export const PageContent = styleProps => cssClass`
+export const PageContent = (styleProps) => cssClass`
   padding: ${space(4, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
 
-  ${styleProps.isFluid &&
+  ${
+    styleProps.isFluid &&
     css`
       padding: ${space(4, 'major')(styleProps)}rem ${theme('Container.fluidMargin')(styleProps)}rem;
 
       & {
         ${theme(styleProps.themeKey, `css.fluid`)(styleProps)};
       }
-    `}
+    `
+  }
 
   ${breakpoint(
     'max-tablet',
@@ -30,13 +32,13 @@ export const PageContent = styleProps => cssClass`
   }
 `;
 
-export const PageContentWrapper = styleProps => cssClass`
+export const PageContentWrapper = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PageWithSidebar = styleProps => cssClass`
+export const PageWithSidebar = (styleProps) => cssClass`
   display: flex;
 
   & {
@@ -44,7 +46,7 @@ export const PageWithSidebar = styleProps => cssClass`
   }
 `;
 
-export const PageWithSidebarContent = styleProps => cssClass`
+export const PageWithSidebarContent = (styleProps) => cssClass`
   width: 100%;
 
   & {
@@ -52,7 +54,7 @@ export const PageWithSidebarContent = styleProps => cssClass`
   }
 `;
 
-export const PageWithSidebarSpacer = styleProps => cssClass`
+export const PageWithSidebarSpacer = (styleProps) => cssClass`
   min-width: ${getWidth(styleProps)};
   width: ${getWidth(styleProps)};
 
@@ -69,7 +71,7 @@ export const PageWithSidebarSpacer = styleProps => cssClass`
   }
 `;
 
-export const PageWithSidebarSidebar = styleProps => cssClass`
+export const PageWithSidebarSidebar = (styleProps) => cssClass`
   background-color: white;
   border-right: 1px solid ${palette('white900')(styleProps)};
   height: 100vh;
@@ -78,17 +80,19 @@ export const PageWithSidebarSidebar = styleProps => cssClass`
   overflow-y: auto;
   transform: translateX(0px);
 
-  ${styleProps.isSidebarMinimized &&
+  ${
+    styleProps.isSidebarMinimized &&
     css`
       overflow: visible;
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PageWithSidebarSidebarExpandedWrapper = styleProps => cssClass`
+export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
 
   ${breakpoint(
@@ -103,7 +107,7 @@ export const PageWithSidebarSidebarExpandedWrapper = styleProps => cssClass`
   }
 `;
 
-export const PageWithSidebarSidebarCollapsedWrapper = styleProps => cssClass`
+export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
   &&& {
     min-width: ${styleProps.collapsedSidebarWidth};
   }
@@ -113,13 +117,13 @@ export const PageWithSidebarSidebarCollapsedWrapper = styleProps => cssClass`
   }
 `;
 
-export const PageWithSidebarDisclosure = styleProps => cssClass`
+export const PageWithSidebarDisclosure = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const PageWithSidebarMinimize = styleProps => cssClass`
+export const PageWithSidebarMinimize = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

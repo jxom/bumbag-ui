@@ -87,7 +87,7 @@ describe('composition', () => {
         const hidden = Disclosure.useState({ baseId: 'test' });
         return (
           <Disclosure {...hidden}>
-            {DisclosureDisclosureProps => <div {...DisclosureDisclosureProps}>Hello world</div>}
+            {(DisclosureDisclosureProps) => <div {...DisclosureDisclosureProps}>Hello world</div>}
           </Disclosure>
         );
       }
@@ -119,7 +119,7 @@ describe('theming', () => {
       return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Disclosure: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Disclosure: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -132,7 +132,7 @@ describe('defaultProps', () => {
       return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Disclosure: { defaultProps: { className: 'red' } } }
+      theme: { Disclosure: { defaultProps: { className: 'red' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

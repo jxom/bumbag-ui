@@ -7,7 +7,7 @@ describe('props', () => {
   it('should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer}>This is a side overlay</Drawer>
@@ -21,7 +21,7 @@ describe('props', () => {
   it('should render correctly for an invisible overlay', () => {
     const { container } = render(
       <Drawer.State baseId="test" modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer}>This is a side overlay</Drawer>
@@ -35,7 +35,7 @@ describe('props', () => {
   it('should render correctly with CSS props', () => {
     const { container } = render(
       <Drawer.State baseId="test" modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer} backgroundColor="primary">
@@ -51,7 +51,7 @@ describe('props', () => {
   it('should render correctly without backdrop', () => {
     const { container } = render(
       <Drawer.State baseId="test" modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer} hideBackdrop>
@@ -67,7 +67,7 @@ describe('props', () => {
   it('should render correctly for full screen', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer} isFullScreen>
@@ -85,7 +85,7 @@ describe('overrides', () => {
   it('Drawer.css.root should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer} overrides={{ Drawer: { css: { root: { backgroundColor: 'red' } } } }}>
@@ -101,7 +101,7 @@ describe('overrides', () => {
   it('Drawer.Disclosure.css.root should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure
               {...drawer}
@@ -122,7 +122,7 @@ describe('theming', () => {
   it('Drawer.css.root should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer}>This is a side overlay</Drawer>
@@ -137,7 +137,7 @@ describe('theming', () => {
   it('Drawer.Disclosure.css.root should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer}>This is a side overlay</Drawer>
@@ -154,7 +154,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
-        {drawer => (
+        {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
             <Drawer {...drawer}>This is a side overlay</Drawer>

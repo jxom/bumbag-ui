@@ -28,9 +28,9 @@ describe('variants', () => {
       {
         theme: {
           PageWithSidebar: {
-            variants: { test: { css: { root: { backgroundColor: 'red' } } } }
-          }
-        }
+            variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+          },
+        },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('overrides', () => {
       <PageWithSidebar
         sidebar={<div>this is a sidebar</div>}
         overrides={{
-          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } }
+          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } },
         }}
       >
         hello world
@@ -59,8 +59,8 @@ describe('theming', () => {
       <PageWithSidebar sidebar={<div>this is a sidebar</div>}>hello world</PageWithSidebar>,
       {
         theme: {
-          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } }
-        }
+          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } },
+        },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -73,8 +73,8 @@ describe('defaultProps', () => {
       <PageWithSidebar sidebar={<div>this is a sidebar</div>}>hello world</PageWithSidebar>,
       {
         theme: {
-          PageWithSidebar: { defaultProps: { className: 'test', color: 'primary' } }
-        }
+          PageWithSidebar: { defaultProps: { className: 'test', color: 'primary' } },
+        },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
-import _omit from 'lodash/omit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -33,21 +32,21 @@ const useProps = createHook<MenuItemProps>(
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const iconBeforeClassName = useClassName({
       style: styles.MenuItemIcon,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides }, isBefore: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const iconAfterClassName = useClassName({
       style: styles.MenuItemIcon,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides }, isAfter: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
 
     return {
@@ -60,21 +59,21 @@ const useProps = createHook<MenuItemProps>(
           {children}
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
         </React.Fragment>
-      )
+      ),
     };
   },
   { themeKey: 'Menu.Item' }
 );
 
 export const MenuItem = createComponent<MenuItemProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Menu.Item'
+    themeKey: 'Menu.Item',
   }
 );

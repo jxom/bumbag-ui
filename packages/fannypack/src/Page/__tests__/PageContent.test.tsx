@@ -20,9 +20,9 @@ describe('variants', () => {
     const { container } = render(<PageContent variant="test">hello world</PageContent>, {
       theme: {
         PageContent: {
-          variants: { test: { css: { root: { backgroundColor: 'red' } } } }
-        }
-      }
+          variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+        },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -33,7 +33,7 @@ describe('overrides', () => {
     const { container } = render(
       <PageContent
         overrides={{
-          PageContent: { css: { root: { backgroundColor: 'red' } } }
+          PageContent: { css: { root: { backgroundColor: 'red' } } },
         }}
       >
         hello world
@@ -47,8 +47,8 @@ describe('theming', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<PageContent>hello world</PageContent>, {
       theme: {
-        PageContent: { css: { root: { backgroundColor: 'red' } } }
-      }
+        PageContent: { css: { root: { backgroundColor: 'red' } } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -58,8 +58,8 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<PageContent>hello world</PageContent>, {
       theme: {
-        PageContent: { defaultProps: { className: 'test', color: 'primary' } }
-      }
+        PageContent: { defaultProps: { className: 'test', color: 'primary' } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

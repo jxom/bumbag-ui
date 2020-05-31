@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { borderRadius, fontSize, palette, tint, theme } from '../utils';
 
-export const Select = styleProps => cssClass`
+export const Select = (styleProps) => cssClass`
   appearance: none;
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid ${palette('white900')(styleProps)};
@@ -38,20 +38,22 @@ export const Select = styleProps => cssClass`
     box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
   }
 
-  ${styleProps.state &&
+  ${
+    styleProps.state &&
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
         box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
       }
-    `}
+    `
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const SelectWrapper = styleProps => cssClass`
+export const SelectWrapper = (styleProps) => cssClass`
   align-items: center;
   position: relative;
   width: fit-content;
@@ -63,7 +65,7 @@ export const SelectWrapper = styleProps => cssClass`
   }
 `;
 
-export const SelectIcon = styleProps => cssClass`
+export const SelectIcon = (styleProps) => cssClass`
   && {
     position: absolute;
     width: 0.8em;
@@ -80,7 +82,7 @@ export const SelectIcon = styleProps => cssClass`
   }
 `;
 
-export const SelectSpinner = styleProps => cssClass`
+export const SelectSpinner = (styleProps) => cssClass`
   && {
     font-size: inherit;
     align-items: center;
@@ -96,7 +98,7 @@ export const SelectSpinner = styleProps => cssClass`
   }
 `;
 
-export const SelectField = styleProps => cssClass`
+export const SelectField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
@@ -129,7 +131,7 @@ export function wrapperSizeProperties(styleProps) {
       & {
         ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
       }
-    `
+    `,
   };
   return properties[styleProps.size];
 }

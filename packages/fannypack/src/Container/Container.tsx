@@ -23,7 +23,7 @@ const useProps = createHook<ContainerProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, className };
@@ -33,21 +33,21 @@ const useProps = createHook<ContainerProps>(
       align: 'center',
       breakpoint: undefined,
       isFluid: false,
-      isLayout: false
+      isLayout: false,
     },
-    themeKey: 'Container'
+    themeKey: 'Container',
   }
 );
 
 export const Container = createComponent<ContainerProps>(
-  props => {
+  (props) => {
     const containerProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: containerProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Container'
+    themeKey: 'Container',
   }
 );

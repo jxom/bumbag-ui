@@ -9,7 +9,10 @@ describe('props', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -20,7 +23,10 @@ describe('props', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -32,7 +38,10 @@ describe('props', () => {
         label="Test label"
         defaultValue="world"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -44,7 +53,10 @@ describe('props', () => {
         disabled
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -55,7 +67,10 @@ describe('props', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world', disabled: true }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world', disabled: true },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -67,20 +82,26 @@ describe('props', () => {
         label="Test label"
         orientation="horizontal"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  ['success', 'danger', 'warning'].forEach(state => {
+  ['success', 'danger', 'warning'].forEach((state) => {
     it(`should render correctly for state ${state}`, () => {
       const { container } = render(
         <RadioGroupField
           label="Test label"
           state={state as any}
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -96,7 +117,10 @@ describe('composition', () => {
           use="div"
           label="Test label"
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         />
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -109,7 +133,10 @@ describe('composition', () => {
         RadioGroupField.useProps({
           name: 'weather',
           label: 'Test label',
-          options: [{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]
+          options: [
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ],
         })
       );
       expect(result.current).toMatchSnapshot();
@@ -122,9 +149,12 @@ describe('composition', () => {
         <RadioGroupField
           label="Test label"
           name="weather"
-          options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+          options={[
+            { label: 'Hello', value: 'world' },
+            { label: 'This is', value: 'me' },
+          ]}
         >
-          {RadioGroupFieldProps => <div {...RadioGroupFieldProps}>Hello world</div>}
+          {(RadioGroupFieldProps) => <div {...RadioGroupFieldProps}>Hello world</div>}
         </RadioGroupField>
       );
       expect(container.firstChild).toMatchSnapshot();
@@ -138,7 +168,10 @@ describe('overrides', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
         overrides={{ RadioGroupField: { css: { root: { backgroundColor: 'red' } } } }}
       />
     );
@@ -152,11 +185,14 @@ describe('theming', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />,
       {
         // @ts-ignore
-        theme: { RadioGroupField: { css: { root: { backgroundColor: 'red' } } } }
+        theme: { RadioGroupField: { css: { root: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -169,11 +205,14 @@ describe('defaultProps', () => {
       <RadioGroupField
         label="Test label"
         name="weather"
-        options={[{ label: 'Hello', value: 'world' }, { label: 'This is', value: 'me' }]}
+        options={[
+          { label: 'Hello', value: 'world' },
+          { label: 'This is', value: 'me' },
+        ]}
       />,
       {
         // @ts-ignore
-        theme: { RadioGroupField: { defaultProps: { className: 'test', color: 'primary' } } }
+        theme: { RadioGroupField: { defaultProps: { className: 'test', color: 'primary' } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

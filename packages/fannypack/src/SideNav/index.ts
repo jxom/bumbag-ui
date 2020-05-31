@@ -8,6 +8,6 @@ export * from './SideNavLevel';
 export * from './SideNavItem';
 export const SideNav = Object.assign(_SideNav, {
   Level: SideNavLevel,
-  Item: SideNavItem
+  Item: SideNavItem,
 });
 export { styles as sideNavStyles };

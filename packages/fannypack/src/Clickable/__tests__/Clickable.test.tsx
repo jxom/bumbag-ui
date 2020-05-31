@@ -18,7 +18,7 @@ describe('props', () => {
 describe('variants', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<Clickable variant="test">hello world</Clickable>, {
-      theme: { Clickable: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } }
+      theme: { Clickable: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -36,7 +36,7 @@ describe('overrides', () => {
 describe('theming', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<Clickable>hello world</Clickable>, {
-      theme: { Clickable: { css: { root: { backgroundColor: 'red' } } } }
+      theme: { Clickable: { css: { root: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -46,7 +46,7 @@ describe('defaultProps', () => {
   it('should render correctly for className', () => {
     const { container } = render(<Clickable>hello world</Clickable>, {
       // @ts-ignore
-      theme: { Clickable: { defaultProps: { className: 'test', color: 'primary' } } }
+      theme: { Clickable: { defaultProps: { className: 'test', color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

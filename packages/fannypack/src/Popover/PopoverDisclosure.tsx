@@ -2,9 +2,8 @@ import * as React from 'react';
 import {
   Box as ReakitBox,
   PopoverDisclosureProps as ReakitPopoverDisclosureProps,
-  usePopoverDisclosure as useReakitPopoverDisclosure
+  usePopoverDisclosure as useReakitPopoverDisclosure,
 } from 'reakit';
-import _omit from 'lodash/omit';
 import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -33,7 +32,7 @@ const useProps = createHook<PopoverDisclosureProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: htmlProps.className
+      prevClassName: htmlProps.className,
     });
 
     return { ...htmlProps, className };
@@ -42,22 +41,22 @@ const useProps = createHook<PopoverDisclosureProps>(
 );
 
 export const PopoverDisclosure = createComponent<PopoverDisclosureProps>(
-  props => {
+  (props) => {
     const popoverDisclosureProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: popoverDisclosureProps
+      htmlProps: popoverDisclosureProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
-      use: 'button'
+      use: 'button',
     },
-    themeKey: 'Popover.Disclosure'
+    themeKey: 'Popover.Disclosure',
   }
 );

@@ -2,7 +2,7 @@ import { css, cssClass } from '../styled';
 import { palette, theme, fontWeight } from '../utils';
 import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 
-export const Checkbox = styleProps => cssClass`
+export const Checkbox = (styleProps) => cssClass`
   && {
     display: flex;
     align-items: flex-start;
@@ -13,7 +13,7 @@ export const Checkbox = styleProps => cssClass`
   }
 `;
 
-export const CheckboxIcon = styleProps => cssClass`
+export const CheckboxIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid #bdbdbd;
@@ -29,7 +29,7 @@ export const CheckboxIcon = styleProps => cssClass`
   }
 `;
 
-export const CheckboxLabel = styleProps => cssClass`
+export const CheckboxLabel = (styleProps) => cssClass`
   && {
     font-weight: ${fontWeight('normal')(styleProps)};
   }
@@ -39,7 +39,7 @@ export const CheckboxLabel = styleProps => cssClass`
   }
 `;
 
-export const HiddenCheckbox = styleProps =>
+export const HiddenCheckbox = (styleProps) =>
   getHiddenInputStyles({
     iconClassName: 'fp-CheckboxIcon',
     checkedIconCss: css`
@@ -72,22 +72,22 @@ export const HiddenCheckbox = styleProps =>
       border-color: ${palette('gray300')(styleProps)};
     `,
     styleProps,
-    themeKey: 'Checkbox.Icon'
+    themeKey: 'Checkbox.Icon',
   });
 
-export const CheckboxGroup = styleProps => cssClass`
+export const CheckboxGroup = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const CheckboxField = styleProps => cssClass`
+export const CheckboxField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }
 `;
 
-export const CheckboxGroupField = styleProps => cssClass`
+export const CheckboxGroupField = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

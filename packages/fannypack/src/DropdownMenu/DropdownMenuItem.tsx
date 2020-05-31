@@ -87,7 +87,7 @@ const useProps = createHook<DropdownMenuItemProps>(
         unstable_idCountRef,
         unstable_moves,
         unstable_virtual,
-        ...dropdownMenu
+        ...dropdownMenu,
       },
       restProps
     );
@@ -98,21 +98,21 @@ const useProps = createHook<DropdownMenuItemProps>(
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides } },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
     const iconBeforeClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isBefore: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
     const iconAfterClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isAfter: true },
       themeKey,
       themeKeyOverride,
-      themeKeySuffix: 'Icon'
+      themeKeySuffix: 'Icon',
     });
 
     return {
@@ -125,21 +125,21 @@ const useProps = createHook<DropdownMenuItemProps>(
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
         </React.Fragment>
       ),
-      tabIndex: props.isTabbable ? boxProps.tabIndex : undefined
+      tabIndex: props.isTabbable ? boxProps.tabIndex : undefined,
     };
   },
   { defaultProps: { isTabbable: true }, themeKey: 'DropdownMenu.Item' }
 );
 
 export const DropdownMenuItem = createComponent<DropdownMenuItemProps>(
-  props => {
+  (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'DropdownMenu.Item'
+    themeKey: 'DropdownMenu.Item',
   }
 );

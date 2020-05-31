@@ -18,7 +18,7 @@ const useProps = createHook<PortalProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className
+      prevClassName: boxProps.className,
     });
 
     return { ...boxProps, children: <Box {...props}>{boxProps.children}</Box>, className };
@@ -27,19 +27,19 @@ const useProps = createHook<PortalProps>(
 );
 
 export const Portal = createComponent<PortalProps>(
-  props => {
+  (props) => {
     const portalProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitPortal,
       use: props.use,
-      htmlProps: portalProps
+      htmlProps: portalProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
-    themeKey: 'Portal'
+    themeKey: 'Portal',
   }
 );

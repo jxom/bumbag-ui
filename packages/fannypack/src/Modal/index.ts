@@ -12,6 +12,6 @@ export const Modal = Object.assign(_Modal, {
   Backdrop: ModalBackdrop,
   Disclosure: ModalDisclosure,
   useState: useModalState,
-  State: ModalState
+  State: ModalState,
 });
 export { styles as modalStyles };

@@ -6,6 +6,6 @@ export const Card = Object.assign(_Card, {
   Header: CardHeader,
   Title: CardTitle,
   Content: CardContent,
-  Footer: CardFooter
+  Footer: CardFooter,
 });
 export { styles as CardStyles };

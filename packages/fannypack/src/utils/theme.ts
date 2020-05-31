@@ -5,7 +5,7 @@ import { css } from '../styled';
 import { isFunction } from './isFunction';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
-  return (props: { theme?: ThemeConfig; variant?: string }) => {
+  return (props: { theme?: ThemeConfig; overrides?: any; variant?: string }) => {
     const { variant } = props;
 
     const selector = `${themeKey}${path ? `.${path}` : ''}`;
@@ -75,8 +75,8 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
       scalar = parseFloat(scalar);
       if (isNaN(scalar)) return 0;
     }
-    const unitSize: number = _get(props, `theme.layout.${scaleType}Unit`);
-    const fontSize: number = _get(props, 'theme.global.fontSize');
+    const unitSize: number = props?.theme?.layout?.[`${scaleType}Unit`];
+    const fontSize: number = props?.theme?.global?.fontSize;
     const value = (scalar as number) * (unitSize / fontSize);
     return value;
   };
@@ -84,7 +84,7 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
 
 export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boolean; else? }) {
   const { else: elseStyle = '', show = false } = config || {};
-  return props => {
+  return (props) => {
     if (!breakpoint)
       return css`
         ${elseStyle};
@@ -112,12 +112,12 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
 
     const minBreakpointValues: { [key: string]: number } = {
       mobile: 0,
-      tablet: _get(props, 'theme.breakpoints.mobile'),
-      desktop: _get(props, 'theme.breakpoints.tablet'),
-      widescreen: _get(props, 'theme.breakpoints.desktop'),
-      fullHD: _get(props, 'theme.breakpoints.widescreen')
+      tablet: props?.theme?.breakpoints?.mobile,
+      desktop: props?.theme?.breakpoints?.tablet,
+      widescreen: props?.theme?.breakpoints?.desktop,
+      fullHD: props?.theme?.breakpoints?.widescreen,
     };
-    let breakpointValue = _get(props, `theme.breakpoints.${strippedBreakpoint}`);
+    let breakpointValue = props?.theme?.breakpoints?.[strippedBreakpoint];
     if (!show && breakpoint.includes('min')) {
       breakpointValue = minBreakpointValues[strippedBreakpoint] + 1;
     }
@@ -139,7 +139,7 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
           }
 
           @media screen and (min-width: ${minBreakpointValues[breakpoint] +
-              1}px) and (max-width: ${breakpointValue}px) {
+            1}px) and (max-width: ${breakpointValue}px) {
             ${elseStyle};
           }
         `;
