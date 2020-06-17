@@ -6,10 +6,10 @@ module.exports = {
       'babel-preset-gatsby',
       {
         targets: {
-          browsers: ['>0.25%', 'not dead']
-        }
-      }
-    ]
+          browsers: ['>0.25%', 'not dead'],
+        },
+      },
+    ],
   ],
   plugins: [
     'babel-plugin-extract-react-types',
@@ -18,9 +18,10 @@ module.exports = {
       {
         alias: {
           fannypack: '../fannypack/src',
-          'fannypack-addon-highlighted-code': '../fannypack-addon-highlighted-code/src'
-        }
-      }
-    ]
-  ].filter(Boolean)
+          'fannypack-addon-highlighted-code': '../fannypack-addon-highlighted-code/src',
+          'fannypack-addon-markdown': '../fannypack-addon-markdown/src',
+        },
+      },
+    ],
+  ].filter(Boolean),
 };

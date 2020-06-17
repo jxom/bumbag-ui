@@ -3,10 +3,11 @@ import {
   LiveProvider,
   LiveEditor as _LiveEditor,
   LiveError as _LiveError,
-  LivePreview as _LivePreview
+  LivePreview as _LivePreview,
 } from 'react-live';
 import * as fannypack from 'fannypack';
-import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
+import { HighlightedCode, highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
+import { Markdown } from 'fannypack-addon-markdown';
 import { palette, space, styled } from 'fannypack';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -65,7 +66,7 @@ type Props = {
 };
 
 LiveCode.defaultProps = {
-  mountStylesheet: false
+  mountStylesheet: false,
 };
 
 export default function LiveCode(props: Props) {
@@ -74,7 +75,8 @@ export default function LiveCode(props: Props) {
   const scope = React.useMemo(
     () => ({
       ...fannypack,
-      HighlightedCode
+      HighlightedCode,
+      Markdown,
     }),
     []
   );
@@ -157,20 +159,18 @@ export default function LiveCode(props: Props) {
 }
 
 function getCodeTabs(props) {
-  const getTransformCode = string => {
+  const getTransformCode = (string) => {
     return JSX_REG.test(string)
-      ? src => `<React.Fragment><Stack spacing="major-1">${src}</Stack></React.Fragment>`
+      ? (src) => `<React.Fragment><Stack spacing="major-1">${src}</Stack></React.Fragment>`
       : undefined;
   };
-  const code = React.Children.toArray(props.children)
-    .join('\n')
-    .replace(/\s$/, '');
+  const code = React.Children.toArray(props.children).join('\n').replace(/\s$/, '');
   if (LIVE_REG.test(props.className) && code.includes('###')) {
     const codeSegments = code
       .split('###')
       .filter(Boolean)
-      .filter(segment => segment.split('').some(char => char !== '\n'));
-    const codeTabs = codeSegments.map(segment => {
+      .filter((segment) => segment.split('').some((char) => char !== '\n'));
+    const codeTabs = codeSegments.map((segment) => {
       const [metaString, ...parts] = segment.split(/\n/);
       const meta = metaString.split(',').reduce((meta, metaPart) => {
         const [key, value] = metaPart.split('=');
@@ -180,7 +180,7 @@ function getCodeTabs(props) {
         ...meta,
         code: parts.join('\n'),
         // @ts-ignore
-        transformCode: getTransformCode(meta.type)
+        transformCode: getTransformCode(meta.type),
       };
     });
     return codeTabs;
@@ -189,7 +189,7 @@ function getCodeTabs(props) {
     {
       tab: undefined,
       code,
-      transformCode: getTransformCode(props.className)
-    }
+      transformCode: getTransformCode(props.className),
+    },
   ];
 }

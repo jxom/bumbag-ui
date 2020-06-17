@@ -74,18 +74,18 @@ function getJsDocs(symbol) {
 function getTagNames(prop) {
   const jsDocs = getJsDocs(prop);
   if (!jsDocs) return [];
-  return jsDocs.getTags().map(tag => tag.getTagName());
+  return jsDocs.getTags().map((tag) => tag.getTagName());
 }
 
 function getProps(type) {
-  return type.getProperties().filter(prop => !getTagNames(prop).includes('private'));
+  return type.getProperties().filter((prop) => !getTagNames(prop).includes('private'));
 }
 
 function getPropType(prop, shouldEncode) {
   const declaration = getDeclaration(prop);
   const type = declaration.getType().getText(undefined, ts.TypeFormatFlags.InTypeAlias);
 
-  const encode = text => text.replace(/[\u00A0-\u9999<>&"]/gim, i => `&#${i.charCodeAt(0)};`);
+  const encode = (text) => text.replace(/[\u00A0-\u9999<>&"]/gim, (i) => `&#${i.charCodeAt(0)};`);
 
   return shouldEncode ? encode(type) : type;
 }
@@ -97,19 +97,19 @@ function createPropTypeObject(prop) {
     isRequired: (prop.getFlags() & ts.SymbolFlags.Optional) === 0,
     description: getComment(prop),
     encodedType: getPropType(prop, true),
-    type: getPropType(prop)
+    type: getPropType(prop),
   };
 }
 
 function createPropTypeObjects(type) {
   return getProps(type)
-    .map(prop => createPropTypeObject(prop))
+    .map((prop) => createPropTypeObject(prop))
     .filter(Boolean);
 }
 
 function createTypeMarkdown(types) {
   return types
-    .map(type => {
+    .map((type) => {
       const isShort = type.type.length < 50;
       return `
 **<Code marginRight="major-1">${type.name}</Code>** ${
@@ -172,11 +172,11 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
   let populated = [];
   function populateUses(uses = []) {
     if (uses.length > 0) {
-      uses.forEach(use => {
+      uses.forEach((use) => {
         const typeReference = typeReferences[`Local${use}`];
         if (typeReference) {
           const useTypes = typeReference.types.filter(
-            type => !Boolean(types.find(refType => refType.name === type.name))
+            (type) => !Boolean(types.find((refType) => refType.name === type.name))
           );
           if (!populated.includes(use)) {
             content = `
@@ -210,7 +210,7 @@ function extractTypes(config) {
 
   const project = new Project({
     tsConfigFilePath: path.join(libPaths[0], 'tsconfig.json'),
-    addFilesFromTsConfig: false
+    addFilesFromTsConfig: false,
   });
 
   const sourcePaths = libPaths.reduce((currentSourcePaths, libPath) => {
@@ -220,8 +220,8 @@ function extractTypes(config) {
   project.resolveSourceFileDependencies();
 
   let typeReferences = {};
-  sourceFilesAst.forEach(sourceFileAst => {
-    sourceFileAst.forEachChild(node => {
+  sourceFilesAst.forEach((sourceFileAst) => {
+    sourceFileAst.forEachChild((node) => {
       const symbol = node.getSymbol();
       if (symbol) {
         const symbolName = symbol.getEscapedName();
@@ -229,7 +229,7 @@ function extractTypes(config) {
           const propTypes = createPropTypeObjects(node.getType());
           typeReferences[symbolName] = {
             ...typeReferences[symbolName],
-            types: propTypes
+            types: propTypes,
           };
         }
         if (/^(?!(Local|use))[A-Z].*Props/.test(symbolName)) {
@@ -239,13 +239,13 @@ function extractTypes(config) {
 
           const typeNode = node.getTypeNode();
           if (TypeGuards.isIntersectionTypeNode(typeNode)) {
-            typeNode.getTypeNodes().forEach(node => {
+            typeNode.getTypeNodes().forEach((node) => {
               const nodeText = node.getText();
 
               dependantTypes = [...dependantTypes, nodeText];
 
               const types = node.getType().getIntersectionTypes();
-              types.forEach(type => {
+              types.forEach((type) => {
                 const typeText = type.getText();
                 if (/reakit\/ts\/.*Return/.test(typeText)) {
                   const propTypes = createPropTypeObjects(type);
@@ -264,14 +264,14 @@ function extractTypes(config) {
             });
           }
 
-          dependantTypes = dependantTypes.filter(type => Boolean(type) && type !== `Local${symbolName}`).reverse();
+          dependantTypes = dependantTypes.filter((type) => Boolean(type) && type !== `Local${symbolName}`).reverse();
 
           const types = _.uniqBy([..._.get(typeReferences, `[Local${symbolName}].types`, []), ...extraTypes], 'name');
           typeReferences[`Local${symbolName}`] = {
             ...typeReferences[`Local${symbolName}`],
             types,
             stateTypes,
-            uses: dependantTypes
+            uses: dependantTypes,
           };
         }
       }
@@ -279,11 +279,11 @@ function extractTypes(config) {
   });
 
   const docPaths = getPaths(docsPath, /\.mdx$/);
-  docPaths.forEach(docPath => {
+  docPaths.forEach((docPath) => {
     const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
     if (/#\s.*\s(API|Props|Return\sValues)/.test(mdContents)) {
       const matches = mdContents.match(/#\s.*\s(API|Props|Return\sValues)/g);
-      matches.forEach(match => {
+      matches.forEach((match) => {
         const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
         const componentSection = match.split(' ')[1];
         let localType;
@@ -329,6 +329,10 @@ function extractTypes(config) {
 }
 
 extractTypes({
-  libPaths: [path.join(__dirname, '../../fannypack'), path.join(__dirname, '../../fannypack-addon-highlighted-code')],
-  docsPath: path.join(__dirname, '../src/')
+  libPaths: [
+    path.join(__dirname, '../../fannypack'),
+    path.join(__dirname, '../../fannypack-addon-highlighted-code'),
+    path.join(__dirname, '../../fannypack-addon-markdown'),
+  ],
+  docsPath: path.join(__dirname, '../src/'),
 });

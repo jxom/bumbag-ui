@@ -9,10 +9,6 @@ export const Heading = (styleProps) => cssClass`
     margin-top: -0.5em;
   }
 
-  &:not(:last-child) {
-    margin-bottom: ${space(1)(styleProps)}em;
-  }
-
   h1& {
     font-size: ${fontSize('700')(styleProps)}rem;
     & {

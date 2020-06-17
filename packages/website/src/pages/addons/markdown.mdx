@@ -1,0 +1,160 @@
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import Markdown from 'fannypack-addon-markdown';
+
+# Markdown
+
+## Install
+
+```
+yarn add fannypack-addon-markdown
+// or npm
+npm install fannypack-addon-markdown
+```
+
+## Import
+
+```javascript
+import Markdown from 'fannypack-addon-markdown'
+```
+
+## Usage
+
+```jsx-live
+<Markdown
+  wrap={children => <Stack spacing="major-2">{children}</Stack>}
+  content={`
+A _friendly_, _themeable_, _accessible_ **React UI Kit** built with [Reakit](https://reakit.io).
+\n\n
+> This is a blockquote.
+\n\n
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+\n\n
+**This is bold text**\n
+_This is italic text_\n
+_**This is bold italic text**_\n
+\n\n
+- Get
+- Around
+- This
+- List
+\n\n
+1. What
+1. About
+1. An
+1. Ordered
+1. One?
+\n\n
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+\n\n\n\n
+It also supports [links](https://google.com)
+\n\n
+And images:\n
+![Fannypack](https://raw.githubusercontent.com/fannypackui/fannypack/master/logo.png)
+`}
+/>
+```
+
+## Markdown Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">content</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementProps</Code>** <Code fontSize="150" palette="primary">any</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">wrap</Code>** <Code fontSize="150" palette="primary">(children: any) =&#62; any</Code> 
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  fontWeights?: FontWeightsThemeConfig;
+  ... 79 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+</details>
+            
