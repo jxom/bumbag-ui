@@ -17,7 +17,7 @@ export const SideNavLevel = (styleProps) => cssClass`
   ${
     styleProps.level === 0 &&
     css`
-      margin-bottom: ${space(2, 'major')(styleProps)}rem;
+      margin-bottom: ${space(3, 'major')(styleProps)}rem;
     `
   }
 

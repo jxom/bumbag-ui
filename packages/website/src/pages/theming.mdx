@@ -1,0 +1,169 @@
+---
+breakpoint: tablet
+title: Theming
+path: /theming
+---
+
+# Theming
+
+Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
+
+### Overriding the default theme (recommended)
+
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](#TODO).
+
+```jsx
+import { Provider as FannypackProvider, css } from 'fannypack';
+
+const theme = {
+  global: {
+    fontFamily: 'Comic Sans MS',
+    fontSize: 20,
+    css: {
+      root: css`
+        html,
+        body {
+          background-color: pink;
+        }
+      `
+    }
+  }
+  palette: {
+    primary: 'blue'
+  },
+  breakpoints: {
+    mobile: 520,
+    tablet: 960
+  },
+  Button: {
+    css: {
+      disabled: css`
+        opacity: 0.2
+      `
+    }
+  },
+  Text: {
+    css: {
+      root: css`
+        font-weight: 300;
+      `
+    }
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    // ... your app
+  </FannypackProvider>
+);
+```
+
+### Creating your own theme (advanced)
+
+If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+
+```jsx
+import { Provider as FannypackProvider, defaultTheme } from 'fannypack';
+
+const App = () => (
+  <FannypackProvider isStandalone theme={defaultTheme()}>
+    // ... your app
+  </FannypackProvider>
+);
+```
+
+### Theme reference
+
+```js
+{
+  // Core
+  altitudes: AltitudesThemeConfig;
+  borders: BordersThemeConfig;
+  borderRadii: BorderRadiiThemeConfig;
+  breakpoints: BreakpointsThemeConfig;
+  fontSizes: FontSizeThemeConfig;
+  fontWeights: FontWeightsThemeConfig;
+  global: GlobalThemeConfig;
+  layout: LayoutThemeConfig;
+  palette: PaletteThemeConfig;
+
+  // Components
+  ActionButtons: ActionButtonsThemeConfig;
+  Alert: AlertThemeConfig;
+  Autosuggest: AutosuggestThemeConfig;
+  Avatar: AvatarThemeConfig;
+  Badge: BadgeThemeConfig;
+  Breadcrumb: BreadcrumbThemeConfig;
+  Box: BoxThemeConfig;
+  Block: BlockThemeConfig;
+  Blockquote: BlockquoteThemeConfig;
+  Button: ButtonThemeConfig;
+  Callout: CalloutThemeConfig;
+  Card: CardThemeConfig;
+  Checkbox: CheckboxThemeConfig;
+  CheckboxField: CheckboxFieldThemeConfig;
+  CheckboxGroup: CheckboxGroupThemeConfig;
+  CheckboxGroupField: CheckboxGroupFieldThemeConfig;
+  Clickable: ClickableThemeConfig;
+  Code: CodeThemeConfig;
+  Columns: ColumnsThemeConfig;
+  Container: ContainerThemeConfig;
+  Dialog: DialogThemeConfig;
+  Disclosure: DisclosureThemeConfig;
+  Drawer: DrawerThemeConfig;
+  DropdownMenu: DropdownMenuThemeConfig;
+  FieldWrapper: FieldWrapperThemeConfig;
+  Flex: FlexThemeConfig;
+  Grid: GridThemeConfig;
+  Group: GroupThemeConfig;
+  Heading: HeadingThemeConfig;
+  HighlightedCode: HighlightedCodeThemeConfig;
+  Icon: IconThemeConfig;
+  Image: ImageThemeConfig;
+  Inline: InlineThemeConfig;
+  InlineBlock: InlineBlockThemeConfig;
+  InlineFlex: InlineFlexThemeConfig;
+  Input: InputThemeConfig;
+  InputField: InputFieldThemeConfig;
+  Stack: StackThemeConfig;
+  Link: LinkThemeConfig;
+  List: ListThemeConfig;
+  Menu: MenuThemeConfig;
+  Modal: ModalThemeConfig;
+  Navigation: NavigationThemeConfig;
+  Overlay: OverlayThemeConfig;
+  PageContent: PageContentThemeConfig;
+  PageWithSidebar: PageWithSidebarThemeConfig;
+  Pagination: PaginationThemeConfig;
+  Paragraph: ParagraphThemeConfig;
+  Popover: PopoverThemeConfig;
+  Portal: PortalThemeConfig;
+  ProgressBar: ProgressBarThemeConfig;
+  Radio: RadioThemeConfig;
+  RadioGroup: RadioGroupThemeConfig;
+  RadioGroupField: RadioGroupFieldThemeConfig;
+  Rating: RatingThemeConfig;
+  Rover: RoverThemeConfig;
+  Select: SelectThemeConfig;
+  SelectField: SelectFieldThemeConfig;
+  SelectMenu: SelectThemeConfig;
+  Set: SetThemeConfig;
+  SideNav: SideNavThemeConfig;
+  Spinner: SpinnerThemeConfig;
+  Switch: SwitchThemeConfig;
+  SwitchField: SwitchFieldThemeConfig;
+  SwitchGroup: SwitchGroupThemeConfig;
+  SwitchGroupField: SwitchGroupFieldThemeConfig;
+  Tabbable: TabbableThemeConfig;
+  Table: TableThemeConfig;
+  Tabs: TabsThemeConfig;
+  Tag: TagThemeConfig;
+  Text: TextThemeConfig;
+  Textarea: TextareaThemeConfig;
+  TextareaField: TextareaFieldThemeConfig;
+  Toast: ToastThemeConfig;
+  Tooltip: TooltipThemeConfig;
+  TopNav: TopNavThemeConfig;
+  Template: TemplateThemeConfig;
+}
+```

@@ -1,1 +1,42 @@
-# Work In Progress AF
+---
+breakpoint: tablet
+title: Getting started
+path: /
+---
+
+# Getting started
+
+Firstly, install Fannypack:
+
+```
+npm install fannypack
+```
+
+Once you have installed the `fannypack` module, wrap your application in a "`<FannypackProvider>`":
+
+```jsx
+import { Provider as FannypackProvider } from 'fannypack';
+
+const App = () => (
+  <FannypackProvider>
+    Hello world!
+  </FannypackProvider>
+);
+```
+
+Now, you can start using the Fannypack components:
+
+```jsx
+import { Button, Provider as FannypackProvider } from 'fannypack';
+
+const MyApp = () => (
+  <FannypackProvider>
+    <Button>
+      Hello world!
+    </Button>
+  </FannypackProvider>
+);
+```
+
+> Note: You can override Fannypack's default theme by passing a `theme` prop to `<FannypackProvider>`. [Click here to find out how to add a theme](/theming).
+

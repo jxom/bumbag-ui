@@ -1,16 +1,22 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Image, Stack, SideNav, css } from 'fannypack';
+import { Image, Stack, SideNav, css, palette } from 'fannypack';
 import _startCase from 'lodash/startCase';
 
 const query = graphql`
-  query {
+  {
     allFile(sort: { fields: name }, filter: { extension: { eq: "mdx" } }) {
       edges {
         node {
           extension
           name
           relativeDirectory
+          childMdx {
+            frontmatter {
+              title
+              path
+            }
+          }
         }
       }
     }
@@ -18,6 +24,7 @@ const query = graphql`
 `;
 
 const orders = [
+  '',
   'primitives',
   'typography',
   'layout',
@@ -26,7 +33,7 @@ const orders = [
   'shells',
   'utilities',
   'addons',
-  'copy-blocks'
+  'copy-blocks',
 ];
 
 export default function Sidebar(props) {
@@ -35,11 +42,11 @@ export default function Sidebar(props) {
   const { allFile } = useStaticQuery(query);
   const sidebarItems = allFile.edges.reduce((currentItems, node) => {
     const item = node.node;
-    if (item.relativeDirectory) {
-      return { ...currentItems, [item.relativeDirectory]: [...(currentItems[item.relativeDirectory] || []), item] };
-    }
-    return { ...currentItems };
+    let relativeDirectory = item.relativeDirectory || '';
+    return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
   }, {});
+
+  console.log(sidebarItems);
 
   return (
     <Stack spacing="major-1" {...props}>
@@ -48,28 +55,43 @@ export default function Sidebar(props) {
         selectedId={path}
         overrides={{
           SideNav: {
+            Level: {
+              Title: {
+                css: {
+                  root: css`
+                    font-size: 13px;
+                  `,
+                },
+              },
+            },
             Item: {
               css: {
-                root: css`
+                root: (props) => css`
+                  color: ${palette('text200')(props)} !important;
+                  font-size: 14px;
+                  font-weight: 500;
                   min-height: 2.25em;
-                `
-              }
-            }
-          }
+                `,
+              },
+            },
+          },
         }}
       >
-        {orders.map(order => {
+        {orders.map((order) => {
           const key = order;
           const items = sidebarItems[key];
           return (
             <SideNav.Level key={key} title={_startCase(key)}>
-              {(items || []).map(item => (
-                <SideNav.Item key={item.name} navId={`/${item.relativeDirectory}/${item.name}/`}>
-                  <Link to={`/${item.relativeDirectory}/${item.name}/`}>
-                    {_startCase(item.name).replace(/\s/g, '')}
-                  </Link>
-                </SideNav.Item>
-              ))}
+              {(items || []).map((item) => {
+                const frontmatter = item.childMdx?.frontmatter || {};
+                return (
+                  <SideNav.Item key={item.name} navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}>
+                    <Link to={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}>
+                      {frontmatter.title || _startCase(item.name).replace(/\s/g, '')}
+                    </Link>
+                  </SideNav.Item>
+                );
+              })}
             </SideNav.Level>
           );
         })}

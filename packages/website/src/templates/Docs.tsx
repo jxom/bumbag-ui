@@ -40,15 +40,31 @@ export default function Docs(props: Props) {
       ),
       h5: (props: any) => <fannypack.Heading use="h5" marginTop="major-4" marginBottom="major-2" {...props} />,
       h6: (props: any) => <fannypack.Heading use="h6" marginTop="major-4" marginBottom="major-2" {...props} />,
-      p: (props: any) => <fannypack.Paragraph {...props} />,
+      p: (props: any) => (
+        <fannypack.Paragraph
+          {...props}
+          overrides={{
+            Paragraph: {
+              css: {
+                root: fannypack.css`
+                  &:not(:last-child) {
+                    margin-bottom: 1rem;
+                  }
+                `,
+              },
+            },
+          }}
+        />
+      ),
       strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
-      pre: (props: any) => <LiveCode {...props.children.props} />
+      pre: (props: any) => <LiveCode {...props.children.props} />,
     }),
     []
   );
 
   return (
     <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+      {console.log(pageContext)}
       <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
         <MDXProvider components={components}>{children}</MDXProvider>
       </fannypack.PageContent>
