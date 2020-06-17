@@ -50,6 +50,7 @@ export * from './Radio';
 export * from './Rating';
 export * from './Rover';
 export * from './Select';
+export * from './SelectMenu';
 export * from './Set';
 export * from './SideNav';
 export * from './Spinner';

@@ -1,22 +1,22 @@
 import Theme from '../../components/Theme';
-import { Autosuggest } from 'fannypack';
+import { SelectMenu } from 'fannypack';
 
-# Autosuggest
+# SelectMenu
 
 ## Import
 
 ```jsx
-import { Autosuggest } from 'fannypack'
+import { SelectMenu } from 'fannypack'
 ```
 
 ## Usage
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
+    <SelectMenu
       onChange={setValue}
       options={[
         { key: 1, label: 'Apples', value: 'apples' },
@@ -24,22 +24,22 @@ function Example() {
         { key: 3, label: 'Oranges', value: 'oranges' },
         { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
       value={value}
     />
   )
 }
 ```
 
-### Automatic selection
+### Disabled
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
-      automaticSelection
+    <SelectMenu
+      disabled
       onChange={setValue}
       options={[
         { key: 1, label: 'Apples', value: 'apples' },
@@ -47,22 +47,44 @@ function Example() {
         { key: 3, label: 'Oranges', value: 'oranges' },
         { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
       value={value}
     />
   )
 }
 ```
 
-### Restrict to options
+#### Disabled options
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
-      restrictToOptions
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { disabled: true, key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { disabled: true, key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Search
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      hasSearch
       onChange={setValue}
       options={[
         { key: 1, label: 'Apples', value: 'apples' },
@@ -70,7 +92,54 @@ function Example() {
         { key: 3, label: 'Oranges', value: 'oranges' },
         { key: 4, label: 'Mangos', value: 'mangos' }
       ]}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Multi-select
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isMultiSelect
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+#### With tags
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      hasTags
+      isMultiSelect
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -81,14 +150,120 @@ function Example() {
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
+    <SelectMenu
       isLoading
       onChange={setValue}
       options={[]}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Option icons
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', iconBefore: 'solid-apple-alt' },
+        { key: 2, label: 'Bananas', value: 'bananas', iconAfter: 'solid-apple-alt' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+### Fetching data (async)
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  const getOptions = React.useCallback(async ({ searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <SelectMenu
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+#### Pagination
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  const getOptions = React.useCallback(async ({ page, searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <SelectMenu
+      hasSearch
+      pagination
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+```
+
+#### Deferred
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  const getOptions = React.useCallback(async ({ page, searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <SelectMenu
+      defer
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -99,10 +274,11 @@ function Example() {
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
+    <SelectMenu
+      hasSearch
       renderOption={({ MatchedLabel, option }) =>
         <React.Fragment>
           <MatchedLabel />
@@ -117,7 +293,7 @@ function Example() {
         { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
         { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
       ]}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -128,20 +304,14 @@ function Example() {
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
+    <SelectMenu
       emptyText="No fruits found."
-      restrictToOptions
       onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples' },
-        { key: 2, label: 'Bananas', value: 'bananas' },
-        { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
-      ]}
-      placeholder="Search for a fruit..."
+      options={[]}
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -152,28 +322,22 @@ function Example() {
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
-      renderEmpty={({ create, emptyText, inputValue }) =>
-        <Autosuggest.StaticItem>
+    <SelectMenu
+      renderEmpty={({ StaticItem, emptyText, inputValue }) =>
+        <StaticItem>
           {emptyText}
           <br />
-          <Link onClick={() => create({ label: inputValue, value: inputValue })}>
-            Create <Text fontWeight="semibold">{inputValue}</Text>
+          <Link>
+            Create a fruit
           </Link>
-        </Autosuggest.StaticItem>
+        </StaticItem>
       }
-      restrictToOptions
       onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples' },
-        { key: 2, label: 'Bananas', value: 'bananas' },
-        { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
-      ]}
-      placeholder="Search for a fruit..."
+      options={[]}
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -182,177 +346,24 @@ function Example() {
 
 ```function-live
 function Example() {
-  const [value, setValue] = React.useState({ label: '' });
+  const [value, setValue] = React.useState();
 
   return (
-    <Autosuggest
-      renderEmpty={({ create, emptyText, inputValue }) =>
-        <Autosuggest.Item
-          onClick={() => create({ label: inputValue, value: inputValue })}
-        >
-          Create <Text fontWeight="semibold">{inputValue}</Text>
-        </Autosuggest.Item>
+    <SelectMenu
+      hasSearch
+      renderEmpty={({ Item, searchText }) =>
+        <Item>
+          Create <Text fontWeight="semibold">{searchText}</Text>
+        </Item>
       }
-      restrictToOptions
       onChange={setValue}
       options={[
-        { key: 1, label: 'Apples', value: 'apples' },
-        { key: 2, label: 'Bananas', value: 'bananas' },
-        { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
+        { key: 1, label: 'Apples', value: 'apples', price: '$10.00/kg' },
+        { key: 2, label: 'Bananas', value: 'bananas', price: '$8.50/kg' },
+        { key: 3, label: 'Oranges', value: 'oranges', price: '$9.50/kg' },
+        { key: 4, label: 'Mangos', value: 'mangos', price: '$8.00/kg' }
       ]}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-### Option icons
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  return (
-    <Autosuggest
-      restrictToOptions
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples', iconBefore: 'solid-apple-alt' },
-        { key: 2, label: 'Bananas', value: 'bananas', iconAfter: 'solid-apple-alt' },
-        { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
-      ]}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-### Disabled
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  return (
-    <Autosuggest
-      disabled
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples' },
-        { key: 2, label: 'Bananas', value: 'bananas' },
-        { key: 3, label: 'Oranges', value: 'oranges' },
-        { key: 4, label: 'Mangos', value: 'mangos' }
-      ]}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-### Disabled item
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  return (
-    <Autosuggest
-      onChange={setValue}
-      options={[
-        { key: 1, label: 'Apples', value: 'apples' },
-        { key: 2, label: 'Bananas', value: 'bananas', disabled: true },
-        { key: 3, label: 'Oranges', value: 'oranges', disabled: true },
-        { key: 4, label: 'Mangos', value: 'mangos' }
-      ]}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-### Fetching data (async)
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  const getOptions = React.useCallback(async ({ searchText }) => {
-    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
-      .then(res => res.json())
-      .then(({ results }) => ({
-        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
-      }))
-      .catch(err => ({ options: [] }));
-  }, [])
-
-  return (
-    <Autosuggest
-      cacheKey="basic"
-      onChange={setValue}
-      loadOptions={getOptions}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-#### Pagination
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  const getOptions = React.useCallback(async ({ page, searchText }) => {
-    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
-      .then(res => res.json())
-      .then(({ results }) => ({
-        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
-      }))
-      .catch(err => ({ options: [] }));
-  }, [])
-
-  return (
-    <Autosuggest
-      pagination
-      cacheKey="pagination"
-      onChange={setValue}
-      loadOptions={getOptions}
-      placeholder="Search for a fruit..."
-      value={value}
-    />
-  )
-}
-```
-
-#### Deferred
-
-```function-live
-function Example() {
-  const [value, setValue] = React.useState({ label: '' });
-
-  const getOptions = React.useCallback(async ({ searchText }) => {
-    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
-      .then(res => res.json())
-      .then(({ results }) => ({
-        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
-      }))
-      .catch(err => ({ options: [] }));
-  }, [])
-
-  return (
-    <Autosuggest
-      defer
-      cacheKey="defer"
-      onChange={setValue}
-      loadOptions={getOptions}
-      placeholder="Search for a fruit..."
+      placeholder="Select a fruit..."
       value={value}
     />
   )
@@ -361,29 +372,32 @@ function Example() {
 
 ### Fields
 
-```jsx-live
-<AutosuggestField
-  label="Choose your fruit"
-  options={[
-    { key: 1, label: 'Apples', value: 'apples' },
-    { key: 2, label: 'Bananas', value: 'bananas' },
-    { key: 3, label: 'Oranges', value: 'oranges' },
-    { key: 4, label: 'Mangos', value: 'mangos' }
-  ]}
-  placeholder="Search for a fruit..."
-  value={{ label: '' }}
-/>
+```function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenuField
+      label="Select a fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
 ```
 
 ## Props
 
-### Autosuggest Props
+### SelectMenu Props
 
 <!-- Automatically generated -->
-
-**<Code marginRight="major-1">automaticSelection</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-<Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">cacheKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
@@ -397,7 +411,23 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">disableClear</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hasSearch</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hasTags</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isMultiSelect</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -421,7 +451,12 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">onChange</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(newOptions: Option
+  | Option[], option: Option) => void`}
+</Code>
 
 <Box marginBottom="major-4" />
 
@@ -430,10 +465,6 @@ function Example() {
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">placeholder</Code>** <Code fontSize="150" palette="primary">string</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">restrictToOptions</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -457,10 +488,6 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">renderClearButton</Code>** <Code fontSize="150" palette="primary">any</Code> 
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">renderError</Code>** <Code fontSize="150" palette="primary">any</Code> 
 
 <Box marginBottom="major-4" />
@@ -481,7 +508,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">clearButtonProps</Code>**  
+**<Code marginRight="major-1">buttonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -493,22 +520,6 @@ function Example() {
   accessKey?: string;
   ... 791 more ...;
   spinnerProps?: SpinnerProps;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">inputProps</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  unstable_system?: unknown;
-  defaultChecked?: boolean;
-  defaultValue?: string | string[] | (string & string[]) | (number & string[]) | (string[] & string);
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  ... 789 more ...;
-  value?: string | ... 1 more ... | string[];
 }`}
 </Code>
 
@@ -543,6 +554,39 @@ function Example() {
   accessKey?: string;
   ... 803 more ...;
   isTabbable?: boolean;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">searchInputProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[] | (string & string[]) | (number & string[]) | (string[] & string);
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 789 more ...;
+  value?: string | ... 1 more ... | string[];
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">tagProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  ... 771 more ...;
+  size?: Size;
 }`}
 </Code>
 
@@ -645,7 +689,7 @@ function Example() {
 </details>
             
 
-### AutosuggestField Props
+### SelectMenuField Props
 
 <!-- Automatically generated -->
 
@@ -677,7 +721,7 @@ Addon component to the input (after). Similar to the addon components in Input.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">autosuggestProps</Code>**  
+**<Code marginRight="major-1">selectMenuProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -687,12 +731,12 @@ Addon component to the input (after). Similar to the addon components in Input.
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 795 more ...;
+  ... 797 more ...;
   dropdownMenuInitialState?: Partial<...>;
 }`}
 </Code>
 
-Additional props for the Autosuggest component
+Additional props for the SelectMenu component
 
 <Box marginBottom="major-4" />
 
@@ -702,11 +746,7 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 
 <Box marginBottom="major-4" />
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Autosuggest</strong></code> props</Box>
-
-**<Code marginRight="major-1">automaticSelection</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
-
-<Box marginBottom="major-4" />
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>SelectMenu</strong></code> props</Box>
 
 **<Code marginRight="major-1">cacheKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
@@ -720,7 +760,23 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 
 <Box marginBottom="major-4" />
 
+**<Code marginRight="major-1">disableClear</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hasSearch</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">hasTags</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
 **<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">isMultiSelect</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -744,7 +800,12 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code marginRight="major-1">onChange</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`(newOptions: Option
+  | Option[], option: Option) => void`}
+</Code>
 
 <Box marginBottom="major-4" />
 
@@ -753,10 +814,6 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 <Box marginBottom="major-4" />
 
 **<Code marginRight="major-1">placeholder</Code>** <Code fontSize="150" palette="primary">string</Code> 
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">restrictToOptions</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -780,10 +837,6 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">renderClearButton</Code>** <Code fontSize="150" palette="primary">any</Code> 
-
-<Box marginBottom="major-4" />
-
 **<Code marginRight="major-1">renderError</Code>** <Code fontSize="150" palette="primary">any</Code> 
 
 <Box marginBottom="major-4" />
@@ -804,7 +857,7 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">clearButtonProps</Code>**  
+**<Code marginRight="major-1">buttonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -816,22 +869,6 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   accessKey?: string;
   ... 791 more ...;
   spinnerProps?: SpinnerProps;
-}`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">inputProps</Code>**  
-
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`{
-  unstable_system?: unknown;
-  defaultChecked?: boolean;
-  defaultValue?: string | string[] | (string & string[]) | (number & string[]) | (string[] & string);
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  ... 789 more ...;
-  value?: string | ... 1 more ... | string[];
 }`}
 </Code>
 
@@ -866,6 +903,39 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   accessKey?: string;
   ... 803 more ...;
   isTabbable?: boolean;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">searchInputProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | string[] | (string & string[]) | (number & string[]) | (string[] & string);
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  ... 789 more ...;
+  value?: string | ... 1 more ... | string[];
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">tagProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  unstable_system?: unknown;
+  defaultChecked?: boolean;
+  defaultValue?: string | number | string[];
+  suppressContentEditableWarning?: boolean;
+  suppressHydrationWarning?: boolean;
+  accessKey?: string;
+  ... 771 more ...;
+  size?: Size;
 }`}
 </Code>
 
@@ -1063,7 +1133,7 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 ## Theming
 
 <Theme
-  component={Autosuggest}
+  component={SelectMenu}
   options={[
     { key: 1, label: 'Apples', value: 'apples' },
     { key: 2, label: 'Bananas', value: 'bananas' },
@@ -1071,15 +1141,17 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
     { key: 4, label: 'Mangos', value: 'mangos' }
   ]}
   placeholder="Search for a fruit..."
-  value={{ label: '' }}
   overrides={[
-    'Autosuggest.css.root',
-    'Autosuggest.Input.css.root',
-    'Autosuggest.Popover.css.root',
-    'Autosuggest.Item.css.root',
-    'Autosuggest.ItemText.css.root',
-    { key: 'Autosuggest.ClearButtonWrapper.css.root', props: { value: { label: 'Apples', value: 'apples' } } },
-    { key: 'Autosuggest.ClearButton.css.root', props: { value: { label: 'Apples', value: 'apples' } } },
-    { key: 'Autosuggest.StaticItem.css.root', props: { options: [], restrictToOptions: true } }
+    'SelectMenu.css.root',
+    'SelectMenu.Button.css.root',
+    'SelectMenu.ButtonText.css.root',
+    'SelectMenu.ButtonIconsWrapper.css.root',
+    'SelectMenu.ButtonIcon.css.root',
+    'SelectMenu.Popover.css.root',
+    'SelectMenu.Item.css.root',
+    'SelectMenu.ItemText.css.root',
+    { key: 'SelectMenu.SearchInputWrapper.css.root', props: { hasSearch: true } },
+    { key: 'SelectMenu.SearchInput.css.root', props: { hasSearch: true } },
+    { key: 'SelectMenu.StaticItem.css.root', props: { options: [] } }
   ]}
 />

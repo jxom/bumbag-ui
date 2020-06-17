@@ -2,7 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 import { ActionButtonsProps } from '../ActionButtons';
 import { AlertProps } from '../Alert';
-import { AutosuggestProps } from '../Autosuggest';
+import { AutosuggestProps, AutosuggestFieldProps } from '../Autosuggest';
 import { AvatarProps } from '../Avatar';
 import { BadgeProps } from '../Badge';
 import { ButtonProps } from '../Button';
@@ -89,6 +89,7 @@ import { RadioProps, RadioGroupProps, RadioGroupFieldProps } from '../Radio';
 import { RatingProps, RatingItemProps } from '../Rating';
 import { RoverProps } from '../Rover';
 import { SelectProps, SelectFieldProps } from '../Select';
+import { SelectMenuProps, SelectMenuFieldProps } from '../SelectMenu';
 import { SetProps } from '../Set';
 import { SideNavProps, SideNavItemProps, SideNavLevelProps } from '../SideNav';
 import { DrawerProps, DrawerDisclosureProps } from '../Drawer';
@@ -238,6 +239,13 @@ export type AutosuggestThemeConfig = {
   };
   defaultProps?: Partial<AutosuggestProps>;
   variants?: Variant<AutosuggestThemeConfig>;
+};
+export type AutosuggestFieldThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<AutosuggestFieldProps>;
+  variants?: Variant<AutosuggestFieldThemeConfig>;
 };
 export type AvatarThemeConfig = {
   css?: {
@@ -1490,6 +1498,70 @@ export type SelectFieldThemeConfig = {
   defaultProps?: Partial<SelectFieldProps>;
   variants?: Variant<SelectFieldThemeConfig>;
 };
+export type SelectMenuThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  StaticItem?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Button?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ButtonText?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ButtonIconsWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ButtonIcon?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Popover?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Item?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  ItemText?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  SearchInputWrapper?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  SearchInput?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  defaultProps?: Partial<SelectMenuProps>;
+  variants?: Variant<SelectMenuThemeConfig>;
+};
+export type SelectMenuFieldThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SelectMenuFieldProps>;
+  variants?: Variant<SelectMenuFieldThemeConfig>;
+};
 export type SetThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1670,6 +1742,7 @@ export type ThemeConfig = {
   Rover?: RoverThemeConfig;
   Select?: SelectThemeConfig;
   SelectField?: SelectFieldThemeConfig;
+  SelectMenu?: SelectThemeConfig;
   Set?: SetThemeConfig;
   SideNav?: SideNavThemeConfig;
   Spinner?: SpinnerThemeConfig;

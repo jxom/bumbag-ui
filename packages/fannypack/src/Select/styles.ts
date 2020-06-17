@@ -17,7 +17,8 @@ export const Select = (styleProps) => cssClass`
     border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
   }
 
-  &[disabled] {
+  &[disabled],
+  &[aria-disabled="true"] {
     background: ${palette('white700')(styleProps)};
     box-shadow: unset;
 
