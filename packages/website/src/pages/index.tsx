@@ -35,7 +35,7 @@ export default function Index() {
             <Text>
               Powered by <Link>Reakit</Link> under the hood, all components come with{' '}
               <Text fontWeight="semibold">accessible HTML attributes & keyboard interactions</Text> out of the box and
-              follow the WAI-ARIA standards.
+              follow the WAI-ARIA standards. <Link>Learn more about accessibility.</Link>
             </Text>
           </Columns.Column>
           <Columns.Column>
@@ -45,6 +45,8 @@ export default function Index() {
             <Text>
               <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
               by altering the default theme, or creating your own.
+              <br />
+              <Link>Learn more about theming.</Link>
             </Text>
           </Columns.Column>
           <Columns.Column>
@@ -53,7 +55,9 @@ export default function Index() {
             </Heading>
             <Text>
               <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a contact
-              form or even a call-to-action.
+              form, or even a call-to-action.
+              <br />
+              <Link>Learn more about composition.</Link>
             </Text>
           </Columns.Column>
         </Columns>

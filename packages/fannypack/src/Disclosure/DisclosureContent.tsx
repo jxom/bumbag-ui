@@ -22,7 +22,7 @@ const useProps = createHook<DisclosureContentProps>(
     let { baseId, visible, animating, animated, stopAnimation, ...htmlProps } = props;
     const disclosureContentProps = useReakitDisclosureContent(
       {
-        baseId,
+        baseId: process.env.NODE_ENV === 'test' ? 'test' : baseId,
         visible,
         animating,
         animated,

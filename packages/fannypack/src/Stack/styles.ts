@@ -11,7 +11,7 @@ export const Stack = (styleProps) => cssClass`
 `;
 
 const getVerticalAttributes = (styleProps) => css`
-  & > *:not(:last-child) {
+  && > *:not(:last-child) {
     margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
 
     & {
