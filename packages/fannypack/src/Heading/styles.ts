@@ -5,6 +5,10 @@ export const Heading = (styleProps) => cssClass`
   font-weight: ${fontWeight('bold')(styleProps)};
   line-height: 1.2;
 
+  &:not(:last-child) {
+    margin-bottom: ${space(4)(styleProps)}rem;
+  }
+
   .heading& + .sub-heading {
     margin-top: -0.5em;
   }

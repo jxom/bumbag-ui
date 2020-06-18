@@ -26,7 +26,7 @@ const query = graphql`
 const orders = [
   {
     '': [
-      'index',
+      'getting-started',
       'theming',
       'palette',
       'styling-components',
