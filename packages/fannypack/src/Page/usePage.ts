@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { PageWithSidebarContext } from './PageWithSidebar';
+import { PageContext } from './PageContext';
 
 export function usePage() {
-  const pageWithSidebarContext = React.useContext(PageWithSidebarContext);
+  const context = React.useContext(PageContext);
   return {
-    ...pageWithSidebarContext,
+    ...context,
   };
 }

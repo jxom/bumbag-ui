@@ -3,6 +3,7 @@ import * as fannypack from 'fannypack';
 import { MDXProvider } from '@mdx-js/react';
 
 import LiveCode from '../components/LiveCode';
+import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 
 type Props = {
@@ -64,10 +65,12 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
-      <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
-        <MDXProvider components={components}>{children}</MDXProvider>
-      </fannypack.PageContent>
-    </fannypack.PageWithSidebar>
+    <fannypack.PageWithHeader sticky header={<Header />}>
+      <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+        <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
+          <MDXProvider components={components}>{children}</MDXProvider>
+        </fannypack.PageContent>
+      </fannypack.PageWithSidebar>
+    </fannypack.PageWithHeader>
   );
 }

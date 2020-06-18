@@ -190,7 +190,7 @@ function Example() {
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>9 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>8 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
@@ -240,12 +240,6 @@ Toggles Dialog's `modal` state.
    - Modal: `preventBodyScroll` is automatically enabled, focus is
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> 
-
-Sets `modal`.
 
 <Box marginBottom="major-4" />
 
@@ -434,7 +428,7 @@ It will be set to `false` if `modal` is `false`.
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 79 more ...;
+  ... 80 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -456,7 +450,7 @@ It will be set to `false` if `modal` is `false`.
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>4 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
 **<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
@@ -468,6 +462,12 @@ Whether it's visible or not.
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Toggles the `visible` state
 
 <Box marginBottom="major-4" />
 
@@ -559,7 +559,7 @@ similarly to `readOnly` on form elements. In this case, only
   breakpoints?: BreakpointsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
-  ... 79 more ...;
+  ... 80 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
@@ -619,7 +619,7 @@ by default.
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>12 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>13 values</strong></Box>
 
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
@@ -669,6 +669,12 @@ Changes the `visible` state to `false`
 **<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setVisible</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
 
 <Box marginBottom="major-4" />
 
@@ -744,7 +750,7 @@ by default.
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>12 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>13 values</strong></Box>
 
 **<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
@@ -794,6 +800,12 @@ Changes the `visible` state to `false`
 **<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles the `visible` state
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">setVisible</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Sets `visible`.
 
 <Box marginBottom="major-4" />
 

@@ -1,89 +1,137 @@
-import PropTypes from '../../components/PropTypes';
-import Theme from '../../components/Theme';
-import { List } from 'fannypack';
+import Theme from "../../components/Theme";
+import { Page } from "fannypack";
 
-# List
-
-`<List>` renders a `<ul>` element by default with reset styles and `list-style` unset.
+# PageWithHeader
 
 ## Import
 
 ```jsx
-import { List } from 'fannypack';
+import { PageWithHeader } from 'fannypack';
 ```
 
 ## Usage
 
 ```jsx-live
-<Paragraph>My awesome list:</Paragraph>
-<List>
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
-  <List.Item>Item 3</List.Item>
-  <List.Item>Item 4</List.Item>
-</List>
+<PageWithHeader
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+  overrides={{ PageWithHeader: { css: { root: { minHeight: 'unset' } } } }}
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
 ```
 
-### Types
+### Sticky headers
 
-Specify if you want your list items to have a style type with the `listStyleType` CSS property.
+```jsx
+<PageWithHeader
+  sticky
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+  overrides={{ PageWithHeader: { css: { root: { minHeight: 'unset' } } } }}
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
+```
 
-[Click here](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) to see all the `listStyleType` values.
+### Toggling the header
 
 ```jsx-live
-<Paragraph>My awesome list:</Paragraph>
-<List listStyleType="disc" listStylePosition="inside">
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
-</List>
-<List listStyleType="circle" listStylePosition="inside">
-  <List.Item>Item 1</List.Item>
-  <List.Item listStyleType="georgian">Item 2</List.Item>
-  <List listStyleType="circle">
-    <List.Item>Item 1</List.Item>
-    <List.Item>Item 2</List.Item>
-  </List>
-</List>
+<PageWithHeader.Disclosure>
+  Toggle header
+</PageWithHeader.Disclosure>
 ```
 
-### Ordered lists
-
-To use an ordered list, use the `isOrdered` prop.
+### Header height
 
 ```jsx-live
-<Paragraph>My awesome list:</Paragraph>
-<List isOrdered listStylePosition="inside">
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
-  <List isOrdered>
-    <List.Item>Item 3</List.Item>
-    <List isOrdered>
-      <List.Item>Item 4</List.Item>
-    </List>
-  </List>
-</List>
+<PageWithHeader
+  headerHeight="80px"
+  header={
+    <TopNav>
+      <TopNav.Section>
+        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+          <Image src="/logo.png" height="44px" />
+        </TopNav.Item>
+        <TopNav.Item href="#">Get started</TopNav.Item>
+        <TopNav.Item href="#">Components</TopNav.Item>
+      </TopNav.Section>
+      <TopNav.Section marginRight="major-2">
+        <TopNav.Item>
+          <Button variant="ghost" palette="primary">Sign up</Button>
+        </TopNav.Item>
+        <TopNav.Item>
+          <Button palette="primary">Login</Button>
+        </TopNav.Item>
+      </TopNav.Section>
+    </TopNav>
+  }
+  border="default"
+  overrides={{ PageWithHeader: { css: { root: { minHeight: 'unset' } } } }}
+>
+  <Box padding="major-2">Hello world</Box>
+</PageWithHeader>
 ```
 
-### Horizontal lists
+## Props
 
-To use an horizontal list, use the `orientation` prop.
-
-```jsx-live
-<List orientation="horizontal">
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
-</List>
-```
-
-## List Props
+### PageWithHeader Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">isOrdered</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">defaultIsVisible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">header</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">headerHeight</Code>** <Code fontSize="150" palette="primary">string</Code> 
 
 <Box marginBottom="major-4" />
 
@@ -166,7 +214,7 @@ To use an horizontal list, use the `orientation` prop.
 </details>
             
 
-## List.Item Props
+### PageWithHeader.Disclosure Props
 
 <!-- Automatically generated -->
 
@@ -248,28 +296,3 @@ To use an horizontal list, use the `orientation` prop.
 
 </details>
             
-
-## Theming
-
-<Theme
-  component={List}
-  overrides={[
-    'List.css.root',
-    { key: 'List.css.ordered', props: { isOrdered: true, listStylePosition: 'inside' } },
-    { key: 'List.css.horizontal', props: { orientation: 'horizontal' } }
-  ]}>
-  <List.Item>Item 1</List.Item>
-  <List.Item>Item 2</List.Item>
-</Theme>
-
-<Theme
-  component={List}
-  injectOverrides={false}
-  overrides={['List.Item.css.root']}>
-  {({ overrides }) => (
-    <React.Fragment>
-      <List.Item overrides={overrides}>Item 1</List.Item>
-      <List.Item>Item 2</List.Item>
-    </React.Fragment>
-  )}
-</Theme>

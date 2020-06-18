@@ -70,6 +70,8 @@ import {
   PageWithSidebarProps,
   PageWithSidebarDisclosureProps,
   PageWithSidebarMinimizeProps,
+  PageWithHeaderProps,
+  PageWithHeaderDisclosureProps,
 } from '../Page';
 import { PaginationProps } from '../Pagination';
 import { ParagraphProps } from '../Paragraph';
@@ -1035,6 +1037,30 @@ export type PageWithSidebarThemeConfig = {
     variants?: Variant<PageWithSidebarThemeConfig['Minimize']>;
   };
 };
+export type PageWithHeaderThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<PageWithHeaderProps>;
+  variants?: Variant<PageWithHeaderThemeConfig>;
+  Header?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Content?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Disclosure?: {
+    css?: {
+      root?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<PageWithHeaderDisclosureProps>;
+    variants?: Variant<PageWithHeaderThemeConfig['Disclosure']>;
+  };
+};
 export type PaginationThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -1731,6 +1757,7 @@ export type ThemeConfig = {
   Overlay?: OverlayThemeConfig;
   PageContent?: PageContentThemeConfig;
   PageWithSidebar?: PageWithSidebarThemeConfig;
+  PageWithHeader?: PageWithHeaderThemeConfig;
   Pagination?: PaginationThemeConfig;
   Paragraph?: ParagraphThemeConfig;
   Popover?: PopoverThemeConfig;

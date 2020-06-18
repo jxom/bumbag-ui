@@ -23,7 +23,7 @@ const useProps = createHook<PageWithSidebarMinimizeProps>(
       prevClassName: htmlProps.className,
     });
 
-    return { ...htmlProps, className, onClick: page.toggleMinimize };
+    return { ...htmlProps, className, onClick: page.sidebar.toggleMinimize };
   },
   { themeKey: 'PageWithSidebar.Minimize' }
 );

@@ -40,6 +40,7 @@ export const PageContentWrapper = (styleProps) => cssClass`
 
 export const PageWithSidebar = (styleProps) => cssClass`
   display: flex;
+  min-height: 100vh;
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
@@ -124,6 +125,58 @@ export const PageWithSidebarDisclosure = (styleProps) => cssClass`
 `;
 
 export const PageWithSidebarMinimize = (styleProps) => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const PageWithHeader = (styleProps) => cssClass`
+  min-height: 100vh;
+  position: relative;
+
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const PageWithHeaderHeader = (styleProps) => cssClass`
+  background-color: white;
+  min-height: ${styleProps.headerHeight};
+  height: ${styleProps.headerHeight};
+  border-bottom: 1px solid ${palette('white900')(styleProps)};
+  z-index: 999;
+
+  & > * {
+    height: 100%;
+  }
+
+  ${
+    styleProps.sticky &&
+    css`
+      position: fixed;
+      width: 100%;
+    `
+  }
+
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const PageWithHeaderContent = (styleProps) => cssClass`
+  ${
+    styleProps.sticky &&
+    css`
+      padding-top: ${styleProps.isHeaderOpen ? styleProps.headerHeight : 'unset'};
+    `
+  }
+
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const PageWithHeaderDisclosure = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

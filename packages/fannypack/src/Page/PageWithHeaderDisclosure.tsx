@@ -8,19 +8,19 @@ import { DrawerDisclosure, DrawerDisclosureProps } from '../Drawer';
 import { usePage } from './usePage';
 import * as styles from './styles';
 
-export type LocalPageWithSidebarDisclosureProps = {};
-export type PageWithSidebarDisclosureProps = BoxProps & LocalPageWithSidebarDisclosureProps;
+export type LocalPageWithHeaderDisclosureProps = {};
+export type PageWithHeaderDisclosureProps = BoxProps & LocalPageWithHeaderDisclosureProps;
 
-const useProps = createHook<PageWithSidebarDisclosureProps>(
+const useProps = createHook<PageWithHeaderDisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const page = usePage();
     const htmlProps = Disclosure.useProps({
       ...props,
-      ...(page.isCollapsed ? page.sidebar.drawer : page.sidebar.disclosure),
+      ...page.header.disclosure,
     });
 
     const className = useClassName({
-      style: styles.PageWithSidebarDisclosure,
+      style: styles.PageWithHeaderDisclosure,
       styleProps: props,
       themeKey,
       themeKeyOverride,
@@ -29,17 +29,17 @@ const useProps = createHook<PageWithSidebarDisclosureProps>(
 
     return { ...htmlProps, className };
   },
-  { themeKey: 'PageWithSidebar.Disclosure' }
+  { themeKey: 'PageWithHeader.Disclosure' }
 );
 
-export const PageWithSidebarDisclosure = createComponent<PageWithSidebarDisclosureProps>(
+export const PageWithHeaderDisclosure = createComponent<PageWithHeaderDisclosureProps>(
   (props) => {
-    const PageWithSidebarDisclosureProps = useProps(props);
+    const PageWithHeaderDisclosureProps = useProps(props);
     return createElement({
       children: props.children,
       component: ReakitBox,
       use: props.use,
-      htmlProps: PageWithSidebarDisclosureProps,
+      htmlProps: PageWithHeaderDisclosureProps,
     });
   },
   {
@@ -49,6 +49,6 @@ export const PageWithSidebarDisclosure = createComponent<PageWithSidebarDisclosu
     defaultProps: {
       use: 'button',
     },
-    themeKey: 'PageWithSidebar.Disclosure',
+    themeKey: 'PageWithHeader.Disclosure',
   }
 );

@@ -39,11 +39,11 @@ const orders = [
     ],
   },
   { 'the-box-primitive': ['box', 'css-props', 'altitudes', 'borders', 'border-radius'] },
-  { typography: [] },
+  { 'page-shells': ['intro', 'page-with-header', 'page-with-sidebar', 'page-content', 'usePage'] },
   { layout: [] },
+  { typography: [] },
   { components: [] },
   { form: [] },
-  { shells: [] },
   { utilities: [] },
   { addons: [] },
   { 'copy-blocks': [] },
@@ -59,11 +59,8 @@ export default function Sidebar(props) {
     return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
   }, {});
 
-  console.log(sidebarItems);
-
   return (
-    <Stack spacing="major-1" {...props}>
-      <Image src="/logo.png" width="100%" paddingX="major-2" marginTop="major-2" />
+    <Stack spacing="major-1" paddingY="major-2" {...props}>
       <SideNav
         selectedId={path}
         overrides={{

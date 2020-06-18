@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook, useBreakpoint } from '../utils';
+import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Drawer, DrawerProps } from '../Drawer';
 import { Disclosure, DisclosureProps } from '../Disclosure';
 
+import { PageContext, Provider } from './PageContext';
 import * as styles from './styles';
 
 export type LocalPageWithSidebarProps = {
@@ -20,20 +21,6 @@ export type LocalPageWithSidebarProps = {
 };
 export type PageWithSidebarProps = BoxProps & LocalPageWithSidebarProps;
 
-export const PageWithSidebarContext = React.createContext({
-  isCollapsed: false,
-  isSidebarOpen: true,
-  openSidebar: () => undefined,
-  closeSidebar: () => undefined,
-  toggleSidebar: () => undefined,
-  isSidebarMinimized: false,
-  minimizeSidebar: () => undefined,
-  maximizeSidebar: () => undefined,
-  toggleMinimize: () => undefined,
-  drawer: {},
-  disclosure: {},
-});
-
 const useProps = createHook<PageWithSidebarProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
@@ -46,10 +33,11 @@ const useProps = createHook<PageWithSidebarProps>(
       sidebar,
       ...restProps
     } = props;
-    const boxProps = Box.useProps(restProps);
+    const boxProps = Box.useProps({
+      ...restProps,
+    });
 
-    const isCollapsed = useBreakpoint(collapseBreakpoint);
-    const [isSidebarMinimized, setIsSidebarMinimized] = React.useState(false);
+    const { isCollapsed, sidebar: sidebarState } = React.useContext(PageContext);
 
     const className = useClassName({
       style: styles.PageWithSidebar,
@@ -60,14 +48,14 @@ const useProps = createHook<PageWithSidebarProps>(
     });
     const spacerClassName = useClassName({
       style: styles.PageWithSidebarSpacer,
-      styleProps: { ...props, isCollapsed, isSidebarMinimized },
+      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Spacer',
     });
     const sidebarClassName = useClassName({
       style: styles.PageWithSidebarSidebar,
-      styleProps: { ...props, isCollapsed, isSidebarMinimized },
+      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Sidebar',
@@ -94,65 +82,30 @@ const useProps = createHook<PageWithSidebarProps>(
       themeKeySuffix: 'Content',
     });
 
-    const drawer = Drawer.useState();
-    const disclosure = Disclosure.useState({ visible: defaultIsVisible });
-    const sidebarState = isCollapsed ? drawer : disclosure;
-
-    const contextValue = React.useMemo(
-      () => ({
-        isCollapsed,
-
-        isSidebarOpen: sidebarState.visible,
-        openSidebar: sidebarState.show,
-        closeSidebar: sidebarState.hide,
-        toggleSidebar: sidebarState.toggle,
-
-        isSidebarMinimized,
-        minimizeSidebar: () => setIsSidebarMinimized(true),
-        maximizeSidebar: () => setIsSidebarMinimized(false),
-        toggleMinimize: () => setIsSidebarMinimized((isMinimized) => !isMinimized),
-
-        drawer,
-        disclosure,
-      }),
-      [
-        disclosure,
-        drawer,
-        isCollapsed,
-        isSidebarMinimized,
-        sidebarState.hide,
-        sidebarState.show,
-        sidebarState.toggle,
-        sidebarState.visible,
-      ]
-    );
-
     React.useEffect(() => {
-      if (isCollapsed) {
-        setIsSidebarMinimized(false);
-      } else {
-        drawer.hide();
+      if (!defaultIsVisible) {
+        sidebarState.disclosure.hide();
       }
-    }, [drawer, isCollapsed]);
+    }, [defaultIsVisible, sidebarState.disclosure]);
 
     return {
       ...boxProps,
       className,
       children: (
-        <PageWithSidebarContext.Provider value={contextValue}>
+        <React.Fragment>
           {isCollapsed ? (
             <Drawer
               className={sidebarCollapsedWrapperClassName}
               overrides={overrides}
               {...collapsedSidebarProps}
-              {...drawer}
+              {...sidebarState.drawer}
             >
               <Box className={sidebarClassName} overrides={overrides}>
                 {sidebar}
               </Box>
             </Drawer>
           ) : (
-            <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...disclosure}>
+            <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
               <Box className={spacerClassName} overrides={overrides} />
               <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
                 <Box className={sidebarClassName} overrides={overrides}>
@@ -164,7 +117,7 @@ const useProps = createHook<PageWithSidebarProps>(
           <Box className={contentClassName} overrides={overrides}>
             {children}
           </Box>
-        </PageWithSidebarContext.Provider>
+        </React.Fragment>
       ),
     };
   },

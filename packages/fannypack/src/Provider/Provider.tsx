@@ -3,19 +3,21 @@ import * as React from 'react';
 import { IdProvider } from '../utils/uniqueId';
 import { ThemeProvider } from '../styled';
 import buildTheme from '../theme';
-import { ThemeConfig } from '../types';
+import { LayoutBreakpoint, ThemeConfig } from '../types';
 import { ToastProvider } from '../Toast';
+import { PageProvider } from '../Page/PageContext';
 
 import GlobalStyles from './GlobalStyles';
 
 export type ProviderProps = {
   children: React.ReactNode;
   isStandalone?: boolean;
+  collapseBreakpoint?: LayoutBreakpoint;
   theme?: ThemeConfig;
 };
 
 export function Provider(props: ProviderProps) {
-  const { children, isStandalone, theme } = props;
+  const { children, collapseBreakpoint, isStandalone, theme } = props;
 
   const derivedTheme = React.useMemo(() => {
     if (theme && isStandalone) {
@@ -28,10 +30,12 @@ export function Provider(props: ProviderProps) {
     <ThemeProvider theme={derivedTheme}>
       <IdProvider>
         <ToastProvider>
-          <React.Fragment>
-            {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-            {children}
-          </React.Fragment>
+          <PageProvider collapseBreakpoint={collapseBreakpoint}>
+            <React.Fragment>
+              {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+              {children}
+            </React.Fragment>
+          </PageProvider>
         </ToastProvider>
       </IdProvider>
     </ThemeProvider>
