@@ -34,7 +34,6 @@ const useProps = createHook<TabsTabProps>(
       select,
       tabId,
       setCurrentId,
-      stopId,
       items,
       up,
       down,

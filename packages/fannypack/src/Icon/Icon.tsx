@@ -41,6 +41,7 @@ const useProps = createHook<IconProps>(
     });
 
     const theme = useTheme();
+    // @ts-ignore
     const icon = theme?.Icon?.iconNames?.[props.icon] ?? props.icon;
     const icons = theme?.Icon?.icons ?? {};
 
