@@ -24,16 +24,29 @@ const query = graphql`
 `;
 
 const orders = [
-  '',
-  'primitives',
-  'typography',
-  'layout',
-  'components',
-  'form',
-  'shells',
-  'utilities',
-  'addons',
-  'copy-blocks',
+  {
+    '': [
+      'index',
+      'theming',
+      'palette',
+      'styling-components',
+      'global-styles',
+      'breakpoints',
+      'fonts',
+      'spacing',
+      'composition',
+      'variants',
+    ],
+  },
+  { 'the-box-primitive': ['box', 'css-props', 'altitudes', 'borders', 'border-radius'] },
+  { typography: [] },
+  { layout: [] },
+  { components: [] },
+  { form: [] },
+  { shells: [] },
+  { utilities: [] },
+  { addons: [] },
+  { 'copy-blocks': [] },
 ];
 
 export default function Sidebar(props) {
@@ -71,15 +84,25 @@ export default function Sidebar(props) {
                   font-size: 14px;
                   font-weight: 500;
                   min-height: 2.25em;
+
+                  &:hover {
+                    color: ${palette('primary')(props)} !important;
+                  }
                 `,
               },
             },
           },
         }}
       >
-        {orders.map((order) => {
-          const key = order;
-          const items = sidebarItems[key];
+        {orders.map((orderItem) => {
+          const key = Object.keys(orderItem)[0];
+          const itemOrders = orderItem[key];
+
+          let items = sidebarItems[key];
+          if (itemOrders.length > 0) {
+            items = itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name));
+          }
+
           return (
             <SideNav.Level key={key} title={_startCase(key)}>
               {(items || []).map((item) => {

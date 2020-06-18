@@ -86,7 +86,7 @@ export const codeTheme = styleProps => ({
       }
     },
     {
-      types: ['builtin', 'char', 'constant', 'url'],
+      types: ['builtin', 'char', 'url'],
       style: {
         color: palette('secondary')(styleProps)
       }
@@ -120,11 +120,11 @@ export const codeTheme = styleProps => ({
     {
       types: ['function', 'selector', 'doctype'],
       style: {
-        color: palette('primary')(styleProps)
+        color: palette('secondary')(styleProps)
       }
     },
     {
-      types: ['class-name'],
+      types: ['class-name', 'maybe-class-name'],
       style: {
         color: palette('primary')(styleProps)
       }

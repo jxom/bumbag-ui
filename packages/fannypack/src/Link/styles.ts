@@ -1,16 +1,15 @@
 import { cssClass } from '../styled';
-import { palette, theme } from '../utils';
+import { palette, theme, fontWeight } from '../utils';
 
 export const Link = (styleProps) => cssClass`
   color: ${palette('primary')(styleProps)};
   fill: ${palette('primary')(styleProps)};
   cursor: pointer;
-  text-decoration: underline;
-  text-decoration-skip: ink edges;
+  font-weight: ${fontWeight('semibold')(styleProps)};
+  text-decoration: none;
 
   &:hover {
-    color: ${palette('primary900')(styleProps)};
-    fill: ${palette('primary900')(styleProps)};
+    text-decoration: underline;
 
     & {
       ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
@@ -18,8 +17,6 @@ export const Link = (styleProps) => cssClass`
   }
 
   &:focus {
-    outline-style: dashed;
-
     & {
       ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
     }

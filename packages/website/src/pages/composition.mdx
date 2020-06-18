@@ -1,0 +1,27 @@
+---
+breakpoint: tablet
+title: Composition
+path: /composition/
+---
+
+# Composition
+
+## `use` prop
+
+```jsx-live
+<Box use={Paragraph}>This is a Box rendered as a paragraph</Box>
+```
+
+## Hooks
+
+```jsx
+const boxProps = Box.useProps();
+
+<p {...boxProps}>This is a Box rendered as a paragraph.</p>
+```
+
+## Render props
+
+```jsx-live
+<Box>{boxProps => <p {...boxProps}>This is a Box rendered as a paragraph</p>}</Box>
+```

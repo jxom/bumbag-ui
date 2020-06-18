@@ -17,6 +17,7 @@ export default function Docs(props: Props) {
   const components = React.useMemo(
     () => ({
       ...fannypack,
+      a: (props: any) => <fannypack.Link {...props} />,
       blockquote: (props: any) => (
         <fannypack.Blockquote
           backgroundColor="primaryTint"
@@ -64,7 +65,6 @@ export default function Docs(props: Props) {
 
   return (
     <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
-      {console.log(pageContext)}
       <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
         <MDXProvider components={components}>{children}</MDXProvider>
       </fannypack.PageContent>

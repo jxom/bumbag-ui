@@ -1,30 +1,35 @@
+---
+name: Box
+group: Primitives
+---
+
 import PropTypes from '../../components/PropTypes';
 import Theme from '../../components/Theme';
-import { InlineBlock } from 'fannypack';
+import { Box } from 'fannypack';
 
-# InlineBlock
+# Box
 
-By default it renders a `<Box>` component with `display: inline-block`.
+All components in Fannypack are built on top of the `<Box>` primitive. Any component in Fannypack can use Box's props. [Read more here](https://reakit.io/docs/box/).
+
+By default it renders a `<div>` element with basic reset styles.
 
 ## Import
 
 ```js
-import { InlineBlock } from 'fannypack';
+import { Box } from 'fannypack';
 ```
 
 ## Usage
 
 ```jsx-live
-<InlineBlock>This is an inline block</InlineBlock>
+<Box>This is a box</Box>
 ```
 
-## InlineBlock Props
+## Box Props
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
-
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -34,11 +39,11 @@ import { InlineBlock } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -57,23 +62,23 @@ import { InlineBlock } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">showBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">hiddenBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -90,17 +95,14 @@ import { InlineBlock } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
-
-</details>
-            
 
 ## Theming
 
-<Theme component={InlineBlock} overrides={['InlineBlock.css.root']}>This is an inline block</Theme>
+<Theme component={Box} overrides={['Box.css.root']}>This is a box</Theme>

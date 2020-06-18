@@ -29,11 +29,6 @@ export default function GlobalStyles() {
           box-sizing: inherit;
         }
 
-        *:focus {
-          outline: 3px solid ${palette('primary200')(styleProps)};
-          outline-offset: 2px;
-        }
-
         ${theme('global.css.root')(styleProps)};
       `}
     />
