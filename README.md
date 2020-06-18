@@ -61,4 +61,3 @@ Feel like contributing? That's awesome! We have a [Contributing guide](/CONTRIBU
 ## Acknowledgements
 
 Thanks [Luke Edwards](https://twitter.com/lukeed05) for handing over the `fannypack` npm name!
-
