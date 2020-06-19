@@ -1,21 +1,18 @@
 import * as React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { Button, Columns, Heading, PageContent, Link, Set, Stack, Text } from 'fannypack';
+
 import LandingLayout from '../layout/LandingLayout';
-import LiveCode from '../components/Landing/LandingLiveCode';
+import LiveCode from '../components/Landing/LiveCode';
 
 export default function Index() {
   return (
     <LandingLayout>
-      <PageContent
-        breakpoint="desktop"
-        paddingY="major-15"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white800' }}
-      >
+      <PageContent breakpoint="desktop" paddingY="major-15">
         <Stack display="flex" flexDirection="column" alignItems="center" spacing="major-5">
           <Heading fontSize="600" fontWeight="semibold" textAlign="center">
             Rapidly build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> <br /> React
-            applications with ease.
+            applications with ease
           </Heading>
           <Set spacing="major-2">
             <Button use={GatsbyLink} to="/getting-started/" palette="primary" size="large">
@@ -27,20 +24,20 @@ export default function Index() {
           </Set>
         </Stack>
       </PageContent>
-      <PageContent
-        breakpoint="desktop"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white800' }}
-        paddingY="major-6"
-      >
+      <PageContent breakpoint="desktop" wrapperProps={{ backgroundColor: 'white600' }} paddingY="major-6">
         <Columns>
           <Columns.Column>
             <Heading use="h2" fontSize="400">
               Accessible
             </Heading>
             <Text>
-              Powered by <Link>Reakit</Link> under the hood, all components come with{' '}
+              Powered by{' '}
+              <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
+                Reakit
+              </Link>{' '}
+              under the hood, all components come with{' '}
               <Text fontWeight="semibold">accessible HTML attributes & keyboard interactions</Text> out of the box and
-              follow the WAI-ARIA standards. <Link>Learn more about accessibility.</Link>
+              follow the WAI-ARIA standards.
             </Text>
           </Columns.Column>
           <Columns.Column>
@@ -51,7 +48,9 @@ export default function Index() {
               <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
               by altering the default theme, or creating your own.
               <br />
-              <Link>Learn more about theming.</Link>
+              <Link use={GatsbyLink} to="/theming">
+                Learn more about theming.
+              </Link>
             </Text>
           </Columns.Column>
           <Columns.Column>
@@ -62,12 +61,14 @@ export default function Index() {
               <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a contact
               form, or even a call-to-action.
               <br />
-              <Link>Learn more about composition.</Link>
+              <Link use={GatsbyLink} to="/composition">
+                Learn more about composition.
+              </Link>
             </Text>
           </Columns.Column>
         </Columns>
       </PageContent>
-      <PageContent breakpoint="fullHD">
+      <PageContent breakpoint="fullHD" paddingY="major-6">
         <LiveCode
           code={`// An example inspired by skyscanner.com
 <Group

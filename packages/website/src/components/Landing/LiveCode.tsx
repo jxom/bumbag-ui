@@ -23,6 +23,7 @@ const LiveEditor = styled(_LiveEditor)`
   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace !important;
   padding: 1rem !important;
   height: 100%;
+  flex: 3;
 
   & textarea {
     padding: 1rem !important;
@@ -84,9 +85,7 @@ export default function LiveCode(props: Props) {
     <fannypack.Box marginBottom="major-4">
       <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
         <Group width="100%" verticalBreakpoint="max-desktop">
-          <Box flex="3">
-            <LiveEditor />
-          </Box>
+          <LiveEditor />
           <Box flex="2" border="default" borderLeft="none">
             <LivePreview />
           </Box>

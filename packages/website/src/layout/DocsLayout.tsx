@@ -2,9 +2,11 @@ import React from 'react';
 import * as fannypack from 'fannypack';
 import { MDXProvider } from '@mdx-js/react';
 
+import SEO from '../components/SEO';
 import LiveCode from '../components/LiveCode';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -66,9 +68,13 @@ export default function Docs(props: Props) {
 
   return (
     <fannypack.PageWithHeader sticky header={<Header />}>
+      <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
       <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
         <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
           <MDXProvider components={components}>{children}</MDXProvider>
+        </fannypack.PageContent>
+        <fannypack.PageContent>
+          <Footer />
         </fannypack.PageContent>
       </fannypack.PageWithSidebar>
     </fannypack.PageWithHeader>

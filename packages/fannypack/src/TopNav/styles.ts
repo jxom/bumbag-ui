@@ -46,8 +46,10 @@ export const TopNavItem = (styleProps) => cssClass`
   ${
     (styleProps.href || styleProps.onClick || styleProps.navId) &&
     css`
-      cursor: pointer;
-      margin: 0 0.8rem;
+      &&&&&& {
+        cursor: pointer;
+        margin: 0 0.8rem;
+      }
     `
   }
 

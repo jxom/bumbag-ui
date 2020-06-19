@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, PageWithHeader } from 'fannypack';
+import { Container, PageContent, PageWithHeader } from 'fannypack';
 
-import Header from '../components/Header';
+import SEO from '../components/SEO';
+import Header from '../components/Landing/Header';
+import Footer from '../components/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +21,11 @@ export default function Docs(props: Props) {
         </Container>
       }
     >
+      <SEO />
       {children}
+      <PageContent wrapperProps={{ backgroundColor: 'white600' }}>
+        <Footer />
+      </PageContent>
     </PageWithHeader>
   );
 }
