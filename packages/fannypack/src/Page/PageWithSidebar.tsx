@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Drawer, DrawerProps } from '../Drawer';
 import { Disclosure, DisclosureProps } from '../Disclosure';
 
-import { PageContext, Provider } from './PageContext';
+import { PageContext } from './PageContext';
 import * as styles from './styles';
 
 export type LocalPageWithSidebarProps = {
