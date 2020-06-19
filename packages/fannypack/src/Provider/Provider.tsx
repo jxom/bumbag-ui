@@ -6,6 +6,7 @@ import buildTheme from '../theme';
 import { LayoutBreakpoint, ThemeConfig } from '../types';
 import { ToastProvider } from '../Toast';
 import { PageProvider } from '../Page/PageContext';
+import { Box } from '../Box';
 
 import GlobalStyles from './GlobalStyles';
 
@@ -33,7 +34,7 @@ export function Provider(props: ProviderProps) {
           <PageProvider collapseBreakpoint={collapseBreakpoint}>
             <React.Fragment>
               {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-              {children}
+              {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
             </React.Fragment>
           </PageProvider>
         </ToastProvider>
