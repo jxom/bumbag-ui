@@ -24,6 +24,7 @@ import { faShare } from '@fortawesome/free-solid-svg-icons/faShare';
 import { faSmile } from '@fortawesome/free-solid-svg-icons/faSmile';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 
 export default {
   Icon: {
@@ -64,6 +65,7 @@ export default {
           faSmile,
           faFrown,
           faMeh,
+          faMapMarkerAlt,
         ],
         prefix: 'solid-',
         type: 'font-awesome',
