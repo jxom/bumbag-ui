@@ -13,19 +13,21 @@ export default function Docs(props: Props) {
   const { children } = props;
 
   return (
-    <PageWithHeader
-      sticky
-      header={
-        <Container breakpoint="desktop">
-          <Header />
-        </Container>
-      }
-    >
+    <React.Fragment>
       <SEO />
-      {children}
-      <PageContent wrapperProps={{ backgroundColor: 'white600' }}>
-        <Footer />
-      </PageContent>
-    </PageWithHeader>
+      <PageWithHeader
+        sticky
+        header={
+          <Container breakpoint="desktop">
+            <Header />
+          </Container>
+        }
+      >
+        {children}
+        <PageContent wrapperProps={{ backgroundColor: 'white600' }}>
+          <Footer />
+        </PageContent>
+      </PageWithHeader>
+    </React.Fragment>
   );
 }

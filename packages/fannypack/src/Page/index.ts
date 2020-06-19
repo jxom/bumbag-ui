@@ -7,6 +7,7 @@ import { PageWithHeaderDisclosure } from './PageWithHeaderDisclosure';
 
 export * from './PageContent';
 export * from './PageContentWrapper';
+export * from './PageContext';
 export * from './PageWithHeader';
 export * from './PageWithHeaderDisclosure';
 export * from './PageWithSidebar';

@@ -67,16 +67,18 @@ export default function Docs(props: Props) {
   );
 
   return (
-    <fannypack.PageWithHeader sticky header={<Header />}>
+    <React.Fragment>
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
-      <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
-        <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
-          <MDXProvider components={components}>{children}</MDXProvider>
-        </fannypack.PageContent>
-        <fannypack.PageContent>
-          <Footer />
-        </fannypack.PageContent>
-      </fannypack.PageWithSidebar>
-    </fannypack.PageWithHeader>
+      <fannypack.PageWithHeader sticky header={<Header />}>
+        <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+          <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
+            <MDXProvider components={components}>{children}</MDXProvider>
+          </fannypack.PageContent>
+          <fannypack.PageContent>
+            <Footer />
+          </fannypack.PageContent>
+        </fannypack.PageWithSidebar>
+      </fannypack.PageWithHeader>
+    </React.Fragment>
   );
 }
