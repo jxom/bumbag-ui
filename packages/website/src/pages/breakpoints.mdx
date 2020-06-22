@@ -6,4 +6,80 @@ path: /breakpoints/
 
 # Breakpoints
 
-TODO
+Fannypack comes with 5 defined breakpoints & their ranges:
+
+| Breakpoint        | Width           |
+| ------------- |-------------|
+| `mobile`      | 480px |
+| `tablet`      | 768px      |
+| `desktop` | 1024px      |
+| `widescreen` | 1200px      |
+| `fullHD` | 1440px      |
+| `min-tablet`      | 480px and above      |
+| `max-tablet`      | 768px and below      |
+| `min-desktop` | 768px and above      |
+| `max-desktop` | 1024px and below      |
+| `min-widescreen` | 1024px and above      |
+| `max-widescreen` | 1200px and below      |
+| `min-fullHD` | 1200px and above      |
+
+## Adding breakpoints to the theme
+
+You are able to add your own breakpoints to the [global theme](/theming):
+
+```jsx
+import { Provider } from 'fannypack';
+
+const theme = {
+  breakpoints: {
+    custom: 1000
+  }
+}
+
+<Provider theme={theme}>Hello world!</Provider>
+```
+
+## Using breakpoints with `styled`
+
+Fannypack provides a `breakpoint` utility to use with styled components. This helper function allows you to specify CSS for a given breakpoint and will create a media query.
+
+The first parameter is the breakpoint (e.g. `max-tablet`).
+
+The second parameter is the CSS (e.g. `font-size: 14px;`).
+
+```jsx
+import { Box, breakpoint, styled } from 'fannypack';
+
+const FancyBox = styled(Box)`
+  color: red;
+
+  `${breakpoint(
+    'max-tablet',
+    css`
+      font-size: 14px;
+    `
+  )`}
+`;
+
+<FancyBox>Hello world</FancyBox>
+```
+
+## Theming
+
+### Schema
+
+```js
+const theme = {
+  breakpoints: {
+    mobile: string,
+    tablet: string,
+    desktop: string,
+    widescreen: string,
+    fullHD: string,
+
+    // Plus your own definitions...
+    [key: string]: string,
+    // e.g. custom: 1000
+  }
+}
+```

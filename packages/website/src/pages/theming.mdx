@@ -76,7 +76,47 @@ const App = () => (
 
 ## Component theming
 
-TODO
+It is possible to override the global theme on the component themselves using the `override` prop on any component.
+
+```function-live noInline
+const theme = {
+  Box: {
+    css: {
+      root: {
+        // Here, we are setting the box default color to 'red'
+        // on the global theme.
+        color: 'red'
+      }
+    }
+  }
+};
+
+function Example() {
+  return (
+    <Provider theme={theme}>
+      <Box
+        overrides={{
+          Box: {
+            css: {
+              root: {
+                // However, we can override the global theme on any
+                // component with the `overrides` prop.
+                color: 'blue'
+              }
+            }
+          }
+        }}
+      >
+        A box straight from the Fannypack.
+      </Box>
+    </Provider>
+  )
+}
+
+render(Example)
+```
+
+> An alternative method to this could be to use [styled components](/styling-components) or [CSS props](/css-props). However, `overrides` provides more flexibility.
 
 ## Theme schema
 
@@ -170,6 +210,94 @@ TODO
   Toast: ToastThemeConfig;
   Tooltip: TooltipThemeConfig;
   TopNav: TopNavThemeConfig;
-  Template: TemplateThemeConfig;
 }
 ```
+
+### Reference
+
+#### Core
+
+- [AltitudesThemeConfig](/the-box-primitive/altitudes/#theming)
+- [BordersThemeConfig](/the-box-primitive/borders/#theming)
+- [BorderRadiiThemeConfig](/the-box-primitive/border-radius/#theming)
+- [BreakpointsThemeConfig](/breakpoints/#theming)
+- [FontSizeThemeConfig](/fonts/#theming)
+- [FontWeightsThemeConfig](/fonts/#theming)
+- [GlobalThemeConfig](/global-styles/#theming)
+- [LayoutThemeConfig](/layout-spacing/#theming)
+- [PaletteThemeConfig](/palette/#theming)
+
+#### Components
+
+- [ActionButtonsThemeConfig](/components/action-buttons/#theming)
+- [AlertThemeConfig](/components/alert/#theming)
+- [AutosuggestThemeConfig](/form/autosuggest/#theming)
+- [AutosuggestFieldThemeConfig](/form/autosuggest/#theming)
+- [AvatarThemeConfig](/components/avatar/#theming)
+- [BadgeThemeConfig](/components/badge/#theming)
+- [BreadcrumbThemeConfig](/components/breadcrumb/#theming)
+- [BoxThemeConfig](/the-box-primitive/box/#theming)
+- [BlockquoteThemeConfig](/typography/blockquote/#theming)
+- [ButtonThemeConfig](/components/button/#theming)
+- [CalloutThemeConfig](/components/callout/#theming)
+- [CardThemeConfig](/components/card#theming)
+- [CheckboxThemeConfig](/form/checkbox/#theming)
+- [CheckboxFieldThemeConfig](/form/checkbox/#theming)
+- [CheckboxGroupThemeConfig](/form/checkbox-group/#theming)
+- [CheckboxGroupFieldThemeConfig](/form/checkbox-group/#theming)
+- [ClickableThemeConfig](/utilities/clickable/#theming)
+- [CodeThemeConfig](/components/code#theming)
+- [ColumnsThemeConfig](/layout/columns/#theming)
+- [ContainerThemeConfig](/layout/container/#theming)
+- [DialogThemeConfig](/components/dialog/#theming)
+- [DisclosureThemeConfig](/utilities/disclosure/#theming)
+- [DrawerThemeConfig](/utilities/drawer/#theming)
+- [DropdownMenuThemeConfig](/components/dropdown-menu/#theming)
+- [FieldWrapperThemeConfig](/form/field-wrapper/#theming)
+- [GroupThemeConfig](/utilities/group/#theming)
+- [HeadingThemeConfig](/typography/heading/#theming)
+- [HighlightedCodeThemeConfig](/addons/highlighted-code/#theming)
+- [IconThemeConfig](/components/icon/#theming)
+- [ImageThemeConfig](/components/image/#theming)
+- [InputThemeConfig](/form/input/#theming)
+- [InputFieldThemeConfig](/form/input/#theming)
+- [LinkThemeConfig](/typography/link/#theming)
+- [ListThemeConfig](/typography/list/#theming)
+- [MenuThemeConfig](/components/menu/#theming)
+- [ModalThemeConfig](/utilities/modal/#theming)
+- [NavigationThemeConfig](/components/navigation/#theming)
+- [OverlayThemeConfig](/utilities/overlay/#theming)
+- [PageContentThemeConfig](/page-shells/page-content/#theming)
+- [PageWithSidebarThemeConfig](/page-shells/page-with-sidebar/#theming)
+- [PaginationThemeConfig](/components/pagination/#theming)
+- [ParagraphThemeConfig](/components/paragraph/#theming)
+- [PopoverThemeConfig](/components/popover/#theming)
+- [PortalThemeConfig](/utilities/portal/#theming)
+- [ProgressBarThemeConfig](/components/progress-bar/#theming)
+- [RadioThemeConfig](/form/radio/#theming)
+- [RadioGroupThemeConfig](/form/radio-group/#theming)
+- [RadioGroupFieldThemeConfig](/form/radio-group/#theming)
+- [RatingThemeConfig](/components/rating/#theming)
+- [RoverThemeConfig](/utilities/rover/#theming)
+- [SelectThemeConfig](/form/select/#theming)
+- [SelectFieldThemeConfig](/form/select/#theming)
+- [SelectMenuThemeConfig](/form/select-menu#theming)
+- [SelectMenuFieldThemeConfig](/form/select-menu#theming)
+- [SetThemeConfig](/layout/set/#theming)
+- [SideNavThemeConfig](/components/side-nav/#theming)
+- [SpinnerThemeConfig](/components/spinner/#theming)
+- [StackThemeConfig](/layout/stack/#theming)
+- [SwitchThemeConfig](/form/switch/#theming)
+- [SwitchFieldThemeConfig](/form/switch/#theming)
+- [SwitchGroupThemeConfig](/form/switch-group/#theming)
+- [SwitchGroupFieldThemeConfig](/form/switch-group/#theming)
+- [TabbableThemeConfig](/utilities/tabbable/#theming)
+- [TableThemeConfig](/components/table/#theming)
+- [TabsThemeConfig](/components/tabs/#theming)
+- [TagThemeConfig](/components/tag/#theming)
+- [TextThemeConfig](/typography/text/#theming)
+- [TextareaThemeConfig](/form/textarea/#theming)
+- [TextareaFieldThemeConfig](/form/textarea/#theming)
+- [ToastThemeConfig](/components/toast/#theming)
+- [TooltipThemeConfig](/components/tooltip/#theming)
+- [TopNavThemeConfig](/components/top-nav/#theming)

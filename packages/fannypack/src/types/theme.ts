@@ -1714,6 +1714,7 @@ export type ThemeConfig = {
   ActionButtons?: ActionButtonsThemeConfig;
   Alert?: AlertThemeConfig;
   Autosuggest?: AutosuggestThemeConfig;
+  AutosuggestField?: AutosuggestFieldThemeConfig;
   Avatar?: AvatarThemeConfig;
   Badge?: BadgeThemeConfig;
   Breadcrumb?: BreadcrumbThemeConfig;
@@ -1771,6 +1772,7 @@ export type ThemeConfig = {
   Select?: SelectThemeConfig;
   SelectField?: SelectFieldThemeConfig;
   SelectMenu?: SelectThemeConfig;
+  SelectMenuField?: SelectMenuFieldThemeConfig;
   Set?: SetThemeConfig;
   SideNav?: SideNavThemeConfig;
   Spinner?: SpinnerThemeConfig;

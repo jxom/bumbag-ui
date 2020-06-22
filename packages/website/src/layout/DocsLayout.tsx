@@ -62,6 +62,12 @@ export default function Docs(props: Props) {
       ),
       strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />,
+      table: (props: any) => <fannypack.Table marginBottom="major-4" marginTop="major-4" {...props} />,
+      th: (props: any) => <fannypack.Table.HeadCell {...props} />,
+      tr: (props: any) => <fannypack.Table.Row {...props} />,
+      td: (props: any) => <fannypack.Table.Cell {...props} />,
+      tbody: (props: any) => <fannypack.Table.Body {...props} />,
+      thead: (props: any) => <fannypack.Table.Head {...props} />,
     }),
     []
   );

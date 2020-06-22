@@ -6,4 +6,147 @@ path: /fonts/
 
 # Fonts
 
-TODO
+## Changing the default font
+
+By default, Fannypack uses the following fonts as it's default font set:
+
+```
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+```
+
+You can change the font family through the Fannypack theme:
+
+```jsx
+import { css, ThemeProvider } from 'fannypack';
+
+const theme = {
+  global: {
+    css: {
+      root: css`
+        font-family: "Comic Sans MS";
+      `
+    }
+  }
+}
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    {/* your app... */}
+  </ThemeProvider>
+)
+```
+
+## Font weights
+
+Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
+
+```jsx-live
+<Text fontWeight="normal">Normal text</Text><br/>
+<Text fontWeight="semibold">Semibold text</Text><br/>
+<Text fontWeight="bold">Bold text</Text>
+```
+
+### Accessing font weights
+
+You can access the font weights through styled components:
+
+```jsx
+import { Text, fontWeight, styled } from 'fannypack';
+
+const BoldText = styled(Text)`
+  font-weight: ${fontWeight('bold')};
+`;
+
+<BoldText>I am bold</BoldText>
+```
+
+or, you can use CSS props:
+
+```jsx-live
+<Text fontWeight="bold">I am bold</Text>
+```
+
+## Font sizes
+
+Fannypack uses a scale from `100`-`900` for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
+
+`200` (16px) is the base font size.
+
+```jsx-live
+<Text fontSize="100">Text 100 - 12px</Text><br/>
+<Text fontSize="150">Text 150 - 14px</Text><br/>
+<Text>Text 200 - 16px (normal)</Text><br/>
+<Text fontSize="300">Text 300 - 20px</Text><br/>
+<Text fontSize="400">Text 400 - 24px</Text><br/>
+<Text fontSize="500">Text 500 - 32px</Text><br/>
+<Text fontSize="600">Text 600 - 40px</Text><br/>
+<Text fontSize="700">Text 700 - 48px</Text><br/>
+<Text fontSize="800">Text 800 - 60px</Text><br/>
+<Text fontSize="900">Text 900 - 72px</Text><br/>
+```
+
+### Accessing font sizes
+
+You can access the font sizes through styled components:
+
+```jsx
+import { Text, fontSize, styled } from 'fannypack';
+
+const LargeText = styled(Text)`
+  font-size: ${fontSize('400')};
+`;
+
+<LargeText>I am large</LargeText>
+```
+
+or, you can use CSS props:
+
+```jsx-live
+<Text fontSize="400">I am large</Text>
+```
+
+## Theming
+
+### Schema
+
+```jsx
+const theme = {
+  fontWeights: {
+    normal: number,
+    semibold: number,
+    bold: number,
+    [key: string]: number
+  },
+  fontSizes: {
+    100: number,
+    150: number,
+    200: number,
+    300: number,
+    400: number,
+    500: number,
+    600: number,
+    700: number,
+    800: number,
+    900: number,
+    [key: string]: number
+  }
+}
+```
+
+### Example
+
+```jsx
+const theme = {
+  fontWeights: {
+    normal: 300,
+    semibold: 400,
+    bold: 500,
+    bolder: 600
+  },
+  fontSizes: {
+    50: 0.5,
+    950: 5,
+    reallySmall: 0.25
+  }
+}
+```

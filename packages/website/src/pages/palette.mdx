@@ -211,3 +211,142 @@ Fannypack provides an accessible default palette to get you up and running, hope
   </Flex>
 </Box>
 
+## Theming
+
+### Schema
+
+```
+const theme = {
+  palette: {
+    background: string,
+
+    black: string,
+    white: string,
+    white600: string,
+    white700: string,
+    white800: string,
+    white900: string,
+
+    gray100: string,
+    gray200: string,
+    gray300: string,
+    gray400: string,
+    gray: string,
+    gray500: string,
+    gray600: string,
+    gray700: string,
+    gray800: string,
+    gray900: string,
+
+    default: string,
+    defaultInverted: string,
+
+    primaryTint: string,
+    primaryTintInverted: string,
+    primary100: string,
+    primary200: string,
+    primary300: string,
+    primary400: string,
+    primary: string,
+    primaryInverted: string,
+    primary500: string,
+    primary600: string,
+    primary700: string,
+    primary800: string,
+    primary900: string,
+
+    secondaryTint: string,
+    secondaryTintInverted: string,
+    secondary100: string,
+    secondary200: string,
+    secondary300: string,
+    secondary400: string,
+    secondary: string,
+    secondaryInverted: string,
+    secondary500: string,
+    secondary600: string,
+    secondary700: string,
+    secondary800: string,
+    secondary900: string,
+
+    infoTint: string,
+    infoTintInverted: string,
+    info100: string,
+    info200: string,
+    info300: string,
+    info400: string,
+    info: string,
+    infoInverted: string,
+    info500: string,
+    info600: string,
+    info700: string,
+    info800: string,
+    info900: string,
+
+    successTint: string,
+    successTintInverted: string,
+    success100: string,
+    success200: string,
+    success300: string,
+    success400: string,
+    success: string,
+    successInverted: string,
+    success500: string,
+    success600: string,
+    success700: string,
+    success800: string,
+    success900: string,
+
+    dangerTint: string,
+    dangerTintInverted: string,
+    danger100: string,
+    danger200: string,
+    danger300: string,
+    danger400: string,
+    danger: string,
+    dangerInverted: string,
+    danger500: string,
+    danger600: string,
+    danger700: string,
+    danger800: string,
+    danger900: string,
+
+    warningTint: string,
+    warningTintInverted: string,
+    warning100: string,
+    warning200: string,
+    warning300: string,
+    warning400: string,
+    warning: string,
+    warningInverted: string,
+    warning500: string,
+    warning600: string,
+    warning700: string,
+    warning800: string,
+    warning900: string,
+
+    // Plus your own definitions...
+    [key: string]: string,
+    // e.g. fullySickBlue: '#145abc'
+  }
+}
+```
+
+### Example
+
+```jsx
+import { Provider } from 'fannypack';
+
+const theme = {
+  palette: {
+    text: '#212121',
+    primary: '#574feb',
+    info: '#1e67d5',
+    success: '#0a7d33',
+    danger: '#da1717',
+    warning: '#ed9c22'
+  }
+}
+
+<Provider theme={theme}>Hello world!</Provider>
+```

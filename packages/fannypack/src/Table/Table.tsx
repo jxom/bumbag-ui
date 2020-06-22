@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
@@ -32,8 +32,12 @@ const useProps = createHook<TableProps>(
       themeKeyOverride,
     });
     const boxProps = Box.useProps({
-      ...props,
-      wrapElement: (element) => <Box className={tableWrapperClassName}>{element}</Box>,
+      ...omitCSSProps(props),
+      wrapElement: (element) => (
+        <Box className={tableWrapperClassName} {...pickCSSProps(props)}>
+          {element}
+        </Box>
+      ),
     });
 
     const className = useClassName({
