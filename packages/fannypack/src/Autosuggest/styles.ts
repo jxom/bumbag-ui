@@ -13,8 +13,7 @@ export const AutosuggestPopover = (styleProps) => cssClass`
   &&& {
     max-width: 100%;
     width: 100%;
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: ${styleProps.popoverHeight};
   }
 
   & {
@@ -84,6 +83,15 @@ export const AutosuggestInput = (styleProps) => cssClass`
 `;
 
 export const AutosuggestField = (styleProps) => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
+export const ItemsWrapper = (styleProps) => cssClass`
+  max-height: calc(${styleProps.popoverHeight} - 1rem);
+  overflow-y: scroll;
+
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

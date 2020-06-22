@@ -36,6 +36,7 @@ export type LocalAutosuggestProps = {
   options?: Options;
   onChange: (Option) => void;
   pagination?: boolean;
+  popoverHeight?: string;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
   value: Partial<Option>;
@@ -266,6 +267,13 @@ const useProps = createHook<AutosuggestProps>(
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Popover',
+    });
+    const itemsWrapperClassName = useClassName({
+      style: styles.ItemsWrapper,
+      styleProps: props,
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'ItemsWrapper',
     });
     const inputClassName = useClassName({
       style: styles.AutosuggestInput,
@@ -580,7 +588,6 @@ const useProps = createHook<AutosuggestProps>(
           <DropdownMenuPopover
             {...dropdownMenu}
             ref={popoverRef}
-            use="ul"
             className={dropdownMenuPopoverClassName}
             isTabbable={false}
             onMouseDown={(e) => e.preventDefault()}
@@ -593,52 +600,54 @@ const useProps = createHook<AutosuggestProps>(
             unstable_autoFocusOnHide={false}
             {...popoverProps}
           >
-            {isSuccess ? (
-              <React.Fragment>
-                {filteredOptions
-                  .slice(0, limit)
-                  .filter(Boolean)
-                  .map((option, index) => (
-                    <AutosuggestItem
-                      key={option.key || index}
-                      {...dropdownMenu}
-                      aria-selected={highlightedIndex === index}
-                      aria-disabled={option.disabled}
-                      disabled={option.disabled}
-                      iconAfter={option.iconAfter}
-                      iconAfterProps={option.iconAfterProps}
-                      iconBefore={option.iconBefore}
-                      iconBeforeProps={option.iconBeforeProps}
-                      onClick={handleClickItem(index, option)}
-                      overrides={overrides}
-                      {...itemProps}
-                    >
-                      <Option
-                        label={option.label}
-                        inputValue={inputValue}
-                        option={option}
+            <Box use="ul" className={itemsWrapperClassName} overrides={overrides}>
+              {isSuccess ? (
+                <React.Fragment>
+                  {filteredOptions
+                    .slice(0, limit)
+                    .filter(Boolean)
+                    .map((option, index) => (
+                      <AutosuggestItem
+                        key={option.key || index}
+                        {...dropdownMenu}
+                        aria-selected={highlightedIndex === index}
+                        aria-disabled={option.disabled}
+                        disabled={option.disabled}
+                        iconAfter={option.iconAfter}
+                        iconAfterProps={option.iconAfterProps}
+                        iconBefore={option.iconBefore}
+                        iconBeforeProps={option.iconBeforeProps}
+                        onClick={handleClickItem(index, option)}
                         overrides={overrides}
-                        MatchedLabel={(props) => (
-                          <MatchedLabel label={option.label} inputValue={inputValue} {...props} />
-                        )}
-                      />
-                    </AutosuggestItem>
-                  ))}
-                {isLoadingMore && <LoadingMore loadingText={loadingMoreText} overrides={overrides} />}
-              </React.Fragment>
-            ) : isLoading ? (
-              <Loading loadingText={loadingText} overrides={overrides} />
-            ) : isError ? (
-              <Error errorText={errorText} overrides={overrides} />
-            ) : (
-              <Empty
-                emptyText={emptyText}
-                inputValue={inputValue}
-                create={handleCreate}
-                itemProps={{ 'aria-selected': highlightedIndex === 0 }}
-                overrides={overrides}
-              />
-            )}
+                        {...itemProps}
+                      >
+                        <Option
+                          label={option.label}
+                          inputValue={inputValue}
+                          option={option}
+                          overrides={overrides}
+                          MatchedLabel={(props) => (
+                            <MatchedLabel label={option.label} inputValue={inputValue} {...props} />
+                          )}
+                        />
+                      </AutosuggestItem>
+                    ))}
+                  {isLoadingMore && <LoadingMore loadingText={loadingMoreText} overrides={overrides} />}
+                </React.Fragment>
+              ) : isLoading ? (
+                <Loading loadingText={loadingText} overrides={overrides} />
+              ) : isError ? (
+                <Error errorText={errorText} overrides={overrides} />
+              ) : (
+                <Empty
+                  emptyText={emptyText}
+                  inputValue={inputValue}
+                  create={handleCreate}
+                  itemProps={{ 'aria-selected': highlightedIndex === 0 }}
+                  overrides={overrides}
+                />
+              )}
+            </Box>
           </DropdownMenuPopover>
         </AutosuggestContext.Provider>
       ),
@@ -652,6 +661,7 @@ const useProps = createHook<AutosuggestProps>(
       errorText: 'An error occurred',
       loadingText: 'Loading...',
       loadingMoreText: 'Loading...',
+      popoverHeight: '300px',
       options: [],
       renderClearButton: ClearButton,
       renderEmpty: Empty,
