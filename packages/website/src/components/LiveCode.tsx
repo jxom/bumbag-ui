@@ -114,6 +114,7 @@ export default function LiveCode(props: Props) {
         isBlock
         code={children.replace(/\n$/, '')}
         language={lang}
+        variant="dark"
       />
     );
   }
@@ -124,7 +125,7 @@ export default function LiveCode(props: Props) {
 
   const noInline = props.className.includes('noInline');
 
-  const codeTheme = highlightedCodeStyles.codeTheme({ theme });
+  const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
     <fannypack.Box marginBottom="major-4" marginTop="major-4">

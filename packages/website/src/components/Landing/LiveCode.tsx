@@ -79,7 +79,7 @@ export default function LiveCode(props: Props) {
     window.open(playroomUrl, '_blank');
   }
 
-  const codeTheme = highlightedCodeStyles.codeTheme({ theme });
+  const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
     <fannypack.Box marginBottom="major-4">

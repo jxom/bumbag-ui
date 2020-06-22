@@ -29,16 +29,16 @@ function useProps(props: Partial<HighlightedCodeProps> = {}) {
   const className = useClassName({
     style: styles.HighlightedCode,
     styleProps: props,
-    prevClassName: boxProps.className
+    prevClassName: boxProps.className,
   });
 
   return { ...boxProps, className };
 }
 
 export const HighlightedCode = createComponent<HighlightedCodeProps>(
-  props => {
+  (props) => {
     const theme = React.useContext(ThemeContext);
-    const codeTheme = styles.codeTheme({ theme, ...props });
+    const codeTheme = styles.codeTheme({ theme, ...props })[props.variant];
     const HighlightedCodeProps = useProps(props);
     return createElement({
       children: (
@@ -81,21 +81,22 @@ export const HighlightedCode = createComponent<HighlightedCodeProps>(
         </Highlight>
       ),
       component: ReakitBox,
-      htmlProps: HighlightedCodeProps
+      htmlProps: HighlightedCodeProps,
     });
   },
   {
     attach: {
-      useProps
+      useProps,
     },
     defaultProps: {
       code: '',
       language: 'javascript',
+      variant: 'light',
       preProps: {},
       lineProps: {},
       tokenProps: {},
-      wrapperProps: {}
+      wrapperProps: {},
     },
-    themeKey: 'HighlightedCode'
+    themeKey: 'HighlightedCode',
   }
 );
