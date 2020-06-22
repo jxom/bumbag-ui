@@ -1,5 +1,5 @@
 ---
-breakpoint: tablet
+breakpoint: desktop
 title: Getting started
 path: /getting-started/
 ---
@@ -42,9 +42,108 @@ const MyApp = () => (
 
 ## Usage with Gatsby
 
-TODO
+In order to use Fannypack with [Gatsby](https://gatsbyjs.org/), you will firstly need to install the Gatsby plugin for Fannypack.
+
+Fannypack uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/):
+
+```
+npm install gatsby-plugin-emotion
+```
+
+Then, we will add this plugin to your app's `gatsby-config.js`:
+
+```js
+module.exports = {
+  plugins: ['gatsby-plugin-emotion']
+}
+```
+
+After that, we will add the `<FannypackProvider>` to our `gatsby-browser.js` file:
+
+```jsx
+import React from 'react';
+import { Provider as FannypackProvider } from 'fannypack';
+
+export const wrapRootElement = ({ element, ...props }) => (
+  <FannypackProvider>
+    {element}
+  </FannypackProvider>
+);
+```
+
+We will also have to add a few lines to our `gatsby-ssr.js` file:
+
+```jsx
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { Provider as FannypackProvider, renderStylesToString } from 'fannypack';
+
+export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+  const html = renderStylesToString(renderToString(bodyComponent));
+  replaceBodyHTMLString(html);
+};
+
+export const wrapRootElement = ({ element, ...props }) => (
+  <FannypackProvider>
+    {element}
+  </FannypackProvider>
+);
+```
+
+Now, you can freely use Fannypack in your Gatsby app!
 
 ## Usage with Next.js
 
-TODO
+In order to use Fannypack with [Next.js](https://nextjs.org/), you will firstly have to set your Next.js app for SSR with Fannypack.
 
+Open up your `_document.js` file, and add the following:
+
+```jsx
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { extractCritical } from 'fannypack';
+
+export default class MyDocument extends Document {
+  static getInitialProps({ renderPage }) {
+    const page = renderPage();
+    const styles = extractCritical(page.html);
+    return { ...page, ...styles };
+  }
+
+  render() {
+    return (
+      <html lang="en">
+        <Head>
+          <style data-emotion-css={this.props.ids.join(' ')} dangerouslySetInnerHTML={{ __html: this.props.css }} />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
+  }
+}
+```
+
+Then, open up your `_app.js` file, and add the `<FannypackProvider>`:
+
+
+```jsx
+import * as React from 'react';
+import NextApp from 'next/app';
+import { Provider as FannypackProvider } from 'fannypack';
+
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <FannypackProvider theme={theme}>
+        <Component {...pageProps} />
+      </FannypackProvider>
+    );
+  }
+}
+```
+
+Now you can freely use Fannypack in your Next.js app!

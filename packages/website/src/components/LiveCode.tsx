@@ -17,6 +17,8 @@ const Actions = styled(fannypack.Box)`
   border: 1px solid ${palette('white800')};
   border-top: none;
   padding: ${space(2)}rem ${space(4)}rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 const CodeTabs = styled(fannypack.Box)`
   background-color: ${palette('white')};
@@ -47,6 +49,8 @@ const LiveError = styled(_LiveError)`
   overflow-x: auto;
 `;
 const LivePreview = styled(_LivePreview)`
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border: 1px solid ${palette('white800')} !important;
   border-bottom: none !important;
   padding: 1.5rem !important;
@@ -102,7 +106,15 @@ export default function LiveCode(props: Props) {
     }
     return (
       // @ts-ignore
-      <HighlightedCode {...restProps} marginBottom="major-4" isBlock code={children.replace(/\n$/, '')} language="js" />
+      <HighlightedCode
+        {...restProps}
+        overrides={{ HighlightedCode: { Pre: { css: { root: { borderRadius: '10px' } } } } }}
+        marginBottom="major-4"
+        marginTop="major-4"
+        isBlock
+        code={children.replace(/\n$/, '')}
+        language={lang}
+      />
     );
   }
 
@@ -115,7 +127,7 @@ export default function LiveCode(props: Props) {
   const codeTheme = highlightedCodeStyles.codeTheme({ theme });
 
   return (
-    <fannypack.Box marginBottom="major-4">
+    <fannypack.Box marginBottom="major-4" marginTop="major-4">
       <LiveProvider
         code={code}
         scope={scope}

@@ -6,9 +6,11 @@ path: /theming/
 
 # Theming
 
+## Global theming
+
 Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
-### Overriding the default theme (recommended)
+### Overriding the default global theme (recommended)
 
 The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](https://github.com/fannypackui/fannypack/blob/v5/packages/fannypack/src/types/theme.ts).
 
@@ -58,7 +60,7 @@ const App = () => (
 );
 ```
 
-### Creating your own theme (advanced)
+### Creating your own global theme (advanced)
 
 If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
 
@@ -72,7 +74,11 @@ const App = () => (
 );
 ```
 
-### Theme schema
+## Component theming
+
+TODO
+
+## Theme schema
 
 ```js
 {
