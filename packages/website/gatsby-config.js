@@ -28,7 +28,7 @@ module.exports = {
         // gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-autolink-headers' }],
       },
     },
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-emotion',
     'gatsby-plugin-webpack-bundle-analyzer',
   ],

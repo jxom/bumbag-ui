@@ -16,14 +16,18 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -53,11 +57,6 @@ exports[`defaultProps should render correctly for className 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -81,11 +80,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -94,7 +93,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -102,7 +101,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -232,7 +231,7 @@ samp.emotion-7 {
   vertical-align: -0.125em;
 }
 
-.emotion-46 {
+.emotion-49 {
   color: #574feb !important;
 }
 
@@ -240,7 +239,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-46 test fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-49 test fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -259,9 +258,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -269,59 +268,63 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -341,10 +344,14 @@ exports[`overrides css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -374,11 +381,6 @@ exports[`overrides css.root should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -402,11 +404,11 @@ exports[`overrides css.root should render correctly 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -415,7 +417,7 @@ exports[`overrides css.root should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -423,7 +425,7 @@ exports[`overrides css.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -553,11 +555,11 @@ samp.emotion-7 {
   vertical-align: -0.125em;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-44 {
+.emotion-47 {
   background-color: red;
 }
 
@@ -565,7 +567,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -584,9 +586,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -594,59 +596,63 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -666,14 +672,18 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -703,11 +713,6 @@ exports[`props should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -731,11 +736,11 @@ exports[`props should render correctly 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -744,7 +749,7 @@ exports[`props should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -752,7 +757,7 @@ exports[`props should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -886,7 +891,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -905,9 +910,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -915,59 +920,63 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -987,14 +996,18 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -1024,11 +1037,6 @@ exports[`props should render correctly with CSS props 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -1052,11 +1060,11 @@ exports[`props should render correctly with CSS props 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -1065,7 +1073,7 @@ exports[`props should render correctly with CSS props 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -1073,7 +1081,7 @@ exports[`props should render correctly with CSS props 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -1203,7 +1211,7 @@ samp.emotion-7 {
   vertical-align: -0.125em;
 }
 
-.emotion-46 {
+.emotion-49 {
   color: #574feb !important;
 }
 
@@ -1211,7 +1219,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-46 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-49 fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -1230,9 +1238,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1240,59 +1248,63 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -1312,10 +1324,14 @@ exports[`theming css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -1345,11 +1361,6 @@ exports[`theming css.root should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -1373,11 +1384,11 @@ exports[`theming css.root should render correctly 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -1386,7 +1397,7 @@ exports[`theming css.root should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -1394,7 +1405,7 @@ exports[`theming css.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -1524,11 +1535,11 @@ samp.emotion-7 {
   vertical-align: -0.125em;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-44 {
+.emotion-47 {
   background-color: red;
 }
 
@@ -1536,7 +1547,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -1555,9 +1566,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1565,59 +1576,63 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -1637,10 +1652,14 @@ exports[`variants css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-43.emotion-43.emotion-43 {
+.emotion-46.emotion-46.emotion-46 {
   max-width: 100%;
   width: 100%;
   max-height: 300px;
+}
+
+.emotion-41 {
+  max-height: calc(300px - 1rem);
   overflow-y: scroll;
 }
 
@@ -1670,11 +1689,6 @@ exports[`variants css.root should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0:hover:not(:disabled) {
-  box-shadow: #eeedfd 0px 0px 0px 2px !important;
-  border-color: #cccaf9;
-}
-
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
@@ -1698,11 +1712,11 @@ exports[`variants css.root should render correctly 1`] = `
   opacity: 0.6;
 }
 
-.emotion-42 {
+.emotion-45 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-39 {
+.emotion-42 {
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
   padding: 0.5rem 0;
   width: 100%;
@@ -1711,7 +1725,7 @@ exports[`variants css.root should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-40 {
+.emotion-43 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -1719,7 +1733,7 @@ exports[`variants css.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-40:focus {
+.emotion-43:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -1849,11 +1863,11 @@ samp.emotion-7 {
   vertical-align: -0.125em;
 }
 
-.emotion-44 {
+.emotion-47 {
   position: relative;
 }
 
-.emotion-44 {
+.emotion-47 {
   background-color: red;
 }
 
@@ -1861,7 +1875,7 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-44 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
 >
   <div
     class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
@@ -1880,9 +1894,9 @@ samp.emotion-7 {
       value=""
     />
   </div>
-  <ul
+  <div
     aria-orientation="vertical"
-    class="emotion-39 emotion-40 emotion-1 emotion-42 emotion-43 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1890,58 +1904,62 @@ samp.emotion-7 {
     role="listbox"
     style="display: none;"
   >
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-1"
-      loop=""
-      role="option"
+    <ul
+      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
     >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-1"
+        loop=""
+        role="option"
       >
-        Apples
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-2"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Apples
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-2"
+        loop=""
+        role="option"
       >
-        Bananas
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-3"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Bananas
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-3"
+        loop=""
+        role="option"
       >
-        Oranges
-      </span>
-    </li>
-    <li
-      aria-selected="false"
-      class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
-      id="test-4"
-      loop=""
-      role="option"
-    >
-      <span
-        class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Oranges
+        </span>
+      </li>
+      <li
+        aria-selected="false"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        id="test-4"
+        loop=""
+        role="option"
       >
-        Mangos
-      </span>
-    </li>
-  </ul>
+        <span
+          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+        >
+          Mangos
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

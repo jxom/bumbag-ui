@@ -2,7 +2,7 @@ import * as React from 'react';
 import buildClassNames from 'classnames';
 import _uniq from 'lodash/uniq';
 
-import { ThemeContext } from '../styled';
+import { useTheme } from './useTheme';
 
 export function useClassName({
   style,
@@ -19,7 +19,7 @@ export function useClassName({
   themeKeyOverride?: string;
   themeKeySuffix?: string;
 }) {
-  const theme = React.useContext(ThemeContext);
+  const { theme } = useTheme();
 
   let className;
   let newThemeKey = `${themeKeyOverride || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;

@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { ThemeContext } from '../styled';
+import { FannypackThemeContext } from '../Provider/ThemeContext';
+import { ThemeContext as EmotionContext } from '../styled';
 
 export function useTheme() {
-  const theme = React.useContext(ThemeContext);
-  return theme as any;
+  const { setTheme } = React.useContext(FannypackThemeContext);
+  const theme = React.useContext(EmotionContext);
+  return { theme, setTheme } as any;
 }

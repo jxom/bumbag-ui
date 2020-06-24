@@ -61,7 +61,7 @@ LiveCode.defaultProps = {
 
 export default function LiveCode(props: Props) {
   const { code, ...restProps } = props;
-  const theme = React.useContext(fannypack.ThemeContext);
+  const { theme } = fannypack.useTheme();
   const scope = React.useMemo(
     () => ({
       ...fannypack,

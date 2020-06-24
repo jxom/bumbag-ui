@@ -63,10 +63,6 @@ export function getHiddenInputStyles({
         ${theme(themeKey, `disabled`)(styleProps)};
       }
     }
-    &:not([disabled]):hover + .${iconClassName} {
-      box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
-      border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
-    }
     &:focus + .${iconClassName} {
       border-color: ${palette(`${styleProps.palette || 'primary'}`)(styleProps)};
       box-shadow: ${palette(`${styleProps.palette || 'primary'}100`)(styleProps)} 0px 0px 0px 3px !important;

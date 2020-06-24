@@ -20,6 +20,7 @@ module.exports = {
           fannypack: '../fannypack/src',
           'fannypack-addon-highlighted-code': '../fannypack-addon-highlighted-code/src',
           'fannypack-addon-markdown': '../fannypack-addon-markdown/src',
+          'fannypack-theme-medipass': '../fannypack-theme-medipass/src',
         },
       },
     ],

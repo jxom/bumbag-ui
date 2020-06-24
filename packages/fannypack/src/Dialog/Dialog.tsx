@@ -16,6 +16,7 @@ export type LocalDialogProps = {
   type?: string;
   title?: string | React.ReactElement<any>;
   footer?: string | React.ReactElement<any>;
+  palette?: string;
   showActionButtons?: boolean;
   showCloseButton?: boolean;
   onClickClose?: ButtonProps['onClick'];
@@ -37,6 +38,7 @@ const useProps = createHook<DialogProps>(
       iconProps = {},
       onClickClose,
       overrides,
+      palette,
       showActionButtons,
       showCloseButton,
       standalone,
@@ -97,7 +99,7 @@ const useProps = createHook<DialogProps>(
                 {footer && <Box>{footer}</Box>}
                 {showActionButtons && (
                   <Box>
-                    <ActionButtons {...actionButtonsProps} />
+                    <ActionButtons palette={palette} {...actionButtonsProps} />
                   </Box>
                 )}
               </DialogFooter>

@@ -1,7 +1,8 @@
 import * as React from 'react';
 import _kebabCase from 'lodash/kebabCase';
 
-import { ThemeContext, css } from '../styled';
+import { css } from '../styled';
+import { useTheme } from '../utils';
 import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
 import { cssProps as cssPropsMap, pickCSSProps } from './cssProps';
@@ -183,7 +184,7 @@ function getStyleFromProps(props, theme) {
 }
 
 export function useStyle(props) {
-  const theme = React.useContext(ThemeContext);
+  const { theme } = useTheme();
   const cssProps = pickCSSProps(props);
-  return React.useMemo(() => getStyleFromProps(cssProps, theme), [theme, ...Object.values(cssProps)]);
+  return React.useMemo(() => getStyleFromProps(cssProps, theme), [cssProps, theme]);
 }

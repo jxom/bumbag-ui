@@ -12,11 +12,6 @@ export const Select = (styleProps) => cssClass`
   line-height: 1.5;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
-  &:hover {
-    box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
-    border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
-  }
-
   &[disabled],
   &[aria-disabled="true"] {
     background: ${palette('white700')(styleProps)};

@@ -40,7 +40,7 @@ const useProps = createHook<IconProps>(
       prevClassName: boxProps.className,
     });
 
-    const theme = useTheme();
+    const { theme } = useTheme();
     // @ts-ignore
     const icon = theme?.Icon?.iconNames?.[props.icon] ?? props.icon;
     const icons = theme?.Icon?.icons ?? {};

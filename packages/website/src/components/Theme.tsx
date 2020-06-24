@@ -5,14 +5,14 @@ import _set from 'lodash/set';
 
 export default function Theme(props) {
   const { component: Component, children, overrides, highlightAttribute, injectOverrides = true, ...restProps } = props;
-  return overrides.map(override => {
+  return overrides.map((override) => {
     let key = typeof override === 'object' ? override.key : override;
 
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
     let overrides = {};
     _set(overrides, key, {
-      [highlightAttribute || override.highlightAttribute || 'background']: '#ffe3a4 !important'
+      [highlightAttribute || override.highlightAttribute || 'background']: '#ffe3a4 !important',
     });
 
     let themeObject = {};
@@ -43,10 +43,10 @@ const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g
           })}
         </Box>
         <Disclosure.State>
-          {disclosure => (
+          {(disclosure) => (
             <React.Fragment>
               <Disclosure {...disclosure}>
-                {props => (
+                {(props) => (
                   <Button marginTop="major-1" variant="ghost" palette="primary" size="small" {...props}>
                     {disclosure.visible ? 'Hide' : 'Show'} example
                   </Button>

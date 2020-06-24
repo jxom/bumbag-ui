@@ -66,6 +66,14 @@ export default function Index() {
               </Link>
             </Text>
           </Columns.Column>
+          <Columns.Column>
+            <Heading use="h2" fontSize="400">
+              Performant
+            </Heading>
+            <Text>
+              Fannypack was architected with performance in mind. All components come with a **100 Lighthouse performance rating** out of the box.
+            </Text>
+          </Columns.Column>
         </Columns>
       </PageContent>
       <PageContent breakpoint="fullHD" paddingY="major-6">

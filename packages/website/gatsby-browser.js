@@ -7,13 +7,8 @@
 // You can delete this file if you're not using it
 
 import React from 'react';
+import ElementWrapper from './src/layout/ElementWrapper';
 
-import { Provider, ToastManager } from 'fannypack';
-import theme from './src/theme';
-
-export const wrapRootElement = ({ element, ...props }) => (
-  <Provider theme={theme}>
-    {element}
-    <ToastManager isStacked={false} />
-  </Provider>
-);
+export const wrapRootElement = (props) => {
+  return <ElementWrapper {...props} />;
+};

@@ -9,18 +9,13 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { renderStylesToString } from 'emotion-server';
-
-import { Provider, ToastManager } from 'fannypack';
-import theme from './src/theme';
+import ElementWrapper from './src/layout/ElementWrapper';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   const html = renderStylesToString(renderToString(bodyComponent));
   replaceBodyHTMLString(html);
 };
 
-export const wrapRootElement = ({ element, ...props }) => (
-  <Provider theme={theme}>
-    {element}
-    <ToastManager isStacked={false} />
-  </Provider>
-);
+export const wrapRootElement = (props) => {
+  return <ElementWrapper {...props} />;
+};

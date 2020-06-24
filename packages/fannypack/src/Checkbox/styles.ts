@@ -59,7 +59,7 @@ export const HiddenCheckbox = (styleProps) =>
               left: calc(50% - 0.3125em);
             `
           : css`
-              border: 0.1em solid ${palette('primary')(styleProps)};
+              border: 0.1rem solid ${palette('primary')(styleProps)};
               border-left-width: 0;
               border-top-width: 0;
               height: 0.625em;

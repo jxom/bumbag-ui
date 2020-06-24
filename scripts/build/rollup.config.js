@@ -4,6 +4,7 @@ const replace = require('rollup-plugin-replace');
 const commonjs = require('rollup-plugin-commonjs');
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
+const url = require('rollup-plugin-url');
 const { camelCase, upperFirst } = require('lodash');
 const { getIndexPath, getPublicFiles, getSourcePath, getPackage, getModuleDir, getMainDir } = require('./utils');
 
@@ -40,7 +41,12 @@ function getPlugins(isUMD) {
         'body-scroll-lock': ['enableBodyScroll', 'disableBodyScroll']
       }
     }),
-    resolve({ extensions, preferBuiltins: false })
+    resolve({ extensions, preferBuiltins: false }),
+    url({
+      limit: 10 * 1024, 
+      include: ["**/*.svg"], 
+      emitFiles: true 
+    })
   ];
 
   if (isUMD) {

@@ -60,13 +60,7 @@ const useProps = createHook<ActionButtonsProps>(
 
     const children = (
       <React.Fragment>
-        <Button
-          onClick={onClickCancel}
-          overrides={overrides}
-          size={size}
-          themeKey={`${themeKey}.Button`}
-          {...cancelProps}
-        >
+        <Button onClick={onClickCancel} overrides={overrides} size={size} {...cancelProps}>
           {cancelText}
         </Button>
         {addonButtons}
@@ -76,7 +70,6 @@ const useProps = createHook<ActionButtonsProps>(
           overrides={overrides}
           palette={palette}
           size={size}
-          themeKey={`${themeKey}.Button`}
           type={type}
           {...submitProps}
         >

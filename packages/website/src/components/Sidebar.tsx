@@ -50,7 +50,7 @@ const orders = [
   { 'copy-blocks': [] },
 ];
 
-export default function Sidebar(props) {
+export default function Sidebar(props: any) {
   const { path } = props;
 
   const { allFile } = useStaticQuery(query);
@@ -78,14 +78,13 @@ export default function Sidebar(props) {
             Item: {
               css: {
                 root: (props) => css`
-                  color: ${palette('text200')(props)} !important;
+                  ${props.theme?.SideNav?.Item?.css?.root?.(props) || ''}
+
                   font-size: 14px;
                   font-weight: 500;
-                  min-height: 2.25em;
-
-                  &:hover {
-                    color: ${palette('primary')(props)} !important;
-                  }
+                  min-height: 2.25em !important;
+                  height: 2.25em !important;
+                  text-transform: unset !important;
                 `,
               },
             },
@@ -107,7 +106,7 @@ export default function Sidebar(props) {
                 const frontmatter = item.childMdx?.frontmatter || {};
                 return (
                   <SideNav.Item key={item.name} navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}>
-                    <Link to={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}>
+                    <Link to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${typeof window !== 'undefined' ? window.location.search : ''}`}>
                       {frontmatter.title || _startCase(item.name).replace(/\s/g, '')}
                     </Link>
                   </SideNav.Item>

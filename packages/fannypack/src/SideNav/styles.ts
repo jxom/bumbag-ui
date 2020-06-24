@@ -40,6 +40,7 @@ export const SideNavLevelTitle = (styleProps) => cssClass`
 
 export const SideNavItem = (styleProps) => cssClass`
   align-items: center;
+  color: ${palette('text200')(styleProps)};
   cursor: pointer;
   display: flex;
   min-height: 2.75em;
@@ -48,13 +49,13 @@ export const SideNavItem = (styleProps) => cssClass`
   transition: box-shadow 0.1s ease-in-out 0s, background-color 0.1s, color 0.1s;
 
   a& {
-    color: unset;
-    fill: unset;
+    color: ${palette('text200')(styleProps)};
+    fill: ${palette('text200')(styleProps)};
     text-decoration: unset;
 
     &:hover {
-      color: unset;
-      fill: unset;
+      color: ${palette('text200')(styleProps)};
+      fill: ${palette('text200')(styleProps)};
     }
   }
 

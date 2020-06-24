@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useTheme } from './useTheme';
 
 export function useBreakpoint(_breakpoint) {
-  const theme = useTheme();
+  const { theme } = useTheme();
 
   const minBreakpointValues: { [key: string]: number } = {
     mobile: 0,

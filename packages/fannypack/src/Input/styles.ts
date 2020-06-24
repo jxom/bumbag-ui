@@ -32,11 +32,6 @@ export const Input = (styleProps) => cssClass`
     }
   }
 
-  &:hover:not(:disabled) {
-    box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
-    border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
-  }
-
   &:focus {
     outline: unset;
     z-index: 2;

@@ -15,6 +15,7 @@ import Icon from './Icon';
 import Toast from './Toast';
 
 export default (overrides: ThemeConfig = {}) => ({
+  name: 'default',
   ...overrides,
   altitudes: altitudes(overrides.altitudes || {}),
   borders: borders(overrides.borders || {}),

@@ -12,7 +12,7 @@ type Props = {
 export function ToastProvider(props: Props) {
   const { children } = props;
 
-  const theme = useTheme();
+  const { theme } = useTheme();
   const [toasts, setToasts] = React.useState([]);
   const placement = theme?.Toast?.placement;
   const showCountdown = theme?.Toast?.showCountdown;

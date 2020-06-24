@@ -7,7 +7,7 @@ export default function PropsTypes(props) {
     return Object.keys(cssProps).reduce((currentOverrrides, cssAttribute) => {
       return {
         ...currentOverrrides,
-        [cssAttribute]: () => null
+        [cssAttribute]: () => null,
       };
     }, {});
   }, []);

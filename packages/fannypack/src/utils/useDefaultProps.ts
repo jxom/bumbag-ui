@@ -3,13 +3,13 @@ import _merge from 'lodash/merge';
 import _get from 'lodash/get';
 
 import { omitBy } from './omitBy';
-import { ThemeContext } from '../styled';
+import { useTheme } from '../utils';
 
 const isUndefined = (val) => typeof val === 'undefined';
 
 export function useDefaultProps(props: any = {}, config: any = {}) {
   const { themeKey } = config;
-  const theme = React.useContext(ThemeContext);
+  const { theme } = useTheme();
   const configDefaultProps = omitBy(config?.defaultProps ?? {}, isUndefined);
   const themeDefaultProps = omitBy(_get(theme, `${themeKey}.defaultProps`, {}), isUndefined);
   const themeVariantDefaultProps = omitBy(

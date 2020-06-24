@@ -28,6 +28,10 @@ export const Button = (styleProps) => cssClass`
     `
   }
 
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+
   &[disabled],
   &[aria-disabled="true"] {
     ${getDisabledProperties(styleProps)};
@@ -41,10 +45,6 @@ export const Button = (styleProps) => cssClass`
   ${styleProps.variant === 'outlined' && getOutlinedProperties(styleProps)};
   ${styleProps.variant === 'link' && getLinkProperties(styleProps)};
   ${styleProps.variant === 'ghost' && getGhostProperties(styleProps)};
-
-  & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
-  }
 `;
 
 export const ButtonIcon = (styleProps) => cssClass`
@@ -113,7 +113,8 @@ export const ButtonClose = (styleProps) => cssClass`
   }
 `;
 
-export const isInteractive = (styleProps) => !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled;
+export const isInteractive = (styleProps) =>
+  !styleProps.isStatic && !styleProps.isLoading && !styleProps.disabled && styleProps.variant !== 'link';
 
 export const getDisabledProperties = (styleProps) => css`
   & {
@@ -210,7 +211,9 @@ export const getInteractiveProperties = (styleProps) => css`
       border-color: transparent;
     `};
 
-    ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+    & {
+      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+    }
   }
 
   ${styleProps.variant !== 'link' &&

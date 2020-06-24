@@ -24,7 +24,7 @@ const useProps = createHook<ToastManagerProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const { children, isStacked, overlayProps, spacing, ...restProps } = props;
 
-    const theme = useTheme();
+    const { theme } = useTheme();
     const boxProps = Box.useProps(restProps);
     const overlay = Overlay.useState({ visible: true, animated: true });
     const { toasts } = React.useContext(ToastContext);

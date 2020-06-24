@@ -3,9 +3,8 @@ import { Box as ReakitBox } from 'reakit';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 
 import { Box, BoxProps } from 'fannypack/Box';
-import { ThemeContext } from 'fannypack/styled';
 import { HighlightedCodeThemeConfig } from 'fannypack/types';
-import { useClassName, createComponent, createElement } from 'fannypack/utils';
+import { useClassName, createComponent, createElement, useTheme } from 'fannypack/utils';
 
 import * as styles from './styles';
 
@@ -37,7 +36,7 @@ function useProps(props: Partial<HighlightedCodeProps> = {}) {
 
 export const HighlightedCode = createComponent<HighlightedCodeProps>(
   (props) => {
-    const theme = React.useContext(ThemeContext);
+    const { theme } = useTheme();
     const codeTheme = styles.codeTheme({ theme, ...props })[props.variant];
     const HighlightedCodeProps = useProps(props);
     return createElement({

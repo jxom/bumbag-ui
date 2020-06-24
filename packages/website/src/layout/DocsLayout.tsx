@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from '@reach/router';
 import * as fannypack from 'fannypack';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -7,6 +8,7 @@ import LiveCode from '../components/LiveCode';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import { themeMap } from '../utils/theme';
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +18,8 @@ type Props = {
 
 export default function Docs(props: Props) {
   const { children, pageContext, path } = props;
+
+  //////////////////////////////////////////////////////////////////////
 
   const components = React.useMemo(
     () => ({
@@ -71,6 +75,8 @@ export default function Docs(props: Props) {
     }),
     []
   );
+
+  //////////////////////////////////////////////////////////////////////
 
   return (
     <React.Fragment>

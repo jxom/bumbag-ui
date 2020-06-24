@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Flex, Text, useTheme } from 'fannypack';
 
-const PaletteColor = ({ palette, ...props }) => {
-  const theme = useTheme();
+const PaletteColor = ({ palette, ...props }: any) => {
+  const { theme } = useTheme();
 
   return (
     <Box border="default" borderColor="white800">

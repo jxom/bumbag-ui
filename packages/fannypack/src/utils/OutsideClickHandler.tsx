@@ -20,7 +20,9 @@ export function OutsideClickHandler(props) {
   );
 
   React.useEffect(() => {
-    window.addEventListener('click', handleOutsideClick);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('click', handleOutsideClick);
+    }
     return () => {
       window.removeEventListener('click', handleOutsideClick);
     };
