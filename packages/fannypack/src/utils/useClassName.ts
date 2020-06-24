@@ -21,13 +21,17 @@ export function useClassName({
 }) {
   const { theme } = useTheme();
 
-  let className;
   let newThemeKey = `${themeKeyOverride || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
-  if (Array.isArray(style)) {
-    className = style.map((style) => style({ theme, ...styleProps, themeKey: newThemeKey }));
-  } else {
-    className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
-  }
+
+  const className = React.useMemo(() => {
+    let className;
+    if (Array.isArray(style)) {
+      className = style.map((style) => style({ theme, ...styleProps, themeKey: newThemeKey }));
+    } else {
+      className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
+    }
+    return className;
+  }, [style, theme, themeKey, themeKeyOverride, themeKeySuffix, styleProps]);
 
   const originalThemeKey = themeKeyOverride
     ? `${themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`
