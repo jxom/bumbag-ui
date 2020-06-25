@@ -5,9 +5,44 @@ title: Borders
 
 # Borders
 
+Along with setting CSS borders, you can set pre-defined borders in the **global theme** using the `border` prop.
+
 ```jsx-live
 <Stack>
   <Box border="default" padding="major-2">Box with a default border</Box>
   <Box border="1px solid black" padding="major-2">Box with a manual border</Box>
 </Stack>
+```
+
+## Theming
+
+### Schema
+
+```jsx
+const theme = {
+  borders: {
+    default: {
+      color: string,
+      width: string
+    }
+
+    [key: string]: {
+      color: string,
+      width: string
+    }
+  }
+}
+```
+
+### Example
+
+```jsx
+const theme = {
+  borders: {
+    solidBlack: {
+      color: 'black',
+      width: '2px'
+    }
+  }
+}
 ```

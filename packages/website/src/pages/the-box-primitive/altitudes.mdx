@@ -5,6 +5,8 @@ title: Altitudes
 
 # Altitudes
 
+Every component in Fannypack has the ability to set an `altitude` prop, allowing the component to have a sense of elevation. The `altitude` prop will give the component a box shadow.
+
 ```jsx-live
 <Stack>
   <Box altitude="100" padding="major-2">Altitude 100</Box>
@@ -12,4 +14,36 @@ title: Altitudes
   <Box altitude="300" padding="major-2">Altitude 300</Box>
   <Box altitude="400" padding="major-2">Altitude 400</Box>
 </Stack>
+```
+
+
+## Theming
+
+### Schema
+
+```jsx
+const theme = {
+  altitudes: {
+    100: string,
+    200: string,
+    300: string,
+    400: string,
+
+    [key: number]: string
+  }
+}
+```
+
+### Example
+
+```jsx
+const theme = {
+  altitudes: {
+    100: 'box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 1px rgba(0, 0, 0, 0.02)',
+    200: 'box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15), 0px 0px 4px 2px rgba(0, 0, 0, 0.02)',
+    300: 'box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15), 0px 0px 6px 3px rgba(0, 0, 0, 0.02)',
+    400: 'box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15), 0px 0px 12px 6px rgba(0, 0, 0, 0.02)',
+    700: 'box-shadow: 0px 24px 72px 0px rgba(0, 0, 0, 0.15), 0px 0px 24px 72px rgba(0, 0, 0, 0.02)',
+  }
+}
 ```

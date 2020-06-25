@@ -5,6 +5,8 @@ title: Border radius
 
 # Border radius
 
+Along with setting pixel-based border radii, you can set pre-defined border radii in the **global theme** using the `borderRadius` prop.
+
 ```jsx-live
 <Stack>
   <Box borderRadius="default" border="default" padding="major-3">Box with a default border radius</Box>
@@ -16,4 +18,36 @@ title: Border radius
   <Box borderRadius="5" border="default" padding="major-3">Box with a border radius of 5</Box>
   <Box borderRadius="6" border="default" padding="major-3">Box with a border radius of 6</Box>
 </Stack>
+```
+
+## Theming
+
+### Schema
+
+```jsx
+const theme = {
+  borderRadii: {
+    default: string,
+    '0': string,
+    '1': string,
+    '2': string,
+    '3': string,
+    '4': string,
+    '5': string,
+    '6': string,
+    '7': string,
+    [key: string]: string
+  }
+}
+```
+
+### Example
+
+```jsx
+const theme = {
+  borders: {
+    default: '6px',
+    '8': '60px'
+  }
+}
 ```

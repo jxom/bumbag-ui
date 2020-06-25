@@ -83,7 +83,11 @@ export default function Docs(props: Props) {
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
       <fannypack.PageWithHeader sticky header={<Header />}>
         <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
-          <fannypack.PageContent breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}>
+          <fannypack.PageContent
+            isLayout={Boolean(pageContext.frontmatter.isFluid)}
+            isFluid={Boolean(pageContext.frontmatter.isFluid)}
+            breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}
+          >
             <MDXProvider components={components}>{children}</MDXProvider>
           </fannypack.PageContent>
           <fannypack.PageContent>

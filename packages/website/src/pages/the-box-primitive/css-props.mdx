@@ -5,13 +5,96 @@ title: CSS Props
 
 # CSS props
 
-You're able to apply any CSS attribute as a prop to `<Box>`.
+You're able to apply any CSS attribute as a prop to `<Box>`. These attributes can be passed through as camel-cased props. CSS props can be very useful when you just want to apply an adhoc style without pulling it out into it's own styled component.
 
 ```jsx-live
-<Box backgroundColor="primaryTint" color="primary800" padding="major-2">This is a box</Box>
+<Box
+  backgroundColor="blue"
+  height="50px"
+  width="50px"
+/>
+```
+
+## Colors
+
+You can specify a [color from the palette](/palette) with any color-based CSS attribute.
+
+```jsx-live
+<Box backgroundColor="primary" color="primaryTint">Hello world</Box>
+```
+
+## Spacing
+
+You can specify a [spacing from the theme](/spacing) for margins & paddings.
+
+```jsx-live
+<Box
+  padding="major-2"
+  backgroundColor="primary"
+  color="white"
+>
+  Hello world
+</Box>
+```
+
+There are also `paddingX`, `paddingY`, `marginX` and `marginY` props to specify padding or margin in a particular direction.
+
+```jsx-live
+<Box
+  paddingY="major-2"
+  paddingX="major-4"
+  backgroundColor="primary"
+  color="white"
+>
+  Hello world
+</Box>
+```
+
+## Font sizes
+
+You can specify a [font size from the theme](/fonts) for font sizes.
+
+```jsx-live
+<Text fontSize="400">Hello world</Text>
+```
+
+## Font weights
+
+You can specify a [font weight from the theme](/fonts) for font weights.
+
+```jsx-live
+<Text fontWeight="semibold">Hello world</Text>
+```
+
+## Responsive attributes
+
+You can pass [breakpoints from the theme](/breakpoints) as responsive attributes inside your CSS props to apply the style for a particular viewport.
+
+In this example, the background of the box will bed red until the max desktop width is reached. It will then fallback to the default.
+
+```jsx-live
+<Box
+  backgroundColor={{
+    default: 'primary',
+    'max-desktop': 'red'
+  }}
+  color="white"
+>
+  This is a box
+</Box>
 ```
 
 ## Pseudo selectors
+
+CSS props allow you to specify certain pseudo selectors. This allows you to add adhoc styling for particular interactions.
+
+The available pseudo selectors you can use are:
+
+- `_hover` for `:hover`
+- `_active` for `:active`
+- `_hoveractive` for `:hover:active`
+- `_focus` for `:focus`
+- `_visited` for `:visited`
 
 ```jsx-live
 <Box
