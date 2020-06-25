@@ -6,7 +6,7 @@ import { DrawerState, useDrawerState } from './DrawerState';
 export * from './Drawer';
 export * from './DrawerDisclosure';
 export * from './DrawerState';
-export const Drawer = Object.assign(_Drawer || {}, {
+export const Drawer = Object.assign(_Drawer, {
   Disclosure: DrawerDisclosure,
   useState: useDrawerState,
   State: DrawerState,

@@ -6,7 +6,7 @@ import { useDisclosureState, DisclosureState } from './DisclosureState';
 export * from './Disclosure';
 export * from './DisclosureContent';
 export * from './DisclosureState';
-export const Disclosure = Object.assign(_Disclosure || {}, {
+export const Disclosure = Object.assign(_Disclosure, {
   Content: DisclosureContent,
   useState: useDisclosureState,
   State: DisclosureState,

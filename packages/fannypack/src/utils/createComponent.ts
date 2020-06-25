@@ -22,5 +22,5 @@ export function createComponent<Props>(
   if (config.shouldMemo) {
     ForwardedComponent = React.memo(ForwardedComponent);
   }
-  return Object.assign({}, ForwardedComponent, config.attach);
+  return Object.assign(ForwardedComponent, config.attach);
 }

@@ -3,7 +3,7 @@ import _merge from 'lodash/merge';
 import _get from 'lodash/get';
 
 import { omitBy } from './omitBy';
-import { useTheme } from '../utils';
+import { useTheme } from './useTheme';
 
 const isUndefined = (val) => typeof val === 'undefined';
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import _kebabCase from 'lodash/kebabCase';
 
 import { css } from '../styled';
-import { useTheme } from '../utils';
+import { useTheme } from './useTheme';
 import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
 import { cssProps as cssPropsMap, pickCSSProps } from './cssProps';

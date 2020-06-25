@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import * as React from 'react';
-import { Box } from '../Box';
 
 export function OutsideClickHandler(props) {
   const { children, onOutsideClick } = props;
@@ -28,7 +27,7 @@ export function OutsideClickHandler(props) {
     };
   });
 
-  return <Box ref={childNodeRef}>{children}</Box>;
+  return <div ref={childNodeRef}>{children}</div>;
 }
 
 OutsideClickHandler.defaultProps = {

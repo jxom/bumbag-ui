@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { altitude, breakpoint, theme } from '../utils';
+import { altitude, breakpoint, theme } from '../utils/theme';
 import { ThemeConfig } from '../types';
 
 export const style = (styleProps) => cssClass`
