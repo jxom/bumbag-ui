@@ -5,4 +5,39 @@ title: useBreakpoint
 
 # useBreakpoint
 
-TODO
+## Import
+
+```js
+import { useBreakpoint } from 'fannypack';
+```
+
+## Usage
+
+The `useBreakpoint` hook will return a `boolean` depending if the particular breakpoint query is met.
+
+In the example below, `isWidescreenAndUnder` will return truthy if it is under the [max widescreen width viewport](/breakpoints) (1440px).
+
+```function-live
+function Example() {
+  const isWidescreenAndUnder = useBreakpoint('max-widescreen');
+  return <Text>{isWidescreenAndUnder ? 'Yes' : 'No'}</Text>;
+}
+```
+
+## Schema
+
+```js
+const doesMatch = useBreakpoint(breakpoint)
+```
+
+### Parameters
+
+**<Code marginRight="major-1">breakpoint</Code>** `string`
+
+A valid [breakpoint](/breakpoint) from the theme.
+
+### Return values
+
+**<Code marginRight="major-1">doesMatch</Code>** `string`
+
+Returns truthy if the query is matched.
