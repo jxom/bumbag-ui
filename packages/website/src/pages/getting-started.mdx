@@ -44,10 +44,10 @@ const MyApp = () => (
 
 In order to use Fannypack with [Gatsby](https://gatsbyjs.org/), you will firstly need to install the Gatsby plugin for Fannypack.
 
-Fannypack uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/):
+Fannypack uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/) & `emotion-server`:
 
 ```
-npm install gatsby-plugin-emotion
+npm install gatsby-plugin-emotion emotion-server
 ```
 
 Then, we will add this plugin to your app's `gatsby-config.js`:
@@ -76,7 +76,8 @@ We will also have to add a few lines to our `gatsby-ssr.js` file:
 ```jsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { Provider as FannypackProvider, renderStylesToString } from 'fannypack';
+import { Provider as FannypackProvider } from 'fannypack';
+import { renderStylesToString } from 'emotion-server';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   const html = renderStylesToString(renderToString(bodyComponent));
@@ -96,12 +97,18 @@ Now, you can freely use Fannypack in your Gatsby app!
 
 In order to use Fannypack with [Next.js](https://nextjs.org/), you will firstly have to set your Next.js app for SSR with Fannypack.
 
+Firstly, you will need to install `emotion-server`:
+
+```
+npm install emotion-server
+```
+
 Open up your `_document.js` file, and add the following:
 
 ```jsx
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { extractCritical } from 'fannypack';
+import { extractCritical } from 'emotion-server';
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
