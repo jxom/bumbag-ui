@@ -74,10 +74,11 @@ export default function Index() {
 <Group
   altitude="300"
   borderRadius="4"
+  verticalBreakpoint="max-tablet"
 >
   <Image
     fit="cover"
-    width="200px"
+    width={{ default: '200px', 'max-tablet': '100%' }}
     src="https://bit.ly/3fCkvhp"
   />
   <Stack padding="major-2" spacing="major-2">

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Button, TopNav, Image } from 'fannypack';
+import { Hide, TopNav, Image } from 'fannypack';
 
 export default function Header(props) {
   return (
@@ -14,12 +14,14 @@ export default function Header(props) {
         <TopNav.Item href="/getting-started/" fontWeight="semibold">
           Documentation
         </TopNav.Item>
-        <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
-          Sponsor
-        </TopNav.Item>
-        <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
-          GitHub
-        </TopNav.Item>
+        <Hide below="desktop">
+          <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
+            Sponsor
+          </TopNav.Item>
+          <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
+            GitHub
+          </TopNav.Item>
+        </Hide>
       </TopNav.Section>
     </TopNav>
   );

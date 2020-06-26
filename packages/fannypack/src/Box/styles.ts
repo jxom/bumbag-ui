@@ -5,7 +5,6 @@ import { ThemeConfig } from '../types';
 export const style = (styleProps) => cssClass`
   & {
     ${styleProps.style};
-    ${buildVisibleAttributes(styleProps)};
   }
 
   ${
@@ -36,16 +35,3 @@ export const Box = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
-
-function buildVisibleAttributes(props: { hiddenBreakpoint?: string; showBreakpoint?: string; theme: ThemeConfig }) {
-  let _breakpoint = props.hiddenBreakpoint || props.showBreakpoint;
-  if (!_breakpoint) return;
-
-  return breakpoint(
-    _breakpoint,
-    css`
-      display: none !important;
-    `,
-    { show: Boolean(props.showBreakpoint) }
-  )(props);
-}

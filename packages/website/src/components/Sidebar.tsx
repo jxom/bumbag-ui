@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Image, Stack, SideNav, css, palette } from 'fannypack';
+import { Image, Stack, SideNav, css, usePage } from 'fannypack';
 import _startCase from 'lodash/startCase';
 
 const query = graphql`
@@ -52,6 +52,8 @@ const orders = [
 
 export default function Sidebar(props: any) {
   const { path } = props;
+
+  const { sidebar } = usePage();
 
   const { allFile } = useStaticQuery(query);
   const sidebarItems = allFile.edges.reduce((currentItems, node) => {
@@ -105,8 +107,16 @@ export default function Sidebar(props: any) {
               {(items || []).map((item) => {
                 const frontmatter = item.childMdx?.frontmatter || {};
                 return (
-                  <SideNav.Item key={item.name} navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}>
-                    <Link to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${typeof window !== 'undefined' ? window.location.search : ''}`}>
+                  <SideNav.Item
+                    key={item.name}
+                    onClick={sidebar.close}
+                    navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
+                  >
+                    <Link
+                      to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${
+                        typeof window !== 'undefined' ? window.location.search : ''
+                      }`}
+                    >
                       {frontmatter.title || _startCase(item.name).replace(/\s/g, '')}
                     </Link>
                   </SideNav.Item>

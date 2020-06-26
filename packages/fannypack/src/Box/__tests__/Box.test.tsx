@@ -97,36 +97,6 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly for showBreakpoint with a single viewport', () => {
-    const { container } = render(<Box showBreakpoint="tablet" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for showBreakpoint with a min viewport', () => {
-    const { container } = render(<Box showBreakpoint="min-desktop" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for showBreakpoint with a max viewport', () => {
-    const { container } = render(<Box showBreakpoint="max-tablet" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for hiddenBreakpoint with a single viewport', () => {
-    const { container } = render(<Box hiddenBreakpoint="tablet" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for hiddenBreakpoint with a min viewport', () => {
-    const { container } = render(<Box hiddenBreakpoint="min-desktop" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly for hiddenBreakpoint with a max viewport', () => {
-    const { container } = render(<Box hiddenBreakpoint="max-tablet" />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   it('should render correctly for an altitude', () => {
     const { container } = render(<Box altitude="400" />);
     expect(container.firstChild).toMatchSnapshot();

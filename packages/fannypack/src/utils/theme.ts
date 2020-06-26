@@ -118,8 +118,11 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
       fullHD: props?.theme?.breakpoints?.widescreen,
     };
     let breakpointValue = props?.theme?.breakpoints?.[strippedBreakpoint];
+    if (!show && breakpoint.includes('max')) {
+      breakpointValue = breakpointValue - 1;
+    }
     if (!show && breakpoint.includes('min')) {
-      breakpointValue = minBreakpointValues[strippedBreakpoint] + 1;
+      breakpointValue = minBreakpointValues[strippedBreakpoint];
     }
     if (show && breakpoint.includes('min')) {
       breakpointValue = minBreakpointValues[strippedBreakpoint];
@@ -145,14 +148,14 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
         `;
       }
       return css`
-        @media screen and (min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue}px) {
+        @media screen and (min-width: ${minBreakpointValues[breakpoint]}px) and (max-width: ${breakpointValue - 1}px) {
           ${cssStyle};
         }
 
-        @media screen and (max-width: ${minBreakpointValues[breakpoint]}px) {
+        @media screen and (max-width: ${minBreakpointValues[breakpoint] - 1}px) {
           ${elseStyle};
         }
-        @media screen and (min-width: ${breakpointValue + 1}px) {
+        @media screen and (min-width: ${breakpointValue}px) {
           ${elseStyle};
         }
       `;

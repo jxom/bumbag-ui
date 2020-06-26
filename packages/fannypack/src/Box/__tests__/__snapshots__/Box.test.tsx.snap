@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-1pwrqjj css-3ekj6a fp-Box",
+  "className": "css-1pwrqjj css-o12mw7 fp-Box",
 }
 `;
 
@@ -517,174 +517,6 @@ exports[`props should render correctly for an altitude 1`] = `
 />
 `;
 
-exports[`props should render correctly for hiddenBreakpoint with a max viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (max-width:768px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
-exports[`props should render correctly for hiddenBreakpoint with a min viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (min-width:769px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
-exports[`props should render correctly for hiddenBreakpoint with a single viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (min-width:481px) and (max-width:768px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
-exports[`props should render correctly for showBreakpoint with a max viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (min-width:769px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
-exports[`props should render correctly for showBreakpoint with a min viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (max-width:768px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
-exports[`props should render correctly for showBreakpoint with a single viewport 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-@media screen and (max-width:480px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width:769px) {
-  .emotion-1 {
-    display: none !important;
-  }
-}
-
-<div
-  class="emotion-0 emotion-1 fp-Box"
-/>
-`;
-
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-0 {
   margin: unset;
@@ -756,13 +588,13 @@ exports[`props should render correctly with CSS props with breakpoints 1`] = `
   background-color: #574feb !important;
 }
 
-@media screen and (min-width:1px) and (max-width:480px) {
+@media screen and (min-width:0px) and (max-width:479px) {
   .emotion-1 {
     background-color: #9e46d8 !important;
   }
 }
 
-@media screen and (min-width:769px) and (max-width:1024px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
   .emotion-1 {
     background-color: red !important;
   }
@@ -793,7 +625,7 @@ exports[`props should render correctly with CSS props with breakpoints 2`] = `
   background-color: #574feb !important;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   .emotion-1 {
     background-color: #9e46d8 !important;
   }
@@ -824,7 +656,7 @@ exports[`props should render correctly with CSS props with breakpoints 3`] = `
   background-color: #574feb !important;
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:768px) {
   .emotion-1 {
     background-color: #9e46d8 !important;
   }

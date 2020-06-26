@@ -15,12 +15,12 @@ import { useBreakpoint } from 'fannypack';
 
 The `useBreakpoint` hook will return a `boolean` depending if the particular breakpoint query is met.
 
-In the example below, `isWidescreenAndUnder` will return truthy if it is under the [max widescreen width viewport](/breakpoints) (1440px).
+In the example below, `isWidescreenAndUnder` will return truthy if it is under the [max widescreen width viewport](/breakpoints) (1199px).
 
 ```function-live
 function Example() {
   const isWidescreenAndUnder = useBreakpoint('max-widescreen');
-  return <Text>{isWidescreenAndUnder ? 'Yes' : 'No'}</Text>;
+  return <Text fontSize={{ default: '200', 'max-widescreen': '400' }}>{isWidescreenAndUnder ? 'Yes' : 'No'}</Text>;
 }
 ```
 
@@ -38,6 +38,6 @@ A valid [breakpoint](/breakpoint) from the theme.
 
 ### Return values
 
-**<Code marginRight="major-1">doesMatch</Code>** `string`
+**<Code marginRight="major-1">doesMatch</Code>** `boolean`
 
 Returns truthy if the query is matched.

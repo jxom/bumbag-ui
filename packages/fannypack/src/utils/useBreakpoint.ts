@@ -23,11 +23,11 @@ export function useBreakpoint(_breakpoint) {
     key = 'max-width';
   }
 
-  const breakpointValue = theme?.breakpoints?.[breakpoint];
+  const breakpointValue = key === 'min-width' ? minBreakpointValues[breakpoint] : theme?.breakpoints?.[breakpoint];
 
   let query = key
-    ? `(${key}: ${breakpointValue}px)`
-    : `(min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue}px)`;
+    ? `(${key}: ${key === 'min-width' ? breakpointValue : breakpointValue - 1}px)`
+    : `(min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue - 1}px)`;
 
   const mediaQueryList =
     typeof window !== 'undefined'

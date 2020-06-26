@@ -13,11 +13,6 @@ describe('props', () => {
     const { container } = render(<Heading color="primary">Hello world</Heading>);
     expect(container.firstChild).toMatchSnapshot();
   });
-
-  it('should render correctly with breakpoint', () => {
-    const { container } = render(<Heading hiddenBreakpoint="desktop">Hello world</Heading>);
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
 
 describe('composition', () => {
