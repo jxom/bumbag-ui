@@ -125,10 +125,7 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
       breakpointValue = minBreakpointValues[strippedBreakpoint];
     }
     if (show && breakpoint.includes('min')) {
-      breakpointValue = minBreakpointValues[strippedBreakpoint];
-    }
-    if (show && breakpoint.includes('max')) {
-      breakpointValue = breakpointValue + 1;
+      breakpointValue = minBreakpointValues[strippedBreakpoint] - 1;
     }
 
     if (!breakpoint.includes('min-') && !breakpoint.includes('max-')) {

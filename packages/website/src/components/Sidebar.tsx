@@ -109,7 +109,7 @@ export default function Sidebar(props: any) {
                 return (
                   <SideNav.Item
                     key={item.name}
-                    onClick={sidebar.close}
+                    onClick={sidebar.drawer.hide}
                     navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
                   >
                     <Link

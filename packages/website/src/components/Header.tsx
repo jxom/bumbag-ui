@@ -5,8 +5,7 @@ import ThemePicker from './ThemePicker';
 
 export default function Header(props) {
   const { theme } = useTheme();
-  const { isCollapsed } = usePage();
-  const disclosureProps = PageWithSidebar.Disclosure.useProps();
+  const { isCollapsed, sidebar } = usePage();
   const Logo = theme._docs?.Logo || <Image src="/logo.png" height="44px" />;
   return (
     <TopNav>
@@ -31,7 +30,7 @@ export default function Header(props) {
         </Hide>
         {isCollapsed && (
           <TopNav.Item>
-            <Button {...disclosureProps} variant="ghost">
+            <Button onClick={sidebar.open} variant="ghost">
               <Icon icon="solid-bars" />
             </Button>
           </TopNav.Item>

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box as ReakitBox, BoxProps as ReakitBoxProps } from 'reakit';
-import classNames from 'classnames';
 
 import { ThemeConfig, CSSProperties } from '../types';
 import {
