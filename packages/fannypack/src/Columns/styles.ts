@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { breakpoint, theme } from '../utils';
+import { breakpoint, space, theme } from '../utils';
 
 export const Columns = (styleProps) => cssClass`
   display: flex;
@@ -7,12 +7,12 @@ export const Columns = (styleProps) => cssClass`
   ${
     !styleProps.isGapless &&
     css`
-      margin-left: -${theme('layout', 'gapUnit')(styleProps)}rem;
-      margin-right: -${theme('layout', 'gapUnit')(styleProps)}rem;
-      margin-top: -${theme('layout', 'gapUnit')(styleProps)}rem;
+      margin-left: -${space(styleProps.spacing)(styleProps) / 2}rem;
+      margin-right: -${space(styleProps.spacing)(styleProps) / 2}rem;
+      margin-top: -${space(styleProps.spacing)(styleProps) / 2}rem;
 
       &:last-child {
-        margin-bottom: -${theme('layout', 'gapUnit')(styleProps)}rem;
+        margin-bottom: -${space(styleProps.spacing)(styleProps) / 2}rem;
       }
     `
   };
@@ -31,7 +31,7 @@ export const Column = (styleProps) => cssClass`
   ${
     !styleProps.isGapless &&
     css`
-      padding: ${theme('layout', 'gapUnit')(styleProps)}rem;
+      padding: ${space(styleProps.spacing)(styleProps) / 2}rem;
     `
   };
 

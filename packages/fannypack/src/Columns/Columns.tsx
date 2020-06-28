@@ -12,6 +12,7 @@ export type LocalColumnsProps = {
   isGapless?: boolean;
   isOneLine?: boolean;
   minBreakpoint?: 'tablet' | 'mobile';
+  spacing?: string;
 };
 export type ColumnsProps = BoxProps & LocalColumnsProps;
 
@@ -31,8 +32,9 @@ const useProps = createHook<ColumnsProps>(
       () => ({
         isGapless: props.isGapless,
         minBreakpoint: props.minBreakpoint,
+        spacing: props.spacing,
       }),
-      [props.isGapless, props.minBreakpoint]
+      [props.isGapless, props.minBreakpoint, props.spacing]
     );
 
     return {
@@ -46,6 +48,7 @@ const useProps = createHook<ColumnsProps>(
       isGapless: false,
       isOneLine: false,
       minBreakpoint: undefined,
+      spacing: 'major-2',
     },
     themeKey: 'Columns',
   }

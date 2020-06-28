@@ -154,7 +154,6 @@ export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
 export type LayoutThemeConfig = {
-  gapUnit?: ThemeAttribute<number>;
   minorUnit?: ThemeAttribute<number>;
   majorUnit?: ThemeAttribute<number>;
 };

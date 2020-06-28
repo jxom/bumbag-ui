@@ -593,14 +593,13 @@ const useProps = createHook<AutosuggestProps>(
             onMouseDown={(e) => e.preventDefault()}
             onMouseEnter={handleMouseEnterPopover}
             onMouseLeave={handleMouseLeavePopover}
-            onScroll={handleScrollPopover}
             overrides={overrides}
             role="listbox"
             hideOnClickOutside={false}
             unstable_autoFocusOnHide={false}
             {...popoverProps}
           >
-            <Box use="ul" className={itemsWrapperClassName} overrides={overrides}>
+            <Box use="ul" className={itemsWrapperClassName} onScroll={handleScrollPopover} overrides={overrides}>
               {isSuccess ? (
                 <React.Fragment>
                   {filteredOptions
