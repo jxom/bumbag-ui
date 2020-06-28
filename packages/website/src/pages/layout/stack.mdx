@@ -10,49 +10,47 @@ import { Stack } from 'fannypack';
 import { Stack } from 'fannypack';
 ```
 
-### Basic Usage
+## Usage
 
-The `<Stack>` component is a utility belt that wraps around layout elements to space them out correctly.
+The `<Stack>` component that assists in creating layouts where it's children are evenly spaced.
 
 ```jsx-live
 <Stack>
-  <Box backgroundColor="white700" padding="major-3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus at.
-    Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient montes,
-    nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et posuere
-    leo. Cras placerat sapien in consectetur aliquet.
-  </Box>
-  <Box backgroundColor="white700" padding="major-3">
-    <Stack spacing="major-2">
-      <Box backgroundColor="white" padding="major-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
-        at. Sed mollis eros sem, eu tincidunt lectus interdum sed.
-      </Box>
-      <Box backgroundColor="white" padding="major-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia lacinia dui id pellentesque. Orci
-        varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec laoreet magna non
-        ornare consectetur. Proin cursus consectetur ligula, et posuere leo. Cras placerat sapien in consectetur
-        aliquet.
-      </Box>
+  <Card>First</Card>
+  <Card>
+    <Stack>
+      <Card variant="bordered">Second</Card>
+      <Card variant="bordered">Third</Card>
     </Stack>
-  </Box>
+  </Card>
   <Stack orientation="horizontal">
-    <Box backgroundColor="white700" padding="major-3">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
-      at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
-      montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
-      posuere leo. Cras placerat sapien in consectetur aliquet.
-    </Box>
-    <Box backgroundColor="white700" padding="major-3">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
-      at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
-      montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
-      posuere leo. Cras placerat sapien in consectetur aliquet.
-    </Box>
+    <Card>Fourth</Card>
+    <Card>Fifth</Card>
   </Stack>
+</Stack>
+```
+
+### Gap
+
+You can specify a gap spacing on your `<Stack>` with the `spacing` prop.
+
+```jsx-live
+<Stack spacing="major-2">
+  <Card>First</Card>
+  <Card>Second</Card>
+  <Card>Third</Card>
+</Stack>
+```
+
+### Vertical breakpoints
+
+You can specify a gap spacing on your `<Stack>` with the `spacing` prop.
+
+```jsx-live
+<Stack spacing="major-2">
+  <Card>First</Card>
+  <Card>Second</Card>
+  <Card>Third</Card>
 </Stack>
 ```
 
@@ -60,21 +58,21 @@ The `<Stack>` component is a utility belt that wraps around layout elements to s
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">verticalAt</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">verticalAt</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -84,11 +82,11 @@ The `<Stack>` component is a utility belt that wraps around layout elements to s
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -107,15 +105,15 @@ The `<Stack>` component is a utility belt that wraps around layout elements to s
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -132,16 +130,16 @@ The `<Stack>` component is a utility belt that wraps around layout elements to s
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 

@@ -24,7 +24,7 @@ export const verticalGroups = () => (
 );
 
 export const responsiveBreakpoint = () => (
-  <Group verticalBreakpoint="max-desktop">
+  <Group verticalBelow="widescreen">
     <Box backgroundColor="primary" color="white" padding="0.5rem 1rem">
       Hello
     </Box>

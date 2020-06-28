@@ -9,7 +9,7 @@ import * as styles from './styles';
 export type LocalGroupProps = {
   borderRadius?: string;
   orientation?: 'vertical' | 'horizontal';
-  verticalBreakpoint?: LayoutBreakpoint;
+  verticalBelow?: LayoutBreakpoint;
 };
 export type GroupProps = BoxProps & LocalGroupProps;
 

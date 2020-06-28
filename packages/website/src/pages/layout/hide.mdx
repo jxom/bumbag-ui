@@ -8,6 +8,10 @@ import { Hide } from 'fannypack';
 
 ## Usage
 
+The `<Hide>` component can be used to **visually hide elements** from the screen.
+
+Pass a `below` prop to hide the element(s) **under** a particular breakpoint, or pass an `above` hide to show element(s) **above** a particular breakpoint.
+
 ```jsx-live
 <Hide below="desktop">
   This should hide on viewports below desktop.
@@ -17,16 +21,18 @@ import { Hide } from 'fannypack';
 </Hide>
 ```
 
+> Note: The `<Hide>` component does not render an element wrapper, meaning it works well with layout components. It just adds hidden styles to each of it's children.
+
 ## Props
 
 ### Hide Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">above</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">above</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">below</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">below</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />

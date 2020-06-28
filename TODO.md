@@ -1,2 +1,1 @@
 - Add descriptions to props for docs
-- Add spacing to Columns

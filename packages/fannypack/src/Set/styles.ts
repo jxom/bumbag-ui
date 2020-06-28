@@ -1,6 +1,13 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
 
+const verticalBreakpoints = {
+  tablet: 'mobile',
+  desktop: 'tablet',
+  widescreen: 'desktop',
+  fullHD: 'widescreen',
+};
+
 export const Set = (styleProps) => cssClass`
   display: flex;
 
@@ -20,7 +27,7 @@ export const Set = (styleProps) => cssClass`
         `
       : css`
           ${breakpoint(
-            styleProps.verticalBreakpoint,
+            styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
             css`
               flex-direction: column;
 
@@ -64,7 +71,7 @@ export const Set = (styleProps) => cssClass`
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBreakpoint,
+              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
               css`
                 &:not(:last-child) {
                   margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;

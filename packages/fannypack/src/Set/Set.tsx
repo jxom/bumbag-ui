@@ -10,7 +10,7 @@ export type LocalSetProps = {
   isFilled?: boolean;
   orientation?: 'vertical' | 'horizontal';
   spacing?: string;
-  verticalBreakpoint?: LayoutBreakpoint;
+  verticalBelow?: LayoutBreakpoint;
 };
 export type SetProps = BoxProps & LocalSetProps;
 
@@ -33,7 +33,7 @@ const useProps = createHook<SetProps>(
       isFilled: false,
       orientation: 'horizontal',
       spacing: 'minor-2',
-      verticalBreakpoint: undefined,
+      verticalBelow: undefined,
     },
     themeKey: 'Set',
   }

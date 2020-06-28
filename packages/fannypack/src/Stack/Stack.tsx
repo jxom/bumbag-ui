@@ -8,7 +8,7 @@ import * as styles from './styles';
 export type LocalStackProps = {
   orientation?: 'vertical' | 'horizontal';
   spacing?: string;
-  verticalAt?: string;
+  verticalBelow?: string;
 };
 export type StackProps = BoxProps & LocalStackProps;
 
@@ -31,7 +31,7 @@ const useProps = createHook<StackProps>(
     defaultProps: {
       orientation: 'vertical',
       spacing: 'major-4',
-      verticalAt: 'tablet',
+      verticalBelow: 'desktop',
     },
     themeKey: 'Stack',
   }

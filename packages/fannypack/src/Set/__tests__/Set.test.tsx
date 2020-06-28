@@ -47,7 +47,7 @@ describe('props', () => {
 
   it('should render correctly for a vertical breakpoint', () => {
     const { container } = render(
-      <Set verticalBreakpoint="max-tablet">
+      <Set verticalBelow="desktop">
         <Box>hello</Box>
         <Box>world</Box>
       </Set>

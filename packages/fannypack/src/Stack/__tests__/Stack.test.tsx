@@ -37,7 +37,7 @@ describe('props', () => {
 
   it('should render correctly for a horizontal set with breakpoint', () => {
     const { container } = render(
-      <Stack orientation="horizontal" verticalAt="desktop">
+      <Stack orientation="horizontal" verticalBelow="widescreen">
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>

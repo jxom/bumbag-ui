@@ -74,7 +74,7 @@ export default function Index() {
 <Group
   altitude="300"
   borderRadius="4"
-  verticalBreakpoint="max-tablet"
+  verticalBelow="desktop"
 >
   <Image
     fit="cover"

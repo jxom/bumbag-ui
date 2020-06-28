@@ -86,7 +86,7 @@ export default function Docs(props: Props) {
           <fannypack.PageContent
             isLayout={Boolean(pageContext.frontmatter.isFluid)}
             isFluid={Boolean(pageContext.frontmatter.isFluid)}
-            breakpoint={pageContext.frontmatter.breakpoint || 'desktop'}
+            breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
           >
             <MDXProvider components={components}>{children}</MDXProvider>
           </fannypack.PageContent>
