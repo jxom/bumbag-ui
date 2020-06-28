@@ -11,6 +11,10 @@ import { Page } from 'fannypack';
 
 ## Usage
 
+The `<PageWithSidebar>` component enables you to build a page layout with a sidebar.
+
+Provide your sidebar component to the `sidebar` prop, and the rest of your page as children.
+
 ```jsx
 <PageWithSidebar sidebar={<Box>This is a sidebar</Box>}>
   Hello world
@@ -19,23 +23,51 @@ import { Page } from 'fannypack';
 
 ### Toggling the sidebar
 
+You can toggle the sidebar with your own component using the `<PageWithSidebar.Disclosure>` component.
+
 ```jsx-live
-<PageWithSidebar.Disclosure>
+<PageWithSidebar.Disclosure use={Button}>
   Toggle sidebar
 </PageWithSidebar.Disclosure>
 ```
 
+Or you can use the `usePage` hook.
+
+```function-live
+function Example() {
+  const { sidebar } = usePage();
+  return (
+    <Button onClick={sidebar.toggle}>Toggle sidebar</Button>
+  )
+}
+```
+
 ### Minimizing the sidebar
 
+You can minimize the sidebar with your own component using the `<PageWithSidebar.Minimize>` component.
+
 ```jsx-live
-<PageWithSidebar.Minimize>
+<PageWithSidebar.Minimize use={Button}>
   Minimize sidebar
 </PageWithSidebar.Minimize>
+```
+
+Or you can use the `usePage` hook.
+
+```function-live
+function Example() {
+  const { sidebar } = usePage();
+  return (
+    <Button onClick={sidebar.toggleMinimize}>Minimize sidebar</Button>
+  )
+}
 ```
 
 ### Sidebar width
 
 #### Expanded
+
+Customize the width of the expanded sidebar with the `sidebarWidth` prop.
 
 ```jsx
 <PageWithSidebar
@@ -48,6 +80,8 @@ import { Page } from 'fannypack';
 
 #### Collapsed
 
+Customize the width of the collapsed sidebar drawer (when open in mobile view) with the `collapsedSidebarWidth` prop.
+
 ```jsx
 <PageWithSidebar
   sidebar={<Box>This is a sidebar</Box>}
@@ -59,10 +93,12 @@ import { Page } from 'fannypack';
 
 #### Minimized
 
+Customize the width of the minimized sidebar with the `minimizedSidebarWidth` prop.
+
 ```jsx
 <PageWithSidebar
   sidebar={<Box>This is a sidebar</Box>}
-  minimizedSidebarWidth="300px"
+  minimizedSidebarWidth="30px"
 >
   This is the content
 </PageWithSidebar>
@@ -74,15 +110,15 @@ import { Page } from 'fannypack';
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">collapseBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">collapseBreakpoint</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">collapsedSidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">collapsedSidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">collapsedSidebarProps</Code>**  
+**<Code marginRight="major-1">collapsedSidebarProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -99,7 +135,7 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">expandedSidebarProps</Code>**  
+**<Code marginRight="major-1">expandedSidebarProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -116,15 +152,15 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">defaultIsVisible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">defaultIsVisible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">minimizedSidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">minimizedSidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">sidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">sidebarWidth</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
@@ -142,7 +178,7 @@ import { Page } from 'fannypack';
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -152,11 +188,11 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -175,15 +211,15 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -200,16 +236,16 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### PageWithSidebar.Disclosure Props
 
@@ -217,7 +253,7 @@ import { Page } from 'fannypack';
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -227,11 +263,11 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -250,15 +286,15 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -275,16 +311,16 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### PageWithSidebar.Minimize Props
 
@@ -292,7 +328,7 @@ import { Page } from 'fannypack';
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -302,11 +338,11 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -325,15 +361,15 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -350,13 +386,13 @@ import { Page } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+

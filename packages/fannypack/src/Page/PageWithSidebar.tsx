@@ -10,7 +10,6 @@ import { PageContext } from './PageContext';
 import * as styles from './styles';
 
 export type LocalPageWithSidebarProps = {
-  collapseBreakpoint?: string;
   collapsedSidebarWidth?: string;
   collapsedSidebarProps?: Partial<DrawerProps>;
   expandedSidebarProps?: Partial<DisclosureProps>;
@@ -25,7 +24,6 @@ const useProps = createHook<PageWithSidebarProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       children,
-      collapseBreakpoint,
       collapsedSidebarProps,
       defaultIsVisible,
       expandedSidebarProps,
@@ -123,7 +121,6 @@ const useProps = createHook<PageWithSidebarProps>(
   },
   {
     defaultProps: {
-      collapseBreakpoint: 'max-tablet',
       collapsedSidebarProps: {},
       expandedSidebarProps: {},
       defaultIsVisible: true,

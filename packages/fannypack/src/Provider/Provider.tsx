@@ -14,12 +14,12 @@ import { FannypackThemeContext } from './ThemeContext';
 export type ProviderProps = {
   children: React.ReactNode;
   isStandalone?: boolean;
-  collapseBreakpoint?: LayoutBreakpoint;
+  collapseBelow?: LayoutBreakpoint;
   theme?: ThemeConfig;
 };
 
 export function Provider(props: ProviderProps) {
-  const { children, collapseBreakpoint, isStandalone, theme: _theme } = props;
+  const { children, collapseBelow, isStandalone, theme: _theme } = props;
 
   ////////////////////////////////////////////////
 
@@ -48,7 +48,7 @@ export function Provider(props: ProviderProps) {
       <EmotionProvider theme={derivedTheme}>
         <IdProvider>
           <ToastProvider>
-            <PageProvider collapseBreakpoint={collapseBreakpoint}>
+            <PageProvider collapseBelow={collapseBelow}>
               <React.Fragment>
                 {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
                 {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}

@@ -15,6 +15,8 @@ import { PageContent } from 'fannypack';
 
 ## Usage
 
+The `<PageContent>` component helps you with creating a page with content. It comes with margins & paddings built in.
+
 ```jsx-live
 <Box>
   <PageContent>
@@ -28,6 +30,8 @@ import { PageContent } from 'fannypack';
 
 ### Breakpoints
 
+The default breakpoint for a content block is `tablet`. However, you can change this with the `breakpoint` prop.
+
 ```jsx-live
 <Box>
   <PageContent breakpoint="desktop">
@@ -37,6 +41,22 @@ import { PageContent } from 'fannypack';
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu bibendum at varius vel. Volutpat sed cras ornare arcu dui. Faucibus scelerisque eleifend donec pretium vulputate sapien nec.
   </PageContent>
 </Box>
+```
+
+You can also change the default breakpoint via the [global theme](/theming) as well.
+
+```jsx
+const theme = {
+  PageContent: {
+    defaultProps: {
+      breakpoint: 'desktop'
+    }
+  }
+}
+
+<FannypackProvider theme={theme}>
+  {/* ... */}
+</FannypackProvider>
 ```
 
 ### Fluid
@@ -58,7 +78,7 @@ import { PageContent } from 'fannypack';
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">wrapperProps</Code>**  
+**<Code marginRight="major-1">wrapperProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -77,11 +97,11 @@ import { PageContent } from 'fannypack';
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Container</strong></code> props</Box>
 
-**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">breakpoint</Code>**  
+**<Code marginRight="major-1">breakpoint</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"tablet"
@@ -93,20 +113,20 @@ import { PageContent } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isFluid</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isFluid</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isLayout</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isLayout</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -116,11 +136,11 @@ import { PageContent } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -139,15 +159,15 @@ import { PageContent } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -164,16 +184,16 @@ import { PageContent } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 

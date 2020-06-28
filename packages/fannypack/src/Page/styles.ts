@@ -1,6 +1,13 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, palette, space, theme } from '../utils';
 
+export const collapseBreakpoints = {
+  tablet: 'mobile',
+  desktop: 'tablet',
+  widescreen: 'desktop',
+  fullHD: 'widescreen',
+};
+
 export const PageContent = (styleProps) => cssClass`
   padding: ${space(4, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
 
@@ -60,7 +67,7 @@ export const PageWithSidebarSpacer = (styleProps) => cssClass`
   width: ${getWidth(styleProps)};
 
   ${breakpoint(
-    styleProps.collapseBreakpoint,
+    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
     css`
       width: 0px;
       min-width: 0px;
@@ -97,7 +104,7 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
 
   ${breakpoint(
-    styleProps.collapseBreakpoint,
+    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
     css`
       display: none;
     `
