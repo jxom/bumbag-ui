@@ -6,31 +6,26 @@ import { Dialog } from 'fannypack';
 ## Import
 
 ```jsx
-import { Dialog } from 'fannypack';
+import { Dialog, Modal } from 'fannypack';
 ```
 
 ## Usage
 
-```jsx-live
-<Dialog title="This is a title" width="600px">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus augue sit amet justo.
-</Dialog>
-```
+The `<Dialog.Modal>` component renders a dialog window that overlays the screen & disables interaction with the background. It inherits the [Modal component](/utilities/modal).
 
-### Footer
-
-You can render a footer for the dialog using the `footer` prop.
+It is recommended to use `<Dialog.Modal>` with the `<Modal>` utilities like `<Modal.State>` & `<Modal.Disclosure>`. These components will help you manage the modal state & accessibility attributes on the elements.
 
 ```jsx-live
-<Dialog
-  title="This is a title"
-  footer={<Text>This is a footer</Text>}
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
+<Modal.State>
+  <Dialog.Modal title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open modal
+  </Modal.Disclosure>
+</Modal.State>
 ```
 
 ### Action buttons
@@ -38,16 +33,36 @@ You can render a footer for the dialog using the `footer` prop.
 It is common to have action buttons in a dialog's footer. Use the `showActionButtons` prop to enable them. Dialog also accepts the `actionButtonsProps` that accepts the props of the [`<ActionButtons>` component](/components/button#actionbuttons-props).
 
 ```jsx-live
-<Dialog
-  actionButtonsProps={{ onClickSubmit: () => alert('Submitted') }}
-  title="This is a title"
-  showActionButtons
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
+<Modal.State>
+  <Dialog.Modal showActionButtons title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open modal
+  </Modal.Disclosure>
+</Modal.State>
+```
+
+### Footer
+
+You can render a footer for the dialog using the `footer` prop.
+
+```jsx-live
+<Modal.State>
+  <Dialog.Modal
+    footer={<Text>This is a footer</Text>}
+    title="This is a title"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open modal
+  </Modal.Disclosure>
+</Modal.State>
 ```
 
 ### Close button
@@ -55,182 +70,99 @@ It is common to have action buttons in a dialog's footer. Use the `showActionBut
 To render a close icon on a dialog, use the `showCloseButton` prop.
 
 ```jsx-live
-<Dialog
-  onClickClose={() => console.log('close')}
-  showCloseButton
-  title="This is a title"
-  width="600px"
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-  eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-  augue sit amet justo.
-</Dialog>
+<Modal.State>
+  <Dialog.Modal
+    showCloseButton
+    title="This is a title"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open modal
+  </Modal.Disclosure>
+</Modal.State>
 ```
 
 ### Types
 
 ```jsx-live
-<Stack>
-  <Dialog
+<Modal.State>
+  <Dialog.Modal
     type="info"
-    title="This is a title"
     showActionButtons
-    width="600px"
+    title="This is a title"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
-  </Dialog>
-  <Dialog
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open info modal
+  </Modal.Disclosure>
+</Modal.State>
+<Modal.State>
+  <Dialog.Modal
     type="success"
-    title="This is a title"
     showActionButtons
-    width="600px"
+    title="This is a title"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
-  </Dialog>
-  <Dialog
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open success modal
+  </Modal.Disclosure>
+</Modal.State>
+<Modal.State>
+  <Dialog.Modal
+    type="danger"
+    showActionButtons
+    title="This is a title"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open danger modal
+  </Modal.Disclosure>
+</Modal.State>
+<Modal.State>
+  <Dialog.Modal
     type="warning"
-    title="This is a title"
     showActionButtons
-    width="600px"
+    title="This is a title"
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
-  </Dialog>
-  <Dialog
+  </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open warning modal
+  </Modal.Disclosure>
+</Modal.State>
+```
+
+### Alert
+
+```jsx-live
+<Modal.State>
+  <Dialog.Modal
+    showActionButtons
     type="danger"
-    title="This is a title"
-    showActionButtons
-    actionButtonsProps={{ palette: 'danger' }}
-    width="600px"
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog>
-</Stack>
-```
-
-### Modal
-
-```jsx-live
-<Modal.State>
-  <Modal.Disclosure>Open modal</Modal.Disclosure>
-  <Dialog.Modal
-    title="This is a title"
-    showActionButtons
-    showCloseButton
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog.Modal>
-</Modal.State>
-```
-
-#### Initial focus
-
-```function-live
-function Example() {
-  const closeButtonRef = React.useRef();
-
-  return (
-    <Modal.State>
-      <Modal.Disclosure>Open modal</Modal.Disclosure>
-      <Dialog.Modal
-        unstable_initialFocusRef={closeButtonRef}
-        title="This is a title"
-        showCloseButton
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-        <Modal.Disclosure ref={closeButtonRef} use={Button}>Close</Modal.Disclosure>
-      </Dialog.Modal>
-    </Modal.State>
-  )
-}
-```
-
-#### Final focus
-
-```function-live
-function Example() {
-  const finalButtonRef = React.useRef();
-
-  return (
-    <Modal.State>
-      <Modal.Disclosure>Open modal</Modal.Disclosure>
-      <Button ref={finalButtonRef}>Another button</Button>
-
-      <Dialog.Modal
-        unstable_finalFocusRef={finalButtonRef}
-        title="This is a title"
-        showCloseButton
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Dialog.Modal>
-    </Modal.State>
-  )
-}
-```
-
-#### Action buttons
-
-```jsx-live
-<Modal.State>
-  <Modal.Disclosure>Open modal</Modal.Disclosure>
-  <Dialog.Modal
-    title="This is a title"
-    showActionButtons
-    actionButtonsProps={{ onClickSubmit: () => alert('Hello') }}
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog.Modal>
-</Modal.State>
-```
-
-#### Close button
-
-```jsx-live
-<Modal.State>
-  <Modal.Disclosure>Open modal</Modal.Disclosure>
-  <Dialog.Modal
-    title="This is a title"
-    showCloseButton
-    closeButtonProps={{ palette: 'primary' }}
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-    augue sit amet justo.
-  </Dialog.Modal>
-</Modal.State>
-```
-
-#### Alert dialogs
-
-```function-live
-<Modal.State>
-  <Modal.Disclosure>Open modal</Modal.Disclosure>
-  <Dialog.Modal
     variant="alert"
-    type="danger"
     title="This is a title"
-    showActionButtons
-    closeButtonProps={{ palette: 'primary' }}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
     augue sit amet justo.
   </Dialog.Modal>
+  <Modal.Disclosure use={Button}>
+    Open modal
+  </Modal.Disclosure>
 </Modal.State>
 ```
 
@@ -268,15 +200,15 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">title</Code>**  
+**<Code marginRight="major-1">title</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -289,7 +221,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">footer</Code>**  
+**<Code marginRight="major-1">footer</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -302,23 +234,23 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">actionButtonsProps</Code>**  
+**<Code marginRight="major-1">actionButtonsProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
@@ -326,7 +258,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**  
+**<Code marginRight="major-1">closeButtonProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -343,7 +275,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalIconProps`}
@@ -353,7 +285,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -363,11 +295,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -386,15 +318,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -411,16 +343,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Header Props
 
@@ -428,7 +360,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -438,11 +370,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -461,15 +393,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -486,16 +418,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Title Props
 
@@ -504,11 +436,11 @@ function Example() {
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -518,11 +450,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -541,15 +473,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -566,16 +498,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Content Props
 
@@ -583,7 +515,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -593,11 +525,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -616,15 +548,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -641,16 +573,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Footer Props
 
@@ -658,7 +590,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -668,11 +600,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -691,15 +623,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -716,22 +648,22 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Icon Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -746,11 +678,11 @@ function Example() {
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -760,11 +692,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -783,15 +715,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -808,45 +740,45 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Dialog.Modal Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">&#34;alert&#34;</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">&#34;alert&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hasScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hasScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2"><strong>8 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> 
+**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -855,25 +787,25 @@ after the same number of milliseconds have passed.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether it's animating or not.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> 
+**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
 
 Changes the `visible` state to `false`
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -894,11 +826,11 @@ ID that will serve as a base for all the items IDs.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Modal</strong></code> props</Box>
 
-**<Code marginRight="major-1">hideBackdrop</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hideBackdrop</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">placement</Code>**  
+**<Code marginRight="major-1">placement</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
@@ -918,19 +850,19 @@ ID that will serve as a base for all the items IDs.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Delay of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Duration of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">expand</Code>**  
+**<Code marginRight="major-1">expand</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
@@ -945,58 +877,58 @@ Will the component have an expand animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Will the component have a fade animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code> 
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code>
 
 Will the component have a slide animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Timing function of the animation
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by pressing `Escape`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by clicking outside it.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 When enabled, user can't scroll on body when the dialog is visible.
 This option doesn't work if the dialog isn't modal.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> 
+**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
 
 The element that will be focused when the dialog shows.
 When not set, the first tabbable element within the dialog will be used.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> 
+**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
 
 The element that will be focused when the dialog hides.
 When not set, the disclosure component will be used.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Whether or not the dialog should be a child of its parent.
 Opening a nested orphan dialog will close its parent dialog if
@@ -1006,11 +938,11 @@ It will be set to `false` if `modal` is `false`.
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1020,11 +952,11 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1043,11 +975,11 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -1064,28 +996,28 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Dialog</strong></code> props</Box>
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">title</Code>**  
+**<Code marginRight="major-1">title</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1098,7 +1030,7 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">footer</Code>**  
+**<Code marginRight="major-1">footer</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1111,23 +1043,23 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">actionButtonsProps</Code>**  
+**<Code marginRight="major-1">actionButtonsProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
@@ -1135,7 +1067,7 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**  
+**<Code marginRight="major-1">closeButtonProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -1152,7 +1084,7 @@ It will be set to `false` if `modal` is `false`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalIconProps`}
@@ -1161,7 +1093,7 @@ It will be set to `false` if `modal` is `false`.
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 

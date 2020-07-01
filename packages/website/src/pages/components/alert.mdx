@@ -3,6 +3,10 @@ import { Alert } from 'fannypack';
 
 # Alerts
 
+The `<Alert>` component displays a **brief** & **important** message in a way that attracts a user's attention without interrupting a user's task.
+
+If you are needing to display more descriptive, but important message to a user, consider using the [`<Callout>` component](/components/callout).
+
 ## Import
 
 ```jsx
@@ -10,10 +14,6 @@ import { Alert } from 'fannypack'
 ```
 
 ## Usage
-
-The `<Alert>` component displays a **brief** & **important** message in a way that attracts a user's attention without interrupting a user's task.
-
-If you are needing to display more descriptive, but important message to a user, consider using the [`<Callout>` component](/components/callout).
 
 ```jsx-live
 <Alert
@@ -33,7 +33,7 @@ You can set a title with the `title` prop.
 <Alert title="Did you know?">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert title="Did you know?" isInline marginTop="major-2">
+<Alert title="Did you know?" isInline>
   Fannypack is a React UI Kit.
 </Alert>
 ```
@@ -46,32 +46,42 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 <Alert title="Did you know?" type="info">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert title="Action applied" type="success" marginTop="major-2">
+<Alert title="Action applied" type="success">
   Your action was applied successfully.
 </Alert>
-<Alert title="Be careful" type="warning" marginTop="major-2">
+<Alert title="Be careful" type="warning">
   Performing this action can be harmful.
 </Alert>
-<Alert title="An error occurred" type="danger" marginTop="major-2">
+<Alert title="An error occurred" type="danger">
   Unable to apply your action.
 </Alert>
 ```
 
 ### Accents
 
+Alerts can have bordered accents.
+
 ```jsx-live
 <Alert accent>
   Fannypack is a React UI Kit.
 </Alert>
-<Alert accent="top" marginTop="major-2">
+<Alert accent="top">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert accent="bottom" marginTop="major-2">
+<Alert accent="bottom">
   Fannypack is a React UI Kit.
 </Alert>
 ```
 
 ### Variants
+
+The `<Alert>` component comes with **three** default variants:
+
+- An alert with a **border**,
+- An alert with a **tint**,
+- A **filled** alert.
+
+You can even [make your own Alert variant](/variants).
 
 #### Bordered
 
@@ -79,13 +89,13 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 <Alert variant="bordered" title="Did you know?" type="info">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert variant="bordered" title="Action applied" type="success" marginTop="major-2">
+<Alert variant="bordered" title="Action applied" type="success">
   Your action was applied successfully.
 </Alert>
-<Alert variant="bordered" title="Be careful" type="warning" marginTop="major-2">
+<Alert variant="bordered" title="Be careful" type="warning">
   Performing this action can be harmful.
 </Alert>
-<Alert variant="bordered" title="An error occurred" type="danger" marginTop="major-2">
+<Alert variant="bordered" title="An error occurred" type="danger">
   Unable to apply your action.
 </Alert>
 ```
@@ -96,13 +106,13 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 <Alert variant="tint" title="Did you know?" type="info">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert variant="tint" title="Action applied" type="success" marginTop="major-2">
+<Alert variant="tint" title="Action applied" type="success">
   Your action was applied successfully.
 </Alert>
-<Alert variant="tint" title="Be careful" type="warning" marginTop="major-2">
+<Alert variant="tint" title="Be careful" type="warning">
   Performing this action can be harmful.
 </Alert>
-<Alert variant="tint" title="An error occurred" type="danger" marginTop="major-2">
+<Alert variant="tint" title="An error occurred" type="danger">
   Unable to apply your action.
 </Alert>
 ```
@@ -113,16 +123,24 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 <Alert variant="fill" title="Did you know?" type="info">
   Fannypack is a React UI Kit.
 </Alert>
-<Alert variant="fill" title="Action applied" type="success" marginTop="major-2">
+<Alert variant="fill" title="Action applied" type="success">
   Your action was applied successfully.
 </Alert>
-<Alert variant="fill" title="Be careful" type="warning" marginTop="major-2">
+<Alert variant="fill" title="Be careful" type="warning">
   Performing this action can be harmful.
 </Alert>
-<Alert variant="fill" title="An error occurred" type="danger" marginTop="major-2">
+<Alert variant="fill" title="An error occurred" type="danger">
   Unable to apply your action.
 </Alert>
 ```
+
+## Accessibility
+
+The `<Alert>` component follows the [WAI ARIA Alert Pattern](https://www.w3.org/TR/wai-aria-practices/#alert).
+
+- The component has a role of `"alert"`.
+- If an alert has a **title**, then the `aria-labelledby` attribute is set on the component.
+- If an alert has a **description**, then the `aria-describedby` attribute is set on the component.
 
 ## Props
 
@@ -130,43 +148,43 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code> 
+**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">accentSize</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">accentSize</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">countdown</Code>** <Code fontSize="150" palette="primary">number</Code> 
+**<Code marginRight="major-1">countdown</Code>** <Code fontSize="150" palette="primary">number</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**  
+**<Code marginRight="major-1">closeButtonProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -183,7 +201,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonIconProps</Code>**  
+**<Code marginRight="major-1">closeButtonIconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -195,7 +213,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -209,7 +227,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -219,11 +237,11 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -242,15 +260,15 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -267,22 +285,22 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Icon Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -296,7 +314,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -306,11 +324,11 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -329,15 +347,15 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -354,16 +372,16 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Content Props
 
@@ -371,7 +389,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -381,11 +399,11 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -404,15 +422,15 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -429,16 +447,16 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Title Props
 
@@ -446,7 +464,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -456,11 +474,11 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -479,15 +497,15 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -504,16 +522,16 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Alert.Description Props
 
@@ -521,7 +539,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -531,11 +549,11 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -554,15 +572,15 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -579,16 +597,16 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
