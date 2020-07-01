@@ -18,7 +18,7 @@ export default function Docs(props: Props) {
       <PageWithHeader
         sticky
         header={
-          <Container breakpoint="desktop">
+          <Container breakpoint="widescreen">
             <Header />
           </Container>
         }

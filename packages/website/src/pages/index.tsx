@@ -8,10 +8,14 @@ import LiveCode from '../components/Landing/LiveCode';
 export default function Index() {
   return (
     <LandingLayout>
-      <PageContent breakpoint="tablet" paddingY="major-15">
-        <Stack display="flex" flexDirection="column" alignItems="center" spacing="major-3">
-          <Heading fontSize="600" fontWeight="semibold" textAlign="center">
-            Rapidly build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> <br /> React
+      <PageContent
+        breakpoint="tablet"
+        paddingY="major-15"
+        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white700' }}
+      >
+        <Stack display="flex" flexDirection="column" spacing="major-3" alignItems="center">
+          <Heading fontSize="600" textAlign="center">
+            Rapidly build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React
             applications with ease
           </Heading>
           <Paragraph fontSize="400" color="text100" textAlign="center">
@@ -27,7 +31,11 @@ export default function Index() {
           </Set>
         </Stack>
       </PageContent>
-      <PageContent breakpoint="widescreen" wrapperProps={{ backgroundColor: 'white600' }} paddingY="major-6">
+      <PageContent
+        breakpoint="widescreen"
+        wrapperProps={{ backgroundColor: 'white600', borderBottom: '1px solid', borderColor: 'white700' }}
+        paddingY="major-6"
+      >
         <Columns spacing="major-4">
           <Columns.Column>
             <Heading use="h2" fontSize="400">
@@ -71,7 +79,11 @@ export default function Index() {
           </Columns.Column>
         </Columns>
       </PageContent>
-      <PageContent breakpoint="fullHD" paddingY="major-6">
+      <PageContent
+        breakpoint="fullHD"
+        paddingY="major-6"
+        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white700' }}
+      >
         <LiveCode
           code={`// An example inspired by skyscanner.com
 <Group
