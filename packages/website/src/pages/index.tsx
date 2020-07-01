@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { Button, Columns, Heading, PageContent, Link, Set, Stack, Text } from 'fannypack';
+import { Button, Columns, Heading, PageContent, Link, Paragraph, Set, Stack, Text } from 'fannypack';
 
 import LandingLayout from '../layout/LandingLayout';
 import LiveCode from '../components/Landing/LiveCode';
@@ -8,29 +8,32 @@ import LiveCode from '../components/Landing/LiveCode';
 export default function Index() {
   return (
     <LandingLayout>
-      <PageContent breakpoint="desktop" paddingY="major-15">
-        <Stack display="flex" flexDirection="column" alignItems="center" spacing="major-5">
+      <PageContent breakpoint="tablet" paddingY="major-15">
+        <Stack display="flex" flexDirection="column" alignItems="center" spacing="major-3">
           <Heading fontSize="600" fontWeight="semibold" textAlign="center">
             Rapidly build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> <br /> React
             applications with ease
           </Heading>
+          <Paragraph fontSize="400" color="text100" textAlign="center">
+            Fannypack is a friendly React UI Kit suitable for MVPs or large-scale applications.
+          </Paragraph>
           <Set spacing="major-2">
-            <Button use={GatsbyLink} to="/getting-started/" palette="primary" size="large">
+            <Button use={GatsbyLink} to="/getting-started/" fontWeight="500" palette="primary" size="large">
               Get started
             </Button>
-            <Button use={GatsbyLink} to="/components/button/" size="large">
+            <Button use={GatsbyLink} to="/components/button/" fontWeight="500" size="large">
               Components
             </Button>
           </Set>
         </Stack>
       </PageContent>
-      <PageContent breakpoint="desktop" wrapperProps={{ backgroundColor: 'white600' }} paddingY="major-6">
-        <Columns>
+      <PageContent breakpoint="widescreen" wrapperProps={{ backgroundColor: 'white600' }} paddingY="major-6">
+        <Columns spacing="major-4">
           <Columns.Column>
             <Heading use="h2" fontSize="400">
               Accessible
             </Heading>
-            <Text>
+            <Text fontSize="250" color="text200" lineHeight="1.5">
               Powered by{' '}
               <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
                 Reakit
@@ -44,7 +47,7 @@ export default function Index() {
             <Heading use="h2" fontSize="400">
               Themeable
             </Heading>
-            <Text>
+            <Text fontSize="250" color="text200" lineHeight="1.5">
               <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any component
               by altering the default theme, or creating your own.
               <br />
@@ -57,7 +60,7 @@ export default function Index() {
             <Heading use="h2" fontSize="400">
               Composable
             </Heading>
-            <Text>
+            <Text fontSize="250" color="text200" lineHeight="1.5">
               <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a contact
               form, or even a call-to-action.
               <br />
