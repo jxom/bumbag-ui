@@ -27,7 +27,7 @@ export function Hide(props) {
   }
 
   const hideClassName = useClassName({
-    style,
+    style: hideStyle,
     styleProps: { breakpoint },
   });
 
@@ -65,7 +65,7 @@ function transformChildren(children, className, index) {
   return null;
 }
 
-export const style = (styleProps) => cssClass`
+export const hideStyle = (styleProps) => cssClass`
   ${breakpoint(
     styleProps.breakpoint,
     css`

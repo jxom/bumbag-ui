@@ -27,7 +27,7 @@ export function Show(props) {
   }
 
   const showClassName = useClassName({
-    style,
+    style: showStyle,
     styleProps: { breakpoint },
   });
 
@@ -65,7 +65,7 @@ function transformChildren(children, className, index) {
   return null;
 }
 
-export const style = (styleProps) => cssClass`
+export const showStyle = (styleProps) => cssClass`
   ${breakpoint(
     styleProps.breakpoint,
     css`
