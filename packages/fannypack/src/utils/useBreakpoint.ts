@@ -27,7 +27,7 @@ export function useBreakpoint(_breakpoint) {
 
   let query = key
     ? `(${key}: ${key === 'min-width' ? breakpointValue : breakpointValue - 1}px)`
-    : `(min-width: ${minBreakpointValues[breakpoint] + 1}px) and (max-width: ${breakpointValue - 1}px)`;
+    : `(min-width: ${minBreakpointValues[breakpoint]}px) and (max-width: ${breakpointValue - 1}px)`;
 
   const mediaQueryList =
     typeof window !== 'undefined'

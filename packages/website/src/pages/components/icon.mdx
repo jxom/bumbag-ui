@@ -28,7 +28,7 @@ import { Icon } from 'fannypack';
 This example uses [@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons) and [@fortawesome/free-regular-svg-icons](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons).
 
 ```jsx
-import { ThemeProvider } from 'fannypack';
+import { Provider as FannypackProvider } from 'fannypack';
 import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
@@ -49,7 +49,7 @@ const theme = {
   }
 };
 
-export default () => <ThemeProvider theme={theme}><App/></ThemeProvider>
+export default () => <FannypackProvider theme={theme}><App/></FannypackProvider>
 ```
 
 **Then**, you can use your icons like so:
@@ -166,13 +166,13 @@ Icons will be the same size as its text by default.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Color of the icon. Can be a color from the palette, or any other color.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">icon</Code>**  
+**<Code marginRight="major-1">icon</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -184,25 +184,25 @@ The name of your icon or parsed icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">label</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 A label for the icon which can be read by screen readers. This is required if a11yHidden is false.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">fontSize</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">&#34;font-awesome&#34; | &#34;font-awesome-standalone&#34;</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -212,11 +212,11 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -235,15 +235,15 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -260,16 +260,16 @@ Size of the icon.
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
