@@ -31,6 +31,7 @@ export const RatingItem = (styleProps) => cssClass`
 
   ${
     styleProps.disabled &&
+    !styleProps.isStatic &&
     css`
       cursor: not-allowed;
       opacity: 0.5;

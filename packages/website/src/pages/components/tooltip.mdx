@@ -3,6 +3,8 @@ import Theme from '../../components/Theme';
 
 # Tooltip
 
+A tooltip is a small popover that displays brief information related to an element when the element receives mouse hover or keyboard focus.
+
 ## Import
 
 ```jsx
@@ -23,6 +25,8 @@ function Example() {
 
 ### Arrow
 
+Add an arrow to a tooltip with the `hasArrow` prop.
+
 ```function-live
 function Example() {
   return (
@@ -34,6 +38,8 @@ function Example() {
 ```
 
 ### Placements
+
+You can place the tooltip to a particular side of the target with the `placement` prop.
 
 ```function-live
 function Example() {
@@ -110,7 +116,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">placement</Code>**  
+**<Code marginRight="major-1">placement</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
@@ -130,15 +136,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hasArrow</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hasArrow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">arrowProps</Code>**  
+**<Code marginRight="major-1">arrowProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & Pick<Partial<PopoverStateReturn>, "unstable_arrowStyles"
@@ -147,19 +153,19 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Delay of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Duration of the animation (in s/ms).
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">expand</Code>**  
+**<Code marginRight="major-1">expand</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
@@ -174,19 +180,19 @@ Will the component have an expand animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 Will the component have a fade animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code> 
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code>
 
 Will the component have a slide animation when it is toggled on/off?
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 Timing function of the animation
 
@@ -194,7 +200,7 @@ Timing function of the animation
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -204,11 +210,11 @@ Timing function of the animation
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -227,15 +233,15 @@ Timing function of the animation
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -252,16 +258,16 @@ Timing function of the animation
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 

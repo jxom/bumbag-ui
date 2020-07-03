@@ -1,7 +1,9 @@
 import { Tabs } from 'fannypack';
 import Theme from '../../components/Theme';
 
-# Tab
+# Tabs
+
+The `<Tabs>` component is used alongside the `<Tabs.List>`, `<Tabs.Tab>` and `<Tabs.Panel>` components to create layered sections of content.
 
 ## Import
 
@@ -10,6 +12,8 @@ import { Tabs } from 'fannypack';
 ```
 
 ## Usage
+
+Each `<Tabs.Tab>` component should have a `tabId` prop with a corresponding `<Tabs.Panel>` component with the same `tabId` value.
 
 ```jsx-live
 <Tabs selectedId="tab1">
@@ -32,6 +36,8 @@ import { Tabs } from 'fannypack';
 
 ### Fitted tabs
 
+You can make your tabs span the whole width with the `isFitted` prop.
+
 ```jsx-live
 <Tabs isFitted selectedId="tab1">
   <Tabs.List>
@@ -52,6 +58,8 @@ import { Tabs } from 'fannypack';
 ```
 
 ### Alignment
+
+Align your tabs with the `align` prop.
 
 ```jsx-live
 <Tabs selectedId="tab1">
@@ -92,6 +100,10 @@ import { Tabs } from 'fannypack';
 ```
 
 ### Variants
+
+The `<Tabs>` component comes with three default variants: `boxed`, `button` and `unstyled`.
+
+You can also [create your own Tabs variant](/variants).
 
 #### Boxed
 
@@ -225,33 +237,33 @@ import { Tabs } from 'fannypack';
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isFitted</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isFitted</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">loop</Code>** <Code fontSize="150" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">manual</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">manual</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
+**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">selectedId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">selectedId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -261,11 +273,11 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -284,15 +296,15 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -309,32 +321,32 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Tabs.List Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">palette</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -344,11 +356,11 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -367,15 +379,15 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -392,28 +404,28 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Tabs.Tab Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">tabId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">tabId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -423,11 +435,11 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -446,15 +458,15 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -471,28 +483,28 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Tabs.Panel Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">tabId</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">tabId</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -502,11 +514,11 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -525,15 +537,15 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -550,16 +562,16 @@ import { Tabs } from 'fannypack';
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Theming
 

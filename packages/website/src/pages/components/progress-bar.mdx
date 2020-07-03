@@ -3,6 +3,8 @@ import Theme from '../../components/Theme';
 
 # ProgressBar
 
+The `<ProgressBar>` component allows you to render the progress and loading state of something.
+
 ## Import
 
 ```jsx
@@ -17,6 +19,8 @@ import { ProgressBar } from 'fannypack';
 
 ### Sizes
 
+The progress bar comes with three preset sizes: `small`, `medium` and `large`.
+
 ```jsx-live
 <ProgressBar value={20} size="small" />
 <ProgressBar value={40} />
@@ -26,6 +30,8 @@ import { ProgressBar } from 'fannypack';
 
 ### Colors
 
+You can use the `color` prop to add color to your progress bar.
+
 ```jsx-live
 <ProgressBar value={20} color="secondary" />
 <ProgressBar value={40} color="success" />
@@ -33,6 +39,8 @@ import { ProgressBar } from 'fannypack';
 ```
 
 ### Max value
+
+By default, the max value of a progress bar is `100`. But you can customize this with the `maxValue` prop.
 
 ```jsx-live
 <ProgressBar value={100} maxValue={150} />

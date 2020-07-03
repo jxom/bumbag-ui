@@ -3,6 +3,8 @@ import Theme from '../../components/Theme';
 
 # Rating
 
+The `<Rating>` component displays a set of selectable (or static) rating stars.
+
 ## Import
 
 ```jsx
@@ -23,7 +25,26 @@ function Example() {
 }
 ```
 
+### Static
+
+Render a set of static unselectable stars with the `isStatic` prop.
+
+```function-live
+function Example() {
+  const [value, setValue] = React.useState(3);
+  return (
+    <Rating
+      isStatic
+      onChange={value => setValue(value)}
+      value={value}
+    />
+  );
+}
+```
+
 ### Disabled
+
+Disable the selectable stars with a `disabled` prop.
 
 ```function-live
 function Example() {
@@ -37,6 +58,7 @@ function Example() {
   );
 }
 ```
+
 
 ### Sizes
 
@@ -125,15 +147,15 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">color</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">item</Code>**  
+**<Code marginRight="major-1">item</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -145,7 +167,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">items</Code>**  
+**<Code marginRight="major-1">items</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -157,11 +179,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isSingular</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isSingular</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">maxValue</Code>** <Code fontSize="150" palette="primary">number</Code> 
+**<Code marginRight="major-1">maxValue</Code>** <Code fontSize="150" palette="primary">number</Code>
 
 <Box marginBottom="major-4" />
 
@@ -169,11 +191,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">roverProps</Code>** <Code fontSize="150" palette="primary">{ baseId?: string; stopId?: string; }</Code> 
+**<Code marginRight="major-1">roverProps</Code>** <Code fontSize="150" palette="primary">{ baseId?: string; stopId?: string; }</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code>
 
 <Box marginBottom="major-4" />
 
@@ -183,7 +205,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -193,11 +215,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -216,15 +238,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -241,16 +263,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Theming
 

@@ -15,6 +15,7 @@ export type LocalRatingProps = {
   item?: React.ReactElement<any>;
   items?: Array<React.ReactElement<any>>;
   isSingular?: boolean;
+  isStatic?: boolean;
   maxValue?: number;
   onChange: (index: number) => void;
   roverProps?: { baseId?: string; stopId?: string };
@@ -27,10 +28,10 @@ const useProps = createHook<RatingProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       color,
-      disabled,
       item,
       items,
       isSingular,
+      isStatic,
       onChange,
       overrides,
       maxValue,
@@ -52,6 +53,8 @@ const useProps = createHook<RatingProps>(
       themeKeyOverride,
       prevClassName: boxProps.className,
     });
+
+    const disabled = props.disabled || isStatic;
 
     return {
       ...boxProps,
@@ -80,6 +83,7 @@ const useProps = createHook<RatingProps>(
                   ? value === index + 1
                   : value > index
               }
+              isStatic={isStatic}
               onClick={!disabled ? () => onChange(index + 1) : undefined}
               onMouseEnter={!disabled ? () => setHoveringIndex(index) : undefined}
               overrides={overrides}
@@ -112,6 +116,7 @@ export const Rating = createComponent<RatingProps>(
 
 export type LocalRatingItemProps = {
   isActive?: boolean;
+  isStatic?: boolean;
   size?: Size;
 };
 export type RatingItemProps = BoxProps & LocalRatingItemProps;

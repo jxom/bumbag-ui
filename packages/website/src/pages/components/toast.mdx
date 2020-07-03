@@ -6,10 +6,14 @@ import { Toast } from 'fannypack';
 ## Import
 
 ```jsx
-import { Toast } from 'fannypack'
+import { ToastManager, useToast } from 'fannypack'
 ```
 
 ## Setup
+
+To get started with rendering toasts to your app, you will need to put the `<ToastManager />` component at the top level of your app.
+
+The `ToastManager` component is essentially an overlay to render the toasts.
 
 ```jsx
 import { Provider, ToastManager } from 'fannypack';
@@ -24,6 +28,10 @@ const App = () => (
 
 ## Usage
 
+To render a toast on your screen, invoke the `add` function with a title & message from the `useToasts` hook.
+
+By default, the toast will appear for 5 seconds.
+
 ```function-live
 function Example() {
   const toasts = useToasts();
@@ -31,7 +39,10 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.add({ title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.add({
+          title: 'Did you know?',
+          message: 'Fannypack is a UI Kit for React'
+        })
       }
     >
       Add toast
@@ -51,7 +62,10 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.success({ title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.success({
+          title: 'Did you know?',
+          message: 'Fannypack is a UI Kit for React'
+        })
       }
     >
       Add toast
@@ -69,7 +83,10 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.danger({ title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.danger({
+          title: 'Did you know?',
+          message: 'Fannypack is a UI Kit for React'
+        })
       }
     >
       Add toast
@@ -87,7 +104,10 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.warning({ title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.warning({
+          title: 'Did you know?',
+          message: 'Fannypack is a UI Kit for React'
+        })
       }
     >
       Add toast
@@ -105,7 +125,10 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.info({ title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.info({
+          title: 'Did you know?',
+          message: 'Fannypack is a UI Kit for React'
+        })
       }
     >
       Add toast
@@ -263,23 +286,23 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isStacked</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isStacked</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">spacing</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overlayProps</Code>**  
+**<Code marginRight="major-1">overlayProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -296,7 +319,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">toastProps</Code>**  
+**<Code marginRight="major-1">toastProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -315,7 +338,7 @@ function Example() {
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -325,11 +348,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -348,15 +371,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -373,60 +396,60 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ### Toast Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">countdown</Code>** <Code fontSize="150" palette="primary">number</Code> 
+**<Code marginRight="major-1">countdown</Code>** <Code fontSize="150" palette="primary">number</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Alert</strong></code> props</Box>
 
-**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code> 
+**<Code marginRight="major-1">accent</Code>** <Code fontSize="150" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">accentSize</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">accentSize</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">hasIcon</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isInline</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
+**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">title</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">type</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**  
+**<Code marginRight="major-1">closeButtonProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -443,7 +466,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">closeButtonIconProps</Code>**  
+**<Code marginRight="major-1">closeButtonIconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -455,7 +478,7 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">iconProps</Code>**  
+**<Code marginRight="major-1">iconProps</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -468,11 +491,11 @@ function Example() {
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -482,11 +505,11 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -505,15 +528,15 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -530,16 +553,16 @@ function Example() {
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 

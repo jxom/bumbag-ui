@@ -49,6 +49,8 @@ import { Table } from 'fannypack'
 
 ### Dividers
 
+You can add dividers to the rows of your table with the `hasDividers` prop.
+
 ```jsx-live
 <Table hasDividers>
   <Table.Head>
@@ -86,6 +88,8 @@ import { Table } from 'fannypack'
 ```
 
 ### Striped
+
+You can stripe your rows with the `isStriped` prop.
 
 ```jsx-live
 <Table isStriped>
@@ -125,6 +129,8 @@ import { Table } from 'fannypack'
 
 ### Hoverable
 
+Make the rows of your table hoverable with the `isHoverable` prop.
+
 ```jsx-live
 <Table isHoverable>
   <Table.Head>
@@ -163,7 +169,13 @@ import { Table } from 'fannypack'
 
 ### Variants
 
+The `<Table>` component comes with two default variants: `minimal` and `shadowed`.
+
+You can also [create your own table variant](/variants).
+
 #### Minimal
+
+The `minimal` variant renders a table with minimal styling.
 
 ```jsx-live
 <Table variant="minimal">
@@ -203,6 +215,8 @@ import { Table } from 'fannypack'
 
 #### Shadowed
 
+The `shadowed` variant renders a table with a lifted altitude.
+
 ```jsx-live
 <Table variant="shadowed">
   <Table.Head>
@@ -241,6 +255,8 @@ import { Table } from 'fannypack'
 
 ### Responsive
 
+When an `isResponsive` prop is attached to a table. When the table reaches the `mobile` breakpoint, it will collapse itself to a condensed version.
+
 ```jsx-live
 <Table isResponsive>
   <Table.Head>
@@ -269,6 +285,8 @@ import { Table } from 'fannypack'
   </Table.Body>
 </Table>
 ```
+
+You can change the responsive breakpoints using the `responsiveBreakpoint` prop.
 
 ```jsx-live
 <Table isResponsive responsiveBreakpoint="tablet">
