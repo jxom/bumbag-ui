@@ -84,9 +84,9 @@ export default function LiveCode(props: Props) {
   return (
     <fannypack.Box marginBottom="major-4">
       <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
-        <Group borderRadius="10px" width="100%" verticalBelow="fullHD">
+        <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="fullHD">
           <LiveEditor />
-          <Box flex="2" border="default" borderLeft="none">
+          <Box backgroundColor="white" flex="2" border="default" borderLeft="none">
             <LivePreview />
           </Box>
         </Group>
