@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Image, Stack, SideNav, css, usePage } from 'fannypack';
 import _startCase from 'lodash/startCase';
+import _uniqBy from 'lodash/uniqBy';
 
 const query = graphql`
   {
@@ -44,7 +45,7 @@ const orders = [
   { layout: [] },
   { typography: [] },
   { components: [] },
-  { form: [] },
+  { form: ['form-libraries'] },
   { utilities: [] },
   { addons: [] },
   { 'copy-blocks': [] },
@@ -99,7 +100,10 @@ export default function Sidebar(props: any) {
 
           let items = sidebarItems[key];
           if (itemOrders.length > 0) {
-            items = itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name));
+            items = _uniqBy(
+              [...itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name)), ...items],
+              'name'
+            );
           }
 
           return (

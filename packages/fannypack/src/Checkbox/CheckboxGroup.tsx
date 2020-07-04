@@ -66,7 +66,7 @@ const useProps = createHook<CheckboxGroupProps>(
     }
 
     return {
-      role: 'CheckboxGroup',
+      role: 'group',
       ...boxProps,
       className,
       children: (

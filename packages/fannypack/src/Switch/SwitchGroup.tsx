@@ -66,7 +66,7 @@ const useProps = createHook<SwitchGroupProps>(
     }
 
     return {
-      role: 'SwitchGroup',
+      role: 'group',
       ...boxProps,
       className,
       children: (

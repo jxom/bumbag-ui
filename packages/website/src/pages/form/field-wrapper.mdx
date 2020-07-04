@@ -4,6 +4,10 @@ import { Input } from 'fannypack';
 
 # FieldWrapper
 
+The `<FieldWrapper>` component is a utility belt that wraps around form elements.
+
+It is used to render data about the field such as label, description text, hint text as well as validation text & color.
+
 ## Import
 
 ```jsx
@@ -11,8 +15,6 @@ import { FieldWrapper } from 'fannypack'
 ```
 
 ## Usage
-
-The `<FieldWrapper>` component is a utility belt that wraps around form elements.
 
 ```jsx-live
 <FieldWrapper label="Username">
@@ -163,7 +165,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -176,7 +178,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">description</Code>**  
+**<Code marginRight="major-1">description</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -189,7 +191,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">hint</Code>**  
+**<Code marginRight="major-1">hint</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -202,15 +204,15 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">label</Code>**  
+**<Code marginRight="major-1">label</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -223,15 +225,15 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">labelType</Code>** <Code fontSize="150" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code> 
+**<Code marginRight="major-1">labelType</Code>** <Code fontSize="150" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">&#34;success&#34; | &#34;danger&#34; | &#34;warning&#34;</Code> 
+**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">&#34;success&#34; | &#34;danger&#34; | &#34;warning&#34;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">tooltip</Code>**  
+**<Code marginRight="major-1">tooltip</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -244,7 +246,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">tooltipTriggerComponent</Code>**  
+**<Code marginRight="major-1">tooltipTriggerComponent</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -256,13 +258,13 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -272,19 +274,19 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -301,16 +303,16 @@ Or you can set a default trigger via `defaultProps` [in the theme](#TODO)
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
