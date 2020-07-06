@@ -6,4 +6,311 @@ path: /migrating-from-v4/
 
 # Migrating from v4
 
-TODO
+If you are migrating from Fannypack v4, there are quite a few notable breaking changes. This guide aims to help you migrate to v5. If you feel like there is anything missing from this guide, feel free to raise a pull request.
+
+## Breaking changes
+
+<Divider />
+
+### General: `ThemeProvider` to `Provider`
+
+We have renamed the `<ThemeProvider>` component to `<Provider>`.
+
+[See more...](/getting-started)
+
+##### v4
+
+```jsx
+import { ThemeProvider } from 'fannypack';
+
+const App = () => (
+  <ThemeProvider>
+    Hello world!
+  </ThemeProvider>
+);
+```
+
+##### v5
+
+```jsx
+import { Provider } from 'fannypack';
+
+const App = () => (
+  <Provider>
+    Hello world!
+  </Provider>
+);
+```
+
+<Divider />
+
+### Theming: `.base` to `.css.root`
+
+We have renamed the `base` attribute in the global theme to `css.root`.
+
+##### v4
+
+```jsx
+const theme = {
+  Box: {
+    base: {
+      backgroundColor: 'red'
+    }
+  }
+}
+```
+
+##### v5
+
+```jsx
+const theme = {
+  Box: {
+    css: {
+      root: {
+        backgroundColor: 'red'
+      }
+    }
+  }
+}
+```
+
+[See more...](/theming)
+
+<Divider />
+
+### Theming: `layout.<viewport>Breakpoint` to `breakpoints.<viewport>`
+
+We have moved where breakpoints are defined in the global theme.
+
+##### v4
+
+In v4, they were placed under the `layout` attribute.
+
+```jsx
+const theme = {
+  layout: {
+    mobileBreakpoint: 480,
+    tabletBreakpoint: 768,
+    desktopBreakpoint: 1024,
+    widescreenBreakpoint: 1200,
+    fullHDBreakpoint: 1440,
+  }
+};
+```
+
+##### v5
+
+Now they are placed under a dedicated `breakpoints` attribute.
+
+```jsx
+const theme = {
+  breakpoints: {
+    mobile: 480,
+    tablet: 768,
+    desktop: 1024,
+    widescreen: 1200,
+    fullHD: 1440
+  }
+};
+```
+
+[See more...](/breakpoints)
+
+<Divider />
+
+### Theming: `gapFactor` to `Columns.defaultProps.spacing`
+
+<Divider />
+
+### Theming: Removed `webFontLoader`
+
+<Divider />
+
+### Box: `hiddenBreakpoint` to `<Hide>`
+
+<Divider />
+
+### Box: `showBreakpoint` to `<Show>`
+
+<Divider />
+
+### LayoutSet: `LayoutSet` to `Stack`
+
+<Divider />
+
+### Pane: Removed `<Pane>`
+
+// elevation -> altitude
+
+<Divider />
+
+### Alert: Removed `hasTint`
+
+<Divider />
+
+### Avatar: `kind` to `variant`
+
+<Divider />
+
+### Badge: `isAbsolute` to `isAttached`
+
+<Divider />
+
+### Breadcrumb: `Breadcrumb.Step` to `Breadcrumb.Item`
+
+<Divider />
+
+### Button: `kind` to `variant`
+
+<Divider />
+
+### Button Theme: Removed `Button.interactive`
+
+<Divider />
+
+### CalloutOverlay: Removed `CalloutOverlay`
+
+<Divider />
+
+### Card: `elevation` to `altitude`
+
+<Divider />
+
+### Card: `headerActions` to `headerAddon`
+
+<Divider />
+
+### HighlightedCode: Moved to `fannypack-addon-highlighted-code`
+
+<Divider />
+
+### Column: Moved to `Columns.Column`
+
+<Divider />
+
+### DialogModal: Removed `DialogModal`
+
+<Divider />
+
+### Divider: Removed `content`
+
+<Divider />
+
+### Divider: `isVertical` to `orientation`
+
+<Divider />
+
+### FieldSet: `isHorizontal` to `orientation`
+
+<Divider />
+
+### FieldWrapper: `tooltipTrigger` to `tooltipTriggerComponent`
+
+<Divider />
+
+### Group: `isVertical` to `orientation`
+
+<Divider />
+
+### Group: `verticalAt` to `verticalBelow`
+
+<Divider />
+
+### Hidden: Removed `Hidden`
+
+<Divider />
+
+### Icon: `size` to `fontSize`
+
+<Divider />
+
+### List: `isVertical` to `orientation`
+
+<Divider />
+
+### Markdown: Moved to `fannypack-addon-markdown`
+
+<Divider />
+
+### Modal: `Modal.Container` to `Modal.State`
+
+<Divider />
+
+### Overlay: `Overlay.Container` to `Overlay.State`
+
+<Divider />
+
+### PageContent: `Page.Content` to `PageContent`
+
+<Divider />
+
+### PageWithSidebar: `Page.WithSidebar` to `PageWithSidebar`
+
+<Divider />
+
+### PageWithSidebar: `sidebarContent` to `sidebar`
+
+<Divider />
+
+### Popover: `Popover` to `Popover.State` & `Popover`
+
+<Divider />
+
+### Rating: `maxRating` to `maxValue`
+
+<Divider />
+
+### Rating: `onRate` to `onChange`
+
+<Divider />
+
+### SelectMenu: `useTags` to `hasTags`
+
+<Divider />
+
+### SelectMenu: `loadQuery` to `loadVariables`
+
+<Divider />
+
+### SelectMenu: `isSearchable` to `hasSearch`
+
+<Divider />
+
+### Set: `isVertical` to `orientation`
+
+<Divider />
+
+### Sidebar: `Sidebar` to `Drawer`
+
+<Divider />
+
+### Tabs: `type` to `variant`
+
+<Divider />
+
+### Tabs.Panel: `tab` to `tabId`
+
+<Divider />
+
+### Tabs.Tab: `tab` to `tabId`
+
+<Divider />
+
+### Tag: `kind` to `variant`
+
+<Divider />
+
+### Toast: Now requires a `ToastManager`
+
+<Divider />
+
+### Toast: `Toast.Container` & `withToasts` to `useToasts`
+
+<Divider />
+
+### Tooltip: Now wraps over children
+
+
+
+
+
