@@ -3,7 +3,7 @@ import { altitude, palette, space, theme, borderRadius, fontWeight } from '../ut
 import { getAnimatedAttributes } from '../Modal/styles';
 
 export const Popover = (styleProps) => cssClass`
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   max-width: 350px;
   z-index: 19900410;
@@ -118,7 +118,7 @@ export const PopoverArrow = (styleProps) => cssClass`
       fill: ${palette('white800')(styleProps)};
     }
     & .fill {
-      fill: white;
+      fill: ${palette('white')(styleProps)};
     }
   }
 

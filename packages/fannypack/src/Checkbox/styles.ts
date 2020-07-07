@@ -15,7 +15,7 @@ export const Checkbox = (styleProps) => cssClass`
 
 export const CheckboxIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border: 1px solid #bdbdbd;
   border-radius: 0.2em;
   height: 1em;

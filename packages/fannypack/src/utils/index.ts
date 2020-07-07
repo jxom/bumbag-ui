@@ -18,6 +18,7 @@ export * from './times';
 export * from './uniqueId';
 export * from './useBreakpoint';
 export * from './useClassName';
+export * from './useColorMode';
 export * from './useDebounce';
 export * from './useStyle';
 export * from './useTheme';

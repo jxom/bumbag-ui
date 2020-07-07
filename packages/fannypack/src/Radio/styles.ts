@@ -15,7 +15,7 @@ export const Radio = (styleProps) => cssClass`
 
 export const RadioIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border: 1px solid #bdbdbd;
   border-radius: 100%;
   height: 1em;

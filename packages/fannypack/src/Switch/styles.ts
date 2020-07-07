@@ -14,7 +14,7 @@ export const Switch = (styleProps) => cssClass`
 `;
 
 export const SwitchIcon = (styleProps) => cssClass`
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border: 1px solid #bdbdbd;
   border-radius: 1em;
   height: 1.5em;
@@ -59,7 +59,7 @@ export const HiddenSwitch = (styleProps) =>
       border-color: ${tint(0.5, palette(styleProps.palette || 'primary')(styleProps))};
     `,
     uncheckedIconCss: css`
-      background: white;
+      background: ${palette('background')(styleProps)};
       content: '';
       border-radius: 100%;
       border: 1px solid #bdbdbd;

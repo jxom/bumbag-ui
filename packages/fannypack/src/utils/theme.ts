@@ -5,15 +5,17 @@ import { css } from '../styled';
 import { isFunction } from './isFunction';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
-  return (props: { theme?: ThemeConfig; overrides?: any; variant?: string }) => {
-    const { variant } = props;
+  return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
+    const { colorMode, variant } = props;
 
     const selector = `${themeKey}${path ? `.${path}` : ''}`;
     const variantSelector = `${themeKey}.variants.${variant}.${path}`;
+    const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
     const defaultTheme = _get(props, `overrides.${selector}`) || _get(props, `theme.${selector}`);
     const variantTheme = _get(props, `overrides.${variantSelector}`) || _get(props, `theme.${variantSelector}`);
-    const theme = variantTheme || defaultTheme || defaultValue;
+    const colorModeTheme = _get(props, `overrides.${colorModeSelector}`) || _get(props, `theme.${colorModeSelector}`);
+    const theme = colorModeTheme || variantTheme || defaultTheme || defaultValue;
 
     if (isFunction(theme)) {
       return theme(props);
@@ -58,7 +60,7 @@ export function fontWeight(selector?: string, defaultValue?: any) {
 }
 
 export function palette(selector?: string, defaultValue?: any) {
-  return (props: { palette?: string; theme?: ThemeConfig }) => {
+  return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const color = theme('palette', selector || props.palette, defaultValue)(props);
     return color;
   };

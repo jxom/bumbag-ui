@@ -1,10 +1,10 @@
 import { css, cssClass } from '../styled';
-import { altitude, theme } from '../utils';
+import { altitude, palette, theme } from '../utils';
 
 export const Drawer = (styleProps) => cssClass`
   && {
     position: fixed;
-    background-color: white;
+    background-color: ${palette('background')(styleProps)};
 
     ${
       styleProps.placement === 'left' &&

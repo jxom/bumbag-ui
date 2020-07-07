@@ -61,7 +61,7 @@ export const Tab = (styleProps) => cssClass`
     ${
       styleProps.variant === 'default' &&
       css`
-        background-color: white;
+        background-color: ${palette('background')(styleProps)};
 
         ${styleProps.orientation === 'vertical'
           ? css`
@@ -80,10 +80,10 @@ export const Tab = (styleProps) => cssClass`
 
         ${styleProps.orientation === 'vertical'
           ? css`
-              border-right-color: white;
+              border-right-color: ${palette('white')(styleProps)};
             `
           : css`
-              border-bottom-color: white;
+              border-bottom-color: ${palette('white')(styleProps)};
             `};
       `
     }

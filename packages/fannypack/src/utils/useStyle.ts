@@ -6,6 +6,7 @@ import { useTheme } from './useTheme';
 import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
 
 import { cssProps as cssPropsMap, pickCSSProps } from './cssProps';
+import { useColorMode } from './useColorMode';
 
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
@@ -77,8 +78,8 @@ function getBorderRadiusValue({ theme, value }) {
   return value;
 }
 
-function getColorValue({ theme, value }) {
-  const color = palette(value)({ theme });
+function getColorValue({ colorMode, theme, value }) {
+  const color = palette(value)({ colorMode, theme });
   if (color) {
     return color;
   }
@@ -109,7 +110,7 @@ function getFontWeightValue({ theme, value }) {
   return value;
 }
 
-function getStyleFromProps(props, theme) {
+function getStyleFromProps(props, theme, colorMode) {
   let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
@@ -132,7 +133,7 @@ function getStyleFromProps(props, theme) {
           ${prevStyle};
 
           ${pseudoSelector} {
-            ${getStyleFromProps(value, theme)};
+            ${getStyleFromProps(value, theme, colorMode)};
           }
         `;
       }
@@ -145,7 +146,7 @@ function getStyleFromProps(props, theme) {
           newValue = getBorderRadiusValue({ theme, value });
         }
         if (colorAttributes.includes(attribute)) {
-          newValue = getColorValue({ theme, value });
+          newValue = getColorValue({ colorMode, theme, value });
         }
         if (spaceAttributes.includes(attribute)) {
           newValue = getSpaceValue({ theme, value });
@@ -185,6 +186,7 @@ function getStyleFromProps(props, theme) {
 
 export function useStyle(props) {
   const { theme } = useTheme();
+  const { colorMode } = useColorMode();
   const cssProps = pickCSSProps(props);
-  return React.useMemo(() => getStyleFromProps(cssProps, theme), [theme, ...Object.values(cssProps)]); // eslint-disable-line
+  return React.useMemo(() => getStyleFromProps(cssProps, theme, colorMode), [theme, colorMode, ...Object.values(cssProps)]); // eslint-disable-line
 }

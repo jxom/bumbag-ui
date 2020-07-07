@@ -5,7 +5,7 @@ import { getAnimatedAttributes } from '../Modal/styles';
 export const TooltipContent = (styleProps) => cssClass`
   background: black;
   border-radius: ${borderRadius('1')(styleProps)};
-  color: white;
+  color: ${palette('white')(styleProps)};
   opacity: 0.8;
   hyphens: auto;
   font-size: ${fontSize('100')(styleProps)}rem;

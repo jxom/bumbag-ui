@@ -202,9 +202,9 @@ export const getInteractiveProperties = (styleProps) => css`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray100' : styleProps.palette)(styleProps)} 0px 0px 0px
+    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray200' : styleProps.palette)(styleProps)} 0px 0px 0px
         1px,
-      ${palette(styleProps.palette === 'default' ? 'white900' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
+      ${palette(styleProps.palette === 'default' ? 'gray100' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
 
     ${styleProps.palette === 'default' &&
     css`
@@ -219,7 +219,7 @@ export const getInteractiveProperties = (styleProps) => css`
   ${styleProps.variant !== 'link' &&
   css`
     &:hover {
-      background-color: ${darken(0.05, palette(styleProps.palette)(styleProps))};
+      background-color: ${palette(`${styleProps.palette === 'default' ? 'white' : styleProps.palette}600`)(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
@@ -230,7 +230,7 @@ export const getInteractiveProperties = (styleProps) => css`
   ${styleProps.variant !== 'link' &&
   css`
     &:hover:active {
-      background-color: ${darken(0.15, palette(styleProps.palette)(styleProps))};
+      background-color: ${palette(`${styleProps.palette === 'default' ? 'white' : styleProps.palette}800`)(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};

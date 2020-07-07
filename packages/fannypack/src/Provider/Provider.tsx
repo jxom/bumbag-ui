@@ -10,16 +10,22 @@ import { Box } from '../Box';
 
 import GlobalStyles from './GlobalStyles';
 import { FannypackThemeContext } from './ThemeContext';
+import { Provider as ColorModeProvider } from './ColorModeContext';
 
 export type ProviderProps = {
   children: React.ReactNode;
   isStandalone?: boolean;
   collapseBelow?: LayoutBreakpoint;
+  colorMode?: string;
   theme?: ThemeConfig;
 };
 
+Provider.defaultProps = {
+  colorMode: 'default',
+};
+
 export function Provider(props: ProviderProps) {
-  const { children, collapseBelow, isStandalone, theme: _theme } = props;
+  const { children, colorMode, collapseBelow, isStandalone, theme: _theme } = props;
 
   ////////////////////////////////////////////////
 
@@ -44,19 +50,21 @@ export function Provider(props: ProviderProps) {
   ////////////////////////////////////////////////
 
   return (
-    <FannypackThemeContext.Provider value={themeContextValue}>
-      <EmotionProvider theme={derivedTheme}>
-        <IdProvider>
-          <ToastProvider>
-            <PageProvider collapseBelow={collapseBelow}>
-              <React.Fragment>
-                {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-                {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
-              </React.Fragment>
-            </PageProvider>
-          </ToastProvider>
-        </IdProvider>
-      </EmotionProvider>
-    </FannypackThemeContext.Provider>
+    <ColorModeProvider mode={colorMode}>
+      <FannypackThemeContext.Provider value={themeContextValue}>
+        <EmotionProvider theme={derivedTheme}>
+          <IdProvider>
+            <ToastProvider>
+              <PageProvider collapseBelow={collapseBelow}>
+                <React.Fragment>
+                  {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+                  {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
+                </React.Fragment>
+              </PageProvider>
+            </ToastProvider>
+          </IdProvider>
+        </EmotionProvider>
+      </FannypackThemeContext.Provider>
+    </ColorModeProvider>
   );
 }

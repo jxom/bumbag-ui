@@ -2,7 +2,7 @@ import { css, cssClass, keyframes } from '../styled';
 import { altitude, borderRadius, palette, space, theme } from '../utils';
 
 export const Alert = (styleProps) => cssClass`
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   position: relative;
   display: flex;

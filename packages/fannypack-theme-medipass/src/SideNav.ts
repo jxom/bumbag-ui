@@ -2,24 +2,24 @@ import { css, palette } from 'fannypack';
 
 export default {
   css: {
-    root: props => css`
-      background-color: ${palette('primary800')(props)}
-    `
+    root: (props) => css`
+      background-color: ${palette('primary800')(props)};
+    `,
   },
   Level: {
     Title: {
       css: {
-        root: css`
-          color: white
-        `
-      }
-    }
+        root: (styleProps) => css`
+          color: ${palette('white')(styleProps)};
+        `,
+      },
+    },
   },
   Item: {
     css: {
-      root: props => css`
+      root: (props) => css`
         && {
-          color: white !important;
+          color: ${palette('white')(props)} !important;
           align-items: center;
           border-color: ${palette('primary')(props)};
           color: #e7e5e1;
@@ -29,15 +29,14 @@ export default {
           text-decoration: none;
 
           ${props.isActive &&
-            css`
-              background-color: ${palette('primary700')(props)};
-              color: white;
-            `
-          };
+          css`
+            background-color: ${palette('primary700')(props)};
+            color: ${palette('white')(props)};
+          `};
 
           &:hover {
             background-color: ${palette('primary700')(props)};
-            color: white;
+            color: ${palette('white')(props)};
           }
 
           &:focus {
@@ -45,7 +44,7 @@ export default {
             background-color: ${palette('primary700')(props)};
           }
         }
-      `
-    }
-  }
-}
+      `,
+    },
+  },
+};

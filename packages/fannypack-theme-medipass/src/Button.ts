@@ -1,22 +1,24 @@
 import { css, palette, space } from 'fannypack';
-import { isInteractive } from 'fannypack/Button/styles'
+import { isInteractive } from 'fannypack/Button/styles';
 
 export default {
   css: {
-    root: styleProps => css`
+    root: (styleProps) => css`
       border-radius: 0px;
-      border: 2px solid ${(styleProps.palette === 'default' ? palette('gray700')(styleProps) : 'transparent')};
-      color: ${(styleProps.palette === 'default' ? palette('gray700')(styleProps) : palette(`${styleProps.palette}Inverted`)(styleProps))};
+      border: 2px solid ${styleProps.palette === 'default' ? palette('gray700')(styleProps) : 'transparent'};
+      color: ${styleProps.palette === 'default'
+        ? palette('gray700')(styleProps)
+        : palette(`${styleProps.palette}Inverted`)(styleProps)};
       min-height: 44px;
       padding: 0 ${space(4)(styleProps)}rem;
       font-size: 15px;
       text-transform: uppercase;
     `,
-    outlined: css`
-      background-color: white;
+    outlined: (styleProps) => css`
+      background-color: ${palette('white')(styleProps)};
       border-width: 2px;
     `,
-    ghost: styleProps => css`
+    ghost: (styleProps) => css`
       border: 2px solid transparent;
 
       &:hover {
@@ -32,28 +34,33 @@ export default {
       }
 
       &:focus {
-        border: 2px solid white;
+        border: 2px solid ${palette('white')(styleProps)};
         background-color: unset;
-        color: ${(styleProps.palette === 'default' ? palette('text')(styleProps) : palette(styleProps.palette)(styleProps))};
+        color: ${styleProps.palette === 'default'
+          ? palette('text')(styleProps)
+          : palette(styleProps.palette)(styleProps)};
       }
     `,
-    focus: styleProps => css`
-      outline: 2px solid ${(styleProps.palette === 'default' ? palette('gray800')(styleProps) : palette()(styleProps))};
+    focus: (styleProps) => css`
+      outline: 2px solid ${styleProps.palette === 'default' ? palette('gray800')(styleProps) : palette()(styleProps)};
       outline-offset: 0;
       box-shadow: none;
-      border: 2px solid white;
-      background-color: ${
-        styleProps.palette === 'default' ? palette('gray800')(styleProps) : palette(`${styleProps.palette}600`)(styleProps)};
-      color: ${(styleProps.palette === 'default' ? 'white' : palette(`${styleProps.palette}Inverted`)(styleProps))};
+      border: 2px solid ${palette('white')(styleProps)};
+      background-color: ${styleProps.palette === 'default'
+        ? palette('gray800')(styleProps)
+        : palette(`${styleProps.palette}600`)(styleProps)};
+      color: ${styleProps.palette === 'default' ? 'white' : palette(`${styleProps.palette}Inverted`)(styleProps)};
     `,
-    hover: styleProps => css`
-      ${styleProps.palette === 'default' && css`
+    hover: (styleProps) => css`
+      ${styleProps.palette === 'default' &&
+      css`
         background-color: ${palette('gray700')(styleProps)};
-        color: white;
+        color: ${palette('white')(styleProps)};
       `}
     `,
-    hoveractive: styleProps => css`
-      ${styleProps.palette === 'default' && css`
+    hoveractive: (styleProps) => css`
+      ${styleProps.palette === 'default' &&
+      css`
         background-color: ${palette('gray800')(styleProps)};
       `}
     `,
@@ -62,14 +69,14 @@ export default {
       background: unset;
     `,
     sizes: {
-      small: styleProps => css`
+      small: (styleProps) => css`
         height: ${space(8)(styleProps)}rem;
         font-size: 15px;
         padding: 0 ${space(4)(styleProps)}rem;
       `,
       medium: css`
         font-size: 18px;
-      `
-    }
+      `,
+    },
   },
 };

@@ -1,0 +1,68 @@
+---
+title: Color modes
+---
+
+# Color modes
+
+### Coming soon...
+
+But here is the gist of how it'll work.
+
+It is very similar to the [variant concept](/variants), each theme attribute will have the ability to plug in a `modes` configuration.
+
+```function-live noInline
+const theme = {
+  palette: {
+    modes: {
+      dark: {
+        background: 'black',
+        text: 'white'
+      },
+      dope: {
+        background: 'hotpink'
+      }
+    }
+  },
+  Button: {
+    modes: {
+      dark: {
+        defaultProps: {
+          backgroundColor: 'gray800',
+          color: 'white'
+        }
+      },
+      dope: {
+        defaultProps: {
+          backgroundColor: 'hotpink',
+          color: 'black'
+        }
+      }
+    }
+  }
+};
+
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <Button onClick={() => setColorMode('default')}>Light</Button>
+        <Button onClick={() => setColorMode('dark')}>Dark</Button>
+        <Button onClick={() => setColorMode('dope')}>Dope</Button>
+      </Set>
+    </Stack>
+  )
+}
+
+function App() {
+  return (
+    <Provider theme={theme}>
+      <Example />
+    </Provider>
+  )
+}
+
+render(App)
+```

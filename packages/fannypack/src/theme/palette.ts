@@ -23,23 +23,23 @@ export default (overrides: PaletteThemeConfig) => ({
 
   white: 'white',
   white500: 'white',
-  white600: darken(0.03, 'white'),
-  white700: darken(0.05, 'white'),
-  white800: darken(0.1, 'white'),
-  white900: darken(0.15, 'white'),
+  white600: '#f7f7fa',
+  white700: '#f2f2f5',
+  white800: '#e6e6eb',
+  white900: '#d9d9e1',
 
-  gray100: lighten(0.2, 'gray'),
-  gray200: lighten(0.15, 'gray'),
-  gray300: lighten(0.1, 'gray'),
-  gray400: lighten(0.05, 'gray'),
-  gray: 'gray',
-  gray500: 'gray',
-  gray600: darken(0.05, 'gray'),
-  gray700: darken(0.1, 'gray'),
-  gray800: darken(0.15, 'gray'),
-  gray900: darken(0.2, 'gray'),
+  gray100: '#cfd8e3',
+  gray200: '#b5bdcc',
+  gray300: '#97a3b4',
+  gray400: '#7b899d',
+  gray: '#626f84',
+  gray500: '#626f84',
+  gray600: '#4b5768',
+  gray700: '#343e4b',
+  gray800: '#1e2530',
+  gray900: '#070c18',
 
-  default: darken(0.01, 'white'),
+  default: '#fcfcfd',
   defaultInverted: '#212121',
 
   ...generateColorVariants({
@@ -69,6 +69,12 @@ export default (overrides: PaletteThemeConfig) => ({
       warningTintInverted: shade(0.7, color),
     }),
   }),
+
+  // modes: {
+  //   dark: {
+  //     background: '#1e2530',
+  //   },
+  // },
 
   ...overrides,
 });

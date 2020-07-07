@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button, Hide, TopNav, Icon, Image, PageWithSidebar, usePage, useTheme } from 'fannypack';
 
+import ColorModePicker from './ColorModePicker';
 import ThemePicker from './ThemePicker';
 
 export default function Header(props) {
@@ -20,6 +21,13 @@ export default function Header(props) {
             <ThemePicker />
           </TopNav.Item>
         </Hide>
+        {/*
+        <Hide below="tablet">
+          <TopNav.Item>
+            <ColorModePicker />
+          </TopNav.Item>
+        </Hide>
+         */}
         <Hide below="desktop">
           <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
             Sponsor

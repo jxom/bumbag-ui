@@ -3,7 +3,7 @@ import { altitude, borderRadius, fontSize, fontWeight, palette, space, theme } f
 
 export const Dialog = (styleProps) => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   overflow: hidden;
   position: relative;
 

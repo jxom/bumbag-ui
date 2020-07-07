@@ -80,7 +80,7 @@ export const PageWithSidebarSpacer = (styleProps) => cssClass`
 `;
 
 export const PageWithSidebarSidebar = (styleProps) => cssClass`
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   border-right: 1px solid ${palette('white800')(styleProps)};
   height: 100vh;
   min-width: ${getWidth(styleProps)};
@@ -147,7 +147,7 @@ export const PageWithHeader = (styleProps) => cssClass`
 `;
 
 export const PageWithHeaderHeader = (styleProps) => cssClass`
-  background-color: white;
+  background-color: ${palette('background')(styleProps)};
   min-height: ${styleProps.headerHeight};
   height: ${styleProps.headerHeight};
   border-bottom: 1px solid ${palette('white800')(styleProps)};
