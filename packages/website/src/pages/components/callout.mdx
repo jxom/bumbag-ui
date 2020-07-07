@@ -26,6 +26,21 @@ import { Callout } from 'fannypack';
 </Callout>
 ```
 
+### Overlay
+
+You can use the [Overlay utility](/utilities/overlay) with a Callout to display a modal-like component to the user.
+
+```jsx-live
+<Overlay.State>
+  <Overlay.Disclosure>Open callout</Overlay.Disclosure>
+  <Callout.Overlay title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout.Overlay>
+</Overlay.State>
+```
+
 ### Title
 
 ```jsx-live
@@ -155,25 +170,6 @@ import { Callout } from 'fannypack';
   lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
   consectetur lectus augue sit amet justo.
 </Callout>
-```
-
-### Overlay
-
-```function-live
-function Example() {
-  const overlay = Overlay.useState({ animated: true })
-
-  return (
-    <div>
-      <Overlay.Disclosure {...overlay}>Open callout</Overlay.Disclosure>
-      <Callout.Overlay title="This is a title" {...overlay}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
-        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
-        augue sit amet justo.
-      </Callout.Overlay>
-    </div>
-  )
-}
 ```
 
 ### Standalone

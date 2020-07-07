@@ -118,61 +118,368 @@ const theme = {
 
 <Divider />
 
-### Theming: `gapFactor` to `Columns.defaultProps.spacing`
+### Theming: `layout.gapFactor` to `Columns.defaultProps.spacing`
+
+The `gapFactor` attribute was only used for the `Columns` component. So we renamed it to a `spacing` prop to put on the `Columns` component.
+
+##### v4
+
+```jsx
+const theme = {
+  layout: {
+    gapFactor: '1rem'
+  }
+};
+```
+
+##### v5
+
+```jsx
+const theme = {
+  Columns: {
+    defaultProps: {
+      spacing: 'major-2'
+    }
+  }
+};
+```
 
 <Divider />
 
 ### Theming: Removed `webFontLoader`
 
+Web Font Loader was removed in favour of direct Google Font imports with font swapping.
+
+##### v4
+
+Previously, web font loader was used to import Google Fonts.
+
+```jsx
+const theme = {
+  global: {
+    fontFamily: "'Lato', system-ui, sans-serif",
+    fallbackFontFamily: "system-ui, sans-serif"
+  },
+  webFontLoader: {
+    google: {
+      families: ['Lato:400,700,900']
+    }
+  }
+}
+```
+
+##### v5
+
+Now, you import the font(s) directly from Google Fonts.
+
+[Click here to see a list of Google Fonts](https://fonts.google.com/)
+
+```jsx
+const theme = {
+  global: {
+    fontFamily: "'Lato', system-ui, sans-serif",
+    css: {
+      root: css`
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+      `,
+    }
+  }
+}
+```
+
 <Divider />
 
 ### Box: `hiddenBreakpoint` to `<Hide>`
+
+The `hiddenBreakpoint` prop on components has been converted to a `<Hide>` component.
+
+##### v4
+
+```jsx
+<Box hiddenBreakpoint="tablet">Hidden below tablet</Box>
+```
+
+##### v5
+
+```jsx
+<Hide below="tablet">Hidden below tablet</Hide>
+```
 
 <Divider />
 
 ### Box: `showBreakpoint` to `<Show>`
 
+The `showBreakpoint` prop on components has been converted to a `<Show>` component.
+
+##### v4
+
+```jsx
+<Box showBreakpoint="tablet">Shown above tablet</Box>
+```
+
+##### v5
+
+```jsx
+<Show above="tablet">Shown above tablet</Show>
+```
+
 <Divider />
 
 ### LayoutSet: `LayoutSet` to `Stack`
+
+The `LayoutSet` component has been renamed to `Stack`.
+
+```jsx
+<LayoutSet>
+  <Box>Evenly</Box>
+  <Box>Spaced</Box>
+  <Box>Components</Box>
+</LayoutSet>
+```
+
+##### v5
+
+```jsx
+<Stack>
+  <Box>Evenly</Box>
+  <Box>Spaced</Box>
+  <Box>Components</Box>
+</Stack>
+```
 
 <Divider />
 
 ### Pane: Removed `<Pane>`
 
-// elevation -> altitude
+We have removed `Pane` in v5.
+
+If you still want borders, then use the [`border` attribute](/the-box-primitive/borders/) on box.
+
+If you still want shadow, then use the [`altitude` attribute](/the-box-primitive/altitudes/) on box.
+
+If you still want border radius, then use the [`borderRadius` attribute](/the-box-primitive/border-radius/) on box.
+
+##### v4
+
+```jsx
+<Pane border="shadow">Hello world</Pane>
+```
+
+##### v5
+
+```jsx
+<Box altitude="100" borderRadius="default">Hello world</Box>
+```
 
 <Divider />
 
 ### Alert: Removed `hasTint`
 
+We have removed the `hasTint` prop on the Alert component in favour of `variant`.
+
+##### v4
+
+```jsx
+<Alert hasTint type="danger">Hello world</Alert>
+```
+
+##### v5
+
+```jsx
+<Alert variant="tint" type="danger">Hello world</Alert>
+```
+
 <Divider />
 
 ### Avatar: `kind` to `variant`
+
+We have renamed the `kind` prop to `variant`
+
+##### v4
+
+```jsx
+<Avatar kind="circle">
+```
+
+##### v5
+
+```jsx
+<Avatar variant="circle">
+```
 
 <Divider />
 
 ### Badge: `isAbsolute` to `isAttached`
 
+##### v4
+
+```jsx
+<Badge isAbsolute>1</Badge>
+```
+
+##### v5
+
+```jsx
+<Badge isAttached>1</Badge>
+```
+
 <Divider />
 
 ### Breadcrumb: `Breadcrumb.Step` to `Breadcrumb.Item`
+
+The `Breadcrumb.Step` component was renamed to `Breadcrumb.Item`.
+
+If you have been using links in your breadcrumbs, you will also have to create separate `Breadcrumb.Link` components.
+
+##### v4
+
+```jsx
+<Breadcrumb>
+  <Breadcrumb.Step href="#">Home</Breadcrumb.Step>
+  <Breadcrumb.Step href="#">Business</Breadcrumb.Step>
+  <Breadcrumb.Step href="#" isCurrent>Staff members</Breadcrumb.Step>
+</Breadcrumb>
+```
+
+##### v5
+
+```jsx
+<Breadcrumb>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item isCurrent>
+    <Breadcrumb.Link href="#">Staff Members</Breadcrumb.Link>
+  </Breadcrumb.Item>
+</Breadcrumb>
+```
 
 <Divider />
 
 ### Button: `kind` to `variant`
 
+The `kind` prop has been renamed to `variant`.
+
+##### v4
+
+```jsx
+<Button kind="outlined" palette="primary">Hello world</Button>
+```
+
+##### v5
+
+```jsx
+<Button variant="outlined" palette="primary">Hello world</Button>
+```
+
 <Divider />
 
 ### Button Theme: Removed `Button.interactive`
+
+The `Button.interactive` theme key has been removed in favour of pseudo based keys.
+
+##### v4
+
+```jsx
+const theme = {
+  Button: {
+    interactive: css`
+      &:focus {
+        ...
+      }
+
+      &:hover {
+        ...
+      }
+
+      &:hover:active {
+        ...
+      }
+    `
+  }
+}
+```
+
+##### v5
+
+```jsx
+const theme = {
+  Button: {
+    focus: css`
+      ...
+    `,
+    hover: css`
+      ...
+    `,
+    hoveractive: css`
+      ...
+    `
+  }
+}
+```
 
 <Divider />
 
 ### CalloutOverlay: Removed `CalloutOverlay`
 
+Removed `CalloutOverlay` in favor of `Callout.Overlay` and the `Overlay` utility.
+
+##### v4
+
+```jsx
+<Overlay.Container>
+  {overlay => (
+    <Box>
+      <Button use={Overlay.Toggle} {...overlay}>
+        Click me
+      </Button>
+      <CalloutOverlay
+        title="This is a title"
+        {...overlay}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+        eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+        augue sit amet justo.
+      </CalloutOverlay>
+    </Box>
+  )}
+</Overlay.Container>
+```
+
+##### v5
+
+
+```jsx
+<Overlay.State>
+  <Button use={Overlay.Disclosure}>Open callout</Button>
+  <Callout.Overlay title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Callout.Overlay>
+</Overlay.State>
+```
+
 <Divider />
 
 ### Card: `elevation` to `altitude`
+
+The `elevation` prop has been renamed to `altitude`.
+
+##### v4
+
+```jsx
+<Card elevation="100">
+```
+
+##### v5
+
+```jsx
+<Card altitude="100">
+```
 
 <Divider />
 

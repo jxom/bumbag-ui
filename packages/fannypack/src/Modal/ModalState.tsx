@@ -9,7 +9,7 @@ import { isFunction } from '../utils';
 export type ModalStateReturn = ReakitDialogStateReturn;
 export type ModalInitialState = ReakitDialogInitialState;
 
-export const ModalContext = React.createContext({ modal: {} });
+export const ModalContext = React.createContext({ modal: {} as ModalStateReturn });
 
 export function useModalState(initialState?: ModalInitialState) {
   return useDialogState(initialState);

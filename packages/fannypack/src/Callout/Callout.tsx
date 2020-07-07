@@ -6,6 +6,7 @@ import { Button, ButtonProps } from '../Button';
 import { Box, BoxProps } from '../Box';
 import { Card, CardProps } from '../Card';
 import { Icon, IconProps } from '../Icon';
+import { ModalContext } from '../Modal';
 import { Overlay, OverlayProps } from '../Overlay';
 import { Text, TextProps } from '../Text';
 
@@ -349,8 +350,10 @@ const useCalloutOverlayProps = createHook<CalloutOverlayProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const { variant, ...restProps } = props;
 
+    const { modal } = React.useContext(ModalContext);
+
     const calloutProps = Callout.useProps({
-      onClickClose: restProps.hide,
+      onClickClose: restProps.hide || modal.hide,
       ...restProps,
       wrapElement: (children) => (
         // @ts-ignore
