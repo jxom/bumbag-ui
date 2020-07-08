@@ -1,4 +1,5 @@
 import { theme as _theme } from 'styled-tools';
+import tinycolor from 'tinycolor2';
 import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
@@ -63,7 +64,7 @@ export function fontWeight(selector?: string, defaultValue?: any) {
 export function palette(selector?: string, defaultValue?: any) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const color = theme('palette', selector || props.palette, defaultValue)(props);
-    if (!color && isColor(selector)) return selector;
+    if (!color) return tinycolor(selector).toHexString();
     return color;
   };
 }

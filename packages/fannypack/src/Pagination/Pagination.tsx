@@ -113,7 +113,7 @@ const useProps = createHook<PaginationProps>(
           <Select
             className={selectClassName}
             onChange={handleChangePageDropdown}
-            options={[...new Array(10).keys()].map((index) => ({
+            options={[...new Array(10).keys()].map((_, index) => ({
               label: `${index + 1}`,
               value: index,
             }))}
