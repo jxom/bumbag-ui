@@ -6,7 +6,7 @@ export const Select = (styleProps) => cssClass`
   background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
   border: 1px solid ${palette('white900')(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
-  color: ${styleProps.isPlaceholderSelected ? tint(0.4, palette('text')(styleProps)) : palette('text')(styleProps)};
+  color: ${styleProps.isPlaceholderSelected ? tint(0.4, 'text')(styleProps) : palette('text')(styleProps)};
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;

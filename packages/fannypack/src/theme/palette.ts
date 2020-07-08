@@ -1,7 +1,7 @@
 // @ts-ignore
 
 import { PaletteThemeConfig } from '../types';
-import { darken, lighten, shade, generateColorVariants, generateTextVariants } from '../utils';
+import { shade, generateColorVariants, generateTextVariants } from '../utils';
 
 const defaultPalette: { [key: string]: string } = {
   text: '#212121',
@@ -66,7 +66,7 @@ export default (overrides: PaletteThemeConfig) => ({
     paletteKey: 'warning',
     color: overrides.warning || defaultPalette.warning,
     paletteOverrides: ({ color }) => ({
-      warningTintInverted: shade(0.7, color),
+      warningTintInverted: shade(0.7, color)(),
     }),
   }),
 

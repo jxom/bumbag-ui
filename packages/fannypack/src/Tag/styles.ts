@@ -43,7 +43,7 @@ export const TagClose = (styleProps) => cssClass`
     margin-left: -${space(1)(styleProps)}em;
 
     &:hover {
-      background-color: ${darken(0.1, palette(styleProps.palette)(styleProps))};
+      background-color: ${darken(0.1, styleProps.palette)(styleProps)};
     }
 
     &:focus {

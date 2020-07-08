@@ -45,8 +45,8 @@ export const HiddenSwitch = (styleProps) =>
       transition: all ease 0.2s;
     `,
     disabledCheckedCss: css`
-      background-color: ${tint(0.5, palette(styleProps.palette || 'primary')(styleProps))};
-      border-color: ${tint(0.5, palette(styleProps.palette || 'primary')(styleProps))};
+      background-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
+      border-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
     `,
     disabledUncheckedIconCss: css`
       background: ${palette('white700')(styleProps)};
@@ -56,7 +56,7 @@ export const HiddenSwitch = (styleProps) =>
       left: 1.25em;
     `,
     disabledCheckedIconCss: css`
-      border-color: ${tint(0.5, palette(styleProps.palette || 'primary')(styleProps))};
+      border-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
     `,
     uncheckedIconCss: css`
       background: ${palette('background')(styleProps)};

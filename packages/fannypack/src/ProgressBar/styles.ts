@@ -6,7 +6,7 @@ export const ProgressBar = (styleProps) => cssClass`
   overflow: hidden;
   width: 100%;
   height: 1rem;
-  background-color: ${tint(0.9, palette(styleProps.color, styleProps.color)(styleProps))};
+  background-color: ${tint(0.9, styleProps.color)(styleProps)};
 
   ${getSizeAttributes(styleProps)};
 

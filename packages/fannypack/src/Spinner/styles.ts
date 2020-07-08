@@ -33,7 +33,7 @@ export const Spinner = (styleProps) => cssClass`
 export const TrackCircle = (styleProps) => cssClass`
   stroke: ${palette(
     styleProps.trackColor || `${styleProps.color}100`,
-    styleProps.trackColor || tint(0.9, styleProps.color)
+    styleProps.trackColor || tint(0.9, styleProps.color)(styleProps)
   )(styleProps)};
 
   & {

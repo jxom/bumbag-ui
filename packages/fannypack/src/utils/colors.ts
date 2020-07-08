@@ -1,47 +1,56 @@
-import {
-  darken as _darken,
-  lighten as _lighten,
-  shade as _shade,
-  readableColor as _readableColor,
-  tint as _tint,
-} from 'polished';
+import tinycolor from 'tinycolor2';
+import { palette } from './theme';
+
+const BLACK = '#000000';
+const WHITE = '#ffffff';
 
 export function darken(scale, color) {
-  try {
-    return _darken(scale, color);
-  } catch (err) {
-    return undefined;
-  }
+  return ({ theme }: { theme?: any } = {}) => {
+    const themeColor = palette(color)({ theme });
+    return tinycolor(themeColor)
+      .darken(scale * 100)
+      .toHexString();
+  };
 }
 
 export function lighten(scale, color) {
-  try {
-    return _lighten(scale, color);
-  } catch (err) {
-    return undefined;
-  }
+  return ({ theme }: { theme?: any } = {}) => {
+    const themeColor = palette(color)({ theme });
+    return tinycolor(themeColor)
+      .lighten(scale * 100)
+      .toHexString();
+  };
 }
 
 export function shade(scale, color) {
-  try {
-    return _shade(scale, color);
-  } catch (err) {
-    return undefined;
-  }
-}
-
-export function readableColor(color) {
-  try {
-    return _readableColor(color);
-  } catch (err) {
-    return undefined;
-  }
+  return ({ theme }: { theme?: any } = {}) => {
+    const themeColor = palette(color)({ theme });
+    if (themeColor === 'transparent') return themeColor;
+    return tinycolor.mix(themeColor, BLACK, scale * 100).toHexString();
+  };
 }
 
 export function tint(scale, color) {
-  try {
-    return _tint(scale, color);
-  } catch (err) {
-    return undefined;
-  }
+  return ({ theme }: { theme?: any } = {}) => {
+    const themeColor = palette(color)({ theme });
+    if (themeColor === 'transparent') return themeColor;
+    return tinycolor.mix(themeColor, WHITE, scale * 100).toHexString();
+  };
+}
+
+export function readableColor(color) {
+  return ({ theme }: { theme?: any } = {}) => {
+    const themeColor = palette(color)({ theme });
+    const isReadable = tinycolor.isReadable(BLACK, themeColor);
+    if (!isReadable) {
+      return WHITE;
+    }
+    return BLACK;
+  };
+}
+
+export function isColor(color) {
+  const s = new Option().style;
+  s.color = color;
+  return s.color === color;
 }

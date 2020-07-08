@@ -3,6 +3,7 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 import { get } from './get';
+import { isColor } from './colors';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
@@ -62,6 +63,7 @@ export function fontWeight(selector?: string, defaultValue?: any) {
 export function palette(selector?: string, defaultValue?: any) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const color = theme('palette', selector || props.palette, defaultValue)(props);
+    if (!color && isColor(selector)) return selector;
     return color;
   };
 }

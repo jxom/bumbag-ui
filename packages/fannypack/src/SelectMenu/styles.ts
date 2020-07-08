@@ -100,13 +100,13 @@ export const SelectMenuItem = (styleProps) => cssClass`
       color: ${palette('primary900')(styleProps)};
 
       &:hover {
-        background-color: ${darken(0.01, palette('primaryTint')(styleProps))};
+        background-color: ${darken(0.01, 'primaryTint')(styleProps)};
       }
 
       ${
         styleProps.tabIndex === 0 &&
         css`
-          background-color: ${darken(0.01, palette('primaryTint')(styleProps))};
+          background-color: ${darken(0.01, 'primaryTint')(styleProps)};
         `
       }
     }

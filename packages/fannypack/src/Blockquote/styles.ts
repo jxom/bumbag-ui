@@ -2,7 +2,7 @@ import { cssClass } from '../styled';
 import { darken, space, theme } from '../utils';
 
 export const Blockquote = (styleProps) => cssClass`
-  border-left: 4px solid ${darken(0.2, 'white')};
+  border-left: 4px solid ${darken(0.2, 'white')(styleProps)};
   padding: ${space(4)(styleProps)}rem;
 
   & {

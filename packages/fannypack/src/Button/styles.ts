@@ -230,7 +230,9 @@ export const getInteractiveProperties = (styleProps) => css`
   ${styleProps.variant !== 'link' &&
   css`
     &:hover:active {
-      background-color: ${palette(`${styleProps.palette === 'default' ? 'white' : styleProps.palette}800`)(styleProps)};
+      background-color: ${palette(styleProps.palette === 'default' ? 'white800' : `${styleProps.palette}700`)(
+        styleProps
+      )};
 
       & {
         ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
@@ -254,11 +256,11 @@ export const getLinkProperties = (styleProps) => css`
 
     &:hover {
       color: ${styleProps.palette === 'default'
-        ? darken(0.5, palette('text', defaultPalette.text)(styleProps))
-        : darken(0.5, palette(styleProps.palette)(styleProps))};
+        ? darken(0.4, 'text')(styleProps)
+        : darken(0.4, styleProps.palette)(styleProps)};
       fill: ${styleProps.palette === 'default'
-        ? darken(0.5, palette('text', defaultPalette.text)(styleProps))
-        : darken(0.5, palette(styleProps.palette)(styleProps))};
+        ? darken(0.4, 'text')(styleProps)
+        : darken(0.4, styleProps.palette)(styleProps)};
     }
   }
 
