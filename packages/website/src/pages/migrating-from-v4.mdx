@@ -8,9 +8,53 @@ path: /migrating-from-v4/
 
 If you are migrating from Fannypack v4, there are quite a few notable breaking changes. This guide aims to help you migrate to v5. If you feel like there is anything missing from this guide, feel free to raise a pull request.
 
-## Breaking changes
+## Upgrading incrementally
 
-<Divider />
+It's recommended to upgrade to v5 incrementally, meaning that v4 and v5 will co-exist until v5 takes over.
+
+If you wish to upgrade incrementally, you can install the `fannypack-v5` package:
+
+```
+npm install fannypack-v5
+```
+
+And then, set up Fannypack v5 in your app root:
+
+```jsx
+// v4 Fannypack
+import { ThemeProvider } from 'fannypack';
+// v5 Fannypack
+import { Provider as FannypackProvider } from 'fannypack-v5';
+
+const oldTheme = { ... };
+const newTheme = { ... };
+
+const App = () => (
+  <ThemeProvider theme={oldTheme}>
+    <FannypackProvider theme={newTheme}>
+      Hello world!
+    </FannypackProvider>
+  </ThemeProvider>
+);
+```
+
+Then you can start incrementally migrating your components like so:
+
+```jsx
+- import { Box } from 'fannypack';
++ import { Box } from 'fannypack-v5';
+import { Button } from 'fannypack';
+
+function Example() {
+  return (
+    <Box>
+      <Button>Hello world!</Button>
+    </Box>
+  )
+}
+```
+
+## Breaking changes
 
 ### General: `ThemeProvider` to `Provider`
 
@@ -454,7 +498,7 @@ Removed `CalloutOverlay` in favor of `Callout.Overlay` and the `Overlay` utility
 
 ```jsx
 <Overlay.State>
-  <Button use={Overlay.Disclosure}>Open callout</Button>
+  <Overlay.Disclosure use={Button}>Open callout</Overlay.Disclosure>
   <Callout.Overlay title="This is a title">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
     eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
@@ -485,137 +529,770 @@ The `elevation` prop has been renamed to `altitude`.
 
 ### Card: `headerActions` to `headerAddon`
 
+The `headerActions` prop has been renamed to `headerAddon`.
+
+##### v4
+
+```jsx
+<Card headerActions={...}>
+```
+
+##### v5
+
+```jsx
+<Card headerAddon={...}>
+```
+
 <Divider />
 
 ### HighlightedCode: Moved to `fannypack-addon-highlighted-code`
+
+We have moved the `HighlightedCode` component to `fannypack-addon-highlighted-code` to save some bundle size.
+
+##### v4
+
+```jsx
+import { HighlightedCode } from 'fannypack';
+```
+
+##### v5
+
+```jsx
+// First, install the package
+npm install fannypack-addon-highlighted-code
+
+// Then, import it accordingly
+import { HighlightedCode } from 'fannypack-addon-highlighted-code';
+```
 
 <Divider />
 
 ### Column: Moved to `Columns.Column`
 
+We have moved the `Column` component to a sub-component of `Columns`.
+
+##### v4
+
+```jsx
+<Column>
+```
+
+##### v5
+
+```jsx
+<Columns.Column>
+```
+
 <Divider />
 
 ### DialogModal: Removed `DialogModal`
+
+Removed `DialogModal` in favor of `Dialog.Modal` and the `Modal` utility.
+
+##### v4
+
+```jsx
+<Modal.Container>
+  {modal => (
+    <Box>
+      <Button use={Modal.Show} {...modal}>
+        Click me
+      </Button>
+      <DialogModal {...modal}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue,
+        ultrices eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum
+        consectetur lectus augue sit amet justo.
+      </DialogModal>
+    </Box>
+  )}
+</Modal.Container>
+```
+
+##### v5
+
+
+```jsx
+<Modal.State>
+  <Modal.Disclosure use={Button}>Open dialog</Modal.Disclosure>
+  <Dialog.Modal title="This is a title">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ipsum, cursus id placerat congue, ultrices
+    eget lectus. Duis posuere, lacus sed tristique commodo, sapien turpis mollis nunc, vestibulum consectetur lectus
+    augue sit amet justo.
+  </Dialog.Modal>
+</Modal.State>
+```
 
 <Divider />
 
 ### Divider: Removed `content`
 
+We have removed the `content` prop on `Divider`.
+
 <Divider />
 
 ### Divider: `isVertical` to `orientation`
+
+We have repurposed the `isVertical` prop to `orientation`.
+
+##### v4
+
+```jsx
+<Divider isVertical />
+```
+
+##### v5
+
+```jsx
+<Divider orientation="vertical" />
+```
 
 <Divider />
 
 ### FieldSet: `isHorizontal` to `orientation`
 
+##### v4
+
+```jsx
+<FieldSet isHorizontal />
+```
+
+##### v5
+
+```jsx
+<FieldSet orientation="horizontal" />
+```
+
 <Divider />
 
 ### FieldWrapper: `tooltipTrigger` to `tooltipTriggerComponent`
+
+We have renamed the `tooltipTrigger` prop to `tooltipTriggerComponent`
+
+##### v4
+
+```jsx
+<FieldWrapper tooltipTrigger={<Button size="small">Tooltip</Button>} />
+```
+
+##### v5
+
+```jsx
+<FieldWrapper tooltipTriggerComponent={<Button size="small">Tooltip</Button>} />
+```
 
 <Divider />
 
 ### Group: `isVertical` to `orientation`
 
+We have renamed the `isVertical` prop to `orientation`.
+
+##### v4
+
+```jsx
+<Group isVertical />
+```
+
+##### v5
+
+```jsx
+<Group orientation="vertical" />
+```
+
 <Divider />
 
 ### Group: `verticalAt` to `verticalBelow`
+
+We have renamed the `verticalAt` prop to `verticalBelow`.
+
+##### v4
+
+```jsx
+<Group verticalAt="desktop" />
+```
+
+##### v5
+
+```jsx
+<Group verticalBelow="desktop" />
+```
 
 <Divider />
 
 ### Hidden: Removed `Hidden`
 
+We have removed the `Hidden` utility in favour of the [`Disclosure` utility](/utilities/disclosure).
+
+##### v4
+
+```jsx
+<Hidden.Container>
+  {hidden => (
+    <Box>
+      <Button use={Hidden.Toggle} {...hidden}>Toggle</Button>
+      <Hidden {...hidden}>
+        Hello world
+      </Hidden>
+    </Box>
+  )}
+</Hidden.Container>
+```
+
+##### v5
+
+```jsx
+<Disclosure.State>
+  <Disclosure>Toggle</Disclosure>
+  <Disclosure.Content>Hello world</Disclosure.Content>
+</Disclosure.State>
+```
+
 <Divider />
 
 ### Icon: `size` to `fontSize`
+
+The `size` prop has been renamed to `fontSize`.
+
+##### v4
+
+```jsx
+<Icon size="400">
+```
+
+##### v5
+
+```jsx
+<Icon fontSize="400">
+```
 
 <Divider />
 
 ### List: `isVertical` to `orientation`
 
+We have renamed the `isVertical` prop to `orientation`.
+
+##### v4
+
+```jsx
+<List isVertical>
+```
+
+##### v5
+
+```jsx
+<List orientation="vertical">
+```
+
 <Divider />
 
 ### Markdown: Moved to `fannypack-addon-markdown`
+
+We have moved the `Markdown` component to `fannypack-addon-markdown` to save some bundle size.
+
+##### v4
+
+```jsx
+import { Markdown } from 'fannypack';
+```
+
+##### v5
+
+```jsx
+// First, install the package
+npm install fannypack-addon-markdown
+
+// Then, import it accordingly
+import { Markdown } from 'fannypack-addon-markdown';
+```
 
 <Divider />
 
 ### Modal: `Modal.Container` to `Modal.State`
 
+We have repurposed the `Modal.Container` utility to `Modal.State`.
+
+##### v4
+
+```jsx
+<Modal.Container>
+  {({ isVisible, show, hide, toggle, ... })} => (...)
+</Modal.Container>
+```
+
+##### v5
+
+```jsx
+<Modal.State>
+  {({ visible, show, hide, toggle, ... })} => (...)
+</Modal.State>
+```
+
 <Divider />
 
 ### Overlay: `Overlay.Container` to `Overlay.State`
+
+We have repurposed the `Overlay.Container` utility to `Overlay.State`.
+
+##### v4
+
+```jsx
+<Overlay.Container>
+  {({ isVisible, show, hide, toggle, ... })} => (...)
+</Overlay.Container>
+```
+
+##### v5
+
+```jsx
+<Overlay.State>
+  {({ visible, show, hide, toggle, ... })} => (...)
+</Overlay.State>
+```
 
 <Divider />
 
 ### PageContent: `Page.Content` to `PageContent`
 
+We have renamed the `Page.Content` component to `PageContent`.
+
+##### v4
+
+```jsx
+<Page.Content>
+```
+
+##### v5
+
+```jsx
+<PageContent>
+```
+
 <Divider />
 
 ### PageWithSidebar: `Page.WithSidebar` to `PageWithSidebar`
+
+We have renamed the `Page.WithSidebar` component to `PageWithSidebar`.
+
+##### v4
+
+```jsx
+<Page.WithSidebar>
+```
+
+##### v5
+
+```jsx
+<PageWithSidebar>
+```
 
 <Divider />
 
 ### PageWithSidebar: `sidebarContent` to `sidebar`
 
+##### v4
+
+```jsx
+<Page.WithSidebar sidebarContent={...}>
+```
+
+##### v5
+
+```jsx
+<PageWithSidebar sidebar={...}>
+```
+
 <Divider />
 
 ### Popover: `Popover` to `Popover.State` & `Popover`
+
+We have repurposed the `Popover` component to use `Popover.State` along with a `Popover.Disclosure` component.
+
+The `Popover` component no longer handles it's state internally.
+
+##### v4
+
+```jsx
+<Popover content={<Text>What was the best thing that happened to you today?</Text>}>
+  <Button>Open Popover</Button>
+</Popover>
+```
+
+##### v5
+
+```jsx
+<Popover.State>
+  <Popover.Disclosure use={Button}>Open Popover</Popover.Disclosure>
+  <Popover>
+    What was the best thing that happened to you today?
+  </Popover>
+</Popover.State>
+```
 
 <Divider />
 
 ### Rating: `maxRating` to `maxValue`
 
+We have renamed the `maxRating` prop to `maxValue`.
+
+##### v4
+
+```jsx
+<Rating maxRating={10}>
+```
+
+##### v5
+
+```jsx
+<Rating maxValue={10}>
+```
+
 <Divider />
 
 ### Rating: `onRate` to `onChange`
+
+We have renamed the `onRate` prop to `onChange`.
+
+##### v4
+
+```jsx
+<Rating onRate={() => {}}>
+```
+
+##### v5
+
+```jsx
+<Rating onChange={() => {}}>
+```
 
 <Divider />
 
 ### SelectMenu: `useTags` to `hasTags`
 
+We have renamed the `useTags` prop to `hasTags`.
+
+##### v4
+
+```jsx
+<SelectMenu useTags>
+```
+
+##### v5
+
+```jsx
+<SelectMenu hasTags>
+```
+
 <Divider />
 
 ### SelectMenu: `loadQuery` to `loadVariables`
+
+##### v4
+
+```jsx
+<SelectMenu loadQuery={{ key: 'value' }}>
+```
+
+##### v5
+
+```jsx
+<SelectMenu loadVariables={{ key: 'value' }}>
+```
+
+<Divider />
+
+### SelectMenu: `data` to `variables`
+
+Inside the `loadOptions` prop, the `data` attribute has been renamed to `variables`.
+
+##### v4
+
+```jsx
+<SelectMenu loadOptions={({ searchText, page, data }) => ...}>
+```
+
+##### v5
+
+```jsx
+<SelectMenu loadOptions={({ searchText, page, variables }) => ...}>
+```
 
 <Divider />
 
 ### SelectMenu: `isSearchable` to `hasSearch`
 
+The `isSearchable` prop has been renamed to `hasSearch`.
+
+##### v4
+
+```jsx
+<SelectMenu isSearchable>
+```
+
+##### v5
+
+```jsx
+<SelectMenu hasSearch>
+```
+
 <Divider />
 
 ### Set: `isVertical` to `orientation`
+
+The `isVertical` prop has been renamed to `orientation`.
+
+##### v4
+
+```jsx
+<Set isVertical>
+```
+
+##### v5
+
+```jsx
+<Set orientation="vertical">
+```
 
 <Divider />
 
 ### Sidebar: `Sidebar` to `Drawer`
 
+The `Sidebar` utility has been renamed to `Drawer`.
+
+`Sidebar.Container` has also been renamed to `Drawer.State`.
+
+##### v4
+
+```jsx
+<Sidebar.Container>
+  {sidebar => (
+    <Box>
+      <Button use={Sidebar.Show} {...sidebar}>
+        Toggle
+      </Button>
+      <Sidebar {...sidebar}>
+        This is a side drawer
+      </Sidebar>
+    </Box>
+  )}
+</Sidebar.Container>
+```
+
+##### v5
+
+```jsx
+<Drawer.State>
+  <Drawer.Disclosure>Toggle</Drawer.Disclosure>
+  <Drawer>
+    This is a side drawer
+  </Drawer>
+</Drawer.State>
+```
+
+<Divider />
+
+### Tabs: `Tabs.Container` to `Tabs`
+
+The `Tabs.Container` component has been repurposed to `Tabs`.
+
+##### v4
+
+```jsx
+<Tabs.Container>
+  {tabs => (
+    ...
+  )}
+</Tabs.Container>
+```
+
+##### v5
+
+
+```jsx
+<Tabs>
+  ...
+</Tabs>
+```
+
+<Divider />
+
+### Tabs: `Tabs` to `Tabs.List`
+
+##### v4
+
+```jsx
+<Tabs.Container>
+  {tabs => (
+    <Tabs>
+      <Tabs.Tab tab="dogs" {...tabs}>
+        Dogs
+      </Tabs.Tab>
+      <Tabs.Tab tab="cats" {...tabs}>
+        Cats
+      </Tabs.Tab>
+      <Tabs.Tab tab="parrots" {...tabs}>
+        Parrots
+      </Tabs.Tab>
+    </Tabs>
+  )}
+</Tabs.Container>
+```
+
+##### v5
+
+```jsx
+<Tabs selectedId="tab1">
+  <Tabs.List>
+    <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
+    <Tabs.Tab tabId="tab2">Cats</Tabs.Tab>
+    <Tabs.Tab tabId="tab3">Parrots</Tabs.Tab>
+  </Tabs.List>
+</Tabs>
+```
+
 <Divider />
 
 ### Tabs: `type` to `variant`
+
+The `type` prop has been renamed to `variant`
+
+##### v4
+
+```jsx
+<Tabs type="boxed">
+```
+
+##### v5
+
+```jsx
+<Tabs.List variant="boxed">
+```
 
 <Divider />
 
 ### Tabs.Panel: `tab` to `tabId`
 
+The `tab` prop has been renamed to `tabId`
+
+##### v4
+
+```jsx
+<Tabs.Panel tab="cats">
+```
+
+##### v5
+
+```jsx
+<Tabs.Panel tabId="cats">
+```
+
 <Divider />
 
 ### Tabs.Tab: `tab` to `tabId`
+
+The `tab` prop has been renamed to `tabId`
+
+##### v4
+
+```jsx
+<Tabs.Tab tab="cats">
+```
+
+##### v5
+
+```jsx
+<Tabs.Tab tabId="cats">
+```
 
 <Divider />
 
 ### Tag: `kind` to `variant`
 
+The `kind` prop has been renamed to `variant`
+
+##### v4
+
+```jsx
+<Tag variant="outlined">
+```
+
+##### v5
+
+```jsx
+<Tag variant="outlined">
+```
+
 <Divider />
 
 ### Toast: Now requires a `ToastManager`
+
+The Toast component now requires a `ToastManager` to render the toasts.
+
+```jsx
+import { Provider, ToastManager } from 'fannypack';
+
+const App = () => (
+  <Provider theme={theme}>
+    // ... your app
+    <ToastManager />
+  </Provider>
+);
+```
 
 <Divider />
 
 ### Toast: `Toast.Container` & `withToasts` to `useToasts`
 
+##### v4
+
+```jsx
+<Toast.Container>
+  {toasts => (
+    <Button
+      onClick={() => toasts.success({ title: 'Message sent' })}
+    >
+      Add toast
+    </Button>
+  )}
+</Toast.Container>
+```
+
+##### v5
+
+```jsx
+function Example() {
+  const toasts = useToasts();
+
+  return (
+    <Button
+      onClick={() => toasts.success({ title: 'Message sent' })}
+    >
+      Add toast
+    </Button>
+  )
+}
+```
+
 <Divider />
 
 ### Tooltip: Now wraps over children
+
+The `Tooltip` component now wraps over it's children.
+
+##### v4
+
+```jsx
+<Button>
+  Hover on me
+  <Tooltip>Hello world!</Tooltip>
+</Button>
+```
+
+##### v5
+
+```jsx
+<Tooltip content="Hello world">
+  <Button>Hover on me</Button>
+</Tooltip>
+```
 
 
 
