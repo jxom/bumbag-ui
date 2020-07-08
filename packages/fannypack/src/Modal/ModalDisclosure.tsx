@@ -4,9 +4,8 @@ import {
   DialogDisclosureProps as ReakitDialogDisclosureProps,
   useDialogDisclosure as useReakitDialogDisclosure,
 } from 'reakit';
-import _merge from 'lodash/merge';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, merge } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { ModalContext } from './ModalState';
@@ -20,7 +19,7 @@ const useProps = createHook<ModalDisclosureProps>(
     let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
     const modalContext = React.useContext(ModalContext);
     const modalDisclosureProps = useReakitDialogDisclosure(
-      _merge({ disabled, focusable, visible, toggle, baseId }, modalContext.modal),
+      merge({ disabled, focusable, visible, toggle, baseId }, modalContext.modal),
       htmlProps
     );
     htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });

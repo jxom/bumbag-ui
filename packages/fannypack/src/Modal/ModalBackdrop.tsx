@@ -4,9 +4,8 @@ import {
   DialogBackdropProps as ReakitDialogBackdropProps,
   useDialogBackdrop as useReakitDialogBackdrop,
 } from 'reakit';
-import _merge from 'lodash/merge';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, merge } from '../utils';
 import { Box, BoxProps } from '../Box';
 
 import { ModalContext } from './ModalState';
@@ -20,7 +19,7 @@ const useProps = createHook<ModalBackdropProps>(
     let { visible, baseId, modal, animating, animated, stopAnimation, ...htmlProps } = props;
     const modalContext = React.useContext(ModalContext);
     const modalBackdropProps = useReakitDialogBackdrop(
-      _merge(
+      merge(
         {
           visible,
           baseId,

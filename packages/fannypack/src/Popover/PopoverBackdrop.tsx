@@ -4,7 +4,6 @@ import {
   PopoverBackdropProps as ReakitPopoverBackdropProps,
   usePopoverBackdrop as useReakitPopoverBackdrop,
 } from 'reakit';
-import _merge from 'lodash/merge';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';

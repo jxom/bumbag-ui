@@ -6,7 +6,6 @@ import {
   PopoverArrowProps as ReakitPopoverArrowProps,
   usePopoverArrow as useReakitPopoverArrow,
 } from 'reakit';
-import _merge from 'lodash/merge';
 
 import { AnimateProps } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';

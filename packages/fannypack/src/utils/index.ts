@@ -9,6 +9,7 @@ export * from './fieldAdaptors';
 export * from './htmlProps';
 export * from './isFunction';
 export * from './OutsideClickHandler';
+export * from './merge';
 export * from './mergeRefs';
 export * from './omit';
 export * from './parseIcons';

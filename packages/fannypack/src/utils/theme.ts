@@ -1,8 +1,8 @@
 import { theme as _theme } from 'styled-tools';
-import _get from 'lodash/get';
 import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
+import { get } from './get';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
@@ -12,9 +12,9 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const variantSelector = `${themeKey}.variants.${variant}.${path}`;
     const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
-    const defaultTheme = _get(props, `overrides.${selector}`) || _get(props, `theme.${selector}`);
-    const variantTheme = _get(props, `overrides.${variantSelector}`) || _get(props, `theme.${variantSelector}`);
-    const colorModeTheme = _get(props, `overrides.${colorModeSelector}`) || _get(props, `theme.${colorModeSelector}`);
+    const defaultTheme = get(props, `overrides.${selector}`) || get(props, `theme.${selector}`);
+    const variantTheme = get(props, `overrides.${variantSelector}`) || get(props, `theme.${variantSelector}`);
+    const colorModeTheme = get(props, `overrides.${colorModeSelector}`) || get(props, `theme.${colorModeSelector}`);
     const theme = colorModeTheme || variantTheme || defaultTheme || defaultValue;
 
     if (isFunction(theme)) {

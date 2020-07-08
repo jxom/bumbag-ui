@@ -1,7 +1,6 @@
 import * as React from 'react';
-import _uniqueId from 'lodash/uniqueId';
 
-import { useTheme } from '../utils';
+import { generateId, useTheme } from '../utils';
 
 export const ToastContext = React.createContext({ toasts: [] });
 
@@ -27,7 +26,7 @@ export function ToastProvider(props: Props) {
 
   const add = React.useCallback(
     (_toast) => {
-      const key = _uniqueId('toast-');
+      const key = generateId('toast-');
       const toast = {
         showCountdown,
         timeout,
