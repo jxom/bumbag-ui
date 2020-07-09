@@ -218,6 +218,30 @@ const theme = {
 
 <Divider />
 
+### Theming: `global.fontFamily` to `fonts.default`
+
+We have moved the `global.fontFamily` attribute to `fonts.default`
+
+##### v4
+
+```jsx
+const theme = {
+  global: {
+    fontFamily: "'Lato', system-ui, sans-serif"
+  }
+}
+```
+
+##### v5
+
+```jsx
+const theme = {
+  fonts: {
+    default: "'Lato', system-ui, sans-serif"
+  }
+}
+```
+
 ### Theming: Removed `webFontLoader`
 
 Web Font Loader was removed in favour of direct Google Font imports with font swapping.
@@ -248,13 +272,9 @@ Now, you import the font(s) directly from Google Fonts.
 
 ```jsx
 const theme = {
-  global: {
-    fontFamily: "'Lato', system-ui, sans-serif",
-    css: {
-      root: css`
-        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-      `,
-    }
+  fonts: {
+    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
+    default: "'Lato', system-ui, sans-serif"
   }
 }
 ```

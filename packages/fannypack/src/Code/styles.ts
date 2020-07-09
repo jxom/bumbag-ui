@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { borderRadius, palette, theme } from '../utils';
+import { borderRadius, font, palette, theme } from '../utils';
 
 export const Code = (styleProps) => cssClass`
   background-color: ${
@@ -11,7 +11,7 @@ export const Code = (styleProps) => cssClass`
   color: ${
     styleProps.palette === 'default' ? palette('text')(styleProps) : palette(`${styleProps.palette}700`)(styleProps)
   };
-  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
+  font-family: ${font('mono')(styleProps)};
   padding: 0.1rem 0.2rem;
   overflow: scroll;
 

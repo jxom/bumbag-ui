@@ -3,7 +3,7 @@ import _kebabCase from 'lodash/kebabCase';
 
 import { css } from '../styled';
 import { useTheme } from './useTheme';
-import { border, borderRadius, breakpoint, fontSize, palette, space, fontWeight } from './theme';
+import { border, borderRadius, breakpoint, font, fontSize, palette, space, fontWeight } from './theme';
 
 import { cssProps as cssPropsMap, pickCSSProps } from './cssProps';
 import { useColorMode } from './useColorMode';
@@ -52,10 +52,12 @@ const spaceAttributes = [
   'grid-column-gap',
   'grid-row-gap',
 ];
+const fontAttributes = ['font', 'fontFamily'];
 const fontSizeAttributes = ['fontSize'];
 const fontWeightAttributes = ['fontWeight'];
 
 const attributeMaps = {
+  font: ['fontFamily'],
   marginY: ['marginTop', 'marginBottom'],
   paddingY: ['paddingTop', 'paddingBottom'],
   marginX: ['marginLeft', 'marginRight'],
@@ -90,6 +92,14 @@ function getSpaceValue({ theme, value }) {
   const spacing = space(value)({ theme });
   if (spacing) {
     return `${spacing}rem`;
+  }
+  return value;
+}
+
+function getFontValue({ theme, value }) {
+  const fontValue = font(value)({ theme });
+  if (fontValue) {
+    return fontValue;
   }
   return value;
 }
@@ -150,6 +160,9 @@ function getStyleFromProps(props, theme, colorMode) {
         }
         if (spaceAttributes.includes(attribute)) {
           newValue = getSpaceValue({ theme, value });
+        }
+        if (fontAttributes.includes(attribute)) {
+          newValue = getFontValue({ theme, value });
         }
         if (fontSizeAttributes.includes(attribute)) {
           newValue = getFontSizeValue({ theme, value });

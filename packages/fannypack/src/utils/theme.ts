@@ -47,6 +47,13 @@ export function borderRadius(selector?: string, defaultValue?: any) {
   };
 }
 
+export function font(selector?: string, defaultValue?: any) {
+  return (props: { font?: string; theme?: ThemeConfig }) => {
+    const color = theme('fonts', selector || props.font, defaultValue)(props);
+    return color;
+  };
+}
+
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
     const color = theme('fontSizes', selector || props.fontSize, defaultValue)(props);

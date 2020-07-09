@@ -5,6 +5,7 @@ import breakpoints from './breakpoints';
 import fontWeights from './fontWeights';
 import global from './global';
 import palette from './palette';
+import fonts from './fonts';
 
 import Button from './Button';
 import Checkbox from './Checkbox';
@@ -33,6 +34,7 @@ export default {
   fontWeights,
   global,
   palette,
+  fonts,
 
   Button,
   Checkbox,

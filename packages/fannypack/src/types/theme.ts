@@ -144,14 +144,15 @@ export type GlobalThemeConfig = {
   css?: {
     root: ThemeAttribute<Stylesheet>;
   };
-  fontFamily?: string;
   fontSize?: number;
 };
 export type FontsThemeConfig = {
+  // @ts-ignore
   importUrls?: Array<string>;
   default?: string;
   heading?: string;
   mono?: string;
+  [key: string]: string;
 };
 export type FontSizeThemeConfig = {
   [key: string]: number;

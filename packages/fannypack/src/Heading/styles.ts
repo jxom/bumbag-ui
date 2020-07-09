@@ -1,7 +1,8 @@
 import { cssClass } from '../styled';
-import { fontSize, fontWeight, space, theme } from '../utils';
+import { font, fontSize, fontWeight, space, theme } from '../utils';
 
 export const Heading = (styleProps) => cssClass`
+  font-family: ${font('heading')(styleProps)};
   font-weight: ${fontWeight('bold')(styleProps)};
   line-height: 1.2;
 

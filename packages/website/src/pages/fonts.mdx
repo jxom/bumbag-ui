@@ -6,33 +6,82 @@ path: /fonts/
 
 # Fonts
 
-## Changing the default font
+## Font families
 
-By default, Fannypack uses the following fonts as it's default font set:
+By default, Fannypack uses the following fonts as it's default:
+
+#### Text & Headings
 
 ```
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 ```
 
-You can change the font family through the Fannypack theme:
+#### Mono (code blocks)
+
+```
+font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
+```
+
+You can change the font families through the Fannypack theme:
 
 ```jsx
-import { css, ThemeProvider } from 'fannypack';
+import { css, Provider } from 'fannypack';
 
 const theme = {
-  global: {
-    css: {
-      root: css`
-        font-family: "Comic Sans MS";
-      `
-    }
+  fonts: {
+    default: "system-ui, sans-serif",
+    heading: "'Comic Sans MS', sans-serif",
+    mono: "Menlo, Courier, monospace",
   }
 }
 
 export default () => (
-  <ThemeProvider theme={theme}>
+  <Provider theme={theme}>
     {/* your app... */}
-  </ThemeProvider>
+  </Provider>
+)
+```
+
+### Accessing font families
+
+You can access the font families through styled components:
+
+```jsx
+import { Text, font, styled } from 'fannypack';
+
+const MonoText = styled(Text)`
+  font-family: ${font('mono')};
+`;
+
+<MonoText>I have the mono font family</MonoText>
+```
+
+or, you can use CSS props:
+
+```jsx-live
+<Text font="mono">I have the mono font family</Text>
+```
+
+## External fonts
+
+Fannypack supports importing third-party fonts (e.g. Google Fonts). [Click here to see a list of Google Fonts](https://fonts.google.com/).
+
+You can do this via the `fonts.importUrls` attribute:
+
+```jsx
+import { css, Provider } from 'fannypack';
+
+const theme = {
+  fonts: {
+    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
+    default: "'Lato', system-ui, sans-serif"
+  }
+}
+
+export default () => (
+  <Provider theme={theme}>
+    {/* your app... */}
+  </Provider>
 )
 ```
 
@@ -111,6 +160,12 @@ or, you can use CSS props:
 
 ```jsx
 const theme = {
+  fonts: {
+    importUrls: Array<string>,
+    default: string,
+    heading: string,
+    mono: string
+  },
   fontWeights: {
     normal: number,
     semibold: number,
@@ -137,6 +192,12 @@ const theme = {
 
 ```jsx
 const theme = {
+  fonts: {
+    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
+    default: "'Lato', system-ui, sans-serif",
+    heading: "'Comic Sans MS', sans-serif",
+    mono: "Menlo, Courier, monospace",
+  },
   fontWeights: {
     normal: 300,
     semibold: 400,

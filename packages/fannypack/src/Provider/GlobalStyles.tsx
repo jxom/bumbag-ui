@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Global, css, ThemeContext } from '../styled';
-import { palette, theme, useColorMode } from '../utils';
+import { palette, font, theme, useColorMode } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
@@ -13,7 +13,7 @@ export default function GlobalStyles() {
         body {
           background-color: ${palette('background')(styleProps)};
           box-sizing: border-box;
-          font-family: ${theme('global', 'fontFamily')(styleProps)};
+          font-family: ${font('default')(styleProps)};
           font-size: ${theme('global', 'fontSize')(styleProps)}px;
           line-height: 1.5;
           margin: 0;
@@ -29,6 +29,11 @@ export default function GlobalStyles() {
         *::after {
           box-sizing: inherit;
         }
+
+        ${font('importUrls')(styleProps) &&
+        font('importUrls')(styleProps)
+          .map((url: string) => `@import url(${url})`)
+          .join(';')};
 
         ${theme('global.css.root')(styleProps)};
       `}

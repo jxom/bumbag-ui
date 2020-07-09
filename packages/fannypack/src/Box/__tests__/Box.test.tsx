@@ -82,6 +82,16 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with a font CSS prop', () => {
+    const { container } = render(<Box font="default" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with a fontFamily CSS prop', () => {
+    const { container } = render(<Box fontFamily="default" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a spacing CSS prop (marginX, paddingX)', () => {
     const { container } = render(<Box marginX="major-4" paddingX="major-2" />);
     expect(container.firstChild).toMatchSnapshot();

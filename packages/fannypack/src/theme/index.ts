@@ -7,6 +7,7 @@ import breakpoints from './breakpoints';
 import global from './global';
 import palette from './palette';
 import spacing from './spacing';
+import fonts from './fonts';
 import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
@@ -21,6 +22,7 @@ export default (overrides: ThemeConfig = {}) => ({
   borders: borders(overrides.borders || {}),
   borderRadii: borderRadii(overrides.borderRadii || {}),
   breakpoints: breakpoints(overrides.breakpoints || {}),
+  fonts: fonts(overrides.fonts || {}),
   fontSizes: fontSizes(overrides.fontSizes || {}),
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
