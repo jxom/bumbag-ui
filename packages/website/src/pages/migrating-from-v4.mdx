@@ -190,6 +190,34 @@ const theme = {
 
 <Divider />
 
+### Theming: `layout.<minor|major>Unit` to `spacing.<minor|major>Unit`
+
+The `layout.minorUnit` and `layout.majorUnit` attributes are renamed to `spacing.minorUnit` and `spacing.majorUnit`
+
+##### v4
+
+```jsx
+const theme = {
+  layout: {
+    minorUnit: 4,
+    majorUnit: 8
+  }
+};
+```
+
+##### v5
+
+```jsx
+const theme = {
+  spacing: {
+    minorUnit: 4,
+    majorUnit: 8
+  }
+};
+```
+
+<Divider />
+
 ### Theming: Removed `webFontLoader`
 
 Web Font Loader was removed in favour of direct Google Font imports with font swapping.

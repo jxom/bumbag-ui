@@ -925,6 +925,31 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
 />
 `;
 
+exports[`props should render correctly with a spacing CSS prop 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  margin: 4rem !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
 exports[`props should render correctly with aria* props 1`] = `
 .emotion-0 {
   margin: unset;

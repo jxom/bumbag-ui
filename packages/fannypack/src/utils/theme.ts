@@ -74,16 +74,23 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
     let scalar = _scalar;
     let scaleType = _scaleType;
     if (!scalar) return 0;
-    if (typeof scalar === 'string' && (scalar.includes('minor') || scalar.includes('major'))) {
-      // @ts-ignore
-      [scaleType, scalar] = scalar.split('-');
-      scalar = parseFloat(scalar);
-      if (isNaN(scalar)) return 0;
+    if (typeof scalar === 'string') {
+      if (scalar.includes('minor') || scalar.includes('major')) {
+        // @ts-ignore
+        [scaleType, scalar] = scalar.split('-');
+        scalar = parseFloat(scalar);
+        if (isNaN(scalar)) return 0;
+      } else {
+        const value = theme('spacing', scalar)(props);
+        return value;
+      }
     }
-    const unitSize: number = props?.theme?.layout?.[`${scaleType}Unit`];
-    const fontSize: number = props?.theme?.global?.fontSize;
-    const value = (scalar as number) * (unitSize / fontSize);
-    return value;
+    if (typeof scalar === 'number') {
+      const unitSize: number = props?.theme?.spacing?.[`${scaleType}Unit`] as number;
+      const fontSize: number = props?.theme?.global?.fontSize;
+      const value = scalar * (unitSize / fontSize);
+      return value;
+    }
   };
 }
 

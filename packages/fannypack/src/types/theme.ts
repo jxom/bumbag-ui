@@ -147,15 +147,22 @@ export type GlobalThemeConfig = {
   fontFamily?: string;
   fontSize?: number;
 };
+export type FontsThemeConfig = {
+  importUrls?: Array<string>;
+  default?: string;
+  heading?: string;
+  mono?: string;
+};
 export type FontSizeThemeConfig = {
   [key: string]: number;
 };
 export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
-export type LayoutThemeConfig = {
+export type SpacingThemeConfig = {
   minorUnit?: ThemeAttribute<number>;
   majorUnit?: ThemeAttribute<number>;
+  [key: string]: ThemeAttribute<number | string>;
 };
 export type PaletteThemeConfig = {
   [key: string]: string;
@@ -1704,10 +1711,11 @@ export type ThemeConfig = {
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
+  fonts?: FontsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
-  layout?: LayoutThemeConfig;
+  spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;
 
   ActionButtons?: ActionButtonsThemeConfig;

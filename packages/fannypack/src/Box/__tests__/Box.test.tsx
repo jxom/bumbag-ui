@@ -77,6 +77,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with a spacing CSS prop', () => {
+    const { container } = render(<Box margin="xl" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a spacing CSS prop (marginX, paddingX)', () => {
     const { container } = render(<Box marginX="major-4" paddingX="major-2" />);
     expect(container.firstChild).toMatchSnapshot();

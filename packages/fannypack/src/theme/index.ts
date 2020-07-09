@@ -6,7 +6,7 @@ import borderRadii from './borderRadii';
 import breakpoints from './breakpoints';
 import global from './global';
 import palette from './palette';
-import layout from './layout';
+import spacing from './spacing';
 import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
@@ -24,7 +24,7 @@ export default (overrides: ThemeConfig = {}) => ({
   fontSizes: fontSizes(overrides.fontSizes || {}),
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
-  layout: layout(overrides.layout || {}),
+  spacing: spacing(overrides.spacing || {}),
   palette: palette(overrides.palette || {}),
 
   Container: Container(overrides.Container || {}),
