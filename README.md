@@ -5,9 +5,11 @@
 
 <p align="center"><img src="./logo.png" width="500px"></img></p>
 
-## [Go to the Fannypack Docs](https://fannypack.style)
+## [Fannypack v4 Branch](https://github.com/jxom/fannypack/tree/v4)
 
-## [Changelog](https://github.com/fannypackui/fannypack/releases)
+## [Fannypack v4 Docs](https://fannypack.style)
+
+## [Fannypack v5 Docs](https://v5.fannypack.style)
 
 ## Installing Fannypack
 
