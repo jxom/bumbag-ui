@@ -23,7 +23,7 @@ export type LocalBoxProps = {
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   altitude?: string;
   variant?: string;
-  /* Component-level theme overrides [Read more](TODO) */
+  /* Component-level theme overrides [Read more](/theming/#component-theming) */
   overrides?: ThemeConfig;
   elementRef?: React.Ref<any>;
   themeKey?: string;

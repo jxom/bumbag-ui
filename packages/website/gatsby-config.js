@@ -10,6 +10,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'docs',
+        path: `${__dirname}/src/docs`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Fannypack',
@@ -24,11 +31,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        defaultLayouts: { default: require.resolve('./src/layout/DocsLayout.tsx') },
-        // gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-autolink-headers' }],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: 76,
+              icon: '<span>#</span>',
+              elements: ['h1', 'h2', 'h3', 'h4'],
+            },
+          },
+        ],
       },
     },
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     'gatsby-plugin-emotion',
     'gatsby-plugin-webpack-bundle-analyzer',
   ],

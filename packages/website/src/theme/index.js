@@ -27,6 +27,22 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 
 export default {
+  global: {
+    css: {
+      root: css`
+        a.anchor {
+          opacity: 0;
+          position: absolute;
+          left: -0.7em;
+        }
+
+        .fp-Heading:hover > a.anchor,
+        a.anchor:hover {
+          opacity: 1;
+        }
+      `,
+    },
+  },
   Icon: {
     icons: {
       calendar: {

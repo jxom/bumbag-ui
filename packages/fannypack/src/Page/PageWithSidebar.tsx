@@ -44,13 +44,6 @@ const useProps = createHook<PageWithSidebarProps>(
       themeKeyOverride,
       prevClassName: boxProps.className,
     });
-    const spacerClassName = useClassName({
-      style: styles.PageWithSidebarSpacer,
-      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
-      themeKey,
-      themeKeyOverride,
-      themeKeySuffix: 'Spacer',
-    });
     const sidebarClassName = useClassName({
       style: styles.PageWithSidebarSidebar,
       styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
@@ -74,7 +67,7 @@ const useProps = createHook<PageWithSidebarProps>(
     });
     const contentClassName = useClassName({
       style: styles.PageWithSidebarContent,
-      styleProps: props,
+      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Content',
@@ -104,7 +97,6 @@ const useProps = createHook<PageWithSidebarProps>(
             </Drawer>
           ) : (
             <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
-              <Box className={spacerClassName} overrides={overrides} />
               <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
                 <Box className={sidebarClassName} overrides={overrides}>
                   {sidebar}

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useDefaultProps } from './useDefaultProps';
-import { ComponentWithUse } from './forwardRefWithUse';
 
 export function createComponent<Props>(
   Component: React.FunctionComponent<Props>,

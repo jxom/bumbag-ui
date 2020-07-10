@@ -46,7 +46,6 @@ export const PageContentWrapper = (styleProps) => cssClass`
 `;
 
 export const PageWithSidebar = (styleProps) => cssClass`
-  display: flex;
   min-height: 100vh;
 
   & {
@@ -56,23 +55,14 @@ export const PageWithSidebar = (styleProps) => cssClass`
 
 export const PageWithSidebarContent = (styleProps) => cssClass`
   width: 100%;
+  padding-left: ${getWidth(styleProps)};
 
-  & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
-  }
-`;
-
-export const PageWithSidebarSpacer = (styleProps) => cssClass`
-  min-width: ${getWidth(styleProps)};
-  width: ${getWidth(styleProps)};
-
-  ${breakpoint(
-    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+  ${
+    styleProps.isCollapsed &&
     css`
-      width: 0px;
-      min-width: 0px;
+      padding-left: 0px;
     `
-  )(styleProps)};
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
@@ -102,6 +92,7 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
 
 export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
+  z-index: 999999;
 
   ${breakpoint(
     `max-${collapseBreakpoints[styleProps.collapseBelow]}`,

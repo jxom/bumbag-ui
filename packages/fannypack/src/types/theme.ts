@@ -1,4 +1,5 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { InterpolationWithTheme } from '@emotion/core';
 
 import { ActionButtonsProps } from '../ActionButtons';
 import { AlertProps } from '../Alert';
@@ -118,7 +119,7 @@ import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
 import { Placement } from './props';
 
-export type Stylesheet = any; // TODO: fix
+export type Stylesheet = InterpolationWithTheme<any>;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
 export type Variant<ThemeConfig> = { [key: string]: ThemeConfig };
 
@@ -147,12 +148,11 @@ export type GlobalThemeConfig = {
   fontSize?: number;
 };
 export type FontsThemeConfig = {
-  // @ts-ignore
   importUrls?: Array<string>;
   default?: string;
   heading?: string;
   mono?: string;
-  [key: string]: string;
+  [key: string]: string | Array<string>;
 };
 export type FontSizeThemeConfig = {
   [key: string]: number;

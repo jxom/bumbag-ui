@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, useMenuItem as useReakitMenuItem, MenuItemProps as ReakitMenuItemProps } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { bindFns, useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 
@@ -39,6 +39,7 @@ const useProps = createHook<DropdownMenuItemProps>(
       hide,
       move,
       next,
+      onClick,
       orientation,
       overrides,
       placement,
@@ -125,6 +126,7 @@ const useProps = createHook<DropdownMenuItemProps>(
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
         </React.Fragment>
       ),
+      onClick: bindFns(onClick, hide, dropdownMenu.hide),
       tabIndex: props.isTabbable ? boxProps.tabIndex : undefined,
     };
   },

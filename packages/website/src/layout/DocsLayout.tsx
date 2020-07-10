@@ -1,14 +1,16 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
+import { graphql, useStaticQuery } from 'gatsby';
 import * as fannypack from 'fannypack';
 import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import SEO from '../components/SEO';
 import LiveCode from '../components/LiveCode';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import { themeMap } from '../utils/theme';
+import _TableOfContents from '../components/TableOfContents';
 
 type Props = {
   children: React.ReactNode;
@@ -16,8 +18,24 @@ type Props = {
   path: string;
 };
 
+const TableOfContents = fannypack.styled(_TableOfContents)`
+  position: fixed;
+  top: 100px;
+  right: 1rem;
+  opacity: ${(props) => (!props.isFluid ? '1' : '0')};
+  overflow: scroll;
+  max-height: calc(100vh - 200px);
+  width: 250px;
+  border-left: 1px solid #ebebeb;
+  padding-left: 1rem;
+
+  @media screen and (max-width: ${(props) => fannypack.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
+    opacity: 0;
+  }
+`;
+
 export default function Docs(props: Props) {
-  const { children, pageContext, path } = props;
+  const { pageContext, path } = props;
 
   //////////////////////////////////////////////////////////////////////
 
@@ -78,17 +96,28 @@ export default function Docs(props: Props) {
 
   //////////////////////////////////////////////////////////////////////
 
+  const showTableOfContents = fannypack.useBreakpoint('min-fullHD');
+
+  //////////////////////////////////////////////////////////////////////
+
   return (
     <React.Fragment>
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
       <fannypack.PageWithHeader sticky header={<Header />}>
         <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+          <TableOfContents
+            breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
+            isFluid={pageContext.frontmatter.isFluid}
+            toc={pageContext.tableOfContents}
+          />
           <fannypack.PageContent
             isLayout={Boolean(pageContext.frontmatter.isFluid)}
             isFluid={Boolean(pageContext.frontmatter.isFluid)}
             breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
           >
-            <MDXProvider components={components}>{children}</MDXProvider>
+            <MDXProvider components={components}>
+              <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
+            </MDXProvider>
           </fannypack.PageContent>
           <fannypack.PageContent>
             <Footer />
