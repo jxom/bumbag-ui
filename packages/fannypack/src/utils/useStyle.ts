@@ -199,7 +199,8 @@ function getStyleFromProps(props, theme, colorMode) {
 
 export function useStyle(props) {
   const { theme } = useTheme();
-  const { colorMode } = useColorMode();
+  const { colorMode: globalColorMode } = useColorMode();
   const cssProps = pickCSSProps(props);
+  const colorMode = props.colorMode || globalColorMode;
   return React.useMemo(() => getStyleFromProps(cssProps, theme, colorMode), [theme, colorMode, ...Object.values(cssProps)]); // eslint-disable-line
 }

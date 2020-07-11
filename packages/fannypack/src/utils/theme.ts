@@ -4,7 +4,6 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 import { get } from './get';
-import { isColor } from './colors';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
@@ -14,15 +13,23 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const variantSelector = `${themeKey}.variants.${variant}.${path}`;
     const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
-    const defaultTheme = get(props, `overrides.${selector}`) || get(props, `theme.${selector}`);
+    const defaultTheme = get(props, `overrides.${selector}`) || get(props, `theme.${selector}`) || defaultValue;
     const variantTheme = get(props, `overrides.${variantSelector}`) || get(props, `theme.${variantSelector}`);
     const colorModeTheme = get(props, `overrides.${colorModeSelector}`) || get(props, `theme.${colorModeSelector}`);
-    const theme = colorModeTheme || variantTheme || defaultTheme || defaultValue;
 
-    if (isFunction(theme)) {
-      return theme(props);
+    if (path && path.includes('css')) {
+      const defaultThemeValue = isFunction(defaultTheme) ? defaultTheme(props) : defaultTheme;
+      const variantThemeValue = isFunction(variantTheme) ? variantTheme(props) : variantTheme;
+      const colorModeThemeValue = isFunction(colorModeTheme) ? colorModeTheme(props) : colorModeTheme;
+      return {
+        ...defaultThemeValue,
+        ...variantThemeValue,
+        ...colorModeThemeValue,
+      };
     }
-    return theme;
+
+    const theme = colorModeTheme || variantTheme || defaultTheme;
+    return isFunction(theme) ? theme(props) : theme;
   };
 }
 

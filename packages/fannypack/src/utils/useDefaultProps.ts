@@ -8,7 +8,8 @@ const isUndefined = (val) => typeof val === 'undefined';
 export function useDefaultProps(props: any = {}, config: any = {}) {
   const { themeKey } = config;
   const { theme } = useTheme();
-  const { colorMode } = useColorMode();
+  const { colorMode: globalColorMode } = useColorMode();
+  const colorMode = props.colorMode || globalColorMode;
   const configDefaultProps = omitBy(config?.defaultProps ?? {}, isUndefined);
   const themeDefaultProps = omitBy(get(theme, `${themeKey}.defaultProps`, {}), isUndefined);
   const themeVariantDefaultProps = omitBy(

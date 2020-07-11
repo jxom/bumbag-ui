@@ -147,6 +147,11 @@ export type GlobalThemeConfig = {
   };
   fontSize?: number;
 };
+export type ModesThemeConfig = {
+  localStoragePrefix: string;
+  enableLocalStorage?: boolean;
+  useSystemColorMode?: boolean;
+};
 export type FontsThemeConfig = {
   importUrls?: Array<string>;
   default?: string;
@@ -175,6 +180,7 @@ export type ActionButtonsThemeConfig = {
   };
   defaultProps?: Partial<ActionButtonsProps>;
   variants?: Variant<ActionButtonsThemeConfig>;
+  modes?: Variant<ActionButtonsThemeConfig>;
 };
 export type AlertThemeConfig = {
   css?: {
@@ -207,6 +213,7 @@ export type AlertThemeConfig = {
   };
   defaultProps?: Partial<AlertProps>;
   variants?: Variant<AlertThemeConfig>;
+  modes?: Variant<AlertThemeConfig>;
 };
 export type AutosuggestThemeConfig = {
   css?: {
@@ -249,6 +256,7 @@ export type AutosuggestThemeConfig = {
   };
   defaultProps?: Partial<AutosuggestProps>;
   variants?: Variant<AutosuggestThemeConfig>;
+  modes?: Variant<AutosuggestThemeConfig>;
 };
 export type AutosuggestFieldThemeConfig = {
   css?: {
@@ -256,6 +264,7 @@ export type AutosuggestFieldThemeConfig = {
   };
   defaultProps?: Partial<AutosuggestFieldProps>;
   variants?: Variant<AutosuggestFieldThemeConfig>;
+  modes?: Variant<AutosuggestFieldThemeConfig>;
 };
 export type AvatarThemeConfig = {
   css?: {
@@ -270,6 +279,7 @@ export type AvatarThemeConfig = {
   };
   defaultProps?: Partial<AvatarProps>;
   variants?: Variant<AvatarThemeConfig>;
+  modes?: Variant<AvatarThemeConfig>;
 };
 export type BadgeThemeConfig = {
   css?: {
@@ -283,6 +293,7 @@ export type BadgeThemeConfig = {
   };
   defaultProps?: Partial<BadgeProps>;
   variants?: Variant<BadgeThemeConfig>;
+  modes?: Variant<BadgeThemeConfig>;
 };
 export type BreadcrumbThemeConfig = {
   css?: {
@@ -308,6 +319,7 @@ export type BreadcrumbThemeConfig = {
   };
   defaultProps?: Partial<BreadcrumbProps>;
   variants?: Variant<BreadcrumbThemeConfig>;
+  modes?: Variant<BreadcrumbThemeConfig>;
 };
 export type BlockThemeConfig = {
   css?: {
@@ -315,6 +327,7 @@ export type BlockThemeConfig = {
   };
   defaultProps?: Partial<BlockProps>;
   variants?: Variant<BlockThemeConfig>;
+  modes?: Variant<BlockThemeConfig>;
 };
 export type BlockquoteThemeConfig = {
   css?: {
@@ -328,6 +341,7 @@ export type BoxThemeConfig = {
   };
   defaultProps?: Partial<BoxProps>;
   variants?: Variant<BoxThemeConfig>;
+  modes?: Variant<BoxThemeConfig>;
 };
 export type ButtonThemeConfig = {
   css?: {
@@ -350,6 +364,7 @@ export type ButtonThemeConfig = {
   };
   defaultProps?: Partial<ButtonProps>;
   variants?: Variant<ButtonThemeConfig>;
+  modes?: Variant<ButtonThemeConfig>;
 };
 export type CalloutThemeConfig = {
   css?: {
@@ -392,6 +407,7 @@ export type CalloutThemeConfig = {
   };
   defaultProps?: Partial<CalloutProps>;
   variants?: Variant<CalloutThemeConfig>;
+  modes?: Variant<CalloutThemeConfig>;
 };
 export type CardThemeConfig = {
   css?: {
@@ -419,6 +435,7 @@ export type CardThemeConfig = {
   };
   defaultProps?: Partial<CardProps>;
   variants?: Variant<CardThemeConfig>;
+  modes?: Variant<CardThemeConfig>;
 };
 export type CheckboxThemeConfig = {
   css?: {
@@ -441,6 +458,7 @@ export type CheckboxThemeConfig = {
   };
   defaultProps?: Partial<CheckboxProps>;
   variants?: Variant<CheckboxThemeConfig>;
+  modes?: Variant<CheckboxThemeConfig>;
 };
 export type CheckboxFieldThemeConfig = {
   css?: {
@@ -448,6 +466,7 @@ export type CheckboxFieldThemeConfig = {
   };
   defaultProps?: Partial<CheckboxFieldProps>;
   variants?: Variant<CheckboxFieldThemeConfig>;
+  modes?: Variant<CheckboxFieldThemeConfig>;
 };
 export type CheckboxGroupThemeConfig = {
   css?: {
@@ -455,6 +474,7 @@ export type CheckboxGroupThemeConfig = {
   };
   defaultProps?: Partial<CheckboxGroupProps>;
   variants?: Variant<CheckboxGroupThemeConfig>;
+  modes?: Variant<CheckboxGroupThemeConfig>;
 };
 export type CheckboxGroupFieldThemeConfig = {
   css?: {
@@ -462,6 +482,7 @@ export type CheckboxGroupFieldThemeConfig = {
   };
   defaultProps?: Partial<CheckboxGroupFieldProps>;
   variants?: Variant<CheckboxGroupFieldThemeConfig>;
+  modes?: Variant<CheckboxGroupFieldThemeConfig>;
 };
 export type ClickableThemeConfig = {
   css?: {
@@ -469,6 +490,7 @@ export type ClickableThemeConfig = {
   };
   defaultProps?: Partial<ClickableProps>;
   variants?: Variant<ClickableThemeConfig>;
+  modes?: Variant<ClickableThemeConfig>;
 };
 export type CodeThemeConfig = {
   css?: {
@@ -477,6 +499,7 @@ export type CodeThemeConfig = {
   };
   defaultProps?: Partial<CodeProps>;
   variants?: Variant<CodeThemeConfig>;
+  modes?: Variant<CodeThemeConfig>;
 };
 export type ColumnsThemeConfig = {
   css?: {
@@ -490,6 +513,7 @@ export type ColumnsThemeConfig = {
   };
   defaultProps?: Partial<ColumnsProps>;
   variants?: Variant<ColumnsThemeConfig>;
+  modes?: Variant<ColumnsThemeConfig>;
 };
 export type ContainerThemeConfig = {
   css?: {
@@ -501,6 +525,7 @@ export type ContainerThemeConfig = {
   fluidMargin?: ThemeAttribute<number>;
   defaultProps?: Partial<ContainerProps>;
   variants?: Variant<ContainerThemeConfig>;
+  modes?: Variant<ContainerThemeConfig>;
 };
 export type DialogThemeConfig = {
   css?: {
@@ -543,6 +568,7 @@ export type DialogThemeConfig = {
   };
   defaultProps?: Partial<DialogProps>;
   variants?: Variant<DialogThemeConfig>;
+  modes?: Variant<DialogThemeConfig>;
 };
 export type DividerThemeConfig = {
   css?: {
@@ -551,6 +577,7 @@ export type DividerThemeConfig = {
   };
   defaultProps?: Partial<DividerProps>;
   variants?: Variant<DividerThemeConfig>;
+  modes?: Variant<DividerThemeConfig>;
 };
 export type DropdownMenuThemeConfig = {
   css?: {
@@ -588,6 +615,7 @@ export type DropdownMenuThemeConfig = {
   };
   defaultProps?: Partial<DropdownMenuProps>;
   variants?: Variant<DropdownMenuThemeConfig>;
+  modes?: Variant<DropdownMenuThemeConfig>;
 };
 export type FieldStackThemeConfig = {
   css?: {
@@ -595,6 +623,7 @@ export type FieldStackThemeConfig = {
   };
   defaultProps?: Partial<FieldStackProps>;
   variants?: Variant<FieldStackThemeConfig>;
+  modes?: Variant<FieldStackThemeConfig>;
 };
 export type FieldWrapperThemeConfig = {
   css?: {
@@ -642,6 +671,7 @@ export type FieldWrapperThemeConfig = {
   };
   defaultProps?: Partial<FieldWrapperProps>;
   variants?: Variant<FieldWrapperThemeConfig>;
+  modes?: Variant<FieldWrapperThemeConfig>;
 };
 export type FlexThemeConfig = {
   css?: {
@@ -649,6 +679,7 @@ export type FlexThemeConfig = {
   };
   defaultProps?: Partial<FlexProps>;
   variants?: Variant<FlexThemeConfig>;
+  modes?: Variant<FlexThemeConfig>;
 };
 export type GridThemeConfig = {
   css?: {
@@ -662,6 +693,7 @@ export type GridThemeConfig = {
   };
   defaultProps?: Partial<GridProps>;
   variants?: Variant<GridThemeConfig>;
+  modes?: Variant<GridThemeConfig>;
 };
 export type GroupThemeConfig = {
   css?: {
@@ -677,6 +709,7 @@ export type GroupThemeConfig = {
     };
   };
   variants?: Variant<GroupThemeConfig>;
+  modes?: Variant<GroupThemeConfig>;
 };
 export type HeadingThemeConfig = {
   css?: {
@@ -719,6 +752,7 @@ export type HeadingThemeConfig = {
   };
   defaultProps?: Partial<HeadingProps>;
   variants?: Variant<HeadingThemeConfig>;
+  modes?: Variant<HeadingThemeConfig>;
 };
 export type DisclosureThemeConfig = {
   css?: {
@@ -726,12 +760,14 @@ export type DisclosureThemeConfig = {
   };
   defaultProps?: Partial<DisclosureProps>;
   variants?: Variant<DisclosureThemeConfig>;
+  modes?: Variant<DisclosureThemeConfig>;
   Content?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DisclosureContentProps>;
     variants?: Variant<DisclosureThemeConfig['Content']>;
+    modes?: Variant<DisclosureThemeConfig['Content']>;
   };
 };
 export type HighlightedCodeThemeConfig = {
@@ -756,6 +792,7 @@ export type HighlightedCodeThemeConfig = {
   };
   defaultProps?: Partial<CodeProps>;
   variants?: Variant<CodeThemeConfig>;
+  modes?: Variant<CodeThemeConfig>;
 };
 export type IconThemeConfig = {
   css?: {
@@ -776,6 +813,7 @@ export type IconThemeConfig = {
   };
   defaultProps?: Partial<IconProps>;
   variants?: Variant<IconThemeConfig>;
+  modes?: Variant<IconThemeConfig>;
 };
 export type ImageThemeConfig = {
   css?: {
@@ -786,6 +824,7 @@ export type ImageThemeConfig = {
   };
   defaultProps?: Partial<ImageProps>;
   variants?: Variant<ImageThemeConfig>;
+  modes?: Variant<ImageThemeConfig>;
 };
 export type InlineThemeConfig = {
   css?: {
@@ -793,6 +832,7 @@ export type InlineThemeConfig = {
   };
   defaultProps?: Partial<InlineProps>;
   variants?: Variant<InlineThemeConfig>;
+  modes?: Variant<InlineThemeConfig>;
 };
 export type InlineBlockThemeConfig = {
   css?: {
@@ -800,6 +840,7 @@ export type InlineBlockThemeConfig = {
   };
   defaultProps?: Partial<InlineBlockProps>;
   variants?: Variant<InlineBlockThemeConfig>;
+  modes?: Variant<InlineBlockThemeConfig>;
 };
 export type InlineFlexThemeConfig = {
   css?: {
@@ -807,6 +848,7 @@ export type InlineFlexThemeConfig = {
   };
   defaultProps?: Partial<InlineFlexProps>;
   variants?: Variant<InlineFlexThemeConfig>;
+  modes?: Variant<InlineFlexThemeConfig>;
 };
 export type InputThemeConfig = {
   css?: {
@@ -838,6 +880,7 @@ export type InputThemeConfig = {
   };
   defaultProps?: Partial<InputProps>;
   variants?: Variant<InputThemeConfig>;
+  modes?: Variant<InputThemeConfig>;
 };
 export type InputFieldThemeConfig = {
   css?: {
@@ -845,6 +888,7 @@ export type InputFieldThemeConfig = {
   };
   defaultProps?: Partial<InputFieldProps>;
   variants?: Variant<InputFieldThemeConfig>;
+  modes?: Variant<InputFieldThemeConfig>;
 };
 export type LabelThemeConfig = {
   css?: {
@@ -852,6 +896,7 @@ export type LabelThemeConfig = {
   };
   defaultProps?: Partial<LabelProps>;
   variants?: Variant<LabelThemeConfig>;
+  modes?: Variant<LabelThemeConfig>;
 };
 export type StackThemeConfig = {
   css?: {
@@ -866,6 +911,7 @@ export type StackThemeConfig = {
   };
   defaultProps?: Partial<StackProps>;
   variants?: Variant<StackThemeConfig>;
+  modes?: Variant<StackThemeConfig>;
 };
 export type LinkThemeConfig = {
   css?: {
@@ -875,6 +921,7 @@ export type LinkThemeConfig = {
   };
   defaultProps?: Partial<LinkProps>;
   variants?: Variant<LinkThemeConfig>;
+  modes?: Variant<LinkThemeConfig>;
 };
 export type ListThemeConfig = {
   css?: {
@@ -888,9 +935,11 @@ export type ListThemeConfig = {
     };
     defaultProps?: Partial<ListItemProps>;
     variants?: Variant<ListThemeConfig['Item']>;
+    modes?: Variant<ListThemeConfig['Item']>;
   };
   defaultProps?: Partial<ListProps>;
   variants?: Variant<ListThemeConfig>;
+  modes?: Variant<ListThemeConfig>;
 };
 export type MenuThemeConfig = {
   css?: {
@@ -902,6 +951,7 @@ export type MenuThemeConfig = {
     };
     defaultProps?: Partial<MenuDividerProps>;
     variants?: Variant<MenuThemeConfig['Divider']>;
+    modes?: Variant<MenuThemeConfig['Divider']>;
   };
   Group?: {
     css?: {
@@ -909,6 +959,7 @@ export type MenuThemeConfig = {
     };
     defaultProps?: Partial<MenuGroupProps>;
     variants?: Variant<MenuThemeConfig['Group']>;
+    modes?: Variant<MenuThemeConfig['Group']>;
   };
   Item?: {
     css?: {
@@ -916,9 +967,11 @@ export type MenuThemeConfig = {
     };
     defaultProps?: Partial<MenuItemProps>;
     variants?: Variant<MenuThemeConfig['Item']>;
+    modes?: Variant<MenuThemeConfig['Item']>;
   };
   defaultProps?: Partial<MenuProps>;
   variants?: Variant<MenuThemeConfig>;
+  modes?: Variant<MenuThemeConfig>;
 };
 export type ModalThemeConfig = {
   css?: {
@@ -937,12 +990,14 @@ export type ModalThemeConfig = {
   };
   defaultProps?: Partial<ModalProps>;
   variants?: Variant<ModalThemeConfig>;
+  modes?: Variant<ModalThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
     variants?: Variant<ModalThemeConfig['Disclosure']>;
+    modes?: Variant<ModalThemeConfig['Disclosure']>;
   };
   Backdrop?: {
     css?: {
@@ -950,6 +1005,7 @@ export type ModalThemeConfig = {
     };
     defaultProps?: Partial<ModalBackdropProps>;
     variants?: Variant<ModalThemeConfig['Backdrop']>;
+    modes?: Variant<ModalThemeConfig['Backdrop']>;
   };
 };
 export type NavigationThemeConfig = {
@@ -958,6 +1014,7 @@ export type NavigationThemeConfig = {
   };
   defaultProps?: Partial<NavigationProps>;
   variants?: Variant<NavigationThemeConfig>;
+  modes?: Variant<NavigationThemeConfig>;
 };
 export type OverlayThemeConfig = {
   css?: {
@@ -976,12 +1033,14 @@ export type OverlayThemeConfig = {
   };
   defaultProps?: Partial<OverlayProps>;
   variants?: Variant<OverlayThemeConfig>;
+  modes?: Variant<OverlayThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<ModalDisclosureProps>;
     variants?: Variant<OverlayThemeConfig['Disclosure']>;
+    modes?: Variant<OverlayThemeConfig['Disclosure']>;
   };
 };
 export type PageContentThemeConfig = {
@@ -990,12 +1049,14 @@ export type PageContentThemeConfig = {
   };
   defaultProps?: Partial<PageContentProps>;
   variants?: Variant<PageContentThemeConfig>;
+  modes?: Variant<PageContentThemeConfig>;
   Wrapper?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<PageContentWrapperProps>;
     variants?: Variant<PageContentThemeConfig['Wrapper']>;
+    modes?: Variant<PageContentThemeConfig['Wrapper']>;
   };
 };
 export type PageWithSidebarThemeConfig = {
@@ -1004,6 +1065,7 @@ export type PageWithSidebarThemeConfig = {
   };
   defaultProps?: Partial<PageWithSidebarProps>;
   variants?: Variant<PageWithSidebarThemeConfig>;
+  modes?: Variant<PageWithSidebarThemeConfig>;
   Spacer?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
@@ -1035,6 +1097,7 @@ export type PageWithSidebarThemeConfig = {
     };
     defaultProps?: Partial<PageWithSidebarDisclosureProps>;
     variants?: Variant<PageWithSidebarThemeConfig['Disclosure']>;
+    modes?: Variant<PageWithSidebarThemeConfig['Disclosure']>;
   };
   Minimize?: {
     css?: {
@@ -1042,6 +1105,7 @@ export type PageWithSidebarThemeConfig = {
     };
     defaultProps?: Partial<PageWithSidebarMinimizeProps>;
     variants?: Variant<PageWithSidebarThemeConfig['Minimize']>;
+    modes?: Variant<PageWithSidebarThemeConfig['Minimize']>;
   };
 };
 export type PageWithHeaderThemeConfig = {
@@ -1050,6 +1114,7 @@ export type PageWithHeaderThemeConfig = {
   };
   defaultProps?: Partial<PageWithHeaderProps>;
   variants?: Variant<PageWithHeaderThemeConfig>;
+  modes?: Variant<PageWithHeaderThemeConfig>;
   Header?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
@@ -1066,6 +1131,7 @@ export type PageWithHeaderThemeConfig = {
     };
     defaultProps?: Partial<PageWithHeaderDisclosureProps>;
     variants?: Variant<PageWithHeaderThemeConfig['Disclosure']>;
+    modes?: Variant<PageWithHeaderThemeConfig['Disclosure']>;
   };
 };
 export type PaginationThemeConfig = {
@@ -1077,6 +1143,7 @@ export type PaginationThemeConfig = {
   Select?: SelectThemeConfig;
   defaultProps?: Partial<PaginationProps>;
   variants?: Variant<PaginationThemeConfig>;
+  modes?: Variant<PaginationThemeConfig>;
 };
 export type ParagraphThemeConfig = {
   css?: {
@@ -1084,6 +1151,7 @@ export type ParagraphThemeConfig = {
   };
   defaultProps?: Partial<ParagraphProps>;
   variants?: Variant<ParagraphThemeConfig>;
+  modes?: Variant<ParagraphThemeConfig>;
 };
 export type PopoverThemeConfig = {
   css?: {
@@ -1106,6 +1174,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverArrowProps>;
     variants?: Variant<PopoverThemeConfig['Arrow']>;
+    modes?: Variant<PopoverThemeConfig['Arrow']>;
   };
   Backdrop?: {
     css?: {
@@ -1113,6 +1182,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverBackdropProps>;
     variants?: Variant<PopoverThemeConfig['Backdrop']>;
+    modes?: Variant<PopoverThemeConfig['Backdrop']>;
   };
   Content?: {
     css?: {
@@ -1120,6 +1190,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverContentProps>;
     variants?: Variant<PopoverThemeConfig['Content']>;
+    modes?: Variant<PopoverThemeConfig['Content']>;
   };
   Close?: {
     css?: {
@@ -1132,6 +1203,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverDisclosureProps>;
     variants?: Variant<PopoverThemeConfig['Disclosure']>;
+    modes?: Variant<PopoverThemeConfig['Disclosure']>;
   };
   Header?: {
     css?: {
@@ -1139,6 +1211,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverHeaderProps>;
     variants?: Variant<PopoverThemeConfig['Header']>;
+    modes?: Variant<PopoverThemeConfig['Header']>;
   };
   Footer?: {
     css?: {
@@ -1146,6 +1219,7 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverFooterProps>;
     variants?: Variant<PopoverThemeConfig['Footer']>;
+    modes?: Variant<PopoverThemeConfig['Footer']>;
   };
   Title?: {
     css?: {
@@ -1153,9 +1227,11 @@ export type PopoverThemeConfig = {
     };
     defaultProps?: Partial<PopoverTitleProps>;
     variants?: Variant<PopoverThemeConfig['Title']>;
+    modes?: Variant<PopoverThemeConfig['Title']>;
   };
   defaultProps?: Partial<PopoverProps>;
   variants?: Variant<PopoverThemeConfig>;
+  modes?: Variant<PopoverThemeConfig>;
 };
 export type PortalThemeConfig = {
   css?: {
@@ -1163,6 +1239,7 @@ export type PortalThemeConfig = {
   };
   defaultProps?: Partial<PortalProps>;
   variants?: Variant<PortalThemeConfig>;
+  modes?: Variant<PortalThemeConfig>;
 };
 export type ProgressBarThemeConfig = {
   css?: {
@@ -1175,6 +1252,7 @@ export type ProgressBarThemeConfig = {
   };
   defaultProps?: Partial<ProgressBarProps>;
   variants?: Variant<ProgressBarThemeConfig>;
+  modes?: Variant<ProgressBarThemeConfig>;
 };
 export type RadioThemeConfig = {
   css?: {
@@ -1197,6 +1275,7 @@ export type RadioThemeConfig = {
   };
   defaultProps?: Partial<RadioProps>;
   variants?: Variant<RadioThemeConfig>;
+  modes?: Variant<RadioThemeConfig>;
 };
 export type RatingThemeConfig = {
   css?: {
@@ -1208,9 +1287,11 @@ export type RatingThemeConfig = {
     };
     defaultProps?: Partial<RatingItemProps>;
     variants?: Variant<RatingThemeConfig['Item']>;
+    modes?: Variant<RatingThemeConfig['Item']>;
   };
   defaultProps?: Partial<RatingProps>;
   variants?: Variant<RatingThemeConfig>;
+  modes?: Variant<RatingThemeConfig>;
 };
 export type RadioGroupThemeConfig = {
   css?: {
@@ -1218,6 +1299,7 @@ export type RadioGroupThemeConfig = {
   };
   defaultProps?: Partial<RadioGroupProps>;
   variants?: Variant<RadioGroupThemeConfig>;
+  modes?: Variant<RadioGroupThemeConfig>;
 };
 export type RadioGroupFieldThemeConfig = {
   css?: {
@@ -1225,6 +1307,7 @@ export type RadioGroupFieldThemeConfig = {
   };
   defaultProps?: Partial<RadioGroupFieldProps>;
   variants?: Variant<RadioGroupFieldThemeConfig>;
+  modes?: Variant<RadioGroupFieldThemeConfig>;
 };
 export type RoverThemeConfig = {
   css?: {
@@ -1232,6 +1315,7 @@ export type RoverThemeConfig = {
   };
   defaultProps?: Partial<RoverProps>;
   variants?: Variant<RoverThemeConfig>;
+  modes?: Variant<RoverThemeConfig>;
 };
 export type SideNavThemeConfig = {
   css?: {
@@ -1248,6 +1332,7 @@ export type SideNavThemeConfig = {
     };
     defaultProps?: Partial<SideNavLevelProps>;
     variants?: Variant<SideNavThemeConfig['Level']>;
+    modes?: Variant<SideNavThemeConfig['Level']>;
   };
   Item?: {
     css?: {
@@ -1258,9 +1343,11 @@ export type SideNavThemeConfig = {
     };
     defaultProps?: Partial<SideNavItemProps>;
     variants?: Variant<SideNavThemeConfig['Item']>;
+    modes?: Variant<SideNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<SideNavProps>;
   variants?: Variant<SideNavThemeConfig>;
+  modes?: Variant<SideNavThemeConfig>;
 };
 export type TabbableThemeConfig = {
   css?: {
@@ -1269,6 +1356,7 @@ export type TabbableThemeConfig = {
   };
   defaultProps?: Partial<TabbableProps>;
   variants?: Variant<TabbableThemeConfig>;
+  modes?: Variant<TabbableThemeConfig>;
 };
 export type TableThemeConfig = {
   css?: {
@@ -1280,6 +1368,7 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableHeadProps>;
     variants?: Variant<TableThemeConfig['Head']>;
+    modes?: Variant<TableThemeConfig['Head']>;
   };
   HeadCell?: {
     css?: {
@@ -1287,6 +1376,7 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableHeadCellProps>;
     variants?: Variant<TableThemeConfig['HeadCell']>;
+    modes?: Variant<TableThemeConfig['HeadCell']>;
   };
   Body?: {
     css?: {
@@ -1294,6 +1384,7 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableBodyProps>;
     variants?: Variant<TableThemeConfig['Body']>;
+    modes?: Variant<TableThemeConfig['Body']>;
   };
   Cell?: {
     css?: {
@@ -1301,6 +1392,7 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableCellProps>;
     variants?: Variant<TableThemeConfig['Cell']>;
+    modes?: Variant<TableThemeConfig['Cell']>;
   };
   Row?: {
     css?: {
@@ -1308,6 +1400,7 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableRowProps>;
     variants?: Variant<TableThemeConfig['Row']>;
+    modes?: Variant<TableThemeConfig['Row']>;
   };
   Foot?: {
     css?: {
@@ -1315,9 +1408,11 @@ export type TableThemeConfig = {
     };
     defaultProps?: Partial<TableFootProps>;
     variants?: Variant<TableThemeConfig['Foot']>;
+    modes?: Variant<TableThemeConfig['Foot']>;
   };
   defaultProps?: Partial<TableProps>;
   variants?: Variant<TableThemeConfig>;
+  modes?: Variant<TableThemeConfig>;
 };
 export type TabsThemeConfig = {
   css?: {
@@ -1329,6 +1424,7 @@ export type TabsThemeConfig = {
     };
     defaultProps?: Partial<TabsListProps>;
     variants?: Variant<TabsThemeConfig['List']>;
+    modes?: Variant<TabsThemeConfig['List']>;
   };
   Tab?: {
     css?: {
@@ -1339,6 +1435,7 @@ export type TabsThemeConfig = {
     };
     defaultProps?: Partial<TabsTabProps>;
     variants?: Variant<TabsThemeConfig['Tab']>;
+    modes?: Variant<TabsThemeConfig['Tab']>;
   };
   Panel?: {
     css?: {
@@ -1346,9 +1443,11 @@ export type TabsThemeConfig = {
     };
     defaultProps?: Partial<TabsPanelProps>;
     variants?: Variant<TabsThemeConfig['Panel']>;
+    modes?: Variant<TabsThemeConfig['Panel']>;
   };
   defaultProps?: Partial<TabsProps>;
   variants?: Variant<TabsThemeConfig>;
+  modes?: Variant<TabsThemeConfig>;
 };
 export type TagThemeConfig = {
   css?: {
@@ -1372,6 +1471,7 @@ export type TagThemeConfig = {
   };
   defaultProps?: Partial<TagProps>;
   variants?: Variant<TagThemeConfig>;
+  modes?: Variant<TagThemeConfig>;
 };
 export type TextThemeConfig = {
   css?: {
@@ -1379,6 +1479,7 @@ export type TextThemeConfig = {
   };
   defaultProps?: Partial<TextProps>;
   variants?: Variant<TextThemeConfig>;
+  modes?: Variant<TextThemeConfig>;
 };
 export type TextareaThemeConfig = {
   css?: {
@@ -1410,6 +1511,7 @@ export type TextareaThemeConfig = {
   };
   defaultProps?: Partial<TextareaProps>;
   variants?: Variant<TextareaThemeConfig>;
+  modes?: Variant<TextareaThemeConfig>;
 };
 export type TextareaFieldThemeConfig = {
   css?: {
@@ -1417,6 +1519,7 @@ export type TextareaFieldThemeConfig = {
   };
   defaultProps?: Partial<TextareaFieldProps>;
   variants?: Variant<TextareaFieldThemeConfig>;
+  modes?: Variant<TextareaFieldThemeConfig>;
 };
 export type ToastThemeConfig = {
   css?: {
@@ -1429,6 +1532,7 @@ export type ToastThemeConfig = {
   };
   defaultProps?: Partial<ToastProps>;
   variants?: Variant<ToastThemeConfig>;
+  modes?: Variant<ToastThemeConfig>;
   placement?: Placement;
   showCountdown?: boolean;
   timeout?: number;
@@ -1454,6 +1558,7 @@ export type TooltipThemeConfig = {
     };
     defaultProps?: Partial<TooltipArrowProps>;
     variants?: Variant<TooltipThemeConfig['Arrow']>;
+    modes?: Variant<TooltipThemeConfig['Arrow']>;
   };
   Content?: {
     css?: {
@@ -1461,6 +1566,7 @@ export type TooltipThemeConfig = {
     };
     defaultProps?: Partial<TooltipContentProps>;
     variants?: Variant<TooltipThemeConfig['Content']>;
+    modes?: Variant<TooltipThemeConfig['Content']>;
   };
   Reference?: {
     css?: {
@@ -1468,9 +1574,11 @@ export type TooltipThemeConfig = {
     };
     defaultProps?: Partial<TooltipReferenceProps>;
     variants?: Variant<TooltipThemeConfig['Reference']>;
+    modes?: Variant<TooltipThemeConfig['Reference']>;
   };
   defaultProps?: Partial<TooltipProps>;
   variants?: Variant<TooltipThemeConfig>;
+  modes?: Variant<TooltipThemeConfig>;
 };
 export type TopNavThemeConfig = {
   css?: {
@@ -1482,6 +1590,7 @@ export type TopNavThemeConfig = {
     };
     defaultProps?: Partial<TopNavSectionProps>;
     variants?: Variant<TopNavThemeConfig['Section']>;
+    modes?: Variant<TopNavThemeConfig['Section']>;
   };
   Item?: {
     css?: {
@@ -1492,9 +1601,11 @@ export type TopNavThemeConfig = {
     };
     defaultProps?: Partial<TopNavItemProps>;
     variants?: Variant<TopNavThemeConfig['Item']>;
+    modes?: Variant<TopNavThemeConfig['Item']>;
   };
   defaultProps?: Partial<TopNavProps>;
   variants?: Variant<TopNavThemeConfig>;
+  modes?: Variant<TopNavThemeConfig>;
 };
 export type SelectThemeConfig = {
   css?: {
@@ -1524,6 +1635,7 @@ export type SelectThemeConfig = {
   };
   defaultProps?: Partial<SelectProps>;
   variants?: Variant<SelectThemeConfig>;
+  modes?: Variant<SelectThemeConfig>;
 };
 export type SelectFieldThemeConfig = {
   css?: {
@@ -1531,6 +1643,7 @@ export type SelectFieldThemeConfig = {
   };
   defaultProps?: Partial<SelectFieldProps>;
   variants?: Variant<SelectFieldThemeConfig>;
+  modes?: Variant<SelectFieldThemeConfig>;
 };
 export type SelectMenuThemeConfig = {
   css?: {
@@ -1588,6 +1701,7 @@ export type SelectMenuThemeConfig = {
   };
   defaultProps?: Partial<SelectMenuProps>;
   variants?: Variant<SelectMenuThemeConfig>;
+  modes?: Variant<SelectMenuThemeConfig>;
 };
 export type SelectMenuFieldThemeConfig = {
   css?: {
@@ -1595,6 +1709,7 @@ export type SelectMenuFieldThemeConfig = {
   };
   defaultProps?: Partial<SelectMenuFieldProps>;
   variants?: Variant<SelectMenuFieldThemeConfig>;
+  modes?: Variant<SelectMenuFieldThemeConfig>;
 };
 export type SetThemeConfig = {
   css?: {
@@ -1609,6 +1724,7 @@ export type SetThemeConfig = {
   };
   defaultProps?: Partial<SetProps>;
   variants?: Variant<SetThemeConfig>;
+  modes?: Variant<SetThemeConfig>;
 };
 export type DrawerThemeConfig = {
   css?: {
@@ -1620,12 +1736,14 @@ export type DrawerThemeConfig = {
   };
   defaultProps?: Partial<DrawerProps>;
   variants?: Variant<DrawerThemeConfig>;
+  modes?: Variant<DrawerThemeConfig>;
   Disclosure?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
     };
     defaultProps?: Partial<DrawerDisclosureProps>;
     variants?: Variant<DrawerThemeConfig['Disclosure']>;
+    modes?: Variant<DrawerThemeConfig['Disclosure']>;
   };
 };
 export type SpinnerThemeConfig = {
@@ -1655,6 +1773,7 @@ export type SpinnerThemeConfig = {
   };
   defaultProps?: Partial<SpinnerProps>;
   variants?: Variant<SpinnerThemeConfig>;
+  modes?: Variant<SpinnerThemeConfig>;
 };
 export type SwitchThemeConfig = {
   css?: {
@@ -1677,6 +1796,7 @@ export type SwitchThemeConfig = {
   };
   defaultProps?: Partial<SwitchProps>;
   variants?: Variant<SwitchThemeConfig>;
+  modes?: Variant<SwitchThemeConfig>;
 };
 export type SwitchFieldThemeConfig = {
   css?: {
@@ -1684,6 +1804,7 @@ export type SwitchFieldThemeConfig = {
   };
   defaultProps?: Partial<SwitchFieldProps>;
   variants?: Variant<SwitchFieldThemeConfig>;
+  modes?: Variant<SwitchFieldThemeConfig>;
 };
 export type SwitchGroupThemeConfig = {
   css?: {
@@ -1691,6 +1812,7 @@ export type SwitchGroupThemeConfig = {
   };
   defaultProps?: Partial<SwitchGroupProps>;
   variants?: Variant<SwitchGroupThemeConfig>;
+  modes?: Variant<SwitchGroupThemeConfig>;
 };
 export type SwitchGroupFieldThemeConfig = {
   css?: {
@@ -1698,6 +1820,7 @@ export type SwitchGroupFieldThemeConfig = {
   };
   defaultProps?: Partial<SwitchGroupFieldProps>;
   variants?: Variant<SwitchGroupFieldThemeConfig>;
+  modes?: Variant<SwitchGroupFieldThemeConfig>;
 };
 export type TemplateThemeConfig = {
   css?: {
@@ -1705,6 +1828,7 @@ export type TemplateThemeConfig = {
   };
   defaultProps?: Partial<TemplateProps>;
   variants?: Variant<TemplateThemeConfig>;
+  modes?: Variant<TemplateThemeConfig>;
 };
 
 export type ThemeConfig = {
@@ -1716,6 +1840,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
+  modes?: ModesThemeConfig;
   spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;
 

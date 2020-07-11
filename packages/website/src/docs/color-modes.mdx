@@ -2,13 +2,46 @@
 title: Color modes
 ---
 
-# Color modes
+# Color modes (WIP)
 
-### Coming soon...
+Color modes are used to create sets of configurable color modes (such as a dark mode).
 
-But here is the gist of how it'll work.
+By default, Fannypack comes with it's own dark mode variant of it's default theme.
 
-It is very similar to the [variant concept](/variants), each theme attribute will have the ability to plug in a `modes` configuration.
+You can also [define your own modes](#defining-modes).
+
+## Setting modes
+
+Fannypack provides you with a `useColorMode` hook that you can use to retrieve the current color mode, and set a color mode.
+
+When setting a color mode, this value will be stored in local storage, so when the user navigates back to your application the color mode will be used when the page loads.
+
+```function-live
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <Button onClick={() => setColorMode('default')}>Light</Button>
+        <Button onClick={() => setColorMode('dark')}>Dark</Button>
+      </Set>
+    </Stack>
+  )
+}
+```
+
+## Defining modes
+
+You can define your own color modes in two ways:
+
+- via the [global theme](/theming)
+- via the [component theme](/component-theming)
+
+### Global theme
+
+Defining your own mode is very similar to the [variant concept](/variants), each theme attribute has the ability to plug in a `modes` configuration.
 
 ```function-live noInline
 const theme = {
@@ -20,6 +53,13 @@ const theme = {
       },
       dope: {
         background: 'hotpink'
+      }
+    }
+  },
+  fonts: {
+    modes: {
+      dope: {
+        default: '"Comic Sans MS"'
       }
     }
   },
@@ -66,3 +106,124 @@ function App() {
 
 render(App)
 ```
+
+### Component theme
+
+<!-- function-live -->
+```jsx
+const ModeButton = applyTheme(Button, {
+  modes: {
+    dark: {
+      defaultProps: {
+        backgroundColor: 'gray800',
+        color: 'white'
+      }
+    },
+    dope: {
+      defaultProps: {
+        backgroundColor: 'hotpink',
+        color: 'black'
+      }
+    }
+  }
+});
+
+function Example() {
+  const { colorMode, setColorMode } = useColorMode();
+
+  return (
+    <Stack>
+      <Text>Current mode: {colorMode}</Text>
+      <Set>
+        <ModeButton
+          onClick={() => setColorMode('default')}
+        >
+          Light
+        </ModeButton>
+        <ModeButton
+          onClick={() => setColorMode('dark')}
+        >
+          Dark
+        </ModeButton>
+        <ModeButton
+          onClick={() => setColorMode('dope')}
+        >
+          Dope
+        </ModeButton>
+      </Set>
+    </Stack>
+  )
+}
+```
+
+## Setting a default mode
+
+You can set a default color mode on the `<Provider>`.
+
+
+```jsx
+import { Provider as FannypackProvider } from 'fannypack';
+
+const App = () => (
+  <FannypackProvider colorMode="dark">
+    ...
+  </FannypackProvider>
+);
+```
+
+## Configuration
+
+### Disabling local storage
+
+You can disable Fannypack storing the current color mode in local storage by setting `enableLocalStorage: false` in the theme.
+
+```jsx
+const theme = {
+  modes: {
+    enableLocalStorage: false
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
+
+### Using system color modes
+
+You can use the system color mode by default with the `useSystemColorMode` attribute. If set to `true`, this will set the color mode to the system's preferred color scheme.
+
+```jsx
+const theme = {
+  modes: {
+    useSystemColorMode: true
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
+
+### Custom local storage prefix
+
+By default, the local storage prefix is set to `"fp"`. However, you can change this with the `localStoragePrefix` attribute.
+
+```jsx
+const theme = {
+  modes: {
+    localStoragePrefix: 'myTheme'
+  }
+}
+
+const App = () => (
+  <FannypackProvider theme={theme}>
+    ...
+  </FannypackProvider>
+);
+```
+

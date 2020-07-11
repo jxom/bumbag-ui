@@ -50,9 +50,9 @@ export function Provider(props: ProviderProps) {
   ////////////////////////////////////////////////
 
   return (
-    <ColorModeProvider mode={colorMode}>
-      <FannypackThemeContext.Provider value={themeContextValue}>
-        <EmotionProvider theme={derivedTheme}>
+    <FannypackThemeContext.Provider value={themeContextValue}>
+      <EmotionProvider theme={derivedTheme}>
+        <ColorModeProvider mode={colorMode}>
           <IdProvider>
             <ToastProvider>
               <PageProvider collapseBelow={collapseBelow}>
@@ -63,8 +63,8 @@ export function Provider(props: ProviderProps) {
               </PageProvider>
             </ToastProvider>
           </IdProvider>
-        </EmotionProvider>
-      </FannypackThemeContext.Provider>
-    </ColorModeProvider>
+        </ColorModeProvider>
+      </EmotionProvider>
+    </FannypackThemeContext.Provider>
   );
 }

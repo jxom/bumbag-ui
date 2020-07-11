@@ -28,7 +28,15 @@ describe('props', () => {
   });
 
   it('should render correctly with CSS props with breakpoints', () => {
-    const { container } = render(<Box backgroundColor={{ default: 'primary', mobile: 'secondary', desktop: 'red' }} />);
+    const { container } = render(
+      <Box
+        backgroundColor={{
+          default: 'primary',
+          mobile: 'secondary',
+          desktop: 'red',
+        }}
+      />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -178,7 +186,9 @@ describe('theming', () => {
 
   it('Box.root should render correctly', () => {
     const { container } = render(<Box color="green">hello world</Box>, {
-      theme: { Box: { css: { root: (props) => ({ backgroundColor: props.color }) } } },
+      theme: {
+        Box: { css: { root: (props) => ({ backgroundColor: props.color }) } },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -187,7 +197,46 @@ describe('theming', () => {
 describe('variants', () => {
   it('css.root should render correctly', () => {
     const { container } = render(<Box variant="test">hello world</Box>, {
-      theme: { Box: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: {
+        Box: {
+          variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+        },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('modes', () => {
+  it('should render correctly when colorMode is set globally', () => {
+    const { container } = render(<Box>hello world</Box>, {
+      colorMode: 'test',
+      theme: {
+        Box: {
+          modes: {
+            test: {
+              css: { root: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
+            },
+          },
+        },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly when colorMode set as prop', () => {
+    const { container } = render(<Box colorMode="test">hello world</Box>, {
+      theme: {
+        Box: {
+          modes: {
+            test: {
+              css: { root: { backgroundColor: 'red' } },
+              defaultProps: { color: 'primaryTint' },
+            },
+          },
+        },
+      },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

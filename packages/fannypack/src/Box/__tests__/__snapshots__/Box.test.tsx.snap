@@ -223,6 +223,60 @@ exports[`defaultProps should render correctly 1`] = `
 </div>
 `;
 
+exports[`modes should render correctly when colorMode is set globally 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+>
+  hello world
+</div>
+`;
+
+exports[`modes should render correctly when colorMode set as prop 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-1 {
+  color: #eeedfd !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+>
+  hello world
+</div>
+`;
+
 exports[`props should assign a ref 1`] = `
 .emotion-0 {
   margin: unset;
