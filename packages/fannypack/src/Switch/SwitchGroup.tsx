@@ -101,6 +101,7 @@ export const SwitchGroup = createComponent<SwitchGroupProps>(
   {
     attach: {
       useProps,
+      displayName: 'SwitchGroup',
     },
     themeKey: 'SwitchGroup',
   }
@@ -200,6 +201,7 @@ export const SwitchGroupField = createComponent<SwitchGroupFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'SwitchGroupField',
     },
     defaultProps: {
       use: 'fieldset',

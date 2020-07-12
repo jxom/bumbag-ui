@@ -101,6 +101,7 @@ export const CheckboxGroup = createComponent<CheckboxGroupProps>(
   {
     attach: {
       useProps,
+      displayName: 'CheckboxGroup',
     },
     themeKey: 'CheckboxGroup',
   }
@@ -200,6 +201,7 @@ export const CheckboxGroupField = createComponent<CheckboxGroupFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'CheckboxGroupField',
     },
     defaultProps: {
       use: 'fieldset',

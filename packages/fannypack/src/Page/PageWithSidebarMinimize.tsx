@@ -41,6 +41,7 @@ export const PageWithSidebarMinimize = createComponent<PageWithSidebarMinimizePr
   {
     attach: {
       useProps,
+      displayName: 'PageWithSidebar.Minimize',
     },
     defaultProps: {
       use: 'button',

@@ -140,6 +140,7 @@ export const Input = createComponent<InputProps>(
   {
     attach: {
       useProps,
+      displayName: 'Input',
     },
     defaultProps: {
       use: 'input',
@@ -312,6 +313,7 @@ export const InputField = createComponent<InputFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'InputField',
     },
     themeKey: 'InputField',
   }

@@ -76,6 +76,7 @@ export const Table = createComponent<TableProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table',
     },
     defaultProps: {
       use: 'table',

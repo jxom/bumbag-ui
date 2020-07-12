@@ -5,6 +5,7 @@ export function createComponent<Props>(
   Component: React.FunctionComponent<Props>,
   config?: {
     attach?: {
+      displayName?: string;
       useProps: (props?: Partial<Props>, config?: { themeKey?: string }) => any;
     };
     defaultProps?: Partial<Props>;

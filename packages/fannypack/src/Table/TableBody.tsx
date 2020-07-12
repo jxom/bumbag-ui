@@ -37,6 +37,7 @@ export const TableBody = createComponent<TableBodyProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.Body',
     },
     defaultProps: {
       use: 'tbody',

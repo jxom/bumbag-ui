@@ -34,6 +34,7 @@ export const Paragraph = createComponent<ParagraphProps>(
   {
     attach: {
       useProps,
+      displayName: 'Paragraph',
     },
     defaultProps: {
       use: 'p',

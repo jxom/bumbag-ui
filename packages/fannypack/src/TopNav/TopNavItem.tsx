@@ -78,6 +78,7 @@ export const TopNavItem = createComponent<TopNavItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'TopNav.Item',
     },
     defaultProps: {
       use: 'li',

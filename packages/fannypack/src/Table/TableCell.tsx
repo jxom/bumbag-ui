@@ -62,6 +62,7 @@ export const TableCell = createComponent<TableCellProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.Cell',
     },
     defaultProps: {
       use: 'td',

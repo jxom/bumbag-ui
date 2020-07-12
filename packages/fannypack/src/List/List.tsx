@@ -49,6 +49,7 @@ export const List = createComponent<ListProps>(
   {
     attach: {
       useProps,
+      displayName: 'List',
     },
     themeKey: 'List',
   }

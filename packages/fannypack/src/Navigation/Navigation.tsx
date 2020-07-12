@@ -36,7 +36,7 @@ export const Navigation = createComponent<NavigationProps>(
     });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'Navigation' },
     defaultProps: {
       use: 'nav',
     },

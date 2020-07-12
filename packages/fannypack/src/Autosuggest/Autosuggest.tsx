@@ -681,6 +681,7 @@ export const Autosuggest = createComponent<AutosuggestProps>(
   {
     attach: {
       useProps,
+      displayName: 'Autosuggest',
     },
     themeKey: 'Autosuggest',
   }

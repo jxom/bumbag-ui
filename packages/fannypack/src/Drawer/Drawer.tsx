@@ -35,6 +35,7 @@ export const Drawer = createComponent<DrawerProps>(
   {
     attach: {
       useProps,
+      displayName: 'Drawer',
     },
     themeKey: 'Drawer',
   }

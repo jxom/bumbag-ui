@@ -33,6 +33,7 @@ export const Link = createComponent<LinkProps>(
   {
     attach: {
       useProps,
+      displayName: 'Link',
     },
     defaultProps: {
       use: 'a',

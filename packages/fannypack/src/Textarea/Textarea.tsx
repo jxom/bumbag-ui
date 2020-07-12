@@ -101,6 +101,7 @@ export const Textarea = createComponent<TextareaProps>(
   {
     attach: {
       useProps,
+      displayName: 'Textarea',
     },
     defaultProps: {
       use: 'textarea',
@@ -230,6 +231,7 @@ export const TextareaField = createComponent<TextareaFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'TextareaField',
     },
     themeKey: 'TextareaField',
   }

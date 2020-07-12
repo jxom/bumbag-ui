@@ -35,6 +35,7 @@ export const Label = createComponent<LabelProps>(
   {
     attach: {
       useProps,
+      displayName: 'Label',
     },
     defaultProps: {
       use: 'label',

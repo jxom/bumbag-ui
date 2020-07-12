@@ -141,6 +141,7 @@ export const Checkbox = createComponent<CheckboxProps>(
   {
     attach: {
       useProps,
+      displayName: 'Checkbox',
     },
     defaultProps: {
       use: Label,
@@ -258,6 +259,7 @@ export const CheckboxField = createComponent<CheckboxFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'CheckboxField',
     },
     themeKey: 'CheckboxField',
   }

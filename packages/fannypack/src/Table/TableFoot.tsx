@@ -37,6 +37,7 @@ export const TableFoot = createComponent<TableFootProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.Foot',
     },
     defaultProps: {
       use: 'tfoot',

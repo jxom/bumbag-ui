@@ -84,6 +84,7 @@ export const Rover = createComponent<RoverProps>(
   {
     attach: {
       useProps,
+      displayName: 'Rover',
     },
     themeKey: 'Rover',
   }

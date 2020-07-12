@@ -33,6 +33,7 @@ export const AutosuggestStaticItem = createComponent<AutosuggestStaticItemProps>
   {
     attach: {
       useProps,
+      displayName: 'Autosuggest.StaticItem',
     },
     themeKey: 'Autosuggest.StaticItem',
   }

@@ -38,6 +38,7 @@ export const DrawerDisclosure = createComponent<DrawerDisclosureProps>(
   {
     attach: {
       useProps,
+      displayName: 'Drawer.Disclosure',
     },
     defaultProps: {
       use: 'button',

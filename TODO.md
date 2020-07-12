@@ -1,6 +1,4 @@
-- Finish color modes & tests
-
-- fp(Component, themeConfig)
+- applyTheme(Component, themeConfig)
 
 const BigButton = fp(Button, {
   css: {

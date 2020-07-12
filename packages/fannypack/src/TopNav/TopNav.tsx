@@ -73,6 +73,7 @@ export const TopNav = createComponent<TopNavProps>(
   {
     attach: {
       useProps,
+      displayName: 'TopNav',
     },
     themeKey: 'TopNav',
   }

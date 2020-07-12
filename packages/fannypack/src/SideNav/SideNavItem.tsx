@@ -71,6 +71,7 @@ export const SideNavItem = createComponent<SideNavItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'SideNav.Item',
     },
     defaultProps: {
       use: 'li',

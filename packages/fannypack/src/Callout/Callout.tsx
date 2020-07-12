@@ -115,6 +115,7 @@ export const Callout = createComponent<CalloutProps>(
   {
     attach: {
       useProps,
+      displayName: 'Callout',
     },
     themeKey: 'Callout',
   }
@@ -154,7 +155,7 @@ export const CalloutContent = createComponent<CalloutContentProps>(
     });
   },
   {
-    attach: { useProps: useCalloutContentProps },
+    attach: { useProps: useCalloutContentProps, displayName: 'Callout.Content' },
     themeKey: 'Callout.Content',
   }
 );
@@ -193,7 +194,7 @@ export const CalloutHeader = createComponent<CalloutHeaderProps>(
     });
   },
   {
-    attach: { useProps: useCalloutHeaderProps },
+    attach: { useProps: useCalloutHeaderProps, displayName: 'Callout.Header' },
     themeKey: 'Callout.Header',
   }
 );
@@ -232,7 +233,7 @@ export const CalloutTitle = createComponent<CalloutTitleProps>(
     });
   },
   {
-    attach: { useProps: useCalloutTitleProps },
+    attach: { useProps: useCalloutTitleProps, displayName: 'Callout.Title' },
     defaultProps: {
       use: 'span',
     },
@@ -274,7 +275,7 @@ export const CalloutFooter = createComponent<CalloutFooterProps>(
     });
   },
   {
-    attach: { useProps: useCalloutFooterProps },
+    attach: { useProps: useCalloutFooterProps, displayName: 'Callout.Footer' },
     themeKey: 'Callout.Footer',
   }
 );
@@ -336,7 +337,7 @@ export const CalloutIcon = createComponent<CalloutIconProps>(
     });
   },
   {
-    attach: { useProps: useCalloutIconProps },
+    attach: { useProps: useCalloutIconProps, displayName: 'Callout.IconWrapper' },
     themeKey: 'Callout.IconWrapper',
   }
 );
@@ -388,7 +389,7 @@ export const CalloutOverlay = createComponent<CalloutOverlayProps>(
     });
   },
   {
-    attach: { useProps: useCalloutOverlayProps },
+    attach: { useProps: useCalloutOverlayProps, displayName: 'Callout.Overlay' },
     themeKey: 'Callout.Overlay',
   }
 );

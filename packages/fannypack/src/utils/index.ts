@@ -1,3 +1,4 @@
+export * from './applyTheme';
 export * from './bindFns';
 export * from './colors';
 export * from './createComponent';

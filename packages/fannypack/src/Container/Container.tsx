@@ -47,6 +47,7 @@ export const Container = createComponent<ContainerProps>(
   {
     attach: {
       useProps,
+      displayName: 'Container',
     },
     themeKey: 'Container',
   }

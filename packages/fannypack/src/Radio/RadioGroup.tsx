@@ -89,6 +89,7 @@ export const RadioGroup = createComponent<RadioGroupProps>(
   {
     attach: {
       useProps,
+      displayName: 'RadioGroup',
     },
     themeKey: 'RadioGroup',
   }
@@ -188,6 +189,7 @@ export const RadioGroupField = createComponent<RadioGroupFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'RadioGroupField',
     },
     defaultProps: {
       use: 'fieldset',

@@ -160,6 +160,7 @@ export const Select = createComponent<SelectProps>(
   {
     attach: {
       useProps,
+      displayName: 'Select',
     },
     defaultProps: {
       use: 'select',
@@ -293,6 +294,7 @@ export const SelectField = createComponent<SelectFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'SelectField',
     },
     themeKey: 'SelectField',
   }

@@ -41,6 +41,7 @@ export const Tabbable = createComponent<TabbableProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tabbable',
     },
     themeKey: 'Tabbable',
   }

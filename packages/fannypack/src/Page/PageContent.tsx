@@ -50,6 +50,7 @@ export const PageContent = createComponent<PageContentProps>(
   {
     attach: {
       useProps,
+      displayName: 'PageContent',
     },
     themeKey: 'PageContent',
   }

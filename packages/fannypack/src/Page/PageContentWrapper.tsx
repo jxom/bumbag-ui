@@ -39,6 +39,7 @@ export const PageContentWrapper = createComponent<PageContentWrapperProps>(
   {
     attach: {
       useProps,
+      displayName: 'PageContent.Wrapper',
     },
     themeKey: 'PageContent.Wrapper',
   }

@@ -31,7 +31,7 @@ export const Block = createComponent<BlockProps>(
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: blockProps });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'Block' },
     themeKey: 'Block',
   }
 );

@@ -53,6 +53,7 @@ export const ButtonClose = createComponent<ButtonCloseProps>(
   {
     attach: {
       useProps,
+      displayName: 'Button.Close',
     },
     themeKey: 'Button.Close',
   }

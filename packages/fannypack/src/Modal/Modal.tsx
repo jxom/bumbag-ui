@@ -105,6 +105,7 @@ export const Modal = createComponent<ModalProps>(
   {
     attach: {
       useProps,
+      displayName: 'Modal',
     },
     themeKey: 'Modal',
   }

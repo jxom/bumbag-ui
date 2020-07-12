@@ -55,6 +55,7 @@ export const Menu = createComponent<MenuProps>(
   {
     attach: {
       useProps,
+      displayName: 'Menu',
     },
     themeKey: 'Menu',
   }

@@ -133,6 +133,7 @@ export const Button = createComponent<ButtonProps>(
   {
     attach: {
       useProps,
+      displayName: 'Button',
     },
     themeKey: 'Button',
   }

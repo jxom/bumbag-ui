@@ -80,6 +80,7 @@ export const Spinner = createComponent<SpinnerProps>(
   {
     attach: {
       useProps,
+      displayName: 'Spinner',
     },
     themeKey: 'Spinner',
   }

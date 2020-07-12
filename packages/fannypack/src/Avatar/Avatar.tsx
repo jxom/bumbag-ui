@@ -58,6 +58,7 @@ export const Avatar = createComponent<AvatarProps>(
   {
     attach: {
       useProps,
+      displayName: 'Avatar',
     },
     defaultProps: {
       use: 'img',

@@ -34,6 +34,7 @@ export const SelectMenuItem = createComponent<SelectMenuItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'SelectMenu.Item',
     },
     defaultProps: {
       use: 'li',

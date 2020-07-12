@@ -171,6 +171,7 @@ export const SelectMenuField = createComponent<SelectMenuFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'SelectMenuField',
     },
     themeKey: 'SelectMenuField',
   }

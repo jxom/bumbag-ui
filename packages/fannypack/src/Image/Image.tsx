@@ -41,6 +41,7 @@ export const Image = createComponent<ImageProps>(
   {
     attach: {
       useProps,
+      displayName: 'Image',
     },
     defaultProps: {
       use: 'img',

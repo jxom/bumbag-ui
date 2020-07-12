@@ -67,6 +67,7 @@ export const Tooltip = createComponent<TooltipProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tooltip',
     },
     themeKey: 'Tooltip',
   }
@@ -159,6 +160,7 @@ export const TooltipContent = createComponent<TooltipContentProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tooltip.Content',
     },
     themeKey: 'Tooltip.Content',
   }
@@ -210,6 +212,7 @@ export const TooltipReference = createComponent<TooltipReferenceProps>(
   {
     attach: {
       useProps: useTooltipReferenceProps,
+      displayName: 'Tooltip.Reference',
     },
     themeKey: 'Tooltip.Reference',
   }
@@ -264,6 +267,7 @@ export const TooltipArrow = createComponent<TooltipArrowProps>(
   {
     attach: {
       useProps: useTooltipArrowProps,
+      displayName: 'Tooltip.Arrow',
     },
     themeKey: 'Tooltip.Arrow',
   }

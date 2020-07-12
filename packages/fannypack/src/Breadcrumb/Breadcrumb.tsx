@@ -68,7 +68,7 @@ export const Breadcrumb = createComponent<BreadcrumbProps>(
     });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'Breadcrumb' },
     defaultProps: { use: 'nav' },
     themeKey: 'Breadcrumb',
   }

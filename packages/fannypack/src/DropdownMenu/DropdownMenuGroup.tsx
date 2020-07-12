@@ -63,6 +63,7 @@ export const DropdownMenuGroup = createComponent<DropdownMenuGroupProps>(
   {
     attach: {
       useProps,
+      displayName: 'DropdownMenu.Group',
     },
     themeKey: 'DropdownMenu.Group',
   }

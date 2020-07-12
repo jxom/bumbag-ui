@@ -33,6 +33,7 @@ export const FieldStack = createComponent<FieldStackProps>(
   {
     attach: {
       useProps,
+      displayName: 'FieldStack',
     },
     themeKey: 'FieldStack',
   }

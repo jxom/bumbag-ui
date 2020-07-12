@@ -33,6 +33,7 @@ export const ListItem = createComponent<ListItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'List.Item',
     },
     defaultProps: {
       use: 'li',

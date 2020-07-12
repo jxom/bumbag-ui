@@ -137,6 +137,7 @@ export const PageWithSidebar = createComponent<PageWithSidebarProps>(
   {
     attach: {
       useProps,
+      displayName: 'PageWithSidebar',
     },
     themeKey: 'PageWithSidebar',
   }

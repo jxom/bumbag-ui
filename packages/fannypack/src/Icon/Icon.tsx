@@ -81,6 +81,7 @@ export const Icon = createComponent<IconProps>(
   {
     attach: {
       useProps,
+      displayName: 'Icon',
     },
     defaultProps: {
       use: 'svg',

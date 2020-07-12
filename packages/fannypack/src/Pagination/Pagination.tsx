@@ -157,6 +157,7 @@ export const Pagination = createComponent<PaginationProps>(
   {
     attach: {
       useProps,
+      displayName: 'Pagination',
     },
     themeKey: 'Pagination',
   }

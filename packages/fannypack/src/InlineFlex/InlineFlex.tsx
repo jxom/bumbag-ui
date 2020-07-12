@@ -37,7 +37,7 @@ export const InlineFlex = createComponent<InlineFlexProps>(
     });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'InlineFlex' },
     themeKey: 'InlineFlex',
   }
 );

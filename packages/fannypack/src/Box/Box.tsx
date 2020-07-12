@@ -90,7 +90,7 @@ export const Box = createComponent<BoxProps>(
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: boxProps });
   },
   {
-    attach: { useProps },
+    attach: { displayName: 'Box', useProps },
     themeKey: 'Box',
   }
 );

@@ -75,6 +75,7 @@ export const PageWithHeader = createComponent<PageWithHeaderProps>(
   {
     attach: {
       useProps,
+      displayName: 'PageWithHeader',
     },
     themeKey: 'PageWithHeader',
   }

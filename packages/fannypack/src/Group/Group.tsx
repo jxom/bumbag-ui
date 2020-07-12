@@ -38,7 +38,7 @@ export const Group = createComponent<GroupProps>(
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: groupProps });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'Group' },
     themeKey: 'Group',
   }
 );

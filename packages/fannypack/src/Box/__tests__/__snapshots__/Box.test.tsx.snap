@@ -223,6 +223,66 @@ exports[`defaultProps should render correctly 1`] = `
 </div>
 `;
 
+exports[`modes renders correctly for applyTheme 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  color: #ff0000 !important;
+  padding: 1rem !important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
+exports[`modes renders correctly for applyTheme 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  color: #ff0000 !important;
+  padding: 1rem !important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+/>
+`;
+
 exports[`modes should render correctly when colorMode is set globally 1`] = `
 .emotion-0 {
   margin: unset;
@@ -246,7 +306,61 @@ exports[`modes should render correctly when colorMode is set globally 1`] = `
 </div>
 `;
 
+exports[`modes should render correctly when colorMode is set globally 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+>
+  hello world
+</div>
+`;
+
 exports[`modes should render correctly when colorMode set as prop 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: red;
+}
+
+.emotion-1 {
+  color: #eeedfd !important;
+}
+
+<div
+  class="emotion-0 emotion-1 fp-Box"
+>
+  hello world
+</div>
+`;
+
+exports[`modes should render correctly when colorMode set as prop 2`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;

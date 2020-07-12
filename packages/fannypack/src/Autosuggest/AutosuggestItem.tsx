@@ -34,6 +34,7 @@ export const AutosuggestItem = createComponent<AutosuggestItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'Autosuggest.Item',
     },
     defaultProps: {
       use: 'li',

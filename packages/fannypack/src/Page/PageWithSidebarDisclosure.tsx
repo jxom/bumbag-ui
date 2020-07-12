@@ -45,6 +45,7 @@ export const PageWithSidebarDisclosure = createComponent<PageWithSidebarDisclosu
   {
     attach: {
       useProps,
+      displayName: 'PageWithSidebar.Disclosure',
     },
     defaultProps: {
       use: 'button',

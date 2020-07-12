@@ -96,6 +96,7 @@ export const TabsList = createComponent<TabsListProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tabs.List',
     },
     themeKey: 'Tabs.List',
   }

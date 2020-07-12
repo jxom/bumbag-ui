@@ -167,6 +167,7 @@ export const AutosuggestField = createComponent<AutosuggestFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'Autosuggest.Field',
     },
     themeKey: 'AutosuggestField',
   }

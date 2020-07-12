@@ -128,6 +128,7 @@ export const Dialog = createComponent<DialogProps>(
   {
     attach: {
       useProps,
+      displayName: 'Dialog',
     },
     themeKey: 'Dialog',
   }
@@ -167,7 +168,7 @@ export const DialogContent = createComponent<DialogContentProps>(
     });
   },
   {
-    attach: { useProps: useDialogContentProps },
+    attach: { useProps: useDialogContentProps, displayName: 'Dialog.Content' },
     themeKey: 'Dialog.Content',
   }
 );
@@ -206,7 +207,7 @@ export const DialogHeader = createComponent<DialogHeaderProps>(
     });
   },
   {
-    attach: { useProps: useDialogHeaderProps },
+    attach: { useProps: useDialogHeaderProps, displayName: 'Dialog.Header' },
     themeKey: 'Dialog.Header',
   }
 );
@@ -245,7 +246,7 @@ export const DialogTitle = createComponent<DialogTitleProps>(
     });
   },
   {
-    attach: { useProps: useDialogTitleProps },
+    attach: { useProps: useDialogTitleProps, displayName: 'Dialog.Title' },
     defaultProps: {
       use: 'span',
     },
@@ -287,7 +288,7 @@ export const DialogFooter = createComponent<DialogFooterProps>(
     });
   },
   {
-    attach: { useProps: useDialogFooterProps },
+    attach: { useProps: useDialogFooterProps, displayName: 'Dialog.Footer' },
     themeKey: 'Dialog.Footer',
   }
 );
@@ -349,7 +350,7 @@ export const DialogIcon = createComponent<DialogIconProps>(
     });
   },
   {
-    attach: { useProps: useDialogIconProps },
+    attach: { useProps: useDialogIconProps, displayName: 'Dialog.IconWrapper' },
     defaultProps: {
       use: 'span',
     },
@@ -415,7 +416,7 @@ export const DialogModal = createComponent<DialogModalProps>(
     });
   },
   {
-    attach: { useProps: useDialogModalProps },
+    attach: { useProps: useDialogModalProps, displayName: 'Dialog.Modal' },
     themeKey: 'Dialog.Modal',
   }
 );

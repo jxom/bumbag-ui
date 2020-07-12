@@ -45,6 +45,7 @@ export const PageWithHeaderDisclosure = createComponent<PageWithHeaderDisclosure
   {
     attach: {
       useProps,
+      displayName: 'PageWithHeader.Disclosure',
     },
     defaultProps: {
       use: 'button',

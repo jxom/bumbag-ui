@@ -39,6 +39,7 @@ export const Overlay = createComponent<OverlayProps>(
   {
     attach: {
       useProps,
+      displayName: 'Overlay',
     },
     themeKey: 'Overlay',
   }

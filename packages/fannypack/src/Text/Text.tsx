@@ -33,6 +33,7 @@ export const Text = createComponent<TextProps>(
   {
     attach: {
       useProps,
+      displayName: 'Text',
     },
     defaultProps: {
       use: 'span',

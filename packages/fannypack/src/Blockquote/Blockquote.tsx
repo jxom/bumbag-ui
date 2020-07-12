@@ -35,5 +35,5 @@ export const Blockquote = createComponent<BlockquoteProps>(
       htmlProps: blockquoteProps,
     });
   },
-  { attach: { useProps }, defaultProps: { use: 'blockquote' }, themeKey: 'Blockquote' }
+  { attach: { useProps, displayName: 'Blockquote' }, defaultProps: { use: 'blockquote' }, themeKey: 'Blockquote' }
 );

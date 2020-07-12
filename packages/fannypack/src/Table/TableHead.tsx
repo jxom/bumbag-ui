@@ -37,6 +37,7 @@ export const TableHead = createComponent<TableHeadProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.Head',
     },
     defaultProps: {
       use: 'thead',

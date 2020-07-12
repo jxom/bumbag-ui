@@ -147,6 +147,7 @@ export const Switch = createComponent<SwitchProps>(
   {
     attach: {
       useProps,
+      displayName: 'Switch',
     },
     defaultProps: {
       use: Label,
@@ -262,6 +263,7 @@ export const SwitchField = createComponent<SwitchFieldProps>(
   {
     attach: {
       useProps,
+      displayName: 'SwitchField',
     },
     themeKey: 'SwitchField',
   }

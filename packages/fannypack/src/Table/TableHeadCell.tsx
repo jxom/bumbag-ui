@@ -37,6 +37,7 @@ export const TableHeadCell = createComponent<TableHeadCellProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.HeadCell',
     },
     defaultProps: {
       use: 'th',

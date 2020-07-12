@@ -47,6 +47,7 @@ export const Set = createComponent<SetProps>(
   {
     attach: {
       useProps,
+      displayName: 'Set',
     },
     themeKey: 'Set',
   }

@@ -52,6 +52,7 @@ export const PopoverDisclosure = createComponent<PopoverDisclosureProps>(
   {
     attach: {
       useProps,
+      displayName: 'Popover.Disclosure',
     },
     defaultProps: {
       use: 'button',

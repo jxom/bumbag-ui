@@ -109,6 +109,7 @@ export const DropdownMenuPopover = createComponent<DropdownMenuPopoverProps>(
   {
     attach: {
       useProps,
+      displayName: 'DropdownMenu.Popover',
     },
     themeKey: 'DropdownMenu.Popover',
   }

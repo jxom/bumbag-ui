@@ -73,6 +73,7 @@ export const SideNav = createComponent<SideNavProps>(
   {
     attach: {
       useProps,
+      displayName: 'SideNav',
     },
     themeKey: 'SideNav',
   }

@@ -107,6 +107,7 @@ export const Rating = createComponent<RatingProps>(
   {
     attach: {
       useProps,
+      displayName: 'Rating',
     },
     themeKey: 'Rating',
   }
@@ -158,6 +159,7 @@ export const RatingItem = createComponent<RatingItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'Rating.Item',
     },
     themeKey: 'Rating.Item',
   }

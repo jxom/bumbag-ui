@@ -75,6 +75,7 @@ export const TabsPanel = createComponent<TabsPanelProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tabs.Panel',
     },
     themeKey: 'Tabs.Panel',
   }

@@ -73,6 +73,7 @@ export const MenuItem = createComponent<MenuItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'Menu.Item',
     },
     themeKey: 'Menu.Item',
   }

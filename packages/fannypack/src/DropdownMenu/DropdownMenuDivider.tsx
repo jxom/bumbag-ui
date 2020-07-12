@@ -50,6 +50,7 @@ export const DropdownMenuDivider = createComponent<DropdownMenuDividerProps>(
   {
     attach: {
       useProps,
+      displayName: 'DropdownMenu.Divider',
     },
     themeKey: 'DropdownMenu.Divider',
   }

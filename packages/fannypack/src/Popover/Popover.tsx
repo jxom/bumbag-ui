@@ -204,6 +204,7 @@ export const Popover = createComponent<PopoverProps>(
   {
     attach: {
       useProps,
+      displayName: 'Popover',
     },
     themeKey: 'Popover',
   }
@@ -243,7 +244,7 @@ export const PopoverContent = createComponent<PopoverContentProps>(
     });
   },
   {
-    attach: { useProps: usePopoverContentProps },
+    attach: { useProps: usePopoverContentProps, displayName: 'Popover.Content' },
     themeKey: 'Popover.Content',
   }
 );
@@ -282,7 +283,7 @@ export const PopoverHeader = createComponent<PopoverHeaderProps>(
     });
   },
   {
-    attach: { useProps: usePopoverHeaderProps },
+    attach: { useProps: usePopoverHeaderProps, displayName: 'Popover.Header' },
     themeKey: 'Popover.Header',
   }
 );
@@ -321,7 +322,7 @@ export const PopoverTitle = createComponent<PopoverTitleProps>(
     });
   },
   {
-    attach: { useProps: usePopoverTitleProps },
+    attach: { useProps: usePopoverTitleProps, displayName: 'Popover.Title' },
     defaultProps: {
       use: 'span',
     },
@@ -363,7 +364,7 @@ export const PopoverFooter = createComponent<PopoverFooterProps>(
     });
   },
   {
-    attach: { useProps: usePopoverFooterProps },
+    attach: { useProps: usePopoverFooterProps, displayName: 'Popover.Footer' },
     themeKey: 'Popover.Footer',
   }
 );
@@ -424,6 +425,7 @@ export const PopoverArrow = createComponent<PopoverArrowProps>(
   {
     attach: {
       useProps,
+      displayName: 'Popover.Arrow',
     },
     themeKey: 'Popover.Arrow',
   }

@@ -35,6 +35,7 @@ export const Toast = createComponent<ToastProps>(
   {
     attach: {
       useProps,
+      displayName: 'Toast',
     },
     themeKey: 'Toast',
   }

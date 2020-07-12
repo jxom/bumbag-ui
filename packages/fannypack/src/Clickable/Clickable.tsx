@@ -38,6 +38,7 @@ export const Clickable = createComponent<ClickableProps>(
   {
     attach: {
       useProps,
+      displayName: 'Clickable',
     },
     themeKey: 'Clickable',
   }

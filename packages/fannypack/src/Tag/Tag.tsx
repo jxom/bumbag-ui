@@ -68,6 +68,7 @@ export const Tag = createComponent<TagProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tag',
     },
     themeKey: 'Tag',
   }

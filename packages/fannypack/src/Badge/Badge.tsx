@@ -48,6 +48,7 @@ export const Badge = createComponent<BadgeProps>(
   {
     attach: {
       useProps,
+      displayName: 'Badge',
     },
     defaultProps: {},
     themeKey: 'Badge',

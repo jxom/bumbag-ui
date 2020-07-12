@@ -48,6 +48,7 @@ export const Code = createComponent<CodeProps>(
   {
     attach: {
       useProps,
+      displayName: 'Code',
     },
     themeKey: 'Code',
   }

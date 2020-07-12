@@ -50,6 +50,7 @@ export const MenuDivider = createComponent<MenuDividerProps>(
   {
     attach: {
       useProps,
+      displayName: 'Menu.Divider',
     },
     themeKey: 'Menu.Divider',
   }

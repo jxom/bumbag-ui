@@ -210,6 +210,7 @@ export const FieldWrapper = createComponent<FieldWrapperProps>(
   {
     attach: {
       useProps,
+      displayName: 'FieldWrapper',
     },
     themeKey: 'FieldWrapper',
   }

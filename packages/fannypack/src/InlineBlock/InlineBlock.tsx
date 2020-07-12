@@ -37,7 +37,7 @@ export const InlineBlock = createComponent<InlineBlockProps>(
     });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'InlineBlock' },
     themeKey: 'InlineBlock',
   }
 );

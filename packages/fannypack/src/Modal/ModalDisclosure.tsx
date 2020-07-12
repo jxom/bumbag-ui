@@ -50,6 +50,7 @@ export const ModalDisclosure = createComponent<ModalDisclosureProps>(
   {
     attach: {
       useProps,
+      displayName: 'Modal.Disclosure',
     },
     defaultProps: {
       use: 'button',

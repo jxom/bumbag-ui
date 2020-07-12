@@ -45,6 +45,7 @@ export const Stack = createComponent<StackProps>(
   {
     attach: {
       useProps,
+      displayName: 'Stack',
     },
     themeKey: 'Stack',
   }

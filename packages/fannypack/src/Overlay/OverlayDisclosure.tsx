@@ -38,6 +38,7 @@ export const OverlayDisclosure = createComponent<OverlayDisclosureProps>(
   {
     attach: {
       useProps,
+      displayName: 'Overlay.Disclosure',
     },
     defaultProps: {
       use: 'button',

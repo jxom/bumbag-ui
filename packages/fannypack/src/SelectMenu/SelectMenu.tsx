@@ -523,6 +523,7 @@ export const SelectMenu = createComponent<SelectMenuProps>(
   {
     attach: {
       useProps,
+      displayName: 'SelectMenu',
     },
     themeKey: 'SelectMenu',
   }

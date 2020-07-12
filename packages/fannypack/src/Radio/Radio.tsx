@@ -143,6 +143,7 @@ export const Radio = createComponent<RadioProps>(
   {
     attach: {
       useProps,
+      displayName: 'Radio',
     },
     defaultProps: {
       use: Label,

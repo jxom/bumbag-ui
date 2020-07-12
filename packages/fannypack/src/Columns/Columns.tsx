@@ -62,6 +62,7 @@ export const Columns = createComponent<ColumnsProps>(
   {
     attach: {
       useProps,
+      displayName: 'Columns',
     },
     themeKey: 'Columns',
   }

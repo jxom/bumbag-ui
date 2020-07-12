@@ -42,6 +42,7 @@ export const TopNavSection = createComponent<TopNavSectionProps>(
   {
     attach: {
       useProps,
+      displayName: 'TopNav.Section',
     },
     defaultProps: {
       use: 'ul',

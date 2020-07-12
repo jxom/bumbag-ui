@@ -141,6 +141,7 @@ export const DropdownMenuItem = createComponent<DropdownMenuItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'DropdownMenu.Item',
     },
     themeKey: 'DropdownMenu.Item',
   }

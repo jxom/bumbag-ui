@@ -49,6 +49,7 @@ export const Disclosure = createComponent<DisclosureProps>(
   {
     attach: {
       useProps,
+      displayName: 'Disclosure',
     },
     defaultProps: {
       use: 'button',

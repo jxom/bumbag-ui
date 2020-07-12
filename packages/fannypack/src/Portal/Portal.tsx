@@ -39,6 +39,7 @@ export const Portal = createComponent<PortalProps>(
   {
     attach: {
       useProps,
+      displayName: 'Portal',
     },
     themeKey: 'Portal',
   }

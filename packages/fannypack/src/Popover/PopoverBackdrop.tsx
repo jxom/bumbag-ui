@@ -58,6 +58,7 @@ export const PopoverBackdrop = createComponent<PopoverBackdropProps>(
   {
     attach: {
       useProps,
+      displayName: 'Popover.Backdrop',
     },
     themeKey: 'Popover.Backdrop',
   }

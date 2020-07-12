@@ -146,6 +146,7 @@ export const Alert = createComponent<AlertProps>(
   {
     attach: {
       useProps,
+      displayName: 'Alert',
     },
     themeKey: 'Alert',
   }

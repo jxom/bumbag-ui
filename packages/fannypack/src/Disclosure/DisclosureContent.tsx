@@ -58,6 +58,7 @@ export const DisclosureContent = createComponent<DisclosureContentProps>(
   {
     attach: {
       useProps,
+      displayName: 'Disclosure.Content',
     },
     themeKey: 'Disclosure.Content',
   }

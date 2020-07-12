@@ -69,6 +69,7 @@ export const ProgressBar = createComponent<ProgressBarProps>(
   {
     attach: {
       useProps,
+      displayName: 'ProgressBar',
     },
     themeKey: 'ProgressBar',
   }

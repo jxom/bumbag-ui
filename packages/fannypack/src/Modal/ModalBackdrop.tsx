@@ -60,6 +60,7 @@ export const ModalBackdrop = createComponent<ModalBackdropProps>(
   {
     attach: {
       useProps,
+      displayName: 'Modal.Backdrop',
     },
     themeKey: 'Modal.Backdrop',
   }

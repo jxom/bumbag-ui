@@ -37,6 +37,7 @@ export const Heading = createComponent<HeadingProps>(
   {
     attach: {
       useProps,
+      displayName: 'Heading',
     },
     defaultProps: { use: 'h1' },
     themeKey: 'Heading',

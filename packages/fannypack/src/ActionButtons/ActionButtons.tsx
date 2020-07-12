@@ -108,7 +108,7 @@ export const ActionButtons = createComponent<ActionButtonsProps>(
     });
   },
   {
-    attach: { useProps },
+    attach: { useProps, displayName: 'ActionButtons' },
     themeKey: 'ActionButtons',
   }
 );

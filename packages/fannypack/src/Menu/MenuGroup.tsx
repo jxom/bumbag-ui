@@ -63,6 +63,7 @@ export const MenuGroup = createComponent<MenuGroupProps>(
   {
     attach: {
       useProps,
+      displayName: 'Menu.Group',
     },
     themeKey: 'Menu.Group',
   }

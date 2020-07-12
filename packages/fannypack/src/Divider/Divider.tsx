@@ -40,6 +40,7 @@ export const Divider = createComponent<DividerProps>(
   {
     attach: {
       useProps,
+      displayName: 'Divider',
     },
     defaultProps: {
       use: 'hr',

@@ -56,6 +56,7 @@ export const Tabs = createComponent<TabsProps>(
   {
     attach: {
       useProps,
+      displayName: 'Tabs',
     },
     themeKey: 'Tabs',
   }

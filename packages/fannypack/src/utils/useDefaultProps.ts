@@ -18,12 +18,22 @@ export function useDefaultProps(props: any = {}, config: any = {}) {
   );
   const themeColorModeDefaultProps = omitBy(get(theme, `${themeKey}.modes.${colorMode}.defaultProps`, {}), isUndefined);
   const overridesDefaultProps = omitBy(get(props, `overrides.${themeKey}.defaultProps`, {}), isUndefined);
+  const overridesVariantDefaultProps = omitBy(
+    get(props, `overrides.${themeKey}.variants.${props.variant}.defaultProps`, {}),
+    isUndefined
+  );
+  const overridesColorModeDefaultProps = omitBy(
+    get(props, `overrides.${themeKey}.modes.${colorMode}.defaultProps`, {}),
+    isUndefined
+  );
   const newProps = {
     ...configDefaultProps,
     ...themeDefaultProps,
     ...themeVariantDefaultProps,
     ...themeColorModeDefaultProps,
     ...overridesDefaultProps,
+    ...overridesVariantDefaultProps,
+    ...overridesColorModeDefaultProps,
     colorMode,
     ...omitBy(props, isUndefined),
   };

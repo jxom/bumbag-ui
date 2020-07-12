@@ -33,6 +33,7 @@ export const SelectMenuStaticItem = createComponent<SelectMenuStaticItemProps>(
   {
     attach: {
       useProps,
+      displayName: 'SelectMenu.StaticItem',
     },
     themeKey: 'SelectMenu.StaticItem',
   }

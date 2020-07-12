@@ -37,6 +37,7 @@ export const TableRow = createComponent<TableRowProps>(
   {
     attach: {
       useProps,
+      displayName: 'Table.Row',
     },
     defaultProps: {
       use: 'tr',

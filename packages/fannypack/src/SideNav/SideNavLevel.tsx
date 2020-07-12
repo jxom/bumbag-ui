@@ -70,6 +70,7 @@ export const SideNavLevel = createComponent<SideNavLevelProps>(
   {
     attach: {
       useProps,
+      displayName: 'SideNav.Level',
     },
     defaultProps: {
       use: 'ul',

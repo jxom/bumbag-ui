@@ -83,6 +83,7 @@ export const Card = createComponent<CardProps>(
   {
     attach: {
       useProps,
+      displayName: 'Card',
     },
     themeKey: 'Card',
   }
