@@ -21,10 +21,10 @@ npm install fannypack-v5
 And then, set up Fannypack v5 in your app root:
 
 ```jsx
-// v4 Fannypack
-import { ThemeProvider } from 'fannypack';
 // v5 Fannypack
 import { Provider as FannypackProvider } from 'fannypack-v5';
+// v4 Fannypack
+import { ThemeProvider } from 'fannypack';
 
 const oldTheme = { ... };
 const newTheme = { ... };
@@ -119,6 +119,46 @@ const theme = {
 ```
 
 [See more...](/theming)
+
+<Divider />
+
+### Theming: No more support for inline functions in the `css` attribute.
+
+We have removed support for inline functions within the `css` attribute. You will now have to retrieve props by converting the attribute to a function.
+
+##### v4
+
+```jsx
+const theme = {
+  Box: {
+    base: css`
+      color: ${palette('primary')};
+
+      ${props => props.error && css`
+        background-color: red;
+      `}
+    `
+  }
+}
+```
+
+##### v5
+
+```jsx
+const theme = {
+  Box: {
+    css: {
+      root: props => css`
+        color: ${palette('primary')(props)};
+
+        ${props.error && css`
+          background-color: red;
+        `}
+      `
+    }
+  }
+}
+```
 
 <Divider />
 
@@ -696,6 +736,22 @@ We have repurposed the `isVertical` prop to `orientation`.
 
 <Divider />
 
+### FieldSet: Renamed to `FieldStack`
+
+##### v4
+
+```jsx
+<FieldSet>
+```
+
+##### v5
+
+```jsx
+<FieldStack>
+```
+
+<Divider />
+
 ### FieldSet: `isHorizontal` to `orientation`
 
 ##### v4
@@ -707,7 +763,7 @@ We have repurposed the `isVertical` prop to `orientation`.
 ##### v5
 
 ```jsx
-<FieldSet orientation="horizontal" />
+<FieldStack orientation="horizontal" />
 ```
 
 <Divider />
