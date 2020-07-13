@@ -14,9 +14,10 @@ export const SelectMenuPopover = (styleProps) => cssClass`
   &&& {
     max-width: 100%;
     width: 100%;
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: ${styleProps.popoverHeight};
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   & {
@@ -130,6 +131,7 @@ export const SelectMenuItemText = (styleProps) => cssClass`
 export const SelectMenuItemsWrapper = (styleProps) => cssClass`
   &&& {
     padding: ${space(2)(styleProps)}rem 0;
+    overflow-y: auto;
   }
 
   & {

@@ -42,6 +42,7 @@ export type LocalSelectMenuProps = {
   options?: Options;
   onChange: (newOptions: Array<Option> | Option | '', option: Option | '') => void;
   pagination?: boolean;
+  popoverHeight?: string;
   placeholder?: string;
   value: Partial<Option>;
 
@@ -320,11 +321,14 @@ const useProps = createHook<SelectMenuProps>(
       [handleClickItem]
     );
 
-    const handleClearOptions = React.useCallback((e) => {
-      e.stopPropagation();
-      dispatch({ type: 'VALUE_CHANGE', value: '' });
-      onChange && onChange('', '');
-    }, []);
+    const handleClearOptions = React.useCallback(
+      (e) => {
+        e.stopPropagation();
+        dispatch({ type: 'VALUE_CHANGE', value: '' });
+        onChange && onChange('', '');
+      },
+      [onChange]
+    );
 
     const handleScrollPopover = React.useCallback(
       (event) => {
@@ -424,9 +428,7 @@ const useProps = createHook<SelectMenuProps>(
           />
           <DropdownMenuPopover
             {...dropdownMenu}
-            use="ul"
             className={dropdownMenuPopoverClassName}
-            onScroll={handleScrollPopover}
             overrides={overrides}
             role="listbox"
             {...popoverProps}
@@ -442,7 +444,12 @@ const useProps = createHook<SelectMenuProps>(
               {hasTags && selectedOptions.length > 0 && (
                 <SelectMenuTags onClearTag={handleClearTag} selectedOptions={selectedOptions} tagProps={tagProps} />
               )}
-              <Box className={selectMenuItemsWrapperClassName} overrides={overrides}>
+              <Box
+                use="ul"
+                className={selectMenuItemsWrapperClassName}
+                onScroll={handleScrollPopover}
+                overrides={overrides}
+              >
                 {state === 'success' && (
                   <React.Fragment>
                     {visibleOptions.map((option, index) => (
@@ -501,6 +508,7 @@ const useProps = createHook<SelectMenuProps>(
       loadingText: 'Loading...',
       loadingMoreText: 'Loading...',
       options: [],
+      popoverHeight: '300px',
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,

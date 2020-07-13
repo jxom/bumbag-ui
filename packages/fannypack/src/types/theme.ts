@@ -148,7 +148,7 @@ export type GlobalThemeConfig = {
   fontSize?: number;
 };
 export type ModesThemeConfig = {
-  localStoragePrefix: string;
+  localStoragePrefix?: string;
   enableLocalStorage?: boolean;
   useSystemColorMode?: boolean;
 };
