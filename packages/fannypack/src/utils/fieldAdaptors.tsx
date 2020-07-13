@@ -56,7 +56,7 @@ export function formikField(
     if (isSelectMenu) {
       onBlur = () => form.setFieldTouched(field.name);
       // @ts-ignore
-      onChange = (value: any, option: any, newValues: any) => form.setFieldValue(field.name, newValues);
+      onChange = (newOptions: any) => form.setFieldValue(field.name, newOptions);
     }
     if (useValue) {
       onChange = (value: any) => form.setFieldValue(field.name, value);
@@ -121,7 +121,7 @@ export function reduxFormField(
     let onFocus = input.onFocus;
     if (isSelectMenu) {
       // @ts-ignore
-      onChange = (value: any, option: any, newValues: any) => input.onChange(newValues);
+      onChange = (newOptions: any) => input.onChange(newOptions);
       onBlur = () => input.onBlur(input.value);
     }
     if (useValue) {
