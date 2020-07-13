@@ -32,19 +32,23 @@ export function useBreakpoint(_breakpoint) {
   const mediaQueryList =
     typeof window !== 'undefined'
       ? window.matchMedia(query)
-      : { matches: undefined, addListener: () => null, removeListener: () => null };
+      : { matches: false, addListener: () => null, removeListener: () => null };
   const [doesMatch, setDoesMatch] = React.useState(mediaQueryList.matches);
 
-  const onMediaChange = React.useCallback((e) => {
-    setDoesMatch(e.matches);
-  }, []);
-
   React.useEffect(() => {
+    let mounted = true;
+
+    const onMediaChange = (e) => {
+      if (!mounted) return;
+      setDoesMatch(e.matches);
+    };
+
     mediaQueryList.addListener(onMediaChange);
     return function cleanup() {
+      mounted = false;
       mediaQueryList.removeListener(onMediaChange);
     };
-  }, [mediaQueryList, onMediaChange]);
+  }, [mediaQueryList]);
 
   return doesMatch;
 }

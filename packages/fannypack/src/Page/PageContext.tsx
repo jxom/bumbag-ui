@@ -6,6 +6,7 @@ import { useBreakpoint } from '../utils';
 import { collapseBreakpoints } from './styles';
 
 export const PageContext = React.createContext({
+  collapseBelow: 'desktop',
   isCollapsed: false,
   sidebar: {
     isOpen: true,
@@ -42,6 +43,7 @@ export function PageProvider(props: any) {
 
   const value = React.useMemo(
     () => ({
+      collapseBelow,
       isCollapsed,
       sidebar: {
         isOpen: sidebarState.visible,
@@ -64,6 +66,7 @@ export function PageProvider(props: any) {
       },
     }),
     [
+      collapseBelow,
       headerDisclosure,
       isCollapsed,
       isSidebarMinimized,
@@ -79,10 +82,8 @@ export function PageProvider(props: any) {
   React.useEffect(() => {
     if (isCollapsed) {
       setIsSidebarMinimized(false);
-    } else {
-      sidebarDrawer.hide();
     }
-  }, [isCollapsed, sidebarDrawer]);
+  }, [isCollapsed]);
 
   return <PageContext.Provider value={value}>{children}</PageContext.Provider>;
 }

@@ -57,8 +57,15 @@ export const PageWithSidebarContent = (styleProps) => cssClass`
   width: 100%;
   padding-left: ${getWidth(styleProps)};
 
+  ${breakpoint(
+    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+    css`
+      padding-left: 0px;
+    `
+  )(styleProps)}
+
   ${
-    styleProps.isCollapsed &&
+    !styleProps.isSidebarOpen &&
     css`
       padding-left: 0px;
     `
@@ -110,6 +117,12 @@ export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
   &&& {
     min-width: ${styleProps.collapsedSidebarWidth};
   }
+
+  ${breakpoint(`max-${collapseBreakpoints[styleProps.collapseBelow]}`, css``, {
+    else: css`
+      display: none;
+    `,
+  })(styleProps)};
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

@@ -31,7 +31,7 @@ export function useClassName({
       className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
     }
     return className;
-  }, [style, theme, themeKey, themeKeyOverride, themeKeySuffix, Object.values(styleProps).join('.')]);
+  }, [newThemeKey, style, styleProps, theme]);
 
   const originalThemeKey = themeKeyOverride
     ? `${themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`

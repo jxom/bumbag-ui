@@ -35,7 +35,7 @@ const useProps = createHook<PageWithSidebarProps>(
       ...restProps,
     });
 
-    const { isCollapsed, sidebar: sidebarState } = React.useContext(PageContext);
+    const { collapseBelow, isCollapsed, sidebar: sidebarState } = React.useContext(PageContext);
 
     const className = useClassName({
       style: styles.PageWithSidebar,
@@ -46,28 +46,34 @@ const useProps = createHook<PageWithSidebarProps>(
     });
     const sidebarClassName = useClassName({
       style: styles.PageWithSidebarSidebar,
-      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
+      styleProps: { ...props, collapseBelow, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Sidebar',
     });
     const sidebarExpandedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarExpandedWrapper,
-      styleProps: props,
+      styleProps: { ...props, collapseBelow },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'SidebarExpandedWrapper',
     });
     const sidebarCollapsedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarCollapsedWrapper,
-      styleProps: props,
+      styleProps: { ...props, collapseBelow },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'SidebarCollapsedWrapper',
     });
     const contentClassName = useClassName({
       style: styles.PageWithSidebarContent,
-      styleProps: { ...props, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
+      styleProps: {
+        ...props,
+        collapseBelow,
+        isCollapsed,
+        isSidebarMinimized: sidebarState.isMinimized,
+        isSidebarOpen: sidebarState.isOpen,
+      },
       themeKey,
       themeKeyOverride,
       themeKeySuffix: 'Content',
@@ -84,26 +90,23 @@ const useProps = createHook<PageWithSidebarProps>(
       className,
       children: (
         <React.Fragment>
-          {isCollapsed ? (
-            <Drawer
-              className={sidebarCollapsedWrapperClassName}
-              overrides={overrides}
-              {...collapsedSidebarProps}
-              {...sidebarState.drawer}
-            >
+          <Drawer
+            className={sidebarCollapsedWrapperClassName}
+            overrides={overrides}
+            {...collapsedSidebarProps}
+            {...sidebarState.drawer}
+          >
+            <Box className={sidebarClassName} overrides={overrides}>
+              {sidebar}
+            </Box>
+          </Drawer>
+          <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
+            <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
               <Box className={sidebarClassName} overrides={overrides}>
                 {sidebar}
               </Box>
-            </Drawer>
-          ) : (
-            <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
-              <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
-                <Box className={sidebarClassName} overrides={overrides}>
-                  {sidebar}
-                </Box>
-              </Box>
-            </Disclosure.Content>
-          )}
+            </Box>
+          </Disclosure.Content>
           <Box className={contentClassName} overrides={overrides}>
             {children}
           </Box>
