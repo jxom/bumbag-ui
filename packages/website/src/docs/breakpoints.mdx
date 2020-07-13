@@ -48,18 +48,17 @@ The first parameter is the breakpoint (e.g. `max-tablet`).
 The second parameter is the CSS (e.g. `font-size: 14px;`).
 
 ```jsx
-import { Box, breakpoint, styled } from 'fannypack';
+import { Box, css, breakpoint, styled } from 'fannypack';
 
 const FancyBox = styled(Box)`
   color: red;
-
-  `${breakpoint(
+  ${breakpoint(
     'max-tablet',
     css`
       font-size: 14px;
-    `
-  )`}
-`;
+    `,
+  )}
+`
 
 <FancyBox>Hello world</FancyBox>
 ```
