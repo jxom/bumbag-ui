@@ -19,17 +19,20 @@ import { Provider as FannypackProvider, css } from 'fannypack';
 
 const theme = {
   global: {
-    fontFamily: 'Comic Sans MS',
-    fontSize: 20,
+    fontSize: 18,
     css: {
       root: css`
         html,
         body {
-          background-color: pink;
+          background-color: hotpink;
+          color: white;
         }
       `
     }
-  }
+  },
+  fonts: {
+    default: 'Comic Sans MS'
+  },
   palette: {
     primary: 'blue'
   },
@@ -38,16 +41,14 @@ const theme = {
     tablet: 960
   },
   Button: {
-    css: {
-      disabled: css`
-        opacity: 0.2
-      `
+    defaultProps: {
+      palette: 'primary'
     }
   },
-  Text: {
+  Heading: {
     css: {
       root: css`
-        font-weight: 300;
+        color: black;
       `
     }
   }
