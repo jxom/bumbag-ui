@@ -90,16 +90,18 @@ const useProps = createHook<PageWithSidebarProps>(
       className,
       children: (
         <React.Fragment>
-          <Drawer
-            className={sidebarCollapsedWrapperClassName}
-            overrides={overrides}
-            {...collapsedSidebarProps}
-            {...sidebarState.drawer}
-          >
-            <Box className={sidebarClassName} overrides={overrides}>
-              {sidebar}
-            </Box>
-          </Drawer>
+          <Box>
+            <Drawer
+              className={sidebarCollapsedWrapperClassName}
+              overrides={overrides}
+              {...collapsedSidebarProps}
+              {...sidebarState.drawer}
+            >
+              <Box className={sidebarClassName} overrides={overrides}>
+                {sidebar}
+              </Box>
+            </Drawer>
+          </Box>
           <Disclosure.Content overrides={overrides} {...expandedSidebarProps} {...sidebarState.disclosure}>
             <Box className={sidebarExpandedWrapperClassName} overrides={overrides}>
               <Box className={sidebarClassName} overrides={overrides}>
