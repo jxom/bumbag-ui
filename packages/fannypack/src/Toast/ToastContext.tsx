@@ -2,7 +2,14 @@ import * as React from 'react';
 
 import { generateId, useTheme } from '../utils';
 
-export const ToastContext = React.createContext({ toasts: [] });
+export const ToastContext = React.createContext({
+  add: (toast: any) => {},
+  success: (toast: any) => {},
+  danger: (toast: any) => {},
+  warning: (toast: any) => {},
+  info: (toast: any) => {},
+  toasts: [],
+});
 
 type Props = {
   children: React.ReactNode;
