@@ -295,7 +295,7 @@ const useProps = createHook<AutosuggestProps>(
       filteredOptions: initialOptions,
       options: initialOptions,
       page: 1,
-      value: { label: '' },
+      value: '',
     });
 
     //////////////////////////////////////////////////
@@ -406,7 +406,7 @@ const useProps = createHook<AutosuggestProps>(
           selectOption({ index: highlightedIndex >= 0 ? highlightedIndex : 0 });
         }
         if (restrictToOptions && !selectedOption && highlightedIndex === -1) {
-          onChange && onChange({ label: '' });
+          onChange && onChange('');
         }
         filterOptions({ searchText: value });
         if (isMouseOutsidePopover({ mousePositionRef, popoverRef })) {
@@ -502,7 +502,7 @@ const useProps = createHook<AutosuggestProps>(
 
     const handleClear = React.useCallback(() => {
       dispatch({ type: 'OPTION_CLEARED' });
-      onChange && onChange({ label: '' });
+      onChange && onChange('');
     }, [onChange]);
 
     const handleMouseEnterPopover = React.useCallback(() => {
@@ -736,7 +736,7 @@ function MatchedLabel(props: { label: string; inputValue: string; overrides: any
     themeKeySuffix: 'ItemText',
   });
 
-  const escapeStringRegexp = (string) => string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
+  const escapeStringRegexp = (string) => (string || '').replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   const match = label.match(new RegExp(escapeStringRegexp(inputValue), 'i')) || [];
 
   const preText = label.slice(0, match.index);

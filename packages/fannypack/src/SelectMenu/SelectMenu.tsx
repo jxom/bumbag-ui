@@ -40,7 +40,7 @@ export type LocalSelectMenuProps = {
   loadOptions?: (options: { page?: number; searchText?: string; variables?: any }) => Promise<{ options: Options }>;
   loadVariables?: { [key: string]: any };
   options?: Options;
-  onChange: (newOptions: Array<Option> | Option, option: Option) => void;
+  onChange: (newOptions: Array<Option> | Option | '', option: Option | '') => void;
   pagination?: boolean;
   placeholder?: string;
   value: Partial<Option>;
@@ -287,7 +287,7 @@ const useProps = createHook<SelectMenuProps>(
           if (!selectedOptions.includes(option)) {
             newOptions = option;
           } else if (!disableClear) {
-            newOptions = undefined;
+            newOptions = '';
           }
           onChange && onChange(newOptions, newOptions);
           dropdownMenu.hide();
@@ -322,7 +322,8 @@ const useProps = createHook<SelectMenuProps>(
 
     const handleClearOptions = React.useCallback((e) => {
       e.stopPropagation();
-      dispatch({ type: 'VALUE_CHANGE', value: undefined });
+      dispatch({ type: 'VALUE_CHANGE', value: '' });
+      onChange && onChange('', '');
     }, []);
 
     const handleScrollPopover = React.useCallback(
