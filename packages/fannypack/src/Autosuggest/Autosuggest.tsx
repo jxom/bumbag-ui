@@ -39,6 +39,7 @@ export type LocalAutosuggestProps = {
   popoverHeight?: string;
   placeholder?: InputProps['placeholder'];
   restrictToOptions?: boolean;
+  state?: string;
   value: Partial<Option>;
 
   errorText?: string;
@@ -202,6 +203,7 @@ const useProps = createHook<AutosuggestProps>(
       limit,
       loadOptions,
       loadVariables,
+      onBlur,
       onChange,
       options: initialOptions,
       overrides,
@@ -214,6 +216,7 @@ const useProps = createHook<AutosuggestProps>(
       renderOption: Option,
       placeholder,
       restrictToOptions,
+      state,
       value,
       ...restProps
     } = props;
@@ -413,7 +416,10 @@ const useProps = createHook<AutosuggestProps>(
           dropdownMenu.hide();
         }
         if (!selectedOption) {
-          onChange && onChange({ label: value });
+          onChange && onChange(value === '' ? '' : { label: value });
+        }
+        if (typeof window !== 'undefined') {
+          window.requestAnimationFrame(() => onBlur && onBlur(event));
         }
       },
       [
@@ -422,6 +428,7 @@ const useProps = createHook<AutosuggestProps>(
         filterOptions,
         highlightedIndex,
         inputValue,
+        onBlur,
         onChange,
         restrictToOptions,
         selectOption,
@@ -582,6 +589,7 @@ const useProps = createHook<AutosuggestProps>(
             onFocus={handleFocusInput}
             overrides={overrides}
             placeholder={placeholder}
+            state={state}
             value={inputValue}
             {...inputProps}
           />
