@@ -16,6 +16,12 @@ describe('props', () => {
     expect(ref.current).toMatchSnapshot();
   });
 
+  it('should assign a ref via textareaRef', () => {
+    const ref = React.createRef();
+    render(<Textarea textareaRef={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Textarea backgroundColor="primary" />);
     expect(container.firstChild).toMatchSnapshot();

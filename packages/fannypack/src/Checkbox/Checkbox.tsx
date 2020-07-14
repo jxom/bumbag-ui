@@ -17,6 +17,7 @@ export type LocalCheckboxProps = {
   defaultChecked?: boolean;
   /** Disables the checkbox */
   disabled?: boolean;
+  checkboxRef?: React.Ref<any>;
   indeterminate?: boolean;
   /** Makes the checkbox required and sets aria-invalid to true */
   isRequired?: boolean;
@@ -41,6 +42,7 @@ const useProps = createHook<CheckboxProps>(
     const {
       autoFocus,
       checked,
+      checkboxRef,
       inputProps,
       defaultChecked,
       disabled,
@@ -101,6 +103,7 @@ const useProps = createHook<CheckboxProps>(
           {/**
            // @ts-ignore */}
           <Box
+            ref={checkboxRef}
             use="input"
             className={hiddenCheckboxClassName}
             // @ts-ignore
@@ -167,6 +170,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
       checked,
       checkboxLabel,
       checkboxProps,
+      checkboxRef,
       description,
       defaultChecked,
       disabled,
@@ -221,6 +225,7 @@ const useCheckboxFieldProps = createHook<CheckboxFieldProps>(
               checked={checked}
               defaultChecked={defaultChecked}
               disabled={disabled}
+              checkboxRef={checkboxRef}
               indeterminate={indeterminate}
               isRequired={isRequired}
               label={checkboxLabel}

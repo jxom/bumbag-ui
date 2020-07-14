@@ -798,6 +798,211 @@ exports[`overrides Switch.root should render correctly 1`] = `
 </label>
 `;
 
+exports[`props should assign a ref 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-6 {
+  display: block;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emotion-9.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  background-color: white;
+  border: 1px solid #bdbdbd;
+  border-radius: 1em;
+  height: 1.5em;
+  position: relative;
+  width: 2.5em;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
+  background-color: #f2f2f5;
+  box-shadow: unset;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f5;
+}
+
+.emotion-2:focus + .fp-SwitchIcon {
+  border-color: #574feb;
+  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+  border-color: #574feb;
+  background-color: #574feb;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #aba7f5;
+  border-color: #aba7f5;
+}
+
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #574feb;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #aba7f5;
+}
+
+<label
+  aria-describedby="label"
+  aria-invalid="false"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+>
+  <input
+    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    id="switch"
+    type="checkbox"
+  />
+  <div
+    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+  />
+</label>
+`;
+
+exports[`props should assign a ref via switchRef 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2 + .fp-SwitchIcon::before {
+  background: white;
+  content: '';
+  border-radius: 100%;
+  border: 1px solid #bdbdbd;
+  height: 1em;
+  width: 1em;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  position: absolute;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon {
+  background-color: #f2f2f5;
+  box-shadow: unset;
+}
+
+.emotion-2[disabled] + .fp-SwitchIcon::before {
+  background: #f2f2f5;
+}
+
+.emotion-2:focus + .fp-SwitchIcon {
+  border-color: #574feb;
+  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+  border-color: #574feb;
+  background-color: #574feb;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.emotion-2:checked + .fp-SwitchIcon {
+  background-color: #aba7f5;
+  border-color: #aba7f5;
+}
+
+.emotion-2:checked + .fp-SwitchIcon::before {
+  border-color: #574feb;
+  left: 1.25em;
+}
+
+.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+  border-color: #aba7f5;
+}
+
+<input
+  class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+  id="switch"
+  type="checkbox"
+/>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-0 {
   margin: unset;

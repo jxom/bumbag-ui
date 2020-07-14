@@ -30,6 +30,7 @@ export type LocalSelectProps = {
   size?: Size;
   /** Hint text to display */
   placeholder?: string;
+  selectRef?: React.Ref<any>;
   /** State of the input. Can be any color in the palette. */
   state?: string;
   /** Value of the input */
@@ -52,6 +53,7 @@ const useProps = createHook<SelectProps>(
       onChange,
       options,
       placeholder: _placeholder,
+      selectRef,
       state,
       ...restProps
     } = props;
@@ -96,6 +98,7 @@ const useProps = createHook<SelectProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
+      elementRef: selectRef || props.elementRef,
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
@@ -212,6 +215,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       onChange,
       onFocus,
       overrides,
+      selectRef,
       validationText,
       ...restProps
     } = props;
@@ -262,6 +266,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                 size={size}
                 options={options}
                 placeholder={placeholder}
+                selectRef={selectRef}
                 state={state}
                 value={value}
                 onBlur={onBlur}

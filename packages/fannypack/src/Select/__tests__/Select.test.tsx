@@ -18,6 +18,36 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref', () => {
+    const ref = React.createRef();
+    render(
+      <Select
+        ref={ref}
+        options={[
+          { label: 'Sunny', value: 'sunny' },
+          { label: 'Windy', value: 'windy' },
+          { label: 'Overcast', value: 'overcast' },
+        ]}
+      />
+    );
+    expect(ref.current).toMatchSnapshot();
+  });
+
+  it('should assign a ref via selectRef', () => {
+    const ref = React.createRef();
+    render(
+      <Select
+        selectRef={ref}
+        options={[
+          { label: 'Sunny', value: 'sunny' },
+          { label: 'Windy', value: 'windy' },
+          { label: 'Overcast', value: 'overcast' },
+        ]}
+      />
+    );
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(
       <Select

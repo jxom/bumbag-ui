@@ -40,6 +40,7 @@ export type LocalTextareaProps = {
   step?: number | string;
   /** State of the textarea. Can be any color in the palette. */
   state?: string;
+  textareaRef?: React.Ref<any>;
   /** Specify the type of textarea. */
   type?: string;
   /** Value of the textarea */
@@ -55,7 +56,7 @@ export type TextareaProps = BoxProps & LocalTextareaProps;
 
 const useProps = createHook<TextareaProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { isRequired, state, ...restProps } = props;
+    const { isRequired, state, textareaRef, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.TextareaWrapper,
@@ -68,6 +69,7 @@ const useProps = createHook<TextareaProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
+      elementRef: textareaRef || props.elementRef,
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {children}
@@ -152,6 +154,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
       onChange,
       onFocus,
       overrides,
+      textareaRef,
       validationText,
       ...restProps
     } = props;
@@ -207,6 +210,7 @@ const useTextareaFieldProps = createHook<TextareaFieldProps>(
               onChange={onChange}
               onFocus={onFocus}
               overrides={overrides}
+              textareaRef={textareaRef}
               {...elementProps}
               {...textareaProps}
             />

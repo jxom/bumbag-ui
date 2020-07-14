@@ -408,6 +408,78 @@ exports[`overrides CheckboxField.root should render correctly 1`] = `
 </div>
 `;
 
+exports[`props should assign a ref via checkboxRef 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-2[disabled] + .fp-CheckboxIcon {
+  background-color: #f2f2f5;
+  box-shadow: unset;
+}
+
+.emotion-2:focus + .fp-CheckboxIcon {
+  border-color: #574feb;
+  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+}
+
+.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+  border-color: #574feb;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  background-clip: padding-box;
+  content: '';
+  left: calc(50% - 0.1875em);
+  top: calc(50% - 0.375em);
+  position: absolute;
+}
+
+.emotion-2:checked + .fp-CheckboxIcon::before {
+  border: 0.1rem solid #574feb;
+  border-left-width: 0;
+  border-top-width: 0;
+  height: 0.625em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.375em;
+}
+
+.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+  border-color: #97a3b4;
+}
+
+<input
+  class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+  id="FieldWrapper"
+  type="checkbox"
+/>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-0 {
   margin: unset;

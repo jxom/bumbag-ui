@@ -21,6 +21,7 @@ export type LocalRadioProps = {
   /** Radio label */
   label?: string;
   name?: string;
+  radioRef?: React.Ref<any>;
   /** State of the radio. Can be any color in the palette. */
   state?: string;
   /** Initial value of the radio */
@@ -49,6 +50,7 @@ const useProps = createHook<RadioProps>(
       onFocus,
       overrides,
       radioProps,
+      radioRef,
       state,
       value,
       ...restProps
@@ -97,6 +99,7 @@ const useProps = createHook<RadioProps>(
       children: (
         <React.Fragment>
           <Box
+            ref={radioRef}
             use="input"
             className={hiddenRadioClassName}
             // @ts-ignore

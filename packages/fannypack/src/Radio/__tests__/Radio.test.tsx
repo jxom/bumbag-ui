@@ -9,6 +9,12 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref via radioRef', () => {
+    const ref = React.createRef();
+    render(<Radio radioRef={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Radio backgroundColor="primary" />);
     expect(container.firstChild).toMatchSnapshot();

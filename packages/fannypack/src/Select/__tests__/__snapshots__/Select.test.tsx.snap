@@ -276,6 +276,148 @@ exports[`overrides Select.root should render correctly 1`] = `
 </div>
 `;
 
+exports[`props should assign a ref 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #d9d9e1;
+  border-radius: 6px;
+  color: #212121;
+  height: 2.75em;
+  padding: 0.4em 2em 0.4em 0.8em;
+  line-height: 1.5;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  background: #f2f2f5;
+  box-shadow: unset;
+}
+
+.emotion-0[disabled] + .fp-Icon {
+  color: #7b899d;
+  fill: #7b899d;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #574feb;
+  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+}
+
+<select
+  aria-invalid="false"
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+>
+  <option
+    value="sunny"
+  >
+    Sunny
+  </option>
+  <option
+    value="windy"
+  >
+    Windy
+  </option>
+  <option
+    value="overcast"
+  >
+    Overcast
+  </option>
+</select>
+`;
+
+exports[`props should assign a ref via selectRef 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(rgb(255,255,255),rgb(249,250,251));
+  border: 1px solid #d9d9e1;
+  border-radius: 6px;
+  color: #212121;
+  height: 2.75em;
+  padding: 0.4em 2em 0.4em 0.8em;
+  line-height: 1.5;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  background: #f2f2f5;
+  box-shadow: unset;
+}
+
+.emotion-0[disabled] + .fp-Icon {
+  color: #7b899d;
+  fill: #7b899d;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: #574feb;
+  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+}
+
+<select
+  aria-invalid="false"
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+>
+  <option
+    value="sunny"
+  >
+    Sunny
+  </option>
+  <option
+    value="windy"
+  >
+    Windy
+  </option>
+  <option
+    value="overcast"
+  >
+    Overcast
+  </option>
+</select>
+`;
+
 exports[`props should render correctly 1`] = `
 .emotion-9 {
   -webkit-align-items: center;

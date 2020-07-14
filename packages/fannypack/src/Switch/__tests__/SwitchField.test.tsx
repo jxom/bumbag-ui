@@ -9,6 +9,12 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref via switchRef', () => {
+    const ref = React.createRef();
+    const { container } = render(<SwitchField switchRef={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<SwitchField backgroundColor="primary" />);
     expect(container.firstChild).toMatchSnapshot();

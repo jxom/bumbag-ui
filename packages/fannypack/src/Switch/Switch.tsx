@@ -25,6 +25,7 @@ export type LocalSwitchProps = {
   name?: string;
   /** State of the switch. Can be any color in the palette. */
   state?: string;
+  switchRef?: React.Ref<any>;
   /** Initial value of the switch */
   value?: boolean | string;
   /** Function to invoke when focus is lost */
@@ -52,6 +53,7 @@ const useProps = createHook<SwitchProps>(
       onFocus,
       overrides,
       state,
+      switchRef,
       value,
       ...restProps
     } = props;
@@ -101,6 +103,7 @@ const useProps = createHook<SwitchProps>(
           {/**
            // @ts-ignore */}
           <Box
+            ref={switchRef}
             use="input"
             className={hiddenSwitchClassName}
             // @ts-ignore
@@ -186,6 +189,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
       onFocus,
       overrides,
       state,
+      switchRef,
       tooltip,
       tooltipTriggerComponent,
       validationText,
@@ -234,6 +238,7 @@ const useSwitchFieldProps = createHook<SwitchFieldProps>(
               onFocus={onFocus}
               overrides={overrides}
               state={state}
+              switchRef={switchRef}
               value={value}
               {...omit(elementProps, 'id')}
               {...switchProps}

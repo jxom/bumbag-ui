@@ -9,6 +9,12 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should assign a ref via checkboxRef', () => {
+    const ref = React.createRef();
+    render(<CheckboxField checkboxRef={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<CheckboxField backgroundColor="primary" />);
     expect(container.firstChild).toMatchSnapshot();

@@ -24,6 +24,7 @@ export type LocalInputProps = {
   defaultValue?: string | string[];
   /** Disables the input */
   disabled?: boolean;
+  inputRef?: React.Ref<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
   /** Makes the input required and sets aria-invalid to true */
@@ -70,7 +71,7 @@ export type InputProps = BoxProps & LocalInputProps;
 
 const useProps = createHook<InputProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { before, after, isLoading, isRequired, state, ...restProps } = props;
+    const { before, after, inputRef, isLoading, isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
@@ -90,6 +91,7 @@ const useProps = createHook<InputProps>(
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
       className: undefined,
+      elementRef: inputRef || props.elementRef,
       wrapElement: (children) => (
         <Box className={wrapperClassName} {...pickCSSProps(props)}>
           {before && (
@@ -190,6 +192,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
       description,
       disabled,
       hint,
+      inputRef,
       inputProps,
       isLoading,
       isOptional,
@@ -265,6 +268,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                 before={before}
                 defaultValue={defaultValue}
                 disabled={disabled}
+                inputRef={inputRef}
                 isLoading={isLoading}
                 isRequired={isRequired}
                 name={name}
