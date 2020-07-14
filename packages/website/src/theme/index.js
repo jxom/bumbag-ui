@@ -1,7 +1,11 @@
 import { css } from 'fannypack';
 import { faAppleAlt } from '@fortawesome/free-solid-svg-icons/faAppleAlt';
+import { faUniversalAccess } from '@fortawesome/free-solid-svg-icons/faUniversalAccess';
+import { faFillDrip } from '@fortawesome/free-solid-svg-icons/faFillDrip';
+import { faCubes } from '@fortawesome/free-solid-svg-icons/faCubes';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons/faArrowDown';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons/faIgloo';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
@@ -43,6 +47,18 @@ export default {
       `,
     },
   },
+  Button: {
+    variants: {
+      cta: {
+        defaultProps: {
+          fontWeight: '500',
+          paddingY: 'major-2',
+          paddingX: 'major-4',
+          size: 'large',
+        },
+      },
+    },
+  },
   Icon: {
     icons: {
       calendar: {
@@ -57,8 +73,12 @@ export default {
       {
         icons: [
           faAppleAlt,
+          faUniversalAccess,
+          faFillDrip,
+          faCubes,
           faArrowLeft,
           faArrowRight,
+          faArrowDown,
           faBars,
           faCog,
           faIgloo,

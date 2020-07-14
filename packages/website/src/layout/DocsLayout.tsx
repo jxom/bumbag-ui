@@ -23,7 +23,7 @@ const TableOfContents = fannypack.styled(_TableOfContents)`
   top: 100px;
   right: 1rem;
   opacity: ${(props) => (!props.isFluid ? '1' : '0')};
-  overflow: scroll;
+  overflow: auto;
   max-height: calc(100vh - 200px);
   width: 250px;
   border-left: 1px solid #ebebeb;

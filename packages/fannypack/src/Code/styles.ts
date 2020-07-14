@@ -13,7 +13,7 @@ export const Code = (styleProps) => cssClass`
   };
   font-family: ${font('mono')(styleProps)};
   padding: 0.1rem 0.2rem;
-  overflow: scroll;
+  overflow: auto;
 
   & {
     ${

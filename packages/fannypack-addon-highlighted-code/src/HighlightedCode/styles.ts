@@ -11,7 +11,7 @@ export const Token = styled(Text)`
 `;
 
 export const Pre = styled(Code)<{ isBlock?: boolean }>`
-  overflow-x: scroll;
+  overflow-x: auto;
 
   ${(props) =>
     !props.isBlock &&
