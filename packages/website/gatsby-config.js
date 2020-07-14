@@ -46,5 +46,12 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-emotion',
     'gatsby-plugin-webpack-bundle-analyzer',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-172675851-1',
+        defer: true,
+      },
+    },
   ],
 };
