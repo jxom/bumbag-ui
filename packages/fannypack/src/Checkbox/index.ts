@@ -10,15 +10,15 @@ export const Checkbox = Object.assign(_Checkbox, {
   ReduxForm: reduxFormField(_Checkbox),
 });
 export const CheckboxField = Object.assign(_Checkbox, {
-  Formik: formikField(_CheckboxField, { hasFieldWrapper: true }),
-  ReduxForm: reduxFormField(_CheckboxField, { hasFieldWrapper: true }),
+  Formik: formikField(_CheckboxField, { isCheckbox: true, hasFieldWrapper: true }),
+  ReduxForm: reduxFormField(_CheckboxField, { isCheckbox: true, hasFieldWrapper: true }),
 });
 export const CheckboxGroup = Object.assign(_CheckboxGroup, {
-  Formik: formikField(_CheckboxGroup),
-  ReduxForm: reduxFormField(_CheckboxGroup),
+  Formik: formikField(_CheckboxGroup, { isCheckboxGroup: true }),
+  ReduxForm: reduxFormField(_CheckboxGroup, { isCheckboxGroup: true }),
 });
 export const CheckboxGroupField = Object.assign(_CheckboxGroup, {
-  Formik: formikField(_CheckboxGroupField, { hasFieldWrapper: true }),
-  ReduxForm: reduxFormField(_CheckboxGroupField, { hasFieldWrapper: true }),
+  Formik: formikField(_CheckboxGroupField, { isCheckboxGroup: true, hasFieldWrapper: true }),
+  ReduxForm: reduxFormField(_CheckboxGroupField, { isCheckboxGroup: true, hasFieldWrapper: true }),
 });
 export { styles as checkboxStyles };

@@ -11,7 +11,7 @@ import * as styles from './styles';
 
 export type LocalSwitchGroupProps = {
   /** Default value(s) of the switch group */
-  defaultValue?: Array<string> | string;
+  defaultValue?: Array<string>;
   /** Disables the switch group */
   disabled?: boolean;
   /** Are the switch inputs layed out horizontally? */
@@ -23,29 +23,36 @@ export type LocalSwitchGroupProps = {
   /** State of the switch group. Can be any color in the palette. */
   state?: string;
   /** Controlled value of the switch group */
-  value?: Array<string> | string;
-  /** Function to invoke when switch group has changed */
-  onChange?: React.FormEventHandler<HTMLInputElement>;
+  value?: Array<string>;
+  /** Function to invoke when checkbox group has changed */
+  onChange?: (value: Array<string>, targetValue: string) => void;
+  /** Function to invoke when checkbox group has blurred */
+  onBlur?: (value: Array<string>) => void;
 };
 export type SwitchGroupProps = BoxProps & LocalSwitchGroupProps;
 
 const useProps = createHook<SwitchGroupProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
-      defaultValue: initialDefaultValue,
+      defaultValue,
       disabled,
       orientation,
+      onBlur,
       onChange,
       options,
       overrides,
       name,
       spacing,
       state,
-      value: initialValue,
+      value,
       ...restProps
     } = props;
 
+    ////////////////////////////////////////////
+
     const boxProps = Box.useProps(restProps);
+
+    ////////////////////////////////////////////
 
     const className = useClassName({
       style: styles.SwitchGroup,
@@ -55,15 +62,38 @@ const useProps = createHook<SwitchGroupProps>(
       prevClassName: boxProps.className,
     });
 
-    let defaultValue = initialDefaultValue;
-    if (typeof initialDefaultValue === 'string') {
-      defaultValue = [initialDefaultValue];
-    }
+    ////////////////////////////////////////////
 
-    let value = initialValue;
-    if (typeof initialValue === 'string') {
-      value = [initialValue];
-    }
+    const [controlledValue, setControlledValue] = React.useState(defaultValue || []);
+    const values = typeof value !== 'undefined' ? value : controlledValue;
+
+    ////////////////////////////////////////////
+
+    const handleChange = React.useCallback(
+      (e) => {
+        const newValue = e.target.value;
+
+        let newValues = [];
+        if (values.includes(newValue)) {
+          newValues = (values || []).filter((val) => val !== newValue);
+        } else {
+          newValues = [...(values || []), newValue];
+        }
+
+        if (typeof value !== 'undefined') {
+          onChange && onChange(newValues, newValue);
+        } else {
+          setControlledValue(newValues);
+        }
+      },
+      [onChange, value, values]
+    );
+
+    const handleBlur = React.useCallback(() => {
+      onBlur && onBlur(values);
+    }, [onBlur, values]);
+
+    ////////////////////////////////////////////
 
     return {
       role: 'group',
@@ -76,11 +106,9 @@ const useProps = createHook<SwitchGroupProps>(
               key={i}
               {...option}
               // @ts-ignore
-              checked={value ? value.includes(option.value) : undefined}
-              // @ts-ignore
-              defaultChecked={defaultValue ? defaultValue.includes(option.value) : undefined}
-              name={name}
-              onChange={onChange}
+              checked={values ? values.includes(option.value) : false}
+              onBlur={handleBlur}
+              onChange={handleChange}
               overrides={overrides}
               state={state || option.state}
               disabled={disabled || option.disabled}
@@ -128,6 +156,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
       label,
       name,
       options,
+      onBlur,
       onChange,
       overrides,
       switchGroupProps,
@@ -173,6 +202,7 @@ const useSwitchGroupFieldProps = createHook<SwitchGroupFieldProps>(
               orientation={orientation}
               name={name}
               options={options}
+              onBlur={onBlur}
               onChange={onChange}
               overrides={overrides}
               state={state}

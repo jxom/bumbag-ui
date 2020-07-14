@@ -144,6 +144,7 @@ const useProps = createHook<SelectMenuFieldProps>(
                 searchInputProps={searchInputProps}
                 tagProps={tagProps}
                 dropdownMenuInitialState={dropdownMenuInitialState}
+                state={state}
                 overrides={overrides}
                 {...elementProps}
                 {...selectMenuProps}

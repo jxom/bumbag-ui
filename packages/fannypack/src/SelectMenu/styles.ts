@@ -39,6 +39,16 @@ export const SelectMenuButton = (styleProps) => cssClass`
     box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
   }
 
+  ${
+    styleProps.state &&
+    css`
+      & {
+        border-color: ${palette(`${styleProps.state}`)(styleProps)};
+        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
+      }
+    `
+  }
+
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

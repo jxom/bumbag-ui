@@ -10,6 +10,8 @@ export function formikField(
     disableFocusEvent = false,
     hasFieldWrapper = false,
     isCheckbox = false,
+    isCheckboxGroup = false,
+    isAutosuggest = false,
     isSelectMenu = false,
     useValue = false,
   } = {}
@@ -21,12 +23,13 @@ export function formikField(
     const error = get(form, `errors.${field.name}`);
     const value = get(form, `values.${field.name}`);
 
-    if (hasFieldWrapper) {
-      let state = isTouched && error ? 'danger' : undefined;
-      if (props.state) {
-        state = props.state;
-      }
+    let state = isTouched && error ? 'danger' : undefined;
+    if (props.state) {
+      state = props.state;
+    }
+    overrideProps = { ...overrideProps, state };
 
+    if (hasFieldWrapper) {
       let validationText = isTouched && error ? error : undefined;
       if (props.validationText) {
         validationText = props.validationText;
@@ -34,7 +37,6 @@ export function formikField(
 
       overrideProps = {
         ...overrideProps,
-        state,
         validationText,
       };
     }
@@ -53,10 +55,18 @@ export function formikField(
     let onBlur = field.onBlur;
     let onChange = field.onChange;
     let onFocus = field.onFocus;
-    if (isSelectMenu) {
-      onBlur = () => form.setFieldTouched(field.name);
+    if (isSelectMenu || isAutosuggest) {
+      if (isAutosuggest) {
+        onBlur = () => setTimeout(() => form.setFieldTouched(field.name), 0);
+      } else {
+        onBlur = () => form.setFieldTouched(field.name);
+      }
       // @ts-ignore
       onChange = (newOptions: any) => form.setFieldValue(field.name, newOptions);
+    }
+    if (isCheckboxGroup) {
+      onChange = (value: any) => form.setFieldValue(field.name, value);
+      onBlur = () => form.setFieldTouched(field.name);
     }
     if (useValue) {
       onChange = (value: any) => form.setFieldValue(field.name, value);
@@ -79,6 +89,8 @@ export function reduxFormField(
     disableFocusEvent = false,
     hasFieldWrapper = false,
     isCheckbox = false,
+    isCheckboxGroup = false,
+    isAutosuggest = false,
     isSelectMenu = false,
     useValue = false,
   } = {}
@@ -86,12 +98,13 @@ export function reduxFormField(
   return ({ input = {}, meta = {}, ...props }: any) => {
     let overrideProps = {};
 
-    if (hasFieldWrapper) {
-      let state = meta.touched && meta.error ? 'danger' : undefined;
-      if (props.state) {
-        state = props.state;
-      }
+    let state = meta.touched && meta.error ? 'danger' : undefined;
+    if (props.state) {
+      state = props.state;
+    }
+    overrideProps = { ...overrideProps, state };
 
+    if (hasFieldWrapper) {
       let validationText = meta.touched && meta.error ? meta.error : undefined;
       if (props.validationText) {
         validationText = props.validationText;
@@ -99,7 +112,6 @@ export function reduxFormField(
 
       overrideProps = {
         ...overrideProps,
-        state,
         validationText,
       };
     }
@@ -119,10 +131,14 @@ export function reduxFormField(
     let onBlur = input.onBlur;
     let onChange = input.onChange;
     let onFocus = input.onFocus;
-    if (isSelectMenu) {
+    if (isSelectMenu || isAutosuggest) {
       // @ts-ignore
       onChange = (newOptions: any) => input.onChange(newOptions);
       onBlur = () => input.onBlur(input.value);
+    }
+    if (isCheckboxGroup) {
+      onChange = (value: any) => input.onChange(value);
+      onBlur = (value: any) => input.onBlur(value);
     }
     if (useValue) {
       onChange = (value: any) => input.onChange(value);

@@ -44,6 +44,7 @@ export type LocalSelectMenuProps = {
   pagination?: boolean;
   popoverHeight?: string;
   placeholder?: string;
+  state?: string;
   value: Partial<Option>;
 
   errorText?: string;
@@ -138,6 +139,7 @@ const useProps = createHook<SelectMenuProps>(
       renderOption: Option,
       searchInputProps,
       placeholder,
+      state: fieldState,
       tagProps,
       value,
       ...restProps
@@ -424,6 +426,7 @@ const useProps = createHook<SelectMenuProps>(
             onClear={handleClearOptions}
             placeholder={placeholder}
             selectedOptions={selectedOptions}
+            state={fieldState}
             {...buttonProps}
           />
           <DropdownMenuPopover

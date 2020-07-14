@@ -10,15 +10,15 @@ export const Switch = Object.assign(_Switch, {
   ReduxForm: reduxFormField(_Switch),
 });
 export const SwitchField = Object.assign(_SwitchField, {
-  Formik: formikField(_SwitchField, { hasFieldWrapper: true }),
-  ReduxForm: reduxFormField(_SwitchField, { hasFieldWrapper: true }),
+  Formik: formikField(_SwitchField, { isCheckbox: true, hasFieldWrapper: true }),
+  ReduxForm: reduxFormField(_SwitchField, { isCheckbox: true, hasFieldWrapper: true }),
 });
 export const SwitchGroup = Object.assign(_SwitchGroup, {
-  Formik: formikField(_SwitchGroup),
-  ReduxForm: reduxFormField(_SwitchGroup),
+  Formik: formikField(_SwitchGroup, { isCheckboxGroup: true }),
+  ReduxForm: reduxFormField(_SwitchGroup, { isCheckboxGroup: true }),
 });
 export const SwitchGroupField = Object.assign(_SwitchGroupField, {
-  Formik: formikField(_SwitchGroupField, { hasFieldWrapper: true }),
-  ReduxForm: reduxFormField(_SwitchGroupField, { hasFieldWrapper: true }),
+  Formik: formikField(_SwitchGroupField, { isCheckboxGroup: true, hasFieldWrapper: true }),
+  ReduxForm: reduxFormField(_SwitchGroupField, { isCheckboxGroup: true, hasFieldWrapper: true }),
 });
 export { styles as switchStyles };

@@ -203,7 +203,6 @@ const useProps = createHook<AutosuggestProps>(
       limit,
       loadOptions,
       loadVariables,
-      onBlur,
       onChange,
       options: initialOptions,
       overrides,
@@ -418,9 +417,6 @@ const useProps = createHook<AutosuggestProps>(
         if (!selectedOption) {
           onChange && onChange(value === '' ? '' : { label: value });
         }
-        if (typeof window !== 'undefined') {
-          window.requestAnimationFrame(() => onBlur && onBlur(event));
-        }
       },
       [
         automaticSelection,
@@ -428,7 +424,6 @@ const useProps = createHook<AutosuggestProps>(
         filterOptions,
         highlightedIndex,
         inputValue,
-        onBlur,
         onChange,
         restrictToOptions,
         selectOption,

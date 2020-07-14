@@ -67,7 +67,6 @@ const useProps = createHook<AutosuggestFieldProps>(
       tooltip,
       tooltipTriggerComponent,
       value,
-      onBlur,
       onChange,
       overrides,
       validationText,
@@ -121,7 +120,6 @@ const useProps = createHook<AutosuggestFieldProps>(
                 loadOptions={loadOptions}
                 loadVariables={loadVariables}
                 options={options}
-                onBlur={onBlur}
                 onChange={onChange}
                 pagination={pagination}
                 placeholder={placeholder}
