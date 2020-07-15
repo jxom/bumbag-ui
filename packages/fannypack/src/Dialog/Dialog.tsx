@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, DialogOptions as ReakitDialogOptions } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook, omitCSSProps, useUniqueId } from '../utils';
+import { bindFns, useClassName, createComponent, createElement, createHook, omitCSSProps, useUniqueId } from '../utils';
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
@@ -372,11 +372,11 @@ const useDialogModalProps = createHook<DialogModalProps>(
     const { variant, ...restProps } = { ...modal, ...props };
 
     const dialogProps = Dialog.useProps({
-      onClickClose: restProps.hide,
       ...restProps,
+      onClickClose: bindFns(restProps.hide, props.onClickClose),
       actionButtonsProps: {
-        onClickCancel: restProps.hide,
         ...restProps.actionButtonsProps,
+        onClickCancel: bindFns(restProps.hide, restProps.actionButtonsProps?.onClickCancel),
       },
       wrapElement: (children) => (
         // @ts-ignore
