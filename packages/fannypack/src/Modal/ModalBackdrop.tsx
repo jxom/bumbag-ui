@@ -16,20 +16,19 @@ export type ModalBackdropProps = BoxProps & ReakitDialogBackdropProps & LocalMod
 
 const useProps = createHook<ModalBackdropProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    let { visible, baseId, modal, animating, animated, stopAnimation, ...htmlProps } = props;
     const modalContext = React.useContext(ModalContext);
+    props = { ...props, ...modalContext.modal };
+
+    let { visible, baseId, modal, animating, animated, stopAnimation, ...htmlProps } = props;
     const modalBackdropProps = useReakitDialogBackdrop(
-      merge(
-        {
-          visible,
-          baseId,
-          modal,
-          animating,
-          animated,
-          stopAnimation,
-        },
-        modalContext.modal
-      ),
+      {
+        visible,
+        baseId,
+        modal,
+        animating,
+        animated,
+        stopAnimation,
+      },
       htmlProps
     );
     htmlProps = Box.useProps({ ...htmlProps, ...modalBackdropProps });

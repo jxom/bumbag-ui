@@ -17,6 +17,9 @@ export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
 const useProps = createHook<ModalProps>(
   (props, { themeKey, themeKeyOverride }) => {
+    const modalContext = React.useContext(ModalContext);
+    props = { ...props, ...modalContext.modal };
+
     let {
       children,
       hideBackdrop,
@@ -37,28 +40,24 @@ const useProps = createHook<ModalProps>(
       stopAnimation,
       ...htmlProps
     } = props;
-    const modalContext = React.useContext(ModalContext);
     const modalProps = useReakitDialog(
-      merge(
-        {
-          hide,
-          hideOnEsc,
-          hideOnClickOutside,
-          modal,
-          preventBodyScroll,
-          visible,
-          animating,
-          animated,
-          baseId,
-          unstable_initialFocusRef,
-          unstable_finalFocusRef,
-          unstable_orphan,
-          unstable_autoFocusOnHide,
-          unstable_autoFocusOnShow,
-          stopAnimation,
-        },
-        modalContext.modal
-      ),
+      {
+        hide,
+        hideOnEsc,
+        hideOnClickOutside,
+        modal,
+        preventBodyScroll,
+        visible,
+        animating,
+        animated,
+        baseId,
+        unstable_initialFocusRef,
+        unstable_finalFocusRef,
+        unstable_orphan,
+        unstable_autoFocusOnHide,
+        unstable_autoFocusOnShow,
+        stopAnimation,
+      },
       htmlProps
     );
     htmlProps = Box.useProps({

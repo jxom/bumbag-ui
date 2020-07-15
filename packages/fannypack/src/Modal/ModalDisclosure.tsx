@@ -16,12 +16,11 @@ export type ModalDisclosureProps = BoxProps & ReakitDialogDisclosureProps & Loca
 
 const useProps = createHook<ModalDisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
     const modalContext = React.useContext(ModalContext);
-    const modalDisclosureProps = useReakitDialogDisclosure(
-      merge({ disabled, focusable, visible, toggle, baseId }, modalContext.modal),
-      htmlProps
-    );
+    props = { ...props, ...modalContext.modal };
+
+    let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
+    const modalDisclosureProps = useReakitDialogDisclosure({ disabled, focusable, visible, toggle, baseId }, htmlProps);
     htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
 
     const className = useClassName({
