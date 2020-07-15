@@ -70,11 +70,27 @@ export default (overrides: PaletteThemeConfig) => ({
     }),
   }),
 
-  // modes: {
-  //   dark: {
-  //     background: '#1e2530',
-  //   },
-  // },
+  modes: {
+    dark: {
+      background: '#1e2530',
+      default: '#27303f',
+      defaultInverted: 'white',
+      text: 'white',
+      text100: '#b1bccd',
+      text200: '#c1c9d7',
+      text300: '#d0d7e1',
+      text400: '#e0e4eb',
+
+      black: 'white',
+
+      white: 'black',
+      white500: 'black',
+      white600: '#181d26',
+      white700: '#14181f',
+      white800: '#101319',
+      white900: '#0c0e13',
+    },
+  },
 
   ...overrides,
 });

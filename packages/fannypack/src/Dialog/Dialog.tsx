@@ -77,7 +77,7 @@ const useProps = createHook<DialogProps>(
           <React.Fragment>
             <DialogContent overrides={overrides}>
               {type && <DialogIcon iconProps={iconProps} overrides={overrides} />}
-              <Box>
+              <Box width="100%">
                 {title && (
                   <DialogHeader overrides={overrides}>
                     {typeof title === 'string' ? <DialogTitle overrides={overrides}>{title}</DialogTitle> : title}

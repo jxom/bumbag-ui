@@ -16,6 +16,8 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp';
 import { faCog } from '@fortawesome/free-solid-svg-icons/faCog';
 import { faFrown } from '@fortawesome/free-solid-svg-icons/faFrown';
+import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon';
+import { faSun } from '@fortawesome/free-solid-svg-icons/faSun';
 import { faPen } from '@fortawesome/free-solid-svg-icons/faPen';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons/faLongArrowAltRight';
 import { faFile } from '@fortawesome/free-solid-svg-icons/faFile';
@@ -88,6 +90,8 @@ export default {
           faChevronRight,
           faChevronUp,
           faThumbsUp,
+          faMoon,
+          faSun,
           faPen,
           faLongArrowAltRight,
           faFile,

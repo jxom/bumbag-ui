@@ -16,19 +16,12 @@ export default function Header(props) {
         </TopNav.Item>
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
-        {/* <Hide below="tablet">
-          <TopNav.Item>
-            <ThemePicker />
-          </TopNav.Item>
-        </Hide> */}
-        {/*
-        <Hide below="tablet">
+        <Hide below={collapseBelow}>
+          {/*
           <TopNav.Item>
             <ColorModePicker />
           </TopNav.Item>
-        </Hide>
-         */}
-        <Hide below={collapseBelow}>
+           */}
           <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
             Sponsor
           </TopNav.Item>

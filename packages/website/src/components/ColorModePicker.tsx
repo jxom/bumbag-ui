@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { useLocation, useNavigate } from '@reach/router';
-import { Box, Select, useColorMode } from 'fannypack';
+import { Box, Button, Icon, useColorMode } from 'fannypack';
 
 export default function ColorModePicker(props) {
   const { colorMode, setColorMode } = useColorMode();
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const handleChangeTheme = React.useCallback(
     (e) => {
@@ -17,16 +15,16 @@ export default function ColorModePicker(props) {
 
   return (
     <Box>
-      <Select
-        size="small"
-        fontWeight="normal"
-        onChange={handleChangeTheme}
-        options={[
-          { key: 'default', label: 'Mode: Default', value: 'default' },
-          { key: 'dark', label: 'Mode: Dark', value: 'dark' },
-        ]}
-        value={colorMode}
-      />
+      {colorMode === 'default' && (
+        <Button onClick={() => setColorMode('dark')} color="gray" variant="ghost">
+          <Icon icon="solid-moon" />
+        </Button>
+      )}
+      {colorMode === 'dark' && (
+        <Button onClick={() => setColorMode('default')} color="text" variant="ghost">
+          <Icon icon="solid-sun" />
+        </Button>
+      )}
     </Box>
   );
 }
