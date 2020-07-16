@@ -103,7 +103,7 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
   height: 100vh;
   min-width: ${getWidth(styleProps)};
   width: ${getWidth(styleProps)};
-  overflow-y: auto;
+  overflow-y: scroll;
   transform: translateX(0px);
 
   ${

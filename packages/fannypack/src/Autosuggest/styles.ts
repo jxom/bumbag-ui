@@ -90,7 +90,7 @@ export const AutosuggestField = (styleProps) => cssClass`
 
 export const ItemsWrapper = (styleProps) => cssClass`
   max-height: calc(${styleProps.popoverHeight} - 1rem);
-  overflow-y: auto;
+  overflow-y: scroll;
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

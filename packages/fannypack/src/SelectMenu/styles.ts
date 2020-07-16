@@ -141,7 +141,7 @@ export const SelectMenuItemText = (styleProps) => cssClass`
 export const SelectMenuItemsWrapper = (styleProps) => cssClass`
   &&& {
     padding: ${space(2)(styleProps)}rem 0;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   & {
