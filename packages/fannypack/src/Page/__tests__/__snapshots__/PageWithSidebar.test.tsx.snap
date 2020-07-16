@@ -22,7 +22,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -30,6 +29,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {
@@ -107,7 +107,6 @@ exports[`overrides css.root should render correctly 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -115,6 +114,7 @@ exports[`overrides css.root should render correctly 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {
@@ -200,7 +200,6 @@ exports[`props should render correctly 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -208,6 +207,7 @@ exports[`props should render correctly 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {
@@ -285,7 +285,6 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -293,6 +292,7 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {
@@ -352,6 +352,92 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
+exports[`props should render correctly with sidebarPlacement 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-14 {
+  min-height: 100vh;
+}
+
+.emotion-4 {
+  background-color: white;
+  height: 100vh;
+  min-width: 320px;
+  width: 320px;
+  overflow-y: auto;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  border-left: 1px solid #e6e6eb;
+}
+
+.emotion-7 {
+  position: fixed;
+  z-index: 999999;
+  right: 0;
+}
+
+@media screen and (max-width:767px) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+.emotion-13 {
+  width: 100%;
+  padding-right: 320px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width:767px) {
+  .emotion-13 {
+    padding-right: 0px;
+  }
+}
+
+<div
+  class="emotion-14 emotion-0 emotion-1 fp-Box fp-PageWithSidebar"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  />
+  <div
+    class="emotion-8 emotion-0 emotion-1 fp-Box fp-DisclosureContent"
+    id="test"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-7 fp-PageWithSidebarSidebarExpandedWrapper fp-Box"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-4 fp-PageWithSidebarSidebar fp-Box"
+      >
+        <div>
+          this is a sidebar
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-13 fp-PageWithSidebarContent fp-Box"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
 exports[`theming css.root should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
@@ -370,7 +456,6 @@ exports[`theming css.root should render correctly 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -378,6 +463,7 @@ exports[`theming css.root should render correctly 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {
@@ -459,7 +545,6 @@ exports[`variants css.root should render correctly 1`] = `
 
 .emotion-4 {
   background-color: white;
-  border-right: 1px solid #e6e6eb;
   height: 100vh;
   min-width: 320px;
   width: 320px;
@@ -467,6 +552,7 @@ exports[`variants css.root should render correctly 1`] = `
   -webkit-transform: translateX(0px);
   -ms-transform: translateX(0px);
   transform: translateX(0px);
+  border-right: 1px solid #e6e6eb;
 }
 
 .emotion-7 {

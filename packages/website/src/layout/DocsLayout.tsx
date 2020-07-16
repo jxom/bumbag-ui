@@ -104,7 +104,7 @@ export default function Docs(props: Props) {
     <React.Fragment>
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
       <fannypack.PageWithHeader sticky header={<Header />}>
-        <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />}>
+        <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left">
           <TableOfContents
             breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
             isFluid={pageContext.frontmatter.isFluid}

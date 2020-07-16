@@ -55,19 +55,41 @@ export const PageWithSidebar = (styleProps) => cssClass`
 
 export const PageWithSidebarContent = (styleProps) => cssClass`
   width: 100%;
-  padding-left: ${getWidth(styleProps)};
-
-  ${breakpoint(
-    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
-    css`
-      padding-left: 0px;
-    `
-  )(styleProps)}
 
   ${
-    !styleProps.isSidebarOpen &&
+    styleProps.sidebarPlacement === 'left' &&
     css`
-      padding-left: 0px;
+      padding-left: ${getWidth(styleProps)};
+
+      ${breakpoint(
+        `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+        css`
+          padding-left: 0px;
+        `
+      )(styleProps)}
+
+      ${!styleProps.isSidebarOpen &&
+      css`
+        padding-left: 0px;
+      `}
+    `
+  }
+  ${
+    styleProps.sidebarPlacement === 'right' &&
+    css`
+      padding-right: ${getWidth(styleProps)};
+
+      ${breakpoint(
+        `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+        css`
+          padding-right: 0px;
+        `
+      )(styleProps)}
+
+      ${!styleProps.isSidebarOpen &&
+      css`
+        padding-right: 0px;
+      `}
     `
   }
 
@@ -78,12 +100,25 @@ export const PageWithSidebarContent = (styleProps) => cssClass`
 
 export const PageWithSidebarSidebar = (styleProps) => cssClass`
   background-color: ${palette('background')(styleProps)};
-  border-right: 1px solid ${palette('white800')(styleProps)};
   height: 100vh;
   min-width: ${getWidth(styleProps)};
   width: ${getWidth(styleProps)};
   overflow-y: auto;
   transform: translateX(0px);
+
+  ${
+    styleProps.sidebarPlacement === 'left' &&
+    css`
+      border-right: 1px solid ${palette('white800')(styleProps)};
+    `
+  }
+
+  ${
+    styleProps.sidebarPlacement === 'right' &&
+    css`
+      border-left: 1px solid ${palette('white800')(styleProps)};
+    `
+  }
 
   ${
     styleProps.isSidebarMinimized &&
@@ -100,6 +135,13 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
 export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
   z-index: 999999;
+
+  ${
+    styleProps.sidebarPlacement === 'right' &&
+    css`
+      right: 0;
+    `
+  }
 
   ${breakpoint(
     `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
@@ -144,6 +186,10 @@ export const PageWithSidebarMinimize = (styleProps) => cssClass`
 export const PageWithHeader = (styleProps) => cssClass`
   min-height: 100vh;
   position: relative;
+
+  & .fp-PageWithSidebarSidebarExpandedWrapper {
+    top: ${styleProps.headerHeight};
+  }
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

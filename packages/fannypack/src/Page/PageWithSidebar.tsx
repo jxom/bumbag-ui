@@ -17,6 +17,7 @@ export type LocalPageWithSidebarProps = {
   minimizedSidebarWidth?: string;
   sidebarWidth?: string;
   sidebar: React.ReactElement<any>;
+  sidebarPlacement?: 'left' | 'right';
 };
 export type PageWithSidebarProps = BoxProps & LocalPageWithSidebarProps;
 
@@ -29,6 +30,7 @@ const useProps = createHook<PageWithSidebarProps>(
       expandedSidebarProps,
       overrides,
       sidebar,
+      sidebarPlacement,
       ...restProps
     } = props;
     const boxProps = Box.useProps({
@@ -79,11 +81,15 @@ const useProps = createHook<PageWithSidebarProps>(
       themeKeySuffix: 'Content',
     });
 
+    //////////////////////////////////////////
+
     React.useEffect(() => {
       if (!defaultIsVisible) {
         sidebarState.disclosure.hide();
       }
     }, [defaultIsVisible, sidebarState.disclosure]);
+
+    //////////////////////////////////////////
 
     return {
       ...boxProps,
@@ -94,6 +100,9 @@ const useProps = createHook<PageWithSidebarProps>(
             <Drawer
               className={sidebarCollapsedWrapperClassName}
               overrides={overrides}
+              slide
+              fade
+              placement={sidebarPlacement}
               {...collapsedSidebarProps}
               {...sidebarState.drawer}
             >
@@ -123,6 +132,7 @@ const useProps = createHook<PageWithSidebarProps>(
       defaultIsVisible: true,
       minimizedSidebarWidth: '60px',
       sidebarWidth: '250px',
+      sidebarPlacement: 'left',
       collapsedSidebarWidth: '320px',
     },
     themeKey: 'PageWithSidebar',

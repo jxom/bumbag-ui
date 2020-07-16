@@ -9,6 +9,15 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with sidebarPlacement', () => {
+    const { container } = render(
+      <PageWithSidebar sidebar={<div>this is a sidebar</div>} sidebarPlacement="right">
+        Hello world
+      </PageWithSidebar>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(
       <PageWithSidebar sidebar={<div>this is a sidebar</div>} color="primary">

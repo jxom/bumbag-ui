@@ -35,7 +35,7 @@ export function PageProvider(props: any) {
   const isCollapsed = useBreakpoint(`max-${collapseBreakpoints[collapseBelow]}`);
   const [isSidebarMinimized, setIsSidebarMinimized] = React.useState(false);
 
-  const sidebarDrawer = Drawer.useState();
+  const sidebarDrawer = Drawer.useState({ animated: true });
   const sidebarDisclosure = Disclosure.useState({ visible: true });
   const sidebarState = isCollapsed ? sidebarDrawer : sidebarDisclosure;
 

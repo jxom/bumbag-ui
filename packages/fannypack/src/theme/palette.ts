@@ -73,8 +73,10 @@ export default (overrides: PaletteThemeConfig) => ({
   modes: {
     dark: {
       background: '#1e2530',
+
       default: '#27303f',
       defaultInverted: 'white',
+
       text: 'white',
       text100: '#b1bccd',
       text200: '#c1c9d7',
