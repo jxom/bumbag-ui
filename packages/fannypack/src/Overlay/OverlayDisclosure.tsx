@@ -8,7 +8,7 @@ import * as styles from './styles';
 export type LocalOverlayDisclosureProps = {};
 export type OverlayDisclosureProps = ModalDisclosureProps & LocalOverlayDisclosureProps;
 
-const useProps = createHook<OverlayDisclosureProps>(
+const useProps = createHook<Partial<OverlayDisclosureProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const htmlProps = ModalDisclosure.useProps(props);
 
@@ -25,7 +25,7 @@ const useProps = createHook<OverlayDisclosureProps>(
   { themeKey: 'Overlay.Disclosure' }
 );
 
-export const OverlayDisclosure = createComponent<OverlayDisclosureProps>(
+export const OverlayDisclosure = createComponent<Partial<OverlayDisclosureProps>>(
   (props) => {
     const overlayDisclosureProps = useProps(props);
     return createElement({

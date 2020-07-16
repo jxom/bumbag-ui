@@ -3,10 +3,15 @@ import * as React from 'react';
 import { generateId, useTheme } from '../utils';
 
 export const ToastContext = React.createContext({
+  // @ts-ignore
   add: (toast: any) => {},
+  // @ts-ignore
   success: (toast: any) => {},
+  // @ts-ignore
   danger: (toast: any) => {},
+  // @ts-ignore
   warning: (toast: any) => {},
+  // @ts-ignore
   info: (toast: any) => {},
   toasts: [],
 });

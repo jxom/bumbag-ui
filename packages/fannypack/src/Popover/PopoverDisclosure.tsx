@@ -14,7 +14,7 @@ import * as styles from './styles';
 export type LocalPopoverDisclosureProps = {};
 export type PopoverDisclosureProps = BoxProps & ReakitPopoverDisclosureProps & LocalPopoverDisclosureProps;
 
-const useProps = createHook<PopoverDisclosureProps>(
+const useProps = createHook<Partial<PopoverDisclosureProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
@@ -39,7 +39,7 @@ const useProps = createHook<PopoverDisclosureProps>(
   { themeKey: 'Popover.Disclosure' }
 );
 
-export const PopoverDisclosure = createComponent<PopoverDisclosureProps>(
+export const PopoverDisclosure = createComponent<Partial<PopoverDisclosureProps>>(
   (props) => {
     const popoverDisclosureProps = useProps(props);
     return createElement({

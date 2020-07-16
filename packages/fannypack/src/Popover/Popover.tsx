@@ -39,7 +39,7 @@ export type PopoverContextOptions = Omit<PopoverProps, 'baseId'> & {
 };
 export const PopoverContext = React.createContext<PopoverContextOptions>({});
 
-const useProps = createHook<PopoverProps>(
+const useProps = createHook<Partial<PopoverProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
@@ -196,7 +196,7 @@ const useProps = createHook<PopoverProps>(
   }
 );
 
-export const Popover = createComponent<PopoverProps>(
+export const Popover = createComponent<Partial<PopoverProps>>(
   (props) => {
     const popoverProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: popoverProps });
@@ -374,7 +374,7 @@ export const PopoverFooter = createComponent<PopoverFooterProps>(
 export type LocalPopoverArrowProps = {};
 export type PopoverArrowProps = BoxProps & ReakitPopoverArrowProps & LocalPopoverArrowProps;
 
-const usePopoverArrowProps = createHook<PopoverArrowProps>(
+const usePopoverArrowProps = createHook<Partial<PopoverArrowProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
@@ -412,7 +412,7 @@ const usePopoverArrowProps = createHook<PopoverArrowProps>(
   { themeKey: 'Popover.Arrow' }
 );
 
-export const PopoverArrow = createComponent<PopoverArrowProps>(
+export const PopoverArrow = createComponent<Partial<PopoverArrowProps>>(
   (props) => {
     const popoverArrowProps = usePopoverArrowProps(props);
     return createElement({

@@ -15,7 +15,7 @@ export type LocalModalProps = {
 } & AnimateProps;
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
-const useProps = createHook<ModalProps>(
+const useProps = createHook<Partial<ModalProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const modalContext = React.useContext(ModalContext);
     props = { ...props, ...modalContext.modal };
@@ -96,7 +96,7 @@ const useProps = createHook<ModalProps>(
   }
 );
 
-export const Modal = createComponent<ModalProps>(
+export const Modal = createComponent<Partial<ModalProps>>(
   (props) => {
     const modalProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: modalProps });

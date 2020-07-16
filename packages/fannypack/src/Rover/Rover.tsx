@@ -10,7 +10,7 @@ import * as styles from './styles';
 export type LocalRoverProps = {};
 export type RoverProps = BoxProps & ReakitRoverProps & LocalRoverProps;
 
-const useProps = createHook<RoverProps>(
+const useProps = createHook<Partial<RoverProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const roverContext = React.useContext(RoverContext);
     props = { ...props, ...roverContext.rover };
@@ -76,7 +76,7 @@ const useProps = createHook<RoverProps>(
   { themeKey: 'Rover' }
 );
 
-export const Rover = createComponent<RoverProps>(
+export const Rover = createComponent<Partial<RoverProps>>(
   (props) => {
     const roverProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: roverProps });

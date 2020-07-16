@@ -8,7 +8,7 @@ import * as styles from './styles';
 export type LocalOverlayProps = {};
 export type OverlayProps = ModalProps & LocalOverlayProps;
 
-const useProps = createHook<OverlayProps>(
+const useProps = createHook<Partial<OverlayProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const htmlProps = Modal.useProps(props, { themeKey: 'Overlay' });
 
@@ -31,7 +31,7 @@ const useProps = createHook<OverlayProps>(
   }
 );
 
-export const Overlay = createComponent<OverlayProps>(
+export const Overlay = createComponent<Partial<OverlayProps>>(
   (props) => {
     const overlayProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: overlayProps });

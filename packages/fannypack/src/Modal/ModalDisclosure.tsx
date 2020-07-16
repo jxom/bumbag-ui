@@ -14,7 +14,7 @@ import * as styles from './styles';
 export type LocalModalDisclosureProps = {};
 export type ModalDisclosureProps = BoxProps & ReakitDialogDisclosureProps & LocalModalDisclosureProps;
 
-const useProps = createHook<ModalDisclosureProps>(
+const useProps = createHook<Partial<ModalDisclosureProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const modalContext = React.useContext(ModalContext);
     props = { ...props, ...modalContext.modal };
@@ -36,7 +36,7 @@ const useProps = createHook<ModalDisclosureProps>(
   { themeKey: 'Modal.Disclosure' }
 );
 
-export const ModalDisclosure = createComponent<ModalDisclosureProps>(
+export const ModalDisclosure = createComponent<Partial<ModalDisclosureProps>>(
   (props) => {
     const modalDisclosureProps = useProps(props);
     return createElement({

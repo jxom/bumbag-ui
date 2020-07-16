@@ -171,7 +171,10 @@ export type SpacingThemeConfig = {
   [key: string]: ThemeAttribute<number | string>;
 };
 export type PaletteThemeConfig = {
-  [key: string]: string;
+  [key: string]: string | { [key: string]: PaletteThemeConfig };
+  modes?: {
+    [key: string]: PaletteThemeConfig;
+  };
 };
 
 export type ActionButtonsThemeConfig = {

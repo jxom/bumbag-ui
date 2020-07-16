@@ -33,7 +33,7 @@ describe('props', () => {
   it('should render correctly for default value', () => {
     const { container } = render(
       <SwitchGroup
-        defaultValue="world"
+        defaultValue={['world']}
         name="weather"
         options={[
           { label: 'Hello', value: 'world' },

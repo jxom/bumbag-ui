@@ -8,7 +8,7 @@ import * as styles from './styles';
 export type LocalDrawerDisclosureProps = {};
 export type DrawerDisclosureProps = ModalDisclosureProps & LocalDrawerDisclosureProps;
 
-const useProps = createHook<DrawerDisclosureProps>(
+const useProps = createHook<Partial<DrawerDisclosureProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const htmlProps = ModalDisclosure.useProps(props);
 
@@ -25,7 +25,7 @@ const useProps = createHook<DrawerDisclosureProps>(
   { themeKey: 'Drawer.Disclosure' }
 );
 
-export const DrawerDisclosure = createComponent<DrawerDisclosureProps>(
+export const DrawerDisclosure = createComponent<Partial<DrawerDisclosureProps>>(
   (props) => {
     const DrawerDisclosureProps = useProps(props);
     return createElement({

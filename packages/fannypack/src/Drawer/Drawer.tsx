@@ -10,7 +10,7 @@ export type LocalDrawerProps = {
 };
 export type DrawerProps = ModalProps & LocalDrawerProps;
 
-const useProps = createHook<DrawerProps>(
+const useProps = createHook<Partial<DrawerProps>>(
   (props, { themeKey, themeKeyOverride }) => {
     const modalProps = Modal.useProps({ ...props }, { themeKey: 'Drawer' });
 
@@ -27,7 +27,7 @@ const useProps = createHook<DrawerProps>(
   { defaultProps: { duration: '0.2s', placement: 'left' }, themeKey: 'Drawer' }
 );
 
-export const Drawer = createComponent<DrawerProps>(
+export const Drawer = createComponent<Partial<DrawerProps>>(
   (props) => {
     const textProps = useProps(props);
     return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });

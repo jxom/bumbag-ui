@@ -14,7 +14,7 @@ const defaultPalette: { [key: string]: string } = {
 };
 
 export default (overrides: PaletteThemeConfig) => ({
-  ...generateTextVariants(overrides?.text ?? defaultPalette.text),
+  ...generateTextVariants((overrides?.text ?? defaultPalette.text) as string),
 
   background: 'white',
 
@@ -44,27 +44,27 @@ export default (overrides: PaletteThemeConfig) => ({
 
   ...generateColorVariants({
     paletteKey: 'primary',
-    color: overrides.primary || defaultPalette.primary,
+    color: (overrides.primary || defaultPalette.primary) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'secondary',
-    color: overrides.secondary || defaultPalette.secondary,
+    color: (overrides.secondary || defaultPalette.secondary) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'info',
-    color: overrides.info || defaultPalette.info,
+    color: (overrides.info || defaultPalette.info) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'success',
-    color: overrides.success || defaultPalette.success,
+    color: (overrides.success || defaultPalette.success) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'danger',
-    color: overrides.danger || defaultPalette.danger,
+    color: (overrides.danger || defaultPalette.danger) as string,
   }),
   ...generateColorVariants({
     paletteKey: 'warning',
-    color: overrides.warning || defaultPalette.warning,
+    color: (overrides.warning || defaultPalette.warning) as string,
     paletteOverrides: ({ color }) => ({
       warningTintInverted: shade(0.7, color)(),
     }),
