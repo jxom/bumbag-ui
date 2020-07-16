@@ -4,7 +4,6 @@ import { borderRadius, fontSize, palette, theme } from '../utils';
 export const InputWrapper = (styleProps) => cssClass`
   align-items: center;
   position: relative;
-  width: 100%;
 
   ${styleProps.size && wrapperSizeProperties(styleProps)};
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Image, Stack, SideNav, css, usePage } from 'fannypack';
+import { Box, Input, Stack, SideNav, css, usePage, applyTheme } from 'fannypack';
 import _startCase from 'lodash/startCase';
 import _uniqBy from 'lodash/uniqBy';
 
@@ -51,6 +51,20 @@ const orders = [
   { 'copy-blocks': [] },
 ];
 
+const SearchInput = applyTheme(Input, {
+  defaultProps: {
+    color: 'text',
+    inputProps: {
+      backgroundColor: 'white700',
+      borderColor: 'white700',
+      _focus: {
+        borderColor: 'primary200',
+      },
+    },
+    size: 'small',
+  },
+});
+
 export default function Sidebar(props: any) {
   const { path } = props;
 
@@ -63,6 +77,8 @@ export default function Sidebar(props: any) {
     return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
   }, {});
 
+  const [searchText, setSearchText] = React.useState('');
+
   return (
     <Stack spacing="major-1" paddingY="major-2" {...props}>
       <SideNav
@@ -73,7 +89,9 @@ export default function Sidebar(props: any) {
               Title: {
                 css: {
                   root: css`
-                    font-size: 13px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-left: 1.25rem;
                   `,
                 },
               },
@@ -83,6 +101,7 @@ export default function Sidebar(props: any) {
                 root: (props) => css`
                   ${props.theme?.SideNav?.Item?.css?.root?.(props) || ''}
 
+                  padding-left: 1.25rem;
                   font-size: 14px;
                   font-weight: 500;
                   min-height: 2.25em !important;
@@ -94,42 +113,81 @@ export default function Sidebar(props: any) {
           },
         }}
       >
+        <SearchInput
+          before={<Input.Icon color="gray200" icon="solid-search" />}
+          onChange={(e) => setSearchText(e.target.value)}
+          value={searchText}
+          placeholder="Search..."
+          marginX="major-2"
+          marginBottom="major-2"
+        />
         {orders.map((orderItem) => {
-          const key = Object.keys(orderItem)[0];
-          const itemOrders = orderItem[key];
-
-          let items = sidebarItems[key];
-          if (itemOrders.length > 0) {
-            items = _uniqBy(
-              [...itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name)), ...items],
-              'name'
-            );
-          }
-
           return (
-            <SideNav.Level key={key} title={_startCase(key)}>
-              {(items || []).map((item) => {
-                const frontmatter = item.childMdx?.frontmatter || {};
-                return (
-                  <SideNav.Item
-                    key={item.name}
-                    onClick={sidebar.drawer.hide}
-                    navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
-                  >
-                    <Link
-                      to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${
-                        typeof window !== 'undefined' ? window.location.search : ''
-                      }`}
-                    >
-                      {frontmatter.title || _startCase(item.name).replace(/\s/g, '')}
-                    </Link>
-                  </SideNav.Item>
-                );
-              })}
-            </SideNav.Level>
+            <SideNavItem
+              key={Object.keys(orderItem)[0]}
+              orderItem={orderItem}
+              searchText={searchText}
+              sidebar={sidebar}
+              sidebarItems={sidebarItems}
+            />
           );
         })}
       </SideNav>
     </Stack>
+  );
+}
+
+function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
+  const sideNavItemRef = React.useRef();
+  const [show, setShow] = React.useState(true);
+
+  const key = Object.keys(orderItem)[0];
+  const itemOrders = orderItem[key];
+
+  let items = sidebarItems[key];
+  if (itemOrders.length > 0) {
+    items = _uniqBy(
+      [...itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name)), ...items],
+      'name'
+    );
+  }
+
+  React.useEffect(() => {
+    // @ts-ignore
+    if (sideNavItemRef.current && !sideNavItemRef.current.querySelector('li')) {
+      console.log('test');
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  }, [searchText]);
+
+  return (
+    <Box ref={sideNavItemRef}>
+      <SideNav.Level title={_startCase(key)} display={!show ? 'none' : undefined}>
+        {(items || []).map((item) => {
+          const frontmatter = item.childMdx?.frontmatter || {};
+          const title = frontmatter.title || _startCase(item.name).replace(/\s/g, '');
+          if (!searchText || title.toLowerCase().includes(searchText.toLowerCase())) {
+            return (
+              <SideNav.Item
+                key={item.name}
+                onClick={sidebar.drawer.hide}
+                navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
+              >
+                <Link
+                  to={`${frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}${
+                    typeof window !== 'undefined' ? window.location.search : ''
+                  }`}
+                >
+                  {title}
+                </Link>
+              </SideNav.Item>
+            );
+          }
+          return null;
+        })}
+      </SideNav.Level>
+    </Box>
   );
 }

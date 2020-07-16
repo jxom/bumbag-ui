@@ -45,7 +45,7 @@ export const SideNavItem = (styleProps) => cssClass`
   display: flex;
   min-height: 2.75em;
   padding: 0 1rem;
-  padding-left: ${styleProps.level === 1 ? space(3, 'major')(styleProps) : styleProps.level}rem;
+  padding-left: ${styleProps.level === 1 ? space(2, 'major')(styleProps) : styleProps.level}rem;
   transition: box-shadow 0.1s ease-in-out 0s, background-color 0.1s, color 0.1s;
 
   a& {

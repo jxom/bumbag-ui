@@ -24,6 +24,7 @@ export type LocalInputProps = {
   defaultValue?: string | string[];
   /** Disables the input */
   disabled?: boolean;
+  inputProps?: Partial<InputProps>;
   inputRef?: React.Ref<any>;
   /** Adds a cute loading indicator to the input field */
   isLoading?: boolean;
@@ -71,7 +72,7 @@ export type InputProps = BoxProps & LocalInputProps;
 
 const useProps = createHook<InputProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const { before, after, inputRef, isLoading, isRequired, state, ...restProps } = props;
+    const { before, after, inputProps, inputRef, isLoading, isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
@@ -90,6 +91,7 @@ const useProps = createHook<InputProps>(
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
+      ...inputProps,
       className: undefined,
       elementRef: inputRef || props.elementRef,
       wrapElement: (children) => (
