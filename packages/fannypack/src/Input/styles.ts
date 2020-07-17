@@ -116,6 +116,16 @@ export const InputField = (styleProps) => cssClass`
   }
 `;
 
+export const InputFieldGroup = (styleProps) => cssClass`
+  & .fp-InputWrapper {
+    flex: 1;
+  }
+
+  & {
+    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+  }
+`;
+
 export function wrapperSizeProperties(styleProps) {
   const properties = {
     small: css`

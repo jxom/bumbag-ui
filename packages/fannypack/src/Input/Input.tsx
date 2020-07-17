@@ -163,7 +163,7 @@ export function InputIcon(props: IconProps) {
     prevClassName: props.className,
   });
 
-  return <Icon {...props} className={className} />;
+  return <Icon color="gray200" {...props} className={className} />;
 }
 
 ////////////////////////////////////////////////////////////////
@@ -236,6 +236,13 @@ const useInputFieldProps = createHook<InputFieldProps>(
       themeKeyOverride,
       prevClassName: boxProps.className,
     });
+    const groupClassName = useClassName({
+      style: styles.InputFieldGroup,
+      styleProps: props,
+      themeKey,
+      themeKeyOverride,
+      themeKeySuffix: 'Group',
+    });
 
     return {
       ...boxProps,
@@ -257,7 +264,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
             <ConditionalWrap
               condition={addonBefore || addonAfter}
               wrap={(children: React.ReactNode) => (
-                <Group orientation={orientation} overrides={overrides}>
+                <Group className={groupClassName} orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}

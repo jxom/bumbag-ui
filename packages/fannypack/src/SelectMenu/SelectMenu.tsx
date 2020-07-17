@@ -52,6 +52,7 @@ export type LocalSelectMenuProps = {
   loadingText?: string;
   loadingMoreText?: string;
 
+  renderDisclosure?: any;
   renderError?: any;
   renderEmpty?: any;
   renderLoading?: any;
@@ -132,6 +133,7 @@ const useProps = createHook<SelectMenuProps>(
       options: initialOptions,
       overrides,
       pagination,
+      renderDisclosure: Disclosure,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
@@ -427,6 +429,7 @@ const useProps = createHook<SelectMenuProps>(
             placeholder={placeholder}
             selectedOptions={selectedOptions}
             state={fieldState}
+            Disclosure={Disclosure}
             {...buttonProps}
           />
           <DropdownMenuPopover
@@ -544,7 +547,7 @@ export const SelectMenu = createComponent<SelectMenuProps>(
 //////////////////////////////////////////////////////////////////
 
 function SelectMenuButton(props: any) {
-  const { disabled, disableClear, isLoading, onClick, onClear, selectedOptions, placeholder, ...restProps } = props;
+  const { disabled, disableClear, isLoading, onClick, onClear, Disclosure, selectedOptions, placeholder, ...restProps } = props;
 
   const { dropdownMenu, overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
 
@@ -580,7 +583,6 @@ function SelectMenuButton(props: any) {
   const dropdownMenuButtonProps = DropdownMenuButton.useProps({
     ...dropdownMenu,
     'aria-haspopup': 'listbox',
-    className: buttonClassName,
     disabled,
     onClick,
     overrides,
@@ -597,8 +599,13 @@ function SelectMenuButton(props: any) {
     }`;
   }
 
+  if (Disclosure) {
+    return (
+      <Disclosure disclosureProps={dropdownMenuButtonProps} disabled={disabled} disableClear={disableClear} isLoading={isLoading} label={label} selectedOptions={selectedOptions} onClear={onClear} placeholder={placeholder} />
+    )
+  }
   return (
-    <Box {...dropdownMenuButtonProps}>
+    <Box {...dropdownMenuButtonProps} className={buttonClassName}>
       <Box className={buttonTextClassName}>{label}</Box>
       <Box className={iconsWrapperClassName}>
         <Set>
