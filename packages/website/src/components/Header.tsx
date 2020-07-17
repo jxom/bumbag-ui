@@ -23,9 +23,11 @@ export default function Header(props) {
           </TopNav.Item>
            */}
           <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
+            <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
           </TopNav.Item>
           <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
+            <Icon icon="solid-github" marginRight="major-1" />
             GitHub
           </TopNav.Item>
         </Hide>

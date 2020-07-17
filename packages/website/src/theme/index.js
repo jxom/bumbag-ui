@@ -9,6 +9,8 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons/faArrowDown';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons/faIgloo';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
+import { faBook } from '@fortawesome/free-solid-svg-icons/faBook';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons/faClipboard';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
@@ -31,6 +33,7 @@ import { faSmile } from '@fortawesome/free-solid-svg-icons/faSmile';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 
 export default {
   global: {
@@ -84,7 +87,10 @@ export default {
           faBars,
           faCog,
           faIgloo,
+          faBook,
+          faHeart,
           faSearch,
+          faGithub,
           faClipboard,
           faChevronDown,
           faChevronRight,
