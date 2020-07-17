@@ -32,6 +32,48 @@ Use the `use` prop to change from the default `h1` element to `h2`, `h3`, `h4`, 
 <Heading use="h6">Heading 6</Heading>
 ```
 
+### Responsive headers
+
+By default, each heading's font size will shrink in a `mobile` viewport.
+
+You can modify the breakpoint in the component itself:
+
+```jsx-live
+<Heading shrinkBelow="desktop">Hello world</Heading>
+```
+
+Or you can modify the breakpoint in the theme:
+
+```jsx
+const theme = {
+  Heading: {
+    defaultProps: {
+      shrinkBelow: 'desktop'
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+If you just want to disable shrinking, you can specify `null`:
+
+```jsx
+const theme = {
+  Heading: {
+    defaultProps: {
+      shrinkBelow: null
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
 ### Subheadings
 
 Subheading's are the same size as a normal heading, however have a slightly lower font weight.
@@ -58,13 +100,13 @@ A header can also be easily grouped with a subheading
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">isSubHeading</Code>** <Code fontSize="150" palette="primary">boolean</Code> 
+**<Code marginRight="major-1">isSubHeading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
 
 <Box marginBottom="major-4" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**  
+**<Code marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -74,11 +116,11 @@ A header can also be easily grouped with a subheading
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">children</Code>**  
+**<Code marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -97,19 +139,19 @@ A header can also be easily grouped with a subheading
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">overrides</Code>**  
+**<Code marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -126,16 +168,16 @@ A header can also be easily grouped with a subheading
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Box marginBottom="major-4" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
 
 <Box marginBottom="major-4" />
 
 </details>
-            
+
 
 ## Theming
 
@@ -149,8 +191,18 @@ A header can also be easily grouped with a subheading
       props: { use: 'h1' }
     },
     {
+      key: 'Heading.h1.css.shrinked',
+      description: 'Applies when the heading is h1 & the page is in a mobile viewport',
+      props: { use: 'h1' }
+    },
+    {
       key: 'Heading.h2.css.root',
       description: 'Applies when the heading is h2. `<Heading use="h2">`',
+      props: { use: 'h2' }
+    },
+    {
+      key: 'Heading.h2.css.shrinked',
+      description: 'Applies when the heading is h2 & the page is in a mobile viewport',
       props: { use: 'h2' }
     },
     {
@@ -159,8 +211,18 @@ A header can also be easily grouped with a subheading
       props: { use: 'h3' }
     },
     {
+      key: 'Heading.h3.css.shrinked',
+      description: 'Applies when the heading is h3 & the page is in a mobile viewport',
+      props: { use: 'h3' }
+    },
+    {
       key: 'Heading.h4.css.root',
       description: 'Applies when the heading is h4. `<Heading use="h4">`',
+      props: { use: 'h4' }
+    },
+    {
+      key: 'Heading.h4.css.shrinked',
+      description: 'Applies when the heading is h4 & the page is in a mobile viewport',
       props: { use: 'h4' }
     },
     {
@@ -169,8 +231,18 @@ A header can also be easily grouped with a subheading
       props: { use: 'h5' }
     },
     {
+      key: 'Heading.h5.css.shrinked',
+      description: 'Applies when the heading is h5 & the page is in a mobile viewport',
+      props: { use: 'h5' }
+    },
+    {
       key: 'Heading.h6.css.root',
       description: 'Applies when the heading is h6. `<Heading use="h6">`',
+      props: { use: 'h6' }
+    },
+    {
+      key: 'Heading.h6.css.shrinked',
+      description: 'Applies when the heading is h6 & the page is in a mobile viewport',
       props: { use: 'h6' }
     },
     {

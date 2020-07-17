@@ -2,13 +2,14 @@ import { Box as ReakitBox } from 'reakit';
 import classNames from 'classnames';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { HeadingThemeConfig } from '../types/theme';
+import { Breakpoint } from '../types';
 import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
 export type LocalHeadingProps = {
   isSubHeading?: boolean;
+  shrinkBelow?: Breakpoint;
 };
 export type HeadingProps = BoxProps & LocalHeadingProps;
 

@@ -117,7 +117,7 @@ import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceP
 import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
 import { TemplateProps } from '../_template';
 import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
-import { Placement } from './props';
+import { Breakpoint, Placement } from './props';
 
 export type Stylesheet = InterpolationWithTheme<any>;
 export type ThemeAttribute<R> = R | ((props: { theme: ThemeConfig }) => R);
@@ -721,31 +721,37 @@ export type HeadingThemeConfig = {
   h1?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h2?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h3?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h4?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h5?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h6?: {
     css?: {
       root?: ThemeAttribute<Stylesheet>;
+      shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   subHeading?: {

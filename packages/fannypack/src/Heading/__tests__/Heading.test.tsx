@@ -9,6 +9,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with shrinkBelow', () => {
+    const { container } = render(<Heading shrinkBelow="desktop">Hello world</Heading>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props', () => {
     const { container } = render(<Heading color="primary">Hello world</Heading>);
     expect(container.firstChild).toMatchSnapshot();

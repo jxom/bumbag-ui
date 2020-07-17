@@ -13,6 +13,7 @@ import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 
 import Container from './Container';
+import Heading from './Heading';
 import Icon from './Icon';
 import Toast from './Toast';
 
@@ -32,6 +33,7 @@ export default (overrides: ThemeConfig = {}) => ({
   palette: palette(overrides.palette || {}),
 
   Container: Container(overrides.Container || {}),
+  Heading: Heading(overrides.Heading || {}),
   Icon: Icon(overrides.Icon || {}),
   Toast: Toast(overrides.Toast || {}),
 });
