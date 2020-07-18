@@ -19,9 +19,6 @@ export default function Header(props) {
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
-          <TopNav.Item>
-            <ColorModePicker />
-          </TopNav.Item>
           <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
@@ -29,6 +26,9 @@ export default function Header(props) {
           <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
             <Icon icon="solid-github" marginRight="major-1" />
             GitHub
+          </TopNav.Item>
+          <TopNav.Item>
+            <ColorModePicker />
           </TopNav.Item>
         </Hide>
         <Hide above={collapseBelow}>

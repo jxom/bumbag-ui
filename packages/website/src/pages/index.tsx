@@ -14,7 +14,9 @@ import {
   Set,
   Stack,
   Text,
+  css,
   styled,
+  useColorMode
 } from 'fannypack';
 import { HighlightedCode } from 'fannypack-addon-highlighted-code';
 
@@ -23,18 +25,23 @@ import LiveCode from '../components/Landing/LiveCode';
 
 const UsedByImage = styled(Image)`
   &:not(:hover) {
+    ${props => props.colorMode === 'dark' ? css`
+    filter: brightness(0) invert(1);
+    ` : css`
     filter: grayscale(1);
+    `}
     opacity: 0.6;
   }
 `;
 
 export default function Index() {
+  const { colorMode } = useColorMode();
   return (
     <LandingLayout>
       <PageContent
         breakpoint="tablet"
         paddingY={{ default: 'major-15', 'max-tablet': 'major-8' }}
-        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white700' }}
+        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
         <Stack display="flex" flexDirection="column" spacing="major-3" alignItems="center">
           <Heading fontSize={{ default: '600', mobile: '500' }} textAlign="center">
@@ -56,7 +63,7 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ backgroundColor: 'white600', borderBottom: '1px solid', borderColor: 'white700' }}
+        wrapperProps={{ backgroundColor: colorMode === 'dark' ? 'black200' : 'white600', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
         paddingY="major-6"
       >
         <Columns spacing="major-6">
@@ -117,7 +124,7 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white700' }}
+        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
         paddingY="major-6"
       >
         <Columns spacing="major-6">
@@ -173,7 +180,7 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ backgroundColor: 'white600', borderBottom: '1px solid', borderColor: 'white700' }}
+        wrapperProps={{ backgroundColor: colorMode === 'dark' ? 'black200' : 'white600', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
         paddingY="major-10"
       >
         <Columns spacing="major-6">
@@ -243,7 +250,7 @@ const linkProps = Link.useProps({
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ borderBottom: '1px solid', borderColor: 'white700' }}
+        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
         paddingY="major-6"
       >
         <Stack spacing="major-6" display="flex" flexDirection="column" alignItems="center">
@@ -252,16 +259,16 @@ const linkProps = Link.useProps({
           </Heading>
           <Set spacing="major-6" verticalBelow="tablet" alignItems="center" justifyContent="center">
             <Link href="https://medipass.com.au">
-              <UsedByImage src="/medipass-logo.png" height="50px" />
+              <UsedByImage colorMode={colorMode} src="/medipass-logo.png" height="50px" />
             </Link>
             <Link href="https://localz.com">
-              <UsedByImage src="/localz.png" height="40px" />
+              <UsedByImage colorMode={colorMode} src="/localz.png" height="40px" />
             </Link>
             <Link href="https://mryum.com.au">
-              <UsedByImage src="/mryum.png" height="80px" />
+              <UsedByImage colorMode={colorMode} src="/mryum.png" height="80px" />
             </Link>
             <Link href="https://pory.io">
-              <UsedByImage src="/pory.png" height="50px" />
+              <UsedByImage colorMode={colorMode} src="/pory.png" height="50px" />
             </Link>
           </Set>
         </Stack>
@@ -270,7 +277,7 @@ const linkProps = Link.useProps({
         <PageContent
           breakpoint="fullHD"
           paddingY="major-6"
-          wrapperProps={{ backgroundColor: 'primary800', borderBottom: '1px solid', borderColor: 'white700' }}
+          wrapperProps={{ backgroundColor: 'primary800', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
         >
           <Box display="flex" flexDirection="column" alignItems="center" marginBottom="major-6">
             <Heading color="white" fontSize="600" textAlign="center" marginBottom="minor-1">
@@ -282,6 +289,7 @@ const linkProps = Link.useProps({
           <LiveCode
             code={`// An example inspired by skyscanner.com
 <Group
+  backgroundColor="background"
   altitude="300"
   borderRadius="4"
   verticalBelow="desktop"
@@ -295,7 +303,7 @@ const linkProps = Link.useProps({
     <Heading fontSize="400" marginBottom="minor-1">
       The Local Hostel
     </Heading>
-    <Tag palette="infoTint">Great for solo travellers</Tag>
+    <Tag palette="info" variant="tint">Great for solo travellers</Tag>
     <Stack spacing="minor-1">
       <Paragraph color="text100" fontSize="100">
         <Icon icon="solid-map-marker-alt" marginRight="minor-1" />

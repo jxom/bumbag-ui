@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, PageContent, PageWithHeader } from 'fannypack';
+import { Container, PageContent, PageWithHeader, useColorMode } from 'fannypack';
 
 import SEO from '../components/SEO';
 import Header from '../components/Landing/Header';
@@ -11,6 +11,8 @@ type Props = {
 
 export default function Docs(props: Props) {
   const { children } = props;
+
+  const { colorMode } = useColorMode();
 
   return (
     <React.Fragment>
@@ -24,7 +26,7 @@ export default function Docs(props: Props) {
         }
       >
         {children}
-        <PageContent wrapperProps={{ backgroundColor: 'white600' }}>
+        <PageContent wrapperProps={{ backgroundColor: colorMode === 'dark' ? 'black200' : 'white600' }}>
           <Footer />
         </PageContent>
       </PageWithHeader>

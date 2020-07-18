@@ -13,8 +13,8 @@ import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const Actions = styled(fannypack.Box)`
-  background-color: ${palette('white')};
-  border: 1px solid ${palette('white800')};
+  background-color: ${palette('background')};
+  border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-left: none;
   border-top: none;
   padding: ${space(2)}rem ${space(4)}rem;
@@ -62,6 +62,7 @@ LiveCode.defaultProps = {
 export default function LiveCode(props: Props) {
   const { code, ...restProps } = props;
   const { theme } = fannypack.useTheme();
+  const { colorMode } = fannypack.useColorMode();
   const scope = React.useMemo(
     () => ({
       ...fannypack,
@@ -85,9 +86,9 @@ export default function LiveCode(props: Props) {
     <fannypack.Box marginBottom="major-4">
       <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
         <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="fullHD">
-          <LiveEditor />
+          <LiveEditor colorMode={colorMode} />
           <Box backgroundColor="white" flex="2" border="default" borderLeft="none">
-            <LivePreview />
+            <LivePreview colorMode={colorMode} />
           </Box>
         </Group>
         <LiveError />

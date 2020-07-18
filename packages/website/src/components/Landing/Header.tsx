@@ -1,13 +1,20 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Icon, Hide, TopNav, Image } from 'fannypack';
+import { Icon, Hide, TopNav, Image, useTheme, useColorMode } from 'fannypack';
+
+import ColorModePicker from '../ColorModePicker';
 
 export default function Header(props) {
+  const { theme } = useTheme();
+  const { colorMode } = useColorMode();
+  const Logo = theme._docs?.Logo || (
+    <Image src={colorMode === 'dark' ? '/logo-dark.png' : '/logo-light.png'} height="44px" />
+  );
   return (
     <TopNav>
       <TopNav.Section>
         <TopNav.Item href="/" fontWeight="semibold">
-          <Image src="/logo.png" height="44px" />
+          {Logo}
         </TopNav.Item>
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
@@ -23,6 +30,9 @@ export default function Header(props) {
           <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
             <Icon icon="solid-github" marginRight="major-1" />
             GitHub
+          </TopNav.Item>
+          <TopNav.Item>
+            <ColorModePicker />
           </TopNav.Item>
         </Hide>
       </TopNav.Section>

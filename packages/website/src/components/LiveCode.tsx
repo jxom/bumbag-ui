@@ -13,16 +13,16 @@ import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const Actions = styled(fannypack.Box)`
-  background-color: ${palette('white')};
-  border: 1px solid ${palette('white800')};
+  background-color: ${palette('background')};
+  border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-top: none;
   padding: ${space(2)}rem ${space(4)}rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
 const CodeTabs = styled(fannypack.Box)`
-  background-color: ${palette('white')};
-  border: 1px solid ${palette('white800')};
+  background-color: ${palette('background')};
+  border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-bottom: none;
   padding: ${space(2)}rem ${space(4)}rem;
 `;
@@ -51,7 +51,7 @@ const LiveError = styled(_LiveError)`
 const LivePreview = styled(_LivePreview)`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border: 1px solid ${palette('white800')} !important;
+  border: 1px solid ${palette('white800', { dark: 'gray700' })} !important;
   border-bottom: none !important;
   padding: 1.5rem !important;
   /* overflow: scroll !important; */
@@ -76,6 +76,7 @@ LiveCode.defaultProps = {
 export default function LiveCode(props: Props) {
   const { pre: Pre, fallback: Fallback, children, ...restProps } = props;
   const { theme } = fannypack.useTheme();
+  const { colorMode } = fannypack.useColorMode();
   const scope = React.useMemo(
     () => ({
       ...fannypack,
@@ -137,9 +138,9 @@ export default function LiveCode(props: Props) {
         transformCode={transformCode}
         {...props}
       >
-        <LivePreview />
+        <LivePreview colorMode={colorMode} />
         {codeTabs.length > 1 && (
-          <CodeTabs>
+          <CodeTabs colorMode={colorMode}>
             {codeTabs.map((codeTab, i) => (
               <fannypack.Button
                 key={i}
@@ -155,7 +156,7 @@ export default function LiveCode(props: Props) {
           </CodeTabs>
         )}
         <LiveEditor />
-        <Actions>
+        <Actions colorMode={colorMode}>
           <CopyToClipboard text={code}>
             <fannypack.Button palette="primary" variant="ghost" size="small">
               Copy
