@@ -2,7 +2,7 @@ import { css, cssClass, keyframes } from '../styled';
 import { altitude, borderRadius, palette, space, theme } from '../utils';
 
 export const Alert = (styleProps) => cssClass`
-  background-color: ${palette('background')(styleProps)};
+  background-color: ${palette('background', { dark: 'gray900' })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   position: relative;
   display: flex;
@@ -11,7 +11,7 @@ export const Alert = (styleProps) => cssClass`
   ${
     styleProps.variant === 'bordered' &&
     css`
-      border: 1px solid ${palette('white800')(styleProps)};
+      border: 1px solid ${palette('white800', { dark: 'gray' })(styleProps)};
     `
   }
 
@@ -25,7 +25,7 @@ export const Alert = (styleProps) => cssClass`
   ${
     styleProps.variant === 'tint' &&
     css`
-      background-color: ${palette(`${styleProps.type}Tint`)(styleProps)};
+      background-color: ${palette(`${styleProps.type}Tint`, { dark: `${styleProps.type}Shade` })(styleProps)};
     `
   }
 

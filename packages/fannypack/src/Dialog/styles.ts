@@ -42,7 +42,7 @@ export const DialogTitle = (styleProps) => cssClass`
 
 export const DialogFooter = (styleProps) => cssClass`
   align-items: center;
-  background-color: ${palette('white600')(styleProps)};
+  background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
   display: flex;
   padding: ${space(5, 'minor')(styleProps)}rem ${space(6, 'minor')(styleProps)}rem;
 

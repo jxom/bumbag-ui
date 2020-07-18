@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { Button, Hide, Show, TopNav, Icon, Image, PageWithSidebar, usePage, useTheme } from 'fannypack';
+import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'fannypack';
 
 import ColorModePicker from './ColorModePicker';
-import ThemePicker from './ThemePicker';
 
 export default function Header(props) {
   const { theme } = useTheme();
   const { collapseBelow, sidebar } = usePage();
-  const Logo = theme._docs?.Logo || <Image src="/logo.png" height="44px" />;
+  const { colorMode } = useColorMode();
+  const Logo = theme._docs?.Logo || (
+    <Image src={colorMode === 'dark' ? '/logo-dark.png' : '/logo-light.png'} height="44px" />
+  );
   return (
     <TopNav>
       <TopNav.Section>
@@ -17,11 +19,9 @@ export default function Header(props) {
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
-          {/*
           <TopNav.Item>
             <ColorModePicker />
           </TopNav.Item>
-           */}
           <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor

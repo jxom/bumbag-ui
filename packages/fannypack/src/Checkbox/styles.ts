@@ -15,8 +15,8 @@ export const Checkbox = (styleProps) => cssClass`
 
 export const CheckboxIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
-  background-color: ${palette('background')(styleProps)};
-  border: 1px solid #bdbdbd;
+  background-color: ${palette('default')(styleProps)};
+  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -52,14 +52,14 @@ export const HiddenCheckbox = (styleProps) =>
       & {
         ${styleProps.indeterminate
           ? css`
-              background-color: ${palette('primary')(styleProps)};
+              background-color: ${palette('primary', { dark: 'primary300' })(styleProps)};
               height: 0.125em;
               width: 0.625em;
               top: calc(50% - 0.0625em);
               left: calc(50% - 0.3125em);
             `
           : css`
-              border: 0.1rem solid ${palette('primary')(styleProps)};
+              border: 0.1rem solid ${palette('primary', { dark: 'primary300' })(styleProps)};
               border-left-width: 0;
               border-top-width: 0;
               height: 0.625em;
@@ -69,7 +69,7 @@ export const HiddenCheckbox = (styleProps) =>
       }
     `,
     disabledCheckedIconCss: css`
-      border-color: ${palette('gray300')(styleProps)};
+      border-color: ${palette('gray300', { dark: 'gray' })(styleProps)};
     `,
     styleProps,
     themeKey: 'Checkbox.Icon',

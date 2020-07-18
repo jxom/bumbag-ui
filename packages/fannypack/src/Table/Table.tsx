@@ -12,9 +12,6 @@ export type LocalTableProps = {
   isHoverable?: boolean;
   isResponsive?: boolean;
   responsiveBreakpoint?: string;
-  dividerColor?: string;
-  stripeColor?: string;
-  hoverColor?: string;
   variant?: string;
 };
 export type TableProps = BoxProps & LocalTableProps;
@@ -58,9 +55,6 @@ const useProps = createHook<TableProps>(
   },
   {
     defaultProps: {
-      dividerColor: 'white800',
-      hoverColor: 'white600',
-      stripeColor: 'white600',
       responsiveBreakpoint: 'mobile',
       variant: 'default',
     },

@@ -48,7 +48,7 @@ export const TopNavItem = (styleProps) => cssClass`
     css`
       &&&&&& {
         cursor: pointer;
-        margin: 0 0.8rem;
+        padding: 0 0.8rem;
       }
     `
   }
@@ -71,12 +71,12 @@ export const TopNavItem = (styleProps) => cssClass`
   ${
     styleProps.isActive &&
     css`
-      color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-      fill: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+      color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+      fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
 
       ${styleProps.variant === 'default' &&
       css`
-        box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+        box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
       `} & {
         ${theme(styleProps.themeKey, `css.active`)(styleProps)};
       }
@@ -87,14 +87,14 @@ export const TopNavItem = (styleProps) => cssClass`
     ${
       styleProps.variant !== 'pill' &&
       css`
-        color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+        color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
       `
     }
 
     ${
       styleProps.variant === 'pill' &&
       css`
-        background-color: ${palette('white700')(styleProps)};
+        background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
       `
     }
 
@@ -105,13 +105,13 @@ export const TopNavItem = (styleProps) => cssClass`
 
   &:focus {
     outline: none;
-    color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-    fill: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+    color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
 
     ${
       styleProps.variant === 'default' &&
       css`
-        box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+        box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
       `
     }
 

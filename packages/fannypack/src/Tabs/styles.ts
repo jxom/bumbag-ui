@@ -55,8 +55,8 @@ export const Tab = (styleProps) => cssClass`
     }
 
   &[aria-selected='true'] {
-    color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
-    fill: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+    color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
 
     ${
       styleProps.variant === 'default' &&
@@ -65,10 +65,10 @@ export const Tab = (styleProps) => cssClass`
 
         ${styleProps.orientation === 'vertical'
           ? css`
-              box-shadow: inset -2px 0 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+              box-shadow: inset -2px 0 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
             `
           : css`
-              box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+              box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
             `};
       `
     }
@@ -76,14 +76,14 @@ export const Tab = (styleProps) => cssClass`
     ${
       styleProps.variant === 'boxed' &&
       css`
-        border: 1px solid ${palette('white900')(styleProps)};
+        border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
 
         ${styleProps.orientation === 'vertical'
           ? css`
-              border-right-color: ${palette('white')(styleProps)};
+              border-right-color: ${palette('white', { dark: 'background' })(styleProps)};
             `
           : css`
-              border-bottom-color: ${palette('white')(styleProps)};
+              border-bottom-color: ${palette('white', { dark: 'background' })(styleProps)};
             `};
       `
     }
@@ -91,7 +91,7 @@ export const Tab = (styleProps) => cssClass`
     ${
       styleProps.variant === 'button' &&
       css`
-        background-color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+        background-color: ${palette(styleProps.palette)(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
       `
     }
@@ -109,10 +109,10 @@ export const Tab = (styleProps) => cssClass`
       css`
         ${styleProps.orientation === 'vertical'
           ? css`
-              box-shadow: inset -2px 0 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+              box-shadow: inset -2px 0 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
             `
           : css`
-              box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+              box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
             `};
       `
     }
@@ -120,7 +120,7 @@ export const Tab = (styleProps) => cssClass`
     ${
       (styleProps.variant === 'boxed' || styleProps.variant === 'button') &&
       css`
-        box-shadow: ${palette(styleProps.palette, styleProps.palette)(styleProps)} 0px 0px 0px 1px,
+        box-shadow: ${palette(styleProps.palette)(styleProps)} 0px 0px 0px 1px,
           ${palette(`${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
       `
     }
@@ -134,14 +134,14 @@ export const Tab = (styleProps) => cssClass`
     ${
       styleProps.variant !== 'button' &&
       css`
-        color: ${palette(styleProps.palette, styleProps.palette)(styleProps)};
+        color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
       `
     }
 
     ${
       styleProps.variant === 'button' &&
       css`
-        background-color: ${palette('white700')(styleProps)};
+        background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
       `
     }
 
@@ -196,10 +196,10 @@ export const TabsList = (styleProps) => cssClass`
     css`
       ${styleProps.orientation === 'vertical'
         ? css`
-            border-right: 1px solid ${palette('white900')(styleProps)};
+            border-right: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
           `
         : css`
-            border-bottom: 1px solid ${palette('white900')(styleProps)};
+            border-bottom: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
           `};
     `
   }

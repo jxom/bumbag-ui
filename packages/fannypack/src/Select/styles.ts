@@ -3,10 +3,12 @@ import { borderRadius, fontSize, palette, tint, theme } from '../utils';
 
 export const Select = (styleProps) => cssClass`
   appearance: none;
-  background: linear-gradient(rgb(255, 255, 255), rgb(249, 250, 251));
-  border: 1px solid ${palette('white900')(styleProps)};
+  background: linear-gradient(${palette('default')(styleProps)}, ${palette('white600', { dark: 'gray900' })(
+  styleProps
+)});
+  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
-  color: ${styleProps.isPlaceholderSelected ? tint(0.4, 'text')(styleProps) : palette('text')(styleProps)};
+  color: ${styleProps.isPlaceholderSelected ? palette('gray300')(styleProps) : palette('text')(styleProps)};
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -14,7 +16,7 @@ export const Select = (styleProps) => cssClass`
 
   &[disabled],
   &[aria-disabled="true"] {
-    background: ${palette('white700')(styleProps)};
+    background: ${palette('white700', { dark: 'black200' })(styleProps)};
     box-shadow: unset;
 
     & {
@@ -31,7 +33,7 @@ export const Select = (styleProps) => cssClass`
     outline: unset;
     z-index: 2;
     border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
+    box-shadow: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)} 0px 0px 0px 3px !important;
   }
 
   ${
@@ -39,7 +41,8 @@ export const Select = (styleProps) => cssClass`
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
+        box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px 0px
+          3px !important;
       }
     `
   }

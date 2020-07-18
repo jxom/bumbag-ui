@@ -2,6 +2,8 @@ import { css, cssClass } from '../styled';
 import { fontSize, fontWeight, palette, space, theme, altitude } from '../utils';
 
 export const Callout = (styleProps) => cssClass`
+  background-color: ${palette('background', { dark: 'gray900' })(styleProps)};
+
   ${
     styleProps.showCloseButton &&
     css`
@@ -88,9 +90,9 @@ export const getTintAttributes = (styleProps: any) => {
       border-color: ${palette(`${styleProps.type}100`)(styleProps)} !important;
     }
 
-    background-color: ${palette(`${styleProps.type}Tint`)(styleProps)};
-    color: ${palette(`${styleProps.type}TintInverted`)(styleProps)};
-    fill: ${palette(`${styleProps.type}TintInverted`)(styleProps)};
+    background-color: ${palette(`${styleProps.type}Tint`, { dark: `${styleProps.type}Shade` })(styleProps)};
+    color: ${palette(`${styleProps.type}TintInverted`, { dark: `${styleProps.type}ShadeInverted` })(styleProps)};
+    fill: ${palette(`${styleProps.type}TintInverted`, { dark: `${styleProps.type}ShadeInverted` })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `tint`)(styleProps)};

@@ -24,7 +24,7 @@ export const Button = (styleProps) => cssClass`
   ${
     styleProps.palette === 'default' &&
     css`
-      border: 1px solid ${palette('white900')(styleProps)};
+      border: 1px solid ${palette('white900', { dark: 'gray600' })(styleProps)};
     `
   }
 
@@ -119,7 +119,7 @@ export const isInteractive = (styleProps) =>
 export const getDisabledProperties = (styleProps) => css`
   & {
     cursor: not-allowed;
-    opacity: 0.7;
+    opacity: ${styleProps.colorMode === 'dark' ? '0.5' : '0.7'};
     outline: unset;
     pointer-events: unset;
   }
@@ -202,9 +202,14 @@ export const getInteractiveProperties = (styleProps) => css`
   &:focus {
     outline: unset;
     z-index: 2;
-    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray200' : styleProps.palette)(styleProps)} 0px 0px 0px
-        1px,
-      ${palette(styleProps.palette === 'default' ? 'gray100' : `${styleProps.palette}200`)(styleProps)} 0px 0px 0px 3px;
+    box-shadow: ${palette(styleProps.palette === 'default' ? 'gray200' : styleProps.palette, {
+          dark: styleProps.palette === 'default' ? 'gray700' : styleProps.palette,
+        })(styleProps)}
+        0px 0px 0px 1px,
+      ${palette(styleProps.palette === 'default' ? 'gray100' : `${styleProps.palette}200`, {
+          dark: styleProps.palette === 'default' ? 'gray600' : `${styleProps.palette}200`,
+        })(styleProps)}
+        0px 0px 0px 3px;
 
     ${styleProps.palette === 'default' &&
     css`
@@ -219,7 +224,9 @@ export const getInteractiveProperties = (styleProps) => css`
   ${styleProps.variant !== 'link' &&
   css`
     &:hover {
-      background-color: ${palette(`${styleProps.palette === 'default' ? 'white' : styleProps.palette}600`)(styleProps)};
+      background-color: ${palette(`${styleProps.palette === 'default' ? 'white' : styleProps.palette}600`, {
+        dark: `${styleProps.palette === 'default' ? 'black100' : `${styleProps.palette}600`}`,
+      })(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
@@ -230,9 +237,9 @@ export const getInteractiveProperties = (styleProps) => css`
   ${styleProps.variant !== 'link' &&
   css`
     &:hover:active {
-      background-color: ${palette(styleProps.palette === 'default' ? 'white800' : `${styleProps.palette}700`)(
-        styleProps
-      )};
+      background-color: ${palette(styleProps.palette === 'default' ? 'white800' : `${styleProps.palette}700`, {
+        dark: `${styleProps.palette === 'default' ? 'black200' : `${styleProps.palette}700`}`,
+      })(styleProps)};
 
       & {
         ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
@@ -246,21 +253,15 @@ export const getLinkProperties = (styleProps) => css`
     border: 0;
     background: unset;
     color: ${styleProps.palette === 'default'
-      ? palette('text', defaultPalette.text)(styleProps)
-      : palette(styleProps.palette)(styleProps)};
+      ? palette('text')(styleProps)
+      : palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     fill: ${styleProps.palette === 'default'
-      ? palette('text', defaultPalette.text)(styleProps)
-      : palette(styleProps.palette)(styleProps)};
-    text-decoration: underline;
+      ? palette('text')(styleProps)
+      : palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     box-shadow: unset;
 
     &:hover {
-      color: ${styleProps.palette === 'default'
-        ? darken(0.4, 'text')(styleProps)
-        : darken(0.4, styleProps.palette)(styleProps)};
-      fill: ${styleProps.palette === 'default'
-        ? darken(0.4, 'text')(styleProps)
-        : darken(0.4, styleProps.palette)(styleProps)};
+      text-decoration: underline;
     }
   }
 
@@ -272,14 +273,15 @@ export const getLinkProperties = (styleProps) => css`
 export const getOutlinedProperties = (styleProps) => css`
   & {
     background-color: unset;
-    border: 1px solid ${palette()(styleProps)};
-    color: ${palette()(styleProps)};
-    fill: ${palette()(styleProps)};
+    border: 1px solid ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     box-shadow: unset;
 
     ${isInteractive(styleProps) &&
     css`
       &:hover {
+        border-color: ${palette()(styleProps)};
         background-color: ${palette()(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
         fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
@@ -295,8 +297,12 @@ export const getGhostProperties = (styleProps) => css`
   & {
     background-color: unset;
     border: unset;
-    color: ${styleProps.palette === 'default' ? palette('defaultInverted')(styleProps) : palette()(styleProps)};
-    fill: ${styleProps.palette === 'default' ? palette('defaultInverted')(styleProps) : palette()(styleProps)};
+    color: ${styleProps.palette === 'default'
+      ? palette('defaultInverted')(styleProps)
+      : palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    fill: ${styleProps.palette === 'default'
+      ? palette('defaultInverted')(styleProps)
+      : palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     box-shadow: unset;
 
     &:hover {

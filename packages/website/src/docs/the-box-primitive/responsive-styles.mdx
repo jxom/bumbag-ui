@@ -1,0 +1,22 @@
+---
+breakpoint: tablet
+title: Responsive styles
+---
+
+## Responsive styles
+
+You can pass [breakpoints from the theme](/breakpoints) as responsive attributes inside your CSS props to apply the style for a particular viewport.
+
+In this example, the background of the box will bed red until the max desktop width is reached. It will then fallback to the default.
+
+```jsx-live
+<Box
+  backgroundColor={{
+    default: 'primary',
+    'max-desktop': 'red'
+  }}
+  color="white"
+>
+  This is a box
+</Box>
+```

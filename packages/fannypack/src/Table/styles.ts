@@ -12,7 +12,7 @@ export const Table = (styleProps) => cssClass`
     styleProps.hasDividers &&
     css`
       & tbody tr:not(:last-child) {
-        border-bottom: 1px solid ${palette(styleProps.dividerColor, styleProps.dividerColor)(styleProps)};
+        border-bottom: 1px solid ${palette('white800', { dark: 'gray900' })(styleProps)};
       }
     `
   }
@@ -21,7 +21,7 @@ export const Table = (styleProps) => cssClass`
     styleProps.isHoverable &&
     css`
       & tbody tr:hover {
-        background-color: ${palette(styleProps.hoverColor, styleProps.hoverColor)(styleProps)};
+        background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
       }
     `
   }
@@ -30,7 +30,7 @@ export const Table = (styleProps) => cssClass`
     styleProps.isStriped &&
     css`
       & tbody tr:nth-child(even) {
-        background-color: ${palette(styleProps.stripeColor, styleProps.stripeColor)(styleProps)};
+        background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
       }
     `
   }
@@ -46,7 +46,7 @@ export const Table = (styleProps) => cssClass`
           }
 
           & tbody tr:not(:last-child) {
-            border-bottom: 1px solid ${palette(styleProps.dividerColor, styleProps.dividerColor)(styleProps)};
+            border-bottom: 1px solid ${palette('white800', { dark: 'gray900' })(styleProps)};
           }
 
           & tbody td {
@@ -84,12 +84,12 @@ export const Table = (styleProps) => cssClass`
 `;
 
 export const TableHead = (styleProps) => cssClass`
-  border-bottom: 1px solid ${palette('white800')(styleProps)};
+  border-bottom: 1px solid ${palette('white800', { dark: 'gray900' })(styleProps)};
 
   ${
     styleProps.tableVariant !== 'minimal' &&
     css`
-      background-color: ${palette('white600')(styleProps)};
+      background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
     `
   }
 
@@ -123,12 +123,12 @@ export const TableCell = (styleProps) => cssClass`
 `;
 
 export const TableFoot = (styleProps) => cssClass`
-  border-top: 1px solid ${palette('white800')(styleProps)};
+  border-top: 1px solid ${palette('white800', { dark: 'gray900' })(styleProps)};
 
   ${
     styleProps.tableVariant !== 'minimal' &&
     css`
-      background-color: ${palette('white600')(styleProps)};
+      background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
     `
   }
 
@@ -150,7 +150,7 @@ export const TableWrapper = (styleProps) => cssClass`
   ${
     styleProps.variant === 'default' &&
     css`
-      border: 1px solid ${palette('white800')(styleProps)};
+      border: 1px solid ${palette('white800', { dark: 'gray900' })(styleProps)};
     `
   }
 

@@ -13,28 +13,34 @@ export const generateTextVariants = (textColor: string) => ({
 });
 
 export const generateColorVariants = ({
+  backgroundColor,
   color,
+  colorMode = 'default',
   paletteKey,
   paletteOverrides,
 }: {
+  backgroundColor: string;
   color: string;
+  colorMode?: string;
   paletteKey: string;
   paletteOverrides?: ({ color }: { color: string }) => {};
 }) => {
   return {
-    [`${paletteKey}100`]: tint(0.7, color)(),
-    [`${paletteKey}200`]: tint(0.5, color)(),
-    [`${paletteKey}300`]: tint(0.3, color)(),
-    [`${paletteKey}400`]: tint(0.1, color)(),
+    [`${paletteKey}100`]: tint(0.7, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}200`]: tint(0.5, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}300`]: tint(0.3, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}400`]: tint(0.1, color)({ backgroundColor, colorMode }),
     [paletteKey]: color,
     [`${paletteKey}500`]: color,
-    [`${paletteKey}600`]: shade(0.1, color)(),
-    [`${paletteKey}700`]: shade(0.3, color)(),
-    [`${paletteKey}800`]: shade(0.5, color)(),
-    [`${paletteKey}900`]: shade(0.7, color)(),
-    [`${paletteKey}Tint`]: tint(0.9, color)(),
+    [`${paletteKey}600`]: shade(0.1, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}700`]: shade(0.3, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}800`]: shade(0.5, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}900`]: shade(0.7, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}Shade`]: shade(0.8, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}Tint`]: tint(0.9, color)({ backgroundColor, colorMode }),
     [`${paletteKey}Inverted`]: readableColor(color)(),
-    [`${paletteKey}TintInverted`]: shade(0.5, color)(),
+    [`${paletteKey}ShadeInverted`]: tint(0.7, color)({ backgroundColor, colorMode }),
+    [`${paletteKey}TintInverted`]: shade(0.5, color)({ backgroundColor, colorMode }),
     ...(paletteOverrides ? paletteOverrides({ color }) : {}),
   };
 };

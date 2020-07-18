@@ -63,6 +63,19 @@ const SearchInput = applyTheme(Input, {
     },
     size: 'small',
   },
+  modes: {
+    dark: {
+      defaultProps: {
+        inputProps: {
+          backgroundColor: 'gray900',
+          borderColor: 'gray900',
+          _focus: {
+            borderColor: 'primary',
+          },
+        },
+      },
+    },
+  },
 });
 
 export default function Sidebar(props: any) {

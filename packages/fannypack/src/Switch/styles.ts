@@ -14,8 +14,8 @@ export const Switch = (styleProps) => cssClass`
 `;
 
 export const SwitchIcon = (styleProps) => cssClass`
-  background-color: ${palette('background')(styleProps)};
-  border: 1px solid #bdbdbd;
+  background-color: ${palette('default')(styleProps)};
+  border: 1px solid ${palette('gray100', { dark: 'gray700' })(styleProps)};
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -41,28 +41,38 @@ export const HiddenSwitch = (styleProps) =>
   getHiddenInputStyles({
     iconClassName: 'fp-SwitchIcon',
     checkedCss: css`
-      background-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+      background-color: ${palette(styleProps.palette || 'primary', { dark: `${styleProps.palette || 'primary'}700` })(
+        styleProps
+      )};
       transition: all ease 0.2s;
     `,
     disabledCheckedCss: css`
-      background-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
-      border-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
+      background-color: ${palette(`${styleProps.palette || 'primary'}100`, {
+        dark: `${styleProps.palette || 'primary'}800`,
+      })(styleProps)};
+      border-color: ${palette(`${styleProps.palette || 'primary'}100`, {
+        dark: `${styleProps.palette || 'primary'}800`,
+      })(styleProps)};
     `,
     disabledUncheckedIconCss: css`
       background: ${palette('white700')(styleProps)};
     `,
     checkedIconCss: css`
-      border-color: ${palette(styleProps.palette || 'primary')(styleProps)};
+      border-color: ${palette(styleProps.palette || 'primary', { dark: `${styleProps.palette || 'primary'}700` })(
+        styleProps
+      )};
       left: 1.25em;
     `,
     disabledCheckedIconCss: css`
-      border-color: ${tint(0.5, styleProps.palette || 'primary')(styleProps)};
+      border-color: ${palette(`${styleProps.palette || 'primary'}100`, {
+        dark: `${styleProps.palette || 'primary'}800`,
+      })(styleProps)};
     `,
     uncheckedIconCss: css`
-      background: ${palette('background')(styleProps)};
+      background: ${palette('default', { dark: 'gray100' })(styleProps)};
       content: '';
       border-radius: 100%;
-      border: 1px solid #bdbdbd;
+      border: 1px solid ${palette('gray100', { dark: 'gray700' })(styleProps)};
       height: 1em;
       width: 1em;
       top: 0.2em;

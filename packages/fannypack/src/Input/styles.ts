@@ -14,16 +14,19 @@ export const InputWrapper = (styleProps) => cssClass`
 
 export const Input = (styleProps) => cssClass`
   -webkit-appearance: none;
-  border: 1px solid ${palette('white900')(styleProps)};
+  background: ${palette('default')(styleProps)};
+  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
+  color: ${palette('text')(styleProps)};
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   &[disabled] {
-    background-color: ${palette('white700')(styleProps)};
+    background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
     box-shadow: unset;
+    color: ${palette('text100')(styleProps)};
     cursor: not-allowed;
 
     & {
@@ -35,7 +38,7 @@ export const Input = (styleProps) => cssClass`
     outline: unset;
     z-index: 2;
     border-color: ${palette('primary')(styleProps)};
-    box-shadow: ${palette('primaryTint')(styleProps)} 0px 0px 0px 3px !important;
+    box-shadow: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)} 0px 0px 0px 3px !important;
 
     & {
       ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
@@ -43,7 +46,7 @@ export const Input = (styleProps) => cssClass`
   }
 
   &::placeholder {
-    opacity: 0.6;
+    color: ${palette('gray300')(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `css.placeholder`)(styleProps)};
@@ -55,7 +58,8 @@ export const Input = (styleProps) => cssClass`
     css`
       & {
         border-color: ${palette(`${styleProps.state}`)(styleProps)};
-        box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
+        box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px 0px
+          3px !important;
       }
     `
   }

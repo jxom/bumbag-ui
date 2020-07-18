@@ -31,10 +31,9 @@ export const Spinner = (styleProps) => cssClass`
 `;
 
 export const TrackCircle = (styleProps) => cssClass`
-  stroke: ${palette(
-    styleProps.trackColor || `${styleProps.color}100`,
-    styleProps.trackColor || tint(0.9, styleProps.color)(styleProps)
-  )(styleProps)};
+  stroke: ${palette(styleProps.trackColor || `${styleProps.color}100`, {
+    dark: styleProps.trackColor || `${styleProps.color}900`,
+  })(styleProps)};
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
@@ -48,7 +47,7 @@ export const LoaderCircle = (styleProps) => cssClass`
       ? `${progressDashArrayValue - (styleProps.value / 100) * progressDashArrayValue}px`
       : `${defaultDashOffset}px`
   };
-  stroke: ${palette(styleProps.color, styleProps.color)(styleProps)};
+  stroke: ${palette(styleProps.color)(styleProps)};
   transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   & {

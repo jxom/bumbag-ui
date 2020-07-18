@@ -109,14 +109,14 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
   ${
     styleProps.sidebarPlacement === 'left' &&
     css`
-      border-right: 1px solid ${palette('white800')(styleProps)};
+      border-right: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
     `
   }
 
   ${
     styleProps.sidebarPlacement === 'right' &&
     css`
-      border-left: 1px solid ${palette('white800')(styleProps)};
+      border-left: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
     `
   }
 
@@ -200,7 +200,7 @@ export const PageWithHeaderHeader = (styleProps) => cssClass`
   background-color: ${palette('background')(styleProps)};
   min-height: ${styleProps.headerHeight};
   height: ${styleProps.headerHeight};
-  border-bottom: 1px solid ${palette('white800')(styleProps)};
+  border-bottom: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
   z-index: 999;
 
   & > * {

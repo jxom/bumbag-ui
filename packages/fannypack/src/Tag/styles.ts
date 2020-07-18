@@ -3,7 +3,9 @@ import { borderRadius, darken, fontSize, fontWeight, palette, space, theme } fro
 
 export const Tag = (styleProps) => cssClass`
   align-items: center;
-  background-color: ${palette(styleProps.palette)(styleProps)};
+  background-color: ${palette(styleProps.palette, {
+    dark: styleProps.palette === 'text' ? 'gray900' : styleProps.palette,
+  })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
   display: inline-flex;
@@ -14,6 +16,7 @@ export const Tag = (styleProps) => cssClass`
   justify-content: center;
 
   ${styleProps.variant === 'outlined' && outlinedProperties(styleProps)}
+  ${styleProps.variant === 'tint' && tintProperties(styleProps)}
   ${styleProps.size && sizeProperties(styleProps)}
 
   & {
@@ -54,7 +57,7 @@ export const TagClose = (styleProps) => cssClass`
       styleProps.variant === 'outlined' &&
       css`
         background-color: unset;
-        color: ${palette(styleProps.palette)(styleProps)};
+        color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
 
         &:hover {
           background-color: ${palette('white700')(styleProps)};
@@ -71,9 +74,26 @@ export const TagClose = (styleProps) => cssClass`
 export const outlinedProperties = (styleProps) => cssClass`
   & {
     background-color: unset;
-    border: 1px solid ${palette(styleProps.palette)(styleProps)};
-    color: ${palette(styleProps.palette)(styleProps)};
-    fill: ${palette(styleProps.palette)(styleProps)};
+    border: 1px solid ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+    fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
+  }
+  & {
+    ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};
+  }
+`;
+
+export const tintProperties = (styleProps) => cssClass`
+  & {
+    background-color: ${palette(`${styleProps.palette}Tint`, {
+      dark: styleProps.palette === 'text' ? 'gray900' : `${styleProps.palette}Shade`,
+    })(styleProps)};
+    color: ${palette(`${styleProps.palette}TintInverted`, {
+      dark: styleProps.palette === 'text' ? 'white' : `${styleProps.palette}ShadeInverted`,
+    })(styleProps)};
+    fill: ${palette(`${styleProps.palette}TintInverted`, {
+      dark: styleProps.palette === 'text' ? 'white' : `${styleProps.palette}ShadeInverted`,
+    })(styleProps)};
   }
   & {
     ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};

@@ -28,7 +28,7 @@ export function getHiddenInputStyles({
       ${
         styleProps.state &&
         css`
-          border-color: ${palette(`${styleProps.state}`)(styleProps)};
+          border-color: ${palette(`${styleProps.state}`, { dark: `${styleProps.state}300` })(styleProps)};
         `
       }
 
@@ -44,12 +44,13 @@ export function getHiddenInputStyles({
       ${
         styleProps.state &&
         css`
-          box-shadow: ${palette(`${styleProps.state}Tint`)(styleProps)} 0px 0px 0px 3px !important;
+          box-shadow: ${palette(`${styleProps.state}Tint`, { dark: `${styleProps.state}Shade` })(styleProps)} 0px 0px
+            0px 3px !important;
         `
       }
     }
     &[disabled] + .${iconClassName} {
-      background-color: ${palette('white700')(styleProps)};
+      background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
       box-shadow: unset;
 
       &::before {
@@ -64,15 +65,21 @@ export function getHiddenInputStyles({
       }
     }
     &:focus + .${iconClassName} {
-      border-color: ${palette(`${styleProps.palette || 'primary'}`)(styleProps)};
-      box-shadow: ${palette(`${styleProps.palette || 'primary'}100`)(styleProps)} 0px 0px 0px 3px !important;
+      border-color: ${palette(`${styleProps.palette || 'primary'}`, { dark: `${styleProps.palette || 'primary'}300` })(
+        styleProps
+      )};
+      box-shadow: ${palette(`${styleProps.palette || 'primary'}100`, { dark: `${styleProps.palette || 'primary'}900` })(
+        styleProps
+      )} 0px 0px 0px 3px !important;
 
       & {
         ${theme(themeKey, `focusChecked`)(styleProps)};
       }
     }
     &:not([disabled]):checked + .${iconClassName} {
-      border-color: ${palette(`${styleProps.palette || 'primary'}`)(styleProps)};
+      border-color: ${palette(`${styleProps.palette || 'primary'}`, { dark: `${styleProps.palette || 'primary'}300` })(
+        styleProps
+      )};
       ${checkedCss};
     }
     &:checked + .${iconClassName} {

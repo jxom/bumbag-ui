@@ -75,9 +75,10 @@ export function fontWeight(selector?: string, defaultValue?: any) {
   };
 }
 
-export function palette(selector?: string, defaultValue?: any) {
+export function palette(_selector?: string, modes?: any) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
-    const color = theme('palette', selector || props.palette, defaultValue)(props);
+    const selector = modes?.[props.colorMode] || _selector;
+    const color = theme('palette', selector || props.palette)(props);
     if (!color) return tinycolor(selector).toHexString();
     return color;
   };

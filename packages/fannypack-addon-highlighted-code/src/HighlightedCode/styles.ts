@@ -52,7 +52,7 @@ export const HighlightedCode = (styleProps) => cssClass`
 `;
 
 export const codeTheme = (styleProps) => ({
-  light: {
+  default: {
     plain: {
       color: palette('text')(styleProps),
       backgroundColor: palette('white700')(styleProps),

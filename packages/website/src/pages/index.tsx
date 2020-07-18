@@ -83,7 +83,7 @@ export default function Index() {
             <Stack display="flex" flexDirection="column" alignItems="center">
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
-                variant="dark"
+                colorMode="dark"
                 isBlock
                 language="jsx"
                 width="100%"
@@ -94,7 +94,7 @@ export default function Index() {
               <Icon icon="solid-arrow-down" color="primary" fontSize="500" />
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
-                variant="dark"
+                colorMode="dark"
                 isBlock
                 language="jsx"
                 width="100%"
@@ -124,7 +124,7 @@ export default function Index() {
           <Columns.Column spread={6}>
             <HighlightedCode
               preProps={{ borderRadius: '10px' }}
-              variant="dark"
+              colorMode="dark"
               isBlock
               language="jsx"
               width="100%"
@@ -198,7 +198,7 @@ export default function Index() {
             <Stack>
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
-                variant="dark"
+                colorMode="dark"
                 isBlock
                 language="jsx"
                 width="100%"
@@ -209,7 +209,7 @@ export default function Index() {
               />
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
-                variant="dark"
+                colorMode="dark"
                 isBlock
                 language="jsx"
                 width="100%"
@@ -224,7 +224,7 @@ const linkProps = Link.useProps({
               />
               <HighlightedCode
                 preProps={{ borderRadius: '10px' }}
-                variant="dark"
+                colorMode="dark"
                 isBlock
                 language="jsx"
                 width="100%"

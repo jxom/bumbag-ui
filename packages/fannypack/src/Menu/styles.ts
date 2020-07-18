@@ -42,14 +42,14 @@ export const MenuItem = (styleProps) => cssClass`
 
   &:not(:disabled):focus {
     outline: unset;
-    background-color: ${palette('white600')(styleProps)};
+    background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `focus`)(styleProps)};
     }
   }
   &:not(:disabled):hover {
-    background-color: ${palette('white600')(styleProps)};
+    background-color: ${palette('white600', { dark: 'black200' })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `hover`)(styleProps)};
@@ -57,17 +57,17 @@ export const MenuItem = (styleProps) => cssClass`
   }
   &:not(:disabled):focus:active,
   &:not(:disabled):hover:active {
-    background-color: ${palette('white700')(styleProps)};
+    background-color: ${palette('white700', { dark: 'black300' })(styleProps)};
   }
 
   ${
     styleProps.isActive &&
     css`
-      background-color: ${palette('white700')(styleProps)};
+      background-color: ${palette('white700', { dark: 'black300' })(styleProps)};
 
       &&:hover,
       &&:focus {
-        background-color: ${palette('white800')(styleProps)};
+        background-color: ${palette('white800', { dark: 'black400' })(styleProps)};
       }
 
       & {

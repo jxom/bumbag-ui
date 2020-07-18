@@ -14,7 +14,7 @@ export const Popover = (styleProps) => cssClass`
 
   &:focus {
     outline: none;
-    box-shadow: ${palette('primary200')(styleProps)} 0px 0px 0px 3px;
+    box-shadow: ${palette('primary200', { dark: 'primary' })(styleProps)} 0px 0px 0px 3px;
   }
 
   & {
@@ -34,7 +34,7 @@ export const PopoverHeader = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid ${palette('white800')(styleProps)};
+  border-bottom: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
   & {
@@ -54,7 +54,7 @@ export const PopoverFooter = (styleProps) => cssClass`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid ${palette('white800')(styleProps)};
+  border-top: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
   ${
@@ -115,10 +115,10 @@ export const PopoverArrow = (styleProps) => cssClass`
     background-color: transparent;
 
     & .stroke {
-      fill: ${palette('white800')(styleProps)};
+      fill: ${palette('white800', { dark: 'gray700' })(styleProps)};
     }
     & .fill {
-      fill: ${palette('white')(styleProps)};
+      fill: ${palette('background')(styleProps)};
     }
   }
 

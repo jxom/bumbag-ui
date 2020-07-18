@@ -6,7 +6,7 @@ export const ProgressBar = (styleProps) => cssClass`
   overflow: hidden;
   width: 100%;
   height: 1rem;
-  background-color: ${tint(0.9, styleProps.color)(styleProps)};
+  background-color: ${palette(`${styleProps.color}Tint`, { dark: `${styleProps.color}Shade` })(styleProps)};
 
   ${getSizeAttributes(styleProps)};
 
@@ -17,7 +17,7 @@ export const ProgressBar = (styleProps) => cssClass`
 
 export const ProgressBarIndicator = (styleProps) => cssClass`
   height: 100%;
-  background-color: ${palette(styleProps.color, styleProps.color)(styleProps)};
+  background-color: ${palette(styleProps.color)(styleProps)};
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: ${styleProps.value || '0'}%;
 

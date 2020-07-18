@@ -114,7 +114,7 @@ export default function LiveCode(props: Props) {
         isBlock
         code={children.replace(/\n$/, '')}
         language={lang}
-        variant="dark"
+        colorMode="dark"
       />
     );
   }

@@ -60,7 +60,7 @@ export const SideNavItem = (styleProps) => cssClass`
   }
 
   &&&:hover {
-    color: ${palette('primary')(styleProps)};
+    color: ${palette('primary', { dark: 'primary300' })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
@@ -69,7 +69,7 @@ export const SideNavItem = (styleProps) => cssClass`
 
   &:focus {
     outline: unset;
-    background-color: ${palette('primaryTint')(styleProps)};
+    background-color: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
@@ -79,7 +79,7 @@ export const SideNavItem = (styleProps) => cssClass`
   ${
     styleProps.isActive &&
     css`
-      background-color: ${palette('primaryTint')(styleProps)};
+      background-color: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)};
       box-shadow: inset 3px 0 0 0 ${palette('primary')(styleProps)};
 
       & {

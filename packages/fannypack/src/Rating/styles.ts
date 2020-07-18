@@ -12,7 +12,7 @@ export const Rating = (styleProps) => cssClass`
 
 export const RatingItem = (styleProps) => cssClass`
   color: ${
-    styleProps.isActive ? palette(styleProps.color, styleProps.color)(styleProps) : palette('white900')(styleProps)
+    styleProps.isActive ? palette(styleProps.color)(styleProps) : palette('white900', { dark: 'gray800' })(styleProps)
   };
   display: inline-flex;
   transition: color 0.1s, transform 0.2s;

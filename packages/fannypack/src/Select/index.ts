@@ -1,6 +1,6 @@
 import { formikField, reduxFormField } from '../utils';
 import * as styles from './styles';
-import { Select as _Select, Select as _SelectField } from './Select';
+import { Select as _Select, SelectField as _SelectField } from './Select';
 
 export * from './Select';
 export const Select = Object.assign(_Select, {

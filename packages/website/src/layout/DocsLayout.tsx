@@ -26,7 +26,7 @@ const TableOfContents = fannypack.styled(_TableOfContents)`
   overflow: auto;
   max-height: calc(100vh - 200px);
   width: 250px;
-  border-left: 1px solid #ebebeb;
+  border-left: 1px solid ${fannypack.palette('white800')};
   padding-left: 1rem;
 
   @media screen and (max-width: ${(props) => fannypack.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
@@ -37,6 +37,8 @@ const TableOfContents = fannypack.styled(_TableOfContents)`
 export default function Docs(props: Props) {
   const { pageContext, path } = props;
 
+  const { colorMode } = fannypack.useColorMode();
+
   //////////////////////////////////////////////////////////////////////
 
   const components = React.useMemo(
@@ -45,7 +47,7 @@ export default function Docs(props: Props) {
       a: (props: any) => <fannypack.Link {...props} />,
       blockquote: (props: any) => (
         <fannypack.Blockquote
-          backgroundColor="primaryTint"
+          backgroundColor={colorMode === 'dark' ? 'primaryShade' : 'primaryTint'}
           borderColor="primary"
           marginTop="major-2"
           marginBottom="major-2"
@@ -91,12 +93,8 @@ export default function Docs(props: Props) {
       tbody: (props: any) => <fannypack.Table.Body {...props} />,
       thead: (props: any) => <fannypack.Table.Head {...props} />,
     }),
-    []
+    [colorMode]
   );
-
-  //////////////////////////////////////////////////////////////////////
-
-  const showTableOfContents = fannypack.useBreakpoint('min-fullHD');
 
   //////////////////////////////////////////////////////////////////////
 

@@ -15,8 +15,8 @@ export const Radio = (styleProps) => cssClass`
 
 export const RadioIcon = (styleProps) => cssClass`
   -webkit-appearance: none;
-  background-color: ${palette('background')(styleProps)};
-  border: 1px solid #bdbdbd;
+  background-color: ${palette('default')(styleProps)};
+  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -43,7 +43,7 @@ export const HiddenRadio = (styleProps) =>
   getHiddenInputStyles({
     iconClassName: 'fp-RadioIcon',
     checkedIconCss: css`
-      background: ${palette('primary')(styleProps)};
+      background: ${palette('primary', { dark: 'primary300' })(styleProps)};
       border-radius: 50%;
       content: '';
       height: 0.5em;
@@ -54,8 +54,8 @@ export const HiddenRadio = (styleProps) =>
       width: 0.5em;
     `,
     disabledCheckedIconCss: css`
-      border-color: ${palette('gray300')(styleProps)};
-      background: ${palette('gray300')(styleProps)};
+      border-color: ${palette('gray300', { dark: 'gray' })(styleProps)};
+      background: ${palette('gray300', { dark: 'gray' })(styleProps)};
     `,
     styleProps,
     themeKey: 'Radio.Icon',

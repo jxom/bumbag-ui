@@ -37,7 +37,7 @@ function useProps(props: Partial<HighlightedCodeProps> = {}) {
 export const HighlightedCode = createComponent<HighlightedCodeProps>(
   (props) => {
     const { theme } = useTheme();
-    const codeTheme = styles.codeTheme({ theme, ...props })[props.variant];
+    const codeTheme = styles.codeTheme({ theme, ...props })[props.colorMode];
     const HighlightedCodeProps = useProps(props);
     return createElement({
       children: (
