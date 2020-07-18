@@ -1,0 +1,61 @@
+---
+breakpoint: tablet
+title: useBreakpointValue
+---
+
+# useBreakpointValue
+
+## Import
+
+```js
+import { useBreakpointValue } from 'fannypack';
+```
+
+## Usage
+
+The `useBreakpointValue` hook is similar to the [useBreakpoint hook](/hooks/use-breakpoint), however it accepts a range of [breakpoints](/breakpoints) and their respective values, and will return the value respective to the current breakpoint.
+
+Try resize your window for the example below to see the button sizes change.
+
+```function-live
+function Example() {
+  const size = useBreakpointValue({
+    default: 'large',
+    mobile: 'small',
+    'max-desktop': 'medium'
+  });
+  return (
+    <Button size={size}>Hello world</Button>
+  );
+}
+```
+
+## Schema
+
+```js
+const value = useBreakpointValues(breakpointValueMap)
+```
+
+### Parameters
+
+**<Code marginRight="major-1">breakpointValueMap</Code>** `{ [breakpoint: Breakpoint]: string | boolean | Object }`
+
+A set of breakpoints (as keys) and their values.
+
+Example:
+
+```jsx
+const size = useBreakpointValue({
+  default: 'large',
+  mobile: 'small',
+  tablet: 'medium'
+});
+```
+
+[Click here to see a list of valid breakpoints.](/breakpoints)
+
+### Return values
+
+**<Code marginRight="major-1">value</Code>** `boolean`
+
+Returns the value corresponding to the current breakpoint.
