@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/travis/bumbagui/bumbag.svg?style=flat-square)](https://travis-ci.org/bumbagui/bumbag)
 [![NPM](https://img.shields.io/npm/v/bumbag/latest.svg?style=flat-square)](https://www.npmjs.com/package/bumbag)
 
-<p align="center"><img src="./logo.png" width="500px"></img></p>
+<p align="center"><img src="./bumbag-logo.png" width="500px"></img></p>
 
 ---
 
@@ -18,7 +18,7 @@ After some consideration, we decided to rebrand the next major version of "Fanny
 
 ## Getting started
 
-[Visit the Bumbag docs](https://v5.bumbag.style) to get started with Bumbag.
+[Visit the Bumbag docs](https://bumbag.dev) to get started with Bumbag.
 
 ## Contributing
 

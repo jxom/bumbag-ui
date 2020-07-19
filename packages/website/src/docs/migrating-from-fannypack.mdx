@@ -1,30 +1,30 @@
 ---
 breakpoint: tablet
-title: Migrating from v4
-path: /migrating-from-v4/
+title: Migrating from Fannypack
+path: /migrating-from-fannypack/
 ---
 
-# Migrating from v4
+# Migrating from Fannypack
 
-If you are migrating from Bumbag v4, there are quite a few notable breaking changes. This guide aims to help you migrate to v5. If you feel like there is anything missing from this guide, feel free to raise a pull request.
+If you are migrating from Fannypack, there are quite a few notable breaking changes. This guide aims to help you migrate to Bumbag. If you feel like there is anything missing from this guide, feel free to raise a pull request.
 
 ## Upgrading incrementally
 
-It's recommended to upgrade to v5 incrementally, meaning that v4 and v5 will co-exist until v5 takes over.
+It's recommended to upgrade to Bumbag incrementally, meaning that Fannypack and Bumbag will co-exist until Bumbag takes over.
 
-If you wish to upgrade incrementally, you can install the `bumbag-v5` package:
+If you wish to upgrade incrementally, you can install the `bumbag` package:
 
 ```
-npm install bumbag-v5
+npm install bumbag
 ```
 
-And then, set up Bumbag v5 in your app root:
+And then, set up Bumbag in your app root:
 
 ```jsx
-// v5 Bumbag
-import { Provider as BumbagProvider } from 'bumbag-v5';
-// v4 Bumbag
-import { ThemeProvider } from 'bumbag';
+// Bumbag
+import { Provider as BumbagProvider } from 'bumbag';
+// Fannypack
+import { ThemeProvider } from 'fannypack';
 
 const oldTheme = { ... };
 const newTheme = { ... };
@@ -41,9 +41,9 @@ const App = () => (
 Then you can start incrementally migrating your components like so:
 
 ```jsx
-- import { Box } from 'bumbag';
-+ import { Box } from 'bumbag-v5';
-import { Button } from 'bumbag';
+- import { Box } from 'fannypack';
++ import { Box } from 'bumbag';
+import { Button } from 'fannypack';
 
 function Example() {
   return (
@@ -65,7 +65,7 @@ We have renamed the `<ThemeProvider>` component to `<Provider>`.
 ##### v4
 
 ```jsx
-import { ThemeProvider } from 'bumbag';
+import { ThemeProvider } from 'fannypack';
 
 const App = () => (
   <ThemeProvider>
@@ -640,7 +640,7 @@ We have moved the `HighlightedCode` component to `bumbag-addon-highlighted-code`
 ##### v4
 
 ```jsx
-import { HighlightedCode } from 'bumbag';
+import { HighlightedCode } from 'fannypack';
 ```
 
 ##### v5
@@ -895,7 +895,7 @@ We have moved the `Markdown` component to `bumbag-addon-markdown` to save some b
 ##### v4
 
 ```jsx
-import { Markdown } from 'bumbag';
+import { Markdown } from 'fannypack';
 ```
 
 ##### v5
