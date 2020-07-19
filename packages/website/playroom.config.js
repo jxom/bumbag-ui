@@ -3,7 +3,7 @@ const path = require('path');
 console.log(__dirname, path.cwd);
 
 module.exports = {
-  components: '../fannypack/src/index.ts',
+  components: '../bumbag/src/index.ts',
   outputPath: './public/playroom',
   frameComponent: './src/components/PlayroomFrame.js',
   widths: [375, 768, 1024, 1200, 1440],
@@ -23,7 +23,7 @@ module.exports = {
     },
     resolve: {
       alias: {
-        fannypack: path.resolve(__dirname, '../fannypack/src')
+        bumbag: path.resolve(__dirname, '../bumbag/src')
       },
       extensions: ['.mjs', '.js', '.json', '.ts', '.tsx']
     }

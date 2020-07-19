@@ -9,45 +9,45 @@ path: /getting-started/
 
 # Getting started
 
-Firstly, install Fannypack:
+Firstly, install Bumbag:
 
 ```
-npm install fannypack
+npm install bumbag
 ```
 
-Once you have installed the `fannypack` module, wrap your application in a "`<FannypackProvider>`":
+Once you have installed the `bumbag` module, wrap your application in a "`<BumbagProvider>`":
 
 ```jsx
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 
 const App = () => (
-  <FannypackProvider>
+  <BumbagProvider>
     Hello world!
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
-Now, you can start using the Fannypack components:
+Now, you can start using the Bumbag components:
 
 ```jsx
-import { Button, Provider as FannypackProvider } from 'fannypack';
+import { Button, Provider as BumbagProvider } from 'bumbag';
 
 const MyApp = () => (
-  <FannypackProvider>
+  <BumbagProvider>
     <Button>
       Hello world!
     </Button>
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
-> Note: You can override Fannypack's default theme by passing a `theme` prop to `<FannypackProvider>`. [Click here to find out how to add a theme](/theming).
+> Note: You can override Bumbag's default theme by passing a `theme` prop to `<BumbagProvider>`. [Click here to find out how to add a theme](/theming).
 
 ## Usage with Gatsby
 
-In order to use Fannypack with [Gatsby](https://gatsbyjs.org/), you will firstly need to install the Gatsby plugin for Fannypack.
+In order to use Bumbag with [Gatsby](https://gatsbyjs.org/), you will firstly need to install the Gatsby plugin for Bumbag.
 
-Fannypack uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/) & `emotion-server`:
+Bumbag uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/) & `emotion-server`:
 
 ```
 npm install gatsby-plugin-emotion emotion-server
@@ -61,16 +61,16 @@ module.exports = {
 }
 ```
 
-After that, we will add the `<FannypackProvider>` to our `gatsby-browser.js` file:
+After that, we will add the `<BumbagProvider>` to our `gatsby-browser.js` file:
 
 ```jsx
 import React from 'react';
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 
 export const wrapRootElement = ({ element, ...props }) => (
-  <FannypackProvider>
+  <BumbagProvider>
     {element}
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
@@ -79,7 +79,7 @@ We will also have to add a few lines to our `gatsby-ssr.js` file:
 ```jsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 import { renderStylesToString } from 'emotion-server';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
@@ -88,17 +88,17 @@ export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
 };
 
 export const wrapRootElement = ({ element, ...props }) => (
-  <FannypackProvider>
+  <BumbagProvider>
     {element}
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
-Now, you can freely use Fannypack in your Gatsby app!
+Now, you can freely use Bumbag in your Gatsby app!
 
 ## Usage with Next.js
 
-In order to use Fannypack with [Next.js](https://nextjs.org/), you will firstly have to set your Next.js app for SSR with Fannypack.
+In order to use Bumbag with [Next.js](https://nextjs.org/), you will firstly have to set your Next.js app for SSR with Bumbag.
 
 Firstly, you will need to install `emotion-server`:
 
@@ -144,24 +144,24 @@ export default class MyDocument extends Document {
 }
 ```
 
-Then, open up your `_app.js` file, and add the `<FannypackProvider>`:
+Then, open up your `_app.js` file, and add the `<BumbagProvider>`:
 
 
 ```jsx
 import * as React from 'react';
 import NextApp from 'next/app';
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <FannypackProvider theme={theme}>
+      <BumbagProvider theme={theme}>
         <Component {...pageProps} />
-      </FannypackProvider>
+      </BumbagProvider>
     );
   }
 }
 ```
 
-Now you can freely use Fannypack in your Next.js app!
+Now you can freely use Bumbag in your Next.js app!

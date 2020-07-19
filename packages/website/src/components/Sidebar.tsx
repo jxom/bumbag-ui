@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Box, Input, Stack, SideNav, css, usePage, applyTheme } from 'fannypack';
+import { Box, Input, Stack, SideNav, css, usePage, applyTheme } from 'bumbag';
 import _startCase from 'lodash/startCase';
 import _uniqBy from 'lodash/uniqBy';
 

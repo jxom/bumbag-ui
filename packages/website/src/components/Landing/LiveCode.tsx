@@ -5,14 +5,14 @@ import {
   LiveError as _LiveError,
   LivePreview as _LivePreview,
 } from 'react-live';
-import * as fannypack from 'fannypack';
-import { HighlightedCode, highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
-import { Markdown } from 'fannypack-addon-markdown';
-import { Box, Group, palette, space, styled } from 'fannypack';
+import * as bumbag from 'bumbag';
+import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
+import { Markdown } from 'bumbag-addon-markdown';
+import { Box, Group, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const Actions = styled(fannypack.Box)`
+const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
   border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-left: none;
@@ -61,11 +61,11 @@ LiveCode.defaultProps = {
 
 export default function LiveCode(props: Props) {
   const { code, ...restProps } = props;
-  const { theme } = fannypack.useTheme();
-  const { colorMode } = fannypack.useColorMode();
+  const { theme } = bumbag.useTheme();
+  const { colorMode } = bumbag.useColorMode();
   const scope = React.useMemo(
     () => ({
-      ...fannypack,
+      ...bumbag,
       HighlightedCode,
       Markdown,
     }),
@@ -83,7 +83,7 @@ export default function LiveCode(props: Props) {
   const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
-    <fannypack.Box marginBottom="major-4">
+    <bumbag.Box marginBottom="major-4">
       <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
         <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="fullHD">
           <LiveEditor colorMode={colorMode} />
@@ -93,6 +93,6 @@ export default function LiveCode(props: Props) {
         </Group>
         <LiveError />
       </LiveProvider>
-    </fannypack.Box>
+    </bumbag.Box>
   );
 }

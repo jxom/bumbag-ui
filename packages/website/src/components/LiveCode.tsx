@@ -5,14 +5,14 @@ import {
   LiveError as _LiveError,
   LivePreview as _LivePreview,
 } from 'react-live';
-import * as fannypack from 'fannypack';
-import { HighlightedCode, highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
-import { Markdown } from 'fannypack-addon-markdown';
-import { palette, space, styled } from 'fannypack';
+import * as bumbag from 'bumbag';
+import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
+import { Markdown } from 'bumbag-addon-markdown';
+import { palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const Actions = styled(fannypack.Box)`
+const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
   border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-top: none;
@@ -20,7 +20,7 @@ const Actions = styled(fannypack.Box)`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
-const CodeTabs = styled(fannypack.Box)`
+const CodeTabs = styled(bumbag.Box)`
   background-color: ${palette('background')};
   border: 1px solid ${palette('white800', { dark: 'gray700' })};
   border-bottom: none;
@@ -75,11 +75,11 @@ LiveCode.defaultProps = {
 
 export default function LiveCode(props: Props) {
   const { pre: Pre, fallback: Fallback, children, ...restProps } = props;
-  const { theme } = fannypack.useTheme();
-  const { colorMode } = fannypack.useColorMode();
+  const { theme } = bumbag.useTheme();
+  const { colorMode } = bumbag.useColorMode();
   const scope = React.useMemo(
     () => ({
-      ...fannypack,
+      ...bumbag,
       HighlightedCode,
       Markdown,
     }),
@@ -129,7 +129,7 @@ export default function LiveCode(props: Props) {
   const codeTheme = highlightedCodeStyles.codeTheme({ theme }).dark;
 
   return (
-    <fannypack.Box marginBottom="major-4" marginTop="major-4">
+    <bumbag.Box marginBottom="major-4" marginTop="major-4">
       <LiveProvider
         code={code}
         scope={scope}
@@ -142,7 +142,7 @@ export default function LiveCode(props: Props) {
         {codeTabs.length > 1 && (
           <CodeTabs colorMode={colorMode}>
             {codeTabs.map((codeTab, i) => (
-              <fannypack.Button
+              <bumbag.Button
                 key={i}
                 onClick={() => setCurrentTab(codeTab)}
                 palette="primary"
@@ -151,24 +151,24 @@ export default function LiveCode(props: Props) {
                 size="small"
               >
                 {codeTab.tab}
-              </fannypack.Button>
+              </bumbag.Button>
             ))}
           </CodeTabs>
         )}
         <LiveEditor />
         <Actions colorMode={colorMode}>
           <CopyToClipboard text={code}>
-            <fannypack.Button palette="primary" variant="ghost" size="small">
+            <bumbag.Button palette="primary" variant="ghost" size="small">
               Copy
-            </fannypack.Button>
+            </bumbag.Button>
           </CopyToClipboard>
-          <fannypack.Button palette="primary" variant="ghost" size="small" onClick={handleClickPlayroom}>
+          <bumbag.Button palette="primary" variant="ghost" size="small" onClick={handleClickPlayroom}>
             Open in Playroom
-          </fannypack.Button>
+          </bumbag.Button>
         </Actions>
         <LiveError />
       </LiveProvider>
-    </fannypack.Box>
+    </bumbag.Box>
   );
 }
 

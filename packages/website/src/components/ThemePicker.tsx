@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useLocation, useNavigate } from '@reach/router';
-import { Box, Select, useTheme } from 'fannypack';
+import { Box, Select, useTheme } from 'bumbag';
 
 import { themeMap } from '../utils/theme';
 

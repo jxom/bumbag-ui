@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Icon, Hide, TopNav, Image, useTheme, useColorMode } from 'fannypack';
+import { Icon, Hide, TopNav, Image, useTheme, useColorMode } from 'bumbag';
 
 import ColorModePicker from '../ColorModePicker';
 
@@ -23,11 +23,11 @@ export default function Header(props) {
           Documentation
         </TopNav.Item>
         <Hide below="desktop">
-          <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
+          <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
             <Icon color="danger" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
           </TopNav.Item>
-          <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
+          <TopNav.Item href="https://github.com/jxom/bumbag" fontWeight="semibold">
             <Icon icon="solid-github" marginRight="major-1" />
             GitHub
           </TopNav.Item>

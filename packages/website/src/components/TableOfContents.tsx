@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Navigation, List, Link, Stack } from 'fannypack';
+import { Box, Navigation, List, Link, Stack } from 'bumbag';
 
 export default function TableOfContents(props: any) {
   const { toc, ...restProps } = props;

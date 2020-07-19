@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useLocation, useNavigate } from '@reach/router';
-import { Box, Button, Icon, useColorMode } from 'fannypack';
+import { Box, Button, Icon, useColorMode } from 'bumbag';
 
 export default function ColorModePicker(props) {
   const { colorMode, setColorMode } = useColorMode();

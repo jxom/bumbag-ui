@@ -6,14 +6,14 @@ path: /styling-components/
 
 # Styling components
 
-Fannypack comes with a `styled` function which allows you to create components that have styles attached to them.
+Bumbag comes with a `styled` function which allows you to create components that have styles attached to them.
 
 ## Creating a basic styled component
 
 To create a styled component, import the `styled` function and then invoke it with your desired component & template literal string containing your CSS:
 
 ```jsx
-import { Box, styled } from 'fannypack';
+import { Box, styled } from 'bumbag';
 
 const FancyBox = styled(Box)`
   background-color: pink;
@@ -31,7 +31,7 @@ function Example() {
 You can generate styles based on your props (and changes in props) by supplying a function (`${props => ...}`) inside your CSS:
 
 ```jsx
-import { Box, css, styled } from 'fannypack';
+import { Box, css, styled } from 'bumbag';
 
 const FancyBox = styled(Box)`
   background-color: ${props => props.palette};
@@ -53,10 +53,10 @@ function Example() {
 
 ## Generating styles based from the theme
 
-You can generate styles based off values in your [Fannypack global theme](/theming) by using the `theme` variable stored in the `props` object:
+You can generate styles based off values in your [Bumbag global theme](/theming) by using the `theme` variable stored in the `props` object:
 
 ```jsx
-import { Box, css, styled } from 'fannypack';
+import { Box, css, styled } from 'bumbag';
 
 const FancyBox = styled(Box)`
   background-color: ${props => props.theme.palette.primary};

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Props from 'pretty-proptypes';
-import { cssProps } from 'fannypack';
+import { cssProps } from 'bumbag';
 
 export default function PropsTypes(props) {
   const overrides = React.useMemo(() => {

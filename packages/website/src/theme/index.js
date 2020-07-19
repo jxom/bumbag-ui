@@ -1,4 +1,4 @@
-import { css } from 'fannypack';
+import { css } from 'bumbag';
 import { faAppleAlt } from '@fortawesome/free-solid-svg-icons/faAppleAlt';
 import { faUniversalAccess } from '@fortawesome/free-solid-svg-icons/faUniversalAccess';
 import { faFillDrip } from '@fortawesome/free-solid-svg-icons/faFillDrip';

@@ -8,14 +8,14 @@ path: /theming/
 
 ## Global theming
 
-Fannypack can be extensively themed to meet your requirements. You can either **override the default Fannypack theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
+Bumbag can be extensively themed to meet your requirements. You can either **override the default Bumbag theme** or **create your own custom theme** from scratch. If you like the default theme and want to keep it simple, we recommend you just override the default.
 
 ### Overriding the default global theme (recommended)
 
-The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Fannypack theme. The schema of the `theme` object can be seen [here](https://github.com/fannypackui/fannypack/blob/v5/packages/fannypack/src/types/theme.ts).
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/types/theme.ts).
 
 ```jsx
-import { Provider as FannypackProvider, css } from 'fannypack';
+import { Provider as BumbagProvider, css } from 'bumbag';
 
 const theme = {
   global: {
@@ -55,29 +55,29 @@ const theme = {
 }
 
 const App = () => (
-  <FannypackProvider theme={theme}>
+  <BumbagProvider theme={theme}>
     // ... your app
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
 ### Creating your own global theme (advanced)
 
-If you decide to not use the default Fannypack theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
+If you decide to not use the default Bumbag theme and roll out your own, just add the `isStandalone` flag to `<ThemeProvider>`.
 
 ```jsx
-import { Provider as FannypackProvider, defaultTheme } from 'fannypack';
+import { Provider as BumbagProvider, defaultTheme } from 'bumbag';
 
 const App = () => (
-  <FannypackProvider isStandalone theme={defaultTheme()}>
+  <BumbagProvider isStandalone theme={defaultTheme()}>
     // ... your app
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
 ## Component theming
 
-Fannypack also allows you to define themes on a component level. This can be done in two ways:
+Bumbag also allows you to define themes on a component level. This can be done in two ways:
 
 - Hoisting the component theme via the `applyTheme` function.
 - Applying the component theme via the `overrides` prop on the component.
@@ -87,7 +87,7 @@ Fannypack also allows you to define themes on a component level. This can be don
 You can apply the theme on a component level via the `applyTheme` utility function. This function accepts two parameters: the first being the **component**, and the second being the **component theme config**.
 
 ```jsx
-import { applyTheme } from 'fannypack';
+import { applyTheme } from 'bumbag';
 ```
 
 ```function-live noInline
@@ -108,7 +108,7 @@ const Card = applyTheme(Box, {
 function Example() {
   return (
     <Card variant="dope">
-      Welcome to Fannypack!
+      Welcome to Bumbag!
     </Card>
   )
 }
@@ -142,7 +142,7 @@ function Example() {
           }
         }}
       >
-        Welcome to Fannypack!
+        Welcome to Bumbag!
       </Box>
     </Provider>
   )

@@ -1,5 +1,5 @@
 import Theme from '../../components/Theme';
-import { Alert } from 'fannypack';
+import { Alert } from 'bumbag';
 
 # Alerts
 
@@ -10,7 +10,7 @@ If you are needing to display more descriptive, but important message to a user,
 ## Import
 
 ```jsx
-import { Alert } from 'fannypack'
+import { Alert } from 'bumbag'
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ import { Alert } from 'fannypack'
   showCloseButton
   onClickClose={() => alert('Closed!')}
 >
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 ```
 
@@ -31,10 +31,10 @@ You can set a title with the `title` prop.
 
 ```jsx-live
 <Alert title="Did you know?">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert title="Did you know?" isInline>
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 ```
 
@@ -44,7 +44,7 @@ An alert can take a type of `"info"`, `"success"`, `"warning"` or `"danger"`.
 
 ```jsx-live
 <Alert title="Did you know?" type="info">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert title="Action applied" type="success">
   Your action was applied successfully.
@@ -63,13 +63,13 @@ Alerts can have bordered accents.
 
 ```jsx-live
 <Alert accent>
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert accent="top">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert accent="bottom">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 ```
 
@@ -87,7 +87,7 @@ You can even [make your own Alert variant](/variants).
 
 ```jsx-live
 <Alert variant="bordered" title="Did you know?" type="info">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert variant="bordered" title="Action applied" type="success">
   Your action was applied successfully.
@@ -104,7 +104,7 @@ You can even [make your own Alert variant](/variants).
 
 ```jsx-live
 <Alert variant="tint" title="Did you know?" type="info">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert variant="tint" title="Action applied" type="success">
   Your action was applied successfully.
@@ -121,7 +121,7 @@ You can even [make your own Alert variant](/variants).
 
 ```jsx-live
 <Alert variant="fill" title="Did you know?" type="info">
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Alert>
 <Alert variant="fill" title="Action applied" type="success">
   Your action was applied successfully.
@@ -636,5 +636,5 @@ The `<Alert>` component follows the [WAI ARIA Alert Pattern](https://www.w3.org/
   showCloseButton
   accent
   overrides={['Alert.css.root', 'Alert.Content.css.root', 'Alert.Title.css.root', 'Alert.Description.css.root', 'Alert.IconWrapper.css.root', 'Alert.CloseButton.css.root']}>
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Theme>

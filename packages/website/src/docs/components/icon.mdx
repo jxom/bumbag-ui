@@ -1,34 +1,34 @@
 import Theme from '../../components/Theme';
-import { Icon } from 'fannypack';
+import { Icon } from 'bumbag';
 
 # Icon
 
-Fannypack aims to have a **low bundle size** & be **icon agnostic**, hence it does not come with a default icon set (apart from status icons).
+Bumbag aims to have a **low bundle size** & be **icon agnostic**, hence it does not come with a default icon set (apart from status icons).
 
 You will need to bring your own icon set. Below is a guide & example to import the **Free Font Awesome** icon set.
 
 There are two ways to import icons for the `<Icon>` component. You can either:
 
-- [Inject the icons via the Fannypack Theme](#usage-via-fannypack-theme) **(recommended)**, or
+- [Inject the icons via the Bumbag Theme](#usage-via-bumbag-theme) **(recommended)**, or
 - [Import the icon directly](#usage-via-direct-import), or
 - [Use SVG paths](#usage-via-svg-paths)
 
 ## Import
 
 ```js
-import { Icon } from 'fannypack';
+import { Icon } from 'bumbag';
 ```
 
-## Usage via Fannypack Theme
+## Usage via Bumbag Theme
 
-**Note**: Fannypack currently only supports parsing of **Font Awesome** icons. If you want to use another icon set, you will need to follow the [usage via SVG paths](#usage-via-svg-paths) instructions. Want to add a parser or an icon set? [Open a Pull Request](https://github.com/fannypackui/fannypack/pulls).
+**Note**: Bumbag currently only supports parsing of **Font Awesome** icons. If you want to use another icon set, you will need to follow the [usage via SVG paths](#usage-via-svg-paths) instructions. Want to add a parser or an icon set? [Open a Pull Request](https://github.com/bumbagui/bumbag/pulls).
 
-**First**, you will need to inject the icons your app will use into the [Fannypack Theme](/styling#theming)
+**First**, you will need to inject the icons your app will use into the [Bumbag Theme](/styling#theming)
 
 This example uses [@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons) and [@fortawesome/free-regular-svg-icons](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons).
 
 ```jsx
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
@@ -49,7 +49,7 @@ const theme = {
   }
 };
 
-export default () => <FannypackProvider theme={theme}><App/></FannypackProvider>
+export default () => <BumbagProvider theme={theme}><App/></BumbagProvider>
 ```
 
 **Then**, you can use your icons like so:
@@ -70,16 +70,16 @@ import { faPen } from '@fortawesome/free-solid-svg-icons'
 
 ## Usage with SVG paths
 
-Currently, Fannypack only supports parsing of **Font Awesome** icons, but if you want to use another icon set, you will need to use SVG paths.
+Currently, Bumbag only supports parsing of **Font Awesome** icons, but if you want to use another icon set, you will need to use SVG paths.
 
-You can supply your SVG paths through the **Fannypack Theme** or **on the icon directly**.
+You can supply your SVG paths through the **Bumbag Theme** or **on the icon directly**.
 
-#### Via the Fannypack Theme
+#### Via the Bumbag Theme
 
 Here is an example for a calendar icon:
 
 ```jsx
-import { ThemeProvider } from 'fannypack';
+import { ThemeProvider } from 'bumbag';
 import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
@@ -281,7 +281,7 @@ Size of the icon.
 
 <Box marginBottom="major-2"><Code fontWeight="semibold">Icon.iconSets</Code></Box>
 
-<Paragraph>The icons to inject into Fannypack.</Paragraph>
+<Paragraph>The icons to inject into Bumbag.</Paragraph>
 
 **Schema**
 

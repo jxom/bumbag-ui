@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Provider } from 'fannypack';
+import { Box, Provider } from 'bumbag';
 
 export default function Frame({ children, frameWindow }) { // eslint-disable-line
   return (

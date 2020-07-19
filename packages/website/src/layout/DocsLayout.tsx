@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
-import * as fannypack from 'fannypack';
+import * as bumbag from 'bumbag';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
@@ -18,7 +18,7 @@ type Props = {
   path: string;
 };
 
-const TableOfContents = fannypack.styled(_TableOfContents)`
+const TableOfContents = bumbag.styled(_TableOfContents)`
   position: fixed;
   top: 100px;
   right: 1rem;
@@ -26,10 +26,10 @@ const TableOfContents = fannypack.styled(_TableOfContents)`
   overflow: auto;
   max-height: calc(100vh - 200px);
   width: 250px;
-  border-left: 1px solid ${fannypack.palette('white800')};
+  border-left: 1px solid ${bumbag.palette('white800')};
   padding-left: 1rem;
 
-  @media screen and (max-width: ${(props) => fannypack.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
+  @media screen and (max-width: ${(props) => bumbag.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
     opacity: 0;
   }
 `;
@@ -37,16 +37,16 @@ const TableOfContents = fannypack.styled(_TableOfContents)`
 export default function Docs(props: Props) {
   const { pageContext, path } = props;
 
-  const { colorMode } = fannypack.useColorMode();
+  const { colorMode } = bumbag.useColorMode();
 
   //////////////////////////////////////////////////////////////////////
 
   const components = React.useMemo(
     () => ({
-      ...fannypack,
-      a: (props: any) => <fannypack.Link {...props} />,
+      ...bumbag,
+      a: (props: any) => <bumbag.Link {...props} />,
       blockquote: (props: any) => (
-        <fannypack.Blockquote
+        <bumbag.Blockquote
           backgroundColor={colorMode === 'dark' ? 'primaryShade' : 'primaryTint'}
           borderColor="primary"
           marginTop="major-2"
@@ -54,27 +54,27 @@ export default function Docs(props: Props) {
           {...props}
         />
       ),
-      code: (props: any) => <fannypack.Code {...props} />,
-      inlineCode: (props: any) => <fannypack.Code {...props} palette="primary" />,
-      h1: (props: any) => <fannypack.Heading marginBottom="major-4" {...props} />,
+      code: (props: any) => <bumbag.Code {...props} />,
+      inlineCode: (props: any) => <bumbag.Code {...props} palette="primary" />,
+      h1: (props: any) => <bumbag.Heading marginBottom="major-4" {...props} />,
       h2: (props: any) => (
-        <fannypack.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
+        <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
       h3: (props: any) => (
-        <fannypack.Heading fontSize="400" use="h3" marginTop="major-4" marginBottom="major-3" {...props} />
+        <bumbag.Heading fontSize="400" use="h3" marginTop="major-4" marginBottom="major-3" {...props} />
       ),
       h4: (props: any) => (
-        <fannypack.Heading fontSize="300" use="h4" marginTop="major-4" marginBottom="major-2" {...props} />
+        <bumbag.Heading fontSize="300" use="h4" marginTop="major-4" marginBottom="major-2" {...props} />
       ),
-      h5: (props: any) => <fannypack.Heading use="h5" marginTop="major-4" marginBottom="major-2" {...props} />,
-      h6: (props: any) => <fannypack.Heading use="h6" marginTop="major-4" marginBottom="major-2" {...props} />,
+      h5: (props: any) => <bumbag.Heading use="h5" marginTop="major-4" marginBottom="major-2" {...props} />,
+      h6: (props: any) => <bumbag.Heading use="h6" marginTop="major-4" marginBottom="major-2" {...props} />,
       p: (props: any) => (
-        <fannypack.Paragraph
+        <bumbag.Paragraph
           {...props}
           overrides={{
             Paragraph: {
               css: {
-                root: fannypack.css`
+                root: bumbag.css`
                   &:not(:last-child) {
                     margin-bottom: 1rem;
                   }
@@ -84,14 +84,14 @@ export default function Docs(props: Props) {
           }}
         />
       ),
-      strong: (props: any) => <fannypack.Text fontWeight="semibold" {...props} />,
+      strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />,
-      table: (props: any) => <fannypack.Table marginBottom="major-4" marginTop="major-4" {...props} />,
-      th: (props: any) => <fannypack.Table.HeadCell {...props} />,
-      tr: (props: any) => <fannypack.Table.Row {...props} />,
-      td: (props: any) => <fannypack.Table.Cell {...props} />,
-      tbody: (props: any) => <fannypack.Table.Body {...props} />,
-      thead: (props: any) => <fannypack.Table.Head {...props} />,
+      table: (props: any) => <bumbag.Table marginBottom="major-4" marginTop="major-4" {...props} />,
+      th: (props: any) => <bumbag.Table.HeadCell {...props} />,
+      tr: (props: any) => <bumbag.Table.Row {...props} />,
+      td: (props: any) => <bumbag.Table.Cell {...props} />,
+      tbody: (props: any) => <bumbag.Table.Body {...props} />,
+      thead: (props: any) => <bumbag.Table.Head {...props} />,
     }),
     [colorMode]
   );
@@ -101,14 +101,14 @@ export default function Docs(props: Props) {
   return (
     <React.Fragment>
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
-      <fannypack.PageWithHeader sticky header={<Header />}>
-        <fannypack.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left">
+      <bumbag.PageWithHeader sticky header={<Header />}>
+        <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left">
           <TableOfContents
             breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
             isFluid={pageContext.frontmatter.isFluid}
             toc={pageContext.tableOfContents}
           />
-          <fannypack.PageContent
+          <bumbag.PageContent
             isLayout={Boolean(pageContext.frontmatter.isFluid)}
             isFluid={Boolean(pageContext.frontmatter.isFluid)}
             breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
@@ -116,12 +116,12 @@ export default function Docs(props: Props) {
             <MDXProvider components={components}>
               <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
             </MDXProvider>
-          </fannypack.PageContent>
-          <fannypack.PageContent>
+          </bumbag.PageContent>
+          <bumbag.PageContent>
             <Footer />
-          </fannypack.PageContent>
-        </fannypack.PageWithSidebar>
-      </fannypack.PageWithHeader>
+          </bumbag.PageContent>
+        </bumbag.PageWithSidebar>
+      </bumbag.PageWithHeader>
     </React.Fragment>
   );
 }

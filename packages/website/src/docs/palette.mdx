@@ -4,17 +4,17 @@ title: Palette
 path: /palette/
 ---
 
-import { Box, Flex } from 'fannypack';
+import { Box, Flex } from 'bumbag';
 import PaletteColor from '../components/PaletteColor';
 
 # Palette
 
 ## Accessing the palette
 
-Fannypack exports a `palette` utility function which you can use to access palette colors:
+Bumbag exports a `palette` utility function which you can use to access palette colors:
 
 ```jsx
-import { Button, palette, styled } from 'fannypack';
+import { Button, palette, styled } from 'bumbag';
 
 const PrimaryButton = styled(Button)`
   color: ${palette('primary')};
@@ -26,21 +26,21 @@ const PrimaryButton = styled(Button)`
 Any CSS color attribute (e.g. `color`, `borderColor`, etc) can take a color from the palette:
 
 ```jsx
-import { Text } from 'fannypack';
+import { Text } from 'bumbag';
 
 <Text color="primary">I am a primary text</Text>
 ```
 
 ## Modifying the palette
 
-You can modify the palette by [altering the Fannypack theme](/theming).
+You can modify the palette by [altering the Bumbag theme](/theming).
 
 You can use tools such as [Coolors](https://coolors.co/) or [Smart Swatch](https://smart-swatch.netlify.app/) to generate a decent accessible palette.
 
 #### Example
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   palette: {
@@ -58,7 +58,7 @@ const theme = {
 
 ## Default palette
 
-Fannypack provides an accessible default palette to get you up and running, hopefully you like it. If not, feel free to customize it.
+Bumbag provides an accessible default palette to get you up and running, hopefully you like it. If not, feel free to customize it.
 
 ### Defaults
 
@@ -347,7 +347,7 @@ const theme = {
 ### Example
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   palette: {

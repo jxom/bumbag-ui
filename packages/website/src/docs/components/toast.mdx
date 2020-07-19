@@ -1,12 +1,12 @@
 import Theme from '../../components/Theme';
-import { Toast } from 'fannypack';
+import { Toast } from 'bumbag';
 
 # Toasts
 
 ## Import
 
 ```jsx
-import { ToastManager, useToast } from 'fannypack'
+import { ToastManager, useToast } from 'bumbag'
 ```
 
 ## Setup
@@ -16,7 +16,7 @@ To get started with rendering toasts to your app, you will need to put the `<Toa
 The `ToastManager` component is essentially an overlay to render the toasts.
 
 ```jsx
-import { Provider, ToastManager } from 'fannypack';
+import { Provider, ToastManager } from 'bumbag';
 
 const App = () => (
   <Provider theme={theme}>
@@ -41,7 +41,7 @@ function Example() {
       onClick={() =>
         toasts.add({
           title: 'Did you know?',
-          message: 'Fannypack is a UI Kit for React'
+          message: 'Bumbag is a UI Kit for React'
         })
       }
     >
@@ -64,7 +64,7 @@ function Example() {
       onClick={() =>
         toasts.success({
           title: 'Did you know?',
-          message: 'Fannypack is a UI Kit for React'
+          message: 'Bumbag is a UI Kit for React'
         })
       }
     >
@@ -85,7 +85,7 @@ function Example() {
       onClick={() =>
         toasts.danger({
           title: 'Did you know?',
-          message: 'Fannypack is a UI Kit for React'
+          message: 'Bumbag is a UI Kit for React'
         })
       }
     >
@@ -106,7 +106,7 @@ function Example() {
       onClick={() =>
         toasts.warning({
           title: 'Did you know?',
-          message: 'Fannypack is a UI Kit for React'
+          message: 'Bumbag is a UI Kit for React'
         })
       }
     >
@@ -127,7 +127,7 @@ function Example() {
       onClick={() =>
         toasts.info({
           title: 'Did you know?',
-          message: 'Fannypack is a UI Kit for React'
+          message: 'Bumbag is a UI Kit for React'
         })
       }
     >
@@ -144,7 +144,7 @@ You can customise the placement of the toasts by using the `placement` prop on `
 > `placement` is set to `"top-end"` by default.
 
 ```jsx
-import { ToastManager } from 'fannypack';
+import { ToastManager } from 'bumbag';
 
 const App = () => (
   <ToastManager placement="bottom" />
@@ -153,10 +153,10 @@ const App = () => (
 
 ### Stacked toasts
 
-By default, toasts in Fannypack are stacked, meaning that you can display multiple toasts at the one time. However, you have the ability to disable this using the `isStacked` prop on `<ToastManager>`.
+By default, toasts in Bumbag are stacked, meaning that you can display multiple toasts at the one time. However, you have the ability to disable this using the `isStacked` prop on `<ToastManager>`.
 
 ```jsx
-import { ToastManager } from 'fannypack';
+import { ToastManager } from 'bumbag';
 
 const App = () => (
   <ToastManager isStacked={false} />
@@ -168,7 +168,7 @@ const App = () => (
 You can override the `Toast` component props using the `Toast.defaultProps` theme variable. This variable accepts an object of the [`<Toast>` props](#props).
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   Toast: {
@@ -195,7 +195,7 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.info({ accent: 'bottom', hasIcon: false, title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.info({ accent: 'bottom', hasIcon: false, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
       }
     >
       Add toast
@@ -211,7 +211,7 @@ By default, the toast timeout is 5 seconds (5000ms). You can change this via the
 > To disable the timeout, set `timeout` to `0`.
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   Toast: {
@@ -235,7 +235,7 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.info({ timeout: 2000, title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.info({ timeout: 2000, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
       }
     >
       Add toast
@@ -247,7 +247,7 @@ function Example() {
 ### Disable the countdown bar
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   Toast: {
@@ -271,7 +271,7 @@ function Example() {
   return (
     <Button
       onClick={() =>
-        toasts.info({ showCountdown: false, title: 'Did you know?', message: 'Fannypack is a UI Kit for React' })
+        toasts.info({ showCountdown: false, title: 'Did you know?', message: 'Bumbag is a UI Kit for React' })
       }
     >
       Add toast
@@ -578,5 +578,5 @@ function Example() {
   component={Toast}
   title="Did you know?"
   overrides={['Toast.css.root', 'Toast.Content.css.root', 'Toast.Title.css.root', 'Toast.Description.css.root', 'Toast.IconWrapper.css.root', 'Toast.CloseButton.css.root']}>
-  Fannypack is a React UI Kit.
+  Bumbag is a React UI Kit.
 </Theme>

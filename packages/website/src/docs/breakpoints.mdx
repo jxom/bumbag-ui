@@ -6,7 +6,7 @@ path: /breakpoints/
 
 # Breakpoints
 
-Fannypack comes with 5 defined breakpoints & their ranges:
+Bumbag comes with 5 defined breakpoints & their ranges:
 
 | Breakpoint        | Width           |
 | ------------- |-------------|
@@ -28,7 +28,7 @@ Fannypack comes with 5 defined breakpoints & their ranges:
 You are able to add your own breakpoints to the [global theme](/theming):
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const theme = {
   breakpoints: {
@@ -41,14 +41,14 @@ const theme = {
 
 ## Using breakpoints with `styled`
 
-Fannypack provides a `breakpoint` utility to use with styled components. This helper function allows you to specify CSS for a given breakpoint and will create a media query.
+Bumbag provides a `breakpoint` utility to use with styled components. This helper function allows you to specify CSS for a given breakpoint and will create a media query.
 
 The first parameter is the breakpoint (e.g. `max-tablet`).
 
 The second parameter is the CSS (e.g. `font-size: 14px;`).
 
 ```jsx
-import { Box, css, breakpoint, styled } from 'fannypack';
+import { Box, css, breakpoint, styled } from 'bumbag';
 
 const FancyBox = styled(Box)`
   color: red;

@@ -6,9 +6,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 const SEO = (props: any) => {
   const { pathname } = useLocation();
   const seo = {
-    title: props.title || 'Fannypack',
+    title: props.title || 'Bumbag',
     titleTemplate:
-      pathname === '/' ? `%s | Rapidly build accessible & themeable React applications with ease` : '%s | Fannypack',
+      pathname === '/' ? `%s | Rapidly build accessible & themeable React applications with ease` : '%s | Bumbag',
   };
   return (
     <Helmet title={seo.title} titleTemplate={seo.titleTemplate}>

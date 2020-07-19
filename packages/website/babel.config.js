@@ -17,10 +17,10 @@ module.exports = {
       'babel-plugin-module-resolver',
       {
         alias: {
-          fannypack: '../fannypack/src',
-          'fannypack-addon-highlighted-code': '../fannypack-addon-highlighted-code/src',
-          'fannypack-addon-markdown': '../fannypack-addon-markdown/src',
-          'fannypack-theme-medipass': '../fannypack-theme-medipass/src',
+          bumbag: '../bumbag/src',
+          'bumbag-addon-highlighted-code': '../bumbag-addon-highlighted-code/src',
+          'bumbag-addon-markdown': '../bumbag-addon-markdown/src',
+          'bumbag-theme-medipass': '../bumbag-theme-medipass/src',
         },
       },
     ],

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'fannypack';
+import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'bumbag';
 
 import ColorModePicker from './ColorModePicker';
 
@@ -19,11 +19,11 @@ export default function Header(props) {
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
-          <TopNav.Item href="https://opencollective.com/fannypack" fontWeight="semibold">
+          <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
           </TopNav.Item>
-          <TopNav.Item href="https://github.com/jxom/fannypack" fontWeight="semibold">
+          <TopNav.Item href="https://github.com/jxom/bumbag" fontWeight="semibold">
             <Icon icon="solid-github" marginRight="major-1" />
             GitHub
           </TopNav.Item>

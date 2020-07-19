@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Fannypack',
-        short_name: 'Fannypack',
+        name: 'Bumbag',
+        short_name: 'Bumbag',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',

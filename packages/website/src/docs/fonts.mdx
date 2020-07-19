@@ -8,7 +8,7 @@ path: /fonts/
 
 ## Font families
 
-By default, Fannypack uses the following fonts as it's default:
+By default, Bumbag uses the following fonts as it's default:
 
 #### Text & Headings
 
@@ -22,10 +22,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
 ```
 
-You can change the font families through the Fannypack theme:
+You can change the font families through the Bumbag theme:
 
 ```jsx
-import { css, Provider } from 'fannypack';
+import { css, Provider } from 'bumbag';
 
 const theme = {
   fonts: {
@@ -47,7 +47,7 @@ export default () => (
 You can access the font families through styled components:
 
 ```jsx
-import { Text, font, styled } from 'fannypack';
+import { Text, font, styled } from 'bumbag';
 
 const MonoText = styled(Text)`
   font-family: ${font('mono')};
@@ -64,12 +64,12 @@ or, you can use CSS props:
 
 ## External fonts
 
-Fannypack supports importing third-party fonts (e.g. Google Fonts). [Click here to see a list of Google Fonts](https://fonts.google.com/).
+Bumbag supports importing third-party fonts (e.g. Google Fonts). [Click here to see a list of Google Fonts](https://fonts.google.com/).
 
 You can do this via the `fonts.importUrls` attribute:
 
 ```jsx
-import { css, Provider } from 'fannypack';
+import { css, Provider } from 'bumbag';
 
 const theme = {
   fonts: {
@@ -87,7 +87,7 @@ export default () => (
 
 ## Font weights
 
-Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
+Bumbag currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
 
 ```jsx-live
 <Text fontWeight="normal">Normal text</Text><br/>
@@ -100,7 +100,7 @@ Fannypack currently has three font weights: `normal`, `semibold` and `bold`. You
 You can access the font weights through styled components:
 
 ```jsx
-import { Text, fontWeight, styled } from 'fannypack';
+import { Text, fontWeight, styled } from 'bumbag';
 
 const BoldText = styled(Text)`
   font-weight: ${fontWeight('bold')};
@@ -117,7 +117,7 @@ or, you can use CSS props:
 
 ## Font sizes
 
-Fannypack uses a scale from `100`-`900` for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
+Bumbag uses a scale from `100`-`900` for font sizes. We use a numeric scale, instead of a contextual scale (like `small`, `medium`, etc) to maximize flexibility so you can easily add sizes inbetween if you need.
 
 `200` (16px) is the base font size.
 
@@ -139,7 +139,7 @@ Fannypack uses a scale from `100`-`900` for font sizes. We use a numeric scale, 
 You can access the font sizes through styled components:
 
 ```jsx
-import { Text, fontSize, styled } from 'fannypack';
+import { Text, fontSize, styled } from 'bumbag';
 
 const LargeText = styled(Text)`
   font-size: ${fontSize('400')};

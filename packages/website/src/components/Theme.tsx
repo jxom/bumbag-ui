@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box, Button, Code, Disclosure, Text } from 'fannypack';
-import HighlightedCode, { highlightedCodeStyles } from 'fannypack-addon-highlighted-code';
+import { Box, Button, Code, Disclosure, Text } from 'bumbag';
+import HighlightedCode, { highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import _set from 'lodash/set';
 
 export default function Theme(props) {
@@ -17,7 +17,7 @@ export default function Theme(props) {
 
     let themeObject = {};
     _set(themeObject, key, { background: '#ffe3a4' });
-    const themeExample = `import { ThemeProvider } from 'fannypack';
+    const themeExample = `import { ThemeProvider } from 'bumbag';
 
 const theme = ${JSON.stringify(themeObject, null, 2).replace(/\"([^(\")"]+)\":/g, '$1:')}
 

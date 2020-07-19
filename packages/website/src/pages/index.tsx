@@ -17,8 +17,8 @@ import {
   css,
   styled,
   useColorMode
-} from 'fannypack';
-import { HighlightedCode } from 'fannypack-addon-highlighted-code';
+} from 'bumbag';
+import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 
 import LandingLayout from '../layout/LandingLayout';
 import LiveCode from '../components/Landing/LiveCode';
@@ -49,7 +49,7 @@ export default function Index() {
             applications with ease
           </Heading>
           <Paragraph fontSize={{ default: '400', mobile: '300' }} color="text100" textAlign="center">
-            Fannypack is a friendly React UI Kit suitable for MVPs or large-scale applications.
+            Bumbag is a friendly React UI Kit suitable for MVPs or large-scale applications.
           </Paragraph>
           <Set verticalBelow="tablet" isFilled spacing="major-2" width={{ mobile: '100%' }}>
             <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary">
@@ -153,9 +153,9 @@ export default function Index() {
   }
 }
 
-<FannypackProvider theme={theme}>
+<BumbagProvider theme={theme}>
   ...
-</FannypackProvider>`}
+</BumbagProvider>`}
             />
           </Columns.Column>
           <Columns.Column spread={6} display="flex" alignItems="center">

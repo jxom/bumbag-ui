@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, PageContent, PageWithHeader, useColorMode } from 'fannypack';
+import { Container, PageContent, PageWithHeader, useColorMode } from 'bumbag';
 
 import SEO from '../components/SEO';
 import Header from '../components/Landing/Header';

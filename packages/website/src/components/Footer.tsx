@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Link, Text } from 'fannypack';
+import { Box, Link, Text } from 'bumbag';
 
 export default function Footer(props) {
   return (

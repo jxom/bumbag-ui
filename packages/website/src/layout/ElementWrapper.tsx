@@ -2,7 +2,7 @@ import * as React from 'react';
 import _merge from 'lodash/merge';
 import queryString from 'query-string';
 
-import { Provider, ToastManager } from 'fannypack';
+import { Provider, ToastManager } from 'bumbag';
 import defaultTheme from '../theme';
 import { themeMap } from '../utils/theme';
 

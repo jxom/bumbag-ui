@@ -6,10 +6,10 @@ path: /global-styles/
 
 # Global styles
 
-To add global styles to Fannypack, you will need to inject them in the Fannypack theme:
+To add global styles to Bumbag, you will need to inject them in the Bumbag theme:
 
 ```jsx
-import { Provider as FannypackProvider, css } from 'fannypack';
+import { Provider as BumbagProvider, css } from 'bumbag';
 
 const theme = {
   global: {
@@ -27,9 +27,9 @@ const theme = {
 }
 
 export default () => (
-  <FannypackProvider theme={theme}>
+  <BumbagProvider theme={theme}>
     {/* your app... */}
-  </FannypackProvider>
+  </BumbagProvider>
 )
 ```
 

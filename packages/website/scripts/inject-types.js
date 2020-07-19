@@ -330,9 +330,9 @@ function extractTypes(config) {
 
 extractTypes({
   libPaths: [
-    path.join(__dirname, '../../fannypack'),
-    path.join(__dirname, '../../fannypack-addon-highlighted-code'),
-    path.join(__dirname, '../../fannypack-addon-markdown'),
+    path.join(__dirname, '../../bumbag'),
+    path.join(__dirname, '../../bumbag-addon-highlighted-code'),
+    path.join(__dirname, '../../bumbag-addon-markdown'),
   ],
   docsPath: path.join(__dirname, '../src/'),
 });

@@ -6,11 +6,11 @@ path: /composition/
 
 # Composition
 
-Fannypack allows you to flexibly build your own components on top of the Fannypack components using a set of composition techniques.
+Bumbag allows you to flexibly build your own components on top of the Bumbag components using a set of composition techniques.
 
 ## `use` prop
 
-You can pass a component to the `use` prop on any Fannypack component. This can be useful when you want to use a different component but still want to preserve the styling.
+You can pass a component to the `use` prop on any Bumbag component. This can be useful when you want to use a different component but still want to preserve the styling.
 
 A common case could be rendering a link as a button:
 
@@ -26,7 +26,7 @@ You can even pass your own components to `use`:
 
 ## Hooks
 
-You can also use hooks to leverage Fannypack's components. Every Fannypack component comes with a `useProps` hook.
+You can also use hooks to leverage Bumbag's components. Every Bumbag component comes with a `useProps` hook.
 
 The first and only parameter to `useProps` are the props for the component.
 
@@ -43,7 +43,7 @@ function Example() {
 
 ## Render props
 
-As an alternative to the `useProps` hook, every Fannypack component also accepts children as a function (render props).
+As an alternative to the `useProps` hook, every Bumbag component also accepts children as a function (render props).
 
 ```jsx-live
 <Button palette="primary">

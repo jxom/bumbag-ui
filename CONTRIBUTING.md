@@ -3,9 +3,9 @@
 - [Contents](#contents)
 - [Developing](#developing)
 - [Commands](#commands)
-- [Getting Fannypack set up on your machine](#getting-fannypack-set-up-on-your-machine)
+- [Getting Bumbag set up on your machine](#getting-bumbag-set-up-on-your-machine)
 - [Guide to developing a new component](#guide-to-developing-a-new-component)
-  - [Fannypack library (`packages/fannypack`)](#fannypack-library-packagesfannypack)
+  - [Bumbag library (`packages/bumbag`)](#bumbag-library-packagesbumbag)
   - [Website (`packages/website`)](#website-packageswebsite)
 - [Pushing your changes and creating a pull request](#pushing-your-changes-and-creating-a-pull-request)
 
@@ -31,21 +31,21 @@ yarn docs
 - `yarn lint:fix` - Fixes lint issues
 - `yarn test` - Runs type-check, linter & tests
 - `yarn docs` - Runs component documentation on a local development server.
-- `yarn develop` - Compile components & listen for changes (only use this for testing Fannypack consumer apps)
+- `yarn develop` - Compile components & listen for changes (only use this for testing Bumbag consumer apps)
 
-## Getting Fannypack set up on your machine
+## Getting Bumbag set up on your machine
 
-To get Fannypack up and running on your machine, follow these steps:
+To get Bumbag up and running on your machine, follow these steps:
 
 1. Fork this repository
 
 > Click on 'Fork' in the top right hand corner.
 
-2. Clone your newly created forked Fannypack repository onto your machine
+2. Clone your newly created forked Bumbag repository onto your machine
 
-> Run `git clone git@github.com:<your-username>/fannypack.git` (SSH) or `git clone https://github.com/<your-username>/fannypack.git` (HTTPS) in your terminal
+> Run `git clone git@github.com:<your-username>/bumbag.git` (SSH) or `git clone https://github.com/<your-username>/bumbag.git` (HTTPS) in your terminal
 
-3. Go to the `fannypack` folder and install the dependencies
+3. Go to the `bumbag` folder and install the dependencies
 
 > Run `yarn`
 
@@ -59,13 +59,13 @@ To get Fannypack up and running on your machine, follow these steps:
 
   > `git checkout -b add-my-compoenent`
 
-The Fannypack repository is set up as [a "monorepo"]() consisting of two main packages: the **Fannypack library** (`packages/fannypack`) and the **website** (`packages/website`). When creating or updating a component, you will have to make changes in both these packages.
+The Bumbag repository is set up as [a "monorepo"]() consisting of two main packages: the **Bumbag library** (`packages/bumbag`) and the **website** (`packages/website`). When creating or updating a component, you will have to make changes in both these packages.
 
-The list below is a guide (or checklist) to creating a new Fannypack component. You can reference this list as well as referencing existing components.
+The list below is a guide (or checklist) to creating a new Bumbag component. You can reference this list as well as referencing existing components.
 
-### Fannypack library (`packages/fannypack`)
+### Bumbag library (`packages/bumbag`)
 
-- A **component folder** (e.g. `packages/fannypack/src/MyComponent/`) which consists of:
+- A **component folder** (e.g. `packages/bumbag/src/MyComponent/`) which consists of:
   - The component's `.tsx` file (e.g. `MyComponent.tsx`).
   - A `index.ts` file that exports the component and it's child components (if it has any).
   - A `styles.ts` file that manages the component's styling (CSS-in-JS via emotion).
@@ -87,7 +87,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
     };
     ```
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/v5/packages/fannypack/src/Button/Button.tsx#L9)
+  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L9)
 
   Ensure **Typescript prop types** are exported:
 
@@ -97,7 +97,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
     export type ComponentProps = ButtonProps & LocalComponentProps;
   ```
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/v5/packages/fannypack/src/Button/Button.tsx#L25)
+  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L25)
 
   Ensure the component has a `useProps` function to get it's HTML props.
 
@@ -106,7 +106,7 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
   - and the `useProps` hook & appropriate `defaultProps` are attached to the component,
   - and the component has a `themeKey`.
 
-  [A realistic example](https://github.com/fannypackui/fannypack/blob/v5/packages/fannypack/src/Button/Button.tsx#L40)
+  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L40)
 
 
 - The **component's `styles.ts`**
@@ -154,9 +154,9 @@ The list below is a guide (or checklist) to creating a new Fannypack component. 
 
   Ensure that the component is tested via the [WAVE accessibility plugin](https://wave.webaim.org/extension/)
 
-- Component is exported in [`src/index.ts`](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/index.ts)
+- Component is exported in [`src/index.ts`](https://github.com/bumbagui/bumbag/blob/master/packages/bumbag/src/index.ts)
 
-- Component's theme config is added to [`src/types/theme.ts`](https://github.com/fannypackui/fannypack/blob/master/packages/fannypack/src/types/theme.ts)
+- Component's theme config is added to [`src/types/theme.ts`](https://github.com/bumbagui/bumbag/blob/master/packages/bumbag/src/types/theme.ts)
 
 ### Website (`packages/website`)
 
@@ -175,8 +175,8 @@ Once you are happy with your new component, create a pull request by doing the f
 
   > `git push origin add-my-component`
 
-2. Head to the Fannypack repository, and open a pull request
+2. Head to the Bumbag repository, and open a pull request
 
-  > Or enter this in your address bar: `https://github.com/fannypackui/fannypack/compare/master...<your-username>:<branch>`
+  > Or enter this in your address bar: `https://github.com/bumbagui/bumbag/compare/master...<your-username>:<branch>`
 
 

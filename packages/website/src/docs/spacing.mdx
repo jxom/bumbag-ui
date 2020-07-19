@@ -4,11 +4,11 @@ title: Spacing
 path: /spacing/
 ---
 
-import { Code, Table } from 'fannypack';
+import { Code, Table } from 'bumbag';
 
 # Spacing
 
-Fannypack uses two types of scales for its spacing system: the **8px major scale** and the **4px minor scale**.
+Bumbag uses two types of scales for its spacing system: the **8px major scale** and the **4px minor scale**.
 
 You can either use the scales **directly**, or use a **pre-defined set** of scales (e.g. `sm`, `md`, `lg`).
 
@@ -18,7 +18,7 @@ You can either use the scales **directly**, or use a **pre-defined set** of scal
 
 The **8px major scale** is most commonly used for positional spacing. Like **margins & paddings** between components on a layout.
 
-Fannypack also exports a utility function called `space` to help you with calculating the scale values.
+Bumbag also exports a utility function called `space` to help you with calculating the scale values.
 
 > Note: It is recommended to try stick to the 8px scale unless you need more precision. In that case, use the **4px minor scale**.
 
@@ -86,7 +86,7 @@ Fannypack also exports a utility function called `space` to help you with calcul
 #### Usage via styled components
 
 ```jsx
-import { Button, space, styled } from 'fannypack';
+import { Button, space, styled } from 'bumbag';
 
 const SaveButton = styled(Button)`
   margin-top: ${space(2, 'major')}rem;
@@ -155,7 +155,7 @@ The **4px minor scale** is most commonly used for precise spacing (**margins & p
 #### Usage via styled components
 
 ```jsx
-import { Button, space, styled } from 'fannypack';
+import { Button, space, styled } from 'bumbag';
 
 const SaveButton = styled(Button)`
   padding: ${space(2, 'minor')}rem;
@@ -164,9 +164,9 @@ const SaveButton = styled(Button)`
 
 ## Using a pre-defined set
 
-Fannypack has the ability for you to specify your own pre-defined set of spacings. Pre-defined spacings can be used when you want to restrict the user to a set of sizes.
+Bumbag has the ability for you to specify your own pre-defined set of spacings. Pre-defined spacings can be used when you want to restrict the user to a set of sizes.
 
-Fannypack has the following pre-defined attributes set by default:
+Bumbag has the following pre-defined attributes set by default:
 
 <Table>
   <Table.Head>
@@ -269,7 +269,7 @@ Fannypack has the following pre-defined attributes set by default:
 #### Usage via styled components
 
 ```jsx
-import { Button, space, styled } from 'fannypack';
+import { Button, space, styled } from 'bumbag';
 
 const SaveButton = styled(Button)`
   padding: ${space('xl')}rem;

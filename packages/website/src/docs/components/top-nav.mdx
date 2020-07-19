@@ -1,18 +1,18 @@
 import Theme from '../../components/Theme';
-import { TopNav } from 'fannypack';
-import { List } from 'fannypack';
-import { Link } from 'fannypack';
+import { TopNav } from 'bumbag';
+import { List } from 'bumbag';
+import { Link } from 'bumbag';
 
 # TopNav
 
 The `<TopNav>` component renders a list of links or items used for navigation.
 
-Fannypack's navigation you see at the top is built with `<TopNav>` & it fits perfectly alongside the [PageWithHeader component](/page-shells/page-with-header).
+Bumbag's navigation you see at the top is built with `<TopNav>` & it fits perfectly alongside the [PageWithHeader component](/page-shells/page-with-header).
 
 ## Import
 
 ```jsx
-import { TopNav } from 'fannypack'
+import { TopNav } from 'bumbag'
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ import { TopNav } from 'fannypack'
 ```jsx-live
 <TopNav>
   <TopNav.Section>
-    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
       <Image src="/logo.png" height="44px" />
     </TopNav.Item>
     <TopNav.Item href="#">Get started</TopNav.Item>
@@ -44,7 +44,7 @@ import { TopNav } from 'fannypack'
 ```jsx-live
 <TopNav>
   <TopNav.Section>
-    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
       <Image src="/logo.png" height="44px" />
     </TopNav.Item>
     <TopNav.Item href="#" variant="pill">Get started</TopNav.Item>
@@ -71,7 +71,7 @@ function Example() {
   return (
     <TopNav selectedId={selectedId} onChange={id => setSelectedId(id)}>
       <TopNav.Section>
-        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
           <Image src="/logo.png" height="44px" />
         </TopNav.Item>
         <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
@@ -95,7 +95,7 @@ function Example() {
 ```jsx-live
 <TopNav defaultSelectedId="get-started">
   <TopNav.Section>
-    <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+    <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
       <Image src="/logo.png" height="44px" />
     </TopNav.Item>
     <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>
@@ -216,7 +216,7 @@ function Example() {
   {props => (
     <TopNav defaultSelectedId="get-started" overrides={props.overrides}>
       <TopNav.Section>
-        <TopNav.Item href="https://fannypack.style" fontWeight="semibold">
+        <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
           <Image src="/logo.png" height="44px" />
         </TopNav.Item>
         <TopNav.Item navId="get-started" href="#">Get started</TopNav.Item>

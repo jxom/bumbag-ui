@@ -6,34 +6,34 @@ path: /migrating-from-v4/
 
 # Migrating from v4
 
-If you are migrating from Fannypack v4, there are quite a few notable breaking changes. This guide aims to help you migrate to v5. If you feel like there is anything missing from this guide, feel free to raise a pull request.
+If you are migrating from Bumbag v4, there are quite a few notable breaking changes. This guide aims to help you migrate to v5. If you feel like there is anything missing from this guide, feel free to raise a pull request.
 
 ## Upgrading incrementally
 
 It's recommended to upgrade to v5 incrementally, meaning that v4 and v5 will co-exist until v5 takes over.
 
-If you wish to upgrade incrementally, you can install the `fannypack-v5` package:
+If you wish to upgrade incrementally, you can install the `bumbag-v5` package:
 
 ```
-npm install fannypack-v5
+npm install bumbag-v5
 ```
 
-And then, set up Fannypack v5 in your app root:
+And then, set up Bumbag v5 in your app root:
 
 ```jsx
-// v5 Fannypack
-import { Provider as FannypackProvider } from 'fannypack-v5';
-// v4 Fannypack
-import { ThemeProvider } from 'fannypack';
+// v5 Bumbag
+import { Provider as BumbagProvider } from 'bumbag-v5';
+// v4 Bumbag
+import { ThemeProvider } from 'bumbag';
 
 const oldTheme = { ... };
 const newTheme = { ... };
 
 const App = () => (
   <ThemeProvider theme={oldTheme}>
-    <FannypackProvider theme={newTheme}>
+    <BumbagProvider theme={newTheme}>
       Hello world!
-    </FannypackProvider>
+    </BumbagProvider>
   </ThemeProvider>
 );
 ```
@@ -41,9 +41,9 @@ const App = () => (
 Then you can start incrementally migrating your components like so:
 
 ```jsx
-- import { Box } from 'fannypack';
-+ import { Box } from 'fannypack-v5';
-import { Button } from 'fannypack';
+- import { Box } from 'bumbag';
++ import { Box } from 'bumbag-v5';
+import { Button } from 'bumbag';
 
 function Example() {
   return (
@@ -65,7 +65,7 @@ We have renamed the `<ThemeProvider>` component to `<Provider>`.
 ##### v4
 
 ```jsx
-import { ThemeProvider } from 'fannypack';
+import { ThemeProvider } from 'bumbag';
 
 const App = () => (
   <ThemeProvider>
@@ -77,7 +77,7 @@ const App = () => (
 ##### v5
 
 ```jsx
-import { Provider } from 'fannypack';
+import { Provider } from 'bumbag';
 
 const App = () => (
   <Provider>
@@ -633,24 +633,24 @@ The `headerActions` prop has been renamed to `headerAddon`.
 
 <Divider />
 
-### HighlightedCode: Moved to `fannypack-addon-highlighted-code`
+### HighlightedCode: Moved to `bumbag-addon-highlighted-code`
 
-We have moved the `HighlightedCode` component to `fannypack-addon-highlighted-code` to save some bundle size.
+We have moved the `HighlightedCode` component to `bumbag-addon-highlighted-code` to save some bundle size.
 
 ##### v4
 
 ```jsx
-import { HighlightedCode } from 'fannypack';
+import { HighlightedCode } from 'bumbag';
 ```
 
 ##### v5
 
 ```jsx
 // First, install the package
-npm install fannypack-addon-highlighted-code
+npm install bumbag-addon-highlighted-code
 
 // Then, import it accordingly
-import { HighlightedCode } from 'fannypack-addon-highlighted-code';
+import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 ```
 
 <Divider />
@@ -888,24 +888,24 @@ We have renamed the `isVertical` prop to `orientation`.
 
 <Divider />
 
-### Markdown: Moved to `fannypack-addon-markdown`
+### Markdown: Moved to `bumbag-addon-markdown`
 
-We have moved the `Markdown` component to `fannypack-addon-markdown` to save some bundle size.
+We have moved the `Markdown` component to `bumbag-addon-markdown` to save some bundle size.
 
 ##### v4
 
 ```jsx
-import { Markdown } from 'fannypack';
+import { Markdown } from 'bumbag';
 ```
 
 ##### v5
 
 ```jsx
 // First, install the package
-npm install fannypack-addon-markdown
+npm install bumbag-addon-markdown
 
 // Then, import it accordingly
-import { Markdown } from 'fannypack-addon-markdown';
+import { Markdown } from 'bumbag-addon-markdown';
 ```
 
 <Divider />
@@ -1331,7 +1331,7 @@ The `kind` prop has been renamed to `variant`
 The Toast component now requires a `ToastManager` to render the toasts.
 
 ```jsx
-import { Provider, ToastManager } from 'fannypack';
+import { Provider, ToastManager } from 'bumbag';
 
 const App = () => (
   <Provider theme={theme}>

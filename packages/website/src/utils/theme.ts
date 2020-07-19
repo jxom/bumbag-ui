@@ -1,4 +1,4 @@
-import medipassTheme from 'fannypack-theme-medipass';
+import medipassTheme from 'bumbag-theme-medipass';
 
 export const themeMap = {
   default: {},

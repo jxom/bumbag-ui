@@ -6,13 +6,13 @@ title: Color modes
 
 Color modes are used to create sets of configurable color modes (such as a dark mode).
 
-By default, Fannypack comes with it's own dark mode variant of it's default theme.
+By default, Bumbag comes with it's own dark mode variant of it's default theme.
 
 You can also [define your own modes](#defining-modes).
 
 ## Setting modes
 
-Fannypack provides you with a `useColorMode` hook that you can use to retrieve the current color mode, and set a color mode.
+Bumbag provides you with a `useColorMode` hook that you can use to retrieve the current color mode, and set a color mode.
 
 When setting a color mode, this value will be stored in local storage, so when the user navigates back to your application the color mode will be used when the page loads.
 
@@ -162,12 +162,12 @@ You can set a default color mode on the `<Provider>`.
 
 
 ```jsx
-import { Provider as FannypackProvider } from 'fannypack';
+import { Provider as BumbagProvider } from 'bumbag';
 
 const App = () => (
-  <FannypackProvider colorMode="dark">
+  <BumbagProvider colorMode="dark">
     ...
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
@@ -175,7 +175,7 @@ const App = () => (
 
 ### Disabling local storage
 
-You can disable Fannypack storing the current color mode in local storage by setting `enableLocalStorage: false` in the theme.
+You can disable Bumbag storing the current color mode in local storage by setting `enableLocalStorage: false` in the theme.
 
 ```jsx
 const theme = {
@@ -185,9 +185,9 @@ const theme = {
 }
 
 const App = () => (
-  <FannypackProvider theme={theme}>
+  <BumbagProvider theme={theme}>
     ...
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
@@ -203,9 +203,9 @@ const theme = {
 }
 
 const App = () => (
-  <FannypackProvider theme={theme}>
+  <BumbagProvider theme={theme}>
     ...
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 
@@ -221,9 +221,9 @@ const theme = {
 }
 
 const App = () => (
-  <FannypackProvider theme={theme}>
+  <BumbagProvider theme={theme}>
     ...
-  </FannypackProvider>
+  </BumbagProvider>
 );
 ```
 

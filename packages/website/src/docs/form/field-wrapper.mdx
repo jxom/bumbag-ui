@@ -1,6 +1,6 @@
 import Theme from '../../components/Theme';
-import { FieldWrapper } from 'fannypack';
-import { Input } from 'fannypack';
+import { FieldWrapper } from 'bumbag';
+import { Input } from 'bumbag';
 
 # FieldWrapper
 
@@ -11,7 +11,7 @@ It is used to render data about the field such as label, description text, hint 
 ## Import
 
 ```jsx
-import { FieldWrapper } from 'fannypack'
+import { FieldWrapper } from 'bumbag'
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ import { FieldWrapper } from 'fannypack'
 The description text is placed underneath the label.
 
 ```jsx-live
-<FieldWrapper label="Username" description="Required for your fannypack">
+<FieldWrapper label="Username" description="Required for your bumbag">
   <Input />
 </FieldWrapper>
 ```
@@ -141,7 +141,7 @@ Or you can set a default trigger via `defaultProps` [in the theme](/theming)
 <FieldWrapper
   a11yId="username"
   label="Username"
-  description={<Text color="primary">Required for your fannypack</Text>}
+  description={<Text color="primary">Required for your bumbag</Text>}
 >
   <Input />
 </FieldWrapper>

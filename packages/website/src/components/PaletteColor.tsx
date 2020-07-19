@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Flex, Text, useTheme } from 'fannypack';
+import { Box, Button, Flex, Text, useTheme } from 'bumbag';
 
 const PaletteColor = ({ palette, ...props }: any) => {
   const { theme } = useTheme();
