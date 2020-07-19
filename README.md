@@ -6,16 +6,6 @@
 
 <p align="center"><img src="./bumbag-logo.png" width="500px"></img></p>
 
----
-
-## Looking for Fannypack?
-
-After some consideration, we decided to rebrand the next major version of "Fannypack" to "Bumbag". If you are looking for the Fannypack docs/branch, click on one of the links below.
-
-### [Docs](https://fannypack.style) | [Branch](https://github.com/jxom/bumbag/tree/fannypack)
-
----
-
 ## Getting started
 
 [Visit the Bumbag docs](https://bumbag.dev) to get started with Bumbag.
