@@ -109,9 +109,8 @@ npm install emotion-server
 Open up your `_document.js` file, and add the following:
 
 ```jsx
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { extractCritical } from 'emotion-server';
+import Document, { Head, Main, NextScript } from 'next/document'
+import { extractCritical } from 'emotion-server'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -133,7 +132,8 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <html>
+        <Head />
         <body>
           <Main />
           <NextScript />
@@ -148,7 +148,6 @@ Then, open up your `_app.js` file, and add the `<BumbagProvider>`:
 
 
 ```jsx
-import * as React from 'react';
 import NextApp from 'next/app';
 import { Provider as BumbagProvider } from 'bumbag';
 
@@ -156,7 +155,7 @@ export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <BumbagProvider theme={theme}>
+      <BumbagProvider>
         <Component {...pageProps} />
       </BumbagProvider>
     );
