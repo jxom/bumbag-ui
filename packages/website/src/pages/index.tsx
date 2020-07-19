@@ -259,7 +259,7 @@ const linkProps = Link.useProps({
           </Heading>
           <Set spacing="major-6" verticalBelow="tablet" alignItems="center" justifyContent="center">
             <Link href="https://medipass.com.au">
-              <UsedByImage colorMode={colorMode} src="/medipass-logo.png" height="50px" />
+              <UsedByImage colorMode={colorMode} src={colorMode === 'dark' ? "/medipass-white.png" : "/medipass-black.png"} height="50px" />
             </Link>
             <Link href="https://localz.com">
               <UsedByImage colorMode={colorMode} src="/localz.png" height="40px" />
@@ -268,7 +268,7 @@ const linkProps = Link.useProps({
               <UsedByImage colorMode={colorMode} src="/mryum.png" height="80px" />
             </Link>
             <Link href="https://pory.io">
-              <UsedByImage colorMode={colorMode} src="/pory.png" height="50px" />
+              <UsedByImage colorMode={colorMode} src={colorMode === 'dark' ? "/pory-white.png" : "/pory-black.png"} height="50px" />
             </Link>
           </Set>
         </Stack>
