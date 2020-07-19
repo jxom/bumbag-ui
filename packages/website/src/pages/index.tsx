@@ -16,7 +16,7 @@ import {
   Text,
   css,
   styled,
-  useColorMode
+  useColorMode,
 } from 'bumbag';
 import { HighlightedCode } from 'bumbag-addon-highlighted-code';
 
@@ -25,11 +25,14 @@ import LiveCode from '../components/Landing/LiveCode';
 
 const UsedByImage = styled(Image)`
   &:not(:hover) {
-    ${props => props.colorMode === 'dark' ? css`
-    filter: brightness(0) invert(1);
-    ` : css`
-    filter: grayscale(1);
-    `}
+    ${(props) =>
+      props.colorMode === 'dark'
+        ? css`
+            filter: brightness(0) invert(1);
+          `
+        : css`
+            filter: grayscale(1);
+          `}
     opacity: 0.6;
   }
 `;
@@ -45,8 +48,8 @@ export default function Index() {
       >
         <Stack display="flex" flexDirection="column" spacing="major-3" alignItems="center">
           <Heading fontSize={{ default: '600', mobile: '500' }} textAlign="center">
-            Rapidly build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React
-            applications with ease
+            Build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React applications
+            with your Bumbag
           </Heading>
           <Paragraph fontSize={{ default: '400', mobile: '300' }} color="text100" textAlign="center">
             Bumbag is a friendly React UI Kit suitable for MVPs or large-scale applications.
@@ -63,7 +66,11 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ backgroundColor: colorMode === 'dark' ? 'black200' : 'white600', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+        wrapperProps={{
+          backgroundColor: colorMode === 'dark' ? 'black200' : 'white600',
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
         paddingY="major-6"
       >
         <Columns spacing="major-6">
@@ -180,7 +187,11 @@ export default function Index() {
       </PageContent>
       <PageContent
         breakpoint="widescreen"
-        wrapperProps={{ backgroundColor: colorMode === 'dark' ? 'black200' : 'white600', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+        wrapperProps={{
+          backgroundColor: colorMode === 'dark' ? 'black200' : 'white600',
+          borderBottom: '1px solid',
+          borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+        }}
         paddingY="major-10"
       >
         <Columns spacing="major-6">
@@ -259,7 +270,11 @@ const linkProps = Link.useProps({
           </Heading>
           <Set spacing="major-6" verticalBelow="tablet" alignItems="center" justifyContent="center">
             <Link href="https://medipass.com.au">
-              <UsedByImage colorMode={colorMode} src={colorMode === 'dark' ? "/medipass-white.png" : "/medipass-black.png"} height="50px" />
+              <UsedByImage
+                colorMode={colorMode}
+                src={colorMode === 'dark' ? '/medipass-white.png' : '/medipass-black.png'}
+                height="50px"
+              />
             </Link>
             <Link href="https://localz.com">
               <UsedByImage colorMode={colorMode} src="/localz.png" height="40px" />
@@ -268,7 +283,11 @@ const linkProps = Link.useProps({
               <UsedByImage colorMode={colorMode} src="/mryum.png" height="80px" />
             </Link>
             <Link href="https://pory.io">
-              <UsedByImage colorMode={colorMode} src={colorMode === 'dark' ? "/pory-white.png" : "/pory-black.png"} height="50px" />
+              <UsedByImage
+                colorMode={colorMode}
+                src={colorMode === 'dark' ? '/pory-white.png' : '/pory-black.png'}
+                height="50px"
+              />
             </Link>
           </Set>
         </Stack>
@@ -277,7 +296,11 @@ const linkProps = Link.useProps({
         <PageContent
           breakpoint="fullHD"
           paddingY="major-6"
-          wrapperProps={{ backgroundColor: 'primary800', borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+          wrapperProps={{
+            backgroundColor: 'primary800',
+            borderBottom: '1px solid',
+            borderColor: colorMode === 'dark' ? 'black100' : 'white700',
+          }}
         >
           <Box display="flex" flexDirection="column" alignItems="center" marginBottom="major-6">
             <Heading color="white" fontSize="600" textAlign="center" marginBottom="minor-1">
