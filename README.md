@@ -1,9 +1,3 @@
-# Bumbag
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors)
-[![Build Status](https://img.shields.io/travis/bumbagui/bumbag.svg?style=flat-square)](https://travis-ci.org/bumbagui/bumbag)
-[![NPM](https://img.shields.io/npm/v/bumbag/latest.svg?style=flat-square)](https://www.npmjs.com/package/bumbag)
-
 <p align="center"><img src="./bumbag-logo.png" width="500px"></img></p>
 
 ## Getting started
