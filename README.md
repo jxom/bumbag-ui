@@ -8,7 +8,7 @@
 
 ## Getting started
 
-[Visit the Bumbag docs](https://bumbag.dev) to get started with Bumbag.
+[Visit the Bumbag docs](https://bumbag.style) to get started with Bumbag.
 
 ## Contributing
 
