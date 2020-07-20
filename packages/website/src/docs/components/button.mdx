@@ -229,11 +229,18 @@ function Example() {
 
 ## Accessibility
 
-- `Button` has a role of `button`
-- When a `Button` has focus, **Space** or **Enter** activates it
-- When a `Button` is disabled, the `disabled` and `aria-disabled` attributes are set to `true`
-- `Button` has an accessible label denoted by it's content. If your button has no content, `ariaLabel` or `ariaLabelledby` can be used to label the button
-- If a description of `Button`'s' function is present, the `ariaDescribedby` prop can be set to the `id` of the component containing the description
+The `<Button>` component follows the [WAI ARIA Button Pattern](https://www.w3.org/TR/wai-aria-practices/#button).
+
+### Rules
+
+- `Button` has an accessible label denoted by it's content. If your button has no content, `ariaLabel` or `ariaLabelledby` can be used to label the button.
+- If a description of `Button`'s' function is present, the `ariaDescribedby` prop can be set to the `id` of the component containing the description.
+
+#### Patterns
+
+- `Button` has a role of `button`.
+- When a `Button` has focus, **Space** or **Enter** activates it.
+- When a `Button` is disabled, the `disabled` and `aria-disabled` attributes are set to `true`.
 - If a `Button` is composed of another element (such as `div` or `a`), accessible button attributes are set on the element.
 
 #### References
