@@ -32,7 +32,7 @@ const tags = (props: any): { [key: string]: { Component: BoxProps['use']; props?
   strong: {
     Component: Text,
     props: {
-      fontWeight: 'bold',
+      fontWeight: 'semibold',
       ...props?.elementProps?.strong,
     },
   },
@@ -165,20 +165,25 @@ const useProps = createHook<MarkdownProps>(
       prevClassName: boxProps.className,
     });
 
-    const handleIterate = React.useCallback((Tag: string, props: Object, children: React.ReactElement<any>) => {
-      const { Component, props: overrideProps = {} } = tags(props)[Tag] || { Component: Tag };
-      return (
-        // @ts-ignore
-        <Component {...props} {...(overrideProps || {})}>
-          {children}
-        </Component>
-      );
-    }, []);
+    const handleIterate = React.useCallback(
+      (restProps) => (Tag: string, props: Object, children: React.ReactElement<any>) => {
+        const { Component, props: overrideProps = {} } = tags({ ...props, ...restProps })[Tag] || { Component: Tag };
+        return (
+          // @ts-ignore
+          <Component {...props} {...(overrideProps || {})}>
+            {children}
+          </Component>
+        );
+      },
+      []
+    );
 
     return {
       ...boxProps,
       className,
-      children: wrap(<MarkdownRenderer onIterate={handleIterate} text={content} tags={{ html: React.Fragment }} />),
+      children: wrap(
+        <MarkdownRenderer onIterate={handleIterate(restProps)} text={content} tags={{ html: React.Fragment }} />
+      ),
     };
   },
   { defaultProps: { wrap: (children) => children }, themeKey: 'Markdown' }
