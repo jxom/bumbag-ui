@@ -16,14 +16,17 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-31 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-34 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
@@ -36,7 +39,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -45,10 +48,6 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -56,15 +55,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -84,14 +79,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -124,30 +112,30 @@ exports[`defaultProps should render correctly for className 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -155,47 +143,47 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-33 {
+.emotion-37 {
   color: #574feb !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-31 emotion-0 emotion-33 test fp-Box fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 test fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -225,14 +213,14 @@ exports[`defaultProps should render correctly for className 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -269,6 +257,13 @@ exports[`overrides Toast.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-2 {
   position: absolute;
   background-color: #1e67d5;
@@ -277,7 +272,7 @@ exports[`overrides Toast.root should render correctly 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -286,10 +281,6 @@ exports[`overrides Toast.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -297,15 +288,11 @@ exports[`overrides Toast.root should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -325,14 +312,7 @@ exports[`overrides Toast.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -365,30 +345,30 @@ exports[`overrides Toast.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -396,63 +376,59 @@ exports[`overrides Toast.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-30 {
+.emotion-33 {
   background-color: red;
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-30 emotion-31 emotion-0 emotion-1 fp-Box fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -482,14 +458,14 @@ exports[`overrides Toast.root should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -526,14 +502,17 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-31 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-34 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
@@ -546,7 +525,7 @@ exports[`props should render correctly 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -555,10 +534,6 @@ exports[`props should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -566,15 +541,11 @@ exports[`props should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -594,14 +565,7 @@ exports[`props should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -634,30 +598,30 @@ exports[`props should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -665,24 +629,24 @@ exports[`props should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -691,17 +655,17 @@ exports[`props should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-31 emotion-0 emotion-1 fp-Box fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -731,14 +695,14 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -775,14 +739,17 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-31 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-34 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
@@ -795,7 +762,7 @@ exports[`props should render correctly with CSS props 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -804,10 +771,6 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -815,15 +778,11 @@ exports[`props should render correctly with CSS props 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -843,14 +802,7 @@ exports[`props should render correctly with CSS props 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -883,30 +835,30 @@ exports[`props should render correctly with CSS props 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -914,47 +866,47 @@ exports[`props should render correctly with CSS props 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-33 {
+.emotion-37 {
   color: #574feb !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-31 emotion-0 emotion-33 fp-Box fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -984,14 +936,14 @@ exports[`props should render correctly with CSS props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1038,19 +990,22 @@ exports[`props should render correctly with a countdown 1`] = `
   outline: none;
 }
 
-.emotion-34 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-37 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-32 {
+.emotion-35 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1059,10 +1014,6 @@ exports[`props should render correctly with a countdown 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1070,15 +1021,11 @@ exports[`props should render correctly with a countdown 1`] = `
   margin-left: 4px;
 }
 
-.emotion-19 {
+.emotion-20 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-11 {
@@ -1098,14 +1045,7 @@ exports[`props should render correctly with a countdown 1`] = `
   width: 1em;
 }
 
-.emotion-29 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-24 {
+.emotion-25 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1138,30 +1078,30 @@ exports[`props should render correctly with a countdown 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-24[disabled],
-.emotion-24[aria-disabled="true"] {
+.emotion-25[disabled],
+.emotion-25[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-24:focus {
+.emotion-25:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-24 {
+.emotion-25 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -1169,24 +1109,24 @@ exports[`props should render correctly with a countdown 1`] = `
   box-shadow: unset;
 }
 
-.emotion-24:hover {
+.emotion-25:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-24:hover:active {
+.emotion-25:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-23.emotion-23 {
+.emotion-24.emotion-24 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-22 {
+.emotion-23 {
   font-size: 1.25rem !important;
 }
 
-.emotion-20 {
+.emotion-21 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -1215,7 +1155,7 @@ exports[`props should render correctly with a countdown 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-14 emotion-34 emotion-0 emotion-1 fp-Box fp-Toast fp-Alert"
+  class="emotion-14 emotion-37 emotion-18 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
@@ -1225,10 +1165,10 @@ exports[`props should render correctly with a countdown 1`] = `
     class="emotion-0 emotion-1 emotion-5 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-18 emotion-0 emotion-1 emotion-35 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-19 fp-Box"
+      class="emotion-18 emotion-0 emotion-20 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-11 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -1258,14 +1198,14 @@ exports[`props should render correctly with a countdown 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-29 fp-Box"
+      class="emotion-18 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-23 emotion-24 emotion-0 emotion-1 emotion-27 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-24 emotion-25 emotion-0 emotion-1 emotion-28 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-20 emotion-0 emotion-22 fp-Box fp-Icon"
+          class="emotion-21 emotion-0 emotion-23 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1302,6 +1242,13 @@ exports[`theming Toast.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-2 {
   position: absolute;
   background-color: #1e67d5;
@@ -1310,7 +1257,7 @@ exports[`theming Toast.root should render correctly 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1319,10 +1266,6 @@ exports[`theming Toast.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1330,15 +1273,11 @@ exports[`theming Toast.root should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -1358,14 +1297,7 @@ exports[`theming Toast.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1398,30 +1330,30 @@ exports[`theming Toast.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -1429,63 +1361,59 @@ exports[`theming Toast.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-30 {
+.emotion-33 {
   background-color: red;
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-30 emotion-31 emotion-0 emotion-1 fp-Box fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -1515,14 +1443,14 @@ exports[`theming Toast.root should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1559,6 +1487,13 @@ exports[`variants css.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-2 {
   position: absolute;
   background-color: #1e67d5;
@@ -1567,7 +1502,7 @@ exports[`variants css.root should render correctly 1`] = `
   width: 4px;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1576,10 +1511,6 @@ exports[`variants css.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1587,15 +1518,11 @@ exports[`variants css.root should render correctly 1`] = `
   margin-left: 4px;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-8 {
@@ -1615,14 +1542,7 @@ exports[`variants css.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-26 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-21 {
+.emotion-22 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1655,30 +1575,30 @@ exports[`variants css.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-21[disabled],
-.emotion-21[aria-disabled="true"] {
+.emotion-22[disabled],
+.emotion-22[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-21:focus {
+.emotion-22:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -1686,62 +1606,58 @@ exports[`variants css.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-21:hover:active {
+.emotion-22:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-20.emotion-20 {
+.emotion-21.emotion-21 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 1.25rem !important;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
 }
 
-.emotion-31 {
+.emotion-34 {
   background-color: red;
 }
 
-.emotion-30 {
+.emotion-33 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-30 emotion-31 emotion-0 emotion-1 fp-Box fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
   role="alert"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-29 fp-ToastWrapper fp-AlertWrapper fp-Box"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-0 emotion-16 fp-Box"
+      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
     >
       <div
         class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
@@ -1771,14 +1687,14 @@ exports[`variants css.root should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-0 emotion-26 fp-Box"
+      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
     >
       <button
-        class="emotion-20 emotion-21 emotion-0 emotion-1 emotion-24 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-17 emotion-0 emotion-19 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >

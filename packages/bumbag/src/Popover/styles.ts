@@ -32,7 +32,6 @@ export const PopoverContent = (styleProps) => cssClass`
 
 export const PopoverHeader = (styleProps) => cssClass`
   align-items: center;
-  display: flex;
   justify-content: space-between;
   border-bottom: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
@@ -52,7 +51,6 @@ export const PopoverTitle = (styleProps) => cssClass`
 
 export const PopoverFooter = (styleProps) => cssClass`
   align-items: center;
-  display: flex;
   justify-content: space-between;
   border-top: 1px solid ${palette('white800', { dark: 'gray700' })(styleProps)};
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;

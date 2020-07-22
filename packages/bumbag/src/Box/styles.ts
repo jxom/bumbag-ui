@@ -1,11 +1,24 @@
 import { css, cssClass } from '../styled';
-import { altitude, breakpoint, theme } from '../utils/theme';
-import { ThemeConfig } from '../types';
+import { altitude, theme } from '../utils/theme';
+
+const FLEX_HORIZONTAL_ALIGN_MAP = {
+  left: 'flex-start',
+  center: 'center',
+  right: 'flex-end',
+};
+
+const FLEX_VERTICAL_ALIGN_MAP = {
+  top: 'flex-start',
+  center: 'center',
+  bottom: 'flex-end',
+};
 
 export const style = (styleProps) => cssClass`
   & {
     ${styleProps.style};
   }
+
+  ${getAlignmentAttributes(styleProps)};
 
   ${
     styleProps.altitude &&
@@ -35,3 +48,33 @@ export const Box = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, 'css.root')(styleProps)};
   }
 `;
+
+export function getAlignmentAttributes(styleProps) {
+  return css`
+    ${(styleProps.alignY || styleProps.alignX) &&
+    css`
+      display: flex;
+
+      ${
+        !styleProps.display &&
+        css`
+          flex-direction: column;
+        `
+      }
+
+      ${
+        styleProps.alignY &&
+        css`
+          justify-content: ${FLEX_VERTICAL_ALIGN_MAP[styleProps.alignY]};
+        `
+      }
+
+      ${
+        styleProps.alignX &&
+        css`
+          align-items: ${FLEX_HORIZONTAL_ALIGN_MAP[styleProps.alignX]};
+        `
+      }
+    `}
+  `;
+}

@@ -23,6 +23,10 @@ export default function Header(props) {
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor
           </TopNav.Item>
+          <TopNav.Item href="https://discord.gg/BPnwqvJ" fontWeight="semibold">
+            <Icon icon="solid-discord" marginRight="major-1" />
+            Discord
+          </TopNav.Item>
           <TopNav.Item href="https://github.com/jxom/bumbag" fontWeight="semibold">
             <Icon icon="solid-github" marginRight="major-1" />
             GitHub

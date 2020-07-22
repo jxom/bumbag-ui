@@ -18,8 +18,7 @@ export const CardContent = (styleProps) => cssClass`
 `;
 
 export const CardHeader = (styleProps) => cssClass`
-  display: flex;
-  margin-bottom: ${space(1, 'major')(styleProps)}rem;
+  margin-bottom: ${space(2, 'major')(styleProps)}rem;
   align-items: center;
   justify-content: space-between;
 

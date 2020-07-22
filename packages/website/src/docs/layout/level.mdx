@@ -1,0 +1,178 @@
+import Theme from '../../components/Theme';
+import { Level } from 'bumbag';
+
+# Level
+
+## Import
+
+```jsx
+import { Level } from 'bumbag';
+```
+
+## Usage
+
+The `<Level>` component that assists in creating layouts where it's children are evenly spaced.
+
+```jsx-live
+<Level>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+### Vertical breakpoint
+
+By default, `Level` will turn vertical under the `desktop` breakpoint. However, you can change this with the `verticalBelow` prop.
+
+```jsx-live
+<Level verticalBelow="widescreen">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+You can disable the vertical snapping by setting `verticalBelow` to `null`.
+
+```jsx-live
+<Level verticalBelow={null}>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+### Vertical spacing
+
+You can modify the space between the vertical items with the `spacing` prop.
+
+```jsx-live
+<Level spacing="major-4">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+### Vertical alignment
+
+You can modify the alignment of the vertical items with the `alignX` prop.
+
+```jsx-live
+<Level alignX="right">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+## Props
+
+### Level Props
+
+<!-- Automatically generated -->
+
+**<Code marginRight="major-1">verticalBelow</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
+
+**<Code marginRight="major-1">use</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | (ComponentClass<any, any> & { useProps: any; })
+  | (FunctionComponent<any> & { useProps: any; })`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">children</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | number
+  | boolean
+  | {}
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>
+  | ReactNodeArray
+  | ReactPortal
+  | ((props: BoxProps) => ReactNode)`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">overrides</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`{
+  altitudes?: AltitudesThemeConfig;
+  borders?: BordersThemeConfig;
+  borderRadii?: BorderRadiiThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  fonts?: FontsThemeConfig;
+  fontSizes?: FontSizeThemeConfig;
+  ... 87 more ...;
+  Template?: TemplateThemeConfig;
+}`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+
+<Box marginBottom="major-4" />
+
+**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code> 
+
+<Box marginBottom="major-4" />
+
+</details>
+            
+
+## Theming
+
+<Theme
+  component={Level}
+  overrides={['Level.css.root']}>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Theme>

@@ -54,6 +54,32 @@ describe('props', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  ['left', 'right', 'center'].forEach((alignX) => {
+    it(`should render correctly for an alignX of ${alignX}`, () => {
+      const { container } = render(
+        // @ts-ignore
+        <Set alignX={alignX}>
+          <Box>hello</Box>
+          <Box>world</Box>
+        </Set>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
+  ['top', 'bottom', 'center'].forEach((alignY) => {
+    it(`should render correctly for an alignY of ${alignY}`, () => {
+      const { container } = render(
+        // @ts-ignore
+        <Set alignY={alignY}>
+          <Box>hello</Box>
+          <Box>world</Box>
+        </Set>
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
 
 describe('composition', () => {

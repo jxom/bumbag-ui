@@ -1,5 +1,6 @@
 import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
+import { getFlexAlignmentAttributes } from '../Flex/styles';
 
 const verticalBreakpoints = {
   tablet: 'mobile',
@@ -38,9 +39,15 @@ const getHorizontalAttributes = (styleProps) => {
     @media screen and (min-width: ${breakpoint}) {
       display: flex;
 
-      & > * {
-        flex: 1;
-      }
+      ${!styleProps.alignX &&
+      !styleProps.alignY &&
+      css`
+        & > * {
+          flex: 1;
+        }
+      `}
+
+      ${getFlexAlignmentAttributes(styleProps)}
 
       & > *:not(:last-child) {
         margin-right: ${space(styleProps.spacing)(styleProps)}rem;

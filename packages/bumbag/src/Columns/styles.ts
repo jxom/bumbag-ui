@@ -2,8 +2,6 @@ import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
 
 export const Columns = (styleProps) => cssClass`
-  display: flex;
-
   ${
     !styleProps.isGapless &&
     css`

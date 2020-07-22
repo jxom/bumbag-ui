@@ -26,7 +26,6 @@ export const Tag = (styleProps) => cssClass`
 
 export const TagContent = (styleProps) => cssClass`
   align-items: center;
-  display: flex;
   height: inherit;
   padding: 0 ${space(3)(styleProps)}em;
 

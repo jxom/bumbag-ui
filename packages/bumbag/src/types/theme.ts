@@ -56,7 +56,9 @@ import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
 import { InputProps, InputFieldProps } from '../Input';
+import { KeyProps } from '../Key';
 import { LabelProps } from '../Label';
+import { LevelProps } from '../Level';
 import { StackProps } from '../Stack';
 import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
@@ -899,6 +901,14 @@ export type InputFieldThemeConfig = {
   variants?: Variant<InputFieldThemeConfig>;
   modes?: Variant<InputFieldThemeConfig>;
 };
+export type KeyThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<KeyProps>;
+  variants?: Variant<KeyThemeConfig>;
+  modes?: Variant<KeyThemeConfig>;
+};
 export type LabelThemeConfig = {
   css?: {
     root?: ThemeAttribute<Stylesheet>;
@@ -906,6 +916,14 @@ export type LabelThemeConfig = {
   defaultProps?: Partial<LabelProps>;
   variants?: Variant<LabelThemeConfig>;
   modes?: Variant<LabelThemeConfig>;
+};
+export type LevelThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<LevelProps>;
+  variants?: Variant<LevelThemeConfig>;
+  modes?: Variant<LevelThemeConfig>;
 };
 export type StackThemeConfig = {
   css?: {
@@ -1891,7 +1909,10 @@ export type ThemeConfig = {
   InlineFlex?: InlineFlexThemeConfig;
   Input?: InputThemeConfig;
   InputField?: InputFieldThemeConfig;
+  Key?: KeyThemeConfig;
   Stack?: StackThemeConfig;
+  Label?: LabelThemeConfig;
+  Level?: LevelThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
   Menu?: MenuThemeConfig;

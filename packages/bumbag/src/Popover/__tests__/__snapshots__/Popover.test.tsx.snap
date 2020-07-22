@@ -52,7 +52,7 @@ Object {
       <Popover.Content />
     </React.Fragment>
   </Context.Provider>,
-  "className": "css-13b65ts css-1pwrqjj css-o12mw7 fp-Box fp-Popover",
+  "className": "css-13b65ts css-1pwrqjj css-1yuzjtp fp-Box fp-Popover",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -431,7 +431,7 @@ exports[`overrides Popover.Close.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -439,13 +439,20 @@ exports[`overrides Popover.Close.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-15 {
+.emotion-16 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-12 {
@@ -453,10 +460,6 @@ exports[`overrides Popover.Close.root should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -638,7 +641,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-18 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-19 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -646,7 +649,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-12 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-12 emotion-13 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -677,7 +680,7 @@ samp.emotion-1 {
         </button>
       </div>
       <div
-        class="emotion-15 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-16 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -761,7 +764,7 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -769,7 +772,7 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -778,15 +781,18 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -803,7 +809,7 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
   <div>
     <div
       aria-describedby="popoverContent"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-Popover"
+      class="emotion-9 emotion-1 emotion-2 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -816,7 +822,7 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-1 emotion-2 fp-Box fp-PopoverFooter"
+        class="emotion-5 emotion-6 emotion-1 emotion-2 fp-Box fp-Flex fp-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 fp-Box"
@@ -845,7 +851,7 @@ exports[`overrides Popover.Header.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -853,13 +859,20 @@ exports[`overrides Popover.Header.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-7 {
+.emotion-8 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {
@@ -937,10 +950,6 @@ samp.emotion-1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -958,7 +967,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-10 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-11 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -966,7 +975,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-4 emotion-5 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -976,7 +985,7 @@ samp.emotion-1 {
         </span>
       </div>
       <div
-        class="emotion-7 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -1002,7 +1011,7 @@ exports[`overrides Popover.Title.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -1010,13 +1019,20 @@ exports[`overrides Popover.Title.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-7 {
+.emotion-8 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-4 {
@@ -1024,10 +1040,6 @@ exports[`overrides Popover.Title.root should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1115,7 +1127,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-10 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-11 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -1123,7 +1135,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-4 emotion-5 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -1133,7 +1145,7 @@ samp.emotion-1 {
         </span>
       </div>
       <div
-        class="emotion-7 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -2259,7 +2271,7 @@ exports[`props should render correctly with a footer 1`] = `
   outline: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -2267,7 +2279,7 @@ exports[`props should render correctly with a footer 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -2276,15 +2288,18 @@ exports[`props should render correctly with a footer 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2297,7 +2312,7 @@ exports[`props should render correctly with a footer 1`] = `
   <div>
     <div
       aria-describedby="popoverContent"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-Popover"
+      class="emotion-9 emotion-1 emotion-2 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -2310,7 +2325,7 @@ exports[`props should render correctly with a footer 1`] = `
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-1 emotion-2 fp-Box fp-PopoverFooter"
+        class="emotion-5 emotion-6 emotion-1 emotion-2 fp-Box fp-Flex fp-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 fp-Box"
@@ -2339,7 +2354,7 @@ exports[`props should render correctly with a title 1`] = `
   outline: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -2347,13 +2362,20 @@ exports[`props should render correctly with a title 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-7 {
+.emotion-8 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-4 {
@@ -2361,10 +2383,6 @@ exports[`props should render correctly with a title 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2448,7 +2466,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-10 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-11 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -2456,7 +2474,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-4 emotion-5 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -2466,7 +2484,7 @@ samp.emotion-1 {
         </span>
       </div>
       <div
-        class="emotion-7 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -2492,7 +2510,7 @@ exports[`props should render correctly with action buttons 1`] = `
   outline: none;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -2500,7 +2518,7 @@ exports[`props should render correctly with action buttons 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -2509,15 +2527,18 @@ exports[`props should render correctly with action buttons 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2681,7 +2702,7 @@ exports[`props should render correctly with action buttons 1`] = `
   <div>
     <div
       aria-describedby="popoverContent"
-      class="emotion-18 emotion-1 emotion-2 fp-Box fp-Popover"
+      class="emotion-19 emotion-1 emotion-2 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -2694,7 +2715,7 @@ exports[`props should render correctly with action buttons 1`] = `
         Hello world
       </div>
       <div
-        class="emotion-15 emotion-1 emotion-2 fp-Box fp-PopoverFooter"
+        class="emotion-15 emotion-16 emotion-1 emotion-2 fp-Box fp-Flex fp-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 fp-Box"
@@ -2831,7 +2852,7 @@ exports[`theming Popover.Close.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -2839,13 +2860,20 @@ exports[`theming Popover.Close.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-15 {
+.emotion-16 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-12 {
@@ -2853,10 +2881,6 @@ exports[`theming Popover.Close.root should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -3038,7 +3062,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-18 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-19 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -3046,7 +3070,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-12 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-12 emotion-13 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -3077,7 +3101,7 @@ samp.emotion-1 {
         </button>
       </div>
       <div
-        class="emotion-15 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-16 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -3161,7 +3185,7 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -3169,7 +3193,7 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
@@ -3178,15 +3202,18 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -3203,7 +3230,7 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
   <div>
     <div
       aria-describedby="popoverContent"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-Popover"
+      class="emotion-9 emotion-1 emotion-2 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -3216,7 +3243,7 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
         Hello world
       </div>
       <div
-        class="emotion-5 emotion-1 emotion-2 fp-Box fp-PopoverFooter"
+        class="emotion-5 emotion-6 emotion-1 emotion-2 fp-Box fp-Flex fp-PopoverFooter"
       >
         <div
           class="emotion-1 emotion-2 fp-Box"
@@ -3245,7 +3272,7 @@ exports[`theming Popover.Header.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -3253,13 +3280,20 @@ exports[`theming Popover.Header.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-7 {
+.emotion-8 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {
@@ -3337,10 +3371,6 @@ samp.emotion-1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -3358,7 +3388,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-10 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-11 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -3366,7 +3396,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-4 emotion-5 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -3376,7 +3406,7 @@ samp.emotion-1 {
         </span>
       </div>
       <div
-        class="emotion-7 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -3402,7 +3432,7 @@ exports[`theming Popover.Title.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   background-color: white;
   border-radius: 6px;
   max-width: 350px;
@@ -3410,13 +3440,20 @@ exports[`theming Popover.Title.root should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
   box-shadow: #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-7 {
+.emotion-8 {
   padding: 0.5rem 0.75rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-4 {
@@ -3424,10 +3461,6 @@ exports[`theming Popover.Title.root should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -3515,7 +3548,7 @@ samp.emotion-1 {
     <div
       aria-describedby="popoverContent"
       aria-labelledby="popoverTitle"
-      class="emotion-10 emotion-2 emotion-3 fp-Box fp-Popover"
+      class="emotion-11 emotion-2 emotion-3 fp-Box fp-Popover"
       data-dialog="true"
       id="test"
       role="dialog"
@@ -3523,7 +3556,7 @@ samp.emotion-1 {
       title="This is a title"
     >
       <div
-        class="emotion-4 emotion-2 emotion-3 fp-Box fp-PopoverHeader"
+        class="emotion-4 emotion-5 emotion-2 emotion-3 fp-Box fp-Flex fp-PopoverHeader"
       >
         <span
           class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Text fp-PopoverTitle"
@@ -3533,7 +3566,7 @@ samp.emotion-1 {
         </span>
       </div>
       <div
-        class="emotion-7 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world

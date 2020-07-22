@@ -32,7 +32,7 @@ export default function GlobalStyles() {
 
         ${font('importUrls')(styleProps) &&
         font('importUrls')(styleProps)
-          .map((url: string) => `@import url(${url})`)
+          .map((url: string) => `@import url('${url}')`)
           .join(';')};
 
         ${theme('global.css.root')(styleProps)};

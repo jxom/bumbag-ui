@@ -16,19 +16,22 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -37,25 +40,17 @@ exports[`composition as should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -77,14 +72,14 @@ exports[`composition as should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -136,24 +131,23 @@ Object {
     }
   >
     <AlertWrapper>
-      <Box
+      <Flex
         alignItems="center"
-        display="flex"
       >
         <AlertIcon />
         <AlertContent>
           <AlertDescription />
         </AlertContent>
-      </Box>
+      </Flex>
     </AlertWrapper>
   </Context.Provider>,
-  "className": "css-1yzl25p css-1pwrqjj css-o12mw7 fp-Box fp-Alert",
+  "className": "css-9cu171 css-1k1yp07 css-1pwrqjj css-1yuzjtp fp-Box fp-Flex fp-Alert",
   "role": "alert",
 }
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -164,25 +158,28 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-0 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Alert"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   Hello world
@@ -205,19 +202,22 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -226,25 +226,17 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -266,14 +258,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 test fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 test fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -322,19 +314,22 @@ exports[`defaultProps should render correctly for hasIcon 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -343,25 +338,17 @@ exports[`defaultProps should render correctly for hasIcon 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -383,14 +370,14 @@ exports[`defaultProps should render correctly for hasIcon 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -439,27 +426,26 @@ exports[`defaultProps should render correctly for isInline 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -479,7 +465,7 @@ exports[`defaultProps should render correctly for isInline 1`] = `
   width: 1em;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -488,10 +474,6 @@ exports[`defaultProps should render correctly for isInline 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -502,7 +484,7 @@ exports[`defaultProps should render correctly for isInline 1`] = `
   display: flex;
 }
 
-.emotion-16 > *:first-child {
+.emotion-18 > *:first-child {
   margin-right: 0.25rem;
 }
 
@@ -519,14 +501,14 @@ exports[`defaultProps should render correctly for isInline 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -575,19 +557,22 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-30 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-26 {
+.emotion-29 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -596,25 +581,17 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -634,14 +611,7 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-23 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -674,30 +644,30 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-18[disabled],
-.emotion-18[aria-disabled="true"] {
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -705,44 +675,44 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 1.25rem !important;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-27 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-30 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-26 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-29 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -772,14 +742,14 @@ exports[`overrides Alert.CloseButton.root should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-1 emotion-23 fp-Box"
+      class="emotion-12 emotion-1 emotion-4 fp-Box fp-Flex"
     >
       <button
-        class="emotion-17 emotion-18 emotion-1 emotion-4 emotion-21 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-18 emotion-19 emotion-1 emotion-4 emotion-22 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-1 emotion-16 fp-Box fp-Icon"
+          class="emotion-15 emotion-1 emotion-17 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -816,19 +786,22 @@ exports[`overrides Alert.Content.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -837,25 +810,17 @@ exports[`overrides Alert.Content.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -881,14 +846,14 @@ exports[`overrides Alert.Content.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -937,19 +902,22 @@ exports[`overrides Alert.Description.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -958,25 +926,17 @@ exports[`overrides Alert.Description.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1002,14 +962,14 @@ exports[`overrides Alert.Description.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1058,19 +1018,22 @@ exports[`overrides Alert.IconWrapper.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1079,25 +1042,17 @@ exports[`overrides Alert.IconWrapper.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-2 {
@@ -1123,14 +1078,14 @@ exports[`overrides Alert.IconWrapper.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1179,19 +1134,22 @@ exports[`overrides Alert.Title.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-23 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-25 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-22 {
+.emotion-24 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1200,25 +1158,17 @@ exports[`overrides Alert.Title.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1315,14 +1265,14 @@ samp.emotion-6 {
 <div
   aria-describedby="alertDescription"
   aria-labelledby="alertTitle"
-  class="emotion-23 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-25 emotion-18 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-22 fp-AlertWrapper fp-Box"
+    class="emotion-18 emotion-1 emotion-4 emotion-24 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-19 fp-Box"
+      class="emotion-18 emotion-1 emotion-20 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1381,7 +1331,14 @@ exports[`overrides Alert.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-16 {
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1390,25 +1347,17 @@ exports[`overrides Alert.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1428,32 +1377,28 @@ exports[`overrides Alert.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-17 {
+.emotion-19 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-17 {
+.emotion-19 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1502,19 +1447,22 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1523,25 +1471,17 @@ exports[`props should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1563,14 +1503,14 @@ exports[`props should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1619,19 +1559,22 @@ exports[`props should render correctly for an icon (danger) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1640,25 +1583,17 @@ exports[`props should render correctly for an icon (danger) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1680,14 +1615,14 @@ exports[`props should render correctly for an icon (danger) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1736,19 +1671,22 @@ exports[`props should render correctly for an icon (info) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1757,25 +1695,17 @@ exports[`props should render correctly for an icon (info) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1797,14 +1727,14 @@ exports[`props should render correctly for an icon (info) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1853,19 +1783,22 @@ exports[`props should render correctly for an icon (success) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1874,25 +1807,17 @@ exports[`props should render correctly for an icon (success) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -1914,14 +1839,14 @@ exports[`props should render correctly for an icon (success) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -1970,19 +1895,22 @@ exports[`props should render correctly for an icon (warning) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1991,25 +1919,17 @@ exports[`props should render correctly for an icon (warning) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2031,14 +1951,14 @@ exports[`props should render correctly for an icon (warning) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2087,19 +2007,22 @@ exports[`props should render correctly for danger type 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2108,25 +2031,17 @@ exports[`props should render correctly for danger type 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2148,14 +2063,14 @@ exports[`props should render correctly for danger type 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2204,19 +2119,22 @@ exports[`props should render correctly for info type 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2225,25 +2143,17 @@ exports[`props should render correctly for info type 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2265,14 +2175,14 @@ exports[`props should render correctly for info type 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2321,27 +2231,26 @@ exports[`props should render correctly for isInline (danger) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2349,7 +2258,7 @@ exports[`props should render correctly for isInline (danger) 1`] = `
   margin-right: 1rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2358,10 +2267,6 @@ exports[`props should render correctly for isInline (danger) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2372,7 +2277,7 @@ exports[`props should render correctly for isInline (danger) 1`] = `
   display: flex;
 }
 
-.emotion-16 > *:first-child {
+.emotion-18 > *:first-child {
   margin-right: 0.25rem;
 }
 
@@ -2401,14 +2306,14 @@ exports[`props should render correctly for isInline (danger) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2457,27 +2362,26 @@ exports[`props should render correctly for isInline (info) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2497,7 +2401,7 @@ exports[`props should render correctly for isInline (info) 1`] = `
   width: 1em;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2506,10 +2410,6 @@ exports[`props should render correctly for isInline (info) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2520,7 +2420,7 @@ exports[`props should render correctly for isInline (info) 1`] = `
   display: flex;
 }
 
-.emotion-16 > *:first-child {
+.emotion-18 > *:first-child {
   margin-right: 0.25rem;
 }
 
@@ -2537,14 +2437,14 @@ exports[`props should render correctly for isInline (info) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2593,27 +2493,26 @@ exports[`props should render correctly for isInline (success) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2621,7 +2520,7 @@ exports[`props should render correctly for isInline (success) 1`] = `
   margin-right: 1rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2630,10 +2529,6 @@ exports[`props should render correctly for isInline (success) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2644,7 +2539,7 @@ exports[`props should render correctly for isInline (success) 1`] = `
   display: flex;
 }
 
-.emotion-16 > *:first-child {
+.emotion-18 > *:first-child {
   margin-right: 0.25rem;
 }
 
@@ -2673,14 +2568,14 @@ exports[`props should render correctly for isInline (success) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2729,27 +2624,26 @@ exports[`props should render correctly for isInline (warning) 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2757,7 +2651,7 @@ exports[`props should render correctly for isInline (warning) 1`] = `
   margin-right: 1rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2766,10 +2660,6 @@ exports[`props should render correctly for isInline (warning) 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2780,7 +2670,7 @@ exports[`props should render correctly for isInline (warning) 1`] = `
   display: flex;
 }
 
-.emotion-16 > *:first-child {
+.emotion-18 > *:first-child {
   margin-right: 0.25rem;
 }
 
@@ -2809,14 +2699,14 @@ exports[`props should render correctly for isInline (warning) 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2865,19 +2755,22 @@ exports[`props should render correctly for success type 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2886,25 +2779,17 @@ exports[`props should render correctly for success type 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -2926,14 +2811,14 @@ exports[`props should render correctly for success type 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -2982,19 +2867,22 @@ exports[`props should render correctly for warning type 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3003,25 +2891,17 @@ exports[`props should render correctly for warning type 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3043,14 +2923,14 @@ exports[`props should render correctly for warning type 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -3099,19 +2979,22 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3120,25 +3003,17 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3158,20 +3033,20 @@ exports[`props should render correctly with CSS props 1`] = `
   width: 1em;
 }
 
-.emotion-19 {
+.emotion-22 {
   color: #574feb !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-19 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-22 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -3220,19 +3095,22 @@ exports[`props should render correctly with a close button 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-30 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-26 {
+.emotion-29 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3241,25 +3119,17 @@ exports[`props should render correctly with a close button 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3279,14 +3149,7 @@ exports[`props should render correctly with a close button 1`] = `
   width: 1em;
 }
 
-.emotion-23 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3319,30 +3182,30 @@ exports[`props should render correctly with a close button 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-18[disabled],
-.emotion-18[aria-disabled="true"] {
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -3350,24 +3213,24 @@ exports[`props should render correctly with a close button 1`] = `
   box-shadow: unset;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 1.25rem !important;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -3376,14 +3239,14 @@ exports[`props should render correctly with a close button 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-27 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-30 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-26 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-29 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -3413,14 +3276,14 @@ exports[`props should render correctly with a close button 1`] = `
       </div>
     </div>
     <div
-      class="emotion-1 emotion-23 fp-Box"
+      class="emotion-12 emotion-1 emotion-4 fp-Box fp-Flex"
     >
       <button
-        class="emotion-17 emotion-18 emotion-1 emotion-4 emotion-21 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-18 emotion-19 emotion-1 emotion-4 emotion-22 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-1 emotion-16 fp-Box fp-Icon"
+          class="emotion-15 emotion-1 emotion-17 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -3457,19 +3320,22 @@ exports[`props should render correctly with a title 1`] = `
   outline: none;
 }
 
-.emotion-23 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-25 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-22 {
+.emotion-24 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3478,25 +3344,17 @@ exports[`props should render correctly with a title 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3589,14 +3447,14 @@ samp.emotion-6 {
 <div
   aria-describedby="alertDescription"
   aria-labelledby="alertTitle"
-  class="emotion-23 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-25 emotion-18 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-22 fp-AlertWrapper fp-Box"
+    class="emotion-18 emotion-1 emotion-4 emotion-24 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-19 fp-Box"
+      class="emotion-18 emotion-1 emotion-20 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -3655,19 +3513,22 @@ exports[`props should render correctly with custom close button icon props 1`] =
   outline: none;
 }
 
-.emotion-27 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-30 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-26 {
+.emotion-29 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3676,25 +3537,17 @@ exports[`props should render correctly with custom close button icon props 1`] =
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3714,14 +3567,7 @@ exports[`props should render correctly with custom close button icon props 1`] =
   width: 1em;
 }
 
-.emotion-23 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3754,30 +3600,30 @@ exports[`props should render correctly with custom close button icon props 1`] =
   border: 1px solid #d9d9e1;
 }
 
-.emotion-18[disabled],
-.emotion-18[aria-disabled="true"] {
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -3785,41 +3631,41 @@ exports[`props should render correctly with custom close button icon props 1`] =
   box-shadow: unset;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 1.25rem !important;
   margin-top: 0.5rem !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-27 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-30 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-26 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-29 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -3849,14 +3695,14 @@ exports[`props should render correctly with custom close button icon props 1`] =
       </div>
     </div>
     <div
-      class="emotion-1 emotion-23 fp-Box"
+      class="emotion-12 emotion-1 emotion-4 fp-Box fp-Flex"
     >
       <button
-        class="emotion-17 emotion-18 emotion-1 emotion-4 emotion-21 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-18 emotion-19 emotion-1 emotion-4 emotion-22 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-1 emotion-16 fp-Box fp-Icon"
+          class="emotion-15 emotion-1 emotion-17 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -3893,19 +3739,22 @@ exports[`props should render correctly with custom close button props 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-30 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-26 {
+.emotion-29 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3914,25 +3763,17 @@ exports[`props should render correctly with custom close button props 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -3952,30 +3793,23 @@ exports[`props should render correctly with custom close button props 1`] = `
   width: 1em;
 }
 
-.emotion-23 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 1.25rem !important;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4007,29 +3841,29 @@ exports[`props should render correctly with custom close button props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
 }
 
-.emotion-18[disabled],
-.emotion-18[aria-disabled="true"] {
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: #4e47d4;
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: #3d37a5;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: unset;
   border: unset;
   color: #574feb;
@@ -4037,24 +3871,24 @@ exports[`props should render correctly with custom close button props 1`] = `
   box-shadow: unset;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-27 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-30 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-26 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-29 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4084,14 +3918,14 @@ exports[`props should render correctly with custom close button props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-1 emotion-23 fp-Box"
+      class="emotion-12 emotion-1 emotion-4 fp-Box fp-Flex"
     >
       <button
-        class="emotion-17 emotion-18 emotion-1 emotion-4 emotion-21 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-18 emotion-19 emotion-1 emotion-4 emotion-22 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-1 emotion-16 fp-Box fp-Icon"
+          class="emotion-15 emotion-1 emotion-17 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -4128,19 +3962,22 @@ exports[`props should render correctly with custom icon props 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4149,25 +3986,17 @@ exports[`props should render correctly with custom icon props 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -4189,14 +4018,14 @@ exports[`props should render correctly with custom icon props 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4245,19 +4074,22 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-27 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-30 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-26 {
+.emotion-29 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4266,25 +4098,17 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -4304,14 +4128,7 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-23 {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.emotion-18 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4344,30 +4161,30 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-18[disabled],
-.emotion-18[aria-disabled="true"] {
+.emotion-19[disabled],
+.emotion-19[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-18:focus {
+.emotion-19:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-18 {
+.emotion-19 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -4375,44 +4192,44 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-18:hover {
+.emotion-19:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-18:hover:active {
+.emotion-19:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-16 {
+.emotion-17 {
   font-size: 1.25rem !important;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-27 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-30 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-26 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-29 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4442,14 +4259,14 @@ exports[`theming Alert.CloseButton.root should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-1 emotion-23 fp-Box"
+      class="emotion-12 emotion-1 emotion-4 fp-Box fp-Flex"
     >
       <button
-        class="emotion-17 emotion-18 emotion-1 emotion-4 emotion-21 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-18 emotion-19 emotion-1 emotion-4 emotion-22 fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-14 emotion-1 emotion-16 fp-Box fp-Icon"
+          class="emotion-15 emotion-1 emotion-17 fp-Box fp-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -4486,19 +4303,22 @@ exports[`theming Alert.Content.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4507,25 +4327,17 @@ exports[`theming Alert.Content.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -4551,14 +4363,14 @@ exports[`theming Alert.Content.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4607,19 +4419,22 @@ exports[`theming Alert.Description.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4628,25 +4443,17 @@ exports[`theming Alert.Description.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -4672,14 +4479,14 @@ exports[`theming Alert.Description.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4728,19 +4535,22 @@ exports[`theming Alert.IconWrapper.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-17 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-19 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4749,25 +4559,17 @@ exports[`theming Alert.IconWrapper.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-2 {
@@ -4793,14 +4595,14 @@ exports[`theming Alert.IconWrapper.root should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -4849,19 +4651,22 @@ exports[`theming Alert.Title.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-23 {
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-25 {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-22 {
+.emotion-24 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4870,25 +4675,17 @@ exports[`theming Alert.Title.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-19 {
+.emotion-20 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -4985,14 +4782,14 @@ samp.emotion-6 {
 <div
   aria-describedby="alertDescription"
   aria-labelledby="alertTitle"
-  class="emotion-23 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-25 emotion-18 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-22 fp-AlertWrapper fp-Box"
+    class="emotion-18 emotion-1 emotion-4 emotion-24 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-19 fp-Box"
+      class="emotion-18 emotion-1 emotion-20 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
@@ -5051,7 +4848,14 @@ exports[`theming Alert.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-16 {
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5060,25 +4864,17 @@ exports[`theming Alert.root should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center !important;
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 .emotion-5 {
@@ -5098,32 +4894,28 @@ exports[`theming Alert.root should render correctly 1`] = `
   width: 1em;
 }
 
-.emotion-17 {
+.emotion-19 {
   background-color: white;
   border-radius: 6px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02);
 }
 
-.emotion-17 {
+.emotion-19 {
   background-color: red;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-17 emotion-1 emotion-4 fp-Box fp-Alert"
+  class="emotion-19 emotion-12 emotion-1 emotion-4 fp-Box fp-Flex fp-Alert"
   role="alert"
 >
   <div
-    class="emotion-1 emotion-4 emotion-16 fp-AlertWrapper fp-Box"
+    class="emotion-12 emotion-1 emotion-4 emotion-18 fp-AlertWrapper fp-Box fp-Flex"
   >
     <div
-      class="emotion-1 emotion-13 fp-Box"
+      class="emotion-12 emotion-1 emotion-14 fp-Box fp-Flex"
     >
       <div
         class="emotion-1 emotion-4 emotion-5 fp-AlertIconWrapper fp-Box"
