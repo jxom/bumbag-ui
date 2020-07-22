@@ -34,6 +34,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalL
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
 
 export default {
   global: {
@@ -112,6 +113,7 @@ export default {
           faFrown,
           faMeh,
           faMapMarkerAlt,
+          faDiscord
         ],
         prefix: 'solid-',
         type: 'font-awesome',
