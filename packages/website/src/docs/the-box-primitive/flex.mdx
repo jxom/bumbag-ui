@@ -1,0 +1,59 @@
+---
+name: Flex
+group: Primitives
+---
+
+import PropTypes from '../../components/PropTypes';
+import Theme from '../../components/Theme';
+import { Flex } from 'bumbag';
+
+# Flex
+
+By default it renders a `<div>` element with `display: flex`.
+
+**You may want to try use a [horizontal Stack](/layout/stack#usage) or [Set](/layout/set) before using Flex.**
+
+## Import
+
+```js
+import { Flex } from 'bumbag';
+```
+
+## Usage
+
+```jsx-live
+<Flex>
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Flex>
+```
+
+## Alignments
+
+You can apply alignments to your `Flex` using the `alignX` and `alignY` props.
+
+### Horizontal align
+
+```jsx-live
+<Flex alignX="center">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Flex>
+```
+
+### Vertical align
+
+```jsx-live
+<Flex alignY="center" height="200px">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Flex>
+```
+
+## Props
+
+### Flex Props
+
+## Theming
+
+<Theme component={Flex} overrides={['Flex.css.root']}>This is a flex box</Theme>
