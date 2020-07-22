@@ -35,6 +35,7 @@ export * from './InlineBlock';
 export * from './InlineFlex';
 export * from './Key';
 export * from './Label';
+export * from './Level';
 export * from './Link';
 export * from './List';
 export * from './Menu';

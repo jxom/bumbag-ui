@@ -1,74 +1,91 @@
----
-name: Box
-group: Primitives
----
-
-import PropTypes from '../../components/PropTypes';
 import Theme from '../../components/Theme';
-import { Box } from 'bumbag';
+import { Level } from 'bumbag';
 
-# Box
-
-All components in Bumbag are built on top of the `<Box>` primitive. Any component in Bumbag can use Box's props.
-
-By default it renders a `<div>` element with basic reset styles.
+# Level
 
 ## Import
 
-```js
-import { Box } from 'bumbag';
+```jsx
+import { Level } from 'bumbag';
 ```
 
 ## Usage
 
-```jsx-live
-<Box>
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
-```
-
-## Alignments
-
-You can apply alignments to your `Box` using the `alignX` and `alignY` props.
-
-### Horizontal align
+The `<Level>` component that assists in creating layouts where it's children are evenly spaced.
 
 ```jsx-live
-<Box alignX="center">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
-<Box alignX="left">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
-<Box alignX="right">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
+<Level>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
 ```
 
-### Vertical align
+### Vertical breakpoint
+
+By default, `Level` will turn vertical under the `desktop` breakpoint. However, you can change this with the `verticalBelow` prop.
 
 ```jsx-live
-<Box alignY="center" height="200px" backgroundColor="white700">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
-<Box alignY="top" height="200px" backgroundColor="white700">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
-<Box alignY="bottom" height="200px" backgroundColor="white700">
-  <Box width="50px" height="50px" backgroundColor="primary" />
-  <Box width="50px" height="50px" backgroundColor="secondary" />
-</Box>
+<Level verticalBelow="widescreen">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
 ```
 
-## Box Props
+You can disable the vertical snapping by setting `verticalBelow` to `null`.
+
+```jsx-live
+<Level verticalBelow={null}>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+### Vertical spacing
+
+You can modify the space between the vertical items with the `spacing` prop.
+
+```jsx-live
+<Level spacing="major-4">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+### Vertical alignment
+
+You can modify the alignment of the vertical items with the `alignX` prop.
+
+```jsx-live
+<Level alignX="right">
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Level>
+```
+
+## Props
+
+### Level Props
 
 <!-- Automatically generated -->
+
+**<Code marginRight="major-1">verticalBelow</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"tablet"
+  | "mobile"
+  | "fullHD"
+  | "widescreen"
+  | "desktop"`}
+</Code>
+
+<Box marginBottom="major-4" />
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
+
+</details>
+            
+
+<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
 **<Code marginRight="major-1">use</Code>**  
 
@@ -148,6 +165,14 @@ You can apply alignments to your `Box` using the `alignX` and `alignY` props.
 
 <Box marginBottom="major-4" />
 
+</details>
+            
+
 ## Theming
 
-<Theme component={Box} overrides={['Box.css.root']}>This is a box</Theme>
+<Theme
+  component={Level}
+  overrides={['Level.css.root']}>
+  <Box backgroundColor="primary" width="50px" height="50px" />
+  <Box backgroundColor="primary" width="50px" height="50px" />
+</Theme>
