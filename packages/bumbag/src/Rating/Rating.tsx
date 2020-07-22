@@ -4,6 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook, times } from '../utils';
 import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 import { Rover } from '../Rover';
 import { Icon } from '../Icon';
 
@@ -22,7 +23,7 @@ export type LocalRatingProps = {
   size?: Size;
   value: number | void;
 };
-export type RatingProps = BoxProps & LocalRatingProps;
+export type RatingProps = FlexProps & LocalRatingProps;
 
 const useProps = createHook<RatingProps>(
   (props, { themeKey, themeKeyOverride }) => {
@@ -40,7 +41,7 @@ const useProps = createHook<RatingProps>(
       value,
       ...restProps
     } = props;
-    const boxProps = Box.useProps(restProps);
+    const flexProps = Flex.useProps(restProps);
 
     const rover = Rover.useState();
 
@@ -51,13 +52,13 @@ const useProps = createHook<RatingProps>(
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
     const disabled = props.disabled || isStatic;
 
     return {
-      ...boxProps,
+      ...flexProps,
       className,
       onMouseLeave: !disabled ? () => setHoveringIndex(-1) : undefined,
       overrides,

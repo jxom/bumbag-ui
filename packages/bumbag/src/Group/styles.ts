@@ -9,7 +9,6 @@ const verticalBreakpoints = {
 };
 
 export const Group = (styleProps) => cssClass`
-  display: flex;
   flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
 
   ${breakpoint(

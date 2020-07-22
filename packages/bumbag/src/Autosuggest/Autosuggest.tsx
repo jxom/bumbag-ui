@@ -4,6 +4,7 @@ import * as Loads from 'react-loads-next';
 
 import { useClassName, createComponent, createElement, createHook, omit, useDebounce } from '../utils';
 import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 import { Button, ButtonProps } from '../Button';
 import { Input, InputProps } from '../Input';
 import {
@@ -713,7 +714,7 @@ function ClearButton(props: any) {
   });
 
   return (
-    <Box className={wrapperClassName} overrides={overrides} {...restProps}>
+    <Flex className={wrapperClassName} overrides={overrides} {...restProps}>
       <Button.Close
         className={buttonClassName}
         onClick={onClick}
@@ -723,7 +724,7 @@ function ClearButton(props: any) {
         overrides={overrides}
         {...buttonProps}
       />
-    </Box>
+    </Flex>
   );
 }
 

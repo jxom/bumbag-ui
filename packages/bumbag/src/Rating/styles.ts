@@ -3,7 +3,6 @@ import { palette, fontSize, space, theme } from '../utils';
 
 export const Rating = (styleProps) => cssClass`
   align-items: center;
-  display: flex;
 
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};

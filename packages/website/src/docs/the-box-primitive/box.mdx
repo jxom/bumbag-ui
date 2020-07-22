@@ -28,6 +28,44 @@ import { Box } from 'bumbag';
 </Box>
 ```
 
+## Alignments
+
+You can apply alignments to your `Box` using the `alignX` and `alignY` props.
+
+### Horizontal align
+
+```jsx-live
+<Box alignX="center">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+<Box alignX="left">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+<Box alignX="right">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+```
+
+### Vertical align
+
+```jsx-live
+<Box alignY="center" height="200px" backgroundColor="white700">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+<Box alignY="top" height="200px" backgroundColor="white700">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+<Box alignY="bottom" height="200px" backgroundColor="white700">
+  <Box width="50px" height="50px" backgroundColor="primary" />
+  <Box width="50px" height="50px" backgroundColor="secondary" />
+</Box>
+```
+
 ## Box Props
 
 <!-- Automatically generated -->

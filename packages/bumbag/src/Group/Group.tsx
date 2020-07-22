@@ -1,7 +1,7 @@
 import { Box as ReakitBox, useGroup as useReakitGroup } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 import { LayoutBreakpoint } from '../types';
 
 import * as styles from './styles';
@@ -11,13 +11,13 @@ export type LocalGroupProps = {
   orientation?: 'vertical' | 'horizontal';
   verticalBelow?: LayoutBreakpoint;
 };
-export type GroupProps = BoxProps & LocalGroupProps;
+export type GroupProps = FlexProps & LocalGroupProps;
 
 const useProps = createHook<GroupProps>(
   (props, { themeKey, themeKeyOverride }) => {
     let htmlProps = props;
     const groupProps = useReakitGroup({}, htmlProps);
-    htmlProps = Box.useProps({ ...props, ...groupProps });
+    htmlProps = Flex.useProps({ ...props, ...groupProps });
 
     const className = useClassName({
       style: styles.Group,

@@ -5,70 +5,44 @@ title: Alignment
 
 # Alignment
 
+Every component in Bumbag has the ability to set an `alignX` or `alignY` prop, allowing the component to be aligned horizontally or vertically.
+
+## Vertical alignment
+
 ```jsx-live
 <Box alignY="center" border="default" height="250px">
-  I am centered vertically
+  I am aligned to the center
 </Box>
 ```
 
 ```jsx-live
-<Box alignX="center" border="default" height="250px">
-  I am centered horizontally
+<Box alignY="top" border="default" height="250px">
+  I am aligned to the top
 </Box>
 ```
 
 ```jsx-live
-<Box alignX="center" alignY="center" border="default" height="250px">
-  I am centered horizontally and vertically
+<Box alignY="bottom" border="default" height="250px">
+  I am aligned to the bottom
+</Box>
+```
+
+## Horizontal alignment
+
+```jsx-live
+<Box alignX="center" border="default">
+  I am aligned to the center
 </Box>
 ```
 
 ```jsx-live
-<Flex alignY="center" border="default" height="250px">
-  I am centered vertically
-</Flex>
+<Box alignX="left" border="default">
+  I am aligned to the left
+</Box>
 ```
 
 ```jsx-live
-<Flex alignX="center" border="default" height="250px">
-  I am centered horizontally
-</Flex>
-```
-
-```jsx-live
-<Flex alignX="center" alignY="center" border="default" height="250px">
-  I am centered horizontally and vertically
-</Flex>
-```
-
-
-## Theming
-
-### Schema
-
-```jsx
-const theme = {
-  altitudes: {
-    100: string,
-    200: string,
-    300: string,
-    400: string,
-
-    [key: number]: string
-  }
-}
-```
-
-### Example
-
-```jsx
-const theme = {
-  altitudes: {
-    100: 'box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15), 0px 0px 2px 1px rgba(0, 0, 0, 0.02)',
-    200: 'box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15), 0px 0px 4px 2px rgba(0, 0, 0, 0.02)',
-    300: 'box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.15), 0px 0px 6px 3px rgba(0, 0, 0, 0.02)',
-    400: 'box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.15), 0px 0px 12px 6px rgba(0, 0, 0, 0.02)',
-    700: 'box-shadow: 0px 24px 72px 0px rgba(0, 0, 0, 0.15), 0px 0px 24px 72px rgba(0, 0, 0, 0.02)',
-  }
-}
+<Box alignX="right" border="default">
+  I am aligned to the right
+</Box>
 ```
