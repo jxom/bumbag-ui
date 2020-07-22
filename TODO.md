@@ -1,3 +1,4 @@
+- <Box alignY="center" alignX="center">
 - Add exposure to <Dialog.Modal> in the Modal docs
 - Update global styles
 - Update styling components

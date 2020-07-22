@@ -56,6 +56,7 @@ import { InlineProps } from '../Inline';
 import { InlineBlockProps } from '../InlineBlock';
 import { InlineFlexProps } from '../InlineFlex';
 import { InputProps, InputFieldProps } from '../Input';
+import { KeyProps } from '../Key';
 import { LabelProps } from '../Label';
 import { StackProps } from '../Stack';
 import { LinkProps } from '../Link';
@@ -898,6 +899,14 @@ export type InputFieldThemeConfig = {
   defaultProps?: Partial<InputFieldProps>;
   variants?: Variant<InputFieldThemeConfig>;
   modes?: Variant<InputFieldThemeConfig>;
+};
+export type KeyThemeConfig = {
+  css?: {
+    root?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<KeyProps>;
+  variants?: Variant<KeyThemeConfig>;
+  modes?: Variant<KeyThemeConfig>;
 };
 export type LabelThemeConfig = {
   css?: {
@@ -1891,6 +1900,7 @@ export type ThemeConfig = {
   InlineFlex?: InlineFlexThemeConfig;
   Input?: InputThemeConfig;
   InputField?: InputFieldThemeConfig;
+  Key?: KeyThemeConfig;
   Stack?: StackThemeConfig;
   Link?: LinkThemeConfig;
   List?: ListThemeConfig;
