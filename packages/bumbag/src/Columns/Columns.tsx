@@ -3,7 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 
 import { ColumnsThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 
 import { ColumnsContext } from './ColumnsContext';
 import * as styles from './styles';
@@ -14,18 +14,18 @@ export type LocalColumnsProps = {
   minBreakpoint?: 'tablet' | 'mobile';
   spacing?: string;
 };
-export type ColumnsProps = BoxProps & LocalColumnsProps;
+export type ColumnsProps = FlexProps & LocalColumnsProps;
 
 const useProps = createHook<ColumnsProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const flexProps = Flex.useProps(props);
 
     const className = useClassName({
       style: styles.Columns,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
     const contextValue = React.useMemo(
@@ -38,7 +38,7 @@ const useProps = createHook<ColumnsProps>(
     );
 
     return {
-      ...boxProps,
+      ...flexProps,
       className,
       children: <ColumnsContext.Provider value={contextValue}>{props.children}</ColumnsContext.Provider>,
     };

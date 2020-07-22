@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,11 +12,11 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -38,24 +38,27 @@ exports[`composition as should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -65,11 +68,11 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Tag props 1`] = `
 Object {
   "children": <React.Fragment>
-    <Box
-      className="css-jihuf0 css-1pwrqjj css-o12mw7 fp-Box fp-TagContent"
+    <Flex
+      className="css-1hjstdn css-1pwrqjj css-1yuzjtp fp-Box fp-TagContent"
     />
   </React.Fragment>,
-  "className": "css-1hk5jxw css-1pwrqjj css-o12mw7 fp-Box fp-Tag",
+  "className": "css-1hk5jxw css-1pwrqjj css-1yuzjtp fp-Box fp-Tag",
 }
 `;
 
@@ -119,7 +122,7 @@ exports[`composition render props should render correctly 1`] = `
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -130,11 +133,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -156,28 +159,31 @@ exports[`defaultProps should render correctly for className 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   color: #574feb !important;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-3 test fp-Box fp-Tag"
+  class="emotion-5 emotion-1 emotion-4 test fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 test fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 test fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -185,7 +191,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides Tag.Close.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -196,11 +202,11 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -222,20 +228,23 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-7 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -268,30 +277,30 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-7[disabled],
-.emotion-7[aria-disabled="true"] {
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-7:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -299,31 +308,31 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-5 {
+.emotion-6 {
   font-size: 1rem !important;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-10.emotion-10.emotion-10 {
+.emotion-11.emotion-11.emotion-11 {
   background-color: #212121;
   color: #ffffff;
   fill: #ffffff;
@@ -333,32 +342,32 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
   margin-left: -0.25em;
 }
 
-.emotion-10.emotion-10.emotion-10:hover {
+.emotion-11.emotion-11.emotion-11:hover {
   background-color: #070707;
 }
 
-.emotion-10.emotion-10.emotion-10:focus {
+.emotion-11.emotion-11.emotion-11:focus {
   box-shadow: unset;
 }
 
-.emotion-10.emotion-10.emotion-10 {
+.emotion-11.emotion-11.emotion-11 {
   background-color: red;
 }
 
 <div
-  class="emotion-11 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
   <button
-    class="emotion-6 emotion-7 emotion-0 emotion-1 emotion-10 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -378,7 +387,7 @@ exports[`overrides Tag.Close.root should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.Content.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -389,11 +398,11 @@ exports[`overrides Tag.Content.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -415,28 +424,31 @@ exports[`overrides Tag.Content.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-2 {
+.emotion-3 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -444,7 +456,7 @@ exports[`overrides Tag.Content.root should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.outlined.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -455,24 +467,27 @@ exports[`overrides Tag.outlined.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -494,22 +509,22 @@ exports[`overrides Tag.outlined.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: unset;
   border: 1px solid #212121;
   color: #212121;
   fill: #212121;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -517,7 +532,7 @@ exports[`overrides Tag.outlined.root should render correctly 1`] = `
 `;
 
 exports[`overrides Tag.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -528,24 +543,27 @@ exports[`overrides Tag.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -567,15 +585,15 @@ exports[`overrides Tag.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -583,7 +601,7 @@ exports[`overrides Tag.root should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.default.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -594,24 +612,27 @@ exports[`overrides sizes Tag.sizes.default.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -633,15 +654,15 @@ exports[`overrides sizes Tag.sizes.default.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -649,7 +670,7 @@ exports[`overrides sizes Tag.sizes.default.root should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.large.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -660,24 +681,27 @@ exports[`overrides sizes Tag.sizes.large.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -701,15 +725,15 @@ exports[`overrides sizes Tag.sizes.large.root should render correctly 1`] = `
   height: 2.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -717,7 +741,7 @@ exports[`overrides sizes Tag.sizes.large.root should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.medium.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -728,24 +752,27 @@ exports[`overrides sizes Tag.sizes.medium.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -769,15 +796,15 @@ exports[`overrides sizes Tag.sizes.medium.root should render correctly 1`] = `
   height: 2rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -785,7 +812,7 @@ exports[`overrides sizes Tag.sizes.medium.root should render correctly 1`] = `
 `;
 
 exports[`overrides sizes Tag.sizes.small.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -796,24 +823,27 @@ exports[`overrides sizes Tag.sizes.small.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -836,10 +866,10 @@ exports[`overrides sizes Tag.sizes.small.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -847,7 +877,7 @@ exports[`overrides sizes Tag.sizes.small.root should render correctly 1`] = `
 `;
 
 exports[`props palette should render a danger tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -858,24 +888,27 @@ exports[`props palette should render a danger tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -898,10 +931,10 @@ exports[`props palette should render a danger tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -909,7 +942,7 @@ exports[`props palette should render a danger tag correctly 1`] = `
 `;
 
 exports[`props palette should render a info tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -920,24 +953,27 @@ exports[`props palette should render a info tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -960,10 +996,10 @@ exports[`props palette should render a info tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -971,7 +1007,7 @@ exports[`props palette should render a info tag correctly 1`] = `
 `;
 
 exports[`props palette should render a primary tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -982,24 +1018,27 @@ exports[`props palette should render a primary tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1022,10 +1061,10 @@ exports[`props palette should render a primary tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1033,7 +1072,7 @@ exports[`props palette should render a primary tag correctly 1`] = `
 `;
 
 exports[`props palette should render a secondary tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1044,24 +1083,27 @@ exports[`props palette should render a secondary tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1084,10 +1126,10 @@ exports[`props palette should render a secondary tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1095,7 +1137,7 @@ exports[`props palette should render a secondary tag correctly 1`] = `
 `;
 
 exports[`props palette should render a success tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1106,24 +1148,27 @@ exports[`props palette should render a success tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1146,10 +1191,10 @@ exports[`props palette should render a success tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1157,7 +1202,7 @@ exports[`props palette should render a success tag correctly 1`] = `
 `;
 
 exports[`props palette should render a warning tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1168,24 +1213,27 @@ exports[`props palette should render a warning tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1208,10 +1256,10 @@ exports[`props palette should render a warning tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1219,7 +1267,7 @@ exports[`props palette should render a warning tag correctly 1`] = `
 `;
 
 exports[`props should render a tag with onRemove correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1230,11 +1278,11 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1256,20 +1304,16 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-10.emotion-10.emotion-10 {
+.emotion-11.emotion-11.emotion-11 {
   background-color: #212121;
   color: #ffffff;
   fill: #ffffff;
@@ -1279,15 +1323,22 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   margin-left: -0.25em;
 }
 
-.emotion-10.emotion-10.emotion-10:hover {
+.emotion-11.emotion-11.emotion-11:hover {
   background-color: #070707;
 }
 
-.emotion-10.emotion-10.emotion-10:focus {
+.emotion-11.emotion-11.emotion-11:focus {
   box-shadow: unset;
 }
 
-.emotion-7 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1320,30 +1371,30 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-7[disabled],
-.emotion-7[aria-disabled="true"] {
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-7:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -1351,24 +1402,24 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-5 {
+.emotion-6 {
   font-size: 1rem !important;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -1376,19 +1427,19 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 }
 
 <div
-  class="emotion-11 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
   <button
-    class="emotion-6 emotion-7 emotion-0 emotion-1 emotion-10 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1408,7 +1459,7 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1419,69 +1470,7 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #212121;
-  border-radius: 6px;
-  color: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  fill: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  height: 1.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: inherit;
-  padding: 0 0.75em;
-}
-
-<div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
->
-  <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
-  >
-    Hello world
-  </div>
-</div>
-`;
-
-exports[`props should render correctly with CSS props 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -1507,28 +1496,96 @@ exports[`props should render correctly with CSS props 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+  >
+    Hello world
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with CSS props 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #212121;
+  border-radius: 6px;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 1.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 0.75em;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   color: #574feb !important;
 }
 
 <div
-  class="emotion-4 emotion-0 emotion-3 fp-Box fp-Tag"
+  class="emotion-5 emotion-1 emotion-4 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1536,7 +1593,7 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`props size should render a default tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1547,11 +1604,11 @@ exports[`props size should render a default tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1573,24 +1630,27 @@ exports[`props size should render a default tag correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1598,7 +1658,7 @@ exports[`props size should render a default tag correctly 1`] = `
 `;
 
 exports[`props size should render a large tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1609,24 +1669,27 @@ exports[`props size should render a large tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1651,10 +1714,10 @@ exports[`props size should render a large tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1662,7 +1725,7 @@ exports[`props size should render a large tag correctly 1`] = `
 `;
 
 exports[`props size should render a medium tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1673,24 +1736,27 @@ exports[`props size should render a medium tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1715,10 +1781,10 @@ exports[`props size should render a medium tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1726,7 +1792,7 @@ exports[`props size should render a medium tag correctly 1`] = `
 `;
 
 exports[`props size should render a small tag correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1737,24 +1803,27 @@ exports[`props size should render a small tag correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1777,10 +1846,10 @@ exports[`props size should render a small tag correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1788,7 +1857,7 @@ exports[`props size should render a small tag correctly 1`] = `
 `;
 
 exports[`props size should render correctly with overrides 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1799,24 +1868,27 @@ exports[`props size should render correctly with overrides 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1839,10 +1911,10 @@ exports[`props size should render correctly with overrides 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1850,7 +1922,7 @@ exports[`props size should render correctly with overrides 1`] = `
 `;
 
 exports[`props size should render correctly with overrides 2`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1861,24 +1933,27 @@ exports[`props size should render correctly with overrides 2`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1900,15 +1975,15 @@ exports[`props size should render correctly with overrides 2`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1916,7 +1991,7 @@ exports[`props size should render correctly with overrides 2`] = `
 `;
 
 exports[`props size should render correctly with overrides 3`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1927,24 +2002,27 @@ exports[`props size should render correctly with overrides 3`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1968,15 +2046,15 @@ exports[`props size should render correctly with overrides 3`] = `
   height: 2rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -1984,7 +2062,7 @@ exports[`props size should render correctly with overrides 3`] = `
 `;
 
 exports[`props size should render correctly with overrides 4`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1995,24 +2073,27 @@ exports[`props size should render correctly with overrides 4`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2036,15 +2117,15 @@ exports[`props size should render correctly with overrides 4`] = `
   height: 2.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     Hello world
   </div>
@@ -2052,7 +2133,7 @@ exports[`props size should render correctly with overrides 4`] = `
 `;
 
 exports[`theming Tag.Close.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2063,11 +2144,11 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2089,20 +2170,23 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-7 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2135,30 +2219,30 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
   border: 1px solid #d9d9e1;
 }
 
-.emotion-7[disabled],
-.emotion-7[aria-disabled="true"] {
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-7:focus {
+.emotion-8:focus {
   outline: unset;
   z-index: 2;
   box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
   border-color: transparent;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: #f7f7fa;
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: #e6e6eb;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: unset;
   border: unset;
   color: #212121;
@@ -2166,31 +2250,31 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
   box-shadow: unset;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-.emotion-7:hover:active {
+.emotion-8:hover:active {
   background-color: rgba(0,0,0,0.1);
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   min-height: unset;
   padding: 0.5em;
 }
 
-.emotion-5 {
+.emotion-6 {
   font-size: 1rem !important;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: inherit;
   position: relative;
   height: 1em;
   width: 1em;
 }
 
-.emotion-10.emotion-10.emotion-10 {
+.emotion-11.emotion-11.emotion-11 {
   background-color: #212121;
   color: #ffffff;
   fill: #ffffff;
@@ -2200,32 +2284,32 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
   margin-left: -0.25em;
 }
 
-.emotion-10.emotion-10.emotion-10:hover {
+.emotion-11.emotion-11.emotion-11:hover {
   background-color: #070707;
 }
 
-.emotion-10.emotion-10.emotion-10:focus {
+.emotion-11.emotion-11.emotion-11:focus {
   box-shadow: unset;
 }
 
-.emotion-10.emotion-10.emotion-10 {
+.emotion-11.emotion-11.emotion-11 {
   background-color: red;
 }
 
 <div
-  class="emotion-11 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
   <button
-    class="emotion-6 emotion-7 emotion-0 emotion-1 emotion-10 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2245,7 +2329,7 @@ exports[`theming Tag.Close.root should render correctly 1`] = `
 `;
 
 exports[`theming Tag.Content.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2256,11 +2340,11 @@ exports[`theming Tag.Content.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2282,28 +2366,31 @@ exports[`theming Tag.Content.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-2 {
+.emotion-3 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2311,7 +2398,7 @@ exports[`theming Tag.Content.root should render correctly 1`] = `
 `;
 
 exports[`theming Tag.outlined.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2322,24 +2409,27 @@ exports[`theming Tag.outlined.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2361,22 +2451,22 @@ exports[`theming Tag.outlined.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: unset;
   border: 1px solid #212121;
   color: #212121;
   fill: #212121;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2384,7 +2474,7 @@ exports[`theming Tag.outlined.root should render correctly 1`] = `
 `;
 
 exports[`theming Tag.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2395,24 +2485,27 @@ exports[`theming Tag.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2434,15 +2527,15 @@ exports[`theming Tag.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2450,7 +2543,7 @@ exports[`theming Tag.root should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.default.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2461,24 +2554,27 @@ exports[`theming sizes Tag.sizes.default.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2500,15 +2596,15 @@ exports[`theming sizes Tag.sizes.default.root should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2516,7 +2612,7 @@ exports[`theming sizes Tag.sizes.default.root should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.large.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2527,24 +2623,27 @@ exports[`theming sizes Tag.sizes.large.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2568,15 +2667,15 @@ exports[`theming sizes Tag.sizes.large.root should render correctly 1`] = `
   height: 2.5rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2584,7 +2683,7 @@ exports[`theming sizes Tag.sizes.large.root should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.medium.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2595,24 +2694,27 @@ exports[`theming sizes Tag.sizes.medium.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2636,15 +2738,15 @@ exports[`theming sizes Tag.sizes.medium.root should render correctly 1`] = `
   height: 2rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background-color: red;
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>
@@ -2652,7 +2754,7 @@ exports[`theming sizes Tag.sizes.medium.root should render correctly 1`] = `
 `;
 
 exports[`theming sizes Tag.sizes.small.root should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2663,24 +2765,27 @@ exports[`theming sizes Tag.sizes.small.root should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: inherit;
   padding: 0 0.75em;
 }
 
-.emotion-3 {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2703,10 +2808,10 @@ exports[`theming sizes Tag.sizes.small.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-0 emotion-1 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-TagContent"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
   >
     hello world
   </div>

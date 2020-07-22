@@ -90,14 +90,14 @@ const useProps = createHook<ButtonProps>(
     const children = (
       <React.Fragment>
         {props.isLoading && (
-          <Box className={spinnerWrapperClassName}>
+          <Flex className={spinnerWrapperClassName}>
             <Spinner
               use={Flex}
               className={spinnerClassName}
               color={props.variant === 'default' ? `${props.palette}Inverted` : props.palette}
               {...spinnerProps}
             />
-          </Box>
+          </Flex>
         )}
         <ConditionalWrap condition={props.isLoading} wrap={(children) => <Text>{children}</Text>}>
           {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}

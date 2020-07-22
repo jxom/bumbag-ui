@@ -3,6 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 import { Button, ButtonProps } from '../Button';
 
 import * as styles from './styles';
@@ -49,7 +50,7 @@ const useProps = createHook<TagProps>(
       className,
       children: (
         <React.Fragment>
-          <Box className={tagContentClassName}>{children}</Box>
+          <Flex className={tagContentClassName}>{children}</Flex>
           {onRemove && (
             <Button.Close className={tagCloseClassName} onClick={onRemove} iconProps={{ fontSize: '200' }} />
           )}

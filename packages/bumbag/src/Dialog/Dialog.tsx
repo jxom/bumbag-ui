@@ -5,6 +5,7 @@ import { bindFns, useClassName, createComponent, createElement, createHook, omit
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
+import { Flex, FlexProps } from '../Flex';
 import { Icon, IconProps } from '../Icon';
 import { Modal, ModalContext, ModalProps } from '../Modal';
 import { Text, TextProps } from '../Text';
@@ -137,11 +138,11 @@ export const Dialog = createComponent<DialogProps>(
 //////////////////////////////
 
 export type LocalDialogContentProps = {};
-export type DialogContentProps = BoxProps & LocalDialogContentProps;
+export type DialogContentProps = FlexProps & LocalDialogContentProps;
 
 const useDialogContentProps = createHook<DialogContentProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
     const className = useClassName({
@@ -149,10 +150,10 @@ const useDialogContentProps = createHook<DialogContentProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
-    return { id: props.id || contextProps.descriptionId, ...boxProps, className };
+    return { id: props.id || contextProps.descriptionId, ...flexProps, className };
   },
   { themeKey: 'Dialog.Content' }
 );
@@ -257,11 +258,11 @@ export const DialogTitle = createComponent<DialogTitleProps>(
 //////////////////////////////
 
 export type LocalDialogFooterProps = {};
-export type DialogFooterProps = BoxProps & LocalDialogFooterProps;
+export type DialogFooterProps = FlexProps & LocalDialogFooterProps;
 
 const useDialogFooterProps = createHook<DialogFooterProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
     const className = useClassName({
@@ -269,10 +270,10 @@ const useDialogFooterProps = createHook<DialogFooterProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
-    return { ...boxProps, className };
+    return { ...flexProps, className };
   },
   { themeKey: 'Dialog.Footer' }
 );

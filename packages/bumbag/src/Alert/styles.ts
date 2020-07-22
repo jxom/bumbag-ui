@@ -5,7 +5,6 @@ export const Alert = (styleProps) => cssClass`
   background-color: ${palette('background', { dark: 'gray900' })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
   position: relative;
-  display: flex;
   overflow: hidden;
 
   ${
@@ -63,7 +62,6 @@ export const AlertContent = (styleProps) => cssClass`
 export const AlertWrapper = (styleProps) => cssClass`
   align-items: center;
   justify-content: space-between;
-  display: flex;
   flex: 1;
   padding: ${space(1, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
 

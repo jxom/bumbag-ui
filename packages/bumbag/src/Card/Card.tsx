@@ -3,6 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 
 import * as styles from './styles';
 
@@ -138,7 +139,7 @@ export function CardTitle(props: CardTitleProps) {
 /////////////////////////////////////
 
 export type LocalCardHeaderProps = {};
-export type CardHeaderProps = BoxProps & LocalCardHeaderProps;
+export type CardHeaderProps = FlexProps & LocalCardHeaderProps;
 
 export function CardHeader(props: CardHeaderProps) {
   const { children, ...restProps } = props;
@@ -152,9 +153,9 @@ export function CardHeader(props: CardHeaderProps) {
   });
 
   return (
-    <Box className={cardHeaderClassName} {...restProps}>
+    <Flex className={cardHeaderClassName} {...restProps}>
       {children}
-    </Box>
+    </Flex>
   );
 }
 

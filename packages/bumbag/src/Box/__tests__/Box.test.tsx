@@ -141,6 +141,22 @@ describe('props', () => {
     const { container } = render(<Box overrides={{ Box: { css: { root: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  ['left', 'right', 'center'].forEach((alignX) => {
+    it(`should render correctly for an alignX of ${alignX}`, () => {
+      // @ts-ignore
+      const { container } = render(<Box alignX={alignX} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
+  ['top', 'bottom', 'center'].forEach((alignY) => {
+    it(`should render correctly for an alignY of ${alignY}`, () => {
+      // @ts-ignore
+      const { container } = render(<Box alignY={alignY} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
 
 describe('composition', () => {

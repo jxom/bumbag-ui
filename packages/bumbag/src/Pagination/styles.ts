@@ -2,8 +2,6 @@ import { cssClass } from '../styled';
 import { fontWeight, theme } from '../utils';
 
 export const Pagination = (styleProps) => cssClass`
-  display: flex;
-
   & {
     ${theme(styleProps.themeKey, `css.root`)(styleProps)};
   }

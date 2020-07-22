@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`composition as should render correctly 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,15 +12,18 @@ exports[`composition as should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -34,7 +37,7 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </p>
@@ -51,12 +54,12 @@ Object {
       }
     }
   />,
-  "className": "css-9zrzcn css-1pwrqjj css-o12mw7 fp-Box fp-Columns",
+  "className": "css-yadc87 css-1k1yp07 css-1pwrqjj css-1yuzjtp fp-Box fp-Flex fp-Columns",
 }
 `;
 
 exports[`composition render props should render correctly 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -67,15 +70,18 @@ exports[`composition render props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -89,7 +95,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </div>
@@ -111,11 +117,14 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -146,7 +155,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 test fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 test fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -187,11 +196,14 @@ exports[`overrides Columns.Column.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -243,7 +255,7 @@ exports[`overrides Columns.Column.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -284,6 +296,13 @@ exports[`overrides Columns.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -302,10 +321,6 @@ exports[`overrides Columns.root should render correctly 1`] = `
 }
 
 .emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -323,7 +338,7 @@ exports[`overrides Columns.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -364,11 +379,14 @@ exports[`props basic offsets renders correctly for a spread offset of "both" 1`]
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -441,7 +459,7 @@ exports[`props basic offsets renders correctly for a spread offset of "both" 1`]
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -472,11 +490,14 @@ exports[`props basic offsets renders correctly for a spread offset of "left" 1`]
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -548,7 +569,7 @@ exports[`props basic offsets renders correctly for a spread offset of "left" 1`]
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -579,11 +600,14 @@ exports[`props basic offsets renders correctly for a spread offset of "right" 1`
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -655,7 +679,7 @@ exports[`props basic offsets renders correctly for a spread offset of "right" 1`
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -686,11 +710,14 @@ exports[`props basic offsets renders correctly for a spread offset of values bet
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -774,7 +801,7 @@ exports[`props basic offsets renders correctly for a spread offset of values bet
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -805,11 +832,14 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -840,7 +870,649 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignX of center 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignX of left 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignX of right 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignY of bottom 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignY of center 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
+>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+  <div
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
+  >
+    Column
+  </div>
+</div>
+`;
+
+exports[`props should render correctly for an alignY of top 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-12 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-top: -0.5rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-12:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+  }
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13.emotion-13 {
+  -webkit-flex-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
+}
+
+<div
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -866,7 +1538,7 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly when isGapless = true 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -877,29 +1549,32 @@ exports[`props should render correctly when isGapless = true 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </div>
 `;
 
 exports[`props should render correctly when isOneLine = true 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -910,15 +1585,18 @@ exports[`props should render correctly when isOneLine = true 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -937,14 +1615,14 @@ exports[`props should render correctly when isOneLine = true 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </div>
 `;
 
 exports[`props should render correctly when isOneLine = true and minBreakpoint = mobile 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -955,15 +1633,18 @@ exports[`props should render correctly when isOneLine = true and minBreakpoint =
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -974,14 +1655,14 @@ exports[`props should render correctly when isOneLine = true and minBreakpoint =
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </div>
 `;
 
 exports[`props should render correctly when isOneLine = true and minBreakpoint = tablet 1`] = `
-.emotion-1 {
+.emotion-2 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -992,15 +1673,18 @@ exports[`props should render correctly when isOneLine = true and minBreakpoint =
   box-sizing: border-box;
 }
 
-.emotion-1:focus:not(:focus-visible) {
+.emotion-2:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-0 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1019,7 +1703,7 @@ exports[`props should render correctly when isOneLine = true and minBreakpoint =
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Flex fp-Columns"
 >
   Hello world
 </div>
@@ -1041,11 +1725,14 @@ exports[`props should render correctly when minBreakpoint is mobile 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1067,7 +1754,7 @@ exports[`props should render correctly when minBreakpoint is mobile 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1108,11 +1795,14 @@ exports[`props should render correctly when minBreakpoint is tablet 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1140,7 +1830,7 @@ exports[`props should render correctly when minBreakpoint is tablet 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1181,11 +1871,14 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1215,7 +1908,7 @@ exports[`props should render correctly with CSS props 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   color: #574feb !important;
 }
 
@@ -1224,7 +1917,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-14 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-15 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1265,11 +1958,14 @@ exports[`props spreads renders correctly when all columns have sizes 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1391,7 +2087,7 @@ exports[`props spreads renders correctly when all columns have sizes 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1432,11 +2128,14 @@ exports[`props spreads renders correctly when one of the columns does not have a
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1548,7 +2247,7 @@ exports[`props spreads renders correctly when one of the columns does not have a
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1589,11 +2288,14 @@ exports[`props spreads renders correctly when the first column does not have a s
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1705,7 +2407,7 @@ exports[`props spreads renders correctly when the first column does not have a s
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1746,11 +2448,14 @@ exports[`props spreads renders correctly when there is space still left on the r
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1818,7 +2523,7 @@ exports[`props spreads renders correctly when there is space still left on the r
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1849,11 +2554,14 @@ exports[`props variable offsets renders correctly when all spreadOffsets are spe
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -1961,7 +2669,7 @@ exports[`props variable offsets renders correctly when all spreadOffsets are spe
 }
 
 <div
-  class="emotion-3 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-3 emotion-4 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -1987,11 +2695,14 @@ exports[`props variable offsets renders correctly when only mobile spread offset
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2022,7 +2733,7 @@ exports[`props variable offsets renders correctly when only mobile spread offset
 }
 
 <div
-  class="emotion-3 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-3 emotion-4 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2048,11 +2759,14 @@ exports[`props variable offsets renders correctly when only spreadOffset and spr
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2124,7 +2838,7 @@ exports[`props variable offsets renders correctly when only spreadOffset and spr
 }
 
 <div
-  class="emotion-3 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-3 emotion-4 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2150,11 +2864,14 @@ exports[`props variable offsets renders correctly when only tablet spread offset
   outline: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-3 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2191,7 +2908,7 @@ exports[`props variable offsets renders correctly when only tablet spread offset
 }
 
 <div
-  class="emotion-3 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-3 emotion-4 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2217,11 +2934,14 @@ exports[`props variable sizes renders correctly when all spreads are specified 1
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2355,7 +3075,7 @@ exports[`props variable sizes renders correctly when all spreads are specified 1
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2386,11 +3106,14 @@ exports[`props variable sizes renders correctly when only mobile spread is speci
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2438,7 +3161,7 @@ exports[`props variable sizes renders correctly when only mobile spread is speci
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2469,11 +3192,14 @@ exports[`props variable sizes renders correctly when only spread and spreadDeskt
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2559,7 +3285,7 @@ exports[`props variable sizes renders correctly when only spread and spreadDeskt
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2590,11 +3316,14 @@ exports[`props variable sizes renders correctly when only tablet spread is speci
   outline: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-6 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2654,7 +3383,7 @@ exports[`props variable sizes renders correctly when only tablet spread is speci
 }
 
 <div
-  class="emotion-6 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2685,11 +3414,14 @@ exports[`theming Columns.Column.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.emotion-12 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2724,7 +3456,7 @@ exports[`theming Columns.Column.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"
@@ -2765,6 +3497,13 @@ exports[`theming Columns.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -2783,10 +3522,6 @@ exports[`theming Columns.root should render correctly 1`] = `
 }
 
 .emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-top: -0.5rem;
@@ -2804,7 +3539,7 @@ exports[`theming Columns.root should render correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Columns"
+  class="emotion-12 emotion-13 emotion-1 emotion-2 fp-Box fp-Flex fp-Columns"
 >
   <div
     class="emotion-0 emotion-1 emotion-2 fp-Box fp-ColumnsColumn"

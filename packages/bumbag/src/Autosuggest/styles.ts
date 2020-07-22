@@ -55,7 +55,6 @@ export const AutosuggestStaticItem = (styleProps) => cssClass`
 `;
 
 export const AutosuggestClearButtonWrapper = (styleProps) => cssClass`
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: ${space(1)(styleProps)}rem ${space(2)(styleProps)}rem;

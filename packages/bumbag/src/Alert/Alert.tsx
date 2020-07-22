@@ -4,6 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { Omit } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
+import { Flex, FlexProps } from '../Flex';
 import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
 import { Text } from '../Text';
@@ -24,7 +25,7 @@ export type LocalAlertProps = {
   closeButtonIconProps?: Omit<IconProps, 'icon'>;
   iconProps?: Omit<IconProps, 'icon'>;
 };
-export type AlertProps = BoxProps & LocalAlertProps;
+export type AlertProps = FlexProps & LocalAlertProps;
 
 export type AlertContextOptions = AlertProps & {
   descriptionId?: string;
@@ -52,14 +53,14 @@ const useProps = createHook<AlertProps>(
       variant,
       ...restProps
     } = props;
-    const boxProps = Box.useProps(restProps);
+    const flexProps = Flex.useProps(restProps);
 
     const className = useClassName({
       style: styles.Alert,
       styleProps: props,
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
     const alertCloseButtonClassName = useClassName({
       style: styles.AlertCloseButton,
@@ -96,15 +97,15 @@ const useProps = createHook<AlertProps>(
           </React.Fragment>
         )}
         <AlertWrapper overrides={overrides}>
-          <Box alignItems="center" display="flex">
+          <Flex alignItems="center">
             {hasIcon && <AlertIcon overrides={overrides} />}
             <AlertContent overrides={overrides}>
               {title && <AlertTitle overrides={overrides}>{title}</AlertTitle>}
               <AlertDescription overrides={overrides}>{props.children}</AlertDescription>
             </AlertContent>
-          </Box>
+          </Flex>
           {showCloseButton && (
-            <Box display="flex">
+            <Flex>
               <Button.Close
                 className={alertCloseButtonClassName}
                 onClick={onClickClose}
@@ -112,14 +113,14 @@ const useProps = createHook<AlertProps>(
                 iconProps={closeButtonIconProps}
                 {...closeButtonProps}
               />
-            </Box>
+            </Flex>
           )}
         </AlertWrapper>
       </AlertContext.Provider>
     );
 
     return {
-      ...boxProps,
+      ...flexProps,
       'aria-describedby': props.children ? descriptionId : undefined,
       'aria-labelledby': props.title ? titleId : undefined,
       className,
@@ -231,9 +232,9 @@ export function AlertWrapper(props: AlertWrapperProps) {
   });
 
   return (
-    <Box className={alertWrapperClassName} {...restProps}>
+    <Flex className={alertWrapperClassName} {...restProps}>
       {children}
-    </Box>
+    </Flex>
   );
 }
 

@@ -1,5 +1,7 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
+import { getAlignmentAttributes } from '../Box/styles';
+import { getFlexAlignmentAttributes } from '../Flex/styles';
 
 const verticalBreakpoints = {
   tablet: 'mobile',
@@ -21,6 +23,8 @@ export const Set = (styleProps) => cssClass`
             align-items: flex-start;
           `};
 
+          ${getAlignmentAttributes(styleProps)}
+
           & {
             ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
           }
@@ -36,6 +40,8 @@ export const Set = (styleProps) => cssClass`
                 align-items: flex-start;
               `};
 
+              ${getAlignmentAttributes(styleProps)}
+
               & {
                 ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
               }
@@ -47,6 +53,8 @@ export const Set = (styleProps) => cssClass`
                 justify-content: flex-start;
                 margin-left: -${space(styleProps.spacing)(styleProps)}rem;
                 margin-top: -${space(styleProps.spacing)(styleProps)}rem;
+
+                ${getFlexAlignmentAttributes(styleProps)}
 
                 & {
                   ${theme(styleProps.themeKey, `css.horizontal`)(styleProps)};

@@ -12,6 +12,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
 import { Button, ButtonProps } from '../Button';
+import { Flex, FlexProps } from '../Flex';
 import { Text, TextProps } from '../Text';
 
 import { PopoverStateContext } from './PopoverState';
@@ -252,11 +253,11 @@ export const PopoverContent = createComponent<PopoverContentProps>(
 //////////////////////////////
 
 export type LocalPopoverHeaderProps = {};
-export type PopoverHeaderProps = BoxProps & LocalPopoverHeaderProps;
+export type PopoverHeaderProps = FlexProps & LocalPopoverHeaderProps;
 
 const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
     const className = useClassName({
@@ -264,10 +265,10 @@ const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
-    return { ...boxProps, className };
+    return { ...flexProps, className };
   },
   { themeKey: 'Popover.Header' }
 );
@@ -333,11 +334,11 @@ export const PopoverTitle = createComponent<PopoverTitleProps>(
 //////////////////////////////
 
 export type LocalPopoverFooterProps = {};
-export type PopoverFooterProps = BoxProps & LocalPopoverFooterProps;
+export type PopoverFooterProps = FlexProps & LocalPopoverFooterProps;
 
 const usePopoverFooterProps = createHook<PopoverFooterProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
     const className = useClassName({
@@ -345,10 +346,10 @@ const usePopoverFooterProps = createHook<PopoverFooterProps>(
       styleProps: { ...contextProps, ...props },
       themeKey,
       themeKeyOverride,
-      prevClassName: boxProps.className,
+      prevClassName: flexProps.className,
     });
 
-    return { ...boxProps, className };
+    return { ...flexProps, className };
   },
   { themeKey: 'Popover.Footer' }
 );

@@ -17,6 +17,22 @@ describe('props', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  ['left', 'right', 'center'].forEach((alignX) => {
+    it(`should render correctly for an alignX of ${alignX}`, () => {
+      // @ts-ignore
+      const { container } = render(<Flex alignX={alignX} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
+
+  ['top', 'bottom', 'center'].forEach((alignY) => {
+    it(`should render correctly for an alignY of ${alignY}`, () => {
+      // @ts-ignore
+      const { container } = render(<Flex alignY={alignY} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
+  });
 });
 
 describe('composition', () => {
