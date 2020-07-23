@@ -1,6 +1,6 @@
 import PropTypes from '../../components/PropTypes';
 import Theme from '../../components/Theme';
-import { Button } from 'bumbag';
+import { Button, Key } from 'bumbag';
 
 # Button
 
@@ -239,7 +239,7 @@ The `<Button>` component follows the [WAI ARIA Button Pattern](https://www.w3.or
 #### Patterns
 
 - `Button` has a role of `button`.
-- When a `Button` has focus, **Space** or **Enter** activates it.
+- When a `Button` has focus, <Key>Space</Key> or <Key>Enter</Key> activates it.
 - When a `Button` is disabled, the `disabled` and `aria-disabled` attributes are set to `true`.
 - If a `Button` is composed of another element (such as `div` or `a`), accessible button attributes are set on the element.
 
