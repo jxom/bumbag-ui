@@ -271,7 +271,7 @@ export const getLinkProperties = (styleProps) => css`
 
 export const getOutlinedProperties = (styleProps) => css`
   & {
-    background-color: unset;
+    background-color: ${palette('default')(styleProps)};
     border: 1px solid ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
@@ -281,9 +281,12 @@ export const getOutlinedProperties = (styleProps) => css`
     css`
       &:hover {
         border-color: ${palette()(styleProps)};
-        background-color: ${palette()(styleProps)};
-        color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-        fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+        background-color: ${palette(`${styleProps.palette}Tint`, { dark: `${styleProps.palette}Shade` })(styleProps)};
+      }
+
+      &:hover:active {
+        border-color: ${palette()(styleProps)};
+        background-color: ${palette(`${styleProps.palette}100`, { dark: `${styleProps.palette}900` })(styleProps)};
       }
     `};
   }

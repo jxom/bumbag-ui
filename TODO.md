@@ -1,4 +1,4 @@
-- Add <Level> component
+
 - Add exposure to <Dialog.Modal> in the Modal docs
 - Update global styles
 - Update styling components

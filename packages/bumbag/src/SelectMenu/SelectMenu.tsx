@@ -210,17 +210,17 @@ const useProps = createHook<SelectMenuProps>(
         if (typeof loadOptions === 'function') {
           if (blockLoad) return { options };
 
-          const { options: fetchedOptions } = await loadOptions({ page, searchText, variables: loadVariables });
+          return loadOptions({ page, searchText, variables: loadVariables }).then(({ options: fetchedOptions }) => {
+            let newOptions = [...options, ...fetchedOptions];
+            if (page === 1) {
+              newOptions = fetchedOptions;
+            }
+            if (page > 1 && fetchedOptions.length === 0) {
+              setBlockLoad(true);
+            }
 
-          let newOptions = [...options, ...fetchedOptions];
-          if (page === 1) {
-            newOptions = fetchedOptions;
-          }
-          if (page > 1 && fetchedOptions.length === 0) {
-            setBlockLoad(true);
-          }
-
-          return { options: newOptions };
+            return { options: newOptions };
+          });
         }
         return undefined;
       },
@@ -547,7 +547,17 @@ export const SelectMenu = createComponent<SelectMenuProps>(
 //////////////////////////////////////////////////////////////////
 
 function SelectMenuButton(props: any) {
-  const { disabled, disableClear, isLoading, onClick, onClear, Disclosure, selectedOptions, placeholder, ...restProps } = props;
+  const {
+    disabled,
+    disableClear,
+    isLoading,
+    onClick,
+    onClear,
+    Disclosure,
+    selectedOptions,
+    placeholder,
+    ...restProps
+  } = props;
 
   const { dropdownMenu, overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
 
@@ -601,8 +611,17 @@ function SelectMenuButton(props: any) {
 
   if (Disclosure) {
     return (
-      <Disclosure disclosureProps={dropdownMenuButtonProps} disabled={disabled} disableClear={disableClear} isLoading={isLoading} label={label} selectedOptions={selectedOptions} onClear={onClear} placeholder={placeholder} />
-    )
+      <Disclosure
+        disclosureProps={dropdownMenuButtonProps}
+        disabled={disabled}
+        disableClear={disableClear}
+        isLoading={isLoading}
+        label={label}
+        selectedOptions={selectedOptions}
+        onClear={onClear}
+        placeholder={placeholder}
+      />
+    );
   }
   return (
     <Box {...dropdownMenuButtonProps} className={buttonClassName}>
