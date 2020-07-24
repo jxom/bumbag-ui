@@ -3,11 +3,11 @@
 exports[`composition hook should return with Spinner props 1`] = `
 Object {
   "children": <svg
-    className="css-1mvkoph fp-Spinnervector"
+    className="css-48n0iw fp-Spinnervector"
     viewBox="22 22 44 44"
   >
     <circle
-      className="css-1dugu06 fp-SpinnerloaderCircle"
+      className="css-7j6w3o fp-SpinnerloaderCircle"
       cx="44"
       cy="44"
       fill="none"
@@ -15,7 +15,7 @@ Object {
       strokeWidth="4"
     />
   </svg>,
-  "className": "css-xsm2k8 css-1pwrqjj css-wzgpg fp-Box fp-Spinner",
+  "className": "css-1aada9t css-4lfl7m css-1boznyh fp-Box fp-Spinner",
 }
 `;
 
@@ -421,21 +421,7 @@ exports[`defaultProps should render correctly for duration 1`] = `
 </div>
 `;
 
-exports[`overrides Spinner.loaderCircle.root should render correctly 1`] = `
-@keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
+exports[`overrides Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -483,11 +469,6 @@ exports[`overrides Spinner.loaderCircle.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 {
-  line-height: 1rem;
-  font-size: 20px;
-}
-
 .emotion-1 {
   width: 1em;
   height: 1em;
@@ -506,8 +487,13 @@ exports[`overrides Spinner.loaderCircle.root should render correctly 1`] = `
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-2 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-2.emotion-2 {
+  background-color: #ff0000;
 }
 
 <div
@@ -529,7 +515,21 @@ exports[`overrides Spinner.loaderCircle.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Spinner.root should render correctly 1`] = `
+exports[`overrides Spinner.loaderCircle.base should render correctly 1`] = `
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -577,6 +577,11 @@ exports[`overrides Spinner.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-2 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
 .emotion-1 {
   width: 1em;
   height: 1em;
@@ -595,13 +600,8 @@ exports[`overrides Spinner.root should render correctly 1`] = `
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-2 {
-  line-height: 1rem;
-  font-size: 20px;
-}
-
-.emotion-2 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <div
@@ -623,7 +623,7 @@ exports[`overrides Spinner.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Spinner.trackCircle.root should render correctly 1`] = `
+exports[`overrides Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -727,7 +727,7 @@ exports[`overrides Spinner.trackCircle.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Spinner.vector.root should render correctly 1`] = `
+exports[`overrides Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -812,8 +812,8 @@ exports[`overrides Spinner.vector.root should render correctly 1`] = `
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-1 {
-  background-color: red;
+.emotion-1.emotion-1 {
+  background-color: #ff0000;
 }
 
 <div
@@ -1703,7 +1703,7 @@ exports[`props should render correctly for value 1`] = `
 </div>
 `;
 
-exports[`theming Spinner.loaderCircle.root should render correctly 1`] = `
+exports[`theming Spinner.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -1765,11 +1765,6 @@ exports[`theming Spinner.loaderCircle.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 {
-  line-height: 1rem;
-  font-size: 20px;
-}
-
 .emotion-1 {
   width: 1em;
   height: 1em;
@@ -1788,8 +1783,13 @@ exports[`theming Spinner.loaderCircle.root should render correctly 1`] = `
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-2 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
+.emotion-2.emotion-2 {
+  background-color: #ff0000;
 }
 
 <div
@@ -1811,7 +1811,7 @@ exports[`theming Spinner.loaderCircle.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Spinner.root should render correctly 1`] = `
+exports[`theming Spinner.loaderCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -1873,6 +1873,11 @@ exports[`theming Spinner.root should render correctly 1`] = `
   outline: none;
 }
 
+.emotion-2 {
+  line-height: 1rem;
+  font-size: 20px;
+}
+
 .emotion-1 {
   width: 1em;
   height: 1em;
@@ -1891,13 +1896,8 @@ exports[`theming Spinner.root should render correctly 1`] = `
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-2 {
-  line-height: 1rem;
-  font-size: 20px;
-}
-
-.emotion-2 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <div
@@ -1919,7 +1919,7 @@ exports[`theming Spinner.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Spinner.trackCircle.root should render correctly 1`] = `
+exports[`theming Spinner.trackCircle.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -2023,7 +2023,7 @@ exports[`theming Spinner.trackCircle.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Spinner.vector.root should render correctly 1`] = `
+exports[`theming Spinner.vector.base should render correctly 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -2108,8 +2108,8 @@ exports[`theming Spinner.vector.root should render correctly 1`] = `
   animation: animation-0 0.6s infinite linear;
 }
 
-.emotion-1 {
-  background-color: red;
+.emotion-1.emotion-1 {
+  background-color: #ff0000;
 }
 
 <div

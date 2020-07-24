@@ -22,12 +22,12 @@ export const Code = (styleProps) => cssClass`
       styleProps.isBlock &&
       css`
         padding: 1rem;
-        ${theme(styleProps.themeKey, `css.block`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.block`)(styleProps)};
       `
     }
   };
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   };
 `;

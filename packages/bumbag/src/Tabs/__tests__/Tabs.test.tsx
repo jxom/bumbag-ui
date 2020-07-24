@@ -225,7 +225,7 @@ describe('props', () => {
 });
 
 describe('theming', () => {
-  it('Tabs.css.root should render correctly', () => {
+  it('Tabs.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -243,12 +243,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { css: { root: { backgroundColor: 'red' } } } } }
+      { theme: { Tabs: { styles: { base: { backgroundColor: 'red' } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.List.css.root should render correctly', () => {
+  it('Tabs.List.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -266,12 +266,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { List: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { List: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.root should render correctly', () => {
+  it('Tabs.Tab.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -289,12 +289,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { Tab: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { Tab: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.selected should render correctly', () => {
+  it('Tabs.Tab.styles.selected should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -312,12 +312,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { Tab: { css: { selected: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { Tab: { styles: { selected: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.focus should render correctly', () => {
+  it('Tabs.Tab.styles.focus should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -335,12 +335,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { Tab: { css: { focus: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { Tab: { styles: { focus: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.hover should render correctly', () => {
+  it('Tabs.Tab.styles.hover should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -358,12 +358,12 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { Tab: { css: { hover: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { Tab: { styles: { hover: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Panel.css.root should render correctly', () => {
+  it('Tabs.Panel.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs baseId="test" orientation="vertical" selectedId="tab1">
         <Tabs.List>
@@ -381,20 +381,20 @@ describe('theming', () => {
           Parrots are cool
         </Tabs.Panel>
       </Tabs>,
-      { theme: { Tabs: { Panel: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Tabs: { Panel: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('Tabs.css.root should render correctly', () => {
+  it('Tabs.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ Tabs: { styles: { base: { backgroundColor: 'red' } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -415,13 +415,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.List.css.root should render correctly', () => {
+  it('Tabs.List.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { List: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { List: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -442,13 +442,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.root should render correctly', () => {
+  it('Tabs.Tab.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { Tab: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { Tab: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -469,13 +469,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.selected should render correctly', () => {
+  it('Tabs.Tab.styles.selected should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { Tab: { css: { selected: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { Tab: { styles: { selected: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -496,13 +496,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.focus should render correctly', () => {
+  it('Tabs.Tab.styles.focus should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { Tab: { css: { focus: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { Tab: { styles: { focus: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -523,13 +523,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Tab.css.hover should render correctly', () => {
+  it('Tabs.Tab.styles.hover should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { Tab: { css: { hover: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { Tab: { styles: { hover: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>
@@ -550,13 +550,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tabs.Panel.css.root should render correctly', () => {
+  it('Tabs.Panel.styles.base should render correctly', () => {
     const { container } = render(
       <Tabs
         baseId="test"
         orientation="vertical"
         selectedId="tab1"
-        overrides={{ Tabs: { Panel: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tabs: { Panel: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         <Tabs.List>
           <Tabs.Tab tabId="tab1">Dogs</Tabs.Tab>

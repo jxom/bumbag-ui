@@ -7,7 +7,7 @@ export const Image = (styleProps) => cssClass`
     css`
       max-width: unset;
 
-      ${theme(styleProps.themeKey, `css.fixed`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.fixed`)(styleProps)};
     `
   }
 
@@ -21,7 +21,7 @@ export const Image = (styleProps) => cssClass`
         object-position: ${styleProps.fitPosition};
       `};
 
-      ${theme(styleProps.themeKey, `css.contain`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.contain`)(styleProps)};
     `
   }
 
@@ -35,11 +35,11 @@ export const Image = (styleProps) => cssClass`
         object-position: ${styleProps.fitPosition};
       `};
 
-      ${theme(styleProps.themeKey, `css.cover`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.cover`)(styleProps)};
     `
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

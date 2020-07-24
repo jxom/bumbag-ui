@@ -6,6 +6,6 @@ export const Blockquote = (styleProps) => cssClass`
   padding: ${space(4)(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

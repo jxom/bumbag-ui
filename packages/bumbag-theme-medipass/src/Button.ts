@@ -2,8 +2,8 @@ import { css, palette, space } from 'bumbag';
 import { isInteractive } from 'bumbag/Button/styles';
 
 export default {
-  css: {
-    root: (styleProps) => css`
+  styles: {
+    base: (styleProps) => css`
       border-radius: 0px;
       border: 2px solid ${styleProps.palette === 'default' ? palette('gray700')(styleProps) : 'transparent'};
       color: ${styleProps.palette === 'default'

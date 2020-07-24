@@ -14,6 +14,6 @@ export const Key = (styleProps) => cssClass`
   border-width: 1px 1px 2px;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

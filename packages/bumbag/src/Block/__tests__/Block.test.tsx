@@ -43,9 +43,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Block.root should render correctly', () => {
+  it('Block.base should render correctly', () => {
     const { container } = render(<Block>hello world</Block>, {
-      theme: { Block: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Block: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

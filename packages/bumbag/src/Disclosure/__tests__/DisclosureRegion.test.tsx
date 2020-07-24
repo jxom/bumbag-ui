@@ -85,11 +85,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Disclosure.root should render correctly', () => {
+  it('Disclosure.base should render correctly', () => {
     const { container } = render(
       <Disclosure.Content
         baseId="test"
-        overrides={{ Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Disclosure: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         hello world
       </Disclosure.Content>
@@ -99,9 +99,9 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Disclosure.root should render correctly', () => {
+  it('Disclosure.base should render correctly', () => {
     const { container } = render(<Disclosure.Content baseId="test">hello world</Disclosure.Content>, {
-      theme: { Disclosure: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Disclosure: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

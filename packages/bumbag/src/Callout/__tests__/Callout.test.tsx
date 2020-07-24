@@ -123,25 +123,25 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Callout.root should render correctly', () => {
+  it('Callout.base should render correctly', () => {
     const { container } = render(
-      <Callout overrides={{ Callout: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Callout>
+      <Callout overrides={{ Callout: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Callout>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Content.root should render correctly', () => {
+  it('Callout.Content.base should render correctly', () => {
     const { container } = render(
-      <Callout overrides={{ Callout: { Content: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Callout>
+      <Callout overrides={{ Callout: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}>hello world</Callout>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Header.root should render correctly', () => {
+  it('Callout.Header.base should render correctly', () => {
     const { container } = render(
       <Callout
         title="This is a title"
-        overrides={{ Callout: { Header: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Callout: { Header: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         hello world
       </Callout>
@@ -149,11 +149,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Title.root should render correctly', () => {
+  it('Callout.Title.base should render correctly', () => {
     const { container } = render(
       <Callout
         title="This is a title"
-        overrides={{ Callout: { Title: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Callout: { Title: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         hello world
       </Callout>
@@ -161,11 +161,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Footer.root should render correctly', () => {
+  it('Callout.Footer.base should render correctly', () => {
     const { container } = render(
       <Callout
         footer="This is a footer"
-        overrides={{ Callout: { Footer: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Callout: { Footer: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         hello world
       </Callout>
@@ -173,18 +173,18 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.IconWrapper.root should render correctly', () => {
+  it('Callout.IconWrapper.base should render correctly', () => {
     const { container } = render(
-      <Callout overrides={{ Callout: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Callout overrides={{ Callout: { IconWrapper: { styles: { base: { backgroundColor: 'red' } } } } }}>
         hello world
       </Callout>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Close.root should render correctly', () => {
+  it('Callout.Close.base should render correctly', () => {
     const { container } = render(
-      <Callout showCloseButton overrides={{ Callout: { Close: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Callout showCloseButton overrides={{ Callout: { Close: { styles: { base: { backgroundColor: 'red' } } } } }}>
         hello world
       </Callout>
     );
@@ -193,51 +193,51 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Callout.root should render correctly', () => {
+  it('Callout.base should render correctly', () => {
     const { container } = render(<Callout>hello world</Callout>, {
-      theme: { Callout: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Callout: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Content.root should render correctly', () => {
+  it('Callout.Content.base should render correctly', () => {
     const { container } = render(<Callout>hello world</Callout>, {
-      theme: { Callout: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Header.root should render correctly', () => {
+  it('Callout.Header.base should render correctly', () => {
     const { container } = render(<Callout title="This is a title">hello world</Callout>, {
-      theme: { Callout: { Header: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { Header: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Title.root should render correctly', () => {
+  it('Callout.Title.base should render correctly', () => {
     const { container } = render(<Callout title="This is a title">hello world</Callout>, {
-      theme: { Callout: { Title: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { Title: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Footer.root should render correctly', () => {
+  it('Callout.Footer.base should render correctly', () => {
     const { container } = render(<Callout footer="This is a footer">hello world</Callout>, {
-      theme: { Callout: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { Footer: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.IconWrapper.root should render correctly', () => {
+  it('Callout.IconWrapper.base should render correctly', () => {
     const { container } = render(<Callout>hello world</Callout>, {
-      theme: { Callout: { IconWrapper: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { IconWrapper: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Callout.Close.root should render correctly', () => {
+  it('Callout.Close.base should render correctly', () => {
     const { container } = render(<Callout showCloseButton>hello world</Callout>, {
-      theme: { Callout: { Close: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Callout: { Close: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

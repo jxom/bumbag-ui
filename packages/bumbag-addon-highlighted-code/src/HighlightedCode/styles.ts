@@ -6,7 +6,7 @@ import { palette, space, theme } from 'bumbag/utils';
 
 export const Token = styled(Text)`
   & {
-    ${theme('HighlightedCode.Token.css.root')};
+    ${theme('HighlightedCode.Token.styles.base')};
   }
 `;
 
@@ -20,7 +20,7 @@ export const Pre = styled(Code)<{ isBlock?: boolean }>`
     `};
 
   & {
-    ${theme('HighlightedCode.Pre.css.root')};
+    ${theme('HighlightedCode.Pre.styles.base')};
   }
 `;
 
@@ -32,7 +32,7 @@ export const Line = styled(Box)<{ isBlock?: boolean }>`
     `};
 
   & {
-    ${theme('HighlightedCode.Line.css.root')};
+    ${theme('HighlightedCode.Line.styles.base')};
   }
 `;
 
@@ -41,13 +41,13 @@ export const HighlightedCode = (styleProps) => cssClass`
     styleProps.isBlock &&
     css`
       & {
-        ${theme('HighlightedCode.css.block')(styleProps)};
+        ${theme('HighlightedCode.styles.block')(styleProps)};
       }
     `
   };
 
   & {
-    ${theme('HighlightedCode.css.root')(styleProps)};
+    ${theme('HighlightedCode.styles.base')(styleProps)};
   };
 `;
 

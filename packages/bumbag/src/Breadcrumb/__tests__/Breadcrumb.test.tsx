@@ -93,9 +93,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Breadcrumb.root should render correctly', () => {
+  it('Breadcrumb.base should render correctly', () => {
     const { container } = render(
-      <Breadcrumb overrides={{ Breadcrumb: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Breadcrumb overrides={{ Breadcrumb: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Breadcrumb.Item>
           <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
         </Breadcrumb.Item>
@@ -110,13 +110,13 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Item.root should render correctly', () => {
+  it('Breadcrumb.Item.base should render correctly', () => {
     const { container } = render(
-      <Breadcrumb overrides={{ Breadcrumb: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Breadcrumb overrides={{ Breadcrumb: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Breadcrumb.Item>
           <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
         </Breadcrumb.Item>
-        <Breadcrumb.Item overrides={{ Breadcrumb: { Item: { css: { root: { backgroundColor: 'blue' } } } } }}>
+        <Breadcrumb.Item overrides={{ Breadcrumb: { Item: { styles: { base: { backgroundColor: 'blue' } } } } }}>
           <Breadcrumb.Link href="#">Business</Breadcrumb.Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item isCurrent>
@@ -127,9 +127,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Separator.root should render correctly', () => {
+  it('Breadcrumb.Separator.base should render correctly', () => {
     const { container } = render(
-      <Breadcrumb overrides={{ Breadcrumb: { Separator: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Breadcrumb overrides={{ Breadcrumb: { Separator: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Breadcrumb.Item>
           <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
         </Breadcrumb.Item>
@@ -144,16 +144,16 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Link.root should render correctly', () => {
+  it('Breadcrumb.Link.base should render correctly', () => {
     const { container } = render(
-      <Breadcrumb overrides={{ Breadcrumb: { Link: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Breadcrumb overrides={{ Breadcrumb: { Link: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Breadcrumb.Item>
           <Breadcrumb.Link href="#">Home</Breadcrumb.Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           <Breadcrumb.Link
             href="#"
-            overrides={{ Breadcrumb: { Link: { css: { root: { backgroundColor: 'blue' } } } } }}
+            overrides={{ Breadcrumb: { Link: { styles: { base: { backgroundColor: 'blue' } } } } }}
           >
             Business
           </Breadcrumb.Link>
@@ -168,7 +168,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Breadcrumb.root should render correctly', () => {
+  it('Breadcrumb.base should render correctly', () => {
     const { container } = render(
       <Breadcrumb>
         <Breadcrumb.Item>
@@ -182,13 +182,13 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Breadcrumb: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Item.root should render correctly', () => {
+  it('Breadcrumb.Item.base should render correctly', () => {
     const { container } = render(
       <Breadcrumb>
         <Breadcrumb.Item>
@@ -202,13 +202,13 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Item: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Breadcrumb: { Item: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Link.root should render correctly', () => {
+  it('Breadcrumb.Link.base should render correctly', () => {
     const { container } = render(
       <Breadcrumb>
         <Breadcrumb.Item>
@@ -222,13 +222,13 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Link: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Breadcrumb: { Link: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Breadcrumb.Separator.root should render correctly', () => {
+  it('Breadcrumb.Separator.base should render correctly', () => {
     const { container } = render(
       <Breadcrumb>
         <Breadcrumb.Item>
@@ -242,7 +242,7 @@ describe('theming', () => {
         </Breadcrumb.Item>
       </Breadcrumb>,
       {
-        theme: { Breadcrumb: { Separator: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Breadcrumb: { Separator: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

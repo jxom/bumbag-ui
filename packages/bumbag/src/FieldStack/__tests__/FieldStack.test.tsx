@@ -84,7 +84,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('FieldStack.root should render correctly', () => {
+  it('FieldStack.base should render correctly', () => {
     const { container } = render(
       <FieldStack>
         <Box />
@@ -92,7 +92,7 @@ describe('theming', () => {
       </FieldStack>,
       {
         // @ts-ignore
-        theme: { FieldStack: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { FieldStack: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

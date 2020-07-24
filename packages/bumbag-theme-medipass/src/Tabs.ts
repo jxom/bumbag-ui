@@ -2,8 +2,8 @@ import { css } from 'bumbag';
 
 export default {
   Tab: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         height: 50px;
         text-transform: uppercase;
       `

@@ -163,7 +163,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('RadioGroupField.root should render correctly', () => {
+  it('RadioGroupField.base should render correctly', () => {
     const { container } = render(
       <RadioGroupField
         label="Test label"
@@ -172,7 +172,7 @@ describe('overrides', () => {
           { label: 'Hello', value: 'world' },
           { label: 'This is', value: 'me' },
         ]}
-        overrides={{ RadioGroupField: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ RadioGroupField: { styles: { base: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -180,7 +180,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('RadioGroupField.root should render correctly', () => {
+  it('RadioGroupField.base should render correctly', () => {
     const { container } = render(
       <RadioGroupField
         label="Test label"
@@ -192,7 +192,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { RadioGroupField: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { RadioGroupField: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

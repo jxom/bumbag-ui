@@ -60,7 +60,7 @@ export const Table = (styleProps) => cssClass`
               ${tableHeadCellText(styleProps)};
 
               & {
-                ${theme(styleProps.themeKey, `css.responsive.headCellText`)(styleProps)};
+                ${theme(styleProps.themeKey, `styles.responsive.headCellText`)(styleProps)};
               }
             }
           }
@@ -71,7 +71,7 @@ export const Table = (styleProps) => cssClass`
           }
 
           & {
-            ${theme(styleProps.themeKey, `css.responsive.root`)(styleProps)};
+            ${theme(styleProps.themeKey, `styles.responsive.base`)(styleProps)};
           }
         `
       )(styleProps)};
@@ -79,7 +79,7 @@ export const Table = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -94,13 +94,13 @@ export const TableHead = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const TableRow = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -110,7 +110,7 @@ export const TableHeadCell = (styleProps) => cssClass`
   ${tableHeadCellText(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -118,7 +118,7 @@ export const TableCell = (styleProps) => cssClass`
   padding: ${space(3)(styleProps)}rem ${space(4)(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -133,13 +133,13 @@ export const TableFoot = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const TableBody = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -163,7 +163,7 @@ export const TableWrapper = (styleProps) => cssClass`
 
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 

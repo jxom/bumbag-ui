@@ -144,11 +144,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Overlay.root should render correctly', () => {
+  it('Overlay.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
-        <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { css: { root: { backgroundColor: 'red' } } } }}>
+        <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { styles: { base: { backgroundColor: 'red' } } } }}>
           Hello world
         </Overlay>
       );
@@ -157,14 +157,14 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.center.root should render correctly', () => {
+  it('Overlay.center.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay
           {...overlay}
           aria-label="test"
-          overrides={{ Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { center: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -174,7 +174,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.top.root should render correctly', () => {
+  it('Overlay.top.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -182,7 +182,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top"
-          overrides={{ Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { top: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -192,7 +192,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.left.root should render correctly', () => {
+  it('Overlay.left.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -200,7 +200,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="left"
-          overrides={{ Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { left: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -210,7 +210,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.right.root should render correctly', () => {
+  it('Overlay.right.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -218,7 +218,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="right"
-          overrides={{ Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { right: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -228,7 +228,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottom.root should render correctly', () => {
+  it('Overlay.bottom.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -236,7 +236,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom"
-          overrides={{ Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { bottom: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -246,7 +246,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topStart.root should render correctly', () => {
+  it('Overlay.topStart.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -254,7 +254,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top-start"
-          overrides={{ Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { topStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -264,7 +264,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topEnd.root should render correctly', () => {
+  it('Overlay.topEnd.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -272,7 +272,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="top-end"
-          overrides={{ Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { topEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -282,7 +282,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomStart.root should render correctly', () => {
+  it('Overlay.bottomStart.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -290,7 +290,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom-start"
-          overrides={{ Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { bottomStart: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -300,7 +300,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomEnd.root should render correctly', () => {
+  it('Overlay.bottomEnd.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -308,7 +308,7 @@ describe('overrides', () => {
           {...overlay}
           aria-label="test"
           placement="bottom-end"
-          overrides={{ Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { styles: { placements: { bottomEnd: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Overlay>
@@ -320,7 +320,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Overlay.root should render correctly', () => {
+  it('Overlay.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -330,12 +330,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Overlay: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.center.root should render correctly', () => {
+  it('Overlay.center.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -345,12 +345,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { center: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { center: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.top.root should render correctly', () => {
+  it('Overlay.top.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -360,12 +360,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { top: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { top: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.left.root should render correctly', () => {
+  it('Overlay.left.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -375,12 +375,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { left: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { left: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.right.root should render correctly', () => {
+  it('Overlay.right.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -390,12 +390,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { right: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { right: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottom.root should render correctly', () => {
+  it('Overlay.bottom.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -405,12 +405,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottom: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { bottom: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topStart.root should render correctly', () => {
+  it('Overlay.topStart.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -420,12 +420,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { topStart: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { topStart: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.topEnd.root should render correctly', () => {
+  it('Overlay.topEnd.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -435,12 +435,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { topEnd: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { topEnd: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomStart.root should render correctly', () => {
+  it('Overlay.bottomStart.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -450,12 +450,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottomStart: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { bottomStart: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Overlay.bottomEnd.root should render correctly', () => {
+  it('Overlay.bottomEnd.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
@@ -465,7 +465,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Overlay: { css: { placements: { bottomEnd: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { styles: { placements: { bottomEnd: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });

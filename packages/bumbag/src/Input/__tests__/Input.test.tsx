@@ -66,60 +66,60 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Input.root should render correctly', () => {
-    const { container } = render(<Input overrides={{ Input: { css: { root: { backgroundColor: 'red' } } } }} />);
+  it('Input.base should render correctly', () => {
+    const { container } = render(<Input overrides={{ Input: { styles: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.Wrapper.root should render correctly', () => {
+  it('Input.Wrapper.base should render correctly', () => {
     const { container } = render(
-      <Input overrides={{ Input: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Input overrides={{ Input: { Wrapper: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.Spinner.root should render correctly', () => {
+  it('Input.Spinner.base should render correctly', () => {
     const { container } = render(
-      <Input overrides={{ Input: { Spinner: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Input overrides={{ Input: { Spinner: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.placeholder.root should render correctly', () => {
-    const { container } = render(<Input overrides={{ Input: { css: { placeholder: { backgroundColor: 'red' } } } }} />);
+  it('Input.placeholder.base should render correctly', () => {
+    const { container } = render(<Input overrides={{ Input: { styles: { placeholder: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Input.root should render correctly', () => {
+  it('Input.base should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Input: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.Wrapper.root should render correctly', () => {
+  it('Input.Wrapper.base should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { Wrapper: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Input: { Wrapper: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.Spinner.root should render correctly', () => {
+  it('Input.Spinner.base should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { Spinner: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Input: { Spinner: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Input.placeholder.root should render correctly', () => {
+  it('Input.placeholder.base should render correctly', () => {
     const { container } = render(<Input />, {
       // @ts-ignore
-      theme: { Input: { css: { placeholder: { backgroundColor: 'red' } } } },
+      theme: { Input: { styles: { placeholder: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -44,18 +44,18 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Divider.root should render correctly', () => {
+  it('Divider.base should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
-      theme: { Divider: { css: { root: { borderColor: 'red' } } } },
+      theme: { Divider: { styles: { base: { borderColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Divider.vertical.root should render correctly', () => {
+  it('Divider.vertical.base should render correctly', () => {
     const { container } = render(<Divider />, {
       // @ts-ignore
-      theme: { Divider: { css: { vertical: { borderColor: 'red' } } } },
+      theme: { Divider: { styles: { vertical: { borderColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

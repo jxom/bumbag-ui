@@ -120,7 +120,7 @@ function getFontWeightValue({ theme, value }) {
   return value;
 }
 
-function getStyleFromProps(props, theme, colorMode) {
+export function getStyleFromProps(props, theme, colorMode, { fromProps = false } = {}) {
   let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
@@ -134,6 +134,15 @@ function getStyleFromProps(props, theme, colorMode) {
 
     style = styleEntries.reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
+      if (attribute.includes(':')) {
+        return css`
+          ${prevStyle};
+
+          ${attribute} {
+            ${getStyleFromProps(value, theme, colorMode, { fromProps })};
+          }
+        `;
+      }
       if (typeof newValue === 'string') {
         newValue = { default: value };
       }
@@ -143,7 +152,7 @@ function getStyleFromProps(props, theme, colorMode) {
           ${prevStyle};
 
           ${pseudoSelector} {
-            ${getStyleFromProps(value, theme, colorMode)};
+            ${getStyleFromProps(value, theme, colorMode, { fromProps })};
           }
         `;
       }
@@ -174,7 +183,9 @@ function getStyleFromProps(props, theme, colorMode) {
           // @ts-ignore
           return css`
             ${prevStyle}
-            ${_kebabCase(attribute)}: ${newValue} !important;
+            ${css`
+                  ${_kebabCase(attribute)}: ${newValue} ${fromProps ? '!important' : ''};
+                `}
           `;
         }
         return css`
@@ -183,7 +194,9 @@ function getStyleFromProps(props, theme, colorMode) {
             bp,
             // @ts-ignore
             css`
-              ${_kebabCase(attribute)}: ${newValue} !important;
+              ${css`
+                    ${_kebabCase(attribute)}: ${newValue} ${fromProps ? '!important' : ''};
+                  `}
             `
           )({ theme })};
         `;
@@ -202,5 +215,9 @@ export function useStyle(props) {
   const { colorMode: globalColorMode } = useColorMode();
   const cssProps = pickCSSProps(props);
   const colorMode = props.colorMode || globalColorMode;
-  return React.useMemo(() => getStyleFromProps(cssProps, theme, colorMode), [cssProps, theme, colorMode]);
+  return React.useMemo(() => getStyleFromProps(cssProps, theme, colorMode, { fromProps: true }), [
+    cssProps,
+    theme,
+    colorMode,
+  ]);
 }

@@ -1,8 +1,8 @@
 import { css, breakpoint, palette } from 'bumbag';
 
 export default {
-  css: {
-    root: (props) => css`
+  styles: {
+    base: (props) => css`
       padding: 2rem;
 
       ${breakpoint(
@@ -15,8 +15,8 @@ export default {
     `,
   },
   Wrapper: {
-    css: {
-      root: (props) => css`
+    styles: {
+      base: (props) => css`
         background-color: ${palette('white')(props)};
         border-bottom: 1px solid ${palette('white900')(props)};
       `,

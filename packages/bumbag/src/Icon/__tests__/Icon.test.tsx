@@ -99,9 +99,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Icon.root should render correctly', () => {
+  it('Icon.base should render correctly', () => {
     const { container } = render(
-      <Icon icon="info-circle" overrides={{ Icon: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Icon icon="info-circle" overrides={{ Icon: { styles: { base: { backgroundColor: 'red' } } } }}>
         hello world
       </Icon>
     );
@@ -181,9 +181,9 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Icon.root should render correctly', () => {
+  it('Icon.base should render correctly', () => {
     const { container } = render(<Icon icon="info-circle">hello world</Icon>, {
-      theme: { Icon: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Icon: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

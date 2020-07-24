@@ -52,7 +52,7 @@ Object {
       <Popover.Content />
     </React.Fragment>
   </Context.Provider>,
-  "className": "css-13b65ts css-1pwrqjj css-1yuzjtp fp-Box fp-Popover",
+  "className": "css-yyssuj css-4lfl7m css-1yuzjtp fp-Box fp-Popover",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -322,7 +322,7 @@ exports[`defaultProps should render correctly for hasArrow 1`] = `
 </body>
 `;
 
-exports[`overrides Popover.Arrow.root should render correctly 1`] = `
+exports[`overrides Popover.Arrow.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -372,8 +372,8 @@ exports[`overrides Popover.Arrow.root should render correctly 1`] = `
   fill: white;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -415,7 +415,7 @@ exports[`overrides Popover.Arrow.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Popover.Close.root should render correctly 1`] = `
+exports[`overrides Popover.Close.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -538,8 +538,8 @@ samp.emotion-1 {
   font-weight: 600;
 }
 
-.emotion-11 {
-  background-color: red;
+.emotion-11.emotion-11 {
+  background-color: #ff0000;
 }
 
 .emotion-8 {
@@ -690,7 +690,7 @@ samp.emotion-1 {
 </body>
 `;
 
-exports[`overrides Popover.Content.root should render correctly 1`] = `
+exports[`overrides Popover.Content.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -723,8 +723,8 @@ exports[`overrides Popover.Content.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -748,7 +748,7 @@ exports[`overrides Popover.Content.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Popover.Footer.root should render correctly 1`] = `
+exports[`overrides Popover.Footer.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -801,8 +801,8 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
-  background-color: red;
+.emotion-5.emotion-5 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -835,7 +835,7 @@ exports[`overrides Popover.Footer.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`overrides Popover.Header.root should render correctly 1`] = `
+exports[`overrides Popover.Header.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -958,8 +958,8 @@ samp.emotion-1 {
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -995,7 +995,7 @@ samp.emotion-1 {
 </body>
 `;
 
-exports[`overrides Popover.Title.root should render correctly 1`] = `
+exports[`overrides Popover.Title.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -1118,8 +1118,8 @@ samp.emotion-1 {
   font-weight: 600;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -1146,6 +1146,64 @@ samp.emotion-1 {
       </div>
       <div
         class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        id="popoverContent"
+      >
+        Hello world
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`overrides Popover.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  padding: 0.5rem 0.75rem;
+}
+
+.emotion-3 {
+  background-color: white;
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+}
+
+.emotion-3:focus {
+  outline: none;
+  box-shadow: #aba7f5 0px 0px 0px 3px;
+}
+
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
+}
+
+<body>
+  <div>
+    <div
+      aria-describedby="popoverContent"
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Popover"
+      data-dialog="true"
+      id="test"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-2 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -1183,8 +1241,8 @@ exports[`overrides Popover.placements.bottom should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -1403,8 +1461,8 @@ exports[`overrides Popover.placements.left should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -1461,8 +1519,8 @@ exports[`overrides Popover.placements.right should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -1519,8 +1577,8 @@ exports[`overrides Popover.placements.top should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -1634,64 +1692,6 @@ exports[`overrides Popover.placements.top-start should render correctly 1`] = `
 
 .emotion-0 {
   padding: 0.5rem 0.75rem;
-}
-
-<body>
-  <div>
-    <div
-      aria-describedby="popoverContent"
-      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Popover"
-      data-dialog="true"
-      id="test"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div
-        class="emotion-0 emotion-1 emotion-2 fp-Box fp-PopoverContent"
-        id="popoverContent"
-      >
-        Hello world
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`overrides Popover.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: white;
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
-}
-
-.emotion-3 {
-  background-color: red;
 }
 
 <body>
@@ -2743,7 +2743,7 @@ exports[`props should render correctly with action buttons 1`] = `
 </body>
 `;
 
-exports[`theming Popover.Arrow.root should render correctly 1`] = `
+exports[`theming Popover.Arrow.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2793,8 +2793,8 @@ exports[`theming Popover.Arrow.root should render correctly 1`] = `
   fill: white;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -2836,7 +2836,7 @@ exports[`theming Popover.Arrow.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Popover.Close.root should render correctly 1`] = `
+exports[`theming Popover.Close.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -2959,8 +2959,8 @@ samp.emotion-1 {
   font-weight: 600;
 }
 
-.emotion-11 {
-  background-color: red;
+.emotion-11.emotion-11 {
+  background-color: #ff0000;
 }
 
 .emotion-8 {
@@ -3111,7 +3111,7 @@ samp.emotion-1 {
 </body>
 `;
 
-exports[`theming Popover.Content.root should render correctly 1`] = `
+exports[`theming Popover.Content.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3144,8 +3144,8 @@ exports[`theming Popover.Content.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -3169,7 +3169,7 @@ exports[`theming Popover.Content.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Popover.Footer.root should render correctly 1`] = `
+exports[`theming Popover.Footer.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3222,8 +3222,8 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-5 {
-  background-color: red;
+.emotion-5.emotion-5 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -3256,7 +3256,7 @@ exports[`theming Popover.Footer.root should render correctly 1`] = `
 </body>
 `;
 
-exports[`theming Popover.Header.root should render correctly 1`] = `
+exports[`theming Popover.Header.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -3379,8 +3379,8 @@ samp.emotion-1 {
   padding: 0.5rem 0.75rem;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -3416,7 +3416,7 @@ samp.emotion-1 {
 </body>
 `;
 
-exports[`theming Popover.Title.root should render correctly 1`] = `
+exports[`theming Popover.Title.base should render correctly 1`] = `
 .emotion-2 {
   margin: unset;
   padding: unset;
@@ -3539,8 +3539,8 @@ samp.emotion-1 {
   font-weight: 600;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <body>
@@ -3567,6 +3567,64 @@ samp.emotion-1 {
       </div>
       <div
         class="emotion-8 emotion-2 emotion-3 fp-Box fp-PopoverContent"
+        id="popoverContent"
+      >
+        Hello world
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`theming Popover.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  padding: 0.5rem 0.75rem;
+}
+
+.emotion-3 {
+  background-color: white;
+  border-radius: 6px;
+  max-width: 350px;
+  z-index: 19900410;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+}
+
+.emotion-3:focus {
+  outline: none;
+  box-shadow: #aba7f5 0px 0px 0px 3px;
+}
+
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
+}
+
+<body>
+  <div>
+    <div
+      aria-describedby="popoverContent"
+      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Popover"
+      data-dialog="true"
+      id="test"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-2 fp-Box fp-PopoverContent"
         id="popoverContent"
       >
         Hello world
@@ -3604,8 +3662,8 @@ exports[`theming Popover.placements.bottom should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -3824,8 +3882,8 @@ exports[`theming Popover.placements.left should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -3882,8 +3940,8 @@ exports[`theming Popover.placements.right should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -3940,8 +3998,8 @@ exports[`theming Popover.placements.top should render correctly 1`] = `
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
 }
 
-.emotion-3 {
-  background-color: red;
+.emotion-3.emotion-3 {
+  background-color: #ff0000;
 }
 
 .emotion-3:focus {
@@ -4055,64 +4113,6 @@ exports[`theming Popover.placements.top-start should render correctly 1`] = `
 
 .emotion-0 {
   padding: 0.5rem 0.75rem;
-}
-
-<body>
-  <div>
-    <div
-      aria-describedby="popoverContent"
-      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Popover"
-      data-dialog="true"
-      id="test"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div
-        class="emotion-0 emotion-1 emotion-2 fp-Box fp-PopoverContent"
-        id="popoverContent"
-      >
-        Hello world
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`theming Popover.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  padding: 0.5rem 0.75rem;
-}
-
-.emotion-3 {
-  background-color: white;
-  border-radius: 6px;
-  max-width: 350px;
-  z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
-}
-
-.emotion-3:focus {
-  outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
-}
-
-.emotion-3 {
-  background-color: red;
 }
 
 <body>

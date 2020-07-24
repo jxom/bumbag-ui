@@ -18,7 +18,7 @@ export const Container = (styleProps) => cssClass`
       padding-right: ${theme(styleProps.themeKey, 'fluidMargin')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, 'css.fluid')(styleProps)};
+        ${theme(styleProps.themeKey, 'styles.fluid')(styleProps)};
       }
     `
   };
@@ -37,7 +37,7 @@ export const Container = (styleProps) => cssClass`
     styleProps.isLayout &&
     css`
       & {
-        ${theme(styleProps.themeKey, 'css.layout')(styleProps)};
+        ${theme(styleProps.themeKey, 'styles.layout')(styleProps)};
       }
     `
   };
@@ -46,7 +46,7 @@ export const Container = (styleProps) => cssClass`
   ${styleProps.align && !styleProps.isFluid ? alignProperties[styleProps.align] : null};
 
   & {
-    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
+    ${theme(styleProps.themeKey, 'styles.base')(styleProps)};
   }
 `;
 

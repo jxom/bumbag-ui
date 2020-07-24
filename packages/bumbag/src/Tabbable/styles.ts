@@ -7,11 +7,11 @@ export const Tabbable = (styleProps) => cssClass`
     opacity: 0.5;
 
     & {
-      ${theme(styleProps.themeKey, `css.disabled`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.disabled`)(styleProps)};
     }
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

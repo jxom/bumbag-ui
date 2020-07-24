@@ -100,8 +100,8 @@ export default function Sidebar(props: any) {
           SideNav: {
             Level: {
               Title: {
-                css: {
-                  root: css`
+                styles: {
+                  base: css`
                     font-size: 14px;
                     font-weight: bold;
                     padding-left: 1.25rem;
@@ -110,9 +110,9 @@ export default function Sidebar(props: any) {
               },
             },
             Item: {
-              css: {
-                root: (props) => css`
-                  ${props.theme?.SideNav?.Item?.css?.root?.(props) || ''}
+              styles: {
+                base: (props) => css`
+                  ${props.theme?.SideNav?.Item?.css?.base?.(props) || ''}
 
                   padding-left: 1.25rem;
                   font-size: 14px;

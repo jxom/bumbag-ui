@@ -60,19 +60,19 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('InputField.root should render correctly', () => {
+  it('InputField.base should render correctly', () => {
     const { container } = render(
-      <InputField overrides={{ InputField: { css: { root: { backgroundColor: 'red' } } } }} />
+      <InputField overrides={{ InputField: { styles: { base: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('InputField.root should render correctly', () => {
+  it('InputField.base should render correctly', () => {
     const { container } = render(<InputField />, {
       // @ts-ignore
-      theme: { InputField: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { InputField: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -73,8 +73,8 @@ export default function Docs(props: Props) {
           {...props}
           overrides={{
             Paragraph: {
-              css: {
-                root: bumbag.css`
+              styles: {
+                base: bumbag.css`
                   &:not(:last-child) {
                     margin-bottom: 1rem;
                   }

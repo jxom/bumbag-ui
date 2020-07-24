@@ -138,7 +138,7 @@ describe('props', () => {
   });
 
   it('should render correctly with overrides', () => {
-    const { container } = render(<Box overrides={{ Box: { css: { root: { backgroundColor: 'red' } } } }} />);
+    const { container } = render(<Box overrides={{ Box: { styles: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -193,17 +193,17 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Box.root should render correctly', () => {
+  it('Box.base should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {
-      theme: { Box: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Box: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Box.root should render correctly', () => {
+  it('Box.base should render correctly', () => {
     const { container } = render(<Box color="green">hello world</Box>, {
       theme: {
-        Box: { css: { root: (props) => ({ backgroundColor: props.color }) } },
+        Box: { styles: { base: (props) => ({ backgroundColor: props.color }) } },
       },
     });
     expect(container.firstChild).toMatchSnapshot();
@@ -211,11 +211,11 @@ describe('theming', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Box variant="test">hello world</Box>, {
       theme: {
         Box: {
-          variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+          variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
         },
       },
     });
@@ -231,7 +231,7 @@ describe('modes', () => {
         Box: {
           modes: {
             test: {
-              css: { root: { backgroundColor: 'red' } },
+              styles: { base: { backgroundColor: 'red' } },
               defaultProps: { color: 'primaryTint' },
             },
           },
@@ -247,7 +247,7 @@ describe('modes', () => {
         Box: {
           modes: {
             test: {
-              css: { root: { backgroundColor: 'red' } },
+              styles: { base: { backgroundColor: 'red' } },
               defaultProps: { color: 'primaryTint' },
             },
           },
@@ -284,7 +284,7 @@ describe('modes', () => {
         Box: {
           modes: {
             test: {
-              css: { root: { backgroundColor: 'red' } },
+              styles: { base: { backgroundColor: 'red' } },
               defaultProps: { color: 'primaryTint' },
             },
           },
@@ -300,7 +300,7 @@ describe('modes', () => {
         Box: {
           modes: {
             test: {
-              css: { root: { backgroundColor: 'red' } },
+              styles: { base: { backgroundColor: 'red' } },
               defaultProps: { color: 'primaryTint' },
             },
           },

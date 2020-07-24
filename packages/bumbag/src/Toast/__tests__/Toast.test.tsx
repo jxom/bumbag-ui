@@ -20,27 +20,27 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Toast variant="test">hello world</Toast>, {
-      theme: { Toast: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: { Toast: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('Toast.root should render correctly', () => {
+  it('Toast.base should render correctly', () => {
     const { container } = render(
-      <Toast overrides={{ Toast: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Toast>
+      <Toast overrides={{ Toast: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Toast>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Toast.root should render correctly', () => {
+  it('Toast.base should render correctly', () => {
     const { container } = render(<Toast>hello world</Toast>, {
-      theme: { Toast: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Toast: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -94,19 +94,19 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SwitchField.root should render correctly', () => {
+  it('SwitchField.base should render correctly', () => {
     const { container } = render(
-      <SwitchField overrides={{ SwitchField: { css: { root: { backgroundColor: 'red' } } } }} />
+      <SwitchField overrides={{ SwitchField: { styles: { base: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('SwitchField.root should render correctly', () => {
+  it('SwitchField.base should render correctly', () => {
     const { container } = render(<SwitchField />, {
       // @ts-ignore
-      theme: { SwitchField: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { SwitchField: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

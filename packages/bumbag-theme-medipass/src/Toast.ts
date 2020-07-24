@@ -6,8 +6,8 @@ export default {
     accent: 'bottom',
     variant: 'tint'
   },
-  css: {
-    root: props => css`
+  styles: {
+    base: props => css`
       border-radius: 0px;
       width: 480px;
 

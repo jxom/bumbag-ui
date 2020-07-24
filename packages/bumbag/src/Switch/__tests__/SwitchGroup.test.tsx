@@ -167,7 +167,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SwitchGroup.root should render correctly', () => {
+  it('SwitchGroup.base should render correctly', () => {
     const { container } = render(
       <SwitchGroup
         name="weather"
@@ -175,7 +175,7 @@ describe('overrides', () => {
           { label: 'Hello', value: 'world' },
           { label: 'This is', value: 'me' },
         ]}
-        overrides={{ SwitchGroup: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ SwitchGroup: { styles: { base: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -183,7 +183,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SwitchGroup.root should render correctly', () => {
+  it('SwitchGroup.base should render correctly', () => {
     const { container } = render(
       <SwitchGroup
         name="weather"
@@ -194,7 +194,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { SwitchGroup: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { SwitchGroup: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
