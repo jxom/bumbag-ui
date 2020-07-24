@@ -4,7 +4,7 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 import { get } from './get';
-import { getStyleFromProps } from './useStyle';
+import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
@@ -27,7 +27,7 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
         ...variantThemeValue,
         ...colorModeThemeValue,
       };
-      styles = getStyleFromProps(styles, props.theme, colorMode);
+      styles = getCSSFromStyleObject(styles, props.theme, colorMode);
       return css`
         && {
           ${styles}
