@@ -9,55 +9,6 @@ import PaletteColor from '../components/PaletteColor';
 
 # Palette
 
-## Accessing the palette
-
-Bumbag exports a `palette` utility function which you can use to access palette colors:
-
-```jsx
-import { Button, palette, styled } from 'bumbag';
-
-const PrimaryButton = styled(Button)`
-  color: ${palette('primary')};
-`;
-
-<PrimaryButton>I am a primary button</PrimaryButton>
-```
-
-Any CSS color attribute (e.g. `color`, `borderColor`, etc) can take a color from the palette:
-
-```jsx
-import { Text } from 'bumbag';
-
-<Text color="primary">I am a primary text</Text>
-```
-
-## Modifying the palette
-
-You can modify the palette by [altering the Bumbag theme](/theming).
-
-You can use tools such as [Coolors](https://coolors.co/) or [Smart Swatch](https://smart-swatch.netlify.app/) to generate a decent accessible palette.
-
-#### Example
-
-```jsx
-import { Provider } from 'bumbag';
-
-const theme = {
-  palette: {
-    text: '#212121',
-    primary: '#574feb',
-    info: '#1e67d5',
-    success: '#0a7d33',
-    danger: '#da1717',
-    warning: '#ed9c22'
-  }
-}
-
-<Provider theme={theme}>Hello world!</Provider>
-```
-
-## Default palette
-
 Bumbag provides an accessible default palette to get you up and running, hopefully you like it. If not, feel free to customize it.
 
 ### Defaults
@@ -222,6 +173,75 @@ Bumbag provides an accessible default palette to get you up and running, hopeful
     <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning900" /></Box>
   </Flex>
 </Box>
+
+## Accessing the palette
+
+### Within themeable components
+
+#### `applyTheme`
+
+You can access any palette value in any of the color based CSS attributes (such as `backgroundColor` or `color`):
+
+```jsx
+import { Button, applyTheme } from 'bumbag';
+
+const PrimaryButton = applyTheme(Button, {
+  styles: {
+    base: {
+      color: 'primary'
+    }
+  }
+})
+
+<PrimaryButton>I am a primary button</PrimaryButton>
+```
+
+#### `styled`
+
+```jsx
+import { Button, styled, palette } from 'bumbag';
+
+const PrimaryButton = styled(Button)`
+  color: ${palette('primary')}
+`;
+
+<PrimaryButton>I am a primary button</PrimaryButton>
+```
+
+### Within CSS Props
+
+Any CSS color attribute (e.g. `color`, `borderColor`, etc) can take a color from the palette:
+
+```jsx
+import { Text } from 'bumbag';
+
+<Text color="primary">I am a primary text</Text>
+```
+
+## Modifying the palette
+
+You can modify the palette by [altering the Bumbag theme](/theming).
+
+You can use tools such as [Coolors](https://coolors.co/) or [Smart Swatch](https://smart-swatch.netlify.app/) to generate a decent accessible palette.
+
+#### Example
+
+```jsx
+import { Provider } from 'bumbag';
+
+const theme = {
+  palette: {
+    text: '#212121',
+    primary: '#574feb',
+    info: '#1e67d5',
+    success: '#0a7d33',
+    danger: '#da1717',
+    warning: '#ed9c22'
+  }
+}
+
+<Provider theme={theme}>Hello world!</Provider>
+```
 
 ## Theming
 

@@ -44,17 +44,37 @@ export default () => (
 
 ### Accessing font families
 
-You can access the font families through styled components:
+You can access the font families through themeable components:
+
+#### With `applyTheme`
 
 ```jsx
-import { Text, font, styled } from 'bumbag';
+import { Text, applyTheme } from 'bumbag';
 
-const MonoText = styled(Text)`
-  font-family: ${font('mono')};
-`;
+const MonoText = applyTheme(Box, {
+  styles: {
+    base: {
+      fontFamily: 'mono'
+    }
+  }
+})
 
 <MonoText>I have the mono font family</MonoText>
 ```
+
+#### With `styled`
+
+```jsx
+import { Text, styled, fontFamily } from 'bumbag';
+
+const LargeText = styled(Text)`
+  font-family: ${fontFamily('mono')};
+`;
+
+<LargeText>I am bold</LargeText>
+```
+
+#### CSS Props
 
 or, you can use CSS props:
 
@@ -97,17 +117,37 @@ Bumbag currently has three font weights: `normal`, `semibold` and `bold`. You ca
 
 ### Accessing font weights
 
-You can access the font weights through styled components:
+You can access the font weights through themeable components:
+
+#### With `applyTheme`
 
 ```jsx
-import { Text, fontWeight, styled } from 'bumbag';
+import { Text, applyTheme } from 'bumbag';
 
-const BoldText = styled(Text)`
-  font-weight: ${fontWeight('bold')};
-`;
+const BoldText = applyTheme(Text, {
+  styles: {
+    base: {
+      fontWeight: 'bold'
+    }
+  }
+});
 
 <BoldText>I am bold</BoldText>
 ```
+
+#### With `styled`
+
+```jsx
+import { Text, styled, fontWeight } from 'bumbag';
+
+const LargeText = styled(Text)`
+  font-size: ${fontWeight('bold')};
+`;
+
+<LargeText>I am bold</LargeText>
+```
+
+#### CSS Props
 
 or, you can use CSS props:
 
@@ -136,17 +176,37 @@ Bumbag uses a scale from `100`-`900` for font sizes. We use a numeric scale, ins
 
 ### Accessing font sizes
 
-You can access the font sizes through styled components:
+You can access the font sizes through themeable components:
+
+#### With `applyTheme`
 
 ```jsx
-import { Text, fontSize, styled } from 'bumbag';
+import { Text, applyTheme } from 'bumbag';
+
+const LargeText = applyTheme(Text, {
+  styles: {
+    base: {
+      fontSize: '400'
+    }
+  }
+});
+
+<LargeText>I am bold</LargeText>
+```
+
+#### With `styled`
+
+```jsx
+import { Text, styled, fontSize } from 'bumbag';
 
 const LargeText = styled(Text)`
   font-size: ${fontSize('400')};
 `;
 
-<LargeText>I am large</LargeText>
+<LargeText>I am bold</LargeText>
 ```
+
+#### CSS Props
 
 or, you can use CSS props:
 

@@ -27,7 +27,9 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
         ...variantThemeValue,
         ...colorModeThemeValue,
       };
-      styles = getCSSFromStyleObject(styles, props.theme, colorMode);
+      if (!styles.styles) {
+        styles = getCSSFromStyleObject(styles, props.theme, colorMode);
+      }
       return css`
         && {
           ${styles}

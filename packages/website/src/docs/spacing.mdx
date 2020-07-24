@@ -83,14 +83,34 @@ Bumbag also exports a utility function called `space` to help you with calculati
 </FieldStack>
 ```
 
-#### Usage via styled components
+#### Usage via themeable components
+
+##### With `applyTheme`
 
 ```jsx
-import { Button, space, styled } from 'bumbag';
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      marginTop: 'major-2'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
 
 const SaveButton = styled(Button)`
   margin-top: ${space(2, 'major')}rem;
 `;
+
+<SaveButton>Save</SaveButton>
 ```
 
 ### The 4px minor scale
@@ -152,14 +172,34 @@ The **4px minor scale** is most commonly used for precise spacing (**margins & p
 <Button paddingX="minor-2">Save</Button>
 ```
 
-#### Usage via styled components
+#### Usage via themeable components
+
+##### With `applyTheme`
 
 ```jsx
-import { Button, space, styled } from 'bumbag';
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      padding: 'major-2'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
 
 const SaveButton = styled(Button)`
-  padding: ${space(2, 'minor')}rem;
+  padding: ${space(2, 'major')}rem;
 `;
+
+<SaveButton>Save</SaveButton>
 ```
 
 ## Using a pre-defined set
@@ -266,14 +306,34 @@ Bumbag has the following pre-defined attributes set by default:
 <Button paddingX="xl">Save</Button>
 ```
 
-#### Usage via styled components
+#### Usage via themeable components
+
+##### With `applyTheme`
 
 ```jsx
-import { Button, space, styled } from 'bumbag';
+import { Button, applyTheme } from 'bumbag';
+
+const SaveButton = applyTheme(Button, {
+  styles: {
+    base: {
+      padding: 'xl'
+    }
+  }
+});
+
+<SaveButton>Save</SaveButton>
+```
+
+##### With `styled`
+
+```jsx
+import { Button, styled, space } from 'bumbag';
 
 const SaveButton = styled(Button)`
   padding: ${space('xl')}rem;
 `;
+
+<SaveButton>Save</SaveButton>
 ```
 
 ## Theming

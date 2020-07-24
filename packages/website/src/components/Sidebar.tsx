@@ -29,8 +29,8 @@ const orders = [
     '': [
       'getting-started',
       'theming',
-      'palette',
       'styling-components',
+      'palette',
       'global-styles',
       'breakpoints',
       'fonts',
@@ -168,7 +168,6 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
   React.useEffect(() => {
     // @ts-ignore
     if (sideNavItemRef.current && !sideNavItemRef.current.querySelector('li')) {
-      console.log('test');
       setShow(false);
     } else {
       setShow(true);
