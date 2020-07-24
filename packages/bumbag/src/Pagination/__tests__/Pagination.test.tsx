@@ -51,38 +51,38 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Pagination.root should render correctly', () => {
+  it('Pagination.base should render correctly', () => {
     const { container } = render(
-      <Pagination numberOfPages={10} overrides={{ Pagination: { css: { root: { backgroundColor: 'red' } } } }} />
+      <Pagination numberOfPages={10} overrides={{ Pagination: { styles: { base: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.Button.css.root should render correctly', () => {
+  it('Pagination.Button.styles.base should render correctly', () => {
     const { container } = render(
       <Pagination
         numberOfPages={10}
-        overrides={{ Pagination: { Button: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Pagination: { Button: { styles: { base: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.Select.css.root should render correctly', () => {
+  it('Pagination.Select.styles.base should render correctly', () => {
     const { container } = render(
       <Pagination
         numberOfPages={10}
-        overrides={{ Pagination: { Select: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Pagination: { Select: { styles: { base: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.PrepositionText.css.root should render correctly', () => {
+  it('Pagination.PrepositionText.styles.base should render correctly', () => {
     const { container } = render(
       <Pagination
         numberOfPages={10}
-        overrides={{ Pagination: { PrepositionText: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Pagination: { PrepositionText: { styles: { base: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -90,30 +90,30 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Pagination.root should render correctly', () => {
+  it('Pagination.base should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Pagination: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.Button.css.root should render correctly', () => {
+  it('Pagination.Button.styles.base should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { Button: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Pagination: { Button: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.Select.css.root should render correctly', () => {
+  it('Pagination.Select.styles.base should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { Select: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Pagination: { Select: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Pagination.PrepositionText.css.root should render correctly', () => {
+  it('Pagination.PrepositionText.styles.base should render correctly', () => {
     const { container } = render(<Pagination numberOfPages={10} />, {
-      theme: { Pagination: { PrepositionText: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Pagination: { PrepositionText: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

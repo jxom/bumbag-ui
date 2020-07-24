@@ -78,11 +78,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Rover.root should render correctly', () => {
+  it('Rover.base should render correctly', () => {
     function Component() {
       const hidden = Rover.useState();
       return (
-        <Rover overrides={{ Rover: { css: { root: { backgroundColor: 'red' } } } }} {...hidden} stopId="test1">
+        <Rover overrides={{ Rover: { styles: { base: { backgroundColor: 'red' } } } }} {...hidden} stopId="test1">
           Hello world
         </Rover>
       );
@@ -93,7 +93,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Rover.root should render correctly', () => {
+  it('Rover.base should render correctly', () => {
     function Component() {
       const hidden = Rover.useState();
       return (
@@ -103,7 +103,7 @@ describe('theming', () => {
       );
     }
     const { container } = render(<Component />, {
-      theme: { Rover: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Rover: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

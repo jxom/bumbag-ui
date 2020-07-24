@@ -169,7 +169,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 </div>
 `;
 
-exports[`overrides Tabs.List.css.root should render correctly 1`] = `
+exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -270,7 +270,7 @@ exports[`overrides Tabs.List.css.root should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -347,7 +347,7 @@ exports[`overrides Tabs.List.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tabs.Panel.css.root should render correctly 1`] = `
+exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -448,7 +448,7 @@ exports[`overrides Tabs.Panel.css.root should render correctly 1`] = `
 }
 
 .emotion-12 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -525,363 +525,7 @@ exports[`overrides Tabs.Panel.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tabs.Tab.css.focus should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-right: 1px solid #d9d9e1;
-}
-
-.emotion-9 {
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  background-color: red;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
-}
-
-<div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
->
-  <div
-    aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
-    id="test"
-    role="tablist"
-  >
-    <div
-      aria-controls="test-4"
-      aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab1"
-      role="tab"
-      tabindex="0"
-    >
-      Dogs
-    </div>
-    <div
-      aria-controls="test-5"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab2"
-      role="tab"
-      tabindex="-1"
-    >
-      Cats
-    </div>
-    <div
-      aria-controls="test-6"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab3"
-      role="tab"
-      tabindex="-1"
-    >
-      Parrots
-    </div>
-  </div>
-  <div
-    aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    id="test-4"
-    role="tabpanel"
-    tabindex="0"
-  >
-    Dogs are awesome
-  </div>
-  <div
-    aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-5"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Cats are alright
-  </div>
-  <div
-    aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-6"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Parrots are cool
-  </div>
-</div>
-`;
-
-exports[`overrides Tabs.Tab.css.hover should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-right: 1px solid #d9d9e1;
-}
-
-.emotion-9 {
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  background-color: red;
-}
-
-<div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
->
-  <div
-    aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
-    id="test"
-    role="tablist"
-  >
-    <div
-      aria-controls="test-4"
-      aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab1"
-      role="tab"
-      tabindex="0"
-    >
-      Dogs
-    </div>
-    <div
-      aria-controls="test-5"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab2"
-      role="tab"
-      tabindex="-1"
-    >
-      Cats
-    </div>
-    <div
-      aria-controls="test-6"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab3"
-      role="tab"
-      tabindex="-1"
-    >
-      Parrots
-    </div>
-  </div>
-  <div
-    aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    id="test-4"
-    role="tabpanel"
-    tabindex="0"
-  >
-    Dogs are awesome
-  </div>
-  <div
-    aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-5"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Cats are alright
-  </div>
-  <div
-    aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-6"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Parrots are cool
-  </div>
-</div>
-`;
-
-exports[`overrides Tabs.Tab.css.root should render correctly 1`] = `
+exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -982,7 +626,7 @@ exports[`overrides Tabs.Tab.css.root should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -1059,7 +703,363 @@ exports[`overrides Tabs.Tab.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tabs.Tab.css.selected should render correctly 1`] = `
+exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-14 {
+  padding: 1rem !important;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-21 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #d9d9e1;
+}
+
+.emotion-9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #574feb;
+  fill: #574feb;
+  background-color: white;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  background-color: #ff0000;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  color: #574feb;
+}
+
+<div
+  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+>
+  <div
+    aria-orientation="vertical"
+    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    id="test"
+    role="tablist"
+  >
+    <div
+      aria-controls="test-4"
+      aria-selected="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab1"
+      role="tab"
+      tabindex="0"
+    >
+      Dogs
+    </div>
+    <div
+      aria-controls="test-5"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab2"
+      role="tab"
+      tabindex="-1"
+    >
+      Cats
+    </div>
+    <div
+      aria-controls="test-6"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab3"
+      role="tab"
+      tabindex="-1"
+    >
+      Parrots
+    </div>
+  </div>
+  <div
+    aria-labelledby="tab1"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    id="test-4"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Dogs are awesome
+  </div>
+  <div
+    aria-labelledby="tab2"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-5"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Cats are alright
+  </div>
+  <div
+    aria-labelledby="tab3"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-6"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Parrots are cool
+  </div>
+</div>
+`;
+
+exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-14 {
+  padding: 1rem !important;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-21 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #d9d9e1;
+}
+
+.emotion-9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #574feb;
+  fill: #574feb;
+  background-color: white;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  color: #574feb;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+>
+  <div
+    aria-orientation="vertical"
+    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    id="test"
+    role="tablist"
+  >
+    <div
+      aria-controls="test-4"
+      aria-selected="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab1"
+      role="tab"
+      tabindex="0"
+    >
+      Dogs
+    </div>
+    <div
+      aria-controls="test-5"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab2"
+      role="tab"
+      tabindex="-1"
+    >
+      Cats
+    </div>
+    <div
+      aria-controls="test-6"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab3"
+      role="tab"
+      tabindex="-1"
+    >
+      Parrots
+    </div>
+  </div>
+  <div
+    aria-labelledby="tab1"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    id="test-4"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Dogs are awesome
+  </div>
+  <div
+    aria-labelledby="tab2"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-5"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Cats are alright
+  </div>
+  <div
+    aria-labelledby="tab3"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-6"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Parrots are cool
+  </div>
+</div>
+`;
+
+exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1151,7 +1151,7 @@ exports[`overrides Tabs.Tab.css.selected should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -1237,7 +1237,7 @@ exports[`overrides Tabs.Tab.css.selected should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Tabs.css.root should render correctly 1`] = `
+exports[`overrides Tabs.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1338,7 +1338,7 @@ exports[`overrides Tabs.css.root should render correctly 1`] = `
 }
 
 .emotion-21 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -3066,7 +3066,7 @@ exports[`props should render correctly with selectedId 1`] = `
 </div>
 `;
 
-exports[`theming Tabs.List.css.root should render correctly 1`] = `
+exports[`theming Tabs.List.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3167,7 +3167,7 @@ exports[`theming Tabs.List.css.root should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -3244,7 +3244,7 @@ exports[`theming Tabs.List.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tabs.Panel.css.root should render correctly 1`] = `
+exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3345,7 +3345,7 @@ exports[`theming Tabs.Panel.css.root should render correctly 1`] = `
 }
 
 .emotion-12 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -3422,363 +3422,7 @@ exports[`theming Tabs.Panel.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tabs.Tab.css.focus should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-right: 1px solid #d9d9e1;
-}
-
-.emotion-9 {
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  background-color: red;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
-}
-
-<div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
->
-  <div
-    aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
-    id="test"
-    role="tablist"
-  >
-    <div
-      aria-controls="test-4"
-      aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab1"
-      role="tab"
-      tabindex="0"
-    >
-      Dogs
-    </div>
-    <div
-      aria-controls="test-5"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab2"
-      role="tab"
-      tabindex="-1"
-    >
-      Cats
-    </div>
-    <div
-      aria-controls="test-6"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab3"
-      role="tab"
-      tabindex="-1"
-    >
-      Parrots
-    </div>
-  </div>
-  <div
-    aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    id="test-4"
-    role="tabpanel"
-    tabindex="0"
-  >
-    Dogs are awesome
-  </div>
-  <div
-    aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-5"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Cats are alright
-  </div>
-  <div
-    aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-6"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Parrots are cool
-  </div>
-</div>
-`;
-
-exports[`theming Tabs.Tab.css.hover should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-right: 1px solid #d9d9e1;
-}
-
-.emotion-9 {
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  background-color: red;
-}
-
-<div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
->
-  <div
-    aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
-    id="test"
-    role="tablist"
-  >
-    <div
-      aria-controls="test-4"
-      aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab1"
-      role="tab"
-      tabindex="0"
-    >
-      Dogs
-    </div>
-    <div
-      aria-controls="test-5"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab2"
-      role="tab"
-      tabindex="-1"
-    >
-      Cats
-    </div>
-    <div
-      aria-controls="test-6"
-      aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
-      id="tab3"
-      role="tab"
-      tabindex="-1"
-    >
-      Parrots
-    </div>
-  </div>
-  <div
-    aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    id="test-4"
-    role="tabpanel"
-    tabindex="0"
-  >
-    Dogs are awesome
-  </div>
-  <div
-    aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-5"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Cats are alright
-  </div>
-  <div
-    aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
-    hidden=""
-    id="test-6"
-    role="tabpanel"
-    style="display: none;"
-    tabindex="0"
-  >
-    Parrots are cool
-  </div>
-</div>
-`;
-
-exports[`theming Tabs.Tab.css.root should render correctly 1`] = `
+exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3879,7 +3523,7 @@ exports[`theming Tabs.Tab.css.root should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -3956,7 +3600,363 @@ exports[`theming Tabs.Tab.css.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tabs.Tab.css.selected should render correctly 1`] = `
+exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-14 {
+  padding: 1rem !important;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-21 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #d9d9e1;
+}
+
+.emotion-9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #574feb;
+  fill: #574feb;
+  background-color: white;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  background-color: #ff0000;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  color: #574feb;
+}
+
+<div
+  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+>
+  <div
+    aria-orientation="vertical"
+    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    id="test"
+    role="tablist"
+  >
+    <div
+      aria-controls="test-4"
+      aria-selected="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab1"
+      role="tab"
+      tabindex="0"
+    >
+      Dogs
+    </div>
+    <div
+      aria-controls="test-5"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab2"
+      role="tab"
+      tabindex="-1"
+    >
+      Cats
+    </div>
+    <div
+      aria-controls="test-6"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab3"
+      role="tab"
+      tabindex="-1"
+    >
+      Parrots
+    </div>
+  </div>
+  <div
+    aria-labelledby="tab1"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    id="test-4"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Dogs are awesome
+  </div>
+  <div
+    aria-labelledby="tab2"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-5"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Cats are alright
+  </div>
+  <div
+    aria-labelledby="tab3"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-6"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Parrots are cool
+  </div>
+</div>
+`;
+
+exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-14 {
+  padding: 1rem !important;
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+.emotion-21 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #d9d9e1;
+}
+
+.emotion-9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #574feb;
+  fill: #574feb;
+  background-color: white;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 #574feb;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  color: #574feb;
+}
+
+.emotion-0:not([aria-selected='true']):hover {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+>
+  <div
+    aria-orientation="vertical"
+    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    id="test"
+    role="tablist"
+  >
+    <div
+      aria-controls="test-4"
+      aria-selected="true"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab1"
+      role="tab"
+      tabindex="0"
+    >
+      Dogs
+    </div>
+    <div
+      aria-controls="test-5"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab2"
+      role="tab"
+      tabindex="-1"
+    >
+      Cats
+    </div>
+    <div
+      aria-controls="test-6"
+      aria-selected="false"
+      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      id="tab3"
+      role="tab"
+      tabindex="-1"
+    >
+      Parrots
+    </div>
+  </div>
+  <div
+    aria-labelledby="tab1"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    id="test-4"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Dogs are awesome
+  </div>
+  <div
+    aria-labelledby="tab2"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-5"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Cats are alright
+  </div>
+  <div
+    aria-labelledby="tab3"
+    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    hidden=""
+    id="test-6"
+    role="tabpanel"
+    style="display: none;"
+    tabindex="0"
+  >
+    Parrots are cool
+  </div>
+</div>
+`;
+
+exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4048,7 +4048,7 @@ exports[`theming Tabs.Tab.css.selected should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -4134,7 +4134,7 @@ exports[`theming Tabs.Tab.css.selected should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Tabs.css.root should render correctly 1`] = `
+exports[`theming Tabs.styles.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4235,7 +4235,7 @@ exports[`theming Tabs.css.root should render correctly 1`] = `
 }
 
 .emotion-21 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div

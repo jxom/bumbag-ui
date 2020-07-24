@@ -64,9 +64,9 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Menu.css.root should render correctly', () => {
+  it('Menu.styles.base should render correctly', () => {
     const { container } = render(
-      <Menu baseId="test" overrides={{ Menu: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Menu baseId="test" overrides={{ Menu: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
         <Menu.Item iconBefore="solid-share">Share</Menu.Item>
         <Menu.Item iconBefore="solid-file-signature">Rename</Menu.Item>
@@ -78,9 +78,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Divider.css.root should render correctly', () => {
+  it('Menu.Divider.styles.base should render correctly', () => {
     const { container } = render(
-      <Menu baseId="test" overrides={{ Menu: { Divider: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Menu baseId="test" overrides={{ Menu: { Divider: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
         <Menu.Item iconBefore="solid-share">Share</Menu.Item>
         <Menu.Item iconBefore="solid-file-signature">Rename</Menu.Item>
@@ -92,9 +92,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Group.css.root should render correctly', () => {
+  it('Menu.Group.styles.base should render correctly', () => {
     const { container } = render(
-      <Menu baseId="test" overrides={{ Menu: { Group: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Menu baseId="test" overrides={{ Menu: { Group: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
         <Menu.Item iconBefore="solid-share">Share</Menu.Item>
         <Menu.Item iconBefore="solid-file-signature">Rename</Menu.Item>
@@ -106,9 +106,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Item.css.root should render correctly', () => {
+  it('Menu.Item.styles.base should render correctly', () => {
     const { container } = render(
-      <Menu baseId="test" overrides={{ Menu: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Menu baseId="test" overrides={{ Menu: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
         <Menu.Item iconBefore="solid-share">Share</Menu.Item>
         <Menu.Item iconBefore="solid-file-signature">Rename</Menu.Item>
@@ -122,7 +122,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Menu.css.root should render correctly', () => {
+  it('Menu.styles.base should render correctly', () => {
     const { container } = render(
       <Menu baseId="test">
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
@@ -133,13 +133,13 @@ describe('theming', () => {
         </Menu.Item>
       </Menu>,
       {
-        theme: { Menu: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Menu: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Divider.css.root should render correctly', () => {
+  it('Menu.Divider.styles.base should render correctly', () => {
     const { container } = render(
       <Menu baseId="test">
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
@@ -149,12 +149,12 @@ describe('theming', () => {
           Delete
         </Menu.Item>
       </Menu>,
-      { theme: { Menu: { Divider: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Menu: { Divider: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Group.css.root should render correctly', () => {
+  it('Menu.Group.styles.base should render correctly', () => {
     const { container } = render(
       <Menu baseId="test">
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
@@ -164,12 +164,12 @@ describe('theming', () => {
           Delete
         </Menu.Item>
       </Menu>,
-      { theme: { Menu: { Group: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Menu: { Group: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Menu.Item.css.root should render correctly', () => {
+  it('Menu.Item.styles.base should render correctly', () => {
     const { container } = render(
       <Menu baseId="test">
         <Menu.Item iconBefore="solid-pen">Edit</Menu.Item>
@@ -179,7 +179,7 @@ describe('theming', () => {
           Delete
         </Menu.Item>
       </Menu>,
-      { theme: { Menu: { Item: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Menu: { Item: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

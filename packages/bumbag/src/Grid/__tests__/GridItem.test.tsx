@@ -39,9 +39,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('GridItem.root should render correctly', () => {
+  it('GridItem.base should render correctly', () => {
     const { container } = render(<GridItem>hello world</GridItem>, {
-      theme: { Grid: { Item: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Grid: { Item: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

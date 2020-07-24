@@ -8,6 +8,7 @@ export default {
   primary300: '#a4dbeb',
   primary400: '#51afc9',
   primary: '#007fa3',
+  primaryInverted: 'white',
   primary500: '#007fa3',
   primary600: '#0e6d8c',
   primary700: '#16556e',
@@ -40,5 +41,5 @@ export default {
   danger500: '#e41625',
   danger600: '#ce1323',
   danger700: '#b4111e',
-  danger800: '#850c16'
+  danger800: '#850c16',
 };

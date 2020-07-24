@@ -265,6 +265,95 @@ exports[`defaultProps should render correctly 1`] = `
 </button>
 `;
 
+exports[`overrides Button.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #d9d9e1;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  background-color: #ff0000;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #f7f7fa;
+}
+
+.emotion-0:hover:active {
+  background-color: #e6e6eb;
+}
+
+<button
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  type="button"
+>
+  hello world
+</button>
+`;
+
 exports[`overrides Button.disabled should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -324,7 +413,7 @@ exports[`overrides Button.disabled should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -403,7 +492,7 @@ exports[`overrides Button.focus should render correctly 1`] = `
 }
 
 .emotion-0:focus {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:hover {
@@ -511,7 +600,7 @@ exports[`overrides Button.ghost should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -591,7 +680,7 @@ exports[`overrides Button.hover should render correctly 1`] = `
 }
 
 .emotion-0:hover {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:hover:active {
@@ -679,7 +768,7 @@ exports[`overrides Button.hoveractive should render correctly 1`] = `
 }
 
 .emotion-0:hover:active {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -761,7 +850,7 @@ exports[`overrides Button.link should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -974,7 +1063,7 @@ samp.emotion-12 {
 }
 
 .emotion-15 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -1083,7 +1172,7 @@ exports[`overrides Button.outlined should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: unset;
+  background-color: #fcfcfd;
   border: 1px solid #fcfcfd;
   color: #fcfcfd;
   fill: #fcfcfd;
@@ -1092,102 +1181,16 @@ exports[`overrides Button.outlined should render correctly 1`] = `
 
 .emotion-0:hover {
   border-color: #fcfcfd;
-  background-color: #fcfcfd;
-  color: #212121;
-  fill: #212121;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<button
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
-  type="button"
->
-  hello world
-</button>
-`;
-
-exports[`overrides Button.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcfcfd;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  background-color: red;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: #000000;
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  border-color: #fcfcfd;
+  background-color: #000000;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
 }
 
 <button
@@ -1256,7 +1259,7 @@ exports[`overrides Button.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -1346,7 +1349,7 @@ exports[`overrides Button.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -1435,7 +1438,7 @@ exports[`overrides Button.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -1525,7 +1528,7 @@ exports[`overrides Button.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -1820,7 +1823,7 @@ exports[`props disabled should render correctly with overrides 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -2476,7 +2479,7 @@ samp.emotion-12 {
 }
 
 .emotion-15 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -2655,7 +2658,7 @@ exports[`props isStatic should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -4200,7 +4203,7 @@ exports[`props size should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -4284,7 +4287,7 @@ exports[`props size should render correctly with overrides 2`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -4373,7 +4376,7 @@ exports[`props size should render correctly with overrides 3`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -4463,7 +4466,7 @@ exports[`props size should render correctly with overrides 4`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -4976,7 +4979,7 @@ exports[`props variant should render a outlined button correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: unset;
+  background-color: #fcfcfd;
   border: 1px solid #fcfcfd;
   color: #fcfcfd;
   fill: #fcfcfd;
@@ -4985,9 +4988,12 @@ exports[`props variant should render a outlined button correctly 1`] = `
 
 .emotion-0:hover {
   border-color: #fcfcfd;
-  background-color: #fcfcfd;
-  color: #212121;
-  fill: #212121;
+  background-color: #000000;
+}
+
+.emotion-0:hover:active {
+  border-color: #fcfcfd;
+  background-color: #000000;
 }
 
 <button
@@ -5071,7 +5077,7 @@ exports[`props variant should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  background-color: unset;
+  background-color: #fcfcfd;
   border: 1px solid #fcfcfd;
   color: #fcfcfd;
   fill: #fcfcfd;
@@ -5080,13 +5086,16 @@ exports[`props variant should render correctly with overrides 1`] = `
 
 .emotion-0:hover {
   border-color: #fcfcfd;
-  background-color: #fcfcfd;
-  color: #212121;
-  fill: #212121;
+  background-color: #000000;
+}
+
+.emotion-0:hover:active {
+  border-color: #fcfcfd;
+  background-color: #000000;
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5186,7 +5195,7 @@ exports[`props variant should render correctly with overrides 2`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5268,7 +5277,7 @@ exports[`props variant should render correctly with overrides 3`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5276,6 +5285,95 @@ exports[`props variant should render correctly with overrides 3`] = `
   type="button"
 >
   Hello world
+</button>
+`;
+
+exports[`theming Button.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #d9d9e1;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  background-color: #ff0000;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #f7f7fa;
+}
+
+.emotion-0:hover:active {
+  background-color: #e6e6eb;
+}
+
+<button
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+  type="button"
+>
+  hello world
 </button>
 `;
 
@@ -5338,7 +5436,7 @@ exports[`theming Button.disabled should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5417,7 +5515,7 @@ exports[`theming Button.focus should render correctly 1`] = `
 }
 
 .emotion-0:focus {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:hover {
@@ -5525,7 +5623,7 @@ exports[`theming Button.ghost should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5605,7 +5703,7 @@ exports[`theming Button.hover should render correctly 1`] = `
 }
 
 .emotion-0:hover {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:hover:active {
@@ -5693,7 +5791,7 @@ exports[`theming Button.hoveractive should render correctly 1`] = `
 }
 
 .emotion-0:hover:active {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5775,7 +5873,7 @@ exports[`theming Button.link should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -5988,7 +6086,7 @@ samp.emotion-12 {
 }
 
 .emotion-15 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <button
@@ -6097,7 +6195,7 @@ exports[`theming Button.outlined should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: unset;
+  background-color: #fcfcfd;
   border: 1px solid #fcfcfd;
   color: #fcfcfd;
   fill: #fcfcfd;
@@ -6106,102 +6204,16 @@ exports[`theming Button.outlined should render correctly 1`] = `
 
 .emotion-0:hover {
   border-color: #fcfcfd;
-  background-color: #fcfcfd;
-  color: #212121;
-  fill: #212121;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<button
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
-  type="button"
->
-  hello world
-</button>
-`;
-
-exports[`theming Button.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcfcfd;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  background-color: red;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: #000000;
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  border-color: #fcfcfd;
+  background-color: #000000;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
 }
 
 <button
@@ -6270,7 +6282,7 @@ exports[`theming Button.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -6360,7 +6372,7 @@ exports[`theming Button.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -6449,7 +6461,7 @@ exports[`theming Button.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {
@@ -6539,7 +6551,7 @@ exports[`theming Button.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0:focus {

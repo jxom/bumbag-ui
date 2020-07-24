@@ -151,7 +151,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Group props 1`] = `
 Object {
-  "className": "css-d7ai6i css-1k1yp07 css-1pwrqjj css-16jhp9u fp-Box fp-Flex fp-Group",
+  "className": "css-d7ai6i css-1k1yp07 css-1pwrqjj css-1rj4g49 fp-Box fp-Flex fp-Group",
   "role": "group",
 }
 `;
@@ -454,6 +454,156 @@ exports[`defaultProps should render correctly 1`] = `
 </div>
 `;
 
+exports[`overrides Group.Item.base should render correctly 1`] = `
+.emotion-8 {
+  border-radius: 6px !important;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #d9d9e1;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #f7f7fa;
+}
+
+.emotion-0:hover:active {
+  background-color: #e6e6eb;
+}
+
+.emotion-5 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-5 > * {
+  border-radius: 6px;
+  background-color: #ff0000;
+}
+
+.emotion-5 input:focus,
+.emotion-5 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-5 > *:first-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emotion-5 > *:first-child input,
+.emotion-5 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emotion-5 > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-5 > *:last-child input,
+.emotion-5 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-5 > *:not(:first-child):not(:last-child),
+.emotion-5 > *:not(:first-child):not(:last-child) > input,
+.emotion-5 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.emotion-5 > *:not(:first-child) {
+  border-left-width: 0;
+}
+
+<div
+  class="emotion-5 emotion-6 emotion-1 emotion-8 fp-Box fp-Flex fp-Group"
+  role="group"
+>
+  <button
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    type="button"
+  >
+    Hello
+  </button>
+  <div
+    class="emotion-1 emotion-2 fp-Box"
+  >
+    World
+  </div>
+</div>
+`;
+
 exports[`overrides Group.Item.first should render correctly 1`] = `
 .emotion-8 {
   border-radius: 6px !important;
@@ -556,7 +706,7 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
 .emotion-5 > *:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:first-child input,
@@ -717,7 +867,7 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
 .emotion-5 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child input,
@@ -879,7 +1029,7 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
 .emotion-5 > *:not(:first-child):not(:last-child) > input,
 .emotion-5 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:not(:first-child) {
@@ -904,157 +1054,7 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
 </div>
 `;
 
-exports[`overrides Group.Item.root should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
-}
-
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcfcfd;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-0:hover {
-  background-color: #f7f7fa;
-}
-
-.emotion-0:hover:active {
-  background-color: #e6e6eb;
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5 > * {
-  border-radius: 6px;
-  background-color: red;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-<div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 fp-Box fp-Flex fp-Group"
-  role="group"
->
-  <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
-    type="button"
-  >
-    Hello
-  </button>
-  <div
-    class="emotion-1 emotion-2 fp-Box"
-  >
-    World
-  </div>
-</div>
-`;
-
-exports[`overrides Group.root should render correctly 1`] = `
+exports[`overrides Group.base should render correctly 1`] = `
 .emotion-8 {
   border-radius: 6px !important;
 }
@@ -1186,7 +1186,7 @@ exports[`overrides Group.root should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div
@@ -1507,6 +1507,156 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
+exports[`theming Group.Item.base should render correctly 1`] = `
+.emotion-8 {
+  border-radius: 6px !important;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: #212121;
+  fill: #212121;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid #d9d9e1;
+}
+
+.emotion-0[disabled],
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-0:focus {
+  outline: unset;
+  z-index: 2;
+  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  border-color: transparent;
+}
+
+.emotion-0:hover {
+  background-color: #f7f7fa;
+}
+
+.emotion-0:hover:active {
+  background-color: #e6e6eb;
+}
+
+.emotion-5 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-5 > * {
+  border-radius: 6px;
+  background-color: #ff0000;
+}
+
+.emotion-5 input:focus,
+.emotion-5 select:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.emotion-5 > *:first-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emotion-5 > *:first-child input,
+.emotion-5 > *:first-child select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.emotion-5 > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-5 > *:last-child input,
+.emotion-5 > *:last-child select {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-5 > *:not(:first-child):not(:last-child),
+.emotion-5 > *:not(:first-child):not(:last-child) > input,
+.emotion-5 > *:not(:first-child):not(:last-child) > select {
+  border-radius: 0;
+}
+
+.emotion-5 > *:not(:first-child) {
+  border-left-width: 0;
+}
+
+<div
+  class="emotion-5 emotion-6 emotion-1 emotion-8 fp-Box fp-Flex fp-Group"
+  role="group"
+>
+  <button
+    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    type="button"
+  >
+    Hello
+  </button>
+  <div
+    class="emotion-1 emotion-2 fp-Box"
+  >
+    World
+  </div>
+</div>
+`;
+
 exports[`theming Group.Item.first should render correctly 1`] = `
 .emotion-8 {
   border-radius: 6px !important;
@@ -1609,7 +1759,7 @@ exports[`theming Group.Item.first should render correctly 1`] = `
 .emotion-5 > *:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:first-child input,
@@ -1770,7 +1920,7 @@ exports[`theming Group.Item.last should render correctly 1`] = `
 .emotion-5 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child input,
@@ -1932,7 +2082,7 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
 .emotion-5 > *:not(:first-child):not(:last-child) > input,
 .emotion-5 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:not(:first-child) {
@@ -1957,157 +2107,7 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Group.Item.root should render correctly 1`] = `
-.emotion-8 {
-  border-radius: 6px !important;
-}
-
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fcfcfd;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
-}
-
-.emotion-0[disabled],
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-0:focus {
-  outline: unset;
-  z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
-  border-color: transparent;
-}
-
-.emotion-0:hover {
-  background-color: #f7f7fa;
-}
-
-.emotion-0:hover:active {
-  background-color: #e6e6eb;
-}
-
-.emotion-5 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-5 > * {
-  border-radius: 6px;
-  background-color: red;
-}
-
-.emotion-5 input:focus,
-.emotion-5 select:focus {
-  z-index: 1;
-  position: relative;
-}
-
-.emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.emotion-5 > *:first-child input,
-.emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:last-child input,
-.emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select {
-  border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child) {
-  border-left-width: 0;
-}
-
-<div
-  class="emotion-5 emotion-6 emotion-1 emotion-8 fp-Box fp-Flex fp-Group"
-  role="group"
->
-  <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
-    type="button"
-  >
-    Hello
-  </button>
-  <div
-    class="emotion-1 emotion-2 fp-Box"
-  >
-    World
-  </div>
-</div>
-`;
-
-exports[`theming Group.root should render correctly 1`] = `
+exports[`theming Group.base should render correctly 1`] = `
 .emotion-8 {
   border-radius: 6px !important;
 }
@@ -2239,7 +2239,7 @@ exports[`theming Group.root should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <div

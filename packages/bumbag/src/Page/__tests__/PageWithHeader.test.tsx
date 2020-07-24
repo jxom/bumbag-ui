@@ -19,7 +19,7 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <PageWithHeader header={<div>this is a header</div>} variant="test">
         hello world
@@ -27,7 +27,7 @@ describe('variants', () => {
       {
         theme: {
           PageWithHeader: {
-            variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+            variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
           },
         },
       }
@@ -37,12 +37,12 @@ describe('variants', () => {
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <PageWithHeader
         header={<div>this is a header</div>}
         overrides={{
-          PageWithHeader: { css: { root: { backgroundColor: 'red' } } },
+          PageWithHeader: { styles: { base: { backgroundColor: 'red' } } },
         }}
       >
         hello world
@@ -53,10 +53,10 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<PageWithHeader header={<div>this is a header</div>}>hello world</PageWithHeader>, {
       theme: {
-        PageWithHeader: { css: { root: { backgroundColor: 'red' } } },
+        PageWithHeader: { styles: { base: { backgroundColor: 'red' } } },
       },
     });
     expect(container.firstChild).toMatchSnapshot();

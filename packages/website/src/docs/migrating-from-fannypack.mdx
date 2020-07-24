@@ -18,7 +18,7 @@ If you wish to upgrade incrementally, you can install the `bumbag` package:
 npm install bumbag
 ```
 
-And then, set up Bumbag in your app root:
+And then, set up Bumbag in your app base:
 
 ```jsx
 // Bumbag
@@ -88,9 +88,9 @@ const App = () => (
 
 <Divider />
 
-### Theming: `.base` to `.css.root`
+### Theming: `.base` to `.styles.base`
 
-We have renamed the `base` attribute in the global theme to `css.root`.
+We have renamed the `base` attribute in the global theme to `styles.base`.
 
 ##### v4
 
@@ -109,8 +109,8 @@ const theme = {
 ```jsx
 const theme = {
   Box: {
-    css: {
-      root: {
+    styles: {
+      base: {
         backgroundColor: 'red'
       }
     }
@@ -147,8 +147,8 @@ const theme = {
 ```jsx
 const theme = {
   Box: {
-    css: {
-      root: props => css`
+    styles: {
+      base: props => css`
         color: ${palette('primary')(props)};
 
         ${props.error && css`

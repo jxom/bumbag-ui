@@ -110,9 +110,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Stack.root should render correctly', () => {
+  it('Stack.base should render correctly', () => {
     const { container } = render(
-      <Stack overrides={{ Stack: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Stack overrides={{ Stack: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>
@@ -120,9 +120,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.child.root should render correctly', () => {
+  it('Stack.child.base should render correctly', () => {
     const { container } = render(
-      <Stack overrides={{ Stack: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
+      <Stack overrides={{ Stack: { styles: { child: { base: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>
@@ -132,7 +132,7 @@ describe('overrides', () => {
 
   it('Stack.vertical should render correctly', () => {
     const { container } = render(
-      <Stack overrides={{ Stack: { css: { vertical: { backgroundColor: 'red' } } } }}>
+      <Stack overrides={{ Stack: { styles: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>
@@ -142,7 +142,7 @@ describe('overrides', () => {
 
   it('Stack.horizontal should render correctly', () => {
     const { container } = render(
-      <Stack orientation="horizontal" overrides={{ Stack: { css: { horizontal: { backgroundColor: 'red' } } } }}>
+      <Stack orientation="horizontal" overrides={{ Stack: { styles: { horizontal: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>
@@ -152,7 +152,7 @@ describe('overrides', () => {
 
   it('Stack.child.vertical should render correctly', () => {
     const { container } = render(
-      <Stack overrides={{ Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
+      <Stack overrides={{ Stack: { styles: { child: { vertical: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>
@@ -164,7 +164,7 @@ describe('overrides', () => {
     const { container } = render(
       <Stack
         orientation="horizontal"
-        overrides={{ Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }}
+        overrides={{ Stack: { styles: { child: { horizontal: { backgroundColor: 'red' } } } } }}
       >
         <Box>hello</Box>
         <Box>world</Box>
@@ -175,79 +175,79 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Stack.css.root should render correctly', () => {
+  it('Stack.styles.base should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Stack: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.css.child.root should render correctly', () => {
+  it('Stack.styles.child.base should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { root: { backgroundColor: 'red' } } } } },
+        theme: { Stack: { styles: { child: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.css.vertical should render correctly', () => {
+  it('Stack.styles.vertical should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { vertical: { backgroundColor: 'red' } } } },
+        theme: { Stack: { styles: { vertical: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.css.horizontal should render correctly', () => {
+  it('Stack.styles.horizontal should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { horizontal: { backgroundColor: 'red' } } } },
+        theme: { Stack: { styles: { horizontal: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.css.child.vertical should render correctly', () => {
+  it('Stack.styles.child.vertical should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { vertical: { backgroundColor: 'red' } } } } },
+        theme: { Stack: { styles: { child: { vertical: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Stack.css.child.horizontal should render correctly', () => {
+  it('Stack.styles.child.horizontal should render correctly', () => {
     const { container } = render(
       <Stack>
         <Box>hello</Box>
         <Box>world</Box>
       </Stack>,
       {
-        theme: { Stack: { css: { child: { horizontal: { backgroundColor: 'red' } } } } },
+        theme: { Stack: { styles: { child: { horizontal: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

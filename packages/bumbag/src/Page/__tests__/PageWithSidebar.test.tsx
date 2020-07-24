@@ -29,7 +29,7 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <PageWithSidebar sidebar={<div>this is a sidebar</div>} variant="test">
         hello world
@@ -37,7 +37,7 @@ describe('variants', () => {
       {
         theme: {
           PageWithSidebar: {
-            variants: { test: { css: { root: { backgroundColor: 'red' } } } },
+            variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
           },
         },
       }
@@ -47,12 +47,12 @@ describe('variants', () => {
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <PageWithSidebar
         sidebar={<div>this is a sidebar</div>}
         overrides={{
-          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } },
+          PageWithSidebar: { styles: { base: { backgroundColor: 'red' } } },
         }}
       >
         hello world
@@ -63,12 +63,12 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <PageWithSidebar sidebar={<div>this is a sidebar</div>}>hello world</PageWithSidebar>,
       {
         theme: {
-          PageWithSidebar: { css: { root: { backgroundColor: 'red' } } },
+          PageWithSidebar: { styles: { base: { backgroundColor: 'red' } } },
         },
       }
     );

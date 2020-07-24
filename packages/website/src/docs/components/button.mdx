@@ -33,6 +33,17 @@ Colors can be added to a button with the `palette` prop.
 </Set>
 ```
 
+### Variants
+
+```jsx-live
+<Set>
+  <Button palette="primary">Default</Button>
+  <Button variant="outlined" palette="primary">Outlined</Button>
+  <Button variant="ghost" palette="primary">Ghost</Button>
+  <Button variant="link" palette="primary">Link</Button>
+</Set>
+```
+
 ### Icons
 
 You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
@@ -643,60 +654,60 @@ similarly to `readOnly` on form elements. In this case, only
 <Theme
   component={Button}
   overrides={[
-    'Button.css.root',
+    'Button.styles.base',
     {
-      key: 'Button.css.disabled',
+      key: 'Button.styles.disabled',
       description: 'Applies when the button is disabled. `<Button disabled>`',
       props: { disabled: true }
     },
-    { key: 'Button.css.focus', description: 'Applies when the button has focus. Try it out by clicking the button.' },
-    { key: 'Button.css.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
+    { key: 'Button.styles.focus', description: 'Applies when the button has focus. Try it out by clicking the button.' },
+    { key: 'Button.styles.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
     {
-      key: 'Button.css.hoveractive',
+      key: 'Button.styles.hoveractive',
       description:
         'Applies when the button is hovered and active. Try it out by hovering over the button and clicking on it.'
     },
     {
-      key: 'Button.css.ghost',
+      key: 'Button.styles.ghost',
       description: 'Applies for ghost buttons. `<Button variant="ghost">`',
       props: { variant: 'ghost' }
     },
-    { key: 'Button.css.link', description: 'Applies for link buttons. `<Button variant="link">`', props: { variant: 'link' } },
+    { key: 'Button.styles.link', description: 'Applies for link buttons. `<Button variant="link">`', props: { variant: 'link' } },
     {
-      key: 'Button.css.outlined',
+      key: 'Button.styles.outlined',
       description: 'Applies for outlined buttons. `<Button variant="outlined">`',
       props: { variant: 'outlined' }
     },
-    { key: 'Button.css.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
+    { key: 'Button.styles.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
     {
-      key: 'Button.css.sizes.small',
+      key: 'Button.styles.sizes.small',
       description: 'Applies for small buttons. `<Button size="small">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.css.sizes.default',
+      key: 'Button.styles.sizes.default',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.css.sizes.medium',
+      key: 'Button.styles.sizes.medium',
       description: 'Applies for static buttons. `<Button size="medium">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.css.sizes.large',
+      key: 'Button.styles.sizes.large',
       description: 'Applies for static buttons. `<Button size="large">`',
       props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
     },
     {
-      key: 'Button.Icon.css.root',
+      key: 'Button.Icon.styles.base',
       props: { iconBefore: 'info-circle' }
     },
     {
-      key: 'Button.Icon.css.before',
+      key: 'Button.Icon.styles.before',
       props: { iconBefore: 'info-circle' }
     },
     {
-      key: 'Button.Icon.css.after',
+      key: 'Button.Icon.styles.after',
       props: { iconAfter: 'info-circle' }
     }
   ]}>

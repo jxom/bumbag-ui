@@ -41,9 +41,9 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Blockquote.root should render correctly', () => {
+  it('Blockquote.base should render correctly', () => {
     const { container } = render(<Blockquote>hello world</Blockquote>, {
-      theme: { Blockquote: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Blockquote: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

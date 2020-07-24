@@ -13,10 +13,9 @@ import { Provider as BumbagProvider, css } from 'bumbag';
 
 const theme = {
   global: {
-    fontFamily: 'Comic Sans MS',
     fontSize: 20,
-    css: {
-      root: css`
+    styles: {
+      base: css`
         html,
         body {
           background-color: pink;
@@ -40,10 +39,9 @@ export default () => (
 ```js
 const theme = {
   global: {
-    fontFamily: string,
     fontSize: number,
-    css: {
-      root: Object | string
+    styles: {
+      base: Object | string
     }
   }
 }

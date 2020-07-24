@@ -29,7 +29,7 @@ export const Button = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 
   &[disabled],
@@ -55,7 +55,7 @@ export const ButtonIcon = (styleProps) => cssClass`
       margin-right: ${space(2)(styleProps)}em;
 
       & {
-        ${theme(styleProps.themeKey, `css.before`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.before`)(styleProps)};
       }
     `
   };
@@ -67,13 +67,13 @@ export const ButtonIcon = (styleProps) => cssClass`
       margin-right: -${space(1)(styleProps)}em;
 
       & {
-        ${theme(styleProps.themeKey, `css.after`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.after`)(styleProps)};
       }
     `
   };
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -87,7 +87,7 @@ export const ButtonSpinnerWrapper = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -97,7 +97,7 @@ export const ButtonSpinner = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -108,7 +108,7 @@ export const ButtonClose = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -123,7 +123,7 @@ export const getDisabledProperties = (styleProps) => css`
     pointer-events: unset;
   }
   & {
-    ${theme(styleProps.themeKey, `css.disabled`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.disabled`)(styleProps)};
   }
 `;
 
@@ -136,12 +136,12 @@ export const getSizeProperties = (styleProps) => {
         padding: 0 ${space(3)(styleProps)}rem;
       }
       & {
-        ${theme(styleProps.themeKey, `css.sizes.small`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -150,7 +150,7 @@ export const getSizeProperties = (styleProps) => {
         padding: 0 ${space(5)(styleProps)}rem;
       }
       & {
-        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
@@ -160,7 +160,7 @@ export const getSizeProperties = (styleProps) => {
         padding: 0 ${space(6)(styleProps)}rem;
       }
       & {
-        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.large`)(styleProps)};
       }
     `,
   };
@@ -178,7 +178,7 @@ export const getLoadingProperties = (styleProps) => css`
     }
   }
   & {
-    ${theme(styleProps.themeKey, `css.loading`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.loading`)(styleProps)};
   }
 `;
 
@@ -193,7 +193,7 @@ export const getStaticProperties = (styleProps) => css`
     }
   }
   & {
-    ${theme(styleProps.themeKey, `css.static`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.static`)(styleProps)};
   }
 `;
 
@@ -216,7 +216,7 @@ export const getInteractiveProperties = (styleProps) => css`
     `};
 
     & {
-      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
 
@@ -228,7 +228,7 @@ export const getInteractiveProperties = (styleProps) => css`
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.hover`)(styleProps)};
       }
     }
   `};
@@ -241,7 +241,7 @@ export const getInteractiveProperties = (styleProps) => css`
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.hoveractive`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.hoveractive`)(styleProps)};
       }
     }
   `};
@@ -265,13 +265,13 @@ export const getLinkProperties = (styleProps) => css`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.link`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.link`)(styleProps)};
   }
 `;
 
 export const getOutlinedProperties = (styleProps) => css`
   & {
-    background-color: unset;
+    background-color: ${palette('default')(styleProps)};
     border: 1px solid ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     color: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
     fill: ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
@@ -281,14 +281,17 @@ export const getOutlinedProperties = (styleProps) => css`
     css`
       &:hover {
         border-color: ${palette()(styleProps)};
-        background-color: ${palette()(styleProps)};
-        color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-        fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+        background-color: ${palette(`${styleProps.palette}Tint`, { dark: `${styleProps.palette}Shade` })(styleProps)};
+      }
+
+      &:hover:active {
+        border-color: ${palette()(styleProps)};
+        background-color: ${palette(`${styleProps.palette}100`, { dark: `${styleProps.palette}900` })(styleProps)};
       }
     `};
   }
   & {
-    ${theme(styleProps.themeKey, `css.outlined`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.outlined`)(styleProps)};
   }
 `;
 
@@ -312,6 +315,6 @@ export const getGhostProperties = (styleProps) => css`
     }
   }
   & {
-    ${theme(styleProps.themeKey, `css.ghost`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.ghost`)(styleProps)};
   }
 `;

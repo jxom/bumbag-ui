@@ -98,12 +98,12 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Overlay.Disclosure.root should render correctly', () => {
+  it('Overlay.Disclosure.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
         <Overlay.Disclosure
-          overrides={{ Overlay: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Overlay: { Disclosure: { styles: { base: { backgroundColor: 'red' } } } } }}
           {...overlay}
         >
           Toggle
@@ -116,13 +116,13 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Overlay.Disclosure.root should render correctly', () => {
+  it('Overlay.Disclosure.base should render correctly', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return <Overlay.Disclosure {...overlay}>Toggle</Overlay.Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Overlay: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Overlay: { Disclosure: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

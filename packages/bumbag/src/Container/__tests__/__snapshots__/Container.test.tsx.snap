@@ -275,6 +275,58 @@ exports[`defaultProps should render correctly for isLayout 1`] = `
 </div>
 `;
 
+exports[`overrides Container.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
 exports[`overrides Container.fluid should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -298,7 +350,7 @@ exports[`overrides Container.fluid should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media (max-width:768px) {
@@ -382,7 +434,7 @@ exports[`overrides Container.layout should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media (max-width:1568px) {
@@ -401,58 +453,6 @@ exports[`overrides Container.layout should render correctly 1`] = `
   .emotion-0 {
     max-width: 768px;
   }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
-exports[`overrides Container.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-.emotion-0 {
-  background-color: red;
 }
 
 <div
@@ -1020,6 +1020,58 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
+exports[`theming Container.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:1568px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width:1328px) {
+  .emotion-0 {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width:1152px) {
+  .emotion-0 {
+    max-width: 768px;
+  }
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+>
+  hello world
+</div>
+`;
+
 exports[`theming Container.fluid should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -1043,7 +1095,7 @@ exports[`theming Container.fluid should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media (max-width:768px) {
@@ -1127,7 +1179,7 @@ exports[`theming Container.layout should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media (max-width:1568px) {
@@ -1146,58 +1198,6 @@ exports[`theming Container.layout should render correctly 1`] = `
   .emotion-0 {
     max-width: 768px;
   }
-}
-
-<div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
->
-  hello world
-</div>
-`;
-
-exports[`theming Container.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width:1568px) {
-  .emotion-0 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width:1328px) {
-  .emotion-0 {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width:1152px) {
-  .emotion-0 {
-    max-width: 768px;
-  }
-}
-
-.emotion-0 {
-  background-color: red;
 }
 
 <div

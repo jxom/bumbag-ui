@@ -4,6 +4,7 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 import { get } from './get';
+import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
@@ -17,15 +18,19 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const variantTheme = get(props, `overrides.${variantSelector}`) || get(props, `theme.${variantSelector}`);
     const colorModeTheme = get(props, `overrides.${colorModeSelector}`) || get(props, `theme.${colorModeSelector}`);
 
-    if (path && path.includes('css')) {
+    if (path && path.includes('styles')) {
       const defaultThemeValue = isFunction(defaultTheme) ? defaultTheme(props) : defaultTheme;
       const variantThemeValue = isFunction(variantTheme) ? variantTheme(props) : variantTheme;
       const colorModeThemeValue = isFunction(colorModeTheme) ? colorModeTheme(props) : colorModeTheme;
-      return {
+      let styles = {
         ...defaultThemeValue,
         ...variantThemeValue,
         ...colorModeThemeValue,
       };
+      if (!styles.styles) {
+        styles = getCSSFromStyleObject(styles, props.theme, colorMode);
+      }
+      return styles;
     }
 
     const theme = colorModeTheme || variantTheme || defaultTheme;

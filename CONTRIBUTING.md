@@ -121,15 +121,15 @@ The list below is a guide (or checklist) to creating a new Bumbag component. You
 
   Ensure that the component is themeable:
 
-  > Every component has a `root` in it's theme config. It's nice to add theme keys (e.g. `MyComponent.css.hover`) to stuff you think would be themeable inside the styled component.
+  > Every component has a `root` in it's theme config. It's nice to add theme keys (e.g. `MyComponent.styles.hover`) to stuff you think would be themeable inside the styled component.
 
   ```tsx
     export const MyComponent = styleProps => cssClass`
       &:hover {
-        ${theme('MyComponent.css.hover')(styleProps)};
+        ${theme('MyComponent.styles.hover')(styleProps)};
       }
       & {
-        ${theme('MyComponent.css.root')(styleProps)};
+        ${theme('MyComponent.styles.base')(styleProps)};
       }
     `
   ```

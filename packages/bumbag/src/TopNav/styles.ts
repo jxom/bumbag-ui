@@ -7,7 +7,7 @@ export const TopNav = (styleProps) => cssClass`
   min-height: 60px;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const TopNavSection = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -78,7 +78,7 @@ export const TopNavItem = (styleProps) => cssClass`
       css`
         box-shadow: inset 0 -2px 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
       `} & {
-        ${theme(styleProps.themeKey, `css.active`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.active`)(styleProps)};
       }
     `
   }
@@ -99,7 +99,7 @@ export const TopNavItem = (styleProps) => cssClass`
     }
 
     & {
-      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.hover`)(styleProps)};
     }
   }
 
@@ -116,11 +116,11 @@ export const TopNavItem = (styleProps) => cssClass`
     }
 
     & {
-      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

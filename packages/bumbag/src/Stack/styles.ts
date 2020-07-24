@@ -14,7 +14,7 @@ export const Stack = (styleProps) => cssClass`
   ${styleProps.orientation === 'horizontal' && getHorizontalAttributes(styleProps)}
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -23,12 +23,12 @@ const getVerticalAttributes = (styleProps) => css`
     margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `css.child.vertical`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.child.vertical`)(styleProps)};
     }
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.vertical`)(styleProps)};
   }
 `;
 
@@ -53,12 +53,12 @@ const getHorizontalAttributes = (styleProps) => {
         margin-right: ${space(styleProps.spacing)(styleProps)}rem;
 
         & {
-          ${theme(styleProps.themeKey, `css.child.horizontal`)(styleProps)};
+          ${theme(styleProps.themeKey, `styles.child.horizontal`)(styleProps)};
         }
       }
 
       & {
-        ${theme(styleProps.themeKey, `css.horizontal`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.horizontal`)(styleProps)};
       }
     }
 

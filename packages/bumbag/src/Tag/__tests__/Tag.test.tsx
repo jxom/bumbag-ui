@@ -35,7 +35,7 @@ describe('props', () => {
           <Tag
             size={size}
             overrides={{
-              Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } },
+              Tag: { styles: { sizes: { [size]: { backgroundColor: 'red' } } } },
             }}
           >
             Hello world
@@ -76,44 +76,44 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Tag.root should render correctly', () => {
+  it('Tag.base should render correctly', () => {
     const { container } = render(<Tag>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Tag: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.Content.root should render correctly', () => {
+  it('Tag.Content.base should render correctly', () => {
     const { container } = render(<Tag>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Tag: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.Close.root should render correctly', () => {
+  it('Tag.Close.base should render correctly', () => {
     const { container } = render(<Tag onRemove={() => {}}>hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { Close: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Tag: { Close: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.outlined.root should render correctly', () => {
+  it('Tag.outlined.base should render correctly', () => {
     const { container } = render(<Tag variant="outlined">hello world</Tag>, {
       // @ts-ignore
-      theme: { Tag: { css: { outlined: { backgroundColor: 'red' } } } },
+      theme: { Tag: { styles: { outlined: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   describe('sizes', () => {
     ['small', 'default', 'medium', 'large'].forEach((size: any) => {
-      it(`Tag.sizes.${size}.root should render correctly`, () => {
+      it(`Tag.sizes.${size}.base should render correctly`, () => {
         const { container } = render(<Tag size={size}>hello world</Tag>, {
           // @ts-ignore
-          theme: { Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } },
+          theme: { Tag: { styles: { sizes: { [size]: { backgroundColor: 'red' } } } } },
         });
         expect(container.firstChild).toMatchSnapshot();
       });
@@ -122,32 +122,32 @@ describe('theming', () => {
 });
 
 describe('overrides', () => {
-  it('Tag.root should render correctly', () => {
+  it('Tag.base should render correctly', () => {
     const { container } = render(
-      <Tag overrides={{ Tag: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Tag>
+      <Tag overrides={{ Tag: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Tag>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.Content.root should render correctly', () => {
+  it('Tag.Content.base should render correctly', () => {
     const { container } = render(
-      <Tag overrides={{ Tag: { Content: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Tag>
+      <Tag overrides={{ Tag: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}>hello world</Tag>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.Close.root should render correctly', () => {
+  it('Tag.Close.base should render correctly', () => {
     const { container } = render(
-      <Tag onRemove={() => {}} overrides={{ Tag: { Close: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Tag onRemove={() => {}} overrides={{ Tag: { Close: { styles: { base: { backgroundColor: 'red' } } } } }}>
         hello world
       </Tag>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tag.outlined.root should render correctly', () => {
+  it('Tag.outlined.base should render correctly', () => {
     const { container } = render(
-      <Tag variant="outlined" overrides={{ Tag: { css: { outlined: { backgroundColor: 'red' } } } }}>
+      <Tag variant="outlined" overrides={{ Tag: { styles: { outlined: { backgroundColor: 'red' } } } }}>
         hello world
       </Tag>
     );
@@ -156,9 +156,9 @@ describe('overrides', () => {
 
   describe('sizes', () => {
     ['small', 'default', 'medium', 'large'].forEach((size: any) => {
-      it(`Tag.sizes.${size}.root should render correctly`, () => {
+      it(`Tag.sizes.${size}.base should render correctly`, () => {
         const { container } = render(
-          <Tag overrides={{ Tag: { css: { sizes: { [size]: { backgroundColor: 'red' } } } } }} size={size}>
+          <Tag overrides={{ Tag: { styles: { sizes: { [size]: { backgroundColor: 'red' } } } } }} size={size}>
             hello world
           </Tag>
         );

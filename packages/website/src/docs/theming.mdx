@@ -12,7 +12,7 @@ Bumbag can be extensively themed to meet your requirements. You can either **ove
 
 ### Overriding the default global theme (recommended)
 
-The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/types/theme.ts).
+The `<ThemeProvider>` component accepts `theme` as a prop, where you can specify overrides to the default Bumbag theme. The schema of the `theme` object can be seen [here](#theme-schema).
 
 ```jsx
 import { Provider as BumbagProvider, css } from 'bumbag';
@@ -20,8 +20,8 @@ import { Provider as BumbagProvider, css } from 'bumbag';
 const theme = {
   global: {
     fontSize: 18,
-    css: {
-      root: css`
+    styles: {
+      base: css`
         html,
         body {
           background-color: hotpink;
@@ -46,10 +46,10 @@ const theme = {
     }
   },
   Heading: {
-    css: {
-      root: css`
-        color: black;
-      `
+    styles: {
+      base: {
+        color: 'primary'
+      }
     }
   }
 }
@@ -77,12 +77,63 @@ const App = () => (
 
 ## Component theming
 
-Bumbag also allows you to define themes on a component level. This can be done in two ways:
+Bumbag also allows you to define themes on a component level. This can be done in three ways:
 
-- Hoisting the component theme via the `applyTheme` function.
-- Applying the component theme via the `overrides` prop on the component.
+- **Globally themed**: Applying the component to the global theme.
+- **Locally themed**: Creating a themed component via the `applyTheme` function.
+- **Locally themed**: Applying the component theme via the `overrides` prop on the component.
 
-### applyTheme
+Each component theme configuration always consists of 4 attributes:
+
+- `styles` - Where the main styling is defined for the component.
+- `variants` - Where the [component variants](/variants) are defined.
+- `modes` - Where the [component color modes](/color-modes) are defined.
+- `defaultProps` - The default props to apply to the component.
+
+For each docs page of the component, you will find a [**Theming** section](/components/button/#theming) where you can reference the schema of the component theme configuration.
+
+### Applying the component to the global theme
+
+
+```jsx
+import { Provider as BumbagProvider, css } from 'bumbag';
+
+const theme = {
+  Button: {
+    styles: {
+      base: {
+        color: 'black',
+
+        // Here we are using "spacing" values from the theme.
+        // But you can specify a `px`, `rem` or `em` value too.
+        padding: 'major-2'
+      }
+    },
+    variants: {
+      'call-to-action': {
+        fontSize: '300',
+        padding: 'major-4'
+      }
+    },
+    modes: {
+      dark: {
+        color: 'white'
+      }
+    },
+    defaultProps: {
+      palette: 'primary'
+    }
+  }
+}
+
+const App = () => (
+  <BumbagProvider theme={theme}>
+    // ... your app
+  </BumbagProvider>
+);
+```
+
+### Creating a themed component
 
 You can apply the theme on a component level via the `applyTheme` utility function. This function accepts two parameters: the first being the **component**, and the second being the **component theme config**.
 
@@ -92,9 +143,15 @@ import { applyTheme } from 'bumbag';
 
 ```function-live noInline
 const Card = applyTheme(Box, {
+  styles: {
+    base: {
+      // Here we are using "spacing" values from the theme.
+      // But you can specify a `px`, `rem` or `em` value too.
+      padding: 'major-2'
+    }
+  },
   defaultProps: {
-    altitude: '100',
-    padding: 'major-2'
+    altitude: '100'
   },
   variants: {
     dope: {
@@ -116,7 +173,7 @@ function Example() {
 render(Example)
 ```
 
-### Overrides prop
+### Using the `overrides` prop
 
 It is possible to override the global theme on the component themselves using the `override` prop on any component.
 
@@ -128,9 +185,15 @@ function Example() {
         variant="dope"
         overrides={{
           Box: {
+            styles: {
+              base: {
+                // Here we are using "spacing" values from the theme.
+                // But you can specify a `px`, `rem` or `em` value too.
+                padding: 'major-2'
+              }
+            },
             defaultProps: {
-              altitude: '100',
-              padding: 'major-2'
+              altitude: '100'
             },
             variants: {
               dope: {

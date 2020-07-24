@@ -3,6 +3,6 @@ import { theme } from 'bumbag/utils';
 
 export const Markdown = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

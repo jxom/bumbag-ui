@@ -8,6 +8,6 @@ export const Icon = (styleProps) => cssClass`
   width: 1em;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

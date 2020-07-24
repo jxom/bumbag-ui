@@ -82,13 +82,13 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Drawer.css.root should render correctly', () => {
+  it('Drawer.styles.base should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
         {(drawer) => (
           <div>
             <Drawer.Disclosure {...drawer}>Toggle</Drawer.Disclosure>
-            <Drawer {...drawer} overrides={{ Drawer: { css: { root: { backgroundColor: 'red' } } } }}>
+            <Drawer {...drawer} overrides={{ Drawer: { styles: { base: { backgroundColor: 'red' } } } }}>
               This is a side overlay
             </Drawer>
           </div>
@@ -98,14 +98,14 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Drawer.Disclosure.css.root should render correctly', () => {
+  it('Drawer.Disclosure.styles.base should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
         {(drawer) => (
           <div>
             <Drawer.Disclosure
               {...drawer}
-              overrides={{ Drawer: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } }}
+              overrides={{ Drawer: { Disclosure: { styles: { base: { backgroundColor: 'red' } } } } }}
             >
               Toggle
             </Drawer.Disclosure>
@@ -119,7 +119,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Drawer.css.root should render correctly', () => {
+  it('Drawer.styles.base should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
         {(drawer) => (
@@ -129,12 +129,12 @@ describe('theming', () => {
           </div>
         )}
       </Drawer.State>,
-      { theme: { Drawer: { css: { root: { backgroundColor: 'red' } } } } }
+      { theme: { Drawer: { styles: { base: { backgroundColor: 'red' } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Drawer.Disclosure.css.root should render correctly', () => {
+  it('Drawer.Disclosure.styles.base should render correctly', () => {
     const { container } = render(
       <Drawer.State baseId="test" visible modal={false}>
         {(drawer) => (
@@ -144,7 +144,7 @@ describe('theming', () => {
           </div>
         )}
       </Drawer.State>,
-      { theme: { Drawer: { Disclosure: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Drawer: { Disclosure: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

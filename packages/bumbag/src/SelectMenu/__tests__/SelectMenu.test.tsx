@@ -43,7 +43,7 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <SelectMenu
         dropdownMenuInitialState={{ baseId: 'test' }}
@@ -59,7 +59,7 @@ describe('variants', () => {
         value={undefined}
       />,
       {
-        theme: { SelectMenu: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+        theme: { SelectMenu: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -67,11 +67,11 @@ describe('variants', () => {
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <SelectMenu
         dropdownMenuInitialState={{ baseId: 'test' }}
-        overrides={{ SelectMenu: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ SelectMenu: { styles: { base: { backgroundColor: 'red' } } } }}
         onChange={jest.fn()}
         options={[
           { key: 1, label: 'Apples', value: 'apples' },
@@ -88,7 +88,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
       <SelectMenu
         dropdownMenuInitialState={{ baseId: 'test' }}
@@ -103,7 +103,7 @@ describe('theming', () => {
         value={undefined}
       />,
       {
-        theme: { SelectMenu: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { SelectMenu: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

@@ -87,62 +87,62 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Radio.root should render correctly', () => {
-    const { container } = render(<Radio overrides={{ Radio: { css: { root: { backgroundColor: 'red' } } } }} />);
+  it('Radio.base should render correctly', () => {
+    const { container } = render(<Radio overrides={{ Radio: { styles: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.Icon.root should render correctly', () => {
+  it('Radio.Icon.base should render correctly', () => {
     const { container } = render(
-      <Radio overrides={{ Radio: { Icon: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Radio overrides={{ Radio: { Icon: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.Label.root should render correctly', () => {
+  it('Radio.Label.base should render correctly', () => {
     const { container } = render(
-      <Radio overrides={{ Radio: { Label: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Radio overrides={{ Radio: { Label: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.HiddenInput.root should render correctly', () => {
+  it('Radio.HiddenInput.base should render correctly', () => {
     const { container } = render(
-      <Radio overrides={{ Radio: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Radio overrides={{ Radio: { HiddenInput: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Radio.root should render correctly', () => {
+  it('Radio.base should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Radio: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.Icon.root should render correctly', () => {
+  it('Radio.Icon.base should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { Icon: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Radio: { Icon: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.Label.root should render correctly', () => {
+  it('Radio.Label.base should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { Label: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Radio: { Label: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Radio.HiddenInput.root should render correctly', () => {
+  it('Radio.HiddenInput.base should render correctly', () => {
     const { container } = render(<Radio />, {
       // @ts-ignore
-      theme: { Radio: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Radio: { HiddenInput: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

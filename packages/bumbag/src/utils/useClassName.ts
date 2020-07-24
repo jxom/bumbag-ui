@@ -22,16 +22,20 @@ export function useClassName({
   const { theme } = useTheme();
 
   let newThemeKey = `${themeKeyOverride || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
+  const stringifiedStyleProps = Object.values(styleProps)
+    .filter((styleProp) => typeof styleProp !== 'function')
+    .join('.');
+  const props = React.useMemo(() => ({ theme, ...styleProps, themeKey: newThemeKey }), [stringifiedStyleProps]); // eslint-disable-line
 
   const className = React.useMemo(() => {
     let className;
     if (Array.isArray(style)) {
-      className = style.map((style) => style({ theme, ...styleProps, themeKey: newThemeKey }));
+      className = style.map((style) => style(props));
     } else {
-      className = [style({ theme, ...styleProps, themeKey: newThemeKey })];
+      className = [style(props)];
     }
     return className;
-  }, [newThemeKey, style, styleProps, theme]);
+  }, [props, style]);
 
   const originalThemeKey = themeKeyOverride
     ? `${themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`

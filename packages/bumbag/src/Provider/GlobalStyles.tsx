@@ -35,7 +35,7 @@ export default function GlobalStyles() {
           .map((url: string) => `@import url('${url}')`)
           .join(';')};
 
-        ${theme('global.css.root')(styleProps)};
+        ${theme('global.styles.base')(styleProps)};
       `}
     />
   );

@@ -126,7 +126,7 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('Popover.root should render correctly', () => {
+  it('Popover.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -136,12 +136,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Popover: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Arrow.root should render correctly', () => {
+  it('Popover.Arrow.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -151,12 +151,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Arrow: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Arrow: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Content.root should render correctly', () => {
+  it('Popover.Content.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -166,12 +166,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Close.root should render correctly', () => {
+  it('Popover.Close.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -181,12 +181,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Close: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Close: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Header.root should render correctly', () => {
+  it('Popover.Header.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -196,12 +196,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Header: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Header: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Title.root should render correctly', () => {
+  it('Popover.Title.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -211,12 +211,12 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Title: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Title: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Footer.root should render correctly', () => {
+  it('Popover.Footer.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -226,7 +226,7 @@ describe('theming', () => {
       );
     }
     const { baseElement } = render(<Component />, {
-      theme: { Popover: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Popover: { Footer: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(baseElement).toMatchSnapshot();
   });
@@ -244,7 +244,7 @@ describe('theming', () => {
           );
         }
         const { baseElement } = render(<Component />, {
-          theme: { Popover: { css: { placements: { [placement]: { backgroundColor: 'red' } } } } },
+          theme: { Popover: { styles: { placements: { [placement]: { backgroundColor: 'red' } } } } },
         });
         expect(baseElement).toMatchSnapshot();
       });
@@ -253,11 +253,11 @@ describe('theming', () => {
 });
 
 describe('overrides', () => {
-  it('Popover.root should render correctly', () => {
+  it('Popover.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
-        <Popover {...popover} visible overrides={{ Popover: { css: { root: { backgroundColor: 'red' } } } }}>
+        <Popover {...popover} visible overrides={{ Popover: { styles: { base: { backgroundColor: 'red' } } } }}>
           Hello world
         </Popover>
       );
@@ -266,7 +266,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Arrow.root should render correctly', () => {
+  it('Popover.Arrow.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -274,7 +274,7 @@ describe('overrides', () => {
           {...popover}
           hasArrow
           visible
-          overrides={{ Popover: { Arrow: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Arrow: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -284,14 +284,14 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Content.root should render correctly', () => {
+  it('Popover.Content.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
         <Popover
           {...popover}
           visible
-          overrides={{ Popover: { Content: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -301,7 +301,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Close.root should render correctly', () => {
+  it('Popover.Close.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -310,7 +310,7 @@ describe('overrides', () => {
           title="This is a title"
           showCloseButton
           visible
-          overrides={{ Popover: { Close: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Close: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -320,7 +320,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Header.root should render correctly', () => {
+  it('Popover.Header.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -328,7 +328,7 @@ describe('overrides', () => {
           {...popover}
           title="This is a title"
           visible
-          overrides={{ Popover: { Header: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Header: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -338,7 +338,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Title.root should render correctly', () => {
+  it('Popover.Title.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -346,7 +346,7 @@ describe('overrides', () => {
           {...popover}
           title="This is a title"
           visible
-          overrides={{ Popover: { Title: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Title: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -356,7 +356,7 @@ describe('overrides', () => {
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('Popover.Footer.root should render correctly', () => {
+  it('Popover.Footer.base should render correctly', () => {
     function Component() {
       const popover = Popover.useState({ baseId: 'test' });
       return (
@@ -364,7 +364,7 @@ describe('overrides', () => {
           {...popover}
           footer="This is a footer"
           visible
-          overrides={{ Popover: { Footer: { css: { root: { backgroundColor: 'red' } } } } }}
+          overrides={{ Popover: { Footer: { styles: { base: { backgroundColor: 'red' } } } } }}
         >
           Hello world
         </Popover>
@@ -384,7 +384,7 @@ describe('overrides', () => {
             <Popover
               {...popover}
               visible
-              overrides={{ Popover: { css: { placements: { [placement]: { backgroundColor: 'red' } } } } }}
+              overrides={{ Popover: { styles: { placements: { [placement]: { backgroundColor: 'red' } } } } }}
             >
               Hello world
             </Popover>

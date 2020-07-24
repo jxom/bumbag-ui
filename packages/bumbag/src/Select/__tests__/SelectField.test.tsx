@@ -193,7 +193,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('SelectField.root should render correctly', () => {
+  it('SelectField.base should render correctly', () => {
     const { container } = render(
       <SelectField
         label="This is a label"
@@ -203,7 +203,7 @@ describe('overrides', () => {
           { label: 'Windy', value: 'windy' },
           { label: 'Overcast', value: 'overcast' },
         ]}
-        overrides={{ SelectField: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ SelectField: { styles: { base: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -211,7 +211,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SelectField.root should render correctly', () => {
+  it('SelectField.base should render correctly', () => {
     const { container } = render(
       <SelectField
         label="This is a label"
@@ -224,7 +224,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { SelectField: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { SelectField: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

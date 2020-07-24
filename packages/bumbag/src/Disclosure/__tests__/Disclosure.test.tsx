@@ -98,11 +98,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Disclosure.root should render correctly', () => {
+  it('Disclosure.base should render correctly', () => {
     function Component() {
       const hidden = Disclosure.useState({ baseId: 'test' });
       return (
-        <Disclosure overrides={{ Disclosure: { css: { root: { backgroundColor: 'red' } } } }} {...hidden}>
+        <Disclosure overrides={{ Disclosure: { styles: { base: { backgroundColor: 'red' } } } }} {...hidden}>
           Toggle
         </Disclosure>
       );
@@ -113,13 +113,13 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Disclosure.root should render correctly', () => {
+  it('Disclosure.base should render correctly', () => {
     function Component() {
       const hidden = Disclosure.useState({ baseId: 'test' });
       return <Disclosure {...hidden}>Toggle</Disclosure>;
     }
     const { container } = render(<Component />, {
-      theme: { Disclosure: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Disclosure: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

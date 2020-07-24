@@ -65,9 +65,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Group.root should render correctly', () => {
+  it('Group.base should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Group overrides={{ Group: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -75,9 +75,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Group.Item.root should render correctly', () => {
+  it('Group.Item.base should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Group overrides={{ Group: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -87,7 +87,7 @@ describe('overrides', () => {
 
   it('Group.Item.first should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { css: { first: { backgroundColor: 'red' } } } } }}>
+      <Group overrides={{ Group: { Item: { styles: { first: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -97,7 +97,7 @@ describe('overrides', () => {
 
   it('Group.Item.middle should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } }}>
+      <Group overrides={{ Group: { Item: { styles: { middle: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -107,7 +107,7 @@ describe('overrides', () => {
 
   it('Group.Item.last should render correctly', () => {
     const { container } = render(
-      <Group overrides={{ Group: { Item: { css: { last: { backgroundColor: 'red' } } } } }}>
+      <Group overrides={{ Group: { Item: { styles: { last: { backgroundColor: 'red' } } } } }}>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>
@@ -117,27 +117,27 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Group.root should render correctly', () => {
+  it('Group.base should render correctly', () => {
     const { container } = render(
       <Group>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Group: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Group.Item.root should render correctly', () => {
+  it('Group.Item.base should render correctly', () => {
     const { container } = render(
       <Group>
         <Button>Hello</Button>
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Group: { Item: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -150,7 +150,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { first: { backgroundColor: 'red' } } } } },
+        theme: { Group: { Item: { styles: { first: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -163,7 +163,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { last: { backgroundColor: 'red' } } } } },
+        theme: { Group: { Item: { styles: { last: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -176,7 +176,7 @@ describe('theming', () => {
         <Box>World</Box>
       </Group>,
       {
-        theme: { Group: { Item: { css: { middle: { backgroundColor: 'red' } } } } },
+        theme: { Group: { Item: { styles: { middle: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

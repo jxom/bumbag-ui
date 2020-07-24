@@ -18,7 +18,7 @@ export const Popover = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -26,7 +26,7 @@ export const PopoverContent = (styleProps) => cssClass`
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -37,7 +37,7 @@ export const PopoverHeader = (styleProps) => cssClass`
   padding: ${space(2, 'minor')(styleProps)}rem ${space(3, 'minor')(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -45,7 +45,7 @@ export const PopoverTitle = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -72,13 +72,13 @@ export const PopoverFooter = (styleProps) => cssClass`
   };
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PopoverClose = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -95,13 +95,13 @@ export const PopoverBackdrop = (styleProps) => cssClass`
   ${getAnimatedAttributes({})(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PopoverDisclosure = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -121,7 +121,7 @@ export const PopoverArrow = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -139,7 +139,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.top`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.top`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -154,7 +154,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottom`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottom`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -169,7 +169,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.left`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.left`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -184,7 +184,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.right`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.right`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -199,7 +199,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.topStart`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.topStart`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -214,7 +214,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.topEnd`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.topEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -229,7 +229,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottomEnd`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottomEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -244,7 +244,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottomStart`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottomStart`)(styleProps)};
       }
     `,
   };

@@ -16,25 +16,25 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Key variant="test">Space</Key>, {
-      theme: { Key: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: { Key: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
-    const { container } = render(<Key overrides={{ Key: { css: { root: { backgroundColor: 'red' } } } }}>Space</Key>);
+  it('styles.base should render correctly', () => {
+    const { container } = render(<Key overrides={{ Key: { styles: { base: { backgroundColor: 'red' } } } }}>Space</Key>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Key>Space</Key>, {
-      theme: { Key: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Key: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

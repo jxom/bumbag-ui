@@ -1,23 +1,23 @@
 import { css, palette } from 'bumbag';
 
 export default {
-  css: {
-    root: (props) => css`
+  styles: {
+    base: (props) => css`
       background-color: ${palette('primary800')(props)};
     `,
   },
   Level: {
     Title: {
-      css: {
-        root: (styleProps) => css`
+      styles: {
+        base: (styleProps) => css`
           color: ${palette('white')(styleProps)};
         `,
       },
     },
   },
   Item: {
-    css: {
-      root: (props) => css`
+    styles: {
+      base: (props) => css`
         && {
           color: ${palette('white')(props)} !important;
           align-items: center;

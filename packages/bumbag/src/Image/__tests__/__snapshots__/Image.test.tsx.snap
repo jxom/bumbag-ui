@@ -156,6 +156,32 @@ exports[`props should render correctly with CSS props 1`] = `
 />
 `;
 
+exports[`theming Image.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+<img
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  src="test.png"
+/>
+`;
+
 exports[`theming Image.contain should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -174,7 +200,7 @@ exports[`theming Image.contain should render correctly 1`] = `
 
 .emotion-0 {
   object-fit: contain;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <img
@@ -201,7 +227,7 @@ exports[`theming Image.cover should render correctly 1`] = `
 
 .emotion-0 {
   object-fit: cover;
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <img
@@ -228,33 +254,7 @@ exports[`theming Image.fixed should render correctly 1`] = `
 
 .emotion-0 {
   max-width: unset;
-  background-color: red;
-}
-
-<img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
-  src="test.png"
-/>
-`;
-
-exports[`theming Image.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 <img

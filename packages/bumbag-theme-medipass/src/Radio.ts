@@ -1,14 +1,14 @@
 import { css } from 'bumbag';
 
 export default {
-  css: {
-    root: css`
+  styles: {
+    base: css`
       font-size: 16px;
     `
   },
   Label: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         font-size: 16px;
       `
     }

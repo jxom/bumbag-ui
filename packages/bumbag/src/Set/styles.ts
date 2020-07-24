@@ -26,7 +26,7 @@ export const Set = (styleProps) => cssClass`
           ${getAlignmentAttributes(styleProps)}
 
           & {
-            ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
+            ${theme(styleProps.themeKey, `styles.vertical`)(styleProps)};
           }
         `
       : css`
@@ -43,7 +43,7 @@ export const Set = (styleProps) => cssClass`
               ${getAlignmentAttributes(styleProps)}
 
               & {
-                ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
+                ${theme(styleProps.themeKey, `styles.vertical`)(styleProps)};
               }
             `,
             {
@@ -57,7 +57,7 @@ export const Set = (styleProps) => cssClass`
                 ${getFlexAlignmentAttributes(styleProps)}
 
                 & {
-                  ${theme(styleProps.themeKey, `css.horizontal`)(styleProps)};
+                  ${theme(styleProps.themeKey, `styles.horizontal`)(styleProps)};
                 }
               `,
             }
@@ -74,7 +74,7 @@ export const Set = (styleProps) => cssClass`
             }
 
             & {
-              ${theme(styleProps.themeKey, `css.child.vertical`)(styleProps)};
+              ${theme(styleProps.themeKey, `styles.child.vertical`)(styleProps)};
             }
           `
         : css`
@@ -86,7 +86,7 @@ export const Set = (styleProps) => cssClass`
                 }
 
                 & {
-                  ${theme(styleProps.themeKey, `css.child.vertical`)(styleProps)};
+                  ${theme(styleProps.themeKey, `styles.child.vertical`)(styleProps)};
                 }
               `,
               {
@@ -95,7 +95,7 @@ export const Set = (styleProps) => cssClass`
                   margin-top: ${space(styleProps.spacing)(styleProps)}rem;
 
                   & {
-                    ${theme(styleProps.themeKey, `css.child.horizontal`)(styleProps)};
+                    ${theme(styleProps.themeKey, `styles.child.horizontal`)(styleProps)};
                   }
                 `,
               }
@@ -103,22 +103,22 @@ export const Set = (styleProps) => cssClass`
           `
     };
 
-    ${theme(styleProps.themeKey, `css.child.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.child.base`)(styleProps)};
   }
 
   &&& > *:first-child {
-    ${theme(styleProps.themeKey, `css.child.first`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.child.first`)(styleProps)};
   }
 
   &&& > *:not(:last-child):not(:first-child) {
-    ${theme(styleProps.themeKey, `css.child.middle`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.child.middle`)(styleProps)};
   }
 
   &&& > *:last-child {
-    ${theme(styleProps.themeKey, `css.child.last`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.child.last`)(styleProps)};
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

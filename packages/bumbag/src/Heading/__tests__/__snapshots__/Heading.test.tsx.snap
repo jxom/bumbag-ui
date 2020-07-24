@@ -295,6 +295,105 @@ h6.emotion-0 {
 </h1>
 `;
 
+exports[`overrides Heading.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
 exports[`overrides Heading.h1 should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
@@ -330,7 +429,7 @@ h1.emotion-0 {
 }
 
 h1.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width:767px) {
@@ -439,7 +538,7 @@ h2.emotion-0 {
 }
 
 h2.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width:767px) {
@@ -548,7 +647,7 @@ h3.emotion-0 {
 }
 
 h3.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width:767px) {
@@ -657,7 +756,7 @@ h4.emotion-0 {
 }
 
 h4.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width:767px) {
@@ -766,7 +865,7 @@ h5.emotion-0 {
 }
 
 h5.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 @media screen and (max-width:767px) {
@@ -875,110 +974,11 @@ h6.emotion-0 {
 }
 
 h6.emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0 .fp-Icon {
   vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`overrides Heading.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  background-color: red;
 }
 
 <h1
@@ -1077,7 +1077,7 @@ h6.emotion-0 {
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0 .fp-Icon {
@@ -1380,502 +1380,7 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h1.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-h1.emotion-0 {
-  background-color: red;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h2.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-h2.emotion-0 {
-  background-color: red;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h3.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-h3.emotion-0 {
-  background-color: red;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h4.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-h4.emotion-0 {
-  background-color: red;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h5.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-h5.emotion-0 {
-  background-color: red;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.h6.root should render correctly 1`] = `
+exports[`theming Heading.base should render correctly 1`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1959,8 +1464,107 @@ h6.emotion-0 {
   font-size: 1rem;
 }
 
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-0 {
+  background-color: #ff0000;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h1.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+h1.emotion-0 {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
 h6.emotion-0 {
-  background-color: red;
+  font-size: 1rem;
 }
 
 .emotion-0 .fp-Icon {
@@ -1974,7 +1578,502 @@ h6.emotion-0 {
 </h1>
 `;
 
-exports[`theming Heading.h6.root should render correctly 2`] = `
+exports[`theming Heading.h2.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+h2.emotion-0 {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h3.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+h3.emotion-0 {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h4.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+h4.emotion-0 {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h5.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+h5.emotion-0 {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h6.base should render correctly 1`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emotion-0:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.heading.emotion-0 + .sub-heading {
+  margin-top: -0.5em;
+}
+
+h1.emotion-0 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:767px) {
+  h1.emotion-0 {
+    font-size: 2.5rem;
+  }
+}
+
+h2.emotion-0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h2.emotion-0 {
+    font-size: 2rem;
+  }
+}
+
+h3.emotion-0 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:767px) {
+  h3.emotion-0 {
+    font-size: 1.5rem;
+  }
+}
+
+h4.emotion-0 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:767px) {
+  h4.emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+h5.emotion-0 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width:767px) {
+  h5.emotion-0 {
+    font-size: 1.125rem;
+  }
+}
+
+h6.emotion-0 {
+  font-size: 1rem;
+}
+
+h6.emotion-0 {
+  background-color: #ff0000;
+}
+
+.emotion-0 .fp-Icon {
+  vertical-align: -0.125em;
+}
+
+<h1
+  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
+>
+  hello world
+</h1>
+`;
+
+exports[`theming Heading.h6.base should render correctly 2`] = `
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2063,7 +2162,7 @@ h6.emotion-0 {
 }
 
 .emotion-0 {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 .emotion-0 .fp-Icon {
@@ -2072,105 +2171,6 @@ h6.emotion-0 {
 
 <h1
   class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading sub-heading"
->
-  hello world
-</h1>
-`;
-
-exports[`theming Heading.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.heading.emotion-0 + .sub-heading {
-  margin-top: -0.5em;
-}
-
-h1.emotion-0 {
-  font-size: 3rem;
-}
-
-@media screen and (max-width:767px) {
-  h1.emotion-0 {
-    font-size: 2.5rem;
-  }
-}
-
-h2.emotion-0 {
-  font-size: 2.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h2.emotion-0 {
-    font-size: 2rem;
-  }
-}
-
-h3.emotion-0 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width:767px) {
-  h3.emotion-0 {
-    font-size: 1.5rem;
-  }
-}
-
-h4.emotion-0 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width:767px) {
-  h4.emotion-0 {
-    font-size: 1.25rem;
-  }
-}
-
-h5.emotion-0 {
-  font-size: 1.25rem;
-}
-
-@media screen and (max-width:767px) {
-  h5.emotion-0 {
-    font-size: 1.125rem;
-  }
-}
-
-h6.emotion-0 {
-  font-size: 1rem;
-}
-
-.emotion-0 .fp-Icon {
-  vertical-align: -0.125em;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<h1
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Heading heading"
 >
   hello world
 </h1>

@@ -310,17 +310,17 @@ const useProps = createHook<AutosuggestProps>(
         if (typeof loadOptions === 'function') {
           if (blockLoad) return { options };
 
-          const { options: fetchedOptions } = await loadOptions({ page, searchText, variables: loadVariables });
+          return loadOptions({ page, searchText, variables: loadVariables }).then(({ options: fetchedOptions }) => {
+            let newOptions = [...options, ...fetchedOptions];
+            if (page === 1) {
+              newOptions = fetchedOptions;
+            }
+            if (page > 1 && fetchedOptions.length === 0) {
+              setBlockLoad(true);
+            }
 
-          let newOptions = [...options, ...fetchedOptions];
-          if (page === 1) {
-            newOptions = fetchedOptions;
-          }
-          if (page > 1 && fetchedOptions.length === 0) {
-            setBlockLoad(true);
-          }
-
-          return { options: newOptions };
+            return { options: newOptions };
+          });
         }
         return undefined;
       },

@@ -39,28 +39,50 @@ const theme = {
 <Provider theme={theme}>Hello world!</Provider>
 ```
 
-## Using breakpoints with `styled`
+## Using breakpoints with themeable components
 
-Bumbag provides a `breakpoint` utility to use with styled components. This helper function allows you to specify CSS for a given breakpoint and will create a media query.
+### With `applyTheme`
 
-The first parameter is the breakpoint (e.g. `max-tablet`).
+You can set attribute values for certain breakpoints by specifying an object of breakpoint/value pairs:
 
-The second parameter is the CSS (e.g. `font-size: 14px;`).
+```function-live noInline
+const FancyBox = applyTheme(Box, {
+  styles: {
+    base: {
+      color: 'red',
+      fontSize: { default: '16px', 'max-tablet': '14px' }
+    }
+  }
+})
 
-```jsx
-import { Box, css, breakpoint, styled } from 'bumbag';
+function Example() {
+  return (
+    <FancyBox>Hello world</FancyBox>
+  );
+}
 
+render(Example)
+```
+
+### With `styled`
+
+```function-live noInline
 const FancyBox = styled(Box)`
   color: red;
-  ${breakpoint(
-    'max-tablet',
-    css`
-      font-size: 14px;
-    `,
-  )}
-`
+  font-size: 16px;
 
-<FancyBox>Hello world</FancyBox>
+  ${breakpoint('max-tablet', css`
+    font-size: 14px;
+  `)}
+`;
+
+function Example() {
+  return (
+    <FancyBox>Hello world</FancyBox>
+  );
+}
+
+render(Example)
 ```
 
 ## Theming

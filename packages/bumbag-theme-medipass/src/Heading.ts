@@ -1,14 +1,14 @@
 import { css, fontWeight } from 'bumbag';
 
 export default {
-  css: {
-    root: props => css`
+  styles: {
+    base: props => css`
       font-weight: ${fontWeight('semibold')(props)};
     `
   },
   h6: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         font-size: 1.125rem;
       `
     }

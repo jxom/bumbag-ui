@@ -128,118 +128,118 @@ describe('composition', () => {
 });
 
 describe('theming', () => {
-  it('FieldWrapper.root should render correctly', () => {
+  it('FieldWrapper.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper>
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { FieldWrapper: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.Label.root should render correctly', () => {
+  it('FieldWrapper.Label.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper label="This is a label">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { Label: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { Label: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.DescriptionText.root should render correctly', () => {
+  it('FieldWrapper.DescriptionText.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper description="This is a description">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { DescriptionText: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { DescriptionText: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.HintText.root should render correctly', () => {
+  it('FieldWrapper.HintText.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper hint="This is a hint">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { HintText: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { HintText: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.OptionalText.root should render correctly', () => {
+  it('FieldWrapper.OptionalText.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper isOptional>
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { OptionalText: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { OptionalText: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.RequiredText.root should render correctly', () => {
+  it('FieldWrapper.RequiredText.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper isRequired>
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { RequiredText: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { RequiredText: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.ValidationText.root should render correctly', () => {
+  it('FieldWrapper.ValidationText.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper validationText="This is validation text">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { ValidationText: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { ValidationText: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.TooltipTrigger.root should render correctly', () => {
+  it('FieldWrapper.TooltipTrigger.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper tooltip="This is a tooltip">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { TooltipTrigger: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { TooltipTrigger: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('FieldWrapper.TooltipPopover.root should render correctly', () => {
+  it('FieldWrapper.TooltipPopover.base should render correctly', () => {
     const { container } = render(
       <FieldWrapper tooltip="This is a tooltip">
         <Input />
       </FieldWrapper>,
       {
         // @ts-ignore
-        theme: { FieldWrapper: { TooltipPopover: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { FieldWrapper: { TooltipPopover: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
