@@ -165,39 +165,3 @@ exports[`props should render correctly with CSS props 1`] = `
   Hello world
 </blockquote>
 `;
-
-exports[`theming Blockquote.root should render correctly 1`] = `
-.emotion-1 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-1:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-0 {
-  border-left: 4px solid #ccc;
-  padding: 1rem;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.emotion-0 {
-  background-color: red;
-}
-
-<blockquote
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Blockquote"
->
-  hello world
-</blockquote>
-`;

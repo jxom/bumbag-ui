@@ -1,8 +1,8 @@
 import { css } from 'bumbag';
 
 export default {
-  css: {
-    root: css`
+  styles: {
+    base: css`
       font-size: 14px;
     `
   }

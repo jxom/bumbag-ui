@@ -97,7 +97,7 @@ export const Tab = (styleProps) => cssClass`
     }
 
     & {
-      ${theme(styleProps.themeKey, `css.selected`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.selected`)(styleProps)};
     }
   }
 
@@ -126,7 +126,7 @@ export const Tab = (styleProps) => cssClass`
     }
 
     & {
-      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
 
@@ -146,12 +146,12 @@ export const Tab = (styleProps) => cssClass`
     }
 
     & {
-      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.hover`)(styleProps)};
     }
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -175,7 +175,7 @@ export const Tabs = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -208,7 +208,7 @@ export const TabsList = (styleProps) => cssClass`
   ${getAlignAttributes(styleProps)}
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -218,7 +218,7 @@ export const TabsPanel = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -228,21 +228,21 @@ function getAlignAttributes(styleProps) {
       & {
         justify-content: start;
 
-        ${theme(styleProps.themeKey, `css.align.left`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.align.left`)(styleProps)};
       }
     `,
     center: css`
       justify-content: center;
 
       & {
-        ${theme(styleProps.themeKey, `css.align.center`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.align.center`)(styleProps)};
       }
     `,
     right: css`
       justify-content: flex-end;
 
       & {
-        ${theme(styleProps.themeKey, `css.align.right`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.align.right`)(styleProps)};
       }
     `,
   };

@@ -45,7 +45,7 @@ export const Box = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, 'css.root')(styleProps)};
+    ${theme(styleProps.themeKey, 'styles.base')(styleProps)};
   }
 `;
 

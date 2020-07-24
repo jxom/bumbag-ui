@@ -473,9 +473,9 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Table.root should render correctly', () => {
+  it('Table.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Table overrides={{ Table: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -512,9 +512,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Head.root should render correctly', () => {
+  it('Table.Head.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { Head: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { Head: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -551,9 +551,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.HeadCell.root should render correctly', () => {
+  it('Table.HeadCell.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { HeadCell: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { HeadCell: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -590,9 +590,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Body.root should render correctly', () => {
+  it('Table.Body.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { Body: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { Body: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -629,9 +629,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Cell.root should render correctly', () => {
+  it('Table.Cell.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { Cell: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { Cell: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -668,9 +668,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Foot.root should render correctly', () => {
+  it('Table.Foot.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { Foot: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { Foot: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -707,9 +707,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Row.root should render correctly', () => {
+  it('Table.Row.base should render correctly', () => {
     const { container } = render(
-      <Table overrides={{ Table: { Row: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Table overrides={{ Table: { Row: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
@@ -748,7 +748,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Table.root should render correctly', () => {
+  it('Table.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -784,13 +784,13 @@ describe('theming', () => {
         </Table.Foot>
       </Table>,
       {
-        theme: { Table: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Table: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Head.root should render correctly', () => {
+  it('Table.Head.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -825,12 +825,12 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { Head: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { Head: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.HeadCell.root should render correctly', () => {
+  it('Table.HeadCell.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -865,12 +865,12 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { HeadCell: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { HeadCell: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Body.root should render correctly', () => {
+  it('Table.Body.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -905,12 +905,12 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { Body: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { Body: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Cell.root should render correctly', () => {
+  it('Table.Cell.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -945,12 +945,12 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { Cell: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { Cell: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Row.root should render correctly', () => {
+  it('Table.Row.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -985,12 +985,12 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { Row: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { Row: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Table.Foot.root should render correctly', () => {
+  it('Table.Foot.base should render correctly', () => {
     const { container } = render(
       <Table>
         <Table.Head>
@@ -1025,7 +1025,7 @@ describe('theming', () => {
           </Table.Row>
         </Table.Foot>
       </Table>,
-      { theme: { Table: { Foot: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { Table: { Foot: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

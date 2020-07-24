@@ -59,7 +59,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Set props 1`] = `
 Object {
-  "className": "css-9rgucs css-1pwrqjj css-1yuzjtp fp-Box fp-Set",
+  "className": "css-1pqugai css-4lfl7m css-1yuzjtp fp-Box fp-Set",
 }
 `;
 
@@ -284,6 +284,128 @@ exports[`defaultProps should render correctly for orientation="vertical" 1`] = `
 </div>
 `;
 
+exports[`overrides Set.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides Set.child.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > *.emotion-4.emotion-4.emotion-4 > * {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
 exports[`overrides Set.child.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
@@ -325,66 +447,8 @@ exports[`overrides Set.child.horizontal should render correctly 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-4.emotion-4.emotion-4 > * {
-  background-color: red;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Set.child.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: red;
+.emotion-4.emotion-4.emotion-4 > *.emotion-4.emotion-4.emotion-4 > * {
+  background-color: #ff0000;
 }
 
 <div
@@ -437,8 +501,8 @@ exports[`overrides Set.child.vertical should render correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.emotion-4.emotion-4.emotion-4 > * {
-  background-color: red;
+.emotion-4.emotion-4.emotion-4 > *.emotion-4.emotion-4.emotion-4 > * {
+  background-color: #ff0000;
 }
 
 <div
@@ -493,74 +557,13 @@ exports[`overrides Set.horizontal should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 .emotion-4.emotion-4.emotion-4 > * {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Set.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-4 {
-  background-color: red;
 }
 
 <div
@@ -609,8 +612,8 @@ exports[`overrides Set.vertical should render correctly 1`] = `
   align-items: flex-start;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 .emotion-4.emotion-4.emotion-4 > *:not(:last-child) {
@@ -1439,6 +1442,128 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
+exports[`theming Set.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`theming Set.child.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > * {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.emotion-4.emotion-4.emotion-4 > *.emotion-4.emotion-4.emotion-4 > * {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
 exports[`theming Set.child.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
@@ -1480,66 +1605,8 @@ exports[`theming Set.child.horizontal should render correctly 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-4.emotion-4.emotion-4 > * {
-  background-color: red;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Set.child.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: red;
+.emotion-4.emotion-4.emotion-4 > *.emotion-4.emotion-4.emotion-4 > * {
+  background-color: #ff0000;
 }
 
 <div
@@ -1651,74 +1718,13 @@ exports[`theming Set.horizontal should render correctly 1`] = `
   margin-top: -0.5rem;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 .emotion-4.emotion-4.emotion-4 > * {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Set"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Set.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-left: -0.5rem;
-  margin-top: -0.5rem;
-}
-
-.emotion-4.emotion-4.emotion-4 > * {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.emotion-4 {
-  background-color: red;
 }
 
 <div

@@ -19,7 +19,7 @@ export const Flex = (styleProps) => cssClass`
   ${getFlexAlignmentAttributes(styleProps)}
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 

@@ -1,22 +1,22 @@
 import { css } from 'bumbag';
 
 export default {
-  css: {
-    root: css`
+  styles: {
+    base: css`
       font-size: 16px;
     `
   },
   Icon: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         border-radius: 0px;
         box-shadow: none;
       `
     }
   },
   Label: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         font-size: 16px;
       `
     }

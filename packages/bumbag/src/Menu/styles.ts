@@ -6,7 +6,7 @@ export const Menu = (styleProps) => cssClass`
   width: 100%;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -81,7 +81,7 @@ export const MenuItem = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -100,7 +100,7 @@ export const MenuItemIcon = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -110,13 +110,13 @@ export const MenuDivider = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const MenuGroup = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -130,6 +130,6 @@ export const MenuGroupTitle = (styleProps) => cssClass`
   text-transform: uppercase;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

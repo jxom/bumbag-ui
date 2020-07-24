@@ -16,27 +16,27 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Level variant="test">hello world</Level>, {
-      theme: { Level: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: { Level: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
-      <Level overrides={{ Level: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Level>
+      <Level overrides={{ Level: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Level>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Level>hello world</Level>, {
-      theme: { Level: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Level: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

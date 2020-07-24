@@ -82,43 +82,43 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Card.css.root should render correctly', () => {
+  it('Card.styles.base should render correctly', () => {
     const { container } = render(
-      <Card overrides={{ Card: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Card>
+      <Card overrides={{ Card: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Card>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Content.css.root should render correctly', () => {
+  it('Card.Content.styles.base should render correctly', () => {
     const { container } = render(
-      <Card overrides={{ Card: { Content: { css: { root: { backgroundColor: 'red' } } } } }}>hello world</Card>
+      <Card overrides={{ Card: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}>hello world</Card>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Header.css.root should render correctly', () => {
+  it('Card.Header.styles.base should render correctly', () => {
     const { container } = render(
-      <Card title="This is a title" overrides={{ Card: { Header: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Card title="This is a title" overrides={{ Card: { Header: { styles: { base: { backgroundColor: 'red' } } } } }}>
         hello world
       </Card>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Title.css.root should render correctly', () => {
+  it('Card.Title.styles.base should render correctly', () => {
     const { container } = render(
-      <Card title="This is a title" overrides={{ Card: { Title: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <Card title="This is a title" overrides={{ Card: { Title: { styles: { base: { backgroundColor: 'red' } } } } }}>
         hello world
       </Card>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Footer.css.root should render correctly', () => {
+  it('Card.Footer.styles.base should render correctly', () => {
     const { container } = render(
       <Card
         footer={<Box>This is a footer</Box>}
-        overrides={{ Card: { Footer: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Card: { Footer: { styles: { base: { backgroundColor: 'red' } } } } }}
       >
         hello world
       </Card>
@@ -128,37 +128,37 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Card.css.root should render correctly', () => {
+  it('Card.styles.base should render correctly', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Card: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Content.css.root should render correctly', () => {
+  it('Card.Content.styles.base should render correctly', () => {
     const { container } = render(<Card>hello world</Card>, {
-      theme: { Card: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Card: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Header.css.root should render correctly', () => {
+  it('Card.Header.styles.base should render correctly', () => {
     const { container } = render(<Card title="This is a title">hello world</Card>, {
-      theme: { Card: { Header: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Card: { Header: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Title.css.root should render correctly', () => {
+  it('Card.Title.styles.base should render correctly', () => {
     const { container } = render(<Card title="This is a title">hello world</Card>, {
-      theme: { Card: { Title: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Card: { Title: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Card.Footer.css.root should render correctly', () => {
+  it('Card.Footer.styles.base should render correctly', () => {
     const { container } = render(<Card footer={<Box>This is a footer</Box>}>hello world</Card>, {
-      theme: { Card: { Footer: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Card: { Footer: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

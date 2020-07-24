@@ -40,25 +40,25 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Rating.css.root should render correctly', () => {
+  it('Rating.styles.base should render correctly', () => {
     const { container } = render(
       <Rating
         roverProps={{ stopId: 'test' }}
         onChange={() => {}}
         value={3}
-        overrides={{ Rating: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ Rating: { styles: { base: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Rating.Item.css.root should render correctly', () => {
+  it('Rating.Item.styles.base should render correctly', () => {
     const { container } = render(
       <Rating
         roverProps={{ stopId: 'test' }}
         onChange={() => {}}
         value={3}
-        overrides={{ Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Rating: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -66,16 +66,16 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Rating.css.root should render correctly', () => {
+  it('Rating.styles.base should render correctly', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Rating: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Rating.Item.css.root should render correctly', () => {
+  it('Rating.Item.styles.base should render correctly', () => {
     const { container } = render(<Rating roverProps={{ stopId: 'test' }} onChange={() => {}} value={3} />, {
-      theme: { Rating: { Item: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Rating: { Item: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

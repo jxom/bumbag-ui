@@ -14,11 +14,11 @@ export const Divider = (styleProps) => cssClass`
       height: auto;
 
       & {
-        ${theme(styleProps.themeKey, `css.vertical`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.vertical`)(styleProps)};
       }
     }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

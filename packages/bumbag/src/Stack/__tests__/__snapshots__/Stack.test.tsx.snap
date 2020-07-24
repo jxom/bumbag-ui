@@ -38,7 +38,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Stack props 1`] = `
 Object {
-  "className": "css-ucri7v css-1pwrqjj css-1yuzjtp fp-Box fp-Stack",
+  "className": "css-1vaxa0h css-4lfl7m css-1yuzjtp fp-Box fp-Stack",
 }
 `;
 
@@ -171,6 +171,82 @@ exports[`defaultProps should render correctly for orientation 1`] = `
 </div>
 `;
 
+exports[`overrides Stack.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4.emotion-4 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`overrides Stack.child.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4.emotion-4 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
 exports[`overrides Stack.child.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
@@ -205,8 +281,8 @@ exports[`overrides Stack.child.horizontal should render correctly 1`] = `
     margin-right: 2rem;
   }
 
-  .emotion-4 > *:not(:last-child) {
-    background-color: red;
+  .emotion-4 > *:not(:last-child).emotion-4 > *:not(:last-child) {
+    background-color: #ff0000;
   }
 }
 
@@ -214,42 +290,6 @@ exports[`overrides Stack.child.horizontal should render correctly 1`] = `
   .emotion-4.emotion-4 > *:not(:last-child) {
     margin-bottom: 2rem;
   }
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Stack.child.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
 }
 
 <div
@@ -288,8 +328,8 @@ exports[`overrides Stack.child.vertical should render correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.emotion-4.emotion-4 > *:not(:last-child) {
-  background-color: red;
+.emotion-4.emotion-4 > *:not(:last-child).emotion-4.emotion-4 > *:not(:last-child) {
+  background-color: #ff0000;
 }
 
 <div
@@ -342,8 +382,8 @@ exports[`overrides Stack.horizontal should render correctly 1`] = `
     margin-right: 2rem;
   }
 
-  .emotion-4 {
-    background-color: red;
+  .emotion-4.emotion-4 {
+    background-color: #ff0000;
   }
 }
 
@@ -351,46 +391,6 @@ exports[`overrides Stack.horizontal should render correctly 1`] = `
   .emotion-4.emotion-4 > *:not(:last-child) {
     margin-bottom: 2rem;
   }
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`overrides Stack.root should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: red;
 }
 
 <div
@@ -429,8 +429,8 @@ exports[`overrides Stack.vertical should render correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 <div
@@ -939,7 +939,47 @@ exports[`props should render correctly with CSS props 1`] = `
 </div>
 `;
 
-exports[`theming Stack.css.child.horizontal should render correctly 1`] = `
+exports[`theming Stack.styles.base should render correctly 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-4.emotion-4 > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
+}
+
+<div
+  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
+>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    hello
+  </div>
+  <div
+    class="emotion-0 emotion-1 fp-Box"
+  >
+    world
+  </div>
+</div>
+`;
+
+exports[`theming Stack.styles.child.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -975,7 +1015,7 @@ exports[`theming Stack.css.child.horizontal should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Stack.css.child.root should render correctly 1`] = `
+exports[`theming Stack.styles.child.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1011,7 +1051,7 @@ exports[`theming Stack.css.child.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Stack.css.child.vertical should render correctly 1`] = `
+exports[`theming Stack.styles.child.vertical should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1031,8 +1071,8 @@ exports[`theming Stack.css.child.vertical should render correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.emotion-4.emotion-4 > *:not(:last-child) {
-  background-color: red;
+.emotion-4.emotion-4 > *:not(:last-child).emotion-4.emotion-4 > *:not(:last-child) {
+  background-color: #ff0000;
 }
 
 <div
@@ -1051,7 +1091,7 @@ exports[`theming Stack.css.child.vertical should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Stack.css.horizontal should render correctly 1`] = `
+exports[`theming Stack.styles.horizontal should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1087,7 +1127,7 @@ exports[`theming Stack.css.horizontal should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Stack.css.root should render correctly 1`] = `
+exports[`theming Stack.styles.vertical should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1107,48 +1147,8 @@ exports[`theming Stack.css.root should render correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.emotion-4 {
-  background-color: red;
-}
-
-<div
-  class="emotion-4 emotion-0 emotion-1 fp-Box fp-Stack"
->
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    hello
-  </div>
-  <div
-    class="emotion-0 emotion-1 fp-Box"
-  >
-    world
-  </div>
-</div>
-`;
-
-exports[`theming Stack.css.vertical should render correctly 1`] = `
-.emotion-0 {
-  margin: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  font: unset;
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-}
-
-.emotion-0:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.emotion-4.emotion-4 > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.emotion-4 {
-  background-color: red;
+.emotion-4.emotion-4 {
+  background-color: #ff0000;
 }
 
 <div

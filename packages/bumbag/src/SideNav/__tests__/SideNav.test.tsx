@@ -185,9 +185,9 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('SideNav.css.root should render correctly', () => {
+  it('SideNav.styles.base should render correctly', () => {
     const { container } = render(
-      <SideNav overrides={{ SideNav: { css: { root: { backgroundColor: 'red' } } } }}>
+      <SideNav overrides={{ SideNav: { styles: { base: { backgroundColor: 'red' } } } }}>
         <SideNav.Level title="Components">
           <SideNav.Item href="#" navId="button">
             Button
@@ -230,9 +230,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Item.css.root should render correctly', () => {
+  it('SideNav.Item.styles.base should render correctly', () => {
     const { container } = render(
-      <SideNav overrides={{ SideNav: { Item: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <SideNav overrides={{ SideNav: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <SideNav.Level title="Components">
           <SideNav.Item href="#" navId="button">
             Button
@@ -275,9 +275,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Level.css.root should render correctly', () => {
+  it('SideNav.Level.styles.base should render correctly', () => {
     const { container } = render(
-      <SideNav overrides={{ SideNav: { Level: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <SideNav overrides={{ SideNav: { Level: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <SideNav.Level title="Components">
           <SideNav.Item href="#" navId="button">
             Button
@@ -320,9 +320,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Level.Title.css.root should render correctly', () => {
+  it('SideNav.Level.Title.styles.base should render correctly', () => {
     const { container } = render(
-      <SideNav overrides={{ SideNav: { Level: { css: { root: { backgroundColor: 'red' } } } } }}>
+      <SideNav overrides={{ SideNav: { Level: { styles: { base: { backgroundColor: 'red' } } } } }}>
         <SideNav.Level title="Components">
           <SideNav.Item href="#" navId="button">
             Button
@@ -367,7 +367,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('SideNav.css.root should render correctly', () => {
+  it('SideNav.styles.base should render correctly', () => {
     const { container } = render(
       <SideNav>
         <SideNav.Level title="Components">
@@ -408,12 +408,12 @@ describe('theming', () => {
           </SideNav.Level>
         </SideNav.Level>
       </SideNav>,
-      { theme: { SideNav: { css: { root: { backgroundColor: 'red' } } } } }
+      { theme: { SideNav: { styles: { base: { backgroundColor: 'red' } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Item.css.root should render correctly', () => {
+  it('SideNav.Item.styles.base should render correctly', () => {
     const { container } = render(
       <SideNav>
         <SideNav.Level title="Components">
@@ -454,12 +454,12 @@ describe('theming', () => {
           </SideNav.Level>
         </SideNav.Level>
       </SideNav>,
-      { theme: { SideNav: { Item: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { SideNav: { Item: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Level.css.root should render correctly', () => {
+  it('SideNav.Level.styles.base should render correctly', () => {
     const { container } = render(
       <SideNav>
         <SideNav.Level title="Components">
@@ -500,12 +500,12 @@ describe('theming', () => {
           </SideNav.Level>
         </SideNav.Level>
       </SideNav>,
-      { theme: { SideNav: { Level: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { SideNav: { Level: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('SideNav.Level.Title.css.root should render correctly', () => {
+  it('SideNav.Level.Title.styles.base should render correctly', () => {
     const { container } = render(
       <SideNav>
         <SideNav.Level title="Components">
@@ -546,7 +546,7 @@ describe('theming', () => {
           </SideNav.Level>
         </SideNav.Level>
       </SideNav>,
-      { theme: { SideNav: { Level: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { SideNav: { Level: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -14,7 +14,7 @@ export const SpinnerWrapper = (styleProps) => cssClass`
   ${styleProps.size && getSizeProperties(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -26,7 +26,7 @@ export const Spinner = (styleProps) => cssClass`
   ${typeof styleProps.value === 'undefined' && getSpinnerAnimation(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -36,7 +36,7 @@ export const TrackCircle = (styleProps) => cssClass`
   })(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -51,7 +51,7 @@ export const LoaderCircle = (styleProps) => cssClass`
   transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -71,12 +71,12 @@ export const getSizeProperties = (styleProps) => {
       }
 
       & {
-        ${theme(styleProps.themeKey, `css.sizes.small`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
@@ -84,7 +84,7 @@ export const getSizeProperties = (styleProps) => {
         font-size: 28px;
       }
       & {
-        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
@@ -92,7 +92,7 @@ export const getSizeProperties = (styleProps) => {
         font-size: 36px;
       }
       & {
-        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.large`)(styleProps)};
       }
     `,
   };

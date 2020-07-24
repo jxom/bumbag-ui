@@ -101,11 +101,11 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('DropdownMenu.css.root should render correctly', () => {
+  it('DropdownMenu.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ DropdownMenu: { styles: { base: { backgroundColor: 'red' } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -123,11 +123,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Popover.css.root should render correctly', () => {
+  it('DropdownMenu.Popover.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Popover: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Popover: { styles: { base: { backgroundColor: 'red' } } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -145,11 +145,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Button.css.root should render correctly', () => {
+  it('DropdownMenu.Button.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Button: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Button: { styles: { base: { backgroundColor: 'red' } } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Item iconBefore="solid-pen">Edit</DropdownMenu.Item>
@@ -167,11 +167,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Divider.css.root should render correctly', () => {
+  it('DropdownMenu.Divider.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Divider: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Divider: { styles: { base: { backgroundColor: 'red' } } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
@@ -195,11 +195,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Group.css.root should render correctly', () => {
+  it('DropdownMenu.Group.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Group: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Group: { styles: { base: { backgroundColor: 'red' } } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
@@ -223,11 +223,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Item.css.root should render correctly', () => {
+  it('DropdownMenu.Item.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
-        overrides={{ DropdownMenu: { Item: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ DropdownMenu: { Item: { styles: { base: { backgroundColor: 'red' } } } } }}
         menu={
           <React.Fragment>
             <DropdownMenu.Group title="Actions">
@@ -253,7 +253,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('DropdownMenu.css.root should render correctly', () => {
+  it('DropdownMenu.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -271,13 +271,13 @@ describe('theming', () => {
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
       {
-        theme: { DropdownMenu: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { DropdownMenu: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Popover.css.root should render correctly', () => {
+  it('DropdownMenu.Popover.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -294,12 +294,12 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Popover: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Popover: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Button.css.root should render correctly', () => {
+  it('DropdownMenu.Button.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -316,12 +316,12 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Button: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Button: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Divider.css.root should render correctly', () => {
+  it('DropdownMenu.Divider.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -344,12 +344,12 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Divider: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Divider: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Group.css.root should render correctly', () => {
+  it('DropdownMenu.Group.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -372,12 +372,12 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Group: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Group: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('DropdownMenu.Item.css.root should render correctly', () => {
+  it('DropdownMenu.Item.styles.base should render correctly', () => {
     const { container } = render(
       <DropdownMenu
         baseId="test"
@@ -400,7 +400,7 @@ describe('theming', () => {
       >
         <Button iconAfter="chevron-down">Actions</Button>
       </DropdownMenu>,
-      { theme: { DropdownMenu: { Item: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { DropdownMenu: { Item: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

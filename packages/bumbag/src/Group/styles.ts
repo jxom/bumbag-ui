@@ -20,7 +20,7 @@ export const Group = (styleProps) => cssClass`
 
   & > * {
     border-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
-    ${theme(styleProps.themeKey, `Item.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `Item.styles.base`)(styleProps)};
   }
 
   & input:focus,
@@ -79,7 +79,7 @@ export const Group = (styleProps) => cssClass`
       };
     }
 
-    ${theme(styleProps.themeKey, `Item.css.first`)(styleProps)};
+    ${theme(styleProps.themeKey, `Item.styles.first`)(styleProps)};
   }
 
   & > *:last-child {
@@ -141,14 +141,14 @@ export const Group = (styleProps) => cssClass`
       };
     }
 
-    ${theme(styleProps.themeKey, `Item.css.last`)(styleProps)};
+    ${theme(styleProps.themeKey, `Item.styles.last`)(styleProps)};
   }
 
   & > *:not(:first-child):not(:last-child),
   & > *:not(:first-child):not(:last-child) > input,
   & > *:not(:first-child):not(:last-child) > select {
     border-radius: 0;
-    ${theme(styleProps.themeKey, `Item.css.middle`)(styleProps)};
+    ${theme(styleProps.themeKey, `Item.styles.middle`)(styleProps)};
   }
 
   & > *:not(:first-child) {
@@ -174,6 +174,6 @@ export const Group = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

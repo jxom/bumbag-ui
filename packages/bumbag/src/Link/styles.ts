@@ -12,13 +12,13 @@ export const Link = (styleProps) => cssClass`
     text-decoration: underline;
 
     & {
-      ${theme(styleProps.themeKey, `css.hover`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.hover`)(styleProps)};
     }
   }
 
   &:focus {
     & {
-      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
 
@@ -27,6 +27,6 @@ export const Link = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;

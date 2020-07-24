@@ -18,7 +18,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('700')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h1.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h1.styles.base`)(styleProps)};
     }
 
     ${
@@ -29,7 +29,7 @@ export const Heading = (styleProps) => cssClass`
           font-size: ${fontSize('600')(styleProps)}rem;
 
           & {
-            ${theme(styleProps.themeKey, `h1.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h1.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -39,7 +39,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('600')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h2.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h2.styles.base`)(styleProps)};
     }
 
     ${
@@ -50,7 +50,7 @@ export const Heading = (styleProps) => cssClass`
           font-size: ${fontSize('500')(styleProps)}rem;
 
           & {
-            ${theme(styleProps.themeKey, `h2.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h2.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -60,7 +60,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('500')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h3.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h3.styles.base`)(styleProps)};
     }
 
     ${
@@ -71,7 +71,7 @@ export const Heading = (styleProps) => cssClass`
           font-size: ${fontSize('400')(styleProps)}rem;
 
           & {
-            ${theme(styleProps.themeKey, `h3.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h3.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -81,7 +81,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('400')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h4.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h4.styles.base`)(styleProps)};
     }
 
     ${
@@ -92,7 +92,7 @@ export const Heading = (styleProps) => cssClass`
           font-size: ${fontSize('300')(styleProps)}rem;
 
           & {
-            ${theme(styleProps.themeKey, `h4.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h4.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -102,7 +102,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('300')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h5.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h5.styles.base`)(styleProps)};
     }
 
     ${
@@ -113,7 +113,7 @@ export const Heading = (styleProps) => cssClass`
           font-size: ${fontSize('250')(styleProps)}rem;
 
           & {
-            ${theme(styleProps.themeKey, `h5.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h5.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -123,7 +123,7 @@ export const Heading = (styleProps) => cssClass`
     font-size: ${fontSize('200')(styleProps)}rem;
 
     & {
-      ${theme(styleProps.themeKey, `h6.css.root`)(styleProps)};
+      ${theme(styleProps.themeKey, `h6.styles.base`)(styleProps)};
     }
 
     ${
@@ -132,7 +132,7 @@ export const Heading = (styleProps) => cssClass`
         `max-${styleProps.shrinkBelow}`,
         css`
           & {
-            ${theme(styleProps.themeKey, `h6.css.shrinked`)(styleProps)};
+            ${theme(styleProps.themeKey, `h6.styles.shrinked`)(styleProps)};
           }
         `
       )(styleProps)
@@ -148,7 +148,7 @@ export const Heading = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -156,6 +156,6 @@ export const getSubHeadingProperties = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `subHeading.css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `subHeading.styles.base`)(styleProps)};
   }
 `;

@@ -109,7 +109,7 @@ export default function LiveCode(props: Props) {
       // @ts-ignore
       <HighlightedCode
         {...restProps}
-        overrides={{ HighlightedCode: { Pre: { css: { root: { borderRadius: '10px' } } } } }}
+        overrides={{ HighlightedCode: { Pre: { styles: { base: { borderRadius: '10px' } } } } }}
         marginBottom="major-4"
         marginTop="major-4"
         isBlock

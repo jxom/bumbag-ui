@@ -230,8 +230,6 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
       prevClassName: boxProps.className,
     });
 
-    console.log('test');
-
     return {
       ...boxProps,
       className,

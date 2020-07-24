@@ -33,16 +33,16 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('Avatar.root should render correctly', () => {
+  it('Avatar.base should render correctly', () => {
     const { container } = render(
-      <Avatar src="test.png" overrides={{ Avatar: { css: { root: { backgroundColor: 'red' } } } }} />
+      <Avatar src="test.png" overrides={{ Avatar: { styles: { base: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Avatar.circle.root should render correctly', () => {
+  it('Avatar.circle.base should render correctly', () => {
     const { container } = render(
-      <Avatar src="test.png" overrides={{ Avatar: { css: { circle: { backgroundColor: 'red' } } } }} />
+      <Avatar src="test.png" overrides={{ Avatar: { styles: { circle: { backgroundColor: 'red' } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -52,7 +52,7 @@ describe('overrides', () => {
       <Avatar
         src="test.png"
         size="small"
-        overrides={{ Avatar: { css: { sizes: { small: { backgroundColor: 'red' } } } } }}
+        overrides={{ Avatar: { styles: { sizes: { small: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('overrides', () => {
 
   it('Avatar.sizes.default should render correctly', () => {
     const { container } = render(
-      <Avatar src="test.png" overrides={{ Avatar: { css: { sizes: { default: { backgroundColor: 'red' } } } } }} />
+      <Avatar src="test.png" overrides={{ Avatar: { styles: { sizes: { default: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -70,7 +70,7 @@ describe('overrides', () => {
       <Avatar
         src="test.png"
         size="medium"
-        overrides={{ Avatar: { css: { sizes: { medium: { backgroundColor: 'red' } } } } }}
+        overrides={{ Avatar: { styles: { sizes: { medium: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -81,7 +81,7 @@ describe('overrides', () => {
       <Avatar
         src="test.png"
         size="large"
-        overrides={{ Avatar: { css: { sizes: { large: { backgroundColor: 'red' } } } } }}
+        overrides={{ Avatar: { styles: { sizes: { large: { backgroundColor: 'red' } } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -89,44 +89,44 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Avatar.root should render correctly', () => {
+  it('Avatar.base should render correctly', () => {
     const { container } = render(<Avatar src="test.png" />, {
-      theme: { Avatar: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Avatar: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Avatar.circle.root should render correctly', () => {
+  it('Avatar.circle.base should render correctly', () => {
     const { container } = render(<Avatar src="test.png" />, {
-      theme: { Avatar: { css: { circle: { backgroundColor: 'red' } } } },
+      theme: { Avatar: { styles: { circle: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Avatar.sizes.small should render correctly', () => {
     const { container } = render(<Avatar src="test.png" size="small" />, {
-      theme: { Avatar: { css: { sizes: { small: { backgroundColor: 'red' } } } } },
+      theme: { Avatar: { styles: { sizes: { small: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Avatar.sizes.default should render correctly', () => {
     const { container } = render(<Avatar src="test.png" size="default" />, {
-      theme: { Avatar: { css: { sizes: { default: { backgroundColor: 'red' } } } } },
+      theme: { Avatar: { styles: { sizes: { default: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Avatar.sizes.medium should render correctly', () => {
     const { container } = render(<Avatar src="test.png" size="medium" />, {
-      theme: { Avatar: { css: { sizes: { medium: { backgroundColor: 'red' } } } } },
+      theme: { Avatar: { styles: { sizes: { medium: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('Avatar.sizes.large should render correctly', () => {
     const { container } = render(<Avatar src="test.png" size="large" />, {
-      theme: { Avatar: { css: { sizes: { large: { backgroundColor: 'red' } } } } },
+      theme: { Avatar: { styles: { sizes: { large: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

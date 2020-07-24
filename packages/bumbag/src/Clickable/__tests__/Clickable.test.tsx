@@ -16,27 +16,27 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Clickable variant="test">hello world</Clickable>, {
-      theme: { Clickable: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: { Clickable: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
-      <Clickable overrides={{ Clickable: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Clickable>
+      <Clickable overrides={{ Clickable: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Clickable>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Clickable>hello world</Clickable>, {
-      theme: { Clickable: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Clickable: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

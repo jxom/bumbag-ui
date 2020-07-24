@@ -17,7 +17,7 @@ export const PageContent = (styleProps) => cssClass`
       padding: ${space(4, 'major')(styleProps)}rem ${theme('Container.fluidMargin')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, `css.fluid`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.fluid`)(styleProps)};
       }
     `
   }
@@ -29,19 +29,19 @@ export const PageContent = (styleProps) => cssClass`
       padding-bottom: ${space(2, 'major')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, `css.mobile`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.mobile`)(styleProps)};
       }
     `
   )(styleProps)}
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PageContentWrapper = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -49,7 +49,7 @@ export const PageWithSidebar = (styleProps) => cssClass`
   min-height: 100vh;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -94,7 +94,7 @@ export const PageWithSidebarContent = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -128,7 +128,7 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -151,7 +151,7 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   )(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -167,19 +167,19 @@ export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
   })(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PageWithSidebarDisclosure = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PageWithSidebarMinimize = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -192,7 +192,7 @@ export const PageWithHeader = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -216,7 +216,7 @@ export const PageWithHeaderHeader = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -229,13 +229,13 @@ export const PageWithHeaderContent = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const PageWithHeaderDisclosure = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 

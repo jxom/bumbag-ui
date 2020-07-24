@@ -2,16 +2,16 @@ import { css } from 'bumbag';
 
 export default {
   TooltipPopover: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         background-color: rgb(255, 251, 217);
         line-height: 1.2;
       `
     }
   },
   TooltipTrigger: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         min-height: unset;
         height: unset;
         padding: 0.1em 0.2em;

@@ -93,62 +93,62 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Switch.root should render correctly', () => {
-    const { container } = render(<Switch overrides={{ Switch: { css: { root: { backgroundColor: 'red' } } } }} />);
+  it('Switch.base should render correctly', () => {
+    const { container } = render(<Switch overrides={{ Switch: { styles: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Icon.root should render correctly', () => {
+  it('Switch.Icon.base should render correctly', () => {
     const { container } = render(
-      <Switch overrides={{ Switch: { Icon: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Switch overrides={{ Switch: { Icon: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Label.root should render correctly', () => {
+  it('Switch.Label.base should render correctly', () => {
     const { container } = render(
-      <Switch overrides={{ Switch: { Label: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Switch overrides={{ Switch: { Label: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.HiddenInput.root should render correctly', () => {
+  it('Switch.HiddenInput.base should render correctly', () => {
     const { container } = render(
-      <Switch overrides={{ Switch: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Switch overrides={{ Switch: { HiddenInput: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Switch.root should render correctly', () => {
+  it('Switch.base should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
-      theme: { Switch: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Switch: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Icon.root should render correctly', () => {
+  it('Switch.Icon.base should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
-      theme: { Switch: { Icon: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Switch: { Icon: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.Label.root should render correctly', () => {
+  it('Switch.Label.base should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
-      theme: { Switch: { Label: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Switch: { Label: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Switch.HiddenInput.root should render correctly', () => {
+  it('Switch.HiddenInput.base should render correctly', () => {
     const { container } = render(<Switch />, {
       // @ts-ignore
-      theme: { Switch: { HiddenInput: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Switch: { HiddenInput: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

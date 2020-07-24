@@ -67,58 +67,58 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Spinner.root should render correctly', () => {
-    const { container } = render(<Spinner overrides={{ Spinner: { css: { root: { backgroundColor: 'red' } } } }} />);
+  it('Spinner.base should render correctly', () => {
+    const { container } = render(<Spinner overrides={{ Spinner: { styles: { base: { backgroundColor: 'red' } } } }} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.vector.root should render correctly', () => {
+  it('Spinner.vector.base should render correctly', () => {
     const { container } = render(
-      <Spinner overrides={{ Spinner: { vector: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Spinner overrides={{ Spinner: { vector: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.trackCircle.root should render correctly', () => {
+  it('Spinner.trackCircle.base should render correctly', () => {
     const { container } = render(
-      <Spinner overrides={{ Spinner: { trackCircle: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Spinner overrides={{ Spinner: { trackCircle: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.loaderCircle.root should render correctly', () => {
+  it('Spinner.loaderCircle.base should render correctly', () => {
     const { container } = render(
-      <Spinner overrides={{ Spinner: { loaderCircle: { css: { root: { backgroundColor: 'red' } } } } }} />
+      <Spinner overrides={{ Spinner: { loaderCircle: { styles: { base: { backgroundColor: 'red' } } } } }} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('Spinner.root should render correctly', () => {
+  it('Spinner.base should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Spinner: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.vector.root should render correctly', () => {
+  it('Spinner.vector.base should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { vector: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Spinner: { vector: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.trackCircle.root should render correctly', () => {
+  it('Spinner.trackCircle.base should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { trackCircle: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Spinner: { trackCircle: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Spinner.loaderCircle.root should render correctly', () => {
+  it('Spinner.loaderCircle.base should render correctly', () => {
     const { container } = render(<Spinner />, {
-      theme: { Spinner: { loaderCircle: { css: { root: { backgroundColor: 'red' } } } } },
+      theme: { Spinner: { loaderCircle: { styles: { base: { backgroundColor: 'red' } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

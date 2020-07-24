@@ -8,7 +8,7 @@ export const InputWrapper = (styleProps) => cssClass`
   ${styleProps.size && wrapperSizeProperties(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -30,7 +30,7 @@ export const Input = (styleProps) => cssClass`
     cursor: not-allowed;
 
     & {
-      ${theme(styleProps.themeKey, `css.disabled`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.disabled`)(styleProps)};
     }
   }
 
@@ -41,7 +41,7 @@ export const Input = (styleProps) => cssClass`
     box-shadow: ${palette('primaryTint', { dark: 'primaryShade' })(styleProps)} 0px 0px 0px 3px !important;
 
     & {
-      ${theme(styleProps.themeKey, `css.focus`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
 
@@ -49,7 +49,7 @@ export const Input = (styleProps) => cssClass`
     color: ${palette('gray300')(styleProps)};
 
     & {
-      ${theme(styleProps.themeKey, `css.placeholder`)(styleProps)};
+      ${theme(styleProps.themeKey, `styles.placeholder`)(styleProps)};
     }
   }
 
@@ -83,7 +83,7 @@ export const Input = (styleProps) => cssClass`
   };
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -94,7 +94,7 @@ export const InputIcon = (styleProps) => cssClass`
     margin: 0 0.75em;
     top: 0;
 
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -110,13 +110,13 @@ export const InputSpinner = (styleProps) => cssClass`
     right: 0;
     z-index: 2;
 
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const InputField = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -126,7 +126,7 @@ export const InputFieldGroup = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -136,26 +136,26 @@ export function wrapperSizeProperties(styleProps) {
       font-size: ${fontSize('150')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, `css.sizes.small`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.small`)(styleProps)};
       }
     `,
     default: css`
       & {
-        ${theme(styleProps.themeKey, `css.sizes.default`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.default`)(styleProps)};
       }
     `,
     medium: css`
       font-size: ${fontSize('300')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, `css.sizes.medium`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.medium`)(styleProps)};
       }
     `,
     large: css`
       font-size: ${fontSize('400')(styleProps)}rem;
 
       & {
-        ${theme(styleProps.themeKey, `css.sizes.large`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.sizes.large`)(styleProps)};
       }
     `,
   };

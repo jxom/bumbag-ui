@@ -14,13 +14,13 @@ export const Callout = (styleProps) => cssClass`
   ${styleProps.hasTint && getTintAttributes(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const CalloutContent = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -28,7 +28,7 @@ export const CalloutHeader = (styleProps) => cssClass`
   margin-bottom: ${space(1, 'major')(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -37,7 +37,7 @@ export const CalloutTitle = (styleProps) => cssClass`
   font-weight: ${fontWeight('semibold')(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -45,7 +45,7 @@ export const CalloutFooter = (styleProps) => cssClass`
   margin-top: ${space(3, 'major')(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -60,7 +60,7 @@ export const CalloutIconWrapper = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -70,7 +70,7 @@ export const CalloutClose = (styleProps) => cssClass`
   right: ${space(1, 'major')(styleProps)}rem;
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -80,7 +80,7 @@ export const CalloutOverlay = (styleProps) => cssClass`
   ${altitude('200')(styleProps)};
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 

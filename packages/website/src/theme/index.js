@@ -38,8 +38,8 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
 
 export default {
   global: {
-    css: {
-      root: css`
+    styles: {
+      base: css`
         a.anchor {
           opacity: 0;
           position: absolute;

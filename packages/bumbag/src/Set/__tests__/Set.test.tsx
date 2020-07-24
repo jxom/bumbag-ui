@@ -120,9 +120,9 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Set.root should render correctly', () => {
+  it('Set.base should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { css: { root: { backgroundColor: 'red' } } } }}>
+      <Set overrides={{ Set: { styles: { base: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -130,9 +130,9 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.root should render correctly', () => {
+  it('Set.child.base should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { css: { child: { root: { backgroundColor: 'red' } } } } }}>
+      <Set overrides={{ Set: { styles: { child: { base: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -142,7 +142,7 @@ describe('overrides', () => {
 
   it('Set.vertical should render correctly', () => {
     const { container } = render(
-      <Set orientation="vertical" overrides={{ Set: { css: { vertical: { backgroundColor: 'red' } } } }}>
+      <Set orientation="vertical" overrides={{ Set: { styles: { vertical: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -152,7 +152,7 @@ describe('overrides', () => {
 
   it('Set.horizontal should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { css: { horizontal: { backgroundColor: 'red' } } } }}>
+      <Set overrides={{ Set: { styles: { horizontal: { backgroundColor: 'red' } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -162,7 +162,7 @@ describe('overrides', () => {
 
   it('Set.child.vertical should render correctly', () => {
     const { container } = render(
-      <Set orientation="vertical" overrides={{ Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } }}>
+      <Set orientation="vertical" overrides={{ Set: { styles: { child: { vertical: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -172,7 +172,7 @@ describe('overrides', () => {
 
   it('Set.child.horizontal should render correctly', () => {
     const { container } = render(
-      <Set overrides={{ Set: { css: { child: { horizontal: { backgroundColor: 'red' } } } } }}>
+      <Set overrides={{ Set: { styles: { child: { horizontal: { backgroundColor: 'red' } } } } }}>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>
@@ -182,27 +182,27 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Set.root should render correctly', () => {
+  it('Set.base should render correctly', () => {
     const { container } = render(
       <Set>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Set: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Set.child.root should render correctly', () => {
+  it('Set.child.base should render correctly', () => {
     const { container } = render(
       <Set>
         <Box>hello</Box>
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { root: { backgroundColor: 'red' } } } } },
+        theme: { Set: { styles: { child: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -215,7 +215,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { vertical: { backgroundColor: 'red' } } } },
+        theme: { Set: { styles: { vertical: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -228,7 +228,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { horizontal: { backgroundColor: 'red' } } } },
+        theme: { Set: { styles: { horizontal: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -241,7 +241,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { vertical: { backgroundColor: 'red' } } } } },
+        theme: { Set: { styles: { child: { vertical: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -254,7 +254,7 @@ describe('theming', () => {
         <Box>world</Box>
       </Set>,
       {
-        theme: { Set: { css: { child: { horizontal: { backgroundColor: 'red' } } } } },
+        theme: { Set: { styles: { child: { horizontal: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

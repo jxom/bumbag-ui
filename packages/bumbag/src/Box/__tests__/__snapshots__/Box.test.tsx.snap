@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-1pwrqjj css-1yuzjtp fp-Box",
+  "className": "css-4lfl7m css-1yuzjtp fp-Box",
 }
 `;
 
@@ -123,7 +123,7 @@ exports[`composition use should render correctly for a Button component with pro
 }
 
 .emotion-3 {
-  background-color: unset;
+  background-color: #fcfcfd;
   border: 1px solid #574feb;
   color: #574feb;
   fill: #574feb;
@@ -132,9 +132,12 @@ exports[`composition use should render correctly for a Button component with pro
 
 .emotion-3:hover {
   border-color: #574feb;
-  background-color: #574feb;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: #eeedfd;
+}
+
+.emotion-3:hover:active {
+  border-color: #574feb;
+  background-color: #cdcaf9;
 }
 
 .emotion-0 {
@@ -346,8 +349,8 @@ exports[`modes should render correctly when colorMode set as prop 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 .emotion-1 {
@@ -377,8 +380,8 @@ exports[`modes should render correctly when colorMode set as prop 2`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 .emotion-1 {
@@ -1417,8 +1420,8 @@ exports[`props should render correctly with overrides 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <div
@@ -1426,7 +1429,7 @@ exports[`props should render correctly with overrides 1`] = `
 />
 `;
 
-exports[`theming Box.root should render correctly 1`] = `
+exports[`theming Box.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1442,8 +1445,8 @@ exports[`theming Box.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <div
@@ -1453,7 +1456,7 @@ exports[`theming Box.root should render correctly 1`] = `
 </div>
 `;
 
-exports[`theming Box.root should render correctly 2`] = `
+exports[`theming Box.base should render correctly 2`] = `
 .emotion-1 {
   color: #008000 !important;
 }
@@ -1473,8 +1476,8 @@ exports[`theming Box.root should render correctly 2`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: green;
+.emotion-0.emotion-0 {
+  background-color: #008000;
 }
 
 <div
@@ -1484,7 +1487,7 @@ exports[`theming Box.root should render correctly 2`] = `
 </div>
 `;
 
-exports[`variants css.root should render correctly 1`] = `
+exports[`variants styles.base should render correctly 1`] = `
 .emotion-0 {
   margin: unset;
   padding: unset;
@@ -1500,8 +1503,8 @@ exports[`variants css.root should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-0 {
-  background-color: red;
+.emotion-0.emotion-0 {
+  background-color: #ff0000;
 }
 
 <div

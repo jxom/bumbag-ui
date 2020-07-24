@@ -16,27 +16,27 @@ describe('props', () => {
 });
 
 describe('variants', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Template variant="test">hello world</Template>, {
-      theme: { Template: { variants: { test: { css: { root: { backgroundColor: 'red' } } } } } },
+      theme: { Template: { variants: { test: { styles: { base: { backgroundColor: 'red' } } } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('overrides', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(
-      <Template overrides={{ Template: { css: { root: { backgroundColor: 'red' } } } }}>hello world</Template>
+      <Template overrides={{ Template: { styles: { base: { backgroundColor: 'red' } } } }}>hello world</Template>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
 
 describe('theming', () => {
-  it('css.root should render correctly', () => {
+  it('styles.base should render correctly', () => {
     const { container } = render(<Template>hello world</Template>, {
-      theme: { Template: { css: { root: { backgroundColor: 'red' } } } },
+      theme: { Template: { styles: { base: { backgroundColor: 'red' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

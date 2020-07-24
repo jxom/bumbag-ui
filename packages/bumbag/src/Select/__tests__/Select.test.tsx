@@ -197,7 +197,7 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Select.root should render correctly', () => {
+  it('Select.base should render correctly', () => {
     const { container } = render(
       <Select
         placeholder="Please select..."
@@ -206,7 +206,7 @@ describe('overrides', () => {
           { label: 'Windy', value: 'windy' },
           { label: 'Overcast', value: 'overcast' },
         ]}
-        overrides={{ Select: { css: { root: { backgroundColor: 'red' } } } }}
+        overrides={{ Select: { styles: { base: { backgroundColor: 'red' } } } }}
       />
     );
     expect(container.firstChild).toMatchSnapshot();
@@ -214,7 +214,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Select.root should render correctly', () => {
+  it('Select.base should render correctly', () => {
     const { container } = render(
       <Select
         placeholder="Please select..."
@@ -226,7 +226,7 @@ describe('theming', () => {
       />,
       {
         // @ts-ignore
-        theme: { Select: { css: { root: { backgroundColor: 'red' } } } },
+        theme: { Select: { styles: { base: { backgroundColor: 'red' } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

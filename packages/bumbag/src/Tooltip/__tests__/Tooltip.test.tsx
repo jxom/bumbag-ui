@@ -55,11 +55,11 @@ describe('composition', () => {
 });
 
 describe('overrides', () => {
-  it('Tooltip.Content.root should render correctly', () => {
+  it('Tooltip.Content.base should render correctly', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
-        overrides={{ Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tooltip: { Content: { styles: { base: { backgroundColor: 'red' } } } } }}
         baseId="test"
       >
         hello world
@@ -68,11 +68,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tooltip.Reference.root should render correctly', () => {
+  it('Tooltip.Reference.base should render correctly', () => {
     const { container } = render(
       <Tooltip
         content="This is content"
-        overrides={{ Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } }}
+        overrides={{ Tooltip: { Reference: { styles: { base: { backgroundColor: 'red' } } } } }}
         baseId="test"
       >
         hello world
@@ -83,27 +83,27 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('Tooltip.Content.root should render correctly', () => {
+  it('Tooltip.Content.base should render correctly', () => {
     const { container } = render(
       <Tooltip content="This is content" baseId="test">
         hello world
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Content: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Tooltip: { Content: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Tooltip.Reference.root should render correctly', () => {
+  it('Tooltip.Reference.base should render correctly', () => {
     const { container } = render(
       <Tooltip content="This is content" baseId="test">
         hello world
       </Tooltip>,
       {
         // @ts-ignore
-        theme: { Tooltip: { Reference: { css: { root: { backgroundColor: 'red' } } } } },
+        theme: { Tooltip: { Reference: { styles: { base: { backgroundColor: 'red' } } } } },
       }
     );
     expect(container.firstChild).toMatchSnapshot();

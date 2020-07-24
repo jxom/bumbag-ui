@@ -123,9 +123,9 @@ describe('props', () => {
 });
 
 describe('overrides', () => {
-  it('TopNav.css.root should render correctly', () => {
+  it('TopNav.styles.base should render correctly', () => {
     const { container } = render(
-      <TopNav defaultSelectedId="get-started" overrides={{ TopNav: { css: { root: { backgroundColor: 'red' } } } }}>
+      <TopNav defaultSelectedId="get-started" overrides={{ TopNav: { styles: { base: { backgroundColor: 'red' } } } }}>
         <TopNav.Section>
           <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
             <Image src="/logo.png" height="44px" />
@@ -152,11 +152,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('TopNav.Item.css.root should render correctly', () => {
+  it('TopNav.Item.styles.base should render correctly', () => {
     const { container } = render(
       <TopNav
         defaultSelectedId="get-started"
-        overrides={{ TopNav: { css: { root: { Item: { backgroundColor: 'red' } } } } }}
+        overrides={{ TopNav: { styles: { base: { Item: { backgroundColor: 'red' } } } } }}
       >
         <TopNav.Section>
           <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
@@ -184,11 +184,11 @@ describe('overrides', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('TopNav.Section.css.root should render correctly', () => {
+  it('TopNav.Section.styles.base should render correctly', () => {
     const { container } = render(
       <TopNav
         defaultSelectedId="get-started"
-        overrides={{ TopNav: { css: { root: { Item: { backgroundColor: 'red' } } } } }}
+        overrides={{ TopNav: { styles: { base: { Item: { backgroundColor: 'red' } } } } }}
       >
         <TopNav.Section>
           <TopNav.Item href="https://bumbag.style" fontWeight="semibold">
@@ -218,7 +218,7 @@ describe('overrides', () => {
 });
 
 describe('theming', () => {
-  it('TopNav.css.root should render correctly', () => {
+  it('TopNav.styles.base should render correctly', () => {
     const { container } = render(
       <TopNav defaultSelectedId="get-started">
         <TopNav.Section>
@@ -243,12 +243,12 @@ describe('theming', () => {
           </TopNav.Item>
         </TopNav.Section>
       </TopNav>,
-      { theme: { TopNav: { css: { root: { backgroundColor: 'red' } } } } }
+      { theme: { TopNav: { styles: { base: { backgroundColor: 'red' } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('TopNav.Item.css.root should render correctly', () => {
+  it('TopNav.Item.styles.base should render correctly', () => {
     const { container } = render(
       <TopNav defaultSelectedId="get-started">
         <TopNav.Section>
@@ -273,12 +273,12 @@ describe('theming', () => {
           </TopNav.Item>
         </TopNav.Section>
       </TopNav>,
-      { theme: { TopNav: { Item: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { TopNav: { Item: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('TopNav.Section.css.root should render correctly', () => {
+  it('TopNav.Section.styles.base should render correctly', () => {
     const { container } = render(
       <TopNav defaultSelectedId="get-started">
         <TopNav.Section>
@@ -303,7 +303,7 @@ describe('theming', () => {
           </TopNav.Item>
         </TopNav.Section>
       </TopNav>,
-      { theme: { TopNav: { Section: { css: { root: { backgroundColor: 'red' } } } } } }
+      { theme: { TopNav: { Section: { styles: { base: { backgroundColor: 'red' } } } } } }
     );
     expect(container.firstChild).toMatchSnapshot();
   });

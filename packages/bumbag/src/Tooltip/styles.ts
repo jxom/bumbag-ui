@@ -15,13 +15,13 @@ export const TooltipContent = (styleProps) => cssClass`
   ${getPlacementAttributes(styleProps)}
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
 export const TooltipReference = (styleProps) => cssClass`
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -41,7 +41,7 @@ export const TooltipArrow = (styleProps) => cssClass`
   }
 
   & {
-    ${theme(styleProps.themeKey, `css.root`)(styleProps)};
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
@@ -59,7 +59,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.top`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.top`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -74,7 +74,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottom`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottom`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -89,7 +89,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.left`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.left`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -104,7 +104,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.right`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.right`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -119,7 +119,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.topStart`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.topStart`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -134,7 +134,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.topEnd`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.topEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -149,7 +149,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottomEnd`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottomEnd`)(styleProps)};
       }
     `,
     // @ts-ignore
@@ -164,7 +164,7 @@ export const getPlacementAttributes = (styleProps) => {
       })(styleProps)};
 
       & {
-        ${theme(styleProps.themeKey, `css.placements.bottomStart`)(styleProps)};
+        ${theme(styleProps.themeKey, `styles.placements.bottomStart`)(styleProps)};
       }
     `,
   };

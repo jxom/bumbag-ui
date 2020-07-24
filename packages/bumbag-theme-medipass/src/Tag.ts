@@ -1,22 +1,22 @@
 import { css, space } from 'bumbag';
 
 export default {
-  css: {
-    root: css`
+  styles: {
+    base: css`
       border-radius: 30px;
       text-transform: uppercase;
     `
   },
   Content: {
-    css: {
-      root: props => css`
+    styles: {
+      base: props => css`
         padding: 0 ${space(3)(props)}em;
       `
     }
   },
   Close: {
-    css: {
-      root: props => css`
+    styles: {
+      base: props => css`
         border-radius: 30px;
 
         &:focus {
