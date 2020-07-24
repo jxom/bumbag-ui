@@ -17,6 +17,17 @@ export default {
     outlined: (styleProps) => css`
       background-color: ${palette('white')(styleProps)};
       border-width: 2px;
+
+      &:hover {
+        background-color: ${palette()(styleProps)};
+        color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+        fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
+      }
+
+      &:hover:active {
+        border-color: ${palette(`${styleProps.palette}700`)(styleProps)};
+        background-color: ${palette(`${styleProps.palette}700`)(styleProps)};
+      }
     `,
     ghost: (styleProps) => css`
       border: 2px solid transparent;

@@ -30,11 +30,7 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
       if (!styles.styles) {
         styles = getCSSFromStyleObject(styles, props.theme, colorMode);
       }
-      return css`
-        && {
-          ${styles}
-        }
-      `;
+      return styles;
     }
 
     const theme = colorModeTheme || variantTheme || defaultTheme;

@@ -151,7 +151,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Group props 1`] = `
 Object {
-  "className": "css-1ontwna css-1blt3pb css-4lfl7m css-1rj4g49 fp-Box fp-Flex fp-Group",
+  "className": "css-d7ai6i css-1k1yp07 css-1pwrqjj css-1rj4g49 fp-Box fp-Flex fp-Group",
   "role": "group",
 }
 `;
@@ -545,9 +545,6 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
 
 .emotion-5 > * {
   border-radius: 6px;
-}
-
-.emotion-5 > *.emotion-5 > * {
   background-color: #ff0000;
 }
 
@@ -709,16 +706,13 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
 .emotion-5 > *:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-}
-
-.emotion-5 > *:first-child.emotion-5 > *:first-child {
-  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child {
@@ -873,16 +867,13 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
 .emotion-5 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:last-child.emotion-5 > *:last-child {
-  background-color: #ff0000;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1038,11 +1029,6 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
 .emotion-5 > *:not(:first-child):not(:last-child) > input,
 .emotion-5 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child).emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select.emotion-5 > *:not(:first-child):not(:last-child) > select {
   background-color: #ff0000;
 }
 
@@ -1199,7 +1185,7 @@ exports[`overrides Group.base should render correctly 1`] = `
   border-left-width: 0;
 }
 
-.emotion-5.emotion-5 {
+.emotion-5 {
   background-color: #ff0000;
 }
 
@@ -1612,9 +1598,6 @@ exports[`theming Group.Item.base should render correctly 1`] = `
 
 .emotion-5 > * {
   border-radius: 6px;
-}
-
-.emotion-5 > *.emotion-5 > * {
   background-color: #ff0000;
 }
 
@@ -1776,16 +1759,13 @@ exports[`theming Group.Item.first should render correctly 1`] = `
 .emotion-5 > *:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-}
-
-.emotion-5 > *:first-child.emotion-5 > *:first-child {
-  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child {
@@ -1940,16 +1920,13 @@ exports[`theming Group.Item.last should render correctly 1`] = `
 .emotion-5 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: #ff0000;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-.emotion-5 > *:last-child.emotion-5 > *:last-child {
-  background-color: #ff0000;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -2105,11 +2082,6 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
 .emotion-5 > *:not(:first-child):not(:last-child) > input,
 .emotion-5 > *:not(:first-child):not(:last-child) > select {
   border-radius: 0;
-}
-
-.emotion-5 > *:not(:first-child):not(:last-child).emotion-5 > *:not(:first-child):not(:last-child),
-.emotion-5 > *:not(:first-child):not(:last-child) > input.emotion-5 > *:not(:first-child):not(:last-child) > input,
-.emotion-5 > *:not(:first-child):not(:last-child) > select.emotion-5 > *:not(:first-child):not(:last-child) > select {
   background-color: #ff0000;
 }
 
@@ -2266,7 +2238,7 @@ exports[`theming Group.base should render correctly 1`] = `
   border-left-width: 0;
 }
 
-.emotion-5.emotion-5 {
+.emotion-5 {
   background-color: #ff0000;
 }
 
