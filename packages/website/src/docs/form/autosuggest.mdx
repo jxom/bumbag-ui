@@ -1,5 +1,5 @@
 import Theme from '../../components/Theme';
-import { Autosuggest } from 'bumbag';
+import { Autosuggest, Key } from 'bumbag';
 
 # Autosuggest
 
@@ -405,6 +405,40 @@ function Example() {
   value={{ label: '' }}
 />
 ```
+
+## Accessibility
+
+The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://www.w3.org/TR/wai-aria-practices/#combobox).
+
+#### Patterns
+
+- `Autosuggest` has a role of `combobox`.
+- The `Autosuggest` input field has a role of `textbox`.
+- The `Autosuggest` popover has a role of `listbox`.
+- The `Autosuggest` has an `aria-owns` value set to the ID of the popover.
+- The `Autosuggest` input field has an `aria-controls` value set to the ID of the popover.
+- DOM focus is maintained on the input field, while the assistive reader focus is moved within the popover with `aria-activedescendant`.
+
+**When focus is on the input field:**
+
+- Focussing the input opens up the popover list of options.
+- Pressing <Key>↓</Key> will bring focus inside the popover, and focus the first option.
+- Pressing <Key>↑</Key> will bring focus inside the popover, and focus the last option.
+- Pressing <Key>Esc</Key> will dismiss the popover.
+- Clicking outside will dismiss the popover.
+- Pressing <Key>Enter</Key> accepts the current selection.
+
+
+**When focus is on an option inside the popover:**
+
+- Pressing <Key>↓</Key> will focus the next available option.
+- Pressing <Key>↑</Key> will focus the previous available option.
+- Pressing <Key>Esc</Key> will dismiss the popover.
+- Clicking outside will dismiss the popover.
+
+#### References
+
+- [WAI ARIA Combobox Pattern](https://www.w3.org/TR/wai-aria-practices/#combobox)
 
 ## Props
 

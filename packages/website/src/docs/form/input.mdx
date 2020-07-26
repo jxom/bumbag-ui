@@ -144,6 +144,37 @@ function Example() {
 }
 ```
 
+## Accessibility
+
+### Rules
+
+- The input must have an accessible label specified via the `InputField` component, or an `aria-label`/`aria-labelledby` prop, or a `htmlFor`/`id` label pair.
+
+**via an `InputField` component**
+
+```jsx
+<InputField label="First name" />
+```
+
+**via an `aria-label`/`aria-labelledby` prop**
+
+```jsx
+<Input aria-label="First name" />
+```
+
+**via a `htmlFor`/`id` label pair**
+
+```jsx
+<Label htmlFor="firstName">First name</Label>
+<Input id="firstName" />
+```
+
+
+#### Patterns
+
+- If an input is required, then `aria-required` is set to `true` for the input.
+- If an input is invalid, then `aria-invalid` is set to `true` for the input.
+
 ## Props
 
 ### Input Props

@@ -85,7 +85,13 @@ export default function Docs(props: Props) {
         />
       ),
       ul: (props: any) => (
-        <bumbag.List listStyleType="disc" listStylePosition="outside" marginLeft="major-2" {...props} />
+        <bumbag.List
+          listStyleType="disc"
+          listStylePosition="outside"
+          marginLeft="major-2"
+          marginBottom="major-2"
+          {...props}
+        />
       ),
       li: (props: any) => <bumbag.ListItem marginBottom="major-1" {...props} />,
       strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,

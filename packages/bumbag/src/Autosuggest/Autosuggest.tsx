@@ -567,6 +567,7 @@ const useProps = createHook<AutosuggestProps>(
       'aria-expanded': dropdownMenuDisclosureProps['aria-expanded'],
       'aria-haspopup': 'listbox',
       'aria-owns': dropdownMenu.baseId,
+      role: 'combobox',
       className,
       children: (
         <AutosuggestContext.Provider value={context}>
@@ -585,6 +586,7 @@ const useProps = createHook<AutosuggestProps>(
             onFocus={handleFocusInput}
             overrides={overrides}
             placeholder={placeholder}
+            role="textbox"
             state={state}
             value={inputValue}
             {...inputProps}
