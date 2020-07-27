@@ -31,18 +31,13 @@ For each docs page of the component, you will find a [**Theming** section](/comp
 const FancyButton = applyTheme(Button, {
   styles: {
     base: {
-      border: '1px solid black',
+      fontSize: '18px',
       padding: '1rem 2rem'
     }
-    /* You could also just use a CSS template literal:
-     * base: css`
-     *  border: 1px solid black,
-     *  padding: 1rem 2rem
-     * `
-     */
   },
   defaultProps: {
-    variant: 'ghost'
+    palette: 'primary',
+    variant: 'outlined'
   }
 });
 
@@ -173,6 +168,8 @@ render(Example)
 #### With `styled`
 
 ```jsx
+import { Box, styled, css } from 'bumbag';
+
 const FancyBox = styled(Box)`
   background-color: ${props => props.palette};
 
