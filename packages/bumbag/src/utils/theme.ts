@@ -14,18 +14,33 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const variantSelector = `${themeKey}.variants.${variant}.${path}`;
     const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
-    const defaultTheme = get(props, `overrides.${selector}`) || get(props, `theme.${selector}`) || defaultValue;
-    const variantTheme = get(props, `overrides.${variantSelector}`) || get(props, `theme.${variantSelector}`);
-    const colorModeTheme = get(props, `overrides.${colorModeSelector}`) || get(props, `theme.${colorModeSelector}`);
+    const defaultTheme = get(props, `theme.${selector}`) || defaultValue;
+    const defaultThemeOverrides = get(props, `overrides.${selector}`);
+    const variantTheme = get(props, `theme.${variantSelector}`);
+    const variantThemeOverrides = get(props, `overrides.${variantSelector}`);
+    const colorModeTheme = get(props, `theme.${colorModeSelector}`);
+    const colorModeThemeOverrides = get(props, `overrides.${colorModeSelector}`);
 
     if (path && path.includes('styles')) {
       const defaultThemeValue = isFunction(defaultTheme) ? defaultTheme(props) : defaultTheme;
+      const defaultThemeOverridesValue = isFunction(defaultThemeOverrides)
+        ? defaultThemeOverrides(props)
+        : defaultThemeOverrides;
       const variantThemeValue = isFunction(variantTheme) ? variantTheme(props) : variantTheme;
+      const variantThemeOverridesValue = isFunction(variantThemeOverrides)
+        ? variantThemeOverrides(props)
+        : variantThemeOverrides;
       const colorModeThemeValue = isFunction(colorModeTheme) ? colorModeTheme(props) : colorModeTheme;
+      const colorModeThemeOverridesValue = isFunction(colorModeThemeOverrides)
+        ? colorModeThemeOverrides(props)
+        : colorModeThemeOverrides;
       let styles = {
         ...defaultThemeValue,
+        ...defaultThemeOverridesValue,
         ...variantThemeValue,
+        ...variantThemeOverridesValue,
         ...colorModeThemeValue,
+        ...colorModeThemeOverridesValue,
       };
       if (!styles.styles) {
         styles = getCSSFromStyleObject(styles, props.theme, colorMode);
@@ -33,7 +48,13 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
       return styles;
     }
 
-    const theme = colorModeTheme || variantTheme || defaultTheme;
+    const theme =
+      colorModeThemeOverrides ||
+      colorModeTheme ||
+      variantThemeOverrides ||
+      variantTheme ||
+      defaultThemeOverrides ||
+      defaultTheme;
     return isFunction(theme) ? theme(props) : theme;
   };
 }
