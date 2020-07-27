@@ -425,7 +425,16 @@ function Example() {
 
 #### Patterns
 
-TODO
+- `SelectMenu` has a role of `combobox`.
+- The `SelectMenu` trigger button has a role of `button`.
+- The trigger button has `aria-expanded` set to `true`/`false` depending on the visibility of the popover listbox.
+- The trigger button has `aria-haspopup` set to `listbox`.
+- The trigger button has it's `aria-controls` value set to the ID of the popover listbox.
+- The `SelectMenu` popover has a role of `listbox`.
+- Pressing <Key>Enter</Key> or <Key>Space</Key> on the trigger button will trigger the popover listbox.
+- If the menu is open, pressing <Key>Esc</Key> will close the listbox.
+- If the menu is open, clicking outside the menu bounds will close the listbox.
+- If the menu is open, pressing <Key>↑</Key> or <Key>↓</Key> will navigate the menu items.
 
 ## Props
 
