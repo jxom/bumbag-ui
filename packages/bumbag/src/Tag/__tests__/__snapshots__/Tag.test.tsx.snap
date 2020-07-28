@@ -21,14 +21,14 @@ exports[`composition as should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -55,10 +55,10 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -69,10 +69,10 @@ exports[`composition hook should return with Tag props 1`] = `
 Object {
   "children": <React.Fragment>
     <Flex
-      className="css-137wwsv css-63it0p css-jwhr8m fp-Box fp-TagContent"
+      className="css-137wwsv css-63it0p css-jwhr8m bb-Box bb-TagContent"
     />
   </React.Fragment>,
-  "className": "css-186i6uh css-63it0p css-jwhr8m fp-Box fp-Tag",
+  "className": "css-186i6uh css-63it0p css-jwhr8m bb-Box bb-Tag",
 }
 `;
 
@@ -97,14 +97,14 @@ exports[`composition render props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -115,7 +115,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   Hello world
 </div>
@@ -142,14 +142,14 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -176,14 +176,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-4 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-5 emotion-1 emotion-4 test fp-Box fp-Tag"
+  class="emotion-5 emotion-1 emotion-4 test bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 test fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 test bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -211,14 +211,14 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -249,11 +249,11 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -274,7 +274,7 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-8[disabled],
@@ -288,23 +288,23 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-8:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-8:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-8 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -333,9 +333,9 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: #212121;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-textInverted,#000000);
+  fill: var(--bb-palette-textInverted,#000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -351,23 +351,23 @@ exports[`overrides Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
   <button
-    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 bb-Box bb-TagClose bb-Button bb-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -407,14 +407,14 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -441,14 +441,14 @@ exports[`overrides Tag.Content.base should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -492,14 +492,14 @@ exports[`overrides Tag.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -510,14 +510,14 @@ exports[`overrides Tag.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -561,14 +561,14 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -580,20 +580,20 @@ exports[`overrides Tag.outlined.base should render correctly 1`] = `
 
 .emotion-4 {
   background-color: unset;
-  border: 1px solid #212121;
-  color: #212121;
-  fill: #212121;
+  border: 1px solid var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -637,14 +637,14 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -655,14 +655,14 @@ exports[`overrides sizes Tag.sizes.default.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -706,14 +706,14 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -726,14 +726,14 @@ exports[`overrides sizes Tag.sizes.large.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -777,14 +777,14 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -797,14 +797,14 @@ exports[`overrides sizes Tag.sizes.medium.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -848,14 +848,14 @@ exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -866,10 +866,10 @@ exports[`overrides sizes Tag.sizes.small.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -913,14 +913,14 @@ exports[`props palette should render a danger tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #da1717;
+  background-color: var(--bb-palette-danger,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-dangerInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-dangerInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -931,10 +931,10 @@ exports[`props palette should render a danger tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -978,14 +978,14 @@ exports[`props palette should render a info tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-infoInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-infoInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -996,10 +996,10 @@ exports[`props palette should render a info tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1043,14 +1043,14 @@ exports[`props palette should render a primary tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-primaryInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1061,10 +1061,10 @@ exports[`props palette should render a primary tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1108,14 +1108,14 @@ exports[`props palette should render a secondary tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #9e46d8;
+  background-color: var(--bb-palette-secondary,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-secondaryInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-secondaryInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1126,10 +1126,10 @@ exports[`props palette should render a secondary tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1173,14 +1173,14 @@ exports[`props palette should render a success tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #0a7d33;
+  background-color: var(--bb-palette-success,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-successInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-successInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1191,10 +1191,10 @@ exports[`props palette should render a success tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1238,14 +1238,14 @@ exports[`props palette should render a warning tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ed9c22;
+  background-color: var(--bb-palette-warning,#000000);
   border-radius: 6px;
-  color: #000000;
+  color: var(--bb-palette-warningInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #000000;
+  fill: var(--bb-palette-warningInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1256,10 +1256,10 @@ exports[`props palette should render a warning tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1287,14 +1287,14 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1314,9 +1314,9 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: #212121;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-textInverted,#000000);
+  fill: var(--bb-palette-textInverted,#000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -1343,11 +1343,11 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1368,7 +1368,7 @@ exports[`props should render a tag with onRemove correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-8[disabled],
@@ -1382,23 +1382,23 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-8:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-8:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-8 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1427,19 +1427,19 @@ exports[`props should render a tag with onRemove correctly 1`] = `
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
   <button
-    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 bb-Box bb-TagClose bb-Button bb-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1479,14 +1479,14 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1513,10 +1513,10 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1544,14 +1544,14 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1578,14 +1578,14 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-4 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-5 emotion-1 emotion-4 fp-Box fp-Tag"
+  class="emotion-5 emotion-1 emotion-4 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 emotion-4 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1613,14 +1613,14 @@ exports[`props size should render a default tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1647,10 +1647,10 @@ exports[`props size should render a default tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1694,14 +1694,14 @@ exports[`props size should render a large tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1714,10 +1714,10 @@ exports[`props size should render a large tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1761,14 +1761,14 @@ exports[`props size should render a medium tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1781,10 +1781,10 @@ exports[`props size should render a medium tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1828,14 +1828,14 @@ exports[`props size should render a small tag correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1846,10 +1846,10 @@ exports[`props size should render a small tag correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1893,14 +1893,14 @@ exports[`props size should render correctly with overrides 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1911,10 +1911,10 @@ exports[`props size should render correctly with overrides 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -1958,14 +1958,14 @@ exports[`props size should render correctly with overrides 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -1976,14 +1976,14 @@ exports[`props size should render correctly with overrides 2`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -2027,14 +2027,14 @@ exports[`props size should render correctly with overrides 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2047,14 +2047,14 @@ exports[`props size should render correctly with overrides 3`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -2098,14 +2098,14 @@ exports[`props size should render correctly with overrides 4`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2118,14 +2118,14 @@ exports[`props size should render correctly with overrides 4`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     Hello world
   </div>
@@ -2153,14 +2153,14 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2191,11 +2191,11 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2216,7 +2216,7 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-8[disabled],
@@ -2230,23 +2230,23 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-8:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-8:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-8 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -2275,9 +2275,9 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: #212121;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-textInverted,#000000);
+  fill: var(--bb-palette-textInverted,#000000);
   height: 1.5em;
   padding: 0 0.25em;
   margin-right: 0.25em;
@@ -2293,23 +2293,23 @@ exports[`theming Tag.Close.base should render correctly 1`] = `
 }
 
 .emotion-11.emotion-11.emotion-11 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-12 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
   <button
-    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 fp-Box fp-TagClose fp-Button fp-ButtonClose"
+    class="emotion-7 emotion-8 emotion-1 emotion-2 emotion-11 bb-Box bb-TagClose bb-Button bb-ButtonClose"
     type="button"
   >
     <svg
-      class="emotion-4 emotion-1 emotion-6 fp-Box fp-Icon"
+      class="emotion-4 emotion-1 emotion-6 bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2349,14 +2349,14 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2383,14 +2383,14 @@ exports[`theming Tag.Content.base should render correctly 1`] = `
 }
 
 .emotion-3 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2434,14 +2434,14 @@ exports[`theming Tag.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2452,14 +2452,14 @@ exports[`theming Tag.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2503,14 +2503,14 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2522,20 +2522,20 @@ exports[`theming Tag.outlined.base should render correctly 1`] = `
 
 .emotion-4 {
   background-color: unset;
-  border: 1px solid #212121;
-  color: #212121;
-  fill: #212121;
+  border: 1px solid var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2579,14 +2579,14 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2597,14 +2597,14 @@ exports[`theming sizes Tag.sizes.default.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2648,14 +2648,14 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2668,14 +2668,14 @@ exports[`theming sizes Tag.sizes.large.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2719,14 +2719,14 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2739,14 +2739,14 @@ exports[`theming sizes Tag.sizes.medium.base should render correctly 1`] = `
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>
@@ -2790,14 +2790,14 @@ exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #212121;
+  background-color: var(--bb-palette-text,#000000);
   border-radius: 6px;
-  color: #ffffff;
+  color: var(--bb-palette-textInverted,#000000);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  fill: #ffffff;
+  fill: var(--bb-palette-textInverted,#000000);
   font-size: 0.75rem;
   font-weight: 600;
   height: 1.5rem;
@@ -2808,10 +2808,10 @@ exports[`theming sizes Tag.sizes.small.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-4 emotion-1 emotion-2 fp-Box fp-Tag"
+  class="emotion-4 emotion-1 emotion-2 bb-Box bb-Tag"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-TagContent fp-Flex"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-TagContent bb-Flex"
   >
     hello world
   </div>

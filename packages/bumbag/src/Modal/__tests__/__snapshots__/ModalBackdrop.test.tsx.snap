@@ -27,7 +27,7 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"
@@ -38,7 +38,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Modal.Backdrop props 1`] = `
 Object {
-  "className": "css-1szagek css-63it0p css-jwhr8m fp-Box fp-ModalBackdrop",
+  "className": "css-1szagek css-63it0p css-jwhr8m bb-Box bb-ModalBackdrop",
   "data-dialog-ref": "test",
   "hidden": true,
   "onAnimationEnd": [Function],
@@ -77,7 +77,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"
@@ -113,7 +113,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 red fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 red bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"
@@ -149,11 +149,11 @@ exports[`overrides Modal.Backdrop.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"
@@ -189,7 +189,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"
@@ -225,11 +225,11 @@ exports[`theming Modal.Backdrop.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
   data-dialog-ref="test"
   hidden=""
   style="display: none;"

@@ -12,6 +12,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    'emotion',
     'babel-plugin-extract-react-types',
     !prod && [
       'babel-plugin-module-resolver',

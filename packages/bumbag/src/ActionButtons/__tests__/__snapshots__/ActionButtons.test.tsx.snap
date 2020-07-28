@@ -46,11 +46,11 @@ exports[`composition as should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -71,7 +71,7 @@ exports[`composition as should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -85,16 +85,16 @@ exports[`composition as should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -102,11 +102,11 @@ exports[`composition as should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -140,28 +140,28 @@ exports[`composition as should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -183,7 +183,7 @@ Object {
       Submit
     </Button>
   </React.Fragment>,
-  "className": "css-1fie8gx css-p6mhl1 css-63it0p css-jwhr8m fp-Box fp-ActionButtons fp-Set",
+  "className": "css-1fie8gx css-p6mhl1 css-63it0p css-jwhr8m bb-Box bb-ActionButtons bb-Set",
 }
 `;
 
@@ -233,11 +233,11 @@ exports[`composition render props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -258,7 +258,7 @@ exports[`composition render props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -272,16 +272,16 @@ exports[`composition render props should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -289,11 +289,11 @@ exports[`composition render props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -327,28 +327,28 @@ exports[`composition render props should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -402,11 +402,11 @@ exports[`defaultProps should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -427,7 +427,7 @@ exports[`defaultProps should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -441,16 +441,16 @@ exports[`defaultProps should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -458,11 +458,11 @@ exports[`defaultProps should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -496,28 +496,28 @@ exports[`defaultProps should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 test fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 test bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -571,11 +571,11 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -596,7 +596,7 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -610,16 +610,16 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-6 {
@@ -627,11 +627,11 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -665,34 +665,34 @@ exports[`defaultProps should render correctly with addon buttons 1`] = `
 .emotion-6:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-6:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-6:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-9 emotion-10 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Addon
   </button>
   <button
-    class="emotion-6 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-6 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -767,7 +767,7 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-11 + .bb-Text {
   opacity: 0;
 }
 
@@ -780,11 +780,11 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -818,15 +818,15 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
 .emotion-18:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-18:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-18:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-15 {
@@ -834,11 +834,11 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -859,7 +859,7 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-15[disabled],
@@ -888,7 +888,7 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
 }
 
 .emotion-6 {
-  color: #212121 !important;
+  color: var(--bb-palette-defaultInverted,#000000) !important;
 }
 
 .emotion-5 {
@@ -909,7 +909,7 @@ exports[`defaultProps should render correctly with cancel props 1`] = `
 .emotion-0 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #212121;
+  stroke: var(--bb-palette-defaultInverted,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
@@ -976,32 +976,32 @@ samp.emotion-12 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
 <div
-  class="emotion-21 emotion-22 emotion-3 emotion-4 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-21 emotion-22 emotion-3 emotion-4 bb-Box bb-ActionButtons bb-Set"
 >
   <button
     aria-disabled="true"
-    class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-11 fp-ButtonSpinnerWrapper fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ButtonSpinner fp-Box fp-Flex fp-Spinner"
+        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-1 fp-Spinnervector"
+          class="emotion-1 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-0 fp-SpinnerloaderCircle"
+            class="emotion-0 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -1012,13 +1012,13 @@ samp.emotion-12 {
       </div>
     </div>
     <span
-      class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+      class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
     >
       Cancel
     </span>
   </button>
   <button
-    class="emotion-18 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-18 emotion-3 emotion-4 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1072,11 +1072,11 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1097,7 +1097,7 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -1111,16 +1111,16 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -1128,11 +1128,11 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1166,28 +1166,28 @@ exports[`defaultProps should render correctly with cancel text 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Close
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1216,11 +1216,11 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1241,7 +1241,7 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -1255,16 +1255,16 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -1272,11 +1272,11 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1310,15 +1310,15 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-7 {
@@ -1347,24 +1347,24 @@ exports[`overrides ActionButtons.base should render correctly 1`] = `
 }
 
 .emotion-7 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-6 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1418,11 +1418,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1443,7 +1443,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -1457,16 +1457,16 @@ exports[`props should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -1474,11 +1474,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1512,28 +1512,28 @@ exports[`props should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1587,11 +1587,11 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1612,7 +1612,7 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -1626,16 +1626,16 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -1643,11 +1643,11 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1681,15 +1681,15 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-9 {
@@ -1698,16 +1698,16 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-9 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-9 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1761,11 +1761,11 @@ exports[`props should render correctly with addon buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1786,7 +1786,7 @@ exports[`props should render correctly with addon buttons 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -1800,16 +1800,16 @@ exports[`props should render correctly with addon buttons 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-6 {
@@ -1817,11 +1817,11 @@ exports[`props should render correctly with addon buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1855,34 +1855,34 @@ exports[`props should render correctly with addon buttons 1`] = `
 .emotion-6:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-6:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-6:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-9 emotion-10 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-9 emotion-10 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Addon
   </button>
   <button
-    class="emotion-6 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-6 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -1957,7 +1957,7 @@ exports[`props should render correctly with cancel props 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .fp-Text {
+.emotion-11 + .bb-Text {
   opacity: 0;
 }
 
@@ -1970,11 +1970,11 @@ exports[`props should render correctly with cancel props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2008,15 +2008,15 @@ exports[`props should render correctly with cancel props 1`] = `
 .emotion-18:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-18:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-18:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-15 {
@@ -2024,11 +2024,11 @@ exports[`props should render correctly with cancel props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2049,7 +2049,7 @@ exports[`props should render correctly with cancel props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-15[disabled],
@@ -2078,7 +2078,7 @@ exports[`props should render correctly with cancel props 1`] = `
 }
 
 .emotion-6 {
-  color: #212121 !important;
+  color: var(--bb-palette-defaultInverted,#000000) !important;
 }
 
 .emotion-5 {
@@ -2099,7 +2099,7 @@ exports[`props should render correctly with cancel props 1`] = `
 .emotion-0 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #212121;
+  stroke: var(--bb-palette-defaultInverted,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
@@ -2166,32 +2166,32 @@ samp.emotion-12 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
 <div
-  class="emotion-21 emotion-22 emotion-3 emotion-4 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-21 emotion-22 emotion-3 emotion-4 bb-Box bb-ActionButtons bb-Set"
 >
   <button
     aria-disabled="true"
-    class="emotion-15 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-11 fp-ButtonSpinnerWrapper fp-Box fp-Flex"
+      class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 fp-ButtonSpinner fp-Box fp-Flex fp-Spinner"
+        class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-1 fp-Spinnervector"
+          class="emotion-1 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-0 fp-SpinnerloaderCircle"
+            class="emotion-0 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2202,13 +2202,13 @@ samp.emotion-12 {
       </div>
     </div>
     <span
-      class="emotion-12 emotion-3 emotion-4 fp-Box fp-Text"
+      class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
     >
       Cancel
     </span>
   </button>
   <button
-    class="emotion-18 emotion-3 emotion-4 fp-Box fp-Button"
+    class="emotion-18 emotion-3 emotion-4 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2262,11 +2262,11 @@ exports[`props should render correctly with cancel text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2287,7 +2287,7 @@ exports[`props should render correctly with cancel text 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -2301,16 +2301,16 @@ exports[`props should render correctly with cancel text 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -2318,11 +2318,11 @@ exports[`props should render correctly with cancel text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2356,28 +2356,28 @@ exports[`props should render correctly with cancel text 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Close
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2445,11 +2445,11 @@ exports[`props should render correctly with isLoading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2470,7 +2470,7 @@ exports[`props should render correctly with isLoading 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -2484,16 +2484,16 @@ exports[`props should render correctly with isLoading 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-14 {
@@ -2508,7 +2508,7 @@ exports[`props should render correctly with isLoading 1`] = `
   justify-content: center;
 }
 
-.emotion-14 + .fp-Text {
+.emotion-14 + .bb-Text {
   opacity: 0;
 }
 
@@ -2600,7 +2600,7 @@ samp.emotion-15 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-15 .fp-Icon {
+.emotion-15 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -2609,11 +2609,11 @@ samp.emotion-15 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2655,42 +2655,42 @@ samp.emotion-15 {
 }
 
 .emotion-9 {
-  color: #ffffff !important;
+  color: var(--bb-palette-primaryInverted,#000000) !important;
 }
 
 .emotion-3 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #ffffff;
+  stroke: var(--bb-palette-primaryInverted,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
 <div
-  class="emotion-21 emotion-22 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-21 emotion-22 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-18 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-18 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     <div
-      class="emotion-5 emotion-1 emotion-2 emotion-14 fp-ButtonSpinnerWrapper fp-Box fp-Flex"
+      class="emotion-5 emotion-1 emotion-2 emotion-14 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ButtonSpinner fp-Box fp-Flex fp-Spinner"
+        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-4 fp-Spinnervector"
+          class="emotion-4 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-3 fp-SpinnerloaderCircle"
+            class="emotion-3 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -2701,7 +2701,7 @@ samp.emotion-15 {
       </div>
     </div>
     <span
-      class="emotion-15 emotion-1 emotion-2 fp-Box fp-Text"
+      class="emotion-15 emotion-1 emotion-2 bb-Box bb-Text"
     >
       Submit
     </span>
@@ -2755,11 +2755,11 @@ exports[`props should render correctly with onClickCancel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2780,7 +2780,7 @@ exports[`props should render correctly with onClickCancel 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -2794,16 +2794,16 @@ exports[`props should render correctly with onClickCancel 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -2811,11 +2811,11 @@ exports[`props should render correctly with onClickCancel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2849,28 +2849,28 @@ exports[`props should render correctly with onClickCancel 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -2924,11 +2924,11 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2949,7 +2949,7 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -2963,16 +2963,16 @@ exports[`props should render correctly with onClickSubmit 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -2980,11 +2980,11 @@ exports[`props should render correctly with onClickSubmit 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3018,28 +3018,28 @@ exports[`props should render correctly with onClickSubmit 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -3093,11 +3093,11 @@ exports[`props should render correctly with palette 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3118,7 +3118,7 @@ exports[`props should render correctly with palette 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -3132,16 +3132,16 @@ exports[`props should render correctly with palette 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -3149,11 +3149,11 @@ exports[`props should render correctly with palette 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #9e46d8;
+  background-color: var(--bb-palette-secondary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-secondaryInverted,#000000);
+  fill: var(--bb-palette-secondaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3187,28 +3187,28 @@ exports[`props should render correctly with palette 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #9e46d8 0px 0px 0px 1px, #cfa3ec 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-secondary,#000000) 0px 0px 0px 1px, var(--bb-palette-secondary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #8e3fc2;
+  background-color: var(--bb-palette-secondary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #6f3197;
+  background-color: var(--bb-palette-secondary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit
@@ -3276,11 +3276,11 @@ exports[`props should render correctly with submitProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3301,7 +3301,7 @@ exports[`props should render correctly with submitProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -3315,16 +3315,16 @@ exports[`props should render correctly with submitProps 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-14 {
@@ -3339,7 +3339,7 @@ exports[`props should render correctly with submitProps 1`] = `
   justify-content: center;
 }
 
-.emotion-14 + .fp-Text {
+.emotion-14 + .bb-Text {
   opacity: 0;
 }
 
@@ -3431,7 +3431,7 @@ samp.emotion-15 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-15 .fp-Icon {
+.emotion-15 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -3440,11 +3440,11 @@ samp.emotion-15 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3486,45 +3486,45 @@ samp.emotion-15 {
 }
 
 .emotion-9 {
-  color: #ffffff !important;
+  color: var(--bb-palette-primaryInverted,#000000) !important;
 }
 
 .emotion-3 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #ffffff;
+  stroke: var(--bb-palette-primaryInverted,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
 <div
-  class="emotion-21 emotion-22 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-21 emotion-22 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
     aria-disabled="true"
-    class="emotion-18 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-18 emotion-1 emotion-2 bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="submit"
   >
     <div
-      class="emotion-5 emotion-1 emotion-2 emotion-14 fp-ButtonSpinnerWrapper fp-Box fp-Flex"
+      class="emotion-5 emotion-1 emotion-2 emotion-14 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
     >
       <div
-        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 fp-ButtonSpinner fp-Box fp-Flex fp-Spinner"
+        class="emotion-5 emotion-1 emotion-2 emotion-8 emotion-9 emotion-10 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
       >
         <svg
-          class="emotion-4 fp-Spinnervector"
+          class="emotion-4 bb-Spinnervector"
           viewBox="22 22 44 44"
         >
           <circle
-            class="emotion-3 fp-SpinnerloaderCircle"
+            class="emotion-3 bb-SpinnerloaderCircle"
             cx="44"
             cy="44"
             fill="none"
@@ -3535,7 +3535,7 @@ samp.emotion-15 {
       </div>
     </div>
     <span
-      class="emotion-15 emotion-1 emotion-2 fp-Box fp-Text"
+      class="emotion-15 emotion-1 emotion-2 bb-Box bb-Text"
     >
       Submit
     </span>
@@ -3589,11 +3589,11 @@ exports[`props should render correctly with submitText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3614,7 +3614,7 @@ exports[`props should render correctly with submitText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -3628,16 +3628,16 @@ exports[`props should render correctly with submitText 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -3645,11 +3645,11 @@ exports[`props should render correctly with submitText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3683,28 +3683,28 @@ exports[`props should render correctly with submitText 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Save
@@ -3758,11 +3758,11 @@ exports[`props should render correctly with type 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3783,7 +3783,7 @@ exports[`props should render correctly with type 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -3797,16 +3797,16 @@ exports[`props should render correctly with type 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -3814,11 +3814,11 @@ exports[`props should render correctly with type 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3852,28 +3852,28 @@ exports[`props should render correctly with type 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Submit
@@ -3902,11 +3902,11 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3927,7 +3927,7 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -3941,16 +3941,16 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-3 {
@@ -3958,11 +3958,11 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3996,15 +3996,15 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-7 {
@@ -4033,24 +4033,24 @@ exports[`theming ActionButtons.base should render correctly 1`] = `
 }
 
 .emotion-7 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-6 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-6 emotion-7 emotion-1 emotion-2 fp-Box fp-ActionButtons fp-Set"
+  class="emotion-6 emotion-7 emotion-1 emotion-2 bb-Box bb-ActionButtons bb-Set"
 >
   <button
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Button"
     type="button"
   >
     Cancel
   </button>
   <button
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-Button"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-Button"
     type="submit"
   >
     Submit

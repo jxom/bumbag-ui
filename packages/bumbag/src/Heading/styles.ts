@@ -143,7 +143,7 @@ export const Heading = (styleProps) => cssClass`
     ${styleProps.isSubHeading && getSubHeadingProperties(styleProps)};
   }
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
 

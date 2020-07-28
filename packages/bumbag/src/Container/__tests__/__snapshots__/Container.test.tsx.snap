@@ -42,7 +42,7 @@ exports[`composition as should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   Hello world
 </p>
@@ -50,7 +50,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Container props 1`] = `
 Object {
-  "className": "css-xakwjy css-63it0p css-jwhr8m fp-Box fp-Container",
+  "className": "css-xakwjy css-63it0p css-jwhr8m bb-Box bb-Container",
 }
 `;
 
@@ -96,7 +96,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   Hello world
 </div>
@@ -130,7 +130,7 @@ exports[`defaultProps should render correctly for breakpoint 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -178,7 +178,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Container"
 >
   hello world
 </div>
@@ -214,7 +214,7 @@ exports[`defaultProps should render correctly for isFluid 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -269,7 +269,7 @@ exports[`defaultProps should render correctly for isLayout 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -317,11 +317,11 @@ exports[`overrides Container.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -350,7 +350,7 @@ exports[`overrides Container.fluid should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 @media (max-width:768px) {
@@ -361,7 +361,7 @@ exports[`overrides Container.fluid should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -397,7 +397,7 @@ exports[`overrides Container.fluidMargin should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -434,7 +434,7 @@ exports[`overrides Container.layout should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 @media (max-width:1568px) {
@@ -456,7 +456,7 @@ exports[`overrides Container.layout should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -511,7 +511,7 @@ exports[`overrides Container.tabletMargin should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -559,7 +559,7 @@ exports[`props alignment renders correctly for a center aligned container 1`] = 
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -606,7 +606,7 @@ exports[`props alignment renders correctly for a left aligned container 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -653,7 +653,7 @@ exports[`props alignment renders correctly for a right aligned container 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -687,7 +687,7 @@ exports[`props fixed width renders correctly when breakpoint is desktop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -721,7 +721,7 @@ exports[`props fixed width renders correctly when breakpoint is fullHD 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -755,7 +755,7 @@ exports[`props fixed width renders correctly when breakpoint is mobile 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -789,7 +789,7 @@ exports[`props fixed width renders correctly when breakpoint is tablet 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -823,7 +823,7 @@ exports[`props fixed width renders correctly when breakpoint is widescreen 1`] =
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -859,7 +859,7 @@ exports[`props fluid renders correctly for a fluid container 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -914,7 +914,7 @@ exports[`props layout renders correctly for a layout container 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   test
 </div>
@@ -962,7 +962,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   Hello world
 </div>
@@ -1010,11 +1010,11 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   Hello world
 </div>
@@ -1062,11 +1062,11 @@ exports[`theming Container.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -1095,7 +1095,7 @@ exports[`theming Container.fluid should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 @media (max-width:768px) {
@@ -1106,7 +1106,7 @@ exports[`theming Container.fluid should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -1142,7 +1142,7 @@ exports[`theming Container.fluidMargin should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -1179,7 +1179,7 @@ exports[`theming Container.layout should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 @media (max-width:1568px) {
@@ -1201,7 +1201,7 @@ exports[`theming Container.layout should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>
@@ -1256,7 +1256,7 @@ exports[`theming Container.tabletMargin should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Container"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Container"
 >
   hello world
 </div>

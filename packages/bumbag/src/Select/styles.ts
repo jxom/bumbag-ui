@@ -24,7 +24,7 @@ export const Select = (styleProps) => cssClass`
     }
   }
 
-  &[disabled] + .fp-Icon {
+  &[disabled] + .bb-Icon {
     color: ${palette('gray400')(styleProps)};
     fill: ${palette('gray400')(styleProps)};
   }

@@ -27,11 +27,11 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-3 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 test fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -53,7 +53,7 @@ exports[`overrides Avatar.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0 {
@@ -67,11 +67,11 @@ exports[`overrides Avatar.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -103,7 +103,7 @@ exports[`overrides Avatar.circle.base should render correctly 1`] = `
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -135,11 +135,11 @@ exports[`overrides Avatar.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -171,11 +171,11 @@ exports[`overrides Avatar.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -207,11 +207,11 @@ exports[`overrides Avatar.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -242,11 +242,11 @@ exports[`overrides Avatar.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -278,7 +278,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -304,8 +304,8 @@ exports[`props should render correctly for initials 1`] = `
   height: 60px;
   overflow: hidden;
   object-fit: cover;
-  background-color: #574feb;
-  color: #ffffff;
+  background-color: var(--bb-palette-primary,#000000);
+  color: var(--bb-palette-primaryInverted,#000000);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -324,7 +324,7 @@ exports[`props should render correctly for initials 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
 >
   JM
 </div>
@@ -358,7 +358,7 @@ exports[`props should render correctly for size default 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -391,7 +391,7 @@ exports[`props should render correctly for size large 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -424,7 +424,7 @@ exports[`props should render correctly for size medium 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -456,7 +456,7 @@ exports[`props should render correctly for size small 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -488,12 +488,12 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-3 {
-  background-color: #ff0000 !important;
+  background-color: var(--bb-palette-red,#ff0000) !important;
 }
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -527,7 +527,7 @@ exports[`props should render correctly with variant circle 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -549,7 +549,7 @@ exports[`theming Avatar.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0 {
@@ -563,11 +563,11 @@ exports[`theming Avatar.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -599,7 +599,7 @@ exports[`theming Avatar.circle.base should render correctly 1`] = `
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -631,11 +631,11 @@ exports[`theming Avatar.sizes.default should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -667,11 +667,11 @@ exports[`theming Avatar.sizes.large should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -703,11 +703,11 @@ exports[`theming Avatar.sizes.medium should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;
@@ -738,11 +738,11 @@ exports[`theming Avatar.sizes.small should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Avatar fp-Image"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Avatar bb-Image"
   src="test.png"
 />
 `;

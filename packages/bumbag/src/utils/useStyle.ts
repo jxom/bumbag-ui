@@ -1,8 +1,8 @@
 import * as React from 'react';
 
+import { useColorMode } from '../ColorMode';
 import { pickCSSProps } from './cssProps';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
-import { useColorMode } from './useColorMode';
 import { useTheme } from './useTheme';
 
 export function useStyle(props) {

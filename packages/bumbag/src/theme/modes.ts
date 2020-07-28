@@ -1,7 +1,7 @@
 import { ModesThemeConfig } from '../types';
 
 export default (overrides: ModesThemeConfig) => ({
-  localStoragePrefix: 'fp',
+  localStoragePrefix: 'bb',
   enableLocalStorage: true,
   useSystemColorMode: false,
   ...overrides,

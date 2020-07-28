@@ -44,7 +44,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-emotion',
+    'gatsby-plugin-bumbag',
     'gatsby-plugin-webpack-bundle-analyzer',
     {
       resolve: `gatsby-plugin-google-analytics`,

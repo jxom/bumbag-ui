@@ -1859,6 +1859,8 @@ export type TemplateThemeConfig = {
 };
 
 export type ThemeConfig = {
+  useCSSVariables?: boolean;
+
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;

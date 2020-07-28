@@ -12,7 +12,7 @@ export const ToastOverlay = (styleProps) => cssClass`
     min-width: 350px;
   }
 
-  & .fp-Toast {
+  & .bb-Toast {
     animation: ${getAnimation(styleProps)} 250ms ease-in-out forwards;
   }
 

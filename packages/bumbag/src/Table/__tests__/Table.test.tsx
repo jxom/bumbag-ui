@@ -120,45 +120,6 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with divider color', () => {
-    const { container } = render(
-      <Table hasDividers dividerColor="red">
-        <Table.Head>
-          <Table.Row>
-            <Table.HeadCell>Name</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Price</Table.HeadCell>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body>
-          <Table.Row>
-            <Table.Cell>Nike</Table.Cell>
-            <Table.Cell textAlign="right">3</Table.Cell>
-            <Table.Cell textAlign="right">$9.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Adidas</Table.Cell>
-            <Table.Cell textAlign="right">4</Table.Cell>
-            <Table.Cell textAlign="right">$12.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>North Face</Table.Cell>
-            <Table.Cell textAlign="right">5</Table.Cell>
-            <Table.Cell textAlign="right">$15.00</Table.Cell>
-          </Table.Row>
-        </Table.Body>
-        <Table.Foot fontWeight="semibold">
-          <Table.Row>
-            <Table.Cell>Total</Table.Cell>
-            <Table.Cell />
-            <Table.Cell textAlign="right">$36.00</Table.Cell>
-          </Table.Row>
-        </Table.Foot>
-      </Table>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   it('should render correctly with stripes', () => {
     const { container } = render(
       <Table isStriped>
@@ -198,87 +159,9 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render correctly with stripe color', () => {
-    const { container } = render(
-      <Table isStriped stripeColor="red">
-        <Table.Head>
-          <Table.Row>
-            <Table.HeadCell>Name</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Price</Table.HeadCell>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body>
-          <Table.Row>
-            <Table.Cell>Nike</Table.Cell>
-            <Table.Cell textAlign="right">3</Table.Cell>
-            <Table.Cell textAlign="right">$9.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Adidas</Table.Cell>
-            <Table.Cell textAlign="right">4</Table.Cell>
-            <Table.Cell textAlign="right">$12.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>North Face</Table.Cell>
-            <Table.Cell textAlign="right">5</Table.Cell>
-            <Table.Cell textAlign="right">$15.00</Table.Cell>
-          </Table.Row>
-        </Table.Body>
-        <Table.Foot fontWeight="semibold">
-          <Table.Row>
-            <Table.Cell>Total</Table.Cell>
-            <Table.Cell />
-            <Table.Cell textAlign="right">$36.00</Table.Cell>
-          </Table.Row>
-        </Table.Foot>
-      </Table>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   it('should render correctly with hoverable rows', () => {
     const { container } = render(
       <Table isHoverable>
-        <Table.Head>
-          <Table.Row>
-            <Table.HeadCell>Name</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Quantity</Table.HeadCell>
-            <Table.HeadCell textAlign="right">Price</Table.HeadCell>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body>
-          <Table.Row>
-            <Table.Cell>Nike</Table.Cell>
-            <Table.Cell textAlign="right">3</Table.Cell>
-            <Table.Cell textAlign="right">$9.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Adidas</Table.Cell>
-            <Table.Cell textAlign="right">4</Table.Cell>
-            <Table.Cell textAlign="right">$12.00</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>North Face</Table.Cell>
-            <Table.Cell textAlign="right">5</Table.Cell>
-            <Table.Cell textAlign="right">$15.00</Table.Cell>
-          </Table.Row>
-        </Table.Body>
-        <Table.Foot fontWeight="semibold">
-          <Table.Row>
-            <Table.Cell>Total</Table.Cell>
-            <Table.Cell />
-            <Table.Cell textAlign="right">$36.00</Table.Cell>
-          </Table.Row>
-        </Table.Foot>
-      </Table>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly with hover color', () => {
-    const { container } = render(
-      <Table hasDividers hoverColor="red">
         <Table.Head>
           <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>

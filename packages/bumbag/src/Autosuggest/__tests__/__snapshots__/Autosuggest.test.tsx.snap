@@ -41,10 +41,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -53,33 +53,33 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -96,7 +96,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -105,7 +105,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -139,19 +139,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -160,11 +160,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -229,22 +229,22 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
 .emotion-49 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-49 test fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-49 test bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -253,7 +253,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -262,7 +262,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -271,56 +271,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>
@@ -367,10 +367,10 @@ exports[`overrides styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -379,33 +379,33 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -422,7 +422,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -431,7 +431,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -465,19 +465,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -486,11 +486,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -555,7 +555,7 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -564,17 +564,17 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -583,7 +583,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -592,7 +592,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -601,56 +601,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>
@@ -701,10 +701,10 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -713,33 +713,33 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -756,7 +756,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -765,7 +765,7 @@ exports[`props should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -799,19 +799,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -820,11 +820,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -889,7 +889,7 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -897,10 +897,10 @@ samp.emotion-7 {
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -909,7 +909,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -918,7 +918,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -927,56 +927,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>
@@ -1027,10 +1027,10 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1039,33 +1039,33 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1082,7 +1082,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1091,7 +1091,7 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1125,19 +1125,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -1146,11 +1146,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1215,22 +1215,22 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
 .emotion-49 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-49 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-49 bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -1239,7 +1239,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -1248,7 +1248,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1257,56 +1257,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>
@@ -1353,10 +1353,10 @@ exports[`theming styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1365,33 +1365,33 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1408,7 +1408,7 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1417,7 +1417,7 @@ exports[`theming styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1451,19 +1451,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -1472,11 +1472,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1541,7 +1541,7 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -1550,17 +1550,17 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -1569,7 +1569,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -1578,7 +1578,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1587,56 +1587,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>
@@ -1683,10 +1683,10 @@ exports[`variants styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1695,33 +1695,33 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1738,7 +1738,7 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1747,7 +1747,7 @@ exports[`variants styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1781,19 +1781,19 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
-.emotion-12 .fp-Icon {
+.emotion-12 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -1802,11 +1802,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1871,7 +1871,7 @@ samp.emotion-7 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-7 .fp-Icon {
+.emotion-7 .bb-Icon {
   vertical-align: -0.125em;
 }
 
@@ -1880,17 +1880,17 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-47 emotion-1 emotion-2 fp-Box fp-Autosuggest"
+  class="emotion-47 emotion-1 emotion-2 bb-Box bb-Autosuggest"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 fp-AutosuggestInput fp-InputWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -1899,7 +1899,7 @@ samp.emotion-7 {
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Input"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       type="text"
@@ -1908,7 +1908,7 @@ samp.emotion-7 {
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 fp-AutosuggestPopover fp-Box fp-DropdownMenuPopover"
+    class="emotion-42 emotion-43 emotion-1 emotion-45 emotion-46 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1917,56 +1917,56 @@ samp.emotion-7 {
     style="display: none;"
   >
     <ul
-      class="emotion-1 emotion-2 emotion-41 fp-AutosuggestItemsWrapper fp-Box"
+      class="emotion-1 emotion-2 emotion-41 bb-AutosuggestItemsWrapper bb-Box"
     >
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-1"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Apples
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-2"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Bananas
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-3"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Oranges
         </span>
       </li>
       <li
         aria-selected="false"
-        class="emotion-11 emotion-12 emotion-1 emotion-2 fp-Box fp-DropdownMenuItem fp-AutosuggestItem"
+        class="emotion-11 emotion-12 emotion-1 emotion-2 bb-Box bb-DropdownMenuItem bb-AutosuggestItem"
         id="test-4"
         loop=""
         role="option"
       >
         <span
-          class="emotion-7 emotion-1 emotion-2 emotion-6 fp-AutosuggestItemText fp-Box fp-Text"
+          class="emotion-7 emotion-1 emotion-2 emotion-6 bb-AutosuggestItemText bb-Box bb-Text"
         >
           Mangos
         </span>

@@ -60,7 +60,7 @@ export const Text = (styleProps) => cssClass`
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
   }
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
 

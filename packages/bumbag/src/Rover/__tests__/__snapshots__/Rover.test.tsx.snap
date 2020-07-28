@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with Rover props 1`] = `
 Object {
-  "className": "css-1fie8gx css-63it0p css-jwhr8m fp-Box fp-Rover",
+  "className": "css-1fie8gx css-63it0p css-jwhr8m bb-Box bb-Rover",
   "id": "test",
   "loop": false,
   "onClick": [Function],
@@ -32,7 +32,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Rover"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Rover"
   id="test"
   tabindex="0"
 >
@@ -61,11 +61,11 @@ exports[`composition use should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -86,7 +86,7 @@ exports[`composition use should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -100,16 +100,16 @@ exports[`composition use should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-4 {
@@ -117,11 +117,11 @@ exports[`composition use should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -142,7 +142,7 @@ exports[`composition use should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -155,7 +155,7 @@ exports[`composition use should render correctly 1`] = `
 
 <div>
   <button
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     id="test"
     tabindex="0"
     type="button"
@@ -164,7 +164,7 @@ exports[`composition use should render correctly 1`] = `
   </button>
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-4 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     disabled=""
     id="test"
     style="pointer-events: none;"
@@ -173,7 +173,7 @@ exports[`composition use should render correctly 1`] = `
     Hello world
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     id="test"
     tabindex="0"
     type="button"
@@ -200,7 +200,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Rover"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Rover"
   id="test"
   tabindex="0"
 >
@@ -225,11 +225,11 @@ exports[`overrides Rover.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Rover"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Rover"
   id="test"
   tabindex="0"
 >
@@ -258,11 +258,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -283,7 +283,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -297,16 +297,16 @@ exports[`props should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-4 {
@@ -314,11 +314,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -339,7 +339,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -352,7 +352,7 @@ exports[`props should render correctly 1`] = `
 
 <div>
   <button
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     id="test"
     tabindex="0"
     type="button"
@@ -361,7 +361,7 @@ exports[`props should render correctly 1`] = `
   </button>
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-4 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     disabled=""
     id="test"
     style="pointer-events: none;"
@@ -370,7 +370,7 @@ exports[`props should render correctly 1`] = `
     Hello world
   </button>
   <button
-    class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-Rover"
+    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-Rover"
     id="test"
     tabindex="0"
     type="button"
@@ -397,11 +397,11 @@ exports[`theming Rover.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Rover"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Rover"
   id="test"
   tabindex="0"
 >
