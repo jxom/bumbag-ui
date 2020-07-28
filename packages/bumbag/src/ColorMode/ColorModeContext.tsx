@@ -55,7 +55,23 @@ export function ColorModeProvider(props: Props) {
 
   ////////////////////////////////////
 
-  return <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>;
+  let mounted = false;
+  React.useEffect(() => {
+    mounted = true;
+  }, []);
+
+  ////////////////////////////////////
+
+  if (!mounted) {
+    return (
+      <div style={{ visibility: 'hidden' }}>{children}</div>
+    )
+  }
+  return (
+    <ColorModeContext.Provider value={value}>
+      {children}
+    </ColorModeContext.Provider>
+  );
 }
 
 export function useColorMode() {
