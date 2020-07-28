@@ -1,10 +1,8 @@
 {
-  "name": "bumbag-addon-highlighted-code",
+  "name": "gatsby-plugin-bumbag",
   "version": "1.0.0-color-mode-refactor.5",
-  "description": "An accessible, composable, and friendly React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "dist/bumbag.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
     "build": "node ../../scripts/build/build.js",
@@ -15,12 +13,11 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src/ --ext js,ts,tsx",
     "lint:fix": "eslint src/ --fix",
-    "test": "yarn type-check && yarn lint && yarn jest",
-    "jest": "jest"
+    "test": "yarn type-check && yarn lint"
   },
   "dependencies": {
-    "lodash": "4.17.19",
-    "prism-react-renderer": "0.1.7"
+    "@emotion/babel-preset-css-prop": "10.0.27",
+    "bumbag-server": "1.0.0-color-mode-refactor.5"
   },
   "peerDependencies": {
     "@types/react": "16.x",
@@ -28,12 +25,6 @@
     "bumbag": "1.x",
     "react": "16.x",
     "react-dom": "16.x"
-  },
-  "devDependencies": {
-    "@testing-library/react": "8.0.7",
-    "@testing-library/react-hooks": "1.1.0",
-    "bumbag": "^1.0.0-color-mode-refactor.5",
-    "react-test-renderer": "16.8.6"
   },
   "author": "Jake Moxey",
   "homepage": "https://github.com/bumbagui",

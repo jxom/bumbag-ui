@@ -47,17 +47,15 @@ const MyApp = () => (
 
 In order to use Bumbag with [Gatsby](https://gatsbyjs.org/), you will firstly need to install the Gatsby plugin for Bumbag.
 
-Bumbag uses Emotion internally, so we will firstly install the [Emotion Gatsby Plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-emotion/) & `emotion-server`:
-
 ```
-npm install gatsby-plugin-emotion emotion-server
+npm install gatsby-plugin-bumbag
 ```
 
 Then, we will add this plugin to your app's `gatsby-config.js`:
 
 ```js
 module.exports = {
-  plugins: ['gatsby-plugin-emotion']
+  plugins: ['gatsby-plugin-bumbag']
 }
 ```
 
@@ -77,25 +75,7 @@ export const wrapRootElement = ({ element, ...props }) => (
 We will also have to add a few lines to our `gatsby-ssr.js` file:
 
 ```jsx
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { Provider as BumbagProvider, InitializeColorMode } from 'bumbag';
-import { renderStylesToString } from 'emotion-server';
-
-export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  const html = renderStylesToString(renderToString(bodyComponent));
-  replaceBodyHTMLString(html);
-};
-
-export const wrapRootElement = ({ element, ...props }) => (
-  <BumbagProvider>
-    {element}
-  </BumbagProvider>
-);
-
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([<InitializeColorMode key="bumbag-no-flash" />])
-}
+export { wrapRootElement } from './gatsby-browser';
 ```
 
 Now, you can freely use Bumbag in your Gatsby app!
@@ -104,17 +84,17 @@ Now, you can freely use Bumbag in your Gatsby app!
 
 In order to use Bumbag with [Next.js](https://nextjs.org/), you will firstly have to set your Next.js app for SSR with Bumbag.
 
-Firstly, you will need to install `emotion-server`:
+Firstly, you will need to install `bumbag-server`:
 
 ```
-npm install emotion-server
+npm install bumbag-server
 ```
 
 Open up your `_document.js` file, and add the following:
 
 ```jsx
 import Document, { Head, Main, NextScript } from 'next/document'
-import { extractCritical } from 'emotion-server'
+import { extractCritical } from 'bumbag-server'
 import { InitializeColorMode } from 'bumbag'
 
 export default class MyDocument extends Document {
