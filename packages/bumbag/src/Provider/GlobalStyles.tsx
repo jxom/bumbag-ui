@@ -1,14 +1,17 @@
 import * as React from 'react';
 import { Global, css, ThemeContext } from '../styled';
-import { palette, font, theme, useColorMode } from '../utils';
+import { getColorModesCSSVariables, palette, font, omit, theme, useColorMode } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
   const { colorMode } = useColorMode();
   const styleProps = { colorMode, theme: _theme };
+  const colorModesCSSVariables = React.useMemo(() => getColorModesCSSVariables(_theme), [_theme]);
   return (
     <Global
       styles={css`
+        ${colorModesCSSVariables}
+
         html,
         body {
           background-color: ${palette('background')(styleProps)};

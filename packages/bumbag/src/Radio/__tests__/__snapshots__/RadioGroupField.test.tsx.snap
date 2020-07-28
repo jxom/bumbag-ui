@@ -69,8 +69,8 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -93,21 +93,21 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -121,8 +121,8 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -327,8 +327,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -351,21 +351,21 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -379,8 +379,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -392,7 +392,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-47 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <fieldset
@@ -543,8 +543,8 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -567,21 +567,21 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -595,8 +595,8 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -608,7 +608,7 @@ exports[`overrides RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-45 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <fieldset
@@ -759,8 +759,8 @@ exports[`props should render correctly 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -783,21 +783,21 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -811,8 +811,8 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -971,8 +971,8 @@ exports[`props should render correctly for default value 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -995,21 +995,21 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -1023,8 +1023,8 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -1183,8 +1183,8 @@ exports[`props should render correctly for disabled field 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1207,21 +1207,21 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -1235,8 +1235,8 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -1396,8 +1396,8 @@ exports[`props should render correctly for disabled fields 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1420,21 +1420,21 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -1448,8 +1448,8 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -1592,8 +1592,8 @@ exports[`props should render correctly for horizontal fields 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1616,21 +1616,21 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -1644,8 +1644,8 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -1829,8 +1829,8 @@ exports[`props should render correctly for state danger 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -1861,29 +1861,29 @@ exports[`props should render correctly for state danger 1`] = `
 }
 
 .emotion-10 + .fp-RadioIcon {
-  border-color: #da1717;
+  border-color: var(--bb-palette-danger,#000000);
 }
 
 .emotion-10:not(:checked) + .fp-RadioIcon {
-  box-shadow: #fbe8e8 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -1897,8 +1897,8 @@ exports[`props should render correctly for state danger 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 <fieldset
@@ -2049,8 +2049,8 @@ exports[`props should render correctly for state success 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2081,29 +2081,29 @@ exports[`props should render correctly for state success 1`] = `
 }
 
 .emotion-10 + .fp-RadioIcon {
-  border-color: #0a7d33;
+  border-color: var(--bb-palette-success,#000000);
 }
 
 .emotion-10:not(:checked) + .fp-RadioIcon {
-  box-shadow: #e7f2eb 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -2117,8 +2117,8 @@ exports[`props should render correctly for state success 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 <fieldset
@@ -2269,8 +2269,8 @@ exports[`props should render correctly for state warning 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2301,29 +2301,29 @@ exports[`props should render correctly for state warning 1`] = `
 }
 
 .emotion-10 + .fp-RadioIcon {
-  border-color: #ed9c22;
+  border-color: var(--bb-palette-warning,#000000);
 }
 
 .emotion-10:not(:checked) + .fp-RadioIcon {
-  box-shadow: #fdf5e9 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -2337,8 +2337,8 @@ exports[`props should render correctly for state warning 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 <fieldset
@@ -2489,8 +2489,8 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2513,21 +2513,21 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -2541,8 +2541,8 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -2701,8 +2701,8 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
 
 .emotion-13 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 100%;
   height: 1em;
   position: relative;
@@ -2725,21 +2725,21 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-10[disabled] + .fp-RadioIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-10:focus + .fp-RadioIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-10:not([disabled]):checked + .fp-RadioIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-10:checked + .fp-RadioIcon::before {
-  background: #574feb;
+  background: var(--bb-palette-primary,#000000);
   border-radius: 50%;
   content: '';
   height: 0.5em;
@@ -2753,8 +2753,8 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-10[disabled]:checked + .fp-RadioIcon::before {
-  border-color: #919aa9;
-  background: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
+  background: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-17.emotion-17 {
@@ -2766,7 +2766,7 @@ exports[`theming RadioGroupField.base should render correctly 1`] = `
 }
 
 .emotion-45 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <fieldset

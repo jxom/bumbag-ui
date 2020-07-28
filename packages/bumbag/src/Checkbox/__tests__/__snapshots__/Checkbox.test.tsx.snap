@@ -29,8 +29,8 @@ exports[`composition as should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -53,17 +53,17 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -75,7 +75,7 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -86,7 +86,7 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
@@ -202,8 +202,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -226,17 +226,17 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -248,7 +248,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -259,11 +259,11 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-10 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <label
@@ -317,8 +317,8 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -341,17 +341,17 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -363,7 +363,7 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -374,11 +374,11 @@ exports[`overrides Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-2 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label
@@ -443,17 +443,17 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -465,7 +465,7 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -476,13 +476,13 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -493,7 +493,7 @@ exports[`overrides Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label
@@ -547,8 +547,8 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -571,17 +571,17 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -593,7 +593,7 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -604,7 +604,7 @@ exports[`overrides Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -647,8 +647,8 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -671,17 +671,17 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -693,7 +693,7 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -704,7 +704,7 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -719,7 +719,7 @@ exports[`overrides Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label
@@ -767,17 +767,17 @@ exports[`props should assign a ref via checkboxRef 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -789,7 +789,7 @@ exports[`props should assign a ref via checkboxRef 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -800,7 +800,7 @@ exports[`props should assign a ref via checkboxRef 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <input
@@ -845,8 +845,8 @@ exports[`props should assign a ref via ref 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -869,17 +869,17 @@ exports[`props should assign a ref via ref 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -891,7 +891,7 @@ exports[`props should assign a ref via ref 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -902,7 +902,7 @@ exports[`props should assign a ref via ref 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -956,8 +956,8 @@ exports[`props should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -980,17 +980,17 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1002,7 +1002,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1013,7 +1013,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1067,8 +1067,8 @@ exports[`props should render correctly for danger state 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1091,25 +1091,25 @@ exports[`props should render correctly for danger state 1`] = `
 }
 
 .emotion-2 + .fp-CheckboxIcon {
-  border-color: #da1717;
+  border-color: var(--bb-palette-danger,#000000);
 }
 
 .emotion-2:not(:checked) + .fp-CheckboxIcon {
-  box-shadow: #fbe8e8 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1121,7 +1121,7 @@ exports[`props should render correctly for danger state 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1132,7 +1132,7 @@ exports[`props should render correctly for danger state 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1186,8 +1186,8 @@ exports[`props should render correctly for success state 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1210,25 +1210,25 @@ exports[`props should render correctly for success state 1`] = `
 }
 
 .emotion-2 + .fp-CheckboxIcon {
-  border-color: #0a7d33;
+  border-color: var(--bb-palette-success,#000000);
 }
 
 .emotion-2:not(:checked) + .fp-CheckboxIcon {
-  box-shadow: #e7f2eb 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1240,7 +1240,7 @@ exports[`props should render correctly for success state 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1251,7 +1251,7 @@ exports[`props should render correctly for success state 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1305,8 +1305,8 @@ exports[`props should render correctly for warning state 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1329,25 +1329,25 @@ exports[`props should render correctly for warning state 1`] = `
 }
 
 .emotion-2 + .fp-CheckboxIcon {
-  border-color: #ed9c22;
+  border-color: var(--bb-palette-warning,#000000);
 }
 
 .emotion-2:not(:checked) + .fp-CheckboxIcon {
-  box-shadow: #fdf5e9 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1359,7 +1359,7 @@ exports[`props should render correctly for warning state 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1370,7 +1370,7 @@ exports[`props should render correctly for warning state 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1424,8 +1424,8 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1448,17 +1448,17 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1470,7 +1470,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1481,11 +1481,11 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-10 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <label
@@ -1539,8 +1539,8 @@ exports[`props should render correctly with checked 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1563,17 +1563,17 @@ exports[`props should render correctly with checked 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1585,7 +1585,7 @@ exports[`props should render correctly with checked 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1596,7 +1596,7 @@ exports[`props should render correctly with checked 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1651,8 +1651,8 @@ exports[`props should render correctly with defaultChecked 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1675,17 +1675,17 @@ exports[`props should render correctly with defaultChecked 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1697,7 +1697,7 @@ exports[`props should render correctly with defaultChecked 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1708,7 +1708,7 @@ exports[`props should render correctly with defaultChecked 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1763,8 +1763,8 @@ exports[`props should render correctly with disabled 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1787,17 +1787,17 @@ exports[`props should render correctly with disabled 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1809,7 +1809,7 @@ exports[`props should render correctly with disabled 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -1820,7 +1820,7 @@ exports[`props should render correctly with disabled 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1875,8 +1875,8 @@ exports[`props should render correctly with indeterminate 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -1899,17 +1899,17 @@ exports[`props should render correctly with indeterminate 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -1921,7 +1921,7 @@ exports[`props should render correctly with indeterminate 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   height: 0.125em;
   width: 0.625em;
   top: calc(50% - 0.0625em);
@@ -1929,7 +1929,7 @@ exports[`props should render correctly with indeterminate 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -1983,8 +1983,8 @@ exports[`props should render correctly with isRequired 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2007,17 +2007,17 @@ exports[`props should render correctly with isRequired 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2029,7 +2029,7 @@ exports[`props should render correctly with isRequired 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2040,7 +2040,7 @@ exports[`props should render correctly with isRequired 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -2095,8 +2095,8 @@ exports[`props should render correctly with label 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2119,17 +2119,17 @@ exports[`props should render correctly with label 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2141,7 +2141,7 @@ exports[`props should render correctly with label 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2152,7 +2152,7 @@ exports[`props should render correctly with label 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -2221,8 +2221,8 @@ exports[`props should render correctly with name 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2245,17 +2245,17 @@ exports[`props should render correctly with name 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2267,7 +2267,7 @@ exports[`props should render correctly with name 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2278,7 +2278,7 @@ exports[`props should render correctly with name 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -2333,8 +2333,8 @@ exports[`props should render correctly with value 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2357,17 +2357,17 @@ exports[`props should render correctly with value 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2379,7 +2379,7 @@ exports[`props should render correctly with value 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2390,7 +2390,7 @@ exports[`props should render correctly with value 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -2445,8 +2445,8 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2469,17 +2469,17 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2491,7 +2491,7 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2502,11 +2502,11 @@ exports[`theming Checkbox.HiddenInput.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-2 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label
@@ -2571,17 +2571,17 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2593,7 +2593,7 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2604,13 +2604,13 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2621,7 +2621,7 @@ exports[`theming Checkbox.Icon.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label
@@ -2675,8 +2675,8 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2699,17 +2699,17 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2721,7 +2721,7 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2732,7 +2732,7 @@ exports[`theming Checkbox.Label.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 <label
@@ -2775,8 +2775,8 @@ exports[`theming Checkbox.base should render correctly 1`] = `
 
 .emotion-5 {
   -webkit-appearance: none;
-  background-color: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 0.2em;
   height: 1em;
   position: relative;
@@ -2799,17 +2799,17 @@ exports[`theming Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-CheckboxIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2:focus + .fp-CheckboxIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
@@ -2821,7 +2821,7 @@ exports[`theming Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2:checked + .fp-CheckboxIcon::before {
-  border: 0.1rem solid #574feb;
+  border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
   height: 0.625em;
@@ -2832,7 +2832,7 @@ exports[`theming Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
-  border-color: #919aa9;
+  border-color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -2847,7 +2847,7 @@ exports[`theming Checkbox.base should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <label

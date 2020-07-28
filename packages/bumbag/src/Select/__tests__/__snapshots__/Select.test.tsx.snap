@@ -46,8 +46,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -77,10 +77,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -90,24 +90,24 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-8 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
@@ -170,8 +170,8 @@ exports[`overrides Select.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -201,10 +201,10 @@ exports[`overrides Select.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -214,24 +214,24 @@ exports[`overrides Select.base should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -296,10 +296,10 @@ exports[`props should assign a ref 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -309,20 +309,20 @@ exports[`props should assign a ref 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <select
@@ -367,10 +367,10 @@ exports[`props should assign a ref via selectRef 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -380,20 +380,20 @@ exports[`props should assign a ref via selectRef 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <select
@@ -436,8 +436,8 @@ exports[`props should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -460,10 +460,10 @@ exports[`props should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -473,20 +473,20 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -551,8 +551,8 @@ exports[`props should render correctly for danger state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -582,10 +582,10 @@ exports[`props should render correctly for danger state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -595,25 +595,25 @@ exports[`props should render correctly for danger state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #da1717;
-  box-shadow: #fbe8e8 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-danger,#000000);
+  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
@@ -660,8 +660,8 @@ exports[`props should render correctly for large size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -684,10 +684,10 @@ exports[`props should render correctly for large size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -697,20 +697,20 @@ exports[`props should render correctly for large size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -776,8 +776,8 @@ exports[`props should render correctly for medium size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -800,10 +800,10 @@ exports[`props should render correctly for medium size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -813,20 +813,20 @@ exports[`props should render correctly for medium size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -892,8 +892,8 @@ exports[`props should render correctly for small size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -916,10 +916,10 @@ exports[`props should render correctly for small size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -929,20 +929,20 @@ exports[`props should render correctly for small size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1019,8 +1019,8 @@ exports[`props should render correctly for success state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1050,10 +1050,10 @@ exports[`props should render correctly for success state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1063,25 +1063,25 @@ exports[`props should render correctly for success state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #0a7d33;
-  box-shadow: #e7f2eb 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-success,#000000);
+  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
@@ -1139,8 +1139,8 @@ exports[`props should render correctly for warning state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1170,10 +1170,10 @@ exports[`props should render correctly for warning state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1183,25 +1183,25 @@ exports[`props should render correctly for warning state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #ed9c22;
-  box-shadow: #fdf5e9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-warning,#000000);
+  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
@@ -1259,8 +1259,8 @@ exports[`props should render correctly with CSS props 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1283,10 +1283,10 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1296,20 +1296,20 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1320,7 +1320,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-8 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
@@ -1378,8 +1378,8 @@ exports[`props should render correctly with a default value 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1402,10 +1402,10 @@ exports[`props should render correctly with a default value 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1415,20 +1415,20 @@ exports[`props should render correctly with a default value 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1494,8 +1494,8 @@ exports[`props should render correctly with disabled 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1518,10 +1518,10 @@ exports[`props should render correctly with disabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1531,20 +1531,20 @@ exports[`props should render correctly with disabled 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1658,10 +1658,10 @@ exports[`props should render correctly with isLoading 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1671,24 +1671,24 @@ exports[`props should render correctly with isLoading 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-7 {
-  color: #212121 !important;
+  color: var(--bb-palette-text,#000000) !important;
 }
 
 .emotion-5 {
@@ -1709,7 +1709,7 @@ exports[`props should render correctly with isLoading 1`] = `
 .emotion-3 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #212121;
+  stroke: var(--bb-palette-text,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
@@ -1775,8 +1775,8 @@ exports[`props should render correctly with isRequired 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1799,10 +1799,10 @@ exports[`props should render correctly with isRequired 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1812,20 +1812,20 @@ exports[`props should render correctly with isRequired 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1891,8 +1891,8 @@ exports[`props should render correctly with name 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1915,10 +1915,10 @@ exports[`props should render correctly with name 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1928,20 +1928,20 @@ exports[`props should render correctly with name 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -2007,8 +2007,8 @@ exports[`props should render placeholder correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2038,10 +2038,10 @@ exports[`props should render placeholder correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2051,20 +2051,20 @@ exports[`props should render placeholder correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
@@ -2127,8 +2127,8 @@ exports[`theming Select.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2158,10 +2158,10 @@ exports[`theming Select.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2171,24 +2171,24 @@ exports[`theming Select.base should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

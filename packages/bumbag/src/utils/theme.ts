@@ -4,6 +4,7 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { isFunction } from './isFunction';
 import { get } from './get';
+import { getColorFromCSSVariable } from './colorModes';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
@@ -101,11 +102,19 @@ export function fontWeight(selector?: string, defaultValue?: any) {
   };
 }
 
-export function palette(_selector?: string, modes?: any) {
+export function palette(
+  _selector?: string,
+  modes?: any,
+  { useCSSVariables = true }: { useCSSVariables?: boolean } = {}
+) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const selector = modes?.[props.colorMode] || _selector;
+    const fallback = tinycolor(selector).toHexString();
+    if (props.theme?.useCSSVariables && useCSSVariables) {
+      return getColorFromCSSVariable(selector, fallback);
+    }
     const color = theme('palette', selector || props.palette)(props);
-    if (!color) return tinycolor(selector).toHexString();
+    if (!color) return fallback;
     return color;
   };
 }

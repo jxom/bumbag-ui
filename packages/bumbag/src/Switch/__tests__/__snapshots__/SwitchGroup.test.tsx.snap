@@ -52,8 +52,8 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -75,10 +75,10 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -89,38 +89,38 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -288,8 +288,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -311,10 +311,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -325,38 +325,38 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -368,7 +368,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-33 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
@@ -478,8 +478,8 @@ exports[`overrides SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -501,10 +501,10 @@ exports[`overrides SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -515,38 +515,38 @@ exports[`overrides SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -558,7 +558,7 @@ exports[`overrides SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-31 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -668,8 +668,8 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -691,10 +691,10 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -705,38 +705,38 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -854,8 +854,8 @@ exports[`props should render correctly for default value (array) 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -877,10 +877,10 @@ exports[`props should render correctly for default value (array) 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -891,38 +891,38 @@ exports[`props should render correctly for default value (array) 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -1042,8 +1042,8 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -1065,10 +1065,10 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1079,38 +1079,38 @@ exports[`props should render correctly for default value 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -1229,8 +1229,8 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -1252,10 +1252,10 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1266,38 +1266,38 @@ exports[`props should render correctly for disabled field 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -1416,8 +1416,8 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -1439,10 +1439,10 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1453,38 +1453,38 @@ exports[`props should render correctly for disabled fields 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -1586,8 +1586,8 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -1609,10 +1609,10 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1623,38 +1623,38 @@ exports[`props should render correctly for horizontal fields 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -1797,8 +1797,8 @@ exports[`props should render correctly for state danger 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -1828,14 +1828,14 @@ exports[`props should render correctly for state danger 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon {
-  border-color: #da1717;
+  border-color: var(--bb-palette-danger,#000000);
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -1846,42 +1846,42 @@ exports[`props should render correctly for state danger 1`] = `
 }
 
 .emotion-2:not(:checked) + .fp-SwitchIcon {
-  box-shadow: #fbe8e8 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 <div
@@ -1991,8 +1991,8 @@ exports[`props should render correctly for state success 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -2022,14 +2022,14 @@ exports[`props should render correctly for state success 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon {
-  border-color: #0a7d33;
+  border-color: var(--bb-palette-success,#000000);
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2040,42 +2040,42 @@ exports[`props should render correctly for state success 1`] = `
 }
 
 .emotion-2:not(:checked) + .fp-SwitchIcon {
-  box-shadow: #e7f2eb 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 <div
@@ -2185,8 +2185,8 @@ exports[`props should render correctly for state warning 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -2216,14 +2216,14 @@ exports[`props should render correctly for state warning 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon {
-  border-color: #ed9c22;
+  border-color: var(--bb-palette-warning,#000000);
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2234,42 +2234,42 @@ exports[`props should render correctly for state warning 1`] = `
 }
 
 .emotion-2:not(:checked) + .fp-SwitchIcon {
-  box-shadow: #fdf5e9 0px 0px 0px 3px !important;
+  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 <div
@@ -2379,8 +2379,8 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -2402,10 +2402,10 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2416,38 +2416,38 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -2565,8 +2565,8 @@ exports[`theming SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  background-color: #fcfcfd;
-  border: 1px solid #d0d4da;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-gray100,#000000);
   border-radius: 1em;
   height: 1.5em;
   position: relative;
@@ -2588,10 +2588,10 @@ exports[`theming SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-2 + .fp-SwitchIcon::before {
-  background: #fcfcfd;
+  background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
-  border: 1px solid #d0d4da;
+  border: 1px solid var(--bb-palette-gray100,#000000);
   height: 1em;
   width: 1em;
   top: 0.2em;
@@ -2602,38 +2602,38 @@ exports[`theming SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
 .emotion-2[disabled] + .fp-SwitchIcon::before {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
 }
 
 .emotion-2:focus + .fp-SwitchIcon {
-  border-color: #574feb;
-  box-shadow: #cdcaf9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-2:not([disabled]):checked + .fp-SwitchIcon {
-  border-color: #574feb;
-  background-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
 .emotion-2:checked + .fp-SwitchIcon {
-  background-color: #cdcaf9;
-  border-color: #cdcaf9;
+  background-color: var(--bb-palette-primary100,#000000);
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-2:checked + .fp-SwitchIcon::before {
-  border-color: #574feb;
+  border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
 .emotion-2[disabled]:checked + .fp-SwitchIcon::before {
-  border-color: #cdcaf9;
+  border-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-9.emotion-9 {
@@ -2645,7 +2645,7 @@ exports[`theming SwitchGroup.base should render correctly 1`] = `
 }
 
 .emotion-31 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

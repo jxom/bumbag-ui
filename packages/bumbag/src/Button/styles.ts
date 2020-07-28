@@ -280,12 +280,12 @@ export const getOutlinedProperties = (styleProps) => css`
     ${isInteractive(styleProps) &&
     css`
       &:hover {
-        border-color: ${palette()(styleProps)};
+        border-color: ${palette(styleProps.palette)(styleProps)};
         background-color: ${palette(`${styleProps.palette}Tint`, { dark: `${styleProps.palette}Shade` })(styleProps)};
       }
 
       &:hover:active {
-        border-color: ${palette()(styleProps)};
+        border-color: ${palette(styleProps.palette)(styleProps)};
         background-color: ${palette(`${styleProps.palette}100`, { dark: `${styleProps.palette}900` })(styleProps)};
       }
     `};

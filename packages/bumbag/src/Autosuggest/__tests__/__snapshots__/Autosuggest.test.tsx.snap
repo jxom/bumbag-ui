@@ -41,10 +41,10 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -53,33 +53,33 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -96,7 +96,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -105,7 +105,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -139,16 +139,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -160,11 +160,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -234,7 +234,7 @@ samp.emotion-7 {
 }
 
 .emotion-49 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
@@ -367,10 +367,10 @@ exports[`overrides styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -379,33 +379,33 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -422,7 +422,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -431,7 +431,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -465,16 +465,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -486,11 +486,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -564,7 +564,7 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -701,10 +701,10 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -713,33 +713,33 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -756,7 +756,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -765,7 +765,7 @@ exports[`props should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -799,16 +799,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -820,11 +820,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1027,10 +1027,10 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1039,33 +1039,33 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1082,7 +1082,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1091,7 +1091,7 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1125,16 +1125,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -1146,11 +1146,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1220,7 +1220,7 @@ samp.emotion-7 {
 }
 
 .emotion-49 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
@@ -1353,10 +1353,10 @@ exports[`theming styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1365,33 +1365,33 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1408,7 +1408,7 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1417,7 +1417,7 @@ exports[`theming styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1451,16 +1451,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -1472,11 +1472,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1550,7 +1550,7 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
@@ -1683,10 +1683,10 @@ exports[`variants styles.base should render correctly 1`] = `
 
 .emotion-0 {
   -webkit-appearance: none;
-  background: #fcfcfd;
-  border: 1px solid #d9d9e1;
+  background: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -1695,33 +1695,33 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-0[disabled] {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
-  color: #545454;
+  color: var(--bb-palette-text100,#000000);
   cursor: not-allowed;
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::-moz-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-0::placeholder {
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
 }
 
 .emotion-45 {
@@ -1738,7 +1738,7 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-43 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
@@ -1747,7 +1747,7 @@ exports[`variants styles.base should render correctly 1`] = `
 
 .emotion-43:focus {
   outline: none;
-  box-shadow: #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-12 {
@@ -1781,16 +1781,16 @@ a.emotion-12:hover {
 
 .emotion-12:not(:disabled):focus {
   outline: unset;
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-12:not(:disabled):focus:active,
 .emotion-12:not(:disabled):hover:active {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 .emotion-12 .fp-Icon {
@@ -1802,11 +1802,11 @@ a.emotion-12:hover {
 }
 
 .emotion-11.emotion-11.emotion-11[aria-selected="true"] {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-11.emotion-11.emotion-11[aria-disabled="true"] {
-  color: #d0d4da;
+  color: var(--bb-palette-gray100,#000000);
 }
 
 .emotion-7 {
@@ -1880,7 +1880,7 @@ samp.emotion-7 {
 }
 
 .emotion-47 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div

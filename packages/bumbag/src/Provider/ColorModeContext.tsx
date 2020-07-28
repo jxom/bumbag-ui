@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { addColorModeBodyClassName } from '../utils/colorModes';
 import { useLocalStorage } from '../utils/useLocalStorage';
 import { useTheme } from '../utils/useTheme';
 
@@ -18,11 +19,7 @@ export function Provider(props: Props) {
   const { theme } = useTheme();
   const localStorage = useLocalStorage();
 
-  const defaultMode = React.useMemo(() => getDefaultMode(_defaultMode, { localStorage, theme }), [
-    _defaultMode,
-    localStorage,
-    theme,
-  ]);
+  const defaultMode = React.useMemo(() => getDefaultMode(_defaultMode, { localStorage, theme }), [_defaultMode]); // eslint-disable-line
 
   ////////////////////////////////////
 
@@ -31,17 +28,19 @@ export function Provider(props: Props) {
   ////////////////////////////////////
 
   React.useEffect(() => {
+    addColorModeBodyClassName(defaultMode);
     localStorage.set('colorMode', defaultMode);
-  }, [defaultMode, localStorage]);
+  }, [defaultMode]); // eslint-disable-line
 
   ////////////////////////////////////
 
   const setColorMode = React.useCallback(
     (colorMode) => {
-      setMode(colorMode);
+      addColorModeBodyClassName(colorMode, mode);
       localStorage.set('colorMode', colorMode);
+      setMode(colorMode);
     },
-    [localStorage]
+    [localStorage, mode]
   );
 
   ////////////////////////////////////
