@@ -1,4 +1,4 @@
-import { omit } from '../utils';
+import { omit } from '../utils/omit';
 
 const bodyClassPrefix = 'bb-mode';
 const cssVariablePrefix = '--bb';

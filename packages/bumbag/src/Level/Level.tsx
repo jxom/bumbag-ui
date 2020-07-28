@@ -7,6 +7,7 @@ import { Flex, FlexProps } from '../Flex';
 import * as styles from './styles';
 
 export type LocalLevelProps = {
+  spacing?: string;
   verticalBelow?: Breakpoint;
 };
 export type LevelProps = FlexProps & LocalLevelProps;
