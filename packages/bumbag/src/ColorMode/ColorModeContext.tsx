@@ -55,9 +55,9 @@ export function ColorModeProvider(props: Props) {
 
   ////////////////////////////////////
 
-  let mounted = false;
+  const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => {
-    mounted = true;
+    setMounted(true);
   }, []);
 
   ////////////////////////////////////
