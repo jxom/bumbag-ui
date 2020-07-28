@@ -9,6 +9,7 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { renderStylesToString } from 'emotion-server';
+import { InitializeColorMode } from 'bumbag';
 import ElementWrapper from './src/layout/ElementWrapper';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
@@ -19,3 +20,7 @@ export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
 export const wrapRootElement = (props) => {
   return <ElementWrapper {...props} />;
 };
+
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([<InitializeColorMode key="bumbag-no-flash" />])
+}

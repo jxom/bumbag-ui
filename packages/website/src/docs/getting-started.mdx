@@ -79,7 +79,7 @@ We will also have to add a few lines to our `gatsby-ssr.js` file:
 ```jsx
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { Provider as BumbagProvider } from 'bumbag';
+import { Provider as BumbagProvider, InitializeColorMode } from 'bumbag';
 import { renderStylesToString } from 'emotion-server';
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
@@ -92,6 +92,10 @@ export const wrapRootElement = ({ element, ...props }) => (
     {element}
   </BumbagProvider>
 );
+
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([<InitializeColorMode key="bumbag-no-flash" />])
+}
 ```
 
 Now, you can freely use Bumbag in your Gatsby app!
@@ -111,6 +115,7 @@ Open up your `_document.js` file, and add the following:
 ```jsx
 import Document, { Head, Main, NextScript } from 'next/document'
 import { extractCritical } from 'emotion-server'
+import { InitializeColorMode } from 'bumbag'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -135,6 +140,7 @@ export default class MyDocument extends Document {
       <html>
         <Head />
         <body>
+          <InitializeColorMode />
           <Main />
           <NextScript />
         </body>
