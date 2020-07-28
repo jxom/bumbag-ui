@@ -34,7 +34,7 @@ Object {
       <div />
     </Modal.Backdrop>
   </React.Fragment>,
-  "className": "css-57bg8i css-63it0p css-jwhr8m fp-Box fp-Modal",
+  "className": "css-57bg8i css-63it0p css-jwhr8m bb-Box bb-Modal",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -89,7 +89,9 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -97,7 +99,7 @@ exports[`composition render props should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -164,11 +166,11 @@ exports[`composition use should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -189,7 +191,7 @@ exports[`composition use should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -203,16 +205,16 @@ exports[`composition use should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-4 {
@@ -220,14 +222,16 @@ exports[`composition use should render correctly 1`] = `
   padding: 1rem;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div>
       <button
         aria-controls="test"
         aria-expanded="false"
         aria-haspopup="dialog"
-        class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-ModalDisclosure"
+        class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-ModalDisclosure"
         type="button"
       >
         Toggle
@@ -240,7 +244,7 @@ exports[`composition use should render correctly 1`] = `
     <blockquote
       aria-label="test"
       aria-modal="true"
-      class="emotion-4 emotion-1 emotion-2 emotion-7 fp-Box fp-Blockquote fp-Modal"
+      class="emotion-4 emotion-1 emotion-2 emotion-7 bb-Box bb-Blockquote bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -255,7 +259,7 @@ exports[`composition use should render correctly 1`] = `
     >
       <blockquote
         aria-label="test"
-        class="emotion-4 emotion-1 emotion-2 emotion-11 fp-Box fp-Blockquote fp-ModalBackdrop"
+        class="emotion-4 emotion-1 emotion-2 emotion-11 bb-Box bb-Blockquote bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -315,7 +319,9 @@ exports[`defaultProps should render correctly for className 1`] = `
   z-index: 19900409;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -323,7 +329,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -338,7 +344,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 test fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 test bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -399,10 +405,12 @@ exports[`overrides Modal.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -410,7 +418,7 @@ exports[`overrides Modal.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -425,7 +433,7 @@ exports[`overrides Modal.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -482,14 +490,16 @@ exports[`overrides Modal.bottom.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -497,7 +507,7 @@ exports[`overrides Modal.bottom.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -512,7 +522,7 @@ exports[`overrides Modal.bottom.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -569,14 +579,16 @@ exports[`overrides Modal.bottomEnd.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -584,7 +596,7 @@ exports[`overrides Modal.bottomEnd.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -599,7 +611,7 @@ exports[`overrides Modal.bottomEnd.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -656,14 +668,16 @@ exports[`overrides Modal.bottomStart.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -671,7 +685,7 @@ exports[`overrides Modal.bottomStart.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -686,7 +700,7 @@ exports[`overrides Modal.bottomStart.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -743,14 +757,16 @@ exports[`overrides Modal.center.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -758,7 +774,7 @@ exports[`overrides Modal.center.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -773,7 +789,7 @@ exports[`overrides Modal.center.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -830,14 +846,16 @@ exports[`overrides Modal.left.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -845,7 +863,7 @@ exports[`overrides Modal.left.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -860,7 +878,7 @@ exports[`overrides Modal.left.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -917,14 +935,16 @@ exports[`overrides Modal.right.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -932,7 +952,7 @@ exports[`overrides Modal.right.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -947,7 +967,7 @@ exports[`overrides Modal.right.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1004,14 +1024,16 @@ exports[`overrides Modal.top.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1019,7 +1041,7 @@ exports[`overrides Modal.top.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1034,7 +1056,7 @@ exports[`overrides Modal.top.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1091,14 +1113,16 @@ exports[`overrides Modal.topEnd.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1106,7 +1130,7 @@ exports[`overrides Modal.topEnd.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1121,7 +1145,7 @@ exports[`overrides Modal.topEnd.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1178,14 +1202,16 @@ exports[`overrides Modal.topStart.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1193,7 +1219,7 @@ exports[`overrides Modal.topStart.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1208,7 +1234,7 @@ exports[`overrides Modal.topStart.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1268,7 +1294,9 @@ exports[`props placement should render correctly for bottom placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1276,7 +1304,7 @@ exports[`props placement should render correctly for bottom placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1291,7 +1319,7 @@ exports[`props placement should render correctly for bottom placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1351,7 +1379,9 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1359,7 +1389,7 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1374,7 +1404,7 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1434,7 +1464,9 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1442,7 +1474,7 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1457,7 +1489,7 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1517,7 +1549,9 @@ exports[`props placement should render correctly for center placement 1`] = `
   z-index: 19900409;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1525,7 +1559,7 @@ exports[`props placement should render correctly for center placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1540,7 +1574,7 @@ exports[`props placement should render correctly for center placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1600,7 +1634,9 @@ exports[`props placement should render correctly for left placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1608,7 +1644,7 @@ exports[`props placement should render correctly for left placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1623,7 +1659,7 @@ exports[`props placement should render correctly for left placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1733,7 +1769,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1741,7 +1779,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1756,7 +1794,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1866,7 +1904,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -1874,7 +1914,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1889,7 +1929,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -1999,7 +2039,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2007,7 +2049,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2022,7 +2064,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2132,7 +2174,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2140,7 +2184,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2155,7 +2199,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2265,7 +2309,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2273,7 +2319,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2288,7 +2334,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2398,7 +2444,9 @@ exports[`props placement should render correctly for placement bottom and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2406,7 +2454,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2421,7 +2469,7 @@ exports[`props placement should render correctly for placement bottom and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2531,7 +2579,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2539,7 +2589,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2554,7 +2604,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2664,7 +2714,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2672,7 +2724,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2687,7 +2739,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2797,7 +2849,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2805,7 +2859,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2820,7 +2874,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -2930,7 +2984,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -2938,7 +2994,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2953,7 +3009,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3063,7 +3119,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3071,7 +3129,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3086,7 +3144,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3196,7 +3254,9 @@ exports[`props placement should render correctly for placement bottom-end and sl
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3204,7 +3264,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3219,7 +3279,7 @@ exports[`props placement should render correctly for placement bottom-end and sl
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3329,7 +3389,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3337,7 +3399,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3352,7 +3414,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3462,7 +3524,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3470,7 +3534,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3485,7 +3549,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3595,7 +3659,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3603,7 +3669,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3618,7 +3684,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3728,7 +3794,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3736,7 +3804,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3751,7 +3819,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3861,7 +3929,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -3869,7 +3939,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3884,7 +3954,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -3994,7 +4064,9 @@ exports[`props placement should render correctly for placement bottom-start and 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4002,7 +4074,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4017,7 +4089,7 @@ exports[`props placement should render correctly for placement bottom-start and 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4127,7 +4199,9 @@ exports[`props placement should render correctly for placement center and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4135,7 +4209,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4150,7 +4224,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4260,7 +4334,9 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4268,7 +4344,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4283,7 +4359,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4393,7 +4469,9 @@ exports[`props placement should render correctly for placement center and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4401,7 +4479,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4416,7 +4494,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4526,7 +4604,9 @@ exports[`props placement should render correctly for placement center and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4534,7 +4614,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4549,7 +4629,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4659,7 +4739,9 @@ exports[`props placement should render correctly for placement center and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4667,7 +4749,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4682,7 +4764,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4792,7 +4874,9 @@ exports[`props placement should render correctly for placement center and slide 
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4800,7 +4884,7 @@ exports[`props placement should render correctly for placement center and slide 
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4815,7 +4899,7 @@ exports[`props placement should render correctly for placement center and slide 
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -4925,7 +5009,9 @@ exports[`props placement should render correctly for placement left and slide bo
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -4933,7 +5019,7 @@ exports[`props placement should render correctly for placement left and slide bo
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4948,7 +5034,7 @@ exports[`props placement should render correctly for placement left and slide bo
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5058,7 +5144,9 @@ exports[`props placement should render correctly for placement left and slide ce
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5066,7 +5154,7 @@ exports[`props placement should render correctly for placement left and slide ce
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5081,7 +5169,7 @@ exports[`props placement should render correctly for placement left and slide ce
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5191,7 +5279,9 @@ exports[`props placement should render correctly for placement left and slide le
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5199,7 +5289,7 @@ exports[`props placement should render correctly for placement left and slide le
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5214,7 +5304,7 @@ exports[`props placement should render correctly for placement left and slide le
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5324,7 +5414,9 @@ exports[`props placement should render correctly for placement left and slide ri
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5332,7 +5424,7 @@ exports[`props placement should render correctly for placement left and slide ri
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5347,7 +5439,7 @@ exports[`props placement should render correctly for placement left and slide ri
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5457,7 +5549,9 @@ exports[`props placement should render correctly for placement left and slide to
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5465,7 +5559,7 @@ exports[`props placement should render correctly for placement left and slide to
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5480,7 +5574,7 @@ exports[`props placement should render correctly for placement left and slide to
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5590,7 +5684,9 @@ exports[`props placement should render correctly for placement left and slide tr
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5598,7 +5694,7 @@ exports[`props placement should render correctly for placement left and slide tr
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5613,7 +5709,7 @@ exports[`props placement should render correctly for placement left and slide tr
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5723,7 +5819,9 @@ exports[`props placement should render correctly for placement right and slide b
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5731,7 +5829,7 @@ exports[`props placement should render correctly for placement right and slide b
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5746,7 +5844,7 @@ exports[`props placement should render correctly for placement right and slide b
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5856,7 +5954,9 @@ exports[`props placement should render correctly for placement right and slide c
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5864,7 +5964,7 @@ exports[`props placement should render correctly for placement right and slide c
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5879,7 +5979,7 @@ exports[`props placement should render correctly for placement right and slide c
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -5989,7 +6089,9 @@ exports[`props placement should render correctly for placement right and slide l
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -5997,7 +6099,7 @@ exports[`props placement should render correctly for placement right and slide l
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6012,7 +6114,7 @@ exports[`props placement should render correctly for placement right and slide l
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6122,7 +6224,9 @@ exports[`props placement should render correctly for placement right and slide r
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6130,7 +6234,7 @@ exports[`props placement should render correctly for placement right and slide r
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6145,7 +6249,7 @@ exports[`props placement should render correctly for placement right and slide r
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6255,7 +6359,9 @@ exports[`props placement should render correctly for placement right and slide t
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6263,7 +6369,7 @@ exports[`props placement should render correctly for placement right and slide t
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6278,7 +6384,7 @@ exports[`props placement should render correctly for placement right and slide t
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6388,7 +6494,9 @@ exports[`props placement should render correctly for placement right and slide t
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6396,7 +6504,7 @@ exports[`props placement should render correctly for placement right and slide t
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6411,7 +6519,7 @@ exports[`props placement should render correctly for placement right and slide t
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6521,7 +6629,9 @@ exports[`props placement should render correctly for placement top and slide bot
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6529,7 +6639,7 @@ exports[`props placement should render correctly for placement top and slide bot
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6544,7 +6654,7 @@ exports[`props placement should render correctly for placement top and slide bot
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6654,7 +6764,9 @@ exports[`props placement should render correctly for placement top and slide cen
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6662,7 +6774,7 @@ exports[`props placement should render correctly for placement top and slide cen
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6677,7 +6789,7 @@ exports[`props placement should render correctly for placement top and slide cen
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6787,7 +6899,9 @@ exports[`props placement should render correctly for placement top and slide lef
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6795,7 +6909,7 @@ exports[`props placement should render correctly for placement top and slide lef
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6810,7 +6924,7 @@ exports[`props placement should render correctly for placement top and slide lef
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -6920,7 +7034,9 @@ exports[`props placement should render correctly for placement top and slide rig
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -6928,7 +7044,7 @@ exports[`props placement should render correctly for placement top and slide rig
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6943,7 +7059,7 @@ exports[`props placement should render correctly for placement top and slide rig
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7053,7 +7169,9 @@ exports[`props placement should render correctly for placement top and slide top
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7061,7 +7179,7 @@ exports[`props placement should render correctly for placement top and slide top
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7076,7 +7194,7 @@ exports[`props placement should render correctly for placement top and slide top
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7186,7 +7304,9 @@ exports[`props placement should render correctly for placement top and slide tru
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7194,7 +7314,7 @@ exports[`props placement should render correctly for placement top and slide tru
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7209,7 +7329,7 @@ exports[`props placement should render correctly for placement top and slide tru
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7319,7 +7439,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7327,7 +7449,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7342,7 +7464,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7452,7 +7574,9 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7460,7 +7584,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7475,7 +7599,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7585,7 +7709,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7593,7 +7719,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7608,7 +7734,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7718,7 +7844,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7726,7 +7854,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7741,7 +7869,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7851,7 +7979,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7859,7 +7989,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7874,7 +8004,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -7984,7 +8114,9 @@ exports[`props placement should render correctly for placement top-end and slide
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -7992,7 +8124,7 @@ exports[`props placement should render correctly for placement top-end and slide
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8007,7 +8139,7 @@ exports[`props placement should render correctly for placement top-end and slide
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8117,7 +8249,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8125,7 +8259,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8140,7 +8274,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8250,7 +8384,9 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8258,7 +8394,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8273,7 +8409,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8383,7 +8519,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8391,7 +8529,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8406,7 +8544,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8516,7 +8654,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8524,7 +8664,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8539,7 +8679,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8649,7 +8789,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8657,7 +8799,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8672,7 +8814,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8782,7 +8924,9 @@ exports[`props placement should render correctly for placement top-start and sli
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8790,7 +8934,7 @@ exports[`props placement should render correctly for placement top-start and sli
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8805,7 +8949,7 @@ exports[`props placement should render correctly for placement top-start and sli
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8865,7 +9009,9 @@ exports[`props placement should render correctly for right placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8873,7 +9019,7 @@ exports[`props placement should render correctly for right placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8888,7 +9034,7 @@ exports[`props placement should render correctly for right placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -8948,7 +9094,9 @@ exports[`props placement should render correctly for top placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -8956,7 +9104,7 @@ exports[`props placement should render correctly for top placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -8971,7 +9119,7 @@ exports[`props placement should render correctly for top placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9031,7 +9179,9 @@ exports[`props placement should render correctly for top-end placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9039,7 +9189,7 @@ exports[`props placement should render correctly for top-end placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9054,7 +9204,7 @@ exports[`props placement should render correctly for top-end placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9114,7 +9264,9 @@ exports[`props placement should render correctly for top-start placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9122,7 +9274,7 @@ exports[`props placement should render correctly for top-start placement 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9137,7 +9289,7 @@ exports[`props placement should render correctly for top-start placement 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9197,14 +9349,16 @@ exports[`props should render correctly 1`] = `
   z-index: 19900409;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div>
       <button
         aria-controls="test"
         aria-expanded="false"
         aria-haspopup="dialog"
-        class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalDisclosure"
+        class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalDisclosure"
         type="button"
       >
         Toggle
@@ -9217,7 +9371,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-3 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-3 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9232,7 +9386,7 @@ exports[`props should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-6 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-6 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9342,7 +9496,9 @@ exports[`props should render correctly for expand bottom 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9350,7 +9506,7 @@ exports[`props should render correctly for expand bottom 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9365,7 +9521,7 @@ exports[`props should render correctly for expand bottom 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9475,7 +9631,9 @@ exports[`props should render correctly for expand center 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9483,7 +9641,7 @@ exports[`props should render correctly for expand center 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9498,7 +9656,7 @@ exports[`props should render correctly for expand center 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9608,7 +9766,9 @@ exports[`props should render correctly for expand left 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9616,7 +9776,7 @@ exports[`props should render correctly for expand left 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9631,7 +9791,7 @@ exports[`props should render correctly for expand left 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9741,7 +9901,9 @@ exports[`props should render correctly for expand right 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9749,7 +9911,7 @@ exports[`props should render correctly for expand right 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9764,7 +9926,7 @@ exports[`props should render correctly for expand right 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -9874,7 +10036,9 @@ exports[`props should render correctly for expand top 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -9882,7 +10046,7 @@ exports[`props should render correctly for expand top 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -9897,7 +10061,7 @@ exports[`props should render correctly for expand top 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10001,7 +10165,9 @@ exports[`props should render correctly for expand true 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10009,7 +10175,7 @@ exports[`props should render correctly for expand true 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10024,7 +10190,7 @@ exports[`props should render correctly for expand true 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10134,7 +10300,9 @@ exports[`props should render correctly for slide bottom 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10142,7 +10310,7 @@ exports[`props should render correctly for slide bottom 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10157,7 +10325,7 @@ exports[`props should render correctly for slide bottom 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10267,7 +10435,9 @@ exports[`props should render correctly for slide center 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10275,7 +10445,7 @@ exports[`props should render correctly for slide center 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10290,7 +10460,7 @@ exports[`props should render correctly for slide center 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10400,7 +10570,9 @@ exports[`props should render correctly for slide left 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10408,7 +10580,7 @@ exports[`props should render correctly for slide left 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10423,7 +10595,7 @@ exports[`props should render correctly for slide left 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10533,7 +10705,9 @@ exports[`props should render correctly for slide right 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10541,7 +10715,7 @@ exports[`props should render correctly for slide right 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10556,7 +10730,7 @@ exports[`props should render correctly for slide right 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10666,7 +10840,9 @@ exports[`props should render correctly for slide top 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10674,7 +10850,7 @@ exports[`props should render correctly for slide top 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10689,7 +10865,7 @@ exports[`props should render correctly for slide top 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10799,7 +10975,9 @@ exports[`props should render correctly for slide true 1`] = `
   transform: translate3d(undefined,undefined,0px) scale(1) !important;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10807,7 +10985,7 @@ exports[`props should render correctly for slide true 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10822,7 +11000,7 @@ exports[`props should render correctly for slide true 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -10882,21 +11060,23 @@ exports[`props should render correctly with non-modal modal 1`] = `
   z-index: 19900409;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div>
       <button
         aria-controls="test"
         aria-expanded="false"
         aria-haspopup="dialog"
-        class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalDisclosure"
+        class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalDisclosure"
         type="button"
       >
         Toggle
       </button>
       <div
         aria-label="test"
-        class="emotion-6 emotion-1 emotion-2 fp-Box fp-Modal"
+        class="emotion-6 emotion-1 emotion-2 bb-Box bb-Modal"
         data-dialog="true"
         hidden=""
         id="test"
@@ -10906,7 +11086,7 @@ exports[`props should render correctly with non-modal modal 1`] = `
       >
         <div
           aria-label="test"
-          class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+          class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
           data-dialog-ref="test"
           hidden=""
           style="display: none;"
@@ -10969,10 +11149,12 @@ exports[`theming Modal.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -10980,7 +11162,7 @@ exports[`theming Modal.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -10995,7 +11177,7 @@ exports[`theming Modal.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11052,14 +11234,16 @@ exports[`theming Modal.bottom.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11067,7 +11251,7 @@ exports[`theming Modal.bottom.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11082,7 +11266,7 @@ exports[`theming Modal.bottom.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11139,14 +11323,16 @@ exports[`theming Modal.bottomEnd.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11154,7 +11340,7 @@ exports[`theming Modal.bottomEnd.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11169,7 +11355,7 @@ exports[`theming Modal.bottomEnd.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11226,14 +11412,16 @@ exports[`theming Modal.bottomStart.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11241,7 +11429,7 @@ exports[`theming Modal.bottomStart.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11256,7 +11444,7 @@ exports[`theming Modal.bottomStart.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11313,14 +11501,16 @@ exports[`theming Modal.center.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11328,7 +11518,7 @@ exports[`theming Modal.center.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11343,7 +11533,7 @@ exports[`theming Modal.center.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11400,14 +11590,16 @@ exports[`theming Modal.left.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11415,7 +11607,7 @@ exports[`theming Modal.left.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11430,7 +11622,7 @@ exports[`theming Modal.left.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11487,14 +11679,16 @@ exports[`theming Modal.right.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11502,7 +11696,7 @@ exports[`theming Modal.right.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11517,7 +11711,7 @@ exports[`theming Modal.right.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11574,14 +11768,16 @@ exports[`theming Modal.top.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11589,7 +11785,7 @@ exports[`theming Modal.top.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11604,7 +11800,7 @@ exports[`theming Modal.top.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11661,14 +11857,16 @@ exports[`theming Modal.topEnd.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11676,7 +11874,7 @@ exports[`theming Modal.topEnd.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11691,7 +11889,7 @@ exports[`theming Modal.topEnd.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"
@@ -11748,14 +11946,16 @@ exports[`theming Modal.topStart.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div />
   <div
     class="__reakit-portal"
@@ -11763,7 +11963,7 @@ exports[`theming Modal.topStart.base should render correctly 1`] = `
     <div
       aria-label="test"
       aria-modal="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -11778,7 +11978,7 @@ exports[`theming Modal.topStart.base should render correctly 1`] = `
     >
       <div
         aria-label="test"
-        class="emotion-3 emotion-1 emotion-2 fp-Box fp-ModalBackdrop"
+        class="emotion-3 emotion-1 emotion-2 bb-Box bb-ModalBackdrop"
         data-dialog-ref="test"
         hidden=""
         style="display: none;"

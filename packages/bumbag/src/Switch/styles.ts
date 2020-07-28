@@ -39,7 +39,7 @@ export const SwitchLabel = (styleProps) => cssClass`
 
 export const HiddenSwitch = (styleProps) =>
   getHiddenInputStyles({
-    iconClassName: 'fp-SwitchIcon',
+    iconClassName: 'bb-SwitchIcon',
     checkedCss: css`
       background-color: ${palette(styleProps.palette || 'primary', { dark: `${styleProps.palette || 'primary'}700` })(
         styleProps

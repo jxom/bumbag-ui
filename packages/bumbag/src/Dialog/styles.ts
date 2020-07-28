@@ -78,10 +78,10 @@ export const DialogClose = (styleProps) => cssClass`
 export const DialogIconWrapper = (styleProps) => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
-  & .fp-CalloutContent .fp-Icon {
+  & .bb-CalloutContent .bb-Icon {
     font-size: 1.25em;
   }
 
@@ -96,7 +96,7 @@ export const DialogModal = (styleProps) => cssClass`
 
   ${altitude('400')(styleProps)};
 
-  & .fp-DialogContent {
+  & .bb-DialogContent {
     max-height: 70vh;
     overflow-y: ${styleProps.hasScroll ? 'scroll' : 'visible'};
   }

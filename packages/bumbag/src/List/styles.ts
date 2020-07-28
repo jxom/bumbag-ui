@@ -29,7 +29,7 @@ export const List = (styleProps) => cssClass`
 `;
 
 export const ListItem = (styleProps) => cssClass`
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
 

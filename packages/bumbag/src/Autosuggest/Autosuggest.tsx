@@ -658,7 +658,7 @@ const useProps = createHook<AutosuggestProps>(
   },
   {
     defaultProps: {
-      cacheKey: 'fp-options',
+      cacheKey: 'bb-options',
       disabled: false,
       emptyText: 'No results found',
       errorText: 'An error occurred',

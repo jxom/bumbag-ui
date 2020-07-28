@@ -21,7 +21,7 @@ Object {
       Overcast
     </option>
   </React.Fragment>,
-  "className": "css-50rkkc css-63it0p css-jwhr8m fp-Box fp-Select",
+  "className": "css-1c74pvi css-63it0p css-jwhr8m bb-Box bb-Select",
   "disabled": undefined,
   "onChange": [Function],
   "wrapElement": [Function],
@@ -46,8 +46,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -77,10 +77,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -90,32 +90,32 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-8 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-1 emotion-8 emotion-9 test fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-8 emotion-9 test bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value=""
@@ -139,7 +139,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -170,8 +170,8 @@ exports[`overrides Select.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -201,10 +201,10 @@ exports[`overrides Select.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -214,32 +214,32 @@ exports[`overrides Select.base should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value=""
@@ -263,7 +263,7 @@ exports[`overrides Select.base should render correctly 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -296,10 +296,10 @@ exports[`props should assign a ref 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -309,25 +309,25 @@ exports[`props should assign a ref 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <select
   aria-invalid="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
 >
   <option
     value="sunny"
@@ -367,10 +367,10 @@ exports[`props should assign a ref via selectRef 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -380,25 +380,25 @@ exports[`props should assign a ref via selectRef 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <select
   aria-invalid="false"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
 >
   <option
     value="sunny"
@@ -436,8 +436,8 @@ exports[`props should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -460,10 +460,10 @@ exports[`props should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -473,20 +473,20 @@ exports[`props should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -497,11 +497,11 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -520,7 +520,7 @@ exports[`props should render correctly 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -551,8 +551,8 @@ exports[`props should render correctly for danger state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -582,10 +582,10 @@ exports[`props should render correctly for danger state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -595,33 +595,33 @@ exports[`props should render correctly for danger state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #da1717;
-  box-shadow: #fbe8e8 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-danger,#000000);
+  box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -640,7 +640,7 @@ exports[`props should render correctly for danger state 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -660,8 +660,8 @@ exports[`props should render correctly for large size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -684,10 +684,10 @@ exports[`props should render correctly for large size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -697,20 +697,20 @@ exports[`props should render correctly for large size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -733,11 +733,11 @@ exports[`props should render correctly for large size 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -756,7 +756,7 @@ exports[`props should render correctly for large size 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -776,8 +776,8 @@ exports[`props should render correctly for medium size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -800,10 +800,10 @@ exports[`props should render correctly for medium size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -813,20 +813,20 @@ exports[`props should render correctly for medium size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -849,11 +849,11 @@ exports[`props should render correctly for medium size 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -872,7 +872,7 @@ exports[`props should render correctly for medium size 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -892,8 +892,8 @@ exports[`props should render correctly for small size 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -916,10 +916,10 @@ exports[`props should render correctly for small size 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -929,20 +929,20 @@ exports[`props should render correctly for small size 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -965,11 +965,11 @@ exports[`props should render correctly for small size 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -988,7 +988,7 @@ exports[`props should render correctly for small size 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1019,8 +1019,8 @@ exports[`props should render correctly for success state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1050,10 +1050,10 @@ exports[`props should render correctly for success state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1063,33 +1063,33 @@ exports[`props should render correctly for success state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #0a7d33;
-  box-shadow: #e7f2eb 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-success,#000000);
+  box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -1108,7 +1108,7 @@ exports[`props should render correctly for success state 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1139,8 +1139,8 @@ exports[`props should render correctly for warning state 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1170,10 +1170,10 @@ exports[`props should render correctly for warning state 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1183,33 +1183,33 @@ exports[`props should render correctly for warning state 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  border-color: #ed9c22;
-  box-shadow: #fdf5e9 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-warning,#000000);
+  box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -1228,7 +1228,7 @@ exports[`props should render correctly for warning state 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1259,8 +1259,8 @@ exports[`props should render correctly with CSS props 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1283,10 +1283,10 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1296,20 +1296,20 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1320,15 +1320,15 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-8 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-1 emotion-8 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-8 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -1347,7 +1347,7 @@ exports[`props should render correctly with CSS props 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1378,8 +1378,8 @@ exports[`props should render correctly with a default value 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1402,10 +1402,10 @@ exports[`props should render correctly with a default value 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1415,20 +1415,20 @@ exports[`props should render correctly with a default value 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1439,11 +1439,11 @@ exports[`props should render correctly with a default value 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       selected=""
@@ -1463,7 +1463,7 @@ exports[`props should render correctly with a default value 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1494,8 +1494,8 @@ exports[`props should render correctly with disabled 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1518,10 +1518,10 @@ exports[`props should render correctly with disabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1531,20 +1531,20 @@ exports[`props should render correctly with disabled 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1555,11 +1555,11 @@ exports[`props should render correctly with disabled 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
     disabled=""
   >
     <option
@@ -1582,7 +1582,7 @@ exports[`props should render correctly with disabled 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1658,10 +1658,10 @@ exports[`props should render correctly with isLoading 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1671,24 +1671,24 @@ exports[`props should render correctly with isLoading 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-7 {
-  color: #212121 !important;
+  color: var(--bb-palette-text,#000000) !important;
 }
 
 .emotion-5 {
@@ -1709,17 +1709,17 @@ exports[`props should render correctly with isLoading 1`] = `
 .emotion-3 {
   stroke-dasharray: 275;
   stroke-dashoffset: 200px;
-  stroke: #212121;
+  stroke: var(--bb-palette-text,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-11 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-11 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -1738,14 +1738,14 @@ exports[`props should render correctly with isLoading 1`] = `
     </option>
   </select>
   <div
-    class="emotion-5 emotion-1 emotion-7 emotion-8 fp-SelectSpinner fp-Box fp-Spinner"
+    class="emotion-5 emotion-1 emotion-7 emotion-8 bb-SelectSpinner bb-Box bb-Spinner"
   >
     <svg
-      class="emotion-4 fp-Spinnervector"
+      class="emotion-4 bb-Spinnervector"
       viewBox="22 22 44 44"
     >
       <circle
-        class="emotion-3 fp-SpinnerloaderCircle"
+        class="emotion-3 bb-SpinnerloaderCircle"
         cx="44"
         cy="44"
         fill="none"
@@ -1775,8 +1775,8 @@ exports[`props should render correctly with isRequired 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1799,10 +1799,10 @@ exports[`props should render correctly with isRequired 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1812,20 +1812,20 @@ exports[`props should render correctly with isRequired 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1836,12 +1836,12 @@ exports[`props should render correctly with isRequired 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
     aria-required="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value="sunny"
@@ -1860,7 +1860,7 @@ exports[`props should render correctly with isRequired 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -1891,8 +1891,8 @@ exports[`props should render correctly with name 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1915,10 +1915,10 @@ exports[`props should render correctly with name 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1928,20 +1928,20 @@ exports[`props should render correctly with name 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-3 {
@@ -1952,11 +1952,11 @@ exports[`props should render correctly with name 1`] = `
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
     name="test"
   >
     <option
@@ -1976,7 +1976,7 @@ exports[`props should render correctly with name 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -2007,8 +2007,8 @@ exports[`props should render placeholder correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2038,10 +2038,10 @@ exports[`props should render placeholder correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2051,28 +2051,28 @@ exports[`props should render placeholder correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value=""
@@ -2096,7 +2096,7 @@ exports[`props should render placeholder correctly 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >
@@ -2127,8 +2127,8 @@ exports[`theming Select.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2158,10 +2158,10 @@ exports[`theming Select.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #919aa9;
+  color: var(--bb-palette-gray300,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2171,32 +2171,32 @@ exports[`theming Select.base should render correctly 1`] = `
 
 .emotion-0[disabled],
 .emotion-0[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-0[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-0[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-1 emotion-2 emotion-9 fp-SelectWrapper fp-Box"
+  class="emotion-1 emotion-2 emotion-9 bb-SelectWrapper bb-Box"
 >
   <select
     aria-invalid="false"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Select"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Select"
   >
     <option
       value=""
@@ -2220,7 +2220,7 @@ exports[`theming Select.base should render correctly 1`] = `
     </option>
   </select>
   <svg
-    class="emotion-3 emotion-1 emotion-2 emotion-6 fp-SelectIcon fp-Box fp-Icon"
+    class="emotion-3 emotion-1 emotion-2 emotion-6 bb-SelectIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 448 512"
   >

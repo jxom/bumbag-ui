@@ -6,7 +6,7 @@ const WHITE = '#ffffff';
 
 export function darken(scale, color) {
   return ({ theme }: { theme?: any } = {}) => {
-    const themeColor = palette(color)({ theme });
+    const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     return tinycolor(themeColor)
       .darken(scale * 100)
       .toHexString();
@@ -15,7 +15,7 @@ export function darken(scale, color) {
 
 export function lighten(scale, color) {
   return ({ theme }: { theme?: any } = {}) => {
-    const themeColor = palette(color)({ theme });
+    const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     return tinycolor(themeColor)
       .lighten(scale * 100)
       .toHexString();
@@ -28,7 +28,7 @@ export function shade(scale, color) {
     colorMode,
     theme,
   }: { backgroundColor?: string; colorMode?: string; theme?: any } = {}) => {
-    const themeColor = palette(color)({ theme });
+    const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     if (themeColor === 'transparent') return themeColor;
 
     let targetColor = BLACK;
@@ -45,7 +45,7 @@ export function tint(scale, color) {
     colorMode,
     theme,
   }: { backgroundColor?: string; colorMode?: string; theme?: any } = {}) => {
-    const themeColor = palette(color)({ theme });
+    const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     if (themeColor === 'transparent') return themeColor;
 
     let targetColor = WHITE;
@@ -58,7 +58,7 @@ export function tint(scale, color) {
 
 export function readableColor(color) {
   return ({ theme }: { theme?: any } = {}) => {
-    const themeColor = palette(color)({ theme });
+    const themeColor = palette(color, null, { useCSSVariables: false })({ theme });
     const isReadable = tinycolor.isReadable(BLACK, themeColor);
     if (!isReadable) {
       return WHITE;

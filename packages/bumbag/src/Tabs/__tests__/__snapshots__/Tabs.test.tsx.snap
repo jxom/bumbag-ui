@@ -30,7 +30,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -77,37 +77,37 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  border: 1px solid #d9d9e1;
-  border-bottom-color: white;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom-color: var(--bb-palette-white,#ffffff);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-23 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-23 test fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-23 test bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -117,7 +117,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -127,7 +127,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -137,7 +137,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -146,7 +146,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -157,7 +157,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -231,19 +231,19 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-9 {
@@ -259,7 +259,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -270,22 +270,22 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -295,7 +295,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -305,7 +305,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -315,7 +315,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -324,7 +324,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -335,7 +335,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -388,7 +388,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -428,19 +428,19 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-12:focus {
@@ -448,22 +448,22 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
 }
 
 .emotion-12 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -473,7 +473,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -483,7 +483,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -493,7 +493,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -502,7 +502,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -513,7 +513,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -570,7 +570,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -610,38 +610,38 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -651,7 +651,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -661,7 +661,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -671,7 +671,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -680,7 +680,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -691,7 +691,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -748,7 +748,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -788,38 +788,38 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -829,7 +829,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -839,7 +839,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -849,7 +849,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -858,7 +858,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -869,7 +869,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -926,7 +926,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -966,38 +966,38 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1007,7 +1007,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1017,7 +1017,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1027,7 +1027,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1036,7 +1036,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1047,7 +1047,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1104,7 +1104,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -1144,38 +1144,38 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0[aria-selected='true'] {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1185,7 +1185,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1195,7 +1195,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1205,7 +1205,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1214,7 +1214,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1225,7 +1225,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1274,7 +1274,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -1314,19 +1314,19 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-21 {
@@ -1338,22 +1338,22 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
 }
 
 .emotion-21 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1363,7 +1363,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1373,7 +1373,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1383,7 +1383,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1392,7 +1392,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1403,7 +1403,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1445,7 +1445,7 @@ exports[`props should render correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -1483,19 +1483,19 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -1507,17 +1507,17 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1527,7 +1527,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1537,7 +1537,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1547,7 +1547,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1556,7 +1556,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1567,7 +1567,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1609,7 +1609,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -1656,33 +1656,33 @@ exports[`props should render correctly for boxed tabs 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  border: 1px solid #d9d9e1;
-  border-bottom-color: white;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  border: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom-color: var(--bb-palette-white,#ffffff);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1692,7 +1692,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1702,7 +1702,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1712,7 +1712,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1721,7 +1721,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1732,7 +1732,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1820,33 +1820,33 @@ exports[`props should render correctly for button tabs 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: #574feb;
-  color: #ffffff;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary,#000000);
+  color: var(--bb-palette-primaryInverted,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  background-color: #f2f2f5;
+  background-color: var(--bb-palette-white700,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1856,7 +1856,7 @@ exports[`props should render correctly for button tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1866,7 +1866,7 @@ exports[`props should render correctly for button tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1876,7 +1876,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1885,7 +1885,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1896,7 +1896,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1956,19 +1956,19 @@ exports[`props should render correctly for center align 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -1989,7 +1989,7 @@ exports[`props should render correctly for center align 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1997,17 +1997,17 @@ exports[`props should render correctly for center align 1`] = `
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2017,7 +2017,7 @@ exports[`props should render correctly for center align 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2027,7 +2027,7 @@ exports[`props should render correctly for center align 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2037,7 +2037,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2046,7 +2046,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2057,7 +2057,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2095,7 +2095,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -2133,19 +2133,19 @@ exports[`props should render correctly for fitted tabs 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -2160,24 +2160,24 @@ exports[`props should render correctly for fitted tabs 1`] = `
   width: 100%;
 }
 
-.emotion-21 .fp-TabsTab {
+.emotion-21 .bb-TabsTab {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2187,7 +2187,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2197,7 +2197,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2207,7 +2207,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2216,7 +2216,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2227,7 +2227,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2287,19 +2287,19 @@ exports[`props should render correctly for right align 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -2320,7 +2320,7 @@ exports[`props should render correctly for right align 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -2328,17 +2328,17 @@ exports[`props should render correctly for right align 1`] = `
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2348,7 +2348,7 @@ exports[`props should render correctly for right align 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2358,7 +2358,7 @@ exports[`props should render correctly for right align 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2368,7 +2368,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2377,7 +2377,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2388,7 +2388,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2475,8 +2475,8 @@ exports[`props should render correctly for unstyled tabs 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
@@ -2484,21 +2484,21 @@ exports[`props should render correctly for unstyled tabs 1`] = `
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2508,7 +2508,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2518,7 +2518,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2528,7 +2528,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2537,7 +2537,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2548,7 +2548,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2605,7 +2605,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -2645,34 +2645,34 @@ exports[`props should render correctly for vertical tabs 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2682,7 +2682,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2692,7 +2692,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2702,7 +2702,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2711,7 +2711,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2722,7 +2722,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2764,7 +2764,7 @@ exports[`props should render correctly with CSS props 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -2802,19 +2802,19 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -2826,21 +2826,21 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-23 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-23 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-23 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2850,7 +2850,7 @@ exports[`props should render correctly with CSS props 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2860,7 +2860,7 @@ exports[`props should render correctly with CSS props 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2870,7 +2870,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2879,7 +2879,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2890,7 +2890,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2932,7 +2932,7 @@ exports[`props should render correctly with selectedId 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid #d9d9e1;
+  border-bottom: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -2970,19 +2970,19 @@ exports[`props should render correctly with selectedId 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 #574feb;
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-14 {
@@ -2994,17 +2994,17 @@ exports[`props should render correctly with selectedId 1`] = `
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="-1"
@@ -3014,7 +3014,7 @@ exports[`props should render correctly with selectedId 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="0"
@@ -3024,7 +3024,7 @@ exports[`props should render correctly with selectedId 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3034,7 +3034,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-4"
     role="tabpanel"
@@ -3045,7 +3045,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-5"
     role="tabpanel"
     tabindex="0"
@@ -3054,7 +3054,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3128,19 +3128,19 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-9 {
@@ -3156,7 +3156,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -3167,22 +3167,22 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
 }
 
 .emotion-9 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3192,7 +3192,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3202,7 +3202,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3212,7 +3212,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3221,7 +3221,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3232,7 +3232,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3285,7 +3285,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -3325,19 +3325,19 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-12:focus {
@@ -3345,22 +3345,22 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
 }
 
 .emotion-12 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3370,7 +3370,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3380,7 +3380,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3390,7 +3390,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3399,7 +3399,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3410,7 +3410,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3467,7 +3467,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -3507,38 +3507,38 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3548,7 +3548,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3558,7 +3558,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3568,7 +3568,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3577,7 +3577,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3588,7 +3588,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3645,7 +3645,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -3685,38 +3685,38 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3726,7 +3726,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3736,7 +3736,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3746,7 +3746,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3755,7 +3755,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3766,7 +3766,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3823,7 +3823,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -3863,38 +3863,38 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3904,7 +3904,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3914,7 +3914,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3924,7 +3924,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3933,7 +3933,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3944,7 +3944,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -4001,7 +4001,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -4041,38 +4041,38 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0[aria-selected='true'] {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -4082,7 +4082,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -4092,7 +4092,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -4102,7 +4102,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -4111,7 +4111,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -4122,7 +4122,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -4171,7 +4171,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid #d9d9e1;
+  border-right: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-9 {
@@ -4211,19 +4211,19 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
 }
 
 .emotion-0[aria-selected='true'] {
-  color: #574feb;
-  fill: #574feb;
-  background-color: white;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-background,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 #574feb;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
 }
 
 .emotion-0:not([aria-selected='true']):hover {
-  color: #574feb;
+  color: var(--bb-palette-primary,#000000);
 }
 
 .emotion-21 {
@@ -4235,22 +4235,22 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
 }
 
 .emotion-21 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 fp-Box fp-Tabs"
+  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 fp-Box fp-TabsList"
+    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -4260,7 +4260,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -4270,7 +4270,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 fp-Box fp-TabsTab"
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -4280,7 +4280,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -4289,7 +4289,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -4300,7 +4300,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 fp-Box fp-TabsPanel"
+    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"

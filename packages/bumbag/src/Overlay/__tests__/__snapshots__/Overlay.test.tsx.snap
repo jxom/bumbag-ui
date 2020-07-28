@@ -3,7 +3,7 @@
 exports[`composition hook should return with Overlay props 1`] = `
 Object {
   "children": <React.Fragment />,
-  "className": "css-1fie8gx css-57bg8i css-63it0p css-jwhr8m fp-Box fp-Overlay fp-Modal",
+  "className": "css-1fie8gx css-57bg8i css-63it0p css-jwhr8m bb-Box bb-Overlay bb-Modal",
   "data-dialog": true,
   "hidden": true,
   "id": "test",
@@ -58,11 +58,13 @@ exports[`composition render props should render correctly 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -119,11 +121,11 @@ exports[`composition use should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -144,7 +146,7 @@ exports[`composition use should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -158,16 +160,16 @@ exports[`composition use should render correctly 1`] = `
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-4 {
@@ -175,21 +177,23 @@ exports[`composition use should render correctly 1`] = `
   padding: 1rem;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div>
       <button
         aria-controls="test"
         aria-expanded="false"
         aria-haspopup="dialog"
-        class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button fp-ModalDisclosure fp-OverlayDisclosure"
+        class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button bb-ModalDisclosure bb-OverlayDisclosure"
         type="button"
       >
         Toggle
       </button>
       <blockquote
         aria-label="test"
-        class="emotion-4 emotion-1 emotion-2 emotion-3 emotion-8 fp-Box fp-Blockquote fp-Overlay fp-Modal"
+        class="emotion-4 emotion-1 emotion-2 emotion-3 emotion-8 bb-Box bb-Blockquote bb-Overlay bb-Modal"
         data-dialog="true"
         hidden=""
         id="test"
@@ -242,11 +246,13 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 test fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -299,18 +305,20 @@ exports[`overrides Overlay.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -359,18 +367,20 @@ exports[`overrides Overlay.bottom.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -419,18 +429,20 @@ exports[`overrides Overlay.bottomEnd.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -479,18 +491,20 @@ exports[`overrides Overlay.bottomStart.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -539,18 +553,20 @@ exports[`overrides Overlay.center.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -599,18 +615,20 @@ exports[`overrides Overlay.left.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -659,18 +677,20 @@ exports[`overrides Overlay.right.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -719,18 +739,20 @@ exports[`overrides Overlay.top.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -779,18 +801,20 @@ exports[`overrides Overlay.topEnd.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -839,18 +863,20 @@ exports[`overrides Overlay.topStart.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -902,11 +928,13 @@ exports[`props placement should render correctly for bottom placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -958,11 +986,13 @@ exports[`props placement should render correctly for bottom-end placement 1`] = 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1014,11 +1044,13 @@ exports[`props placement should render correctly for bottom-start placement 1`] 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1070,11 +1102,13 @@ exports[`props placement should render correctly for center placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1126,11 +1160,13 @@ exports[`props placement should render correctly for left placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1207,11 +1243,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1288,11 +1326,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1369,11 +1409,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1450,11 +1492,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1531,11 +1575,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1612,11 +1658,13 @@ exports[`props placement should render correctly for placement bottom and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1693,11 +1741,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1774,11 +1824,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1855,11 +1907,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -1936,11 +1990,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2017,11 +2073,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2098,11 +2156,13 @@ exports[`props placement should render correctly for placement bottom-end and sl
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2179,11 +2239,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2260,11 +2322,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2341,11 +2405,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2422,11 +2488,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2503,11 +2571,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2584,11 +2654,13 @@ exports[`props placement should render correctly for placement bottom-start and 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2665,11 +2737,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2746,11 +2820,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2827,11 +2903,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2908,11 +2986,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -2989,11 +3069,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3070,11 +3152,13 @@ exports[`props placement should render correctly for placement center and slide 
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3151,11 +3235,13 @@ exports[`props placement should render correctly for placement left and slide bo
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3232,11 +3318,13 @@ exports[`props placement should render correctly for placement left and slide ce
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3313,11 +3401,13 @@ exports[`props placement should render correctly for placement left and slide le
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3394,11 +3484,13 @@ exports[`props placement should render correctly for placement left and slide ri
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3475,11 +3567,13 @@ exports[`props placement should render correctly for placement left and slide to
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3556,11 +3650,13 @@ exports[`props placement should render correctly for placement left and slide tr
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3637,11 +3733,13 @@ exports[`props placement should render correctly for placement right and slide b
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3718,11 +3816,13 @@ exports[`props placement should render correctly for placement right and slide c
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3799,11 +3899,13 @@ exports[`props placement should render correctly for placement right and slide l
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3880,11 +3982,13 @@ exports[`props placement should render correctly for placement right and slide r
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -3961,11 +4065,13 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4042,11 +4148,13 @@ exports[`props placement should render correctly for placement right and slide t
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4123,11 +4231,13 @@ exports[`props placement should render correctly for placement top and slide bot
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4204,11 +4314,13 @@ exports[`props placement should render correctly for placement top and slide cen
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4285,11 +4397,13 @@ exports[`props placement should render correctly for placement top and slide lef
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4366,11 +4480,13 @@ exports[`props placement should render correctly for placement top and slide rig
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4447,11 +4563,13 @@ exports[`props placement should render correctly for placement top and slide top
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4528,11 +4646,13 @@ exports[`props placement should render correctly for placement top and slide tru
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4609,11 +4729,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4690,11 +4812,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4771,11 +4895,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4852,11 +4978,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -4933,11 +5061,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5014,11 +5144,13 @@ exports[`props placement should render correctly for placement top-end and slide
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5095,11 +5227,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5176,11 +5310,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5257,11 +5393,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5338,11 +5476,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5419,11 +5559,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5500,11 +5642,13 @@ exports[`props placement should render correctly for placement top-start and sli
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5556,11 +5700,13 @@ exports[`props placement should render correctly for right placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5612,11 +5758,13 @@ exports[`props placement should render correctly for top placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5668,11 +5816,13 @@ exports[`props placement should render correctly for top-end placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5724,11 +5874,13 @@ exports[`props placement should render correctly for top-start placement 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5780,21 +5932,23 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div>
       <button
         aria-controls="test"
         aria-expanded="false"
         aria-haspopup="dialog"
-        class="emotion-0 emotion-1 emotion-2 fp-Box fp-ModalDisclosure fp-OverlayDisclosure"
+        class="emotion-0 emotion-1 emotion-2 bb-Box bb-ModalDisclosure bb-OverlayDisclosure"
         type="button"
       >
         Toggle
       </button>
       <div
         aria-label="test"
-        class="emotion-0 emotion-4 emotion-1 emotion-2 fp-Box fp-Overlay fp-Modal"
+        class="emotion-0 emotion-4 emotion-1 emotion-2 bb-Box bb-Overlay bb-Modal"
         data-dialog="true"
         hidden=""
         id="test"
@@ -5872,11 +6026,13 @@ exports[`props should render correctly for expand bottom 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -5953,11 +6109,13 @@ exports[`props should render correctly for expand center 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6034,11 +6192,13 @@ exports[`props should render correctly for expand left 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6115,11 +6275,13 @@ exports[`props should render correctly for expand right 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6196,11 +6358,13 @@ exports[`props should render correctly for expand top 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6274,11 +6438,13 @@ exports[`props should render correctly for expand true 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6355,11 +6521,13 @@ exports[`props should render correctly for slide bottom 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6436,11 +6604,13 @@ exports[`props should render correctly for slide center 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6517,11 +6687,13 @@ exports[`props should render correctly for slide left 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6598,11 +6770,13 @@ exports[`props should render correctly for slide right 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6679,11 +6853,13 @@ exports[`props should render correctly for slide top 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6760,11 +6936,13 @@ exports[`props should render correctly for slide true 1`] = `
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6817,18 +6995,20 @@ exports[`theming Overlay.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6877,18 +7057,20 @@ exports[`theming Overlay.bottom.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6937,18 +7119,20 @@ exports[`theming Overlay.bottomEnd.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -6997,18 +7181,20 @@ exports[`theming Overlay.bottomStart.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7057,18 +7243,20 @@ exports[`theming Overlay.center.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7117,18 +7305,20 @@ exports[`theming Overlay.left.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7177,18 +7367,20 @@ exports[`theming Overlay.right.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7237,18 +7429,20 @@ exports[`theming Overlay.top.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7297,18 +7491,20 @@ exports[`theming Overlay.topEnd.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"
@@ -7357,18 +7553,20 @@ exports[`theming Overlay.topStart.base should render correctly 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1:focus {
   outline: none;
 }
 
-<body>
+<body
+  class="bb-mode-default"
+>
   <div>
     <div
       aria-label="test"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Overlay fp-Modal"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Overlay bb-Modal"
       data-dialog="true"
       hidden=""
       id="test"

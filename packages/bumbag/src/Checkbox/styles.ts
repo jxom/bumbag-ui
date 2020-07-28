@@ -41,7 +41,7 @@ export const CheckboxLabel = (styleProps) => cssClass`
 
 export const HiddenCheckbox = (styleProps) =>
   getHiddenInputStyles({
-    iconClassName: 'fp-CheckboxIcon',
+    iconClassName: 'bb-CheckboxIcon',
     checkedIconCss: css`
       background-clip: padding-box;
       content: '';

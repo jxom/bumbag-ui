@@ -52,10 +52,10 @@ export const CalloutFooter = (styleProps) => cssClass`
 export const CalloutIconWrapper = (styleProps) => cssClass`
   margin-right: ${space(2, 'major')(styleProps)}rem;
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
-  & .fp-CalloutContent .fp-Icon {
+  & .bb-CalloutContent .bb-Icon {
     font-size: 1.25em;
   }
 

@@ -1,7 +1,7 @@
+import { useColorMode } from '../ColorMode';
 import { omitBy } from './omitBy';
 import { get } from './get';
 import { useTheme } from './useTheme';
-import { useColorMode } from './useColorMode';
 
 const isUndefined = (val) => typeof val === 'undefined';
 

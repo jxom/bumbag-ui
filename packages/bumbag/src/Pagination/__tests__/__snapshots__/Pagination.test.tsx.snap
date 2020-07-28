@@ -50,11 +50,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -75,7 +75,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -89,8 +89,8 @@ exports[`defaultProps should render correctly for className 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -136,8 +136,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -145,10 +145,10 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -158,20 +158,20 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -179,11 +179,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -204,7 +204,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -218,23 +218,23 @@ exports[`defaultProps should render correctly for className 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -247,21 +247,21 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-33 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-33 test fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-33 test bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -274,11 +274,11 @@ exports[`defaultProps should render correctly for className 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -287,7 +287,7 @@ exports[`defaultProps should render correctly for className 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -299,19 +299,19 @@ exports[`defaultProps should render correctly for className 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -404,8 +404,8 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -413,10 +413,10 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -426,24 +426,24 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-7 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-4 {
@@ -451,11 +451,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -476,11 +476,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-4[disabled],
@@ -494,8 +494,8 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -512,11 +512,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -537,11 +537,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-26[disabled],
@@ -555,23 +555,23 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -584,17 +584,17 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-18 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-18 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -607,11 +607,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -620,7 +620,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -632,19 +632,19 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -704,11 +704,11 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -729,7 +729,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -743,8 +743,8 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -790,8 +790,8 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -799,10 +799,10 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -812,20 +812,20 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -833,11 +833,11 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -858,7 +858,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -872,23 +872,23 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -905,21 +905,21 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
 }
 
 .emotion-21 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -932,11 +932,11 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -945,7 +945,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -957,19 +957,19 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1033,11 +1033,11 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1058,7 +1058,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -1072,8 +1072,8 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1119,8 +1119,8 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1129,11 +1129,11 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1154,7 +1154,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -1168,23 +1168,23 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1197,17 +1197,17 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
 }
 
 .emotion-18 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1217,38 +1217,38 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-8 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1261,11 +1261,11 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -1274,7 +1274,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1286,19 +1286,19 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1362,11 +1362,11 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1387,7 +1387,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -1401,8 +1401,8 @@ exports[`overrides Pagination.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1448,8 +1448,8 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1457,10 +1457,10 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1470,20 +1470,20 @@ exports[`overrides Pagination.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -1491,11 +1491,11 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1516,7 +1516,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -1530,23 +1530,23 @@ exports[`overrides Pagination.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1559,21 +1559,21 @@ exports[`overrides Pagination.base should render correctly 1`] = `
 }
 
 .emotion-30 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-30 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-30 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1586,11 +1586,11 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -1599,7 +1599,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1611,19 +1611,19 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1687,11 +1687,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1712,7 +1712,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -1726,8 +1726,8 @@ exports[`props should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1773,8 +1773,8 @@ exports[`props should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -1782,10 +1782,10 @@ exports[`props should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1795,20 +1795,20 @@ exports[`props should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -1816,11 +1816,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1841,7 +1841,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -1855,23 +1855,23 @@ exports[`props should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1884,17 +1884,17 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1907,11 +1907,11 @@ exports[`props should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -1920,7 +1920,7 @@ exports[`props should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1932,19 +1932,19 @@ exports[`props should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2008,11 +2008,11 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2033,7 +2033,7 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -2047,8 +2047,8 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -2094,8 +2094,8 @@ exports[`props should render correctly with CSS props 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2103,10 +2103,10 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2116,20 +2116,20 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -2137,11 +2137,11 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2162,7 +2162,7 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -2176,23 +2176,23 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -2205,21 +2205,21 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-33 {
-  background-color: #ff0000 !important;
+  background-color: var(--bb-palette-red,#ff0000) !important;
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-33 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-33 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2232,11 +2232,11 @@ exports[`props should render correctly with CSS props 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -2245,7 +2245,7 @@ exports[`props should render correctly with CSS props 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2257,19 +2257,19 @@ exports[`props should render correctly with CSS props 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2362,8 +2362,8 @@ exports[`props should render correctly with currentPage 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2371,10 +2371,10 @@ exports[`props should render correctly with currentPage 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2384,20 +2384,20 @@ exports[`props should render correctly with currentPage 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-4 {
@@ -2405,11 +2405,11 @@ exports[`props should render correctly with currentPage 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2430,7 +2430,7 @@ exports[`props should render correctly with currentPage 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -2444,23 +2444,23 @@ exports[`props should render correctly with currentPage 1`] = `
 .emotion-4:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-4:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -2473,15 +2473,15 @@ exports[`props should render correctly with currentPage 1`] = `
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     style=""
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2494,11 +2494,11 @@ exports[`props should render correctly with currentPage 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -2507,7 +2507,7 @@ exports[`props should render correctly with currentPage 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2519,19 +2519,19 @@ exports[`props should render correctly with currentPage 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2595,11 +2595,11 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2620,7 +2620,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -2634,8 +2634,8 @@ exports[`props should render correctly with nextButtonProps 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -2681,8 +2681,8 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -2690,10 +2690,10 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -2703,20 +2703,20 @@ exports[`props should render correctly with nextButtonProps 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -2724,11 +2724,11 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2749,7 +2749,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -2763,48 +2763,48 @@ exports[`props should render correctly with nextButtonProps 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
-  background-color: #fcfcfd;
-  border: 1px solid #fcfcfd;
-  color: #fcfcfd;
-  fill: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-default,#000000);
+  color: var(--bb-palette-default,#000000);
+  fill: var(--bb-palette-default,#000000);
   box-shadow: unset;
 }
 
 .emotion-26:hover {
-  border-color: #fcfcfd;
-  background-color: #000000;
+  border-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-defaultTint,#000000);
 }
 
 .emotion-26:hover:active {
-  border-color: #fcfcfd;
-  background-color: #000000;
+  border-color: var(--bb-palette-default,#000000);
+  background-color: var(--bb-palette-default100,#000000);
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2817,11 +2817,11 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -2830,7 +2830,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2842,19 +2842,19 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2918,11 +2918,11 @@ exports[`props should render correctly with nextText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2943,7 +2943,7 @@ exports[`props should render correctly with nextText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -2957,8 +2957,8 @@ exports[`props should render correctly with nextText 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3004,8 +3004,8 @@ exports[`props should render correctly with nextText 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -3013,10 +3013,10 @@ exports[`props should render correctly with nextText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -3026,20 +3026,20 @@ exports[`props should render correctly with nextText 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -3047,11 +3047,11 @@ exports[`props should render correctly with nextText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3072,7 +3072,7 @@ exports[`props should render correctly with nextText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -3086,23 +3086,23 @@ exports[`props should render correctly with nextText 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3115,17 +3115,17 @@ exports[`props should render correctly with nextText 1`] = `
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3138,11 +3138,11 @@ exports[`props should render correctly with nextText 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -3151,7 +3151,7 @@ exports[`props should render correctly with nextText 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -3163,19 +3163,19 @@ exports[`props should render correctly with nextText 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next page
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3239,11 +3239,11 @@ exports[`props should render correctly with prepositionText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3264,7 +3264,7 @@ exports[`props should render correctly with prepositionText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -3278,8 +3278,8 @@ exports[`props should render correctly with prepositionText 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3325,8 +3325,8 @@ exports[`props should render correctly with prepositionText 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -3334,10 +3334,10 @@ exports[`props should render correctly with prepositionText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -3347,20 +3347,20 @@ exports[`props should render correctly with prepositionText 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -3368,11 +3368,11 @@ exports[`props should render correctly with prepositionText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3393,7 +3393,7 @@ exports[`props should render correctly with prepositionText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -3407,23 +3407,23 @@ exports[`props should render correctly with prepositionText 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3436,17 +3436,17 @@ exports[`props should render correctly with prepositionText 1`] = `
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3459,11 +3459,11 @@ exports[`props should render correctly with prepositionText 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -3472,7 +3472,7 @@ exports[`props should render correctly with prepositionText 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -3484,19 +3484,19 @@ exports[`props should render correctly with prepositionText 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     out of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3589,8 +3589,8 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -3598,10 +3598,10 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -3611,20 +3611,20 @@ exports[`props should render correctly with previousButtonProps 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -3632,11 +3632,11 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3657,7 +3657,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -3671,23 +3671,23 @@ exports[`props should render correctly with previousButtonProps 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3704,11 +3704,11 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3729,7 +3729,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -3741,25 +3741,25 @@ exports[`props should render correctly with previousButtonProps 1`] = `
 }
 
 .emotion-4 {
-  background-color: #fcfcfd;
-  border: 1px solid #fcfcfd;
-  color: #fcfcfd;
-  fill: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-default,#000000);
+  color: var(--bb-palette-default,#000000);
+  fill: var(--bb-palette-default,#000000);
   box-shadow: unset;
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3772,11 +3772,11 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -3785,7 +3785,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -3797,19 +3797,19 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3873,11 +3873,11 @@ exports[`props should render correctly with previousText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3898,7 +3898,7 @@ exports[`props should render correctly with previousText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -3912,8 +3912,8 @@ exports[`props should render correctly with previousText 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -3959,8 +3959,8 @@ exports[`props should render correctly with previousText 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -3968,10 +3968,10 @@ exports[`props should render correctly with previousText 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -3981,20 +3981,20 @@ exports[`props should render correctly with previousText 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -4002,11 +4002,11 @@ exports[`props should render correctly with previousText 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4027,7 +4027,7 @@ exports[`props should render correctly with previousText 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -4041,23 +4041,23 @@ exports[`props should render correctly with previousText 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4070,17 +4070,17 @@ exports[`props should render correctly with previousText 1`] = `
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4093,11 +4093,11 @@ exports[`props should render correctly with previousText 1`] = `
     Prev page
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -4106,7 +4106,7 @@ exports[`props should render correctly with previousText 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4118,19 +4118,19 @@ exports[`props should render correctly with previousText 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4194,11 +4194,11 @@ exports[`props should render correctly with selectProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4219,7 +4219,7 @@ exports[`props should render correctly with selectProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -4233,8 +4233,8 @@ exports[`props should render correctly with selectProps 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4280,8 +4280,8 @@ exports[`props should render correctly with selectProps 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -4289,10 +4289,10 @@ exports[`props should render correctly with selectProps 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -4302,20 +4302,20 @@ exports[`props should render correctly with selectProps 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -4323,11 +4323,11 @@ exports[`props should render correctly with selectProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4348,7 +4348,7 @@ exports[`props should render correctly with selectProps 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -4362,23 +4362,23 @@ exports[`props should render correctly with selectProps 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4391,21 +4391,21 @@ exports[`props should render correctly with selectProps 1`] = `
 }
 
 .emotion-16 {
-  background-color: #ff0000 !important;
+  background-color: var(--bb-palette-red,#ff0000) !important;
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4418,11 +4418,11 @@ exports[`props should render correctly with selectProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-16 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-16 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -4431,7 +4431,7 @@ exports[`props should render correctly with selectProps 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4443,19 +4443,19 @@ exports[`props should render correctly with selectProps 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4548,8 +4548,8 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -4557,10 +4557,10 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -4570,24 +4570,24 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-7 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-4 {
@@ -4595,11 +4595,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4620,11 +4620,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-4[disabled],
@@ -4638,8 +4638,8 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4656,11 +4656,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4681,11 +4681,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-26[disabled],
@@ -4699,23 +4699,23 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4728,17 +4728,17 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-18 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-18 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4751,11 +4751,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -4764,7 +4764,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4776,19 +4776,19 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4848,11 +4848,11 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4873,7 +4873,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -4887,8 +4887,8 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -4934,8 +4934,8 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -4943,10 +4943,10 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -4956,20 +4956,20 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -4977,11 +4977,11 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5002,7 +5002,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -5016,23 +5016,23 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -5049,21 +5049,21 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
 }
 
 .emotion-21 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5076,11 +5076,11 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -5089,7 +5089,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5101,19 +5101,19 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5177,11 +5177,11 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5202,7 +5202,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -5216,8 +5216,8 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -5263,8 +5263,8 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -5273,11 +5273,11 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5298,7 +5298,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -5312,23 +5312,23 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -5341,17 +5341,17 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
 }
 
 .emotion-18 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-8 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -5361,38 +5361,38 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-8 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-7 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5405,11 +5405,11 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -5418,7 +5418,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5430,19 +5430,19 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5506,11 +5506,11 @@ exports[`theming Pagination.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5531,7 +5531,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-4[disabled],
@@ -5545,8 +5545,8 @@ exports[`theming Pagination.base should render correctly 1`] = `
 .emotion-4 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -5592,8 +5592,8 @@ exports[`theming Pagination.base should render correctly 1`] = `
   height: 2.75em;
   right: 0.8em;
   z-index: 1;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-text,#000000);
+  fill: var(--bb-palette-text,#000000);
   pointer-events: none;
 }
 
@@ -5601,10 +5601,10 @@ exports[`theming Pagination.base should render correctly 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: linear-gradient(#fcfcfd,#f7f7fa);
-  border: 1px solid #d9d9e1;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
   border-radius: 6px;
-  color: #212121;
+  color: var(--bb-palette-text,#000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -5614,20 +5614,20 @@ exports[`theming Pagination.base should render correctly 1`] = `
 
 .emotion-8[disabled],
 .emotion-8[aria-disabled="true"] {
-  background: #f2f2f5;
+  background: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-8[disabled] + .fp-Icon {
-  color: #727d90;
-  fill: #727d90;
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
 }
 
 .emotion-8:focus {
   outline: unset;
   z-index: 2;
-  border-color: #574feb;
-  box-shadow: #eeedfd 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
 .emotion-26 {
@@ -5635,11 +5635,11 @@ exports[`theming Pagination.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5660,7 +5660,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-26[disabled],
@@ -5674,23 +5674,23 @@ exports[`theming Pagination.base should render correctly 1`] = `
 .emotion-26:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-26:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-26:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-26 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -5703,21 +5703,21 @@ exports[`theming Pagination.base should render correctly 1`] = `
 }
 
 .emotion-30 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-30 emotion-31 emotion-1 emotion-2 fp-Box fp-Set fp-Pagination"
+  class="emotion-30 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
   <button
     aria-disabled="true"
-    class="emotion-4 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-4 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     disabled=""
     style="pointer-events: none;"
     type="button"
   >
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-3 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5730,11 +5730,11 @@ exports[`theming Pagination.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 fp-PaginationSelect fp-PaginationSelectWrapper fp-SelectWrapper fp-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 fp-Box fp-PaginationSelect fp-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
     >
       <option
         value="0"
@@ -5743,7 +5743,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
       </option>
     </select>
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-14 fp-PaginationSelectIcon fp-SelectIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5755,19 +5755,19 @@ exports[`theming Pagination.base should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="emotion-1 emotion-2 emotion-21 fp-PaginationPrepositionText fp-Box"
+    class="emotion-1 emotion-2 emotion-21 bb-PaginationPrepositionText bb-Box"
   >
     of
      
     10
   </div>
   <button
-    class="emotion-26 emotion-1 emotion-2 emotion-7 fp-PaginationButton fp-Box fp-Button"
+    class="emotion-26 emotion-1 emotion-2 emotion-7 bb-PaginationButton bb-Box bb-Button"
     type="button"
   >
     Next
     <svg
-      class="emotion-0 emotion-1 emotion-2 emotion-25 fp-PaginationButtonIcon fp-ButtonIcon fp-Box fp-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >

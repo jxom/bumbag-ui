@@ -24,7 +24,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -33,7 +33,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -68,12 +68,12 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -84,11 +84,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -109,7 +109,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -123,23 +123,23 @@ exports[`defaultProps should render correctly for className 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -168,29 +168,29 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-37 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 test fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 test bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -202,10 +202,10 @@ exports[`defaultProps should render correctly for className 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           hello world
@@ -213,14 +213,14 @@ exports[`defaultProps should render correctly for className 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -266,7 +266,7 @@ exports[`overrides Toast.base should render correctly 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -301,12 +301,12 @@ exports[`overrides Toast.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -317,11 +317,11 @@ exports[`overrides Toast.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -342,7 +342,7 @@ exports[`overrides Toast.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -356,23 +356,23 @@ exports[`overrides Toast.base should render correctly 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -401,11 +401,11 @@ exports[`overrides Toast.base should render correctly 1`] = `
 }
 
 .emotion-33 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -413,29 +413,29 @@ exports[`overrides Toast.base should render correctly 1`] = `
 }
 
 .emotion-34 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -447,10 +447,10 @@ exports[`overrides Toast.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           hello world
@@ -458,14 +458,14 @@ exports[`overrides Toast.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -510,7 +510,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -519,7 +519,7 @@ exports[`props should render correctly 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -554,12 +554,12 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -570,11 +570,11 @@ exports[`props should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -595,7 +595,7 @@ exports[`props should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -609,23 +609,23 @@ exports[`props should render correctly 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -655,24 +655,24 @@ exports[`props should render correctly 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -684,10 +684,10 @@ exports[`props should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           Hello world
@@ -695,14 +695,14 @@ exports[`props should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -747,7 +747,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -756,7 +756,7 @@ exports[`props should render correctly with CSS props 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -791,12 +791,12 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -807,11 +807,11 @@ exports[`props should render correctly with CSS props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -832,7 +832,7 @@ exports[`props should render correctly with CSS props 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -846,23 +846,23 @@ exports[`props should render correctly with CSS props 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -891,29 +891,29 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-37 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-11 emotion-34 emotion-15 emotion-0 emotion-37 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -925,10 +925,10 @@ exports[`props should render correctly with CSS props 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           Hello world
@@ -936,14 +936,14 @@ exports[`props should render correctly with CSS props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -998,7 +998,7 @@ exports[`props should render correctly with a countdown 1`] = `
 }
 
 .emotion-37 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -1034,12 +1034,12 @@ exports[`props should render correctly with a countdown 1`] = `
 }
 
 .emotion-8 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-6 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -1050,11 +1050,11 @@ exports[`props should render correctly with a countdown 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1075,7 +1075,7 @@ exports[`props should render correctly with a countdown 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-25[disabled],
@@ -1089,23 +1089,23 @@ exports[`props should render correctly with a countdown 1`] = `
 .emotion-25:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-25:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-25:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-25 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1135,7 +1135,7 @@ exports[`props should render correctly with a countdown 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -1145,7 +1145,7 @@ exports[`props should render correctly with a countdown 1`] = `
 
 .emotion-5 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -1155,27 +1155,27 @@ exports[`props should render correctly with a countdown 1`] = `
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-14 emotion-37 emotion-18 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-14 emotion-37 emotion-18 emotion-0 emotion-1 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-18 emotion-0 emotion-1 emotion-35 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-18 emotion-0 emotion-1 emotion-35 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-18 emotion-0 emotion-20 fp-Box fp-Flex"
+      class="emotion-18 emotion-0 emotion-20 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-11 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-11 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-0 emotion-8 fp-Box fp-Icon"
+          class="emotion-6 emotion-0 emotion-8 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1187,10 +1187,10 @@ exports[`props should render correctly with a countdown 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-17 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-17 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-14 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-14 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           Hello world
@@ -1198,14 +1198,14 @@ exports[`props should render correctly with a countdown 1`] = `
       </div>
     </div>
     <div
-      class="emotion-18 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-18 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-24 emotion-25 emotion-0 emotion-1 emotion-28 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-24 emotion-25 emotion-0 emotion-1 emotion-28 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-21 emotion-0 emotion-23 fp-Box fp-Icon"
+          class="emotion-21 emotion-0 emotion-23 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1251,7 +1251,7 @@ exports[`theming Toast.base should render correctly 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -1286,12 +1286,12 @@ exports[`theming Toast.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -1302,11 +1302,11 @@ exports[`theming Toast.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1327,7 +1327,7 @@ exports[`theming Toast.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -1341,23 +1341,23 @@ exports[`theming Toast.base should render correctly 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1386,11 +1386,11 @@ exports[`theming Toast.base should render correctly 1`] = `
 }
 
 .emotion-33 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
@@ -1398,29 +1398,29 @@ exports[`theming Toast.base should render correctly 1`] = `
 }
 
 .emotion-34 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1432,10 +1432,10 @@ exports[`theming Toast.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           hello world
@@ -1443,14 +1443,14 @@ exports[`theming Toast.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >
@@ -1496,7 +1496,7 @@ exports[`variants styles.base should render correctly 1`] = `
 
 .emotion-2 {
   position: absolute;
-  background-color: #1e67d5;
+  background-color: var(--bb-palette-info,#000000);
   bottom: 0;
   height: 100%;
   width: 4px;
@@ -1531,12 +1531,12 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-5 {
-  color: #1e67d5 !important;
+  color: var(--bb-palette-info,#000000) !important;
   font-size: 1rem !important;
 }
 
 .emotion-3 {
-  fill: #1e67d5;
+  fill: var(--bb-palette-info,#000000);
   position: relative;
   height: 1em;
   width: 1em;
@@ -1547,11 +1547,11 @@ exports[`variants styles.base should render correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1572,7 +1572,7 @@ exports[`variants styles.base should render correctly 1`] = `
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-22[disabled],
@@ -1586,23 +1586,23 @@ exports[`variants styles.base should render correctly 1`] = `
 .emotion-22:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-22:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-22:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 .emotion-22 {
   background-color: unset;
   border: unset;
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   box-shadow: unset;
 }
 
@@ -1631,40 +1631,40 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-34 {
-  background-color: white;
+  background-color: var(--bb-palette-background,#000000);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
 }
 
 .emotion-34 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-33 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-describedby="alertDescription"
-  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 fp-Box fp-Flex fp-Toast fp-Alert"
+  class="emotion-33 emotion-34 emotion-15 emotion-0 emotion-1 bb-Box bb-Flex bb-Toast bb-Alert"
   role="alert"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-ToastAccent fp-AlertAccent fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-ToastAccent bb-AlertAccent bb-Box"
   />
   <div
-    class="emotion-15 emotion-0 emotion-1 emotion-32 fp-ToastWrapper fp-AlertWrapper fp-Box fp-Flex"
+    class="emotion-15 emotion-0 emotion-1 emotion-32 bb-ToastWrapper bb-AlertWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-15 emotion-0 emotion-17 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-17 bb-Box bb-Flex"
     >
       <div
-        class="emotion-0 emotion-1 emotion-8 fp-ToastIconWrapper fp-AlertIconWrapper fp-Box"
+        class="emotion-0 emotion-1 emotion-8 bb-ToastIconWrapper bb-AlertIconWrapper bb-Box"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-5 fp-Box fp-Icon"
+          class="emotion-3 emotion-0 emotion-5 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 512 512"
         >
@@ -1676,10 +1676,10 @@ exports[`variants styles.base should render correctly 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-0 emotion-1 emotion-14 fp-ToastContent fp-AlertContent fp-Box"
+        class="emotion-0 emotion-1 emotion-14 bb-ToastContent bb-AlertContent bb-Box"
       >
         <div
-          class="emotion-0 emotion-1 emotion-11 fp-ToastDescription fp-AlertDescription fp-Box"
+          class="emotion-0 emotion-1 emotion-11 bb-ToastDescription bb-AlertDescription bb-Box"
           id="alertDescription"
         >
           hello world
@@ -1687,14 +1687,14 @@ exports[`variants styles.base should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-15 emotion-0 emotion-1 fp-Box fp-Flex"
+      class="emotion-15 emotion-0 emotion-1 bb-Box bb-Flex"
     >
       <button
-        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 fp-ToastCloseButton fp-AlertCloseButton fp-Box fp-Button fp-ButtonClose"
+        class="emotion-21 emotion-22 emotion-0 emotion-1 emotion-25 bb-ToastCloseButton bb-AlertCloseButton bb-Box bb-Button bb-ButtonClose"
         type="button"
       >
         <svg
-          class="emotion-18 emotion-0 emotion-20 fp-Box fp-Icon"
+          class="emotion-18 emotion-0 emotion-20 bb-Box bb-Icon"
           role="img"
           viewBox="0 0 320 512"
         >

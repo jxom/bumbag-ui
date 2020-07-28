@@ -121,7 +121,7 @@ export const InputField = (styleProps) => cssClass`
 `;
 
 export const InputFieldGroup = (styleProps) => cssClass`
-  & .fp-InputWrapper {
+  & .bb-InputWrapper {
     flex: 1;
   }
 

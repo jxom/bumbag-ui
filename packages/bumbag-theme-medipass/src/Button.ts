@@ -19,7 +19,7 @@ export default {
       border-width: 2px;
 
       &:hover {
-        background-color: ${palette()(styleProps)};
+        background-color: ${palette(styleProps.palette)(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
         fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
       }
@@ -35,13 +35,13 @@ export default {
       &:hover {
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
         fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-        background-color: ${palette()(styleProps)};
+        background-color: ${palette(styleProps.palette)(styleProps)};
       }
 
       &:hover:active {
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
         fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
-        background-color: ${palette()(styleProps)};
+        background-color: ${palette(styleProps.palette)(styleProps)};
       }
 
       &:focus {
@@ -53,7 +53,7 @@ export default {
       }
     `,
     focus: (styleProps) => css`
-      outline: 2px solid ${styleProps.palette === 'default' ? palette('gray800')(styleProps) : palette()(styleProps)};
+      outline: 2px solid ${styleProps.palette === 'default' ? palette('gray800')(styleProps) : palette(styleProps.palette)(styleProps)};
       outline-offset: 0;
       box-shadow: none;
       border: 2px solid ${palette('white')(styleProps)};

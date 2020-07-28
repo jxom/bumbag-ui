@@ -76,7 +76,7 @@ export const MenuItem = (styleProps) => cssClass`
     `
   }
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
 

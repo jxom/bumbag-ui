@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with box props 1`] = `
 Object {
-  "className": "css-63it0p css-jwhr8m fp-Box",
+  "className": "css-63it0p css-jwhr8m bb-Box",
 }
 `;
 
@@ -23,7 +23,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   Hello world
 </p>
@@ -46,7 +46,7 @@ exports[`composition use should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   Hello world
 </p>
@@ -73,11 +73,11 @@ exports[`composition use should render correctly for a Button component with pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #574feb;
+  background-color: var(--bb-palette-primary,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--bb-palette-primaryInverted,#000000);
+  fill: var(--bb-palette-primaryInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -111,33 +111,33 @@ exports[`composition use should render correctly for a Button component with pro
 .emotion-3:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #574feb 0px 0px 0px 1px, #aba7f5 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
 }
 
 .emotion-3:hover {
-  background-color: #4e47d4;
+  background-color: var(--bb-palette-primary600,#000000);
 }
 
 .emotion-3:hover:active {
-  background-color: #3d37a5;
+  background-color: var(--bb-palette-primary700,#000000);
 }
 
 .emotion-3 {
-  background-color: #fcfcfd;
-  border: 1px solid #574feb;
-  color: #574feb;
-  fill: #574feb;
+  background-color: var(--bb-palette-default,#000000);
+  border: 1px solid var(--bb-palette-primary,#000000);
+  color: var(--bb-palette-primary,#000000);
+  fill: var(--bb-palette-primary,#000000);
   box-shadow: unset;
 }
 
 .emotion-3:hover {
-  border-color: #574feb;
-  background-color: #eeedfd;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primaryTint,#000000);
 }
 
 .emotion-3:hover:active {
-  border-color: #574feb;
-  background-color: #cdcaf9;
+  border-color: var(--bb-palette-primary,#000000);
+  background-color: var(--bb-palette-primary100,#000000);
 }
 
 .emotion-0 {
@@ -145,11 +145,11 @@ exports[`composition use should render correctly for a Button component with pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fcfcfd;
+  background-color: var(--bb-palette-default,#000000);
   border-radius: 6px;
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: #212121;
-  fill: #212121;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -170,7 +170,7 @@ exports[`composition use should render correctly for a Button component with pro
   hyphens: auto;
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid #d9d9e1;
+  border: 1px solid var(--bb-palette-white900,#000000);
 }
 
 .emotion-0[disabled],
@@ -184,20 +184,20 @@ exports[`composition use should render correctly for a Button component with pro
 .emotion-0:focus {
   outline: unset;
   z-index: 2;
-  box-shadow: #b1b7c2 0px 0px 0px 1px, #d0d4da 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-gray200,#000000) 0px 0px 0px 1px, var(--bb-palette-gray100,#000000) 0px 0px 0px 3px;
   border-color: transparent;
 }
 
 .emotion-0:hover {
-  background-color: #f7f7fa;
+  background-color: var(--bb-palette-white600,#000000);
 }
 
 .emotion-0:hover:active {
-  background-color: #e6e6eb;
+  background-color: var(--bb-palette-white800,#000000);
 }
 
 <button
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Button"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Button"
   type="button"
 >
   Hello world
@@ -221,7 +221,7 @@ exports[`defaultProps should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 test fp-Box"
+  class="emotion-0 emotion-1 test bb-Box"
 >
   hello world
 </div>
@@ -244,7 +244,7 @@ exports[`modes renders correctly for applyTheme 1`] = `
 }
 
 .emotion-1 {
-  color: #ff0000 !important;
+  color: var(--bb-palette-red,#ff0000) !important;
   padding: 1rem !important;
 }
 
@@ -253,7 +253,7 @@ exports[`modes renders correctly for applyTheme 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -274,7 +274,7 @@ exports[`modes renders correctly for applyTheme 2`] = `
 }
 
 .emotion-1 {
-  color: #ff0000 !important;
+  color: var(--bb-palette-red,#ff0000) !important;
   padding: 1rem !important;
 }
 
@@ -283,7 +283,7 @@ exports[`modes renders correctly for applyTheme 2`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -304,7 +304,7 @@ exports[`modes should render correctly when colorMode is set globally 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -327,7 +327,7 @@ exports[`modes should render correctly when colorMode is set globally 2`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -350,15 +350,15 @@ exports[`modes should render correctly when colorMode set as prop 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1 {
-  color: #eeedfd !important;
+  color: var(--bb-palette-primaryTint,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -381,15 +381,15 @@ exports[`modes should render correctly when colorMode set as prop 2`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-1 {
-  color: #eeedfd !important;
+  color: var(--bb-palette-primaryTint,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -412,7 +412,7 @@ exports[`props should assign a ref 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   Hello world
 </div>
@@ -435,7 +435,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -460,7 +460,7 @@ exports[`props should render correctly for a borderRadius of 0 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -485,7 +485,7 @@ exports[`props should render correctly for a borderRadius of 1 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -510,7 +510,7 @@ exports[`props should render correctly for a borderRadius of 2 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -535,7 +535,7 @@ exports[`props should render correctly for a borderRadius of 3 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -560,7 +560,7 @@ exports[`props should render correctly for a borderRadius of 4 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -585,7 +585,7 @@ exports[`props should render correctly for a borderRadius of 5 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -610,7 +610,7 @@ exports[`props should render correctly for a borderRadius of 6 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -635,7 +635,7 @@ exports[`props should render correctly for a borderRadius of default 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -656,11 +656,11 @@ exports[`props should render correctly for a custom border 1`] = `
 }
 
 .emotion-1 {
-  border: 1px solid #e6e6eb !important;
+  border: 1px solid var(--bb-palette-white800,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -695,7 +695,7 @@ exports[`props should render correctly for an alignX of center 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -730,7 +730,7 @@ exports[`props should render correctly for an alignX of left 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -765,7 +765,7 @@ exports[`props should render correctly for an alignX of right 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -800,7 +800,7 @@ exports[`props should render correctly for an alignY of bottom 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -835,7 +835,7 @@ exports[`props should render correctly for an alignY of center 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -870,7 +870,7 @@ exports[`props should render correctly for an alignY of top 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -895,7 +895,7 @@ exports[`props should render correctly for an altitude 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -916,12 +916,12 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-1 {
-  background-color: #ff0000 !important;
-  color: white !important;
+  background-color: var(--bb-palette-red,#ff0000) !important;
+  color: var(--bb-palette-white,#ffffff) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -942,11 +942,11 @@ exports[`props should render correctly with CSS props with active 1`] = `
 }
 
 .emotion-1:active {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -967,23 +967,23 @@ exports[`props should render correctly with CSS props with breakpoints 1`] = `
 }
 
 .emotion-1 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 @media screen and (min-width:0px) and (max-width:479px) {
   .emotion-1 {
-    background-color: #9e46d8 !important;
+    background-color: var(--bb-palette-secondary,#000000) !important;
   }
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
   .emotion-1 {
-    background-color: #ff0000 !important;
+    background-color: var(--bb-palette-red,#ff0000) !important;
   }
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1004,17 +1004,17 @@ exports[`props should render correctly with CSS props with breakpoints 2`] = `
 }
 
 .emotion-1 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 @media screen and (max-width:767px) {
   .emotion-1 {
-    background-color: #9e46d8 !important;
+    background-color: var(--bb-palette-secondary,#000000) !important;
   }
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1035,17 +1035,17 @@ exports[`props should render correctly with CSS props with breakpoints 3`] = `
 }
 
 .emotion-1 {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 @media screen and (min-width:768px) {
   .emotion-1 {
-    background-color: #9e46d8 !important;
+    background-color: var(--bb-palette-secondary,#000000) !important;
   }
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1066,11 +1066,11 @@ exports[`props should render correctly with CSS props with focus 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1091,11 +1091,11 @@ exports[`props should render correctly with CSS props with hover 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1116,11 +1116,11 @@ exports[`props should render correctly with CSS props with hoveractive 1`] = `
 }
 
 .emotion-1:hover:active {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1141,11 +1141,11 @@ exports[`props should render correctly with CSS props with visited 1`] = `
 }
 
 .emotion-1:visited {
-  background-color: #574feb !important;
+  background-color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1166,12 +1166,12 @@ exports[`props should render correctly with a color CSS prop 1`] = `
 }
 
 .emotion-1 {
-  background-color: #d9d9e1 !important;
-  color: #574feb !important;
+  background-color: var(--bb-palette-white900,#000000) !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1196,7 +1196,7 @@ exports[`props should render correctly with a font CSS prop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1221,7 +1221,7 @@ exports[`props should render correctly with a font size CSS prop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1246,7 +1246,7 @@ exports[`props should render correctly with a font weight CSS prop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1271,7 +1271,7 @@ exports[`props should render correctly with a fontFamily CSS prop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1299,7 +1299,7 @@ exports[`props should render correctly with a spacing CSS prop (marginX, padding
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1327,7 +1327,7 @@ exports[`props should render correctly with a spacing CSS prop (marginY, padding
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1353,7 +1353,7 @@ exports[`props should render correctly with a spacing CSS prop 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1378,7 +1378,7 @@ exports[`props should render correctly with a spacing CSS prop 2`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1400,7 +1400,7 @@ exports[`props should render correctly with aria* props 1`] = `
 
 <div
   aria-label="hello"
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1421,11 +1421,11 @@ exports[`props should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 />
 `;
 
@@ -1446,11 +1446,11 @@ exports[`theming Box.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -1458,7 +1458,7 @@ exports[`theming Box.base should render correctly 1`] = `
 
 exports[`theming Box.base should render correctly 2`] = `
 .emotion-1 {
-  color: #008000 !important;
+  color: var(--bb-palette-green,#008000) !important;
 }
 
 .emotion-0 {
@@ -1477,11 +1477,11 @@ exports[`theming Box.base should render correctly 2`] = `
 }
 
 .emotion-0 {
-  background-color: #008000;
+  background-color: var(--bb-palette-green,#008000);
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>
@@ -1504,11 +1504,11 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 fp-Box"
+  class="emotion-0 emotion-1 bb-Box"
 >
   hello world
 </div>

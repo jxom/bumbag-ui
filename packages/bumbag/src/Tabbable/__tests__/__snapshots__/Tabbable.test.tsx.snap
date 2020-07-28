@@ -2,7 +2,7 @@
 
 exports[`composition hook should return with Tabbable props 1`] = `
 Object {
-  "className": "css-1s9nf0t css-63it0p css-jwhr8m fp-Box fp-Tabbable",
+  "className": "css-1s9nf0t css-63it0p css-jwhr8m bb-Box bb-Tabbable",
   "onClick": [Function],
   "onMouseDown": [Function],
   "ref": [Function],
@@ -31,7 +31,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <p
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
   tabindex="0"
 >
   Hello world
@@ -61,14 +61,14 @@ exports[`composition use should render correctly 1`] = `
 
 <div>
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     tabindex="0"
   >
     Tabbable
   </div>
   <div
     aria-disabled="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     disabled=""
     style="pointer-events: none;"
   >
@@ -76,7 +76,7 @@ exports[`composition use should render correctly 1`] = `
   </div>
   <div
     aria-disabled="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     disabled=""
     style="pointer-events: none;"
     tabindex="0"
@@ -108,7 +108,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Tabbable"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Tabbable"
   tabindex="0"
 >
   Tabbable
@@ -137,11 +137,11 @@ exports[`overrides Tabbable.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
   tabindex="0"
 >
   Tabbable
@@ -171,14 +171,14 @@ exports[`props should render correctly 1`] = `
 
 <div>
   <div
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     tabindex="0"
   >
     Tabbable
   </div>
   <div
     aria-disabled="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     disabled=""
     style="pointer-events: none;"
   >
@@ -186,7 +186,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-disabled="true"
-    class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+    class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
     disabled=""
     style="pointer-events: none;"
     tabindex="0"
@@ -218,11 +218,11 @@ exports[`theming Tabbable.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Tabbable"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabbable"
   tabindex="0"
 >
   Tabbable

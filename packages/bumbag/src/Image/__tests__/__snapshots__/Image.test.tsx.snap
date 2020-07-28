@@ -17,11 +17,11 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-2 {
-  color: #574feb !important;
+  color: var(--bb-palette-primary,#000000) !important;
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 test fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -43,7 +43,7 @@ exports[`props should render correctly 1`] = `
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -70,7 +70,7 @@ exports[`props should render correctly for fit contain 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -97,7 +97,7 @@ exports[`props should render correctly for fit cover 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -124,7 +124,7 @@ exports[`props should render correctly for fixed image 1`] = `
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -146,12 +146,12 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-2 {
-  background-color: #ff0000 !important;
+  background-color: var(--bb-palette-red,#ff0000) !important;
 }
 
 <img
   alt="Bean"
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -173,11 +173,11 @@ exports[`theming Image.base should render correctly 1`] = `
 }
 
 .emotion-0 {
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -200,11 +200,11 @@ exports[`theming Image.contain should render correctly 1`] = `
 
 .emotion-0 {
   object-fit: contain;
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -227,11 +227,11 @@ exports[`theming Image.cover should render correctly 1`] = `
 
 .emotion-0 {
   object-fit: cover;
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;
@@ -254,11 +254,11 @@ exports[`theming Image.fixed should render correctly 1`] = `
 
 .emotion-0 {
   max-width: unset;
-  background-color: #ff0000;
+  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <img
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-Image"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Image"
   src="test.png"
 />
 `;

@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-plugin-bumbag",
+  "version": "1.0.0-color-mode-refactor.5",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "ts/index.d.ts",
+  "scripts": {
+    "build": "node ../../scripts/build/build.js",
+    "clean": "node ../../scripts/build/clean.js",
+    "develop": "node ../../scripts/build/build.js --watch",
+    "prepublishOnly": "yarn build",
+    "postpublish": "yarn clean",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/ --ext js,ts,tsx",
+    "lint:fix": "eslint src/ --fix",
+    "test": "yarn type-check && yarn lint"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "10.0.27",
+    "bumbag-server": "1.0.0-color-mode-refactor.5"
+  },
+  "peerDependencies": {
+    "@types/react": "16.x",
+    "@types/react-dom": "16.x",
+    "bumbag": "1.x",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "author": "Jake Moxey",
+  "homepage": "https://github.com/bumbagui",
+  "license": "MIT",
+  "repository": "https://github.com/bumbagui/bumbag",
+  "keywords": [
+    "bumbag",
+    "ui",
+    "accessible",
+    "composable"
+  ],
+  "gitHead": "b2de00ba5c6a4dab5ef4e1b7f372ac54b18e8b57"
+}

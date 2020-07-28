@@ -8,9 +8,9 @@ import { ToastProvider } from '../Toast';
 import { PageProvider } from '../Page/PageContext';
 import { Box } from '../Box';
 
+import { ColorModeProvider } from '../ColorMode/ColorModeContext';
 import GlobalStyles from './GlobalStyles';
 import { BumbagThemeContext } from './ThemeContext';
-import { Provider as ColorModeProvider } from './ColorModeContext';
 
 export type ProviderProps = {
   children: React.ReactNode;
