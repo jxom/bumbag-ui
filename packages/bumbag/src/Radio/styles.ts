@@ -41,7 +41,7 @@ export const RadioLabel = (styleProps) => cssClass`
 
 export const HiddenRadio = (styleProps) =>
   getHiddenInputStyles({
-    iconClassName: 'fp-RadioIcon',
+    iconClassName: 'bb-RadioIcon',
     checkedIconCss: css`
       background: ${palette('primary', { dark: 'primary300' })(styleProps)};
       border-radius: 50%;

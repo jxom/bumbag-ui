@@ -187,7 +187,7 @@ export const PageWithHeader = (styleProps) => cssClass`
   min-height: 100vh;
   position: relative;
 
-  & .fp-PageWithSidebarSidebarExpandedWrapper {
+  & .bb-PageWithSidebarSidebarExpandedWrapper {
     top: ${styleProps.headerHeight};
   }
 

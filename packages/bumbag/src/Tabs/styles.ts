@@ -161,7 +161,7 @@ export const Tabs = (styleProps) => cssClass`
   ${
     styleProps.isFitted &&
     css`
-      & .fp-TabsTab {
+      & .bb-TabsTab {
         flex: 1;
       }
     `

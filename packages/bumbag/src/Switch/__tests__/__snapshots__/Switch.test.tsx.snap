@@ -50,7 +50,7 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -64,53 +64,53 @@ exports[`composition as should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <div
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 fp-Box fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 bb-Box bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </div>
 `;
@@ -122,16 +122,16 @@ Object {
   "aria-required": undefined,
   "children": <React.Fragment>
     <Box
-      className="css-1r5wid6 fp-SwitchHiddenInput"
+      className="css-1g1ngb0 bb-SwitchHiddenInput"
       id=""
       type="checkbox"
       use="input"
     />
     <Box
-      className="css-c00kuf fp-SwitchIcon"
+      className="css-c00kuf bb-SwitchIcon"
     />
   </React.Fragment>,
-  "className": "css-i5mf5v css-63it0p css-jwhr8m fp-Box fp-Switch",
+  "className": "css-i5mf5v css-63it0p css-jwhr8m bb-Box bb-Switch",
 }
 `;
 
@@ -171,7 +171,7 @@ exports[`composition render props should render correctly 1`] = `
 <div
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-0 emotion-1 emotion-2 emotion-3 fp-Box fp-Label fp-Switch"
+  class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-Label bb-Switch"
 >
   Hello world
 </div>
@@ -233,7 +233,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -247,38 +247,38 @@ exports[`defaultProps should render correctly for className 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -289,15 +289,15 @@ exports[`defaultProps should render correctly for className 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 emotion-10 test fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 emotion-10 test bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -358,7 +358,7 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -372,38 +372,38 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -414,15 +414,15 @@ exports[`overrides Switch.HiddenInput.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -472,7 +472,7 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -486,38 +486,38 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -539,15 +539,15 @@ exports[`overrides Switch.Icon.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -608,7 +608,7 @@ exports[`overrides Switch.Label.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -622,53 +622,53 @@ exports[`overrides Switch.Label.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -718,7 +718,7 @@ exports[`overrides Switch.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -732,38 +732,38 @@ exports[`overrides Switch.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -785,15 +785,15 @@ exports[`overrides Switch.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -854,7 +854,7 @@ exports[`props should assign a ref 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -868,53 +868,53 @@ exports[`props should assign a ref 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -947,7 +947,7 @@ exports[`props should assign a ref via switchRef 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -961,43 +961,43 @@ exports[`props should assign a ref via switchRef 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <input
-  class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
   id="switch"
   type="checkbox"
 />
@@ -1059,7 +1059,7 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1073,53 +1073,53 @@ exports[`props should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1180,11 +1180,11 @@ exports[`props should render correctly for danger state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon {
+.emotion-2 + .bb-SwitchIcon {
   border-color: var(--bb-palette-danger,#000000);
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1198,57 +1198,57 @@ exports[`props should render correctly for danger state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .fp-SwitchIcon {
+.emotion-2:not(:checked) + .bb-SwitchIcon {
   box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="true"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1309,11 +1309,11 @@ exports[`props should render correctly for success state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon {
+.emotion-2 + .bb-SwitchIcon {
   border-color: var(--bb-palette-success,#000000);
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1327,57 +1327,57 @@ exports[`props should render correctly for success state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .fp-SwitchIcon {
+.emotion-2:not(:checked) + .bb-SwitchIcon {
   box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1438,11 +1438,11 @@ exports[`props should render correctly for warning state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon {
+.emotion-2 + .bb-SwitchIcon {
   border-color: var(--bb-palette-warning,#000000);
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1456,57 +1456,57 @@ exports[`props should render correctly for warning state 1`] = `
   position: absolute;
 }
 
-.emotion-2:not(:checked) + .fp-SwitchIcon {
+.emotion-2:not(:checked) + .bb-SwitchIcon {
   box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1567,7 +1567,7 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1581,38 +1581,38 @@ exports[`props should render correctly with CSS props 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -1623,15 +1623,15 @@ exports[`props should render correctly with CSS props 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 emotion-10 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 emotion-10 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1692,7 +1692,7 @@ exports[`props should render correctly with checked 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1706,54 +1706,54 @@ exports[`props should render correctly with checked 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1814,7 +1814,7 @@ exports[`props should render correctly with defaultChecked 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1828,54 +1828,54 @@ exports[`props should render correctly with defaultChecked 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
     checked=""
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -1936,7 +1936,7 @@ exports[`props should render correctly with disabled 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -1950,54 +1950,54 @@ exports[`props should render correctly with disabled 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     disabled=""
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2058,7 +2058,7 @@ exports[`props should render correctly with isRequired 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2072,38 +2072,38 @@ exports[`props should render correctly with isRequired 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -2111,15 +2111,15 @@ exports[`props should render correctly with isRequired 1`] = `
   aria-describedby="label"
   aria-invalid="false"
   aria-required="true"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2180,7 +2180,7 @@ exports[`props should render correctly with label 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2194,38 +2194,38 @@ exports[`props should render correctly with label 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -2240,18 +2240,18 @@ exports[`props should render correctly with label 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-13 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
   <span
-    class="emotion-6 emotion-0 emotion-8 emotion-9 fp-SwitchLabel fp-Box fp-Label"
+    class="emotion-6 emotion-0 emotion-8 emotion-9 bb-SwitchLabel bb-Box bb-Label"
     for="switch"
     id="label"
   >
@@ -2316,7 +2316,7 @@ exports[`props should render correctly with name 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2330,54 +2330,54 @@ exports[`props should render correctly with name 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     name="checkboxRocks"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2438,7 +2438,7 @@ exports[`props should render correctly with value 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2452,54 +2452,54 @@ exports[`props should render correctly with value 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
     value="checkboxValue"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2560,7 +2560,7 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2574,38 +2574,38 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -2616,15 +2616,15 @@ exports[`theming Switch.HiddenInput.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2674,7 +2674,7 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2688,38 +2688,38 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -2741,15 +2741,15 @@ exports[`theming Switch.Icon.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2810,7 +2810,7 @@ exports[`theming Switch.Label.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2824,53 +2824,53 @@ exports[`theming Switch.Label.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;
@@ -2920,7 +2920,7 @@ exports[`theming Switch.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-SwitchIcon::before {
+.emotion-2 + .bb-SwitchIcon::before {
   background: var(--bb-palette-default,#000000);
   content: '';
   border-radius: 100%;
@@ -2934,38 +2934,38 @@ exports[`theming Switch.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon {
+.emotion-2[disabled] + .bb-SwitchIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2[disabled] + .fp-SwitchIcon::before {
+.emotion-2[disabled] + .bb-SwitchIcon::before {
   background: var(--bb-palette-white700,#000000);
 }
 
-.emotion-2:focus + .fp-SwitchIcon {
+.emotion-2:focus + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-SwitchIcon {
+.emotion-2:not([disabled]):checked + .bb-SwitchIcon {
   border-color: var(--bb-palette-primary,#000000);
   background-color: var(--bb-palette-primary,#000000);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.emotion-2:checked + .fp-SwitchIcon {
+.emotion-2:checked + .bb-SwitchIcon {
   background-color: var(--bb-palette-primary100,#000000);
   border-color: var(--bb-palette-primary100,#000000);
 }
 
-.emotion-2:checked + .fp-SwitchIcon::before {
+.emotion-2:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary,#000000);
   left: 1.25em;
 }
 
-.emotion-2[disabled]:checked + .fp-SwitchIcon::before {
+.emotion-2[disabled]:checked + .bb-SwitchIcon::before {
   border-color: var(--bb-palette-primary100,#000000);
 }
 
@@ -2987,15 +2987,15 @@ exports[`theming Switch.base should render correctly 1`] = `
 <label
   aria-describedby="label"
   aria-invalid="false"
-  class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Switch"
+  class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Switch"
 >
   <input
-    class="emotion-0 emotion-1 emotion-2 fp-SwitchHiddenInput fp-Box"
+    class="emotion-0 emotion-1 emotion-2 bb-SwitchHiddenInput bb-Box"
     id="switch"
     type="checkbox"
   />
   <div
-    class="emotion-0 emotion-1 emotion-5 fp-SwitchIcon fp-Box"
+    class="emotion-0 emotion-1 emotion-5 bb-SwitchIcon bb-Box"
   />
 </label>
 `;

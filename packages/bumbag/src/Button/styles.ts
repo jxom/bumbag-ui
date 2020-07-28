@@ -82,7 +82,7 @@ export const ButtonSpinnerWrapper = (styleProps) => cssClass`
   align-items: center;
   justify-content: center;
 
-  & + .fp-Text {
+  & + .bb-Text {
     opacity: 0;
   }
 

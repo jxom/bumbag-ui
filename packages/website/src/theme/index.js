@@ -46,7 +46,7 @@ export default {
           left: -0.7em;
         }
 
-        .fp-Heading:hover > a.anchor,
+        .bb-Heading:hover > a.anchor,
         a.anchor:hover {
           opacity: 1;
         }

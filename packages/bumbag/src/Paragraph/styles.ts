@@ -6,7 +6,7 @@ export const Paragraph = (styleProps) => cssClass`
     margin-bottom: ${space(4)(styleProps)}rem;
   }
 
-  & .fp-Icon {
+  & .bb-Icon {
     vertical-align: -0.125em;
   }
 

@@ -43,8 +43,8 @@ export function useClassName({
   const classNames = buildClassNames(
     ...className,
     prevClassName,
-    newThemeKey ? `fp-${newThemeKey.replace(/\./g, '')}` : undefined,
-    originalThemeKey ? `fp-${originalThemeKey.replace(/\./g, '')}` : undefined
+    newThemeKey ? `bb-${newThemeKey.replace(/\./g, '')}` : undefined,
+    originalThemeKey ? `bb-${originalThemeKey.replace(/\./g, '')}` : undefined
   );
   const uniqueClassNames = _uniq(classNames.split(' ')).join(' ');
   return uniqueClassNames;

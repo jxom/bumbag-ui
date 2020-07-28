@@ -58,21 +58,21 @@ exports[`composition as should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -80,7 +80,7 @@ exports[`composition as should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -91,28 +91,28 @@ exports[`composition as should render correctly 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -126,16 +126,16 @@ Object {
   "aria-required": undefined,
   "children": <React.Fragment>
     <Box
-      className="css-kbs3lk fp-CheckboxHiddenInput"
+      className="css-hzw9l4 bb-CheckboxHiddenInput"
       id=""
       type="checkbox"
       use="input"
     />
     <Box
-      className="css-ajsfpq fp-CheckboxIcon"
+      className="css-ajsfpq bb-CheckboxIcon"
     />
   </React.Fragment>,
-  "className": "css-1q49kjh css-63it0p css-jwhr8m fp-Box fp-Checkbox",
+  "className": "css-1q49kjh css-63it0p css-jwhr8m bb-Box bb-Checkbox",
 }
 `;
 
@@ -156,7 +156,7 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1 emotion-2 fp-Box fp-CheckboxField"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-CheckboxField"
 >
   Hello world
 </div>
@@ -220,21 +220,21 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -242,7 +242,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -253,7 +253,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -262,23 +262,23 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-15 test fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-15 test bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -343,21 +343,21 @@ exports[`overrides CheckboxField.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -365,7 +365,7 @@ exports[`overrides CheckboxField.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -376,7 +376,7 @@ exports[`overrides CheckboxField.base should render correctly 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -385,23 +385,23 @@ exports[`overrides CheckboxField.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-13 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-13 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -436,21 +436,21 @@ exports[`props should assign a ref via checkboxRef 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -458,7 +458,7 @@ exports[`props should assign a ref via checkboxRef 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -469,12 +469,12 @@ exports[`props should assign a ref via checkboxRef 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <input
-  class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+  class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
   id="FieldWrapper"
   type="checkbox"
 />
@@ -538,21 +538,21 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -560,7 +560,7 @@ exports[`props should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -571,28 +571,28 @@ exports[`props should render correctly 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -657,29 +657,29 @@ exports[`props should render correctly for danger state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-CheckboxIcon {
+.emotion-2 + .bb-CheckboxIcon {
   border-color: var(--bb-palette-danger,#000000);
 }
 
-.emotion-2:not(:checked) + .fp-CheckboxIcon {
+.emotion-2:not(:checked) + .bb-CheckboxIcon {
   box-shadow: var(--bb-palette-dangerTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -687,7 +687,7 @@ exports[`props should render correctly for danger state 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -698,28 +698,28 @@ exports[`props should render correctly for danger state 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="true"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -784,29 +784,29 @@ exports[`props should render correctly for success state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-CheckboxIcon {
+.emotion-2 + .bb-CheckboxIcon {
   border-color: var(--bb-palette-success,#000000);
 }
 
-.emotion-2:not(:checked) + .fp-CheckboxIcon {
+.emotion-2:not(:checked) + .bb-CheckboxIcon {
   box-shadow: var(--bb-palette-successTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -814,7 +814,7 @@ exports[`props should render correctly for success state 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -825,28 +825,28 @@ exports[`props should render correctly for success state 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -911,29 +911,29 @@ exports[`props should render correctly for warning state 1`] = `
   outline: none;
 }
 
-.emotion-2 + .fp-CheckboxIcon {
+.emotion-2 + .bb-CheckboxIcon {
   border-color: var(--bb-palette-warning,#000000);
 }
 
-.emotion-2:not(:checked) + .fp-CheckboxIcon {
+.emotion-2:not(:checked) + .bb-CheckboxIcon {
   box-shadow: var(--bb-palette-warningTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -941,7 +941,7 @@ exports[`props should render correctly for warning state 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -952,28 +952,28 @@ exports[`props should render correctly for warning state 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1038,21 +1038,21 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1060,7 +1060,7 @@ exports[`props should render correctly with CSS props 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1071,7 +1071,7 @@ exports[`props should render correctly with CSS props 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -1080,23 +1080,23 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-15 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-15 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1161,21 +1161,21 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1183,7 +1183,7 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1194,7 +1194,7 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -1207,26 +1207,26 @@ exports[`props should render correctly with a checkboxLabel 1`] = `
 }
 
 <div
-  class="emotion-14 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-14 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-14 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-14 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-13 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-13 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
       <span
-        class="emotion-6 emotion-0 emotion-8 emotion-9 fp-CheckboxLabel fp-Box fp-Label"
+        class="emotion-6 emotion-0 emotion-8 emotion-9 bb-CheckboxLabel bb-Box bb-Label"
         for="checkbox"
         id="label"
       >
@@ -1295,21 +1295,21 @@ exports[`props should render correctly with checked 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1317,7 +1317,7 @@ exports[`props should render correctly with checked 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1328,29 +1328,29 @@ exports[`props should render correctly with checked 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
         checked=""
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1415,21 +1415,21 @@ exports[`props should render correctly with defaultChecked 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1437,7 +1437,7 @@ exports[`props should render correctly with defaultChecked 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1448,29 +1448,29 @@ exports[`props should render correctly with defaultChecked 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
         checked=""
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1535,21 +1535,21 @@ exports[`props should render correctly with disabled 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1557,7 +1557,7 @@ exports[`props should render correctly with disabled 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1568,29 +1568,29 @@ exports[`props should render correctly with disabled 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         disabled=""
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1655,21 +1655,21 @@ exports[`props should render correctly with indeterminate 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1677,7 +1677,7 @@ exports[`props should render correctly with indeterminate 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-color: var(--bb-palette-primary,#000000);
   height: 0.125em;
   width: 0.625em;
@@ -1685,28 +1685,28 @@ exports[`props should render correctly with indeterminate 1`] = `
   left: calc(50% - 0.3125em);
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1771,21 +1771,21 @@ exports[`props should render correctly with isRequired 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1793,7 +1793,7 @@ exports[`props should render correctly with isRequired 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1804,29 +1804,29 @@ exports[`props should render correctly with isRequired 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
       aria-required="true"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -1891,21 +1891,21 @@ exports[`props should render correctly with label 1`] = `
   outline: none;
 }
 
-.emotion-10[disabled] + .fp-CheckboxIcon {
+.emotion-10[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-10:focus + .fp-CheckboxIcon {
+.emotion-10:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-10:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-10:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-10:checked + .fp-CheckboxIcon::before {
+.emotion-10:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1913,7 +1913,7 @@ exports[`props should render correctly with label 1`] = `
   position: absolute;
 }
 
-.emotion-10:checked + .fp-CheckboxIcon::before {
+.emotion-10:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1924,7 +1924,7 @@ exports[`props should render correctly with label 1`] = `
   width: 0.375em;
 }
 
-.emotion-10[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-10[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -1945,19 +1945,19 @@ exports[`props should render correctly with label 1`] = `
 }
 
 <div
-  class="emotion-3 emotion-1 emotion-2 fp-Box fp-CheckboxField"
+  class="emotion-3 emotion-1 emotion-2 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-3 emotion-1 emotion-2 fp-Box fp-FieldWrapper"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
-      class="emotion-1 emotion-7 fp-Box"
+      class="emotion-1 emotion-7 bb-Box"
     >
       <div
-        class="emotion-1 emotion-5 fp-Box"
+        class="emotion-1 emotion-5 bb-Box"
       >
         <legend
-          class="emotion-0 emotion-1 emotion-2 emotion-3 fp-FieldWrapperLabel fp-Box fp-Label"
+          class="emotion-0 emotion-1 emotion-2 emotion-3 bb-FieldWrapperLabel bb-Box bb-Label"
         >
           Hello world
         </legend>
@@ -1966,15 +1966,15 @@ exports[`props should render correctly with label 1`] = `
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 emotion-17 fp-Box fp-Label fp-Checkbox"
+      class="emotion-0 emotion-1 emotion-2 emotion-17 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-1 emotion-2 emotion-10 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-1 emotion-2 emotion-10 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-1 emotion-2 emotion-13 fp-CheckboxIcon fp-Box"
+        class="emotion-1 emotion-2 emotion-13 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -2039,21 +2039,21 @@ exports[`props should render correctly with name 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2061,7 +2061,7 @@ exports[`props should render correctly with name 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -2072,29 +2072,29 @@ exports[`props should render correctly with name 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         name="CheckboxFieldRocks"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -2159,21 +2159,21 @@ exports[`props should render correctly with value 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2181,7 +2181,7 @@ exports[`props should render correctly with value 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -2192,29 +2192,29 @@ exports[`props should render correctly with value 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
 <div
-  class="emotion-10 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-10 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
         value="CheckboxFieldValue"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
@@ -2279,21 +2279,21 @@ exports[`theming CheckboxField.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-2[disabled] + .fp-CheckboxIcon {
+.emotion-2[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-2:focus + .fp-CheckboxIcon {
+.emotion-2:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-2:not([disabled]):checked + .fp-CheckboxIcon {
+.emotion-2:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -2301,7 +2301,7 @@ exports[`theming CheckboxField.base should render correctly 1`] = `
   position: absolute;
 }
 
-.emotion-2:checked + .fp-CheckboxIcon::before {
+.emotion-2:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -2312,7 +2312,7 @@ exports[`theming CheckboxField.base should render correctly 1`] = `
   width: 0.375em;
 }
 
-.emotion-2[disabled]:checked + .fp-CheckboxIcon::before {
+.emotion-2[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
 }
 
@@ -2321,23 +2321,23 @@ exports[`theming CheckboxField.base should render correctly 1`] = `
 }
 
 <div
-  class="emotion-13 emotion-0 emotion-1 fp-Box fp-CheckboxField"
+  class="emotion-13 emotion-0 emotion-1 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-10 emotion-0 emotion-1 fp-Box fp-FieldWrapper"
+    class="emotion-10 emotion-0 emotion-1 bb-Box bb-FieldWrapper"
   >
     <label
       aria-describedby="label"
       aria-invalid="false"
-      class="emotion-6 emotion-0 emotion-1 emotion-9 fp-Box fp-Label fp-Checkbox"
+      class="emotion-6 emotion-0 emotion-1 emotion-9 bb-Box bb-Label bb-Checkbox"
     >
       <input
-        class="emotion-0 emotion-1 emotion-2 fp-CheckboxHiddenInput fp-Box"
+        class="emotion-0 emotion-1 emotion-2 bb-CheckboxHiddenInput bb-Box"
         id="FieldWrapper"
         type="checkbox"
       />
       <div
-        class="emotion-0 emotion-1 emotion-5 fp-CheckboxIcon fp-Box"
+        class="emotion-0 emotion-1 emotion-5 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>
