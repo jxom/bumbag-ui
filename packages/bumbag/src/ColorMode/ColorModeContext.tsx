@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { addColorModeBodyClassName } from '../utils/colorModes';
 import { useLocalStorage } from '../utils/useLocalStorage';
 import { useTheme } from '../utils/useTheme';
+import { addColorModeBodyClassName, getDefaultColorMode } from './utils';
 
 export const ColorModeContext = React.createContext<any>({ setColorMode: () => {}, colorMode: 'default' });
 
@@ -11,7 +11,7 @@ type Props = {
   mode: string;
 };
 
-export function Provider(props: Props) {
+export function ColorModeProvider(props: Props) {
   const { children, mode: _defaultMode } = props;
 
   ////////////////////////////////////
@@ -19,7 +19,7 @@ export function Provider(props: Props) {
   const { theme } = useTheme();
   const localStorage = useLocalStorage();
 
-  const defaultMode = React.useMemo(() => getDefaultMode(_defaultMode, { localStorage, theme }), [_defaultMode]); // eslint-disable-line
+  const defaultMode = React.useMemo(() => getDefaultColorMode(_defaultMode, { localStorage, theme }), [_defaultMode]); // eslint-disable-line
 
   ////////////////////////////////////
 
@@ -29,7 +29,7 @@ export function Provider(props: Props) {
 
   React.useEffect(() => {
     addColorModeBodyClassName(defaultMode);
-    localStorage.set('colorMode', defaultMode);
+    localStorage.set('mode', defaultMode);
   }, [defaultMode]); // eslint-disable-line
 
   ////////////////////////////////////
@@ -37,7 +37,7 @@ export function Provider(props: Props) {
   const setColorMode = React.useCallback(
     (colorMode) => {
       addColorModeBodyClassName(colorMode, mode);
-      localStorage.set('colorMode', colorMode);
+      localStorage.set('mode', colorMode);
       setMode(colorMode);
     },
     [localStorage, mode]
@@ -58,19 +58,6 @@ export function Provider(props: Props) {
   return <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>;
 }
 
-function getDefaultMode(mode, { localStorage, theme }) {
-  const { useSystemColorMode } = theme.modes;
-  let defaultMode = mode;
-  if (
-    useSystemColorMode &&
-    typeof window !== 'undefined' &&
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  ) {
-    defaultMode = 'dark';
-  }
-  if (localStorage.get('colorMode')) {
-    defaultMode = localStorage.get('colorMode');
-  }
-  return defaultMode;
+export function useColorMode() {
+  return React.useContext(ColorModeContext);
 }

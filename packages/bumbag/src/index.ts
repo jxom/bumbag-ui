@@ -12,6 +12,7 @@ export * from './Callout';
 export * from './Card';
 export * from './Clickable';
 export * from './Code';
+export * from './ColorMode';
 export * from './Columns';
 export * from './Container';
 export * from './Checkbox';

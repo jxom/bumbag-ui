@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { getColorModesCSSVariables, useColorMode } from '../ColorMode';
 import { Global, css, ThemeContext } from '../styled';
-import { getColorModesCSSVariables, palette, font, omit, theme, useColorMode } from '../utils';
+import { palette, font, theme } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);

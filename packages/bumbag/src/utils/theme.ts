@@ -1,10 +1,12 @@
 import { theme as _theme } from 'styled-tools';
 import tinycolor from 'tinycolor2';
+
 import { ThemeConfig } from '../types';
 import { css } from '../styled';
+import { getColorFromCSSVariable } from '../ColorMode/utils';
+
 import { isFunction } from './isFunction';
 import { get } from './get';
-import { getColorFromCSSVariable } from './colorModes';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
