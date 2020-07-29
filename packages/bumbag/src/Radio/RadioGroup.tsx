@@ -56,7 +56,7 @@ const useProps = createHook<RadioGroupProps>(
     });
 
     return {
-      role: 'group',
+      role: 'radiogroup',
       ...boxProps,
       className,
       children: (

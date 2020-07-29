@@ -12,11 +12,9 @@ import { Card } from 'bumbag'
 ## Usage
 
 ```jsx-live
-<Stack>
-  <Card>Hello world</Card>
-  <Card variant="shadowed">Hello world</Card>
-  <Card variant="bordered">Hello world</Card>
-</Stack>
+<Card>Hello world</Card>
+<Card variant="shadowed">Hello world</Card>
+<Card variant="bordered">Hello world</Card>
 ```
 
 ### Header
@@ -88,6 +86,13 @@ You can render a footer for the card using the `footer` prop.
   </Card.Footer>
 </Card>
 ```
+
+## Accessibility
+
+### Patterns
+
+- If a card has a **title**, then the `aria-labelledby` attribute is set on the component.
+- If a card has a **description**, then the `aria-describedby` attribute is set on the component.
 
 ## Props
 

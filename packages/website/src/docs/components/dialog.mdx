@@ -193,6 +193,30 @@ To render a close icon on a dialog, use the `showCloseButton` prop.
 </Dialog>
 ```
 
+## Accessibility
+
+The `<Dialog.Modal>` component follows the [WAI ARIA Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
+
+### Rules
+
+- A `Dialog.Modal` must be triggered via `<Modal.Disclosure>`, or `Modal.Disclosure.useProps`.
+
+#### Patterns
+
+- If a dialog has a **title**, then the `aria-labelledby` attribute is set on the component.
+- If a dialog has a **description**, then the `aria-describedby` attribute is set on the component.
+- `Dialog.Modal` has a role of `dialog`.
+- `Dialog.Modal` has the `aria-modal` attribute set to `true`, unless the `modal` prop is set to `false`.
+- When the modal opens, focus is set to the first focusable element in the modal.
+- Focus is trapped inside the modal, unless the `modal` prop is set to false.
+- <Key>Esc</Key> closes the modal unless `hideOnEsc` is `false`.
+- Clicking outside the modal closes it unless `hideOnClickOutside` is `false`.
+- When the modal closes, focus returns to the disclosure that triggered it.
+
+#### References
+
+- [WAI ARIA Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal)
+
 ## Props
 
 ### Dialog Props

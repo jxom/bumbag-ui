@@ -37,6 +37,24 @@ A checkbox can use different states (as per palette) such as `danger`, `success`
 <Radio state="primary" label="Click me" />
 ```
 
+## Accessibility
+
+The `<Radio>` component follows the [WAI ARIA Radio Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup).
+
+### Rules
+
+- The Radio must have a `label` prop to identify it's label. If a `label` prop is not provided, an `aria-label` or `aria-labelledby` prop can be specified.
+
+#### Patterns
+
+- The radio has a role of `radio`.
+- The radio has an accessible label specified via the `label`, `aria-labelledby` or `aria-label` prop.
+- When the radio has focus, pressing the <Key>Space</Key> key changes the state of the radio.
+
+#### References
+
+- [WAI ARIA Radio Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup)
+
 ## Props
 
 ### Radio Props

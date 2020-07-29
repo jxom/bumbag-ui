@@ -139,6 +139,22 @@ function Example() {
 }
 ```
 
+## Accessibility
+
+The `<RadioGroup>` component follows the [WAI ARIA RadioGroup Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup).
+
+#### Patterns
+
+- The outer wrapper of the group has a role of `radiogroup`.
+- The radio has a role of `radio`.
+- Pressing <Key>Tab</Key> and <Key>Shift</Key> + <Key>Tab</Key> moves focus in and out of the radio group.
+- Pressing <Key>Space</Key> checks the selected radio button.
+- Pressing <Key>Up</Key>, <Key>Down</Key>, <Key>Left</Key> or <Key>Right</Key> will move the current selection to the next or previous item.
+
+#### References
+
+- [WAI ARIA RadioGroup Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup)
+
 ## Props
 
 ### RadioGroup Props

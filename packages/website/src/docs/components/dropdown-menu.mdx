@@ -1,6 +1,6 @@
 import Theme from '../../components/Theme';
 import { DropdownMenu } from 'bumbag';
-import { Link } from 'bumbag';
+import { Key, Link } from 'bumbag';
 
 # DropdownMenu
 
@@ -77,6 +77,34 @@ You can group your menu by using the `<DropdownMenu.Group>` component.
   <Button iconAfter="chevron-down">Actions</Button>
 </DropdownMenu>
 ```
+
+## Accessibility
+
+The `<DropdownMenu>` component follows the [WAI ARIA Menu Pattern](https://www.w3.org/TR/wai-aria-practices/#menu).
+
+### Rules
+
+- `DropdownMenu`'s `menu` prop must consist of a set of `DropdownMenu.Item` components.
+
+#### Patterns
+
+- `DropdownMenu` has a role of `menu`.
+- `DropdownMenu` has the `aria-expended` attribute set to `true` or `false` depending if the menu is visible.
+- `DropdownMenu` has the `aria-controls` attribute set to the menu popover element.
+- Pressing <Key>Enter</Key> or <Key>Space</Key> on the menu button will trigger the dropdown menu.
+- If the menu is open, pressing <Key>Esc</Key> will close the dropdown menu.
+- If the menu is open, clicking outside the menu bounds will close the dropdown menu.
+- If the menu is open, pressing <Key>↑</Key> or <Key>↓</Key> will navigate the menu items.
+- If the menu is open, `DropdownMenu` has `aria-haspopup` set to `"menu"`.
+- A `DropdownMenu.Item` has the role of `menuitem`.
+- Each `DropdownMenu.Item` has it's `tabindex` set to `-1` except either the first element if the menu is closed, or the active element if the menu is open, where it will be `0`.
+- When a `DropdownMenu.Item` is disabled, `aria-disabled` will be set to `true`.
+
+
+#### References
+
+- [WAI ARIA Menu Pattern](https://www.w3.org/TR/wai-aria-practices/#menu)
+
 
 ## Props
 
@@ -857,7 +885,6 @@ Separator's orientation.
 <Box marginBottom="major-4" />
 
 </details>
-
 
 ## Theming
 

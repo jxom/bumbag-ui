@@ -81,6 +81,24 @@ function Example() {
 }
 ```
 
+## Accessibility
+
+The `<Switch>` component follows the [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox).
+
+### Rules
+
+- The switch must have a `label` prop to identify it's label. If a `label` prop is not provided, an `aria-label` or `aria-labelledby` prop can be specified.
+
+#### Patterns
+
+- The switch has a role of `checkbox`.
+- The switch has an accessible label specified via the `label`, `aria-labelledby` or `aria-label` prop.
+- When the switch has focus, pressing the <Key>Space</Key> key changes the state of the checkbox.
+
+#### References
+
+- [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox)
+
 ## Props
 
 ### Switch Props

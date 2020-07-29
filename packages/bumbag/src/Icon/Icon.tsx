@@ -58,6 +58,7 @@ const useProps = createHook<IconProps>(
     return {
       role: 'img',
       viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
+      'aria-hidden': !props['aria-label'] && !props.label,
       ...boxProps,
       className,
       children: (
