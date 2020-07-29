@@ -48,6 +48,18 @@ function Example() {
 ###
 ```
 
+## Accessibility
+
+### Rules
+
+- Each `Disclosure` must have an accomanying `Disclosure.Content`.
+
+#### Patterns
+
+- `Disclosure` extends the accessibility features of a [Button](/components/button).
+- `Disclosure` has a `aria-controls` value to the ID of the `Disclosure.Content`.
+- When the disclosure is visible, `aria-expanded` is set to `true`. If it is hidden, it is set to `false`.
+
 ## Props
 
 ### Disclosure Props

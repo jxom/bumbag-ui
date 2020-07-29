@@ -33,6 +33,15 @@ function Example() {
 }
 ```
 
+## Accessibility
+
+#### Patterns
+
+- The `Tabbable` component has a `tabindex` set to `0` by default. If it is disabled, then the `tabindex` is removed.
+- When the `Tabbable` is disabled, then the `aria-disabled` attribute is set to `true`.
+- When the `Tabbable` is disabled, then the **click**, **mouse down** and **mouse over** events are not triggered.
+- Focus is automatically set on Tabbable when it's clicked, which prevents inconsistencies between browsers.
+
 ## Props
 
 ### Tabbable Props
