@@ -1,7 +1,5 @@
 const path = require('path');
 
-console.log(__dirname, path.cwd);
-
 module.exports = {
   components: '../bumbag/src/index.ts',
   outputPath: './public/playroom',
@@ -15,32 +13,33 @@ module.exports = {
           use: {
             loader: 'babel-loader',
             options: {
-              cwd: path.join(__dirname, '../..')
-            }
-          }
-        }
-      ]
+              cwd: path.join(__dirname, '../..'),
+              configFile: path.resolve(__dirname, '../../node_modules/playroom/.babelrc'),
+            },
+          },
+        },
+      ],
     },
     resolve: {
       alias: {
-        bumbag: path.resolve(__dirname, '../bumbag/src')
+        bumbag: path.resolve(__dirname, '../bumbag/src'),
+        'bumbag-addon-markdown': path.resolve(__dirname, '../bumbag-addon-markdown/src'),
+        'bumbag-addon-highlighted-code': path.resolve(__dirname, '../bumbag-addon-highlighted-code/src'),
+        'bumbag-theme-medipass': path.resolve(__dirname, '../bumbag-theme-medipass/src'),
       },
-      extensions: ['.mjs', '.js', '.json', '.ts', '.tsx']
-    }
+      extensions: ['.mjs', '.js', '.json', '.ts', '.tsx'],
+      modules: [path.resolve(__dirname, '../../node_modules'), 'node_modules'],
+    },
   }),
   exampleCode: `
-    <Container breakpoint="mobile" padding="major-2">
-      <FieldStack>
-        <Heading fontSize="500">Log in</Heading>
-        <InputField label="Username" size="medium" />
-        <InputField label="Password" size="medium" type="password" />
-        <Button palette="primary" size="large" width="100%">
-          Log in
-        </Button>
-        <Button palette="primary" size="large" variant="ghost" width="100%">
-          Sign up
-        </Button>
-      </FieldStack>
-    </Container>
-  `
+    <PageContent>
+      <Heading fontSize={{ default: "500", mobile: "300" }}>
+        Welcome to the Bumbag playroom!
+      </Heading>
+      <Drawer.State>
+        <Drawer.Disclosure use={Button}>Click me!</Drawer.Disclosure>
+        <Drawer>Hey hey!</Drawer>
+      </Drawer.State>
+    </PageContent>
+  `,
 };
