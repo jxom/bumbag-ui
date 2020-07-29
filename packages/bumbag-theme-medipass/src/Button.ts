@@ -19,7 +19,7 @@ export default {
       border-width: 2px;
 
       &:hover {
-        background-color: ${palette(styleProps.palette)(styleProps)};
+        background-color: ${palette(`${styleProps.palette}`)(styleProps)};
         color: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
         fill: ${palette(`${styleProps.palette}Inverted`)(styleProps)};
       }
