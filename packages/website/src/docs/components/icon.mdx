@@ -162,6 +162,22 @@ Icons will be the same size as its text by default.
 </Heading>
 ```
 
+## Accessibility
+
+### Rules
+
+- The `Icon` must have an `aria-label` prop, however, if it is a presentational icon with no meaning, set the `aria-hidden` prop to `true`.
+
+#### Patterns
+
+- The `Icon` has a role of `img`.
+- If no `aria-label` is provided, then `aria-hidden` is set to `true`.
+
+
+#### References
+
+- [Semantically identifying a font icon with role="img"](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA24.html)
+
 ## Icon Props
 
 <!-- Automatically generated -->

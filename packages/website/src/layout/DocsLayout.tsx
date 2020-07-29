@@ -55,7 +55,7 @@ export default function Docs(props: Props) {
         />
       ),
       code: (props: any) => <bumbag.Code {...props} />,
-      inlineCode: (props: any) => <bumbag.Code {...props} palette="primary" />,
+      inlineCode: (props: any) => <bumbag.Code fontSize="15px" {...props} palette="primary" />,
       h1: (props: any) => <bumbag.Heading marginBottom="major-4" {...props} />,
       h2: (props: any) => (
         <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
@@ -84,6 +84,16 @@ export default function Docs(props: Props) {
           }}
         />
       ),
+      ul: (props: any) => (
+        <bumbag.List
+          listStyleType="disc"
+          listStylePosition="outside"
+          marginLeft="major-2"
+          marginBottom="major-2"
+          {...props}
+        />
+      ),
+      li: (props: any) => <bumbag.ListItem marginBottom="major-1" {...props} />,
       strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />,
       table: (props: any) => <bumbag.Table marginBottom="major-4" marginTop="major-4" {...props} />,

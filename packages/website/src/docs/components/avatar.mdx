@@ -14,7 +14,7 @@ import { Avatar } from 'bumbag';
 ## Usage
 
 ```jsx-live
-<Avatar src="/bean.jpg" alt="Bean" />
+<Avatar src="/bean.jpg" alt="Photo of Mr. Bean" />
 ```
 
 ### Shapes
@@ -22,7 +22,7 @@ import { Avatar } from 'bumbag';
 Avatars are available in two different shapes and can be changed using the `variant` prop.
 
 ```jsx-live
-<Avatar variant="circle" src="/bean.jpg" alt="Bean" />
+<Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" />
 ```
 
 ### Sizes
@@ -31,11 +31,11 @@ Avatars are available in five different sizes or you can set your own using the 
 
 ```jsx-live
 <Set>
-  <Avatar variant="circle" src="/bean.jpg" alt="Bean" size="small" />
-  <Avatar variant="circle" src="/bean.jpg" alt="Bean" />
-  <Avatar variant="circle" src="/bean.jpg" alt="Bean" size="medium" />
-  <Avatar variant="circle" src="/bean.jpg" alt="Bean" size="large" />
-  <Avatar variant="circle" src="/bean.jpg" alt="Bean" size="150px" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="small" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="medium" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="large" />
+  <Avatar variant="circle" src="/bean.jpg" alt="Photo of Mr. Bean" size="150px" />
 </Set>
 ```
 
@@ -51,6 +51,12 @@ Avatars can also be initials using the `initials` prop.
   <Avatar initials="JM" variant="circle" palette="warning" size="large" />
 </Set>
 ```
+
+## Accessibility
+
+### Rules
+
+- If the avatar is an image, it **must have an `alt` prop**.
 
 ## Props
 
