@@ -57,15 +57,19 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">borderRadius</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">borderRadius</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the border radius of the group.
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
-**<Code marginRight="major-1">verticalBelow</Code>**
+Sets the orientation of the group.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">verticalBelow</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"tablet"
@@ -85,16 +89,18 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
   | "max-mobile"`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the breakpoint at which the group should snap to be vertical.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -102,13 +108,13 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -119,61 +125,59 @@ A group can snap from horizontal to vertical after a given breakpoint with the `
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ## Theming
 

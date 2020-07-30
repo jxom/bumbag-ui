@@ -4,7 +4,9 @@ import { breakpoint, useClassName } from '../utils';
 import { css, cssClass } from '../styled';
 
 export type LocalHideProps = {
+  // When **above** the breakpoint specified, children will be hidden.
   above?: string;
+  // When **below** the breakpoint specified, children will be hidden.
   below?: string;
 };
 export type HideProps = LocalHideProps;

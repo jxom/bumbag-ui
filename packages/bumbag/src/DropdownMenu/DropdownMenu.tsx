@@ -10,10 +10,10 @@ import { useDropdownMenuState, DropdownMenuInitialState, DropdownMenuStateReturn
 import * as styles from './styles';
 
 export type LocalDropdownMenuProps = {
-  baseId?: DropdownMenuInitialState['baseId'];
-  children: React.ReactElement<any>;
   menu: any;
+  children: React.ReactElement<any>;
   visible?: DropdownMenuInitialState['visible'];
+  baseId?: DropdownMenuInitialState['baseId'];
 };
 export type DropdownMenuProps = BoxProps & LocalDropdownMenuProps;
 

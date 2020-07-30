@@ -8,6 +8,7 @@ import { PageContentWrapper, PageContentWrapperProps } from './PageContentWrappe
 import * as styles from './styles';
 
 export type LocalPageContentProps = {
+  /** Props to spread onto the wrapper component. */
   wrapperProps?: Partial<PageContentWrapperProps>;
 };
 export type PageContentProps = ContainerProps & LocalPageContentProps;

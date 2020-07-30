@@ -10,14 +10,22 @@ import { PageContext } from './PageContext';
 import * as styles from './styles';
 
 export type LocalPageWithSidebarProps = {
-  collapsedSidebarWidth?: string;
-  collapsedSidebarProps?: Partial<DrawerProps>;
-  expandedSidebarProps?: Partial<DisclosureProps>;
-  defaultIsVisible?: boolean;
-  minimizedSidebarWidth?: string;
-  sidebarWidth?: string;
+  /** Sets the sidebar component. */
   sidebar: React.ReactElement<any>;
+  /** Sets the width of the sidebar. */
+  sidebarWidth?: string;
+  /** Sets the placement of the sidebar. */
   sidebarPlacement?: 'left' | 'right';
+  /** Sets the width of the collapsed (mobile) sidebar. */
+  collapsedSidebarWidth?: string;
+  /** Props to spread on the collapsed (mobile) sidebar. */
+  collapsedSidebarProps?: Partial<DrawerProps>;
+  /** Props to spread on the expanded sidebar. */
+  expandedSidebarProps?: Partial<DisclosureProps>;
+  /** Sets the initial visibility of the sidebar. */
+  defaultIsVisible?: boolean;
+  /** Sets the width of the minimized sidebar. */
+  minimizedSidebarWidth?: string;
 };
 export type PageWithSidebarProps = BoxProps & LocalPageWithSidebarProps;
 

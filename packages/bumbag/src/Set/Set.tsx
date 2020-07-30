@@ -7,9 +7,13 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalSetProps = {
+  /** Indicates if the set items should span the width of the set. */
   isFilled?: boolean;
+  /** Indicates the orientation of the set. */
   orientation?: 'vertical' | 'horizontal';
+  /** Sets the spacing between items. */
   spacing?: string;
+  /** Indicates the breakpoint at which the set should become vertical. */
   verticalBelow?: LayoutBreakpoint;
 };
 export type SetProps = BoxProps & LocalSetProps;

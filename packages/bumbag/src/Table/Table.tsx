@@ -7,11 +7,17 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalTableProps = {
+  /** Indicates if the table should have dividers. */
   hasDividers?: boolean;
+  /** Indicates if the table should be striped. */
   isStriped?: boolean;
+  /** Indicates if the table should be hoverable. */
   isHoverable?: boolean;
+  /** Indicates if the table should be responsive. */
   isResponsive?: boolean;
+  /** Indicates breakpoint at which the table should become responsive. */
   responsiveBreakpoint?: string;
+  /** Sets the variant of the table. */
   variant?: string;
 };
 export type TableProps = BoxProps & LocalTableProps;

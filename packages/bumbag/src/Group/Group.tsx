@@ -7,8 +7,11 @@ import { LayoutBreakpoint } from '../types';
 import * as styles from './styles';
 
 export type LocalGroupProps = {
+  /** Sets the border radius of the group. */
   borderRadius?: string;
+  /** Sets the orientation of the group. */
   orientation?: 'vertical' | 'horizontal';
+  /** Sets the breakpoint at which the group should snap to be vertical. */
   verticalBelow?: LayoutBreakpoint;
 };
 export type GroupProps = FlexProps & LocalGroupProps;

@@ -19,17 +19,24 @@ import { PopoverStateContext } from './PopoverState';
 import * as styles from './styles';
 
 export type LocalPopoverProps = {
+  /** Sets the footer component of the popover. */
   footer?: string | React.ReactElement<any>;
+  /** Indicates if the popover should have an arrow. */
   hasArrow?: boolean;
+  /** Function to invoke when the popover is closed. */
   onClickClose?: ButtonProps['onClick'];
+  /** Indicates if the action button should be visible. */
   showActionButtons?: boolean;
+  /** Indicates if the close button should be visible. */
   showCloseButton?: boolean;
+  /** Indicates if the action button should be visible. */
   title?: string | React.ReactElement<any>;
+  /** Indicates if the popover should be rendered in a portal. */
   usePortal?: boolean;
-  standalone?: boolean;
   actionButtonsProps?: ActionButtonsProps;
   arrowProps?: PopoverArrowProps;
   closeButtonProps?: Omit<ButtonProps, 'children'>;
+  standalone?: boolean;
 } & AnimateProps;
 export type PopoverProps = BoxProps & ReakitPopoverProps & LocalPopoverProps;
 

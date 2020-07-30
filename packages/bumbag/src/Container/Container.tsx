@@ -7,9 +7,13 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalContainerProps = {
+  /** Sets the alignment of the container. */
   align?: 'left' | 'right' | 'center';
+  /** Sets the breakpoint width of the container. */
   breakpoint?: Breakpoint;
+  /** Indicates if the container is fluid. */
   isFluid?: boolean;
+  /** Indicates if the container is of a layout type. */
   isLayout?: boolean;
 };
 export type ContainerProps = BoxProps & LocalContainerProps;

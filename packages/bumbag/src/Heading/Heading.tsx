@@ -9,6 +9,7 @@ import * as styles from './styles';
 
 export type LocalHeadingProps = {
   isSubHeading?: boolean;
+  /** Indicates the breakpoint at which the heading font size should shrink. */
   shrinkBelow?: Breakpoint;
 };
 export type HeadingProps = BoxProps & LocalHeadingProps;

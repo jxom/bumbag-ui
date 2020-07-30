@@ -6,8 +6,11 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalStackProps = {
+  /** Sets the orientation of the stack component. */
   orientation?: 'vertical' | 'horizontal';
+  /** Sets the spacing between the stack items. */
   spacing?: string;
+  /** Indicates the breakpoint at which the stack should become vertical. */
   verticalBelow?: string;
 };
 export type StackProps = BoxProps & LocalStackProps;

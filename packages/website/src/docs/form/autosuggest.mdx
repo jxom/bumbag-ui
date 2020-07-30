@@ -428,7 +428,6 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 - Clicking outside will dismiss the popover.
 - Pressing <Key>Enter</Key> accepts the current selection.
 
-
 **When focus is on an option inside the popover:**
 
 - Pressing <Key>↓</Key> will focus the next available option.
@@ -446,115 +445,155 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">automaticSelection</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">automaticSelection</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Whether or not an Autosuggest option should be automatically selected.
 
-**<Code marginRight="major-1">cacheKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">cacheKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">defer</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+The key to cache the loadOptions results against.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">defer</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened.
 
-**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">limit</Code>** <Code fontSize="150" palette="primary">number</Code>
+Indicates if the  Autosuggest is disabled.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">loadOptions</Code>**
+**<Code fontSize="150" marginRight="major-1">isLoading</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the Autosuggest is loading.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">limit</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+Applies a limit to the number of options that appear in the list.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">loadOptions</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(options: { page?: number; searchText?: string; variables?: any; }) => Promise<{ options: Option[]; }>`}
+{`(options: { page?: number; searchText?: string; variables?: any; }) => Promise<{ options: Options; }>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Supply an async function to `loadOptions` to load options from an external data source.
 
-**<Code marginRight="major-1">loadVariables</Code>** <Code fontSize="150" palette="primary">{ [key: string]: any; }</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">loadVariables</Code>** <Code fontSize="100" palette="primary">{ [key: string]: any; }</Code> 
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">Option[]</Code>
+Supply variables (i.e. query parameters) to the `loadOptions` function.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">Option[]</Code> 
 
-<Box marginBottom="major-4" />
+Options to show in the list. If `loadOptions` is supplied, then you don't need to supply this.
 
-**<Code marginRight="major-1">pagination</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-**<Code marginRight="major-1">popoverHeight</Code>** <Code fontSize="150" palette="primary">string</Code>
+Function to invoke when the option has been changed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">placeholder</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">pagination</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Indicates if the list should be paginated. If `true`, then pagination will be applied to `loadOptions`.
 
-**<Code marginRight="major-1">restrictToOptions</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">popoverHeight</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code>
+Sets the height of the popover list.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">{ key?: Key; label?: string; value?: any; }</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">placeholder</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the placeholder of the search input.
 
-**<Code marginRight="major-1">errorText</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">restrictToOptions</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">emptyText</Code>** <Code fontSize="150" palette="primary">string</Code>
+Restricts selection to the options supplied via `options` or `loadOptions`. Otherwise, it's free-for-all entry.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">loadingText</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the visual state of the Autosuggest.
 
-**<Code marginRight="major-1">loadingMoreText</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">{ key?: ReactText; label?: string; value?: any; }</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-**<Code marginRight="major-1">renderClearButton</Code>** <Code fontSize="150" palette="primary">any</Code>
+Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`).
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">renderError</Code>** <Code fontSize="150" palette="primary">any</Code>
+**<Code fontSize="150" marginRight="major-1">errorText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the error text when the `loadOptions` function throws an error.
 
-**<Code marginRight="major-1">renderEmpty</Code>** <Code fontSize="150" palette="primary">any</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">emptyText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">renderLoading</Code>** <Code fontSize="150" palette="primary">any</Code>
+Sets the empty text when no options are present.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">renderLoadingMore</Code>** <Code fontSize="150" palette="primary">any</Code>
+**<Code fontSize="150" marginRight="major-1">loadingText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the loading text when the options are loading.
 
-**<Code marginRight="major-1">renderOption</Code>** <Code fontSize="150" palette="primary">any</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">loadingMoreText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">clearButtonProps</Code>**
+Sets the loading text when more options are loading (via pagination).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderClearButton</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderError</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderEmpty</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderLoading</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderLoadingMore</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">clearButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -569,9 +608,9 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">inputProps</Code>**
+**<Code fontSize="150" marginRight="major-1">inputProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -584,9 +623,9 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">itemProps</Code>**
+**<Code fontSize="150" marginRight="major-1">itemProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -601,9 +640,9 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">popoverProps</Code>**
+**<Code fontSize="150" marginRight="major-1">popoverProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -618,9 +657,9 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">dropdownMenuInitialState</Code>**
+**<Code fontSize="150" marginRight="major-1">dropdownMenuInitialState</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -636,11 +675,11 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -648,13 +687,13 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -665,67 +704,65 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### AutosuggestField Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">addonBefore</Code>**
+**<Code fontSize="150" marginRight="major-1">addonBefore</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -737,9 +774,9 @@ The `<Autosuggest>` component follows the [WAI ARIA Combobox Pattern](https://ww
 
 Addon component to the input (before). Similar to the addon components in Input.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">addonAfter</Code>**
+**<Code fontSize="150" marginRight="major-1">addonAfter</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -751,9 +788,9 @@ Addon component to the input (before). Similar to the addon components in Input.
 
 Addon component to the input (after). Similar to the addon components in Input.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">autosuggestProps</Code>**
+**<Code fontSize="150" marginRight="major-1">autosuggestProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -770,125 +807,165 @@ Addon component to the input (after). Similar to the addon components in Input.
 
 Additional props for the Autosuggest component
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">orientation</Code>** <Code fontSize="150" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">orientation</Code>** <Code fontSize="100" palette="primary">&#34;horizontal&#34; | &#34;vertical&#34;</Code> 
 
 If addonBefore or addonAfter exists, then the addons will render vertically.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Autosuggest</strong></code> props</Box>
 
-**<Code marginRight="major-1">automaticSelection</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">automaticSelection</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Whether or not an Autosuggest option should be automatically selected.
 
-**<Code marginRight="major-1">cacheKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">cacheKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">defer</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+The key to cache the loadOptions results against.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">defer</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened.
 
-**<Code marginRight="major-1">isLoading</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">limit</Code>** <Code fontSize="150" palette="primary">number</Code>
+Indicates if the  Autosuggest is disabled.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">loadOptions</Code>**
+**<Code fontSize="150" marginRight="major-1">isLoading</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the Autosuggest is loading.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">limit</Code>** <Code fontSize="100" palette="primary">number</Code> 
+
+Applies a limit to the number of options that appear in the list.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">loadOptions</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`(options: { page?: number; searchText?: string; variables?: any; }) => Promise<{ options: Option[]; }>`}
+{`(options: { page?: number; searchText?: string; variables?: any; }) => Promise<{ options: Options; }>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Supply an async function to `loadOptions` to load options from an external data source.
 
-**<Code marginRight="major-1">loadVariables</Code>** <Code fontSize="150" palette="primary">{ [key: string]: any; }</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">loadVariables</Code>** <Code fontSize="100" palette="primary">{ [key: string]: any; }</Code> 
 
-**<Code marginRight="major-1">options</Code>** <Code fontSize="150" palette="primary">Option[]</Code>
+Supply variables (i.e. query parameters) to the `loadOptions` function.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">onChange</Code>** <Code fontSize="150" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">options</Code>** <Code fontSize="100" palette="primary">Option[]</Code> 
 
-<Box marginBottom="major-4" />
+Options to show in the list. If `loadOptions` is supplied, then you don't need to supply this.
 
-**<Code marginRight="major-1">pagination</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">onChange</Code>** <Code fontSize="100" palette="primary">(Option: any) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-**<Code marginRight="major-1">popoverHeight</Code>** <Code fontSize="150" palette="primary">string</Code>
+Function to invoke when the option has been changed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">placeholder</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">pagination</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-<Box marginBottom="major-4" />
+Indicates if the list should be paginated. If `true`, then pagination will be applied to `loadOptions`.
 
-**<Code marginRight="major-1">restrictToOptions</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">popoverHeight</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">state</Code>** <Code fontSize="150" palette="primary">string</Code>
+Sets the height of the popover list.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">value</Code>** <Code fontSize="150" palette="primary">{ key?: Key; label?: string; value?: any; }</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">placeholder</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the placeholder of the search input.
 
-**<Code marginRight="major-1">errorText</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">restrictToOptions</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">emptyText</Code>** <Code fontSize="150" palette="primary">string</Code>
+Restricts selection to the options supplied via `options` or `loadOptions`. Otherwise, it's free-for-all entry.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">loadingText</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">state</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the visual state of the Autosuggest.
 
-**<Code marginRight="major-1">loadingMoreText</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">value</Code>** <Code fontSize="100" palette="primary">{ key?: ReactText; label?: string; value?: any; }</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-**<Code marginRight="major-1">renderClearButton</Code>** <Code fontSize="150" palette="primary">any</Code>
+Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`).
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">renderError</Code>** <Code fontSize="150" palette="primary">any</Code>
+**<Code fontSize="150" marginRight="major-1">errorText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the error text when the `loadOptions` function throws an error.
 
-**<Code marginRight="major-1">renderEmpty</Code>** <Code fontSize="150" palette="primary">any</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">emptyText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">renderLoading</Code>** <Code fontSize="150" palette="primary">any</Code>
+Sets the empty text when no options are present.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">renderLoadingMore</Code>** <Code fontSize="150" palette="primary">any</Code>
+**<Code fontSize="150" marginRight="major-1">loadingText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+Sets the loading text when the options are loading.
 
-**<Code marginRight="major-1">renderOption</Code>** <Code fontSize="150" palette="primary">any</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">loadingMoreText</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-**<Code marginRight="major-1">clearButtonProps</Code>**
+Sets the loading text when more options are loading (via pagination).
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderClearButton</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderError</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderEmpty</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderLoading</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderLoadingMore</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">renderOption</Code>** <Code fontSize="100" palette="primary">any</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">clearButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -903,9 +980,9 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">inputProps</Code>**
+**<Code fontSize="150" marginRight="major-1">inputProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -918,9 +995,9 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">itemProps</Code>**
+**<Code fontSize="150" marginRight="major-1">itemProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -935,9 +1012,9 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">popoverProps</Code>**
+**<Code fontSize="150" marginRight="major-1">popoverProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -952,9 +1029,9 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">dropdownMenuInitialState</Code>**
+**<Code fontSize="150" marginRight="major-1">dropdownMenuInitialState</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -970,14 +1047,14 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -985,13 +1062,13 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1002,65 +1079,63 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>FieldWrapper</strong></code> props</Box>
 
-**<Code marginRight="major-1">description</Code>**
+**<Code fontSize="150" marginRight="major-1">description</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1071,30 +1146,11 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the description text of the field wrapper.
 
-**<Code marginRight="major-1">hint</Code>**
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`string
-  | ReactElement<any, string
-  | ((props: any) => ReactElement<any, string
-  | ...
-  | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>`}
-</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">isOptional</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">isRequired</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">label</Code>**
+**<Code fontSize="150" marginRight="major-1">hint</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1105,13 +1161,23 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the bottom hint text of the field wrapper.
 
-**<Code marginRight="major-1">labelType</Code>** <Code fontSize="150" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">isOptional</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">tooltip</Code>**
+Sets the optional flag (and displays optional text) on the field wrapper.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isRequired</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Sets the required flag (and a required astrix) on the field wrapper.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">label</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1122,9 +1188,32 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the label on the field wrapper.
 
-**<Code marginRight="major-1">tooltipTriggerComponent</Code>**
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">labelType</Code>** <Code fontSize="100" palette="primary">&#34;label&#34; | &#34;legend&#34;</Code> 
+
+Sets the label type on the field wrapper.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tooltip</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`string
+  | ReactElement<any, string
+  | ((props: any) => ReactElement<any, string
+  | ...
+  | (new (props: any) => Component<any, any, any>)>)
+  | (new (props: any) => Component<any, any, any>)>`}
+</Code>
+
+Sets the tooltip of the field wrapper. Can be either a string, or a React component.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tooltipTriggerComponent</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`ReactElement<any, string
@@ -1134,14 +1223,18 @@ If addonBefore or addonAfter exists, then the addons will render vertically.
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the tooltip trigger component.
 
-**<Code marginRight="major-1">validationText</Code>** <Code fontSize="150" palette="primary">string</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">validationText</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+Sets the bottom validation text of the field wrapper.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ## Theming
 

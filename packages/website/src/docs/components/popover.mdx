@@ -266,7 +266,7 @@ function Example() {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">footer</Code>**
+**<Code fontSize="150" marginRight="major-1">footer</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -277,25 +277,35 @@ function Example() {
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the footer component of the popover.
 
-**<Code marginRight="major-1">hasArrow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">hasArrow</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">onClickClose</Code>** <Code fontSize="150" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+Indicates if the popover should have an arrow.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">showActionButtons</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
 
-<Box marginBottom="major-4" />
+Function to invoke when the popover is closed.
 
-**<Code marginRight="major-1">showCloseButton</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">showActionButtons</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">title</Code>**
+Indicates if the action button should be visible.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the close button should be visible.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">title</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -306,34 +316,33 @@ function Example() {
   | (new (props: any) => Component<any, any, any>)>`}
 </Code>
 
-<Box marginBottom="major-4" />
+Indicates if the action button should be visible.
 
-**<Code marginRight="major-1">usePortal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">usePortal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">standalone</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+Indicates if the popover should be rendered in a portal.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">actionButtonsProps</Code>**
+**<Code fontSize="150" marginRight="major-1">actionButtonsProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">arrowProps</Code>**
+**<Code fontSize="150" marginRight="major-1">arrowProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & Pick<Partial<PopoverStateReturn>, "unstable_arrowStyles"
-  | "unstable_arrowRef"> & Pick<...> & { ...; }`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 4 more ... & { ...; }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">closeButtonProps</Code>**
+**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -348,21 +357,25 @@ function Example() {
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">delay</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">standalone</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Delay of the animation (in s/ms).
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">duration</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Duration of the animation (in s/ms).
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">expand</Code>**
+**<Code fontSize="150" marginRight="major-1">expand</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
@@ -375,111 +388,88 @@ Duration of the animation (in s/ms).
 
 Will the component have an expand animation when it is toggled on/off?
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">fade</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Will the component have a fade animation when it is toggled on/off?
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">slide</Code>** <Code fontSize="150" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code> 
 
 Will the component have a slide animation when it is toggled on/off?
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">timingFunction</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Timing function of the animation
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">hideOnEsc</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can hide the dialog by pressing `Escape`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can hide the dialog by clicking outside it.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can't scroll on body when the dialog is visible.
 This option doesn't work if the dialog isn't modal.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_initialFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
-
-The element that will be focused when the dialog shows.
-When not set, the first tabbable element within the dialog will be used.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_finalFocusRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
-
-The element that will be focused when the dialog hides.
-When not set, the disclosure component will be used.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_orphan</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Whether or not the dialog should be a child of its parent.
-Opening a nested orphan dialog will close its parent dialog if
-`hideOnClickOutside` is set to `true` on the parent.
-It will be set to `false` if `modal` is `false`.
-
-<Box marginBottom="major-4" />
-
-<details><Box use="summary" marginBottom="major-2"><strong>8 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>11 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's animating or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
 
 Stops animation. It's called automatically if there's a CSS transition.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
 
 Changes the `visible` state to `false`
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
 
@@ -488,19 +478,19 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -508,13 +498,13 @@ ID that will serve as a base for all the items IDs.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -525,61 +515,59 @@ ID that will serve as a base for all the items IDs.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Header Props
 
@@ -588,11 +576,11 @@ ID that will serve as a base for all the items IDs.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -600,13 +588,13 @@ ID that will serve as a base for all the items IDs.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -617,61 +605,59 @@ ID that will serve as a base for all the items IDs.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Title Props
 
@@ -680,11 +666,11 @@ ID that will serve as a base for all the items IDs.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -692,13 +678,13 @@ ID that will serve as a base for all the items IDs.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -709,61 +695,59 @@ ID that will serve as a base for all the items IDs.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Content Props
 
@@ -771,7 +755,7 @@ ID that will serve as a base for all the items IDs.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -779,13 +763,13 @@ ID that will serve as a base for all the items IDs.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -796,61 +780,59 @@ ID that will serve as a base for all the items IDs.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Footer Props
 
@@ -859,11 +841,11 @@ ID that will serve as a base for all the items IDs.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -871,13 +853,13 @@ ID that will serve as a base for all the items IDs.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -888,104 +870,102 @@ ID that will serve as a base for all the items IDs.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Arrow Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">size</Code>** <Code fontSize="150" palette="primary">string | number</Code>
+**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">string | number</Code> 
 
 Arrow's size
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<details><Box use="summary" marginBottom="major-2"><strong>1 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>3 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
   | "left"
   | "right"
   | "top"
-  | "auto-start"
-  | "auto"
-  | "auto-end"
   | "top-start"
-  | "top-end"
   | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
   | "right-end"
   | "bottom-end"
-  | "bottom-start"
   | "left-end"
-  | "left-start"`}
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
 </Code>
 
 Actual `placement`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -993,13 +973,13 @@ Actual `placement`.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1010,61 +990,59 @@ Actual `placement`.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Backdrop Props
 
@@ -1073,40 +1051,40 @@ Actual `placement`.
 <details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's animating or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
 
 Stops animation. It's called automatically if there's a CSS transition.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
 
@@ -1115,13 +1093,13 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1129,13 +1107,13 @@ by default.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1146,118 +1124,110 @@ by default.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Popover.Disclosure Props
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">disabled</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Same as the HTML attribute.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">focusable</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
 `aria-disabled` will be set.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<details><Box use="summary" marginBottom="major-2"><strong>5 state props</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Toggles the `visible` state
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles the `visible` state
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_referenceRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-The reference element.
+Toggles the `visible` state
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1265,13 +1235,13 @@ The reference element.
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1282,61 +1252,59 @@ The reference element.
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ## State
 
@@ -1344,28 +1312,28 @@ The reference element.
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
 
@@ -1374,139 +1342,108 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">placement</Code>**
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
   | "left"
   | "right"
   | "top"
-  | "auto-start"
-  | "auto"
-  | "auto-end"
   | "top-start"
-  | "top-end"
   | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
   | "right-end"
   | "bottom-end"
-  | "bottom-start"
   | "left-end"
-  | "left-start"`}
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
 </Code>
 
 Actual `placement`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_fixed</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Whether or not the popover should have `position` set to `fixed`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_flip</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Flip the popover's placement when it starts to overlap its reference
-element.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_offset</Code>** <Code fontSize="150" palette="primary">[Key, Key]</Code>
-
-Offset between the reference and the popover: [main axis, alt axis]. Should not be combined with `gutter`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">gutter</Code>** <Code fontSize="150" palette="primary">number</Code>
+**<Code fontSize="150" marginRight="major-1">gutter</Code>** <Code fontSize="100" palette="primary">number</Code> 
 
 Offset between the reference and the popover on the main axis. Should not be combined with `unstable_offset`.
 
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_preventOverflow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Prevents popover from being positioned outside the boundary.
-
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 ### Popover.State Return Values
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>16 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>24 values</strong></Box>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Whether it's animating or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_setBaseId</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Sets `baseId`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Changes the `visible` state to `true`
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Changes the `visible` state to `false`
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles the `visible` state
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setVisible</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `visible`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setAnimated</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `animated`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Stops animation. It's called automatically if there's a CSS transition.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles Dialog's `modal` state.
 
@@ -1515,79 +1452,73 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `modal`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_referenceRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-The reference element.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
   | "left"
   | "right"
   | "top"
-  | "auto-start"
-  | "auto"
-  | "auto-end"
   | "top-start"
-  | "top-end"
   | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
   | "right-end"
   | "bottom-end"
-  | "bottom-start"
   | "left-end"
-  | "left-start"`}
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
 </Code>
 
 Actual `placement`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">place</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;Placement&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">place</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;Placement&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Change the `placement` state.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+    
 
 ### Popover.useState API
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
 
@@ -1596,139 +1527,108 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">placement</Code>**
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
   | "left"
   | "right"
   | "top"
-  | "auto-start"
-  | "auto"
-  | "auto-end"
   | "top-start"
-  | "top-end"
   | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
   | "right-end"
   | "bottom-end"
-  | "bottom-start"
   | "left-end"
-  | "left-start"`}
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
 </Code>
 
 Actual `placement`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_fixed</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Whether or not the popover should have `position` set to `fixed`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_flip</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Flip the popover's placement when it starts to overlap its reference
-element.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_offset</Code>** <Code fontSize="150" palette="primary">[Key, Key]</Code>
-
-Offset between the reference and the popover: [main axis, alt axis]. Should not be combined with `gutter`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">gutter</Code>** <Code fontSize="150" palette="primary">number</Code>
+**<Code fontSize="150" marginRight="major-1">gutter</Code>** <Code fontSize="100" palette="primary">number</Code> 
 
 Offset between the reference and the popover on the main axis. Should not be combined with `unstable_offset`.
 
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">unstable_preventOverflow</Code>** <Code fontSize="150" palette="primary">boolean</Code>
-
-Prevents popover from being positioned outside the boundary.
-
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 ### Popover.useState Return Values
 
 <!-- Automatically generated -->
 
-<details><Box use="summary" marginBottom="major-2"><strong>16 values</strong></Box>
+<details><Box use="summary" marginBottom="major-2"><strong>24 values</strong></Box>
 
-**<Code marginRight="major-1">baseId</Code>** <Code fontSize="150" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 ID that will serve as a base for all the items IDs.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">visible</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Whether it's visible or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animated</Code>** <Code fontSize="150" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">animating</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Whether it's animating or not.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_setBaseId</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Sets `baseId`.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">show</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">show</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Changes the `visible` state to `true`
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">hide</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Changes the `visible` state to `false`
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">toggle</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">toggle</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles the `visible` state
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setVisible</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setVisible</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `visible`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setAnimated</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setAnimated</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;number | boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `animated`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">stopAnimation</Code>** <Code fontSize="150" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Stops animation. It's called automatically if there's a CSS transition.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">modal</Code>** <Code fontSize="150" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Toggles Dialog's `modal` state.
 
@@ -1737,52 +1637,46 @@ Toggles Dialog's `modal` state.
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">setModal</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">setModal</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;boolean&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Sets `modal`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">unstable_referenceRef</Code>** <Code fontSize="150" palette="primary">RefObject&#60;HTMLElement&#62;</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-The reference element.
-
-<Box marginBottom="major-4" />
-
-**<Code marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"bottom"
   | "left"
   | "right"
   | "top"
-  | "auto-start"
-  | "auto"
-  | "auto-end"
   | "top-start"
-  | "top-end"
   | "right-start"
+  | "bottom-start"
+  | "left-start"
+  | "top-end"
   | "right-end"
   | "bottom-end"
-  | "bottom-start"
   | "left-end"
-  | "left-start"`}
+  | "auto-start"
+  | "auto"
+  | "auto-end"`}
 </Code>
 
 Actual `placement`.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">place</Code>** <Code fontSize="150" palette="primary">(value: SetStateAction&#60;Placement&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+**<Code fontSize="150" marginRight="major-1">place</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;Placement&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Change the `placement` state.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+    
 
 ### Theming
 

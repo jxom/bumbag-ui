@@ -11,17 +11,27 @@ import { Icon } from '../Icon';
 import * as styles from './styles';
 
 export type LocalRatingProps = {
+  /** Sets the color of the rating items. */
   color?: string;
+  /** Indicates if the rating is disabled. */
   disabled?: boolean;
+  /** Sets the custom item component. */
   item?: React.ReactElement<any>;
+  /** Sets the items of the rating. */
   items?: Array<React.ReactElement<any>>;
+  /** Indicates if the rating is radio. */
   isSingular?: boolean;
+  /** Indicates the rating is static. */
   isStatic?: boolean;
+  /** Sets the max value. */
   maxValue?: number;
+  /** Function to invoke when the rating has changed. */
   onChange: (index: number) => void;
-  roverProps?: { baseId?: string; stopId?: string };
+  /** Sets the size of the rating items. */
   size?: Size;
+  /** Sets the value of the rating. */
   value: number | void;
+  roverProps?: { baseId?: string; stopId?: string };
 };
 export type RatingProps = FlexProps & LocalRatingProps;
 

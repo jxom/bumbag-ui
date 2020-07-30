@@ -74,7 +74,7 @@ function getJsDocs(symbol) {
 function getTagNames(prop) {
   const jsDocs = getJsDocs(prop);
   if (!jsDocs) return [];
-  return jsDocs.getTags().map((tag) => tag.getTagName());
+  return jsDocs.getTags().map((tag) => tag?.getTagName?.());
 }
 
 function getProps(type) {
@@ -110,10 +110,11 @@ function createPropTypeObjects(type) {
 function createTypeMarkdown(types) {
   return types
     .map((type) => {
+      if (type.name.includes('unstable')) return '';
       const isShort = type.type.length < 50;
       return `
-**<Code marginRight="major-1">${type.name}</Code>** ${
-        isShort ? `<Code fontSize="150" palette="primary">${type.encodedType}</Code>` : ''
+**<Code fontSize="150" marginRight="major-1">${type.name}</Code>** ${
+        isShort ? `<Code fontSize="100" palette="primary">${type.encodedType}</Code>` : ''
       } ${
         type.isRequired
           ? '<Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>'
@@ -132,7 +133,7 @@ ${
 
 ${type.description}
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 `;
     })
     .join('');
@@ -140,8 +141,8 @@ ${type.description}
 
 function getTypeMarkdown(extractedType, typeReferences, { type } = {}) {
   let content = '';
-  const typeMetaData = typeReferences[extractedType];
-  let types = typeMetaData.types;
+  const typeMetaData = typeReferences[extractedType] || {};
+  let types = typeMetaData?.types || [];
 
   if (types.length > 0) {
     content = createTypeMarkdown(types);

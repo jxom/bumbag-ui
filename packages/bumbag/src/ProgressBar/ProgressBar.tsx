@@ -8,9 +8,13 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalProgressBarProps = {
+  /** Sets the color of the progress bar. */
   color?: string;
+  /** Sets the max value of the progress bar. */
   maxValue?: number;
+  /** Sets the size of the progress bar. */
   size?: Size;
+  /** Sets the value of the progress bar. */
   value?: number;
 };
 export type ProgressBarProps = BoxProps & LocalProgressBarProps;

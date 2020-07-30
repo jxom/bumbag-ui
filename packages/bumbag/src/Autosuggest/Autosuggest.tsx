@@ -26,26 +26,46 @@ type Option = { key: number | string; label: string; value: any };
 type Options = Array<Option>;
 
 export type LocalAutosuggestProps = {
+  /** Whether or not an Autosuggest option should be automatically selected. */
   automaticSelection?: boolean;
+  /** The key to cache the loadOptions results against. */
   cacheKey?: string;
+  /** Whether or not the invocation of loadOptions should be deferred until it the Autosuggest is opened. */
   defer?: boolean;
+  /** Indicates if the  Autosuggest is disabled. */
   disabled?: boolean;
+  /** Indicates if the Autosuggest is loading. */
   isLoading?: boolean;
+  /** Applies a limit to the number of options that appear in the list. */
   limit?: number;
+  /** Supply an async function to `loadOptions` to load options from an external data source. */
   loadOptions?: (options: { page?: number; searchText?: string; variables?: any }) => Promise<{ options: Options }>;
+  /** Supply variables (i.e. query parameters) to the `loadOptions` function. */
   loadVariables?: { [key: string]: any };
+  /** Options to show in the list. If `loadOptions` is supplied, then you don't need to supply this. */
   options?: Options;
+  /** Function to invoke when the option has been changed. */
   onChange: (Option) => void;
+  /** Indicates if the list should be paginated. If `true`, then pagination will be applied to `loadOptions`. */
   pagination?: boolean;
+  /** Sets the height of the popover list. */
   popoverHeight?: string;
+  /** Sets the placeholder of the search input. */
   placeholder?: InputProps['placeholder'];
+  /** Restricts selection to the options supplied via `options` or `loadOptions`. Otherwise, it's free-for-all entry. */
   restrictToOptions?: boolean;
+  /** Sets the visual state of the Autosuggest. */
   state?: string;
+  /** Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`). */
   value: Partial<Option>;
 
+  /** Sets the error text when the `loadOptions` function throws an error. */
   errorText?: string;
+  /** Sets the empty text when no options are present. */
   emptyText?: string;
+  /** Sets the loading text when the options are loading. */
   loadingText?: string;
+  /** Sets the loading text when more options are loading (via pagination). */
   loadingMoreText?: string;
 
   renderClearButton?: any;

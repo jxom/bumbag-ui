@@ -8,10 +8,15 @@ import { Flex, FlexProps } from '../Flex';
 import * as styles from './styles';
 
 export type LocalCardProps = {
+  /** Variant of the card. */
   variant?: string;
+  /** Indicates if the card is standalone. */
   standalone?: boolean;
+  /** Sets the title of the card. */
   title?: string | React.ReactElement<any>;
+  /** Sets the footer of the card. */
   footer?: string | React.ReactElement<any>;
+  /** Sets the header addon of the card. */
   headerAddon?: React.ReactElement<any>;
 };
 export type CardProps = BoxProps & LocalCardProps;

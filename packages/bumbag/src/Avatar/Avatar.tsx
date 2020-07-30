@@ -8,10 +8,15 @@ import { Image, ImageProps } from '../Image';
 import * as styles from './styles';
 
 export type LocalAvatarProps = {
-  variant?: 'circle';
+  /** Variant of the avatar. */
+  variant?: 'circle' | string;
+  /** URL of the avatar image. */
   src?: string;
+  /** Size of the avatar. */
   size?: Size | string;
+  /** Initials to place on the avatar. */
   initials?: string;
+  /** Color of the avatar. */
   palette?: string;
 };
 export type AvatarProps = Omit<ImageProps, 'src'> & LocalAvatarProps;

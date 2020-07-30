@@ -10,7 +10,9 @@ import { ModalContext } from './ModalState';
 import * as styles from './styles';
 
 export type LocalModalProps = {
+  /** Hides the backdrop. */
   hideBackdrop?: boolean;
+  /** Sets the placement of the modal. */
   placement?: Placement;
 } & AnimateProps;
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;

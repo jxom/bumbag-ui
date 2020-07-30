@@ -6,6 +6,7 @@ import { Modal, ModalProps } from '../Modal';
 import * as styles from './styles';
 
 export type LocalDrawerProps = {
+  /** Indicates if the drawer should span the whole width/height of the screen. */
   isFullScreen?: boolean;
 };
 export type DrawerProps = ModalProps & LocalDrawerProps;

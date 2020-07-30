@@ -7,7 +7,9 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalCodeProps = {
+  /** Indicates if the code should be placed in a block. */
   isBlock?: boolean;
+  /** Color of the code (inline) block. */
   palette?: string;
 };
 export type CodeProps = BoxProps & LocalCodeProps;

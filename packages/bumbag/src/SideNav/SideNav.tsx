@@ -8,8 +8,11 @@ import { Navigation, NavigationProps } from '../Navigation';
 import * as styles from './styles';
 
 export type LocalSideNavProps = {
+  /** Sets the default selected nav item. */
   defaultSelectedId?: string;
+  /** Function to invoke when the nav item is changed. */
   onChange?: any;
+  /** Sets the selected nav item. */
   selectedId?: string;
 };
 export type SideNavProps = NavigationProps & LocalSideNavProps;

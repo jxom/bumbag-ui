@@ -15,15 +15,25 @@ import * as styles from './styles';
 
 export type LocalFieldWrapperProps = {
   children?: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;
+  /** Sets the description text of the field wrapper. */
   description?: string | React.ReactElement<any>;
+  /** Sets the bottom hint text of the field wrapper. */
   hint?: string | React.ReactElement<any>;
+  /** Sets the optional flag (and displays optional text) on the field wrapper. */
   isOptional?: boolean;
+  /** Sets the required flag (and a required astrix) on the field wrapper. */
   isRequired?: boolean;
+  /** Sets the label on the field wrapper. */
   label?: string | React.ReactElement<any>;
+  /** Sets the label type on the field wrapper. */
   labelType?: 'legend' | 'label';
+  /** Sets the state of the field wrapper. */
   state?: 'success' | 'danger' | 'warning';
+  /** Sets the tooltip of the field wrapper. Can be either a string, or a React component. */
   tooltip?: string | React.ReactElement<any>;
+  /** Sets the tooltip trigger component. */
   tooltipTriggerComponent?: React.ReactElement<any>;
+  /** Sets the bottom validation text of the field wrapper. */
   validationText?: string;
 };
 export type FieldWrapperProps = BoxProps & LocalFieldWrapperProps;

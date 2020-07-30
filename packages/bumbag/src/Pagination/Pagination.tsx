@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
+import _times from 'lodash/times';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
@@ -10,14 +11,23 @@ import { Select, SelectProps } from '../Select';
 import * as styles from './styles';
 
 export type LocalPaginationProps = {
+  /** Sets the number of pages. */
   numberOfPages: number;
+  /** Sets the current page. */
   currentPage?: number;
+  /** Function to invoke when the page is changed. */
   onChangePage?: (page: number) => void;
+  /** Sets the text of the next button. */
   nextText?: string;
+  /** Sets the text of the previous button. */
   previousText?: string;
+  /** Sets the preposition text. */
   prepositionText?: string;
+  /** Props to spread onto the next button. */
   nextButtonProps?: ButtonProps;
+  /** Props to spread onto the previous button. */
   previousButtonProps?: ButtonProps;
+  /** Props to spread onto the select component. */
   selectProps?: Omit<SelectProps, 'options'>;
 };
 export type PaginationProps = BoxProps & LocalPaginationProps;
@@ -113,7 +123,7 @@ const useProps = createHook<PaginationProps>(
           <Select
             className={selectClassName}
             onChange={handleChangePageDropdown}
-            options={[...new Array(numberOfPages).keys()].map((_, index) => ({
+            options={_times(numberOfPages).map((_, index) => ({
               label: `${index + 1}`,
               value: index,
             }))}

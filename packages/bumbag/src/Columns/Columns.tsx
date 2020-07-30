@@ -9,9 +9,13 @@ import { ColumnsContext } from './ColumnsContext';
 import * as styles from './styles';
 
 export type LocalColumnsProps = {
+  /** Indicates if the columns should be gapless. */
   isGapless?: boolean;
+  /** Indicates if the columns should be placed on the one line. */
   isOneLine?: boolean;
+  /** Indicates the minimum breakpoint where the columns should snap. */
   minBreakpoint?: 'tablet' | 'mobile';
+  /** Sets the spacing between each column. */
   spacing?: string;
 };
 export type ColumnsProps = FlexProps & LocalColumnsProps;

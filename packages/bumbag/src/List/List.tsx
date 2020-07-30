@@ -7,7 +7,9 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalListProps = {
+  /** Indicates if the list is ordered. */
   isOrdered?: boolean;
+  /** Indicates the orientation of the list. */
   orientation?: 'horizontal' | 'vertical';
 };
 export type ListProps = BoxProps & LocalListProps;

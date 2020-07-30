@@ -13,14 +13,23 @@ import { Text, TextProps } from '../Text';
 import * as styles from './styles';
 
 export type LocalCalloutProps = {
+  /** The title of the callout. */
   title?: string | React.ReactElement<any>;
+  /** Indicates if the callout has a tint. */
   hasTint?: boolean;
+  /** Function to invoke when the close button is pressed. */
   onClickClose?: ButtonProps['onClick'];
+  /** Indicates if a close button should be visible. */
   showCloseButton?: boolean;
+  /** Indicates if the callout is standalone. */
   standalone?: boolean;
-  type?: string;
+  /** Type of callout. */
+  type?: 'info' | 'danger' | 'warning' | 'success';
+  /** Footer of the callout. */
   footer?: string | React.ReactElement<any>;
+  /** Props to spread on the close button. */
   closeButtonProps?: Omit<ButtonProps, 'children'>;
+  /** Props to spread on the icon. */
   iconProps?: IconProps;
 };
 export type CalloutProps = CardProps & LocalCalloutProps;

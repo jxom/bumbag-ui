@@ -78,7 +78,7 @@ const theme = {
 
 <!-- Automatically generated -->
 
-**<Code marginRight="major-1">wrapperProps</Code>**
+**<Code fontSize="150" marginRight="major-1">wrapperProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -93,15 +93,19 @@ const theme = {
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+Props to spread onto the wrapper component.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Container</strong></code> props</Box>
 
-**<Code marginRight="major-1">align</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">align</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+Sets the alignment of the container.
 
-**<Code marginRight="major-1">breakpoint</Code>**
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">breakpoint</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"tablet"
@@ -111,22 +115,28 @@ const theme = {
   | "desktop"`}
 </Code>
 
-<Box marginBottom="major-4" />
+Sets the breakpoint width of the container.
 
-**<Code marginRight="major-1">isFluid</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-<Box marginBottom="major-4" />
+**<Code fontSize="150" marginRight="major-1">isFluid</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
-**<Code marginRight="major-1">isLayout</Code>** <Code fontSize="150" palette="primary">boolean</Code>
+Indicates if the container is fluid.
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isLayout</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the container is of a layout type.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -134,13 +144,13 @@ const theme = {
   | (FunctionComponent<any> & { useProps: any; })`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">className</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -151,61 +161,59 @@ const theme = {
   | ((props: any) => ReactElement<any, string
   | ...
   | (new (props: any) => Component<any, any, any>)>)
-  | (new (props: any) => Component<any, any, any>)>
+  | (new (props: any) => Component<...>)>
   | ReactNodeArray
   | ReactPortal
   | ((props: BoxProps) => ReactNode)`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignX</Code>** <Code fontSize="150" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">alignY</Code>** <Code fontSize="150" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">altitude</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">variant</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">colorMode</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
+  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  breakpoints?: BreakpointsThemeConfig;
-  fonts?: FontsThemeConfig;
-  fontSizes?: FontSizeThemeConfig;
-  ... 87 more ...;
+  ... 90 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">elementRef</Code>** <Code fontSize="150" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code marginRight="major-1">themeKey</Code>** <Code fontSize="150" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
-<Box marginBottom="major-4" />
+<Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ## Theming
 

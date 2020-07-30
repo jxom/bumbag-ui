@@ -13,17 +13,27 @@ import { Text, TextProps } from '../Text';
 import * as styles from './styles';
 
 export type LocalDialogProps = {
-  standalone?: boolean;
+  /** Indicates the type of dialog. */
   type?: string;
+  /** Sets the title of the dialog. */
   title?: string | React.ReactElement<any>;
+  /** Sets the footer of the dialog. */
   footer?: string | React.ReactElement<any>;
+  /** Sets the color of the dialog action buttons. */
   palette?: string;
+  /** Sets the visibility of the dialog action buttons. */
   showActionButtons?: boolean;
+  /** Sets the visibility of the close buttons. */
   showCloseButton?: boolean;
+  /** Function to invoke when the close button is clicked. */
   onClickClose?: ButtonProps['onClick'];
+  /** Props to spread onto the action buttons. */
   actionButtonsProps?: ActionButtonsProps;
+  /** Props to spread onto the close button. */
   closeButtonProps?: Omit<ButtonProps, 'children'>;
+  /** Props to spread on the icon. */
   iconProps?: IconProps;
+  standalone?: boolean;
 };
 export type DialogProps = BoxProps & LocalDialogProps;
 

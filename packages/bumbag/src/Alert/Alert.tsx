@@ -12,17 +12,29 @@ import { Text } from '../Text';
 import * as styles from './styles';
 
 export type LocalAlertProps = {
+  /** Placement of the accent (the side border). */
   accent?: true | 'top' | 'bottom';
+  /** Size of the accent (in px). */
   accentSize?: string;
+  /** Countdown timer of the alert (in ms). */
   countdown?: number;
+  /** Should the alert have an icon depending on its `type`? */
   hasIcon?: boolean;
+  /** Is the alert inline, and has the title beside its content? */
   isInline?: boolean;
+  /** Function to invoke when the alert close button is pressed. */
   onClickClose?: ButtonProps['onClick'];
+  /** Whether or not to show the close button. */
   showCloseButton?: boolean;
+  /** The title of the alert. */
   title?: string;
-  type?: string;
+  /** The type of the alert. */
+  type?: 'info' | 'success' | 'warning' | 'danger';
+  /** The props to spread onto the close button. */
   closeButtonProps?: Omit<ButtonProps, 'children'>;
+  /** The props to spread onto the close button icon. */
   closeButtonIconProps?: Omit<IconProps, 'icon'>;
+  /** The props to spread onto the alert icon. */
   iconProps?: Omit<IconProps, 'icon'>;
 };
 export type AlertProps = FlexProps & LocalAlertProps;

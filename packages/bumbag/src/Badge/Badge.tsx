@@ -8,8 +8,11 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './styles';
 
 export type LocalBadgeProps = {
+  /** Indicates if the badge is attached to it's parent. */
   isAttached?: boolean;
+  /** The color of the badge. */
   palette?: string;
+  /** The size of the badge. */
   size?: Size;
 };
 export type BadgeProps = BoxProps & LocalBadgeProps;

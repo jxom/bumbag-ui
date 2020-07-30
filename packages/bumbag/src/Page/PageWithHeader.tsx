@@ -9,8 +9,11 @@ import { PageContext } from './PageContext';
 import * as styles from './styles';
 
 export type LocalPageWithHeaderProps = {
+  /** Indicates if the header is visible initially. */
   defaultIsVisible?: boolean;
+  /** Sets the header component. */
   header: React.ReactElement<any>;
+  /** Sets the height of the header component. */
   headerHeight?: string;
 };
 export type PageWithHeaderProps = BoxProps & LocalPageWithHeaderProps;

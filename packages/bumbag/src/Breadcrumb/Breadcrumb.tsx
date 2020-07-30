@@ -11,7 +11,9 @@ import { Navigation, NavigationProps } from '../Navigation';
 import * as styles from './styles';
 
 export type LocalBreadcrumbProps = {
+  /** Indicates if the breadcrumb has a separator. */
   hasSeparator?: LocalBreadcrumbItemProps['hasSeparator'];
+  /** The separator of the breadcrumbs. It can be a string, or a React component. */
   separator?: LocalBreadcrumbItemProps['separator'];
 };
 export type BreadcrumbProps = NavigationProps & LocalBreadcrumbProps;
@@ -77,8 +79,11 @@ export const Breadcrumb = createComponent<BreadcrumbProps>(
 //////////////////////////////
 
 export type LocalBreadcrumbItemProps = {
+  /** Indicates if the breadcrumb has a separator. */
   hasSeparator?: boolean;
+  /** Indicates if the breadcrumb is currently selected. */
   isCurrent?: boolean;
+  /** Custom separator for the breadcrumb. Can either be a string, or a React component. */
   separator?: string | React.ReactElement<any>;
 };
 export type BreadcrumbItemProps = ListItemProps & LocalBreadcrumbItemProps;

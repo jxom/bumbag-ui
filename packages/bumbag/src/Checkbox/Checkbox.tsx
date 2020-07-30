@@ -11,18 +11,23 @@ import * as styles from './styles';
 export type LocalCheckboxProps = {
   /** Automatically focus on the checkbox */
   autoFocus?: boolean;
+  /** Indicates if the checkbox is checked. */
   checked?: boolean;
+  /** Spreads the props onto the `<input>` element of the checkbox. */
   inputProps?: React.InputHTMLAttributes<any>;
   /** Is the checkbox checked by default? */
   defaultChecked?: boolean;
   /** Disables the checkbox */
   disabled?: boolean;
+  /** Forwards the ref to the checkbox. */
   checkboxRef?: React.Ref<any>;
+  /** Indicates if the checkbox is indeterminate. */
   indeterminate?: boolean;
   /** Makes the checkbox required and sets aria-invalid to true */
   isRequired?: boolean;
   /** Checkbox label */
   label?: string;
+  /** Sets the name of the checkbox. */
   name?: string;
   /** State of the checkbox. Can be any color in the palette. */
   state?: string;
