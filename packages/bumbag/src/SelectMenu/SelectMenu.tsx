@@ -219,6 +219,11 @@ const useProps = createHook<SelectMenuProps>(
       selectedOptions: [],
     });
 
+    React.useEffect(() => {
+      dispatch({ type: 'OPTIONS_SET', options: initialOptions });
+      dispatch({ type: 'OPTIONS_FILTERED', filteredOptions: initialOptions });
+    }, [initialOptions]);
+
     //////////////////////////////////////////////////
 
     const debouncedInputValue = useDebounce(searchText, 500);
