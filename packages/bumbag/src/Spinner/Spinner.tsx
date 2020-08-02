@@ -69,7 +69,7 @@ const useProps = createHook<SpinnerProps>(
 
     return { ...boxProps, className, children };
   },
-  { defaultProps: { color: 'primary', duration: '0.6s', perimeter: '60%' }, themeKey: 'Spinner' }
+  { defaultProps: { color: 'primary', duration: '0.6s', perimeter: '40%' }, themeKey: 'Spinner' }
 );
 
 export const Spinner = createComponent<SpinnerProps>(

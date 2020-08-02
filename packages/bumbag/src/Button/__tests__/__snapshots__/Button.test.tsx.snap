@@ -876,7 +876,7 @@ exports[`overrides Button.loading should render correctly 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -887,11 +887,11 @@ exports[`overrides Button.loading should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -903,31 +903,31 @@ exports[`overrides Button.loading should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .bb-Text {
+.emotion-12 + .bb-Text {
   opacity: 0;
 }
 
-.emotion-7.emotion-7 {
+.emotion-8.emotion-8 {
   font-size: 1.25em;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
-  color: var(--bb-palette-defaultInverted,#000000) !important;
+.emotion-7 {
+  color: var(--bb-palette-gray100,#000000) !important;
 }
 
-.emotion-5 {
+.emotion-6 {
   line-height: 1rem;
   font-size: 20px;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
@@ -938,33 +938,37 @@ exports[`overrides Button.loading should render correctly 1`] = `
 }
 
 .emotion-0 {
-  stroke-dasharray: 275;
+  stroke: var(--bb-palette-default300,#000000);
+}
+
+.emotion-1 {
+  stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-defaultInverted,#000000);
+  stroke: var(--bb-palette-gray100,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-12 {
+.emotion-13 {
   line-height: 1.2;
 }
 
-abbr.emotion-12 {
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -972,46 +976,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-13,
+u.emotion-13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1044,44 +1048,52 @@ samp.emotion-12 {
   border: 1px solid var(--bb-palette-white900,#000000);
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-16[disabled],
+.emotion-16[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-16 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-16:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-16 {
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 <button
-  class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
+  class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
   type="button"
 >
   <div
-    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+    class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+      class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
     >
       <svg
-        class="emotion-1 bb-Spinnervector"
+        class="emotion-2 bb-Spinnervector"
         viewBox="22 22 44 44"
       >
         <circle
-          class="emotion-0 bb-SpinnerloaderCircle"
+          class="emotion-0 bb-SpinnertrackCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+        <circle
+          class="emotion-1 bb-SpinnerloaderCircle"
           cx="44"
           cy="44"
           fill="none"
@@ -1092,7 +1104,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
+    class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
   >
     hello world
   </span>
@@ -1927,6 +1939,7 @@ exports[`props iconAfter should render a button with an icon correctly 1`] = `
 >
   Hello world
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -2029,6 +2042,7 @@ exports[`props iconBefore should render a button with an icon correctly 1`] = `
   type="button"
 >
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -2058,7 +2072,7 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2069,11 +2083,11 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2085,15 +2099,15 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .bb-Text {
+.emotion-12 + .bb-Text {
   opacity: 0;
 }
 
-.emotion-7.emotion-7 {
+.emotion-8.emotion-8 {
   font-size: 1.25em;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2126,41 +2140,41 @@ exports[`props isLoading should render a loading button correctly 1`] = `
   border: 1px solid var(--bb-palette-white900,#000000);
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-16[disabled],
+.emotion-16[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-16 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-16:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
-  color: var(--bb-palette-defaultInverted,#000000) !important;
+.emotion-7 {
+  color: var(--bb-palette-gray100,#000000) !important;
 }
 
-.emotion-5 {
+.emotion-6 {
   line-height: 1rem;
   font-size: 20px;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
@@ -2171,33 +2185,37 @@ exports[`props isLoading should render a loading button correctly 1`] = `
 }
 
 .emotion-0 {
-  stroke-dasharray: 275;
+  stroke: var(--bb-palette-default300,#000000);
+}
+
+.emotion-1 {
+  stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-defaultInverted,#000000);
+  stroke: var(--bb-palette-gray100,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-12 {
+.emotion-13 {
   line-height: 1.2;
 }
 
-abbr.emotion-12 {
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2205,61 +2223,69 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-13,
+u.emotion-13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
 <button
-  class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
+  class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
   type="button"
 >
   <div
-    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+    class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+      class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
     >
       <svg
-        class="emotion-1 bb-Spinnervector"
+        class="emotion-2 bb-Spinnervector"
         viewBox="22 22 44 44"
       >
         <circle
-          class="emotion-0 bb-SpinnerloaderCircle"
+          class="emotion-0 bb-SpinnertrackCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+        <circle
+          class="emotion-1 bb-SpinnerloaderCircle"
           cx="44"
           cy="44"
           fill="none"
@@ -2270,7 +2296,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
+    class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
   >
     Hello world
   </span>
@@ -2292,7 +2318,7 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -2303,11 +2329,11 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2319,31 +2345,31 @@ exports[`props isLoading should render correctly with overrides 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .bb-Text {
+.emotion-12 + .bb-Text {
   opacity: 0;
 }
 
-.emotion-7.emotion-7 {
+.emotion-8.emotion-8 {
   font-size: 1.25em;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
-  color: var(--bb-palette-defaultInverted,#000000) !important;
+.emotion-7 {
+  color: var(--bb-palette-gray100,#000000) !important;
 }
 
-.emotion-5 {
+.emotion-6 {
   line-height: 1rem;
   font-size: 20px;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
@@ -2354,33 +2380,37 @@ exports[`props isLoading should render correctly with overrides 1`] = `
 }
 
 .emotion-0 {
-  stroke-dasharray: 275;
+  stroke: var(--bb-palette-default300,#000000);
+}
+
+.emotion-1 {
+  stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-defaultInverted,#000000);
+  stroke: var(--bb-palette-gray100,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-12 {
+.emotion-13 {
   line-height: 1.2;
 }
 
-abbr.emotion-12 {
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -2388,46 +2418,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-13,
+u.emotion-13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2460,44 +2490,52 @@ samp.emotion-12 {
   border: 1px solid var(--bb-palette-white900,#000000);
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-16[disabled],
+.emotion-16[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-16 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-16:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-16 {
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 <button
-  class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
+  class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
   type="button"
 >
   <div
-    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+    class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+      class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
     >
       <svg
-        class="emotion-1 bb-Spinnervector"
+        class="emotion-2 bb-Spinnervector"
         viewBox="22 22 44 44"
       >
         <circle
-          class="emotion-0 bb-SpinnerloaderCircle"
+          class="emotion-0 bb-SpinnertrackCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+        <circle
+          class="emotion-1 bb-SpinnerloaderCircle"
           cx="44"
           cy="44"
           fill="none"
@@ -2508,7 +2546,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
+    class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
   >
     Hello world
   </span>
@@ -3387,6 +3425,7 @@ exports[`props should render correctly for iconAfter 1`] = `
 >
   Hello world
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -3494,6 +3533,7 @@ exports[`props should render correctly for iconAfter with props 1`] = `
 >
   Hello world
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -3596,6 +3636,7 @@ exports[`props should render correctly for iconBefore 1`] = `
   type="button"
 >
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -3703,6 +3744,7 @@ exports[`props should render correctly for iconBefore with props 1`] = `
   type="button"
 >
   <svg
+    aria-hidden="true"
     class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
     role="img"
     viewBox="0 0 512 512"
@@ -5899,7 +5941,7 @@ exports[`theming Button.loading should render correctly 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -5910,11 +5952,11 @@ exports[`theming Button.loading should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-3:focus:not(:focus-visible) {
+.emotion-4:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: absolute;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5926,31 +5968,31 @@ exports[`theming Button.loading should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-11 + .bb-Text {
+.emotion-12 + .bb-Text {
   opacity: 0;
 }
 
-.emotion-7.emotion-7 {
+.emotion-8.emotion-8 {
   font-size: 1.25em;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
-  color: var(--bb-palette-defaultInverted,#000000) !important;
+.emotion-7 {
+  color: var(--bb-palette-gray100,#000000) !important;
 }
 
-.emotion-5 {
+.emotion-6 {
   line-height: 1rem;
   font-size: 20px;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(-90deg);
@@ -5961,33 +6003,37 @@ exports[`theming Button.loading should render correctly 1`] = `
 }
 
 .emotion-0 {
-  stroke-dasharray: 275;
+  stroke: var(--bb-palette-default300,#000000);
+}
+
+.emotion-1 {
+  stroke-dasharray: 250;
   stroke-dashoffset: 200px;
-  stroke: var(--bb-palette-defaultInverted,#000000);
+  stroke: var(--bb-palette-gray100,#000000);
   -webkit-transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: stroke-dashoffset 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
-.emotion-12 {
+.emotion-13 {
   line-height: 1.2;
 }
 
-abbr.emotion-12 {
+abbr.emotion-13 {
   border-bottom: 1px dotted;
   cursor: help;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-code.emotion-12 {
+code.emotion-13 {
   font-family: monospace;
 }
 
-i.emotion-12 {
+i.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12 {
+kbd.emotion-13 {
   background: #454d5d;
   border-radius: 0.1rem;
   color: #fff;
@@ -5995,46 +6041,46 @@ kbd.emotion-12 {
   padding: 0.1rem 0.2rem;
 }
 
-mark.emotion-12 {
+mark.emotion-13 {
   background: #ffe9b3;
   border-radius: 0.1rem;
   padding: 0.1rem 0.2rem;
 }
 
-strong.emotion-12 {
+strong.emotion-13 {
   font-weight: bold;
 }
 
-sub.emotion-12,
-sup.emotion-12 {
+sub.emotion-13,
+sup.emotion-13 {
   font-size: 0.8em;
   vertical-align: baseline;
 }
 
-ins.emotion-12,
-u.emotion-12 {
+ins.emotion-13,
+u.emotion-13 {
   -webkit-text-decoration-skip: ink edges;
   text-decoration-skip: ink edges;
 }
 
-i.emotion-12,
-cite.emotion-12,
-var.emotion-12,
-em.emotion-12 {
+i.emotion-13,
+cite.emotion-13,
+var.emotion-13,
+em.emotion-13 {
   font-style: italic;
 }
 
-kbd.emotion-12,
-pre.emotion-12,
-samp.emotion-12 {
+kbd.emotion-13,
+pre.emotion-13,
+samp.emotion-13 {
   font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
 }
 
-.emotion-12 .bb-Icon {
+.emotion-13 .bb-Icon {
   vertical-align: -0.125em;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6067,44 +6113,52 @@ samp.emotion-12 {
   border: 1px solid var(--bb-palette-white900,#000000);
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
+.emotion-16[disabled],
+.emotion-16[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.7;
   outline: unset;
   pointer-events: unset;
 }
 
-.emotion-15 {
+.emotion-16 {
   cursor: not-allowed;
   position: relative;
 }
 
-.emotion-15:focus {
+.emotion-16:focus {
   box-shadow: unset !important;
   outline: unset !important;
 }
 
-.emotion-15 {
+.emotion-16 {
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 <button
-  class="emotion-15 emotion-3 emotion-4 bb-Box bb-Button"
+  class="emotion-16 emotion-4 emotion-5 bb-Box bb-Button"
   type="button"
 >
   <div
-    class="emotion-2 emotion-3 emotion-4 emotion-11 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
+    class="emotion-3 emotion-4 emotion-5 emotion-12 bb-ButtonSpinnerWrapper bb-Box bb-Flex"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
+      class="emotion-3 emotion-4 emotion-5 emotion-6 emotion-7 emotion-8 bb-ButtonSpinner bb-Box bb-Flex bb-Spinner"
     >
       <svg
-        class="emotion-1 bb-Spinnervector"
+        class="emotion-2 bb-Spinnervector"
         viewBox="22 22 44 44"
       >
         <circle
-          class="emotion-0 bb-SpinnerloaderCircle"
+          class="emotion-0 bb-SpinnertrackCircle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20"
+          stroke-width="4"
+        />
+        <circle
+          class="emotion-1 bb-SpinnerloaderCircle"
           cx="44"
           cy="44"
           fill="none"
@@ -6115,7 +6169,7 @@ samp.emotion-12 {
     </div>
   </div>
   <span
-    class="emotion-12 emotion-3 emotion-4 bb-Box bb-Text"
+    class="emotion-13 emotion-4 emotion-5 bb-Box bb-Text"
   >
     hello world
   </span>

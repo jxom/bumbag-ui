@@ -87,6 +87,22 @@ const useProps = createHook<ButtonProps>(
       themeKeySuffix: 'Spinner',
     });
 
+    let spinnerColor = props.palette;
+    if (props.variant === 'default') {
+      spinnerColor = `${props.palette}Inverted`;
+    }
+    if (props.palette === 'default') {
+      spinnerColor = 'defaultInverted';
+    }
+
+    let spinnerTrackColor;
+    if (props.variant === 'default') {
+      spinnerTrackColor = `${props.palette}300`
+    }
+    if (props.palette === 'default') {
+      spinnerColor = 'gray100';
+    }
+
     const children = (
       <React.Fragment>
         {props.isLoading && (
@@ -94,7 +110,9 @@ const useProps = createHook<ButtonProps>(
             <Spinner
               use={Flex}
               className={spinnerClassName}
-              color={props.variant === 'default' ? `${props.palette}Inverted` : props.palette}
+              color={spinnerColor}
+              trackColor={spinnerTrackColor}
+              hasTrack
               {...spinnerProps}
             />
           </Flex>
