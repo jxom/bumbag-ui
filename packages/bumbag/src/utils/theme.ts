@@ -112,7 +112,7 @@ export function palette(
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const selector = modes && modes[props.colorMode] ? modes[props.colorMode] : _selector;
     const fallback = tinycolor(selector).toHexString();
-    if (props.theme?.useCSSVariables && useCSSVariables && !selector.includes('#')) {
+    if (props.theme?.useCSSVariables && useCSSVariables && !selector?.includes('#')) {
       return getColorFromCSSVariable(selector, fallback);
     }
     const color = theme('palette', selector || props.palette)(props);

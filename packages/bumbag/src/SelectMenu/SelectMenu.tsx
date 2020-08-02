@@ -462,67 +462,69 @@ const useProps = createHook<SelectMenuProps>(
             role="listbox"
             {...popoverProps}
           >
-            <React.Fragment>
-              {hasSearch && (
-                <SelectMenuSearchInput
-                  onChange={handleChangeInput}
-                  value={searchText}
-                  searchInputProps={searchInputProps}
-                />
-              )}
-              {hasTags && selectedOptions.length > 0 && (
-                <SelectMenuTags onClearTag={handleClearTag} selectedOptions={selectedOptions} tagProps={tagProps} />
-              )}
-              <Box
-                use="ul"
-                className={selectMenuItemsWrapperClassName}
-                onScroll={handleScrollPopover}
-                overrides={overrides}
-              >
-                {state === 'success' && (
-                  <React.Fragment>
-                    {visibleOptions.map((option, index) => (
-                      <SelectMenuItem
-                        key={option.key || index}
-                        {...dropdownMenu}
-                        aria-selected={selectedOptions.some((selectedOption) => selectedOption.key === option.key)}
-                        aria-disabled={option.disabled}
-                        disabled={option.disabled}
-                        iconAfter={option.iconAfter}
-                        iconAfterProps={option.iconAfterProps}
-                        iconBefore={option.iconBefore}
-                        iconBeforeProps={option.iconBeforeProps}
-                        onClick={handleClickItem({ index, option })}
-                        overrides={overrides}
-                        {...itemProps}
-                      >
-                        <Option
-                          label={option.label}
-                          searchText={searchText}
-                          option={option}
-                          overrides={overrides}
-                          MatchedLabel={(props) => (
-                            <MatchedLabel label={option.label} searchText={searchText} {...props} />
-                          )}
-                        />
-                      </SelectMenuItem>
-                    ))}
-                    {isLoadingMore && <LoadingMore loadingText={loadingMoreText} overrides={overrides} />}
-                  </React.Fragment>
-                )}
-                {state === 'loading' && <Loading loadingText={loadingText} overrides={overrides} />}
-                {state === 'empty' && (
-                  <Empty
-                    emptyText={emptyText}
-                    searchText={searchText}
-                    overrides={overrides}
-                    StaticItem={EmptyStaticItem}
-                    Item={EmptyItem}
+            {dropdownMenu.visible ? (
+              <React.Fragment>
+                {hasSearch && (
+                  <SelectMenuSearchInput
+                    onChange={handleChangeInput}
+                    value={searchText}
+                    searchInputProps={searchInputProps}
                   />
                 )}
-                {state === 'error' && <Error errorText={errorText} overrides={overrides} />}
-              </Box>
-            </React.Fragment>
+                {hasTags && selectedOptions.length > 0 && (
+                  <SelectMenuTags onClearTag={handleClearTag} selectedOptions={selectedOptions} tagProps={tagProps} />
+                )}
+                <Box
+                  use="ul"
+                  className={selectMenuItemsWrapperClassName}
+                  onScroll={handleScrollPopover}
+                  overrides={overrides}
+                >
+                  {state === 'success' && (
+                    <React.Fragment>
+                      {visibleOptions.map((option, index) => (
+                        <SelectMenuItem
+                          key={option.key || index}
+                          {...dropdownMenu}
+                          aria-selected={selectedOptions.some((selectedOption) => selectedOption.key === option.key)}
+                          aria-disabled={option.disabled}
+                          disabled={option.disabled}
+                          iconAfter={option.iconAfter}
+                          iconAfterProps={option.iconAfterProps}
+                          iconBefore={option.iconBefore}
+                          iconBeforeProps={option.iconBeforeProps}
+                          onClick={handleClickItem({ index, option })}
+                          overrides={overrides}
+                          {...itemProps}
+                        >
+                          <Option
+                            label={option.label}
+                            searchText={searchText}
+                            option={option}
+                            overrides={overrides}
+                            MatchedLabel={(props) => (
+                              <MatchedLabel label={option.label} searchText={searchText} {...props} />
+                            )}
+                          />
+                        </SelectMenuItem>
+                      ))}
+                      {isLoadingMore && <LoadingMore loadingText={loadingMoreText} overrides={overrides} />}
+                    </React.Fragment>
+                  )}
+                  {state === 'loading' && <Loading loadingText={loadingText} overrides={overrides} />}
+                  {state === 'empty' && (
+                    <Empty
+                      emptyText={emptyText}
+                      searchText={searchText}
+                      overrides={overrides}
+                      StaticItem={EmptyStaticItem}
+                      Item={EmptyItem}
+                    />
+                  )}
+                  {state === 'error' && <Error errorText={errorText} overrides={overrides} />}
+                </Box>
+              </React.Fragment>
+            ) : null}
           </DropdownMenuPopover>
         </SelectMenuContext.Provider>
       ),
