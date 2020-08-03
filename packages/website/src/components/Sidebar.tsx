@@ -37,6 +37,8 @@ const orders = [
       'spacing',
       'composition',
       'variants',
+      'color-modes',
+      'migrating-from-fannypack'
     ],
   },
   { 'the-box-primitive': ['box', 'flex', 'css-props', 'alignment', 'altitudes', 'borders', 'border-radius'] },
