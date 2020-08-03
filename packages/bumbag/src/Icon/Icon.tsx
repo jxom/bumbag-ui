@@ -9,7 +9,7 @@ import {
   parseIcons,
   useTheme,
   ParsedIcon,
-  Opts as ParseIconOpts,
+  ParseIconsOpts,
 } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -24,7 +24,7 @@ export type LocalIconProps = {
   label?: string;
   /** Size of the icon. */
   fontSize?: string;
-  type?: ParseIconOpts['type'];
+  type?: ParseIconsOpts['type'];
 };
 export type IconProps = BoxProps & LocalIconProps;
 

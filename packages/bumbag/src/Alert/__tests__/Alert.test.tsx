@@ -49,13 +49,13 @@ describe('props', () => {
 
   ['info', 'success', 'danger', 'warning'].forEach((type) => {
     it(`should render correctly for ${type} type`, () => {
-      const { container } = render(<Alert type={type}>Hello world</Alert>);
+      const { container } = render(<Alert type={type as any}>Hello world</Alert>);
       expect(container.firstChild).toMatchSnapshot();
     });
 
     it(`should render correctly for an icon (${type})`, () => {
       const { container } = render(
-        <Alert hasIcon type={type}>
+        <Alert hasIcon type={type as any}>
           Hello world
         </Alert>
       );
@@ -64,7 +64,7 @@ describe('props', () => {
 
     it(`should render correctly for isInline (${type})`, () => {
       const { container } = render(
-        <Alert isInline type={type}>
+        <Alert isInline type={type as any}>
           Hello world
         </Alert>
       );
@@ -122,7 +122,9 @@ describe('overrides', () => {
 
   it('Alert.Description.base should render correctly', () => {
     const { container } = render(
-      <Alert overrides={{ Alert: { Description: { styles: { base: { backgroundColor: 'red' } } } } }}>hello world</Alert>
+      <Alert overrides={{ Alert: { Description: { styles: { base: { backgroundColor: 'red' } } } } }}>
+        hello world
+      </Alert>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
