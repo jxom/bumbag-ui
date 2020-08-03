@@ -118,7 +118,7 @@ import { ToastProps } from '../Toast';
 import { TooltipProps, TooltipArrowProps, TooltipContentProps, TooltipReferenceProps } from '../Tooltip';
 import { TopNavProps, TopNavItemProps, TopNavSectionProps } from '../TopNav';
 import { TemplateProps } from '../_template';
-import { ParsedIcons, Opts as ParseIconsOpts } from '../utils/parseIcons';
+import { ParsedIcons, ParseIconsOpts } from '../utils/parseIcons';
 import { Breakpoint, Placement } from './props';
 
 export type Stylesheet = InterpolationWithTheme<any>;

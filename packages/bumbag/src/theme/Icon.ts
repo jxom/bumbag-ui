@@ -11,7 +11,7 @@ import * as faTimes from '@fortawesome/free-solid-svg-icons/faTimes';
 import * as faSearch from '@fortawesome/free-solid-svg-icons/faSearch';
 import * as faStar from '@fortawesome/free-solid-svg-icons/faStar';
 
-import { parseIcons, Opts as ParseIconsOpts, Icons } from '../utils/parseIcons';
+import { parseIcons, ParseIconsOpts, Icons } from '../utils/parseIcons';
 
 const parseOverrideIcons = (
   icons: Array<{ icons: Icons; type: ParseIconsOpts['type']; prefix: ParseIconsOpts['prefix'] }>

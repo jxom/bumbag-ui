@@ -14,13 +14,13 @@ export type ParsedIcon =
       paths: Array<string>;
     };
 export type ParsedIcons = { [key: string]: ParsedIcon };
-export type Opts = {
+export type ParseIconsOpts = {
   prefix?: string;
   type?: 'font-awesome' | 'font-awesome-standalone';
 };
 export type Icons = IconDefinition[] | FontAwesomeIconStandalone[];
 
-export function parseIcons(icons: Icons, { prefix, type }: Opts = {}): ParsedIcons {
+export function parseIcons(icons: Icons, { prefix, type }: ParseIconsOpts = {}): ParsedIcons {
   if (type === 'font-awesome') {
     const parsedIcons = (icons as IconDefinition[]).reduce((newIcons, { iconName, icon: iconDetails }) => {
       if (!iconDetails) return newIcons;
