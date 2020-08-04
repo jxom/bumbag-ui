@@ -11,17 +11,30 @@ const verticalBreakpoints = {
 
 export const Level = (styleProps) => cssClass`
   &&& {
-    ${breakpoint(styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null, css`
-    flex-direction: column;
+    ${breakpoint(
+      styleProps.orientation === 'horizontal' && styleProps.verticalBelow
+        ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+        : null,
+      css`
+        flex-direction: column;
 
-    & > *:not(:last-child) {
-      margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
-    }
+        & > *:not(:last-child) {
+          margin-bottom: ${space(styleProps.spacing)(styleProps)}rem;
+        }
 
-    ${getAlignmentAttributes(styleProps)}
-    `, { else: css`
-    justify-content: space-between;
-    ` })(styleProps)};
+        ${getAlignmentAttributes(styleProps)}
+      `,
+      {
+        else: css`
+          justify-content: space-between;
+
+          ${styleProps.orientation === 'vertical' &&
+          css`
+            flex-direction: column;
+          `}
+        `,
+      }
+    )(styleProps)};
   }
 
 

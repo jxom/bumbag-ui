@@ -7,6 +7,8 @@ import { Flex, FlexProps } from '../Flex';
 import * as styles from './styles';
 
 export type LocalLevelProps = {
+  /** Sets the orientation of the level. */
+  orientation?: 'vertical' | 'horizontal';
   /** Sets the spacing of the level when it snaps to a vertical orientation. */
   spacing?: string;
   /** Sets the breakpoint at which the level should become vertical. */
