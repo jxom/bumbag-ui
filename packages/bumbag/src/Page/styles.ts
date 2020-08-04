@@ -103,7 +103,6 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
   height: 100vh;
   min-width: ${getWidth(styleProps)};
   width: ${getWidth(styleProps)};
-  overflow-y: scroll;
   transform: translateX(0px);
 
   ${
@@ -135,6 +134,7 @@ export const PageWithSidebarSidebar = (styleProps) => cssClass`
 export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   position: fixed;
   z-index: 999999;
+  overflow-y: scroll;
 
   ${
     styleProps.sidebarPlacement === 'right' &&
@@ -158,6 +158,7 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
 export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
   &&& {
     min-width: ${styleProps.collapsedSidebarWidth};
+    overflow-y: scroll;
   }
 
   ${breakpoint(`max-${collapseBreakpoints[styleProps.collapseBelow]}`, css``, {
@@ -189,6 +190,10 @@ export const PageWithHeader = (styleProps) => cssClass`
 
   & .bb-PageWithSidebarSidebarExpandedWrapper {
     top: ${styleProps.headerHeight};
+  }
+
+  & .bb-PageWithSidebarSidebar {
+    height: calc(100vh - ${styleProps.headerHeight});
   }
 
   & {
