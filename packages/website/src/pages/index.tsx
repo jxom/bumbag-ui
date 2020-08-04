@@ -310,37 +310,31 @@ const linkProps = Link.useProps({
             </Heading>
           </Box>
           <LiveCode
-            code={`// An example inspired by skyscanner.com
-<Group
+            code={`<Group
   backgroundColor="background"
   altitude="300"
   borderRadius="4"
-  verticalBelow="desktop"
 >
   <Image
     fit="cover"
-    width={{ default: '200px', 'max-tablet': '100%' }}
+    width="200px"
     src="https://bit.ly/3fCkvhp"
   />
-  <Stack padding="major-2" spacing="major-2">
-    <Heading fontSize="400" marginBottom="minor-1">
-      The Local Hostel
-    </Heading>
-    <Tag palette="info" variant="tint">Great for solo travellers</Tag>
-    <Stack spacing="minor-1">
+  <Level orientation="vertical" padding="major-2">
+    <Stack spacing="major-1">
+      <Heading fontSize="400" marginBottom="minor-1">
+        The Local Hostel
+      </Heading>
+      <Tag palette="info" variant="tint">Great for solo travellers</Tag>
       <Paragraph color="text100" fontSize="100">
         <Icon icon="solid-map-marker-alt" marginRight="minor-1" />
         6km from city center
-      </Paragraph>
-      <Paragraph color="primary" fontWeight="semibold" fontSize="100">
-        <Icon icon="solid-thumbs-up" marginRight="minor-1" />
-        Hotel cleanliness is rated 4.5/5
       </Paragraph>
     </Stack>
     <Paragraph fontSize="300">
       from <Text fontWeight="bold">$35</Text> a night
     </Paragraph>
-  </Stack>
+  </Level>
 </Group>`}
           />
         </PageContent>

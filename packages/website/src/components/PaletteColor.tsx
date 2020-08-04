@@ -7,7 +7,7 @@ const PaletteColor = ({ palette, ...props }: any) => {
   return (
     <Box border="default" borderColor="white800">
       <Flex flexDirection="column">
-        <Box borderRadius="2px" height="60px" backgroundColor={palette} width="180px" {...props} />
+        <Box height="60px" backgroundColor={palette} width="100%" {...props} />
         <Box padding="minor-2" lineHeight="1">
           <Text fontSize="150" marginBottom="minor-1">
             {palette}

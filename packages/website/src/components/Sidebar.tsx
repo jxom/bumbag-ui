@@ -186,7 +186,7 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
             return (
               <SideNav.Item
                 key={item.name}
-                onClick={sidebar.drawer.hide}
+                onClick={() => setTimeout(sidebar.drawer.hide, 100)}
                 navId={frontmatter.path || `/${item.relativeDirectory}/${item.name}/`}
               >
                 <Link

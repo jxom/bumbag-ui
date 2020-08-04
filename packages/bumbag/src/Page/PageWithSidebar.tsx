@@ -113,6 +113,7 @@ const useProps = createHook<PageWithSidebarProps>(
               placement={sidebarPlacement}
               {...collapsedSidebarProps}
               {...sidebarState.drawer}
+              animating={false}
             >
               <Box className={sidebarClassName} overrides={overrides}>
                 {sidebar}

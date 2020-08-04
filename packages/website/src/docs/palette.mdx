@@ -4,7 +4,7 @@ title: Palette
 path: /palette/
 ---
 
-import { Box, Flex } from 'bumbag';
+import { Box, Columns } from 'bumbag';
 import PaletteColor from '../components/PaletteColor';
 
 # Palette
@@ -14,164 +14,164 @@ Bumbag provides an accessible default palette to get you up and running, hopeful
 ### Defaults
 
 <Box marginBottom="major-7">
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="default" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="text" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="textTint" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primaryTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primaryShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="primary900" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondaryShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="secondary900" /></Box>
-  </Flex>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="default" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="text400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="text300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="text200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="text100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="text" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="textTint" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primaryTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primaryShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="primary900" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondaryTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondaryShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="secondary900" /></Columns.Column>
+  </Columns>
 </Box>
 
 ### Grayscales
 
 <Box marginBottom="major-7">
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="black100" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="white900" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="gray900" /></Box>
-  </Flex>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="black" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="black400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="black300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="black200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="black100" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="white" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="white600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="white700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="white800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="white900" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="gray900" /></Columns.Column>
+  </Columns>
 </Box>
 
 ### Statuses
 
 <Box marginBottom="major-7">
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="infoShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="info900" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="successTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="successShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="success900" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="dangerTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="dangerShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="danger900" /></Box>
-  </Flex>
-  <Flex marginTop="major-4">
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning400" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning300" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning200" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning100" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warningTint" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warningShade" /></Box>
-  </Flex>
-  <Flex>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning600" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning700" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning800" /></Box>
-    <Box padding="0.5rem 0.25rem"><PaletteColor palette="warning900" /></Box>
-  </Flex>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="infoTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="infoShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="info900" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="successTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="successShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="success900" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="dangerTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="dangerShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="danger900" /></Columns.Column>
+  </Columns>
+  <Columns marginTop="major-4">
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning400" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning300" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning200" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning100" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warningTint" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warningShade" /></Columns.Column>
+  </Columns>
+  <Columns>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning600" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning700" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning800" /></Columns.Column>
+    <Columns.Column spread={3} spreadMobile={6}><PaletteColor palette="warning900" /></Columns.Column>
+  </Columns>
 </Box>
 
 ## Accessing the palette
