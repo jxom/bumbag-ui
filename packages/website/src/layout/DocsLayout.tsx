@@ -112,7 +112,7 @@ export default function Docs(props: Props) {
     <React.Fragment>
       <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
-        <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left">
+        <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left" sidebarWidth="270px">
           <TableOfContents
             breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
             isFluid={pageContext.frontmatter.isFluid}
