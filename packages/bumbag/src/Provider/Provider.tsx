@@ -17,6 +17,7 @@ export type ProviderProps = {
   isStandalone?: boolean;
   collapseBelow?: LayoutBreakpoint;
   colorMode?: string;
+  isSSR?: boolean;
   theme?: ThemeConfig;
 };
 
@@ -25,7 +26,7 @@ Provider.defaultProps = {
 };
 
 export function Provider(props: ProviderProps) {
-  const { children, colorMode, collapseBelow, isStandalone, theme: _theme } = props;
+  const { children, colorMode, collapseBelow, isSSR, isStandalone, theme: _theme } = props;
 
   ////////////////////////////////////////////////
 
@@ -52,7 +53,7 @@ export function Provider(props: ProviderProps) {
   return (
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
-        <ColorModeProvider mode={colorMode}>
+        <ColorModeProvider isSSR={isSSR} mode={colorMode}>
           <IdProvider>
             <ToastProvider>
               <PageProvider collapseBelow={collapseBelow}>

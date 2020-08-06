@@ -9,10 +9,15 @@ export const ColorModeContext = React.createContext<any>({ setColorMode: () => {
 type Props = {
   children: React.ReactNode;
   mode: string;
+  isSSR?: boolean;
 };
 
+ColorModeProvider.defaultProps = {
+  isSSR: false
+}
+
 export function ColorModeProvider(props: Props) {
-  const { children, mode: _defaultMode } = props;
+  const { children, mode: _defaultMode, isSSR } = props;
 
   ////////////////////////////////////
 
@@ -62,16 +67,10 @@ export function ColorModeProvider(props: Props) {
 
   ////////////////////////////////////
 
-  if (!mounted) {
-    return (
-      <div style={{ visibility: 'hidden' }}>{children}</div>
-    )
+  if (isSSR && !mounted) {
+    return <div style={{ visibility: 'hidden' }}>{children}</div>;
   }
-  return (
-    <ColorModeContext.Provider value={value}>
-      {children}
-    </ColorModeContext.Provider>
-  );
+  return <ColorModeContext.Provider value={value}>{children}</ColorModeContext.Provider>;
 }
 
 export function useColorMode() {

@@ -132,6 +132,8 @@ export default class MyDocument extends Document {
 
 Then, open up your `_app.js` file, and add the `<BumbagProvider>`:
 
+**Make sure you add `isSSR` as a prop to `BumbagProvider`. This will help with color mode consistency.**
+
 
 ```jsx
 import NextApp from 'next/app';
@@ -141,7 +143,7 @@ export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <BumbagProvider>
+      <BumbagProvider isSSR>
         <Component {...pageProps} />
       </BumbagProvider>
     );
