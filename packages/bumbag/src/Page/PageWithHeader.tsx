@@ -15,6 +15,8 @@ export type LocalPageWithHeaderProps = {
   header: React.ReactElement<any>;
   /** Sets the height of the header component. */
   headerHeight?: string;
+  /** Makes the header stick to the top of the page. */
+  sticky?: boolean;
 };
 export type PageWithHeaderProps = BoxProps & LocalPageWithHeaderProps;
 
