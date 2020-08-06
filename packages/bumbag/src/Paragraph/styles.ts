@@ -1,7 +1,9 @@
 import { cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { getCapsizeStyles, space, theme } from '../utils';
 
 export const Paragraph = (styleProps) => cssClass`
+  ${getCapsizeStyles({ lineHeight: 'paragraph' })(styleProps)};
+
   &:not(:last-child) {
     margin-bottom: ${space(4)(styleProps)}rem;
   }

@@ -161,10 +161,22 @@ export type FontsThemeConfig = {
   mono?: string;
   [key: string]: string | Array<string>;
 };
+export type FontMetricsThemeConfig = {
+  default?: {
+    capHeight: number;
+    ascent: number;
+    descent: number;
+    lineGap: number;
+    unitsPerEm: number;
+  };
+};
 export type FontSizeThemeConfig = {
   [key: string]: number;
 };
 export type FontWeightsThemeConfig = {
+  [key: string]: number;
+};
+export type LineHeightsThemeConfig = {
   [key: string]: number;
 };
 export type SpacingThemeConfig = {
@@ -1866,9 +1878,11 @@ export type ThemeConfig = {
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
   fonts?: FontsThemeConfig;
+  fontMetrics?: FontMetricsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
+  lineHeights?: LineHeightsThemeConfig;
   modes?: ModesThemeConfig;
   spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;

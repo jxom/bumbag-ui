@@ -1,8 +1,8 @@
 import { cssClass } from '../styled';
-import { theme } from '../utils';
+import { lineHeight, theme } from '../utils';
 
 export const Text = (styleProps) => cssClass`
-  line-height: 1.2;
+  line-height: ${lineHeight('text')(styleProps)};
 
   abbr& {
     border-bottom: 1px dotted;
