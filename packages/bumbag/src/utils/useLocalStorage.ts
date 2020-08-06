@@ -4,7 +4,7 @@ import { useTheme } from './useTheme';
 export function useLocalStorage() {
   const { theme } = useTheme();
 
-  const isEnabled = theme.modes.enableLocalStorage;
+  const isEnabled = theme.modes?.enableLocalStorage;
 
   const get = React.useCallback(
     (key: string) => {
