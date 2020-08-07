@@ -30,7 +30,10 @@ const useProps = createHook<LevelProps>(
 
     return { ...flexProps, className };
   },
-  { defaultProps: { alignX: 'center', spacing: 'major-2', verticalBelow: 'desktop' }, themeKey: 'Level' }
+  {
+    defaultProps: { alignX: 'center', orientation: 'horizontal', spacing: 'major-2', verticalBelow: 'desktop' },
+    themeKey: 'Level',
+  }
 );
 
 export const Level = createComponent<LevelProps>(
