@@ -326,7 +326,7 @@ const useProps = createHook<AutosuggestProps>(
     const debouncedInputValue = useDebounce(inputValue, 500);
 
     const getOptions = React.useCallback(
-      async ({ loadVariables, page, searchText = '' }) => {
+      ({ loadVariables, page, searchText = '' }) => {
         if (typeof loadOptions === 'function') {
           if (blockLoad) return { options };
 
@@ -340,13 +340,13 @@ const useProps = createHook<AutosuggestProps>(
             }
 
             return { options: newOptions };
-          });
+          }) as any;
         }
-        return undefined;
+        return new Promise((res) => res(undefined));
       },
       [blockLoad, loadOptions, options]
     );
-    const optionsRecord = Loads.useLoads(cacheKey, getOptions, {
+    const optionsRecord: any = Loads.useLoads(cacheKey, getOptions, {
       defer,
       variables: [{ loadVariables, page, searchText: debouncedInputValue }],
     });
