@@ -40,7 +40,7 @@ export function addColorModeBodyClassName(nextMode: string, prevMode?: string) {
 }
 
 export function getDefaultColorMode(mode, { localStorage, theme }) {
-  const { useSystemColorMode } = theme.modes;
+  const { useSystemColorMode } = theme.modes || {};
   let defaultMode = mode;
   if (typeof window !== 'undefined') {
     if (useSystemColorMode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

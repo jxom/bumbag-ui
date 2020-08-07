@@ -4,26 +4,27 @@ import { useTheme } from './useTheme';
 export function useLocalStorage() {
   const { theme } = useTheme();
 
-  const isEnabled = theme.modes.enableLocalStorage;
+  const isEnabled = theme.modes?.enableLocalStorage;
+  const localStoragePrefix = theme.modes?.localStoragePrefix;
 
   const get = React.useCallback(
     (key: string) => {
       if (!isEnabled) return;
       if (typeof window !== 'undefined') {
-        return window.localStorage.getItem(`${theme.modes.localStoragePrefix}.${key}`);
+        return window.localStorage.getItem(`${localStoragePrefix}.${key}`);
       }
     },
-    [isEnabled, theme.modes.localStoragePrefix]
+    [isEnabled, localStoragePrefix]
   );
 
   const set = React.useCallback(
     (key: string, value: any) => {
       if (!isEnabled) return;
       if (typeof window !== 'undefined') {
-        return window.localStorage.setItem(`${theme.modes.localStoragePrefix}.${key}`, value);
+        return window.localStorage.setItem(`${localStoragePrefix}.${key}`, value);
       }
     },
-    [isEnabled, theme.modes.localStoragePrefix]
+    [isEnabled, localStoragePrefix]
   );
 
   return { get, set };
