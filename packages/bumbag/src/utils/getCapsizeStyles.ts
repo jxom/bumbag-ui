@@ -6,8 +6,9 @@ type CapsizeOpts = {
 };
 
 export function getCapsizeStyles(opts?: CapsizeOpts): any {
-  const { fontSize = '200', lineHeight = 'default' } = opts;
-  return ({ theme }) => {
+  return ({ theme, ...props }) => {
+    const fontSize = props.fontSize || opts.fontSize || '200';
+    const lineHeight = props.lineHeight || opts.lineHeight || 'default';
     const fontSizeInPx = theme.fontSizes[fontSize] * theme.global.fontSize;
     return capsize({
       fontMetrics: theme.fontMetrics.default,
