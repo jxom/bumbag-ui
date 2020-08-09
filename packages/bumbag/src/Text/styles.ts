@@ -76,14 +76,8 @@ export const TextInline = (styleProps) => cssClass`
 `;
 
 export const TextBlock = (styleProps) => cssClass`
+  ${Text(styleProps)};
+
   display: block;
-  ${getCapsizeStyles({ lineHeight: 'text', includeBottomGap: true })(styleProps)};
-
-  & .bb-Icon {
-    vertical-align: -0.125em;
-  }
-
-  & {
-    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
-  }
+  ${getCapsizeStyles({ lineHeight: 'text' })(styleProps)};
 `;

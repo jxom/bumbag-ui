@@ -5,15 +5,15 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalTextBlockProps = {};
-export type TextBlockProps = BoxProps & LocalTextBlockProps;
+export type LocalLinkInlineProps = {};
+export type LinkInlineProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkInlineProps;
 
-const useProps = createHook<TextBlockProps>(
+const useProps = createHook<LinkInlineProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
-      style: styles.TextBlock,
+      style: styles.LinkInline,
       styleProps: props,
       themeKey,
       themeKeyOverride,
@@ -22,22 +22,27 @@ const useProps = createHook<TextBlockProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Text.Block' }
+  { themeKey: 'Link.Inline' }
 );
 
-export const TextBlock = createComponent<TextBlockProps>(
+export const LinkInline = createComponent<LinkInlineProps>(
   (props) => {
-    const textBlockProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textBlockProps });
+    const linkInlineProps = useProps(props);
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: linkInlineProps,
+    });
   },
   {
     attach: {
       useProps,
-      displayName: 'Text.Block',
+      displayName: 'Link.Inline',
     },
     defaultProps: {
-      use: 'span',
+      use: 'a',
     },
-    themeKey: 'Text.Block',
+    themeKey: 'Link.Inline',
   }
 );

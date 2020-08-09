@@ -8,4 +8,4 @@ export const Text = Object.assign(_Text, {
   Block: TextBlock,
   Inline: TextInline,
 });
-export { styles as TextStyles };
+export { styles as textStyles };

@@ -22,7 +22,7 @@ const useProps = createHook<TextInlineProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'TextInline' }
+  { themeKey: 'Text.Inline' }
 );
 
 export const TextInline = createComponent<TextInlineProps>(
@@ -38,11 +38,11 @@ export const TextInline = createComponent<TextInlineProps>(
   {
     attach: {
       useProps,
-      displayName: 'TextInline',
+      displayName: 'Text.Inline',
     },
     defaultProps: {
       use: 'span',
     },
-    themeKey: 'TextInline',
+    themeKey: 'Text.Inline',
   }
 );

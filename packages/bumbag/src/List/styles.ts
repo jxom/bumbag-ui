@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { getCapsizeStyles, space, theme } from '../utils';
+import { space, theme } from '../utils';
 
 export const List = (styleProps) => cssClass`
   list-style: unset;
@@ -9,7 +9,11 @@ export const List = (styleProps) => cssClass`
     margin-left: ${space(4)(styleProps)}rem;
   }
 
-  ${getCapsizeStyles({ lineHeight: 'list', includeBottomGap: true })(styleProps)};
+  & li {
+    &:not(:last-child) {
+      margin-bottom: ${space(1)(styleProps)}rem;
+    }
+  }
 
   & {
     ${styleProps.isOrdered && getOrderedProperties(styleProps)};

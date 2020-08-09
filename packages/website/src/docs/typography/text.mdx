@@ -6,6 +6,11 @@ import { Text } from 'bumbag';
 
 The `<Text>` component renders a `<span>` with basic reset styles by default.
 
+A text comes in two different forms:
+
+- `Text.Block`: Text rendered as block display.
+- `Text`: Text rendered as inline (should only be rendered within a `Text.Block`).
+
 ## Import
 
 ```jsx
@@ -15,7 +20,10 @@ import { Text } from 'bumbag'
 ## Usage
 
 ```jsx-live
-<Text>Hello world!</Text>
+<Text.Block>
+  Hello world! This is a bit of
+  <Text fontWeight="bold">text</Text>.
+</Text.Block>
 ```
 
 ### Other elements

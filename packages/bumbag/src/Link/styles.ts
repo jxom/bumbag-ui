@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { palette, theme, fontWeight } from '../utils';
+import { getCapsizeStyles, palette, theme, fontWeight } from '../utils';
 
 export const Link = (styleProps) => cssClass`
   color: ${palette('primary', { dark: 'primary300' })(styleProps)};
@@ -29,4 +29,16 @@ export const Link = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
+`;
+
+export const LinkBlock = (styleProps) => cssClass`
+  ${Link(styleProps)};
+
+  display: block;
+
+  ${getCapsizeStyles({ lineHeight: 'text', includeBottomGap: true })(styleProps)};
+`;
+
+export const LinkInline = (styleProps) => cssClass`
+  ${Link(styleProps)};
 `;

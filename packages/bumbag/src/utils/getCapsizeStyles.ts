@@ -6,15 +6,17 @@ type CapsizeOpts = {
   fontMetrics?: any;
   fontSize?: string;
   lineHeight?: string;
+  shrinkScale?: number;
 };
 
 export function getCapsizeAttributes(opts?: CapsizeOpts) {
   return ({ theme, ...props }) => {
-    const fontMetrics = props.fontMetrics || opts.fontMetrics || theme.fontMetrics.default;
+    const shrinkScale = opts.shrinkScale || 1;
+    const fontMetrics = props.fontMetrics || opts.fontMetrics || theme.fontMetrics?.default || {};
     const fontSize = props.fontSize || opts.fontSize || '200';
     const lineHeight = props.lineHeight || opts.lineHeight || 'default';
-    const fontSizeInPx = theme.fontSizes[fontSize] * theme.global.fontSize;
-    const leading = fontSizeInPx * theme.lineHeights[lineHeight];
+    const fontSizeInPx = shrinkScale * theme.fontSizes?.[fontSize] * theme.global?.fontSize;
+    const leading = fontSizeInPx * theme.lineHeights?.[lineHeight];
     return {
       fontMetrics,
       lineHeight,
@@ -35,7 +37,7 @@ export function getLineGapInPx(opts?: any): any {
 
 export function getCapsizeStyles(opts?: CapsizeOpts): any {
   return (props) => {
-    const { fontMetrics, fontSize, leading } = getCapsizeAttributes(opts)(props);
+    const { fontMetrics = {}, fontSize, leading } = getCapsizeAttributes(opts)(props);
     // @ts-ignore
     return css`
       ${capsize({
@@ -52,7 +54,7 @@ export function getCapsizeStyles(opts?: CapsizeOpts): any {
 
         ${opts.lineHeight === 'heading' &&
         css`
-          &:last-of-type {
+          &:last-of-type:not(:last-child) {
             margin-bottom: ${1.5 * getLineGapInPx(opts)(props)}px;
           }
         `}

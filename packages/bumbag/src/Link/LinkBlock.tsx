@@ -5,15 +5,15 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles';
 
-export type LocalTextBlockProps = {};
-export type TextBlockProps = BoxProps & LocalTextBlockProps;
+export type LocalLinkBlockProps = {};
+export type LinkBlockProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkBlockProps;
 
-const useProps = createHook<TextBlockProps>(
+const useProps = createHook<LinkBlockProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
-      style: styles.TextBlock,
+      style: styles.LinkBlock,
       styleProps: props,
       themeKey,
       themeKeyOverride,
@@ -22,22 +22,22 @@ const useProps = createHook<TextBlockProps>(
 
     return { ...boxProps, className };
   },
-  { themeKey: 'Text.Block' }
+  { themeKey: 'Link.Block' }
 );
 
-export const TextBlock = createComponent<TextBlockProps>(
+export const LinkBlock = createComponent<LinkBlockProps>(
   (props) => {
-    const textBlockProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textBlockProps });
+    const linkBlockProps = useProps(props);
+    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: linkBlockProps });
   },
   {
     attach: {
       useProps,
-      displayName: 'Text.Block',
+      displayName: 'Link.Block',
     },
     defaultProps: {
-      use: 'span',
+      use: 'a',
     },
-    themeKey: 'Text.Block',
+    themeKey: 'Link.Block',
   }
 );

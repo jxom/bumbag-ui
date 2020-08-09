@@ -25,7 +25,7 @@ export const CalloutContent = (styleProps) => cssClass`
 `;
 
 export const CalloutHeader = (styleProps) => cssClass`
-  margin-bottom: ${space(1, 'major')(styleProps)}rem;
+  margin-bottom: ${space(3, 'minor')(styleProps)}rem;
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

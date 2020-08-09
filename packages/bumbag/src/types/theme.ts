@@ -733,36 +733,48 @@ export type HeadingThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   h1?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h2?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h3?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h4?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h5?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h6?: {
+    fontSize?: string;
+    shrinkedFontSize?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -958,6 +970,8 @@ export type LinkThemeConfig = {
     hover?: ThemeAttribute<Stylesheet>;
     focus?: ThemeAttribute<Stylesheet>;
   };
+  Block?: LinkThemeConfig;
+  Inline?: LinkThemeConfig;
   defaultProps?: Partial<LinkProps>;
   variants?: Variant<LinkThemeConfig>;
   modes?: Variant<LinkThemeConfig>;
@@ -1516,6 +1530,8 @@ export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
   };
+  Block?: LinkThemeConfig;
+  Inline?: LinkThemeConfig;
   defaultProps?: Partial<TextProps>;
   variants?: Variant<TextThemeConfig>;
   modes?: Variant<TextThemeConfig>;
