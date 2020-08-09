@@ -1,8 +1,8 @@
 import { cssClass } from '../styled';
-import { lineHeight, theme } from '../utils';
+import { getCapsizeStyles, theme } from '../utils';
 
 export const Text = (styleProps) => cssClass`
-  line-height: ${lineHeight('text')(styleProps)};
+  line-height: 1.2;
 
   abbr& {
     border-bottom: 1px dotted;
@@ -59,6 +59,25 @@ export const Text = (styleProps) => cssClass`
   samp& {
     font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
   }
+
+  & .bb-Icon {
+    vertical-align: -0.125em;
+  }
+
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+export const TextInline = (styleProps) => cssClass`
+  ${Text(styleProps)};
+
+  line-height: 1;
+`;
+
+export const TextBlock = (styleProps) => cssClass`
+  display: block;
+  ${getCapsizeStyles({ lineHeight: 'text', includeBottomGap: true })(styleProps)};
 
   & .bb-Icon {
     vertical-align: -0.125em;
