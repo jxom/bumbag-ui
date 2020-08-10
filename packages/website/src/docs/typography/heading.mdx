@@ -36,6 +36,45 @@ Use the `use` prop to change from the default `h1` element to `h2`, `h3`, `h4`, 
 </Box>
 ```
 
+### Font sizes
+
+You can adjust the font size of a heading with the `fontSize` prop:
+
+```jsx-live
+<Heading fontSize="400">Hello world</Heading>
+```
+
+Or, you can modify the font size for each heading level in the theme:
+
+```jsx
+const theme = {
+  Heading: {
+    h1: {
+      fontSize: '700'
+    },
+    h2: {
+      fontSize: '600'
+    },
+    h3: {
+      fontSize: '500'
+    }
+    h4: {
+      fontSize: '400'
+    }
+    h5: {
+      fontSize: '300'
+    },
+    h6: {
+      fontSize: '200'
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
 ### Responsive headers
 
 By default, each heading's font size will shrink in a `mobile` viewport.
