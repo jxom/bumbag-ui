@@ -1,25 +1,30 @@
-import { css, cssClass } from '../styled';
-import { breakpoint, borderRadius, theme } from '../utils';
+import { css, cssClass } from "../styled";
+import { breakpoint, borderRadius, theme } from "../utils";
 
 const verticalBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
+  tablet: "mobile",
+  desktop: "tablet",
+  widescreen: "desktop",
+  fullHD: "widescreen"
 };
 
-export const Group = (styleProps) => cssClass`
-  flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
+export const Group = styleProps => cssClass`
+  flex-direction: ${styleProps.orientation === "vertical" ? "column" : "row"};
 
   ${breakpoint(
-    styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+    styleProps.verticalBelow
+      ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+      : null,
     css`
       flex-direction: column;
     `
   )(styleProps)};
 
   & > * {
-    border-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+    border-radius: ${borderRadius(
+      styleProps.borderRadius,
+      styleProps.borderRadius
+    )(styleProps)};
     ${theme(styleProps.themeKey, `Item.styles.base`)(styleProps)};
   }
 
@@ -29,50 +34,53 @@ export const Group = (styleProps) => cssClass`
     position: relative;
   }
 
-  & > *:first-child {
+  & > *:first-child:nth-last-child(-n+1) {
     ${
-      styleProps.orientation === 'vertical'
+      styleProps.orientation === "vertical"
         ? css`
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
+            border-bottom-right-radius: initial;
+            border-bottom-left-radius: initial;
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow
+                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                : null,
               css`
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
+                border-bottom-right-radius: initial;
+                border-bottom-left-radius: initial;
               `,
               {
                 else: css`
-                  border-bottom-right-radius: 0;
-                  border-top-right-radius: 0;
-                `,
+                  border-bottom-right-radius: initial;
+                  border-top-right-radius: initial;
+                `
               }
             )(styleProps)};
           `
     }
-
     & input,
     & select {
       ${
-        styleProps.orientation === 'vertical'
+        styleProps.orientation === "vertical"
           ? css`
-              border-bottom-right-radius: 0;
-              border-bottom-left-radius: 0;
+              border-bottom-right-radius: initial;
+              border-bottom-left-radius: initial;
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+                styleProps.verticalBelow
+                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                  : null,
                 css`
-                  border-bottom-right-radius: 0;
-                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: initial;
+                  border-bottom-left-radius: initial;
                 `,
                 {
                   else: css`
-                    border-bottom-right-radius: 0;
-                    border-top-right-radius: 0;
-                  `,
+                    border-bottom-right-radius: initial;
+                    border-top-right-radius: initial;
+                  `
                 }
               )(styleProps)};
             `
@@ -82,16 +90,146 @@ export const Group = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, `Item.styles.first`)(styleProps)};
   }
 
+  & > *:first-child {
+    ${
+      styleProps.orientation === "vertical"
+        ? css`
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          `
+        : css`
+            ${breakpoint(
+              styleProps.verticalBelow
+                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                : null,
+              css`
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+              `,
+              {
+                else: css`
+                  border-bottom-right-radius: 0;
+                  border-top-right-radius: 0;
+                `
+              }
+            )(styleProps)};
+          `
+    }
+
+    & input,
+    & select {
+      ${
+        styleProps.orientation === "vertical"
+          ? css`
+              border-bottom-right-radius: 0;
+              border-bottom-left-radius: 0;
+            `
+          : css`
+              ${breakpoint(
+                styleProps.verticalBelow
+                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                  : null,
+                css`
+                  border-bottom-right-radius: 0;
+                  border-bottom-left-radius: 0;
+                `,
+                {
+                  else: css`
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                  `
+                }
+              )(styleProps)};
+            `
+      };
+    }
+
+    ${theme(styleProps.themeKey, `Item.styles.first`)(styleProps)};
+  }
+
+  & > *:last-child:nth-first-child(n+1) {
+    ${
+      styleProps.orientation === "vertical"
+        ? css`
+            border-top-right-radius: initial;
+            border-top-left-radius: initial;
+          `
+        : css`
+            ${breakpoint(
+              styleProps.verticalBelow
+                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                : null,
+              css`
+                border-top-left-radius: initial;
+                border-top-right-radius: initial;
+              `,
+              {
+                else: css`
+                  border-top-left-radius: initial;
+                  border-bottom-left-radius: initial;
+                `
+              }
+            )(styleProps)};
+          `
+    }
+
+    ${breakpoint(
+      styleProps.verticalBelow
+        ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+        : null,
+      css`
+        border-top-right-radius: initial;
+        border-top-left-radius: initial;
+        border-bottom-left-radius: ${borderRadius(
+          styleProps.borderRadius,
+          styleProps.borderRadius
+        )(styleProps)};
+      `
+    )(styleProps)};
+
+    & input,
+    & select {
+      ${
+        styleProps.orientation === "vertical"
+          ? css`
+              border-top-left-radius: initial;
+              border-top-right-radius: initial;
+            `
+          : css`
+              ${breakpoint(
+                styleProps.verticalBelow
+                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                  : null,
+                css`
+                  border-top-left-radius: initial;
+                  border-top-right-radius: initial;
+                `,
+                {
+                  else: css`
+                    border-top-left-radius: initial;
+                    border-bottom-left-radius: initial;
+                  `
+                }
+              )(styleProps)};
+            `
+      };
+    }
+
+    ${theme(styleProps.themeKey, `Item.styles.last`)(styleProps)};
+  }
+
   & > *:last-child {
     ${
-      styleProps.orientation === 'vertical'
+      styleProps.orientation === "vertical"
         ? css`
             border-top-right-radius: 0;
             border-top-left-radius: 0;
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow
+                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                : null,
               css`
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
@@ -100,32 +238,39 @@ export const Group = (styleProps) => cssClass`
                 else: css`
                   border-top-left-radius: 0;
                   border-bottom-left-radius: 0;
-                `,
+                `
               }
             )(styleProps)};
           `
     }
 
     ${breakpoint(
-      styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+      styleProps.verticalBelow
+        ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+        : null,
       css`
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        border-bottom-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+        border-bottom-left-radius: ${borderRadius(
+          styleProps.borderRadius,
+          styleProps.borderRadius
+        )(styleProps)};
       `
     )(styleProps)};
 
     & input,
     & select {
       ${
-        styleProps.orientation === 'vertical'
+        styleProps.orientation === "vertical"
           ? css`
               border-top-left-radius: 0;
               border-top-right-radius: 0;
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+                styleProps.verticalBelow
+                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                  : null,
                 css`
                   border-top-left-radius: 0;
                   border-top-right-radius: 0;
@@ -134,7 +279,7 @@ export const Group = (styleProps) => cssClass`
                   else: css`
                     border-top-left-radius: 0;
                     border-bottom-left-radius: 0;
-                  `,
+                  `
                 }
               )(styleProps)};
             `
@@ -153,20 +298,22 @@ export const Group = (styleProps) => cssClass`
 
   & > *:not(:first-child) {
     ${
-      styleProps.orientation === 'vertical'
+      styleProps.orientation === "vertical"
         ? css`
             border-top-width: 0;
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow
+                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
+                : null,
               css`
                 border-top-width: 0;
               `,
               {
                 else: css`
                   border-left-width: 0;
-                `,
+                `
               }
             )(styleProps)};
           `
