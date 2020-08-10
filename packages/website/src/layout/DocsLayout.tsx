@@ -76,7 +76,7 @@ export default function Docs(props: Props) {
               styles: {
                 base: bumbag.css`
                   &:not(:last-child) {
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                   }
                 `,
               },
@@ -88,8 +88,9 @@ export default function Docs(props: Props) {
         <bumbag.List
           listStyleType="disc"
           listStylePosition="outside"
-          marginLeft="major-2"
-          marginBottom="major-2"
+          marginLeft="major-4"
+          marginBottom="major-4"
+          marginTop="-1rem"
           {...props}
         />
       ),

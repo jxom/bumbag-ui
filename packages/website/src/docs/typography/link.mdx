@@ -7,7 +7,14 @@ import { Link } from 'bumbag';
 A link comes in two different forms:
 
 - `Link.Block`: Link rendered as block display.
-- `Link`: Link rendered as inline (should only be rendered within a block component).
+- `Link`: Link rendered as inline.
+
+The inline `Link` component should only be rendered within a:
+  - **Link.Block**
+  - [Text.Block](/typography/text)
+  - [Paragraph](/typography/paragraph)
+  - [Heading](/typography/heading)
+  - [List.Item](/typography/list)
 
 ## Import
 
