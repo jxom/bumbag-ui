@@ -117,7 +117,7 @@ function getFontWeightValue({ theme, value }) {
   return value;
 }
 
-export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = false } = {}) {
+export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = false, disableCSSProps = [] } = {}) {
   let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
@@ -171,6 +171,9 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           newValue = getFontValue({ theme, value });
         }
         if (fontSizeAttributes.includes(attribute)) {
+          if (disableCSSProps.includes('fontSize')) {
+            return {};
+          }
           newValue = getFontSizeValue({ theme, value });
         }
         if (fontWeightAttributes.includes(attribute)) {

@@ -34,7 +34,7 @@ export type LocalBoxProps = {
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
-  (_props, { themeKey, themeKeyOverride }) => {
+  (_props, { disableCSSProps, themeKey, themeKeyOverride }) => {
     let props = _props;
     const { use } = props;
 
@@ -49,7 +49,7 @@ const useProps = createHook<BoxProps>(
     //
     // Example output:
     // style = { color: 'red', backgroundColor: 'blue' }
-    const style = useStyle(props);
+    const style = useStyle(props, { disableCSSProps });
 
     // Append the styles from above as a className on the DOM element (with precedence).
     let className = useClassName({
