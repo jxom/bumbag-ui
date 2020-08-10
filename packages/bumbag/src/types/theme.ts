@@ -734,7 +734,7 @@ export type HeadingThemeConfig = {
   };
   h1?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -742,7 +742,7 @@ export type HeadingThemeConfig = {
   };
   h2?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -750,7 +750,7 @@ export type HeadingThemeConfig = {
   };
   h3?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -758,7 +758,7 @@ export type HeadingThemeConfig = {
   };
   h4?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -766,7 +766,7 @@ export type HeadingThemeConfig = {
   };
   h5?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -774,7 +774,7 @@ export type HeadingThemeConfig = {
   };
   h6?: {
     fontSize?: string;
-    shrinkedFontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;

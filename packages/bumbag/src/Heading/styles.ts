@@ -8,7 +8,7 @@ export const Heading = (styleProps) => cssClass`
   ${getCapsizeStyles({ lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
   h1& {
-    ${getCapsizeStyles({ fontSize: '700', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h1', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h1.styles.base`)(styleProps)};
@@ -19,7 +19,7 @@ export const Heading = (styleProps) => cssClass`
       breakpoint(
         `max-${styleProps.shrinkBelow}`,
         css`
-          ${getCapsizeStyles({ fontSize: '700', lineHeight: 'heading', includeBottomGap: true, shrinkScale: 0.75 })(
+          ${getCapsizeStyles({ themeKey: 'Heading.h1', lineHeight: 'heading', includeBottomGap: true, shrink: true })(
             styleProps
           )};
 
@@ -31,7 +31,7 @@ export const Heading = (styleProps) => cssClass`
     };
   }
   h2& {
-    ${getCapsizeStyles({ fontSize: '600', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h2', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h2.styles.base`)(styleProps)};
@@ -42,9 +42,7 @@ export const Heading = (styleProps) => cssClass`
       breakpoint(
         `max-${styleProps.shrinkBelow}`,
         css`
-          ${getCapsizeStyles({ fontSize: '600', lineHeight: 'heading', includeBottomGap: true, shrinkScale: 0.75 })(
-            styleProps
-          )};
+          ${getCapsizeStyles({ themeKey: 'Heading.h2', lineHeight: 'heading', includeBottomGap: true, shrink: true })(styleProps)};
 
           & {
             ${theme(styleProps.themeKey, `h2.styles.shrinked`)(styleProps)};
@@ -54,7 +52,7 @@ export const Heading = (styleProps) => cssClass`
     };
   }
   h3& {
-    ${getCapsizeStyles({ fontSize: '500', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h3', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h3.styles.base`)(styleProps)};
@@ -65,9 +63,7 @@ export const Heading = (styleProps) => cssClass`
       breakpoint(
         `max-${styleProps.shrinkBelow}`,
         css`
-          ${getCapsizeStyles({ fontSize: '500', lineHeight: 'heading', includeBottomGap: true, shrinkScale: 0.75 })(
-            styleProps
-          )};
+          ${getCapsizeStyles({ themeKey: 'Heading.h3', lineHeight: 'heading', includeBottomGap: true, shrink: true })(styleProps)};
 
           & {
             ${theme(styleProps.themeKey, `h3.styles.shrinked`)(styleProps)};
@@ -77,7 +73,7 @@ export const Heading = (styleProps) => cssClass`
     };
   }
   h4& {
-    ${getCapsizeStyles({ fontSize: '400', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h4', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h4.styles.base`)(styleProps)};
@@ -88,9 +84,7 @@ export const Heading = (styleProps) => cssClass`
       breakpoint(
         `max-${styleProps.shrinkBelow}`,
         css`
-          ${getCapsizeStyles({ fontSize: '400', lineHeight: 'heading', includeBottomGap: true, shrinkScale: 0.75 })(
-            styleProps
-          )};
+          ${getCapsizeStyles({ themeKey: 'Heading.h4', lineHeight: 'heading', includeBottomGap: true, shrink: true })(styleProps)};
 
           & {
             ${theme(styleProps.themeKey, `h4.styles.shrinked`)(styleProps)};
@@ -100,7 +94,7 @@ export const Heading = (styleProps) => cssClass`
     };
   }
   h5& {
-    ${getCapsizeStyles({ fontSize: '300', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h5', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h5.styles.base`)(styleProps)};
@@ -111,9 +105,7 @@ export const Heading = (styleProps) => cssClass`
       breakpoint(
         `max-${styleProps.shrinkBelow}`,
         css`
-          ${getCapsizeStyles({ fontSize: '300', lineHeight: 'heading', includeBottomGap: true, shrinkScale: 0.875 })(
-            styleProps
-          )};
+          ${getCapsizeStyles({ themeKey: 'Heading.h5', lineHeight: 'heading', includeBottomGap: true, shrink: true })(styleProps)};
 
           & {
             ${theme(styleProps.themeKey, `h5.styles.shrinked`)(styleProps)};
@@ -123,7 +115,7 @@ export const Heading = (styleProps) => cssClass`
     };
   }
   h6& {
-    ${getCapsizeStyles({ fontSize: '200', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
+    ${getCapsizeStyles({ themeKey: 'Heading.h6', lineHeight: 'heading', includeBottomGap: true })(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `h6.styles.base`)(styleProps)};

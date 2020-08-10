@@ -1,19 +1,19 @@
 import capsize from 'capsize';
+import { get } from './get';
 import { css } from '../styled';
 
 type CapsizeOpts = {
   includeBottomGap?: boolean;
-  fontMetrics?: any;
-  fontSize?: string;
   lineHeight?: string;
-  shrinkScale?: number;
+  shrink?: boolean;
+  themeKey?: string;
 };
 
 export function getCapsizeAttributes(opts?: CapsizeOpts) {
   return ({ theme, ...props }) => {
-    const shrinkScale = opts.shrinkScale || 1;
-    const fontMetrics = props.fontMetrics || opts.fontMetrics || theme.fontMetrics?.default || {};
-    const fontSize = props.fontSize || opts.fontSize || '200';
+    const shrinkScale = opts.shrink ? get(theme, `${opts.themeKey}.shrinkScale`) || 1 : 1;
+    const fontMetrics = props.fontMetrics || theme.fontMetrics?.default || {};
+    const fontSize = props.fontSize || get(theme, `${opts.themeKey}.fontSize`) || '200';
     const lineHeight = props.lineHeight || opts.lineHeight || 'default';
     const fontSizeInPx = shrinkScale * theme.fontSizes?.[fontSize] * theme.global?.fontSize;
     const leading = fontSizeInPx * theme.lineHeights?.[lineHeight];
