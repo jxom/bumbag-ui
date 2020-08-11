@@ -33,6 +33,8 @@ import { faSmile } from '@fortawesome/free-solid-svg-icons/faSmile';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+import { faComment } from '@fortawesome/free-solid-svg-icons/faComment';
+import { faPencilRuler } from '@fortawesome/free-solid-svg-icons/faPencilRuler';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
 
@@ -49,6 +51,10 @@ export default {
         .bb-Heading:hover > a.anchor,
         a.anchor:hover {
           opacity: 1;
+        }
+
+        & body form {
+          min-width: 320px !important;
         }
       `,
     },
@@ -113,7 +119,9 @@ export default {
           faFrown,
           faMeh,
           faMapMarkerAlt,
-          faDiscord
+          faDiscord,
+          faComment,
+          faPencilRuler,
         ],
         prefix: 'solid-',
         type: 'font-awesome',
