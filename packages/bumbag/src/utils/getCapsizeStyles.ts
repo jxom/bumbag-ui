@@ -4,6 +4,7 @@ import { breakpoint } from './theme';
 import { css } from '../styled';
 
 type CapsizeOpts = {
+  fontFamily?: string;
   fontSize?: string;
   includeBottomGap?: boolean;
   lineHeight?: string;
@@ -14,7 +15,9 @@ type CapsizeOpts = {
 export function getCapsizeAttributes(opts?: CapsizeOpts) {
   return ({ theme, ...props }) => {
     const shrinkScale = opts.shrink ? get(theme, `${opts.themeKey}.shrinkScale`) || 1 : 1;
-    const fontMetrics = props.fontMetrics || theme.fontMetrics?.default || {};
+    const fontFamily = props.font || props.fontFamily || opts.fontFamily;
+    const fontMetrics =
+      props.fontMetrics || get(theme, `fontMetrics.${fontFamily}`) || theme.fontMetrics?.default || {};
     const lineHeight = props.lineHeight || opts.lineHeight || 'default';
     const fontSizeInPx = shrinkScale * theme.fontSizes?.[opts.fontSize] * theme.global?.fontSize;
     const leading = fontSizeInPx * theme.lineHeights?.[lineHeight];
