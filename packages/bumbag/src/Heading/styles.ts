@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { breakpoint, font, getLineGapInPx, fontWeight, space, theme, getCapsizeStyles } from '../utils';
+import { breakpoint, font, fontWeight, space, theme, getCapsizeStyles } from '../utils';
 
 export const Heading = (styleProps) => cssClass`
   font-family: ${font('heading')(styleProps) || font('default')(styleProps)};

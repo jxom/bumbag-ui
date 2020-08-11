@@ -46,8 +46,8 @@ export default function Index() {
         paddingY={{ default: 'major-15', 'max-tablet': 'major-8' }}
         wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
-        <Stack display="flex" flexDirection="column" spacing="major-3" alignItems="center">
-          <Heading fontSize={{ default: '600', mobile: '500' }} textAlign="center">
+        <Stack display="flex" flexDirection="column" spacing="major-5" alignItems="center">
+          <Heading fontSize="600" textAlign="center">
             Build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React applications
             with your Bumbag
           </Heading>

@@ -1,8 +1,10 @@
 import capsize from 'capsize';
 import { get } from './get';
+import { breakpoint } from './theme';
 import { css } from '../styled';
 
 type CapsizeOpts = {
+  fontSize?: string;
   includeBottomGap?: boolean;
   lineHeight?: string;
   shrink?: boolean;
@@ -13,52 +15,74 @@ export function getCapsizeAttributes(opts?: CapsizeOpts) {
   return ({ theme, ...props }) => {
     const shrinkScale = opts.shrink ? get(theme, `${opts.themeKey}.shrinkScale`) || 1 : 1;
     const fontMetrics = props.fontMetrics || theme.fontMetrics?.default || {};
-    const fontSize = props.fontSize || get(theme, `${opts.themeKey}.fontSize`) || '200';
     const lineHeight = props.lineHeight || opts.lineHeight || 'default';
-    const fontSizeInPx = shrinkScale * theme.fontSizes?.[fontSize] * theme.global?.fontSize;
+    const fontSizeInPx = shrinkScale * theme.fontSizes?.[opts.fontSize] * theme.global?.fontSize;
     const leading = fontSizeInPx * theme.lineHeights?.[lineHeight];
+    const capHeight = fontSizeInPx * (fontMetrics.capHeight / fontMetrics.unitsPerEm);
+    const lineGap = leading - capHeight;
     return {
       fontMetrics,
       lineHeight,
-      fontSize: fontSizeInPx,
+      lineGap,
+      fontSizeInPx,
       leading,
     };
   };
 }
 
-export function getLineGapInPx(opts?: any): any {
-  return (props) => {
-    const { fontMetrics, fontSize, leading } = getCapsizeAttributes(opts)(props);
-    const capHeight = fontSize * (fontMetrics.capHeight / fontMetrics.unitsPerEm);
-    const lineGap = leading - capHeight;
-    return lineGap;
+export function getFontSize(opts?: any) {
+  return (props): { [key: string]: string } => {
+    let fontSize = props.fontSize || get(props, `theme.${opts.themeKey}.fontSize`) || '200';
+    if (typeof fontSize === 'string') {
+      fontSize = { default: fontSize };
+    }
+    return fontSize;
   };
 }
 
 export function getCapsizeStyles(opts?: CapsizeOpts): any {
   return (props) => {
-    const { fontMetrics = {}, fontSize, leading } = getCapsizeAttributes(opts)(props);
-    // @ts-ignore
-    return css`
-      ${capsize({
-        fontMetrics,
-        fontSize,
-        leading,
-      })}
+    // We want to cater for responsive `fontSize` CSS props, so let's
+    // transform fontSize in the shape of a responsive CSS prop.
+    const fontSize = getFontSize(opts)(props);
 
-      ${opts.includeBottomGap &&
-      css`
-        &:not(:last-child) {
-          margin-bottom: ${getLineGapInPx(opts)(props)}px;
-        }
+    // If a responsive `fontSize` CSS prop exists, then ignore the shrinked variant...
+    if (opts.shrink && Object.keys(fontSize).length > 1) return {};
 
-        ${opts.lineHeight === 'heading' &&
+    // For each fontSize on the breakpoint, we want to apply Capsize.
+    return Object.entries(fontSize).reduce((currentStyles, [bp, fontSize]) => {
+      const { fontMetrics = {}, fontSizeInPx, leading, lineGap } = getCapsizeAttributes({ ...opts, fontSize })(props);
+      // @ts-ignore
+      const styles = (fontSize) => css`
+        ${capsize({
+          fontMetrics,
+          fontSize: fontSizeInPx,
+          leading,
+        })}
+
+        ${opts.includeBottomGap &&
         css`
-          &:last-of-type:not(:last-child) {
-            margin-bottom: ${1.5 * getLineGapInPx(opts)(props)}px;
+          &:not(:last-child) {
+            margin-bottom: ${lineGap}px;
           }
+
+          ${opts.lineHeight === 'heading' &&
+          css`
+            &:last-of-type:not(:last-child) {
+              margin-bottom: ${1.5 * lineGap}px;
+            }
+          `}
         `}
-      `}
-    `;
+      `;
+      return css`
+        ${currentStyles}
+        ${bp === 'default'
+          ? styles(fontSize)
+          : // @ts-ignore
+            css`
+              ${breakpoint(bp, styles(fontSize))(props)};
+            `};
+      `;
+    }, css``);
   };
 }

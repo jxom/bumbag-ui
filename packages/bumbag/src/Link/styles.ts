@@ -36,7 +36,7 @@ export const LinkBlock = (styleProps) => cssClass`
 
   display: block;
 
-  ${getCapsizeStyles({ lineHeight: 'text', includeBottomGap: true })(styleProps)};
+  ${getCapsizeStyles({ lineHeight: 'default', includeBottomGap: true })(styleProps)};
 `;
 
 export const LinkInline = (styleProps) => cssClass`

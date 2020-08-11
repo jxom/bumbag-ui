@@ -33,7 +33,7 @@ module.exports = {
   }),
   exampleCode: `
     <PageContent>
-      <Heading fontSize={{ default: "500", mobile: "300" }}>
+      <Heading fontSize="500">
         Welcome to the Bumbag playroom!
       </Heading>
       <Drawer.State>
