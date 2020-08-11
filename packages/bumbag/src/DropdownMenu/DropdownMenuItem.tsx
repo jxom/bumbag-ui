@@ -9,6 +9,7 @@ import { DropdownMenuContext } from './DropdownMenu';
 import * as styles from './styles';
 
 export type LocalDropdownMenuItemProps = {
+  hideOnClick?: boolean;
   /** Icon that appears on the right side of the menu item. */
   iconAfter?: IconProps['icon'];
   iconAfterProps?: Omit<IconProps, 'icon'>;
@@ -37,6 +38,7 @@ const useProps = createHook<DropdownMenuItemProps>(
       registerItem,
       currentId,
       hide,
+      hideOnClick,
       move,
       next,
       onClick,
@@ -126,11 +128,11 @@ const useProps = createHook<DropdownMenuItemProps>(
           {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
         </React.Fragment>
       ),
-      onClick: bindFns(onClick, hide, dropdownMenu.hide),
+      onClick: hideOnClick ? bindFns(onClick, hide, dropdownMenu.hide) : onClick,
       tabIndex: props.isTabbable ? boxProps.tabIndex : undefined,
     };
   },
-  { defaultProps: { isTabbable: true }, themeKey: 'DropdownMenu.Item' }
+  { defaultProps: { hideOnClick: true, isTabbable: true }, themeKey: 'DropdownMenu.Item' }
 );
 
 export const DropdownMenuItem = createComponent<DropdownMenuItemProps>(
