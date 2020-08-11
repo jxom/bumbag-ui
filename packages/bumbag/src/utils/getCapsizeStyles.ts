@@ -19,13 +19,15 @@ export function getCapsizeAttributes(opts?: CapsizeOpts) {
     const fontMetrics =
       props.fontMetrics || get(theme, `fontMetrics.${fontFamily}`) || theme.fontMetrics?.default || {};
     const lineHeight = props.lineHeight || opts.lineHeight || 'default';
+    const lineHeightScale = theme.lineHeights?.[lineHeight];
     const fontSizeInPx = shrinkScale * theme.fontSizes?.[opts.fontSize] * theme.global?.fontSize;
-    const leading = fontSizeInPx * theme.lineHeights?.[lineHeight];
+    const leading = fontSizeInPx * lineHeightScale;
     const capHeight = fontSizeInPx * (fontMetrics.capHeight / fontMetrics.unitsPerEm);
     const lineGap = leading - capHeight;
     return {
       fontMetrics,
       lineHeight,
+      lineHeightScale,
       lineGap,
       fontSizeInPx,
       leading,
@@ -54,7 +56,11 @@ export function getCapsizeStyles(opts?: CapsizeOpts): any {
 
     // For each fontSize on the breakpoint, we want to apply Capsize.
     return Object.entries(fontSize).reduce((currentStyles, [bp, fontSize]) => {
-      const { fontMetrics = {}, fontSizeInPx, leading, lineGap } = getCapsizeAttributes({ ...opts, fontSize })(props);
+      const { fontMetrics = {}, fontSizeInPx, leading, lineGap, lineHeightScale } = getCapsizeAttributes({
+        ...opts,
+        fontSize,
+      })(props);
+
       // @ts-ignore
       const styles = (fontSize) => css`
         ${capsize({
@@ -72,7 +78,7 @@ export function getCapsizeStyles(opts?: CapsizeOpts): any {
           ${opts.lineHeight === 'heading' &&
           css`
             &:last-of-type:not(:last-child) {
-              margin-bottom: ${1.5 * lineGap}px;
+              margin-bottom: ${lineHeightScale * lineGap}px;
             }
           `}
         `}
