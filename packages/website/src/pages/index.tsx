@@ -339,6 +339,34 @@ const linkProps = Link.useProps({
           />
         </PageContent>
       </Hide>
+      <PageContent
+        breakpoint="tablet"
+        paddingY="major-6"
+        wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
+      >
+        <Stack alignX="center" spacing="major-2">
+          <Heading fontSize="600" textAlign="center">
+            Join our growing <Text color="primary">community</Text>
+          </Heading>
+          <Paragraph color="text100" fontSize="300" textAlign="center">
+            Join our discord server to get the latest updates, chat with other Bumbag enthusiasts, and see what's
+            happening in the community!
+          </Paragraph>
+          <Box altitude="300" marginTop="major-2">
+            <Box
+              use="iframe"
+              src={`https://discordapp.com/widget?id=735469626619854869&theme=${
+                colorMode === 'dark' ? 'dark' : 'light'
+              }`}
+              width="350px"
+              height="500px"
+              allowTransparency="true"
+              frameBorder="0"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            />
+          </Box>
+        </Stack>
+      </PageContent>
     </LandingLayout>
   );
 }
