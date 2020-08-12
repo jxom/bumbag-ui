@@ -21,10 +21,6 @@ export const Group = styleProps => cssClass`
   )(styleProps)};
 
   & > * {
-    border-radius: ${borderRadius(
-      styleProps.borderRadius,
-      styleProps.borderRadius
-    )(styleProps)};
     ${theme(styleProps.themeKey, `Item.styles.base`)(styleProps)};
   }
 
@@ -34,68 +30,18 @@ export const Group = styleProps => cssClass`
     position: relative;
   }
 
-  & > *:first-child:nth-last-child(-n+1) {
-    ${
-      styleProps.orientation === "vertical"
-        ? css`
-            border-bottom-right-radius: initial;
-            border-bottom-left-radius: initial;
-          `
-        : css`
-            ${breakpoint(
-              styleProps.verticalBelow
-                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                : null,
-              css`
-                border-bottom-right-radius: initial;
-                border-bottom-left-radius: initial;
-              `,
-              {
-                else: css`
-                  border-bottom-right-radius: initial;
-                  border-top-right-radius: initial;
-                `
-              }
-            )(styleProps)};
-          `
-    }
-    & input,
-    & select {
-      ${
-        styleProps.orientation === "vertical"
-          ? css`
-              border-bottom-right-radius: initial;
-              border-bottom-left-radius: initial;
-            `
-          : css`
-              ${breakpoint(
-                styleProps.verticalBelow
-                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                  : null,
-                css`
-                  border-bottom-right-radius: initial;
-                  border-bottom-left-radius: initial;
-                `,
-                {
-                  else: css`
-                    border-bottom-right-radius: initial;
-                    border-top-right-radius: initial;
-                  `
-                }
-              )(styleProps)};
-            `
-      };
-    }
-
-    ${theme(styleProps.themeKey, `Item.styles.first`)(styleProps)};
-  }
-
   & > *:first-child {
     ${
       styleProps.orientation === "vertical"
         ? css`
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
+            border-bottom-right-radius: ${borderRadius(
+              styleProps.borderRadius,
+              styleProps.borderRadius
+            )(styleProps)};
+            border-bottom-left-radius: ${borderRadius(
+              styleProps.borderRadius,
+              styleProps.borderRadius
+            )(styleProps)};
           `
         : css`
             ${breakpoint(
@@ -103,13 +49,25 @@ export const Group = styleProps => cssClass`
                 ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
                 : null,
               css`
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
+                border-bottom-right-radius: ${borderRadius(
+                  styleProps.borderRadius,
+                  styleProps.borderRadius
+                )(styleProps)};
+                border-bottom-left-radius: ${borderRadius(
+                  styleProps.borderRadius,
+                  styleProps.borderRadius
+                )(styleProps)};
               `,
               {
                 else: css`
-                  border-bottom-right-radius: 0;
-                  border-top-right-radius: 0;
+                  border-bottom-right-radius: ${borderRadius(
+                    styleProps.borderRadius,
+                    styleProps.borderRadius
+                  )(styleProps)};
+                  border-top-right-radius: ${borderRadius(
+                    styleProps.borderRadius,
+                    styleProps.borderRadius
+                  )(styleProps)};
                 `
               }
             )(styleProps)};
@@ -147,83 +105,18 @@ export const Group = styleProps => cssClass`
     ${theme(styleProps.themeKey, `Item.styles.first`)(styleProps)};
   }
 
-  & > *:last-child:nth-first-child(n+1) {
-    ${
-      styleProps.orientation === "vertical"
-        ? css`
-            border-top-right-radius: initial;
-            border-top-left-radius: initial;
-          `
-        : css`
-            ${breakpoint(
-              styleProps.verticalBelow
-                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                : null,
-              css`
-                border-top-left-radius: initial;
-                border-top-right-radius: initial;
-              `,
-              {
-                else: css`
-                  border-top-left-radius: initial;
-                  border-bottom-left-radius: initial;
-                `
-              }
-            )(styleProps)};
-          `
-    }
-
-    ${breakpoint(
-      styleProps.verticalBelow
-        ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-        : null,
-      css`
-        border-top-right-radius: initial;
-        border-top-left-radius: initial;
-        border-bottom-left-radius: ${borderRadius(
-          styleProps.borderRadius,
-          styleProps.borderRadius
-        )(styleProps)};
-      `
-    )(styleProps)};
-
-    & input,
-    & select {
-      ${
-        styleProps.orientation === "vertical"
-          ? css`
-              border-top-left-radius: initial;
-              border-top-right-radius: initial;
-            `
-          : css`
-              ${breakpoint(
-                styleProps.verticalBelow
-                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                  : null,
-                css`
-                  border-top-left-radius: initial;
-                  border-top-right-radius: initial;
-                `,
-                {
-                  else: css`
-                    border-top-left-radius: initial;
-                    border-bottom-left-radius: initial;
-                  `
-                }
-              )(styleProps)};
-            `
-      };
-    }
-
-    ${theme(styleProps.themeKey, `Item.styles.last`)(styleProps)};
-  }
-
   & > *:last-child {
     ${
       styleProps.orientation === "vertical"
         ? css`
-            border-top-right-radius: 0;
-            border-top-left-radius: 0;
+            border-top-right-radius: ${borderRadius(
+              styleProps.borderRadius,
+              styleProps.borderRadius
+            )(styleProps)};
+            border-top-left-radius: ${borderRadius(
+              styleProps.borderRadius,
+              styleProps.borderRadius
+            )(styleProps)};
           `
         : css`
             ${breakpoint(
@@ -231,13 +124,25 @@ export const Group = styleProps => cssClass`
                 ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
                 : null,
               css`
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
+                border-top-left-radius: ${borderRadius(
+                  styleProps.borderRadius,
+                  styleProps.borderRadius
+                )(styleProps)};
+                border-top-right-radius: ${borderRadius(
+                  styleProps.borderRadius,
+                  styleProps.borderRadius
+                )(styleProps)};
               `,
               {
                 else: css`
-                  border-top-left-radius: 0;
-                  border-bottom-left-radius: 0;
+                  border-top-left-radius: ${borderRadius(
+                    styleProps.borderRadius,
+                    styleProps.borderRadius
+                  )(styleProps)};
+                  border-bottom-left-radius: ${borderRadius(
+                    styleProps.borderRadius,
+                    styleProps.borderRadius
+                  )(styleProps)};
                 `
               }
             )(styleProps)};
@@ -249,8 +154,14 @@ export const Group = styleProps => cssClass`
         ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
         : null,
       css`
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
+        border-top-right-radius: ${borderRadius(
+          styleProps.borderRadius,
+          styleProps.borderRadius
+        )(styleProps)};
+        border-top-left-radius: ${borderRadius(
+          styleProps.borderRadius,
+          styleProps.borderRadius
+        )(styleProps)};
         border-bottom-left-radius: ${borderRadius(
           styleProps.borderRadius,
           styleProps.borderRadius
