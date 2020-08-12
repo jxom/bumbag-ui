@@ -37,7 +37,7 @@ export function getCapsizeAttributes(opts?: CapsizeOpts) {
 
 export function getFontSize(opts?: any) {
   return (props): { [key: string]: string } => {
-    let fontSize = props.fontSize || get(props, `theme.${opts.themeKey}.fontSize`) || '200';
+    let fontSize = props.fontSize || opts.fontSize || get(props, `theme.${opts.themeKey}.fontSize`) || '200';
     if (typeof fontSize === 'string') {
       fontSize = { default: fontSize };
     }

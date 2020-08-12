@@ -81,7 +81,7 @@ export default function Index() {
                 Accessible <Text color="primary">by default</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   Powered by{' '}
                   <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
                     Reakit
@@ -172,7 +172,7 @@ export default function Index() {
                 Theme <Text color="primary">your way</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any
                   component by altering the theme at a global or component level.
                   <br />
@@ -202,7 +202,7 @@ export default function Index() {
                 Compose <Text color="primary">for flexibility</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a
                   contact form, or even a call-to-action.
                 </Text>

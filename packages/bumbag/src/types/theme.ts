@@ -162,7 +162,7 @@ export type FontsThemeConfig = {
   [key: string]: string | Array<string>;
 };
 export type FontMetricsThemeConfig = {
-  default?: {
+  [key: string]: {
     capHeight: number;
     ascent: number;
     descent: number;
@@ -177,6 +177,9 @@ export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
 export type LineHeightsThemeConfig = {
+  [key: string]: number;
+};
+export type LetterSpacingsThemeConfig = {
   [key: string]: number;
 };
 export type SpacingThemeConfig = {
@@ -1899,6 +1902,7 @@ export type ThemeConfig = {
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
   lineHeights?: LineHeightsThemeConfig;
+  letterSpacings?: LetterSpacingsThemeConfig;
   modes?: ModesThemeConfig;
   spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;

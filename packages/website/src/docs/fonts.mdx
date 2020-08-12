@@ -1,26 +1,38 @@
 ---
 breakpoint: tablet
-title: Fonts
+title: Fonts & typography
 path: /fonts/
 ---
 
-# Fonts
+# Fonts & typography
 
-## Font families
+## Font stack
 
-By default, Bumbag uses the following fonts as it's default:
+### Text & Headings
 
-#### Text & Headings
+For text & headings, Bumbag uses the operating system's sans serif fonts.
 
 ```
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 ```
 
-#### Mono (code blocks)
+Here is how they look on an per-OS basis:
+
+<Image src="/textfonts.jpg" />
+
+### Mono (code blocks)
+
+For code blocks, Bumbag uses the operating system's mono fonts.
 
 ```
 font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier, monospace;
 ```
+
+Here is how they look on an per-OS basis:
+
+<Image src="/monofonts.jpg" />
+
+### Modifying the theme fonts
 
 You can change the font families through the Bumbag theme:
 
@@ -41,6 +53,99 @@ export default () => (
   </Provider>
 )
 ```
+
+**Note: If you are changing the theme fonts, you [may want to also apply their font metrics](#font-spacing--metrics)**
+
+## External fonts
+
+Bumbag supports importing third-party fonts (e.g. Google Fonts). [Click here to see a list of Google Fonts](https://fonts.google.com/).
+
+You can do this via the `fonts.importUrls` attribute:
+
+```jsx
+import { css, Provider } from 'bumbag';
+
+const theme = {
+  fonts: {
+    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
+    default: "'Lato', system-ui, sans-serif"
+  }
+}
+
+export default () => (
+  <Provider theme={theme}>
+    {/* your app... */}
+  </Provider>
+)
+```
+
+**Note: If you are changing the theme fonts, you [may want to also apply their font metrics](#font-spacing--metrics)**
+
+## Font trimming & metrics
+
+Thanks to [Capsize](https://github.com/seek-oss/capsize), Bumbag trims the unpredictable space above capital letters and below the font baseline. Check out the example below:
+
+<Set alignX="center" spacing="major-4" marginBottom="major-4">
+  <Stack alignY="top" spacing="major-2">
+    <Text.Block fontSize="100" fontWeight="semibold" color="text100" textTransform="uppercase">Without trimming</Text.Block>
+    <Box backgroundColor="#ffe3a4" fontSize="500">Hello world</Box>
+  </Stack>
+  <Stack alignY="top" spacing="major-2">
+    <Text.Block fontSize="100" fontWeight="semibold" color="text100" textTransform="uppercase">With trimming</Text.Block>
+    <Text.Block backgroundColor="#ffe3a4" fontSize="500">Hello world</Text.Block>
+  </Stack>
+</Set>
+
+Bumbag provides font metrics out of the box for the default theme fonts. However, if you modify the fonts in the theme, you will need to provide font metrics for your custom font. If you don't provide font metrics, your custom fonts will still work but you may see inconsistencies in the white space trimming of the text.
+
+**To obtain font metrics for your custom font, follow these steps:**
+
+1. Head to the [Capsize website](https://seek-oss.github.io/capsize/)
+2. Choose or upload your font
+3. Ignore the **Adjust size & spacing** section, and just head to **Apply the styles**
+4. Under **Apply the styles**, you will see a `fontMetrics` variable
+5. Use the `fontMetrics` value in the Bumbag theme!
+
+Below is a full example of applying the font metrics to the theme with custom fonts:
+
+```jsx
+import { css, Provider } from 'bumbag';
+
+const theme = {
+  fonts: {
+    importUrls: [
+      'https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap',
+      'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap'
+    ],
+    default: "Lato, sans-serif",
+    heading: "Merriweather, sans"
+  },
+  fontMetrics: {
+    default: {
+      capHeight: 1433,
+      ascent: 1974,
+      descent: -426,
+      lineGap: 0,
+      unitsPerEm: 2000
+    },
+    heading: {
+      capHeight: 743,
+      ascent: 984,
+      descent: -273,
+      lineGap: 0,
+      unitsPerEm: 1000
+    }
+  }
+}
+
+export default () => (
+  <Provider theme={theme}>
+    {/* your app... */}
+  </Provider>
+)
+```
+
+## Font families
 
 ### Accessing font families
 
@@ -67,7 +172,7 @@ const MonoText = applyTheme(Box, {
 ```jsx
 import { Text, styled, fontFamily } from 'bumbag';
 
-const LargeText = styled(Text)`
+const LargeText = styled(Text.Block)`
   font-family: ${fontFamily('mono')};
 `;
 
@@ -79,30 +184,7 @@ const LargeText = styled(Text)`
 or, you can use CSS props:
 
 ```jsx-live
-<Text font="mono">I have the mono font family</Text>
-```
-
-## External fonts
-
-Bumbag supports importing third-party fonts (e.g. Google Fonts). [Click here to see a list of Google Fonts](https://fonts.google.com/).
-
-You can do this via the `fonts.importUrls` attribute:
-
-```jsx
-import { css, Provider } from 'bumbag';
-
-const theme = {
-  fonts: {
-    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
-    default: "'Lato', system-ui, sans-serif"
-  }
-}
-
-export default () => (
-  <Provider theme={theme}>
-    {/* your app... */}
-  </Provider>
-)
+<Text.Block font="mono">I have the mono font family</Text.Block>
 ```
 
 ## Font weights
@@ -110,9 +192,9 @@ export default () => (
 Bumbag currently has three font weights: `normal`, `semibold` and `bold`. You can also add your own custom font weights in the theme config if you wish.
 
 ```jsx-live
-<Text fontWeight="normal">Normal text</Text><br/>
-<Text fontWeight="semibold">Semibold text</Text><br/>
-<Text fontWeight="bold">Bold text</Text>
+<Text.Block fontWeight="normal">Normal text</Text.Block>
+<Text.Block fontWeight="semibold">Semibold text</Text.Block>
+<Text.Block fontWeight="bold">Bold text</Text.Block>
 ```
 
 ### Accessing font weights
@@ -124,7 +206,7 @@ You can access the font weights through themeable components:
 ```jsx
 import { Text, applyTheme } from 'bumbag';
 
-const BoldText = applyTheme(Text, {
+const BoldText = applyTheme(Text.Block, {
   styles: {
     base: {
       fontWeight: 'bold'
@@ -140,7 +222,7 @@ const BoldText = applyTheme(Text, {
 ```jsx
 import { Text, styled, fontWeight } from 'bumbag';
 
-const LargeText = styled(Text)`
+const LargeText = styled(Text.Block)`
   font-size: ${fontWeight('bold')};
 `;
 
@@ -152,7 +234,7 @@ const LargeText = styled(Text)`
 or, you can use CSS props:
 
 ```jsx-live
-<Text fontWeight="bold">I am bold</Text>
+<Text.Block fontWeight="bold">I am bold</Text.Block>
 ```
 
 ## Font sizes
@@ -162,16 +244,16 @@ Bumbag uses a scale from `100`-`900` for font sizes. We use a numeric scale, ins
 `200` (16px) is the base font size.
 
 ```jsx-live
-<Text fontSize="100">Text 100 - 12px</Text><br/>
-<Text fontSize="150">Text 150 - 14px</Text><br/>
-<Text>Text 200 - 16px (normal)</Text><br/>
-<Text fontSize="300">Text 300 - 20px</Text><br/>
-<Text fontSize="400">Text 400 - 24px</Text><br/>
-<Text fontSize="500">Text 500 - 32px</Text><br/>
-<Text fontSize="600">Text 600 - 40px</Text><br/>
-<Text fontSize="700">Text 700 - 48px</Text><br/>
-<Text fontSize="800">Text 800 - 60px</Text><br/>
-<Text fontSize="900">Text 900 - 72px</Text><br/>
+<Text.Block fontSize="100">Text 100 - 12px</Text.Block>
+<Text.Block fontSize="150">Text 150 - 14px</Text.Block>
+<Text.Block>Text 200 - 16px (normal)</Text.Block>
+<Text.Block fontSize="300">Text 300 - 20px</Text.Block>
+<Text.Block fontSize="400">Text 400 - 24px</Text.Block>
+<Text.Block fontSize="500">Text 500 - 32px</Text.Block>
+<Text.Block fontSize="600">Text 600 - 40px</Text.Block>
+<Text.Block fontSize="700">Text 700 - 48px</Text.Block>
+<Text.Block fontSize="800">Text 800 - 60px</Text.Block>
+<Text.Block fontSize="900">Text 900 - 72px</Text.Block>
 ```
 
 ### Accessing font sizes
@@ -211,7 +293,117 @@ const LargeText = styled(Text)`
 or, you can use CSS props:
 
 ```jsx-live
-<Text fontSize="400">I am large</Text>
+<Text.Block fontSize="400">I am large</Text.Block>
+```
+
+## Line heights
+
+A numerical scale (from `none` to `600`) is also used for line heights.
+
+```jsx-live
+<Stack>
+  <Text.Block lineHeight="none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="default">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+  <Text.Block lineHeight="600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta lacinia purus, eget auctor purus pulvinar at. Sed in tortor nisl. Curabitur euismod dignissim pulvinar.</Text.Block>
+</Stack>
+```
+
+### Accessing line heights
+
+You can access the line heights through themeable components:
+
+#### With `applyTheme`
+
+```jsx
+import { Text, applyTheme } from 'bumbag';
+
+const CustomText = applyTheme(Text, {
+  styles: {
+    base: {
+      lineHeight: 'none'
+    }
+  }
+});
+
+<CustomText>Hello<br/>World</CustomText>
+```
+
+#### With `styled`
+
+```jsx
+import { Text, styled, lineHeight } from 'bumbag';
+
+const CustomText = styled(Text)`
+  font-size: ${lineHeight('none')};
+`;
+
+<CustomText>Hello<br/>World</CustomText>
+```
+
+#### Using CSS Props
+
+or, you can use CSS props:
+
+```jsx-live
+<Text.Block lineHeight="none">Hello<br/>World</Text.Block>
+```
+
+## Letter spacings
+
+A numerical scale (from `100` to `700`) is also used for letter spacings.
+
+```jsx-live
+<Text.Block letterSpacing="100">Hello world</Text.Block>
+<Text.Block letterSpacing="200">Hello world</Text.Block>
+<Text.Block letterSpacing="default">Hello world</Text.Block>
+<Text.Block letterSpacing="400">Hello world</Text.Block>
+<Text.Block letterSpacing="500">Hello world</Text.Block>
+<Text.Block letterSpacing="600">Hello world</Text.Block>
+<Text.Block letterSpacing="700">Hello world</Text.Block>
+```
+
+### Accessing letter spacings
+
+You can access the letter spacings through themeable components:
+
+#### With `applyTheme`
+
+```jsx
+import { Text, applyTheme } from 'bumbag';
+
+const CustomText = applyTheme(Text, {
+  styles: {
+    base: {
+      letterSpacing: '100'
+    }
+  }
+});
+
+<CustomText>Hello World</CustomText>
+```
+
+#### With `styled`
+
+```jsx
+import { Text, styled, letterSpacing } from 'bumbag';
+
+const CustomText = styled(Text)`
+  font-size: ${letterSpacing('100')};
+`;
+
+<CustomText>Hello World</CustomText>
+```
+
+#### Using CSS Props
+
+or, you can use CSS props:
+
+```jsx-live
+<Text.Block letterSpacing="100">Hello World</Text.Block>
 ```
 
 ## Theming
@@ -225,6 +417,15 @@ const theme = {
     default: string,
     heading: string,
     mono: string
+  },
+  fontMetrics: {
+    [font: string]: {
+      capHeight: number,
+      ascent: number,
+      descent: number,
+      lineGap: number,
+      unitsPerEm: number
+    }
   },
   fontWeights: {
     normal: number,
@@ -244,6 +445,27 @@ const theme = {
     800: number,
     900: number,
     [key: string]: number
+  },
+  lineHeights: {
+    none: number,
+    default: number,
+    100: number,
+    200: number,
+    300: number,
+    400: number,
+    500: number,
+    600: number,
+    [key: string]: number
+  },
+  letterSpacings: {
+    default: string,
+    100: string,
+    200: string,
+    300: string,
+    400: string,
+    500: string,
+    600: string,
+    [key: string]: string
   }
 }
 ```
@@ -253,10 +475,29 @@ const theme = {
 ```jsx
 const theme = {
   fonts: {
-    importUrls: ['https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap'],
-    default: "'Lato', system-ui, sans-serif",
-    heading: "'Comic Sans MS', sans-serif",
+    importUrls: [
+      'https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap',
+      'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap'
+    ],
+    default: "'Lato', sans-serif",
+    heading: "'Merriweather', sans-serif",
     mono: "Menlo, Courier, monospace",
+  },
+  fontMetrics: {
+    default: {
+      capHeight: 1433,
+      ascent: 1974,
+      descent: -426,
+      lineGap: 0,
+      unitsPerEm: 2000
+    },
+    heading: {
+      capHeight: 743,
+      ascent: 984,
+      descent: -273,
+      lineGap: 0,
+      unitsPerEm: 1000
+    }
   },
   fontWeights: {
     normal: 300,
@@ -267,7 +508,15 @@ const theme = {
   fontSizes: {
     50: 0.5,
     950: 5,
-    reallySmall: 0.25
-  }
+    extraSmall: 0.25
+  },
+  lineHeights: {
+    700: 3,
+    extraSmall: 0.8
+  },
+  letterSpacings: {
+    800: '0.2em',
+    extraSmall: '-0.075em'
+  },
 }
 ```

@@ -1,5 +1,5 @@
 import { css, cssClass, keyframes } from '../styled';
-import { palette, theme, tint } from '../utils';
+import { palette, theme, lineHeight } from '../utils';
 
 export const defaultDashArrayValueMax = 325;
 export const defaultDashOffset = 200;
@@ -8,7 +8,7 @@ export const progressDashArrayValue = 126;
 export const progressDashOffset = 60;
 
 export const SpinnerWrapper = (styleProps) => cssClass`
-  line-height: 1rem;
+  line-height: ${lineHeight('none')(styleProps)};
   font-size: 20px;
 
   ${styleProps.size && getSizeProperties(styleProps)};

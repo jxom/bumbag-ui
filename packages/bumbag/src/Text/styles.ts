@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { getCapsizeStyles, theme } from '../utils';
+import { lineHeight, getCapsizeStyles, theme } from '../utils';
 
 export const Text = (styleProps) => cssClass`
   abbr& {
@@ -70,7 +70,7 @@ export const Text = (styleProps) => cssClass`
 export const TextInline = (styleProps) => cssClass`
   ${Text(styleProps)};
 
-  line-height: 1;
+  line-height: ${lineHeight('none')(styleProps)};
 `;
 
 export const TextBlock = (styleProps) => cssClass`

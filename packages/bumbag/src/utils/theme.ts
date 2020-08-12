@@ -118,6 +118,13 @@ export function lineHeight(selector?: string, defaultValue?: any) {
   };
 }
 
+export function letterSpacing(selector?: string, defaultValue?: any) {
+  return (props: { letterSpacing?: string; theme?: ThemeConfig }) => {
+    const letterSpacing = theme('letterSpacings', selector || props.letterSpacing, defaultValue)(props);
+    return letterSpacing;
+  };
+}
+
 export function palette(
   _selector?: string,
   modes?: any,

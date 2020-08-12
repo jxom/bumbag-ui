@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getColorModesCSSVariables, useColorMode } from '../ColorMode';
 import { Global, css, ThemeContext } from '../styled';
-import { palette, font, theme } from '../utils';
+import { palette, font, lineHeight, theme } from '../utils';
 
 export default function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
@@ -19,7 +19,7 @@ export default function GlobalStyles() {
           box-sizing: border-box;
           font-family: ${font('default')(styleProps)};
           font-size: ${theme('global', 'fontSize')(styleProps)}px;
-          line-height: 1.5;
+          line-height: ${lineHeight('default')(styleProps)};
           margin: 0;
           padding: 0;
           -webkit-font-smoothing: antialiased;

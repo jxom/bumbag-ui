@@ -5,7 +5,7 @@ import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 export const Radio = (styleProps) => cssClass`
   && {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   & {

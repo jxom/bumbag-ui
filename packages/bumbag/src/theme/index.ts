@@ -13,6 +13,7 @@ import fontMetrics from './fontMetrics';
 import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
 import lineHeights from './lineHeights';
+import letterSpacings from './letterSpacings';
 
 import Container from './Container';
 import Heading from './Heading';
@@ -33,6 +34,7 @@ export default (overrides: ThemeConfig = {}) => ({
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
   lineHeights: lineHeights(overrides.lineHeights || {}),
+  letterSpacings: letterSpacings(overrides.letterSpacings || {}),
   modes: modes(overrides.modes || {}),
   spacing: spacing(overrides.spacing || {}),
   palette: palette(overrides.palette || {}),

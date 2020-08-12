@@ -94,6 +94,16 @@ export default function Docs(props: Props) {
           {...props}
         />
       ),
+      ol: (props: any) => (
+        <bumbag.List
+          listStyleType="decimal"
+          listStylePosition="outside"
+          marginLeft="major-4"
+          marginBottom="major-4"
+          marginTop="-1rem"
+          {...props}
+        />
+      ),
       li: (props: any) => <bumbag.ListItem marginBottom="major-1" {...props} />,
       strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,
       pre: (props: any) => <LiveCode {...props.children.props} />,
