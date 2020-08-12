@@ -5,8 +5,6 @@ about: Create a report to help us improve
 
 <!-- Before creating a bug report, try disabling browser extensions to see if the bug is still present. -->
 
-<!-- If you're having trouble updating your profile, it is likely because you logged in separately with GitHub & Twitter. Please check if this is the case before creating a bug report, and email yo@dev.to so we can merge your accounts. -->
-
 **Describe the bug**
 
 <!-- A clear and concise description of what the bug is. -->
@@ -28,16 +26,15 @@ about: Create a report to help us improve
 
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-**Desktop (please complete the following information):**
+**Device information (please complete the following information):**
 
-- OS, version:
-- Browser, version:
+-   Device:
+-   OS, version:
+-   Browser, version:
 
-**Smartphone (please complete the following information):**
+<!-- To make it easier, you can also use: -->
 
-- Device:
-- OS, version:
-- Browser, version:
+-   [What's My Browser URL](https://www.whatsmybrowser.org/):
 
 **Additional context**
 
