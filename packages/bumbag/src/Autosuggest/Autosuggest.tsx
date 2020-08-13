@@ -10,7 +10,7 @@ import { Input, InputProps } from '../Input';
 import {
   DropdownMenu,
   DropdownMenuPopover,
-  DropdownMenuDisclosure,
+  DropdownMenuButton,
   DropdownMenuPopoverProps,
   DropdownMenuItemProps,
   DropdownMenuInitialState,
@@ -252,7 +252,7 @@ const useProps = createHook<AutosuggestProps>(
       gutter: 4,
       ...dropdownMenuInitialState,
     });
-    const dropdownMenuDisclosureProps = DropdownMenuDisclosure.useProps(dropdownMenu);
+    const dropdownMenuButtonProps = DropdownMenuButton.useProps(dropdownMenu);
 
     //////////////////////////////////////////////////
 
@@ -584,7 +584,7 @@ const useProps = createHook<AutosuggestProps>(
 
     return {
       ...boxProps,
-      'aria-expanded': dropdownMenuDisclosureProps['aria-expanded'],
+      'aria-expanded': dropdownMenuButtonProps['aria-expanded'],
       'aria-haspopup': 'listbox',
       'aria-owns': dropdownMenu.baseId,
       role: 'combobox',
@@ -592,13 +592,12 @@ const useProps = createHook<AutosuggestProps>(
       children: (
         <AutosuggestContext.Provider value={context}>
           <Input
-            {...omit(dropdownMenuDisclosureProps, 'type', 'className', 'role')}
+            {...omit(dropdownMenuButtonProps, 'type', 'className', 'role')}
             after={inputValue && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
             aria-autocomplete="list"
             aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
             disabled={disabled}
-            elementRef={dropdownMenuDisclosureProps.ref}
             isLoading={isInputLoading}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
