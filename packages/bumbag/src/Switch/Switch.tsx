@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
+import { Palette } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId, omit } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
@@ -21,10 +22,10 @@ export type LocalSwitchProps = {
   isRequired?: boolean;
   /** Switch label */
   label?: string;
-  palette?: string;
+  palette?: Palette;
   name?: string;
   /** State of the switch. Can be any color in the palette. */
-  state?: string;
+  state?: Palette;
   switchRef?: React.Ref<any>;
   /** Initial value of the switch */
   value?: boolean | string;
@@ -35,7 +36,7 @@ export type LocalSwitchProps = {
   /** Function to invoke when switch is focused */
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
-export type SwitchProps = BoxProps & LocalSwitchProps;
+export type SwitchProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalSwitchProps;
 
 const useProps = createHook<SwitchProps>(
   (props, { themeKey, themeKeyOverride }) => {

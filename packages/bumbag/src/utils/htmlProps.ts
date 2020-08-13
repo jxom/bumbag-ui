@@ -1,6 +1,6 @@
 import isPropValid from '@emotion/is-prop-valid';
 
-const omitProps = ['focusable', 'spacing', 'size', 'kind', 'variant', 'orientation'];
+const omitProps = ['focusable', 'spacing', 'size', 'kind', 'variant', 'orientation', 'wrap', 'colorMode'];
 
 export function pickHTMLProps<P extends object>(props: P) {
   const filteredProps: Partial<P> = {};

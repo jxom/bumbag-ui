@@ -11,6 +11,7 @@ import { Markdown } from 'bumbag-addon-markdown';
 import { palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { FeedbackForm } from 'feedback-fish';
 
 const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
@@ -72,6 +73,14 @@ type Props = {
 LiveCode.defaultProps = {
   mountStylesheet: false,
 };
+
+function FeedbackButton(props) {
+  return (
+    <bumbag.Button iconBefore="solid-comment" palette="primary" variant="ghost" size="small" {...props}>
+      Feedback
+    </bumbag.Button>
+  );
+}
 
 export default function LiveCode(props: Props) {
   const { pre: Pre, fallback: Fallback, children, ...restProps } = props;
@@ -157,14 +166,25 @@ export default function LiveCode(props: Props) {
         )}
         <LiveEditor />
         <Actions colorMode={colorMode}>
-          <CopyToClipboard text={code}>
-            <bumbag.Button palette="primary" variant="ghost" size="small">
-              Copy
-            </bumbag.Button>
-          </CopyToClipboard>
-          <bumbag.Button palette="primary" variant="ghost" size="small" onClick={handleClickPlayroom}>
-            Open in Playroom
-          </bumbag.Button>
+          <bumbag.Level verticalBelow={null}>
+            <bumbag.Box>
+              <CopyToClipboard text={code}>
+                <bumbag.Button iconBefore="solid-clipboard" palette="primary" variant="ghost" size="small">
+                  Copy
+                </bumbag.Button>
+              </CopyToClipboard>
+              <bumbag.Button
+                iconBefore="solid-pencil-ruler"
+                palette="primary"
+                variant="ghost"
+                size="small"
+                onClick={handleClickPlayroom}
+              >
+                Open in Playroom
+              </bumbag.Button>
+            </bumbag.Box>
+            <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />
+          </bumbag.Level>
         </Actions>
         <LiveError />
       </LiveProvider>

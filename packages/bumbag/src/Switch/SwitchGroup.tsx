@@ -29,7 +29,7 @@ export type LocalSwitchGroupProps = {
   /** Function to invoke when checkbox group has blurred */
   onBlur?: (value: Array<string>) => void;
 };
-export type SwitchGroupProps = BoxProps & LocalSwitchGroupProps;
+export type SwitchGroupProps = Omit<BoxProps, 'onBlur' | 'onChange'> & LocalSwitchGroupProps;
 
 const useProps = createHook<SwitchGroupProps>(
   (props, { themeKey, themeKeyOverride }) => {

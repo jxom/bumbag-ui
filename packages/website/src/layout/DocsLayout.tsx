@@ -22,7 +22,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
   position: fixed;
   top: 100px;
   right: 1rem;
-  opacity: ${(props) => (!props.isFluid ? '1' : '0')};
+  visibility: ${(props) => (!props.isFluid ? 'visible' : 'hidden')};
   overflow: auto;
   max-height: calc(100vh - 200px);
   width: 250px;
@@ -30,7 +30,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
   padding-left: 1rem;
 
   @media screen and (max-width: ${(props) => bumbag.theme(`breakpoints.${props.breakpoint}`)(props) + 832}px) {
-    opacity: 0;
+    visibility: hidden;
   }
 `;
 

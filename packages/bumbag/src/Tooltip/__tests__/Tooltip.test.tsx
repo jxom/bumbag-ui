@@ -27,7 +27,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Tooltip use="p" content="This is content" baseId="test">
+        <Tooltip use="div" content="This is content" baseId="test">
           Hello world
         </Tooltip>
       );

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
+import { Flexible } from '../types';
 import { useClassName, createComponent, createElement, createHook, useUniqueId } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { Flex, FlexProps } from '../Flex';
@@ -9,7 +10,7 @@ import * as styles from './styles';
 
 export type LocalCardProps = {
   /** Variant of the card. */
-  variant?: string;
+  variant?: Flexible<'shadowed' | 'bordered', string>;
   /** Indicates if the card is standalone. */
   standalone?: boolean;
   /** Sets the title of the card. */

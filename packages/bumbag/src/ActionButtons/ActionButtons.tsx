@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { Omit } from '../types';
+import { Flexible, Palette, Omit } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Button, ButtonProps } from '../Button';
 import { Set, SetProps } from '../Set';
@@ -19,7 +19,7 @@ export type LocalActionButtonsProps = {
   onClickSubmit?(): void;
   onClickCancel?(): void;
   /** Changes the color of the submit button */
-  palette?: string;
+  palette?: Palette;
   /** Size of the buttons */
   size?: ButtonProps['size'];
   /** Custom button props for the submit button */

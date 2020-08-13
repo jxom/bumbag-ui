@@ -598,6 +598,7 @@ const useProps = createHook<AutosuggestProps>(
             aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
             disabled={disabled}
+            inputRef={dropdownMenuDisclosureProps.ref}
             isLoading={isInputLoading}
             onBlur={handleBlurInput}
             onClick={handleClickInput}

@@ -1,7 +1,17 @@
 import * as React from 'react';
 import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'bumbag';
+import { FeedbackForm } from 'feedback-fish';
 
 import ColorModePicker from './ColorModePicker';
+
+function FeedbackButton(props) {
+  return (
+    <TopNav.Item fontWeight="semibold" {...props}>
+      <Icon icon="solid-comment" fontSize="150" marginRight="major-1" />
+      Feedback
+    </TopNav.Item>
+  );
+}
 
 export default function Header(props) {
   const { theme } = useTheme();
@@ -19,6 +29,7 @@ export default function Header(props) {
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
+          <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />
           <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor

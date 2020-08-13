@@ -68,7 +68,7 @@ export type LocalInputProps = {
   /** Function to invoke when input is focused */
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
-export type InputProps = BoxProps & LocalInputProps;
+export type InputProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalInputProps;
 
 const useProps = createHook<InputProps>(
   (props, { themeKey, themeKeyOverride }) => {
@@ -262,48 +262,50 @@ const useInputFieldProps = createHook<InputFieldProps>(
         >
           {({ elementProps }) => (
             <ConditionalWrap
-              condition={addonBefore || addonAfter}
+              condition={Boolean(addonBefore || addonAfter)}
               wrap={(children: React.ReactNode) => (
                 <Group className={groupClassName} orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}
             >
-              {addonBefore}
-              <Input
-                after={after}
-                autoComplete={autoComplete}
-                autoFocus={autoFocus}
-                before={before}
-                defaultValue={defaultValue}
-                disabled={disabled}
-                inputRef={inputRef}
-                isLoading={isLoading}
-                isRequired={isRequired}
-                name={name}
-                size={size}
-                mask={mask}
-                max={max}
-                maxLength={maxLength}
-                min={min}
-                minLength={minLength}
-                multiple={multiple}
-                pattern={pattern}
-                placeholder={placeholder}
-                readOnly={readOnly}
-                spellCheck={spellCheck}
-                step={step}
-                state={state}
-                type={type}
-                value={value}
-                onBlur={onBlur}
-                onChange={onChange}
-                onFocus={onFocus}
-                overrides={overrides}
-                {...elementProps}
-                {...inputProps}
-              />
-              {addonAfter}
+              <React.Fragment>
+                {addonBefore}
+                <Input
+                  after={after}
+                  autoComplete={autoComplete}
+                  autoFocus={autoFocus}
+                  before={before}
+                  defaultValue={defaultValue}
+                  disabled={disabled}
+                  inputRef={inputRef}
+                  isLoading={isLoading}
+                  isRequired={isRequired}
+                  name={name}
+                  size={size}
+                  mask={mask}
+                  max={max}
+                  maxLength={maxLength}
+                  min={min}
+                  minLength={minLength}
+                  multiple={multiple}
+                  pattern={pattern}
+                  placeholder={placeholder}
+                  readOnly={readOnly}
+                  spellCheck={spellCheck}
+                  step={step}
+                  state={state}
+                  type={type}
+                  value={value}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  onFocus={onFocus}
+                  overrides={overrides}
+                  {...elementProps}
+                  {...inputProps}
+                />
+                {addonAfter}
+              </React.Fragment>
             </ConditionalWrap>
           )}
         </FieldWrapper>
