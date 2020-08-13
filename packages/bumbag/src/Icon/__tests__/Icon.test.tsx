@@ -73,7 +73,7 @@ describe('composition', () => {
   describe('as', () => {
     it('should render correctly', () => {
       const { container } = render(
-        <Icon use="div" icon="info-circle">
+        <Icon use="svg" icon="info-circle">
           Hello world
         </Icon>
       );
