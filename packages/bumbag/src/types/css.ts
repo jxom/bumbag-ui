@@ -1,4 +1,4 @@
-import { BorderRadii, FontFamily, FontSize, FontWeight, Palette } from './props';
+import { BorderRadii, FontFamily, FontSize, FontWeight, LetterSpacing, LineHeight, Palette } from './props';
 import { Flexible } from './utils';
 
 export type CSSProperties = {
@@ -249,11 +249,11 @@ export type CSSProperties = {
   justifyItems?: string | number | { [key: string]: string };
   justifySelf?: string | number | { [key: string]: string };
   left?: string | number | { [key: string]: string };
-  letterSpacing?: string | number | { [key: string]: string };
+  letterSpacing?: Flexible<LetterSpacing, string | number | { [key: string]: LetterSpacing }>;
   lightingColor?: Flexible<Palette, string | number | { [key: string]: Flexible<Palette, string> }>;
   lineBreak?: string | number | { [key: string]: string };
   lineGrid?: string | number | { [key: string]: string };
-  lineHeight?: string | number | { [key: string]: string };
+  lineHeight?: Flexible<LineHeight, string | number | { [key: string]: LineHeight }>;
   lineHeightStep?: string | number | { [key: string]: string };
   lineSnap?: string | number | { [key: string]: string };
   listStyle?: string | number | { [key: string]: string };

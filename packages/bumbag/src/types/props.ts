@@ -8,6 +8,8 @@ export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | '
 export type FontFamily = Flexible<'default' | 'heading' | 'mono', string>;
 export type FontSize = Flexible<'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900', string>;
 export type FontWeight = Flexible<'normal' | 'semibold' | 'bold', string>;
+export type LineHeight = Flexible<'none' | 'default' | '100' | '200' | '300' | '400' | '500' | '600', string>;
+export type LetterSpacing = Flexible<'default' | '100' | '200' | '300' | '400' | '500' | '600' | '700', string>;
 export type LayoutBreakpoint =
   | 'fullHD'
   | 'min-fullHD'
