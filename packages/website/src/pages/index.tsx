@@ -344,7 +344,7 @@ const linkProps = Link.useProps({
         paddingY="major-6"
         wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
-        <Stack alignX="center" spacing="major-2">
+        <Stack alignX="center" spacing="major-4">
           <Heading fontSize="600" textAlign="center">
             Join our growing <Text color="primary">community</Text>
           </Heading>

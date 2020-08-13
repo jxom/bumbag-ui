@@ -58,7 +58,7 @@ export default function Docs(props: Props) {
       inlineCode: (props: any) => <bumbag.Code fontSize="15px" {...props} palette="primary" />,
       h1: (props: any) => <bumbag.Heading marginBottom="major-6" {...props} />,
       h2: (props: any) => (
-        <bumbag.Heading use="h2" fontSize="500" marginTop="major-8" marginBottom="major-6" {...props} />
+        <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
       h3: (props: any) => (
         <bumbag.Heading fontSize="400" use="h3" marginTop="major-6" marginBottom="major-4" {...props} />
@@ -76,7 +76,7 @@ export default function Docs(props: Props) {
               styles: {
                 base: bumbag.css`
                   &:not(:last-child) {
-                    margin-bottom: 2rem;
+                    margin-bottom: 1.75rem;
                   }
                 `,
               },
@@ -90,7 +90,7 @@ export default function Docs(props: Props) {
           listStylePosition="outside"
           marginLeft="major-4"
           marginBottom="major-4"
-          marginTop="-1rem"
+          marginTop="-0.5rem"
           {...props}
         />
       ),
@@ -100,7 +100,7 @@ export default function Docs(props: Props) {
           listStylePosition="outside"
           marginLeft="major-4"
           marginBottom="major-4"
-          marginTop="-1rem"
+          marginTop="-0.5rem"
           {...props}
         />
       ),
