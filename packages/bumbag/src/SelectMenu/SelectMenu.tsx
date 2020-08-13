@@ -304,7 +304,7 @@ const useProps = createHook<SelectMenuProps>(
       ({ option }) => () => {
         if (isMultiSelect) {
           let newOptions = [];
-          if (selectedOptions.includes(option)) {
+          if (selectedOptions.some((selectedOption) => selectedOption.key === option.key)) {
             newOptions = selectedOptions.filter((selectedOption) => option.key !== selectedOption.key);
           } else {
             newOptions = [...selectedOptions, option];
@@ -318,10 +318,9 @@ const useProps = createHook<SelectMenuProps>(
             newOptions = '';
           }
           onChange && onChange(newOptions, newOptions);
-          dropdownMenu.hide();
         }
       },
-      [disableClear, dropdownMenu, isMultiSelect, onChange, selectedOptions]
+      [disableClear, isMultiSelect, onChange, selectedOptions]
     );
 
     const handleClickButton = React.useCallback(() => {
@@ -493,6 +492,7 @@ const useProps = createHook<SelectMenuProps>(
                           iconAfterProps={option.iconAfterProps}
                           iconBefore={option.iconBefore}
                           iconBeforeProps={option.iconBeforeProps}
+                          hideOnClick={!isMultiSelect}
                           onClick={handleClickItem({ index, option })}
                           overrides={overrides}
                           {...itemProps}
