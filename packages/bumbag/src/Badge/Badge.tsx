@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { Size } from '../types';
+import { Palette, Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -11,7 +11,7 @@ export type LocalBadgeProps = {
   /** Indicates if the badge is attached to it's parent. */
   isAttached?: boolean;
   /** The color of the badge. */
-  palette?: string;
+  palette?: Palette;
   /** The size of the badge. */
   size?: Size;
 };

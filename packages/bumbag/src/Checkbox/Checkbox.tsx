@@ -40,7 +40,7 @@ export type LocalCheckboxProps = {
   /** Function to invoke when checkbox is focused */
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
-export type CheckboxProps = BoxProps & LocalCheckboxProps;
+export type CheckboxProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalCheckboxProps;
 
 const useProps = createHook<CheckboxProps>(
   (props, { themeKey, themeKeyOverride }) => {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
+import { Flexible } from '../types';
 import { useClassName, createComponent, createElement, createHook, pickCSSProps, omitCSSProps } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -18,7 +19,7 @@ export type LocalTableProps = {
   /** Indicates breakpoint at which the table should become responsive. */
   responsiveBreakpoint?: string;
   /** Sets the variant of the table. */
-  variant?: string;
+  variant?: Flexible<'default' | 'minimal' | 'shadowed', string>;
 };
 export type TableProps = BoxProps & LocalTableProps;
 

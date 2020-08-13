@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, DialogOptions as ReakitDialogOptions } from 'reakit';
 
+import { Palette, Flexible } from '../types';
 import { bindFns, useClassName, createComponent, createElement, createHook, omitCSSProps, useUniqueId } from '../utils';
 import { ActionButtons, ActionButtonsProps } from '../ActionButtons';
 import { Box, BoxProps } from '../Box';
@@ -20,7 +21,7 @@ export type LocalDialogProps = {
   /** Sets the footer of the dialog. */
   footer?: string | React.ReactElement<any>;
   /** Sets the color of the dialog action buttons. */
-  palette?: string;
+  palette?: Palette;
   /** Sets the visibility of the dialog action buttons. */
   showActionButtons?: boolean;
   /** Sets the visibility of the close buttons. */
@@ -372,7 +373,7 @@ export const DialogIcon = createComponent<DialogIconProps>(
 //////////////////////////////
 
 export type LocalDialogModalProps = {
-  variant?: 'alert';
+  variant?: Flexible<'alert', string>;
   hasScroll?: boolean;
 };
 export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;

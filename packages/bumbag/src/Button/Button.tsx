@@ -97,7 +97,7 @@ const useProps = createHook<ButtonProps>(
 
     let spinnerTrackColor;
     if (props.variant === 'default') {
-      spinnerTrackColor = `${props.palette}300`
+      spinnerTrackColor = `${props.palette}300`;
     }
     if (props.palette === 'default') {
       spinnerColor = 'gray100';
@@ -118,9 +118,11 @@ const useProps = createHook<ButtonProps>(
           </Flex>
         )}
         <ConditionalWrap condition={props.isLoading} wrap={(children) => <Text>{children}</Text>}>
-          {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
-          {htmlProps.children}
-          {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
+          <React.Fragment>
+            {iconBefore && <Icon className={iconBeforeClassName} icon={iconBefore} {...iconBeforeProps} />}
+            {htmlProps.children}
+            {iconAfter && <Icon className={iconAfterClassName} icon={iconAfter} {...iconAfterProps} />}
+          </React.Fragment>
         </ConditionalWrap>
       </React.Fragment>
     );

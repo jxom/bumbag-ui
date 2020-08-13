@@ -27,7 +27,7 @@ export type LocalRadioGroupProps = {
   /** Function to invoke when radio group has changed */
   onChange?: React.FormEventHandler<HTMLInputElement>;
 };
-export type RadioGroupProps = BoxProps & LocalRadioGroupProps;
+export type RadioGroupProps = Omit<BoxProps, 'onChange'> & LocalRadioGroupProps;
 
 const useProps = createHook<RadioGroupProps>(
   (props, { themeKey, themeKeyOverride }) => {

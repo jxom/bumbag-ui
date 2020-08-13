@@ -15,7 +15,7 @@ const colorAttributes = [
   'borderBottomColor',
   'borderColor',
   'borderInlineEndColor',
-  'borderInline-startColor',
+  'borderInlineStartColor',
   'borderLeftColor',
   'borderRightColor',
   'borderTopColor',
