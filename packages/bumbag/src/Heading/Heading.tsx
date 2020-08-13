@@ -16,7 +16,7 @@ export type HeadingProps = BoxProps & LocalHeadingProps;
 
 const useProps = createHook<HeadingProps>(
   (props, { themeKey, themeKeyOverride }) => {
-    const boxProps = Box.useProps(props);
+    const boxProps = Box.useProps(props, { disableCSSProps: ['fontSize'] });
 
     const className = useClassName({
       style: styles.Heading,

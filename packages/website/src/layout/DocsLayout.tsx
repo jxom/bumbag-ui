@@ -56,18 +56,18 @@ export default function Docs(props: Props) {
       ),
       code: (props: any) => <bumbag.Code {...props} />,
       inlineCode: (props: any) => <bumbag.Code fontSize="15px" {...props} palette="primary" />,
-      h1: (props: any) => <bumbag.Heading marginBottom="major-4" {...props} />,
+      h1: (props: any) => <bumbag.Heading marginBottom="major-6" {...props} />,
       h2: (props: any) => (
         <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
       h3: (props: any) => (
-        <bumbag.Heading fontSize="400" use="h3" marginTop="major-4" marginBottom="major-3" {...props} />
+        <bumbag.Heading fontSize="400" use="h3" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
       h4: (props: any) => (
-        <bumbag.Heading fontSize="300" use="h4" marginTop="major-4" marginBottom="major-2" {...props} />
+        <bumbag.Heading fontSize="300" use="h4" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
-      h5: (props: any) => <bumbag.Heading use="h5" marginTop="major-4" marginBottom="major-2" {...props} />,
-      h6: (props: any) => <bumbag.Heading use="h6" marginTop="major-4" marginBottom="major-2" {...props} />,
+      h5: (props: any) => <bumbag.Heading use="h5" marginTop="major-6" marginBottom="major-4" {...props} />,
+      h6: (props: any) => <bumbag.Heading use="h6" marginTop="major-6" marginBottom="major-4" {...props} />,
       p: (props: any) => (
         <bumbag.Paragraph
           {...props}
@@ -76,7 +76,7 @@ export default function Docs(props: Props) {
               styles: {
                 base: bumbag.css`
                   &:not(:last-child) {
-                    margin-bottom: 1rem;
+                    margin-bottom: 1.75rem;
                   }
                 `,
               },
@@ -88,8 +88,19 @@ export default function Docs(props: Props) {
         <bumbag.List
           listStyleType="disc"
           listStylePosition="outside"
-          marginLeft="major-2"
-          marginBottom="major-2"
+          marginLeft="major-4"
+          marginBottom="major-4"
+          marginTop="-0.5rem"
+          {...props}
+        />
+      ),
+      ol: (props: any) => (
+        <bumbag.List
+          listStyleType="decimal"
+          listStylePosition="outside"
+          marginLeft="major-4"
+          marginBottom="major-4"
+          marginTop="-0.5rem"
           {...props}
         />
       ),

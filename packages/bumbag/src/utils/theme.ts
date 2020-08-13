@@ -90,6 +90,13 @@ export function font(selector?: string, defaultValue?: any) {
   };
 }
 
+export function fontMetric(selector?: string) {
+  return (props: { fontMetrics?: string; theme?: ThemeConfig }) => {
+    const fontMetrics = theme('fontMetrics', selector || props.fontMetrics)(props);
+    return fontMetrics;
+  };
+}
+
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
     const color = theme('fontSizes', selector || props.fontSize, defaultValue)(props);
@@ -101,6 +108,20 @@ export function fontWeight(selector?: string, defaultValue?: any) {
   return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
     const color = theme('fontWeights', selector || props.fontWeight, defaultValue)(props);
     return color;
+  };
+}
+
+export function lineHeight(selector?: string, defaultValue?: any) {
+  return (props: { lineHeight?: string; theme?: ThemeConfig }) => {
+    const lineHeights = theme('lineHeights', selector || props.lineHeight, defaultValue)(props);
+    return lineHeights;
+  };
+}
+
+export function letterSpacing(selector?: string, defaultValue?: any) {
+  return (props: { letterSpacing?: string; theme?: ThemeConfig }) => {
+    const letterSpacing = theme('letterSpacings', selector || props.letterSpacing, defaultValue)(props);
+    return letterSpacing;
   };
 }
 

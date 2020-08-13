@@ -1,9 +1,7 @@
 import { cssClass } from '../styled';
-import { theme } from '../utils';
+import { lineHeight, getCapsizeStyles, theme } from '../utils';
 
 export const Text = (styleProps) => cssClass`
-  line-height: 1.2;
-
   abbr& {
     border-bottom: 1px dotted;
     cursor: help;
@@ -67,4 +65,17 @@ export const Text = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
+`;
+
+export const TextInline = (styleProps) => cssClass`
+  ${Text(styleProps)};
+
+  line-height: ${lineHeight('none')(styleProps)};
+`;
+
+export const TextBlock = (styleProps) => cssClass`
+  ${Text(styleProps)};
+
+  display: block;
+  ${getCapsizeStyles({ lineHeight: 'default' })(styleProps)};
 `;

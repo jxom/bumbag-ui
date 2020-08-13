@@ -46,8 +46,8 @@ export default function Index() {
         paddingY={{ default: 'major-15', 'max-tablet': 'major-8' }}
         wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
-        <Stack display="flex" flexDirection="column" spacing="major-3" alignItems="center">
-          <Heading fontSize={{ default: '600', mobile: '500' }} textAlign="center">
+        <Stack display="flex" flexDirection="column" spacing="major-5" alignItems="center">
+          <Heading fontSize="600" textAlign="center">
             Build <Text color="primary">accessible</Text> & <Text color="primary">themeable</Text> React applications
             with your Bumbag
           </Heading>
@@ -81,7 +81,7 @@ export default function Index() {
                 Accessible <Text color="primary">by default</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   Powered by{' '}
                   <Link href="https://reakit.io" target="_blank" rel="noreferrer noopener">
                     Reakit
@@ -172,7 +172,7 @@ export default function Index() {
                 Theme <Text color="primary">your way</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   <Text fontWeight="semibold">Put yourself in control</Text> and have the ability to customize any
                   component by altering the theme at a global or component level.
                   <br />
@@ -202,7 +202,7 @@ export default function Index() {
                 Compose <Text color="primary">for flexibility</Text>
               </Heading>
               <Box>
-                <Text fontSize="300" color="text200" lineHeight="1.5">
+                <Text fontSize="300" color="text200" lineHeight="default">
                   <Text fontWeight="semibold">Flexibly build your own components</Text> such as a pricing section, a
                   contact form, or even a call-to-action.
                 </Text>
@@ -344,7 +344,7 @@ const linkProps = Link.useProps({
         paddingY="major-6"
         wrapperProps={{ borderBottom: '1px solid', borderColor: colorMode === 'dark' ? 'black100' : 'white700' }}
       >
-        <Stack alignX="center" spacing="major-2">
+        <Stack alignX="center" spacing="major-4">
           <Heading fontSize="600" textAlign="center">
             Join our growing <Text color="primary">community</Text>
           </Heading>

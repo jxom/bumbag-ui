@@ -1,10 +1,8 @@
 import { cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { getCapsizeStyles, theme } from '../utils';
 
 export const Paragraph = (styleProps) => cssClass`
-  &:not(:last-child) {
-    margin-bottom: ${space(4)(styleProps)}rem;
-  }
+  ${getCapsizeStyles({ lineHeight: 'default', includeBottomGap: true })(styleProps)};
 
   & .bb-Icon {
     vertical-align: -0.125em;

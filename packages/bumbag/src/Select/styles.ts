@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { borderRadius, fontSize, palette, tint, theme } from '../utils';
+import { borderRadius, fontSize, palette, lineHeight, theme } from '../utils';
 
 export const Select = (styleProps) => cssClass`
   appearance: none;
@@ -11,7 +11,7 @@ export const Select = (styleProps) => cssClass`
   color: ${styleProps.isPlaceholderSelected ? palette('gray300')(styleProps) : palette('text')(styleProps)};
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
-  line-height: 1.5;
+  line-height: ${lineHeight('default')(styleProps)};
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   &[disabled],

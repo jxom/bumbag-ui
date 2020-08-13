@@ -8,6 +8,7 @@ export * from './cssProps';
 export * from './forwardRefWithUse';
 export * from './fieldAdaptors';
 export * from './getMediaQueryList';
+export * from './getCapsizeStyles';
 export * from './htmlProps';
 export * from './isFunction';
 export * from './OutsideClickHandler';

@@ -130,8 +130,8 @@ const useProps = createHook<FieldWrapperProps>(
       children: (
         <React.Fragment>
           {label && (
-            <Box marginBottom="minor-2">
-              <Box display="flex" alignItems="center" lineHeight="1">
+            <Box marginBottom="minor-3">
+              <Box display="flex" alignItems="center" lineHeight="none">
                 {typeof label === 'string' ? (
                   <React.Fragment>
                     {labelType === 'legend' ? (
@@ -173,7 +173,7 @@ const useProps = createHook<FieldWrapperProps>(
               {description && (
                 <Box marginTop="minor-1">
                   {typeof description === 'string' ? (
-                    <Box className={descriptionClassName}>{description}</Box>
+                    <Text.Block className={descriptionClassName}>{description}</Text.Block>
                   ) : (
                     description
                   )}
