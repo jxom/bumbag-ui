@@ -1,7 +1,7 @@
 import {
   Box as ReakitBox,
-  useMenuDisclosure as useReakitMenuDisclosure,
-  MenuDisclosureProps as ReakitMenuDisclosureProps,
+  useMenuButton as useReakitMenuDisclosure,
+  MenuButtonProps as ReakitMenuDisclosureProps,
 } from 'reakit';
 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
@@ -16,34 +16,46 @@ const useProps = createHook<DropdownMenuDisclosureProps>(
   (props, { themeKey, themeKeyOverride }) => {
     const {
       baseId,
+      currentId,
       disabled,
       first,
       focusable,
       hide,
+      move,
       last,
       placement,
       show,
       toggle,
       visible,
+      unstable_arrowStyles,
       unstable_clickOnEnter,
       unstable_clickOnSpace,
+      unstable_disclosureRef,
+      unstable_popoverStyles,
+      unstable_moves,
       unstable_referenceRef,
       ...restProps
     } = props;
     const dropdownMenuDisclosureProps = useReakitMenuDisclosure(
       {
         baseId,
+        currentId,
         disabled,
         first,
         focusable,
         hide,
+        move,
         last,
         placement,
         show,
         toggle,
         visible,
+        unstable_arrowStyles,
         unstable_clickOnEnter,
         unstable_clickOnSpace,
+        unstable_disclosureRef,
+        unstable_popoverStyles,
+        unstable_moves,
         unstable_referenceRef,
       },
       restProps
