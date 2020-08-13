@@ -40,8 +40,8 @@ export function getFontMetricsFromUserAgent() {
     } else if (/Android/.test(userAgent)) {
       return fontMetrics[OSFonts.android];
     }
-    return fontMetrics.SFPro;
   }
+  return fontMetrics.SFPro;
 }
 
 export default (overrides: FontMetricsThemeConfig) => ({
