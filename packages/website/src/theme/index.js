@@ -42,6 +42,10 @@ export default {
   global: {
     styles: {
       base: css`
+        html, body {
+          overflow-x: hidden;
+        }
+
         a.anchor {
           opacity: 0;
           position: absolute;
