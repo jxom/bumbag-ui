@@ -57,7 +57,7 @@ To get Bumbag up and running on your machine, follow these steps:
 
 - Create a new branch for your component
 
-  > `git checkout -b add-my-compoenent`
+  > `git checkout -b add-my-component`
 
 The Bumbag repository is set up as [a "monorepo"]() consisting of two main packages: the **Bumbag library** (`packages/bumbag`) and the **website** (`packages/website`). When creating or updating a component, you will have to make changes in both these packages.
 
