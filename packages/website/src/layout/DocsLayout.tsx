@@ -56,7 +56,7 @@ export default function Docs(props: Props) {
       ),
       code: (props: any) => <bumbag.Code {...props} />,
       inlineCode: (props: any) => <bumbag.Code fontSize="15px" {...props} palette="primary" />,
-      h1: (props: any) => <bumbag.Heading marginBottom="major-6" {...props} />,
+      h1: (props: any) => <bumbag.Heading marginTop="major-2" marginBottom="major-6" {...props} />,
       h2: (props: any) => (
         <bumbag.Heading use="h2" fontSize="500" marginTop="major-6" marginBottom="major-4" {...props} />
       ),
