@@ -33,8 +33,13 @@ exports[`composition as should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -44,25 +49,25 @@ exports[`composition as should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -151,7 +156,7 @@ exports[`composition as should render correctly 1`] = `
 
 exports[`composition hook should return with Group props 1`] = `
 Object {
-  "className": "css-1tfv44b css-g8vme7 css-63it0p css-13kni2o bb-Box bb-Flex bb-Group",
+  "className": "css-152ef8p css-g8vme7 css-63it0p css-13kni2o bb-Box bb-Flex bb-Group",
   "role": "group",
 }
 `;
@@ -189,8 +194,13 @@ exports[`composition render props should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -200,25 +210,25 @@ exports[`composition render props should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -338,8 +348,13 @@ exports[`defaultProps should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -349,25 +364,25 @@ exports[`defaultProps should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -543,9 +558,14 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
   background-color: var(--bb-palette-red,#ff0000);
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -555,25 +575,25 @@ exports[`overrides Group.Item.base should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -693,8 +713,13 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -704,26 +729,26 @@ exports[`overrides Group.Item.first should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -843,8 +868,13 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -854,26 +884,26 @@ exports[`overrides Group.Item.last should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -993,8 +1023,13 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1004,25 +1039,25 @@ exports[`overrides Group.Item.middle should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1143,8 +1178,13 @@ exports[`overrides Group.base should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1154,25 +1194,25 @@ exports[`overrides Group.base should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1240,8 +1280,13 @@ exports[`props should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1251,25 +1296,25 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1385,8 +1430,13 @@ exports[`props should render correctly with CSS props 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1396,25 +1446,25 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1596,9 +1646,14 @@ exports[`theming Group.Item.base should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
   background-color: var(--bb-palette-red,#ff0000);
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1608,25 +1663,25 @@ exports[`theming Group.Item.base should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1746,8 +1801,13 @@ exports[`theming Group.Item.first should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1757,26 +1817,26 @@ exports[`theming Group.Item.first should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -1896,8 +1956,13 @@ exports[`theming Group.Item.last should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -1907,26 +1972,26 @@ exports[`theming Group.Item.last should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -2046,8 +2111,13 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -2057,25 +2127,25 @@ exports[`theming Group.Item.middle should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),
@@ -2196,8 +2266,13 @@ exports[`theming Group.base should render correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 > * {
-  border-radius: 6px;
+.emotion-5.emotion-5 > * {
+  border-radius: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 select {
+  border-radius: 0px;
 }
 
 .emotion-5 input:focus,
@@ -2207,25 +2282,25 @@ exports[`theming Group.base should render correctly 1`] = `
 }
 
 .emotion-5 > *:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:first-child input,
 .emotion-5 > *:first-child select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .emotion-5 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:last-child input,
 .emotion-5 > *:last-child select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .emotion-5 > *:not(:first-child):not(:last-child),

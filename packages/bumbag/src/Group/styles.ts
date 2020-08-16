@@ -1,62 +1,51 @@
-import { css, cssClass } from "../styled";
-import { breakpoint, borderRadius, theme } from "../utils";
+import { css, cssClass } from '../styled';
+import { breakpoint, borderRadius, theme } from '../utils';
 
 const verticalBreakpoints = {
-  tablet: "mobile",
-  desktop: "tablet",
-  widescreen: "desktop",
-  fullHD: "widescreen"
+  tablet: 'mobile',
+  desktop: 'tablet',
+  widescreen: 'desktop',
+  fullHD: 'widescreen',
 };
 
-export const Group = styleProps => cssClass`
-  flex-direction: ${styleProps.orientation === "vertical" ? "column" : "row"};
+export const Group = (styleProps) => cssClass`
+  flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
 
   ${breakpoint(
-    styleProps.verticalBelow
-      ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-      : null,
+    styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
     css`
       flex-direction: column;
     `
   )(styleProps)};
 
-  & > * {
+  && > * {
+    border-radius: 0px;
     ${theme(styleProps.themeKey, `Item.styles.base`)(styleProps)};
   }
 
-  & input:focus,
-  & select:focus {
-    z-index: 1;
-    position: relative;
+  & input,
+  & select {
+    border-radius: 0px;
+
+    &:focus {
+      z-index: 1;
+      position: relative;
+    }
   }
 
   & > *:first-child {
     ${
-      styleProps.orientation === "vertical"
+      styleProps.orientation === 'vertical'
         ? css`
-            border-top-right-radius: ${borderRadius(
-              styleProps.borderRadius,
-              styleProps.borderRadius
-            )(styleProps)};
-            border-top-left-radius: ${borderRadius(
-              styleProps.borderRadius,
-              styleProps.borderRadius
-            )(styleProps)};
+            border-top-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+            border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow
-                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                : null,
+              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
               css`
-                border-top-right-radius: ${borderRadius(
-                  styleProps.borderRadius,
-                  styleProps.borderRadius
-                )(styleProps)};
-                border-top-left-radius: ${borderRadius(
-                  styleProps.borderRadius,
-                  styleProps.borderRadius
-                )(styleProps)};
+                border-top-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+                border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
               `,
               {
                 else: css`
@@ -64,11 +53,8 @@ export const Group = styleProps => cssClass`
                     styleProps.borderRadius,
                     styleProps.borderRadius
                   )(styleProps)};
-                  border-top-left-radius: ${borderRadius(
-                    styleProps.borderRadius,
-                    styleProps.borderRadius
-                  )(styleProps)};
-                `
+                  border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+                `,
               }
             )(styleProps)};
           `
@@ -77,43 +63,32 @@ export const Group = styleProps => cssClass`
     & input,
     & select {
       ${
-        styleProps.orientation === "vertical"
+        styleProps.orientation === 'vertical'
           ? css`
-              border-bottom-right-radius: ${borderRadius(
-                styleProps.borderRadius,
-                styleProps.borderRadius
-              )(styleProps)};
-              border-bottom-left-radius: ${borderRadius(
-                styleProps.borderRadius,
-                styleProps.borderRadius
-              )(styleProps)};
+              border-top-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+              border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow
-                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                  : null,
+                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
                 css`
-                  border-bottom-right-radius: ${borderRadius(
+                  border-top-right-radius: ${borderRadius(
                     styleProps.borderRadius,
                     styleProps.borderRadius
                   )(styleProps)};
-                  border-bottom-left-radius: ${borderRadius(
-                    styleProps.borderRadius,
-                    styleProps.borderRadius
-                  )(styleProps)};
+                  border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
                 `,
                 {
                   else: css`
-                    border-bottom-right-radius: ${borderRadius(
+                    border-bottom-left-radius: ${borderRadius(
                       styleProps.borderRadius,
                       styleProps.borderRadius
                     )(styleProps)};
-                    border-top-right-radius: ${borderRadius(
+                    border-top-left-radius: ${borderRadius(
                       styleProps.borderRadius,
                       styleProps.borderRadius
                     )(styleProps)};
-                  `
+                  `,
                 }
               )(styleProps)};
             `
@@ -125,22 +100,14 @@ export const Group = styleProps => cssClass`
 
   & > *:last-child {
     ${
-      styleProps.orientation === "vertical"
+      styleProps.orientation === 'vertical'
         ? css`
-            border-bottom-right-radius: ${borderRadius(
-              styleProps.borderRadius,
-              styleProps.borderRadius
-            )(styleProps)};
-            border-bottom-left-radius: ${borderRadius(
-              styleProps.borderRadius,
-              styleProps.borderRadius
-            )(styleProps)};
+            border-bottom-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+            border-bottom-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow
-                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                : null,
+              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
               css`
                 border-bottom-left-radius: ${borderRadius(
                   styleProps.borderRadius,
@@ -161,72 +128,44 @@ export const Group = styleProps => cssClass`
                     styleProps.borderRadius,
                     styleProps.borderRadius
                   )(styleProps)};
-                `
+                `,
               }
             )(styleProps)};
           `
     }
 
-    ${breakpoint(
-      styleProps.verticalBelow
-        ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-        : null,
-      css`
-        border-top-right-radius: ${borderRadius(
-          styleProps.borderRadius,
-          styleProps.borderRadius
-        )(styleProps)};
-        border-top-left-radius: ${borderRadius(
-          styleProps.borderRadius,
-          styleProps.borderRadius
-        )(styleProps)};
-        border-bottom-left-radius: ${borderRadius(
-          styleProps.borderRadius,
-          styleProps.borderRadius
-        )(styleProps)};
-      `
-    )(styleProps)};
-
     & input,
     & select {
       ${
-        styleProps.orientation === "vertical"
+        styleProps.orientation === 'vertical'
           ? css`
-              border-top-left-radius: ${borderRadius(
-                styleProps.borderRadius,
-                styleProps.borderRadius
-              )(styleProps)};
-              border-top-right-radius: ${borderRadius(
-                styleProps.borderRadius,
-                styleProps.borderRadius
-              )(styleProps)};
+              border-bottom-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
+              border-bottom-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow
-                  ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                  : null,
+                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
                 css`
-                  border-top-left-radius: ${borderRadius(
+                  border-bottom-left-radius: ${borderRadius(
                     styleProps.borderRadius,
                     styleProps.borderRadius
                   )(styleProps)};
-                  border-top-right-radius: ${borderRadius(
+                  border-bottom-right-radius: ${borderRadius(
                     styleProps.borderRadius,
                     styleProps.borderRadius
                   )(styleProps)};
                 `,
                 {
                   else: css`
-                    border-top-left-radius: ${borderRadius(
+                    border-top-right-radius: ${borderRadius(
                       styleProps.borderRadius,
                       styleProps.borderRadius
                     )(styleProps)};
-                    border-bottom-left-radius: ${borderRadius(
+                    border-bottom-right-radius: ${borderRadius(
                       styleProps.borderRadius,
                       styleProps.borderRadius
                     )(styleProps)};
-                  `
+                  `,
                 }
               )(styleProps)};
             `
@@ -245,22 +184,20 @@ export const Group = styleProps => cssClass`
 
   & > *:not(:first-child) {
     ${
-      styleProps.orientation === "vertical"
+      styleProps.orientation === 'vertical'
         ? css`
             border-top-width: 0;
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow
-                ? `max-${verticalBreakpoints[styleProps.verticalBelow]}`
-                : null,
+              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
               css`
                 border-top-width: 0;
               `,
               {
                 else: css`
                   border-left-width: 0;
-                `
+                `,
               }
             )(styleProps)};
           `
