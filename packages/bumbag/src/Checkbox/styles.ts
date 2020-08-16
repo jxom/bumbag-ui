@@ -5,7 +5,7 @@ import { getHiddenInputStyles } from '../utils/getHiddenInputStyles';
 export const Checkbox = (styleProps) => cssClass`
   && {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   & {

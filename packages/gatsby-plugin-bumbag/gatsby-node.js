@@ -6,5 +6,5 @@ exports.onCreateBabelConfig = ({ actions }, pluginOptions) => {
       autoLabel: process.env.NODE_ENV !== `production`,
       ...(pluginOptions ? pluginOptions : {}),
     },
-  })
-}
+  });
+};

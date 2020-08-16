@@ -1,6 +1,6 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { Omit, Size } from '../types';
+import { Palette, Omit, Size, Flexible } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box } from '../Box';
 import { Image, ImageProps } from '../Image';
@@ -9,7 +9,7 @@ import * as styles from './styles';
 
 export type LocalAvatarProps = {
   /** Variant of the avatar. */
-  variant?: 'circle' | string;
+  variant?: Flexible<'circle', string>;
   /** URL of the avatar image. */
   src?: string;
   /** Size of the avatar. */
@@ -17,7 +17,7 @@ export type LocalAvatarProps = {
   /** Initials to place on the avatar. */
   initials?: string;
   /** Color of the avatar. */
-  palette?: string;
+  palette?: Palette;
 };
 export type AvatarProps = Omit<ImageProps, 'src'> & LocalAvatarProps;
 

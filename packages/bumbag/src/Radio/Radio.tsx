@@ -33,7 +33,7 @@ export type LocalRadioProps = {
   /** Function to invoke when radio is focused */
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
-export type RadioProps = BoxProps & LocalRadioProps;
+export type RadioProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalRadioProps;
 
 const useProps = createHook<RadioProps>(
   (props, { themeKey, themeKeyOverride }) => {

@@ -1,7 +1,15 @@
+import { Flexible } from './utils';
+
+export type BorderRadii = Flexible<'default' | '1' | '2' | '3' | '4' | '5' | '6' | '7', string>;
 export type ButtonType = 'button' | 'submit' | 'reset';
-export type Breakpoint = 'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile';
+export type Breakpoint = Flexible<'fullHD' | 'widescreen' | 'desktop' | 'tablet' | 'mobile', string>;
 export type ColumnSpread = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type ColumnSpreadOffset = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 'left' | 'both' | 'right';
+export type FontFamily = Flexible<'default' | 'heading' | 'mono', string>;
+export type FontSize = Flexible<'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900', string>;
+export type FontWeight = Flexible<'normal' | 'semibold' | 'bold', string>;
+export type LineHeight = Flexible<'none' | 'default' | '100' | '200' | '300' | '400' | '500' | '600', string>;
+export type LetterSpacing = Flexible<'default' | '100' | '200' | '300' | '400' | '500' | '600' | '700', string>;
 export type LayoutBreakpoint =
   | 'fullHD'
   | 'min-fullHD'
@@ -18,7 +26,7 @@ export type LayoutBreakpoint =
   | 'mobile'
   | 'min-mobile'
   | 'max-mobile';
-export type Palette = 'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | string;
+export type Palette = Flexible<'default' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning', string>;
 export type Placement =
   | 'center'
   | 'top'
@@ -33,7 +41,7 @@ export type Placement =
   | 'right-end'
   | 'bottom-end'
   | 'left-end';
-export type Size = 'default' | 'small' | 'medium' | 'large';
+export type Size = Flexible<'default' | 'small' | 'medium' | 'large', string>;
 
 export type AnimateProps = {
   /** Delay of the animation (in s/ms). */

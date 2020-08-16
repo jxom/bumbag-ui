@@ -103,53 +103,55 @@ const useProps = createHook<SelectMenuFieldProps>(
         >
           {({ elementProps }) => (
             <ConditionalWrap
-              condition={addonBefore || addonAfter}
+              condition={Boolean(addonBefore || addonAfter)}
               wrap={(children: React.ReactNode) => (
                 <Group orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}
             >
-              {addonBefore}
-              <SelectMenu
-                flex={addonBefore || addonAfter ? '1' : undefined}
-                cacheKey={cacheKey}
-                defer={defer}
-                disabled={disabled}
-                disableClear={disableClear}
-                hasTags={hasTags}
-                hasSearch={hasSearch}
-                isLoading={isLoading}
-                isMultiSelect={isMultiSelect}
-                limit={limit}
-                loadOptions={loadOptions}
-                loadVariables={loadVariables}
-                options={options}
-                onChange={onChange}
-                pagination={pagination}
-                placeholder={placeholder}
-                value={value}
-                errorText={errorText}
-                emptyText={emptyText}
-                loadingText={loadingText}
-                loadingMoreText={loadingMoreText}
-                renderError={renderError}
-                renderEmpty={renderEmpty}
-                renderLoading={renderLoading}
-                renderLoadingMore={renderLoadingMore}
-                renderOption={renderOption}
-                buttonProps={buttonProps}
-                itemProps={itemProps}
-                popoverProps={popoverProps}
-                searchInputProps={searchInputProps}
-                tagProps={tagProps}
-                dropdownMenuInitialState={dropdownMenuInitialState}
-                state={state}
-                overrides={overrides}
-                {...elementProps}
-                {...selectMenuProps}
-              />
-              {addonAfter}
+              <React.Fragment>
+                {addonBefore}
+                <SelectMenu
+                  flex={addonBefore || addonAfter ? '1' : undefined}
+                  cacheKey={cacheKey}
+                  defer={defer}
+                  disabled={disabled}
+                  disableClear={disableClear}
+                  hasTags={hasTags}
+                  hasSearch={hasSearch}
+                  isLoading={isLoading}
+                  isMultiSelect={isMultiSelect}
+                  limit={limit}
+                  loadOptions={loadOptions}
+                  loadVariables={loadVariables}
+                  options={options}
+                  onChange={onChange}
+                  pagination={pagination}
+                  placeholder={placeholder}
+                  value={value}
+                  errorText={errorText}
+                  emptyText={emptyText}
+                  loadingText={loadingText}
+                  loadingMoreText={loadingMoreText}
+                  renderError={renderError}
+                  renderEmpty={renderEmpty}
+                  renderLoading={renderLoading}
+                  renderLoadingMore={renderLoadingMore}
+                  renderOption={renderOption}
+                  buttonProps={buttonProps}
+                  itemProps={itemProps}
+                  popoverProps={popoverProps}
+                  searchInputProps={searchInputProps}
+                  tagProps={tagProps}
+                  dropdownMenuInitialState={dropdownMenuInitialState}
+                  state={state}
+                  overrides={overrides}
+                  {...elementProps}
+                  {...selectMenuProps}
+                />
+                {addonAfter}
+              </React.Fragment>
             </ConditionalWrap>
           )}
         </FieldWrapper>

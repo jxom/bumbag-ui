@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box as ReakitBox, useButton as useReakitButton } from 'reakit';
 import buildClassNames from 'classnames';
 
+import { Palette, Flexible } from '../types';
 import { bindFns, useClassName, createComponent, createElement, createHook } from '../utils';
 import { ListItem, ListItemProps } from '../List';
 
@@ -11,9 +12,9 @@ import * as styles from './styles';
 export type LocalTopNavItemProps = {
   href?: string;
   isActive?: boolean;
-  palette?: string;
+  palette?: Palette;
   navId?: string;
-  variant?: string;
+  variant?: Flexible<'default' | 'pill' | 'ghost', string>;
 };
 export type TopNavItemProps = ListItemProps & LocalTopNavItemProps;
 

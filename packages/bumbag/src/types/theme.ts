@@ -161,10 +161,25 @@ export type FontsThemeConfig = {
   mono?: string;
   [key: string]: string | Array<string>;
 };
+export type FontMetricsThemeConfig = {
+  [key: string]: {
+    capHeight: number;
+    ascent: number;
+    descent: number;
+    lineGap: number;
+    unitsPerEm: number;
+  };
+};
 export type FontSizeThemeConfig = {
   [key: string]: number;
 };
 export type FontWeightsThemeConfig = {
+  [key: string]: number;
+};
+export type LineHeightsThemeConfig = {
+  [key: string]: number;
+};
+export type LetterSpacingsThemeConfig = {
   [key: string]: number;
 };
 export type SpacingThemeConfig = {
@@ -721,36 +736,48 @@ export type HeadingThemeConfig = {
     base?: ThemeAttribute<Stylesheet>;
   };
   h1?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h2?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h3?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h4?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h5?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
     };
   };
   h6?: {
+    fontSize?: string;
+    shrinkScale?: string;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -946,6 +973,8 @@ export type LinkThemeConfig = {
     hover?: ThemeAttribute<Stylesheet>;
     focus?: ThemeAttribute<Stylesheet>;
   };
+  Block?: LinkThemeConfig;
+  Inline?: LinkThemeConfig;
   defaultProps?: Partial<LinkProps>;
   variants?: Variant<LinkThemeConfig>;
   modes?: Variant<LinkThemeConfig>;
@@ -1504,6 +1533,8 @@ export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
   };
+  Block?: LinkThemeConfig;
+  Inline?: LinkThemeConfig;
   defaultProps?: Partial<TextProps>;
   variants?: Variant<TextThemeConfig>;
   modes?: Variant<TextThemeConfig>;
@@ -1866,9 +1897,12 @@ export type ThemeConfig = {
   borderRadii?: BorderRadiiThemeConfig;
   breakpoints?: BreakpointsThemeConfig;
   fonts?: FontsThemeConfig;
+  fontMetrics?: FontMetricsThemeConfig;
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
+  lineHeights?: LineHeightsThemeConfig;
+  letterSpacings?: LetterSpacingsThemeConfig;
   modes?: ModesThemeConfig;
   spacing?: SpacingThemeConfig;
   palette?: PaletteThemeConfig;

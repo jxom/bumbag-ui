@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box as ReakitBox, TabListProps as ReakitTabListProps, useTabList as useReakitTabList } from 'reakit';
 
+import { Palette } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -9,7 +10,7 @@ import * as styles from './styles';
 
 export type LocalTabsListProps = {
   align?: 'left' | 'center' | 'right';
-  palette?: string;
+  palette?: Palette;
 };
 export type TabsListProps = BoxProps & Partial<ReakitTabListProps> & LocalTabsListProps;
 

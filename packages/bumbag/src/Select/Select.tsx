@@ -42,7 +42,7 @@ export type LocalSelectProps = {
   /** Function to invoke when input is focused */
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
 };
-export type SelectProps = BoxProps & LocalSelectProps;
+export type SelectProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalSelectProps;
 
 const useProps = createHook<SelectProps>(
   (props, { themeKey, themeKeyOverride }) => {
@@ -248,35 +248,37 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
         >
           {({ elementProps }) => (
             <ConditionalWrap
-              condition={addonBefore || addonAfter}
+              condition={Boolean(addonBefore || addonAfter)}
               wrap={(children: React.ReactNode) => (
                 <Group orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}
             >
-              {addonBefore}
-              <Select
-                autoFocus={autoFocus}
-                defaultValue={defaultValue}
-                disabled={disabled}
-                isLoading={isLoading}
-                isRequired={isRequired}
-                name={name}
-                size={size}
-                options={options}
-                placeholder={placeholder}
-                selectRef={selectRef}
-                state={state}
-                value={value}
-                onBlur={onBlur}
-                onChange={onChange}
-                onFocus={onFocus}
-                overrides={overrides}
-                {...elementProps}
-                {...selectProps}
-              />
-              {addonAfter}
+              <React.Fragment>
+                {addonBefore}
+                <Select
+                  autoFocus={autoFocus}
+                  defaultValue={defaultValue}
+                  disabled={disabled}
+                  isLoading={isLoading}
+                  isRequired={isRequired}
+                  name={name}
+                  size={size}
+                  options={options}
+                  placeholder={placeholder}
+                  selectRef={selectRef}
+                  state={state}
+                  value={value}
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  onFocus={onFocus}
+                  overrides={overrides}
+                  {...elementProps}
+                  {...selectProps}
+                />
+                {addonAfter}
+              </React.Fragment>
             </ConditionalWrap>
           )}
         </FieldWrapper>

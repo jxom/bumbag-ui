@@ -1,6 +1,6 @@
 import { Box as ReakitBox } from 'reakit';
 
-import { CodeThemeConfig } from '../types';
+import { Palette } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
@@ -10,7 +10,7 @@ export type LocalCodeProps = {
   /** Indicates if the code should be placed in a block. */
   isBlock?: boolean;
   /** Color of the code (inline) block. */
-  palette?: string;
+  palette?: Palette;
 };
 export type CodeProps = BoxProps & LocalCodeProps;
 

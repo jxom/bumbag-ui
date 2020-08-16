@@ -74,12 +74,9 @@ const useProps = createHook<RatingProps>(
       overrides,
       role: 'radiogroup',
       children: times(items ? items.length : maxValue, (index) => (
-        <Rover {...rover} {...roverProps} disabled={disabled}>
+        <Rover key={index} {...rover} {...roverProps} disabled={disabled}>
           {(props) => (
-            /*
-            // @ts-ignore */
             <RatingItem
-              key={index}
               {...props}
               aria-checked={value === index + 1}
               aria-posinset={index + 1}

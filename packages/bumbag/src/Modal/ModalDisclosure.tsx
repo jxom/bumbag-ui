@@ -19,8 +19,11 @@ const useProps = createHook<Partial<ModalDisclosureProps>>(
     const modalContext = React.useContext(ModalContext);
     props = { ...props, ...modalContext.modal };
 
-    let { disabled, focusable, visible, toggle, baseId, ...htmlProps } = props;
-    const modalDisclosureProps = useReakitDialogDisclosure({ disabled, focusable, visible, toggle, baseId }, htmlProps);
+    let { disabled, focusable, visible, toggle, baseId, unstable_disclosureRef, ...htmlProps } = props;
+    const modalDisclosureProps = useReakitDialogDisclosure(
+      { disabled, focusable, visible, toggle, baseId, unstable_disclosureRef },
+      htmlProps
+    );
     htmlProps = Box.useProps({ ...htmlProps, ...modalDisclosureProps });
 
     const className = useClassName({

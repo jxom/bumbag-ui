@@ -6,7 +6,7 @@ export function createComponent<Props>(
   config?: {
     attach?: {
       displayName?: string;
-      useProps: (props?: Partial<Props>, config?: { themeKey?: string }) => any;
+      useProps: (props?: Partial<Props>, config?: { disableCSSProps?: Array<string>; themeKey?: string }) => any;
     };
     defaultProps?: Partial<Props>;
     themeKey?: string;

@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { altitude, palette, space, theme, fontSize, fontWeight } from '../utils';
+import { altitude, palette, space, theme, lineHeight, getCapsizeStyles, fontSize, fontWeight } from '../utils';
 
 export const FieldWrapper = (styleProps) => cssClass`
   & {
@@ -8,6 +8,10 @@ export const FieldWrapper = (styleProps) => cssClass`
 `;
 
 export const Label = (styleProps) => cssClass`
+  &&& {
+    margin-bottom: 0px;
+  }
+
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
@@ -15,7 +19,11 @@ export const Label = (styleProps) => cssClass`
 
 export const DescriptionText = (styleProps) => cssClass`
   display: block;
-  font-size: ${fontSize('150')(styleProps)}rem;
+  margin-top: ${space(2)(styleProps)}rem;
+
+  && {
+    ${getCapsizeStyles({ fontSize: '150' })(styleProps)};
+  }
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
@@ -35,7 +43,7 @@ export const OptionalText = (styleProps) => cssClass`
   font-size: ${fontSize('150')(styleProps)}rem;
   color: ${palette('text100')(styleProps)};
   margin-left: ${space(2)(styleProps)}rem;
-  line-height: 1;
+  line-height: ${lineHeight('none')(styleProps)};
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

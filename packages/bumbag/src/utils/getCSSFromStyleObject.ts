@@ -1,7 +1,18 @@
 import _kebabCase from 'lodash/kebabCase';
 
 import { css } from '../styled';
-import { border, borderRadius, breakpoint, font, fontSize, palette, space, fontWeight } from './theme';
+import {
+  border,
+  borderRadius,
+  breakpoint,
+  font,
+  fontSize,
+  lineHeight,
+  palette,
+  space,
+  fontWeight,
+  letterSpacing,
+} from './theme';
 
 import { cssProps as cssPropsMap } from './cssProps';
 
@@ -15,7 +26,7 @@ const colorAttributes = [
   'borderBottomColor',
   'borderColor',
   'borderInlineEndColor',
-  'borderInline-startColor',
+  'borderInlineStartColor',
   'borderLeftColor',
   'borderRightColor',
   'borderTopColor',
@@ -52,6 +63,8 @@ const spaceAttributes = [
 const fontAttributes = ['font', 'fontFamily'];
 const fontSizeAttributes = ['fontSize'];
 const fontWeightAttributes = ['fontWeight'];
+const lineHeightAttributes = ['lineHeight'];
+const letterSpacingAttributes = ['letterSpacing'];
 
 const attributeMaps = {
   font: ['fontFamily'],
@@ -117,7 +130,24 @@ function getFontWeightValue({ theme, value }) {
   return value;
 }
 
-export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = false } = {}) {
+function getLineHeightValue({ theme, value }) {
+  const height = lineHeight(value)({ theme });
+  if (height) {
+    return height;
+  }
+  return value;
+}
+
+function getLetterSpacingValue({ theme, value }) {
+  const spacing = letterSpacing(value)({ theme });
+  console.log('test', spacing, value);
+  if (spacing) {
+    return spacing;
+  }
+  return value;
+}
+
+export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = false, disableCSSProps = [] } = {}) {
   let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
@@ -171,10 +201,19 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           newValue = getFontValue({ theme, value });
         }
         if (fontSizeAttributes.includes(attribute)) {
+          if (disableCSSProps.includes('fontSize')) {
+            return {};
+          }
           newValue = getFontSizeValue({ theme, value });
         }
         if (fontWeightAttributes.includes(attribute)) {
           newValue = getFontWeightValue({ theme, value });
+        }
+        if (lineHeightAttributes.includes(attribute)) {
+          newValue = getLineHeightValue({ theme, value });
+        }
+        if (letterSpacingAttributes.includes(attribute)) {
+          newValue = getLetterSpacingValue({ theme, value });
         }
         if (bp === 'default') {
           // @ts-ignore

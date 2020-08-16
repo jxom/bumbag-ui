@@ -52,7 +52,7 @@ export type LocalTextareaProps = {
   /** Function to invoke when textarea is focused */
   onFocus?: React.FocusEventHandler<HTMLTextAreaElement>;
 };
-export type TextareaProps = BoxProps & LocalTextareaProps;
+export type TextareaProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalTextareaProps;
 
 const useProps = createHook<TextareaProps>(
   (props, { themeKey, themeKeyOverride }) => {

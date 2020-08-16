@@ -101,50 +101,52 @@ const useProps = createHook<AutosuggestFieldProps>(
         >
           {({ elementProps }) => (
             <ConditionalWrap
-              condition={addonBefore || addonAfter}
+              condition={Boolean(addonBefore || addonAfter)}
               wrap={(children: React.ReactNode) => (
                 <Group orientation={orientation} overrides={overrides}>
                   {children}
                 </Group>
               )}
             >
-              {addonBefore}
-              <Autosuggest
-                flex={addonBefore || addonAfter ? '1' : undefined}
-                automaticSelection={automaticSelection}
-                cacheKey={cacheKey}
-                defer={defer}
-                disabled={disabled}
-                isLoading={isLoading}
-                limit={limit}
-                loadOptions={loadOptions}
-                loadVariables={loadVariables}
-                options={options}
-                onChange={onChange}
-                pagination={pagination}
-                placeholder={placeholder}
-                restrictToOptions={restrictToOptions}
-                value={value}
-                errorText={errorText}
-                emptyText={emptyText}
-                loadingText={loadingText}
-                loadingMoreText={loadingMoreText}
-                renderClearButton={renderClearButton}
-                renderError={renderError}
-                renderEmpty={renderEmpty}
-                renderLoading={renderLoading}
-                renderLoadingMore={renderLoadingMore}
-                renderOption={renderOption}
-                clearButtonProps={clearButtonProps}
-                inputProps={{ isRequired, state, ...inputProps }}
-                itemProps={itemProps}
-                popoverProps={popoverProps}
-                dropdownMenuInitialState={dropdownMenuInitialState}
-                overrides={overrides}
-                {...elementProps}
-                {...autosuggestProps}
-              />
-              {addonAfter}
+              <React.Fragment>
+                {addonBefore}
+                <Autosuggest
+                  flex={addonBefore || addonAfter ? '1' : undefined}
+                  automaticSelection={automaticSelection}
+                  cacheKey={cacheKey}
+                  defer={defer}
+                  disabled={disabled}
+                  isLoading={isLoading}
+                  limit={limit}
+                  loadOptions={loadOptions}
+                  loadVariables={loadVariables}
+                  options={options}
+                  onChange={onChange}
+                  pagination={pagination}
+                  placeholder={placeholder}
+                  restrictToOptions={restrictToOptions}
+                  value={value}
+                  errorText={errorText}
+                  emptyText={emptyText}
+                  loadingText={loadingText}
+                  loadingMoreText={loadingMoreText}
+                  renderClearButton={renderClearButton}
+                  renderError={renderError}
+                  renderEmpty={renderEmpty}
+                  renderLoading={renderLoading}
+                  renderLoadingMore={renderLoadingMore}
+                  renderOption={renderOption}
+                  clearButtonProps={clearButtonProps}
+                  inputProps={{ isRequired, state, ...inputProps }}
+                  itemProps={itemProps}
+                  popoverProps={popoverProps}
+                  dropdownMenuInitialState={dropdownMenuInitialState}
+                  overrides={overrides}
+                  {...elementProps}
+                  {...autosuggestProps}
+                />
+                {addonAfter}
+              </React.Fragment>
             </ConditionalWrap>
           )}
         </FieldWrapper>
