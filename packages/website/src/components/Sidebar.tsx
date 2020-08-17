@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Box, Input, Stack, SideNav, css, usePage, applyTheme } from 'bumbag';
+import { Box, Input, Stack, SideNav as _SideNav, usePage, applyTheme } from 'bumbag';
 import _startCase from 'lodash/startCase';
 import _uniqBy from 'lodash/uniqBy';
 
@@ -38,7 +38,7 @@ const orders = [
       'composition',
       'variants',
       'color-modes',
-      'migrating-from-fannypack'
+      'migrating-from-fannypack',
     ],
   },
   { 'the-box-primitive': ['box', 'flex', 'css-props', 'alignment', 'altitudes', 'borders', 'border-radius'] },
@@ -80,6 +80,33 @@ const SearchInput = applyTheme(Input, {
   },
 });
 
+const SideNav = applyTheme(_SideNav, {
+  Level: {
+    Title: {
+      styles: {
+        base: {
+          paddingLeft: 'minor-5',
+          fontSize: '100',
+          fontWeight: '700',
+          color: 'gray400',
+        },
+      },
+    },
+  },
+  Item: {
+    styles: {
+      base: {
+        paddingLeft: 'minor-5',
+        fontSize: '150',
+        fontWeight: '500',
+        minHeight: '2.25em',
+        height: '2.25em',
+        textTransform: 'unset',
+      },
+    },
+  },
+});
+
 export default function Sidebar(props: any) {
   const { path } = props;
 
@@ -96,38 +123,7 @@ export default function Sidebar(props: any) {
 
   return (
     <Stack spacing="major-1" paddingY="major-2" {...props}>
-      <SideNav
-        selectedId={path}
-        overrides={{
-          SideNav: {
-            Level: {
-              Title: {
-                styles: {
-                  base: css`
-                    font-size: 14px;
-                    font-weight: bold;
-                    padding-left: 1.25rem;
-                  `,
-                },
-              },
-            },
-            Item: {
-              styles: {
-                base: (props) => css`
-                  ${props.theme?.SideNav?.Item?.css?.base?.(props) || ''}
-
-                  padding-left: 1.25rem;
-                  font-size: 14px;
-                  font-weight: 500;
-                  min-height: 2.25em !important;
-                  height: 2.25em !important;
-                  text-transform: unset !important;
-                `,
-              },
-            },
-          },
-        }}
-      >
+      <SideNav selectedId={path}>
         <SearchInput
           before={<Input.Icon color="gray200" icon="solid-search" />}
           onChange={(e) => setSearchText(e.target.value)}
