@@ -140,7 +140,6 @@ function getLineHeightValue({ theme, value }) {
 
 function getLetterSpacingValue({ theme, value }) {
   const spacing = letterSpacing(value)({ theme });
-  console.log('test', spacing, value);
   if (spacing) {
     return spacing;
   }

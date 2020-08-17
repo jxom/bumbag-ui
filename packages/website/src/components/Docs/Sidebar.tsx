@@ -59,6 +59,5 @@ export default function DocsSidebar(props: any) {
     let relativeDirectory = item.relativeDirectory || '';
     return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
   }, {});
-  console.log(items);
   return <Sidebar orders={orders} items={items} path={path} />;
 }

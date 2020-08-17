@@ -98,8 +98,6 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
   const key = Object.keys(orderItem)[0];
   const itemOrders = orderItem[key];
 
-  console.log('test', sidebarItems[key] || sidebarItems);
-
   let items = sidebarItems[key] || sidebarItems;
   if (itemOrders.length > 0) {
     items = _uniqBy(
