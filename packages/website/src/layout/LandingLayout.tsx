@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, PageContent, PageWithHeader, useColorMode } from 'bumbag';
 
 import SEO from '../components/SEO';
-import Header from '../components/Landing/Header';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 type Props = {
@@ -21,7 +21,7 @@ export default function Docs(props: Props) {
         sticky
         header={
           <Container breakpoint="widescreen">
-            <Header />
+            <Header type="landing" />
           </Container>
         }
       >
