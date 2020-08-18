@@ -8,10 +8,12 @@ import {
 import * as bumbag from 'bumbag';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
-import { palette, space, styled } from 'bumbag';
+import { css, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { FeedbackForm } from 'feedback-fish';
+
+import Iframe from './Iframe';
 
 const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
@@ -49,16 +51,24 @@ const LiveError = styled(_LiveError)`
   color: ${palette('dangerInverted')};
   overflow-x: auto;
 `;
-const LivePreview = styled(_LivePreview)`
+const LivePreview = styled(bumbag.Box)`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid ${palette('white800', { dark: 'gray700' })} !important;
   border-bottom: none !important;
-  padding: 1.5rem !important;
-  /* overflow: scroll !important; */
+
+  ${(props) =>
+    props.isIframe
+      ? css`
+          overflow: hidden;
+        `
+      : css`
+          padding: 1.5rem;
+        `};
 `;
 
 const JSX_REG = /language\-\jsx-live/; // eslint-disable-line
+const JSX_IFRAME_REG = /language\-\jsx-live-iframe/; // eslint-disable-line
 const FC_REG = /language\-function-live/; // eslint-disable-line
 const LIVE_REG = /language\-live/; // eslint-disable-line
 
@@ -107,7 +117,12 @@ export default function LiveCode(props: Props) {
     return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
   }, [code]);
 
-  const isLive = JSX_REG.test(props.className) || FC_REG.test(props.className) || LIVE_REG.test(props.className);
+  const isLive =
+    JSX_REG.test(props.className) ||
+    JSX_IFRAME_REG.test(props.className) ||
+    FC_REG.test(props.className) ||
+    LIVE_REG.test(props.className);
+  const isIframe = JSX_IFRAME_REG.test(props.className);
   if (!isLive) {
     const lang = (props.className || '').split('-')[1];
 
@@ -147,7 +162,7 @@ export default function LiveCode(props: Props) {
         transformCode={transformCode}
         {...props}
       >
-        <LivePreview colorMode={colorMode} />
+        <LivePreview use={isIframe ? Iframe : _LivePreview} isIframe={isIframe} colorMode={colorMode} />
         {codeTabs.length > 1 && (
           <CodeTabs colorMode={colorMode}>
             {codeTabs.map((codeTab, i) => (
