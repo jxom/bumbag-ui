@@ -27,11 +27,13 @@ function Iframe(props: any) {
 
   const renderCode = transformCode(code);
   const frameUrl = React.useMemo(() => {
-    const baseUrl = window.location.href.includes('localhost') ? 'http://localhost:9000/' : '/';
-    if (window.location.href.includes('localhost')) {
-      return `${baseUrl}frame.html#?code=${encodeURIComponent(renderCode)}`;
+    if (typeof window !== 'undefined') {
+      const baseUrl = window.location.href.includes('localhost') ? 'http://localhost:9000/' : '/';
+      if (window.location.href.includes('localhost')) {
+        return `${baseUrl}frame.html#?code=${encodeURIComponent(renderCode)}`;
+      }
+      return `${baseUrl}playroom/frame.html#?code=${encodeURIComponent(renderCode)}`;
     }
-    return `${baseUrl}playroom/frame.html#?code=${encodeURIComponent(renderCode)}`;
   }, [renderCode]);
 
   ////////////////////////////////////////////////////////////////////////////////////
