@@ -1,10 +1,5 @@
 import * as React from 'react';
-import {
-  LiveProvider,
-  LiveEditor as _LiveEditor,
-  LiveError as _LiveError,
-  LivePreview as _LivePreview,
-} from 'react-live';
+import { LiveProvider, LiveEditor as _LiveEditor, LiveError as _LiveError } from 'react-live';
 import * as bumbag from 'bumbag';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
@@ -51,7 +46,7 @@ const LiveError = styled(_LiveError)`
   color: ${palette('dangerInverted')};
   overflow-x: auto;
 `;
-const LivePreview = styled(bumbag.Box)`
+const LivePreview = styled(Iframe)`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid ${palette('white800', { dark: 'gray700' })} !important;
@@ -111,7 +106,9 @@ export default function LiveCode(props: Props) {
   );
   const [currentTab, setCurrentTab] = React.useState(codeTabs[0]);
 
-  const { code, transformCode } = currentTab;
+  const { code: defaultCode, transformCode } = currentTab;
+
+  const [code, setCode] = React.useState(defaultCode || '');
 
   const playroomUrl = React.useMemo(() => {
     return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
@@ -162,7 +159,7 @@ export default function LiveCode(props: Props) {
         transformCode={transformCode}
         {...props}
       >
-        <LivePreview use={isIframe ? Iframe : _LivePreview} isIframe={isIframe} colorMode={colorMode} />
+        <LivePreview isIframe={isIframe} code={code} colorMode={colorMode} />
         {codeTabs.length > 1 && (
           <CodeTabs colorMode={colorMode}>
             {codeTabs.map((codeTab, i) => (
@@ -179,7 +176,7 @@ export default function LiveCode(props: Props) {
             ))}
           </CodeTabs>
         )}
-        <LiveEditor />
+        <LiveEditor onChange={setCode} code={code} />
         <Actions colorMode={colorMode}>
           <bumbag.Level verticalBelow={null}>
             <bumbag.Box>

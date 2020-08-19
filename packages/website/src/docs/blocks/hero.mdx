@@ -1,5 +1,5 @@
 ---
-breakpoint: desktop
+breakpoint: fullHD
 title: Hero
 path: /blocks/hero/
 ---
@@ -7,18 +7,37 @@ path: /blocks/hero/
 # Hero
 
 ```jsx-live-iframe
-<Columns>
-  <Columns.Column>
-    <Box backgroundColor="primary" height="50px" />
-  </Columns.Column>
-  <Columns.Column>
-    <Box backgroundColor="primary" height="50px" />
-  </Columns.Column>
-  <Columns.Column>
-    <Box backgroundColor="primary" height="50px" />
-  </Columns.Column>
-  <Columns.Column>
-    <Box backgroundColor="primary" height="50px" />
-  </Columns.Column>
-</Columns>
+<Box padding="major-2">
+  <Stack spacing="major-4">
+    <Heading color="primary900" fontSize="800" fontWeight="800" lineHeight="none">
+      Create components<br/>
+      <Text color="primary">with Bumbag</Text>
+    </Heading>
+    <Paragraph color="gray" fontSize="300">
+      Bumbag is a friendly React UI Kit suitable for MVPs or large-scale applications.<br/>
+      What are you waiting for? Strap on your Bumbag today.
+    </Paragraph>
+    <Set>
+      <Button
+        altitude="100"
+        paddingX="major-4"
+        paddingY="major-2"
+        palette="primary"
+        size="large"
+      >
+        Get started
+      </Button>
+      <Button
+        altitude="100"
+        paddingX="major-4"
+        paddingY="major-2"
+        palette="primary"
+        variant="ghost"
+        size="large"
+      >
+        Components
+      </Button>
+    </Set>
+  </Stack>
+</Box>
 ```
