@@ -3,6 +3,8 @@ import { Box } from 'bumbag';
 import { LivePreview } from 'react-live';
 import { transform } from '@babel/standalone';
 
+const MIN_WIDTH = 400;
+
 export const transformCode = (code: string) => {
   try {
     return transform(`<Box padding="major-2">${code.trim() || ''}</Box>`, {
@@ -28,11 +30,7 @@ function Iframe(props: any) {
   const renderCode = transformCode(code);
   const frameUrl = React.useMemo(() => {
     if (typeof window !== 'undefined') {
-      const baseUrl = window.location.href.includes('localhost') ? 'http://localhost:9000/' : '/';
-      if (window.location.href.includes('localhost')) {
-        return `${baseUrl}frame.html#?code=${encodeURIComponent(renderCode)}`;
-      }
-      return `${baseUrl}playroom/frame.html#?code=${encodeURIComponent(renderCode)}`;
+      return `/playroom/frame.html#?code=${encodeURIComponent(renderCode)}`;
     }
   }, [renderCode]);
 
@@ -52,14 +50,17 @@ function Iframe(props: any) {
 
     const handleMouseMove = (e) => {
       requestAnimationFrame(() => {
-        setIframeWidth(`${e.clientX}px`);
+        const width = e.clientX;
+        console.log('test', width > MIN_WIDTH)
+        setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };
     const handleMouseMoveInWrapper = (e) => {
       requestAnimationFrame(() => {
         const wrapper = wrapperRef.current || {};
         const width = e.clientX - wrapper.offsetLeft;
-        setIframeWidth(`${width}px`);
+        console.log('test', width > MIN_WIDTH)
+        setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };
     const handleMouseUp = (e) => {
