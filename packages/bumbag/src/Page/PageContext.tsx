@@ -3,7 +3,6 @@ import * as React from 'react';
 import { Drawer, DrawerStateReturn } from '../Drawer';
 import { Disclosure, DisclosureStateReturn } from '../Disclosure';
 import { useBreakpoint } from '../utils';
-import { collapseBreakpoints } from './styles';
 
 export const PageContext = React.createContext({
   collapseBelow: 'desktop',
@@ -32,7 +31,7 @@ export const PageContext = React.createContext({
 export function PageProvider(props: any) {
   const { children, collapseBelow = 'desktop' } = props;
 
-  const isCollapsed = useBreakpoint(`max-${collapseBreakpoints[collapseBelow]}`);
+  const isCollapsed = useBreakpoint(`max-${collapseBelow}`);
   const [isSidebarMinimized, setIsSidebarMinimized] = React.useState(false);
 
   const sidebarDrawer = Drawer.useState({ animated: true });

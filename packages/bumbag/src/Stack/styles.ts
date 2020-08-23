@@ -2,13 +2,6 @@ import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
 import { getFlexAlignmentAttributes } from '../Flex/styles';
 
-const verticalBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
-};
-
 export const Stack = (styleProps) => cssClass`
   ${styleProps.orientation === 'vertical' && getVerticalAttributes(styleProps)}
   ${styleProps.orientation === 'horizontal' && getHorizontalAttributes(styleProps)}
@@ -33,7 +26,7 @@ const getVerticalAttributes = (styleProps) => css`
 `;
 
 const getHorizontalAttributes = (styleProps) => {
-  let breakpoint = theme('breakpoints', verticalBreakpoints[styleProps.verticalBelow])(styleProps);
+  let breakpoint = theme('breakpoints', styleProps.verticalBelow)(styleProps);
   breakpoint = breakpoint ? `${breakpoint}px` : styleProps.verticalBelow;
   return css`
     @media screen and (min-width: ${breakpoint}) {

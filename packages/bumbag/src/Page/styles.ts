@@ -1,13 +1,6 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, palette, space, theme } from '../utils';
 
-export const collapseBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
-};
-
 export const PageContent = (styleProps) => cssClass`
   padding: ${space(4, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
 
@@ -62,7 +55,7 @@ export const PageWithSidebarContent = (styleProps) => cssClass`
       padding-left: ${getWidth(styleProps)};
 
       ${breakpoint(
-        `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+        `max-${styleProps.collapseBelow}`,
         css`
           padding-left: 0px;
         `
@@ -80,7 +73,7 @@ export const PageWithSidebarContent = (styleProps) => cssClass`
       padding-right: ${getWidth(styleProps)};
 
       ${breakpoint(
-        `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+        `max-${styleProps.collapseBelow}`,
         css`
           padding-right: 0px;
         `
@@ -144,7 +137,7 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   }
 
   ${breakpoint(
-    `max-${collapseBreakpoints[styleProps.collapseBelow]}`,
+    `max-${styleProps.collapseBelow}`,
     css`
       display: none;
     `
@@ -161,7 +154,7 @@ export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
     overflow-y: scroll;
   }
 
-  ${breakpoint(`max-${collapseBreakpoints[styleProps.collapseBelow]}`, css``, {
+  ${breakpoint(`max-${styleProps.collapseBelow}`, css``, {
     else: css`
       display: none;
     `,

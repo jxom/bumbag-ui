@@ -1,18 +1,11 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, borderRadius, theme } from '../utils';
 
-const verticalBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
-};
-
 export const Group = (styleProps) => cssClass`
   flex-direction: ${styleProps.orientation === 'vertical' ? 'column' : 'row'};
 
   ${breakpoint(
-    styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+    styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
     css`
       flex-direction: column;
     `
@@ -42,7 +35,7 @@ export const Group = (styleProps) => cssClass`
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
               css`
                 border-top-right-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
                 border-top-left-radius: ${borderRadius(styleProps.borderRadius, styleProps.borderRadius)(styleProps)};
@@ -70,7 +63,7 @@ export const Group = (styleProps) => cssClass`
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+                styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
                 css`
                   border-top-right-radius: ${borderRadius(
                     styleProps.borderRadius,
@@ -107,7 +100,7 @@ export const Group = (styleProps) => cssClass`
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
               css`
                 border-bottom-left-radius: ${borderRadius(
                   styleProps.borderRadius,
@@ -144,7 +137,7 @@ export const Group = (styleProps) => cssClass`
             `
           : css`
               ${breakpoint(
-                styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+                styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
                 css`
                   border-bottom-left-radius: ${borderRadius(
                     styleProps.borderRadius,
@@ -190,7 +183,7 @@ export const Group = (styleProps) => cssClass`
           `
         : css`
             ${breakpoint(
-              styleProps.verticalBelow ? `max-${verticalBreakpoints[styleProps.verticalBelow]}` : null,
+              styleProps.verticalBelow ? `max-${styleProps.verticalBelow}` : null,
               css`
                 border-top-width: 0;
               `,
