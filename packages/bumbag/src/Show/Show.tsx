@@ -11,11 +11,11 @@ export type LocalShowProps = {
 };
 export type ShowProps = LocalShowProps;
 
-const belowBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
+const aboveBreakpoints = {
+  mobile: 'tablet',
+  tablet: 'desktop',
+  desktop: 'widescreen',
+  widescreen: 'fullHD',
 };
 
 export function Show(props) {
@@ -23,9 +23,9 @@ export function Show(props) {
 
   let breakpoint;
   if (above) {
-    breakpoint = `min-${above}`;
+    breakpoint = `min-${aboveBreakpoints[above]}`;
   } else if (below) {
-    breakpoint = `max-${belowBreakpoints[below]}`;
+    breakpoint = `max-${below}`;
   }
 
   const showClassName = useClassName({

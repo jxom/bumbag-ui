@@ -11,11 +11,11 @@ export type LocalHideProps = {
 };
 export type HideProps = LocalHideProps;
 
-const belowBreakpoints = {
-  tablet: 'mobile',
-  desktop: 'tablet',
-  widescreen: 'desktop',
-  fullHD: 'widescreen',
+const aboveBreakpoints = {
+  mobile: 'tablet',
+  tablet: 'desktop',
+  desktop: 'widescreen',
+  widescreen: 'fullHD',
 };
 
 export function Hide(props) {
@@ -23,9 +23,9 @@ export function Hide(props) {
 
   let breakpoint;
   if (above) {
-    breakpoint = `min-${above}`;
+    breakpoint = `min-${aboveBreakpoints[above]}`;
   } else if (below) {
-    breakpoint = `max-${belowBreakpoints[below]}`;
+    breakpoint = `max-${below}`;
   }
 
   const hideClassName = useClassName({
