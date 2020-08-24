@@ -1,3 +1,7 @@
+---
+breakpoint: desktop
+---
+
 import Theme from '../../components/Theme';
 import { Level } from 'bumbag';
 
@@ -13,7 +17,9 @@ import { Level } from 'bumbag';
 
 The `<Level>` component that assists in creating layouts where it's children are evenly spaced.
 
-```jsx-live
+When the viewport is below **tablet**, the level will snap to a vertical orientation.
+
+```jsx-live-iframe
 <Level>
   <Box backgroundColor="primary" width="50px" height="50px" />
   <Box backgroundColor="primary" width="50px" height="50px" />
@@ -33,10 +39,12 @@ A `<Level>` can be of a vertical orientation with the `orientation` prop.
 
 ### Vertical breakpoint
 
-By default, `Level` will turn vertical under the `desktop` breakpoint. However, you can change this with the `verticalBelow` prop.
+By default, `Level` will turn vertical under the **tablet** breakpoint. However, you can change this with the `verticalBelow` prop.
 
-```jsx-live
-<Level verticalBelow="widescreen">
+**Try drag the viewport with the slider!**
+
+```jsx-live-iframe
+<Level verticalBelow="mobile">
   <Box backgroundColor="primary" width="50px" height="50px" />
   <Box backgroundColor="primary" width="50px" height="50px" />
 </Level>
@@ -55,8 +63,8 @@ You can disable the vertical snapping by setting `verticalBelow` to `null`.
 
 You can modify the space between the vertical items with the `spacing` prop.
 
-```jsx-live
-<Level spacing="major-4">
+```jsx-live-iframe
+<Level spacing="major-4" verticalBelow="desktop">
   <Box backgroundColor="primary" width="50px" height="50px" />
   <Box backgroundColor="primary" width="50px" height="50px" />
 </Level>
@@ -66,8 +74,8 @@ You can modify the space between the vertical items with the `spacing` prop.
 
 You can modify the alignment of the vertical items with the `alignX` prop.
 
-```jsx-live
-<Level alignX="right">
+```jsx-live-iframe
+<Level alignX="right" verticalBelow="desktop">
   <Box backgroundColor="primary" width="50px" height="50px" />
   <Box backgroundColor="primary" width="50px" height="50px" />
 </Level>

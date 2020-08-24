@@ -1,4 +1,17 @@
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
 module.exports = {
+  developMiddleware: (app) => {
+    app.use(
+      '/playroom/',
+      createProxyMiddleware({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/playroom/': '',
+        },
+      })
+    );
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',

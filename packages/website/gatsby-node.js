@@ -9,12 +9,26 @@ const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
+
   if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: 'slug',
       node,
       value,
+    });
+  }
+
+  if (node.internal.type === 'File' || node.internal.type === 'Mdx') {
+    const path = node.absolutePath || node.fileAbsolutePath;
+    let type = 'docs';
+    if (path.includes('blocks')) {
+      type = 'blocks';
+    }
+    createNodeField({
+      name: 'type',
+      node,
+      value: type,
     });
   }
 };
@@ -29,6 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fileAbsolutePath
             fields {
+              type
               slug
             }
             frontmatter {
@@ -61,6 +76,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         frontmatter: node.frontmatter,
         mdxBody: node.body,
         tableOfContents: node.tableOfContents,
+        type: node.fields.type,
       },
     });
   });

@@ -1,21 +1,29 @@
 import React from 'react';
-import { useLocation } from '@reach/router';
-import { graphql, useStaticQuery } from 'gatsby';
 import * as bumbag from 'bumbag';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import SEO from '../components/SEO';
-import LiveCode from '../components/LiveCode';
+import LiveCode from '../components/Live/LiveCode';
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import BlocksSidebar from '../components/Blocks/Sidebar';
+import DocsSidebar from '../components/Docs/Sidebar';
 import Footer from '../components/Footer';
 import _TableOfContents from '../components/TableOfContents';
 
+const Sidebars = {
+  blocks: BlocksSidebar,
+  docs: DocsSidebar,
+};
+
 type Props = {
   children: React.ReactNode;
-  pageContext: any;
-  path: string;
+  pageContext?: any;
+  path?: string;
+  title?: string;
+  isFluid?: boolean;
+  breakpoint?: string;
+  type?: string;
 };
 
 const TableOfContents = bumbag.styled(_TableOfContents)`
@@ -35,7 +43,7 @@ const TableOfContents = bumbag.styled(_TableOfContents)`
 `;
 
 export default function Docs(props: Props) {
-  const { pageContext, path } = props;
+  const { children, pageContext = {}, path = '' } = props;
 
   const { colorMode } = bumbag.useColorMode();
 
@@ -119,24 +127,29 @@ export default function Docs(props: Props) {
 
   //////////////////////////////////////////////////////////////////////
 
+  const title = props.title || pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title;
+  const breakpoint = props.breakpoint || pageContext.frontmatter?.breakpoint || 'tablet';
+  const isFluid = props.isFluid || pageContext.frontmatter?.isFluid;
+  const type = props.type || pageContext.type;
+
+  const Sidebar = Sidebars[type];
+
   return (
     <React.Fragment>
-      <SEO title={pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title} />
+      <SEO title={title} />
       <bumbag.PageWithHeader sticky header={<Header />}>
         <bumbag.PageWithSidebar sidebar={<Sidebar path={path} />} sidebarPlacement="left" sidebarWidth="270px">
-          <TableOfContents
-            breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
-            isFluid={pageContext.frontmatter.isFluid}
-            toc={pageContext.tableOfContents}
-          />
-          <bumbag.PageContent
-            isLayout={Boolean(pageContext.frontmatter.isFluid)}
-            isFluid={Boolean(pageContext.frontmatter.isFluid)}
-            breakpoint={pageContext.frontmatter.breakpoint || 'tablet'}
-          >
-            <MDXProvider components={components}>
-              <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
-            </MDXProvider>
+          {pageContext.tableOfContents && (
+            <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
+          )}
+          <bumbag.PageContent isLayout={isFluid} isFluid={isFluid} breakpoint={breakpoint}>
+            {pageContext.mdxBody ? (
+              <MDXProvider components={components}>
+                <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
+              </MDXProvider>
+            ) : (
+              children
+            )}
           </bumbag.PageContent>
           <bumbag.PageContent>
             <Footer />

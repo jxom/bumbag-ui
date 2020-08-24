@@ -4,55 +4,6 @@ import { Box, Input, Stack, SideNav as _SideNav, usePage, applyTheme } from 'bum
 import _startCase from 'lodash/startCase';
 import _uniqBy from 'lodash/uniqBy';
 
-const query = graphql`
-  {
-    allFile(sort: { fields: name }, filter: { extension: { eq: "mdx" } }) {
-      edges {
-        node {
-          extension
-          name
-          relativeDirectory
-          childMdx {
-            frontmatter {
-              title
-              path
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-const orders = [
-  {
-    '': [
-      'getting-started',
-      'theming',
-      'styling-components',
-      'palette',
-      'global-styles',
-      'breakpoints',
-      'fonts',
-      'spacing',
-      'composition',
-      'variants',
-      'color-modes',
-      'migrating-from-fannypack',
-    ],
-  },
-  { 'the-box-primitive': ['box', 'flex', 'css-props', 'alignment', 'altitudes', 'borders', 'border-radius'] },
-  { hooks: [] },
-  { 'page-shells': ['intro', 'page-with-header', 'page-with-sidebar', 'page-content'] },
-  { layout: [] },
-  { typography: [] },
-  { components: [] },
-  { form: ['form-libraries'] },
-  { utilities: [] },
-  { addons: [] },
-  { 'copy-blocks': [] },
-];
-
 const SearchInput = applyTheme(Input, {
   defaultProps: {
     color: 'text',
@@ -108,17 +59,9 @@ const SideNav = applyTheme(_SideNav, {
 });
 
 export default function Sidebar(props: any) {
-  const { path } = props;
+  const { items, orders, path } = props;
 
   const { sidebar } = usePage();
-
-  const { allFile } = useStaticQuery(query);
-  const sidebarItems = allFile.edges.reduce((currentItems, node) => {
-    const item = node.node;
-    let relativeDirectory = item.relativeDirectory || '';
-    return { ...currentItems, [relativeDirectory]: [...(currentItems[relativeDirectory] || []), item] };
-  }, {});
-
   const [searchText, setSearchText] = React.useState('');
 
   return (
@@ -139,7 +82,7 @@ export default function Sidebar(props: any) {
               orderItem={orderItem}
               searchText={searchText}
               sidebar={sidebar}
-              sidebarItems={sidebarItems}
+              sidebarItems={items}
             />
           );
         })}
@@ -155,7 +98,7 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
   const key = Object.keys(orderItem)[0];
   const itemOrders = orderItem[key];
 
-  let items = sidebarItems[key];
+  let items = sidebarItems[key] || sidebarItems;
   if (itemOrders.length > 0) {
     items = _uniqBy(
       [...itemOrders.map((itemOrder) => items.find((item) => itemOrder === item.name)), ...items],

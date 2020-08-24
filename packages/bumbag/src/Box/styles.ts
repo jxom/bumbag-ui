@@ -24,7 +24,7 @@ export const style = (styleProps) => cssClass`
     styleProps.altitude &&
     css`
       & {
-        ${altitude(styleProps.altitude)(styleProps)};
+        ${altitude(styleProps.altitude)(styleProps)} !important;
       }
     `
   };
