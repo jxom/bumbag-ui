@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from 'bumbag';
+import { Box, Spinner } from 'bumbag';
 import { LivePreview } from 'react-live';
 import { transform } from '@babel/standalone';
 
@@ -51,7 +51,7 @@ function Iframe(props: any) {
     const handleMouseMove = (e) => {
       requestAnimationFrame(() => {
         const width = e.clientX;
-        console.log('test', width > MIN_WIDTH)
+        console.log('test', width > MIN_WIDTH);
         setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };
@@ -59,7 +59,7 @@ function Iframe(props: any) {
       requestAnimationFrame(() => {
         const wrapper = wrapperRef.current || {};
         const width = e.clientX - wrapper.offsetLeft;
-        console.log('test', width > MIN_WIDTH)
+        console.log('test', width > MIN_WIDTH);
         setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };
@@ -120,10 +120,16 @@ function Iframe(props: any) {
       display="flex"
       minHeight="200px"
       height={wrapperHeight}
+      position="relative"
       width="100%"
       transition="height 100ms ease-in-out, background-color 100ms"
       {...restProps}
     >
+      {!loaded && (
+        <Box position="absolute" alignY="center" textAlign="center" height="100%" width="100%">
+          <Spinner hasTrack size="large" />
+        </Box>
+      )}
       <Box
         ref={iframeRef}
         use="iframe"

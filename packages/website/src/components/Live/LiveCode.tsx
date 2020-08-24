@@ -8,7 +8,7 @@ import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { FeedbackForm } from 'feedback-fish';
 
-import Iframe from './Iframe';
+import LivePreview from './LivePreview';
 
 const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
@@ -46,7 +46,7 @@ const LiveError = styled(_LiveError)`
   color: ${palette('dangerInverted')};
   overflow-x: auto;
 `;
-const LivePreview = styled(Iframe)`
+const _LivePreview = styled(LivePreview)`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid ${palette('white800', { dark: 'gray700' })} !important;
@@ -159,7 +159,7 @@ export default function LiveCode(props: Props) {
         transformCode={transformCode}
         {...props}
       >
-        <LivePreview isIframe={isIframe} code={code} colorMode={colorMode} />
+        <_LivePreview isIframe={isIframe} code={code} colorMode={colorMode} />
         {codeTabs.length > 1 && (
           <CodeTabs colorMode={colorMode}>
             {codeTabs.map((codeTab, i) => (

@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import SEO from '../components/SEO';
-import LiveCode from '../components/LiveCode';
+import LiveCode from '../components/Live/LiveCode';
 import Header from '../components/Header';
 import BlocksSidebar from '../components/Blocks/Sidebar';
 import DocsSidebar from '../components/Docs/Sidebar';

@@ -42,9 +42,11 @@ export default function Header(props) {
         <TopNav.Item use={Link} navId="docs" to="/getting-started" fontWeight="semibold">
           Docs
         </TopNav.Item>
-        <TopNav.Item use={Link} navId="blocks" to="/blocks" fontWeight="semibold">
-          Blocks
-        </TopNav.Item>
+        {/*
+          <TopNav.Item use={Link} navId="blocks" to="/blocks" fontWeight="semibold">
+            Blocks
+          </TopNav.Item>
+         */}
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>

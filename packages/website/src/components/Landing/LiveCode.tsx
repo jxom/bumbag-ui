@@ -10,7 +10,6 @@ import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted
 import { Markdown } from 'bumbag-addon-markdown';
 import { Box, Group, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
-import CopyToClipboard from 'react-copy-to-clipboard';
 
 const Actions = styled(bumbag.Box)`
   background-color: ${palette('background')};
@@ -85,7 +84,7 @@ export default function LiveCode(props: Props) {
   return (
     <bumbag.Box marginBottom="major-4">
       <LiveProvider code={code} scope={scope} theme={codeTheme} {...props}>
-        <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="fullHD">
+        <Group altitude="400" borderRadius="10px" width="100%" verticalBelow="widescreen">
           <LiveEditor colorMode={colorMode} />
           <Box backgroundColor="white" flex="2" border="default" borderLeft="none">
             <LivePreview colorMode={colorMode} />
