@@ -152,7 +152,7 @@ export const Checkbox = createComponent<CheckboxProps>(
       displayName: 'Checkbox',
     },
     defaultProps: {
-      use: Label,
+      use: 'label',
     },
     themeKey: 'Checkbox',
   }

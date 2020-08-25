@@ -149,7 +149,7 @@ export const Radio = createComponent<RadioProps>(
       displayName: 'Radio',
     },
     defaultProps: {
-      use: Label,
+      use: 'label',
     },
     themeKey: 'Radio',
   }
