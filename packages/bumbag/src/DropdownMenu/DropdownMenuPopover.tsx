@@ -95,7 +95,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
 
     return { ...boxProps, className, tabIndex: props.isTabbable ? boxProps.tabIndex : undefined };
   },
-  { defaultProps: { altitude: '200', isTabbable: false }, themeKey: 'DropdownMenu.Popover' }
+  { defaultProps: { altitude: '200', isTabbable: true }, themeKey: 'DropdownMenu.Popover' }
 );
 
 export const DropdownMenuPopover = createComponent<DropdownMenuPopoverProps>(
