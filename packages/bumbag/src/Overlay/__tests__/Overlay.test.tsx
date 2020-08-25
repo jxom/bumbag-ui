@@ -148,7 +148,11 @@ describe('overrides', () => {
     function Component() {
       const overlay = Overlay.useState({ baseId: 'test' });
       return (
-        <Overlay {...overlay} aria-label="test" overrides={{ Overlay: { styles: { base: { backgroundColor: 'red' } } } }}>
+        <Overlay
+          {...overlay}
+          aria-label="test"
+          overrides={{ Overlay: { styles: { base: { backgroundColor: 'red' } } } }}
+        >
           Hello world
         </Overlay>
       );

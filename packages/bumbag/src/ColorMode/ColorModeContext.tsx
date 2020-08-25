@@ -13,8 +13,8 @@ type Props = {
 };
 
 ColorModeProvider.defaultProps = {
-  isSSR: false
-}
+  isSSR: false,
+};
 
 export function ColorModeProvider(props: Props) {
   const { children, mode: _defaultMode, isSSR } = props;

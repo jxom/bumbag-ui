@@ -53,7 +53,9 @@ describe('props', () => {
 
 describe('overrides', () => {
   it('Textarea.base should render correctly', () => {
-    const { container } = render(<Textarea overrides={{ Textarea: { styles: { base: { backgroundColor: 'red' } } } }} />);
+    const { container } = render(
+      <Textarea overrides={{ Textarea: { styles: { base: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 

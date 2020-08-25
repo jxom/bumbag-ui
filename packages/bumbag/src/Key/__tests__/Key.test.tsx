@@ -26,7 +26,9 @@ describe('variants', () => {
 
 describe('overrides', () => {
   it('styles.base should render correctly', () => {
-    const { container } = render(<Key overrides={{ Key: { styles: { base: { backgroundColor: 'red' } } } }}>Space</Key>);
+    const { container } = render(
+      <Key overrides={{ Key: { styles: { base: { backgroundColor: 'red' } } } }}>Space</Key>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });

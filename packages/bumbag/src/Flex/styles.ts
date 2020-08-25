@@ -49,6 +49,5 @@ export function getFlexAlignmentAttributes(styleProps) {
         `}
       `}
     }
-
   `;
 }

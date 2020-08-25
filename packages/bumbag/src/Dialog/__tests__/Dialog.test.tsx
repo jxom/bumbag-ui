@@ -120,7 +120,10 @@ describe('overrides', () => {
 
   it('Dialog.Header.base should render correctly', () => {
     const { container } = render(
-      <Dialog title="This is a title" overrides={{ Dialog: { Header: { styles: { base: { backgroundColor: 'red' } } } } }}>
+      <Dialog
+        title="This is a title"
+        overrides={{ Dialog: { Header: { styles: { base: { backgroundColor: 'red' } } } } }}
+      >
         hello world
       </Dialog>
     );
@@ -129,7 +132,10 @@ describe('overrides', () => {
 
   it('Dialog.Title.base should render correctly', () => {
     const { container } = render(
-      <Dialog title="This is a title" overrides={{ Dialog: { Title: { styles: { base: { backgroundColor: 'red' } } } } }}>
+      <Dialog
+        title="This is a title"
+        overrides={{ Dialog: { Title: { styles: { base: { backgroundColor: 'red' } } } } }}
+      >
         hello world
       </Dialog>
     );

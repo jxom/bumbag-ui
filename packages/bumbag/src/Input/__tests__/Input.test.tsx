@@ -86,7 +86,9 @@ describe('overrides', () => {
   });
 
   it('Input.placeholder.base should render correctly', () => {
-    const { container } = render(<Input overrides={{ Input: { styles: { placeholder: { backgroundColor: 'red' } } } }} />);
+    const { container } = render(
+      <Input overrides={{ Input: { styles: { placeholder: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });

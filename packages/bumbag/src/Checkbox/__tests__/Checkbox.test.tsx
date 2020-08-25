@@ -99,7 +99,9 @@ describe('composition', () => {
 
 describe('overrides', () => {
   it('Checkbox.base should render correctly', () => {
-    const { container } = render(<Checkbox overrides={{ Checkbox: { styles: { base: { backgroundColor: 'red' } } } }} />);
+    const { container } = render(
+      <Checkbox overrides={{ Checkbox: { styles: { base: { backgroundColor: 'red' } } } }} />
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 
