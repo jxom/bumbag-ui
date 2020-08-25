@@ -31,7 +31,7 @@ const useProps = createHook<LevelProps>(
     return { ...flexProps, className };
   },
   {
-    defaultProps: { alignX: 'center', orientation: 'horizontal', spacing: 'major-2', verticalBelow: 'tablet' },
+    defaultProps: { alignX: 'left', orientation: 'horizontal', spacing: 'major-2', verticalBelow: 'tablet' },
     themeKey: 'Level',
   }
 );
