@@ -14,6 +14,7 @@ The available pseudo selectors you can use are:
 - `_hoveractive` for `:hover:active`
 - `_focus` for `:focus`
 - `_visited` for `:visited`
+- `_disabled` for `:disabled`
 
 ```jsx-live
 <Box
@@ -27,5 +28,31 @@ The available pseudo selectors you can use are:
   padding="major-2"
 >
   This is a box
+</Box>
+```
+
+## Group pseudo selectors
+
+CSS props allow you to style a child when its parent has a certain pseudo class and has the `role="group"` attribute.
+
+The available pseudo selectors you can use are:
+
+- `_groupHover` for `[role=group]:hover &`
+- `_groupActive` for `[role=group]:active &`
+- `_groupFocus` for `[role=group]:focus &`
+- `_groupVisited` for `[role=group]:visited &`
+- `_groupDisabled` for `[role=group]:disabled &`
+
+```jsx-live
+<Box
+  tabIndex="-1"
+  role="button"
+  backgroundColor="primaryTint"
+  color="text400"
+  padding="major-2"
+  role="group"
+>
+  <Text _groupHover={{color: 'primary500'}}>This is a box</Text>
+  <Text visibility="hidden" _groupHover={{visibility: 'visible'}}>, I am visible when my parent is hovered on</Text>
 </Box>
 ```

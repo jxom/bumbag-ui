@@ -7,6 +7,12 @@ export type CSSProperties = {
   _focus?: CSSProperties;
   _active?: CSSProperties;
   _visited?: CSSProperties;
+  _disabled?: CSSProperties;
+  _groupHover?: CSSProperties;
+  _groupActive?: CSSProperties;
+  _groupFocus?: CSSProperties;
+  _groupVisited?: CSSProperties;
+  _groupDisabled?: CSSProperties;
   alignContent?: string | number | { [key: string]: string };
   alignSelf?: string | number | { [key: string]: string };
   alignItems?: string | number | { [key: string]: string };
