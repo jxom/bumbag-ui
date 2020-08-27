@@ -75,6 +75,60 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with CSS props with disabled', () => {
+    const { container } = render(<Box use="button" disabled _disabled={{ backgroundColor: 'primary' }} />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with CSS props with group hover', () => {
+    const { container } = render(
+      <Box role="group">
+        <Box _groupHover={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render correctly with CSS props with group active', () => {
+    const { container } = render(
+      <Box role="group">
+        <Box _groupActive={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render correctly with CSS props with group focus', () => {
+    const { container } = render(
+      <Box role="group">
+        <Box _groupFocus={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render correctly with CSS props with group visited', () => {
+    const { container } = render(
+      <Box role="group">
+        <Box _groupVisited={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render correctly with CSS props with group disabled', () => {
+    const { container } = render(
+      <Box role="group" use="button" disabled>
+        <Box _groupDisabled={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render correctly with CSS props with group hover', () => {
+    const { container } = render(
+      <Box role="group">
+        <Box _groupHover={{ backgroundColor: 'primary' }} />
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with a color CSS prop', () => {
     const { container } = render(<Box backgroundColor="white900" color="primary" />);
     expect(container.firstChild).toMatchSnapshot();
