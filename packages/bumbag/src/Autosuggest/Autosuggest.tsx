@@ -247,19 +247,20 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
+    const inputRef = React.useRef();
+    const mousePositionRef = React.useRef();
+    const popoverRef = React.useRef();
+    const [defer, setDefer] = React.useState(props.defer || !loadOptions);
+    const [blockLoad, setBlockLoad] = React.useState(false);
+
+    //////////////////////////////////////////////////
+
     const dropdownMenu = DropdownMenu.useState({
       loop: true,
       gutter: 4,
       ...dropdownMenuInitialState,
     });
-    const dropdownMenuButtonProps = DropdownMenuButton.useProps(dropdownMenu);
-
-    //////////////////////////////////////////////////
-
-    const mousePositionRef = React.useRef();
-    const popoverRef = React.useRef();
-    const [defer, setDefer] = React.useState(props.defer || !loadOptions);
-    const [blockLoad, setBlockLoad] = React.useState(false);
+    const dropdownMenuButtonProps = DropdownMenuButton.useProps({ ...dropdownMenu, ref: inputRef });
 
     //////////////////////////////////////////////////
 
@@ -432,7 +433,7 @@ const useProps = createHook<AutosuggestProps>(
           onChange && onChange('');
         }
         filterOptions({ searchText: value });
-        if (isMouseOutsidePopover({ mousePositionRef, popoverRef })) {
+        if (isMouseOutsidePopover({ inputRef, mousePositionRef, popoverRef })) {
           dropdownMenu.hide();
         }
         if (!selectedOption) {
@@ -465,6 +466,9 @@ const useProps = createHook<AutosuggestProps>(
     const handleClickInput = React.useCallback(
       (event) => {
         const value = event.target.value;
+        if (document.activeElement !== event.target) {
+          event.target.focus();
+        }
         filterOptions({ controlsVisibility: true, searchText: value });
         if (loadOptions) {
           if (defer) {
@@ -820,8 +824,9 @@ function Loading(props: { loadingText: string; overrides: any }) {
 
 //////////////////////////////////////////////////////////////////
 
-function isMouseOutsidePopover({ mousePositionRef, popoverRef }) {
-  const { left, right, top, bottom } = popoverRef.current.getBoundingClientRect();
+function isMouseOutsidePopover({ inputRef, mousePositionRef, popoverRef }) {
+  const { top } = inputRef.current.getBoundingClientRect();
+  const { left, right, bottom } = popoverRef.current.getBoundingClientRect();
   const { clientX, clientY } = mousePositionRef.current;
   return left > clientX || right < clientX || top > clientY || bottom < clientY;
 }
