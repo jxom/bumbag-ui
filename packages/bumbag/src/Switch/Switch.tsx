@@ -154,7 +154,7 @@ export const Switch = createComponent<SwitchProps>(
       displayName: 'Switch',
     },
     defaultProps: {
-      use: Label,
+      use: 'label',
     },
     themeKey: 'Switch',
   }
