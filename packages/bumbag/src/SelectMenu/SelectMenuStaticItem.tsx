@@ -9,14 +9,13 @@ export type LocalSelectMenuStaticItemProps = {};
 export type SelectMenuStaticItemProps = BoxProps & LocalSelectMenuStaticItemProps;
 
 const useProps = createHook<SelectMenuStaticItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.SelectMenuStaticItem,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

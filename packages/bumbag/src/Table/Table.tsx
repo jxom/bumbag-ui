@@ -26,14 +26,13 @@ export type TableProps = BoxProps & LocalTableProps;
 export const TableContext = React.createContext({ overrides: {}, tableVariant: 'default' });
 
 const useProps = createHook<TableProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, overrides, variant } = props;
 
     const tableWrapperClassName = useClassName({
       style: styles.TableWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(props),
@@ -48,7 +47,6 @@ const useProps = createHook<TableProps>(
       style: styles.Table,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

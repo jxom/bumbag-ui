@@ -17,7 +17,7 @@ export type TabsListProps = BoxProps & Partial<ReakitTabListProps> & LocalTabsLi
 export const TabsListContext = React.createContext<TabsListProps>({});
 
 const useProps = createHook<TabsListProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let {
       align,
       baseId,
@@ -69,7 +69,6 @@ const useProps = createHook<TabsListProps>(
       style: styles.TabsList,
       styleProps: { ...tabs, ...props, overrides: { ...tabOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

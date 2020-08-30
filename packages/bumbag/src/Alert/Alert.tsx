@@ -43,12 +43,11 @@ export type AlertContextOptions = AlertProps & {
   descriptionId?: string;
   titleId?: string;
   themeKey?: string;
-  themeKeyOverride?: string;
 };
 export const AlertContext = React.createContext<AlertContextOptions>({});
 
 const useProps = createHook<AlertProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       accent,
       countdown,
@@ -71,26 +70,19 @@ const useProps = createHook<AlertProps>(
       style: styles.Alert,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
     const alertCloseButtonClassName = useClassName({
       style: styles.AlertCloseButton,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'CloseButton',
     });
 
     const titleId = useUniqueId('alertTitle');
     const descriptionId = useUniqueId('alertDescription');
 
-    const context = React.useMemo(() => ({ descriptionId, themeKeyOverride, titleId, ...props }), [
-      descriptionId,
-      props,
-      themeKeyOverride,
-      titleId,
-    ]);
+    const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
     let palette = 'default';
     if (variant === 'fill') {
@@ -180,7 +172,6 @@ export function AlertIcon(props: AlertIconProps) {
     style: styles.AlertIconWrapper,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'IconWrapper',
   });
 
@@ -215,7 +206,6 @@ export function AlertContent(props: AlertContentProps) {
     style: styles.AlertContent,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Content',
   });
 
@@ -239,7 +229,6 @@ export function AlertWrapper(props: AlertWrapperProps) {
     style: styles.AlertWrapper,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Wrapper',
   });
 
@@ -265,7 +254,6 @@ export function AlertAccent(props: AlertAccentProps) {
     style: styles.AlertAccent,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Accent',
   });
 
@@ -289,7 +277,6 @@ export function AlertTitle(props: AlertTitleProps) {
     style: styles.AlertTitle,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Title',
   });
 
@@ -315,7 +302,6 @@ export function AlertDescription(props: AlertDescriptionProps) {
     style: styles.AlertDescription,
     styleProps: { ...context, ...props },
     themeKey: context.themeKey || 'Alert',
-    themeKeyOverride: context.themeKeyOverride,
     themeKeySuffix: 'Description',
   });
 

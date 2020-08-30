@@ -32,7 +32,7 @@ export type LocalActionButtonsProps = {
 export type ActionButtonsProps = SetProps & LocalActionButtonsProps;
 
 const useProps = createHook<ActionButtonsProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       addonButtons,
       cancelProps,
@@ -54,7 +54,6 @@ const useProps = createHook<ActionButtonsProps>(
       style: styles.ActionButtons,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: setProps.className,
     });
 

@@ -17,7 +17,7 @@ export type LocalGroupProps = {
 export type GroupProps = FlexProps & LocalGroupProps;
 
 const useProps = createHook<GroupProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let htmlProps = props;
     const groupProps = useReakitGroup({}, htmlProps);
     htmlProps = Flex.useProps({ ...props, ...groupProps });
@@ -26,7 +26,6 @@ const useProps = createHook<GroupProps>(
       style: styles.Group,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

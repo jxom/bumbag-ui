@@ -10,14 +10,13 @@ export type LocalSelectMenuItemProps = {};
 export type SelectMenuItemProps = BoxProps & DropdownMenuItemProps & LocalSelectMenuItemProps;
 
 const useProps = createHook<SelectMenuItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const dropdownMenuItemProps = DropdownMenuItem.useProps(props);
 
     const className = useClassName({
       style: styles.SelectMenuItem,
       styleProps: { ...dropdownMenuItemProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: dropdownMenuItemProps.className,
     });
 

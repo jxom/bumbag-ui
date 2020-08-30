@@ -15,7 +15,7 @@ export type LocalPopoverBackdropProps = {};
 export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & LocalPopoverBackdropProps;
 
 const useProps = createHook<PopoverBackdropProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
@@ -36,7 +36,6 @@ const useProps = createHook<PopoverBackdropProps>(
       style: styles.PopoverBackdrop,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

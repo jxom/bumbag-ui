@@ -36,7 +36,7 @@ export type LocalRatingProps = {
 export type RatingProps = FlexProps & LocalRatingProps;
 
 const useProps = createHook<RatingProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       color,
       item,
@@ -61,7 +61,6 @@ const useProps = createHook<RatingProps>(
       style: styles.Rating,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 
@@ -131,7 +130,7 @@ export type LocalRatingItemProps = {
 export type RatingItemProps = BoxProps & LocalRatingItemProps;
 
 const useRatingItemProps = createHook<RatingItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, color, ...restProps } = props;
 
     const boxProps = Box.useProps(restProps);
@@ -140,7 +139,6 @@ const useRatingItemProps = createHook<RatingItemProps>(
       style: styles.RatingItem,
       styleProps: { ...props, color },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

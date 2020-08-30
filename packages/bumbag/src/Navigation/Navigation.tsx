@@ -9,14 +9,13 @@ export type LocalNavigationProps = {};
 export type NavigationProps = BoxProps & LocalNavigationProps;
 
 const useProps = createHook<NavigationProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Navigation,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

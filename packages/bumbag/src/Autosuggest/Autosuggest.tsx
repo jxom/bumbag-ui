@@ -86,7 +86,6 @@ export type AutosuggestProps = BoxProps & LocalAutosuggestProps;
 export type AutosuggestContextOptions = {
   overrides?: any;
   themeKey?: string;
-  themeKeyOverride?: string;
 };
 
 export const AutosuggestContext = React.createContext<AutosuggestContextOptions>({});
@@ -206,7 +205,7 @@ function reducer(state, event) {
 }
 
 const useProps = createHook<AutosuggestProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       automaticSelection,
       cacheKey,
@@ -282,28 +281,24 @@ const useProps = createHook<AutosuggestProps>(
       style: styles.Autosuggest,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const dropdownMenuPopoverClassName = useClassName({
       style: styles.AutosuggestPopover,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Popover',
     });
     const itemsWrapperClassName = useClassName({
       style: styles.ItemsWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'ItemsWrapper',
     });
     const inputClassName = useClassName({
       style: styles.AutosuggestInput,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Input',
     });
 
@@ -579,9 +574,8 @@ const useProps = createHook<AutosuggestProps>(
       () => ({
         overrides,
         themeKey,
-        themeKeyOverride,
       }),
-      [overrides, themeKey, themeKeyOverride]
+      [overrides, themeKey]
     );
 
     //////////////////////////////////////////////////
@@ -724,20 +718,18 @@ export const Autosuggest = createComponent<AutosuggestProps>(
 function ClearButton(props: any) {
   const { buttonProps, onClick, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(AutosuggestContext);
+  const { overrides, themeKey } = React.useContext(AutosuggestContext);
 
   const wrapperClassName = useClassName({
     style: styles.AutosuggestClearButtonWrapper,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ClearButtonWrapper',
   });
   const buttonClassName = useClassName({
     style: styles.AutosuggestClearButton,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ClearButton',
   });
 
@@ -759,12 +751,11 @@ function ClearButton(props: any) {
 function MatchedLabel(props: { label: string; inputValue: string; overrides: any }) {
   const { label, inputValue, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(AutosuggestContext);
+  const { overrides, themeKey } = React.useContext(AutosuggestContext);
   const className = useClassName({
     style: styles.AutosuggestItemText,
     styleProps: props,
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ItemText',
   });
 

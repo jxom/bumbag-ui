@@ -48,7 +48,7 @@ export type PopoverContextOptions = Omit<PopoverProps, 'baseId'> & {
 export const PopoverContext = React.createContext<PopoverContextOptions>({});
 
 const useProps = createHook<Partial<PopoverProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
@@ -112,14 +112,12 @@ const useProps = createHook<Partial<PopoverProps>>(
       style: styles.Popover,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const popoverCloseClassName = useClassName({
       style: styles.PopoverClose,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Close',
       prevClassName: closeButtonProps.className,
     });
@@ -224,7 +222,7 @@ export type LocalPopoverContentProps = {};
 export type PopoverContentProps = BoxProps & LocalPopoverContentProps;
 
 const usePopoverContentProps = createHook<PopoverContentProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
@@ -232,7 +230,6 @@ const usePopoverContentProps = createHook<PopoverContentProps>(
       style: styles.PopoverContent,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -263,7 +260,7 @@ export type LocalPopoverHeaderProps = {};
 export type PopoverHeaderProps = FlexProps & LocalPopoverHeaderProps;
 
 const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
@@ -271,7 +268,6 @@ const usePopoverHeaderProps = createHook<PopoverHeaderProps>(
       style: styles.PopoverHeader,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 
@@ -302,7 +298,7 @@ export type LocalPopoverTitleProps = {};
 export type PopoverTitleProps = TextProps & LocalPopoverTitleProps;
 
 const usePopoverTitleProps = createHook<PopoverTitleProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const textProps = Text.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
@@ -310,7 +306,6 @@ const usePopoverTitleProps = createHook<PopoverTitleProps>(
       style: styles.PopoverTitle,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: textProps.className,
     });
 
@@ -344,7 +339,7 @@ export type LocalPopoverFooterProps = {};
 export type PopoverFooterProps = FlexProps & LocalPopoverFooterProps;
 
 const usePopoverFooterProps = createHook<PopoverFooterProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(PopoverContext);
 
@@ -352,7 +347,6 @@ const usePopoverFooterProps = createHook<PopoverFooterProps>(
       style: styles.PopoverFooter,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 
@@ -383,7 +377,7 @@ export type LocalPopoverArrowProps = {};
 export type PopoverArrowProps = BoxProps & ReakitPopoverArrowProps & LocalPopoverArrowProps;
 
 const usePopoverArrowProps = createHook<Partial<PopoverArrowProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
@@ -408,7 +402,6 @@ const usePopoverArrowProps = createHook<Partial<PopoverArrowProps>>(
       style: styles.PopoverArrow,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

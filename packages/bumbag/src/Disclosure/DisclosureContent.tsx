@@ -15,7 +15,7 @@ export type LocalDisclosureContentProps = {};
 export type DisclosureContentProps = BoxProps & ReakitDisclosureContentProps & LocalDisclosureContentProps;
 
 const useProps = createHook<DisclosureContentProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const disclosureContext = React.useContext(DisclosureContext);
     props = { ...props, ...disclosureContext.disclosure };
 
@@ -36,7 +36,6 @@ const useProps = createHook<DisclosureContentProps>(
       style: styles.DisclosureContent,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

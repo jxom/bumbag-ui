@@ -34,7 +34,7 @@ export type LocalBoxProps = {
 export type BoxProps = ReakitBoxProps & CSSProperties & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
-  (_props, { disableCSSProps, themeKey, themeKeyOverride }) => {
+  (_props, { disableCSSProps, themeKey }) => {
     let props = _props;
     const { use } = props;
 
@@ -56,7 +56,6 @@ const useProps = createHook<BoxProps>(
       style: styles.style,
       styleProps: { ...props, style },
       themeKey,
-      themeKeyOverride,
       prevClassName: props.className,
     });
 
@@ -66,11 +65,11 @@ const useProps = createHook<BoxProps>(
       styleProps: props,
       prevClassName: className,
       themeKey,
-      themeKeyOverride,
     });
 
     // Pick out and invalid HTML props & omit the CSS props.
     const htmlProps = omitCSSProps(pickHTMLProps({ ...props, className }));
+    // const htmlProps = { ...props, className };
 
     if (props.elementRef) {
       // @ts-ignore

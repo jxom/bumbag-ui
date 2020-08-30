@@ -11,7 +11,7 @@ export type LocalTableBodyProps = {};
 export type TableBodyProps = BoxProps & LocalTableBodyProps;
 
 const useProps = createHook<TableBodyProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const tableContext = React.useContext(TableContext);
@@ -20,7 +20,6 @@ const useProps = createHook<TableBodyProps>(
       style: styles.TableBody,
       styleProps: { ...tableContext, ...props, overrides: { ...tableContext.overrides, ...props.overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

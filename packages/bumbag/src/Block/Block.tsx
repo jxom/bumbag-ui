@@ -9,14 +9,13 @@ export type LocalBlockProps = {};
 export type BlockProps = BoxProps & LocalBlockProps;
 
 const useProps = createHook<BlockProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Block,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

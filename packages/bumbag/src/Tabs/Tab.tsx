@@ -14,7 +14,7 @@ export type LocalTabsTabProps = {
 export type TabsTabProps = Partial<ReakitTabProps> & BoxProps & LocalTabsTabProps;
 
 const useProps = createHook<TabsTabProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let {
       baseId,
       currentId,
@@ -94,7 +94,6 @@ const useProps = createHook<TabsTabProps>(
         overrides: { ...tabOverrides, ...tabsListContext.overrides, ...overrides },
       },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

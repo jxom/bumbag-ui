@@ -17,14 +17,13 @@ export type LocalLevelProps = {
 export type LevelProps = FlexProps & LocalLevelProps;
 
 const useProps = createHook<LevelProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
 
     const className = useClassName({
       style: styles.Level,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 

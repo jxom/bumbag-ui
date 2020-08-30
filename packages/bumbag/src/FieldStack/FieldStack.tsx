@@ -9,14 +9,13 @@ export type LocalFieldStackProps = {};
 export type FieldStackProps = StackProps & LocalFieldStackProps;
 
 const useProps = createHook<FieldStackProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const stackProps = Stack.useProps(props);
 
     const className = useClassName({
       style: styles.FieldStack,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: stackProps.className,
     });
 

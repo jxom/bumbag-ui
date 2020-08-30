@@ -23,7 +23,7 @@ export type LocalSelectMenuFieldProps = {
 export type SelectMenuFieldProps = BoxProps & FieldWrapperProps & SelectMenuProps & LocalSelectMenuFieldProps;
 
 const useProps = createHook<SelectMenuFieldProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       addonAfter,
       addonBefore,
@@ -81,7 +81,6 @@ const useProps = createHook<SelectMenuFieldProps>(
       style: styles.SelectMenuField,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

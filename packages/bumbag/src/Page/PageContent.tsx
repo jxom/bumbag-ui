@@ -14,7 +14,7 @@ export type LocalPageContentProps = {
 export type PageContentProps = ContainerProps & LocalPageContentProps;
 
 const useProps = createHook<PageContentProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { overrides, wrapperProps, ...restProps } = props;
     const containerProps = Container.useProps({
       ...restProps,
@@ -29,7 +29,6 @@ const useProps = createHook<PageContentProps>(
       style: styles.PageContent,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: containerProps.className,
     });
 

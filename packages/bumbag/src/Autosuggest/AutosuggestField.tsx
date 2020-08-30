@@ -23,7 +23,7 @@ export type LocalAutosuggestFieldProps = {
 export type AutosuggestFieldProps = BoxProps & FieldWrapperProps & AutosuggestProps & LocalAutosuggestFieldProps;
 
 const useProps = createHook<AutosuggestFieldProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       addonAfter,
       addonBefore,
@@ -79,7 +79,6 @@ const useProps = createHook<AutosuggestFieldProps>(
       style: styles.AutosuggestField,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

@@ -21,7 +21,7 @@ export type LocalPageWithHeaderProps = {
 export type PageWithHeaderProps = BoxProps & LocalPageWithHeaderProps;
 
 const useProps = createHook<PageWithHeaderProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, defaultIsVisible, header, ...restProps } = props;
 
     const boxProps = Box.useProps(restProps);
@@ -32,21 +32,18 @@ const useProps = createHook<PageWithHeaderProps>(
       style: styles.PageWithHeader,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const headerClassName = useClassName({
       style: styles.PageWithHeaderHeader,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Header',
     });
     const contentClassName = useClassName({
       style: styles.PageWithHeaderContent,
       styleProps: { ...props, isHeaderOpen: headerState.isOpen },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Content',
     });
 

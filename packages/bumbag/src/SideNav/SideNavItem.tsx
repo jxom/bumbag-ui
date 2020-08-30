@@ -18,7 +18,7 @@ export type LocalSideNavItemProps = {
 export type SideNavItemProps = ListItemProps & LocalSideNavItemProps;
 
 const useProps = createHook<SideNavItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, href, isActive, navId, onClick, overrides, ...restProps } = props;
     const listItemProps = ListItem.useProps(restProps);
 
@@ -34,7 +34,6 @@ const useProps = createHook<SideNavItemProps>(
         overrides: { ...sideNavOverrides, ...overrides },
       },
       themeKey,
-      themeKeyOverride,
     });
 
     return {

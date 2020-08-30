@@ -16,7 +16,7 @@ export type LocalDropdownMenuDividerProps = {};
 export type DropdownMenuDividerProps = BoxProps & ReakitMenuSeparatorProps & LocalDropdownMenuDividerProps;
 
 const useProps = createHook<DropdownMenuDividerProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { orientation, overrides, ...restProps } = props;
 
     const { overrides: dropdownMenuOverrides } = React.useContext(DropdownMenuContext);
@@ -33,7 +33,6 @@ const useProps = createHook<DropdownMenuDividerProps>(
       style: styles.DropdownMenuDivider,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: dividerProps.className,
     });
 

@@ -16,7 +16,7 @@ export type LocalMenuDividerProps = {};
 export type MenuDividerProps = BoxProps & ReakitMenuSeparatorProps & LocalMenuDividerProps;
 
 const useProps = createHook<MenuDividerProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { orientation, overrides, ...restProps } = props;
 
     const { overrides: menuOverrides } = React.useContext(MenuContext);
@@ -33,7 +33,6 @@ const useProps = createHook<MenuDividerProps>(
       style: styles.MenuDivider,
       styleProps: { ...props, overrides: { ...menuOverrides, overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: dividerProps.className,
     });
 

@@ -28,7 +28,7 @@ export const SideNavContext = React.createContext<{
 });
 
 const useProps = createHook<SideNavProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, defaultSelectedId, onChange, overrides, selectedId: _selectedId, ...restProps } = props;
 
     const navigationProps = Navigation.useProps(restProps);
@@ -37,7 +37,6 @@ const useProps = createHook<SideNavProps>(
       style: styles.SideNav,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: navigationProps.className,
     });
 

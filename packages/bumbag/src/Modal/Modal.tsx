@@ -18,7 +18,7 @@ export type LocalModalProps = {
 export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 
 const useProps = createHook<Partial<ModalProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const modalContext = React.useContext(ModalContext);
     props = { ...props, ...modalContext.modal };
 
@@ -71,7 +71,6 @@ const useProps = createHook<Partial<ModalProps>>(
       style: styles.Modal,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

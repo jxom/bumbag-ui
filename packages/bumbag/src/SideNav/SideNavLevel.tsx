@@ -16,7 +16,7 @@ export type SideNavLevelProps = ListProps & LocalSideNavLevelProps;
 export const SideNavLevelContext = React.createContext({ level: 0 });
 
 const useProps = createHook<SideNavLevelProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, overrides, title, ...restProps } = props;
 
     const listProps = List.useProps(restProps);
@@ -28,14 +28,12 @@ const useProps = createHook<SideNavLevelProps>(
       style: styles.SideNavLevel,
       styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: listProps.className,
     });
     const titleClassName = useClassName({
       style: styles.SideNavLevelTitle,
       styleProps: { ...props, level, overrides: { ...sideNavOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Title',
     });
 

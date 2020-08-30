@@ -9,14 +9,13 @@ export type LocalTextInlineProps = {};
 export type TextInlineProps = BoxProps & LocalTextInlineProps;
 
 const useProps = createHook<TextInlineProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.TextInline,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

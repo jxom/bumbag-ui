@@ -16,7 +16,7 @@ export type LocalButtonCloseProps = {
 export type ButtonCloseProps = ButtonProps & LocalButtonCloseProps;
 
 const useProps = createHook<ButtonCloseProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { iconProps, label, ...restProps } = props;
     const buttonProps = Button.useProps(restProps);
 
@@ -24,7 +24,6 @@ const useProps = createHook<ButtonCloseProps>(
       style: styles.ButtonClose,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: buttonProps.className,
     });
 

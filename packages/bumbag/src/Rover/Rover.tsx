@@ -11,7 +11,7 @@ export type LocalRoverProps = {};
 export type RoverProps = BoxProps & ReakitRoverProps & LocalRoverProps;
 
 const useProps = createHook<Partial<RoverProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const roverContext = React.useContext(RoverContext);
     props = { ...props, ...roverContext.rover };
 
@@ -67,7 +67,6 @@ const useProps = createHook<Partial<RoverProps>>(
       style: styles.Rover,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

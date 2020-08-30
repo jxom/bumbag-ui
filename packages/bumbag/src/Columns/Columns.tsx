@@ -21,14 +21,13 @@ export type LocalColumnsProps = {
 export type ColumnsProps = FlexProps & LocalColumnsProps;
 
 const useProps = createHook<ColumnsProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
 
     const className = useClassName({
       style: styles.Columns,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 

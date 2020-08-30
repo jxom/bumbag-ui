@@ -15,7 +15,7 @@ export type LocalModalBackdropProps = {};
 export type ModalBackdropProps = BoxProps & ReakitDialogBackdropProps & LocalModalBackdropProps;
 
 const useProps = createHook<ModalBackdropProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const modalContext = React.useContext(ModalContext);
     props = { ...props, ...modalContext.modal };
 
@@ -37,7 +37,6 @@ const useProps = createHook<ModalBackdropProps>(
       style: styles.ModalBackdrop,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

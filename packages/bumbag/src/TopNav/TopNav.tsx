@@ -25,7 +25,7 @@ export const TopNavContext = React.createContext<{
 });
 
 const useProps = createHook<TopNavProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, defaultSelectedId, onChange, overrides, selectedId: _selectedId, ...restProps } = props;
 
     const navigationProps = Navigation.useProps(restProps);
@@ -34,7 +34,6 @@ const useProps = createHook<TopNavProps>(
       style: styles.TopNav,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: navigationProps.className,
     });
 

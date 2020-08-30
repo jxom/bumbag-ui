@@ -21,7 +21,7 @@ export type LocalDropdownMenuItemProps = {
 export type DropdownMenuItemProps = BoxProps & Partial<ReakitMenuItemProps> & LocalDropdownMenuItemProps;
 
 const useProps = createHook<DropdownMenuItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       iconAfter,
       iconAfterProps,
@@ -104,21 +104,18 @@ const useProps = createHook<DropdownMenuItemProps>(
       style: styles.DropdownMenuItem,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const iconBeforeClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isBefore: true },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Icon',
     });
     const iconAfterClassName = useClassName({
       style: styles.DropdownMenuItemIcon,
       styleProps: { ...props, overrides: { ...dropdownMenuOverrides, ...overrides }, isAfter: true },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Icon',
     });
 

@@ -152,7 +152,7 @@ const tags = (props: any): { [key: string]: { Component: BoxProps['use']; props?
 });
 
 const useProps = createHook<MarkdownProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey  }) => {
     const { content, wrap, ...restProps } = props;
 
     const boxProps = Box.useProps(restProps);
@@ -161,7 +161,7 @@ const useProps = createHook<MarkdownProps>(
       style: styles.Markdown,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
+       
       prevClassName: boxProps.className,
     });
 

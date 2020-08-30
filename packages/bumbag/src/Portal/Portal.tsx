@@ -10,14 +10,13 @@ export type LocalPortalProps = {};
 export type PortalProps = BoxProps & ReakitPortalProps & LocalPortalProps;
 
 const useProps = createHook<PortalProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Portal,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

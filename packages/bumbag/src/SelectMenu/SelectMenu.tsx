@@ -90,7 +90,6 @@ export type SelectMenuContextOptions = {
   dropdownMenu?: any;
   overrides?: any;
   themeKey?: string;
-  themeKeyOverride?: string;
 };
 
 export const SelectMenuContext = React.createContext<SelectMenuContextOptions>({});
@@ -127,7 +126,7 @@ function reducer(state, event) {
 }
 
 const useProps = createHook<SelectMenuProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       buttonProps,
       cacheKey,
@@ -188,21 +187,18 @@ const useProps = createHook<SelectMenuProps>(
       style: styles.SelectMenu,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const dropdownMenuPopoverClassName = useClassName({
       style: styles.SelectMenuPopover,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Popover',
     });
     const selectMenuItemsWrapperClassName = useClassName({
       style: styles.SelectMenuItemsWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'ItemsWrapper',
     });
 
@@ -400,9 +396,8 @@ const useProps = createHook<SelectMenuProps>(
         dropdownMenu,
         overrides,
         themeKey,
-        themeKeyOverride,
       }),
-      [dropdownMenu, overrides, themeKey, themeKeyOverride]
+      [dropdownMenu, overrides, themeKey]
     );
 
     //////////////////////////////////////////////////
@@ -584,34 +579,30 @@ function SelectMenuButton(props: any) {
     ...restProps
   } = props;
 
-  const { dropdownMenu, overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
+  const { dropdownMenu, overrides, themeKey } = React.useContext(SelectMenuContext);
 
   const buttonClassName = useClassName({
     style: styles.SelectMenuButton,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'Button',
   });
   const buttonTextClassName = useClassName({
     style: styles.SelectMenuButtonText,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ButtonText',
   });
   const iconsWrapperClassName = useClassName({
     style: styles.SelectMenuButtonIconsWrapper,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ButtonIconsWrapper',
   });
   const iconClassName = useClassName({
     style: styles.SelectMenuButtonIcon,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ButtonIcon',
   });
 
@@ -666,20 +657,18 @@ function SelectMenuButton(props: any) {
 function SelectMenuSearchInput(props: any) {
   const { onChange, searchInputProps, value, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
+  const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
   const searchInputWrapperClassName = useClassName({
     style: styles.SelectMenuSearchInputWrapper,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'SearchInputWrapper',
   });
   const searchInputClassName = useClassName({
     style: styles.SelectMenuSearchInput,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'SearchInput',
   });
 
@@ -702,13 +691,12 @@ function SelectMenuSearchInput(props: any) {
 function SelectMenuTags(props: any) {
   const { onClearTag, selectedOptions, tagProps, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
+  const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
   const tagsWrapperClassName = useClassName({
     style: styles.SelectMenuTagsWrapper,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'TagsWrapper',
   });
 
@@ -736,12 +724,11 @@ function SelectMenuTags(props: any) {
 function MatchedLabel(props: { label: string; searchText: string; overrides: any }) {
   const { label, searchText, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
+  const { overrides, themeKey } = React.useContext(SelectMenuContext);
   const className = useClassName({
     style: styles.SelectMenuItemText,
     styleProps: props,
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ItemText',
   });
 
@@ -799,20 +786,18 @@ function Loading(props: { loadingText: string; overrides: any }) {
 function ClearButton(props: any) {
   const { buttonProps, onClick, ...restProps } = props;
 
-  const { overrides, themeKey, themeKeyOverride } = React.useContext(SelectMenuContext);
+  const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
   const wrapperClassName = useClassName({
     style: styles.SelectMenuClearButtonWrapper,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ClearButtonWrapper',
   });
   const buttonClassName = useClassName({
     style: styles.SelectMenuClearButton,
     styleProps: { ...props, overrides },
     themeKey,
-    themeKeyOverride,
     themeKeySuffix: 'ClearButton',
   });
 

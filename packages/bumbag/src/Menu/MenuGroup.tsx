@@ -11,7 +11,7 @@ export type LocalMenuGroupProps = { title?: string };
 export type MenuGroupProps = BoxProps & LocalMenuGroupProps;
 
 const useProps = createHook<MenuGroupProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, overrides, title, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -21,14 +21,12 @@ const useProps = createHook<MenuGroupProps>(
       style: styles.MenuGroup,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const titleClassName = useClassName({
       style: styles.MenuGroupTitle,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Title',
       prevClassName: boxProps.className,
     });

@@ -15,14 +15,13 @@ export type LocalHeadingProps = {
 export type HeadingProps = BoxProps & LocalHeadingProps;
 
 const useProps = createHook<HeadingProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props, { disableCSSProps: ['fontSize'] });
 
     const className = useClassName({
       style: styles.Heading,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

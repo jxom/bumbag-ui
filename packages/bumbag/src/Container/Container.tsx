@@ -19,14 +19,13 @@ export type LocalContainerProps = {
 export type ContainerProps = BoxProps & LocalContainerProps;
 
 const useProps = createHook<ContainerProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Container,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

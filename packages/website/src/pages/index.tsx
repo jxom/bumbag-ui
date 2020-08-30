@@ -54,7 +54,7 @@ export default function Index() {
           <Paragraph fontSize={{ default: '400', mobile: '300' }} color="text100" textAlign="center">
             Bumbag is a friendly React UI Kit suitable for MVPs or large-scale applications.
           </Paragraph>
-          <Set verticalBelow="tablet" isFilled spacing="major-2" width={{ mobile: '100%' }}>
+          <Set verticalBelow="mobile" isFilled spacing="major-2" width={{ mobile: '100%' }}>
             <Button use={GatsbyLink} to="/getting-started/" variant="cta" palette="primary">
               Get started
             </Button>

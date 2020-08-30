@@ -12,7 +12,7 @@ export type LocalPageWithSidebarDisclosureProps = {};
 export type PageWithSidebarDisclosureProps = BoxProps & LocalPageWithSidebarDisclosureProps;
 
 const useProps = createHook<PageWithSidebarDisclosureProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const page = usePage();
     const htmlProps = Disclosure.useProps({
       ...props,
@@ -23,7 +23,6 @@ const useProps = createHook<PageWithSidebarDisclosureProps>(
       style: styles.PageWithSidebarDisclosure,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

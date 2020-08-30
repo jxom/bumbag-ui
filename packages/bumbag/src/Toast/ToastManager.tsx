@@ -21,7 +21,7 @@ export type LocalToastManagerProps = {
 export type ToastManagerProps = BoxProps & LocalToastManagerProps;
 
 const useProps = createHook<ToastManagerProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, isStacked, overlayProps, spacing, ...restProps } = props;
 
     const { theme } = useTheme();
@@ -34,14 +34,12 @@ const useProps = createHook<ToastManagerProps>(
       style: styles.Toast,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const overlayClassName = useClassName({
       style: styles.ToastOverlay,
       styleProps: { ...props, placement },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Overlay',
     });
 

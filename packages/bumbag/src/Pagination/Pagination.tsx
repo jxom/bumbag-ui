@@ -33,7 +33,7 @@ export type LocalPaginationProps = {
 export type PaginationProps = BoxProps & LocalPaginationProps;
 
 const useProps = createHook<PaginationProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       currentPage: _currentPage,
       nextButtonProps,
@@ -59,28 +59,24 @@ const useProps = createHook<PaginationProps>(
       style: styles.Pagination,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: setProps.className,
     });
     const buttonClassName = useClassName({
       style: styles.PaginationButton,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Button',
     });
     const selectClassName = useClassName({
       style: styles.PaginationSelect,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Select',
     });
     const prepositionClassName = useClassName({
       style: styles.PaginationPrepositionText,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'PrepositionText',
     });
 

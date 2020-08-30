@@ -26,35 +26,31 @@ export type LocalSpinnerProps = {
 export type SpinnerProps = BoxProps & LocalSpinnerProps;
 
 const useProps = createHook<SpinnerProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.SpinnerWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const spinnerClassName = useClassName({
       style: styles.Spinner,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'vector',
     });
     const trackCircleClassName = useClassName({
       style: styles.TrackCircle,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'trackCircle',
     });
     const loaderCircleClassName = useClassName({
       style: styles.LoaderCircle,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'loaderCircle',
     });
 

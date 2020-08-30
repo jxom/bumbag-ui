@@ -11,7 +11,7 @@ export type LocalTableFootProps = {};
 export type TableFootProps = BoxProps & LocalTableFootProps;
 
 const useProps = createHook<TableFootProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const tableContext = React.useContext(TableContext);
@@ -20,7 +20,6 @@ const useProps = createHook<TableFootProps>(
       style: styles.TableFoot,
       styleProps: { ...tableContext, ...props, overrides: { ...tableContext.overrides, ...props.overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

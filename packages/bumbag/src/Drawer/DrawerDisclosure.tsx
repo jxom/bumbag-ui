@@ -9,14 +9,13 @@ export type LocalDrawerDisclosureProps = {};
 export type DrawerDisclosureProps = ModalDisclosureProps & LocalDrawerDisclosureProps;
 
 const useProps = createHook<Partial<DrawerDisclosureProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const htmlProps = ModalDisclosure.useProps(props);
 
     const className = useClassName({
       style: styles.DrawerDisclosure,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

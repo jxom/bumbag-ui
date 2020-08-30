@@ -22,7 +22,7 @@ export type BreadcrumbContextOptions = { overrides?: BoxProps['overrides'] };
 export const BreadcrumbContext = React.createContext<BreadcrumbContextOptions>({});
 
 const useProps = createHook<BreadcrumbProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { hasSeparator, overrides, separator, ...restProps } = props;
 
     const navigationProps = Navigation.useProps({ ...restProps, overrides });
@@ -31,7 +31,6 @@ const useProps = createHook<BreadcrumbProps>(
       style: styles.Breadcrumb,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: navigationProps.className,
     });
 
@@ -89,7 +88,7 @@ export type LocalBreadcrumbItemProps = {
 export type BreadcrumbItemProps = ListItemProps & LocalBreadcrumbItemProps;
 
 const useBreadcrumbItemProps = createHook<BreadcrumbItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { hasSeparator, isCurrent, overrides, separator, ...restProps } = props;
 
     const boxProps = List.Item.useProps({ ...restProps, overrides });
@@ -99,7 +98,6 @@ const useBreadcrumbItemProps = createHook<BreadcrumbItemProps>(
       style: styles.BreadcrumbItem,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -146,7 +144,7 @@ export type LocalBreadcrumbSeparatorProps = {};
 export type BreadcrumbSeparatorProps = BoxProps & LocalBreadcrumbSeparatorProps;
 
 const useBreadcrumbSeparatorProps = createHook<BreadcrumbSeparatorProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(BreadcrumbContext);
 
@@ -154,7 +152,6 @@ const useBreadcrumbSeparatorProps = createHook<BreadcrumbSeparatorProps>(
       style: styles.BreadcrumbSeparator,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -187,7 +184,7 @@ export type LocalBreadcrumbLinkProps = {
 export type BreadcrumbLinkProps = LinkProps & LocalBreadcrumbLinkProps;
 
 const useBreadcrumbLinkProps = createHook<BreadcrumbLinkProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { isCurrent, ...restProps } = props;
 
     const linkProps = isCurrent ? Text.useProps(restProps) : Link.useProps(restProps);
@@ -197,7 +194,6 @@ const useBreadcrumbLinkProps = createHook<BreadcrumbLinkProps>(
       style: styles.BreadcrumbLink,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: linkProps.className,
     });
 

@@ -30,7 +30,7 @@ export type LocalPageWithSidebarProps = {
 export type PageWithSidebarProps = BoxProps & LocalPageWithSidebarProps;
 
 const useProps = createHook<PageWithSidebarProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       children,
       collapsedSidebarProps,
@@ -51,28 +51,24 @@ const useProps = createHook<PageWithSidebarProps>(
       style: styles.PageWithSidebar,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const sidebarClassName = useClassName({
       style: styles.PageWithSidebarSidebar,
       styleProps: { ...props, collapseBelow, isCollapsed, isSidebarMinimized: sidebarState.isMinimized },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Sidebar',
     });
     const sidebarExpandedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarExpandedWrapper,
       styleProps: { ...props, collapseBelow },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'SidebarExpandedWrapper',
     });
     const sidebarCollapsedWrapperClassName = useClassName({
       style: styles.PageWithSidebarSidebarCollapsedWrapper,
       styleProps: { ...props, collapseBelow },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'SidebarCollapsedWrapper',
     });
     const contentClassName = useClassName({
@@ -85,7 +81,6 @@ const useProps = createHook<PageWithSidebarProps>(
         isSidebarOpen: sidebarState.isOpen,
       },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Content',
     });
 

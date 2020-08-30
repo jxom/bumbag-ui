@@ -10,14 +10,13 @@ export type LocalAutosuggestItemProps = {};
 export type AutosuggestItemProps = BoxProps & DropdownMenuItemProps & LocalAutosuggestItemProps;
 
 const useProps = createHook<AutosuggestItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const dropdownMenuItemProps = DropdownMenuItem.useProps(props);
 
     const className = useClassName({
       style: styles.AutosuggestItem,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: dropdownMenuItemProps.className,
     });
 

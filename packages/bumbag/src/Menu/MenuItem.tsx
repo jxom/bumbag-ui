@@ -20,7 +20,7 @@ export type LocalMenuItemProps = {
 export type MenuItemProps = BoxProps & LocalMenuItemProps;
 
 const useProps = createHook<MenuItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, iconAfter, iconAfterProps, iconBefore, iconBeforeProps, overrides, ...restProps } = props;
     const { rover, overrides: menuOverrides } = React.useContext(MenuContext);
 
@@ -31,21 +31,18 @@ const useProps = createHook<MenuItemProps>(
       style: styles.MenuItem,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const iconBeforeClassName = useClassName({
       style: styles.MenuItemIcon,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides }, isBefore: true },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Icon',
     });
     const iconAfterClassName = useClassName({
       style: styles.MenuItemIcon,
       styleProps: { ...props, overrides: { ...menuOverrides, ...overrides }, isAfter: true },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Icon',
     });
 

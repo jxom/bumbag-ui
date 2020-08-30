@@ -15,14 +15,13 @@ export type LocalCodeProps = {
 export type CodeProps = BoxProps & LocalCodeProps;
 
 const useProps = createHook<CodeProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Code,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

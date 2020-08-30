@@ -82,7 +82,7 @@ export type LocalTooltipContentProps = {
 export type TooltipContentProps = BoxProps & ReakitTooltipProps & LocalTooltipContentProps;
 
 const useTooltipContentProps = createHook<TooltipContentProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let {
       arrowProps,
       children,
@@ -118,7 +118,6 @@ const useTooltipContentProps = createHook<TooltipContentProps>(
       style: styles.TooltipContent,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -172,7 +171,7 @@ export type LocalTooltipReferenceProps = {};
 export type TooltipReferenceProps = BoxProps & ReakitTooltipReferenceProps & LocalTooltipReferenceProps;
 
 const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let { show, hide, unstable_referenceRef, baseId, ...restProps } = props;
 
     const tooltipReferenceProps = useReakitTooltipReference(
@@ -190,7 +189,6 @@ const useTooltipReferenceProps = createHook<TooltipReferenceProps>(
       style: styles.TooltipReference,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -224,7 +222,7 @@ export type LocalTooltipArrowProps = {};
 export type TooltipArrowProps = BoxProps & ReakitTooltipArrowProps & LocalTooltipArrowProps;
 
 const useTooltipArrowProps = createHook<TooltipArrowProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let { unstable_arrowRef, unstable_arrowStyles, placement, size, ...restProps } = props;
 
     const tooltipArrowProps = useReakitTooltipArrow(
@@ -242,7 +240,6 @@ const useTooltipArrowProps = createHook<TooltipArrowProps>(
       style: styles.TooltipArrow,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

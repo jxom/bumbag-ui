@@ -11,14 +11,13 @@ export type LocalToastProps = {
 export type ToastProps = AlertProps & LocalToastProps;
 
 const useProps = createHook<ToastProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const alertProps = Alert.useProps(props, { themeKey: 'Toast' });
 
     const className = useClassName({
       style: styles.Toast,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: alertProps.className,
     });
 

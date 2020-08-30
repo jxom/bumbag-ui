@@ -23,7 +23,7 @@ export const TabsContext = React.createContext<{ tabs: Partial<TabStateReturn>; 
 });
 
 const useProps = createHook<TabsProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { baseId, children, loop, manual, orientation, overrides, selectedId, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -33,7 +33,6 @@ const useProps = createHook<TabsProps>(
       style: styles.Tabs,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

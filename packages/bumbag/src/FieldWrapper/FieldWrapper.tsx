@@ -44,7 +44,7 @@ export type FieldElementProps = {
 };
 
 const useProps = createHook<FieldWrapperProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       children,
       description,
@@ -65,28 +65,24 @@ const useProps = createHook<FieldWrapperProps>(
       style: styles.FieldWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const labelClassName = useClassName({
       style: styles.Label,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Label',
     });
     const descriptionClassName = useClassName({
       style: styles.DescriptionText,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'DescriptionText',
     });
     const hintClassName = useClassName({
       style: styles.HintText,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'HintText',
     });
     const optionalClassName = useClassName({

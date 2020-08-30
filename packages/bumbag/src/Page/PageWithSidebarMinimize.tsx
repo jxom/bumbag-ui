@@ -11,7 +11,7 @@ export type LocalPageWithSidebarMinimizeProps = {};
 export type PageWithSidebarMinimizeProps = BoxProps & LocalPageWithSidebarMinimizeProps;
 
 const useProps = createHook<PageWithSidebarMinimizeProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const page = usePage();
     const htmlProps = Box.useProps(props);
 
@@ -19,7 +19,6 @@ const useProps = createHook<PageWithSidebarMinimizeProps>(
       style: styles.PageWithSidebarMinimize,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 

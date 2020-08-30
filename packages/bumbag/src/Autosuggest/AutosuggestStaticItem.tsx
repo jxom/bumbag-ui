@@ -9,14 +9,13 @@ export type LocalAutosuggestStaticItemProps = {};
 export type AutosuggestStaticItemProps = BoxProps & LocalAutosuggestStaticItemProps;
 
 const useProps = createHook<AutosuggestStaticItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.AutosuggestStaticItem,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

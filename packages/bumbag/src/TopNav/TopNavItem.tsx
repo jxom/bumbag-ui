@@ -19,7 +19,7 @@ export type LocalTopNavItemProps = {
 export type TopNavItemProps = ListItemProps & LocalTopNavItemProps;
 
 const useProps = createHook<TopNavItemProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, href, isActive, navId, onClick, overrides, ...restProps } = props;
 
     let htmlProps;
@@ -38,7 +38,6 @@ const useProps = createHook<TopNavItemProps>(
         overrides: { ...topNavOverrides, ...overrides },
       },
       themeKey,
-      themeKeyOverride,
     });
 
     return {

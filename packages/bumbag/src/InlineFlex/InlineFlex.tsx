@@ -10,14 +10,13 @@ export type LocalInlineFlexProps = {};
 export type InlineFlexProps = BoxProps & LocalInlineFlexProps;
 
 const useProps = createHook<InlineFlexProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.InlineFlex,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

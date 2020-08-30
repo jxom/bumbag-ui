@@ -9,14 +9,13 @@ export type LocalLinkInlineProps = {};
 export type LinkInlineProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkInlineProps;
 
 const useProps = createHook<LinkInlineProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.LinkInline,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

@@ -13,7 +13,7 @@ export type LocalTabsPanelProps = {
 export type TabsPanelProps = BoxProps & Partial<ReakitTabPanelProps> & LocalTabsPanelProps;
 
 const useProps = createHook<TabsPanelProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     let {
       baseId,
       id,
@@ -58,7 +58,6 @@ const useProps = createHook<TabsPanelProps>(
       style: styles.TabsPanel,
       styleProps: { props, overrides: { ...tabOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

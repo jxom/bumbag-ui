@@ -36,7 +36,7 @@ export type LocalRadioProps = {
 export type RadioProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalRadioProps;
 
 const useProps = createHook<RadioProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       autoFocus,
       checked,
@@ -62,28 +62,24 @@ const useProps = createHook<RadioProps>(
       style: styles.Radio,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const radioIconClassName = useClassName({
       style: styles.RadioIcon,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Icon',
     });
     const hiddenRadioClassName = useClassName({
       style: styles.HiddenRadio,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'HiddenInput',
     });
     const radioLabelClassName = useClassName({
       style: styles.RadioLabel,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Label',
     });
 

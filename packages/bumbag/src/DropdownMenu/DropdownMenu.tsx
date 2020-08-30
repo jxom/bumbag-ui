@@ -26,7 +26,7 @@ export const DropdownMenuContext = React.createContext<{
 });
 
 const useProps = createHook<DropdownMenuProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { baseId, children, menu, overrides, visible, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -41,7 +41,6 @@ const useProps = createHook<DropdownMenuProps>(
       style: styles.DropdownMenu,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

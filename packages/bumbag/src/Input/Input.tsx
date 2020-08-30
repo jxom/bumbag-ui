@@ -71,14 +71,13 @@ export type LocalInputProps = {
 export type InputProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & LocalInputProps;
 
 const useProps = createHook<InputProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { before, after, inputProps, inputRef, isLoading, isRequired, state, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.InputWrapper,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Wrapper',
       prevClassName: restProps.className,
     });
@@ -86,7 +85,6 @@ const useProps = createHook<InputProps>(
       style: styles.InputSpinner,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Spinner',
     });
     const boxProps = Box.useProps({
@@ -116,7 +114,6 @@ const useProps = createHook<InputProps>(
       style: styles.Input,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -181,7 +178,7 @@ export type LocalInputFieldProps = {
 export type InputFieldProps = BoxProps & FieldWrapperProps & InputProps & LocalInputFieldProps;
 
 const useInputFieldProps = createHook<InputFieldProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       addonAfter,
       addonBefore,
@@ -233,14 +230,12 @@ const useInputFieldProps = createHook<InputFieldProps>(
       style: styles.InputField,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const groupClassName = useClassName({
       style: styles.InputFieldGroup,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Group',
     });
 

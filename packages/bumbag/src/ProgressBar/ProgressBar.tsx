@@ -27,7 +27,7 @@ function normalizeValue(value: number, maxValue: number) {
 }
 
 const useProps = createHook<ProgressBarProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { maxValue, value, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -40,14 +40,12 @@ const useProps = createHook<ProgressBarProps>(
       style: styles.ProgressBar,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const indicatorClassName = useClassName({
       style: styles.ProgressBarIndicator,
       styleProps: { ...props, value: percent },
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Indicator',
       prevClassName: boxProps.className,
     });

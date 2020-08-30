@@ -9,14 +9,13 @@ export type LocalLinkBlockProps = {};
 export type LinkBlockProps = BoxProps & React.LinkHTMLAttributes<any> & LocalLinkBlockProps;
 
 const useProps = createHook<LinkBlockProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.LinkBlock,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

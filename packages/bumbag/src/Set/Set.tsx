@@ -19,14 +19,13 @@ export type LocalSetProps = {
 export type SetProps = BoxProps & LocalSetProps;
 
 const useProps = createHook<SetProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
 
     const className = useClassName({
       style: styles.Set,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

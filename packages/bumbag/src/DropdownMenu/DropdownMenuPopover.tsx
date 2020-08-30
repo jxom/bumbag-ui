@@ -12,7 +12,7 @@ export type LocalDropdownMenuPopoverProps = {
 export type DropdownMenuPopoverProps = BoxProps & ReakitMenuProps & LocalDropdownMenuPopoverProps;
 
 const useProps = createHook<DropdownMenuPopoverProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       baseId,
       currentId,
@@ -89,7 +89,6 @@ const useProps = createHook<DropdownMenuPopoverProps>(
       style: [styles.DropdownMenuPopover, popoverStyles],
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

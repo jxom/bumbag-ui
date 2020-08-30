@@ -21,7 +21,7 @@ export const MenuContext = React.createContext<{
 });
 
 const useProps = createHook<MenuProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { baseId, children, overrides, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -31,7 +31,6 @@ const useProps = createHook<MenuProps>(
       style: styles.Menu,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

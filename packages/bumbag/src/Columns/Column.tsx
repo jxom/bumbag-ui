@@ -25,7 +25,7 @@ export type LocalColumnProps = {
 export type ColumnProps = BoxProps & LocalColumnProps;
 
 const useProps = createHook<ColumnProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
     const columnsContext = React.useContext(ColumnsContext);
 
@@ -33,7 +33,6 @@ const useProps = createHook<ColumnProps>(
       style: styles.Column,
       styleProps: { ...props, ...columnsContext },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

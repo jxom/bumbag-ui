@@ -42,7 +42,7 @@ export type DialogContextOptions = DialogProps & { descriptionId?: string; title
 export const DialogContext = React.createContext<DialogContextOptions>({});
 
 const useProps = createHook<DialogProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const {
       actionButtonsProps = {},
       closeButtonProps = {},
@@ -64,14 +64,12 @@ const useProps = createHook<DialogProps>(
       style: styles.Dialog,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
     const dialogCloseClassName = useClassName({
       style: styles.DialogClose,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       themeKeySuffix: 'Close',
       prevClassName: closeButtonProps.className,
     });
@@ -152,7 +150,7 @@ export type LocalDialogContentProps = {};
 export type DialogContentProps = FlexProps & LocalDialogContentProps;
 
 const useDialogContentProps = createHook<DialogContentProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
@@ -160,7 +158,6 @@ const useDialogContentProps = createHook<DialogContentProps>(
       style: styles.DialogContent,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 
@@ -191,7 +188,7 @@ export type LocalDialogHeaderProps = {};
 export type DialogHeaderProps = BoxProps & LocalDialogHeaderProps;
 
 const useDialogHeaderProps = createHook<DialogHeaderProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
@@ -199,7 +196,6 @@ const useDialogHeaderProps = createHook<DialogHeaderProps>(
       style: styles.DialogHeader,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 
@@ -230,7 +226,7 @@ export type LocalDialogTitleProps = {};
 export type DialogTitleProps = TextProps & LocalDialogTitleProps;
 
 const useDialogTitleProps = createHook<DialogTitleProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const textProps = Text.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
@@ -238,7 +234,6 @@ const useDialogTitleProps = createHook<DialogTitleProps>(
       style: styles.DialogTitle,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: textProps.className,
     });
 
@@ -272,7 +267,7 @@ export type LocalDialogFooterProps = {};
 export type DialogFooterProps = FlexProps & LocalDialogFooterProps;
 
 const useDialogFooterProps = createHook<DialogFooterProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const flexProps = Flex.useProps(props);
     const contextProps = React.useContext(DialogContext);
 
@@ -280,7 +275,6 @@ const useDialogFooterProps = createHook<DialogFooterProps>(
       style: styles.DialogFooter,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: flexProps.className,
     });
 
@@ -313,7 +307,7 @@ export type LocalDialogIconProps = {
 export type DialogIconProps = TextProps & LocalDialogIconProps;
 
 const useDialogIconProps = createHook<DialogIconProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { iconProps, ...restProps } = props;
 
     const textProps = Text.useProps(restProps);
@@ -323,7 +317,6 @@ const useDialogIconProps = createHook<DialogIconProps>(
       style: styles.DialogIconWrapper,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: textProps.className,
     });
 
@@ -379,7 +372,7 @@ export type LocalDialogModalProps = {
 export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
 
 const useDialogModalProps = createHook<DialogModalProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { modal } = React.useContext(ModalContext);
     const { variant, ...restProps } = { ...modal, ...props };
 
@@ -408,7 +401,6 @@ const useDialogModalProps = createHook<DialogModalProps>(
       style: styles.DialogModal,
       styleProps: { ...contextProps, ...props },
       themeKey,
-      themeKeyOverride,
       prevClassName: dialogProps.className,
     });
 

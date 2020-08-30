@@ -9,19 +9,17 @@ export function useClassName({
   prevClassName,
   styleProps,
   themeKey,
-  themeKeyOverride,
   themeKeySuffix,
 }: {
   style: any;
   prevClassName?: string;
   styleProps: any;
   themeKey?: string;
-  themeKeyOverride?: string;
   themeKeySuffix?: string;
 }) {
   const { theme } = useTheme();
 
-  let newThemeKey = `${themeKeyOverride || themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
+  let newThemeKey = `${themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`;
   const stringifiedStyleProps = Object.values(styleProps)
     .filter((styleProp) => typeof styleProp !== 'function')
     .join('.');
@@ -37,14 +35,10 @@ export function useClassName({
     return className;
   }, [props, style]);
 
-  const originalThemeKey = themeKeyOverride
-    ? `${themeKey || ''}${themeKeySuffix ? `.${themeKeySuffix}` : ''}`
-    : undefined;
   const classNames = buildClassNames(
     ...className,
     prevClassName,
-    newThemeKey ? `bb-${newThemeKey.replace(/\./g, '')}` : undefined,
-    originalThemeKey ? `bb-${originalThemeKey.replace(/\./g, '')}` : undefined
+    newThemeKey ? `bb-${newThemeKey.replace(/\./g, '')}` : undefined
   );
   const uniqueClassNames = _uniq(classNames.split(' ')).join(' ');
   return uniqueClassNames;

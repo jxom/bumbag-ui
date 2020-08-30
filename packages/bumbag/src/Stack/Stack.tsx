@@ -16,7 +16,7 @@ export type LocalStackProps = {
 export type StackProps = BoxProps & LocalStackProps;
 
 const useProps = createHook<StackProps>(
-  (props = {}, { themeKey, themeKeyOverride }) => {
+  (props = {}, { themeKey }) => {
     const { orientation, spacing, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
@@ -24,7 +24,6 @@ const useProps = createHook<StackProps>(
       style: styles.Stack,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

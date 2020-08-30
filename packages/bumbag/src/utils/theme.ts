@@ -18,11 +18,17 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
     const defaultTheme = get(props, `theme.${selector}`) || defaultValue;
-    const defaultThemeOverrides = get(props, `overrides.${selector}`);
     const variantTheme = get(props, `theme.${variantSelector}`);
-    const variantThemeOverrides = get(props, `overrides.${variantSelector}`);
     const colorModeTheme = get(props, `theme.${colorModeSelector}`);
-    const colorModeThemeOverrides = get(props, `overrides.${colorModeSelector}`);
+
+    let defaultThemeOverrides;
+    let variantThemeOverrides;
+    let colorModeThemeOverrides;
+    if (props.overrides) {
+      defaultThemeOverrides = get(props, `overrides.${selector}`);
+      variantThemeOverrides = get(props, `overrides.${variantSelector}`);
+      colorModeThemeOverrides = get(props, `overrides.${colorModeSelector}`);
+    }
 
     if (path && path.includes('styles')) {
       const defaultThemeValue = isFunction(defaultTheme) ? defaultTheme(props) : defaultTheme;

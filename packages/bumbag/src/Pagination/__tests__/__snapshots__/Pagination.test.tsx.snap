@@ -262,7 +262,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -275,11 +275,11 @@ exports[`defaultProps should render correctly for className 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -334,7 +334,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -359,7 +359,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -416,6 +416,63 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
 
 .emotion-21 {
   font-weight: 600;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default,#000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900,#000000);
+}
+
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-4 {
+  background-color: unset;
+  border: unset;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: unset;
+}
+
+.emotion-4:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.emotion-4:hover:active {
+  background-color: rgba(0,0,0,0.1);
 }
 
 .emotion-3 {
@@ -490,71 +547,6 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-4[disabled],
-.emotion-4[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-4 {
-  background-color: unset;
-  border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  box-shadow: unset;
-}
-
-.emotion-4:hover {
-  background-color: rgba(0,0,0,0.05);
-}
-
-.emotion-4:hover:active {
-  background-color: rgba(0,0,0,0.1);
-}
-
 .emotion-26 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -586,10 +578,6 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-26 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-26[disabled],
@@ -631,6 +619,10 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   background-color: rgba(0,0,0,0.1);
 }
 
+.emotion-7 {
+  background-color: var(--bb-palette-red,#ff0000);
+}
+
 <div
   class="emotion-18 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
@@ -643,7 +635,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -656,11 +648,11 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -715,7 +707,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -740,7 +732,7 @@ exports[`overrides Pagination.Button.styles.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1016,7 +1008,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1029,11 +1021,11 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -1088,7 +1080,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1113,7 +1105,7 @@ exports[`overrides Pagination.PrepositionText.styles.base should render correctl
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1268,6 +1260,39 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   pointer-events: none;
 }
 
+.emotion-8 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text,#000000);
+  height: 2.75em;
+  padding: 0.4em 2em 0.4em 0.8em;
+  line-height: 1.5;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
+  background: var(--bb-palette-white700,#000000);
+  box-shadow: unset;
+}
+
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
+}
+
+.emotion-8:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+}
+
 .emotion-26 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1344,43 +1369,6 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   background-color: var(--bb-palette-red,#ff0000);
 }
 
-.emotion-8 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
-  line-height: 1.5;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-8[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
-}
-
-.emotion-8:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-8 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
   class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
@@ -1393,7 +1381,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1406,11 +1394,11 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -1465,7 +1453,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1490,7 +1478,7 @@ exports[`overrides Pagination.Select.styles.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1766,7 +1754,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -1779,11 +1767,11 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -1838,7 +1826,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -1863,7 +1851,7 @@ exports[`overrides Pagination.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2135,7 +2123,7 @@ exports[`props should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2148,11 +2136,11 @@ exports[`props should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -2207,7 +2195,7 @@ exports[`props should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2232,7 +2220,7 @@ exports[`props should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2508,7 +2496,7 @@ exports[`props should render correctly with CSS props 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2521,11 +2509,11 @@ exports[`props should render correctly with CSS props 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -2580,7 +2568,7 @@ exports[`props should render correctly with CSS props 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2605,7 +2593,7 @@ exports[`props should render correctly with CSS props 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2818,7 +2806,7 @@ exports[`props should render correctly with currentPage 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -2831,11 +2819,11 @@ exports[`props should render correctly with currentPage 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -2890,7 +2878,7 @@ exports[`props should render correctly with currentPage 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -2915,7 +2903,7 @@ exports[`props should render correctly with currentPage 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3189,7 +3177,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3202,11 +3190,11 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -3261,7 +3249,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -3286,7 +3274,7 @@ exports[`props should render correctly with nextButtonProps 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3558,7 +3546,7 @@ exports[`props should render correctly with nextText 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3571,11 +3559,11 @@ exports[`props should render correctly with nextText 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -3630,7 +3618,7 @@ exports[`props should render correctly with nextText 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -3655,7 +3643,7 @@ exports[`props should render correctly with nextText 1`] = `
     Next page
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3927,7 +3915,7 @@ exports[`props should render correctly with prepositionText 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -3940,11 +3928,11 @@ exports[`props should render correctly with prepositionText 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -3999,7 +3987,7 @@ exports[`props should render correctly with prepositionText 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4024,7 +4012,7 @@ exports[`props should render correctly with prepositionText 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4288,7 +4276,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4301,11 +4289,11 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -4360,7 +4348,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4385,7 +4373,7 @@ exports[`props should render correctly with previousButtonProps 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4657,7 +4645,7 @@ exports[`props should render correctly with previousText 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -4670,11 +4658,11 @@ exports[`props should render correctly with previousText 1`] = `
     Prev page
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -4729,7 +4717,7 @@ exports[`props should render correctly with previousText 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -4754,7 +4742,7 @@ exports[`props should render correctly with previousText 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5030,7 +5018,7 @@ exports[`props should render correctly with selectProps 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5043,11 +5031,11 @@ exports[`props should render correctly with selectProps 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-16 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-16 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -5102,7 +5090,7 @@ exports[`props should render correctly with selectProps 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5127,7 +5115,7 @@ exports[`props should render correctly with selectProps 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5184,6 +5172,63 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
 
 .emotion-21 {
   font-weight: 600;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bb-palette-default,#000000);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  min-height: 2.75rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
+  border: 1px solid var(--bb-palette-white900,#000000);
+}
+
+.emotion-4[disabled],
+.emotion-4[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  outline: unset;
+  pointer-events: unset;
+}
+
+.emotion-4 {
+  background-color: unset;
+  border: unset;
+  color: var(--bb-palette-defaultInverted,#000000);
+  fill: var(--bb-palette-defaultInverted,#000000);
+  box-shadow: unset;
+}
+
+.emotion-4:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.emotion-4:hover:active {
+  background-color: rgba(0,0,0,0.1);
 }
 
 .emotion-3 {
@@ -5258,71 +5303,6 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-7 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--bb-palette-default,#000000);
-  border-radius: 6px;
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.05);
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  min-height: 2.75rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 1rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
-  border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
-.emotion-4[disabled],
-.emotion-4[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
-  outline: unset;
-  pointer-events: unset;
-}
-
-.emotion-4 {
-  background-color: unset;
-  border: unset;
-  color: var(--bb-palette-defaultInverted,#000000);
-  fill: var(--bb-palette-defaultInverted,#000000);
-  box-shadow: unset;
-}
-
-.emotion-4:hover {
-  background-color: rgba(0,0,0,0.05);
-}
-
-.emotion-4:hover:active {
-  background-color: rgba(0,0,0,0.1);
-}
-
 .emotion-26 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5354,10 +5334,6 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   -webkit-transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   transition: box-shadow 0.1s ease-in-out 0s,border 0.1s,background-color 0.1s;
   border: 1px solid var(--bb-palette-white900,#000000);
-}
-
-.emotion-26 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 .emotion-26[disabled],
@@ -5399,6 +5375,10 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   background-color: rgba(0,0,0,0.1);
 }
 
+.emotion-7 {
+  background-color: var(--bb-palette-red,#ff0000);
+}
+
 <div
   class="emotion-18 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
@@ -5411,7 +5391,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5424,11 +5404,11 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -5483,7 +5463,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5508,7 +5488,7 @@ exports[`theming Pagination.Button.styles.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5784,7 +5764,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -5797,11 +5777,11 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -5856,7 +5836,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -5881,7 +5861,7 @@ exports[`theming Pagination.PrepositionText.styles.base should render correctly 
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -6036,6 +6016,39 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   pointer-events: none;
 }
 
+.emotion-8 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
+  border: 1px solid var(--bb-palette-white900,#000000);
+  border-radius: 6px;
+  color: var(--bb-palette-text,#000000);
+  height: 2.75em;
+  padding: 0.4em 2em 0.4em 0.8em;
+  line-height: 1.5;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled="true"] {
+  background: var(--bb-palette-white700,#000000);
+  box-shadow: unset;
+}
+
+.emotion-8[disabled] + .bb-Icon {
+  color: var(--bb-palette-gray400,#000000);
+  fill: var(--bb-palette-gray400,#000000);
+}
+
+.emotion-8:focus {
+  outline: unset;
+  z-index: 2;
+  border-color: var(--bb-palette-primary,#000000);
+  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+}
+
 .emotion-26 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6112,43 +6125,6 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   background-color: var(--bb-palette-red,#ff0000);
 }
 
-.emotion-8 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
-  height: 2.75em;
-  padding: 0.4em 2em 0.4em 0.8em;
-  line-height: 1.5;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
-}
-
-.emotion-8[disabled],
-.emotion-8[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
-  box-shadow: unset;
-}
-
-.emotion-8[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
-}
-
-.emotion-8:focus {
-  outline: unset;
-  z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
-}
-
-.emotion-8 {
-  background-color: var(--bb-palette-red,#ff0000);
-}
-
 <div
   class="emotion-7 emotion-31 emotion-1 emotion-2 bb-Box bb-Set bb-Pagination"
 >
@@ -6161,7 +6137,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -6174,11 +6150,11 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-18 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -6233,7 +6209,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -6258,7 +6234,7 @@ exports[`theming Pagination.Select.styles.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -6534,7 +6510,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-3 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >
@@ -6547,11 +6523,11 @@ exports[`theming Pagination.base should render correctly 1`] = `
     Previous
   </button>
   <div
-    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-PaginationSelectWrapper bb-SelectWrapper bb-Box"
+    class="emotion-1 emotion-2 emotion-17 emotion-7 bb-PaginationSelect bb-SelectWrapper bb-Box"
   >
     <select
       aria-invalid="false"
-      class="emotion-8 emotion-1 emotion-2 bb-Box bb-PaginationSelect bb-Select"
+      class="emotion-8 emotion-1 emotion-2 bb-Box bb-Select"
     >
       <option
         value="0"
@@ -6606,7 +6582,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-PaginationSelectIcon bb-SelectIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-14 bb-SelectIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 448 512"
     >
@@ -6631,7 +6607,7 @@ exports[`theming Pagination.base should render correctly 1`] = `
     Next
     <svg
       aria-hidden="true"
-      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-PaginationButtonIcon bb-ButtonIcon bb-Box bb-Icon"
+      class="emotion-0 emotion-1 emotion-2 emotion-25 bb-ButtonIcon bb-Box bb-Icon"
       role="img"
       viewBox="0 0 320 512"
     >

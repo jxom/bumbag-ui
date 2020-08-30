@@ -12,14 +12,13 @@ export type LocalDrawerProps = {
 export type DrawerProps = ModalProps & LocalDrawerProps;
 
 const useProps = createHook<Partial<DrawerProps>>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const modalProps = Modal.useProps({ ...props }, { themeKey: 'Drawer' });
 
     const className = useClassName({
       style: styles.Drawer,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: modalProps.className,
     });
 

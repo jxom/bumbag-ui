@@ -11,7 +11,7 @@ export type LocalTopNavSectionProps = {};
 export type TopNavSectionProps = ListProps & LocalTopNavSectionProps;
 
 const useProps = createHook<TopNavSectionProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { children, overrides, title, ...restProps } = props;
 
     const listProps = List.useProps({ ...restProps, orientation: 'horizontal' });
@@ -22,7 +22,6 @@ const useProps = createHook<TopNavSectionProps>(
       style: styles.TopNavSection,
       styleProps: { ...props, overrides: { ...topNavOverrides, ...overrides } },
       themeKey,
-      themeKeyOverride,
       prevClassName: listProps.className,
     });
 

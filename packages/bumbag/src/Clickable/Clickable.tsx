@@ -9,7 +9,7 @@ export type LocalClickableProps = {};
 export type ClickableProps = BoxProps & ReakitClickableProps & LocalClickableProps;
 
 const useProps = createHook<ClickableProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace, ...restProps } = props;
     const clickableProps = useReakitClickable(
       { disabled, focusable, unstable_clickOnEnter, unstable_clickOnSpace },
@@ -21,7 +21,6 @@ const useProps = createHook<ClickableProps>(
       style: styles.Clickable,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: boxProps.className,
     });
 

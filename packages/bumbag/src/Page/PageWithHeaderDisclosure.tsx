@@ -12,7 +12,7 @@ export type LocalPageWithHeaderDisclosureProps = {};
 export type PageWithHeaderDisclosureProps = BoxProps & LocalPageWithHeaderDisclosureProps;
 
 const useProps = createHook<PageWithHeaderDisclosureProps>(
-  (props, { themeKey, themeKeyOverride }) => {
+  (props, { themeKey }) => {
     const page = usePage();
     const htmlProps = Disclosure.useProps({
       ...props,
@@ -23,7 +23,6 @@ const useProps = createHook<PageWithHeaderDisclosureProps>(
       style: styles.PageWithHeaderDisclosure,
       styleProps: props,
       themeKey,
-      themeKeyOverride,
       prevClassName: htmlProps.className,
     });
 
