@@ -87,9 +87,9 @@ The list below is a guide (or checklist) to creating a new Bumbag component. You
     };
     ```
 
-  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L9)
+  [A realistic example](https://github.com/bumbag/bumbag-ui/blob/master/packages/bumbag/src/Button/Button.tsx#L15)
 
-  Ensure **Typescript prop types** are exported:
+  Ensure **TypeScript prop types** are exported:
 
   > The difference between this, and **local prop types** is that it extends the local prop types to provide HTML/style based props that can belong on the component. Generally, you want to extend the type which the component inherits (if the component inherits the `<Button>` component, then you extend off `ButtonProps` - in the "realistic example" above, `<Button>` extends off `BoxProps`).
 
@@ -97,7 +97,7 @@ The list below is a guide (or checklist) to creating a new Bumbag component. You
     export type ComponentProps = ButtonProps & LocalComponentProps;
   ```
 
-  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L25)
+  [A realistic example](https://github.com/bumbag/bumbag-ui/blob/master/packages/bumbag/src/Button/Button.tsx#L32)
 
   Ensure the component has a `useProps` function to get it's HTML props.
 
@@ -106,7 +106,7 @@ The list below is a guide (or checklist) to creating a new Bumbag component. You
   - and the `useProps` hook & appropriate `defaultProps` are attached to the component,
   - and the component has a `themeKey`.
 
-  [A realistic example](https://github.com/bumbagui/bumbag/blob/v5/packages/bumbag/src/Button/Button.tsx#L40)
+  [A realistic example](https://github.com/bumbag/bumbag-ui/blob/master/packages/bumbag/src/Button/Button.tsx#L143)
 
 
 - The **component's `styles.ts`**
@@ -154,9 +154,9 @@ The list below is a guide (or checklist) to creating a new Bumbag component. You
 
   Ensure that the component is tested via the [WAVE accessibility plugin](https://wave.webaim.org/extension/)
 
-- Component is exported in [`src/index.ts`](https://github.com/bumbagui/bumbag/blob/master/packages/bumbag/src/index.ts)
+- Component is exported in [`src/index.ts`](https://github.com/bumbag/bumbag-ui/blob/master/packages/bumbag/src/index.ts)
 
-- Component's theme config is added to [`src/types/theme.ts`](https://github.com/bumbagui/bumbag/blob/master/packages/bumbag/src/types/theme.ts)
+- Component's theme config is added to [`src/types/theme.ts`](https://github.com/bumbag/bumbag-ui/blob/master/packages/bumbag/src/types/theme.ts)
 
 ### Website (`packages/website`)
 
