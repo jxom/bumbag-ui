@@ -106,12 +106,8 @@ const useProps = createHook<DialogProps>(
             </DialogContent>
             {(footer || showActionButtons) && (
               <DialogFooter overrides={overrides}>
-                {footer && <Box>{footer}</Box>}
-                {showActionButtons && (
-                  <Box>
-                    <ActionButtons palette={palette} {...actionButtonsProps} />
-                  </Box>
-                )}
+                {footer}
+                {showActionButtons && <ActionButtons palette={palette} {...actionButtonsProps} />}
               </DialogFooter>
             )}
           </React.Fragment>
