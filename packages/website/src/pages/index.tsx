@@ -279,9 +279,6 @@ const linkProps = Link.useProps({
             <Link href="https://localz.com">
               <UsedByImage colorMode={colorMode} src="/localz.png" height="40px" />
             </Link>
-            <Link href="https://mryum.com.au">
-              <UsedByImage colorMode={colorMode} src="/mryum.png" height="80px" />
-            </Link>
             <Link href="https://pory.io">
               <UsedByImage
                 colorMode={colorMode}
