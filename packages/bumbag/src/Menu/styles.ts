@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { palette, space, theme, fontSize, fontWeight } from '../utils';
+import { darken, palette, space, theme, fontSize, fontWeight } from '../utils';
 
 export const Menu = (styleProps) => cssClass`
   padding: ${space(2)(styleProps)}rem 0;
@@ -115,6 +115,39 @@ export const MenuDivider = (styleProps) => cssClass`
 `;
 
 export const MenuGroup = (styleProps) => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+export const MenuCheckboxGroup = (styleProps) => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+export const MenuCheckboxItem = (styleProps) => cssClass`
+  display: flex;
+  align-items: center;
+
+  &[aria-checked="true"] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: ${palette('primary')(styleProps)};
+    }
+  }
+
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
+export const MenuCheckboxItemIconWrapper = (styleProps) => cssClass`
+  margin-right: ${space(1, 'major')(styleProps)}rem;
+  width: 16px;
+
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }

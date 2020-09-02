@@ -8,6 +8,7 @@ import { Set, SetProps } from '../Set';
 
 import { Checkbox, CheckboxProps } from './Checkbox';
 import * as styles from './styles';
+import { addColorModeBodyClassName } from '../ColorMode';
 
 export type LocalCheckboxGroupProps = {
   /** Default value(s) of the checkbox group */
@@ -106,6 +107,7 @@ const useProps = createHook<CheckboxGroupProps>(
               {...option}
               // @ts-ignore
               checked={values ? values.includes(option.value) : false}
+              name={name}
               onBlur={handleBlur}
               onChange={handleChange}
               overrides={overrides}
