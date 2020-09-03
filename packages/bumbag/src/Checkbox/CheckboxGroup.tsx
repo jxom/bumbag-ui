@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
+import { useClassName, createComponent, createElement, createHook, useOptionsState } from '../utils';
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
 import { Checkbox, CheckboxProps } from './Checkbox';
 import * as styles from './styles';
+import { addColorModeBodyClassName } from '../ColorMode';
 
 export type LocalCheckboxGroupProps = {
   /** Default value(s) of the checkbox group */
@@ -63,34 +64,14 @@ const useProps = createHook<CheckboxGroupProps>(
 
     ////////////////////////////////////////////
 
-    const [controlledValue, setControlledValue] = React.useState(defaultValue || []);
-    const values = typeof value !== 'undefined' ? value : controlledValue;
-
-    ////////////////////////////////////////////
-
-    const handleChange = React.useCallback(
-      (e) => {
-        const newValue = e.target.value;
-
-        let newValues = [];
-        if (values.includes(newValue)) {
-          newValues = (values || []).filter((val) => val !== newValue);
-        } else {
-          newValues = [...(values || []), newValue];
-        }
-
-        if (typeof value !== 'undefined') {
-          onChange && onChange(newValues, newValue);
-        } else {
-          setControlledValue(newValues);
-        }
-      },
-      [onChange, value, values]
-    );
-
-    const handleBlur = React.useCallback(() => {
-      onBlur && onBlur(values);
-    }, [onBlur, values]);
+    const { getOptionItemProps } = useOptionsState({
+      defaultValue,
+      onBlur,
+      onChange,
+      type: 'checkbox',
+      value,
+      isNativeInput: true,
+    });
 
     ////////////////////////////////////////////
 
@@ -104,10 +85,8 @@ const useProps = createHook<CheckboxGroupProps>(
             <Checkbox
               key={i}
               {...option}
-              // @ts-ignore
-              checked={values ? values.includes(option.value) : false}
-              onBlur={handleBlur}
-              onChange={handleChange}
+              {...getOptionItemProps({ value: option.value })}
+              name={name}
               overrides={overrides}
               state={state || option.state}
               disabled={disabled || option.disabled}

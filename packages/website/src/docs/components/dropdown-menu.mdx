@@ -78,6 +78,99 @@ You can group your menu by using the `<DropdownMenu.Group>` component.
 </DropdownMenu>
 ```
 
+## Option groups
+
+The `DropdownMenu` component can also have selectable option items which can act as checkbox or radio items.
+
+```live
+###tab=Uncontrolled Example,type=jsx-live
+<DropdownMenu
+  menu={
+    <React.Fragment>
+      <DropdownMenu.OptionGroup
+        defaultValue="asc"
+        title="Sort by"
+        type="radio"
+      >
+        <DropdownMenu.OptionItem value="asc">
+          Ascending
+        </DropdownMenu.OptionItem>
+        <DropdownMenu.OptionItem value="desc">
+          Descending
+        </DropdownMenu.OptionItem>
+      </DropdownMenu.OptionGroup>
+
+      <DropdownMenu.OptionGroup
+        defaultValue={['australia', 'india']}
+        title="Countries"
+        type="checkbox"
+      >
+        <DropdownMenu.OptionItem value="australia">
+          Australia
+        </DropdownMenu.OptionItem>
+        <DropdownMenu.OptionItem value="us">
+          United States
+        </DropdownMenu.OptionItem>
+        <DropdownMenu.OptionItem value="india">
+          India
+        </DropdownMenu.OptionItem>
+      </DropdownMenu.OptionGroup>
+    </React.Fragment>
+  }
+>
+  <Button iconAfter="chevron-down">Filters</Button>
+</DropdownMenu>
+###
+
+###tab=Controlled Example,type=function-live
+function Example() {
+  const [sortBy, setSortBy] = React.useState('asc');
+  const [countries, setCountries] = React.useState(['australia', 'india']);
+
+  return (
+    <DropdownMenu
+      menu={
+        <React.Fragment>
+          <DropdownMenu.OptionGroup
+            onChange={setSortBy}
+            value={sortBy}
+            title="Sort by"
+            type="radio"
+          >
+            <DropdownMenu.OptionItem value="asc">
+              Ascending
+            </DropdownMenu.OptionItem>
+            <DropdownMenu.OptionItem value="desc">
+              Descending
+            </DropdownMenu.OptionItem>
+          </DropdownMenu.OptionGroup>
+
+          <DropdownMenu.OptionGroup
+            onChange={setCountries}
+            value={countries}
+            title="Countries"
+            type="checkbox"
+          >
+            <DropdownMenu.OptionItem value="australia">
+              Australia
+            </DropdownMenu.OptionItem>
+            <DropdownMenu.OptionItem value="us">
+              United States
+            </DropdownMenu.OptionItem>
+            <DropdownMenu.OptionItem value="india">
+              India
+            </DropdownMenu.OptionItem>
+          </DropdownMenu.OptionGroup>
+        </React.Fragment>
+      }
+    >
+      <Button iconAfter="chevron-down">Filters</Button>
+    </DropdownMenu>
+  );
+}
+###
+```
+
 ## Accessibility
 
 The `<DropdownMenu>` component follows the [WAI ARIA Menu Pattern](https://www.w3.org/TR/wai-aria-practices/#menu).

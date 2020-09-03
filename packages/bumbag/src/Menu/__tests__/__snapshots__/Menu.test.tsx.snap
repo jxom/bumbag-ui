@@ -17,7 +17,6 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -167,7 +166,6 @@ exports[`overrides Menu.Divider.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -313,7 +311,6 @@ exports[`overrides Menu.Group.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -459,7 +456,6 @@ exports[`overrides Menu.Item.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -671,7 +667,6 @@ a.emotion-4:hover {
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -759,7 +754,6 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -905,7 +899,6 @@ exports[`props should render correctly for CSS props 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1055,7 +1048,6 @@ exports[`props should render correctly for an invisible dropdown menu 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1184,6 +1176,8 @@ a.emotion-4:hover {
 </div>
 `;
 
+exports[`props should render correctly with controlled option groups 1`] = `null`;
+
 exports[`props should render correctly with groups 1`] = `
 .emotion-1 {
   margin: unset;
@@ -1201,7 +1195,6 @@ exports[`props should render correctly with groups 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1326,6 +1319,247 @@ a.emotion-4:hover {
       viewBox="0 0 0 0"
     />
     Delete
+  </div>
+</div>
+`;
+
+exports[`props should render correctly with uncontrolled option groups 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-58 {
+  width: 100%;
+}
+
+.emotion-10 {
+  background-color: unset;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 0.375rem 1rem;
+  text-align: left;
+  width: 100%;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+a.emotion-10 {
+  color: unset;
+  fill: unset;
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+}
+
+a.emotion-10:hover {
+  color: unset;
+  fill: unset;
+}
+
+.emotion-10[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-10:not(:disabled):focus {
+  outline: unset;
+  background-color: var(--bb-palette-white600,#000000);
+}
+
+.emotion-10:not(:disabled):hover {
+  background-color: var(--bb-palette-white600,#000000);
+}
+
+.emotion-10:not(:disabled):focus:active,
+.emotion-10:not(:disabled):hover:active {
+  background-color: var(--bb-palette-white700,#000000);
+}
+
+.emotion-10 .bb-Icon {
+  vertical-align: -0.125em;
+}
+
+.emotion-3 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.emotion-21 + .emotion-21 {
+  margin-top: 1rem;
+}
+
+.emotion-2 {
+  color: var(--bb-palette-text100,#000000);
+  font-size: 0.75rem;
+  font-weight: 600;
+  -webkit-letter-spacing: 0.025em;
+  -moz-letter-spacing: 0.025em;
+  -ms-letter-spacing: 0.025em;
+  letter-spacing: 0.025em;
+  padding: 0.5rem 1rem;
+  padding-top: 0.25rem;
+  text-transform: uppercase;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9[aria-checked="true"] {
+  color: var(--bb-palette-primary,#000000);
+}
+
+.emotion-8 {
+  margin-right: 0.5rem;
+  width: 16px;
+}
+
+<div
+  class="emotion-58 emotion-0 emotion-1 bb-Box bb-Menu"
+  role="menu"
+>
+  <div
+    aria-labelledby="menuTitle"
+    class="emotion-20 emotion-21 emotion-0 emotion-1 bb-Box bb-MenuGroup bb-MenuOptionGroup"
+    role="group"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-MenuGroupTitle"
+      id="menuTitle"
+    >
+      Sort by
+    </div>
+    <div
+      aria-checked="true"
+      class="emotion-9 emotion-10 emotion-0 emotion-1 bb-Box bb-MenuItem bb-MenuOptionItem"
+      id="test"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-8 bb-MenuOptionItemIconWrapper bb-Box"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-3 emotion-0 emotion-1 bb-Box bb-Icon"
+          role="img"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 3c-.28 0-.53.11-.71.29L6 10.59l-3.29-3.3a1.003 1.003 0 00-1.42 1.42l4 4c.18.18.43.29.71.29s.53-.11.71-.29l8-8A1.003 1.003 0 0014 3z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      Ascending
+    </div>
+    <div
+      aria-checked="false"
+      class="emotion-9 emotion-10 emotion-0 emotion-1 bb-Box bb-MenuItem bb-MenuOptionItem"
+      id="test"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-8 bb-MenuOptionItemIconWrapper bb-Box"
+      />
+      Descending
+    </div>
+  </div>
+  <div
+    aria-labelledby="menuTitle"
+    class="emotion-20 emotion-21 emotion-0 emotion-1 bb-Box bb-MenuGroup bb-MenuOptionGroup"
+    role="group"
+  >
+    <div
+      class="emotion-0 emotion-1 emotion-2 bb-Box bb-MenuGroupTitle"
+      id="menuTitle"
+    >
+      Countries
+    </div>
+    <div
+      aria-checked="true"
+      class="emotion-9 emotion-10 emotion-0 emotion-1 bb-Box bb-MenuItem bb-MenuOptionItem"
+      id="test"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-8 bb-MenuOptionItemIconWrapper bb-Box"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-3 emotion-0 emotion-1 bb-Box bb-Icon"
+          role="img"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 3c-.28 0-.53.11-.71.29L6 10.59l-3.29-3.3a1.003 1.003 0 00-1.42 1.42l4 4c.18.18.43.29.71.29s.53-.11.71-.29l8-8A1.003 1.003 0 0014 3z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      Australia
+    </div>
+    <div
+      aria-checked="false"
+      class="emotion-9 emotion-10 emotion-0 emotion-1 bb-Box bb-MenuItem bb-MenuOptionItem"
+      id="test"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-8 bb-MenuOptionItemIconWrapper bb-Box"
+      />
+      United States
+    </div>
+    <div
+      aria-checked="true"
+      class="emotion-9 emotion-10 emotion-0 emotion-1 bb-Box bb-MenuItem bb-MenuOptionItem"
+      id="test"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1 emotion-8 bb-MenuOptionItemIconWrapper bb-Box"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-3 emotion-0 emotion-1 bb-Box bb-Icon"
+          role="img"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 3c-.28 0-.53.11-.71.29L6 10.59l-3.29-3.3a1.003 1.003 0 00-1.42 1.42l4 4c.18.18.43.29.71.29s.53-.11.71-.29l8-8A1.003 1.003 0 0014 3z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      India
+    </div>
   </div>
 </div>
 `;
@@ -1347,7 +1581,6 @@ exports[`theming Menu.Divider.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1493,7 +1726,6 @@ exports[`theming Menu.Group.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1639,7 +1871,6 @@ exports[`theming Menu.Item.styles.base should render correctly 1`] = `
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 
@@ -1851,7 +2082,6 @@ a.emotion-4:hover {
 }
 
 .emotion-28 {
-  padding: 0.5rem 0;
   width: 100%;
 }
 

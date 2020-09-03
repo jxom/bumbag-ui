@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { altitude, theme } from '../utils';
+import { altitude, space, theme } from '../utils';
 import * as menuStyles from '../Menu/styles';
 
 export const DropdownMenu = (styleProps) => cssClass`
@@ -13,6 +13,7 @@ export const DropdownMenuPopover = (styleProps) => cssClass`
 
   ${menuStyles.Menu(styleProps)}
 
+  padding: ${space(2)(styleProps)}rem 0;
   position: absolute;
   min-width: 200px;
   width: unset;
@@ -48,4 +49,16 @@ export const DropdownMenuGroup = (styleProps) => cssClass`
 
 export const DropdownMenuGroupTitle = (styleProps) => cssClass`
   ${menuStyles.MenuGroupTitle(styleProps)}
+`;
+
+export const DropdownMenuOptionGroup = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionGroup(styleProps)}
+`;
+
+export const DropdownMenuOptionItem = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionItem(styleProps)}
+`;
+
+export const DropdownMenuOptionItemIconWrapper = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionItemIconWrapper(styleProps)}
 `;

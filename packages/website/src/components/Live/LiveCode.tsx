@@ -110,6 +110,10 @@ export default function LiveCode(props: Props) {
 
   const [code, setCode] = React.useState(defaultCode || '');
 
+  React.useEffect(() => {
+    setCode(defaultCode);
+  }, [defaultCode]);
+
   const playroomUrl = React.useMemo(() => {
     return `/playroom/#?code=${code ? base64url.encode(code) : ''}`;
   }, [code]);

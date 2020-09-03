@@ -5,6 +5,8 @@ import { DropdownMenuItem } from './DropdownMenuItem';
 import { DropdownMenuButton } from './DropdownMenuButton';
 import { DropdownMenuDivider } from './DropdownMenuDivider';
 import { DropdownMenuGroup } from './DropdownMenuGroup';
+import { DropdownMenuOptionGroup } from './DropdownMenuOptionGroup';
+import { DropdownMenuOptionItem } from './DropdownMenuOptionItem';
 import { useDropdownMenuState, DropdownMenuState } from './DropdownMenuState';
 
 export * from './DropdownMenu';
@@ -12,6 +14,8 @@ export * from './DropdownMenuItem';
 export * from './DropdownMenuButton';
 export * from './DropdownMenuPopover';
 export * from './DropdownMenuGroup';
+export * from './DropdownMenuOptionGroup';
+export * from './DropdownMenuOptionItem';
 export * from './DropdownMenuDivider';
 export * from './DropdownMenuState';
 export const DropdownMenu = Object.assign(_DropdownMenu, {
@@ -20,6 +24,8 @@ export const DropdownMenu = Object.assign(_DropdownMenu, {
   Item: DropdownMenuItem,
   Divider: DropdownMenuDivider,
   Group: DropdownMenuGroup,
+  OptionGroup: DropdownMenuOptionGroup,
+  OptionItem: DropdownMenuOptionItem,
   useState: useDropdownMenuState,
   State: DropdownMenuState,
 });

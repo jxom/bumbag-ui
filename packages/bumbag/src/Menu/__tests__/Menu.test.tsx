@@ -61,6 +61,49 @@ describe('props', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly with uncontrolled option groups', () => {
+    const { container } = render(
+      <Menu>
+        <Menu.OptionGroup defaultValue="asc" title="Sort by" type="radio">
+          <Menu.OptionItem value="asc">Ascending</Menu.OptionItem>
+          <Menu.OptionItem value="desc">Descending</Menu.OptionItem>
+        </Menu.OptionGroup>
+        <Menu.OptionGroup defaultValue={['australia', 'india']} title="Countries" type="checkbox">
+          <Menu.OptionItem value="australia">Australia</Menu.OptionItem>
+          <Menu.OptionItem value="us">United States</Menu.OptionItem>
+          <Menu.OptionItem value="india">India</Menu.OptionItem>
+        </Menu.OptionGroup>
+      </Menu>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with controlled option groups', () => {
+    const { container } = render(() => {
+      const [sortBy, setSortBy] = React.useState<Array<string> | string>('asc');
+      const [countries, setCountries] = React.useState<Array<string> | string>(['australia', 'india']);
+      return (
+        <Menu>
+          <Menu.OptionGroup onChange={(value) => setSortBy(value)} value={sortBy} title="Sort by" type="radio">
+            <Menu.OptionItem value="asc">Ascending</Menu.OptionItem>
+            <Menu.OptionItem value="desc">Descending</Menu.OptionItem>
+          </Menu.OptionGroup>
+          <Menu.OptionGroup
+            onChange={(value) => setCountries(value)}
+            value={countries}
+            title="Countries"
+            type="checkbox"
+          >
+            <Menu.OptionItem value="australia">Australia</Menu.OptionItem>
+            <Menu.OptionItem value="us">United States</Menu.OptionItem>
+            <Menu.OptionItem value="india">India</Menu.OptionItem>
+          </Menu.OptionGroup>
+        </Menu>
+      );
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('overrides', () => {
