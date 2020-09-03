@@ -1,20 +1,20 @@
 import * as styles from './styles';
 import { Menu as _Menu } from './Menu';
-import { MenuCheckboxGroup } from './MenuCheckboxGroup';
-import { MenuCheckboxItem } from './MenuCheckboxItem';
+import { MenuOptionGroup } from './MenuOptionGroup';
+import { MenuOptionItem } from './MenuOptionItem';
 import { MenuDivider } from './MenuDivider';
 import { MenuItem } from './MenuItem';
 import { MenuGroup } from './MenuGroup';
 
 export * from './Menu';
-export * from './MenuCheckboxGroup';
-export * from './MenuCheckboxItem';
+export * from './MenuOptionGroup';
+export * from './MenuOptionItem';
 export * from './MenuDivider';
 export * from './MenuItem';
 export * from './MenuGroup';
 export const Menu = Object.assign(_Menu, {
-  CheckboxGroup: MenuCheckboxGroup,
-  CheckboxItem: MenuCheckboxItem,
+  OptionGroup: MenuOptionGroup,
+  OptionItem: MenuOptionItem,
   Divider: MenuDivider,
   Item: MenuItem,
   Group: MenuGroup,

@@ -1,8 +1,7 @@
 import { css, cssClass } from '../styled';
-import { darken, palette, space, theme, fontSize, fontWeight } from '../utils';
+import { palette, space, theme, fontSize, fontWeight, letterSpacing } from '../utils';
 
 export const Menu = (styleProps) => cssClass`
-  padding: ${space(2)(styleProps)}rem 0;
   width: 100%;
 
   & {
@@ -115,28 +114,27 @@ export const MenuDivider = (styleProps) => cssClass`
 `;
 
 export const MenuGroup = (styleProps) => cssClass`
+  & + & {
+    margin-top: ${space(2, 'major')(styleProps)}rem;
+  }
+
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
-export const MenuCheckboxGroup = (styleProps) => cssClass`
+export const MenuOptionGroup = (styleProps) => cssClass`
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
 
-export const MenuCheckboxItem = (styleProps) => cssClass`
+export const MenuOptionItem = (styleProps) => cssClass`
   display: flex;
   align-items: center;
 
   &[aria-checked="true"] {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: ${palette('primary')(styleProps)};
-    }
+    color: ${palette('primary')(styleProps)};
   }
 
   & {
@@ -144,7 +142,7 @@ export const MenuCheckboxItem = (styleProps) => cssClass`
   }
 `;
 
-export const MenuCheckboxItemIconWrapper = (styleProps) => cssClass`
+export const MenuOptionItemIconWrapper = (styleProps) => cssClass`
   margin-right: ${space(1, 'major')(styleProps)}rem;
   width: 16px;
 
@@ -154,10 +152,10 @@ export const MenuCheckboxItemIconWrapper = (styleProps) => cssClass`
 `;
 
 export const MenuGroupTitle = (styleProps) => cssClass`
-  color: ${palette('text200')(styleProps)};
+  color: ${palette('text100')(styleProps)};
   font-size: ${fontSize('100')(styleProps)}rem;
   font-weight: ${fontWeight('semibold')(styleProps)};
-  letter-spacing: 1px;
+  letter-spacing: ${letterSpacing('400')(styleProps)};
   padding: ${space(2)(styleProps)}rem ${space(4)(styleProps)}rem;
   padding-top: ${space(1)(styleProps)}rem;
   text-transform: uppercase;

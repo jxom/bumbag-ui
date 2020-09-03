@@ -66,30 +66,43 @@ Supply a set of `<Menu.Item>` components as children to `<Menu>` to create a men
 
 ```function-live
 function Example() {
-  const [checked, setChecked] = React.useState(true);
+  const [sortBy, setSortBy] = React.useState('asc');
+  const [countries, setCountries] = React.useState(['australia', 'india']);
+
   return (
     <Menu>
-      <Menu.CheckboxGroup title="Sort by">
-        <Menu.CheckboxItem checked={checked} onChange={setChecked}>
+      <Menu.OptionGroup
+        onChange={setSortBy}
+        value={sortBy}
+        title="Sort by"
+        type="radio"
+      >
+        <Menu.OptionItem value="asc">
           Ascending
-        </Menu.CheckboxItem>
-      </Menu.CheckboxGroup>
+        </Menu.OptionItem>
+        <Menu.OptionItem value="desc">
+          Descending
+        </Menu.OptionItem>
+      </Menu.OptionGroup>
+      <Menu.OptionGroup
+        onChange={setCountries}
+        value={countries}
+        title="Countries"
+        type="checkbox"
+      >
+        <Menu.OptionItem value="australia">
+          Australia
+        </Menu.OptionItem>
+        <Menu.OptionItem value="us">
+          United States
+        </Menu.OptionItem>
+        <Menu.OptionItem value="india">
+          India
+        </Menu.OptionItem>
+      </Menu.OptionGroup>
     </Menu>
-  )
+  );
 }
-```
-
-```jsx-live
-<Menu>
-  <Menu.CheckboxGroup title="Sort by">
-    <Menu.CheckboxItem value="asc">
-      Ascending
-    </Menu.CheckboxItem>
-    <Menu.CheckboxItem value="desc">
-      Descending
-    </Menu.CheckboxItem>
-  </Menu.CheckboxGroup>
-</Menu>
 ```
 
 ## Accessibility
