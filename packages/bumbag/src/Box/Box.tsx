@@ -26,6 +26,7 @@ export type LocalBoxProps = {
   altitude?: string;
   variant?: string;
   colorMode?: string;
+  disabled?: boolean;
   /* Component-level theme overrides [Read more](/theming/#component-theming) */
   overrides?: ThemeConfig;
   elementRef?: React.Ref<any>;

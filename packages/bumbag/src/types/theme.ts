@@ -42,6 +42,8 @@ import {
   DropdownMenuDividerProps,
   DropdownMenuGroupProps,
   DropdownMenuItemProps,
+  DropdownMenuOptionGroupProps,
+  DropdownMenuOptionItemProps,
 } from '../DropdownMenu';
 import { FieldStackProps } from '../FieldStack';
 import { FieldWrapperProps } from '../FieldWrapper';
@@ -64,7 +66,14 @@ import { LinkProps } from '../Link';
 import { ListProps } from '../List/List';
 import { ListItemProps } from '../List/ListItem';
 import { ModalProps, ModalBackdropProps, ModalDisclosureProps } from '../Modal';
-import { MenuProps, MenuDividerProps, MenuGroupProps, MenuItemProps } from '../Menu';
+import {
+  MenuProps,
+  MenuDividerProps,
+  MenuGroupProps,
+  MenuItemProps,
+  MenuOptionGroupProps,
+  MenuOptionItemProps,
+} from '../Menu';
 import { NavigationProps } from '../Navigation';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import {
@@ -180,7 +189,7 @@ export type LineHeightsThemeConfig = {
   [key: string]: number;
 };
 export type LetterSpacingsThemeConfig = {
-  [key: string]: number;
+  [key: string]: string;
 };
 export type SpacingThemeConfig = {
   minorUnit?: ThemeAttribute<number>;
@@ -633,6 +642,18 @@ export type DropdownMenuThemeConfig = {
     };
     defaultProps?: Partial<DropdownMenuItemProps>;
   };
+  OptionGroup?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuOptionGroupProps>;
+  };
+  OptionItem?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<DropdownMenuOptionItemProps>;
+  };
   defaultProps?: Partial<DropdownMenuProps>;
   variants?: Variant<DropdownMenuThemeConfig>;
   modes?: Variant<DropdownMenuThemeConfig>;
@@ -737,7 +758,7 @@ export type HeadingThemeConfig = {
   };
   h1?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -745,7 +766,7 @@ export type HeadingThemeConfig = {
   };
   h2?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -753,7 +774,7 @@ export type HeadingThemeConfig = {
   };
   h3?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -761,7 +782,7 @@ export type HeadingThemeConfig = {
   };
   h4?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -769,7 +790,7 @@ export type HeadingThemeConfig = {
   };
   h5?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -777,7 +798,7 @@ export type HeadingThemeConfig = {
   };
   h6?: {
     fontSize?: string;
-    shrinkScale?: string;
+    shrinkScale?: number;
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
       shrinked?: ThemeAttribute<Stylesheet>;
@@ -1024,6 +1045,22 @@ export type MenuThemeConfig = {
     defaultProps?: Partial<MenuItemProps>;
     variants?: Variant<MenuThemeConfig['Item']>;
     modes?: Variant<MenuThemeConfig['Item']>;
+  };
+  OptionGroup?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuOptionGroupProps>;
+    variants?: Variant<MenuThemeConfig['OptionGroup']>;
+    modes?: Variant<MenuThemeConfig['OptionGroup']>;
+  };
+  OptionItem?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<MenuOptionItemProps>;
+    variants?: Variant<MenuThemeConfig['OptionItem']>;
+    modes?: Variant<MenuThemeConfig['OptionItem']>;
   };
   defaultProps?: Partial<MenuProps>;
   variants?: Variant<MenuThemeConfig>;

@@ -33,6 +33,8 @@ Supply a set of `<Menu.Item>` components as children to `<Menu>` to create a men
 
 ### Grouped items
 
+You can group your menu by using the `<Menu.Group>` component.
+
 ```jsx-live
 <Menu>
   <Menu.Group title="Actions">
@@ -64,7 +66,43 @@ Supply a set of `<Menu.Item>` components as children to `<Menu>` to create a men
 
 ### Option groups
 
-```function-live
+The `Menu` component can also have selectable option items which can act as checkbox or radio items.
+
+```live
+###tab=Uncontrolled Example,type=jsx-live
+<Menu>
+  <Menu.OptionGroup
+    defaultValue="asc"
+    title="Sort by"
+    type="radio"
+  >
+    <Menu.OptionItem value="asc">
+      Ascending
+    </Menu.OptionItem>
+    <Menu.OptionItem value="desc">
+      Descending
+    </Menu.OptionItem>
+  </Menu.OptionGroup>
+
+  <Menu.OptionGroup
+    defaultValue={['australia', 'india']}
+    title="Countries"
+    type="checkbox"
+  >
+    <Menu.OptionItem value="australia">
+      Australia
+    </Menu.OptionItem>
+    <Menu.OptionItem value="us">
+      United States
+    </Menu.OptionItem>
+    <Menu.OptionItem value="india">
+      India
+    </Menu.OptionItem>
+  </Menu.OptionGroup>
+</Menu>
+###
+
+###tab=Controlled Example,type=function-live
 function Example() {
   const [sortBy, setSortBy] = React.useState('asc');
   const [countries, setCountries] = React.useState(['australia', 'india']);
@@ -84,6 +122,7 @@ function Example() {
           Descending
         </Menu.OptionItem>
       </Menu.OptionGroup>
+
       <Menu.OptionGroup
         onChange={setCountries}
         value={countries}
@@ -103,6 +142,7 @@ function Example() {
     </Menu>
   );
 }
+###
 ```
 
 ## Accessibility
@@ -111,7 +151,7 @@ The `<Menu>` component follows the [WAI ARIA Menu Pattern](https://www.w3.org/TR
 
 ### Rules
 
-- A `Menu` must consist of a set of `Menu.Item` or `Menu.Group` components.
+- A `Menu` must consist of a set of `Menu.Item`, `Menu.Group`, `Menu.OptionGroup` or `Menu.OptionItem` components.
 
 #### Patterns
 

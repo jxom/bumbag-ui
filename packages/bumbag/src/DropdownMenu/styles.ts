@@ -50,3 +50,15 @@ export const DropdownMenuGroup = (styleProps) => cssClass`
 export const DropdownMenuGroupTitle = (styleProps) => cssClass`
   ${menuStyles.MenuGroupTitle(styleProps)}
 `;
+
+export const DropdownMenuOptionGroup = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionGroup(styleProps)}
+`;
+
+export const DropdownMenuOptionItem = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionItem(styleProps)}
+`;
+
+export const DropdownMenuOptionItemIconWrapper = (styleProps) => cssClass`
+  ${menuStyles.MenuOptionItemIconWrapper(styleProps)}
+`;

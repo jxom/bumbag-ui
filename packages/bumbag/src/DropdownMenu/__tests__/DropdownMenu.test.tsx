@@ -98,6 +98,71 @@ describe('props', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly for an uncontrolled option group', () => {
+    const { container } = render(
+      <DropdownMenu
+        baseId="test"
+        menu={
+          <React.Fragment>
+            <DropdownMenu.OptionGroup defaultValue="asc" title="Sort by" type="radio">
+              <DropdownMenu.OptionItem value="asc">Ascending</DropdownMenu.OptionItem>
+              <DropdownMenu.OptionItem value="desc">Descending</DropdownMenu.OptionItem>
+            </DropdownMenu.OptionGroup>
+            <DropdownMenu.OptionGroup defaultValue={['australia', 'india']} title="Countries" type="checkbox">
+              <DropdownMenu.OptionItem value="australia">Australia</DropdownMenu.OptionItem>
+              <DropdownMenu.OptionItem value="us">United States</DropdownMenu.OptionItem>
+              <DropdownMenu.OptionItem value="india">India</DropdownMenu.OptionItem>
+            </DropdownMenu.OptionGroup>
+          </React.Fragment>
+        }
+        visible
+      >
+        <Button iconAfter="chevron-down">Actions</Button>
+      </DropdownMenu>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly for a controlled option group', () => {
+    const { container } = render(() => {
+      const [sortBy, setSortBy] = React.useState<Array<string> | string>('asc');
+      const [countries, setCountries] = React.useState<Array<string> | string>(['australia', 'india']);
+
+      return (
+        <DropdownMenu
+          baseId="test"
+          menu={
+            <React.Fragment>
+              <DropdownMenu.OptionGroup
+                onChange={(value) => setSortBy(value)}
+                value={sortBy}
+                title="Sort by"
+                type="radio"
+              >
+                <DropdownMenu.OptionItem value="asc">Ascending</DropdownMenu.OptionItem>
+                <DropdownMenu.OptionItem value="desc">Descending</DropdownMenu.OptionItem>
+              </DropdownMenu.OptionGroup>
+              <DropdownMenu.OptionGroup
+                onChange={(value) => setCountries(value)}
+                value={countries}
+                title="Countries"
+                type="checkbox"
+              >
+                <DropdownMenu.OptionItem value="australia">Australia</DropdownMenu.OptionItem>
+                <DropdownMenu.OptionItem value="us">United States</DropdownMenu.OptionItem>
+                <DropdownMenu.OptionItem value="india">India</DropdownMenu.OptionItem>
+              </DropdownMenu.OptionGroup>
+            </React.Fragment>
+          }
+          visible
+        >
+          <Button iconAfter="chevron-down">Actions</Button>
+        </DropdownMenu>
+      );
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('overrides', () => {
