@@ -13,7 +13,7 @@ export type LocalMenuOptionGroupProps = {
   type: 'checkbox' | 'radio';
   value?: Array<string> | string;
 };
-export type MenuOptionGroupProps = MenuGroupProps & LocalMenuOptionGroupProps;
+export type MenuOptionGroupProps = Omit<MenuGroupProps, 'onBlur' | 'onChange'> & LocalMenuOptionGroupProps;
 
 const useProps = createHook<MenuOptionGroupProps>(
   (props, { themeKey }) => {
