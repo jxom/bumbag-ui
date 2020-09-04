@@ -42,6 +42,7 @@ export * from './List';
 export * from './Menu';
 export * from './Modal';
 export * from './Navigation';
+export * from './OptionButtons';
 export * from './Overlay';
 export * from './Page';
 export * from './Pagination';

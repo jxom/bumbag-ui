@@ -1,0 +1,237 @@
+import Theme from '../../components/Theme';
+import { OptionButtons } from 'bumbag';
+
+# OptionButtons
+
+## Import
+
+```jsx
+import { OptionButtons, OptionButton } from 'bumbag'
+```
+
+## Usage
+
+### Radio group
+
+```live
+###tab=Uncontrolled Example,type=jsx-live
+<OptionButtons
+  defaultValue="desktop"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+###
+
+###tab=Controlled Example,type=function-live
+function Example() {
+  const [viewport, setViewport] = React.useState('desktop');
+  return (
+    <OptionButtons
+      onChange={setViewport}
+      value={viewport}
+      type="radio"
+      options={[
+        { label: 'Desktop', value: 'desktop' },
+        { label: 'Tablet', value: 'tablet' },
+        { label: 'Mobile', value: 'mobile' }
+      ]}
+    />
+  );
+}
+###
+```
+
+### Checkbox group
+
+```live
+###tab=Uncontrolled Example,type=jsx-live
+<OptionButtons
+  defaultValue={['desktop', 'mobile']}
+  type="checkbox"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+###
+
+###tab=Controlled Example,type=function-live
+function Example() {
+  const [viewport, setViewport] = React.useState(['desktop', 'mobile']);
+  return (
+    <OptionButtons
+      onChange={setViewport}
+      value={viewport}
+      type="checkbox"
+      options={[
+        { label: 'Desktop', value: 'desktop' },
+        { label: 'Tablet', value: 'tablet' },
+        { label: 'Mobile', value: 'mobile' }
+      ]}
+    />
+  );
+}
+###
+```
+
+### Disabled
+
+```jsx-live
+<OptionButtons
+  disabled
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+```jsx-live
+<OptionButtons
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { disabled: true, label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Colors
+
+```jsx-live
+<OptionButtons
+  palette="secondary"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### States
+
+```jsx-live
+<OptionButtons
+  state="danger"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Sizes
+
+```jsx-live
+<OptionButtons
+  size="small"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+<OptionButtons
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+<OptionButtons
+  size="medium"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+<OptionButtons
+  size="large"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Border radius
+
+```jsx-live
+<OptionButtons
+  borderRadius="0"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Orientation
+
+```jsx-live
+<OptionButtons
+  orientation="vertical"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Vertical breakpoint
+
+```jsx-live
+<OptionButtons
+  verticalBelow="tablet"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+### Full width
+
+```jsx-live
+<OptionButtons
+  isFullWidth
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
+## Accessibility
+
+## Props
+
+### OptionButtons Props
+
+## Theming
