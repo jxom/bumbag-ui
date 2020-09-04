@@ -319,7 +319,7 @@ const linkProps = Link.useProps({
   />
   <Level orientation="vertical" padding="major-2">
     <Stack spacing="major-1">
-      <Heading fontSize="400" marginBottom="minor-1">
+      <Heading fontSize="400">
         The Local Hostel
       </Heading>
       <Tag palette="info" variant="tint">Great for solo travellers</Tag>
