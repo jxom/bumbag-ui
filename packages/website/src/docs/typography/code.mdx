@@ -48,7 +48,17 @@ Indicates if the code should be placed in a block.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 Color of the code (inline) block.
 
@@ -109,6 +119,10 @@ Color of the code (inline) block.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -117,7 +131,7 @@ Color of the code (inline) block.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 90 more ...;
+  ... 94 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

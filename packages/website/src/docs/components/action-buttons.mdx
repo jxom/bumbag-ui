@@ -128,7 +128,7 @@ You can pass custom button props to action buttons using `submitProps` or `cance
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 791 more ...;
+  ... 797 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -157,13 +157,31 @@ Makes the submit button in a loading state
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 Changes the color of the submit button
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">&#34;default&#34; | &#34;small&#34; | &#34;medium&#34; | &#34;large&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">size</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | (string & {})
+  | "small"
+  | "medium"
+  | "large"`}
+</Code>
 
 Size of the buttons
 
@@ -179,7 +197,7 @@ Size of the buttons
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 791 more ...;
+  ... 797 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -302,6 +320,10 @@ Indicates the breakpoint at which the set should become vertical.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -310,7 +332,7 @@ Indicates the breakpoint at which the set should become vertical.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 90 more ...;
+  ... 94 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>
