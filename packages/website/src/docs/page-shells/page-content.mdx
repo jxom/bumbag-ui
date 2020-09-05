@@ -88,7 +88,7 @@ const theme = {
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 769 more ...;
+  ... 776 more ...;
   themeKey?: string;
 }`}
 </Code>
@@ -108,7 +108,8 @@ Sets the alignment of the container.
 **<Code fontSize="150" marginRight="major-1">breakpoint</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"tablet"
+{`(string & {})
+  | "tablet"
   | "mobile"
   | "fullHD"
   | "widescreen"
@@ -189,6 +190,10 @@ Indicates if the container is of a layout type.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
@@ -197,7 +202,7 @@ Indicates if the container is of a layout type.
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 90 more ...;
+  ... 94 more ...;
   Template?: TemplateThemeConfig;
 }`}
 </Code>

@@ -238,8 +238,8 @@ function extractTypes(config) {
           let extraTypes = [];
           let stateTypes = [];
 
-          const typeNode = node.getTypeNode();
-          if (TypeGuards.isIntersectionTypeNode(typeNode)) {
+          const typeNode = node?.getTypeNode?.();
+          if (typeNode && TypeGuards.isIntersectionTypeNode(typeNode)) {
             typeNode.getTypeNodes().forEach((node) => {
               const nodeText = node.getText();
 

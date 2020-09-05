@@ -64,7 +64,7 @@ Avatars can also be initials using the `initials` prop.
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">(string &#38; {}) | &#34;circle&#34;</Code> 
 
 Variant of the avatar.
 
@@ -76,7 +76,7 @@ URL of the avatar image.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">size</Code>** <Code fontSize="100" palette="primary">string | (string &#38; {})</Code> 
 
 Size of the avatar.
 
@@ -88,7 +88,17 @@ Initials to place on the avatar.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`"default"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | (string & {})`}
+</Code>
 
 Color of the avatar.
 

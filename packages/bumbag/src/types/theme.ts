@@ -75,6 +75,7 @@ import {
   MenuOptionItemProps,
 } from '../Menu';
 import { NavigationProps } from '../Navigation';
+import { OptionButtonsProps, OptionButtonProps } from '../OptionButtons';
 import { OverlayProps, OverlayDisclosureProps } from '../Overlay';
 import {
   PageContentProps,
@@ -1109,6 +1110,27 @@ export type NavigationThemeConfig = {
   variants?: Variant<NavigationThemeConfig>;
   modes?: Variant<NavigationThemeConfig>;
 };
+export type OptionButtonsThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<OptionButtonsProps>;
+  variants?: Variant<OptionButtonsThemeConfig>;
+  modes?: Variant<OptionButtonsThemeConfig>;
+  Button?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<OptionButtonProps>;
+    variants?: Variant<OptionButtonsThemeConfig['Button']>;
+    modes?: Variant<OptionButtonsThemeConfig['Button']>;
+  };
+  Wrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+};
 export type OverlayThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -1991,6 +2013,7 @@ export type ThemeConfig = {
   Menu?: MenuThemeConfig;
   Modal?: ModalThemeConfig;
   Navigation?: NavigationThemeConfig;
+  OptionButtons?: OptionButtonsThemeConfig;
   Overlay?: OverlayThemeConfig;
   PageContent?: PageContentThemeConfig;
   PageWithSidebar?: PageWithSidebarThemeConfig;
