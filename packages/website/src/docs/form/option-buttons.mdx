@@ -3,6 +3,8 @@ import { OptionButtons } from 'bumbag';
 
 # OptionButtons
 
+The `OptionButtons` component can be used to render a set of **Checkbox** or **Radio** option buttons.
+
 ## Import
 
 ```jsx
@@ -12,6 +14,8 @@ import { OptionButtons, OptionButton } from 'bumbag'
 ## Usage
 
 ### Radio group
+
+To render a set of radio option buttons, set the `type` prop to `"radio"`.
 
 ```live
 ###tab=Uncontrolled Example,type=jsx-live
@@ -47,6 +51,8 @@ function Example() {
 
 ### Checkbox group
 
+To render a set of checkbox option buttons, set the `type` prop to `"checkbox"`.
+
 ```live
 ###tab=Uncontrolled Example,type=jsx-live
 <OptionButtons
@@ -79,7 +85,48 @@ function Example() {
 ###
 ```
 
+### Field
+
+You can also use the `<OptionButtonsField>` component, which internally has a [FieldWrapper](/form/field-wrapper) to wrap form controls such as labels, hint text and validation text.
+
+It accepts a combination of [OptionButtons props](/form/option-buttons/#props) and [FieldWrapper props](/form/field-wrapper/#props).
+
+```live
+###tab=Uncontrolled Example,type=jsx-live
+<OptionButtonsField
+  label="Choose your viewport"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+###
+
+###tab=Controlled Example,type=function-live
+function Example() {
+  const [viewport, setViewport] = React.useState('');
+  return (
+    <OptionButtonsField
+      label="Choose your viewport"
+      onChange={setViewport}
+      value={viewport}
+      type="radio"
+      options={[
+        { label: 'Desktop', value: 'desktop' },
+        { label: 'Tablet', value: 'tablet' },
+        { label: 'Mobile', value: 'mobile' }
+      ]}
+    />
+  );
+}
+###
+```
+
 ### Disabled
+
+You can disable the option buttons with the `disabled` prop. If you only want to disable one option, add the `disabled: true` attribute to the option.
 
 ```jsx-live
 <OptionButtons
@@ -120,6 +167,8 @@ function Example() {
 
 ### States
 
+Option buttons can use different states (as per palette) such as `danger`, `success` and `warning`.
+
 ```jsx-live
 <OptionButtons
   state="danger"
@@ -133,6 +182,8 @@ function Example() {
 ```
 
 ### Sizes
+
+You can change the size of the option buttons with the `size` prop.
 
 ```jsx-live
 <OptionButtons
@@ -174,6 +225,8 @@ function Example() {
 
 ### Border radius
 
+Change the radius of the outer group with the `borderRadius` prop. It accepts a [border radius value](/the-box-primitive/border-radius).
+
 ```jsx-live
 <OptionButtons
   borderRadius="0"
@@ -188,6 +241,8 @@ function Example() {
 
 ### Orientation
 
+Option buttons can have a vertical orientation by setting the `orientation` prop to `"vertical"`.
+
 ```jsx-live
 <OptionButtons
   orientation="vertical"
@@ -201,6 +256,8 @@ function Example() {
 ```
 
 ### Vertical breakpoint
+
+To change the vertical breakpoint (defaulted to `"tablet"`), use the `verticalBelow` prop.
 
 ```jsx-live
 <OptionButtons
@@ -228,10 +285,59 @@ function Example() {
 />
 ```
 
+### Read only
+
+```jsx-live
+<OptionButtons
+  readOnly
+  defaultValue="desktop"
+  type="radio"
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+/>
+```
+
 ## Accessibility
+
+The `<OptionButtons>` component follows the [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox) and [WAI ARIA RadioGroup Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup).
+
+### Rules
+
+- The outer wrapper of the `OptionButtons` has a role of `group`.
+
+#### Patterns
+
+- The checkbox or radio has a role of `checkbox` or `radio`.
+- When the checkbox or radio has focus, pressing the <Key>Space</Key> key changes the state of the option.
+- Pressing <Key>Tab</Key> and <Key>Shift</Key> + <Key>Tab</Key> moves focus in and out of the checkbox or radio group.
+- Pressing <Key>Space</Key> checks the selected checkbox or radio button.
+- Pressing <Key>Up</Key>, <Key>Down</Key>, <Key>Left</Key> or <Key>Right</Key> will move the current selection to the next or previous item.
+
+#### References
+
+- [WAI ARIA Checkbox Pattern](https://www.w3.org/TR/wai-aria-practices/#checkbox)
+- [WAI ARIA RadioGroup Pattern](https://www.w3.org/TR/wai-aria-practices/#radiogroup)
 
 ## Props
 
 ### OptionButtons Props
 
+### OptionButtonsField Props
+
 ## Theming
+
+<Theme
+  component={OptionButtons}
+  options={[
+    { label: 'Desktop', value: 'desktop' },
+    { label: 'Tablet', value: 'tablet' },
+    { label: 'Mobile', value: 'mobile' }
+  ]}
+  overrides={[
+    'OptionButtons.styles.base',
+    'OptionButtons.Button.styles.base'
+  ]} />
+

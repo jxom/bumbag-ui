@@ -9,14 +9,19 @@ export type LocalOptionButtonProps = {
   checked?: boolean;
   isFullWidth?: boolean;
   onChange?: ({ checked: boolean, value: string }) => void;
+  readOnly?: boolean;
   value?: string;
 };
 export type OptionButtonProps = ButtonProps & LocalOptionButtonProps;
 
 const useProps = createHook<OptionButtonProps>(
   (props, { themeKey }) => {
-    const { checked, onChange, value, ...restProps } = props;
-    const buttonProps = Button.useProps({ ...restProps, variant: !checked ? 'outlined' : undefined });
+    const { checked, onChange, readOnly, value, ...restProps } = props;
+    const buttonProps = Button.useProps({
+      ...restProps,
+      isStatic: readOnly,
+      variant: !checked ? 'outlined' : undefined,
+    });
 
     const className = useClassName({
       style: styles.OptionButton,
@@ -29,7 +34,7 @@ const useProps = createHook<OptionButtonProps>(
       ...buttonProps,
       'aria-checked': checked,
       className,
-      onClick: () => onChange && onChange({ checked: !checked, value }),
+      onClick: () => !readOnly && onChange && onChange({ checked: !checked, value }),
     };
   },
   { defaultProps: { palette: 'primary' }, themeKey: 'OptionButtons.Button' }

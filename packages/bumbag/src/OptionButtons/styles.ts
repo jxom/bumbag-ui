@@ -51,3 +51,9 @@ export const OptionButtonsWrapper = (styleProps) => cssClass`
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
+
+export const OptionButtonsField = (styleProps) => cssClass`
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;

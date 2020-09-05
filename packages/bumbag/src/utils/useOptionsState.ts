@@ -33,10 +33,10 @@ export function useOptionsState({ defaultValue, isNativeInput, onBlur, onChange,
   }, [onBlur, values]);
 
   return {
-    getOptionItemProps: ({ value }) => ({
+    getOptionItemProps: ({ readOnly, value }) => ({
       checked: values ? values.includes(value) : false,
-      onChange: handleChange,
-      onBlur: handleBlur,
+      onChange: !readOnly ? handleChange : undefined,
+      onBlur: !readOnly ? handleBlur : undefined,
     }),
   };
 }
