@@ -93,7 +93,7 @@ npm install bumbag-server
 Open up your `_document.js` file, and add the following:
 
 ```jsx
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { extractCritical } from 'bumbag-server'
 import { InitializeColorMode } from 'bumbag'
 
@@ -117,14 +117,14 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <Html>
         <Head />
         <body>
           <InitializeColorMode />
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
