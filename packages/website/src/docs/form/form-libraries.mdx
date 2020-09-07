@@ -19,7 +19,7 @@ function Form() {
   return (
     <Formik
       initialValues={{ username: '' }}
-      handleSubmit={data => console.log(data)}
+      onSubmit={data => console.log(data)}
     >
       <Form>
         <Field
