@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Provider as ReakitProvider } from 'reakit';
 
-import { IdProvider } from '../utils/uniqueId';
 import { ThemeProvider as EmotionProvider } from '../styled';
 import buildTheme from '../theme';
 import { LayoutBreakpoint, ThemeConfig } from '../types';
@@ -55,17 +54,15 @@ export function Provider(props: ProviderProps) {
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
         <ColorModeProvider isSSR={isSSR} mode={colorMode}>
-          <ReakitProvider>
-            <IdProvider>
-              <ToastProvider>
-                <PageProvider collapseBelow={collapseBelow}>
-                  <React.Fragment>
-                    {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-                    {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
-                  </React.Fragment>
-                </PageProvider>
-              </ToastProvider>
-            </IdProvider>
+          <ReakitProvider unstable_prefix="bb-id">
+            <ToastProvider>
+              <PageProvider collapseBelow={collapseBelow}>
+                <React.Fragment>
+                  {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+                  {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
+                </React.Fragment>
+              </PageProvider>
+            </ToastProvider>
           </ReakitProvider>
         </ColorModeProvider>
       </EmotionProvider>
