@@ -13,23 +13,36 @@ import { Box, BoxProps } from '../Box';
 import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 
-import { useTooltipState } from './TooltipState';
+import { TooltipInitialState, useTooltipState } from './TooltipState';
 import * as styles from './styles';
 
 export type LocalTooltipProps = {
   content: string | React.ReactElement<any>;
   placement?: Placement;
   baseId?: string;
+  tooltipState?: TooltipInitialState;
 } & LocalTooltipContentProps;
 export type TooltipProps = BoxProps & LocalTooltipProps;
 
 const useProps = createHook<TooltipProps>(
   (props) => {
-    let { arrowProps, children, content, expand, fade, hasArrow, overrides, placement, slide, baseId } = props;
+    let {
+      arrowProps,
+      children,
+      content,
+      expand,
+      fade,
+      hasArrow,
+      overrides,
+      placement,
+      slide,
+      baseId,
+      tooltipState,
+    } = props;
 
     const boxProps = Box.useProps({ ...props, content: undefined });
     // @ts-ignore
-    const tooltip = useTooltipState({ placement, animated: expand || fade || slide, baseId });
+    const tooltip = useTooltipState({ placement, animated: expand || fade || slide, baseId, ...tooltipState });
 
     return {
       children: (
