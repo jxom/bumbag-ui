@@ -14,6 +14,7 @@ export type LocalDropdownMenuProps = {
   children: React.ReactElement<any>;
   visible?: DropdownMenuInitialState['visible'];
   baseId?: DropdownMenuInitialState['baseId'];
+  dropdownMenuState?: DropdownMenuInitialState;
 };
 export type DropdownMenuProps = BoxProps & LocalDropdownMenuProps;
 
@@ -27,10 +28,10 @@ export const DropdownMenuContext = React.createContext<{
 
 const useProps = createHook<DropdownMenuProps>(
   (props, { themeKey }) => {
-    const { baseId, children, menu, overrides, visible, ...restProps } = props;
+    const { baseId, children, dropdownMenuState, menu, overrides, visible, ...restProps } = props;
     const boxProps = Box.useProps(restProps);
 
-    const dropdownMenu = useDropdownMenuState({ baseId, visible });
+    const dropdownMenu = useDropdownMenuState({ baseId, visible, ...dropdownMenuState });
 
     const dropdownMenuButtonProps = DropdownMenuButton.useProps({
       ...dropdownMenu,
