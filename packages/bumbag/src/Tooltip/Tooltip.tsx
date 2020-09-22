@@ -20,6 +20,7 @@ export type LocalTooltipProps = {
   content: string | React.ReactElement<any>;
   placement?: Placement;
   baseId?: string;
+  tooltipContentProps?: TooltipContentProps;
   tooltipState?: TooltipInitialState;
 } & LocalTooltipContentProps;
 export type TooltipProps = BoxProps & LocalTooltipProps;
@@ -37,6 +38,7 @@ const useProps = createHook<TooltipProps>(
       placement,
       slide,
       baseId,
+      tooltipContentProps,
       tooltipState,
     } = props;
 
@@ -61,6 +63,7 @@ const useProps = createHook<TooltipProps>(
             hasArrow={hasArrow}
             overrides={overrides}
             slide={slide}
+            {...tooltipContentProps}
             {...tooltip}
           >
             {content}
