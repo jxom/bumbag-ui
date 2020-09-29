@@ -29,12 +29,16 @@ export function ColorModeProvider(props: Props) {
   ////////////////////////////////////
 
   const [mode, setMode] = React.useState(defaultMode);
+  const [initialized, setInitialized] = React.useState(false);
 
   ////////////////////////////////////
 
   React.useEffect(() => {
     addColorModeBodyClassName(defaultMode);
     localStorage.set('mode', defaultMode);
+    requestAnimationFrame(() => {
+      setInitialized(true);
+    });
   }, [defaultMode]); // eslint-disable-line
 
   ////////////////////////////////////
@@ -63,12 +67,10 @@ export function ColorModeProvider(props: Props) {
   const [mounted, setMounted] = React.useState(false);
   const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
   useIsomorphicLayoutEffect(() => {
-    if (typeof window !== 'undefined') {
-      requestAnimationFrame(() => {
-        setMounted(true);
-      });
+    if (initialized) {
+      setMounted(true);
     }
-  }, []);
+  }, [initialized]);
 
   ////////////////////////////////////
 
