@@ -63,7 +63,9 @@ export function ColorModeProvider(props: Props) {
   const [mounted, setMounted] = React.useState(false);
   const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
   useIsomorphicLayoutEffect(() => {
-    setMounted(true);
+    if (typeof window !== 'undefined') {
+      setMounted(true);
+    }
   }, []);
 
   ////////////////////////////////////
