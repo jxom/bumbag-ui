@@ -36,7 +36,11 @@ export function addColorModeBodyClassName(nextMode: string, prevMode?: string) {
   if (prevMode) {
     document.body.classList.remove(`${bodyClassPrefix}-${prevMode}`);
   }
-  document.body.classList.add(`${bodyClassPrefix}-${nextMode}`);
+  if (typeof window !== 'undefined') {
+    requestAnimationFrame(() => {
+      document.body.classList.add(`${bodyClassPrefix}-${nextMode}`);
+    });
+  }
 }
 
 export function getDefaultColorMode(mode, { localStorage, theme }) {
