@@ -56,7 +56,7 @@ export function Provider(props: ProviderProps) {
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
         <ConditionalWrap
-          condition={disableColorMode}
+          condition={!disableColorMode}
           wrap={(children) => (
             <ColorModeProvider isSSR={isSSR} mode={colorMode}>
               {children}
