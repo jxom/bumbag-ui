@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Provider as ReakitProvider } from 'reakit';
+import ConditionalWrap from 'conditional-wrap';
 
 import { ThemeProvider as EmotionProvider } from '../styled';
 import buildTheme from '../theme';
@@ -17,6 +18,7 @@ export type ProviderProps = {
   isStandalone?: boolean;
   collapseBelow?: LayoutBreakpoint;
   colorMode?: string;
+  disableColorMode?: boolean;
   isSSR?: boolean;
   theme?: ThemeConfig;
 };
@@ -26,7 +28,7 @@ Provider.defaultProps = {
 };
 
 export function Provider(props: ProviderProps) {
-  const { children, colorMode, collapseBelow, isSSR, isStandalone, theme: _theme } = props;
+  const { children, colorMode, collapseBelow, disableColorMode, isSSR, isStandalone, theme: _theme } = props;
 
   ////////////////////////////////////////////////
 
@@ -53,7 +55,14 @@ export function Provider(props: ProviderProps) {
   return (
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
-        <ColorModeProvider isSSR={isSSR} mode={colorMode}>
+        <ConditionalWrap
+          condition={disableColorMode}
+          wrap={(children) => (
+            <ColorModeProvider isSSR={isSSR} mode={colorMode}>
+              {children}
+            </ColorModeProvider>
+          )}
+        >
           <ReakitProvider unstable_prefix="bb-id">
             <ToastProvider>
               <PageProvider collapseBelow={collapseBelow}>
@@ -64,7 +73,7 @@ export function Provider(props: ProviderProps) {
               </PageProvider>
             </ToastProvider>
           </ReakitProvider>
-        </ColorModeProvider>
+        </ConditionalWrap>
       </EmotionProvider>
     </BumbagThemeContext.Provider>
   );
