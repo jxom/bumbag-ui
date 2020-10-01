@@ -138,7 +138,12 @@ export function palette(
 ) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
     const selector = modes && modes[props.colorMode] ? modes[props.colorMode] : _selector;
-    const fallback = tinycolor(selector).toHexString();
+
+    let fallback = tinycolor(selector).toHexString();
+    if (selector === 'transparent') {
+      fallback = 'transparent';
+    }
+
     if (props.theme?.useCSSVariables && useCSSVariables && !selector?.includes('#')) {
       return getColorFromCSSVariable(selector, fallback);
     }
