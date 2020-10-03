@@ -227,6 +227,35 @@ exports[`defaultProps should render correctly 1`] = `
 </div>
 `;
 
+exports[`modes correctly assigns a ref for applyTheme 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  padding: 1rem !important;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.15),0px 0px 2px 1px rgba(0,0,0,0.02) !important;
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
 exports[`modes renders correctly for applyTheme 1`] = `
 .emotion-0 {
   margin: unset;

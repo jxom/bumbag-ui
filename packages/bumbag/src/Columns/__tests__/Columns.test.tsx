@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Columns } from '../index';
+import { applyTheme } from '../../utils/applyTheme';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {
@@ -329,6 +330,22 @@ describe('props', () => {
       );
       expect(container.firstChild).toMatchSnapshot();
     });
+  });
+
+  it('renders correctly for applyTheme', () => {
+    const CustomColumns = applyTheme(Columns, {
+      styles: {
+        base: {
+          backgroundColor: 'red',
+        },
+      },
+    });
+    const { container } = render(
+      <CustomColumns>
+        <CustomColumns.Column>test</CustomColumns.Column>
+      </CustomColumns>
+    );
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
 

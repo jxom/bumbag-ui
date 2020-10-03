@@ -36,8 +36,8 @@ export default function GlobalStyles() {
 
         ${font('importUrls')(styleProps) &&
         font('importUrls')(styleProps)
-          .map((url: string) => `@import url('${url}')`)
-          .join(';')};
+          .map((url: string) => `@import url('${url}');`)
+          .join('')};
 
         ${theme('global.styles.base')(styleProps)};
       `}

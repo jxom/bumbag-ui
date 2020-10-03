@@ -381,6 +381,18 @@ describe('modes', () => {
     const { container } = render(<Card colorMode="test" />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('correctly assigns a ref for applyTheme', () => {
+    const CustomBox = applyTheme(Box, {
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+    });
+    const ref = React.createRef();
+    const { container } = render(<CustomBox ref={ref} />);
+    expect(ref.current).toMatchSnapshot();
+  });
 });
 
 describe('defaultProps', () => {
