@@ -142,7 +142,7 @@ export default function Docs(props: Props) {
           {pageContext.tableOfContents && (
             <TableOfContents breakpoint={breakpoint} isFluid={isFluid} toc={pageContext.tableOfContents} />
           )}
-          <bumbag.PageContent isLayout={isFluid} isFluid={isFluid} breakpoint={breakpoint}>
+          <bumbag.PageContent isLayout={isFluid} isFluid={isFluid} breakpoint={breakpoint} use="main" id="main-content">
             {pageContext.mdxBody ? (
               <MDXProvider components={components}>
                 <MDXRenderer>{pageContext.mdxBody}</MDXRenderer>
