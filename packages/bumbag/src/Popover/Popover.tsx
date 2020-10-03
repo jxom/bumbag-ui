@@ -106,7 +106,7 @@ const useProps = createHook<Partial<PopoverProps>>(
       },
       restProps
     );
-    const boxProps = Box.useProps({ ...props, ...popoverProps });
+    const boxProps = Box.useProps({ ...restProps, ...popoverProps });
 
     const className = useClassName({
       style: styles.Popover,

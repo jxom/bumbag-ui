@@ -11,6 +11,7 @@ export const TooltipContent = (styleProps) => cssClass`
   font-size: ${fontSize('100')(styleProps)}rem;
   font-weight: ${fontWeight('normal')(styleProps)};
   padding: ${space(1)(styleProps)}rem ${space(2)(styleProps)}rem;
+  z-index: 19900411;
 
   ${getPlacementAttributes(styleProps)}
 
