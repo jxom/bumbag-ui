@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'bumbag';
 import { FeedbackForm } from 'feedback-fish';
 import { Link, useLocation } from '@reach/router';
+import SkipToMainContent from './SkipToMainContent';
 
 import ColorModePicker from './ColorModePicker';
 
@@ -39,6 +40,7 @@ export default function Header(props) {
         <TopNav.Item href="/" fontWeight="semibold">
           {Logo}
         </TopNav.Item>
+        {pathname !== '/' && <SkipToMainContent />}
         <TopNav.Item use={Link} navId="docs" to="/getting-started" fontWeight="semibold">
           Docs
         </TopNav.Item>
