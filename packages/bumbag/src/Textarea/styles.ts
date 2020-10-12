@@ -15,25 +15,23 @@ export const TextareaWrapper = (styleProps) => cssClass`
 
 export const Textarea = (styleProps) => cssClass`
   -webkit-appearance: none;
-  border: 1px solid ${palette('white900')(styleProps)};
+  background: ${palette('default')(styleProps)};
+  border: 1px solid ${palette('white900', { dark: 'gray700' })(styleProps)};
   border-radius: ${borderRadius('default')(styleProps)};
+  color: ${palette('text')(styleProps)};
   width: 100%;
   padding: 0.4em 0.8em;
   transition: box-shadow 0.1s ease-in-out 0s, border-color 0.1s, background-color 0.1s;
 
   &[disabled] {
-    background-color: ${palette('white700')(styleProps)};
+    background-color: ${palette('white700', { dark: 'black200' })(styleProps)};
     box-shadow: unset;
+    color: ${palette('text100')(styleProps)};
     cursor: not-allowed;
 
     & {
       ${theme(styleProps.themeKey, `styles.disabled`)(styleProps)};
     }
-  }
-
-  &:not([disabled]):hover {
-    box-shadow: ${palette(`${styleProps.state || 'primary'}Tint`)(styleProps)} 0px 0px 0px 2px !important;
-    border-color: ${palette(`${styleProps.state || 'primary'}100`)(styleProps)};
   }
 
   &:focus {
@@ -48,7 +46,7 @@ export const Textarea = (styleProps) => cssClass`
   }
 
   &::placeholder {
-    opacity: 0.6;
+    color: ${palette('gray300')(styleProps)};
 
     & {
       ${theme(styleProps.themeKey, `styles.placeholder`)(styleProps)};
