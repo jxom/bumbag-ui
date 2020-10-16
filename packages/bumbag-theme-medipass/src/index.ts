@@ -7,6 +7,7 @@ import global from './global';
 import palette from './palette';
 import fonts from './fonts';
 
+import Alert from './Alert';
 import Button from './Button';
 import Checkbox from './Checkbox';
 import Container from './Container';
@@ -36,6 +37,7 @@ export default {
   palette,
   fonts,
 
+  Alert,
   Button,
   Checkbox,
   Container,
