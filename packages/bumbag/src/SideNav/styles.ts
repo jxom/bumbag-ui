@@ -59,6 +59,10 @@ export const SideNavItem = (styleProps) => cssClass`
     }
   }
 
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+
   &&&:hover {
     color: ${palette('primary', { dark: 'primary300' })(styleProps)};
 
@@ -86,9 +90,5 @@ export const SideNavItem = (styleProps) => cssClass`
         ${theme(styleProps.themeKey, `styles.active`)(styleProps)};
       }
     `
-  }
-
-  & {
-    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
 `;
