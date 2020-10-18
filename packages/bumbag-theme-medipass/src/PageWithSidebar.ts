@@ -6,6 +6,7 @@ export default {
       base: (props) => css`
         color: ${palette('white')(props)};
         background-color: ${palette('primary800')(props)};
+        border-right: unset;
       `,
     },
   },
