@@ -27,7 +27,6 @@ const useProps = createHook<OptionButtonProps>(
       style: styles.OptionButton,
       styleProps: props,
       themeKey,
-      prevClassName: buttonProps.className,
     });
 
     return {
@@ -43,7 +42,12 @@ const useProps = createHook<OptionButtonProps>(
 export const OptionButton = createComponent<OptionButtonProps>(
   (props) => {
     const htmlProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps });
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps,
+    });
   },
   {
     attach: {
