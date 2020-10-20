@@ -84,20 +84,23 @@ const useProps = createHook<OptionButtonsProps>(
             verticalBelow={verticalBelow}
           >
             {options.map(({ label, ...option }, index) => (
-              <Rover
-                key={index}
-                use={OptionButton}
-                {...getOptionItemProps({ readOnly, value: option.value })}
-                disabled={disabled}
-                // @ts-ignore
-                isFullWidth={isFullWidth}
-                overrides={overrides}
-                palette={palette}
-                readOnly={readOnly}
-                size={size}
-                {...option}
-              >
-                {label}
+              <Rover key={index}>
+                {(roverProps) => (
+                  <OptionButton
+                    {...roverProps}
+                    {...getOptionItemProps({ readOnly, value: option.value })}
+                    disabled={disabled}
+                    // @ts-ignore
+                    isFullWidth={isFullWidth}
+                    overrides={overrides}
+                    palette={palette}
+                    readOnly={readOnly}
+                    size={size}
+                    {...option}
+                  >
+                    {label}
+                  </OptionButton>
+                )}
               </Rover>
             ))}
           </Group>
