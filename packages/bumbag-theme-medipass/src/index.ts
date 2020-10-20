@@ -17,6 +17,7 @@ import FieldStack from './FieldStack';
 import FieldWrapper from './FieldWrapper';
 import Heading from './Heading';
 import Label from './Label';
+import Link from './Link';
 import PageContent from './PageContent';
 import PageWithSidebar from './PageWithSidebar';
 import SideNav from './SideNav';
@@ -47,6 +48,7 @@ export default {
   FieldWrapper,
   Heading,
   Label,
+  Link,
   PageContent,
   PageWithSidebar,
   SideNav,
