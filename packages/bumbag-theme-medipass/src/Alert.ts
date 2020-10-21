@@ -3,7 +3,9 @@ import { css, space } from 'bumbag';
 export default {
   Wrapper: {
     styles: {
-      paddingY: 'major-3',
+      base: {
+        paddingY: 'major-3',
+      },
     },
   },
   defaultProps: {
