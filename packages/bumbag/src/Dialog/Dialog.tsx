@@ -38,7 +38,11 @@ export type LocalDialogProps = {
 };
 export type DialogProps = BoxProps & LocalDialogProps;
 
-export type DialogContextOptions = DialogProps & { descriptionId?: string; titleId?: string; themeKey?: string };
+export type DialogContextOptions = DialogProps & {
+  descriptionId?: string;
+  titleId?: string;
+  themeKey?: string;
+};
 export const DialogContext = React.createContext<DialogContextOptions>({});
 
 const useProps = createHook<DialogProps>(
@@ -129,7 +133,12 @@ const useProps = createHook<DialogProps>(
 export const Dialog = createComponent<DialogProps>(
   (props) => {
     const dialogProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: dialogProps });
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: dialogProps,
+    });
   },
   {
     attach: {
@@ -157,7 +166,11 @@ const useDialogContentProps = createHook<DialogContentProps>(
       prevClassName: flexProps.className,
     });
 
-    return { id: props.id || contextProps.descriptionId, ...flexProps, className };
+    return {
+      id: props.id || contextProps.descriptionId,
+      ...flexProps,
+      className,
+    };
   },
   { themeKey: 'Dialog.Content' }
 );
@@ -364,13 +377,14 @@ export const DialogIcon = createComponent<DialogIconProps>(
 export type LocalDialogModalProps = {
   variant?: Flexible<'alert', string>;
   hasScroll?: boolean;
+  wrap?: (children: React.ReactNode) => React.ReactNode;
 };
 export type DialogModalProps = DialogProps & ModalProps & LocalDialogModalProps;
 
 const useDialogModalProps = createHook<DialogModalProps>(
   (props, { themeKey }) => {
     const { modal } = React.useContext(ModalContext);
-    const { variant, ...restProps } = { ...modal, ...props };
+    const { wrap, variant, ...restProps } = { ...modal, ...props };
 
     const dialogProps = Dialog.useProps({
       ...restProps,
@@ -400,7 +414,11 @@ const useDialogModalProps = createHook<DialogModalProps>(
       prevClassName: dialogProps.className,
     });
 
-    return { ...dialogProps, className };
+    return {
+      ...dialogProps,
+      className,
+      children: typeof wrap === 'function' ? wrap(dialogProps.children) : dialogProps.children,
+    };
   },
   { defaultProps: { hasScroll: true }, themeKey: 'Dialog.Modal' }
 );
