@@ -4,7 +4,7 @@ export default {
   Wrapper: {
     styles: {
       base: {
-        paddingY: 'major-3',
+        paddingY: 'major-2',
       },
     },
   },
