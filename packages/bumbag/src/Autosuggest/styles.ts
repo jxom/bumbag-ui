@@ -1,5 +1,5 @@
 import { cssClass } from '../styled';
-import { palette, space, theme } from '../utils';
+import { getHiddenScrollbarStyles, palette, space, theme } from '../utils';
 
 export const Autosuggest = (styleProps) => cssClass`
   position: relative;
@@ -90,6 +90,8 @@ export const AutosuggestField = (styleProps) => cssClass`
 export const ItemsWrapper = (styleProps) => cssClass`
   max-height: calc(${styleProps.popoverHeight} - 1rem);
   overflow-y: scroll;
+
+  ${getHiddenScrollbarStyles()};
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

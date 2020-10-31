@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { breakpoint, palette, space, theme } from '../utils';
+import { breakpoint, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
 
 export const PageContent = (styleProps) => cssClass`
   padding: ${space(4, 'major')(styleProps)}rem ${space(2, 'major')(styleProps)}rem;
@@ -129,6 +129,8 @@ export const PageWithSidebarSidebarExpandedWrapper = (styleProps) => cssClass`
   z-index: 999999;
   overflow-y: scroll;
 
+  ${getHiddenScrollbarStyles()};
+
   ${
     styleProps.sidebarPlacement === 'right' &&
     css`
@@ -152,6 +154,8 @@ export const PageWithSidebarSidebarCollapsedWrapper = (styleProps) => cssClass`
   &&& {
     min-width: ${styleProps.collapsedSidebarWidth};
     overflow-y: scroll;
+
+    ${getHiddenScrollbarStyles()};
   }
 
   ${breakpoint(`max-${styleProps.collapseBelow}`, css``, {

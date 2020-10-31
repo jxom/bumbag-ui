@@ -1,5 +1,14 @@
 import { css, cssClass } from '../styled';
-import { altitude, borderRadius, fontSize, fontWeight, palette, space, theme } from '../utils';
+import {
+  altitude,
+  borderRadius,
+  fontSize,
+  fontWeight,
+  getHiddenScrollbarStyles,
+  palette,
+  space,
+  theme,
+} from '../utils';
 
 export const Dialog = (styleProps) => cssClass`
   border-radius: ${borderRadius('default')(styleProps)};
@@ -99,6 +108,8 @@ export const DialogModal = (styleProps) => cssClass`
   & .bb-DialogContent {
     max-height: 70vh;
     overflow-y: ${styleProps.hasScroll ? 'scroll' : 'visible'};
+
+    ${getHiddenScrollbarStyles()};
   }
 
   & {

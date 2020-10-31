@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { space, theme } from '../utils';
+import { getHiddenScrollbarStyles, space, theme } from '../utils';
 
 export const Modal = (styleProps) => cssClass`
   position: fixed;
@@ -16,6 +16,8 @@ export const Modal = (styleProps) => cssClass`
   &:focus {
     outline: none;
   }
+
+  ${getHiddenScrollbarStyles()};
 
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};

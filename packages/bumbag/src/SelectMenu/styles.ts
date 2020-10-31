@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { darken, palette, space, theme } from '../utils';
+import { darken, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
 import { Select } from '../Select/styles';
 
 export const SelectMenu = (styleProps) => cssClass`
@@ -142,6 +142,8 @@ export const SelectMenuItemsWrapper = (styleProps) => cssClass`
   &&& {
     padding: ${space(2)(styleProps)}rem 0;
     overflow-y: scroll;
+
+    ${getHiddenScrollbarStyles()};
   }
 
   & {

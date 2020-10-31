@@ -42,7 +42,8 @@ export default {
   global: {
     styles: {
       base: css`
-        html, body {
+        html,
+        body {
           overflow-x: hidden;
         }
 
@@ -131,5 +132,23 @@ export default {
         type: 'font-awesome',
       },
     ],
+  },
+  Modal: {
+    styles: {
+      base: css`
+        max-height: 100px;
+        overflow-y: scroll;
+
+
+        &::-webkit-scrollbar {
+          width: 0px;
+          background: transparent;
+        }
+        & {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+      `,
+    },
   },
 };
