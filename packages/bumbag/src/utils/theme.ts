@@ -257,7 +257,7 @@ export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boole
       @media screen and (${key}: ${breakpointValue}px) {
         ${cssStyle};
       }
-      @media screen and (${elseKey}: ${breakpointValue}px) {
+      @media screen and (${elseKey}: ${breakpointValue + (elseKey.includes('max') ? -1 : 1)}px) {
         ${elseStyle};
       }
     `;
