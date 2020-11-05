@@ -1,7 +1,8 @@
+import * as React from 'react';
 import { Box as ReakitBox } from 'reakit';
 
-import { useClassName, createComponent, createElement, createHook } from '../utils';
-import { Modal, ModalProps } from '../Modal';
+import { useClassName, createComponent, createElement, createHook, useViewportHeight } from '../utils';
+import { Modal, ModalContext, ModalProps } from '../Modal';
 
 import * as styles from './styles';
 
@@ -13,11 +14,13 @@ export type DrawerProps = ModalProps & LocalDrawerProps;
 
 const useProps = createHook<Partial<DrawerProps>>(
   (props, { themeKey }) => {
+    const modalContext = React.useContext(ModalContext);
+    const viewportHeight = useViewportHeight({ enabled: modalContext.modal.visible || props.visible });
     const modalProps = Modal.useProps({ ...props }, { themeKey: 'Drawer' });
 
     const className = useClassName({
       style: styles.Drawer,
-      styleProps: props,
+      styleProps: { ...props, viewportHeight },
       themeKey,
       prevClassName: modalProps.className,
     });

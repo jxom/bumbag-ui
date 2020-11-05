@@ -52,7 +52,9 @@ export default function Header(props) {
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
-          {type !== 'landing' && <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />}
+          <div>
+            {type !== 'landing' && <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />}
+          </div>
           <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />
             Sponsor

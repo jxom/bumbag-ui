@@ -37,7 +37,7 @@ export const Drawer = (styleProps) => cssClass`
     ${
       (styleProps.placement === 'left' || styleProps.placement === 'right' || styleProps.isFullScreen) &&
       css`
-        height: 100vh;
+        height: ${styleProps.viewportHeight};
       `
     }
 
