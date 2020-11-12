@@ -122,7 +122,7 @@ export const getDisabledProperties = (styleProps) => css`
     outline: unset;
     pointer-events: unset;
   }
-  &&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.disabled`)(styleProps)};
   }
 `;
@@ -177,7 +177,7 @@ export const getLoadingProperties = (styleProps) => css`
       outline: unset !important;
     }
   }
-  &&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.loading`)(styleProps)};
   }
 `;
@@ -192,7 +192,7 @@ export const getStaticProperties = (styleProps) => css`
       outline: unset !important;
     }
   }
-  &&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.static`)(styleProps)};
   }
 `;
@@ -215,7 +215,7 @@ export const getInteractiveProperties = (styleProps) => css`
       border-color: transparent;
     `};
 
-    &&&& {
+    && {
       ${theme(styleProps.themeKey, `styles.focus`)(styleProps)};
     }
   }
@@ -227,7 +227,7 @@ export const getInteractiveProperties = (styleProps) => css`
         dark: `${styleProps.palette === 'default' ? 'black100' : `${styleProps.palette}600`}`,
       })(styleProps)};
 
-      &&&& {
+      & {
         ${theme(styleProps.themeKey, `styles.hover`)(styleProps)};
       }
     }
@@ -240,7 +240,7 @@ export const getInteractiveProperties = (styleProps) => css`
         dark: `${styleProps.palette === 'default' ? 'black200' : `${styleProps.palette}700`}`,
       })(styleProps)};
 
-      &&&& {
+      & {
         ${theme(styleProps.themeKey, `styles.hoveractive`)(styleProps)};
       }
     }
@@ -264,7 +264,7 @@ export const getLinkProperties = (styleProps) => css`
     }
   }
 
-  &&&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.link`)(styleProps)};
   }
 `;
@@ -290,7 +290,7 @@ export const getOutlinedProperties = (styleProps) => css`
       }
     `};
   }
-  &&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.outlined`)(styleProps)};
   }
 `;
@@ -314,7 +314,7 @@ export const getGhostProperties = (styleProps) => css`
       background-color: rgba(0, 0, 0, 0.1);
     }
   }
-  &&&& {
+  & {
     ${theme(styleProps.themeKey, `styles.ghost`)(styleProps)};
   }
 `;
