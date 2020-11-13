@@ -24,7 +24,7 @@ const useProps = createHook<ModalBackdropProps>(
       {
         visible,
         baseId,
-        modal,
+        modal: process.env.NODE_ENV === 'test' ? false : modal,
         animating,
         animated,
         stopAnimation,

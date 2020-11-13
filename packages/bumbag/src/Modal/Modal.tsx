@@ -47,7 +47,7 @@ const useProps = createHook<Partial<ModalProps>>(
         hide,
         hideOnEsc,
         hideOnClickOutside,
-        modal,
+        modal: process.env.NODE_ENV === 'test' ? false : modal,
         preventBodyScroll,
         visible,
         animating,

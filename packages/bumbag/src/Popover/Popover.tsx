@@ -89,7 +89,7 @@ const useProps = createHook<Partial<PopoverProps>>(
         hide,
         hideOnEsc,
         hideOnClickOutside,
-        modal: usePortal || modal,
+        modal: process.env.NODE_ENV === 'test' ? false : usePortal || modal,
         preventBodyScroll,
         visible,
         animating,

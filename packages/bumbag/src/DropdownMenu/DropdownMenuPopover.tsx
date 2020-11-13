@@ -56,7 +56,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
         hideOnClickOutside,
         groups,
         last,
-        modal,
+        modal: process.env.NODE_ENV === 'test' ? false : modal,
         move,
         next,
         orientation,
