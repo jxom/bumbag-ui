@@ -10,6 +10,7 @@ export const Toast = (styleProps) => cssClass`
 export const ToastOverlay = (styleProps) => cssClass`
   && {
     min-width: 350px;
+    z-index: 19900411;
   }
 
   & .bb-Toast {
