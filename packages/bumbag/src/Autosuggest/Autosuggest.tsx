@@ -112,13 +112,6 @@ function reducer(state, event) {
         selectedOption: undefined,
       };
     }
-    case 'VALUE_CHANGE': {
-      return {
-        ...state,
-        page: 1,
-        value: event.value,
-      };
-    }
     case 'INPUT_BLUR': {
       return {
         ...state,
@@ -564,7 +557,7 @@ const useProps = createHook<AutosuggestProps>(
 
     React.useEffect(() => {
       if (value) {
-        dispatch({ type: 'VALUE_CHANGE', automaticSelection, value });
+        dispatch({ type: 'OPTION_SELECTED', option: value });
       }
     }, [automaticSelection, value]);
 
