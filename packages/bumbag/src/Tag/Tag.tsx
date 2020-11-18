@@ -32,14 +32,12 @@ const useProps = createHook<TagProps>(
       styleProps: props,
       themeKey,
       themeKeySuffix: 'Content',
-      prevClassName: boxProps.className,
     });
     const tagCloseClassName = useClassName({
       style: styles.TagClose,
       styleProps: props,
       themeKey,
       themeKeySuffix: 'Close',
-      prevClassName: boxProps.className,
     });
 
     return {
