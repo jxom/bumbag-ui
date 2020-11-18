@@ -30,11 +30,26 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Tooltip props 1`] = `
 Object {
   "children": <React.Fragment>
-    <Tooltip.Reference
+    .emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<Tooltip.Reference
       animated={false}
       animating={false}
       baseId="test"
-      className="css-63it0p css-jwhr8m bb-Box"
+      className="emotion-0 emotion-1 bb-Box"
       hide={[Function]}
       place={[Function]}
       placement="top"
@@ -152,7 +167,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div>
@@ -194,6 +209,10 @@ exports[`overrides Tooltip.Content.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tooltip.Reference.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -207,10 +226,6 @@ exports[`overrides Tooltip.Reference.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div>
@@ -268,7 +283,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 <div>
@@ -310,6 +325,10 @@ exports[`theming Tooltip.Content.base should render correctly 1`] = `
 `;
 
 exports[`theming Tooltip.Reference.base should render correctly 1`] = `
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -323,10 +342,6 @@ exports[`theming Tooltip.Reference.base should render correctly 1`] = `
 
 .emotion-1:focus:not(:focus-visible) {
   outline: none;
-}
-
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div>

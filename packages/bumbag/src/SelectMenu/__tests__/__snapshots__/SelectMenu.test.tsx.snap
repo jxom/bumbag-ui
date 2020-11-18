@@ -2,6 +2,10 @@
 
 exports[`defaultProps should render correctly for className 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -12,36 +16,23 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-21 {
-  position: relative;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -58,41 +49,40 @@ exports[`defaultProps should render correctly for className 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,17 +92,18 @@ exports[`defaultProps should render correctly for className 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -121,19 +112,19 @@ exports[`defaultProps should render correctly for className 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -141,11 +132,7 @@ exports[`defaultProps should render correctly for className 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -153,49 +140,63 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-23 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-23 test bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-4 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-4 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -210,7 +211,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -224,6 +225,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 
 exports[`overrides styles.base should render correctly 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -234,32 +243,19 @@ exports[`overrides styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -276,41 +272,40 @@ exports[`overrides styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -320,17 +315,18 @@ exports[`overrides styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -339,19 +335,19 @@ exports[`overrides styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -359,11 +355,7 @@ exports[`overrides styles.base should render correctly 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -371,53 +363,63 @@ exports[`overrides styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-21 {
-  position: relative;
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-21 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-1 bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -432,7 +434,7 @@ exports[`overrides styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -446,6 +448,10 @@ exports[`overrides styles.base should render correctly 1`] = `
 
 exports[`props should render correctly 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -456,36 +462,19 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-21 {
-  position: relative;
-}
-
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -502,41 +491,40 @@ exports[`props should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -546,17 +534,18 @@ exports[`props should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -565,19 +554,19 @@ exports[`props should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -585,11 +574,7 @@ exports[`props should render correctly 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -597,45 +582,63 @@ exports[`props should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-1 bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -650,7 +653,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -664,6 +667,10 @@ exports[`props should render correctly 1`] = `
 
 exports[`props should render correctly with CSS props 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -674,36 +681,23 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-21 {
-  position: relative;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -720,41 +714,40 @@ exports[`props should render correctly with CSS props 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -764,17 +757,18 @@ exports[`props should render correctly with CSS props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -783,19 +777,19 @@ exports[`props should render correctly with CSS props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -803,11 +797,7 @@ exports[`props should render correctly with CSS props 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -815,49 +805,63 @@ exports[`props should render correctly with CSS props 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-23 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-23 bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-4 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-4 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-4 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-4 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-4 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -872,7 +876,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -886,6 +890,14 @@ exports[`props should render correctly with CSS props 1`] = `
 
 exports[`theming styles.base should render correctly 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -896,32 +908,19 @@ exports[`theming styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -938,41 +937,40 @@ exports[`theming styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -982,17 +980,18 @@ exports[`theming styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1001,19 +1000,19 @@ exports[`theming styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -1021,11 +1020,7 @@ exports[`theming styles.base should render correctly 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -1033,53 +1028,63 @@ exports[`theming styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-21 {
-  position: relative;
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-21 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-1 bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -1094,7 +1099,7 @@ exports[`theming styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -1108,6 +1113,14 @@ exports[`theming styles.base should render correctly 1`] = `
 
 exports[`variants styles.base should render correctly 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -1118,32 +1131,19 @@ exports[`variants styles.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-20.emotion-20.emotion-20 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-15 {
+.emotion-5 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  background: linear-gradient(var(--bb-palette-default,#000000),var(--bb-palette-white600,#000000));
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: linear-gradient(var(--bb-palette-default, #000000), var(--bb-palette-white600, #000000));
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   padding: 0.4em 2em 0.4em 0.8em;
   line-height: 1.5;
@@ -1160,41 +1160,40 @@ exports[`variants styles.base should render correctly 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.4em 0.8em;
 }
 
-.emotion-15[disabled],
-.emotion-15[aria-disabled="true"] {
-  background: var(--bb-palette-white700,#000000);
+.emotion-5[disabled],
+.emotion-5[aria-disabled="true"] {
+  background: var(--bb-palette-white700, #000000);
   box-shadow: unset;
 }
 
-.emotion-15[disabled] + .bb-Icon {
-  color: var(--bb-palette-gray400,#000000);
-  fill: var(--bb-palette-gray400,#000000);
+.emotion-5[disabled]+.bb-Icon {
+  color: var(--bb-palette-gray400, #000000);
+  fill: var(--bb-palette-gray400, #000000);
 }
 
-.emotion-15:focus {
+.emotion-5:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-15[aria-expanded="true"] {
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+.emotion-5[aria-expanded="true"] {
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-2 {
+.emotion-8 {
   max-width: calc(100% - 4rem);
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1204,17 +1203,18 @@ exports[`variants styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   min-width: 4rem;
 }
 
-.emotion-7 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1223,19 +1223,19 @@ exports[`variants styles.base should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-left: -0.5rem;
   margin-top: -0.5rem;
 }
 
-.emotion-7.emotion-7.emotion-7 > * {
+.emotion-12.emotion-12.emotion-12>* {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-15 {
   fill: inherit;
   position: relative;
   height: 1em;
@@ -1243,11 +1243,7 @@ exports[`variants styles.base should render correctly 1`] = `
 }
 
 .emotion-19 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-16 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -1255,53 +1251,63 @@ exports[`variants styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-17 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-20 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-17:focus {
+.emotion-20:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-21 {
-  position: relative;
+.emotion-22 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-21 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-23.emotion-23.emotion-23 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
-  class="emotion-21 emotion-0 emotion-1 bb-Box bb-SelectMenu"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-SelectMenu"
 >
   <div
     aria-controls="test"
     aria-expanded="false"
     aria-haspopup="listbox"
-    class="emotion-0 emotion-1 emotion-15 bb-SelectMenuButton bb-Box"
+    class="emotion-1 emotion-2 emotion-5 bb-SelectMenuButton bb-Box"
     loop=""
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2 bb-SelectMenuButtonText bb-Box"
+      class="emotion-1 emotion-2 emotion-8 bb-SelectMenuButtonText bb-Box"
     >
       Search for a fruit...
     </div>
     <div
-      class="emotion-0 emotion-1 emotion-12 bb-SelectMenuButtonIconsWrapper bb-Box"
+      class="emotion-1 emotion-2 emotion-11 bb-SelectMenuButtonIconsWrapper bb-Box"
     >
       <div
-        class="emotion-7 emotion-0 emotion-1 bb-Box bb-Set"
+        class="emotion-12 emotion-1 emotion-2 bb-Box bb-Set"
       >
         <svg
           aria-hidden="true"
-          class="emotion-3 emotion-0 emotion-1 emotion-6 bb-SelectMenuButtonIcon bb-Box bb-Icon"
+          class="emotion-15 emotion-1 emotion-2 emotion-18 bb-SelectMenuButtonIcon bb-Box bb-Icon"
           role="img"
           viewBox="0 0 448 512"
         >
@@ -1316,7 +1322,7 @@ exports[`variants styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-16 emotion-17 emotion-0 emotion-19 emotion-20 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-19 emotion-20 emotion-1 emotion-22 emotion-23 bb-SelectMenuPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"

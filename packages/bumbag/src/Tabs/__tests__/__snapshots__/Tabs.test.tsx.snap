@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -16,11 +20,11 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -30,25 +34,17 @@ exports[`defaultProps should render correctly for className 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -60,8 +56,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -72,42 +68,46 @@ exports[`defaultProps should render correctly for className 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-bottom-color: var(--bb-palette-white,#ffffff);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-bottom-color: var(--bb-palette-white, #ffffff);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-23 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-23 test bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-5 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -117,7 +117,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -127,7 +127,7 @@ exports[`defaultProps should render correctly for className 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -137,7 +137,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -146,7 +146,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -157,7 +157,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -170,6 +170,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -185,68 +193,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -259,33 +206,86 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-9 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-6:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
+}
+
+.emotion-6:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
+}
+
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -295,7 +295,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -305,7 +305,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -315,7 +315,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -324,7 +324,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -335,7 +335,7 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -348,6 +348,14 @@ exports[`overrides Tabs.List.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -363,19 +371,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -388,17 +384,17 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -410,8 +406,8 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -423,47 +419,51 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-15 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -473,7 +473,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -483,7 +483,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -493,7 +493,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -502,7 +502,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -513,7 +513,7 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -526,6 +526,14 @@ exports[`overrides Tabs.Panel.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -541,23 +549,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -570,17 +562,17 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -592,8 +584,8 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -605,43 +597,51 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -651,7 +651,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -661,7 +661,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -671,7 +671,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -680,7 +680,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -691,7 +691,7 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -704,6 +704,14 @@ exports[`overrides Tabs.Tab.styles.base should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -719,23 +727,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -748,17 +740,17 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -770,8 +762,8 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -783,43 +775,51 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6:focus {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -829,7 +829,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -839,7 +839,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -849,7 +849,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -858,7 +858,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -869,7 +869,7 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -882,6 +882,14 @@ exports[`overrides Tabs.Tab.styles.focus should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -897,23 +905,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -926,17 +918,17 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -948,8 +940,8 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -961,43 +953,51 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6:not([aria-selected='true']):hover {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1007,7 +1007,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1017,7 +1017,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1027,7 +1027,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1036,7 +1036,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1047,7 +1047,7 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1060,6 +1060,14 @@ exports[`overrides Tabs.Tab.styles.hover should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1075,23 +1083,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1104,17 +1096,17 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1126,8 +1118,8 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1139,43 +1131,51 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0[aria-selected='true'] {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6[aria-selected='true'] {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1185,7 +1185,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1195,7 +1195,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1205,7 +1205,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1214,7 +1214,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1225,7 +1225,7 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1238,6 +1238,18 @@ exports[`overrides Tabs.Tab.styles.selected should render correctly 1`] = `
 `;
 
 exports[`overrides Tabs.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1253,15 +1265,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1274,17 +1278,17 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1296,8 +1300,8 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1309,51 +1313,47 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-15:focus {
+  outline: none;
 }
 
-.emotion-21 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1363,7 +1363,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1373,7 +1373,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1383,7 +1383,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1392,7 +1392,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1403,7 +1403,7 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1416,6 +1416,10 @@ exports[`overrides Tabs.styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1431,11 +1435,7 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1445,17 +1445,17 @@ exports[`props should render correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1467,8 +1467,8 @@ exports[`props should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1478,46 +1478,46 @@ exports[`props should render correctly 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
+.emotion-17 {
+  padding: 1rem!important;
+}
+
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1527,7 +1527,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1537,7 +1537,7 @@ exports[`props should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1547,7 +1547,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1556,7 +1556,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1567,7 +1567,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1580,6 +1580,10 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly for boxed tabs 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1595,11 +1599,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1609,25 +1609,17 @@ exports[`props should render correctly for boxed tabs 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1639,8 +1631,8 @@ exports[`props should render correctly for boxed tabs 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1651,38 +1643,46 @@ exports[`props should render correctly for boxed tabs 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
-  border-bottom-color: var(--bb-palette-white,#ffffff);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
+  border-bottom-color: var(--bb-palette-white, #ffffff);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1692,7 +1692,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1702,7 +1702,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1712,7 +1712,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1721,7 +1721,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1732,7 +1732,7 @@ exports[`props should render correctly for boxed tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1745,6 +1745,10 @@ exports[`props should render correctly for boxed tabs 1`] = `
 `;
 
 exports[`props should render correctly for button tabs 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1760,19 +1764,7 @@ exports[`props should render correctly for button tabs 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1784,14 +1776,14 @@ exports[`props should render correctly for button tabs 1`] = `
   font-weight: 600;
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1803,8 +1795,8 @@ exports[`props should render correctly for button tabs 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1815,38 +1807,46 @@ exports[`props should render correctly for button tabs 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-primary,#000000);
-  color: var(--bb-palette-primaryInverted,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-primary, #000000);
+  color: var(--bb-palette-primaryInverted, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: var(--bb-palette-primary,#000000) 0px 0px 0px 1px, var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary, #000000) 0px 0px 0px 1px,var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  background-color: var(--bb-palette-white700, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -1856,7 +1856,7 @@ exports[`props should render correctly for button tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -1866,7 +1866,7 @@ exports[`props should render correctly for button tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -1876,7 +1876,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -1885,7 +1885,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -1896,7 +1896,7 @@ exports[`props should render correctly for button tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -1909,6 +1909,10 @@ exports[`props should render correctly for button tabs 1`] = `
 `;
 
 exports[`props should render correctly for center align 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -1924,11 +1928,24 @@ exports[`props should render correctly for center align 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1940,8 +1957,8 @@ exports[`props should render correctly for center align 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -1951,63 +1968,46 @@ exports[`props should render correctly for center align 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2017,7 +2017,7 @@ exports[`props should render correctly for center align 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2027,7 +2027,7 @@ exports[`props should render correctly for center align 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2037,7 +2037,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2046,7 +2046,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2057,7 +2057,7 @@ exports[`props should render correctly for center align 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2070,6 +2070,16 @@ exports[`props should render correctly for center align 1`] = `
 `;
 
 exports[`props should render correctly for fitted tabs 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 .bb-TabsTab {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2085,7 +2095,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   outline: none;
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2095,17 +2105,17 @@ exports[`props should render correctly for fitted tabs 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2117,8 +2127,8 @@ exports[`props should render correctly for fitted tabs 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2128,56 +2138,46 @@ exports[`props should render correctly for fitted tabs 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-21 .bb-TabsTab {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2187,7 +2187,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2197,7 +2197,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2207,7 +2207,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2216,7 +2216,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2227,7 +2227,7 @@ exports[`props should render correctly for fitted tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2240,6 +2240,10 @@ exports[`props should render correctly for fitted tabs 1`] = `
 `;
 
 exports[`props should render correctly for right align 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2255,11 +2259,24 @@ exports[`props should render correctly for right align 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2271,8 +2288,8 @@ exports[`props should render correctly for right align 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2282,63 +2299,46 @@ exports[`props should render correctly for right align 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2348,7 +2348,7 @@ exports[`props should render correctly for right align 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2358,7 +2358,7 @@ exports[`props should render correctly for right align 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2368,7 +2368,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2377,7 +2377,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2388,7 +2388,7 @@ exports[`props should render correctly for right align 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2401,6 +2401,10 @@ exports[`props should render correctly for right align 1`] = `
 `;
 
 exports[`props should render correctly for unstyled tabs 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2416,19 +2420,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2440,14 +2432,14 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   font-weight: 600;
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2459,8 +2451,8 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2470,35 +2462,43 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2508,7 +2508,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2518,7 +2518,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2528,7 +2528,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2537,7 +2537,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2548,7 +2548,7 @@ exports[`props should render correctly for unstyled tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2561,6 +2561,14 @@ exports[`props should render correctly for unstyled tabs 1`] = `
 `;
 
 exports[`props should render correctly for vertical tabs 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2576,23 +2584,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2605,17 +2597,17 @@ exports[`props should render correctly for vertical tabs 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2627,8 +2619,8 @@ exports[`props should render correctly for vertical tabs 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2640,39 +2632,47 @@ exports[`props should render correctly for vertical tabs 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2682,7 +2682,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2692,7 +2692,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2702,7 +2702,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2711,7 +2711,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2722,7 +2722,7 @@ exports[`props should render correctly for vertical tabs 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2735,6 +2735,10 @@ exports[`props should render correctly for vertical tabs 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2750,11 +2754,11 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
+.emotion-2 {
+  background-color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2764,17 +2768,17 @@ exports[`props should render correctly with CSS props 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2786,8 +2790,8 @@ exports[`props should render correctly with CSS props 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2797,50 +2801,46 @@ exports[`props should render correctly with CSS props 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-23 {
-  background-color: var(--bb-palette-primary,#000000) !important;
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-23 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-5 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -2850,7 +2850,7 @@ exports[`props should render correctly with CSS props 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -2860,7 +2860,7 @@ exports[`props should render correctly with CSS props 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-5 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -2870,7 +2870,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -2879,7 +2879,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -2890,7 +2890,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -2903,6 +2903,10 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`props should render correctly with selectedId 1`] = `
+.emotion-0 {
+  width: 100%;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -2918,11 +2922,7 @@ exports[`props should render correctly with selectedId 1`] = `
   outline: none;
 }
 
-.emotion-21 {
-  width: 100%;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2932,17 +2932,17 @@ exports[`props should render correctly with selectedId 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
-  border-bottom: 1px solid var(--bb-palette-white900,#000000);
+  border-bottom: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2954,8 +2954,8 @@ exports[`props should render correctly with selectedId 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -2965,46 +2965,46 @@ exports[`props should render correctly with selectedId 1`] = `
   border-top-right-radius: 6px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset 0 -2px 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
+.emotion-17 {
+  padding: 1rem!important;
+}
+
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="-1"
@@ -3014,7 +3014,7 @@ exports[`props should render correctly with selectedId 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="0"
@@ -3024,7 +3024,7 @@ exports[`props should render correctly with selectedId 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3034,7 +3034,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-4"
     role="tabpanel"
@@ -3045,7 +3045,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-5"
     role="tabpanel"
     tabindex="0"
@@ -3054,7 +3054,7 @@ exports[`props should render correctly with selectedId 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3067,6 +3067,14 @@ exports[`props should render correctly with selectedId 1`] = `
 `;
 
 exports[`theming Tabs.List.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3082,68 +3090,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2.75em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0 1rem;
-  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-right: -2px;
-}
-
-.emotion-0:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
-}
-
-.emotion-0:focus {
-  outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
-}
-
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3156,33 +3103,86 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-9 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-3 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75em;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0 1rem;
+  -webkit-transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  transition: box-shadow 0.1s ease-in-out 0s,background-color 0.1s,color 0.1s;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  margin-right: -2px;
+}
+
+.emotion-6:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
+}
+
+.emotion-6:focus {
+  outline: unset;
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
+}
+
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3192,7 +3192,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3202,7 +3202,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3212,7 +3212,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3221,7 +3221,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3232,7 +3232,7 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3245,6 +3245,14 @@ exports[`theming Tabs.List.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3260,19 +3268,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3285,17 +3281,17 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3307,8 +3303,8 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -3320,47 +3316,51 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-12:focus {
+.emotion-15:focus {
   outline: none;
 }
 
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-15 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3370,7 +3370,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3380,7 +3380,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3390,7 +3390,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3399,7 +3399,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3410,7 +3410,7 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3423,6 +3423,14 @@ exports[`theming Tabs.Panel.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3438,23 +3446,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3467,17 +3459,17 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3489,8 +3481,8 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -3502,43 +3494,51 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-0 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3548,7 +3548,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3558,7 +3558,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3568,7 +3568,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3577,7 +3577,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3588,7 +3588,7 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3601,6 +3601,14 @@ exports[`theming Tabs.Tab.styles.base should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3616,23 +3624,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3645,17 +3637,17 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3667,8 +3659,8 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -3680,43 +3672,51 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6:focus {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3726,7 +3726,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3736,7 +3736,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3746,7 +3746,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3755,7 +3755,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3766,7 +3766,7 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3779,6 +3779,14 @@ exports[`theming Tabs.Tab.styles.focus should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3794,23 +3802,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3823,17 +3815,17 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3845,8 +3837,8 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -3858,43 +3850,51 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6:not([aria-selected='true']):hover {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -3904,7 +3904,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -3914,7 +3914,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -3924,7 +3924,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -3933,7 +3933,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -3944,7 +3944,7 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -3957,6 +3957,14 @@ exports[`theming Tabs.Tab.styles.hover should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -3972,23 +3980,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4001,17 +3993,17 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4023,8 +4015,8 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -4036,43 +4028,51 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0[aria-selected='true'] {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-6[aria-selected='true'] {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
+}
+
+.emotion-15:focus {
+  outline: none;
+}
+
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -4082,7 +4082,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -4092,7 +4092,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -4102,7 +4102,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -4111,7 +4111,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -4122,7 +4122,7 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"
@@ -4135,6 +4135,18 @@ exports[`theming Tabs.Tab.styles.selected should render correctly 1`] = `
 `;
 
 exports[`theming Tabs.styles.base should render correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -4150,15 +4162,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-14 {
-  padding: 1rem !important;
-}
-
-.emotion-12:focus {
-  outline: none;
-}
-
-.emotion-9 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4171,17 +4175,17 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-right: 1px solid var(--bb-palette-white900,#000000);
+  border-right: 1px solid var(--bb-palette-white900, #000000);
 }
 
-.emotion-9 {
+.emotion-3 {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-0 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4193,8 +4197,8 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   display: flex;
   height: 2.75em;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin-bottom: -1px;
   padding: 0 1rem;
@@ -4206,51 +4210,47 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   margin-right: -2px;
 }
 
-.emotion-0:not(:last-child) {
+.emotion-6:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.emotion-0[aria-selected='true'] {
-  color: var(--bb-palette-primary,#000000);
-  fill: var(--bb-palette-primary,#000000);
-  background-color: var(--bb-palette-background,#000000);
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+.emotion-6[aria-selected='true'] {
+  color: var(--bb-palette-primary, #000000);
+  fill: var(--bb-palette-primary, #000000);
+  background-color: var(--bb-palette-background, #000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:focus {
+.emotion-6:focus {
   outline: unset;
-  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary,#000000);
+  box-shadow: inset -2px 0 0 0 var(--bb-palette-primary, #000000);
 }
 
-.emotion-0:not([aria-selected='true']):hover {
-  color: var(--bb-palette-primary,#000000);
+.emotion-6:not([aria-selected='true']):hover {
+  color: var(--bb-palette-primary, #000000);
 }
 
-.emotion-21 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-15:focus {
+  outline: none;
 }
 
-.emotion-21 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-17 {
+  padding: 1rem!important;
 }
 
 <div
-  class="emotion-21 emotion-1 emotion-2 bb-Box bb-Tabs"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Tabs"
 >
   <div
     aria-orientation="vertical"
-    class="emotion-9 emotion-1 emotion-2 bb-Box bb-TabsList"
+    class="emotion-3 emotion-1 emotion-2 bb-Box bb-TabsList"
     id="test"
     role="tablist"
   >
     <div
       aria-controls="test-4"
       aria-selected="true"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab1"
       role="tab"
       tabindex="0"
@@ -4260,7 +4260,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-5"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab2"
       role="tab"
       tabindex="-1"
@@ -4270,7 +4270,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
     <div
       aria-controls="test-6"
       aria-selected="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-TabsTab"
+      class="emotion-6 emotion-1 emotion-2 bb-Box bb-TabsTab"
       id="tab3"
       role="tab"
       tabindex="-1"
@@ -4280,7 +4280,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab1"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     id="test-4"
     role="tabpanel"
     tabindex="0"
@@ -4289,7 +4289,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab2"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-5"
     role="tabpanel"
@@ -4300,7 +4300,7 @@ exports[`theming Tabs.styles.base should render correctly 1`] = `
   </div>
   <div
     aria-labelledby="tab3"
-    class="emotion-12 emotion-1 emotion-14 bb-Box bb-TabsPanel"
+    class="emotion-15 emotion-1 emotion-17 bb-Box bb-TabsPanel"
     hidden=""
     id="test-6"
     role="tabpanel"

@@ -5,8 +5,35 @@ Object {
   "aria-valuemax": 100,
   "aria-valuemin": 0,
   "aria-valuenow": 50,
-  "children": <Box
-    className="css-1bsu0i0 css-63it0p css-nkssow bb-Box bb-ProgressBarIndicator"
+  "children": .emotion-0 {
+  height: 100%;
+  background-color: #000000;
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: 50%;
+}
+
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-2 {
+  color: #000000!important;
+}
+
+<Box
+    className="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBarIndicator"
   />,
   "className": "css-i19h14 css-63it0p css-nkssow bb-Box bb-ProgressBar",
   "role": "progressbar",
@@ -14,11 +41,15 @@ Object {
 `;
 
 exports[`defaultProps should render correctly for className 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -29,23 +60,19 @@ exports[`defaultProps should render correctly for className 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
 }
 
@@ -53,21 +80,25 @@ exports[`defaultProps should render correctly for className 1`] = `
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 test bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 test bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 test bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`overrides ProgressBar.Indicator.base should render correctly 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -78,49 +109,53 @@ exports[`overrides ProgressBar.Indicator.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`overrides ProgressBar.base should render correctly 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -131,49 +166,45 @@ exports[`overrides ProgressBar.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
-}
-
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`props should render correctly 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -184,23 +215,19 @@ exports[`props should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
 }
 
@@ -208,21 +235,25 @@ exports[`props should render correctly 1`] = `
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -233,23 +264,19 @@ exports[`props should render correctly with CSS props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
 }
 
@@ -257,21 +284,25 @@ exports[`props should render correctly with CSS props 1`] = `
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`props should render correctly with maxValue 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -282,23 +313,19 @@ exports[`props should render correctly with maxValue 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 33.33333333333333%;
 }
 
@@ -306,21 +333,26 @@ exports[`props should render correctly with maxValue 1`] = `
   aria-valuemax="150"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`props should render correctly with size 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
+  height: 2rem;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -331,46 +363,45 @@ exports[`props should render correctly with size 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
-  height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  width: 50%;
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
-  height: 2rem;
+.emotion-5 {
+  height: 100%;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: 50%;
 }
 
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`theming ProgressBar.Indicator.base should render correctly 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -381,49 +412,53 @@ exports[`theming ProgressBar.Indicator.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
-.emotion-2 {
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
 }
 
-.emotion-2 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-5 {
+  background-color: var(--bb-palette-red, #ff0000);
 }
 
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
 
 exports[`theming ProgressBar.base should render correctly 1`] = `
-.emotion-3 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-0 {
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--bb-palette-primaryTint, #000000);
 }
 
 .emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
+.emotion-1 {
   margin: unset;
   padding: unset;
   border: unset;
@@ -434,39 +469,31 @@ exports[`theming ProgressBar.base should render correctly 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-0:focus:not(:focus-visible) {
+.emotion-1:focus:not(:focus-visible) {
   outline: none;
 }
 
 .emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
+}
+
+.emotion-5 {
   height: 100%;
-  background-color: var(--bb-palette-primary,#000000);
-  -webkit-transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: width 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: var(--bb-palette-primary, #000000);
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   width: 50%;
-}
-
-.emotion-4 {
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  height: 1rem;
-  background-color: var(--bb-palette-primaryTint,#000000);
-}
-
-.emotion-4 {
-  background-color: var(--bb-palette-red,#ff0000);
 }
 
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow="50"
-  class="emotion-4 emotion-0 emotion-3 bb-Box bb-ProgressBar"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-ProgressBar"
   role="progressbar"
 >
   <div
-    class="emotion-0 emotion-1 emotion-2 emotion-3 bb-Box bb-ProgressBarIndicator"
+    class="emotion-1 emotion-4 emotion-5 emotion-2 bb-Box bb-ProgressBarIndicator"
   />
 </div>
 `;
