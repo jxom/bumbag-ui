@@ -122,8 +122,8 @@ const useProps = createHook<Partial<PopoverProps>>(
       prevClassName: closeButtonProps.className,
     });
 
-    const titleId = useUniqueId('popoverTitle');
-    const descriptionId = useUniqueId('popoverContent');
+    const titleId = useUniqueId();
+    const descriptionId = useUniqueId();
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 

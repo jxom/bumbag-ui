@@ -39,7 +39,7 @@ const useProps = createHook<SideNavLevelProps>(
 
     const contextValue = React.useMemo(() => ({ level: level + 1 }), [level]);
 
-    const titleId = useUniqueId('sideNavLevelTitle');
+    const titleId = useUniqueId();
 
     return {
       ...listProps,

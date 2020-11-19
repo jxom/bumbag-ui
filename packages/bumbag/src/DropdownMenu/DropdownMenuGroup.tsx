@@ -31,7 +31,7 @@ const useProps = createHook<DropdownMenuGroupProps>(
       prevClassName: boxProps.className,
     });
 
-    const titleId = useUniqueId('dropdownMenuTitle');
+    const titleId = useUniqueId();
 
     return {
       ...boxProps,
