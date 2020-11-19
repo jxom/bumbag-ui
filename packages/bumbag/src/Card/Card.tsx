@@ -41,8 +41,8 @@ const useProps = createHook<CardProps>(
       prevClassName: boxProps.className,
     });
 
-    const titleId = useUniqueId('cardTitle');
-    const descriptionId = useUniqueId('cardDescription');
+    const titleId = useUniqueId();
+    const descriptionId = useUniqueId();
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 

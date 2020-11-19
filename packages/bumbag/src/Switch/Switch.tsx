@@ -86,8 +86,8 @@ const useProps = createHook<SwitchProps>(
       themeKeySuffix: 'Label',
     });
 
-    const labelId = useUniqueId('label');
-    const switchId = useUniqueId('switch');
+    const labelId = useUniqueId();
+    const switchId = useUniqueId();
 
     return {
       ...boxProps,

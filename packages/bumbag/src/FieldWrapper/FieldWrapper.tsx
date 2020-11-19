@@ -116,7 +116,7 @@ const useProps = createHook<FieldWrapperProps>(
       themeKeySuffix: 'TooltipPopover',
     });
     const disclosure = Disclosure.useState();
-    const uid = useUniqueId('FieldWrapper');
+    const uid = useUniqueId();
 
     const elementProps = { isRequired, id: uid, state };
 

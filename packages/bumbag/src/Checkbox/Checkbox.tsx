@@ -90,8 +90,8 @@ const useProps = createHook<CheckboxProps>(
       themeKeySuffix: 'Label',
     });
 
-    const labelId = useUniqueId('label');
-    const checkboxId = useUniqueId('checkbox');
+    const labelId = useUniqueId();
+    const checkboxId = useUniqueId();
 
     return {
       ...boxProps,

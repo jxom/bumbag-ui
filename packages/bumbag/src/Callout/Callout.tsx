@@ -67,8 +67,8 @@ const useProps = createHook<CalloutProps>(
       prevClassName: closeButtonProps.className,
     });
 
-    const titleId = useUniqueId('calloutTitle');
-    const descriptionId = useUniqueId('calloutDescription');
+    const titleId = useUniqueId();
+    const descriptionId = useUniqueId();
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 

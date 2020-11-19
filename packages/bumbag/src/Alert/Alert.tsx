@@ -79,8 +79,8 @@ const useProps = createHook<AlertProps>(
       themeKeySuffix: 'CloseButton',
     });
 
-    const titleId = useUniqueId('alertTitle');
-    const descriptionId = useUniqueId('alertDescription');
+    const titleId = useUniqueId();
+    const descriptionId = useUniqueId();
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 

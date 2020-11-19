@@ -83,8 +83,8 @@ const useProps = createHook<RadioProps>(
       themeKeySuffix: 'Label',
     });
 
-    const labelId = useUniqueId('label');
-    const radioId = useUniqueId('radio');
+    const labelId = useUniqueId();
+    const radioId = useUniqueId();
 
     return {
       ...boxProps,

@@ -31,7 +31,7 @@ const useProps = createHook<MenuGroupProps>(
       prevClassName: boxProps.className,
     });
 
-    const titleId = useUniqueId('menuTitle');
+    const titleId = useUniqueId();
 
     return {
       ...boxProps,

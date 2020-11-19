@@ -78,8 +78,8 @@ const useProps = createHook<DialogProps>(
       prevClassName: closeButtonProps.className,
     });
 
-    const titleId = useUniqueId('dialogTitle');
-    const descriptionId = useUniqueId('dialogDescription');
+    const titleId = useUniqueId();
+    const descriptionId = useUniqueId();
 
     const context = React.useMemo(() => ({ descriptionId, titleId, ...props }), [descriptionId, props, titleId]);
 
