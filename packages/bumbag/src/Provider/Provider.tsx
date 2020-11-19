@@ -59,7 +59,7 @@ export function Provider(props: ProviderProps) {
               <PageProvider collapseBelow={collapseBelow}>
                 <React.Fragment>
                   {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-                  {children}
+                  <Box>{children}</Box>
                 </React.Fragment>
               </PageProvider>
             </ToastProvider>
