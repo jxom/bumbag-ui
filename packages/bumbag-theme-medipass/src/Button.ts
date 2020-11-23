@@ -10,6 +10,7 @@ export default {
         ? palette('gray700')(styleProps)
         : palette(`${styleProps.palette}Inverted`)(styleProps)};
       min-height: 44px;
+      hyphens: none;
       padding: 0 ${space(4)(styleProps)}rem;
       font-size: 15px;
       text-transform: uppercase;
