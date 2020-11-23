@@ -23,6 +23,7 @@ import PageWithSidebar from './PageWithSidebar';
 import SideNav from './SideNav';
 import Select from './Select';
 import Radio from './Radio';
+import Table from './Table';
 import Tabs from './Tabs';
 import Tag from './Tag';
 import Toast from './Toast';
@@ -54,6 +55,7 @@ export default {
   SideNav,
   Select,
   Radio,
+  Table,
   Tabs,
   Tag,
   Toast,
