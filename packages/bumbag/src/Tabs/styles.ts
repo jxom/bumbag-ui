@@ -61,8 +61,6 @@ export const Tab = (styleProps) => cssClass`
     ${
       styleProps.variant === 'default' &&
       css`
-        background-color: ${palette('background')(styleProps)};
-
         ${styleProps.orientation === 'vertical'
           ? css`
               box-shadow: inset -2px 0 0 0 ${palette(styleProps.palette, { dark: `${styleProps.palette}300` })(styleProps)};
