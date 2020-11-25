@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultProps should render correctly for className 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -16,14 +20,8 @@ exports[`defaultProps should render correctly for className 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-5 {
@@ -34,12 +32,12 @@ exports[`defaultProps should render correctly for className 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -47,42 +45,38 @@ exports[`defaultProps should render correctly for className 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -90,32 +84,38 @@ exports[`defaultProps should render correctly for className 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-14 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-14 test bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 test bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
+    class="emotion-1 emotion-4 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -124,7 +124,7 @@ exports[`defaultProps should render correctly for className 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-4 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -134,7 +134,7 @@ exports[`defaultProps should render correctly for className 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -146,6 +146,14 @@ exports[`defaultProps should render correctly for className 1`] = `
 `;
 
 exports[`overrides styles.base should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -161,12 +169,6 @@ exports[`overrides styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -175,12 +177,12 @@ exports[`overrides styles.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -188,42 +190,38 @@ exports[`overrides styles.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -231,32 +229,34 @@ exports[`overrides styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-12 {
-  position: relative;
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
@@ -269,7 +269,7 @@ exports[`overrides styles.base should render correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -279,7 +279,7 @@ exports[`overrides styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -291,6 +291,10 @@ exports[`overrides styles.base should render correctly 1`] = `
 `;
 
 exports[`props should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -306,16 +310,6 @@ exports[`props should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -324,12 +318,12 @@ exports[`props should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -337,42 +331,38 @@ exports[`props should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -380,24 +370,34 @@ exports[`props should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
+}
+
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
@@ -410,7 +410,7 @@ exports[`props should render correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -420,7 +420,7 @@ exports[`props should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -432,6 +432,10 @@ exports[`props should render correctly 1`] = `
 `;
 
 exports[`props should render correctly with CSS props 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -447,14 +451,8 @@ exports[`props should render correctly with CSS props 1`] = `
   outline: none;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
+.emotion-2 {
+  color: var(--bb-palette-primary, #000000)!important;
 }
 
 .emotion-5 {
@@ -465,12 +463,12 @@ exports[`props should render correctly with CSS props 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -478,42 +476,38 @@ exports[`props should render correctly with CSS props 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -521,32 +515,38 @@ exports[`props should render correctly with CSS props 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-14 {
-  color: var(--bb-palette-primary,#000000) !important;
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
+}
+
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-14 bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
-    class="emotion-1 emotion-2 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
+    class="emotion-1 emotion-4 emotion-5 emotion-6 bb-AutosuggestInput bb-InputWrapper bb-Box"
   >
     
     <input
@@ -555,7 +555,7 @@ exports[`props should render correctly with CSS props 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-4 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -565,7 +565,7 @@ exports[`props should render correctly with CSS props 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -577,6 +577,14 @@ exports[`props should render correctly with CSS props 1`] = `
 `;
 
 exports[`theming styles.base should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -592,12 +600,6 @@ exports[`theming styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -606,12 +608,12 @@ exports[`theming styles.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -619,42 +621,38 @@ exports[`theming styles.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -662,32 +660,34 @@ exports[`theming styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-12 {
-  position: relative;
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
@@ -700,7 +700,7 @@ exports[`theming styles.base should render correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -710,7 +710,7 @@ exports[`theming styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"
@@ -722,6 +722,14 @@ exports[`theming styles.base should render correctly 1`] = `
 `;
 
 exports[`variants styles.base should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: var(--bb-palette-red, #ff0000);
+}
+
 .emotion-1 {
   margin: unset;
   padding: unset;
@@ -737,12 +745,6 @@ exports[`variants styles.base should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-11.emotion-11.emotion-11 {
-  max-width: 100%;
-  width: 100%;
-  max-height: 300px;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -751,12 +753,12 @@ exports[`variants styles.base should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-7 {
   -webkit-appearance: none;
-  background: var(--bb-palette-default,#000000);
-  border: 1px solid var(--bb-palette-white900,#000000);
+  background: var(--bb-palette-default, #000000);
+  border: 1px solid var(--bb-palette-white900, #000000);
   border-radius: 6px;
-  color: var(--bb-palette-text,#000000);
+  color: var(--bb-palette-text, #000000);
   height: 2.75em;
   width: 100%;
   padding: 0.4em 0.8em;
@@ -764,42 +766,38 @@ exports[`variants styles.base should render correctly 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-0[disabled] {
-  background-color: var(--bb-palette-white700,#000000);
+.emotion-7[disabled] {
+  background-color: var(--bb-palette-white700, #000000);
   box-shadow: unset;
-  color: var(--bb-palette-text100,#000000);
+  color: var(--bb-palette-text100, #000000);
   cursor: not-allowed;
 }
 
-.emotion-0:focus {
+.emotion-7:focus {
   outline: unset;
   z-index: 2;
-  border-color: var(--bb-palette-primary,#000000);
-  box-shadow: var(--bb-palette-primaryTint,#000000) 0px 0px 0px 3px !important;
+  border-color: var(--bb-palette-primary, #000000);
+  box-shadow: var(--bb-palette-primaryTint, #000000) 0px 0px 0px 3px!important;
 }
 
-.emotion-0::-webkit-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-webkit-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::-moz-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::-moz-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0:-ms-input-placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7:-ms-input-placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
-.emotion-0::placeholder {
-  color: var(--bb-palette-gray300,#000000);
+.emotion-7::placeholder {
+  color: var(--bb-palette-gray300, #000000);
 }
 
 .emotion-10 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
-}
-
-.emotion-7 {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02) !important;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
   width: 100%;
   padding: 0.5rem 0;
   position: absolute;
@@ -807,32 +805,34 @@ exports[`variants styles.base should render correctly 1`] = `
   width: unset;
 }
 
-.emotion-8 {
-  background-color: var(--bb-palette-background,#000000);
+.emotion-11 {
+  background-color: var(--bb-palette-background, #000000);
   border-radius: 6px;
   max-width: 350px;
   z-index: 19900410;
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15),0px 0px 4px 2px rgba(0,0,0,0.02);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02);
 }
 
-.emotion-8:focus {
+.emotion-11:focus {
   outline: none;
-  box-shadow: var(--bb-palette-primary200,#000000) 0px 0px 0px 3px;
+  box-shadow: var(--bb-palette-primary200, #000000) 0px 0px 0px 3px;
 }
 
-.emotion-12 {
-  position: relative;
+.emotion-13 {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15),0px 0px 4px 2px rgba(0, 0, 0, 0.02)!important;
 }
 
-.emotion-12 {
-  background-color: var(--bb-palette-red,#ff0000);
+.emotion-14.emotion-14.emotion-14 {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
 }
 
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-owns="test"
-  class="emotion-12 emotion-1 emotion-2 bb-Box bb-Autosuggest"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Autosuggest"
   role="combobox"
 >
   <div
@@ -845,7 +845,7 @@ exports[`variants styles.base should render correctly 1`] = `
       aria-expanded="false"
       aria-haspopup="menu"
       aria-invalid="false"
-      class="emotion-0 emotion-1 emotion-2 bb-Box bb-Input"
+      class="emotion-7 emotion-1 emotion-2 bb-Box bb-Input"
       loop=""
       placeholder="Search for a fruit..."
       role="textbox"
@@ -855,7 +855,7 @@ exports[`variants styles.base should render correctly 1`] = `
   </div>
   <div
     aria-orientation="vertical"
-    class="emotion-7 emotion-8 emotion-1 emotion-10 emotion-11 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
+    class="emotion-10 emotion-11 emotion-1 emotion-13 emotion-14 bb-AutosuggestPopover bb-Box bb-DropdownMenuPopover"
     data-dialog="true"
     hidden=""
     id="test"

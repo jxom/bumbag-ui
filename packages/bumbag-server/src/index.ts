@@ -1,1 +1,1 @@
-export * from 'emotion-server';
+export * from '@emotion/server';
