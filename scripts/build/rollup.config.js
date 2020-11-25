@@ -33,6 +33,7 @@ function getPlugins(isUMD) {
   const commonPlugins = [
     babel({
       extensions,
+      babelHelpers: 'bundled',
       exclude: ['node_modules/**', '../../node_modules/**'],
     }),
     commonjs({
@@ -81,6 +82,7 @@ function getOutput(isUMD) {
     moduleDir && {
       format: 'es',
       dir: moduleDir,
+      chunkFileNames: '[name][hash].js',
     },
     {
       format: 'cjs',
