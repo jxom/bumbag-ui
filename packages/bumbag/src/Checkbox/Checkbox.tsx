@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
-import * as styles from './styles';
+import * as styles from './Checkbox.styles';
 
 export type LocalCheckboxProps = {
   /** Automatically focus on the checkbox */

@@ -8,7 +8,7 @@ import { Button, ButtonProps } from '../Button';
 import { Set, SetProps } from '../Set';
 import { Select, SelectProps } from '../Select';
 
-import * as styles from './styles';
+import * as styles from './Pagination.styles';
 
 export type LocalPaginationProps = {
   /** Sets the number of pages. */

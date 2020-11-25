@@ -4,7 +4,7 @@ import { Palette } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Code.styles';
 
 export type LocalCodeProps = {
   /** Indicates if the code should be placed in a block. */

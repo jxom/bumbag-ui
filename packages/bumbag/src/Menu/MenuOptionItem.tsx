@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 
 import { MenuItem, MenuItemProps } from './MenuItem';
-import * as styles from './styles';
+import * as styles from './Menu.styles';
 
 export type LocalMenuOptionItemProps = {
   checked?: boolean;

@@ -13,7 +13,7 @@ import {
   createHook,
 } from '../utils';
 
-import * as styles from './styles';
+import * as styles from './Box.styles';
 
 type ComponentType<R> = React.ComponentType<R> & { useProps: any };
 

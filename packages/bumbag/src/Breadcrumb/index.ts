@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Breadcrumb.styles';
 import { Breadcrumb as _Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, BreadcrumbLink } from './Breadcrumb';
 
 export * from './Breadcrumb';

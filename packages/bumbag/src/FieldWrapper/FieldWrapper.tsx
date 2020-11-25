@@ -11,7 +11,7 @@ import { Label } from '../Label';
 import { Text } from '../Text';
 import { VisuallyHidden } from '../VisuallyHidden';
 
-import * as styles from './styles';
+import * as styles from './FieldWrapper.styles';
 
 export type LocalFieldWrapperProps = {
   children?: (({ elementProps }: { elementProps: FieldElementProps }) => React.ReactNode) | React.ReactElement<any>;

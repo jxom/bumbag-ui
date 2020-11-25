@@ -3,7 +3,7 @@ import { Box as ReakitBox, useSeparator as useReakitSeparator, SeparatorProps as
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Divider.styles';
 
 export type LocalDividerProps = {};
 export type DividerProps = BoxProps & ReakitSeparatorProps & LocalDividerProps;

@@ -7,7 +7,7 @@ import { Drawer, DrawerProps } from '../Drawer';
 import { Disclosure, DisclosureProps } from '../Disclosure';
 
 import { PageContext } from './PageContext';
-import * as styles from './styles';
+import * as styles from './Page.styles';
 
 export type LocalPageWithSidebarProps = {
   /** Sets the sidebar component. */

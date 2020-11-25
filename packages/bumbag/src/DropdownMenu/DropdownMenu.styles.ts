@@ -1,6 +1,6 @@
 import { cssClass } from '../styled';
 import { altitude, space, theme } from '../utils';
-import * as menuStyles from '../Menu/styles';
+import * as menuStyles from '../Menu/Menu.styles';
 
 export const DropdownMenu = (styleProps) => cssClass`
   & {

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Overlay.styles';
 import { Overlay as _Overlay } from './Overlay';
 import { OverlayDisclosure } from './OverlayDisclosure';
 import { useOverlayState, OverlayState } from './OverlayState';

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Columns.styles';
 import { Columns as _Columns } from './Columns';
 import { Column } from './Column';
 

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Modal.styles';
 import { Modal as _Modal } from './Modal';
 import { ModalBackdrop } from './ModalBackdrop';
 import { ModalDisclosure } from './ModalDisclosure';

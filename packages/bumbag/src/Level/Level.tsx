@@ -4,7 +4,7 @@ import { Breakpoint } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Flex, FlexProps } from '../Flex';
 
-import * as styles from './styles';
+import * as styles from './Level.styles';
 
 export type LocalLevelProps = {
   /** Sets the orientation of the level. */

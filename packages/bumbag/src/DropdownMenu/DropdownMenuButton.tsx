@@ -7,7 +7,7 @@ import {
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuButtonProps = {};
 export type DropdownMenuButtonProps = BoxProps & ReakitMenuButtonProps & LocalDropdownMenuButtonProps;

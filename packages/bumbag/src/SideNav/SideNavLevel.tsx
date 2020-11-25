@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { List, ListProps } from '../List';
 
 import { SideNavContext } from './SideNav';
-import * as styles from './styles';
+import * as styles from './SideNav.styles';
 
 export type LocalSideNavLevelProps = {
   title?: React.ReactElement<any> | string;

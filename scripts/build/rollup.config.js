@@ -82,7 +82,7 @@ function getOutput(isUMD) {
     moduleDir && {
       format: 'es',
       dir: moduleDir,
-      chunkFileNames: '[name][hash].js',
+      chunkFileNames: '[name].js',
     },
     {
       format: 'cjs',

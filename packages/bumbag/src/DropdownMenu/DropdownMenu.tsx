@@ -7,7 +7,7 @@ import { Box, BoxProps } from '../Box';
 import { DropdownMenuButton } from './DropdownMenuButton';
 import { DropdownMenuPopover } from './DropdownMenuPopover';
 import { useDropdownMenuState, DropdownMenuInitialState, DropdownMenuStateReturn } from './DropdownMenuState';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuProps = {
   menu: any;

@@ -11,7 +11,7 @@ import { Icon, IconProps } from '../Icon';
 import { Modal, ModalContext, ModalProps } from '../Modal';
 import { Text, TextProps } from '../Text';
 
-import * as styles from './styles';
+import * as styles from './Dialog.styles';
 
 export type LocalDialogProps = {
   /** Indicates the type of dialog. */

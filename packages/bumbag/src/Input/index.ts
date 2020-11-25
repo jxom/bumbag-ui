@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Input.styles';
 import { Input as _Input, InputIcon, InputField as _InputField } from './Input';
 
 export * from './Input';

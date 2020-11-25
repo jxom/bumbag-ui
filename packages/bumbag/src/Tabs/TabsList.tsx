@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { TabsContext } from './Tabs';
-import * as styles from './styles';
+import * as styles from './Tabs.styles';
 
 export type LocalTabsListProps = {
   align?: 'left' | 'center' | 'right';

@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { TabInitialState, TabStateReturn, useTabState } from './TabsState';
-import * as styles from './styles';
+import * as styles from './Tabs.styles';
 
 export type LocalTabsProps = {
   baseId?: TabInitialState['baseId'];

@@ -20,7 +20,7 @@ import { Text } from '../Text';
 
 import { AutosuggestItem } from './AutosuggestItem';
 import { AutosuggestStaticItem } from './AutosuggestStaticItem';
-import * as styles from './styles';
+import * as styles from './Autosuggest.styles';
 
 type Option = { key: number | string; label: string; value: any };
 type Options = Array<Option>;

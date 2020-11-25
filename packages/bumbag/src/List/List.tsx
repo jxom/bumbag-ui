@@ -4,7 +4,7 @@ import { ListThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './List.styles';
 
 export type LocalListProps = {
   /** Indicates if the list is ordered. */

@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { List, ListProps } from '../List';
 
 import { TopNavContext } from './TopNav';
-import * as styles from './styles';
+import * as styles from './TopNav.styles';
 
 export type LocalTopNavSectionProps = {};
 export type TopNavSectionProps = ListProps & LocalTopNavSectionProps;

@@ -3,7 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Button, ButtonProps } from '../Button';
 
-import * as styles from './styles';
+import * as styles from './OptionButtons.styles';
 
 export type LocalOptionButtonProps = {
   checked?: boolean;

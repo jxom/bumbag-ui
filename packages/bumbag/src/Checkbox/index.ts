@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Checkbox.styles';
 import { Checkbox as _Checkbox, CheckboxField as _CheckboxField } from './Checkbox';
 import { CheckboxGroup as _CheckboxGroup, CheckboxGroupField as _CheckboxGroupField } from './CheckboxGroup';
 

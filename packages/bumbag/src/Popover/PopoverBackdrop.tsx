@@ -9,7 +9,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { PopoverStateContext } from './PopoverState';
-import * as styles from './styles';
+import * as styles from './Popover.styles';
 
 export type LocalPopoverBackdropProps = {};
 export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & LocalPopoverBackdropProps;

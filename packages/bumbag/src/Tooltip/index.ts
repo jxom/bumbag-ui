@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Tooltip.styles';
 import { Tooltip as _Tooltip, TooltipContent, TooltipArrow, TooltipReference } from './Tooltip';
 import { useTooltipState, TooltipState } from './TooltipState';
 

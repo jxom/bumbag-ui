@@ -9,7 +9,7 @@ import { Button, ButtonProps } from '../Button';
 import { Icon, IconProps } from '../Icon';
 import { Text } from '../Text';
 
-import * as styles from './styles';
+import * as styles from './Alert.styles';
 
 export type LocalAlertProps = {
   /** Placement of the accent (the side border). */

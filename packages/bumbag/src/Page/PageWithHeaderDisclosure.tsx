@@ -6,7 +6,7 @@ import { Disclosure, DisclosureProps } from '../Disclosure';
 import { DrawerDisclosure, DrawerDisclosureProps } from '../Drawer';
 
 import { usePage } from './usePage';
-import * as styles from './styles';
+import * as styles from './Page.styles';
 
 export type LocalPageWithHeaderDisclosureProps = {};
 export type PageWithHeaderDisclosureProps = BoxProps & LocalPageWithHeaderDisclosureProps;

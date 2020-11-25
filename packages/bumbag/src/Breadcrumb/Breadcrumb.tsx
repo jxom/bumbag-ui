@@ -8,7 +8,7 @@ import { List, ListItemProps } from '../List';
 import { Text } from '../Text';
 import { Navigation, NavigationProps } from '../Navigation';
 
-import * as styles from './styles';
+import * as styles from './Breadcrumb.styles';
 
 export type LocalBreadcrumbProps = {
   /** Indicates if the breadcrumb has a separator. */

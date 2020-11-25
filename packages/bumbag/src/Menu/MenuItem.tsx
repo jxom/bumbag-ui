@@ -7,7 +7,7 @@ import { Icon, IconProps } from '../Icon';
 import { Rover } from '../Rover';
 
 import { MenuContext } from './Menu';
-import * as styles from './styles';
+import * as styles from './Menu.styles';
 
 export type LocalMenuItemProps = {
   /** Icon that appears on the right side of the menu item. */

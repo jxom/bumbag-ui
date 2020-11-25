@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Dialog.styles';
 import {
   Dialog as _Dialog,
   DialogHeader,

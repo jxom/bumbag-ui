@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Block.styles';
 
 export * from './Block';
 export { styles as blockStyles };

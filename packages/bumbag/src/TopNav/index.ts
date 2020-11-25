@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './TopNav.styles';
 import { TopNav as _TopNav } from './TopNav';
 import { TopNavSection } from './TopNavSection';
 import { TopNavItem } from './TopNavItem';

@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 
 import { DropdownMenuContext } from './DropdownMenu';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuItemProps = {
   hideOnClick?: boolean;

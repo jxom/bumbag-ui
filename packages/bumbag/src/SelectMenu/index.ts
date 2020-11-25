@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './SelectMenu.styles';
 import { SelectMenu as _SelectMenu } from './SelectMenu';
 import { SelectMenuField as _SelectMenuField } from './SelectMenuField';
 import { SelectMenuStaticItem } from './SelectMenuStaticItem';

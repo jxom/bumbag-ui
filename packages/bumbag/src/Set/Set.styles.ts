@@ -1,7 +1,7 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
-import { getAlignmentAttributes } from '../Box/styles';
-import { getFlexAlignmentAttributes } from '../Flex/styles';
+import { getAlignmentAttributes } from '../Box/Box.styles';
+import { getFlexAlignmentAttributes } from '../Flex/Flex.styles';
 
 export const Set = (styleProps) => cssClass`
   display: flex;

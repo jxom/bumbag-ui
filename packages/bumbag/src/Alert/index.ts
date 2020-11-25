@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Alert.styles';
 import { Alert as _Alert, AlertIcon, AlertContent, AlertDescription, AlertTitle } from './Alert';
 
 export * from './Alert';

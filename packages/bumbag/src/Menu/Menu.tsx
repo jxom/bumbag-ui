@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 import { Rover, RoverInitialState, RoverStateReturn } from '../Rover';
 
-import * as styles from './styles';
+import * as styles from './Menu.styles';
 
 export type LocalMenuProps = {
   baseId?: RoverInitialState['baseId'];

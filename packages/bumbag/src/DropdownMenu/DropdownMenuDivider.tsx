@@ -10,7 +10,7 @@ import { Box, BoxProps } from '../Box';
 import { Divider } from '../Divider';
 
 import { DropdownMenuContext } from './DropdownMenu';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuDividerProps = {};
 export type DropdownMenuDividerProps = BoxProps & ReakitMenuSeparatorProps & LocalDropdownMenuDividerProps;

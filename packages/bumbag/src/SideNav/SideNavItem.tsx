@@ -8,7 +8,7 @@ import { ListItem, ListItemProps } from '../List';
 
 import { SideNavContext } from './SideNav';
 import { SideNavLevelContext } from './SideNavLevel';
-import * as styles from './styles';
+import * as styles from './SideNav.styles';
 
 export type LocalSideNavItemProps = {
   href?: string;

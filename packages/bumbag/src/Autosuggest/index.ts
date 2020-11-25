@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Autosuggest.styles';
 import { Autosuggest as _Autosuggest } from './Autosuggest';
 import { AutosuggestField as _AutosuggestField } from './AutosuggestField';
 import { AutosuggestStaticItem } from './AutosuggestStaticItem';

@@ -7,7 +7,7 @@ import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
 import { Switch, SwitchProps } from './Switch';
-import * as styles from './styles';
+import * as styles from './Switch.styles';
 
 export type LocalSwitchGroupProps = {
   /** Default value(s) of the switch group */

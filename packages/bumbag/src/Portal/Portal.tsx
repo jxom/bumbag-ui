@@ -4,7 +4,7 @@ import { Portal as ReakitPortal, PortalProps as ReakitPortalProps } from 'reakit
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Portal.styles';
 
 export type LocalPortalProps = {};
 export type PortalProps = BoxProps & ReakitPortalProps & LocalPortalProps;

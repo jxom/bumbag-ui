@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Flex, FlexProps } from '../Flex';
 
 import { ColumnsContext } from './ColumnsContext';
-import * as styles from './styles';
+import * as styles from './Columns.styles';
 
 export type LocalColumnsProps = {
   /** Indicates if the columns should be gapless. */

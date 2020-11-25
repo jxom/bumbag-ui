@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Switch.styles';
 import { Switch as _Switch, SwitchField as _SwitchField } from './Switch';
 import { SwitchGroup as _SwitchGroup, SwitchGroupField as _SwitchGroupField } from './SwitchGroup';
 

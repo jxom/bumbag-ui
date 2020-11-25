@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './SideNav.styles';
 import { SideNav as _SideNav } from './SideNav';
 import { SideNavLevel } from './SideNavLevel';
 import { SideNavItem } from './SideNavItem';

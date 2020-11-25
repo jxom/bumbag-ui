@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Table.styles';
 import { Table as _Table } from './Table';
 import { TableHead } from './TableHead';
 import { TableCell } from './TableCell';

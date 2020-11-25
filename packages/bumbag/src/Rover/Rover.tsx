@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { RoverContext } from './RoverState';
-import * as styles from './styles';
+import * as styles from './Rover.styles';
 
 export type LocalRoverProps = {};
 export type RoverProps = BoxProps & ReakitRoverProps & LocalRoverProps;

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Card.styles';
 import { Card as _Card, CardHeader, CardTitle, CardContent, CardFooter } from './Card';
 
 export * from './Card';

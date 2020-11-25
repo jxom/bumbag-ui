@@ -1,6 +1,6 @@
 import { css, cssClass } from '../styled';
 import { space, theme } from '../utils';
-import { getFlexAlignmentAttributes } from '../Flex/styles';
+import { getFlexAlignmentAttributes } from '../Flex/Flex.styles';
 
 export const Stack = (styleProps) => cssClass`
   ${styleProps.orientation === 'vertical' && getVerticalAttributes(styleProps)}

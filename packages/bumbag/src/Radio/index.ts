@@ -1,7 +1,7 @@
 import { formikField, reduxFormField } from '../utils';
 import { Radio as _Radio } from './Radio';
 import { RadioGroup as _RadioGroup, RadioGroupField as _RadioGroupField } from './RadioGroup';
-import * as styles from './styles';
+import * as styles from './Radio.styles';
 
 export * from './Radio';
 export * from './RadioGroup';

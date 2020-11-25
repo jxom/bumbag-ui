@@ -4,7 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook, useViewportHeight } from '../utils';
 import { Modal, ModalContext, ModalProps } from '../Modal';
 
-import * as styles from './styles';
+import * as styles from './Drawer.styles';
 
 export type LocalDrawerProps = {
   /** Indicates if the drawer should span the whole width/height of the screen. */

@@ -10,7 +10,7 @@ import { ModalContext } from '../Modal';
 import { Overlay, OverlayProps } from '../Overlay';
 import { Text, TextProps } from '../Text';
 
-import * as styles from './styles';
+import * as styles from './Callout.styles';
 
 export type LocalCalloutProps = {
   /** The title of the callout. */

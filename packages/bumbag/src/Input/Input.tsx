@@ -12,7 +12,7 @@ import { Group } from '../Group';
 import { Icon, IconProps } from '../Icon';
 import { Spinner } from '../Spinner';
 
-import * as styles from './styles';
+import * as styles from './Input.styles';
 
 export type LocalInputProps = {
   after?: React.ReactElement<any>;

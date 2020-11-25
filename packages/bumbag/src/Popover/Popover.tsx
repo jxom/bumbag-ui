@@ -16,7 +16,7 @@ import { Flex, FlexProps } from '../Flex';
 import { Text, TextProps } from '../Text';
 
 import { PopoverStateContext } from './PopoverState';
-import * as styles from './styles';
+import * as styles from './Popover.styles';
 
 export type LocalPopoverProps = {
   /** Sets the footer component of the popover. */

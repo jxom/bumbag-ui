@@ -7,7 +7,7 @@ import { Box, BoxProps } from '../Box';
 
 import { ModalBackdrop } from './ModalBackdrop';
 import { ModalContext } from './ModalState';
-import * as styles from './styles';
+import * as styles from './Modal.styles';
 
 export type LocalModalProps = {
   /** Hides the backdrop. */

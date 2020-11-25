@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { Box, BoxProps } from '../Box';
 
 import { DropdownMenuContext } from './DropdownMenu';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuGroupProps = { title?: string };
 export type DropdownMenuGroupProps = BoxProps & LocalDropdownMenuGroupProps;

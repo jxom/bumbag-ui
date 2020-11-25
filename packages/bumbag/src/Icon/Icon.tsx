@@ -13,7 +13,7 @@ import {
 } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Icon.styles';
 
 export type LocalIconProps = {
   /** Color of the icon. Can be a color from the palette, or any other color. */

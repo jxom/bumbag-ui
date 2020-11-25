@@ -9,7 +9,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { DisclosureContext } from './DisclosureState';
-import * as styles from './styles';
+import * as styles from './Disclosure.styles';
 
 export type LocalDisclosureContentProps = {};
 export type DisclosureContentProps = BoxProps & ReakitDisclosureContentProps & LocalDisclosureContentProps;

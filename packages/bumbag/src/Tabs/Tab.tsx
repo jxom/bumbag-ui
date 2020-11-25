@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 
 import { TabsContext } from './Tabs';
 import { TabsListContext } from './TabsList';
-import * as styles from './styles';
+import * as styles from './Tabs.styles';
 
 export type LocalTabsTabProps = {
   tabId?: string;
