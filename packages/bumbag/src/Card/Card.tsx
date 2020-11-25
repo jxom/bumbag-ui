@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { Box, BoxProps } from '../Box';
 import { Flex, FlexProps } from '../Flex';
 
-import * as styles from './styles';
+import * as styles from './Card.styles';
 
 export type LocalCardProps = {
   /** Variant of the card. */

@@ -4,7 +4,7 @@ import { InlineFlexThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './InlineFlex.styles';
 
 export type LocalInlineFlexProps = {};
 export type InlineFlexProps = BoxProps & LocalInlineFlexProps;

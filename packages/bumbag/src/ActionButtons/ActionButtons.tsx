@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Button, ButtonProps } from '../Button';
 import { Set, SetProps } from '../Set';
 
-import * as styles from './styles';
+import * as styles from './ActionButtons.styles';
 
 export type LocalActionButtonsProps = {
   addonButtons?: React.ReactElement<any>;

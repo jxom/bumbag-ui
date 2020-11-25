@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { Box, BoxProps } from '../Box';
 
 import { MenuContext } from './Menu';
-import * as styles from './styles';
+import * as styles from './Menu.styles';
 
 export type LocalMenuGroupProps = { title?: string };
 export type MenuGroupProps = BoxProps & LocalMenuGroupProps;

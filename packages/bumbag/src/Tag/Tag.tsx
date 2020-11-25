@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Flex, FlexProps } from '../Flex';
 import { Button, ButtonProps } from '../Button';
 
-import * as styles from './styles';
+import * as styles from './Tag.styles';
 import { Palette, Size } from '../types';
 
 export type LocalTagProps = {

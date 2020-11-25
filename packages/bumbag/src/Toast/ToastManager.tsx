@@ -8,7 +8,7 @@ import { Stack, StackProps } from '../Stack';
 
 import { ToastContext } from './ToastContext';
 import { Toast, ToastProps } from './Toast';
-import * as styles from './styles';
+import * as styles from './Toast.styles';
 
 export type LocalToastManagerProps = {
   fade?: boolean;

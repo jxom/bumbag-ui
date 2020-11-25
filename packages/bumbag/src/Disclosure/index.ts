@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Disclosure.styles';
 import { Disclosure as _Disclosure } from './Disclosure';
 import { DisclosureContent } from './DisclosureContent';
 import { useDisclosureState, DisclosureState } from './DisclosureState';

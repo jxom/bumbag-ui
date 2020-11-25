@@ -8,7 +8,7 @@ import { Flex, FlexProps } from '../Flex';
 import { Rover } from '../Rover';
 import { Icon } from '../Icon';
 
-import * as styles from './styles';
+import * as styles from './Rating.styles';
 
 export type LocalRatingProps = {
   /** Sets the color of the rating items. */

@@ -4,7 +4,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Flex, FlexProps } from '../Flex';
 import { LayoutBreakpoint } from '../types';
 
-import * as styles from './styles';
+import * as styles from './Group.styles';
 
 export type LocalGroupProps = {
   /** Sets the border radius of the group. */

@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook, pickCSSProps,
 import { Box, BoxProps } from '../Box';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
-import * as styles from './styles';
+import * as styles from './Textarea.styles';
 
 export type LocalTextareaProps = {
   autoComplete?: string;

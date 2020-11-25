@@ -4,7 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook, useOptionsState } from '../utils';
 
 import { DropdownMenuGroup, DropdownMenuGroupProps } from './DropdownMenuGroup';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuOptionGroupProps = {
   defaultValue?: Array<string> | string;

@@ -9,7 +9,7 @@ import { useClassName, createComponent, createElement, createHook, merge } from 
 import { Box, BoxProps } from '../Box';
 
 import { ModalContext } from './ModalState';
-import * as styles from './styles';
+import * as styles from './Modal.styles';
 
 export type LocalModalBackdropProps = {};
 export type ModalBackdropProps = BoxProps & ReakitDialogBackdropProps & LocalModalBackdropProps;

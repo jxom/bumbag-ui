@@ -3,7 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Blockquote.styles';
 
 export type LocalBlockquoteProps = {};
 export type BlockquoteProps = BoxProps & LocalBlockquoteProps;

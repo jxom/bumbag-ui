@@ -6,7 +6,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { ColumnsContext } from './ColumnsContext';
-import * as styles from './styles';
+import * as styles from './Columns.styles';
 
 export type LocalColumnProps = {
   spread?: ColumnSpread;

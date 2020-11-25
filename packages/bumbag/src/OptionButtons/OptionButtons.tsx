@@ -8,7 +8,7 @@ import { Group, GroupProps } from '../Group';
 import { Rover } from '../Rover';
 
 import { OptionButton, OptionButtonProps } from './OptionButton';
-import * as styles from './styles';
+import * as styles from './OptionButtons.styles';
 
 export type LocalOptionButtonsProps = {
   defaultValue?: Array<string> | string;

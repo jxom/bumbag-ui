@@ -7,7 +7,7 @@ import { bindFns, useClassName, createComponent, createElement, createHook } fro
 import { ListItem, ListItemProps } from '../List';
 
 import { TopNavContext } from './TopNav';
-import * as styles from './styles';
+import * as styles from './TopNav.styles';
 
 export type LocalTopNavItemProps = {
   href?: string;

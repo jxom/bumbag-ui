@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Textarea.styles';
 import { Textarea as _Textarea, TextareaField as _TextareaField } from './Textarea';
 
 export * from './Textarea';

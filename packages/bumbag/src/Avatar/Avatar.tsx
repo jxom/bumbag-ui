@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box } from '../Box';
 import { Image, ImageProps } from '../Image';
 
-import * as styles from './styles';
+import * as styles from './Avatar.styles';
 
 export type LocalAvatarProps = {
   /** Variant of the avatar. */

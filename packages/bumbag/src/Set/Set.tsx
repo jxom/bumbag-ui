@@ -4,7 +4,7 @@ import { LayoutBreakpoint } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Set.styles';
 
 export type LocalSetProps = {
   /** Indicates if the set items should span the width of the set. */

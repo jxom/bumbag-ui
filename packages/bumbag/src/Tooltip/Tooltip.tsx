@@ -14,7 +14,7 @@ import { AnimateProps, Placement } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 
 import { TooltipInitialState, useTooltipState } from './TooltipState';
-import * as styles from './styles';
+import * as styles from './Tooltip.styles';
 
 export type LocalTooltipProps = {
   content: string | React.ReactElement<any>;

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Menu.styles';
 import { Menu as _Menu } from './Menu';
 import { MenuOptionGroup } from './MenuOptionGroup';
 import { MenuOptionItem } from './MenuOptionItem';

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Popover.styles';
 import {
   Popover as _Popover,
   PopoverArrow,

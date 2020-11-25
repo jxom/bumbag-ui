@@ -5,7 +5,7 @@ import { Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Spinner.styles';
 
 export type LocalSpinnerProps = {
   /** Color of the spinner. */

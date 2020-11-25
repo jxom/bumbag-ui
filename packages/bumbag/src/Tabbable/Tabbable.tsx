@@ -3,7 +3,7 @@ import { Box as ReakitBox, TabbableProps as ReakitTabbableProps, useTabbable as 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Tabbable.styles';
 
 export type LocalTabbableProps = {};
 export type TabbableProps = BoxProps & ReakitTabbableProps & LocalTabbableProps;

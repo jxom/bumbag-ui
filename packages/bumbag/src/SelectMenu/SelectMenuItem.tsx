@@ -4,7 +4,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 import { DropdownMenuItem, DropdownMenuItemProps } from '../DropdownMenu';
 
-import * as styles from './styles';
+import * as styles from './SelectMenu.styles';
 
 export type LocalSelectMenuItemProps = {};
 export type SelectMenuItemProps = BoxProps & DropdownMenuItemProps & LocalSelectMenuItemProps;

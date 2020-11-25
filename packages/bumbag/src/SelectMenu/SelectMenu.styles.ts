@@ -1,6 +1,6 @@
 import { css, cssClass } from '../styled';
 import { darken, getHiddenScrollbarStyles, palette, space, theme } from '../utils';
-import { Select } from '../Select/styles';
+import { Select } from '../Select/Select.styles';
 
 export const SelectMenu = (styleProps) => cssClass`
   position: relative;

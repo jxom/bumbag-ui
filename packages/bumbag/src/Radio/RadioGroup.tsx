@@ -7,7 +7,7 @@ import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
 import { Radio, RadioProps } from './Radio';
-import * as styles from './styles';
+import * as styles from './Radio.styles';
 
 export type LocalRadioGroupProps = {
   /** Default value of the radio group */

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Grid.styles';
 import { Grid as _Grid } from './Grid';
 import { GridItem } from './GridItem';
 

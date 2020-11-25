@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Toast.styles';
 import { Toast as _Toast } from './Toast';
 import { ToastManager } from './ToastManager';
 

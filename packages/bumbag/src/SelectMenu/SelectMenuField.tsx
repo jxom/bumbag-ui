@@ -8,7 +8,7 @@ import { Group, GroupProps } from '../Group';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
 import { SelectMenu, SelectMenuProps } from './SelectMenu';
-import * as styles from './styles';
+import * as styles from './SelectMenu.styles';
 
 export type LocalSelectMenuFieldProps = {
   /** Addon component to the input (before). Similar to the addon components in Input. */

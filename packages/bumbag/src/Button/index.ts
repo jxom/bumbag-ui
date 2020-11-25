@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Button.styles';
 import { Button as _Button } from './Button';
 import { ButtonClose } from './ButtonClose';
 

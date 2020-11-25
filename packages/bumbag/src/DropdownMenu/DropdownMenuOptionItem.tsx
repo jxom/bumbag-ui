@@ -6,7 +6,7 @@ import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 
 import { DropdownMenuItem, DropdownMenuItemProps } from './DropdownMenuItem';
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 
 export type LocalDropdownMenuOptionItemProps = {
   checked?: boolean;

@@ -4,7 +4,7 @@ import { GridThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Grid.styles';
 
 export type LocalGridProps = {
   autoFlow?: 'row' | 'column' | 'dense';

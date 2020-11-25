@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Page.styles';
 import { PageWithSidebar as _PageWithSidebar } from './PageWithSidebar';
 import { PageWithSidebarDisclosure } from './PageWithSidebarDisclosure';
 import { PageWithSidebarMinimize } from './PageWithSidebarMinimize';

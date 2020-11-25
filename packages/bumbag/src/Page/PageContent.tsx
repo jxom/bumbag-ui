@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Container, ContainerProps } from '../Container';
 
 import { PageContentWrapper, PageContentWrapperProps } from './PageContentWrapper';
-import * as styles from './styles';
+import * as styles from './Page.styles';
 
 export type LocalPageContentProps = {
   /** Props to spread onto the wrapper component. */

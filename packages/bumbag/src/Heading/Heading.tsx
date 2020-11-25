@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Breakpoint } from '../types';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Heading.styles';
 
 export type LocalHeadingProps = {
   isSubHeading?: boolean;

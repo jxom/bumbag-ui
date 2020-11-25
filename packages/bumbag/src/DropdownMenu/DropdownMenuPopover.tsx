@@ -3,8 +3,8 @@ import { Box as ReakitBox, useMenu as useReakitMenu, MenuProps as ReakitMenuProp
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
-import { Popover as popoverStyles } from '../Popover/styles';
+import * as styles from './DropdownMenu.styles';
+import { Popover as popoverStyles } from '../Popover/Popover.styles';
 
 export type LocalDropdownMenuPopoverProps = {
   isTabbable?: boolean;

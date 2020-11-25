@@ -1,5 +1,5 @@
 import { formikField, reduxFormField } from '../utils';
-import * as styles from './styles';
+import * as styles from './Select.styles';
 import { Select as _Select, SelectField as _SelectField } from './Select';
 
 export * from './Select';

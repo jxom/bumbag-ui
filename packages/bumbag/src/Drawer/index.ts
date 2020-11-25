@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Drawer.styles';
 import { Drawer as _Drawer } from './Drawer';
 import { DrawerDisclosure } from './DrawerDisclosure';
 import { DrawerState, useDrawerState } from './DrawerState';

@@ -4,7 +4,7 @@ import { FlexThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Flex.styles';
 
 export type LocalFlexProps = {};
 export type FlexProps = BoxProps & LocalFlexProps;

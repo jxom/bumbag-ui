@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Callout.styles';
 import {
   Callout as _Callout,
   CalloutHeader,

@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './DropdownMenu.styles';
 import { DropdownMenu as _DropdownMenu } from './DropdownMenu';
 import { DropdownMenuPopover } from './DropdownMenuPopover';
 import { DropdownMenuItem } from './DropdownMenuItem';

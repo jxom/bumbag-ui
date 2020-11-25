@@ -3,7 +3,7 @@ import { getColorModesCSSVariables, useColorMode } from '../ColorMode';
 import { Global, css, ThemeContext } from '../styled';
 import { palette, font, lineHeight, theme } from '../utils';
 
-export default function GlobalStyles() {
+export function GlobalStyles() {
   const _theme = React.useContext(ThemeContext);
   const { colorMode } = useColorMode();
   const styleProps = { colorMode, theme: _theme };

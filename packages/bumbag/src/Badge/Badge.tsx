@@ -5,7 +5,7 @@ import { Palette, Size } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Badge.styles';
 
 export type LocalBadgeProps = {
   /** Indicates if the badge is attached to it's parent. */

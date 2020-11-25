@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Tabs.styles';
 import { Tab } from './Tab';
 import { Tabs as _Tabs } from './Tabs';
 import { TabsList } from './TabsList';

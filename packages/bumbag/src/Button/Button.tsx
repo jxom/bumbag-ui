@@ -10,7 +10,7 @@ import { Icon, IconProps } from '../Icon';
 import { Text } from '../Text';
 import { Spinner, SpinnerProps } from '../Spinner';
 
-import * as styles from './styles';
+import * as styles from './Button.styles';
 
 export type LocalButtonProps = {
   /** Icon that appears on the right side of the button. */

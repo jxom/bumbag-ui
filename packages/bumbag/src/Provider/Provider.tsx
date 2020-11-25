@@ -9,7 +9,7 @@ import { PageProvider } from '../Page/PageContext';
 import { Box } from '../Box';
 
 import { ColorModeProvider } from '../ColorMode/ColorModeContext';
-import GlobalStyles from './GlobalStyles';
+import { GlobalStyles } from './GlobalStyles';
 import { BumbagThemeContext } from './ThemeContext';
 
 export type ProviderProps = {

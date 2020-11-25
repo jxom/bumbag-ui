@@ -10,7 +10,7 @@ import { Group } from '../Group';
 import { Icon } from '../Icon';
 import { Spinner } from '../Spinner';
 
-import * as styles from './styles';
+import * as styles from './Select.styles';
 
 export type LocalSelectProps = {
   /** Automatically focus on the input */

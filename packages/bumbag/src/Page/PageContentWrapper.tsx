@@ -4,7 +4,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Page.styles';
 
 export type LocalPageContentWrapperProps = {};
 export type PageContentWrapperProps = BoxProps & LocalPageContentWrapperProps;

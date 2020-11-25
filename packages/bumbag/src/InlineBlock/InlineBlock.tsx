@@ -4,7 +4,7 @@ import { InlineBlockThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './InlineBlock.styles';
 
 export type LocalInlineBlockProps = {};
 export type InlineBlockProps = BoxProps & LocalInlineBlockProps;

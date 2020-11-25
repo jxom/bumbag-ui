@@ -7,7 +7,7 @@ import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 import { Set, SetProps } from '../Set';
 
 import { Checkbox, CheckboxProps } from './Checkbox';
-import * as styles from './styles';
+import * as styles from './Checkbox.styles';
 
 export type LocalCheckboxGroupProps = {
   /** Default value(s) of the checkbox group */

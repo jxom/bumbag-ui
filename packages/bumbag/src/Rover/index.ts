@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Rover.styles';
 import { Rover as _Rover } from './Rover';
 import { useRoverState, RoverState } from './RoverState';
 

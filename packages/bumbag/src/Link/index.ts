@@ -1,4 +1,4 @@
-import * as styles from './styles';
+import * as styles from './Link.styles';
 import { Link as _Link } from './Link';
 import { LinkBlock } from './LinkBlock';
 import { LinkInline } from './LinkInline';

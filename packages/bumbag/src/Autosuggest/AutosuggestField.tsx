@@ -8,7 +8,7 @@ import { Group, GroupProps } from '../Group';
 import { FieldWrapper, FieldWrapperProps } from '../FieldWrapper';
 
 import { Autosuggest, AutosuggestProps } from './Autosuggest';
-import * as styles from './styles';
+import * as styles from './Autosuggest.styles';
 
 export type LocalAutosuggestFieldProps = {
   /** Addon component to the input (before). Similar to the addon components in Input. */

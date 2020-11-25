@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook } from '../uti
 import { Box, BoxProps } from '../Box';
 
 import { TableContext } from './Table';
-import * as styles from './styles';
+import * as styles from './Table.styles';
 
 export type LocalTableHeadCellProps = {};
 export type TableHeadCellProps = BoxProps & LocalTableHeadCellProps;

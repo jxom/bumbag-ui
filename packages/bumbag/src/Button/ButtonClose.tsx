@@ -6,7 +6,7 @@ import { Icon, IconProps } from '../Icon';
 import { VisuallyHidden } from '../VisuallyHidden';
 import { Button, ButtonProps } from './Button';
 
-import * as styles from './styles';
+import * as styles from './Button.styles';
 
 export type LocalButtonCloseProps = {
   iconProps?: Omit<IconProps, 'icon'>;

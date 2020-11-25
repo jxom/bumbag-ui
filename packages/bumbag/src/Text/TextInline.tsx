@@ -3,7 +3,7 @@ import { Box as ReakitBox } from 'reakit';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Text.styles';
 
 export type LocalTextInlineProps = {};
 export type TextInlineProps = BoxProps & LocalTextInlineProps;

@@ -5,7 +5,7 @@ import { useClassName, createComponent, createElement, createHook, useUniqueId }
 import { Box, BoxProps } from '../Box';
 import { Label } from '../Label';
 
-import * as styles from './styles';
+import * as styles from './Radio.styles';
 
 export type LocalRadioProps = {
   /** Automatically focus on the radio */

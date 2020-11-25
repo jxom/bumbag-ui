@@ -5,7 +5,7 @@ import { ThemeConfig } from '../types';
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Navigation, NavigationProps } from '../Navigation';
 
-import * as styles from './styles';
+import * as styles from './SideNav.styles';
 
 export type LocalSideNavProps = {
   /** Sets the default selected nav item. */

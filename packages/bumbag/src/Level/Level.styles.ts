@@ -1,6 +1,6 @@
 import { css, cssClass } from '../styled';
 import { breakpoint, space, theme } from '../utils';
-import { getAlignmentAttributes } from '../Box/styles';
+import { getAlignmentAttributes } from '../Box/Box.styles';
 
 export const Level = (styleProps) => cssClass`
   &&& {

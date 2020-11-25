@@ -22,7 +22,7 @@ import { Text } from '../Text';
 
 import { SelectMenuItem } from './SelectMenuItem';
 import { SelectMenuStaticItem } from './SelectMenuStaticItem';
-import * as styles from './styles';
+import * as styles from './SelectMenu.styles';
 
 type Option = { key: number | string; label: string; value: any };
 type Options = Array<Option>;

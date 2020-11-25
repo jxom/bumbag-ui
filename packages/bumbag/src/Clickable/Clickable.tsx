@@ -3,7 +3,7 @@ import { Box as ReakitBox, ClickableProps as ReakitClickableProps, useClickable 
 import { useClassName, createComponent, createElement, createHook } from '../utils';
 import { Box, BoxProps } from '../Box';
 
-import * as styles from './styles';
+import * as styles from './Clickable.styles';
 
 export type LocalClickableProps = {};
 export type ClickableProps = BoxProps & ReakitClickableProps & LocalClickableProps;

@@ -1,10 +1,10 @@
-const babel = require('rollup-plugin-babel');
-const resolve = require('rollup-plugin-node-resolve');
-const replace = require('rollup-plugin-replace');
-const commonjs = require('rollup-plugin-commonjs');
+import babel from '@rollup/plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
+import url from '@rollup/plugin-url';
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
-const url = require('rollup-plugin-url');
 const { camelCase, upperFirst } = require('lodash');
 const { getIndexPath, getPublicFiles, getSourcePath, getPackage, getModuleDir, getMainDir } = require('./utils');
 
@@ -20,7 +20,7 @@ function makeExternalPredicate(externalArr) {
     return () => false;
   }
   const pattern = new RegExp(`^(${externalArr.join('|')})($|/)`);
-  return id => pattern.test(id);
+  return (id) => pattern.test(id);
 }
 
 function getExternal(isUMD) {
@@ -33,20 +33,18 @@ function getPlugins(isUMD) {
   const commonPlugins = [
     babel({
       extensions,
-      exclude: ['node_modules/**', '../../node_modules/**']
+      babelHelpers: 'bundled',
+      exclude: ['node_modules/**', '../../node_modules/**'],
     }),
     commonjs({
       include: /node_modules/,
-      namedExports: {
-        'body-scroll-lock': ['enableBodyScroll', 'disableBodyScroll']
-      }
     }),
     resolve({ extensions, preferBuiltins: false }),
     url({
-      limit: 10 * 1024, 
-      include: ["**/*.svg"], 
-      emitFiles: true 
-    })
+      limit: 10 * 1024,
+      include: ['**/*.svg'],
+      emitFiles: true,
+    }),
   ];
 
   if (isUMD) {
@@ -55,8 +53,8 @@ function getPlugins(isUMD) {
       ignore(['stream']),
       terser(),
       replace({
-        'process.env.NODE_ENV': JSON.stringify('production')
-      })
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
     ];
   }
 
@@ -73,8 +71,8 @@ function getOutput(isUMD) {
       globals: {
         reakit: 'Reakit',
         react: 'React',
-        'react-dom': 'ReactDOM'
-      }
+        'react-dom': 'ReactDOM',
+      },
     };
   }
 
@@ -83,13 +81,14 @@ function getOutput(isUMD) {
   return [
     moduleDir && {
       format: 'es',
-      dir: moduleDir
+      dir: moduleDir,
+      chunkFileNames: '[name].js',
     },
     {
       format: 'cjs',
       dir: getMainDir(cwd),
-      exports: 'named'
-    }
+      exports: 'named',
+    },
   ].filter(Boolean);
 }
 
@@ -105,7 +104,7 @@ function getConfig(isUMD) {
     external: getExternal(isUMD),
     plugins: getPlugins(isUMD),
     output: getOutput(isUMD),
-    input: getInput(isUMD)
+    input: getInput(isUMD),
   };
 }
 
