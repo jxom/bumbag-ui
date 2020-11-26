@@ -110,7 +110,7 @@ const useProps = createHook<Partial<PopoverProps>>(
 
     const className = useClassName({
       style: styles.Popover,
-      styleProps: props,
+      styleProps: { ...props, prevTransformValue: unstable_popoverStyles.transform },
       themeKey,
       prevClassName: boxProps.className,
     });

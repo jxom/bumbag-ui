@@ -15,6 +15,11 @@ export const TooltipContent = (styleProps) => cssClass`
 
   ${getPlacementAttributes(styleProps)}
 
+  &[hidden] {
+    display: inherit !important;
+    visibility: hidden !important;
+  }
+
   & {
     ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
   }
@@ -51,7 +56,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     top: css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'bottom',
@@ -66,7 +71,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     bottom: css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'top',
@@ -81,7 +86,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     left: css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'right',
@@ -96,7 +101,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     right: css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'left',
@@ -111,7 +116,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     'top-start': css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'bottom',
@@ -126,7 +131,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     'top-end': css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'bottom',
@@ -141,7 +146,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     'bottom-end': css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'top',
@@ -156,7 +161,7 @@ export const getPlacementAttributes = (styleProps) => {
     // @ts-ignore
     'bottom-start': css`
       ${getAnimatedAttributes({
-        prevTransformValue: styleProps.unstable_popoverStyles.transform,
+        prevTransformValue: styleProps.prevTransformValue,
         transformX: '0px',
         transformY: '0px',
         defaultSlide: 'top',

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, Hide, TopNav, Icon, Image, useColorMode, usePage, useTheme } from 'bumbag';
-import { FeedbackForm } from 'feedback-fish';
+import { FeedbackFish } from '@feedback-fish/react';
 import { Link, useLocation } from '@reach/router';
 import SkipToMainContent from './SkipToMainContent';
 
@@ -53,7 +53,11 @@ export default function Header(props) {
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>
           <div>
-            {type !== 'landing' && <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />}
+            {type !== 'landing' && (
+              <FeedbackFish projectId="5f9819d7f47369">
+                <FeedbackButton />
+              </FeedbackFish>
+            )}
           </div>
           <TopNav.Item href="https://opencollective.com/bumbag" fontWeight="semibold">
             <Icon color="red" icon="solid-heart" fontSize="150" marginRight="major-1" />

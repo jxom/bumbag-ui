@@ -6,7 +6,7 @@ import { Markdown } from 'bumbag-addon-markdown';
 import { css, palette, space, styled } from 'bumbag';
 import base64url from 'base64-url';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { FeedbackForm } from 'feedback-fish';
+import { FeedbackFish } from '@feedback-fish/react';
 
 import LivePreview from './LivePreview';
 
@@ -199,7 +199,9 @@ export default function LiveCode(props: Props) {
                 Open in Playroom
               </bumbag.Button>
             </bumbag.Box>
-            <FeedbackForm projectId="5f9819d7f47369" triggerComponent={FeedbackButton} />
+            <FeedbackFish projectId="5f9819d7f47369">
+              <FeedbackButton />
+            </FeedbackFish>
           </bumbag.Level>
         </Actions>
         <LiveError />
