@@ -87,7 +87,7 @@ const useProps = createHook<DropdownMenuPopoverProps>(
 
     const className = useClassName({
       style: [styles.DropdownMenuPopover, popoverStyles],
-      styleProps: props,
+      styleProps: { ...props, prevTransformValue: unstable_popoverStyles.transform },
       themeKey,
       prevClassName: boxProps.className,
     });
