@@ -13,7 +13,8 @@ import { SelectMenu } from 'bumbag'
 
 ## Usage
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -31,6 +32,28 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Fields
@@ -39,7 +62,8 @@ You can also use the `<SelectMenuField>` component, which internally has a [Fiel
 
 It accepts a combination of [SelectMenu props](/form/select-menu/#props) and [FieldWrapper props](/form/field-wrapper/#props).
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -58,6 +82,29 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenuField
+      isDropdown={false}
+      label="Select a fruit"
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Disabled
@@ -85,7 +132,8 @@ function Example() {
 
 #### Disabled options
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -103,11 +151,34 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      onChange={setValue}
+      options={[
+        { disabled: true, key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { disabled: true, key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Search
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -126,11 +197,35 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      hasSearch
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Multi-select
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -149,11 +244,35 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      isMultiSelect
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 #### With tags
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -173,6 +292,30 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      hasTags
+      isMultiSelect
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples' },
+        { key: 2, label: 'Bananas', value: 'bananas' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Loading indicator
@@ -195,7 +338,8 @@ function Example() {
 
 ### Option icons
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -213,11 +357,34 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      onChange={setValue}
+      options={[
+        { key: 1, label: 'Apples', value: 'apples', iconBefore: 'solid-apple-alt' },
+        { key: 2, label: 'Bananas', value: 'bananas', iconAfter: 'solid-apple-alt' },
+        { key: 3, label: 'Oranges', value: 'oranges' },
+        { key: 4, label: 'Mangos', value: 'mangos' }
+      ]}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 ### Fetching data (async)
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -240,11 +407,39 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  const getOptions = React.useCallback(async ({ searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 #### Pagination
 
-```function-live
+```live
+###tab=Dropdown,type=function-live
 function Example() {
   const [value, setValue] = React.useState();
 
@@ -269,6 +464,35 @@ function Example() {
     />
   )
 }
+###
+
+###tab=No Dropdown,type=function-live
+function Example() {
+  const [value, setValue] = React.useState();
+
+  const getOptions = React.useCallback(async ({ page, searchText }) => {
+    return fetch(`https://rickandmortyapi.com/api/location/?name=${searchText}&page=${page}`)
+      .then(res => res.json())
+      .then(({ results }) => ({
+        options: results.map(character => ({ key: character.id, label: character.name, value: character }))
+      }))
+      .catch(err => ({ options: [] }));
+  }, [])
+
+  return (
+    <SelectMenu
+      isDropdown={false}
+      hasSearch
+      pagination
+      cacheKey="basic"
+      onChange={setValue}
+      loadOptions={getOptions}
+      placeholder="Select a fruit..."
+      value={value}
+    />
+  )
+}
+###
 ```
 
 #### Deferred
@@ -482,6 +706,12 @@ Indicates if the select menu should have tags of the selected options.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">isDropdown</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the select menu is a dropdown menu. Default: `true`
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">isLoading</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Indicates if the select menu is loading.
@@ -660,11 +890,18 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
+  onFocus?: (event: FocusEvent<...>) => void;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -692,12 +929,12 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 {`{
   baseId?: string;
   unstable_virtual?: boolean;
-  orientation?: "horizontal" | "vertical";
   currentId?: string;
+  orientation?: Orientation;
+  wrap?: boolean | "horizontal" | "vertical";
   rtl?: boolean;
   loop?: boolean | "horizontal" | "vertical";
-  wrap?: boolean | "horizontal" | "vertical";
-  ... 10 more ...;
+  ... 11 more ...;
   unstable_preventOverflow?: boolean;
 }`}
 </Code>
@@ -739,11 +976,11 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -827,7 +1064,7 @@ Addon component to the input (after). Similar to the addon components in Input.
   suppressContentEditableWarning?: boolean;
   suppressHydrationWarning?: boolean;
   accessKey?: string;
-  ... 807 more ...;
+  ... 808 more ...;
   dropdownMenuInitialState?: Partial<...>;
 }`}
 </Code>
@@ -877,6 +1114,12 @@ Indicates if the select menu has a search component.
 **<Code fontSize="150" marginRight="major-1">hasTags</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Indicates if the select menu should have tags of the selected options.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">isDropdown</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Indicates if the select menu is a dropdown menu. Default: `true`
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -1058,11 +1301,18 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
+  onFocus?: (event: FocusEvent<...>) => void;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -1090,12 +1340,12 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 {`{
   baseId?: string;
   unstable_virtual?: boolean;
-  orientation?: "horizontal" | "vertical";
   currentId?: string;
+  orientation?: Orientation;
+  wrap?: boolean | "horizontal" | "vertical";
   rtl?: boolean;
   loop?: boolean | "horizontal" | "vertical";
-  wrap?: boolean | "horizontal" | "vertical";
-  ... 10 more ...;
+  ... 11 more ...;
   unstable_preventOverflow?: boolean;
 }`}
 </Code>
@@ -1140,11 +1390,11 @@ Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ ke
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

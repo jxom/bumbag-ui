@@ -244,13 +244,13 @@ The `<Dialog.Modal>` component follows the [WAI ARIA Dialog (Modal) Pattern](htt
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Indicates the type of dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">title</Code>**
+**<Code fontSize="150" marginRight="major-1">title</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -265,7 +265,7 @@ Sets the title of the dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">footer</Code>**
+**<Code fontSize="150" marginRight="major-1">footer</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -280,7 +280,7 @@ Sets the footer of the dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>**
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"default"
@@ -296,25 +296,25 @@ Sets the color of the dialog action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">showActionButtons</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">showActionButtons</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Sets the visibility of the dialog action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Sets the visibility of the close buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
 
 Function to invoke when the close button is clicked.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">actionButtonsProps</Code>**
+**<Code fontSize="150" marginRight="major-1">actionButtonsProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
@@ -324,17 +324,20 @@ Props to spread onto the action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**
+**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  defaultChecked?: boolean;
-  defaultValue?: string | number | string[];
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  accessKey?: string;
-  ... 797 more ...;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -343,7 +346,7 @@ Props to spread onto the close button.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">iconProps</Code>**
+**<Code fontSize="150" marginRight="major-1">iconProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalIconProps`}
@@ -353,13 +356,13 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">standalone</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">standalone</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -369,11 +372,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -392,31 +395,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -431,16 +434,16 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Header Props
 
@@ -448,7 +451,7 @@ Props to spread on the icon.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -458,11 +461,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -481,31 +484,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -520,16 +523,16 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Title Props
 
@@ -538,11 +541,11 @@ Props to spread on the icon.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -552,11 +555,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -575,31 +578,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -614,16 +617,16 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Content Props
 
@@ -632,11 +635,11 @@ Props to spread on the icon.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -646,11 +649,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -669,31 +672,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -708,16 +711,16 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Footer Props
 
@@ -726,11 +729,11 @@ Props to spread on the icon.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Flex</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -740,11 +743,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -763,31 +766,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -802,30 +805,37 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Icon Props
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">iconProps</Code>**
+**<Code fontSize="150" marginRight="major-1">iconProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -833,11 +843,11 @@ Props to spread on the icon.
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Text</strong></code> props</Box>
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -847,11 +857,11 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -870,31 +880,31 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -909,45 +919,55 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ### Dialog.Modal Props
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">(string &#38; {}) | &#34;alert&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">(string &#38; {}) | &#34;alert&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hasScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hasScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">wrap</Code>** <Code fontSize="100" palette="primary">(children: ReactNode) =&#62; ReactNode</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 <details><Box use="summary" marginBottom="major-2"><strong>9 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -956,25 +976,13 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code>
-
-Whether it's animating or not.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
 
 Stops animation. It's called automatically if there's a CSS transition.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
-
-Changes the `visible` state to `false`
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Toggles Dialog's `modal` state.
 
@@ -982,6 +990,12 @@ Toggles Dialog's `modal` state.
    - Modal: `preventBodyScroll` is automatically enabled, focus is
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Changes the `visible` state to `false`
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -995,54 +1009,54 @@ ID that will serve as a base for all the items IDs.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Modal</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Hides the backdrop.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">placement</Code>**
+**<Code fontSize="150" marginRight="major-1">placement</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"bottom"
-  | "left"
-  | "right"
+{`"top-start"
   | "top"
-  | "center"
-  | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
   | "top-end"
+  | "right-start"
+  | "right"
   | "right-end"
   | "bottom-end"
-  | "left-end"`}
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start"
+  | "center"`}
 </Code>
 
 Sets the placement of the modal.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Delay of the animation (in s/ms).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Duration of the animation (in s/ms).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">expand</Code>**
+**<Code fontSize="150" marginRight="major-1">expand</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
+  | "top"
+  | "right"
   | "bottom"
   | "left"
-  | "right"
-  | "top"
   | "center"`}
 </Code>
 
@@ -1050,37 +1064,37 @@ Will the component have an expand animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Will the component have a fade animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
 
 Will the component have a slide animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Timing function of the animation
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can hide the dialog by pressing `Escape`.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can hide the dialog by clicking outside it.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 When enabled, user can't scroll on body when the dialog is visible.
 This option doesn't work if the dialog isn't modal.
@@ -1088,11 +1102,11 @@ This option doesn't work if the dialog isn't modal.
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**
+**<Code fontSize="150" marginRight="major-1">use</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1102,11 +1116,11 @@ This option doesn't work if the dialog isn't modal.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**
+**<Code fontSize="150" marginRight="major-1">children</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1125,27 +1139,27 @@ This option doesn't work if the dialog isn't modal.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -1160,26 +1174,26 @@ This option doesn't work if the dialog isn't modal.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Dialog</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">type</Code>** <Code fontSize="100" palette="primary">string</Code> 
 
 Indicates the type of dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">title</Code>**
+**<Code fontSize="150" marginRight="major-1">title</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1194,7 +1208,7 @@ Sets the title of the dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">footer</Code>**
+**<Code fontSize="150" marginRight="major-1">footer</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -1209,7 +1223,7 @@ Sets the footer of the dialog.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">palette</Code>**
+**<Code fontSize="150" marginRight="major-1">palette</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"default"
@@ -1225,25 +1239,25 @@ Sets the color of the dialog action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">showActionButtons</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">showActionButtons</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Sets the visibility of the dialog action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">showCloseButton</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 Sets the visibility of the close buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">onClickClose</Code>** <Code fontSize="100" palette="primary">(event: MouseEvent&#60;any, MouseEvent&#62;) =&#62; void</Code> 
 
 Function to invoke when the close button is clicked.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">actionButtonsProps</Code>**
+**<Code fontSize="150" marginRight="major-1">actionButtonsProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalSetProps & LocalActionButtonsProps`}
@@ -1253,17 +1267,20 @@ Props to spread onto the action buttons.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**
+**<Code fontSize="150" marginRight="major-1">closeButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  defaultChecked?: boolean;
-  defaultValue?: string | number | string[];
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  accessKey?: string;
-  ... 797 more ...;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -1272,7 +1289,7 @@ Props to spread onto the close button.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">iconProps</Code>**
+**<Code fontSize="150" marginRight="major-1">iconProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & CSSProperties & LocalBoxProps & LocalIconProps`}
@@ -1282,12 +1299,12 @@ Props to spread on the icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">standalone</Code>** <Code fontSize="100" palette="primary">boolean</Code>
+**<Code fontSize="150" marginRight="major-1">standalone</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-
+            
 
 ## Theming
 

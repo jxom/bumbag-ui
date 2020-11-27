@@ -41,6 +41,7 @@ const useProps = createHook<SelectMenuFieldProps>(
       hasSearch,
       hasTags,
       hint,
+      isDropdown,
       isLoading,
       isMultiSelect,
       isOptional,
@@ -119,6 +120,7 @@ const useProps = createHook<SelectMenuFieldProps>(
                   disableClear={disableClear}
                   hasTags={hasTags}
                   hasSearch={hasSearch}
+                  isDropdown={isDropdown}
                   isLoading={isLoading}
                   isMultiSelect={isMultiSelect}
                   limit={limit}

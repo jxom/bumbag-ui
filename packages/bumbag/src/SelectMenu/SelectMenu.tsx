@@ -15,6 +15,7 @@ import {
 } from '../DropdownMenu';
 import { Icon } from '../Icon';
 import { Input, InputProps } from '../Input';
+import { Menu } from '../Menu';
 import { Set } from '../Set';
 import { Spinner } from '../Spinner';
 import { Tag, TagProps } from '../Tag';
@@ -40,6 +41,8 @@ export type LocalSelectMenuProps = {
   hasSearch?: boolean;
   /** Indicates if the select menu should have tags of the selected options. */
   hasTags?: boolean;
+  /** Indicates if the select menu is a dropdown menu. Default: `true` */
+  isDropdown?: boolean;
   /** Indicates if the select menu is loading. */
   isLoading?: boolean;
   /** Indicates if multiple options should be selected. */
@@ -141,6 +144,7 @@ const useProps = createHook<SelectMenuProps>(
       hasSearch,
       hasTags,
       itemProps,
+      isDropdown,
       isLoading,
       isMultiSelect,
       limit,
@@ -419,6 +423,7 @@ const useProps = createHook<SelectMenuProps>(
     const EmptyItem = React.useCallback(
       (props) => (
         <SelectMenuItem
+          isDropdown={isDropdown}
           {...dropdownMenu}
           {...props}
           onClick={(e) => {
@@ -432,31 +437,37 @@ const useProps = createHook<SelectMenuProps>(
 
     //////////////////////////////////////////////////
 
+    const MenuWrapper = isDropdown ? DropdownMenuPopover : Menu;
+
+    //////////////////////////////////////////////////
+
     return {
       ...boxProps,
       className,
       children: (
         <SelectMenuContext.Provider value={context}>
-          <SelectMenuButton
-            disabled={disabled}
-            disableClear={disableClear}
-            isLoading={isLoading}
-            onClick={handleClickButton}
-            onClear={handleClearOptions}
-            placeholder={placeholder}
-            selectedOptions={selectedOptions}
-            state={fieldState}
-            Disclosure={Disclosure}
-            {...buttonProps}
-          />
-          <DropdownMenuPopover
+          {isDropdown && (
+            <SelectMenuButton
+              disabled={disabled}
+              disableClear={disableClear}
+              isLoading={isLoading}
+              onClick={handleClickButton}
+              onClear={handleClearOptions}
+              placeholder={placeholder}
+              selectedOptions={selectedOptions}
+              state={fieldState}
+              Disclosure={Disclosure}
+              {...buttonProps}
+            />
+          )}
+          <MenuWrapper
             {...dropdownMenu}
             className={dropdownMenuPopoverClassName}
             overrides={overrides}
             role="listbox"
             {...popoverProps}
           >
-            {dropdownMenu.visible ? (
+            {!isDropdown || dropdownMenu.visible ? (
               <React.Fragment>
                 {hasSearch && (
                   <SelectMenuSearchInput
@@ -487,6 +498,7 @@ const useProps = createHook<SelectMenuProps>(
                           iconAfterProps={option.iconAfterProps}
                           iconBefore={option.iconBefore}
                           iconBeforeProps={option.iconBeforeProps}
+                          isDropdown={isDropdown}
                           hideOnClick={!isMultiSelect}
                           onClick={handleClickItem({ index, option })}
                           overrides={overrides}
@@ -520,7 +532,7 @@ const useProps = createHook<SelectMenuProps>(
                 </Box>
               </React.Fragment>
             ) : null}
-          </DropdownMenuPopover>
+          </MenuWrapper>
         </SelectMenuContext.Provider>
       ),
     };
@@ -531,6 +543,7 @@ const useProps = createHook<SelectMenuProps>(
       disabled: false,
       emptyText: 'No results found',
       errorText: 'An error occurred',
+      isDropdown: true,
       loadingText: 'Loading...',
       loadingMoreText: 'Loading...',
       options: [],

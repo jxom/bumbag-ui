@@ -232,11 +232,18 @@ Disables the input
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
+  onFocus?: (event: FocusEvent<...>) => void;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -412,14 +419,17 @@ Addon component to the input (after). Similar to the addon components in Input.
 **<Code fontSize="150" marginRight="major-1">inputProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`Pick<BoxProps, "children"
-  | "unstable_system"
+{`Pick<BoxProps, "unstable_system"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "children"
   | "defaultChecked"
   | "defaultValue"
   | "suppressContentEditableWarning"
   | "suppressHydrationWarning"
-  | "accessKey"
-  | ... 772 more ...
+  | ... 769 more ...
   | "themeKey"> & LocalInputProps`}
 </Code>
 
@@ -746,11 +756,11 @@ Sets the bottom validation text of the field wrapper.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

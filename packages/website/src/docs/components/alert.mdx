@@ -154,7 +154,7 @@ The `<Alert>` component follows the [WAI ARIA Alert Pattern](https://www.w3.org/
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">accent</Code>** <Code fontSize="100" palette="primary">true | &#34;bottom&#34; | &#34;top&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">accent</Code>** <Code fontSize="100" palette="primary">true | &#34;top&#34; | &#34;bottom&#34;</Code> 
 
 Placement of the accent (the side border).
 
@@ -213,12 +213,15 @@ The type of the alert.
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
   unstable_system?: any;
-  defaultChecked?: boolean;
-  defaultValue?: string | number | string[];
-  suppressContentEditableWarning?: boolean;
-  suppressHydrationWarning?: boolean;
-  accessKey?: string;
-  ... 797 more ...;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 798 more ...;
   spinnerProps?: SpinnerProps;
 }`}
 </Code>
@@ -231,11 +234,18 @@ The props to spread onto the close button.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 The props to spread onto the close button icon.
@@ -246,11 +256,18 @@ The props to spread onto the close button icon.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 The props to spread onto the alert icon.
@@ -297,11 +314,11 @@ The props to spread onto the alert icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -355,11 +372,18 @@ The props to spread onto the alert icon.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -399,11 +423,11 @@ The props to spread onto the alert icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -488,11 +512,11 @@ The props to spread onto the alert icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -577,11 +601,11 @@ The props to spread onto the alert icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -666,11 +690,11 @@ The props to spread onto the alert icon.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

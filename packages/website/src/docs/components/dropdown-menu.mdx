@@ -227,6 +227,18 @@ The `<DropdownMenu>` component follows the [WAI ARIA Menu Pattern](https://www.w
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">dropdownMenuState</Code>**
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`Partial<Pick<unstable_IdState, "baseId">> & Partial<Pick<CompositeState, "unstable_virtual"
+  | "currentId"
+  | "orientation"
+  | ... 4 more ...
+  | "unstable_includesBaseElement">> & ... 4 more ... & { ...; }`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
 **<Code fontSize="150" marginRight="major-1">use</Code>**
@@ -243,11 +255,11 @@ The `<DropdownMenu>` component follows the [WAI ARIA Menu Pattern](https://www.w
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -313,9 +325,9 @@ Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
-Changes the `visible` state to `false`
+Whether it's animating or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -325,12 +337,6 @@ If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code>
-
-Whether it's animating or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -348,6 +354,12 @@ Toggles Dialog's `modal` state.
    - Modal: `preventBodyScroll` is automatically enabled, focus is
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
+
+Changes the `visible` state to `false`
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -384,21 +396,21 @@ similarly to `readOnly` on form elements. In this case, only
 **<Code fontSize="150" marginRight="major-1">placement</Code>**  <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"bottom"
-  | "left"
-  | "right"
-  | "top"
+{`"auto-start"
+  | "auto"
+  | "auto-end"
   | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
+  | "top"
   | "top-end"
+  | "right-start"
+  | "right"
   | "right-end"
   | "bottom-end"
+  | "bottom"
+  | "bottom-start"
   | "left-end"
-  | "auto-start"
-  | "auto"
-  | "auto-end"`}
+  | "left"
+  | "left-start"`}
 </Code>
 
 Actual `placement`.
@@ -408,6 +420,19 @@ Actual `placement`.
 **<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">currentId</Code>** <Code fontSize="100" palette="primary">string</Code>
+
+The current focused item `id`.
+
+   - `undefined` will automatically focus the first enabled composite item.
+   - `null` will focus the base composite element and users will be able to
+navigate out of it using arrow keys.
+   - If `currentId` is initially set to `null`, the base composite element
+itself will have focus and users will be able to navigate to it using
+arrow keys.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -425,16 +450,18 @@ It doesn't have any effect on two-dimensional composites.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">currentId</Code>** <Code fontSize="100" palette="primary">string</Code>
+**<Code fontSize="150" marginRight="major-1">wrap</Code>** <Code fontSize="100" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code>
 
-The current focused item `id`.
+**Has effect only on two-dimensional composites**. If enabled, moving to
+the next item from the last one in a row or column will focus the first
+item in the next row or column and vice-versa.
 
-   - `undefined` will automatically focus the first enabled composite item.
-   - `null` will focus the composite container and users will be able to
-navigate out of it using arrow keys.
-   - If `currentId` is initially set to `null`, the composite element
-itself will have focus and users will be able to navigate to it using
-arrow keys.
+   - `true` wraps between rows and columns.
+   - `horizontal` wraps only between rows.
+   - `vertical` wraps only between columns.
+   - If `loop` matches the value of `wrap`, it'll wrap between the last
+item in the last row or column and the first item in the first row or
+column and vice-versa.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -443,20 +470,6 @@ arrow keys.
 Lists all the composite groups with their `id` and DOM `ref`. This state
 is automatically updated when `registerGroup` and `unregisterGroup` are
 called.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">wrap</Code>** <Code fontSize="100" palette="primary">boolean | &#34;horizontal&#34; | &#34;vertical&#34;</Code>
-
-If enabled, moving to the next item from the last one in a row or column
-will focus the first item in the next row or column and vice-versa.
-
-   - `true` wraps between rows and columns.
-   - `horizontal` wraps only between rows.
-   - `vertical` wraps only between columns.
-   - If `loop` matches the value of `wrap`, it'll wrap between the last
-item in the last row or column and the first item in the first row or
-column and vice-versa.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -470,7 +483,10 @@ and `groupId` if any. This state is automatically updated when
 
 **<Code fontSize="150" marginRight="major-1">setCurrentId</Code>** <Code fontSize="100" palette="primary">(value: SetStateAction&#60;string&#62;) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
-Sets `currentId`.
+Sets `currentId`. This is different from `composite.move` as this only
+updates the `currentId` state without moving focus. When the composite
+widget gets focused by the user, the item referred by the `currentId`
+state will get focus.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -514,6 +530,12 @@ and `groupId` if any. This state is automatically updated when
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">move</Code>** <Code fontSize="100" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
+
+Moves focus to a given item ID.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">next</Code>** <Code fontSize="100" palette="primary">(unstable_allTheWay?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to the next item.
@@ -523,12 +545,6 @@ Moves focus to the next item.
 **<Code fontSize="150" marginRight="major-1">previous</Code>** <Code fontSize="100" palette="primary">(unstable_allTheWay?: boolean) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
 
 Moves focus to the previous item.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">move</Code>** <Code fontSize="100" palette="primary">(id: string) =&#62; void</Code> <Text marginLeft="major-1" fontSize="150" textTransform="uppercase" color="gray">Required</Text>
-
-Moves focus to a given item ID.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -569,11 +585,11 @@ Moves focus to a given item ID.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -639,11 +655,18 @@ Icon that appears on the right side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -664,11 +687,18 @@ Icon that appears on the left side of the menu item.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 779 more ...;
+  label?: string;
+}`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -712,11 +742,11 @@ Icon that appears on the left side of the menu item.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -807,11 +837,11 @@ Separator's orientation.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -900,11 +930,11 @@ Separator's orientation.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code>
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

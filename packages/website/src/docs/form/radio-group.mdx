@@ -218,14 +218,17 @@ Function to invoke when radio group has changed
 **<Code fontSize="150" marginRight="major-1">radioGroupProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`Pick<BoxProps, "children"
-  | "unstable_system"
+{`Pick<BoxProps, "unstable_system"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "children"
   | "defaultChecked"
   | "defaultValue"
   | "suppressContentEditableWarning"
   | "suppressHydrationWarning"
-  | "accessKey"
-  | ... 774 more ...
+  | ... 771 more ...
   | "themeKey"> & LocalRadioGroupProps`}
 </Code>
 
@@ -420,11 +423,11 @@ Sets the bottom validation text of the field wrapper.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

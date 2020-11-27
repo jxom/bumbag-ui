@@ -119,24 +119,48 @@ function Example() {
 **<Code fontSize="150" marginRight="major-1">placement</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"bottom"
-  | "left"
-  | "right"
+{`"top-start"
   | "top"
-  | "center"
-  | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
   | "top-end"
+  | "right-start"
+  | "right"
   | "right-end"
   | "bottom-end"
-  | "left-end"`}
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start"
+  | "center"`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 **<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tooltipContentProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 8 more ... & AnimateProps`}
+</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">tooltipState</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`Pick<PopoverInitialState, "baseId"
+  | "visible"
+  | "animated"
+  | "placement"
+  | "unstable_fixed"
+  | "unstable_flip"
+  | "unstable_offset"
+  | "gutter"
+  | "unstable_preventOverflow"> & Pick<...>`}
+</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -147,7 +171,7 @@ function Example() {
 **<Code fontSize="150" marginRight="major-1">arrowProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 4 more ... & { ...; }`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 6 more ... & { ...; }`}
 </Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
@@ -168,10 +192,10 @@ Duration of the animation (in s/ms).
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
+  | "top"
+  | "right"
   | "bottom"
   | "left"
-  | "right"
-  | "top"
   | "center"`}
 </Code>
 
@@ -185,7 +209,7 @@ Will the component have a fade animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
 
 Will the component have a slide animation when it is toggled on/off?
 
@@ -232,11 +256,11 @@ Timing function of the animation
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

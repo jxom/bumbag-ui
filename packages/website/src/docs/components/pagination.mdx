@@ -90,7 +90,7 @@ Sets the preposition text.
 **<Code fontSize="150" marginRight="major-1">nextButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 6 more ... & LocalButtonProps`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 8 more ... & LocalButtonProps`}
 </Code>
 
 Props to spread onto the next button.
@@ -100,7 +100,7 @@ Props to spread onto the next button.
 **<Code fontSize="150" marginRight="major-1">previousButtonProps</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 6 more ... & LocalButtonProps`}
+{`BoxOptions & HTMLAttributes<any> & RefAttributes<any> & { wrapElement?: (element: ReactNode) => ReactNode; } & ... 8 more ... & LocalButtonProps`}
 </Code>
 
 Props to spread onto the previous button.
@@ -111,11 +111,18 @@ Props to spread onto the previous button.
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  children?: string | number | boolean | {
-     | (string & {
-      ) | (number & {
-        ) | ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)> | ... 45 more ... | (ReactPortal & ((props: BoxProps) => ReactNode));
-        ......`}
+  unstable_system?: any;
+  top?: string | number | {
+    [key: string]: string
+  }; right?: string | number | {
+    [key: string]: string
+  }; bottom?: string | number | {
+    [key: string]: string
+  }; left?: string | number | {
+    [key: string]: string
+  }; ... 786 more ...;
+  selectRef?: Ref<...>;
+}`}
 </Code>
 
 Props to spread onto the select component.
@@ -157,11 +164,11 @@ Props to spread onto the select component.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 

@@ -282,19 +282,19 @@ Hides the backdrop.
 **<Code fontSize="150" marginRight="major-1">placement</Code>**  
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
-{`"bottom"
-  | "left"
-  | "right"
+{`"top-start"
   | "top"
-  | "center"
-  | "top-start"
-  | "right-start"
-  | "bottom-start"
-  | "left-start"
   | "top-end"
+  | "right-start"
+  | "right"
   | "right-end"
   | "bottom-end"
-  | "left-end"`}
+  | "bottom"
+  | "bottom-start"
+  | "left-end"
+  | "left"
+  | "left-start"
+  | "center"`}
 </Code>
 
 Sets the placement of the modal.
@@ -317,10 +317,10 @@ Duration of the animation (in s/ms).
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
+  | "top"
+  | "right"
   | "bottom"
   | "left"
-  | "right"
-  | "top"
   | "center"`}
 </Code>
 
@@ -334,7 +334,7 @@ Will the component have a fade animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;bottom&#34; | &#34;left&#34; | &#34;right&#34; | &#34;top&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
 
 Will the component have a slide animation when it is toggled on/off?
 
@@ -380,6 +380,12 @@ Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
@@ -389,21 +395,9 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
-
-Whether it's animating or not.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
 **<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
 
 Stops animation. It's called automatically if there's a CSS transition.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
-
-Changes the `visible` state to `false`
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -415,6 +409,12 @@ Toggles Dialog's `modal` state.
    - Modal: `preventBodyScroll` is automatically enabled, focus is
 trapped within the dialog and the dialog is rendered within a `Portal`
 by default.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+
+Changes the `visible` state to `false`
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -461,11 +461,11 @@ ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -593,11 +593,11 @@ Toggles the `visible` state
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -658,18 +658,18 @@ Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+
+Whether it's animating or not.
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
 **<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
 If `animated` is set to a `number`, `stopAnimation` will be called only
 after the same number of milliseconds have passed.
-
-<Divider marginTop="major-2" marginBottom="major-2" />
-
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
-
-Whether it's animating or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
@@ -727,11 +727,11 @@ by default.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;left&#34; | &#34;right&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;bottom&#34; | &#34;top&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
