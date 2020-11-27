@@ -589,6 +589,7 @@ const useProps = createHook<AutosuggestProps>(
             aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
             disabled={disabled}
+            inputProps={inputProps}
             isLoading={isInputLoading}
             onBlur={handleBlurInput}
             onClick={handleClickInput}
@@ -600,7 +601,6 @@ const useProps = createHook<AutosuggestProps>(
             role="textbox"
             state={state}
             value={inputValue}
-            {...inputProps}
           />
           <DropdownMenuPopover
             {...dropdownMenu}

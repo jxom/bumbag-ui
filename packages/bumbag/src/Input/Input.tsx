@@ -273,6 +273,7 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   before={before}
                   defaultValue={defaultValue}
                   disabled={disabled}
+                  inputProps={inputProps}
                   inputRef={inputRef}
                   isLoading={isLoading}
                   isRequired={isRequired}
@@ -297,7 +298,6 @@ const useInputFieldProps = createHook<InputFieldProps>(
                   onFocus={onFocus}
                   overrides={overrides}
                   {...elementProps}
-                  {...inputProps}
                 />
                 {addonAfter}
               </React.Fragment>

@@ -30,6 +30,7 @@ export type LocalSelectProps = {
   size?: Size;
   /** Hint text to display */
   placeholder?: string;
+  selectProps?: Partial<SelectProps>;
   selectRef?: React.Ref<any>;
   /** State of the input. Can be any color in the palette. */
   state?: string;
@@ -53,6 +54,7 @@ const useProps = createHook<SelectProps>(
       onChange,
       options,
       placeholder: _placeholder,
+      selectProps,
       selectRef,
       state,
       ...restProps
@@ -94,6 +96,7 @@ const useProps = createHook<SelectProps>(
 
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
+      ...selectProps,
       className: undefined,
       elementRef: selectRef || props.elementRef,
       wrapElement: (children) => (
@@ -262,6 +265,7 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                   size={size}
                   options={options}
                   placeholder={placeholder}
+                  selectProps={selectProps}
                   selectRef={selectRef}
                   state={state}
                   value={value}
@@ -270,7 +274,6 @@ const useSelectFieldProps = createHook<SelectFieldProps>(
                   onFocus={onFocus}
                   overrides={overrides}
                   {...elementProps}
-                  {...selectProps}
                 />
                 {addonAfter}
               </React.Fragment>

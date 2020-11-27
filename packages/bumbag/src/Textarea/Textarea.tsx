@@ -41,6 +41,7 @@ export type LocalTextareaProps = {
   /** State of the textarea. Can be any color in the palette. */
   state?: string;
   textareaRef?: React.Ref<any>;
+  textareaProps?: Partial<TextareaProps>;
   /** Specify the type of textarea. */
   type?: string;
   /** Value of the textarea */
@@ -56,7 +57,7 @@ export type TextareaProps = Omit<BoxProps, 'onBlur' | 'onChange' | 'onFocus'> & 
 
 const useProps = createHook<TextareaProps>(
   (props, { themeKey }) => {
-    const { isRequired, state, textareaRef, ...restProps } = props;
+    const { isRequired, state, textareaProps, textareaRef, ...restProps } = props;
 
     const wrapperClassName = useClassName({
       style: styles.TextareaWrapper,
@@ -67,6 +68,7 @@ const useProps = createHook<TextareaProps>(
     });
     const boxProps = Box.useProps({
       ...omitCSSProps(restProps),
+      ...textareaProps,
       className: undefined,
       elementRef: textareaRef || props.elementRef,
       wrapElement: (children) => (

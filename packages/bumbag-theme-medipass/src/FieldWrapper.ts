@@ -6,8 +6,8 @@ export default {
       base: css`
         background-color: rgb(255, 251, 217);
         line-height: 1.2;
-      `
-    }
+      `,
+    },
   },
   TooltipTrigger: {
     styles: {
@@ -18,7 +18,7 @@ export default {
         position: absolute;
         top: -0.75em;
         height: 22px;
-      `
-    }
-  }
+      `,
+    },
+  },
 };
