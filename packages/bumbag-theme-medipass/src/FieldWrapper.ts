@@ -1,6 +1,13 @@
-import { css, palette } from 'bumbag';
+import { css, palette, space } from 'bumbag';
 
 export default {
+  LabelWrapper: {
+    styles: {
+      base: (props) => css`
+        margin-bottom: ${space(2)(props)}rem;
+      `,
+    },
+  },
   TooltipPopover: {
     styles: {
       base: css`

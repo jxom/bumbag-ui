@@ -73,6 +73,12 @@ const useProps = createHook<FieldWrapperProps>(
       themeKey,
       themeKeySuffix: 'Label',
     });
+    const labelWrapperClassName = useClassName({
+      style: styles.LabelWrapper,
+      styleProps: props,
+      themeKey,
+      themeKeySuffix: 'LabelWrapper',
+    });
     const descriptionClassName = useClassName({
       style: styles.DescriptionText,
       styleProps: props,
@@ -126,7 +132,7 @@ const useProps = createHook<FieldWrapperProps>(
       children: (
         <React.Fragment>
           {label && (
-            <Box marginBottom="minor-3">
+            <Box className={labelWrapperClassName}>
               <Box display="flex" alignItems="center" lineHeight="none">
                 {typeof label === 'string' ? (
                   <React.Fragment>

@@ -1795,7 +1795,11 @@ exports[`props should render correctly with label 1`] = `
   margin-bottom: 0px;
 }
 
-.emotion-14.emotion-14 {
+.emotion-8 {
+  margin-bottom: 0.75rem;
+}
+
+.emotion-15.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1806,7 +1810,7 @@ exports[`props should render correctly with label 1`] = `
   align-items: center;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-appearance: none;
   background-color: var(--bb-palette-default,#000000);
   border: 1px solid var(--bb-palette-white900,#000000);
@@ -1819,7 +1823,7 @@ exports[`props should render correctly with label 1`] = `
   transition: box-shadow 0.1s ease-in-out 0s,border-color 0.1s,background-color 0.1s;
 }
 
-.emotion-10 {
+.emotion-11 {
   height: 1em;
   width: 1em;
   overflow: hidden;
@@ -1827,25 +1831,25 @@ exports[`props should render correctly with label 1`] = `
   opacity: 0;
 }
 
-.emotion-10:focus {
+.emotion-11:focus {
   outline: none;
 }
 
-.emotion-10[disabled] + .bb-CheckboxIcon {
+.emotion-11[disabled] + .bb-CheckboxIcon {
   background-color: var(--bb-palette-white700,#000000);
   box-shadow: unset;
 }
 
-.emotion-10:focus + .bb-CheckboxIcon {
+.emotion-11:focus + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
   box-shadow: var(--bb-palette-primary100,#000000) 0px 0px 0px 3px !important;
 }
 
-.emotion-10:not([disabled]):checked + .bb-CheckboxIcon {
+.emotion-11:not([disabled]):checked + .bb-CheckboxIcon {
   border-color: var(--bb-palette-primary,#000000);
 }
 
-.emotion-10:checked + .bb-CheckboxIcon::before {
+.emotion-11:checked + .bb-CheckboxIcon::before {
   background-clip: padding-box;
   content: '';
   left: calc(50% - 0.1875em);
@@ -1853,7 +1857,7 @@ exports[`props should render correctly with label 1`] = `
   position: absolute;
 }
 
-.emotion-10:checked + .bb-CheckboxIcon::before {
+.emotion-11:checked + .bb-CheckboxIcon::before {
   border: 0.1rem solid var(--bb-palette-primary,#000000);
   border-left-width: 0;
   border-top-width: 0;
@@ -1864,12 +1868,8 @@ exports[`props should render correctly with label 1`] = `
   width: 0.375em;
 }
 
-.emotion-10[disabled]:checked + .bb-CheckboxIcon::before {
+.emotion-11[disabled]:checked + .bb-CheckboxIcon::before {
   border-color: var(--bb-palette-gray300,#000000);
-}
-
-.emotion-7 {
-  margin-bottom: 0.75rem !important;
 }
 
 .emotion-5 {
@@ -1911,13 +1911,13 @@ exports[`props should render correctly with label 1`] = `
 }
 
 <div
-  class="emotion-17 emotion-1 emotion-2 bb-Box bb-CheckboxField"
+  class="emotion-18 emotion-1 emotion-2 bb-Box bb-CheckboxField"
 >
   <div
-    class="emotion-17 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
+    class="emotion-18 emotion-1 emotion-2 bb-Box bb-FieldWrapper"
   >
     <div
-      class="emotion-1 emotion-7 bb-Box"
+      class="emotion-1 emotion-2 emotion-8 bb-FieldWrapperLabelWrapper bb-Box"
     >
       <div
         class="emotion-1 emotion-5 bb-Box"
@@ -1932,15 +1932,15 @@ exports[`props should render correctly with label 1`] = `
     <label
       aria-describedby="id-test"
       aria-invalid="false"
-      class="emotion-14 emotion-1 emotion-2 bb-Box bb-Checkbox"
+      class="emotion-15 emotion-1 emotion-2 bb-Box bb-Checkbox"
     >
       <input
-        class="emotion-1 emotion-2 emotion-10 bb-CheckboxHiddenInput bb-Box"
+        class="emotion-1 emotion-2 emotion-11 bb-CheckboxHiddenInput bb-Box"
         id="id-test"
         type="checkbox"
       />
       <div
-        class="emotion-1 emotion-2 emotion-13 bb-CheckboxIcon bb-Box"
+        class="emotion-1 emotion-2 emotion-14 bb-CheckboxIcon bb-Box"
       />
     </label>
   </div>

@@ -676,6 +676,11 @@ export type FieldWrapperThemeConfig = {
       base?: ThemeAttribute<Stylesheet>;
     };
   };
+  LabelWrapper?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
   DescriptionText?: {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;

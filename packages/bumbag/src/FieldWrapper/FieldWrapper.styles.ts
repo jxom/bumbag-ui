@@ -17,6 +17,14 @@ export const Label = (styleProps) => cssClass`
   }
 `;
 
+export const LabelWrapper = (styleProps) => cssClass`
+  margin-bottom: ${space(3)(styleProps)}rem;
+
+  & {
+    ${theme(styleProps.themeKey, `styles.base`)(styleProps)};
+  }
+`;
+
 export const DescriptionText = (styleProps) => cssClass`
   display: block;
   margin-top: ${space(2)(styleProps)}rem;
