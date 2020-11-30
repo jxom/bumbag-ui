@@ -154,7 +154,7 @@ const useProps = createHook<SelectMenuProps>(
       options: initialOptions,
       overrides,
       pagination,
-      renderDisclosure: Disclosure,
+      renderDisclosure,
       renderEmpty: Empty,
       renderError: Error,
       renderLoading: Loading,
@@ -454,9 +454,9 @@ const useProps = createHook<SelectMenuProps>(
               onClick={handleClickButton}
               onClear={handleClearOptions}
               placeholder={placeholder}
+              renderDisclosure={renderDisclosure}
               selectedOptions={selectedOptions}
               state={fieldState}
-              Disclosure={Disclosure}
               {...buttonProps}
             />
           )}
@@ -586,7 +586,7 @@ function SelectMenuButton(props: any) {
     isLoading,
     onClick,
     onClear,
-    Disclosure,
+    renderDisclosure,
     selectedOptions,
     placeholder,
     ...restProps
@@ -638,19 +638,17 @@ function SelectMenuButton(props: any) {
     }`;
   }
 
-  if (Disclosure) {
-    return (
-      <Disclosure
-        disclosureProps={dropdownMenuButtonProps}
-        disabled={disabled}
-        disableClear={disableClear}
-        isLoading={isLoading}
-        label={label}
-        selectedOptions={selectedOptions}
-        onClear={onClear}
-        placeholder={placeholder}
-      />
-    );
+  if (renderDisclosure) {
+    return renderDisclosure({
+      disclosureProps: dropdownMenuButtonProps,
+      disabled,
+      disableClear,
+      isLoading,
+      label,
+      selectedOptions,
+      onClear,
+      placeholder,
+    });
   }
   return (
     <Box {...dropdownMenuButtonProps} className={buttonClassName}>
