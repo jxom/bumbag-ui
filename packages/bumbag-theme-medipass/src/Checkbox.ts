@@ -16,19 +16,20 @@ export default {
         box-shadow: none;
       `,
     },
+    focusChecked: (styleProps) => css`
+      border-color: ${palette('primary')(styleProps)};
+      box-shadow: ${palette('primary')(styleProps)} 0px 0px 0px 1px !important;
+    `,
   },
   Label: {
     styles: {
       base: css`
         && {
+          line-height: 20px;
           font-size: 16px;
-          margin-top: 3px;
+          margin-top: 2px;
         }
       `,
     },
-    focusChecked: (styleProps) => css`
-      border-color: ${palette('primary')(styleProps)};
-      box-shadow: ${palette('primary')(styleProps)} 0px 0px 0px 1px !important;
-    `,
   },
 };
