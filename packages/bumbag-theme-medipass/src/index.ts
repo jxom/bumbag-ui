@@ -22,10 +22,12 @@ import PageContent from './PageContent';
 import PageWithSidebar from './PageWithSidebar';
 import SideNav from './SideNav';
 import Select from './Select';
+import SelectMenu from './SelectMenu';
 import Radio from './Radio';
 import Table from './Table';
 import Tabs from './Tabs';
 import Tag from './Tag';
+import Textarea from './Textarea';
 import Toast from './Toast';
 
 export default {
@@ -54,9 +56,11 @@ export default {
   PageWithSidebar,
   SideNav,
   Select,
+  SelectMenu,
   Radio,
   Table,
   Tabs,
   Tag,
+  Textarea,
   Toast,
 };
