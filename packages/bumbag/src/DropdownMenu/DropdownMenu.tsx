@@ -53,9 +53,11 @@ const useProps = createHook<DropdownMenuProps>(
       children: (
         <DropdownMenuContext.Provider value={contextValue}>
           {React.cloneElement(children, { ...dropdownMenuButtonProps })}
-          <DropdownMenuPopover {...dropdownMenu} overrides={overrides}>
-            {menu}
-          </DropdownMenuPopover>
+          {dropdownMenu.visible && (
+            <DropdownMenuPopover {...dropdownMenu} overrides={overrides}>
+              {menu}
+            </DropdownMenuPopover>
+          )}
         </DropdownMenuContext.Provider>
       ),
     };
