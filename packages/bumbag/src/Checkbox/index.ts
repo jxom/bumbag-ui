@@ -6,8 +6,8 @@ import { CheckboxGroup as _CheckboxGroup, CheckboxGroupField as _CheckboxGroupFi
 export * from './Checkbox';
 export * from './CheckboxGroup';
 export const Checkbox = Object.assign(_Checkbox, {
-  Formik: formikField(_Checkbox),
-  ReduxForm: reduxFormField(_Checkbox),
+  Formik: formikField(_Checkbox, { isCheckbox: true }),
+  ReduxForm: reduxFormField(_Checkbox, { isCheckbox: true }),
 });
 export const CheckboxField = Object.assign(_CheckboxField, {
   Formik: formikField(_CheckboxField, { isCheckbox: true, hasFieldWrapper: true }),

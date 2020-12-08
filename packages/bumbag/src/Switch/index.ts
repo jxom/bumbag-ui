@@ -6,8 +6,8 @@ import { SwitchGroup as _SwitchGroup, SwitchGroupField as _SwitchGroupField } fr
 export * from './Switch';
 export * from './SwitchGroup';
 export const Switch = Object.assign(_Switch, {
-  Formik: formikField(_Switch),
-  ReduxForm: reduxFormField(_Switch),
+  Formik: formikField(_Switch, { isCheckbox: true }),
+  ReduxForm: reduxFormField(_Switch, { isCheckbox: true }),
 });
 export const SwitchField = Object.assign(_SwitchField, {
   Formik: formikField(_SwitchField, { isCheckbox: true, hasFieldWrapper: true }),
