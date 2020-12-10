@@ -158,7 +158,11 @@ function reducer(state, event) {
     case 'MOUSE_CLICK_ITEM': {
       if (event.option && event.option.disabled) return state;
 
-      return { ...state, highlightedIndex: -1, inputValue: state.filteredOptions[event.index].label };
+      return {
+        ...state,
+        highlightedIndex: -1,
+        inputValue: state.filteredOptions[event.index].label,
+      };
     }
     case 'OPTIONS_SET': {
       return { ...state, options: event.options };
@@ -176,7 +180,13 @@ function reducer(state, event) {
       };
     }
     case 'OPTION_CLEARED': {
-      return { ...state, filteredOptions: state.options, inputValue: '', selectedOption: undefined, value: undefined };
+      return {
+        ...state,
+        filteredOptions: state.options,
+        inputValue: '',
+        selectedOption: undefined,
+        value: undefined,
+      };
     }
     case 'MOUSE_ENTER_POPOVER': {
       return { ...state, isMouseInsidePopover: true };
@@ -252,7 +262,10 @@ const useProps = createHook<AutosuggestProps>(
       gutter: 4,
       ...dropdownMenuInitialState,
     });
-    const dropdownMenuButtonProps = DropdownMenuButton.useProps({ ...dropdownMenu, ref: inputRef });
+    const dropdownMenuButtonProps = DropdownMenuButton.useProps({
+      ...dropdownMenu,
+      ref: inputRef,
+    });
 
     //////////////////////////////////////////////////
 
@@ -315,11 +328,15 @@ const useProps = createHook<AutosuggestProps>(
     const debouncedInputValue = useDebounce(inputValue, 500);
 
     const getOptions = React.useCallback(
-      ({ loadVariables, page, searchText = '' }) => {
+      async ({ loadVariables, page, searchText = '' }) => {
         if (typeof loadOptions === 'function') {
-          if (blockLoad) return { options };
+          if (blockLoad) return new Promise((res) => res({ options }));
 
-          return loadOptions({ page, searchText, variables: loadVariables }).then(({ options: fetchedOptions }) => {
+          return loadOptions({
+            page,
+            searchText,
+            variables: loadVariables,
+          }).then(({ options: fetchedOptions }) => {
             let newOptions = [...options, ...fetchedOptions];
             if (page === 1) {
               newOptions = fetchedOptions;
@@ -389,7 +406,11 @@ const useProps = createHook<AutosuggestProps>(
             dropdownMenu.show();
           }
         }
-        dispatch({ type: 'OPTIONS_FILTERED', filteredOptions, controlsVisibility });
+        dispatch({
+          type: 'OPTIONS_FILTERED',
+          filteredOptions,
+          controlsVisibility,
+        });
         return filteredOptions;
       },
       [dropdownMenu, loadOptions, options]
@@ -446,7 +467,11 @@ const useProps = createHook<AutosuggestProps>(
         const inputValue = event.target.value || '';
         setBlockLoad(false);
         dispatch({ type: 'INPUT_CHANGE', automaticSelection, inputValue });
-        filterOptions({ controlsVisibility: true, hideIfNoOptions: !restrictToOptions, searchText: inputValue });
+        filterOptions({
+          controlsVisibility: true,
+          hideIfNoOptions: !restrictToOptions,
+          searchText: inputValue,
+        });
       },
       [automaticSelection, filterOptions, restrictToOptions]
     );
@@ -695,7 +720,12 @@ const useProps = createHook<AutosuggestProps>(
 export const Autosuggest = createComponent<AutosuggestProps>(
   (props) => {
     const textProps = useProps(props);
-    return createElement({ children: props.children, component: ReakitBox, use: props.use, htmlProps: textProps });
+    return createElement({
+      children: props.children,
+      component: ReakitBox,
+      use: props.use,
+      htmlProps: textProps,
+    });
   },
   {
     attach: {
@@ -816,7 +846,10 @@ function isMouseOutsidePopover({ inputRef, mousePositionRef, popoverRef }) {
 }
 
 function getNewHighlightedIndex({ compare, highlightedIndex = -1, filteredOptions, count = 0 }) {
-  const newHighlightedIndex = compare({ index: highlightedIndex, optionsLength: filteredOptions.length - 1 });
+  const newHighlightedIndex = compare({
+    index: highlightedIndex,
+    optionsLength: filteredOptions.length - 1,
+  });
   if (filteredOptions?.[newHighlightedIndex]?.disabled && count < filteredOptions.length) {
     return getNewHighlightedIndex({
       compare,
