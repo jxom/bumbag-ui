@@ -598,6 +598,10 @@ const useProps = createHook<AutosuggestProps>(
 
     //////////////////////////////////////////////////
 
+    const showClearButton = inputValue && !disabled;
+
+    //////////////////////////////////////////////////
+
     return {
       ...boxProps,
       'aria-expanded': dropdownMenuButtonProps['aria-expanded'],
@@ -609,7 +613,7 @@ const useProps = createHook<AutosuggestProps>(
         <AutosuggestContext.Provider value={context}>
           <Input
             {...omit(dropdownMenuButtonProps, 'type', 'className', 'role')}
-            after={inputValue && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
+            after={showClearButton && <ClearButton onClick={handleClear} buttonProps={clearButtonProps} />}
             aria-autocomplete="list"
             aria-activedescendant={dropdownMenu?.items?.[highlightedIndex]?.id}
             className={inputClassName}
