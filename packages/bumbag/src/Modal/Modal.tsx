@@ -94,7 +94,7 @@ const useProps = createHook<Partial<ModalProps>>(
       children: modal ? (
         <React.Fragment>
           {!hideBackdrop && (
-            <ModalBackdrop {...omitCSSProps(props)}>
+            <ModalBackdrop {...omitCSSProps(props)} className={undefined}>
               <div />
             </ModalBackdrop>
           )}
