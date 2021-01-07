@@ -24,6 +24,8 @@ module.exports = !isPlayroom
               'bumbag-addon-highlighted-code': '../bumbag-addon-highlighted-code/src',
               'bumbag-addon-markdown': '../bumbag-addon-markdown/src',
               'bumbag-theme-medipass': '../bumbag-theme-medipass/src',
+              'bumbag-native': '../bumbag-native/src',
+              '^react-native$': 'react-native-web',
             },
           },
         ],

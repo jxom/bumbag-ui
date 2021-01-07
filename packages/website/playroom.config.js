@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  components: '../bumbag/src/index.ts',
+  // TODO: target for bumbag-native
+  // components: '../bumbag/src/index.ts',
+  components: '../bumbag-native/src/index.ts',
   outputPath: './public/playroom',
   frameComponent: './src/components/PlayroomFrame.js',
   widths: [375, 768, 1024, 1200, 1440],
@@ -23,9 +25,11 @@ module.exports = {
     resolve: {
       alias: {
         bumbag: path.resolve(__dirname, '../bumbag/src'),
+        'bumbag-native': path.resolve(__dirname, '../bumbag-native/src'),
         'bumbag-addon-markdown': path.resolve(__dirname, '../bumbag-addon-markdown/src'),
         'bumbag-addon-highlighted-code': path.resolve(__dirname, '../bumbag-addon-highlighted-code/src'),
         'bumbag-theme-medipass': path.resolve(__dirname, '../bumbag-theme-medipass/src'),
+        'react-native$': 'react-native-web',
       },
       extensions: ['.mjs', '.js', '.json', '.ts', '.tsx'],
       modules: [path.resolve(__dirname, '../../node_modules'), 'node_modules'],

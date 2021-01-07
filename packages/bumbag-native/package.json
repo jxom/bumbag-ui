@@ -1,0 +1,47 @@
+{
+  "name": "bumbag-native",
+  "version": "0.0.0-alpha.0",
+  "description": "An accessible, composable, and friendly React UI Kit",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/bumbag.min.js",
+  "types": "ts/index.d.ts",
+  "scripts": {
+    "build": "node ../../scripts/build/build.js",
+    "clean": "node ../../scripts/build/clean.js",
+    "develop": "node ../../scripts/build/build.js --watch",
+    "prepublishOnly": "yarn build",
+    "postpublish": "yarn clean",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/ --ext js,ts,tsx",
+    "lint:fix": "eslint src/ --fix",
+    "test": "yarn type-check && yarn lint && yarn jest",
+    "jest": "jest"
+  },
+  "dependencies": {
+    "@emotion/native": "^11.0.0",
+    "@emotion/react": "^11.1.4"
+  },
+  "peerDependencies": {
+    "@types/react": "16.x",
+    "bumbag": "1.x",
+    "react": "16.x",
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "8.0.7",
+    "@testing-library/react-hooks": "1.1.0",
+    "bumbag": "^1.6.10",
+    "react-test-renderer": "16.8.6"
+  },
+  "author": "Jake Moxey",
+  "homepage": "https://bumbag.style",
+  "license": "MIT",
+  "repository": "https://github.com/bumbag/bumbag-ui",
+  "keywords": [
+    "bumbag",
+    "ui",
+    "accessible",
+    "composable"
+  ]
+}

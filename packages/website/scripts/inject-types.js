@@ -332,6 +332,7 @@ function extractTypes(config) {
 extractTypes({
   libPaths: [
     path.join(__dirname, '../../bumbag'),
+    path.join(__dirname, '../../bumbag-native'),
     path.join(__dirname, '../../bumbag-addon-highlighted-code'),
     path.join(__dirname, '../../bumbag-addon-markdown'),
   ],
