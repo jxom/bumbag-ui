@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Provider as ReakitProvider } from 'reakit';
+import { Provider as ReakitProvider } from 'reakit/Provider';
 import ConditionalWrap from 'conditional-wrap';
 
 import { ThemeProvider as EmotionProvider } from '../styled';
