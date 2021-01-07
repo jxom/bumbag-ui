@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Provider as ReakitProvider } from 'reakit';
+import ConditionalWrap from 'conditional-wrap';
 
 import { ThemeProvider as EmotionProvider } from '../styled';
 import buildTheme from '../theme';
@@ -18,15 +19,17 @@ export type ProviderProps = {
   collapseBelow?: LayoutBreakpoint;
   colorMode?: string;
   isSSR?: boolean;
+  platform?: 'web' | 'native';
   theme?: ThemeConfig;
 };
 
 Provider.defaultProps = {
   colorMode: 'default',
+  platform: 'web',
 };
 
 export function Provider(props: ProviderProps) {
-  const { children, colorMode, collapseBelow, isSSR, isStandalone, theme: _theme } = props;
+  const { children, colorMode, collapseBelow, isSSR, isStandalone, platform, theme: _theme } = props;
 
   ////////////////////////////////////////////////
 
@@ -54,16 +57,23 @@ export function Provider(props: ProviderProps) {
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
         <ColorModeProvider isSSR={isSSR} mode={colorMode}>
-          <ReakitProvider unstable_prefix="bb-id">
-            <ToastProvider>
-              <PageProvider collapseBelow={collapseBelow}>
-                <React.Fragment>
-                  {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-                  {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
-                </React.Fragment>
-              </PageProvider>
-            </ToastProvider>
-          </ReakitProvider>
+          <ConditionalWrap
+            condition={platform === 'web'}
+            wrap={(children: React.ReactNode) => (
+              <ReakitProvider unstable_prefix="bb-id">
+                <ToastProvider>
+                  <PageProvider collapseBelow={collapseBelow}>
+                    <React.Fragment>
+                      {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+                      {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
+                    </React.Fragment>
+                  </PageProvider>
+                </ToastProvider>
+              </ReakitProvider>
+            )}
+          >
+            {children}
+          </ConditionalWrap>
         </ColorModeProvider>
       </EmotionProvider>
     </BumbagThemeContext.Provider>
