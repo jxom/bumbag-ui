@@ -6,8 +6,9 @@ export { withTheme, ThemeProvider } from 'emotion-theming';
 export { default as styled } from '@emotion/styled';
 
 const noop = () => {};
+
 // @ts-ignore
-const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, sheet, cache, css }: Emotion =
+export const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, css: cssClass, sheet, cache }: Emotion =
   window && window.document
     ? createEmotion()
     : {
@@ -20,4 +21,3 @@ const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, sheet, cache, css
         cache: {},
         css: noop,
       };
-export { flush, hydrate, cx, getRegisteredStyles, injectGlobal, sheet, cache, css as cssClass };
