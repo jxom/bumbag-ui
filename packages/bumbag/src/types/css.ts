@@ -376,7 +376,7 @@ export type CSSProperties = {
   placeItems?: string | number | { [key: string]: string };
   placeSelf?: string | number | { [key: string]: string };
   playDuring?: string | number | { [key: string]: string };
-  pointerEvents?: string | number | { [key: string]: string };
+  pointerEvents?: React.CSSProperties['pointerEvents'] | { [key: string]: React.CSSProperties['pointerEvents'] };
   position?: string | number | { [key: string]: string };
   presentationLevel?: string | number | { [key: string]: string };
   quotes?: string | number | { [key: string]: string };

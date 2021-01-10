@@ -1,4 +1,4 @@
-import createEmotion from 'create-emotion';
+import createEmotion, { Emotion } from 'create-emotion';
 
 export { default as classNames } from 'classnames';
 export { css, keyframes, Global, ThemeContext, CacheProvider } from '@emotion/core';
@@ -6,7 +6,8 @@ export { withTheme, ThemeProvider } from 'emotion-theming';
 export { default as styled } from '@emotion/styled';
 
 const noop = () => {};
-const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, sheet, cache, css } =
+// @ts-ignore
+const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, sheet, cache, css }: Emotion =
   window && window.document
     ? createEmotion()
     : {

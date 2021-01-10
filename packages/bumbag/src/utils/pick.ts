@@ -1,7 +1,7 @@
 export const pick = (obj, ...props) => {
   let object = {};
   props.forEach((prop) => {
-    if (prop in obj) {
+    if (obj && prop in obj) {
       object[prop] = obj[prop];
     }
   });

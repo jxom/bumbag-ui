@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ViewProps } from 'react-native';
 
 import { ThemeConfig, CSSProperties } from 'bumbag/types';
-import { mergeRefs, createComponent, createElement, createHook } from 'bumbag/utils';
+import { mergeRefs, createComponent, createElement, createHook, omitCSSProps } from 'bumbag/utils';
 import { useStyle } from '../utils/useStyle';
 
 import * as styles from './Box.styles';
@@ -19,12 +19,13 @@ export type LocalBoxProps = {
   variant?: string;
   colorMode?: string;
   disabled?: boolean;
+  style?: any;
   /* Component-level theme overrides [Read more](/theming/#component-theming) */
   overrides?: ThemeConfig;
   elementRef?: React.Ref<any>;
   themeKey?: string;
 };
-export type BoxProps = CSSProperties & LocalBoxProps;
+export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
   (_props, { disableCSSProps }) => {
@@ -42,28 +43,10 @@ const useProps = createHook<BoxProps>(
     //
     // Example output:
     // style = { color: 'red', backgroundColor: 'blue' }
-    const style = useStyle({ ...props, ...props.style }, { disableCSSProps });
+    props.style = useStyle({ ...props, ...props.style }, { disableCSSProps });
 
-    props.style = style;
-
-    // // Append the styles from above as a className on the DOM element (with precedence).
-    // let className = useClassName({
-    //   style: styles.style,
-    //   styleProps: { ...props, style },
-    //   themeKey,
-    //   prevClassName: props.className,
-    // });
-
-    // // Append the Box styles as a className on the DOM element.
-    // className = useClassName({
-    //   style: styles.Box,
-    //   styleProps: props,
-    //   prevClassName: className,
-    //   themeKey,
-    // });
-
-    // Pick out and invalid HTML props & omit the CSS props.
-    // const htmlProps = omitCSSProps(pickHTMLProps({ ...props, className }));
+    // Pick out the CSS props
+    props = omitCSSProps(props);
 
     if (props.elementRef) {
       // @ts-ignore

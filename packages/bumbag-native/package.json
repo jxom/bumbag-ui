@@ -7,9 +7,9 @@
   "unpkg": "dist/bumbag.min.js",
   "types": "ts/index.d.ts",
   "scripts": {
-    "build": "node ../../scripts/build/build.js",
+    "build": "node ../../scripts/build/build.js --no-umd",
     "clean": "node ../../scripts/build/clean.js",
-    "develop": "node ../../scripts/build/build.js --watch",
+    "develop": "node ../../scripts/build/build.js --no-umd --watch",
     "prepublishOnly": "yarn build",
     "postpublish": "yarn clean",
     "type-check": "tsc --noEmit",

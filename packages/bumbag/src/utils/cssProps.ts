@@ -28,6 +28,8 @@ export const cssProps = {
   alignContent: 'align-content',
   alignSelf: 'align-self',
   alignItems: 'align-items',
+  alignX: 'align-x',
+  alignY: 'align-y',
   alignmentBaseline: 'alignment-baseline',
   all: 'all',
   animation: 'animation',

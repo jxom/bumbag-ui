@@ -16,6 +16,19 @@ import {
   letterSpacing,
 } from './theme';
 
+const FLEX_HORIZONTAL_ALIGN_MAP = {
+  left: 'flex-start',
+  center: 'center',
+  right: 'flex-end',
+};
+
+const FLEX_VERTICAL_ALIGN_MAP = {
+  top: 'flex-start',
+  center: 'center',
+  bottom: 'flex-end',
+};
+
+const alignAttributes = ['alignX', 'alignY'];
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
 const colorAttributes = [
@@ -73,6 +86,33 @@ const attributeMaps = {
   marginX: ['marginLeft', 'marginRight'],
   paddingX: ['paddingLeft', 'paddingRight'],
 };
+
+function getAlignmentStyles({ attribute, value, props }) {
+  return css`
+      display: flex;
+
+      ${
+        !props.display &&
+        css`
+          flex-direction: column;
+        `
+      }
+
+      ${
+        attribute === 'alignY' &&
+        css`
+          justify-content: ${FLEX_VERTICAL_ALIGN_MAP[value]};
+        `
+      }
+
+      ${
+        attribute === 'alignX' &&
+        css`
+          align-items: ${FLEX_HORIZONTAL_ALIGN_MAP[value]};
+        `
+      }
+    `;
+}
 
 function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
@@ -183,7 +223,12 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         `;
       }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
+        let newStyle;
         let newValue = value;
+        if (alignAttributes.includes(attribute)) {
+          newStyle = getAlignmentStyles({ attribute, value, props });
+          newValue = undefined;
+        }
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });
         }
@@ -217,21 +262,27 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         if (bp === 'default') {
           // @ts-ignore
           return css`
-            ${prevStyle}
-            ${css`
-              ${_kebabCase(attribute)}: ${newValue};
-            `}
+            ${prevStyle};
+            ${newStyle};
+            ${newValue
+              ? css`
+                  ${_kebabCase(attribute)}: ${newValue};
+                `
+              : ''}
           `;
         }
         return css`
           ${prevStyle};
+          ${newStyle};
           ${breakpoint(
             bp,
             // @ts-ignore
             css`
-              ${css`
-                ${_kebabCase(attribute)}: ${newValue};
-              `}
+              ${newValue
+                ? css`
+                    ${_kebabCase(attribute)}: ${newValue};
+                  `
+                : ''}
             `
           )({ theme })};
         `;

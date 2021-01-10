@@ -53,27 +53,36 @@ export function Provider(props: ProviderProps) {
 
   ////////////////////////////////////////////////
 
+  if (platform === 'web') {
+    return (
+      <BumbagThemeContext.Provider value={themeContextValue}>
+        <EmotionProvider theme={derivedTheme}>
+          <ColorModeProvider isSSR={isSSR} mode={colorMode}>
+            <ReakitProvider unstable_prefix="bb-id">
+              <ToastProvider>
+                <PageProvider collapseBelow={collapseBelow}>
+                  <React.Fragment>
+                    {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
+                    {process.env.NODE_ENV === 'test' ? (
+                      children
+                    ) : (
+                      <Box>{typeof children === 'function' ? children({ theme: derivedTheme }) : children}</Box>
+                    )}
+                  </React.Fragment>
+                </PageProvider>
+              </ToastProvider>
+            </ReakitProvider>
+          </ColorModeProvider>
+        </EmotionProvider>
+      </BumbagThemeContext.Provider>
+    );
+  }
+
   return (
     <BumbagThemeContext.Provider value={themeContextValue}>
       <EmotionProvider theme={derivedTheme}>
         <ColorModeProvider isSSR={isSSR} mode={colorMode}>
-          <ConditionalWrap
-            condition={platform === 'web'}
-            wrap={(children: React.ReactNode) => (
-              <ReakitProvider unstable_prefix="bb-id">
-                <ToastProvider>
-                  <PageProvider collapseBelow={collapseBelow}>
-                    <React.Fragment>
-                      {process.env.NODE_ENV !== 'test' && <GlobalStyles />}
-                      {process.env.NODE_ENV === 'test' ? children : <Box>{children}</Box>}
-                    </React.Fragment>
-                  </PageProvider>
-                </ToastProvider>
-              </ReakitProvider>
-            )}
-          >
-            {children}
-          </ConditionalWrap>
+          {typeof children === 'function' ? children({ theme: derivedTheme }) : children}
         </ColorModeProvider>
       </EmotionProvider>
     </BumbagThemeContext.Provider>

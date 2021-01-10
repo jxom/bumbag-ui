@@ -16,6 +16,7 @@ import {
 
 import { cssProps as cssPropsMap } from './cssProps';
 
+const alignAttributes = ['alignX', 'alignY'];
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
 const colorAttributes = [
@@ -184,6 +185,9 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
       }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
         let newValue = value;
+        if (alignAttributes.includes(attribute)) {
+          newValue = null;
+        }
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });
         }
@@ -218,9 +222,11 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           // @ts-ignore
           return css`
             ${prevStyle}
-            ${css`
+            ${newValue
+              ? css`
                   ${_kebabCase(attribute)}: ${newValue} ${fromProps ? '!important' : ''};
-                `}
+                `
+              : ''}
           `;
         }
         return css`
@@ -229,9 +235,11 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
             bp,
             // @ts-ignore
             css`
-              ${css`
+              ${newValue
+                ? css`
                     ${_kebabCase(attribute)}: ${newValue} ${fromProps ? '!important' : ''};
-                  `}
+                  `
+                : ''}
             `
           )({ theme })};
         `;
