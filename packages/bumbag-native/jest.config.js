@@ -2,5 +2,6 @@ const { ...baseConfig } = require('../../jest.config');
 
 module.exports = {
   ...baseConfig,
-  snapshotSerializers: ['jest-emotion']
+  preset: 'react-native-web',
+  snapshotSerializers: ['@emotion/jest/serializer'],
 };
