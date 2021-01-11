@@ -33,7 +33,7 @@ export function getColorFromCSSVariable(selector, fallback) {
 }
 
 export function addColorModeBodyClassName(nextMode: string, prevMode?: string) {
-  if (window && window.document) {
+  if (window && window.document && window.document.body) {
     if (prevMode) {
       document.body.classList.remove(`${bodyClassPrefix}-${prevMode}`);
     }
