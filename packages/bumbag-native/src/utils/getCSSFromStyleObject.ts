@@ -4,6 +4,7 @@ import { cssProps as cssPropsMap } from 'bumbag/utils/cssProps';
 
 import { css } from '../styled';
 import {
+  altitude,
   border,
   borderRadius,
   breakpoint,
@@ -29,6 +30,7 @@ const FLEX_VERTICAL_ALIGN_MAP = {
 };
 
 const alignAttributes = ['alignX', 'alignY'];
+const altitudeAttributes = ['altitude'];
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
 const colorAttributes = [
@@ -114,10 +116,19 @@ function getAlignmentStyles({ attribute, value, props }) {
     `;
 }
 
+function getAltitudeStyles({ theme, value }) {
+  const altitudeStyle = altitude(value)({ theme });
+  if (altitudeStyle) {
+    return altitudeStyle;
+  }
+  return value;
+}
+
 function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
   if (borderValue) {
-    return `${borderValue.width} solid ${borderValue.color}`;
+    const borderColor = palette(borderValue.color)({ theme });
+    return `${borderValue.width} ${borderValue.style} ${borderColor}`;
   }
   return value;
 }
@@ -141,7 +152,7 @@ function getColorValue({ colorMode, theme, value }) {
 function getSpaceValue({ theme, value }) {
   const spacing = space(value)({ theme });
   if (spacing) {
-    return `${spacing}rem`;
+    return `${spacing}px`;
   }
   return value;
 }
@@ -157,7 +168,7 @@ function getFontValue({ theme, value }) {
 function getFontSizeValue({ theme, value }) {
   const size = fontSize(value)({ theme });
   if (size) {
-    return `${size}rem`;
+    return `${size}px`;
   }
   return value;
 }
@@ -229,6 +240,10 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           newStyle = getAlignmentStyles({ attribute, value, props });
           newValue = undefined;
         }
+        if (altitudeAttributes.includes(attribute)) {
+          newStyle = getAltitudeStyles({ theme, value });
+          newValue = undefined;
+        }
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });
         }
@@ -243,6 +258,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         }
         if (fontAttributes.includes(attribute)) {
           newValue = getFontValue({ theme, value });
+          console.log('test', newValue);
         }
         if (fontSizeAttributes.includes(attribute)) {
           if (disableCSSProps.includes('fontSize')) {

@@ -4,6 +4,7 @@ import tinycolor from 'tinycolor2';
 import { ThemeConfig } from 'bumbag/types';
 import { isFunction } from 'bumbag/utils/isFunction';
 import { get } from 'bumbag/utils/get';
+import { Platform } from 'react-native';
 
 import { css } from '../styled';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
@@ -12,7 +13,13 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
   return (props: { theme?: ThemeConfig; overrides?: any; colorMode?: string; variant?: string }) => {
     const { colorMode, variant } = props;
 
-    const selector = `${themeKey}${path ? `.${path}` : ''}`;
+    const platform = Platform.OS;
+
+    let selector = `${themeKey}${path ? `.${path}` : ''}`;
+    if (get(props, `theme.${themeKey}.${platform}`)) {
+      selector = `${themeKey}.${platform}${path ? `.${path}` : ''}`;
+    }
+
     const variantSelector = `${themeKey}.variants.${variant}.${path}`;
     const colorModeSelector = `${themeKey}.modes.${colorMode}.${path}`;
 
@@ -104,8 +111,9 @@ export function fontMetric(selector?: string) {
 
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
-    const color = theme('fontSizes', selector || props.fontSize, defaultValue)(props);
-    return color;
+    const globalFontSize = props.theme.global.fontSize;
+    const fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue)(props);
+    return fontSize;
   };
 }
 
@@ -163,8 +171,7 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
     }
     if (typeof scalar === 'number') {
       const unitSize: number = props?.theme?.spacing?.[`${scaleType}Unit`] as number;
-      const fontSize: number = props?.theme?.global?.fontSize;
-      const value = scalar * (unitSize / fontSize);
+      const value = scalar * unitSize;
       return value;
     }
   };

@@ -30,6 +30,7 @@ export const cssProps = {
   alignItems: 'align-items',
   alignX: 'align-x',
   alignY: 'align-y',
+  altitude: 'altitude',
   alignmentBaseline: 'alignment-baseline',
   all: 'all',
   animation: 'animation',
