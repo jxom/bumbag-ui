@@ -9,7 +9,7 @@ const noop = () => {};
 
 // @ts-ignore
 export const { flush, hydrate, cx, getRegisteredStyles, injectGlobal, css: cssClass, sheet, cache }: Emotion =
-  window && window.document
+  window && window.document && window.document.querySelectorAll
     ? createEmotion()
     : {
         flush: noop,
