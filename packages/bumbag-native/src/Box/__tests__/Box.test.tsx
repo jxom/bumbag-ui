@@ -28,8 +28,6 @@ describe('props', () => {
 
   it.todo('should render correctly with CSS props with pseudo props');
 
-  it.todo('should render correctly with CSS props with platform props');
-
   it('should render correctly for an altitude', () => {
     const { container } = render(<Box altitude="400" />);
     expect(container.firstChild).toMatchSnapshot();

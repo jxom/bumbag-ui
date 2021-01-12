@@ -148,6 +148,22 @@ export default function App() {
           </Box>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Platform props">
+        <Preview>
+          <Box>
+            <Box width="50px" height="50px" backgroundColor={{ web: 'primary', ios: 'secondary', android: 'red' }} />
+            <Box width="50px" height="50px" backgroundColor={{ web: 'green', native: 'blue' }} />
+            <Box
+              width="50px"
+              height="50px"
+              _web={{ backgroundColor: 'primary' }}
+              _ios={{ backgroundColor: 'secondary' }}
+              _android={{ backgroundColor: 'red' }}
+            />
+            <Box width="50px" height="50px" _web={{ backgroundColor: 'green' }} _native={{ backgroundColor: 'red' }} />
+          </Box>
+        </Preview>
+      </PreviewSection>
     </Box>
   );
 }

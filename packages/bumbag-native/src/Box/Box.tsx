@@ -43,7 +43,10 @@ const useProps = createHook<BoxProps>(
     //
     // Example output:
     // style = { color: 'red', backgroundColor: 'blue' }
-    props.style = useStyle({ ...props, ...props.style }, { disableCSSProps });
+    let style = useStyle({ ...props, ...props.style }, { disableCSSProps });
+    if (Array.isArray(props.style) || typeof props.style !== 'object') {
+      props.style = [style, ...props.style];
+    }
 
     // Pick out the CSS props
     props = omitCSSProps(props);

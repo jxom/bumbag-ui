@@ -1,13 +1,10 @@
 import _kebabCase from 'lodash/kebabCase';
 
-import { cssProps as cssPropsMap } from 'bumbag/utils/cssProps';
-
 import { css } from '../styled';
 import {
   altitude,
   border,
   borderRadius,
-  breakpoint,
   font,
   fontSize,
   lineHeight,
@@ -16,6 +13,7 @@ import {
   fontWeight,
   letterSpacing,
 } from './theme';
+import { Platform } from 'react-native';
 
 const FLEX_HORIZONTAL_ALIGN_MAP = {
   left: 'flex-start',
@@ -224,16 +222,14 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         newValue = { default: value };
       }
       if (attribute.includes('_')) {
-        const pseudoSelector = cssPropsMap[attribute];
+        const platform = attribute.slice(1);
         return css`
           ${prevStyle};
-
-          ${pseudoSelector} {
-            ${getCSSFromStyleObject(value, theme, colorMode, { fromProps })};
-          }
+          ${(Platform.OS === platform || (platform === 'native' && Platform.OS !== 'web')) &&
+          getCSSFromStyleObject(value, theme, colorMode, { fromProps })}
         `;
       }
-      const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
+      const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [platform, value]) => {
         let newStyle;
         let newValue = value;
         if (alignAttributes.includes(attribute)) {
@@ -258,7 +254,6 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         }
         if (fontAttributes.includes(attribute)) {
           newValue = getFontValue({ theme, value });
-          console.log('test', newValue);
         }
         if (fontSizeAttributes.includes(attribute)) {
           if (disableCSSProps.includes('fontSize')) {
@@ -275,7 +270,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         if (letterSpacingAttributes.includes(attribute)) {
           newValue = getLetterSpacingValue({ theme, value });
         }
-        if (bp === 'default') {
+        if (platform === 'default' || Platform.OS === platform || (platform === 'native' && Platform.OS !== 'web')) {
           // @ts-ignore
           return css`
             ${prevStyle};
@@ -290,17 +285,6 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         return css`
           ${prevStyle};
           ${newStyle};
-          ${breakpoint(
-            bp,
-            // @ts-ignore
-            css`
-              ${newValue
-                ? css`
-                    ${_kebabCase(attribute)}: ${newValue};
-                  `
-                : ''}
-            `
-          )({ theme })};
         `;
       }, css``);
       return css`
