@@ -36,7 +36,7 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
       colorModeThemeOverrides = get(props, `overrides.${colorModeSelector}`);
     }
 
-    if (path && path.includes('styles')) {
+    if (path && path.includes && path.includes('styles')) {
       const defaultThemeValue = isFunction(defaultTheme) ? defaultTheme(props) : defaultTheme;
       const defaultThemeOverridesValue = isFunction(defaultThemeOverrides)
         ? defaultThemeOverrides(props)
@@ -174,91 +174,5 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
       const value = scalar * unitSize;
       return value;
     }
-  };
-}
-
-export function breakpoint(breakpoint: string, cssStyle, config?: { show?: boolean; else? }) {
-  const { else: elseStyle = '', show = false } = config || {};
-  return (props) => {
-    if (!breakpoint)
-      return css`
-        ${elseStyle};
-      `;
-
-    let key: string | undefined;
-    let elseKey: string | undefined;
-    if (!show && breakpoint.includes('max')) {
-      key = 'max-width';
-      elseKey = 'min-width';
-    } else if (!show && breakpoint.includes('min')) {
-      key = 'min-width';
-      elseKey = 'max-width';
-    } else if (show && breakpoint.includes('max')) {
-      key = 'min-width';
-      elseKey = 'max-width';
-    } else if (show && breakpoint.includes('min')) {
-      key = 'max-width';
-      elseKey = 'min-width';
-    }
-
-    let strippedBreakpoint = breakpoint;
-    strippedBreakpoint = strippedBreakpoint.replace('max-', '');
-    strippedBreakpoint = strippedBreakpoint.replace('min-', '');
-
-    const minBreakpointValues: { [key: string]: number } = {
-      mobile: 0,
-      tablet: props?.theme?.breakpoints?.mobile,
-      desktop: props?.theme?.breakpoints?.tablet,
-      widescreen: props?.theme?.breakpoints?.desktop,
-      fullHD: props?.theme?.breakpoints?.widescreen,
-    };
-    let breakpointValue = props?.theme?.breakpoints?.[strippedBreakpoint];
-    if (!show && breakpoint.includes('max')) {
-      breakpointValue = breakpointValue - 1;
-    }
-    if (!show && breakpoint.includes('min')) {
-      breakpointValue = minBreakpointValues[strippedBreakpoint];
-    }
-    if (show && breakpoint.includes('min')) {
-      breakpointValue = minBreakpointValues[strippedBreakpoint] - 1;
-    }
-
-    if (!breakpoint.includes('min-') && !breakpoint.includes('max-')) {
-      if (show) {
-        return css`
-          @media screen and (max-width: ${minBreakpointValues[breakpoint]}px) {
-            ${cssStyle};
-          }
-          @media screen and (min-width: ${breakpointValue + 1}px) {
-            ${cssStyle};
-          }
-
-          @media screen and (min-width: ${minBreakpointValues[breakpoint] +
-            1}px) and (max-width: ${breakpointValue}px) {
-            ${elseStyle};
-          }
-        `;
-      }
-      return css`
-        @media screen and (min-width: ${minBreakpointValues[breakpoint]}px) and (max-width: ${breakpointValue - 1}px) {
-          ${cssStyle};
-        }
-
-        @media screen and (max-width: ${minBreakpointValues[breakpoint] - 1}px) {
-          ${elseStyle};
-        }
-        @media screen and (min-width: ${breakpointValue}px) {
-          ${elseStyle};
-        }
-      `;
-    }
-    return css`
-      @media screen and (${key}: ${breakpointValue}px) {
-        ${cssStyle};
-      }
-      @media screen and (${elseKey}: ${breakpointValue + (elseKey.includes('max') ? -1 : 1)}px) {
-        ${elseStyle};
-      }
-    `;
   };
 }

@@ -209,6 +209,9 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
 
     style = styleEntries.reduce((prevStyle, [attribute, value]) => {
       let newValue = value;
+      if (typeof value === 'function') {
+        newValue = value({ theme });
+      }
       if (attribute.includes(':')) {
         return css`
           ${prevStyle};
@@ -219,7 +222,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         `;
       }
       if (typeof newValue === 'string') {
-        newValue = { default: value };
+        newValue = { default: newValue };
       }
       if (attribute.includes('_')) {
         const platform = attribute.slice(1);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text } from 'bumbag-native';
+import { Box, Text, breakpoint } from 'bumbag-native';
 import { Preview } from '../../components/Preview';
 import { PreviewSection } from '../../components/PreviewSection';
 
@@ -161,6 +161,36 @@ export default function App() {
               _android={{ backgroundColor: 'red' }}
             />
             <Box width="50px" height="50px" _web={{ backgroundColor: 'green' }} _native={{ backgroundColor: 'red' }} />
+          </Box>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Responsive - Widths">
+        <Preview>
+          <Box>
+            <Box
+              width="50px"
+              height="50px"
+              backgroundColor={breakpoint('width', {
+                default: 'primary',
+                xs: 'secondary',
+                'max-lg': 'warning',
+              })}
+            />
+          </Box>
+        </Preview>
+      </PreviewSection>
+      <PreviewSection title="Responsive - Heights">
+        <Preview>
+          <Box>
+            <Box
+              width="50px"
+              height="50px"
+              backgroundColor={breakpoint('height', {
+                default: 'primary',
+                xs: 'secondary',
+                'max-lg': 'warning',
+              })}
+            />
           </Box>
         </Preview>
       </PreviewSection>
