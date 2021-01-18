@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { NativeRouter, Link, Route } from 'react-router-native';
+import { Box as CoreBox, Provider as CoreProvider } from 'bumbag';
 import { Box, Text, Provider } from 'bumbag-native';
 
 import Home from './routes/Home';

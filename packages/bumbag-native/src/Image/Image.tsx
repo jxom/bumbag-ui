@@ -15,7 +15,7 @@ const useProps = createHook<ImageProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Image' }
+  { themeKey: 'native.Image' }
 );
 
 export const Image = createComponent<ImageProps>(
@@ -33,8 +33,8 @@ export const Image = createComponent<ImageProps>(
   {
     attach: {
       useProps,
-      displayName: 'Image',
+      displayName: 'native.Image',
     },
-    themeKey: 'Image',
+    themeKey: 'native.Image',
   }
 );

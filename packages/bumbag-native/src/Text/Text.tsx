@@ -12,7 +12,7 @@ const useProps = createHook<TextProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Text' }
+  { themeKey: 'native.Text' }
 );
 
 export const Text = createComponent<RNTextProps & TextProps>(
@@ -27,8 +27,8 @@ export const Text = createComponent<RNTextProps & TextProps>(
   {
     attach: {
       useProps,
-      displayName: 'Text',
+      displayName: 'native.Text',
     },
-    themeKey: 'Text',
+    themeKey: 'native.Text',
   }
 );

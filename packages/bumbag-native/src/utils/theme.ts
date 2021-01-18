@@ -76,7 +76,7 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
 
 export function altitude(selector?: string, defaultValue?: any) {
   return (props: { altitude?: string; theme?: ThemeConfig }) => {
-    const altitude = theme('altitudes', selector || props.altitude, defaultValue)(props);
+    const altitude = theme('native.altitudes', selector || props.altitude, defaultValue)(props);
     return altitude;
   };
 }

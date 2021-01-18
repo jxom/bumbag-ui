@@ -52,7 +52,7 @@ const useProps = createHook<BoxProps>(
 
     return props;
   },
-  { themeKey: 'Box' }
+  { themeKey: 'native.Box' }
 );
 
 export const Box = createComponent<BoxProps>(
@@ -65,7 +65,7 @@ export const Box = createComponent<BoxProps>(
     });
   },
   {
-    attach: { displayName: 'Box', useProps },
-    themeKey: 'Box',
+    attach: { displayName: 'native.Box', useProps },
+    themeKey: 'native.Box',
   }
 );

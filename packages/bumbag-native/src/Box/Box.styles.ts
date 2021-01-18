@@ -3,9 +3,9 @@ import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
 export const StyledBox = styled(View)`
-  ${theme('Box', 'styles.base')};
+  ${theme('native.Box', 'styles.base')};
 `;
 
 export const StyledBoxSafe = styled(SafeAreaView)`
-  ${theme('Box.Safe', 'styles.base')};
+  ${theme('native.Box.Safe', 'styles.base')};
 `;

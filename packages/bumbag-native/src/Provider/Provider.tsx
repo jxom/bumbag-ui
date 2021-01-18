@@ -12,10 +12,15 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
 
   let newTheme = themeOverrides || {};
   if (!isStandalone) {
-    newTheme = merge(theme, newTheme);
+    newTheme = {
+      // @ts-ignore
+      native: merge(theme, newTheme),
+      breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}),
+    };
   }
 
   return (
+    // @ts-ignore
     <BumbagProvider platform={Platform.OS === 'web' ? 'web' : 'native'} theme={newTheme} {...restProps}>
       {({ theme }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>}
     </BumbagProvider>

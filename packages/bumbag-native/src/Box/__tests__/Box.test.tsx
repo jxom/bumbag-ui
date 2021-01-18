@@ -127,6 +127,45 @@ describe('theming', () => {
   });
 });
 
+describe('overrides', () => {
+  it('Box.base should render correctly', () => {
+    const { container } = render(
+      <Box
+        overrides={{
+          Box: {
+            styles: { base: { backgroundColor: 'red' } },
+            defaultProps: {
+              altitude: '100',
+              padding: 'major-2',
+            },
+          },
+        }}
+      >
+        <Text>hello world</Text>
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('applyTheme', () => {
+  it('renders correctly', () => {
+    const Card = applyTheme(Box, {
+      styles: {
+        base: {
+          backgroundColor: 'red',
+        },
+      },
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+    });
+    const { container } = render(<Card variant="test" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
 describe('variants', () => {
   it('styles.base should render correctly', () => {
     const { container } = render(
@@ -141,6 +180,24 @@ describe('variants', () => {
         },
       }
     );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders correctly for applyTheme', () => {
+    const Card = applyTheme(Box, {
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+      variants: {
+        test: {
+          defaultProps: {
+            color: 'red',
+          },
+        },
+      },
+    });
+    const { container } = render(<Card variant="test" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -195,15 +252,14 @@ describe('modes', () => {
         altitude: '100',
         padding: 'major-2',
       },
-      variants: {
+      modes: {
         test: {
-          defaultProps: {
-            color: 'red',
-          },
+          styles: { base: { backgroundColor: 'red' } },
+          defaultProps: { color: 'primaryTint' },
         },
       },
     });
-    const { container } = render(<Card variant="test" />);
+    const { container } = render(<Card colorMode="test" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

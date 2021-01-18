@@ -1,5 +1,5 @@
 import { Platform, Text } from 'react-native';
-import { css, styled } from '../styled';
+import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
 export const StyledText = styled(Text)`
@@ -9,5 +9,5 @@ export const StyledText = styled(Text)`
       font-size: unset;
     `}
 
-  ${theme('Text', 'styles.base')};
+  ${theme('native.Text', 'styles.base')};
 `;
