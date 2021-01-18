@@ -4,12 +4,10 @@ import { theme } from '../utils/theme';
 
 export const StyledText = styled(Text)`
   ${Platform.OS === 'web' &&
-  css`
-    font-family: unset;
-    font-size: unset;
-  `}
+  `
+      font-family: unset;
+      font-size: unset;
+    `}
 
-  & {
-    ${theme('Text.styles.base')};
-  }
+  ${theme('Text', 'styles.base')};
 `;

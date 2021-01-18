@@ -11,8 +11,13 @@ const breakpoints = {
     xs: 320,
     sm: 375,
     md: 414,
+    mobile: 480,
+    tablet: 768,
     lg: 768,
+    desktop: 1024,
     xl: 1024,
+    widescreen: 1200,
+    fullHD: 1440,
   },
 };
 

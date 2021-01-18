@@ -3,6 +3,7 @@ import { theme } from './theme';
 
 export function breakpoint(direction, values) {
   return (props) => {
+    console.log('test', props);
     const breakpoints = theme('breakpoints')(props);
     const directionBreakpoints = breakpoints[direction];
     const size = Dimensions.get('window')[direction];

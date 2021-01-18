@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ThemeConfig } from 'bumbag/types';
+import { ThemeConfig } from '../../types/theme';
 import { render } from '@testing-library/react';
 // @ts-ignore
 import { Provider } from '../../Provider';

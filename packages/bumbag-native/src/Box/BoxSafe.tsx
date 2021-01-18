@@ -17,12 +17,12 @@ const useProps = createHook<BoxSafeProps>(
 
 export const BoxSafe = createComponent<ViewProps & BoxSafeProps>(
   (props) => {
-    const textProps = useProps(props);
+    const boxProps = useProps(props);
     return createElement({
       children: props.children,
       component: styles.StyledBoxSafe,
       use: props.use,
-      htmlProps: textProps,
+      htmlProps: boxProps,
     });
   },
   {

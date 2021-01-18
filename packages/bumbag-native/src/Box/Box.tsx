@@ -25,17 +25,11 @@ export type LocalBoxProps = {
   elementRef?: React.Ref<any>;
   themeKey?: string;
 };
-export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & LocalBoxProps;
+export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & ViewProps & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
   (_props, { disableCSSProps }) => {
     let props = _props;
-    const { use } = props;
-
-    if (use && typeof use !== 'string' && use.useProps) {
-      const newProps = use.useProps({ ...props, use: undefined });
-      props = { ...props, ...newProps };
-    }
 
     // Convert CSS props to an object.
     // Example input:
@@ -61,13 +55,12 @@ const useProps = createHook<BoxProps>(
   { themeKey: 'Box' }
 );
 
-export const Box = createComponent<ViewProps & BoxProps>(
+export const Box = createComponent<BoxProps>(
   (props) => {
     const boxProps = useProps(props);
     return createElement({
       children: props.children,
       component: styles.StyledBox,
-      use: props.use,
       htmlProps: boxProps,
     });
   },

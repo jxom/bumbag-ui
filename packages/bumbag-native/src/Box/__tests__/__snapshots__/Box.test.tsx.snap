@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`modes renders correctly for applyTheme 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="box-shadow: 0px 1px 4px rgba(0,0,0,0.15); color: rgb(255, 0, 0); padding: 16px 16px 16px 16px;"
+/>
+`;
+
+exports[`modes should render correctly when colorMode is set globally 1`] = `
+<div
+  class="css-view-1dbjc4n"
+>
+  <div
+    class="css-text-901oao"
+    dir="auto"
+    style="font-family: unset;"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`modes should render correctly when colorMode set as prop 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="background-color: rgb(255, 0, 0); color: rgb(238, 237, 253);"
+>
+  <div
+    class="css-text-901oao"
+    dir="auto"
+    style="font-family: unset;"
+  >
+    hello world
+  </div>
+</div>
+`;
+
 exports[`props should assign a ref 1`] = `
 <div
   class="css-view-1dbjc4n"
@@ -192,4 +228,49 @@ exports[`props should render correctly with a spacing CSS prop 2`] = `
   class="css-view-1dbjc4n"
   style="margin: 32px 32px 32px 32px; padding-left: 16px;"
 />
+`;
+
+exports[`theming Box.base should render correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="background-color: rgb(255, 0, 0);"
+>
+  <div
+    class="css-text-901oao"
+    dir="auto"
+    style="font-family: unset;"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`theming Box.base should render correctly 2`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="color: rgb(87, 79, 235);"
+>
+  <div
+    class="css-text-901oao"
+    dir="auto"
+    style="font-family: unset;"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`variants styles.base should render correctly 1`] = `
+<div
+  class="css-view-1dbjc4n"
+  style="background-color: rgb(255, 0, 0);"
+>
+  <div
+    class="css-text-901oao"
+    dir="auto"
+    style="font-family: unset;"
+  >
+    hello world
+  </div>
+</div>
 `;

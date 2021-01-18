@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { applyTheme } from 'bumbag/utils/applyTheme';
 import { Box } from '../index';
 import { Text } from '../../Text';
 import render from '../../utils/_tests/render';
@@ -95,5 +96,114 @@ describe('props', () => {
       const { container } = render(<Box alignY={alignY} />);
       expect(container.firstChild).toMatchSnapshot();
     });
+  });
+});
+
+describe('theming', () => {
+  it('Box.base should render correctly', () => {
+    const { container } = render(
+      <Box>
+        <Text>hello world</Text>
+      </Box>,
+      {
+        theme: { Box: { styles: { base: { backgroundColor: 'red' } } } },
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Box.base should render correctly', () => {
+    const { container } = render(
+      <Box color="primary">
+        <Text>hello world</Text>
+      </Box>,
+      {
+        theme: {
+          Box: { styles: { base: (props) => ({ backgroundColor: props.color }) } },
+        },
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('variants', () => {
+  it('styles.base should render correctly', () => {
+    const { container } = render(
+      <Box variant="test">
+        <Text>hello world</Text>
+      </Box>,
+      {
+        theme: {
+          Box: {
+            variants: { test: { styles: { base: { backgroundColor: 'red' } } } },
+          },
+        },
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('modes', () => {
+  it('should render correctly when colorMode is set globally', () => {
+    const { container } = render(
+      <Box>
+        <Text>hello world</Text>
+      </Box>,
+      {
+        colorMode: 'test',
+        theme: {
+          Box: {
+            modes: {
+              test: {
+                styles: { base: { backgroundColor: 'red' } },
+                defaultProps: { color: 'primaryTint' },
+              },
+            },
+          },
+        },
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly when colorMode set as prop', () => {
+    const { container } = render(
+      <Box colorMode="test">
+        <Text>hello world</Text>
+      </Box>,
+      {
+        theme: {
+          Box: {
+            modes: {
+              test: {
+                styles: { base: { backgroundColor: 'red' } },
+                defaultProps: { color: 'primaryTint' },
+              },
+            },
+          },
+        },
+      }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders correctly for applyTheme', () => {
+    const Card = applyTheme(Box, {
+      defaultProps: {
+        altitude: '100',
+        padding: 'major-2',
+      },
+      variants: {
+        test: {
+          defaultProps: {
+            color: 'red',
+          },
+        },
+      },
+    });
+    const { container } = render(<Card variant="test" />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

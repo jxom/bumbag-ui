@@ -60,16 +60,16 @@ export default function App() {
       <PreviewSection title="Altitudes">
         <Preview>
           <Box>
-            <Box altitude="100" padding="major-2">
+            <Box altitude="100" backgroundColor="white" padding="major-2">
               <Text>Altitude 100</Text>
             </Box>
-            <Box altitude="200" padding="major-2" marginTop="major-2">
+            <Box altitude="200" backgroundColor="white" padding="major-2" marginTop="major-2">
               <Text>Altitude 200</Text>
             </Box>
-            <Box altitude="300" padding="major-2" marginTop="major-2">
+            <Box altitude="300" backgroundColor="white" padding="major-2" marginTop="major-2">
               <Text>Altitude 300</Text>
             </Box>
-            <Box altitude="400" padding="major-2" marginTop="major-2">
+            <Box altitude="400" backgroundColor="white" padding="major-2" marginTop="major-2">
               <Text>Altitude 400</Text>
             </Box>
           </Box>

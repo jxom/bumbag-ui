@@ -1,3 +1,4 @@
+import { TextProps as RNTextProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from '../Box';
@@ -14,13 +15,12 @@ const useProps = createHook<TextProps>(
   { themeKey: 'Text' }
 );
 
-export const Text = createComponent<TextProps>(
+export const Text = createComponent<RNTextProps & TextProps>(
   (props) => {
     const textProps = useProps(props);
     return createElement({
       children: props.children,
       component: styles.StyledText,
-      use: props.use,
       htmlProps: textProps,
     });
   },
