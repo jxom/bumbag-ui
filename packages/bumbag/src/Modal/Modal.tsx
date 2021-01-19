@@ -21,7 +21,7 @@ export type ModalProps = BoxProps & ReakitDialogProps & LocalModalProps;
 const useProps = createHook<Partial<ModalProps>>(
   (props, { themeKey }) => {
     const modalContext = React.useContext(ModalContext);
-    props = { ...modalContext.modal, ...props };
+    props = { ...props, ...modalContext.modal };
 
     let {
       children,
@@ -66,19 +66,20 @@ const useProps = createHook<Partial<ModalProps>>(
     htmlProps = Box.useProps({
       ...props,
       ...modalProps,
-      wrapElement: (children) =>
-        !modal ? (
-          <Box>
-            {!hideBackdrop && (
-              <ModalBackdrop>
-                <div />
-              </ModalBackdrop>
-            )}
-            {children}
-          </Box>
-        ) : (
-          children
-        ),
+      ...(!modal
+        ? {
+            wrapElement: (children) => (
+              <Box>
+                {!hideBackdrop && (
+                  <ModalBackdrop>
+                    <div />
+                  </ModalBackdrop>
+                )}
+                {children}
+              </Box>
+            ),
+          }
+        : {}),
     });
 
     const className = useClassName({
