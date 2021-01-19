@@ -137,3 +137,26 @@ describe('defaultProps', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('useContext', () => {
+  it('should render correctly', () => {
+    let disclosure;
+
+    function ParentComponent({ children }: any) {
+      return <Disclosure.State>{children}</Disclosure.State>;
+    }
+
+    function ChildComponent() {
+      const context = Disclosure.useContext();
+      disclosure = context.disclosure;
+      return <Box>hello world</Box>;
+    }
+
+    render(
+      <ParentComponent>
+        <ChildComponent />
+      </ParentComponent>
+    );
+    expect(disclosure).toMatchSnapshot();
+  });
+});

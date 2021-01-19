@@ -15,6 +15,10 @@ export function useModalState(initialState?: ModalInitialState) {
   return useDialogState(initialState);
 }
 
+export function useModalContext() {
+  return React.useContext(ModalContext);
+}
+
 export function ModalState(
   props: {
     children?: React.ReactNode | ((state: ModalStateReturn) => React.ReactElement<any>);

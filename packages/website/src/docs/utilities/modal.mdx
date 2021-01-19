@@ -245,6 +245,20 @@ function Example() {
 </Modal.State>
 ```
 
+### Accessing internal state
+
+Any descendant component of `Modal.State` can utilise `Modal.useContext` to access the [internal modal state](#modalstate-return-values):
+
+```jsx
+function Example() {
+  const { modal } = Modal.useContext();
+
+  return (
+    <Button onClick={modal.hide}>Hide modal</Button>
+  )
+}
+```
+
 ## Accessibility
 
 The `<Modal>` component follows the [WAI ARIA Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
@@ -273,13 +287,13 @@ The `<Modal>` component follows the [WAI ARIA Dialog (Modal) Pattern](https://ww
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">hideBackdrop</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Hides the backdrop.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">placement</Code>**  
+**<Code fontSize="150" marginRight="major-1">placement</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`"top-start"
@@ -301,19 +315,19 @@ Sets the placement of the modal.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">delay</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 Delay of the animation (in s/ms).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">duration</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 Duration of the animation (in s/ms).
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">expand</Code>**  
+**<Code fontSize="150" marginRight="major-1">expand</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`boolean
@@ -328,37 +342,37 @@ Will the component have an expand animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">fade</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Will the component have a fade animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">slide</Code>** <Code fontSize="100" palette="primary">boolean | &#34;top&#34; | &#34;right&#34; | &#34;bottom&#34; | &#34;left&#34;</Code>
 
 Will the component have a slide animation when it is toggled on/off?
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">timingFunction</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 Timing function of the animation
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">hideOnEsc</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by pressing `Escape`.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">hideOnClickOutside</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 When enabled, user can hide the dialog by clicking outside it.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">preventBodyScroll</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 When enabled, user can't scroll on body when the dialog is visible.
 This option doesn't work if the dialog isn't modal.
@@ -368,25 +382,25 @@ This option doesn't work if the dialog isn't modal.
 <details><Box use="summary" marginBottom="major-2"><strong>9 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's animating or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -395,13 +409,13 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -412,7 +426,7 @@ by default.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+**<Code fontSize="150" marginRight="major-1">hide</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
 
 Changes the `visible` state to `false`
 
@@ -428,7 +442,7 @@ ID that will serve as a base for all the items IDs.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**  
+**<Code fontSize="150" marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -438,11 +452,11 @@ ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**  
+**<Code fontSize="150" marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -461,31 +475,31 @@ ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -500,28 +514,28 @@ ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-            
+
 
 ### Modal.Disclosure Props
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Same as the HTML attribute.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">focusable</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 When an element is `disabled`, it may still be `focusable`. It works
 similarly to `readOnly` on form elements. In this case, only
@@ -532,7 +546,7 @@ similarly to `readOnly` on form elements. In this case, only
 <details><Box use="summary" marginBottom="major-2"><strong>5 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
@@ -560,7 +574,7 @@ Toggles the `visible` state
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**  
+**<Code fontSize="150" marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -570,11 +584,11 @@ Toggles the `visible` state
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**  
+**<Code fontSize="150" marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -593,27 +607,27 @@ Toggles the `visible` state
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -628,16 +642,16 @@ Toggles the `visible` state
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-            
+
 
 ### Modal.Backdrop Props
 
@@ -646,25 +660,25 @@ Toggles the `visible` state
 <details><Box use="summary" marginBottom="major-2"><strong>6 state props</strong></Box>
 <blockquote>These props are returned by the state hook. You can spread them into this component (<code>...state</code>) or pass them separately. You can also provide these props from your own state logic.</blockquote>
 
-**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animating</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's animating or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -673,13 +687,13 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code> 
+**<Code fontSize="150" marginRight="major-1">stopAnimation</Code>** <Code fontSize="100" palette="primary">() =&#62; void</Code>
 
 Stops animation. It's called automatically if there's a CSS transition.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -694,7 +708,7 @@ by default.
 
 <details><Box use="summary" marginBottom="major-2">Inherits <code><strong>Box</strong></code> props</Box>
 
-**<Code fontSize="150" marginRight="major-1">use</Code>**  
+**<Code fontSize="150" marginRight="major-1">use</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -704,11 +718,11 @@ by default.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">className</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">children</Code>**  
+**<Code fontSize="150" marginRight="major-1">children</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`string
@@ -727,31 +741,31 @@ by default.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignX</Code>** <Code fontSize="100" palette="primary">&#34;right&#34; | &#34;left&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code> 
+**<Code fontSize="150" marginRight="major-1">alignY</Code>** <Code fontSize="100" palette="primary">&#34;top&#34; | &#34;bottom&#34; | &#34;center&#34;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">altitude</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">variant</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">colorMode</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">disabled</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">overrides</Code>**  
+**<Code fontSize="150" marginRight="major-1">overrides</Code>**
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
@@ -766,16 +780,16 @@ by default.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code> 
+**<Code fontSize="150" marginRight="major-1">elementRef</Code>** <Code fontSize="100" palette="primary">((instance: any) =&#62; void) | RefObject&#60;any&#62;</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">themeKey</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-            
+
 
 ## State
 
@@ -783,19 +797,19 @@ by default.
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -804,7 +818,7 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -908,25 +922,25 @@ Sets `modal`.
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-    
+
 
 ### Modal.useState API
 
 <!-- Automatically generated -->
 
-**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code> 
+**<Code fontSize="150" marginRight="major-1">baseId</Code>** <Code fontSize="100" palette="primary">string</Code>
 
 ID that will serve as a base for all the items IDs.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">visible</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Whether it's visible or not.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">animated</Code>** <Code fontSize="100" palette="primary">number | boolean</Code>
 
 If `true`, `animating` will be set to `true` when `visible` is updated.
 It'll wait for `stopAnimation` to be called or a CSS transition ends.
@@ -935,7 +949,7 @@ after the same number of milliseconds have passed.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code> 
+**<Code fontSize="150" marginRight="major-1">modal</Code>** <Code fontSize="100" palette="primary">boolean</Code>
 
 Toggles Dialog's `modal` state.
 
@@ -1039,7 +1053,7 @@ Sets `modal`.
 <Divider marginTop="major-2" marginBottom="major-2" />
 
 </details>
-    
+
 
 ## Theming
 

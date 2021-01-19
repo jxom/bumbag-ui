@@ -503,3 +503,31 @@ describe('defaultProps', () => {
     expect(baseElement).toMatchSnapshot();
   });
 });
+
+describe('useContext', () => {
+  it('should render correctly', () => {
+    let modal;
+
+    function ParentComponent({ children }: any) {
+      return (
+        <Modal.State>
+          <Modal.Disclosure>Toggle</Modal.Disclosure>
+          <Modal aria-label="test">{children}</Modal>
+        </Modal.State>
+      );
+    }
+
+    function ChildComponent() {
+      const context = Modal.useContext();
+      modal = context.modal;
+      return <Box>hello world</Box>;
+    }
+
+    render(
+      <ParentComponent>
+        <ChildComponent />
+      </ParentComponent>
+    );
+    expect(modal).toMatchSnapshot();
+  });
+});
