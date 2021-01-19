@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Provider as ReakitProvider } from 'reakit/Provider';
-import ConditionalWrap from 'conditional-wrap';
 
 import { ThemeProvider as EmotionProvider } from '../styled';
 import buildTheme from '../theme';
@@ -80,11 +79,9 @@ export function Provider(props: ProviderProps) {
 
   return (
     <BumbagThemeContext.Provider value={themeContextValue}>
-      <EmotionProvider theme={derivedTheme}>
-        <ColorModeProvider isSSR={isSSR} mode={colorMode}>
-          {typeof children === 'function' ? children({ theme: derivedTheme }) : children}
-        </ColorModeProvider>
-      </EmotionProvider>
+      <ColorModeProvider isSSR={isSSR} mode={colorMode}>
+        {typeof children === 'function' ? children({ theme: derivedTheme }) : children}
+      </ColorModeProvider>
     </BumbagThemeContext.Provider>
   );
 }
