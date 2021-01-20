@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, View } from 'react-native';
+import { KeyboardAvoidingView, SafeAreaView, ScrollView, View } from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
@@ -12,4 +12,8 @@ export const StyledBoxSafe = styled(SafeAreaView)`
 
 export const StyledBoxScroll = styled(ScrollView)`
   ${theme('native.Box.Scroll', 'styles.base')};
+`;
+
+export const StyledBoxKeyboardAvoiding = styled(KeyboardAvoidingView)`
+  ${theme('native.Box.KeyboardAvoiding', 'styles.base')};
 `;
