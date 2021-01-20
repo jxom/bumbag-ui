@@ -2,6 +2,7 @@
 
 <p align="center">Est. 2018 – Formally known as Fannypack</p>
 
+
 ## Getting started
 
 [Visit the Bumbag docs](https://bumbag.style) to get started with Bumbag.
