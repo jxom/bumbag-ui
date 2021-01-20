@@ -1,26 +1,26 @@
-import { ViewProps } from 'react-native';
+import { ScrollViewProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from './Box';
 import * as styles from './Box.styles';
 
-export type LocalBoxSafeProps = {};
-export type BoxSafeProps = BoxProps & ViewProps & LocalBoxSafeProps;
+export type LocalBoxScrollProps = {};
+export type BoxScrollProps = BoxProps & ScrollViewProps & LocalBoxScrollProps;
 
-const useProps = createHook<BoxSafeProps>(
+const useProps = createHook<BoxScrollProps>(
   (props) => {
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Box.Safe' }
+  { themeKey: 'Box.Scroll' }
 );
 
-export const BoxSafe = createComponent<BoxSafeProps>(
+export const BoxScroll = createComponent<BoxScrollProps>(
   (props) => {
     const boxProps = useProps(props);
     return createElement({
       children: props.children,
-      component: styles.StyledBoxSafe,
+      component: styles.StyledBoxScroll,
       use: props.use,
       htmlProps: boxProps,
     });
@@ -28,8 +28,8 @@ export const BoxSafe = createComponent<BoxSafeProps>(
   {
     attach: {
       useProps,
-      displayName: 'Box.Safe',
+      displayName: 'Box.Scroll',
     },
-    themeKey: 'Box.Safe',
+    themeKey: 'Box.Scroll',
   }
 );

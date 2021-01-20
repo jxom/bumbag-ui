@@ -1,4 +1,4 @@
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView, ScrollView, View } from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
@@ -8,4 +8,8 @@ export const StyledBox = styled(View)`
 
 export const StyledBoxSafe = styled(SafeAreaView)`
   ${theme('native.Box.Safe', 'styles.base')};
+`;
+
+export const StyledBoxScroll = styled(ScrollView)`
+  ${theme('native.Box.Scroll', 'styles.base')};
 `;

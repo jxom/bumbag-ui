@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, ScrollView } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { NativeRouter, Link, Route } from 'react-router-native';
 import { Box, Text, Provider } from 'bumbag-native';
 
@@ -13,7 +13,7 @@ export default function App() {
     <Provider>
       <NativeRouter>
         <Box.Safe>
-          <ScrollView>
+          <Box.Scroll>
             <Box padding="16px">
               <Link to="/" component={TouchableOpacity}>
                 <Text fontSize="20px" fontWeight="600" marginBottom="16px">
@@ -25,7 +25,7 @@ export default function App() {
               <Route exact path="/components/image" component={ImagePage} />
               <Route exact path="/components/text" component={TextPage} />
             </Box>
-          </ScrollView>
+          </Box.Scroll>
         </Box.Safe>
       </NativeRouter>
     </Provider>
