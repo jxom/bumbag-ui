@@ -1,6 +1,5 @@
 import React from 'react';
 import * as bumbag from 'bumbag';
-import * as bumbagNative from 'bumbag-native';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 

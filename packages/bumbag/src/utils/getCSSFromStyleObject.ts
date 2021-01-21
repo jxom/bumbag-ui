@@ -77,9 +77,11 @@ const attributeMaps = {
 
 function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
-  const borderColor = palette(borderValue.color)({ theme });
   if (borderValue) {
-    return `${borderValue.width} ${borderValue.style} ${borderColor}`;
+    const borderColor = palette(borderValue.color)({ theme });
+    if (borderValue) {
+      return `${borderValue.width} ${borderValue.style} ${borderColor}`;
+    }
   }
   return value;
 }
