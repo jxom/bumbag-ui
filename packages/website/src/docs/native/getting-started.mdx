@@ -1,0 +1,40 @@
+---
+title: Getting started
+path: /native/getting-started/
+---
+
+# Getting started
+
+Firstly, install Bumbag & Bumbag Native:
+
+```
+npm install bumbag bumbag-native
+```
+
+Once you have installed the modules, wrap your application in a "`<BumbagNativeProvider>`":
+
+```jsx
+import { Text, Provider as BumbagNativeProvider } from 'bumbag-native';
+
+const App = () => (
+  <BumbagNativeProvider>
+    <Text>Hello world!</Text>
+  </BumbagNativeProvider>
+);
+```
+
+Now, you can start using the Bumbag components:
+
+```jsx
+import { Button, Provider as BumbagNativeProvider } from 'bumbag-native';
+
+const MyApp = () => (
+  <BumbagNativeProvider>
+    <Button>
+      Hello world!
+    </Button>
+  </BumbagNativeProvider>
+);
+```
+
+> Note: You can override Bumbag's default theme by passing a `theme` prop to `<BumbagNativeProvider>`. [Click here to find out how to add a theme](/theming).

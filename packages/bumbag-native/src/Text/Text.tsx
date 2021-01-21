@@ -5,7 +5,7 @@ import { Box, BoxProps } from '../Box';
 import * as styles from './Text.styles';
 
 export type LocalTextProps = {};
-export type TextProps = BoxProps & LocalTextProps;
+export type TextProps = BoxProps & RNTextProps & LocalTextProps;
 
 const useProps = createHook<TextProps>(
   (props) => {
@@ -15,7 +15,7 @@ const useProps = createHook<TextProps>(
   { themeKey: 'native.Text' }
 );
 
-export const Text = createComponent<RNTextProps & TextProps>(
+export const Text = createComponent<TextProps>(
   (props) => {
     const textProps = useProps(props);
     return createElement({

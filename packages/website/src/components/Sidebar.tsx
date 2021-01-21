@@ -118,7 +118,7 @@ function SideNavItem({ orderItem, searchText, sidebarItems, sidebar }: any) {
   return (
     <Box ref={sideNavItemRef}>
       <SideNav.Level title={_startCase(key)} display={!show ? 'none' : undefined}>
-        {(items || []).map((item) => {
+        {(items || []).filter(Boolean).map((item) => {
           const frontmatter = item.childMdx?.frontmatter || {};
           const title = frontmatter.title || _startCase(item.name).replace(/\s/g, '');
           if (!searchText || title.toLowerCase().includes(searchText.toLowerCase())) {

@@ -1,11 +1,11 @@
-import { ViewProps } from 'react-native';
+import { ViewProps as RNViewProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from './Box';
 import * as styles from './Box.styles';
 
 export type LocalBoxSafeProps = {};
-export type BoxSafeProps = BoxProps & ViewProps & LocalBoxSafeProps;
+export type BoxSafeProps = BoxProps & RNViewProps & LocalBoxSafeProps;
 
 const useProps = createHook<BoxSafeProps>(
   (props) => {
@@ -21,7 +21,6 @@ export const BoxSafe = createComponent<BoxSafeProps>(
     return createElement({
       children: props.children,
       component: styles.StyledBoxSafe,
-      use: props.use,
       htmlProps: boxProps,
     });
   },

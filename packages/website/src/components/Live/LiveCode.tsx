@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { LiveProvider, LiveEditor as _LiveEditor, LiveError as _LiveError } from 'react-live';
 import * as bumbag from 'bumbag';
+import * as bumbagNative from 'bumbag-native';
 import { HighlightedCode, highlightedCodeStyles } from 'bumbag-addon-highlighted-code';
 import { Markdown } from 'bumbag-addon-markdown';
 import { css, palette, space, styled } from 'bumbag';
@@ -73,6 +74,7 @@ type Props = {
   fallback?: React.ReactElement<any>;
   match?: RegExp;
   children: React.ReactNode | string;
+  platform?: string;
 };
 
 LiveCode.defaultProps = {
@@ -88,16 +90,18 @@ function FeedbackButton(props) {
 }
 
 export default function LiveCode(props: Props) {
-  const { pre: Pre, fallback: Fallback, children, ...restProps } = props;
+  const { pre: Pre, fallback: Fallback, children, platform, ...restProps } = props;
   const { theme } = bumbag.useTheme();
   const { colorMode } = bumbag.useColorMode();
   const scope = React.useMemo(
     () => ({
       ...bumbag,
+      ...(platform === 'native' ? bumbagNative : {}),
+      require,
       HighlightedCode,
       Markdown,
     }),
-    []
+    [platform]
   );
 
   const codeTabs: Array<{ code?: string; transformCode?: (src: any) => string; tab?: string }> = React.useMemo(

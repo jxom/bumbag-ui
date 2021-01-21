@@ -25,6 +25,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (path.includes('blocks')) {
       type = 'blocks';
     }
+    if (path.includes('native')) {
+      type = 'native';
+    }
     createNodeField({
       name: 'type',
       node,
@@ -80,4 +83,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     });
   });
+};
+
+exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
+  const config = getConfig();
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    'react-native$': 'react-native-web',
+  };
+  // This will completely replace the webpack config with the modified object.
+  actions.replaceWebpackConfig(config);
 };

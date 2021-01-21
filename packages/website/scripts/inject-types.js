@@ -139,9 +139,9 @@ ${type.description}
     .join('');
 }
 
-function getTypeMarkdown(extractedType, typeReferences, { type } = {}) {
+function getTypeMarkdown(extractedType, typeReferences, { prefix = '', type } = {}) {
   let content = '';
-  const typeMetaData = typeReferences[extractedType] || {};
+  const typeMetaData = typeReferences[`${prefix}${extractedType}`] || {};
   let types = typeMetaData?.types || [];
 
   if (types.length > 0) {
@@ -174,7 +174,15 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
   function populateUses(uses = []) {
     if (uses.length > 0) {
       uses.forEach((use) => {
-        const typeReference = typeReferences[`Local${use}`];
+        const typeReference = typeReferences[`${prefix}Local${use}`] || typeReferences[use];
+
+        let componentDisplayName = use.replace(/(Local|Props)/g, '');
+        let inheritText = `<code>${componentDisplayName}</code>`;
+        if (componentDisplayName.includes('RN')) {
+          componentDisplayName = componentDisplayName.replace('RN', '');
+          inheritText = `<a href="https://reactnative.dev/docs/${componentDisplayName.toLowerCase()}">React Native's <code>${componentDisplayName}</code></a>`;
+        }
+
         if (typeReference) {
           const useTypes = typeReference.types.filter(
             (type) => !Boolean(types.find((refType) => refType.name === type.name))
@@ -183,10 +191,7 @@ ${createTypeMarkdown(typeMetaData.stateTypes)}
             content = `
 ${content}
 
-<details><Box use="summary" marginBottom="major-2">Inherits <code><strong>${use.replace(
-              /(Local|Props)/g,
-              ''
-            )}</strong></code> props</Box>
+<details><Box use="summary" marginBottom="major-2">Inherits <strong>${inheritText}</strong> props</Box>
 ${createTypeMarkdown(useTypes)}
 </details>
             `;
@@ -222,10 +227,18 @@ function extractTypes(config) {
 
   let typeReferences = {};
   sourceFilesAst.forEach((sourceFileAst) => {
+    let prefix = '';
+
+    const path = sourceFileAst.getFilePath();
+    if (path.includes('bumbag-native')) {
+      prefix = 'Native';
+    }
+
     sourceFileAst.forEachChild((node) => {
       const symbol = node.getSymbol();
       if (symbol) {
-        const symbolName = symbol.getEscapedName();
+        const symbolName = `${prefix}${symbol.getEscapedName()}`;
+
         if (/(Local.*Props|.*StateReturn|.*InitialState)/.test(symbolName)) {
           const propTypes = createPropTypeObjects(node.getType());
           typeReferences[symbolName] = {
@@ -244,6 +257,14 @@ function extractTypes(config) {
               const nodeText = node.getText();
 
               dependantTypes = [...dependantTypes, nodeText];
+
+              if (/^RN.*/.test(nodeText)) {
+                const propTypes = createPropTypeObjects(node.getType());
+                typeReferences[nodeText] = {
+                  ...typeReferences[nodeText],
+                  types: propTypes,
+                };
+              }
 
               const types = node.getType().getIntersectionTypes();
               types.forEach((type) => {
@@ -265,11 +286,16 @@ function extractTypes(config) {
             });
           }
 
-          dependantTypes = dependantTypes.filter((type) => Boolean(type) && type !== `Local${symbolName}`).reverse();
+          dependantTypes = dependantTypes
+            .filter((type) => Boolean(type) && type !== `Local${symbol.getEscapedName()}`)
+            .reverse();
 
-          const types = _.uniqBy([..._.get(typeReferences, `[Local${symbolName}].types`, []), ...extraTypes], 'name');
-          typeReferences[`Local${symbolName}`] = {
-            ...typeReferences[`Local${symbolName}`],
+          const types = _.uniqBy(
+            [..._.get(typeReferences, `[${prefix}Local${symbol.getEscapedName()}].types`, []), ...extraTypes],
+            'name'
+          );
+          typeReferences[`${prefix}Local${symbol.getEscapedName()}`] = {
+            ...typeReferences[`${prefix}Local${symbol.getEscapedName()}`],
             types,
             stateTypes,
             uses: dependantTypes,
@@ -281,6 +307,11 @@ function extractTypes(config) {
 
   const docPaths = getPaths(docsPath, /\.mdx$/);
   docPaths.forEach((docPath) => {
+    let prefix = '';
+    if (docPath.includes('native')) {
+      prefix = 'Native';
+    }
+
     const mdContents = readFileSync(docPath, { encoding: 'utf-8' });
     if (/#\s.*\s(API|Props|Return\sValues)/.test(mdContents)) {
       const matches = mdContents.match(/#\s.*\s(API|Props|Return\sValues)/g);
@@ -302,7 +333,10 @@ function extractTypes(config) {
           localType = `Local${component}Props`;
           type = 'props';
         }
-        const typeMarkdown = getTypeMarkdown(localType, typeReferences, { type });
+        const typeMarkdown = getTypeMarkdown(localType, typeReferences, {
+          prefix,
+          type,
+        });
 
         let title;
         if (type === 'state-return') {

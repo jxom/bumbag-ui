@@ -33,6 +33,9 @@ export default function Header(props) {
   if (pathname.includes('blocks')) {
     selectedId = 'blocks';
   }
+  if (pathname.includes('native')) {
+    selectedId = 'native';
+  }
 
   return (
     <TopNav selectedId={selectedId}>
@@ -42,13 +45,11 @@ export default function Header(props) {
         </TopNav.Item>
         {pathname !== '/' && <SkipToMainContent />}
         <TopNav.Item use={Link} navId="docs" to="/getting-started" fontWeight="semibold">
-          Docs
+          Web
         </TopNav.Item>
-        {/*
-          <TopNav.Item use={Link} navId="blocks" to="/blocks" fontWeight="semibold">
-            Blocks
-          </TopNav.Item>
-         */}
+        <TopNav.Item use={Link} navId="native" to="/native/getting-started" fontWeight="semibold">
+          Native
+        </TopNav.Item>
       </TopNav.Section>
       <TopNav.Section marginRight="major-2">
         <Hide below={collapseBelow}>

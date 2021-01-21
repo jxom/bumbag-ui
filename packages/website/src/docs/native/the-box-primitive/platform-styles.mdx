@@ -1,0 +1,52 @@
+---
+breakpoint: tablet
+title: Platform styles
+---
+
+# Platform styles
+
+Bumbag Native enables you to specify platform-specific styling on any component.
+
+In the example below, the Box will appear `blue` on the web, `green` on iOS, and `red` on Android.
+
+```jsx-live
+<Box
+  backgroundColor={{
+    web: 'blue',
+    ios: 'green',
+    android: 'red'
+  }}
+  width="50px"
+  height="50px"
+/>
+```
+
+You can also use the `native` attribute to target the native environment (iOS or Android).
+
+```jsx-live
+<Box
+  backgroundColor={{
+    web: 'blue',
+    native: 'green'
+  }}
+  width="50px"
+  height="50px"
+/>
+```
+
+## Grouping by platform
+
+It is also possible to group CSS Props by platform if the props are mutually exclusive:
+
+```jsx-live
+<Box
+  _web={{
+    backgroundColor: 'red'
+  }}
+  _native={{
+    padding: 'major-2'
+  }}
+  width="50px"
+  height="50px"
+/>
+```

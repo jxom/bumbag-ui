@@ -1,11 +1,11 @@
-import { ScrollViewProps } from 'react-native';
+import { ScrollViewProps as RNScrollViewProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from './Box';
 import * as styles from './Box.styles';
 
 export type LocalBoxScrollProps = {};
-export type BoxScrollProps = BoxProps & ScrollViewProps & LocalBoxScrollProps;
+export type BoxScrollProps = BoxProps & RNScrollViewProps & LocalBoxScrollProps;
 
 const useProps = createHook<BoxScrollProps>(
   (props) => {
@@ -21,7 +21,6 @@ export const BoxScroll = createComponent<BoxScrollProps>(
     return createElement({
       children: props.children,
       component: styles.StyledBoxScroll,
-      use: props.use,
       htmlProps: boxProps,
     });
   },

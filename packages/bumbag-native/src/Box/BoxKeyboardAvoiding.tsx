@@ -1,11 +1,11 @@
-import { KeyboardAvoidingViewProps } from 'react-native';
+import { KeyboardAvoidingViewProps as RNKeyboardAvoidingViewProps } from 'react-native';
 import { createComponent, createElement, createHook } from 'bumbag/utils';
 
 import { Box, BoxProps } from './Box';
 import * as styles from './Box.styles';
 
 export type LocalBoxKeyboardAvoidingProps = {};
-export type BoxKeyboardAvoidingProps = BoxProps & KeyboardAvoidingViewProps & LocalBoxKeyboardAvoidingProps;
+export type BoxKeyboardAvoidingProps = BoxProps & RNKeyboardAvoidingViewProps & LocalBoxKeyboardAvoidingProps;
 
 const useProps = createHook<BoxKeyboardAvoidingProps>(
   (props) => {
@@ -21,7 +21,6 @@ export const BoxKeyboardAvoiding = createComponent<BoxKeyboardAvoidingProps>(
     return createElement({
       children: props.children,
       component: styles.StyledBoxKeyboardAvoiding,
-      use: props.use,
       htmlProps: boxProps,
     });
   },

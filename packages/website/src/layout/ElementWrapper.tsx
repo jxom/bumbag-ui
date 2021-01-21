@@ -4,6 +4,7 @@ import _omit from 'lodash/omit';
 import queryString from 'query-string';
 
 import { Provider, ToastManager } from 'bumbag';
+import { Provider as NativeProvider } from 'bumbag-native';
 import defaultTheme from '../theme';
 import { themeMap } from '../utils/theme';
 
@@ -15,8 +16,10 @@ export default function ElementWrapper(props: { element: React.ReactNode }) {
 
   return (
     <Provider theme={theme}>
-      {element}
-      <ToastManager isStacked={false} />
+      <NativeProvider theme={theme}>
+        {element}
+        <ToastManager isStacked={false} />
+      </NativeProvider>
     </Provider>
   );
 }

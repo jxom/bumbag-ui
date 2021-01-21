@@ -1,5 +1,6 @@
 import React from 'react';
 import * as bumbag from 'bumbag';
+import * as bumbagNative from 'bumbag-native';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
@@ -8,12 +9,14 @@ import LiveCode from '../components/Live/LiveCode';
 import Header from '../components/Header';
 import BlocksSidebar from '../components/Blocks/Sidebar';
 import DocsSidebar from '../components/Docs/Sidebar';
+import NativeSidebar from '../components/Native/Sidebar';
 import Footer from '../components/Footer';
 import _TableOfContents from '../components/TableOfContents';
 
 const Sidebars = {
   blocks: BlocksSidebar,
   docs: DocsSidebar,
+  native: NativeSidebar,
 };
 
 type Props = {
@@ -46,6 +49,13 @@ export default function Docs(props: Props) {
   const { children, pageContext = {}, path = '' } = props;
 
   const { colorMode } = bumbag.useColorMode();
+
+  //////////////////////////////////////////////////////////////////////
+
+  const title = props.title || pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title;
+  const breakpoint = props.breakpoint || pageContext.frontmatter?.breakpoint || 'tablet';
+  const isFluid = props.isFluid || pageContext.frontmatter?.isFluid;
+  const type = props.type || pageContext.type;
 
   //////////////////////////////////////////////////////////////////////
 
@@ -114,7 +124,7 @@ export default function Docs(props: Props) {
       ),
       li: (props: any) => <bumbag.ListItem marginBottom="major-1" {...props} />,
       strong: (props: any) => <bumbag.Text fontWeight="semibold" {...props} />,
-      pre: (props: any) => <LiveCode {...props.children.props} />,
+      pre: (props: any) => <LiveCode platform={type} {...props.children.props} />,
       table: (props: any) => <bumbag.Table marginBottom="major-4" marginTop="major-4" {...props} />,
       th: (props: any) => <bumbag.Table.HeadCell {...props} />,
       tr: (props: any) => <bumbag.Table.Row {...props} />,
@@ -122,15 +132,10 @@ export default function Docs(props: Props) {
       tbody: (props: any) => <bumbag.Table.Body {...props} />,
       thead: (props: any) => <bumbag.Table.Head {...props} />,
     }),
-    [colorMode]
+    [colorMode, type]
   );
 
   //////////////////////////////////////////////////////////////////////
-
-  const title = props.title || pageContext.frontmatter?.seoTitle || pageContext.frontmatter?.title;
-  const breakpoint = props.breakpoint || pageContext.frontmatter?.breakpoint || 'tablet';
-  const isFluid = props.isFluid || pageContext.frontmatter?.isFluid;
-  const type = props.type || pageContext.type;
 
   const Sidebar = Sidebars[type];
 

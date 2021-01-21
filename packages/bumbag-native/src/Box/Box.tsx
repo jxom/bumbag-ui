@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ViewProps } from 'react-native';
+import { ViewProps as RNViewProps } from 'react-native';
 
 import { ThemeConfig, CSSProperties } from 'bumbag/types';
 import { mergeRefs, createComponent, createElement, createHook, omitCSSProps } from 'bumbag/utils';
@@ -10,8 +10,6 @@ import * as styles from './Box.styles';
 type ComponentType<R> = React.ComponentType<R> & { useProps: any };
 
 export type LocalBoxProps = {
-  use?: string | ComponentType<any>;
-  className?: string;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   alignX?: 'left' | 'center' | 'right';
   alignY?: 'top' | 'center' | 'bottom';
@@ -25,7 +23,7 @@ export type LocalBoxProps = {
   elementRef?: React.Ref<any>;
   themeKey?: string;
 };
-export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & ViewProps & LocalBoxProps;
+export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & RNViewProps & LocalBoxProps;
 
 const useProps = createHook<BoxProps>(
   (_props, { disableCSSProps }) => {
@@ -39,7 +37,7 @@ const useProps = createHook<BoxProps>(
     // style = { color: 'red', backgroundColor: 'blue' }
     let style = useStyle({ ...props, ...props.style }, { disableCSSProps });
     if (Array.isArray(props.style) || typeof props.style !== 'object') {
-      props.style = [style, ...props.style];
+      props.style = [style, ...(props.style || [])];
     }
 
     // Pick out the CSS props
