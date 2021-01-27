@@ -9,6 +9,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/box">
         <Text>Box</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/icon">
+        <Text>Icon</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/image">
         <Text>Image</Text>
       </Link>

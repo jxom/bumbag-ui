@@ -35,6 +35,15 @@ export type BoxThemeConfig = {
   modes?: Variant<BoxThemeConfig>;
 };
 
+export type FlexThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<BoxProps>;
+  variants?: Variant<BoxThemeConfig>;
+  modes?: Variant<BoxThemeConfig>;
+};
+
 export type ImageThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -66,6 +75,7 @@ export type ThemeConfig = {
   palette?: CoreThemeConfig['palette'];
 
   Box?: BoxThemeConfig;
+  Flex?: FlexThemeConfig;
   Image?: ImageThemeConfig;
   Text?: TextThemeConfig;
 };

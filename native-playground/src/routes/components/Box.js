@@ -46,7 +46,7 @@ export default function App() {
       <PreviewSection title="CSS Props - Font weight">
         <Preview>
           <Box>
-            <Text fontWeight="semibold">Hello world</Text>
+            <Text fontWeight="600">Hello world</Text>
           </Box>
         </Preview>
       </PreviewSection>

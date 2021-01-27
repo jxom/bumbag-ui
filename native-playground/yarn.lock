@@ -1082,16 +1082,6 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
-"@emotion/cache@^10.0.27":
-  version "10.0.29"
-  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
-  integrity sha512-fU2VtSVlHiF27empSbxi1O2JFdNWZO+2NFHfwO0pxgTep6Xa3uGb+3pVKfLww2l/IBGLNEZl5Xf/++A4wAYDYQ==
-  dependencies:
-    "@emotion/sheet" "0.9.4"
-    "@emotion/stylis" "0.8.5"
-    "@emotion/utils" "0.11.3"
-    "@emotion/weak-memoize" "0.2.5"
-
 "@emotion/cache@^11.1.3":
   version "11.1.3"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.1.3.tgz#c7683a9484bcd38d5562f2b9947873cf66829afd"
@@ -1103,13 +1093,23 @@
     "@emotion/weak-memoize" "^0.2.5"
     stylis "^4.0.3"
 
-"@emotion/core@10.1.1":
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.1.1.tgz#c956c1365f2f2481960064bcb8c4732e5fb612c3"
-  integrity sha512-ZMLG6qpXR8x031NXD8HJqugy/AZSkAuMxxqB46pmAR7ze47MhNJ56cdoX243QPZdGctrdfo+s08yZTiwaUcRKA==
+"@emotion/cache@npm:@bumbag/emotion-cache@10.0.29-1":
+  version "10.0.29-1"
+  resolved "https://registry.yarnpkg.com/@bumbag/emotion-cache/-/emotion-cache-10.0.29-1.tgz#a9a0843dced37d1dc08c9fccd68a4dacf5a85e33"
+  integrity sha512-eqPeI0EpToFu5D489UOq1I5/2SQ8Cis/IYSICwtokTFLiYVnTObiFKLmUdGBUumw4Qhk4YzBAQjhB2VRRfoDww==
+  dependencies:
+    "@emotion/sheet" "0.9.4"
+    "@emotion/stylis" "0.8.5"
+    "@emotion/utils" "0.11.3"
+    "@emotion/weak-memoize" "0.2.5"
+
+"@emotion/core@npm:@bumbag/emotion-core@10.1.1-3":
+  version "10.1.1-3"
+  resolved "https://registry.yarnpkg.com/@bumbag/emotion-core/-/emotion-core-10.1.1-3.tgz#1d267f22caec0ea078c3ea62099d85d1d35356bf"
+  integrity sha512-/G4hqE4DAZJndsy6gteEHGrNh5ob/c+UwHB7aE5JjET2GgVKOJnFg/g6GevF9ZfeLbx7y9dfNVtsfLAWbqMaHw==
   dependencies:
     "@babel/runtime" "^7.5.5"
-    "@emotion/cache" "^10.0.27"
+    "@emotion/cache" "npm:@bumbag/emotion-cache@10.0.29-1"
     "@emotion/css" "^10.0.27"
     "@emotion/serialize" "^0.11.15"
     "@emotion/sheet" "0.9.4"
@@ -3931,7 +3931,7 @@ builtins@^1.0.3:
 "bumbag@file:../packages/bumbag":
   version "1.6.12-native.9"
   dependencies:
-    "@emotion/core" "10.1.1"
+    "@emotion/core" "npm:@bumbag/emotion-core@10.1.1-3"
     "@emotion/is-prop-valid" "0.8.2"
     "@emotion/styled" "10.0.27"
     "@fortawesome/fontawesome-common-types" "0.2.32"
@@ -3940,9 +3940,8 @@ builtins@^1.0.3:
     capsize "1.1.0"
     classnames "2.2.6"
     conditional-wrap "1.0.0"
-    create-emotion "10.0.27"
     deepmerge "4.2.2"
-    emotion "10.0.27"
+    emotion "npm:@bumbag/emotion@10.0.27-2"
     emotion-theming "10.0.27"
     lodash "4.17.20"
     react-input-mask "2.0.4"
@@ -4708,12 +4707,12 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.5.3"
 
-create-emotion@10.0.27, create-emotion@^10.0.27:
-  version "10.0.27"
-  resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-10.0.27.tgz#cb4fa2db750f6ca6f9a001a33fbf1f6c46789503"
-  integrity sha512-fIK73w82HPPn/RsAij7+Zt8eCE8SptcJ3WoRMfxMtjteYxud8GDTKKld7MYwAX2TVhrw29uR1N/bVGxeStHILg==
+"create-emotion@npm:@bumbag/create-emotion@10.0.27-1":
+  version "10.0.27-1"
+  resolved "https://registry.yarnpkg.com/@bumbag/create-emotion/-/create-emotion-10.0.27-1.tgz#0dfd773a729ff0d691219bb3cff37b91945d8ba2"
+  integrity sha512-moM3M80LDeJp82jXngm9hWjWxbfpoWWbHRiBrK7H684/X6WHfkv1truDSS7u9SFnUzh87eygpNsEBHRADikJqg==
   dependencies:
-    "@emotion/cache" "^10.0.27"
+    "@emotion/cache" "npm:@bumbag/emotion-cache@10.0.29-1"
     "@emotion/serialize" "^0.11.15"
     "@emotion/sheet" "0.9.4"
     "@emotion/utils" "0.11.3"
@@ -4857,7 +4856,7 @@ css-select-base-adapter@^0.1.1:
   resolved "https://registry.yarnpkg.com/css-select-base-adapter/-/css-select-base-adapter-0.1.1.tgz#3b2ff4972cc362ab88561507a95408a1432135d7"
   integrity sha512-jQVeeRG70QI08vSTwf1jHxp74JoZsr2XSgETae8/xC8ovSnL2WF87GTLO86Sbwdt2lK4Umg4HnnwMO4YF3Ce7w==
 
-css-select@^2.0.0, css-select@^2.0.2:
+css-select@^2.0.0, css-select@^2.0.2, css-select@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
   integrity sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==
@@ -4884,7 +4883,7 @@ css-tree@1.0.0-alpha.37:
     mdn-data "2.0.4"
     source-map "^0.6.1"
 
-css-tree@^1.1.2:
+css-tree@^1.0.0-alpha.39, css-tree@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.2.tgz#9ae393b5dafd7dae8a622475caec78d3d8fbd7b5"
   integrity sha512-wCoWush5Aeo48GLhfHPbmvZs59Z+M7k5+B1xDnXbdWNcEF423DoFdqSWE0PM5aNk5nI5cp1q7ms36zGApY/sKQ==
@@ -5407,13 +5406,13 @@ emotion-theming@10.0.27:
     "@emotion/weak-memoize" "0.2.5"
     hoist-non-react-statics "^3.3.0"
 
-emotion@10.0.27:
-  version "10.0.27"
-  resolved "https://registry.yarnpkg.com/emotion/-/emotion-10.0.27.tgz#f9ca5df98630980a23c819a56262560562e5d75e"
-  integrity sha512-2xdDzdWWzue8R8lu4G76uWX5WhyQuzATon9LmNeCy/2BHVC6dsEpfhN1a0qhELgtDVdjyEA6J8Y/VlI5ZnaH0g==
+"emotion@npm:@bumbag/emotion@10.0.27-2":
+  version "10.0.27-2"
+  resolved "https://registry.yarnpkg.com/@bumbag/emotion/-/emotion-10.0.27-2.tgz#375c1fde828108b573a84233c6629f594a308fd5"
+  integrity sha512-Pq62sjsz6L+5b7Lj7/IIzVvhVMNUUmjkvDLcncKFMm3sdlyBuu9+5nxb1iZUl8epYx/HzKLH0Az3DyVecZnW0A==
   dependencies:
     babel-plugin-emotion "^10.0.27"
-    create-emotion "^10.0.27"
+    create-emotion "npm:@bumbag/create-emotion@10.0.27-1"
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -11005,6 +11004,14 @@ react-native-screens@~2.15.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.15.0.tgz#9b97c1881c4fcdf304bf363f0013225901625f44"
   integrity sha512-qTSQPy0WKHtlb8xt5gY0Gt6sdvfQUQAnFSqgsggW9UEvySbkHzpqOrOYNA79Ca8oXO0dCFwp6X8buIiDefa7+Q==
+
+react-native-svg@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
+  integrity sha512-1g9qBRci7man8QsHoXn6tP3DhCDiypGgc6+AOWq+Sy+PmP6yiyf8VmvKuoqrPam/tf5x+ZaBT2KI0gl7bptZ7w==
+  dependencies:
+    css-select "^2.1.0"
+    css-tree "^1.0.0-alpha.39"
 
 react-native-unimodules@~0.12.0:
   version "0.12.0"

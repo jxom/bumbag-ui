@@ -88,6 +88,8 @@ const attributeMaps = {
 };
 
 function getAlignmentStyles({ attribute, value, props }) {
+  const alignYAttribute = props.display && props.display.includes('flex') ? 'align-items' : 'justify-content';
+  const alignXAttribute = props.display && props.display.includes('flex') ? 'justify-content' : 'align-items';
   return css`
       display: flex;
 
@@ -101,14 +103,14 @@ function getAlignmentStyles({ attribute, value, props }) {
       ${
         attribute === 'alignY' &&
         css`
-          justify-content: ${FLEX_VERTICAL_ALIGN_MAP[value]};
+          ${alignYAttribute}: ${FLEX_VERTICAL_ALIGN_MAP[value]};
         `
       }
 
       ${
         attribute === 'alignX' &&
         css`
-          align-items: ${FLEX_HORIZONTAL_ALIGN_MAP[value]};
+          ${alignXAttribute}: ${FLEX_HORIZONTAL_ALIGN_MAP[value]};
         `
       }
     `;

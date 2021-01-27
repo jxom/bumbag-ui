@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
+import alias from '@rollup/plugin-alias';
 const { terser } = require('rollup-plugin-terser');
 const ignore = require('rollup-plugin-ignore');
 const { camelCase, upperFirst } = require('lodash');
@@ -44,6 +45,9 @@ function getPlugins(isUMD) {
       limit: 10 * 1024,
       include: ['**/*.svg'],
       emitFiles: true,
+    }),
+    alias({
+      entries: [{ find: '@emotion/cache', replacement: '@bumbag/emotion-cache' }],
     }),
   ];
 

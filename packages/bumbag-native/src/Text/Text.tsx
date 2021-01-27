@@ -12,7 +12,7 @@ const useProps = createHook<TextProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'native.Text' }
+  { defaultProps: { fontSize: '200' }, themeKey: 'native.Text' }
 );
 
 export const Text = createComponent<TextProps>(

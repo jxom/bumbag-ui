@@ -6,8 +6,7 @@ import {
   createComponent,
   createElement,
   createHook,
-  parseIcons,
-  useTheme,
+  useIcon,
   ParsedIcon,
   ParseIconsOpts,
 } from '../utils';
@@ -39,20 +38,7 @@ const useProps = createHook<IconProps>(
       prevClassName: boxProps.className,
     });
 
-    const { theme } = useTheme();
-    // @ts-ignore
-    const icon = theme?.Icon?.iconNames?.[props.icon] ?? props.icon;
-    const icons = theme?.Icon?.icons ?? {};
-
-    let iconInfo = icons[icon];
-    if (props.type) {
-      // @ts-ignore
-      const parsedIcons = parseIcons([props.icon], { type: props.type });
-      iconInfo = Object.entries(parsedIcons)[0][1];
-    } else if (typeof props.icon === 'object') {
-      iconInfo = props.icon;
-    }
-    const { viewBoxWidth = 0, viewBoxHeight = 0, paths = [] } = iconInfo || {};
+    const { viewBoxWidth, viewBoxHeight, paths } = useIcon({ icon: props.icon, type: props.type });
 
     return {
       role: 'img',

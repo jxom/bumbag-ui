@@ -1,0 +1,129 @@
+import { Icon } from 'bumbag-native';
+
+# Icon
+
+Bumbag aims to have a **low bundle size** & be **icon agnostic**, hence it does not come with a default icon set (apart from status icons).
+
+You will need to bring your own icon set. Below is a guide & example to import the **Free Font Awesome** icon set.
+
+There are two ways to import icons for the `<Icon>` component. You can either:
+
+- [Inject the icons via the Bumbag Theme](#usage-via-bumbag-theme) **(recommended)**, or
+- [Import the icon directly](#usage-via-direct-import), or
+- [Use SVG paths](#usage-via-svg-paths)
+
+## Import
+
+```js
+import { Icon } from 'bumbag';
+```
+
+## Usage via Bumbag Theme
+
+**Note**: Bumbag currently only supports parsing of **Font Awesome** icons. If you want to use another icon set, you will need to follow the [usage via SVG paths](#usage-via-svg-paths) instructions. Want to add a parser or an icon set? [Open a Pull Request](https://github.com/bumbagui/bumbag/pulls).
+
+**First**, you will need to inject the icons your app will use into the [Bumbag Theme](/styling#theming)
+
+This example uses [@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons) and [@fortawesome/free-regular-svg-icons](https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons).
+
+```jsx
+import { Provider as BumbagProvider } from 'bumbag';
+import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+
+const theme = {
+  Icon: {
+    iconSets: [
+      {
+        icons: [faIgloo, faSearch, faClipboard, faThumbsUp],
+        prefix: 'solid-',
+        type: 'font-awesome'
+      },
+      {
+        icons: [faAddressBook],
+        prefix: 'regular-',
+        type: 'font-awesome'
+      }
+    ]
+  }
+};
+
+export default () => <BumbagProvider theme={theme}><App/></BumbagProvider>
+```
+
+**Then**, you can use your icons like so:
+
+```jsx-live
+  <Icon aria-label="Settings" icon="solid-igloo" />
+```
+
+## Usage via Direct Import
+
+You can also import the icons when you need them:
+
+```jsx
+import { faPen } from '@fortawesome/free-solid-svg-icons'
+
+<Icon aria-label="Settings" icon={faPen} type="font-awesome" />
+```
+
+## Usage with SVG paths
+
+Currently, Bumbag only supports parsing of **Font Awesome** icons, but if you want to use another icon set, you will need to use SVG paths.
+
+You can supply your SVG paths through the **Bumbag Theme** or **on the icon directly**.
+
+#### Via the Bumbag Theme
+
+Here is an example for a calendar icon:
+
+```jsx
+import { ThemeProvider } from 'bumbag';
+import { faIgloo, faSearch, faClipboard, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
+
+const theme = {
+  Icon: {
+    icons: {
+      calendar: {
+        viewBoxWidth: 16,
+        viewBoxHeight: 16,
+        paths: ['M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z']
+      }
+    }
+  }
+};
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    <App/>
+  </ThemeProvider>
+);
+```
+
+```jsx-live
+<Icon aria-label="Calendar" icon="calendar" />
+```
+
+#### Via the icon directly
+
+```function-live
+function Example() {
+  const calendar = {
+    viewBoxWidth: 16,
+    viewBoxHeight: 16,
+    paths: ['M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z']
+  };
+
+  return (
+    <Icon aria-label="Calendar" icon={calendar} />
+  );
+}
+```
+
+## Icon Props
+
+
+## Theming
+
+TODO

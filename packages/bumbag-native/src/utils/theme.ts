@@ -6,7 +6,6 @@ import { isFunction } from 'bumbag/utils/isFunction';
 import { get } from 'bumbag/utils/get';
 import { Platform } from 'react-native';
 
-import { css } from '../styled';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
 
 export function theme(themeKey: string, path?: string, defaultValue?: any) {
@@ -111,8 +110,8 @@ export function fontMetric(selector?: string) {
 
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
-    const globalFontSize = props.theme.global.fontSize;
-    const fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue)(props);
+    const globalFontSize = props.theme?.global?.fontSize;
+    const fontSize = globalFontSize * theme('fontSizes', selector || props.fontSize, defaultValue || 1)(props);
     return fontSize;
   };
 }
