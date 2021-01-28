@@ -1,10 +1,11 @@
+import { parseIcons } from './parseIcons';
 import { useTheme } from './useTheme';
 
 export function useIcon({ icon: initialIcon, type }) {
   const { theme } = useTheme();
   // @ts-ignore
-  const icon = theme?.Icon?.iconNames?.[initialIcon] ?? initialIcon;
-  const icons = theme?.Icon?.icons ?? {};
+  const icon = theme?.icons?.iconNames?.[initialIcon] ?? initialIcon;
+  const icons = theme?.icons?.icons ?? {};
 
   let iconInfo = icons[icon];
   if (type) {

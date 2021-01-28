@@ -7,7 +7,7 @@ export default function App() {
   return (
     <Box>
       <Text fontSize="300" fontWeight="500" marginBottom="16px">
-        Text
+        Icon
       </Text>
       <PreviewSection title="Basic">
         <Preview>
@@ -30,12 +30,23 @@ export default function App() {
           </Box>
         </Preview>
       </PreviewSection>
+      <PreviewSection title="Colors">
+        <Preview>
+          <Box>
+            <Icon icon="chevron-down" color="primary" />
+            <Icon icon="chevron-down" color="secondary" />
+            <Icon icon="chevron-down" color="warning" />
+            <Icon icon="chevron-down" color="danger" />
+            <Icon icon="chevron-down" color="info" />
+          </Box>
+        </Preview>
+      </PreviewSection>
       <PreviewSection title="With Text">
         <Preview>
           <Box>
             <Flex alignY="center">
-              <Icon icon="chevron-down" marginRight="minor-1" />
-              <Text>Hello world</Text>
+              <Text>Hello world asdad jasndjhasb dahjsbd ahjsb dashjbd ajhsbd asd ahsdjhas bd jahsb dahjbs bdajsb dajhb sjhdb ajshbd ajhs</Text>
+              <Icon icon="chevron-down" marginLeft="minor-1" />
             </Flex>
           </Box>
         </Preview>

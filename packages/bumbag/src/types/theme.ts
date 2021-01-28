@@ -186,6 +186,21 @@ export type FontSizeThemeConfig = {
 export type FontWeightsThemeConfig = {
   [key: string]: number;
 };
+export type IconsThemeConfig = {
+  iconSets?: Array<{
+    icons: IconDefinition[];
+    prefix?: ParseIconsOpts['prefix'];
+    type: ParseIconsOpts['type'];
+  }>;
+  icons?: ParsedIcons;
+  iconNames?: {
+    info?: string;
+    warning?: string;
+    success?: string;
+    danger?: string;
+    [key: string]: string;
+  };
+};
 export type LineHeightsThemeConfig = {
   [key: string]: number;
 };
@@ -862,19 +877,6 @@ export type HighlightedCodeThemeConfig = {
 export type IconThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
-  };
-  iconSets?: Array<{
-    icons: IconDefinition[];
-    prefix?: ParseIconsOpts['prefix'];
-    type: ParseIconsOpts['type'];
-  }>;
-  icons?: ParsedIcons;
-  iconNames?: {
-    info?: string;
-    warning?: string;
-    success?: string;
-    danger?: string;
-    [key: string]: string;
   };
   defaultProps?: Partial<IconProps>;
   variants?: Variant<IconThemeConfig>;
@@ -1965,6 +1967,7 @@ export type ThemeConfig = {
   fontSizes?: FontSizeThemeConfig;
   fontWeights?: FontWeightsThemeConfig;
   global?: GlobalThemeConfig;
+  icons?: IconsThemeConfig;
   lineHeights?: LineHeightsThemeConfig;
   letterSpacings?: LetterSpacingsThemeConfig;
   modes?: ModesThemeConfig;

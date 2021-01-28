@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { ViewProps as RNViewProps } from 'react-native';
 
-import { ThemeConfig, CSSProperties } from 'bumbag/types';
+import { CSSProperties } from 'bumbag/types';
 import { mergeRefs, createComponent, createElement, createHook, omitCSSProps } from 'bumbag/utils';
 import { useStyle } from '../utils/useStyle';
+import { ThemeConfig } from '../types/theme';
 
 import * as styles from './Box.styles';
 

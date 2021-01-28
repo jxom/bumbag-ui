@@ -81,6 +81,7 @@ const useProps = createHook<BoxProps>(
       // @ts-ignore
       htmlProps.wrapElement = props.wrapElement;
     }
+
     return { ...htmlProps };
   },
   { themeKey: 'Box' }

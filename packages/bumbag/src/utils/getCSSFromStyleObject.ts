@@ -2,6 +2,7 @@ import _kebabCase from 'lodash/kebabCase';
 
 import { css } from '../styled';
 import {
+  altitude,
   border,
   borderRadius,
   breakpoint,
@@ -16,6 +17,7 @@ import {
 
 import { cssProps as cssPropsMap } from './cssProps';
 
+const altitudeAttributes = ['altitude'];
 const alignAttributes = ['alignX', 'alignY'];
 const borderAttributes = ['border'];
 const borderRadiusAttributes = ['borderRadius'];
@@ -74,6 +76,14 @@ const attributeMaps = {
   marginX: ['marginLeft', 'marginRight'],
   paddingX: ['paddingLeft', 'paddingRight'],
 };
+
+function getAltitudeStyles({ theme, value }) {
+  const altitudeStyle = altitude(value)({ theme });
+  if (altitudeStyle) {
+    return altitudeStyle;
+  }
+  return value;
+}
 
 function getBorderValue({ theme, value }) {
   const borderValue = border(value)({ theme });
@@ -187,9 +197,14 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         `;
       }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [bp, value]) => {
+        let newStyle;
         let newValue = value;
         if (alignAttributes.includes(attribute)) {
           newValue = null;
+        }
+        if (altitudeAttributes.includes(attribute)) {
+          newStyle = getAltitudeStyles({ theme, value });
+          newValue = undefined;
         }
         if (borderAttributes.includes(attribute)) {
           newValue = getBorderValue({ theme, value });
@@ -225,6 +240,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
           // @ts-ignore
           return css`
             ${prevStyle}
+            ${newStyle};
             ${newValue
               ? css`
                   ${_kebabCase(attribute)}: ${newValue} ${fromProps ? '!important' : ''};
@@ -234,6 +250,7 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         }
         return css`
           ${prevStyle};
+          ${newStyle};
           ${breakpoint(
             bp,
             // @ts-ignore

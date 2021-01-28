@@ -113,7 +113,7 @@ describe('overrides', () => {
       <Icon
         icon="solid-arrow-left"
         overrides={{
-          Icon: {
+          icons: {
             iconSets: [
               {
                 icons: [faArrowLeft],
@@ -135,7 +135,7 @@ describe('overrides', () => {
       <Icon
         icon="calendar"
         overrides={{
-          Icon: {
+          icons: {
             icons: {
               calendar: {
                 viewBoxWidth: 16,
@@ -159,7 +159,7 @@ describe('overrides', () => {
       <Icon
         icon="foo"
         overrides={{
-          Icon: {
+          icons: {
             iconSets: [
               {
                 icons: [faArrowLeft],
@@ -191,7 +191,7 @@ describe('theming', () => {
   it('Icon.iconSets should render correctly', () => {
     const { container } = render(<Icon icon="solid-arrow-left">hello world</Icon>, {
       theme: {
-        Icon: {
+        icons: {
           iconSets: [
             {
               icons: [faArrowLeft],
@@ -208,7 +208,7 @@ describe('theming', () => {
   it('Icon.icons should render correctly', () => {
     const { container } = render(<Icon icon="calendar">hello world</Icon>, {
       theme: {
-        Icon: {
+        icons: {
           icons: {
             calendar: {
               viewBoxWidth: 16,
@@ -227,7 +227,7 @@ describe('theming', () => {
   it('Icon.iconNames should render correctly', () => {
     const { container } = render(<Icon icon="foo">hello world</Icon>, {
       theme: {
-        Icon: {
+        icons: {
           iconSets: [
             {
               icons: [faArrowLeft],

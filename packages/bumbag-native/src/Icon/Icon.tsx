@@ -29,12 +29,12 @@ export type LocalIconProps = {
 export type IconProps = BoxProps & LocalIconProps;
 
 const useProps = createHook<IconProps>(
-  (props) => {
-    const { color, icon, label, size, type, ...restProps } = props;
+  (props, { themeKey }) => {
+    const { color, icon, label, size, type } = props;
 
     const { theme } = useTheme();
 
-    const boxProps = Box.useProps(restProps);
+    const boxProps = Box.useProps(props);
 
     const { viewBoxWidth, viewBoxHeight, paths } = useIcon({ icon, type });
 
@@ -69,6 +69,10 @@ export const Icon = createComponent<IconProps>(
     attach: {
       useProps,
       displayName: 'native.Icon',
+    },
+    defaultProps: {
+      color: 'text',
+      size: '200',
     },
     themeKey: 'native.Icon',
   }

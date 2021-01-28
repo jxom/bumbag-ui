@@ -30,9 +30,9 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
     let variantThemeOverrides;
     let colorModeThemeOverrides;
     if (props.overrides) {
-      defaultThemeOverrides = get(props, `overrides.${selector}`);
-      variantThemeOverrides = get(props, `overrides.${variantSelector}`);
-      colorModeThemeOverrides = get(props, `overrides.${colorModeSelector}`);
+      defaultThemeOverrides = get(props, `overrides.${selector.replace('native.', '')}`);
+      variantThemeOverrides = get(props, `overrides.${variantSelector.replace('native.', '')}`);
+      colorModeThemeOverrides = get(props, `overrides.${colorModeSelector.replace('native.', '')}`);
     }
 
     if (path && path.includes && path.includes('styles')) {

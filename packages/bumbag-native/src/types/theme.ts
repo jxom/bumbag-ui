@@ -1,7 +1,10 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { InterpolationWithTheme } from '@emotion/core';
 import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
+import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxProps } from '../Box';
+import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { TextProps } from '../Text';
 
@@ -44,6 +47,28 @@ export type FlexThemeConfig = {
   modes?: Variant<BoxThemeConfig>;
 };
 
+export type IconThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  iconSets?: Array<{
+    icons: IconDefinition[];
+    prefix?: ParseIconsOpts['prefix'];
+    type: ParseIconsOpts['type'];
+  }>;
+  icons?: ParsedIcons;
+  iconNames?: {
+    info?: string;
+    warning?: string;
+    success?: string;
+    danger?: string;
+    [key: string]: string;
+  };
+  defaultProps?: Partial<IconProps>;
+  variants?: Variant<IconThemeConfig>;
+  modes?: Variant<IconThemeConfig>;
+};
+
 export type ImageThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -75,6 +100,7 @@ export type ThemeConfig = {
   palette?: CoreThemeConfig['palette'];
 
   Box?: BoxThemeConfig;
+  Icon?: IconThemeConfig;
   Flex?: FlexThemeConfig;
   Image?: ImageThemeConfig;
   Text?: TextThemeConfig;

@@ -12,12 +12,12 @@ import fonts from './fonts';
 import fontMetrics from './fontMetrics';
 import fontWeights from './fontWeights';
 import fontSizes from './fontSizes';
+import icons from './icons';
 import lineHeights from './lineHeights';
 import letterSpacings from './letterSpacings';
 
 import Container from './Container';
 import Heading from './Heading';
-import Icon from './Icon';
 import Toast from './Toast';
 
 export default (overrides: ThemeConfig = {}) => ({
@@ -33,6 +33,7 @@ export default (overrides: ThemeConfig = {}) => ({
   fontSizes: fontSizes(overrides.fontSizes || {}),
   fontWeights: fontWeights(overrides.fontWeights || {}),
   global: global(overrides.global || {}),
+  icons: icons(overrides.icons || {}),
   lineHeights: lineHeights(overrides.lineHeights || {}),
   letterSpacings: letterSpacings(overrides.letterSpacings || {}),
   modes: modes(overrides.modes || {}),
@@ -41,6 +42,5 @@ export default (overrides: ThemeConfig = {}) => ({
 
   Container: Container(overrides.Container || {}),
   Heading: Heading(overrides.Heading || {}),
-  Icon: Icon(overrides.Icon || {}),
   Toast: Toast(overrides.Toast || {}),
 });

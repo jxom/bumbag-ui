@@ -33,11 +33,15 @@ export function useDefaultProps(props: any = {}, config: any = {}) {
     get(theme, themeKey),
     { colorMode, variant: props.variant }
   );
+
   const {
     themeDefaultProps: overridesDefaultProps,
     themeVariantDefaultProps: overridesVariantDefaultProps,
     themeColorModeDefaultProps: overridesColorModeDefaultProps,
-  } = getDefaultPropsFromTheme(get(props, `overrides.${themeKey}`), { colorMode, variant: props.variant });
+  } = getDefaultPropsFromTheme(get(props, `overrides.${themeKey.replace('native.', '')}`), {
+    colorMode,
+    variant: props.variant,
+  });
 
   const newProps = {
     ...configDefaultProps,

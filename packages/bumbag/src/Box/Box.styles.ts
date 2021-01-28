@@ -1,5 +1,5 @@
 import { css, cssClass } from '../styled';
-import { altitude, theme } from '../utils/theme';
+import { theme } from '../utils/theme';
 
 const FLEX_HORIZONTAL_ALIGN_MAP = {
   left: 'flex-start',
@@ -19,15 +19,6 @@ export const style = (styleProps) => cssClass`
   }
 
   ${getAlignmentAttributes(styleProps)};
-
-  ${
-    styleProps.altitude &&
-    css`
-      & {
-        ${altitude(styleProps.altitude)(styleProps)} !important;
-      }
-    `
-  };
 `;
 
 export const Box = (styleProps) => cssClass`

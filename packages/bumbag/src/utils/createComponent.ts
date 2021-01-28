@@ -20,6 +20,7 @@ export function createComponent<Props>(
   };
   let ForwardedComponent = React.forwardRef(Comp);
   if (config.shouldMemo) {
+    // @ts-ignore
     ForwardedComponent = React.memo(ForwardedComponent);
   }
   return Object.assign(ForwardedComponent, config.attach);

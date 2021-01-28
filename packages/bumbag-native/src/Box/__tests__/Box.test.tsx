@@ -183,6 +183,30 @@ describe('variants', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('renders correctly for overrides', () => {
+    const { container } = render(
+      <Box
+        overrides={{
+          Box: {
+            variants: {
+              test: {
+                styles: { base: { backgroundColor: 'red' } },
+                defaultProps: {
+                  altitude: '100',
+                  padding: 'major-2',
+                },
+              },
+            },
+          },
+        }}
+        variant="test"
+      >
+        <Text>hello world</Text>
+      </Box>
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('renders correctly for applyTheme', () => {
     const Card = applyTheme(Box, {
       defaultProps: {
@@ -242,6 +266,30 @@ describe('modes', () => {
           },
         },
       }
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('renders correctly for overrides', () => {
+    const { container } = render(
+      <Box
+        overrides={{
+          Box: {
+            modes: {
+              test: {
+                styles: { base: { backgroundColor: 'red' } },
+                defaultProps: {
+                  altitude: '100',
+                  padding: 'major-2',
+                },
+              },
+            },
+          },
+        }}
+        colorMode="test"
+      >
+        <Text>hello world</Text>
+      </Box>
     );
     expect(container.firstChild).toMatchSnapshot();
   });
