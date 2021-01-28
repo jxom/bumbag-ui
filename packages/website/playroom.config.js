@@ -31,7 +31,7 @@ module.exports = {
         'bumbag-theme-medipass': path.resolve(__dirname, '../bumbag-theme-medipass/src'),
         'react-native$': 'react-native-web',
       },
-      extensions: ['.mjs', '.js', '.json', '.ts', '.tsx'],
+      extensions: ['.web.js', '.mjs', '.js', '.json', '.ts', '.tsx'],
       modules: [path.resolve(__dirname, '../../node_modules'), 'node_modules'],
     },
   }),
