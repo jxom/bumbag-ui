@@ -3,6 +3,7 @@ name: Box
 group: Primitives
 ---
 
+import Theme from '../../../components/Theme';
 import { Box } from 'bumbag-native';
 
 # Box
@@ -81,12 +82,12 @@ import { Box } from 'bumbag-native';
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 94 more ...;
-  Template?: TemplateThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  ... 12 more ...;
+  Text?: TextThemeConfig;
 }`}
 </Code>
 
@@ -532,4 +533,4 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 ## Theming
 
-TODO
+<Theme component={Box} overrides={['Box.styles.base']}>This is a box</Theme>

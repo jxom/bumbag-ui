@@ -92,8 +92,10 @@ export type ThemeConfig = {
   borders?: CoreThemeConfig['borders'];
   borderRadii?: CoreThemeConfig['borderRadii'];
   breakpoints?: BreakpointsThemeConfig;
+  fonts?: CoreThemeConfig['fonts'];
   fontSizes?: CoreThemeConfig['fontSizes'];
   fontWeights?: CoreThemeConfig['fontWeights'];
+  icons?: CoreThemeConfig['icons'];
   lineHeights?: CoreThemeConfig['lineHeights'];
   letterSpacings?: CoreThemeConfig['letterSpacings'];
   spacing?: CoreThemeConfig['spacing'];

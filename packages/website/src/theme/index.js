@@ -76,7 +76,7 @@ export default {
       },
     },
   },
-  Icon: {
+  icons: {
     icons: {
       calendar: {
         viewBoxWidth: 16,

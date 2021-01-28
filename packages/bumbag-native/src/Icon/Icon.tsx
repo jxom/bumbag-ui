@@ -9,7 +9,8 @@ import {
   useTheme,
 } from 'bumbag/utils';
 import { Icon as WebIcon } from 'bumbag/Icon';
-import { Path } from 'react-native-svg';
+import capitalize from 'lodash/capitalize';
+import * as Svg from 'react-native-svg';
 
 import { Box, BoxProps } from '../Box';
 import { fontSize, palette } from '../utils';
@@ -28,15 +29,36 @@ export type LocalIconProps = {
 };
 export type IconProps = BoxProps & LocalIconProps;
 
+function Tree({ fill, tree }) {
+  if (tree.length > 0) {
+    return tree.map((node) => {
+      const Component = Svg[capitalize(node.name)] || Svg.Path;
+      let newProps = {};
+      if (node.attributes?.fill && node.attributes?.fill !== 'white') {
+        newProps = {
+          fill,
+          fillRule: 'evenodd',
+        };
+      }
+      return (
+        <Component key={node.name} {...node.attributes} {...newProps}>
+          <Tree fill={fill} tree={node.children} />
+        </Component>
+      );
+    });
+  }
+  return null;
+}
+
 const useProps = createHook<IconProps>(
-  (props, { themeKey }) => {
+  (props) => {
     const { color, icon, label, size, type } = props;
 
     const { theme } = useTheme();
 
     const boxProps = Box.useProps(props);
 
-    const { viewBoxWidth, viewBoxHeight, paths } = useIcon({ icon, type });
+    const { viewBoxWidth, viewBoxHeight, paths, tree } = useIcon({ icon, type });
 
     return {
       ...boxProps,
@@ -47,8 +69,9 @@ const useProps = createHook<IconProps>(
         <React.Fragment>
           {label && <title>{label}</title>}
           {paths.map((path: string) => (
-            <Path key={path} d={path} fill={palette(color)({ theme })} fillRule="evenodd" />
+            <Svg.Path key={path} d={path} fill={palette(color)({ theme })} fillRule="evenodd" />
           ))}
+          {tree.length > 0 && <Tree fill={palette(color)({ theme })} tree={tree} />}
         </React.Fragment>
       ),
     };

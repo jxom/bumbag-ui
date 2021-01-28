@@ -11,7 +11,8 @@ export type ParsedIcon =
   | {
       viewBoxHeight: number;
       viewBoxWidth: number;
-      paths: Array<string>;
+      paths?: Array<string>;
+      tree?: Array<any>;
     };
 export type ParsedIcons = { [key: string]: ParsedIcon };
 export type ParseIconsOpts = {

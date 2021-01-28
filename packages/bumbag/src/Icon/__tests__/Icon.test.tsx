@@ -67,6 +67,94 @@ describe('props', () => {
     const { container } = render(<Icon icon={calendar}>Hello world</Icon>);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render correctly for custom icon', () => {
+    const bat = {
+      viewBoxWidth: 24,
+      viewBoxHeight: 24,
+      tree: [
+        {
+          name: 'circle',
+          type: 'element',
+          value: '',
+          attributes: { cx: '12', cy: '12', r: '12', fill: '#BAC0C5' },
+          children: [],
+        },
+        {
+          name: 'g',
+          type: 'element',
+          value: '',
+          attributes: { 'clip-path': 'url(#clip0)' },
+          children: [
+            {
+              name: 'path',
+              type: 'element',
+              value: '',
+              attributes: {
+                d:
+                  'M12.0001 3.75V8.84637L15.0501 14.1323L19.4746 16.7026C19.5145 16.633 19.5088 16.5369 19.4478 16.4314L15.8349 10.17L12.222 3.9087C12.1608 3.80283 12.0803 3.75 12.0001 3.75Z',
+                fill: 'white',
+              },
+              children: [],
+            },
+            {
+              name: 'path',
+              type: 'element',
+              value: '',
+              attributes: {
+                d:
+                  'M4.5253 16.7032L8.94993 14.1331L12.0002 8.84698V3.75061C11.9196 3.75061 11.8392 3.80344 11.7783 3.9092L8.16515 10.1707L4.55205 16.4319C4.49128 16.5375 4.48557 16.6335 4.5253 16.7032Z',
+                fill: 'white',
+              },
+              children: [],
+            },
+            {
+              name: 'path',
+              type: 'element',
+              value: '',
+              attributes: {
+                d:
+                  'M19.4746 16.7026L15.0501 14.1324H8.94993L4.5253 16.7026C4.56537 16.7724 4.65132 16.8158 4.7732 16.8158H19.2268C19.3488 16.8158 19.4346 16.7724 19.4746 16.7026Z',
+                fill: 'white',
+              },
+              children: [],
+            },
+          ],
+        },
+        {
+          name: 'defs',
+          type: 'element',
+          value: '',
+          attributes: {},
+          children: [
+            {
+              name: 'clipPath',
+              type: 'element',
+              value: '',
+              attributes: { id: 'clip0' },
+              children: [
+                {
+                  name: 'rect',
+                  type: 'element',
+                  value: '',
+                  attributes: {
+                    width: '15',
+                    height: '13.0658',
+                    fill: 'white',
+                    transform: 'translate(4.5 3.75)',
+                  },
+                  children: [],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const { container } = render(<Icon icon={bat}>Hello world</Icon>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('composition', () => {

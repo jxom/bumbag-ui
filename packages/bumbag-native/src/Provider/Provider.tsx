@@ -21,6 +21,16 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
       // @ts-ignore
       native: merge(theme, newTheme),
       breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}),
+      borders: merge(theme.borders || {}, newTheme.borders || {}),
+      borderRadii: merge(theme.borderRadii || {}, newTheme.borderRadii || {}),
+      fonts: merge(theme.fonts || {}, newTheme.fonts || {}),
+      fontSizes: merge(theme.fontSizes || {}, newTheme.fontSizes || {}),
+      fontWeights: merge(theme.fontWeights || {}, newTheme.fontWeights || {}),
+      icons: merge(theme.icons || {}, newTheme.icons || {}),
+      lineHeights: merge(theme.lineHeights || {}, newTheme.lineHeights || {}),
+      letterSpacings: merge(theme.letterSpacings || {}, newTheme.letterSpacings || {}),
+      spacing: merge(theme.spacing || {}, newTheme.spacing || {}),
+      palette: merge(theme.palette || {}, newTheme.palette || {}),
     });
   }
 

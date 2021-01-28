@@ -27,6 +27,27 @@ export type LocalIconProps = {
 };
 export type IconProps = BoxProps & LocalIconProps;
 
+function Tree({ fill, tree }) {
+  if (tree.length > 0) {
+    return tree.map((node) => {
+      const Component = node.name;
+      let newProps = {};
+      if (node.attributes?.fill && node.attributes?.fill !== 'white') {
+        newProps = {
+          fill,
+          fillRule: 'evenodd',
+        };
+      }
+      return (
+        <Component key={node.name} {...node.attributes} {...newProps}>
+          <Tree fill={fill} tree={node.children} />
+        </Component>
+      );
+    });
+  }
+  return null;
+}
+
 const useProps = createHook<IconProps>(
   (props, { themeKey }) => {
     const boxProps = Box.useProps(props);
@@ -38,7 +59,7 @@ const useProps = createHook<IconProps>(
       prevClassName: boxProps.className,
     });
 
-    const { viewBoxWidth, viewBoxHeight, paths } = useIcon({ icon: props.icon, type: props.type });
+    const { viewBoxWidth, viewBoxHeight, paths, tree } = useIcon({ icon: props.icon, type: props.type });
 
     return {
       role: 'img',
@@ -52,6 +73,7 @@ const useProps = createHook<IconProps>(
           {paths.map((path: string) => (
             <path key={path} d={path} fill="currentColor" fillRule="evenodd" />
           ))}
+          <Tree fill="currentColor" tree={tree} />
         </React.Fragment>
       ),
     };

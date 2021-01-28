@@ -41,9 +41,9 @@ describe('theming', () => {
 });
 
 describe('defaultProps', () => {
-  it('should render correctly for className', () => {
+  it('should render correctly for color', () => {
     const { container } = render(<Text>hello world</Text>, {
-      theme: { Text: { defaultProps: { className: 'test', color: 'primary' } } },
+      theme: { Text: { defaultProps: { color: 'primary' } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

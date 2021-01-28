@@ -1,3 +1,4 @@
+import Theme from '../../../components/Theme';
 import { Image } from 'bumbag-native';
 
 # Image
@@ -493,12 +494,12 @@ https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
 
 <Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
 {`{
-  useCSSVariables?: boolean;
   altitudes?: AltitudesThemeConfig;
   borders?: BordersThemeConfig;
   borderRadii?: BorderRadiiThemeConfig;
-  ... 94 more ...;
-  Template?: TemplateThemeConfig;
+  breakpoints?: BreakpointsThemeConfig;
+  ... 12 more ...;
+  Text?: TextThemeConfig;
 }`}
 </Code>
 
@@ -797,3 +798,16 @@ it should have a onStartShouldSetResponderCapture handler which returns true.
 
 
 ## Theming
+
+<Theme
+  component={Image}
+  source={{ uri: '/bean.jpg' }}
+  width="500px"
+  height="300px"
+  padding="major-1"
+  overrides={[
+    'Image.styles.base',
+    { key: 'Image.styles.contain', props: { fit: 'contain', width: '300px' } },
+    { key: 'Image.styles.cover', props: { fit: 'cover', width: '300px' } }
+  ]}
+/>

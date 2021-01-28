@@ -40,7 +40,12 @@ exports[`composition as should render correctly 1`] = `
 exports[`composition hook should return with Icon props 1`] = `
 Object {
   "aria-hidden": true,
-  "children": <React.Fragment />,
+  "children": <React.Fragment>
+    <Tree
+      fill="currentColor"
+      tree={Array []}
+    />
+  </React.Fragment>,
   "className": "css-1v1fg4 css-63it0p css-1074357 bb-Box bb-Icon",
   "role": "img",
   "viewBox": "0 0 0 0",
@@ -445,6 +450,73 @@ exports[`props should render correctly for custom icon 1`] = `
     fill="currentColor"
     fill-rule="evenodd"
   />
+</svg>
+`;
+
+exports[`props should render correctly for custom icon 2`] = `
+.emotion-1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  fill: inherit;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+<svg
+  aria-hidden="true"
+  class="emotion-0 emotion-1 emotion-2 bb-Box bb-Icon"
+  role="img"
+  viewBox="0 0 24 24"
+>
+  <circle
+    cx="12"
+    cy="12"
+    fill="currentColor"
+    fill-rule="evenodd"
+    r="12"
+  />
+  <g
+    clip-path="url(#clip0)"
+  >
+    <path
+      d="M12.0001 3.75V8.84637L15.0501 14.1323L19.4746 16.7026C19.5145 16.633 19.5088 16.5369 19.4478 16.4314L15.8349 10.17L12.222 3.9087C12.1608 3.80283 12.0803 3.75 12.0001 3.75Z"
+      fill="white"
+    />
+    <path
+      d="M4.5253 16.7032L8.94993 14.1331L12.0002 8.84698V3.75061C11.9196 3.75061 11.8392 3.80344 11.7783 3.9092L8.16515 10.1707L4.55205 16.4319C4.49128 16.5375 4.48557 16.6335 4.5253 16.7032Z"
+      fill="white"
+    />
+    <path
+      d="M19.4746 16.7026L15.0501 14.1324H8.94993L4.5253 16.7026C4.56537 16.7724 4.65132 16.8158 4.7732 16.8158H19.2268C19.3488 16.8158 19.4346 16.7724 19.4746 16.7026Z"
+      fill="white"
+    />
+  </g>
+  <defs>
+    <clippath
+      id="clip0"
+    >
+      <rect
+        fill="white"
+        height="13.0658"
+        transform="translate(4.5 3.75)"
+        width="15"
+      />
+    </clippath>
+  </defs>
 </svg>
 `;
 

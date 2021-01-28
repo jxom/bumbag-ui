@@ -17,10 +17,28 @@ Object {
 }
 `;
 
+exports[`defaultProps should render correctly for size 1`] = `
+<svg
+  colorMode="default"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":32,\\"minWidth\\":32},[{\\"color\\":\\"#212121\\"}]]"
+  height="32"
+  icon="info-circle"
+  size="500"
+  viewBox="0 0 512 512"
+  width="32"
+>
+  <path
+    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+    fill="#212121"
+    fill-rule="evenodd"
+  />
+</svg>
+`;
+
 exports[`overrides Icon.base should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":32,\\"minWidth\\":32,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":32,\\"minWidth\\":32},[{\\"color\\":\\"#212121\\"}]]"
   height="32"
   icon="info-circle"
   overrides="[object Object]"
@@ -36,23 +54,10 @@ exports[`overrides Icon.base should render correctly 1`] = `
 </svg>
 `;
 
-exports[`overrides Icon.iconSets should render correctly 1`] = `
-<svg
-  colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
-  height="16"
-  icon="solid-arrow-left"
-  overrides="[object Object]"
-  size="200"
-  viewBox="0 0 0 0"
-  width="16"
-/>
-`;
-
 exports[`props should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -70,7 +75,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render correctly for custom icon 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="[object Object]"
   size="200"
@@ -85,10 +90,58 @@ exports[`props should render correctly for custom icon 1`] = `
 </svg>
 `;
 
+exports[`props should render correctly for custom icon 2`] = `
+<svg
+  colorMode="default"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  height="16"
+  icon="[object Object]"
+  size="200"
+  viewBox="0 0 24 24"
+  width="16"
+>
+  <circle
+    cx="12"
+    cy="12"
+    fill="#212121"
+    fill-rule="evenodd"
+    r="12"
+  />
+  <g
+    clip-path="url(#clip0)"
+  >
+    <path
+      d="M12.0001 3.75V8.84637L15.0501 14.1323L19.4746 16.7026C19.5145 16.633 19.5088 16.5369 19.4478 16.4314L15.8349 10.17L12.222 3.9087C12.1608 3.80283 12.0803 3.75 12.0001 3.75Z"
+      fill="white"
+    />
+    <path
+      d="M4.5253 16.7032L8.94993 14.1331L12.0002 8.84698V3.75061C11.9196 3.75061 11.8392 3.80344 11.7783 3.9092L8.16515 10.1707L4.55205 16.4319C4.49128 16.5375 4.48557 16.6335 4.5253 16.7032Z"
+      fill="white"
+    />
+    <path
+      d="M19.4746 16.7026L15.0501 14.1324H8.94993L4.5253 16.7026C4.56537 16.7724 4.65132 16.8158 4.7732 16.8158H19.2268C19.3488 16.8158 19.4346 16.7724 19.4746 16.7026Z"
+      fill="white"
+    />
+  </g>
+  <defs>
+    <path
+      id="clip0"
+    >
+      <path
+        fill="white"
+        height="13.0658"
+        transform="translate(4.5 3.75)"
+        width="15"
+      />
+    </path>
+  </defs>
+</svg>
+`;
+
 exports[`props should render correctly for direct import 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="[object Object]"
   size="200"
@@ -107,7 +160,7 @@ exports[`props should render correctly for direct import 1`] = `
 exports[`props should render correctly with a label 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   label="Information"
@@ -129,7 +182,7 @@ exports[`props should render correctly with a label 1`] = `
 exports[`props should render correctly with a size 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\",\\"fontSize\\":24}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\",\\"fontSize\\":24}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -147,7 +200,7 @@ exports[`props should render correctly with a size 1`] = `
 exports[`props should render correctly with color prop 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#574feb\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#574feb\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -165,7 +218,7 @@ exports[`props should render correctly with color prop 1`] = `
 exports[`theming Icon.base should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"height\\":32,\\"width\\":32,\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"height\\":32,\\"width\\":32,\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -180,14 +233,56 @@ exports[`theming Icon.base should render correctly 1`] = `
 </svg>
 `;
 
+exports[`theming Icon.iconNames should render correctly 1`] = `
+<svg
+  colorMode="default"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  height="16"
+  icon="foo"
+  size="200"
+  viewBox="0 0 448 512"
+  width="16"
+>
+  <path
+    d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+    fill="#212121"
+    fill-rule="evenodd"
+  />
+</svg>
+`;
+
 exports[`theming Icon.iconSets should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"minHeight\\":16,\\"minWidth\\":16,\\"position\\":\\"relative\\"},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="solid-arrow-left"
   size="200"
-  viewBox="0 0 0 0"
+  viewBox="0 0 448 512"
   width="16"
-/>
+>
+  <path
+    d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+    fill="#212121"
+    fill-rule="evenodd"
+  />
+</svg>
+`;
+
+exports[`theming Icon.icons should render correctly 1`] = `
+<svg
+  colorMode="default"
+  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  height="16"
+  icon="calendar"
+  size="200"
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <path
+    d="M11 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .5.4 1 1 1zm3-2h-1v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H6v1c0 1.1-.9 2-2 2s-2-.9-2-2V1H1c-.6 0-1 .5-1 1v12c0 .6.4 1 1 1h13c.6 0 1-.4 1-1V2c0-.6-.5-1-1-1zM5 13H2v-3h3v3zm0-4H2V6h3v3zm4 4H6v-3h3v3zm0-4H6V6h3v3zm4 4h-3v-3h3v3zm0-4h-3V6h3v3zM4 3c.6 0 1-.5 1-1V1c0-.6-.4-1-1-1S3 .4 3 1v1c0 .5.4 1 1 1z"
+    fill="#212121"
+    fill-rule="evenodd"
+  />
+</svg>
 `;
