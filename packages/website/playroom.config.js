@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   // TODO: target for bumbag-native
-  // components: '../bumbag/src/index.ts',
-  components: '../bumbag-native/src/index.ts',
+  components: '../bumbag/src/index.ts',
+  // components: '../bumbag-native/src/index.ts',
   outputPath: './public/playroom',
   frameComponent: './src/components/PlayroomFrame.js',
   widths: [375, 768, 1024, 1200, 1440],
