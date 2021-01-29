@@ -4,6 +4,7 @@ import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
 import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxProps } from '../Box';
+import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { TextProps } from '../Text';
@@ -45,6 +46,70 @@ export type FlexThemeConfig = {
   defaultProps?: Partial<BoxProps>;
   variants?: Variant<BoxThemeConfig>;
   modes?: Variant<BoxThemeConfig>;
+};
+
+export type HeadingThemeConfig = {
+  fontSize?: string;
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<HeadingProps>;
+  variants?: Variant<HeadingThemeConfig>;
+  modes?: Variant<HeadingThemeConfig>;
+  H1?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
+  H2?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
+  H3?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
+  H4?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
+  H5?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
+  H6?: {
+    fontSize?: string;
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<HeadingProps>;
+    variants?: Variant<HeadingThemeConfig>;
+    modes?: Variant<HeadingThemeConfig>;
+  };
 };
 
 export type IconThemeConfig = {
@@ -102,8 +167,9 @@ export type ThemeConfig = {
   palette?: CoreThemeConfig['palette'];
 
   Box?: BoxThemeConfig;
-  Icon?: IconThemeConfig;
   Flex?: FlexThemeConfig;
+  Heading?: HeadingThemeConfig;
+  Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
   Text?: TextThemeConfig;
 };

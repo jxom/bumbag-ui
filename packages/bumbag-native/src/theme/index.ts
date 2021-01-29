@@ -1,6 +1,8 @@
 import altitudes from './altitudes';
 import breakpoints from './breakpoints';
 
+import Heading from './Heading';
+
 export default {
   altitudes,
   breakpoints,
@@ -16,4 +18,6 @@ export default {
   modes: {},
   spacing: {},
   palette: {},
+
+  Heading,
 };

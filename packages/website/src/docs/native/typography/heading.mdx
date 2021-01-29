@@ -1,0 +1,137 @@
+---
+title: Heading
+path: /native/typography/heading
+---
+
+import Theme from '../../../components/Theme';
+import { Heading as BBHeading } from 'bumbag-native';
+
+# Heading
+
+The `<Heading>` component renders a React Native `<Text>` component by default, with extra styling and configurations.
+
+## Import
+
+```jsx
+import { Heading } from 'bumbag-native';
+```
+
+## Usage
+
+```jsx-live
+<Box>
+  <Heading>Heading 1</Heading>
+</Box>
+```
+
+### Other headers
+
+The `<Heading>` component also has variants of `H1`, `H2`, `H3`, `H4`, `H5` and `H6`.
+
+```jsx-live
+<Box>
+  <Heading.H1>Heading 1</Heading.H1>
+  <Heading.H2>Heading 2</Heading.H2>
+  <Heading.H3>Heading 3</Heading.H3>
+  <Heading.H4>Heading 4</Heading.H4>
+  <Heading.H5>Heading 5</Heading.H5>
+  <Heading.H6>Heading 6</Heading.H6>
+</Box>
+```
+
+### Font sizes
+
+You can adjust the font size of a heading with the `fontSize` prop:
+
+```jsx-live
+<Heading fontSize="400">Hello world</Heading>
+```
+
+Or, you can modify the font size for each heading level in the theme:
+
+```jsx
+const theme = {
+  Heading: {
+    // Applies for <Heading>
+    fontSize: '400',
+
+    // Applies for <Heading.H1>
+    H1: {
+      fontSize: '700'
+    },
+
+    // Applies for <Heading.H2>
+    H2: {
+      fontSize: '600'
+    },
+
+    // Applies for <Heading.H3>
+    H3: {
+      fontSize: '500'
+    }
+
+    // Applies for <Heading.H4>
+    H4: {
+      fontSize: '400'
+    }
+
+    // Applies for <Heading.H5>
+    H5: {
+      fontSize: '300'
+    },
+
+    // Applies for <Heading.H6>
+    H6: {
+      fontSize: '200'
+    }
+  }
+}
+
+<Provider theme={theme}>
+  ...
+</Provider>
+```
+
+## Heading Props
+
+
+## Theming
+
+<Theme
+  component={BBHeading}
+  overrides={[
+    'Heading.styles.base',
+    {
+      key: 'Heading.H1.styles.base',
+      component: BBHeading.H1,
+      description: 'Applies when the heading is H1. `<Heading.H1>`'
+    },
+    {
+      key: 'Heading.H2.styles.base',
+      component: BBHeading.H2,
+      description: 'Applies when the heading is H2. `<Heading.H2>`'
+    },
+    {
+      key: 'Heading.H3.styles.base',
+      component: BBHeading.H3,
+      description: 'Applies when the heading is H3. `<Heading.H3>`'
+    },
+    {
+      key: 'Heading.H4.styles.base',
+      component: BBHeading.H4,
+      description: 'Applies when the heading is H4. `<Heading.H4>`'
+    },
+    {
+      key: 'Heading.H5.styles.base',
+      component: BBHeading.H5,
+      description: 'Applies when the heading is H5. `<Heading.H5>`'
+    },
+    {
+      key: 'Heading.H6.styles.base',
+      component: BBHeading.H6,
+      description: 'Applies when the heading is H6. `<Heading.H6>`'
+    }
+  ]}>
+  Hello world
+</Theme>
+

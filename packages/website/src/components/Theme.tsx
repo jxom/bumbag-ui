@@ -4,9 +4,18 @@ import HighlightedCode, { highlightedCodeStyles } from 'bumbag-addon-highlighted
 import _set from 'lodash/set';
 
 export default function Theme(props) {
-  const { component: Component, children, overrides, highlightAttribute, injectOverrides = true, ...restProps } = props;
+  const {
+    component: DefaultComponent,
+    children,
+    overrides,
+    highlightAttribute,
+    injectOverrides = true,
+    ...restProps
+  } = props;
   return overrides.map((override) => {
     let key = typeof override === 'object' ? override.key : override;
+
+    let Component = override.component || DefaultComponent;
 
     let components = Array.isArray(override.props) ? override.props : [override.props];
 
