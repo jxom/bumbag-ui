@@ -7,6 +7,7 @@ import { BoxProps } from '../Box';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
+import { SpinnerProps } from '../Spinner';
 import { TextProps } from '../Text';
 
 export type Stylesheet = InterpolationWithTheme<any>;
@@ -143,6 +144,21 @@ export type ImageThemeConfig = {
   modes?: Variant<ImageThemeConfig>;
 };
 
+export type SpinnerThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  sizes?: {
+    small?: string;
+    default?: string;
+    medium?: string;
+    large?: string;
+  };
+  defaultProps?: Partial<SpinnerProps>;
+  variants?: Variant<SpinnerThemeConfig>;
+  modes?: Variant<SpinnerThemeConfig>;
+};
+
 export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -171,5 +187,6 @@ export type ThemeConfig = {
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
+  Spinner?: SpinnerThemeConfig;
   Text?: TextThemeConfig;
 };

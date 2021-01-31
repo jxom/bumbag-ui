@@ -2,6 +2,7 @@ import altitudes from './altitudes';
 import breakpoints from './breakpoints';
 
 import Heading from './Heading';
+import Spinner from './Spinner';
 
 export default {
   altitudes,
@@ -20,4 +21,5 @@ export default {
   palette: {},
 
   Heading,
+  Spinner,
 };
