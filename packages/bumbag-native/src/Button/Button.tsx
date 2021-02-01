@@ -1,11 +1,14 @@
 import * as React from 'react';
-import { TouchableOpacityProps as RNTouchableOpacityProps } from 'react-native';
-import { createComponent, createElement, createHook } from 'bumbag/utils';
+import { Platform, TouchableOpacityProps as RNTouchableOpacityProps } from 'react-native';
+import ConditionalWrap from 'conditional-wrap';
+import { createComponent, createElement, createHook, useTheme } from 'bumbag/utils';
 import { ButtonType, Omit, Size, Palette } from 'bumbag/types';
 
 import { Box, BoxProps } from '../Box';
 import { Icon, IconProps } from '../Icon';
 import { Text, TextProps } from '../../Text/Text';
+import { Spinner, SpinnerProps } from '../../Spinner/Spinner';
+import { palette } from '../utils';
 import * as styles from './Button.styles';
 
 export type LocalButtonProps = {
@@ -22,18 +25,96 @@ export type LocalButtonProps = {
   palette?: Palette;
   size?: Size;
   /** Custom props for the isLoading spinner. */
-  // spinnerProps?: SpinnerProps;
+  spinnerProps?: SpinnerProps;
   type?: ButtonType;
 };
 export type ButtonProps = BoxProps & RNTouchableOpacityProps & LocalButtonProps;
 
 const useProps = createHook<ButtonProps>(
   (props) => {
-    const { children, ...restProps } = props;
-    const boxProps = Box.useProps(restProps);
-    return { ...boxProps, children: typeof children === 'string' ? <Text>{children}</Text> : children };
+    const {
+      children,
+      color,
+      iconAfter,
+      iconAfterProps,
+      iconBefore,
+      iconBeforeProps,
+      isLoading,
+      isStatic,
+      palette,
+      size,
+      spinnerProps,
+      variant,
+    } = props;
+
+    const { theme } = useTheme();
+
+    const boxProps = Box.useProps(props);
+
+    const activeOpacity = Platform.OS === 'web' || isStatic ? '1' : props.activeOpacity;
+
+    let spinnerColor = palette;
+    if (props.variant === 'default') {
+      spinnerColor = `${props.palette}Inverted`;
+    }
+    if (props.palette === 'default') {
+      spinnerColor = 'defaultInverted';
+    }
+
+    return {
+      ...boxProps,
+      children: (
+        <React.Fragment>
+          {props.isLoading && <styles.ButtonSpinner color={spinnerColor} {...spinnerProps} />}
+          <ConditionalWrap condition={isLoading} wrap={(children) => <Box opacity="0">{children}</Box>}>
+            <React.Fragment>
+              {iconBefore && (
+                <styles.ButtonIcon
+                  color={styles.getButtonIconColor({ ...props, theme })}
+                  // @ts-ignore
+                  isBefore
+                  icon={iconBefore}
+                  {...iconBeforeProps}
+                />
+              )}
+              {typeof children === 'string' ? (
+                // @ts-ignore
+                <styles.ButtonText color={color} palette={palette} size={size} variant={variant}>
+                  {children}
+                </styles.ButtonText>
+              ) : (
+                children
+              )}
+              {iconAfter && (
+                <styles.ButtonIcon
+                  color={styles.getButtonIconColor({ ...props, theme })}
+                  // @ts-ignore
+                  isAfter
+                  icon={iconAfter}
+                  {...iconAfterProps}
+                />
+              )}
+            </React.Fragment>
+          </ConditionalWrap>
+        </React.Fragment>
+      ),
+      activeOpacity,
+    };
   },
-  { defaultProps: { palette: 'default' }, themeKey: 'native.Button' }
+  {
+    defaultProps: {
+      disabled: false,
+      iconAfter: undefined,
+      iconBefore: undefined,
+      isLoading: false,
+      isStatic: false,
+      variant: 'default',
+      palette: 'default',
+      size: 'default',
+      type: 'button',
+    },
+    themeKey: 'native.Button',
+  }
 );
 
 export const Button = createComponent<ButtonProps>(

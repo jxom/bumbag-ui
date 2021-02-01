@@ -93,10 +93,6 @@ export const Icon = createComponent<IconProps>(
       useProps,
       displayName: 'native.Icon',
     },
-    defaultProps: {
-      color: 'text',
-      size: '200',
-    },
     themeKey: 'native.Icon',
   }
 );

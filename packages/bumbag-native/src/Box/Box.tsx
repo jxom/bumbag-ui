@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ViewProps as RNViewProps } from 'react-native';
+import { useActive, useFocus, useHover } from 'react-native-web-hooks';
 
 import { CSSProperties } from 'bumbag/types';
 import { mergeRefs, createComponent, createElement, createHook, omitCSSProps } from 'bumbag/utils';
@@ -24,11 +25,25 @@ export type LocalBoxProps = {
   elementRef?: React.Ref<any>;
   themeKey?: string;
 };
-export type BoxProps = Omit<CSSProperties, 'pointerEvents'> & RNViewProps & LocalBoxProps;
+export type BoxProps = Omit<CSSProperties, 'pointerEvents'> &
+  RNViewProps &
+  LocalBoxProps & {
+    active?: boolean;
+    focus?: boolean;
+    hover?: boolean;
+    hoveractive?: boolean;
+  };
 
 const useProps = createHook<BoxProps>(
   (_props, { disableCSSProps }) => {
     let props = _props;
+
+    const buttonRef = React.useRef();
+    props.elementRef = mergeRefs(buttonRef, props.elementRef);
+    props.hover = useHover(buttonRef);
+    props.active = useActive(buttonRef);
+    props.focus = useFocus(buttonRef);
+    props.hoveractive = props.hover && props.active;
 
     // Convert CSS props to an object.
     // Example input:

@@ -57,6 +57,9 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
         ...colorModeThemeOverridesValue,
       };
       if (!styles.styles) {
+        if (Object.values(styles).length === 0) {
+          return '';
+        }
         styles = getCSSFromStyleObject(styles, props.theme, colorMode);
       }
       return styles;

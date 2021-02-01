@@ -2,10 +2,16 @@
 
 exports[`composition hook should return with Icon props 1`] = `
 Object {
+  "active": false,
   "children": <React.Fragment />,
   "colorMode": "default",
+  "elementRef": [Function],
+  "focus": false,
   "height": NaN,
+  "hover": false,
+  "hoveractive": false,
   "icon": "info-circle",
+  "ref": [Function],
   "size": "200",
   "style": Array [
     Object {
@@ -20,7 +26,7 @@ Object {
 exports[`defaultProps should render correctly for size 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":32,\\"minWidth\\":32},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="32"
   icon="info-circle"
   size="500"
@@ -38,7 +44,7 @@ exports[`defaultProps should render correctly for size 1`] = `
 exports[`overrides Icon.base should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":32,\\"minWidth\\":32},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="32"
   icon="info-circle"
   overrides="[object Object]"
@@ -57,7 +63,7 @@ exports[`overrides Icon.base should render correctly 1`] = `
 exports[`props should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -75,7 +81,7 @@ exports[`props should render correctly 1`] = `
 exports[`props should render correctly for custom icon 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="[object Object]"
   size="200"
@@ -93,7 +99,7 @@ exports[`props should render correctly for custom icon 1`] = `
 exports[`props should render correctly for custom icon 2`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="[object Object]"
   size="200"
@@ -141,7 +147,7 @@ exports[`props should render correctly for custom icon 2`] = `
 exports[`props should render correctly for direct import 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="[object Object]"
   size="200"
@@ -160,7 +166,7 @@ exports[`props should render correctly for direct import 1`] = `
 exports[`props should render correctly with a label 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   label="Information"
@@ -182,7 +188,7 @@ exports[`props should render correctly with a label 1`] = `
 exports[`props should render correctly with a size 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\",\\"fontSize\\":24}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\",\\"fontSize\\":24}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -200,7 +206,7 @@ exports[`props should render correctly with a size 1`] = `
 exports[`props should render correctly with color prop 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#574feb\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#574feb\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -218,7 +224,7 @@ exports[`props should render correctly with color prop 1`] = `
 exports[`theming Icon.base should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"height\\":32,\\"width\\":32,\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"height\\":32,\\"width\\":32,\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="info-circle"
   size="200"
@@ -236,7 +242,7 @@ exports[`theming Icon.base should render correctly 1`] = `
 exports[`theming Icon.iconNames should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="foo"
   size="200"
@@ -254,7 +260,7 @@ exports[`theming Icon.iconNames should render correctly 1`] = `
 exports[`theming Icon.iconSets should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="solid-arrow-left"
   size="200"
@@ -272,7 +278,7 @@ exports[`theming Icon.iconSets should render correctly 1`] = `
 exports[`theming Icon.icons should render correctly 1`] = `
 <svg
   colorMode="default"
-  data-style="[{\\"display\\":\\"flex\\",\\"minHeight\\":16,\\"minWidth\\":16},[{\\"color\\":\\"#212121\\"}]]"
+  data-style="[{\\"display\\":\\"flex\\"},[{\\"color\\":\\"#212121\\"}]]"
   height="16"
   icon="calendar"
   size="200"

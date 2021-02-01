@@ -1,5 +1,5 @@
 import Theme from '../../../components/Theme';
-import { Button, Key } from 'bumbag-native';
+import { Button as BNButton, Key } from 'bumbag-native';
 
 # Button
 
@@ -19,55 +19,161 @@ import { Button } from 'bumbag-native';
 
 ### Colors
 
-TODO
+Colors can be added to a button with the `palette` prop.
+
+```jsx-live
+<Set>
+  <Button>Default</Button>
+  <Button palette="primary">Primary</Button>
+  <Button palette="secondary">Secondary</Button>
+  <Button palette="success">Success</Button>
+  <Button palette="danger">Danger</Button>
+  <Button palette="warning">Warning</Button>
+</Set>
+```
 
 ### Variants
 
-TODO
+```jsx-live
+<Set>
+  <Button palette="primary">Default</Button>
+  <Button variant="outlined" palette="primary">Outlined</Button>
+  <Button variant="ghost" palette="primary">Ghost</Button>
+  <Button variant="link" palette="primary">Link</Button>
+</Set>
+```
 
 ### Icons
 
-TODO
+You can add icons to your buttons with the `iconBefore` or `iconAfter` prop.
+
+**Note:** To use button icons, you will need to follow the [instructions to set up icons with Bumbag Native](/native/components/icon).
+
+```jsx-live
+<Set>
+  <Button iconBefore="solid-clipboard">Copy</Button>
+  <Button iconBefore="solid-pen" palette="primary">
+    Edit
+  </Button>
+  <Button iconAfter="solid-long-arrow-alt-right">Continue</Button>
+  <Button iconBefore="info-circle" iconBeforeProps={{ fontSize: '300' }}>Info</Button>
+</Set>
+```
 
 ### Loading
 
-TODO
+To indicate a button is loading, use the `isLoading` prop.
+
+```jsx-live
+<Set>
+  <Button isLoading>Hello world</Button>
+  <Button isLoading palette="primary">Hello world</Button>
+</Set>
+```
 
 ### Outlines
 
-TODO
+An outline can be placed on a button by assigning `"outlined"` to the `variant` prop.
+
+```jsx-live
+<Set>
+  <Button palette="primary" variant="outlined">
+    Primary
+  </Button>
+  <Button palette="secondary" variant="outlined">
+    Secondary
+  </Button>
+  <Button palette="success" variant="outlined">
+    Success
+  </Button>
+  <Button palette="danger" variant="outlined">
+    Danger
+  </Button>
+</Set>
+```
 
 ### Ghost
 
-TODO
+To have a button of minimal appearence, use the assign `"ghost"` to the `variant` prop.
+
+```jsx-live
+<Set>
+  <Button variant="ghost">Default</Button>
+  <Button palette="primary" variant="ghost">
+    Primary
+  </Button>
+  <Button palette="success" variant="ghost">
+    Success
+  </Button>
+  <Button palette="danger" variant="ghost">
+    Danger
+  </Button>
+  <Button palette="warning" variant="ghost">
+    Warning
+  </Button>
+</Set>
+```
 
 ### Sizes
 
-TODO
+Buttons are available in four different sizes and can be added with a `size` prop.
+
+```jsx-live
+<Set>
+  <Button size="small">Small</Button>
+  <Button>Default</Button>
+  <Button size="medium">Medium</Button>
+  <Button size="large">Large</Button>
+</Set>
+```
 
 ### Links
 
-TODO
+A button can appear as a link with no styling by assigning `"link"` to the `type` prop.
+
+```jsx-live
+<Button palette="primary" variant="link">
+  Default
+</Button>
+```
 
 ### Static
 
-TODO
+To make a button non-interactable, add the `isStatic` prop.
+
+```jsx-live
+<Button isStatic>Static</Button>
+```
 
 ### Disabled
 
-TODO
+To indicate a button as disabled, use the `disabled` prop.
+
+```jsx-live
+<Set>
+  <Button disabled>Default</Button>
+  <Button palette="primary" disabled>
+    Primary
+  </Button>
+  <Button palette="success" disabled>
+    Success
+  </Button>
+  <Button palette="danger" disabled>
+    Danger
+  </Button>
+  <Button palette="warning" disabled>
+    Warning
+  </Button>
+</Set>
+```
 
 ### Sets
 
-TODO
+TODO: Once `<Set>` component is complete
 
 ### Group
 
-TODO
-
-### Close Buttons
-
-TODO
+TODO: Once `<Group>` component is complete
 
 ## Props
 
@@ -76,4 +182,65 @@ TODO
 
 ## Theming
 
-TODO
+<Theme
+  component={BNButton}
+  overrides={[
+    'Button.styles.base',
+    {
+      key: 'Button.styles.disabled',
+      description: 'Applies when the button is disabled. `<Button disabled>`',
+      props: { disabled: true }
+    },
+    { key: 'Button.styles.hover', description: 'Applies when the button is hovered. Try it out by hovering over the button.' },
+    {
+      key: 'Button.styles.hoveractive',
+      description:
+        'Applies when the button is hovered and active. Try it out by hovering over the button and clicking on it.'
+    },
+    {
+      key: 'Button.styles.ghost',
+      description: 'Applies for ghost buttons. `<Button variant="ghost">`',
+      props: { variant: 'ghost' }
+    },
+    { key: 'Button.styles.link', description: 'Applies for link buttons. `<Button variant="link">`', props: { variant: 'link' } },
+    {
+      key: 'Button.styles.outlined',
+      description: 'Applies for outlined buttons. `<Button variant="outlined">`',
+      props: { variant: 'outlined' }
+    },
+    { key: 'Button.styles.static', description: 'Applies for static buttons. `<Button isStatic>`', props: { isStatic: true } },
+    {
+      key: 'Button.styles.sizes.small',
+      description: 'Applies for small buttons. `<Button size="small">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.styles.sizes.default',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.styles.sizes.medium',
+      description: 'Applies for static buttons. `<Button size="medium">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.styles.sizes.large',
+      description: 'Applies for static buttons. `<Button size="large">`',
+      props: [{ size: 'small' }, { size: 'default' }, { size: 'medium' }, { size: 'large' }]
+    },
+    {
+      key: 'Button.Icon.styles.base',
+      props: { iconBefore: 'info-circle' }
+    },
+    {
+      key: 'Button.Icon.styles.before',
+      props: { iconBefore: 'info-circle' }
+    },
+    {
+      key: 'Button.Icon.styles.after',
+      props: { iconAfter: 'info-circle' }
+    }
+  ]}>
+  Hello world
+</Theme>
+

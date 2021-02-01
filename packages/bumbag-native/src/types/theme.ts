@@ -4,6 +4,7 @@ import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
 import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxProps } from '../Box';
+import { ButtonProps } from '../Button';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
@@ -38,6 +39,57 @@ export type BoxThemeConfig = {
   defaultProps?: Partial<BoxProps>;
   variants?: Variant<BoxThemeConfig>;
   modes?: Variant<BoxThemeConfig>;
+};
+
+export type ButtonThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+    disabled?: ThemeAttribute<Stylesheet>;
+    ghost?: ThemeAttribute<Stylesheet>;
+    hover?: ThemeAttribute<Stylesheet>;
+    hoveractive?: ThemeAttribute<Stylesheet>;
+    loading?: ThemeAttribute<Stylesheet>;
+    link?: ThemeAttribute<Stylesheet>;
+    outlined?: ThemeAttribute<Stylesheet>;
+    static?: ThemeAttribute<Stylesheet>;
+    sizes?: {
+      small?: ThemeAttribute<Stylesheet>;
+      default?: ThemeAttribute<Stylesheet>;
+      medium?: ThemeAttribute<Stylesheet>;
+      large?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Icon?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+      after?: ThemeAttribute<Stylesheet>;
+      before?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Spinner?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+  };
+  Text?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+      hover?: ThemeAttribute<Stylesheet>;
+      hoveractive?: ThemeAttribute<Stylesheet>;
+      outlined?: ThemeAttribute<Stylesheet>;
+      ghost?: ThemeAttribute<Stylesheet>;
+      link?: ThemeAttribute<Stylesheet>;
+      sizes?: {
+        small?: ThemeAttribute<Stylesheet>;
+        default?: ThemeAttribute<Stylesheet>;
+        medium?: ThemeAttribute<Stylesheet>;
+        large?: ThemeAttribute<Stylesheet>;
+      };
+    };
+  };
+  defaultProps?: Partial<ButtonProps>;
+  variants?: Variant<ButtonThemeConfig>;
+  modes?: Variant<ButtonThemeConfig>;
 };
 
 export type FlexThemeConfig = {
@@ -183,6 +235,7 @@ export type ThemeConfig = {
   palette?: CoreThemeConfig['palette'];
 
   Box?: BoxThemeConfig;
+  Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
