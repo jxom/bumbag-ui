@@ -11,7 +11,9 @@ import { Box, BoxProps } from '../Box';
 import { PopoverStateContext } from './PopoverState';
 import * as styles from './Popover.styles';
 
-export type LocalPopoverBackdropProps = {};
+export type LocalPopoverBackdropProps = {
+  usePortal?: boolean;
+};
 export type PopoverBackdropProps = BoxProps & ReakitPopoverBackdropProps & LocalPopoverBackdropProps;
 
 const useProps = createHook<PopoverBackdropProps>(
@@ -19,7 +21,7 @@ const useProps = createHook<PopoverBackdropProps>(
     const popoverContext = React.useContext(PopoverStateContext);
     props = { ...props, ...popoverContext.popover };
 
-    let { visible, baseId, animating, animated, stopAnimation, ...htmlProps } = props;
+    let { visible, baseId, animating, animated, stopAnimation, modal, usePortal, ...htmlProps } = props;
     const popoverBackdropProps = useReakitPopoverBackdrop(
       {
         visible,
@@ -27,6 +29,7 @@ const useProps = createHook<PopoverBackdropProps>(
         animating,
         animated,
         stopAnimation,
+        modal: process.env.NODE_ENV === 'test' ? false : usePortal || modal,
       },
       htmlProps
     );

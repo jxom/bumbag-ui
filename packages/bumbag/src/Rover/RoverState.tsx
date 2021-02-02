@@ -15,6 +15,10 @@ export function useRoverState(initialState?: RoverInitialState) {
   return useReakitRoverState(initialState);
 }
 
+export function useRoverContext() {
+  return React.useContext(RoverContext);
+}
+
 export function RoverState(
   props: {
     children?: React.ReactNode | ((state: RoverStateReturn) => React.ReactElement<any>);

@@ -9,7 +9,7 @@ import {
 } from './Popover';
 import { PopoverBackdrop } from './PopoverBackdrop';
 import { PopoverDisclosure } from './PopoverDisclosure';
-import { usePopoverState, PopoverState } from './PopoverState';
+import { usePopoverContext, usePopoverState, PopoverState } from './PopoverState';
 
 export * from './Popover';
 export * from './PopoverBackdrop';
@@ -23,6 +23,7 @@ export const Popover = Object.assign(_Popover, {
   Footer: PopoverFooter,
   Header: PopoverHeader,
   Title: PopoverTitle,
+  useContext: usePopoverContext,
   useState: usePopoverState,
   State: PopoverState,
 });

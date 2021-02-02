@@ -424,3 +424,31 @@ describe('defaultProps', () => {
     expect(baseElement).toMatchSnapshot();
   });
 });
+
+describe('useContext', () => {
+  it('should render correctly', () => {
+    let popover;
+
+    function ParentComponent({ children }: any) {
+      return (
+        <Popover.State>
+          <Popover.Disclosure>Toggle</Popover.Disclosure>
+          <Popover aria-label="test">{children}</Popover>
+        </Popover.State>
+      );
+    }
+
+    function ChildComponent() {
+      const context = Popover.useContext();
+      popover = context.popover;
+      return <Box>hello world</Box>;
+    }
+
+    render(
+      <ParentComponent>
+        <ChildComponent />
+      </ParentComponent>
+    );
+    expect(popover).toMatchSnapshot();
+  });
+});

@@ -125,3 +125,30 @@ describe('defaultProps', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('useContext', () => {
+  it('should render correctly', () => {
+    let rover;
+
+    function ParentComponent({ children }: any) {
+      return (
+        <Rover.State>
+          <Rover aria-label="test">{children}</Rover>
+        </Rover.State>
+      );
+    }
+
+    function ChildComponent() {
+      const context = Rover.useContext();
+      rover = context.rover;
+      return <div>hello world</div>;
+    }
+
+    render(
+      <ParentComponent>
+        <ChildComponent />
+      </ParentComponent>
+    );
+    expect(rover).toMatchSnapshot();
+  });
+});

@@ -15,6 +15,10 @@ export function usePopoverState(initialState?: PopoverInitialState) {
   return useReakitPopoverState(initialState);
 }
 
+export function usePopoverContext() {
+  return React.useContext(PopoverStateContext);
+}
+
 export function PopoverState(
   props: {
     children?: React.ReactNode | ((state: PopoverStateReturn) => React.ReactElement<any>);

@@ -15,6 +15,10 @@ export function useDisclosureState(initialState?: DisclosureInitialState) {
   return useReakitDisclosureState(initialState);
 }
 
+export function useDisclosureContext() {
+  return React.useContext(DisclosureContext);
+}
+
 export function DisclosureState(
   props: {
     children?: React.ReactNode | ((state: DisclosureStateReturn) => React.ReactElement<any>);
