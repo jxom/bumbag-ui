@@ -38,6 +38,12 @@ function Tree({ fill, tree }) {
           fillRule: 'evenodd',
         };
       }
+      if (node.attributes?.stroke && node.attributes?.stroke !== 'white') {
+        newProps = {
+          stroke: fill,
+          fillRule: 'evenodd',
+        };
+      }
       return (
         <Component key={node.name} {...node.attributes} {...newProps}>
           <Tree fill={fill} tree={node.children} />
@@ -59,9 +65,13 @@ const useProps = createHook<IconProps>(
       prevClassName: boxProps.className,
     });
 
-    const { viewBoxWidth, viewBoxHeight, paths, tree } = useIcon({ icon: props.icon, type: props.type });
+    const { viewBoxWidth, viewBoxHeight, props: svgProps, paths, tree } = useIcon({
+      icon: props.icon,
+      type: props.type,
+    });
 
     return {
+      ...svgProps,
       role: 'img',
       viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
       'aria-hidden': !props['aria-label'] && !props.label,

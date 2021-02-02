@@ -15,10 +15,11 @@ export function useIcon({ icon: initialIcon, type }) {
   } else if (typeof icon === 'object') {
     iconInfo = icon;
   }
-  const { viewBoxWidth = 0, viewBoxHeight = 0, paths = [], tree = [] } = iconInfo || {};
+  const { viewBoxWidth = 0, viewBoxHeight = 0, props = {}, paths = [], tree = [] } = iconInfo || {};
   return {
     viewBoxHeight,
     viewBoxWidth,
+    props,
     paths,
     tree,
   };
