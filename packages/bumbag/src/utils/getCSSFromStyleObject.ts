@@ -62,6 +62,8 @@ const spaceAttributes = [
   'grid-gap',
   'grid-column-gap',
   'grid-row-gap',
+  'height',
+  'width',
 ];
 const fontAttributes = ['font', 'fontFamily'];
 const fontSizeAttributes = ['fontSize'];

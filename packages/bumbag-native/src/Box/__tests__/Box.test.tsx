@@ -25,6 +25,16 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with height/width CSS props', () => {
+    const { container } = render(<Box height="16px" width="32px" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render correctly with height/width CSS props', () => {
+    const { container } = render(<Box height="major-2" width="minor-2" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly for an altitude', () => {
     const { container } = render(<Box altitude="400" />);
     expect(container.firstChild).toMatchSnapshot();
