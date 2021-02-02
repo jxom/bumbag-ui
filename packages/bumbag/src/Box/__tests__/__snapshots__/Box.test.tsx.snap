@@ -954,6 +954,32 @@ exports[`props should render correctly with CSS props 1`] = `
 />
 `;
 
+exports[`props should render correctly with CSS props 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-1 {
+  background-color: rgb(255,0,0) !important;
+  color: rgba(0,255,0,0.1) !important;
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+/>
+`;
+
 exports[`props should render correctly with CSS props with active 1`] = `
 .emotion-0 {
   margin: unset;
@@ -1693,6 +1719,34 @@ exports[`theming Box.base should render correctly 1`] = `
 `;
 
 exports[`theming Box.base should render correctly 2`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.emotion-0 {
+  background-color: rgb(255,0,0);
+  color: rgba(0,255,0,0.1);
+}
+
+<div
+  class="emotion-0 emotion-1 bb-Box"
+>
+  hello world
+</div>
+`;
+
+exports[`theming Box.base should render correctly 3`] = `
 .emotion-1 {
   color: var(--bb-palette-green,#008000) !important;
 }

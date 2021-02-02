@@ -72,3 +72,27 @@ export function isColor(color) {
   s.color = color;
   return s.color === color;
 }
+
+export function isRGB(string) {
+  return /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/.test(string);
+}
+
+export function isRGBA(string) {
+  return /^rgba\((\d{1,3}%?),\s*(\d{1,3}%?),\s*(\d{1,3}%?),\s*(\d*(?:\.\d+)?)\)$/.test(string);
+}
+
+export function isHex(string) {
+  return /#([a-f0-9]{3}|[a-f0-9]{4}(?:[a-f0-9]{2}){0,2})\b/gi.test(string);
+}
+
+export function isHSL(string) {
+  return /^hsl\(\s*(\d+)\s*,\s*(\d*(?:\.\d+)?%)\s*,\s*(\d*(?:\.\d+)?%)\)$/.test(string);
+}
+
+export function isHSLA(string) {
+  return /^hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*(\d*(?:\.\d+)?)\)$/.test(string);
+}
+
+export function isRGBOrHSLOrHex(string) {
+  return isRGB(string) || isRGBA(string) || isHSL(string) || isHSLA(string) || isHex(string);
+}

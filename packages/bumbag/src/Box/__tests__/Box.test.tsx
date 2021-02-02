@@ -27,6 +27,11 @@ describe('props', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render correctly with CSS props', () => {
+    const { container } = render(<Box backgroundColor="rgb(255, 0, 0)" color="rgba(0, 255, 0, 0.1)" />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('should render correctly with CSS props with breakpoints', () => {
     const { container } = render(
       <Box
@@ -250,6 +255,13 @@ describe('theming', () => {
   it('Box.base should render correctly', () => {
     const { container } = render(<Box>hello world</Box>, {
       theme: { Box: { styles: { base: { backgroundColor: 'red' } } } },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Box.base should render correctly', () => {
+    const { container } = render(<Box>hello world</Box>, {
+      theme: { Box: { styles: { base: { backgroundColor: 'rgb(255, 0, 0)', color: 'rgba(0, 255, 0, 0.1)' } } } },
     });
     expect(container.firstChild).toMatchSnapshot();
   });

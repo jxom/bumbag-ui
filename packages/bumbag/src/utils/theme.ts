@@ -5,6 +5,7 @@ import { ThemeConfig } from '../types';
 import { css } from '../styled';
 import { getColorFromCSSVariable } from '../ColorMode/utils';
 
+import { isRGBOrHSLOrHex } from './colors';
 import { isFunction } from './isFunction';
 import { get } from './get';
 import { getCSSFromStyleObject } from './getCSSFromStyleObject';
@@ -144,7 +145,10 @@ export function palette(
       fallback = 'transparent';
     }
 
-    if (props.theme?.useCSSVariables && useCSSVariables && !selector?.includes('#')) {
+    if (isRGBOrHSLOrHex(selector)) {
+      return selector;
+    }
+    if (props.theme?.useCSSVariables && useCSSVariables) {
       return getColorFromCSSVariable(selector, fallback);
     }
     const color = theme('palette', selector || props.palette)(props);
