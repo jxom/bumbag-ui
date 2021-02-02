@@ -34,13 +34,13 @@ function Tree({ fill, tree }) {
     return tree.map((node) => {
       const Component = Svg[capitalize(node.name)] || Svg.Path;
       let newProps = {};
-      if (node.attributes?.fill && node.attributes?.fill !== 'white') {
+      if (node.attributes?.fill && node.attributes?.fill !== 'white' && node.attributes?.fill !== 'none') {
         newProps = {
           fill,
           fillRule: 'evenodd',
         };
       }
-      if (node.attributes?.stroke && node.attributes?.stroke !== 'white') {
+      if (node.attributes?.stroke && node.attributes?.stroke !== 'white' && node.attributes?.stroke !== 'none') {
         newProps = {
           stroke: fill,
           fillRule: 'evenodd',

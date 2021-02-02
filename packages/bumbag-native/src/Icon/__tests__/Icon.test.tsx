@@ -74,6 +74,9 @@ describe('props', () => {
     const bat = {
       viewBoxWidth: 24,
       viewBoxHeight: 24,
+      props: {
+        fill: 'none',
+      },
       tree: [
         {
           name: 'circle',
