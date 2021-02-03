@@ -12,7 +12,7 @@ const useProps = createHook<BoxSafeProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Box.Safe' }
+  { themeKey: 'native.Box.Safe' }
 );
 
 export const BoxSafe = createComponent<BoxSafeProps>(
@@ -27,8 +27,8 @@ export const BoxSafe = createComponent<BoxSafeProps>(
   {
     attach: {
       useProps,
-      displayName: 'Box.Safe',
+      displayName: 'native.Box.Safe',
     },
-    themeKey: 'Box.Safe',
+    themeKey: 'native.Box.Safe',
   }
 );

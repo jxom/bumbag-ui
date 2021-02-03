@@ -12,7 +12,7 @@ const useProps = createHook<BoxScrollProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Box.Scroll' }
+  { themeKey: 'native.Box.Scroll' }
 );
 
 export const BoxScroll = createComponent<BoxScrollProps>(
@@ -27,8 +27,8 @@ export const BoxScroll = createComponent<BoxScrollProps>(
   {
     attach: {
       useProps,
-      displayName: 'Box.Scroll',
+      displayName: 'native.Box.Scroll',
     },
-    themeKey: 'Box.Scroll',
+    themeKey: 'native.Box.Scroll',
   }
 );

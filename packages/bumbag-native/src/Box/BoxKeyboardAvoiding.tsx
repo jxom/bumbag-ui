@@ -12,7 +12,7 @@ const useProps = createHook<BoxKeyboardAvoidingProps>(
     const boxProps = Box.useProps(props);
     return { ...boxProps };
   },
-  { themeKey: 'Box.KeyboardAvoiding' }
+  { themeKey: 'native.Box.KeyboardAvoiding' }
 );
 
 export const BoxKeyboardAvoiding = createComponent<BoxKeyboardAvoidingProps>(
@@ -27,8 +27,8 @@ export const BoxKeyboardAvoiding = createComponent<BoxKeyboardAvoidingProps>(
   {
     attach: {
       useProps,
-      displayName: 'Box.KeyboardAvoiding',
+      displayName: 'native.Box.KeyboardAvoiding',
     },
-    themeKey: 'Box.KeyboardAvoiding',
+    themeKey: 'native.Box.KeyboardAvoiding',
   }
 );

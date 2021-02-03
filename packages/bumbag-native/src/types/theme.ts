@@ -3,7 +3,7 @@ import { InterpolationWithTheme } from '@emotion/core';
 import { ThemeConfig as CoreThemeConfig } from 'bumbag/types';
 import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
-import { BoxProps } from '../Box';
+import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
@@ -35,6 +35,33 @@ export type BoxThemeConfig = {
     styles?: {
       base?: ThemeAttribute<Stylesheet>;
     };
+    defaultProps?: Partial<BoxSafeProps>;
+    variants?: Variant<BoxThemeConfig['Safe']>;
+    modes?: Variant<BoxThemeConfig['Safe']>;
+  };
+  Touchable?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<BoxTouchableProps>;
+    variants?: Variant<BoxThemeConfig['Touchable']>;
+    modes?: Variant<BoxThemeConfig['Touchable']>;
+  };
+  KeyboardAvoiding?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<BoxKeyboardAvoidingProps>;
+    variants?: Variant<BoxThemeConfig['KeyboardAvoiding']>;
+    modes?: Variant<BoxThemeConfig['KeyboardAvoiding']>;
+  };
+  Scroll?: {
+    styles?: {
+      base?: ThemeAttribute<Stylesheet>;
+    };
+    defaultProps?: Partial<BoxScrollProps>;
+    variants?: Variant<BoxThemeConfig['Scroll']>;
+    modes?: Variant<BoxThemeConfig['Scroll']>;
   };
   defaultProps?: Partial<BoxProps>;
   variants?: Variant<BoxThemeConfig>;
