@@ -5,12 +5,12 @@ import { palette, theme } from '../utils/theme';
 export const StyledText = styled(Text)`
   color: ${palette('text')};
 
-  ${Platform.OS === 'web' &&
-  `
-      font: unset;
-      font-family: unset;
+  ${Platform.OS === 'web'
+    ? `
+      font-family: inherit;
       font-size: unset;
-    `}
+    `
+    : ''}
 
   ${theme('native.Text', 'styles.base')};
 `;

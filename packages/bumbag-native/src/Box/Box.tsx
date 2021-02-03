@@ -5,6 +5,7 @@ import { useActive, useFocus, useHover } from 'react-native-web-hooks';
 import { CSSProperties } from 'bumbag/types';
 import { mergeRefs, createComponent, createElement, createHook, omitCSSProps } from 'bumbag/utils';
 import { useStyle } from '../utils/useStyle';
+import { css } from '../styled';
 import { ThemeConfig } from '../types/theme';
 
 import * as styles from './Box.styles';
@@ -38,11 +39,11 @@ const useProps = createHook<BoxProps>(
   (_props, { disableCSSProps }) => {
     let props = _props;
 
-    const buttonRef = React.useRef();
-    props.elementRef = mergeRefs(buttonRef, props.elementRef);
-    props.hover = useHover(buttonRef);
-    props.active = useActive(buttonRef);
-    props.focus = useFocus(buttonRef);
+    const boxRef = React.useRef();
+    props.elementRef = mergeRefs(boxRef, props.elementRef);
+    props.hover = useHover(boxRef);
+    props.active = useActive(boxRef);
+    props.focus = useFocus(boxRef);
     props.hoveractive = props.hover && props.active;
 
     // Convert CSS props to an object.
@@ -51,9 +52,25 @@ const useProps = createHook<BoxProps>(
     //
     // Example output:
     // style = { color: 'red', backgroundColor: 'blue' }
-    let style = useStyle({ ...props, ...props.style }, { disableCSSProps });
+    let style = useStyle(
+      { ...props, ...props.style },
+      {
+        disableCSSProps,
+        events: {
+          hover: props.hover,
+          active: props.active,
+          focus: props.focus,
+          hoveractive: props.hoveractive,
+        },
+      }
+    );
     if (Array.isArray(props.style) || typeof props.style !== 'object') {
-      props.style = [style, ...(props.style || [])];
+      props.style = [
+        css`
+          ${style}
+        `,
+        ...(props.style || []),
+      ];
     }
 
     // Pick out the CSS props

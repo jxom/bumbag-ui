@@ -51,7 +51,6 @@ function Iframe(props: any) {
     const handleMouseMove = (e) => {
       requestAnimationFrame(() => {
         const width = e.clientX;
-        console.log('test', width > MIN_WIDTH);
         setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };
@@ -59,7 +58,6 @@ function Iframe(props: any) {
       requestAnimationFrame(() => {
         const wrapper = wrapperRef.current || {};
         const width = e.clientX - wrapper.offsetLeft;
-        console.log('test', width > MIN_WIDTH);
         setIframeWidth(`${width > MIN_WIDTH ? width : MIN_WIDTH}px`);
       });
     };

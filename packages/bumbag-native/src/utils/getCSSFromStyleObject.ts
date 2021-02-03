@@ -89,29 +89,39 @@ const attributeMaps = {
   paddingX: ['paddingLeft', 'paddingRight'],
 };
 
+const platforms = ['web', 'native', 'ios', 'android'];
+function isPlatform(selector) {
+  return platforms.includes(selector);
+}
+
+const states = ['hover', 'hoveractive', 'focus', 'active'];
+function isPseudo(selector) {
+  return states.includes(selector);
+}
+
 function getAlignmentStyles({ attribute, value, props }) {
   const alignYAttribute = props.display && props.display.includes('flex') ? 'align-items' : 'justify-content';
   const alignXAttribute = props.display && props.display.includes('flex') ? 'justify-content' : 'align-items';
-  return css`
+  return `
       display: flex;
 
       ${
         !props.display &&
-        css`
+        `
           flex-direction: column;
         `
       }
 
       ${
         attribute === 'alignY' &&
-        css`
+        `
           ${alignYAttribute}: ${FLEX_VERTICAL_ALIGN_MAP[value]};
         `
       }
 
       ${
         attribute === 'alignX' &&
-        css`
+        `
           ${alignXAttribute}: ${FLEX_HORIZONTAL_ALIGN_MAP[value]};
         `
       }
@@ -199,7 +209,12 @@ function getLetterSpacingValue({ theme, value }) {
   return value;
 }
 
-export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = false, disableCSSProps = [] } = {}) {
+export function getCSSFromStyleObject(
+  props,
+  theme,
+  colorMode,
+  { fromProps = false, disableCSSProps = [], events = {} } = {}
+) {
   let style = { ...props };
   if (style) {
     let styleEntries = Object.entries(style);
@@ -217,8 +232,8 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         newValue = value({ theme });
       }
       if (attribute.includes(':')) {
-        return css`
-          ${prevStyle};
+        return `
+          ${prevStyle ? `${prevStyle};` : ''}
 
           ${attribute} {
             ${getCSSFromStyleObject(value, theme, colorMode, { fromProps })};
@@ -229,12 +244,23 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         newValue = { default: newValue };
       }
       if (attribute.includes('_')) {
-        const platform = attribute.slice(1);
-        return css`
-          ${prevStyle};
-          ${(Platform.OS === platform || (platform === 'native' && Platform.OS !== 'web')) &&
-          getCSSFromStyleObject(value, theme, colorMode, { fromProps })}
-        `;
+        const selector = attribute.slice(1);
+        if (isPlatform(selector)) {
+          const platform = selector;
+          return `
+            ${prevStyle ? `${prevStyle};` : ''}
+            ${
+              (Platform.OS === platform || (platform === 'native' && Platform.OS !== 'web')) &&
+              getCSSFromStyleObject(value, theme, colorMode, { fromProps })
+            }
+          `;
+        }
+        if (isPseudo(selector)) {
+          return `
+            ${prevStyle ? `${prevStyle};` : ''}
+            ${events[selector] ? getCSSFromStyleObject(value, theme, colorMode, { fromProps }) : ''}
+          `;
+        }
       }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [platform, value]) => {
         let newStyle;
@@ -279,25 +305,28 @@ export function getCSSFromStyleObject(props, theme, colorMode, { fromProps = fal
         }
         if (platform === 'default' || Platform.OS === platform || (platform === 'native' && Platform.OS !== 'web')) {
           // @ts-ignore
-          return css`
-            ${prevStyle};
-            ${newStyle};
-            ${newValue
-              ? css`
+          return `
+            ${newStyle ? `${newStyle};` : ''}
+            ${prevStyle ? `${prevStyle};` : ''}
+            ${
+              newValue
+                ? `
                   ${_kebabCase(attribute)}: ${newValue};
                 `
-              : ''}
+                : ''
+            }
           `;
         }
-        return css`
-          ${prevStyle};
-          ${newStyle};
+        return `
+          ${newStyle ? `${newStyle};` : ''}
+          ${prevStyle ? `${prevStyle};` : ''}
         `;
-      }, css``);
-      return css`
-        ${prevStyle} ${newStyle};
+      }, ``);
+      return `
+        ${newStyle ? `${newStyle};` : ''}
+        ${prevStyle ? `${prevStyle};` : ''}
       `;
-    }, css``);
+    }, ``);
   }
 
   return style;
