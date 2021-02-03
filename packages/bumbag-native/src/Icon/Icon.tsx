@@ -8,7 +8,7 @@ import {
   ParseIconsOpts,
   useTheme,
 } from 'bumbag/utils';
-import { Icon as WebIcon } from 'bumbag/Icon';
+import { useColorMode } from 'bumbag/ColorMode/ColorModeContext';
 import capitalize from 'lodash/capitalize';
 import * as Svg from 'react-native-svg';
 
@@ -61,6 +61,7 @@ const useProps = createHook<IconProps>(
     const { color, icon, label, size, type } = props;
 
     const { theme } = useTheme();
+    const { colorMode } = useColorMode();
 
     const boxProps = Box.useProps(props);
 
@@ -76,9 +77,9 @@ const useProps = createHook<IconProps>(
         <React.Fragment>
           {label && <title>{label}</title>}
           {paths.map((path: string) => (
-            <Svg.Path key={path} d={path} fill={palette(color)({ theme })} fillRule="evenodd" />
+            <Svg.Path key={path} d={path} fill={palette(color)({ colorMode, theme })} fillRule="evenodd" />
           ))}
-          {tree.length > 0 && <Tree fill={palette(color)({ theme })} tree={tree} />}
+          {tree.length > 0 && <Tree fill={palette(color)({ colorMode, theme })} tree={tree} />}
         </React.Fragment>
       ),
     };
