@@ -38,6 +38,26 @@ describe('theming', () => {
     });
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('Text.styles.base should render correctly with default font', () => {
+    const { container } = render(<Text>hello world</Text>, {
+      theme: {
+        fonts: { default: 'default', heading: 'heading' },
+        Text: { styles: { base: { backgroundColor: 'red' } } },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Text.styles.base should render correctly with heading font', () => {
+    const { container } = render(<Text font="heading">hello world</Text>, {
+      theme: {
+        fonts: { default: 'default', heading: 'heading' },
+        Text: { styles: { base: { backgroundColor: 'red' } } },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
 
 describe('defaultProps', () => {

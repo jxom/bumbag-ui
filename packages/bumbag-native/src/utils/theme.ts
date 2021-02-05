@@ -99,7 +99,7 @@ export function borderRadius(selector?: string, defaultValue?: any) {
 
 export function font(selector?: string, defaultValue?: any) {
   return (props: { font?: string; theme?: ThemeConfig }) => {
-    const color = theme('fonts', selector || props.font, defaultValue)(props);
+    const color = theme('native.fonts', selector || props.font, defaultValue)(props);
     return color;
   };
 }

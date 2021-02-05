@@ -23,7 +23,6 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
       breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}),
       borders: merge(theme.borders || {}, newTheme.borders || {}),
       borderRadii: merge(theme.borderRadii || {}, newTheme.borderRadii || {}),
-      fonts: merge(theme.fonts || {}, newTheme.fonts || {}),
       fontSizes: merge(theme.fontSizes || {}, newTheme.fontSizes || {}),
       fontWeights: merge(theme.fontWeights || {}, newTheme.fontWeights || {}),
       icons: merge(theme.icons || {}, newTheme.icons || {}),

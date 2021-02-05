@@ -81,6 +81,26 @@ describe('theming', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('Heading.styles.base should render correctly for default font', () => {
+    const { container } = render(<Heading font="default">hello world</Heading>, {
+      theme: {
+        fonts: { default: 'default', heading: 'heading' },
+        Heading: { styles: { base: { backgroundColor: 'red' } } },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Heading.styles.base should render correctly for heading font', () => {
+    const { container } = render(<Heading>hello world</Heading>, {
+      theme: {
+        fonts: { default: 'default', heading: 'heading' },
+        Heading: { styles: { base: { backgroundColor: 'red' } } },
+      },
+    });
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('Heading.H1.styles.base should render correctly for H1', () => {
     const { container } = render(<Heading.H1>hello world</Heading.H1>, {
       theme: { Heading: { H1: { styles: { base: { backgroundColor: 'red' } } } } },
