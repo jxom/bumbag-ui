@@ -34,13 +34,18 @@ function Tree({ fill, tree }) {
     return tree.map((node) => {
       const Component = Svg[capitalize(node.name)] || Svg.Path;
       let newProps = {};
-      if (node.attributes?.fill && node.attributes?.fill !== 'white' && node.attributes?.fill !== 'none') {
+      if (fill && node.attributes?.fill && node.attributes?.fill !== 'white' && node.attributes?.fill !== 'none') {
         newProps = {
           fill,
           fillRule: 'evenodd',
         };
       }
-      if (node.attributes?.stroke && node.attributes?.stroke !== 'white' && node.attributes?.stroke !== 'none') {
+      if (
+        fill &&
+        node.attributes?.stroke &&
+        node.attributes?.stroke !== 'white' &&
+        node.attributes?.stroke !== 'none'
+      ) {
         newProps = {
           stroke: fill,
           fillRule: 'evenodd',
@@ -79,7 +84,9 @@ const useProps = createHook<IconProps>(
           {paths.map((path: string) => (
             <Svg.Path key={path} d={path} fill={palette(color)({ colorMode, theme })} fillRule="evenodd" />
           ))}
-          {tree.length > 0 && <Tree fill={palette(color)({ colorMode, theme })} tree={tree} />}
+          {tree.length > 0 && (
+            <Tree fill={color === 'inherit' ? undefined : palette(color)({ colorMode, theme })} tree={tree} />
+          )}
         </React.Fragment>
       ),
     };
