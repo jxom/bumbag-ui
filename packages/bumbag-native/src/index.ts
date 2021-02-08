@@ -8,6 +8,7 @@ export * from './Icon';
 export * from './Image';
 export * from './Provider';
 export * from './Spinner';
+export * from './Stack';
 export * from './Text';
 
 export * from './styled';

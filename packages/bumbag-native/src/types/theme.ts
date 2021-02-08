@@ -9,6 +9,7 @@ import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { SpinnerProps } from '../Spinner';
+import { StackProps } from '../Stack';
 import { TextProps } from '../Text';
 
 export type Stylesheet = InterpolationWithTheme<any>;
@@ -238,6 +239,15 @@ export type SpinnerThemeConfig = {
   modes?: Variant<SpinnerThemeConfig>;
 };
 
+export type StackThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<StackProps>;
+  variants?: Variant<StackThemeConfig>;
+  modes?: Variant<StackThemeConfig>;
+};
+
 export type TextThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -268,5 +278,6 @@ export type ThemeConfig = {
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
   Spinner?: SpinnerThemeConfig;
+  Stack?: StackThemeConfig;
   Text?: TextThemeConfig;
 };

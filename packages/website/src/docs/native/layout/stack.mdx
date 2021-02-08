@@ -15,15 +15,27 @@ The `<Stack>` component that assists in creating layouts where it's children are
 
 ```jsx-live
 <Stack>
-  <Box backgroundColor="primaryTint">
+  <Box backgroundColor="primaryTint" padding="major-2">
     <Text>First</Text>
   </Box>
-  <Box backgroundColor="primaryTint">
-    <Text>Second</Text>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Stack>
+      <Box backgroundColor="white" padding="major-2">
+        <Text>Second</Text>
+      </Box>
+      <Box backgroundColor="white" padding="major-2">
+        <Text>Third</Text>
+      </Box>
+    </Stack>
   </Box>
-  <Box backgroundColor="primaryTint">
-    <Text>Third</Text>
-  </Box>
+  <Stack orientation="horizontal">
+    <Box backgroundColor="primaryTint" padding="major-2">
+      <Text>Fourth</Text>
+    </Box>
+    <Box backgroundColor="primaryTint" padding="major-2">
+      <Text>Fifth</Text>
+    </Box>
+  </Stack>
 </Stack>
 ```
 
@@ -33,13 +45,13 @@ You can specify a gap spacing on your `<Stack>` with the `spacing` prop.
 
 ```jsx-live
 <Stack spacing="major-2">
-  <Box backgroundColor="primaryTint">
+  <Box backgroundColor="primaryTint" padding="major-2">
     <Text>First</Text>
   </Box>
-  <Box backgroundColor="primaryTint">
+  <Box backgroundColor="primaryTint" padding="major-2">
     <Text>Second</Text>
   </Box>
-  <Box backgroundColor="primaryTint">
+  <Box backgroundColor="primaryTint" padding="major-2">
     <Text>Third</Text>
   </Box>
 </Stack>
@@ -49,15 +61,102 @@ You can specify a gap spacing on your `<Stack>` with the `spacing` prop.
 
 #### Horizontal alignment
 
-TODO
+```jsx-live
+<Stack alignX="left">
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+<Stack alignX="center">
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+<Stack alignX="right">
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="primaryTint" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+```
 
 #### Vertical alignment
 
-TODO
+```jsx-live
+<Stack alignY="top" height="300px" backgroundColor="white700">
+  <Box backgroundColor="white" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+<Stack alignY="center" height="300px" backgroundColor="primaryTint">
+  <Box backgroundColor="white" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+<Stack alignY="bottom" height="300px" backgroundColor="white700">
+  <Box backgroundColor="white" padding="major-2">
+    <Text>First</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Second</Text>
+  </Box>
+  <Box backgroundColor="white" padding="major-2">
+    <Text>Third</Text>
+  </Box>
+</Stack>
+```
 
 ## Stack Props
 
 
 ## Theming
 
-TODO
+<Theme
+  component={Stack}
+  padding="major-3"
+  overrides={['Stack.styles.base']}>
+  <Box backgroundColor="white700" padding="major-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+    posuere leo. Cras placerat sapien in consectetur aliquet.
+  </Box>
+  <Box backgroundColor="white700" padding="major-3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor lacus lacus, id mattis felis cursus
+    at. Sed mollis eros sem, eu tincidunt lectus interdum sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Integer lacinia lacinia dui id pellentesque. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec laoreet magna non ornare consectetur. Proin cursus consectetur ligula, et
+    posuere leo. Cras placerat sapien in consectetur aliquet.
+  </Box>
+</Theme>
+
