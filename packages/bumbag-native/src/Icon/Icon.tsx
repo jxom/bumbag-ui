@@ -26,6 +26,7 @@ export type LocalIconProps = {
   /** Size of the icon. */
   size?: string;
   type?: ParseIconsOpts['type'];
+  useOriginalFill?: boolean;
 };
 export type IconProps = BoxProps & LocalIconProps;
 
@@ -63,7 +64,7 @@ function Tree({ fill, tree }) {
 
 const useProps = createHook<IconProps>(
   (props) => {
-    const { color, icon, label, size, type } = props;
+    const { color, icon, label, size, type, useOriginalFill } = props;
 
     const { theme } = useTheme();
     const { colorMode } = useColorMode();
@@ -85,7 +86,7 @@ const useProps = createHook<IconProps>(
             <Svg.Path key={path} d={path} fill={palette(color)({ colorMode, theme })} fillRule="evenodd" />
           ))}
           {tree.length > 0 && (
-            <Tree fill={color === 'inherit' ? undefined : palette(color)({ colorMode, theme })} tree={tree} />
+            <Tree fill={useOriginalFill ? undefined : palette(color)({ colorMode, theme })} tree={tree} />
           )}
         </React.Fragment>
       ),
