@@ -55,7 +55,7 @@ export default () => <BumbagProvider theme={theme}><App/></BumbagProvider>
 **Then**, you can use your icons like so:
 
 ```jsx-live
-  <Icon aria-label="Settings" icon="solid-igloo" />
+<Icon icon="solid-igloo" />
 ```
 
 ## Usage via Direct Import
@@ -65,7 +65,7 @@ You can also import the icons when you need them:
 ```jsx
 import { faPen } from '@fortawesome/free-solid-svg-icons'
 
-<Icon aria-label="Settings" icon={faPen} type="font-awesome" />
+<Icon icon={faPen} type="font-awesome" />
 ```
 
 ## Usage with SVG paths
@@ -117,7 +117,7 @@ function Example() {
   };
 
   return (
-    <Icon aria-label="Calendar" icon={calendar} />
+    <Icon icon={calendar} />
   );
 }
 ```
@@ -127,15 +127,15 @@ function Example() {
 Change the size of an icon with the `fontSize` prop.
 
 ```jsx-live
-<Icon aria-label="Igloo" icon="solid-igloo" size="100" />
-<Icon aria-label="Igloo" icon="solid-igloo" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="300" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="400" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="500" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="600" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="700" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="800" />
-<Icon aria-label="Igloo" icon="solid-igloo" size="900" />
+<Icon icon="solid-igloo" size="100" />
+<Icon icon="solid-igloo" />
+<Icon icon="solid-igloo" size="300" />
+<Icon icon="solid-igloo" size="400" />
+<Icon icon="solid-igloo" size="500" />
+<Icon icon="solid-igloo" size="600" />
+<Icon icon="solid-igloo" size="700" />
+<Icon icon="solid-igloo" size="800" />
+<Icon icon="solid-igloo" size="900" />
 ```
 
 ### Colors
@@ -143,10 +143,10 @@ Change the size of an icon with the `fontSize` prop.
 Change the color of an icon with the `color` prop. It can be any color from the [palette](/palette), or any other color like `#ff0000` or `red`.
 
 ```jsx-live
-<Icon aria-label="Success" icon="success" color="success" />
-<Icon aria-label="Error" icon="danger" color="danger" />
-<Icon aria-label="Warning" icon="warning" color="warning" />
-<Icon aria-label="Copy" icon="solid-clipboard" color="primary" />
+<Icon icon="success" color="success" />
+<Icon icon="danger" color="danger" />
+<Icon icon="warning" color="warning" />
+<Icon icon="solid-clipboard" color="primary" />
 ```
 
 ### Usage in text
@@ -156,7 +156,7 @@ To use icons with text, you can wrap them in a `Flex`.
 ```jsx-live
 <Flex alignY="center">
   <Text>This is text with an icon!</Text>
-  <Icon marginLeft="minor-1" aria-label="Thumbs up" icon="solid-thumbs-up" />
+  <Icon marginLeft="minor-1" icon="solid-thumbs-up" />
 </Flex>
 ```
 

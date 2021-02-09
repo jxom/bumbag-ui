@@ -64,7 +64,7 @@ function Tree({ fill, tree }) {
 
 const useProps = createHook<IconProps>(
   (props) => {
-    const { color, icon, label, size, type, useOriginalFill } = props;
+    const { color, icon, size, type, useOriginalFill } = props;
 
     const { theme } = useTheme();
     const { colorMode } = useColorMode();
@@ -81,7 +81,6 @@ const useProps = createHook<IconProps>(
       viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
       children: (
         <React.Fragment>
-          {label && <title>{label}</title>}
           {paths.map((path: string) => (
             <Svg.Path key={path} d={path} fill={palette(color)({ colorMode, theme })} fillRule="evenodd" />
           ))}
