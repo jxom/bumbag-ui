@@ -22,8 +22,8 @@ export const StyledButton = styled(TouchableOpacity)`
   ${(props: any) =>
     props.palette === 'default'
       ? `
-      border: 1px solid ${palette('white900', { dark: 'gray600' })(props)};
-    `
+          border: 1px solid ${palette('white900', { dark: 'gray600' })(props)};
+        `
       : ''}
 
   ${theme('native.Button', 'styles.base')};
@@ -59,9 +59,9 @@ export const getDisabledButtonProperties = (props: any) => `
   ${
     Platform.OS === 'web'
       ? `
-        cursor: not-allowed;
-        pointer-events: unset;
-      `
+          cursor: not-allowed;
+          pointer-events: unset;
+        `
       : ''
   }
 `;
@@ -99,9 +99,9 @@ export const getLoadingButtonProperties = (props: any) => `
   ${
     Platform.OS === 'web'
       ? `
-        positon: relative;
-        cursor: not-allowed;
-      `
+          positon: relative;
+          cursor: not-allowed;
+        `
       : ''
   }
 `;
@@ -110,8 +110,8 @@ export const getStaticButtonProperties = (props: any) => `
   ${
     Platform.OS === 'web'
       ? `
-        cursor: default;
-      `
+          cursor: default;
+        `
       : ''
   }
 `;
@@ -120,9 +120,9 @@ export const getInteractiveButtonProperties = (props: any) => `
   ${
     props.hover && props.variant !== 'link'
       ? `
-      background-color: ${palette(`${props.palette === 'default' ? 'white' : props.palette}600`, {
-        dark: `${props.palette === 'default' ? 'black100' : `${props.palette}600`}`,
-      })(props)};
+          background-color: ${palette(`${props.palette === 'default' ? 'white' : props.palette}600`, {
+            dark: `${props.palette === 'default' ? 'black100' : `${props.palette}600`}`,
+          })(props)};
         `
       : ''
   }
@@ -130,9 +130,9 @@ export const getInteractiveButtonProperties = (props: any) => `
   ${
     props.hoveractive && props.variant !== 'link'
       ? `
-      background-color: ${palette(props.palette === 'default' ? 'white800' : `${props.palette}700`, {
-        dark: `${props.palette === 'default' ? 'black200' : `${props.palette}700`}`,
-      })(props)};
+          background-color: ${palette(props.palette === 'default' ? 'white800' : `${props.palette}700`, {
+            dark: `${props.palette === 'default' ? 'black200' : `${props.palette}700`}`,
+          })(props)};
         `
       : ''
   }
@@ -150,13 +150,13 @@ export const getInteractiveButtonOverrides = (props: any) => {
 
 export const getOutlinedButtonProperties = (props) => `
   background-color: ${palette('default')(props)};
-  border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)}
+  border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
 
   ${
     props.hover && isInteractive(props)
       ? `
-        background-color: ${palette(`${props.palette}Tint`, { dark: `${props.palette}Shade` })(props)};
-        border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)}
+          background-color: ${palette(`${props.palette}Tint`, { dark: `${props.palette}Shade` })(props)};
+          border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
         `
       : ''
   }
@@ -164,8 +164,8 @@ export const getOutlinedButtonProperties = (props) => `
   ${
     props.hoveractive && isInteractive(props)
       ? `
-        background-color: ${palette(`${props.palette}100`, { dark: `${props.palette}Shade` })(props)};
-        border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)}
+          background-color: ${palette(`${props.palette}100`, { dark: `${props.palette}Shade` })(props)};
+          border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
         `
       : ''
   }
@@ -252,7 +252,7 @@ export const getInteractiveButtonTextProperties = (props: any) => `
   ${
     props.hover && props.variant !== 'link'
       ? `
-      ${theme('native.Button', 'Text.styles.hover')(props)};
+          ${theme('native.Button', 'Text.styles.hover')(props)};
         `
       : ''
   }
@@ -260,7 +260,7 @@ export const getInteractiveButtonTextProperties = (props: any) => `
   ${
     props.hoveractive && props.variant !== 'link'
       ? `
-      ${theme('native.Button', 'Text.styles.hoveractive')(props)};
+          ${theme('native.Button', 'Text.styles.hoveractive')(props)};
         `
       : ''
   }
@@ -279,7 +279,6 @@ export const getGhostButtonTextProperties = (props) => `
       : palette(props.palette, { dark: `${props.palette}300` })(props)
   };
 
-
   ${theme('native.Button', `Text.styles.ghost`)(props)};
 `;
 
@@ -293,12 +292,12 @@ export const getLinkButtonTextProperties = (props) => `
   ${
     Platform.OS !== 'web'
       ? `
-        text-decoration: underline;
-        text-decoration-color: ${
-          props.palette === 'default'
-            ? palette('text')(props)
-            : palette(props.palette, { dark: `${props.palette}300` })(props)
-        };
+          text-decoration: underline;
+          text-decoration-color: ${
+            props.palette === 'default'
+              ? palette('text')(props)
+              : palette(props.palette, { dark: `${props.palette}300` })(props)
+          };
         `
       : ''
   }

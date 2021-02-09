@@ -11,8 +11,8 @@ export const StyledHeading = styled(Text)`
   ${(props) =>
     font('heading')(props) || font('default')(props)
       ? `
-    font-family: ${font('heading')(props) || font('default')(props)};
-  `
+          font-family: ${font('heading')(props) || font('default')(props)};
+        `
       : ``};
 
   ${(props) => theme(`native.Heading${props.type ? `.${props.type}` : ''}`, 'styles.base')(props)};

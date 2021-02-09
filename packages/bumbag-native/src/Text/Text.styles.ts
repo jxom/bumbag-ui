@@ -8,15 +8,15 @@ export const StyledText = styled(Text)`
   ${(props) =>
     font('default')(props)
       ? `
-        font-family: ${font('default')(props)};
+          font-family: ${font('default')(props)};
         `
       : ''}
 
   ${
     Platform.OS === 'web'
       ? `
-      font-size: unset;
-    `
+          font-size: unset;
+        `
       : ''
   }
 

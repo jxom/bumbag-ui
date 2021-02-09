@@ -6,8 +6,8 @@ export const StyledStack = styled(View)`
   ${(props: any) =>
     props.orientation === 'horizontal'
       ? `
-    flex-direction: row;
-  `
+          flex-direction: row;
+        `
       : ''}
 
   ${theme('native.Stack', 'styles.base')};
