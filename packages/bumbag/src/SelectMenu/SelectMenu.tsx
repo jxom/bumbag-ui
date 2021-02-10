@@ -24,6 +24,7 @@ import { Text } from '../Text';
 import { SelectMenuItem } from './SelectMenuItem';
 import { SelectMenuStaticItem } from './SelectMenuStaticItem';
 import * as styles from './SelectMenu.styles';
+import { Size } from '../types';
 
 type Option = { key: number | string; label: string; value: any };
 type Options = Array<Option>;
@@ -63,6 +64,8 @@ export type LocalSelectMenuProps = {
   popoverHeight?: string;
   /** Sets the placeholder of the search input. */
   placeholder?: string;
+  /** Sets the size of the select menu button */
+  size?: Size;
   /** Sets the visual state of the Autosuggest. */
   state?: string;
   /** Sets the value of the Autosuggest. Must be in the shape of an option (i.e. `{ key: 1, label: 'Jake', value: 'legend' }`). */
@@ -163,6 +166,7 @@ const useProps = createHook<SelectMenuProps>(
       searchInputProps,
       placeholder,
       state: fieldState,
+      size,
       tagProps,
       value,
       ...restProps
@@ -460,6 +464,7 @@ const useProps = createHook<SelectMenuProps>(
               placeholder={placeholder}
               renderDisclosure={renderDisclosure}
               selectedOptions={selectedOptions}
+              size={size}
               state={fieldState}
               {...buttonProps}
             />
@@ -671,7 +676,7 @@ function SelectMenuButton(props: any) {
 //////////////////////////////////////////////////////////////////
 
 function SelectMenuSearchInput(props: any) {
-  const { autoFocus, onChange, searchInputProps, value, ...restProps } = props;
+  const { autoFocus, onChange, searchInputProps, size, value, ...restProps } = props;
 
   const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
@@ -697,6 +702,7 @@ function SelectMenuSearchInput(props: any) {
         placeholder="Type to search..."
         value={value}
         autoFocus={autoFocus}
+        size={size}
         {...searchInputProps}
       />
     </Box>
