@@ -20,7 +20,9 @@ export function Provider(props: Omit<ProviderProps, 'theme'> & { theme?: ThemeCo
     newTheme = merge(coreTheme, {
       // @ts-ignore
       native: merge(theme, newTheme),
-      breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}),
+      breakpoints: merge(theme.breakpoints || {}, newTheme.breakpoints || {}, {
+        arrayMerge: (_, sourceArray) => sourceArray,
+      }),
       borders: merge(theme.borders || {}, newTheme.borders || {}),
       borderRadii: merge(theme.borderRadii || {}, newTheme.borderRadii || {}),
       fontSizes: merge(theme.fontSizes || {}, newTheme.fontSizes || {}),
