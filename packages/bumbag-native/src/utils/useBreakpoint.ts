@@ -28,7 +28,7 @@ export function useBreakpoint(direction: Direction, breakpoint: string) {
       const maxSize = directionBreakpoints[breakpoint];
 
       const targetBreakpointIndex = directionBreakpointsArray.findIndex((bp) => bp[0] === breakpoint) - 1;
-      const minSize = directionBreakpointsArray?.[targetBreakpointIndex]?.[1];
+      const minSize = directionBreakpointsArray?.[targetBreakpointIndex]?.[1] || 0;
 
       return size < maxSize && size >= minSize;
     }
