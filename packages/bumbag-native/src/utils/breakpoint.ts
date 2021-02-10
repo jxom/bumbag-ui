@@ -7,37 +7,57 @@ export function breakpoint(direction, values) {
     const directionBreakpoints = breakpoints[direction];
     const size = Dimensions.get('window')[direction];
 
-    const directionBreakpointsArray = Object.entries(directionBreakpoints).reverse();
-
-    let hasMatched;
     let value = values.default;
-    directionBreakpointsArray.forEach(([breakpoint, upperLimit], index) => {
-      if (hasMatched) return;
 
-      const lowerLimit = directionBreakpointsArray?.[index + 1]?.[1] || 0;
+    function getValueFromDirectionBreakpoints(directionBreakpoints) {
+      const directionBreakpointsArray = Object.entries(directionBreakpoints).reverse();
 
-      // 'md', 'lg', etc takes first precedence
-      if (size <= upperLimit && size > lowerLimit) {
-        const matchedValue = values[breakpoint];
-        value = matchedValue || value;
-        hasMatched = Boolean(matchedValue);
-      }
+      let hasMatched;
+      let value;
+      directionBreakpointsArray.forEach(([breakpoint, upperLimit], index) => {
+        if (hasMatched) return;
 
-      // 'min-md', 'min-lg', etc takes second precedence
-      if (size > lowerLimit) {
-        const matcher = `min-${breakpoint}`;
-        const matchedValue = values[matcher];
-        value = matchedValue || value;
-        hasMatched = Boolean(matchedValue);
-      }
+        const lowerLimit = directionBreakpointsArray?.[index + 1]?.[1] || 0;
 
-      // 'max-md', 'max-lg', etc takes third precedence
-      if (size <= upperLimit) {
-        const matcher = `max-${breakpoint}`;
-        value = values[matcher] || value;
-      }
-    });
+        // 'md', 'lg', etc takes first precedence
+        if (size < upperLimit && size >= lowerLimit) {
+          const matchedValue = values[breakpoint];
+          value = matchedValue || value;
+          hasMatched = Boolean(matchedValue);
+        }
 
+        // 'min-md', 'min-lg', etc takes second precedence
+        if (size >= lowerLimit) {
+          const matcher = `min-${breakpoint}`;
+          const matchedValue = values[matcher];
+          value = matchedValue || value;
+          hasMatched = Boolean(matchedValue);
+        }
+
+        // 'max-md', 'max-lg', etc takes third precedence
+        if (size < upperLimit) {
+          const matcher = `max-${breakpoint}`;
+          value = values[matcher] || value;
+        }
+      });
+
+      return value;
+    }
+
+    if (Array.isArray(directionBreakpoints)) {
+      directionBreakpoints.forEach((directionBreakpoints) => {
+        const maybeValue = getValueFromDirectionBreakpoints(directionBreakpoints);
+        if (maybeValue) {
+          value = maybeValue;
+        }
+      });
+      return value;
+    }
+
+    const maybeValue = getValueFromDirectionBreakpoints(directionBreakpoints);
+    if (maybeValue) {
+      value = maybeValue;
+    }
     return value;
   };
 }

@@ -39,6 +39,7 @@ const orders = [
     ],
   },
   { 'the-box-primitive': ['box', 'flex', 'css-props'] },
+  { hooks: [] },
   { layout: [] },
   { typography: [] },
   { components: [] },

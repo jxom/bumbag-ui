@@ -7,18 +7,22 @@ const breakpoints = {
     xl: 844,
     '2xl': 1024,
   },
-  width: {
-    xs: 320,
-    sm: 375,
-    md: 414,
-    mobile: 480,
-    tablet: 768,
-    lg: 768,
-    desktop: 1024,
-    xl: 1024,
-    widescreen: 1200,
-    fullHD: 1440,
-  },
+  width: [
+    {
+      xs: 320,
+      sm: 375,
+      md: 414,
+      lg: 768,
+      xl: 1024,
+    },
+    {
+      mobile: 480,
+      tablet: 768,
+      desktop: 1024,
+      widescreen: 1200,
+      fullHD: 1440,
+    },
+  ],
 };
 
 export default {
