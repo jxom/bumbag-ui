@@ -2,6 +2,7 @@ import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { SelectMenu } from '../SelectMenu';
 import render from '../../utils/_tests/render';
+import { Size } from '../../types';
 
 describe('props', () => {
   it('should render correctly', () => {
@@ -84,6 +85,28 @@ describe('overrides', () => {
       />
     );
     expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+describe('sizes', () => {
+  ['small', 'medium', 'large'].forEach((size) => {
+    it(`should render ${size} correctly`, () => {
+      const { container } = render(
+        <SelectMenu
+          size={size as Size}
+          onChange={jest.fn()}
+          options={[
+            { key: 1, label: 'Apples', value: 'apples' },
+            { key: 2, label: 'Bananas', value: 'bananas' },
+            { key: 3, label: 'Oranges', value: 'oranges' },
+            { key: 4, label: 'Mangos', value: 'mangos' },
+          ]}
+          placeholder="Search for a fruit..."
+          value={undefined}
+        />
+      );
+      expect(container.firstChild).toMatchSnapshot();
+    });
   });
 });
 
