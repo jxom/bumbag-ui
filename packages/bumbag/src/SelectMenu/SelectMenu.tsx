@@ -676,7 +676,7 @@ function SelectMenuButton(props: any) {
 //////////////////////////////////////////////////////////////////
 
 function SelectMenuSearchInput(props: any) {
-  const { autoFocus, onChange, searchInputProps, size, value, ...restProps } = props;
+  const { autoFocus, onChange, searchInputProps, value, ...restProps } = props;
 
   const { overrides, themeKey } = React.useContext(SelectMenuContext);
 
@@ -702,7 +702,6 @@ function SelectMenuSearchInput(props: any) {
         placeholder="Type to search..."
         value={value}
         autoFocus={autoFocus}
-        size={size}
         {...searchInputProps}
       />
     </Box>
