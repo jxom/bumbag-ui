@@ -1,5 +1,6 @@
 <p align="center"><img src="./bumbag-logo.png" width="500px"></img></p>
 
+
 <p align="center">Est. 2018 – Formally known as Fannypack</p>
 
 ## Getting started
