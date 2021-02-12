@@ -11,6 +11,8 @@ export function useBreakpoint(direction: Direction, breakpoint: string) {
   const directionBreakpoints = breakpoints[direction];
   const size = Dimensions.get('window')[direction];
 
+  if (!breakpoint) return false;
+
   function isWithin(directionBreakpoints) {
     const directionBreakpointsArray = Object.entries(directionBreakpoints);
 

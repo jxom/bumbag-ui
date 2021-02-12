@@ -6,6 +6,7 @@ export * from './Flex';
 export * from './Heading';
 export * from './Icon';
 export * from './Image';
+export * from './Level';
 export * from './Provider';
 export * from './Set';
 export * from './Spinner';

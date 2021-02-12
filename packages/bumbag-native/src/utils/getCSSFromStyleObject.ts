@@ -99,7 +99,7 @@ function isPseudo(selector) {
   return states.includes(selector);
 }
 
-function getAlignmentStyles({ attribute, value, props }) {
+export function getAlignmentStyles({ attribute, value, props }) {
   const alignYAttribute = props.display && props.display.includes('flex') ? 'align-items' : 'justify-content';
   const alignXAttribute = props.display && props.display.includes('flex') ? 'justify-content' : 'align-items';
   return `
