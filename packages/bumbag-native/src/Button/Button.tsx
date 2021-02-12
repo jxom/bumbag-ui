@@ -5,11 +5,12 @@ import { createComponent, createElement, createHook, useTheme } from 'bumbag/uti
 import { ButtonType, Omit, Size, Palette } from 'bumbag/types';
 
 import { Box, BoxProps } from '../Box';
-import { Icon, IconProps } from '../Icon';
-import { Text, TextProps } from '../../Text/Text';
-import { Spinner, SpinnerProps } from '../../Spinner/Spinner';
-import { palette } from '../utils';
+import { IconProps } from '../Icon';
+import { SpinnerProps } from '../../Spinner/Spinner';
+
 import * as styles from './Button.styles';
+import { ButtonIcon } from './ButtonIcon';
+import { ButtonText } from './ButtonText';
 
 export type LocalButtonProps = {
   /** Icon that appears on the right side of the button. */
@@ -30,6 +31,8 @@ export type LocalButtonProps = {
 };
 export type ButtonProps = BoxProps & RNTouchableOpacityProps & LocalButtonProps;
 
+export const ButtonContext = React.createContext<LocalButtonProps>({});
+
 const useProps = createHook<ButtonProps>(
   (props) => {
     const {
@@ -47,8 +50,6 @@ const useProps = createHook<ButtonProps>(
       variant,
     } = props;
 
-    const { theme } = useTheme();
-
     const boxProps = Box.useProps(props);
 
     const activeOpacity = Platform.OS === 'web' || isStatic ? '1' : props.activeOpacity;
@@ -61,42 +62,52 @@ const useProps = createHook<ButtonProps>(
       spinnerColor = 'defaultInverted';
     }
 
+    const contextValue = React.useMemo(
+      () => ({
+        color,
+        palette,
+        size,
+        variant,
+      }),
+      [color, palette, size, variant]
+    );
+
+    const isString = typeof children === 'string' || !children?.some?.((child) => typeof child !== 'string');
+
     return {
       ...boxProps,
       children: (
-        <React.Fragment>
-          {props.isLoading && <styles.ButtonSpinner color={spinnerColor} {...spinnerProps} />}
-          <ConditionalWrap condition={isLoading} wrap={(children) => <Box opacity="0">{children}</Box>}>
-            <React.Fragment>
-              {iconBefore && (
-                <styles.ButtonIcon
-                  color={styles.getButtonIconColor({ ...props, theme })}
+        <ButtonContext.Provider value={contextValue}>
+          <React.Fragment>
+            {props.isLoading && <styles.ButtonSpinner color={spinnerColor} {...spinnerProps} />}
+            <ConditionalWrap condition={isLoading} wrap={(children) => <Box opacity="0">{children}</Box>}>
+              <React.Fragment>
+                {iconBefore && (
+                  <ButtonIcon
+                    // @ts-ignore
+                    isBefore
+                    icon={iconBefore}
+                    {...iconBeforeProps}
+                  />
+                )}
+                {isString ? (
                   // @ts-ignore
-                  isBefore
-                  icon={iconBefore}
-                  {...iconBeforeProps}
-                />
-              )}
-              {typeof children === 'string' ? (
-                // @ts-ignore
-                <styles.ButtonText color={color} palette={palette} size={size} variant={variant}>
-                  {children}
-                </styles.ButtonText>
-              ) : (
-                children
-              )}
-              {iconAfter && (
-                <styles.ButtonIcon
-                  color={styles.getButtonIconColor({ ...props, theme })}
-                  // @ts-ignore
-                  isAfter
-                  icon={iconAfter}
-                  {...iconAfterProps}
-                />
-              )}
-            </React.Fragment>
-          </ConditionalWrap>
-        </React.Fragment>
+                  <ButtonText>{children}</ButtonText>
+                ) : (
+                  children
+                )}
+                {iconAfter && (
+                  <ButtonIcon
+                    // @ts-ignore
+                    isAfter
+                    icon={iconAfter}
+                    {...iconAfterProps}
+                  />
+                )}
+              </React.Fragment>
+            </ConditionalWrap>
+          </React.Fragment>
+        </ButtonContext.Provider>
       ),
       activeOpacity,
     };

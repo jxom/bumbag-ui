@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { Box } from '../../Box';
-import { Button } from '../Button';
+import { Button } from '../index';
 import render from '../../utils/_tests/render';
 
 describe('props', () => {

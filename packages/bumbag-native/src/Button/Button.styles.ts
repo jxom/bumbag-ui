@@ -212,7 +212,7 @@ export const getLinkButtonProperties = (props) => `
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-export const ButtonText = styled(Text)`
+export const StyledButtonText = styled(Text)`
   color: ${(props: any) => palette(`${props.palette}Inverted`)(props)};
   font-weight: ${fontWeight('semibold')};
 
@@ -308,7 +308,7 @@ export const getLinkButtonTextProperties = (props) => `
 
 ////////////////////////////////////////////////////////
 
-export const ButtonIcon = styled(Icon)`
+export const StyledButtonIcon = styled(Icon)`
   ${(props) =>
     props.isBefore
       ? `
