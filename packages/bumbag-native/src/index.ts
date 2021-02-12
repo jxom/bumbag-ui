@@ -7,6 +7,7 @@ export * from './Heading';
 export * from './Icon';
 export * from './Image';
 export * from './Provider';
+export * from './Set';
 export * from './Spinner';
 export * from './Stack';
 export * from './Text';

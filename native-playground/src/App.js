@@ -9,6 +9,7 @@ import ButtonPage from './routes/components/Button';
 import HeadingPage from './routes/components/Heading';
 import IconPage from './routes/components/Icon';
 import ImagePage from './routes/components/Image';
+import SetPage from './routes/components/Set';
 import TextPage from './routes/components/Text';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
               <Route exact path="/components/heading" component={HeadingPage} />
               <Route exact path="/components/icon" component={IconPage} />
               <Route exact path="/components/image" component={ImagePage} />
+              <Route exact path="/components/set" component={SetPage} />
               <Route exact path="/components/text" component={TextPage} />
             </Box>
           </Box.Scroll>

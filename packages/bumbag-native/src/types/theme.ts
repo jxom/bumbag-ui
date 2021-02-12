@@ -9,6 +9,7 @@ import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { SpinnerProps } from '../Spinner';
+import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
 import { TextProps } from '../Text';
 
@@ -224,6 +225,17 @@ export type ImageThemeConfig = {
   modes?: Variant<ImageThemeConfig>;
 };
 
+export type SetThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+    vertical?: ThemeAttribute<Stylesheet>;
+    horizontal?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<SetProps>;
+  variants?: Variant<SetThemeConfig>;
+  modes?: Variant<SetThemeConfig>;
+};
+
 export type SpinnerThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -277,6 +289,7 @@ export type ThemeConfig = {
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
+  Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;
   Text?: TextThemeConfig;

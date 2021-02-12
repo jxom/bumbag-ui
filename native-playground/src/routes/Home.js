@@ -21,6 +21,9 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/image">
         <Text>Image</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/set">
+        <Text>Set</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/text">
         <Text>Text</Text>
       </Link>
