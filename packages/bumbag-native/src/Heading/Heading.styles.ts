@@ -15,5 +15,6 @@ export const StyledHeading = styled(Text)`
         `
       : ``};
 
-  ${(props) => theme(`native.Heading${props.type ? `.${props.type}` : ''}`, 'styles.base')(props)};
+  ${theme('native.Heading', 'styles.base')};
+  ${(props) => (props.type ? theme(`native.Heading.${props.type}`, 'styles.base')(props) : '')};
 `;
