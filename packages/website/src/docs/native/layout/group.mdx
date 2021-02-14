@@ -1,0 +1,70 @@
+import { Group as BBGroup } from 'bumbag-native';
+import Theme from '../../../components/Theme';
+
+# Group
+
+## Import
+
+```jsx
+import { Group } from 'bumbag-native';
+```
+
+## Usage
+
+The `<Group>` component groups components together with their respective `border-radius`.
+
+```jsx-live
+<Group>
+  <Button>Send</Button>
+  <Button>Receive</Button>
+  <Button>Cancel</Button>
+</Group>
+```
+
+```jsx-live
+<Group borderRadius="5">
+  <Button>Send</Button>
+  <Button>Receive</Button>
+  <Button>Cancel</Button>
+</Group>
+```
+
+### Vertical groups
+
+A group can also be aligned vertically.
+
+```jsx-live
+<Group orientation="vertical">
+  <Button>Send</Button>
+  <Button>Receive</Button>
+  <Button>Cancel</Button>
+</Group>
+```
+
+### Responsive breakpoint
+
+A group can snap from horizontal to vertical after a given breakpoint with the `verticalBelow` prop.
+
+```jsx-live
+<Group verticalBelow="mobile">
+  <Button>Send</Button>
+  <Button>Receive</Button>
+  <Button>Cancel</Button>
+</Group>
+```
+
+## Props
+
+### Group Props
+
+
+## Theming
+
+<Theme
+  component={BBGroup}
+  overrides={['Group.styles.base']}>
+  <Button>Hello</Button>
+  <Button>My</Button>
+  <Button>Good</Button>
+  <Button>Friends</Button>
+</Theme>

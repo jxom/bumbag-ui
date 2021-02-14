@@ -5,6 +5,8 @@ import { ParsedIcons, ParseIconsOpts } from 'bumbag/utils/parseIcons';
 
 import { BoxKeyboardAvoidingProps, BoxProps, BoxSafeProps, BoxScrollProps, BoxTouchableProps } from '../Box';
 import { ButtonProps } from '../Button';
+import { FlexProps } from '../Flex';
+import { GroupProps } from '../Group';
 import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
@@ -126,9 +128,20 @@ export type FlexThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
   };
-  defaultProps?: Partial<BoxProps>;
-  variants?: Variant<BoxThemeConfig>;
-  modes?: Variant<BoxThemeConfig>;
+  defaultProps?: Partial<FlexProps>;
+  variants?: Variant<FlexThemeConfig>;
+  modes?: Variant<FlexThemeConfig>;
+};
+
+export type GroupThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+    vertical?: ThemeAttribute<Stylesheet>;
+    horizontal?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<GroupProps>;
+  variants?: Variant<GroupThemeConfig>;
+  modes?: Variant<GroupThemeConfig>;
 };
 
 export type HeadingThemeConfig = {
@@ -296,6 +309,7 @@ export type ThemeConfig = {
   Box?: BoxThemeConfig;
   Button?: ButtonThemeConfig;
   Flex?: FlexThemeConfig;
+  Group?: GroupThemeConfig;
   Heading?: HeadingThemeConfig;
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;

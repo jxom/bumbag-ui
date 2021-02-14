@@ -30,7 +30,17 @@ const FLEX_VERTICAL_ALIGN_MAP = {
 const alignAttributes = ['alignX', 'alignY'];
 const altitudeAttributes = ['altitude'];
 const borderAttributes = ['border'];
-const borderRadiusAttributes = ['borderRadius'];
+const borderRadiusAttributes = [
+  'borderRadius',
+  'borderLeftRadius',
+  'borderRightRadius',
+  'borderTopRadius',
+  'borderBottomRadius',
+  'borderTopLeftRadius',
+  'borderBottomLeftRadius',
+  'borderTopRightRadius',
+  'borderBottomRightRadius',
+];
 const colorAttributes = [
   'color',
   'backgroundColor',
@@ -87,6 +97,10 @@ const attributeMaps = {
   paddingY: ['paddingTop', 'paddingBottom'],
   marginX: ['marginLeft', 'marginRight'],
   paddingX: ['paddingLeft', 'paddingRight'],
+  borderTopRadius: ['borderTopLeftRadius', 'borderTopRightRadius'],
+  borderBottomRadius: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
+  borderLeftRadius: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
+  borderRightRadius: ['borderTopRightRadius', 'borderBottomRightRadius'],
 };
 
 const platforms = ['web', 'native', 'ios', 'android'];

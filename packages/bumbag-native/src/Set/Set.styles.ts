@@ -45,7 +45,7 @@ function getFillProps({ isFilled }: any) {
     `;
   }
   return `
-    align-items: flex-start
+    align-items: flex-start;
   `;
 }
 
