@@ -18,7 +18,7 @@ export function GlobalStyles() {
           background-color: ${palette('background')(styleProps)};
           box-sizing: border-box;
           font-family: ${font('default')(styleProps)};
-          font-size: ${fontSize('200')(styleProps)}px;
+          font-size: ${theme('global', 'fontSize')(styleProps) * fontSize('200')(styleProps)}px;
           line-height: ${lineHeight('default')(styleProps)};
           margin: 0;
           padding: 0;
