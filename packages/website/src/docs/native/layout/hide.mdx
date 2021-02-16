@@ -1,0 +1,45 @@
+# Hide
+
+## Import
+
+```jsx
+import { Hide } from 'bumbag-native';
+```
+
+## Usage
+
+The `<Hide>` component can be used to hide elements on the screen above or below a particular breakpoint, but **show them otherwise**.
+
+[Breakpoints can be referenced here](/native/breakpoints).
+
+```jsx-live
+<Hide below="lg">
+  <Text>This should hide on viewports below lg width (768px).</Text>
+</Hide>
+<Hide above="lg">
+  <Text>This should hide on viewports above or equal to lg width (768px).</Text>
+</Hide>
+```
+
+```jsx-live
+<Hide below="lg" direction="height">
+  <Text>This should hide on viewports below lg height (736px).</Text>
+</Hide>
+<Hide above="lg" direction="height">
+  <Text>This should hide on viewports above or equal to lg height (736px).</Text>
+</Hide>
+```
+
+## Props
+
+### Hide Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">above</Code>** <Code fontSize="100" palette="primary">string</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">below</Code>** <Code fontSize="100" palette="primary">string</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />

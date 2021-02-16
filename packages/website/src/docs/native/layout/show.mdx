@@ -1,0 +1,45 @@
+# Show
+
+## Import
+
+```jsx
+import { Show } from 'bumbag-native';
+```
+
+## Usage
+
+The `<Show>` component can be used to show elements on the screen above or below a particular breakpoint, but **hide them otherwise**.
+
+[Breakpoints can be referenced here](/native/breakpoints).
+
+```jsx-live
+<Show below="lg">
+  <Text>This should show on viewports below lg width (768px).</Text>
+</Show>
+<Show above="lg">
+  <Text>This should show on viewports above or equal to lg width (768px).</Text>
+</Show>
+```
+
+```jsx-live
+<Show below="lg" direction="height">
+  <Text>This should show on viewports below lg height (736px).</Text>
+</Show>
+<Show above="lg" direction="height">
+  <Text>This should show on viewports above or equal to lg height (736px).</Text>
+</Show>
+```
+
+## Props
+
+### Show Props
+
+<!-- Automatically generated -->
+
+**<Code fontSize="150" marginRight="major-1">above</Code>** <Code fontSize="100" palette="primary">string</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />
+
+**<Code fontSize="150" marginRight="major-1">below</Code>** <Code fontSize="100" palette="primary">string</Code>
+
+<Divider marginTop="major-2" marginBottom="major-2" />

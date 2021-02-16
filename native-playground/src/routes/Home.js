@@ -15,11 +15,17 @@ export default function App() {
       <Link component={TouchableOpacity} to="/components/heading">
         <Text>Heading</Text>
       </Link>
+      <Link component={TouchableOpacity} to="/components/hide">
+        <Text>Hide</Text>
+      </Link>
       <Link component={TouchableOpacity} to="/components/icon">
         <Text>Icon</Text>
       </Link>
       <Link component={TouchableOpacity} to="/components/image">
         <Text>Image</Text>
+      </Link>
+      <Link component={TouchableOpacity} to="/components/show">
+        <Text>Show</Text>
       </Link>
       <Link component={TouchableOpacity} to="/components/set">
         <Text>Set</Text>

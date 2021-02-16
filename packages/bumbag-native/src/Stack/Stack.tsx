@@ -27,7 +27,7 @@ const useProps = createHook<StackProps>(
       ...boxProps,
       children: children.map((child, i) => {
         let spacingKey = orientation === 'vertical' ? 'marginBottom' : 'marginRight';
-        let spacing = _spacing;
+        let spacing = child.props?.[spacingKey] || _spacing;
         if (i === children.length - 1) {
           spacing = undefined;
         }
