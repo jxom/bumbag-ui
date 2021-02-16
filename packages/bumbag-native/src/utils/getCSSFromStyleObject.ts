@@ -84,6 +84,10 @@ const spaceAttributes = [
   'grid-row-gap',
   'height',
   'width',
+  'minWidth',
+  'minHeight',
+  'maxWidth',
+  'maxHeight',
 ];
 const fontAttributes = ['font', 'fontFamily'];
 const fontSizeAttributes = ['fontSize'];
