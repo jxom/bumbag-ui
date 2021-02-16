@@ -303,7 +303,24 @@ Makes the button not interactable.
 
 <Divider marginTop="major-2" marginBottom="major-2" />
 
-**<Code fontSize="150" marginRight="major-1">spinnerProps</Code>** <Code fontSize="100" palette="primary">any</Code> 
+**<Code fontSize="150" marginRight="major-1">spinnerProps</Code>**  
+
+<Code isBlock palette="primary" fontSize="150" padding="minor-1" marginBottom="major-2">
+{`Pick<CSSProperties, "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "color"
+  | "_hover"
+  | "_hoveractive"
+  | "_focus"
+  | "_active"
+  | "_visited"
+  | "_disabled"
+  | "_groupHover"
+  | ... 501 more ...
+  | "zIndex"> & ... 4 more ... & LocalSpinnerProps`}
+</Code>
 
 Custom props for the isLoading spinner.
 
