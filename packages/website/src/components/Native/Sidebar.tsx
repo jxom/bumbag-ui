@@ -43,6 +43,7 @@ const orders = [
   { layout: [] },
   { typography: [] },
   { components: [] },
+  { form: [] },
 ];
 
 export default function DocsSidebar(props: any) {

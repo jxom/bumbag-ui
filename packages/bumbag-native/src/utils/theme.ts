@@ -2,6 +2,8 @@ import { theme as _theme } from 'styled-tools';
 import tinycolor from 'tinycolor2';
 
 import { ThemeConfig } from 'bumbag/types';
+import { useColorMode } from 'bumbag/ColorMode/ColorModeContext';
+import { useTheme } from 'bumbag/utils/useTheme';
 import { isFunction } from 'bumbag/utils/isFunction';
 import { get } from 'bumbag/utils/get';
 import { Platform } from 'react-native';
@@ -76,12 +78,16 @@ export function theme(themeKey: string, path?: string, defaultValue?: any) {
   };
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 export function altitude(selector?: string, defaultValue?: any) {
   return (props: { altitude?: string; theme?: ThemeConfig }) => {
     const altitude = theme('native.altitudes', selector || props.altitude, defaultValue)(props);
     return altitude;
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function border(selector?: string, defaultValue?: any) {
   return (props: { border?: string; theme?: ThemeConfig }) => {
@@ -90,12 +96,16 @@ export function border(selector?: string, defaultValue?: any) {
   };
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 export function borderRadius(selector?: string, defaultValue?: any) {
   return (props: { borderRadius?: string; theme?: ThemeConfig }) => {
     const borderRadius = theme('borderRadii', selector || props.borderRadius, defaultValue)(props);
     return borderRadius;
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function font(selector?: string, defaultValue?: any) {
   return (props: { font?: string; theme?: ThemeConfig }) => {
@@ -104,12 +114,16 @@ export function font(selector?: string, defaultValue?: any) {
   };
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 export function fontMetric(selector?: string) {
   return (props: { fontMetrics?: string; theme?: ThemeConfig }) => {
     const fontMetrics = theme('fontMetrics', selector || props.fontMetrics)(props);
     return fontMetrics;
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function fontSize(selector?: string, defaultValue?: any) {
   return (props: { fontSize?: string; theme?: ThemeConfig }) => {
@@ -119,12 +133,16 @@ export function fontSize(selector?: string, defaultValue?: any) {
   };
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 export function fontWeight(selector?: string, defaultValue?: any) {
   return (props: { fontWeight?: string; theme?: ThemeConfig }) => {
     const color = theme('fontWeights', selector || props.fontWeight, defaultValue)(props);
     return color;
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function lineHeight(selector?: string, defaultValue?: any) {
   return (props: { lineHeight?: string; theme?: ThemeConfig }) => {
@@ -133,12 +151,16 @@ export function lineHeight(selector?: string, defaultValue?: any) {
   };
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+
 export function letterSpacing(selector?: string, defaultValue?: any) {
   return (props: { letterSpacing?: string; theme?: ThemeConfig }) => {
     const letterSpacing = theme('letterSpacings', selector || props.letterSpacing, defaultValue)(props);
     return letterSpacing;
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function palette(_selector?: string, modes?: any) {
   return (props: { palette?: string; colorMode?: string; theme?: ThemeConfig }) => {
@@ -154,6 +176,14 @@ export function palette(_selector?: string, modes?: any) {
     return color;
   };
 }
+
+export function usePalette(selector: string, modes?: any) {
+  const { theme } = useTheme();
+  const { colorMode } = useColorMode();
+  return palette(selector, modes)({ colorMode, theme });
+}
+
+/////////////////////////////////////////////////////////////////////////////////
 
 export function space(_scalar: number | string | void, _scaleType: 'minor' | 'major' = 'minor') {
   return (props: { theme?: ThemeConfig }) => {
@@ -178,3 +208,5 @@ export function space(_scalar: number | string | void, _scaleType: 'minor' | 'ma
     }
   };
 }
+
+/////////////////////////////////////////////////////////////////////////////////

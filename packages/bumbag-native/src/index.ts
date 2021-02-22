@@ -1,5 +1,6 @@
 import './utils/resetWindow';
 
+export * from './Animated';
 export * from './Box';
 export * from './Button';
 export * from './Flex';
@@ -7,6 +8,7 @@ export * from './Group';
 export * from './Heading';
 export * from './Hide';
 export * from './Icon';
+export * from './Input';
 export * from './Image';
 export * from './Level';
 export * from './Provider';

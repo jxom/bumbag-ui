@@ -128,7 +128,19 @@ describe('applyTheme', () => {
         padding: 'major-2',
       },
     });
-    const { container } = render(<Card variant="test" />);
+    const { container } = render(
+      <Card variant="test">
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+      </Card>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -204,7 +216,19 @@ describe('variants', () => {
         },
       },
     });
-    const { container } = render(<Card variant="test" />);
+    const { container } = render(
+      <Card variant="test">
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+      </Card>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
@@ -314,7 +338,19 @@ describe('modes', () => {
         },
       },
     });
-    const { container } = render(<Card colorMode="test" />);
+    const { container } = render(
+      <Card colorMode="test">
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+        <Box backgroundColor="primaryTint" padding="major-2">
+          <Text>First</Text>
+        </Box>
+      </Card>
+    );
     expect(container.firstChild).toMatchSnapshot();
   });
 });

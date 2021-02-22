@@ -52,6 +52,20 @@ const useProps = createHook<BoxProps>(
     //
     // Example output:
     // style = { color: 'red', backgroundColor: 'blue' }
+    const animationStyles = React.useMemo(
+      () =>
+        Object.entries(props).reduce((styles, [key, value]) => {
+          if (value && typeof value === 'object' && '_listeners' in value) {
+            return {
+              ...styles,
+              [key]: value,
+            };
+          }
+          return styles;
+        }, {}),
+      [props]
+    );
+
     let style = useStyle(
       { ...props, ...props.style },
       {
@@ -64,11 +78,13 @@ const useProps = createHook<BoxProps>(
         },
       }
     );
+
     if (Array.isArray(props.style) || typeof props.style !== 'object') {
       props.style = [
         css`
           ${style}
         `,
+        animationStyles,
         ...(props.style || []),
       ];
     }

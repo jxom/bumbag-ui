@@ -1,0 +1,79 @@
+import Theme from '../../../components/Theme';
+import { Input, InputField } from 'bumbag-native';
+
+# Input
+
+The `<Input>` component is used in a form in order to retrieve input from the user.
+
+## Import
+
+```jsx
+import { Input, InputField } from 'bumbag-native'
+```
+
+## Usage
+
+```jsx-live
+<Input placeholder="Enter your name here..." />
+```
+
+```jsx-live
+<Input placeholder="Enter your name here..." variant="borderless" />
+```
+
+```jsx-live
+<Input placeholder="Enter your name here..." variant="underline" />
+```
+
+## With labels
+
+```jsx-live
+<Input label="Username" />
+```
+
+```jsx-live
+<Input label="Username" variant="borderless" />
+```
+
+```jsx-live
+<Input label="Username" variant="underline" />
+```
+
+### Fields
+
+TODO
+
+### Default values
+
+For uncontrolled inputs, set a default value using the `defaultValue` prop.
+
+```jsx-live
+<Input defaultValue="Bumbags rock!" />
+```
+
+### Disabled
+
+Make the input disabled with the `disabled` prop.
+
+```jsx-live
+<Input disabled defaultValue="Disabled field" />
+```
+
+### Sizes
+
+An input can come in different sizes - `small`, `medium`, `large`, or the default.
+
+```jsx-live
+<Input size="small" />
+<Input />
+<Input size="medium" />
+<Input size="large" />
+```
+
+## Props
+
+### Input Props
+
+## Theming
+
+### Input

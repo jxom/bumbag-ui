@@ -280,6 +280,9 @@ export function getCSSFromStyleObject(
           `;
         }
       }
+      // if (newValue._animation) {
+      //   return { [attribute]: newValue };
+      // }
       const newStyle = Object.entries(newValue || {}).reduce((prevStyle, [platform, value]) => {
         let newStyle;
         let newValue = value;

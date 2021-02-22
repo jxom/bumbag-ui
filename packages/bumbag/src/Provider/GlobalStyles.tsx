@@ -28,6 +28,10 @@ export function GlobalStyles() {
           fill: ${palette('text')(styleProps)};
         }
 
+        & input:focus {
+          outline: unset;
+        }
+
         *,
         *::before,
         *::after {
