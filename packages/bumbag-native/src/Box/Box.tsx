@@ -10,9 +10,8 @@ import { ThemeConfig } from '../types/theme';
 
 import * as styles from './Box.styles';
 
-type ComponentType<R> = React.ComponentType<R> & { useProps: any };
-
 export type LocalBoxProps = {
+  animated?: boolean;
   children?: React.ReactNode | ((props: BoxProps) => React.ReactNode);
   alignX?: 'left' | 'center' | 'right';
   alignY?: 'top' | 'center' | 'bottom';
@@ -46,12 +45,6 @@ const useProps = createHook<BoxProps>(
     props.focus = useFocus(boxRef);
     props.hoveractive = props.hover && props.active;
 
-    // Convert CSS props to an object.
-    // Example input:
-    // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
-    //
-    // Example output:
-    // style = { color: 'red', backgroundColor: 'blue' }
     const animationStyles = React.useMemo(
       () =>
         Object.entries(props).reduce((styles, [key, value]) => {
@@ -66,6 +59,12 @@ const useProps = createHook<BoxProps>(
       [props]
     );
 
+    // Convert CSS props to an object.
+    // Example input:
+    // props = { color: 'red', backgroundColor: 'blue', isEnabled: true }
+    //
+    // Example output:
+    // style = { color: 'red', backgroundColor: 'blue' }
     let style = useStyle(
       { ...props, ...props.style },
       {

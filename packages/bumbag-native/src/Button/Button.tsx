@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Platform, TouchableOpacityProps as RNTouchableOpacityProps } from 'react-native';
 import ConditionalWrap from 'conditional-wrap';
-import { createComponent, createElement, createHook, useTheme } from 'bumbag/utils';
+import { createComponent, createElement, createHook } from 'bumbag/utils';
 import { ButtonType, Omit, Size, Palette } from 'bumbag/types';
 
 import { Box, BoxProps } from '../Box';
 import { IconProps } from '../Icon';
-import { SpinnerProps } from '../../Spinner/Spinner';
+import { SpinnerProps } from '../Spinner/Spinner';
 
 import * as styles from './Button.styles';
 import { ButtonIcon } from './ButtonIcon';
@@ -72,7 +72,9 @@ const useProps = createHook<ButtonProps>(
       [color, palette, size, variant]
     );
 
-    const isString = typeof children === 'string' || !children?.some?.((child) => typeof child !== 'string');
+    const isString =
+      typeof children === 'string' ||
+      (Array.isArray(children) && !children.some?.((child) => typeof child !== 'string'));
 
     return {
       ...boxProps,

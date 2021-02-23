@@ -13,30 +13,28 @@ import { Input, InputField } from 'bumbag-native'
 
 ## Usage
 
-```jsx-live
-<Input placeholder="Enter your name here..." />
+```live
+###tab=Default,type=jsx-live
+<Input placeholder="Enter your name here..." />###
+
+###tab=Borderless,type=jsx-live
+<Input placeholder="Enter your name here..." variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input placeholder="Enter your name here..." variant="underline" />###
 ```
 
-```jsx-live
-<Input placeholder="Enter your name here..." variant="borderless" />
-```
+## Labels
 
-```jsx-live
-<Input placeholder="Enter your name here..." variant="underline" />
-```
+```live
+###tab=Default,type=jsx-live
+<Input label="Username" />###
 
-## With labels
+###tab=Borderless,type=jsx-live
+<Input label="Username" variant="borderless" />###
 
-```jsx-live
-<Input label="Username" />
-```
-
-```jsx-live
-<Input label="Username" variant="borderless" />
-```
-
-```jsx-live
-<Input label="Username" variant="underline" />
+###tab=Underline,type=jsx-live
+<Input label="Username" variant="underline" />###
 ```
 
 ### Fields
@@ -55,19 +53,45 @@ For uncontrolled inputs, set a default value using the `defaultValue` prop.
 
 Make the input disabled with the `disabled` prop.
 
-```jsx-live
-<Input disabled defaultValue="Disabled field" />
+```live
+###tab=Default,type=jsx-live
+<Input disabled label="Username" />###
+
+###tab=Borderless,type=jsx-live
+<Input disabled label="Username" variant="borderless" />###
+
+###tab=Underline,type=jsx-live
+<Input disabled label="Username" variant="underline" />###
 ```
 
 ### Sizes
 
 An input can come in different sizes - `small`, `medium`, `large`, or the default.
 
-```jsx-live
-<Input size="small" />
-<Input />
-<Input size="medium" />
-<Input size="large" />
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input label="Username" size="small" />
+  <Input label="Username" />
+  <Input label="Username" size="medium" />
+  <Input label="Username" size="large" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input label="Username" size="small" variant="borderless" />
+  <Input label="Username" variant="borderless" />
+  <Input label="Username" size="medium" variant="borderless" />
+  <Input label="Username" size="large" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input label="Username" size="small" variant="underline" />
+  <Input label="Username" variant="underline" />
+  <Input label="Username" size="medium" variant="underline" />
+  <Input label="Username" size="large" variant="underline" />
+</Stack>###
 ```
 
 ## Props

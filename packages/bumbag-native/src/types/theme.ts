@@ -11,6 +11,7 @@ import { HeadingProps } from '../Heading';
 import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { LevelProps } from '../Level';
+import { PressableProps } from '../Pressable';
 import { SpinnerProps } from '../Spinner';
 import { SetProps } from '../Set';
 import { StackProps } from '../Stack';
@@ -248,6 +249,15 @@ export type LevelThemeConfig = {
   modes?: Variant<LevelThemeConfig>;
 };
 
+export type PressableThemeConfig = {
+  styles?: {
+    base?: ThemeAttribute<Stylesheet>;
+  };
+  defaultProps?: Partial<PressableProps>;
+  variants?: Variant<PressableThemeConfig>;
+  modes?: Variant<PressableThemeConfig>;
+};
+
 export type SetThemeConfig = {
   styles?: {
     base?: ThemeAttribute<Stylesheet>;
@@ -314,6 +324,7 @@ export type ThemeConfig = {
   Icon?: IconThemeConfig;
   Image?: ImageThemeConfig;
   Level?: LevelThemeConfig;
+  Pressable?: PressableThemeConfig;
   Set?: SetThemeConfig;
   Spinner?: SpinnerThemeConfig;
   Stack?: StackThemeConfig;

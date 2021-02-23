@@ -34,23 +34,23 @@ export const StyledButton = styled(TouchableOpacity)`
   ${(props: any) => (props.size ? getButtonSizeProperties(props) : '')};
   ${(props: any) => (props.size ? getButtonSizeOverrides(props) : '')};
 
-  ${(props: any) => (props.isLoading ? getLoadingButtonProperties(props) : '')};
-  ${(props) => (props.isLoading ? theme('native.Button', `styles.loading`)(props) : '')}
+  ${(props: any) => (props.isLoading ? getLoadingButtonProperties() : '')};
+  ${(props: any) => (props.isLoading ? theme('native.Button', `styles.loading`)(props) : '')}
 
-  ${(props: any) => (props.isStatic ? getStaticButtonProperties(props) : '')};
-  ${(props) => (props.isStatic ? theme('native.Button', `styles.static`)(props) : '')}
+  ${(props: any) => (props.isStatic ? getStaticButtonProperties() : '')};
+  ${(props: any) => (props.isStatic ? theme('native.Button', `styles.static`)(props) : '')}
 
   ${(props: any) => (isInteractive(props) ? getInteractiveButtonProperties(props) : '')};
   ${(props: any) => (isInteractive(props) ? getInteractiveButtonOverrides(props) : '')};
 
   ${(props: any) => (props.variant === 'outlined' ? getOutlinedButtonProperties(props) : '')};
-  ${(props) => (props.variant === 'outlined' ? theme('native.Button', `styles.outlined`)(props) : '')}
+  ${(props: any) => (props.variant === 'outlined' ? theme('native.Button', `styles.outlined`)(props) : '')}
 
   ${(props: any) => (props.variant === 'link' ? getLinkButtonProperties(props) : '')};
-  ${(props) => (props.variant === 'link' ? theme('native.Button', `styles.link`)(props) : '')}
+  ${(props: any) => (props.variant === 'link' ? theme('native.Button', `styles.link`)(props) : '')}
 
   ${(props: any) => (props.variant === 'ghost' ? getGhostButtonProperties(props) : '')};
-  ${(props) => (props.variant === 'ghost' ? theme('native.Button', `styles.ghost`)(props) : '')}
+  ${(props: any) => (props.variant === 'ghost' ? theme('native.Button', `styles.ghost`)(props) : '')}
 `;
 
 export const getDisabledButtonProperties = (props: any) => `
@@ -66,7 +66,7 @@ export const getDisabledButtonProperties = (props: any) => `
   }
 `;
 
-export const getButtonSizeProperties = (props) => {
+export const getButtonSizeProperties = (props: any) => {
   const styles = {
     small: `
       min-height: ${space(8)(props)}px;
@@ -85,7 +85,7 @@ export const getButtonSizeProperties = (props) => {
   return styles[props.size];
 };
 
-export const getButtonSizeOverrides = (props) => {
+export const getButtonSizeOverrides = (props: any) => {
   const styles = {
     small: theme('native.Button', `styles.sizes.small`)(props),
     default: theme('native.Button', `styles.sizes.default`)(props),
@@ -95,7 +95,7 @@ export const getButtonSizeOverrides = (props) => {
   return styles[props.size];
 };
 
-export const getLoadingButtonProperties = (props: any) => `
+export const getLoadingButtonProperties = () => `
   ${
     Platform.OS === 'web'
       ? `
@@ -106,7 +106,7 @@ export const getLoadingButtonProperties = (props: any) => `
   }
 `;
 
-export const getStaticButtonProperties = (props: any) => `
+export const getStaticButtonProperties = () => `
   ${
     Platform.OS === 'web'
       ? `
@@ -148,7 +148,7 @@ export const getInteractiveButtonOverrides = (props: any) => {
   return '';
 };
 
-export const getOutlinedButtonProperties = (props) => `
+export const getOutlinedButtonProperties = (props: any) => `
   background-color: ${palette('default')(props)};
   border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
 
@@ -171,7 +171,7 @@ export const getOutlinedButtonProperties = (props) => `
   }
 `;
 
-export const getGhostButtonProperties = (props) => `
+export const getGhostButtonProperties = (props: any) => `
   background-color: transparent;
   border: transparent;
 
@@ -192,7 +192,7 @@ export const getGhostButtonProperties = (props) => `
   }
 `;
 
-export const getLinkButtonProperties = (props) => `
+export const getLinkButtonProperties = (props: any) => `
   background-color: transparent;
   border: transparent;
 
@@ -226,7 +226,7 @@ export const StyledButtonText = styled(Text)`
   ${(props: any) => props.variant === 'ghost' && getGhostButtonTextProperties(props)};
 `;
 
-export const getButtonTextSizeProperties = (props) => {
+export const getButtonTextSizeProperties = (props: any) => {
   const styles = {
     small: `
       font-size: ${fontSize('100')(props)}px;
@@ -266,13 +266,13 @@ export const getInteractiveButtonTextProperties = (props: any) => `
   }
 `;
 
-export const getOutlinedButtonTextProperties = (props) => `
+export const getOutlinedButtonTextProperties = (props: any) => `
   color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
 
   ${theme('native.Button', `Text.styles.outlined`)(props)};
 `;
 
-export const getGhostButtonTextProperties = (props) => `
+export const getGhostButtonTextProperties = (props: any) => `
   color: ${
     props.palette === 'default'
       ? palette('defaultInverted')(props)
@@ -282,7 +282,7 @@ export const getGhostButtonTextProperties = (props) => `
   ${theme('native.Button', `Text.styles.ghost`)(props)};
 `;
 
-export const getLinkButtonTextProperties = (props) => `
+export const getLinkButtonTextProperties = (props: any) => `
   color: ${
     props.palette === 'default'
       ? palette('text')(props)
@@ -309,28 +309,28 @@ export const getLinkButtonTextProperties = (props) => `
 ////////////////////////////////////////////////////////
 
 export const StyledButtonIcon = styled(Icon)`
-  ${(props) =>
+  ${(props: any) =>
     props.isBefore
       ? `
       margin-left: -${space(1)(props)}px;
       margin-right: ${space(2)(props)}px;
     `
       : ''};
-  ${(props) => (props.isBefore ? theme('native.Button.Icon', `styles.before`)(props) : '')}
+  ${(props: any) => (props.isBefore ? theme('native.Button.Icon', `styles.before`)(props) : '')}
 
-  ${(props) =>
+  ${(props: any) =>
     props.isAfter
       ? `
       margin-left: ${space(2)(props)}px;
       margin-right: -${space(1)(props)}px;
     `
       : ''};
-  ${(props) => (props.isAfter ? theme('native.Button.Icon', `styles.after`)(props) : '')}
+  ${(props: any) => (props.isAfter ? theme('native.Button.Icon', `styles.after`)(props) : '')}
 
-  ${(props) => theme('native.Button.Icon', `styles.base`)(props)};
+  ${(props: any) => theme('native.Button.Icon', `styles.base`)(props)};
 `;
 
-export const getButtonIconColor = (props) => {
+export const getButtonIconColor = (props: any) => {
   if (props.variant === 'ghost') {
     return props.palette === 'default'
       ? palette('defaultInverted')(props)
@@ -352,5 +352,5 @@ export const getButtonIconColor = (props) => {
 export const ButtonSpinner = styled(Spinner)`
   position: absolute;
 
-  ${(props) => theme('native.Button.Spinner', `styles.base`)(props)};
+  ${(props: any) => theme('native.Button.Spinner', `styles.base`)(props)};
 `;

@@ -1,4 +1,11 @@
-import { KeyboardAvoidingView, SafeAreaView, ScrollView, TouchableOpacity, View } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import { styled } from '../styled';
 import { theme } from '../utils/theme';
 
@@ -20,4 +27,8 @@ export const StyledBoxKeyboardAvoiding = styled(KeyboardAvoidingView)`
 
 export const StyledBoxTouchable = styled(TouchableOpacity)`
   ${theme('native.Box.Touchable', 'styles.base')};
+`;
+
+export const StyledBoxTouchableWithoutFeedback = styled(TouchableWithoutFeedback)`
+  ${theme('native.Box.TouchableWithoutFeedback', 'styles.base')};
 `;
