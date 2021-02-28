@@ -97,6 +97,8 @@ export type CSSProperties = {
   borderLeftStyle?: string | number | { [key: string]: string };
   borderLeftWidth?: string | number | { [key: string]: string };
   borderRadius?: Flexible<BorderRadii, string | number | { [key: string]: BorderRadii }>;
+  borderRightRadius?: Flexible<BorderRadii, string | number | { [key: string]: BorderRadii }>;
+  borderLeftRadius?: Flexible<BorderRadii, string | number | { [key: string]: BorderRadii }>;
   borderRight?: string | number | { [key: string]: string };
   borderRightColor?: Flexible<Palette, string | number | { [key: string]: Flexible<Palette, string> }>;
   borderRightStyle?: string | number | { [key: string]: string };

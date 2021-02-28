@@ -96,3 +96,14 @@ export function isHSLA(string) {
 export function isRGBOrHSLOrHex(string) {
   return isRGB(string) || isRGBA(string) || isHSL(string) || isHSLA(string) || isHex(string);
 }
+
+const parseInt16 = (value) => parseInt(value, 16);
+export const hexToRgb = (h) => {
+  const hexNoHash = h.charAt(0) === '#' ? h.substring(1, 7) : h;
+  const { r, g, b } = {
+    r: parseInt16(hexNoHash.substring(0, 2)),
+    g: parseInt16(hexNoHash.substring(2, 4)),
+    b: parseInt16(hexNoHash.substring(4, 6)),
+  };
+  return `rgb(${r},${g},${b})`;
+};

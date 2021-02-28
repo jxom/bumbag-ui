@@ -12,9 +12,8 @@ export const SIZES = {
 };
 
 export const StyledInput = styled(TextInput)`
-  background: ${palette('default')};
-  font-size: ${(props: any) => `${fontSize(props.fontSize)(props)}px`};
-  height: ${(props: any) => `${space(2.75, props.fontSize)(props)}px`};
+  font-size: ${(props: any) => `${fontSize(props.styledFontSize)(props)}px`};
+  height: ${(props: any) => `${space(2.75, props.styledFontSize)(props)}px`};
 
   ${getVariantStyles}
   ${getDisabledStyles}
@@ -26,15 +25,16 @@ export const StyledInput = styled(TextInput)`
 function getVariantStyles(props) {
   if (props.variant === 'bordered') {
     return `
-      border: 1px solid ${palette(props.palette || 'white900', { dark: 'gray700' })(props)};
+      background-color: ${palette('default')(props)};
+      border: 1px solid ${palette(props.state || props.palette || 'white900', { dark: 'gray700' })(props)};
       border-radius: ${borderRadius('default')(props)};
-      padding: ${space(0.4, props.fontSize)(props)}px ${space(0.8, props.fontSize)(props)}px;
+      padding: ${space(0.4, props.styledFontSize)(props)}px ${space(0.8, props.styledFontSize)(props)}px;
 
       ${
         props.focus
           ? `
             border: 2px solid ${palette(props.palette || 'primary')(props)};
-            padding: ${space(0.4, props.fontSize)(props)}px ${space(0.8, props.fontSize)(props) - 1}px;
+            padding: ${space(0.4, props.styledFontSize)(props)}px ${space(0.8, props.styledFontSize)(props) - 1}px;
           `
           : ''
       }
@@ -45,9 +45,9 @@ function getVariantStyles(props) {
   if (props.variant === 'underline') {
     return `
       border-bottom-width: 1px;
-      border-bottom-color: ${palette(props.palette || 'white900', { dark: 'gray700' })(props)};
+      border-bottom-color: ${palette(props.state || props.palette || 'white900', { dark: 'gray700' })(props)};
       border-radius: 0px;
-      padding: ${space(0.4, props.fontSize)(props)}px 0px;
+      padding: ${space(0.4, props.styledFontSize)(props)}px 0px;
 
       ${
         props.focus
@@ -63,7 +63,7 @@ function getVariantStyles(props) {
   }
   if (props.variant === 'borderless') {
     return `
-      padding: ${space(0.4, props.fontSize)(props)}px 0px;
+      padding: ${space(0.4, props.styledFontSize)(props)}px 0px;
 
       ${theme('native.Input.variants.borderless', `styles.base`)(props)};
     `;
@@ -76,8 +76,7 @@ function getDisabledStyles(props) {
     ? `
       background-color: ${palette('white700', { dark: 'black200' })(props)};
       color: ${palette('text100')(props)};
-      cursor: not-allowed;
-      padding: ${space(0.4, props.fontSize)(props)}px ${space(0.8, props.fontSize)(props)}px;
+      padding: ${space(0.4, props.styledFontSize)(props)}px ${space(0.8, props.styledFontSize)(props)}px;
 
       ${theme('native.Input', `styles.disabled`)(props)};
     `
@@ -118,21 +117,21 @@ export const StyledAnimatedLabel = styled(AnimatedText)`
 function getAnimatedLabelVariantStyles(props) {
   if (props.variant === 'bordered') {
     return `
-      background-color: white;
+      background-color: ${palette('default')(props)};
       margin: 0px ${space(0.675, props.fontSize)(props)}px;
       padding: 0px ${space(0.25, props.fontSize)(props)}px;
 
-      ${theme('native.Input.variants.bordered', 'AnimatedLabel.styles.base')};
+      ${theme('native.Input.variants.bordered', 'AnimatedLabel.styles.base')(props)};
     `;
   }
   if (props.variant === 'underline') {
     return `
-      ${theme('native.Input.variants.underline', 'AnimatedLabel.styles.base')};
+      ${theme('native.Input.variants.underline', 'AnimatedLabel.styles.base')(props)};
     `;
   }
   if (props.variant === 'borderless') {
     return `
-      ${theme('native.Input.variants.borderless', 'AnimatedLabel.styles.base')};
+      ${theme('native.Input.variants.borderless', 'AnimatedLabel.styles.base')(props)};
     `;
   }
   return '';

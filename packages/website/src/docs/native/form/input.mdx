@@ -24,7 +24,7 @@ import { Input, InputField } from 'bumbag-native'
 <Input placeholder="Enter your name here..." variant="underline" />###
 ```
 
-## Labels
+### Labels
 
 ```live
 ###tab=Default,type=jsx-live
@@ -92,6 +92,135 @@ An input can come in different sizes - `small`, `medium`, `large`, or the defaul
   <Input label="Username" size="medium" variant="underline" />
   <Input label="Username" size="large" variant="underline" />
 </Stack>###
+```
+
+### Colors
+
+#### Input colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input palette="primary" label="Username" />
+  <Input palette="secondary" label="Username" />
+  <Input palette="danger" label="Username" />
+  <Input palette="success" label="Username" />
+  <Input palette="warning" label="Username" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input palette="primary" label="Username" variant="borderless" />
+  <Input palette="secondary" label="Username" variant="borderless" />
+  <Input palette="danger" label="Username" variant="borderless" />
+  <Input palette="success" label="Username" variant="borderless" />
+  <Input palette="warning" label="Username" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input palette="primary" label="Username" variant="underline" />
+  <Input palette="secondary" label="Username" variant="underline" />
+  <Input palette="danger" label="Username" variant="underline" />
+  <Input palette="success" label="Username" variant="underline" />
+  <Input palette="warning" label="Username" variant="underline" />
+</Stack>###
+```
+
+#### Placeholder colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input placeholderTextColor="primary" label="Username" />
+  <Input placeholderTextColor="secondary" label="Username" />
+  <Input placeholderTextColor="danger" label="Username" />
+  <Input placeholderTextColor="success" label="Username" />
+  <Input placeholderTextColor="warning" label="Username" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input placeholderTextColor="primary" label="Username" variant="borderless" />
+  <Input placeholderTextColor="secondary" label="Username" variant="borderless" />
+  <Input placeholderTextColor="danger" label="Username" variant="borderless" />
+  <Input placeholderTextColor="success" label="Username" variant="borderless" />
+  <Input placeholderTextColor="warning" label="Username" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input placeholderTextColor="primary" label="Username" variant="underline" />
+  <Input placeholderTextColor="secondary" label="Username" variant="underline" />
+  <Input placeholderTextColor="danger" label="Username" variant="underline" />
+  <Input placeholderTextColor="success" label="Username" variant="underline" />
+  <Input placeholderTextColor="warning" label="Username" variant="underline" />
+</Stack>###
+```
+
+#### Label colors
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input labelTextColor="primary" label="Username" />
+  <Input labelTextColor="secondary" label="Username" />
+  <Input labelTextColor="danger" label="Username" />
+  <Input labelTextColor="success" label="Username" />
+  <Input labelTextColor="warning" label="Username" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input labelTextColor="primary" label="Username" variant="borderless" />
+  <Input labelTextColor="secondary" label="Username" variant="borderless" />
+  <Input labelTextColor="danger" label="Username" variant="borderless" />
+  <Input labelTextColor="success" label="Username" variant="borderless" />
+  <Input labelTextColor="warning" label="Username" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input labelTextColor="primary" label="Username" variant="underline" />
+  <Input labelTextColor="secondary" label="Username" variant="underline" />
+  <Input labelTextColor="danger" label="Username" variant="underline" />
+  <Input labelTextColor="success" label="Username" variant="underline" />
+  <Input labelTextColor="warning" label="Username" variant="underline" />
+</Stack>###
+```
+
+### States
+
+```live
+###tab=Default,type=jsx-live
+<Stack spacing="major-2">
+  <Input state="danger" label="Username" defaultValue="Invalid" />
+  <Input state="success" label="Username" defaultValue="Invalid" />
+  <Input state="warning" label="Username" defaultValue="Invalid" />
+</Stack>###
+
+###tab=Borderless,type=jsx-live
+<Stack spacing="major-2">
+  <Input state="danger" label="Username" defaultValue="Invalid" variant="borderless" />
+  <Input state="success" label="Username" defaultValue="Invalid" variant="borderless" />
+  <Input state="warning" label="Username" defaultValue="Invalid" variant="borderless" />
+</Stack>###
+
+###tab=Underline,type=jsx-live
+<Stack spacing="major-2">
+  <Input state="danger" label="Username" defaultValue="Invalid" variant="underline" />
+  <Input state="success" label="Username" defaultValue="Invalid" variant="underline" />
+  <Input state="warning" label="Username" defaultValue="Invalid" variant="underline" />
+</Stack>###
+```
+
+### Addons
+
+```jsx-live
+<Group>
+  <Input flex="1" label="Username" />
+  <Button>Send</Button>
+</Group>
 ```
 
 ## Props
