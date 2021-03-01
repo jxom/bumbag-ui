@@ -32,7 +32,7 @@ export type IconProps = BoxProps & LocalIconProps;
 
 function Tree({ fill, tree }) {
   if (tree.length > 0) {
-    return tree.map((node) => {
+    return tree.map((node, index) => {
       const Component = Svg[capitalize(node.name)] || Svg.Path;
       let newProps = {};
       if (fill && node.attributes?.fill && node.attributes?.fill !== 'white' && node.attributes?.fill !== 'none') {
@@ -53,7 +53,8 @@ function Tree({ fill, tree }) {
         };
       }
       return (
-        <Component key={node.name} {...node.attributes} {...newProps}>
+        // eslint-disable-next-line
+        <Component key={`${node.name}.${index}`} {...node.attributes} {...newProps}>
           <Tree fill={fill} tree={node.children} />
         </Component>
       );
