@@ -12,6 +12,7 @@ export * from './Input';
 export * from './Image';
 export * from './Level';
 export * from './Provider';
+export * from './Pressable';
 export * from './Set';
 export * from './Show';
 export * from './Spinner';
