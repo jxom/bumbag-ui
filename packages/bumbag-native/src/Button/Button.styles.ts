@@ -22,7 +22,12 @@ export const StyledButton = styled(TouchableOpacity)`
   ${(props: any) =>
     props.palette === 'default'
       ? `
-          border: 1px solid ${palette('white900', { dark: 'gray600' })(props)};
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: ${palette('white900', { dark: 'gray600' })(props)};
+        border-bottom-color: ${palette('white900', { dark: 'gray600' })(props)};
+        border-left-color: ${palette('white900', { dark: 'gray600' })(props)};
+        border-right-color: ${palette('white900', { dark: 'gray600' })(props)};
         `
       : ''}
 
@@ -150,13 +155,23 @@ export const getInteractiveButtonOverrides = (props: any) => {
 
 export const getOutlinedButtonProperties = (props: any) => `
   background-color: ${palette('default')(props)};
-  border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+  border-bottom-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+  border-left-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+  border-right-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
 
   ${
     props.hover && isInteractive(props)
       ? `
           background-color: ${palette(`${props.palette}Tint`, { dark: `${props.palette}Shade` })(props)};
-          border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-width: 1px;
+          border-style: solid;
+          border-top-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-bottom-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-left-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-right-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
         `
       : ''
   }
@@ -165,7 +180,12 @@ export const getOutlinedButtonProperties = (props: any) => `
     props.hoveractive && isInteractive(props)
       ? `
           background-color: ${palette(`${props.palette}100`, { dark: `${props.palette}Shade` })(props)};
-          border: 1px solid ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-width: 1px;
+          border-style: solid;
+          border-top-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-bottom-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-left-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
+          border-right-color: ${palette(props.palette, { dark: `${props.palette}300` })(props)};
         `
       : ''
   }
@@ -173,7 +193,10 @@ export const getOutlinedButtonProperties = (props: any) => `
 
 export const getGhostButtonProperties = (props: any) => `
   background-color: transparent;
-  border: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
 
   ${
     props.hover
@@ -194,7 +217,10 @@ export const getGhostButtonProperties = (props: any) => `
 
 export const getLinkButtonProperties = (props: any) => `
   background-color: transparent;
-  border: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
 
   ${
     props.hover && Platform.OS === 'web'
