@@ -19,7 +19,7 @@ const useProps = createHook<ButtonIconProps>(
     const { theme } = useTheme();
     const buttonProps = React.useContext(ButtonContext);
     const boxProps = Box.useProps(props);
-    return { ...buttonProps, color: styles.getButtonIconColor({ ...buttonProps, theme }), ...boxProps };
+    return { ...buttonProps, color: props.color || styles.getButtonIconColor({ ...buttonProps, theme }), ...boxProps };
   },
   { themeKey: 'native.ButtonIcon' }
 );
